@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "next_action": {"type": "string", "enum": ["continue", "stop", "needs_owner_input"]},
+    "novel_discrimination": {"type": "boolean"},
+    "stop_reason": {"type": "string"},
+    "owner_question": {"type": "string"},
+    "summary": {"type": "string"},
+    "supported": {"type": "array", "items": {"type": "string"}},
+    "falsified": {"type": "array", "items": {"type": "string"}},
+    "unresolved": {"type": "array", "items": {"type": "string"}},
+    "next_experiment_goal": {"type": "string"}
+  },
+  "required": ["next_action", "novel_discrimination", "stop_reason", "owner_question", "summary", "supported", "falsified", "unresolved", "next_experiment_goal"]
+}

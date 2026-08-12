@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: pangram-humanization-lab
+Version: 2.0.0
+Summary: Adaptive, resumable Pangram 4 experiment lab for Joel humanization research
+Requires-Python: >=3.10
+Provides-Extra: test
+Requires-Dist: pytest>=8; extra == "test"
