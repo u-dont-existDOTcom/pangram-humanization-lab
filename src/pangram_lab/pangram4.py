@@ -106,7 +106,7 @@ class PangramClient:
         # POST is deliberately not automatically retried. If transport fails after
         # Pangram accepts a request but before task_id returns, another POST can cost
         # money twice and cannot be deduplicated locally.
-        obj = self._request_once("POST", f"{self.base_url}/task", {"text": text, "public_dashboard_link": False})
+        obj = self._request_once("POST", f"{self.base_url}/task", {"text": text, "public_dashboard_link": False, "model": self.model})
         task_id = str(obj.get("task_id") or "")
         if not task_id:
             raise PangramError(f"Pangram submit response missing task_id: {obj}")
@@ -122,9 +122,6 @@ class PangramClient:
                 print(f"[pangram] task {task_id}: {stage or 'pending'}", flush=True)
                 last_stage = stage
             if stage == "STAGE_SUCCESS":
-                version = str(obj.get("version") or "")
-                if self.expected_version and version != self.expected_version:
-                    raise PangramError(f"Pangram terminal version mismatch: expected {self.expected_version!r}, got {version!r}")
                 return obj
             if stage == "STAGE_FAILED":
                 raise PangramError(f"Pangram task {task_id} terminal failure: {obj}")
@@ -143,22 +140,34 @@ class PangramClient:
                 "The harness will not POST it again automatically because that could duplicate a paid call. "
                 f"Inspect/resolve cache record {cache.path_for(self.model, self.expected_version, text, measurement_key)}."
             )
+        if rec and rec.get("status") == "terminal_wrong_version":
+            submitted_model = str(rec.get("submitted_model") or "")
+            actual = str((rec.get("result") or {}).get("version") or "")
+            if submitted_model == self.model:
+                raise PangramError(
+                    f"Pangram terminal version mismatch after explicit model {self.model!r}: "
+                    f"expected {self.expected_version!r}, got {actual!r}; refusing another paid POST"
+                )
+            print(
+                f"[pangram] MIGRATE prior terminal task {rec.get('task_id')} returned {actual or 'unknown version'} "
+                f"without an explicit model selector; preserved result and will submit one corrected {self.model} task",
+                flush=True,
+            )
+            rec = None
+
+        submitted_model = ""
         if rec and rec.get("status") == "pending" and rec.get("task_id"):
             task_id = str(rec["task_id"])
+            submitted_model = str(rec.get("submitted_model") or "")
             print(f"[pangram] RESUME pending task {task_id} for {measurement_key}; NO new POST", flush=True)
         else:
             print(f"[pangram] SUBMIT new task for {measurement_key}; no cached equivalent exists", flush=True)
             try:
                 task_id = self.submit_once(text)
             except Exception as exc:
-                # Without a task_id, transport loss and server/rate-limit failures are
-                # ambiguous: the service may have accepted the POST before the response
-                # failed. Preserve that uncertainty and never issue another paid POST
-                # automatically. Definite 4xx request/auth failures may be retried later
-                # after the underlying problem is corrected.
-                msg=str(exc)
-                lowered=msg.lower()
-                ambiguous=("network failure" in lowered or any(f"HTTP {code}" in msg for code in (429,500,502,503,504)))
+                msg = str(exc)
+                lowered = msg.lower()
+                ambiguous = ("network failure" in lowered or any(f"HTTP {code}" in msg for code in (429,500,502,503,504)))
                 if ambiguous:
                     cache.save_submit_ambiguous(self.model, self.expected_version, text, measurement_key, error=msg)
                     self.sync(f"pangram ambiguous submit {measurement_key}")
@@ -166,19 +175,70 @@ class PangramClient:
                     cache.save_failure(self.model, self.expected_version, text, measurement_key, error=msg)
                     self.sync(f"pangram submit failure {measurement_key}")
                 raise
-            cache.save_pending(self.model, self.expected_version, text, measurement_key, task_id)
+            submitted_model = self.model
+            cache.save_pending(self.model, self.expected_version, text, measurement_key, task_id, submitted_model=self.model)
             self.sync(f"pangram task checkpoint {measurement_key}")
-            print(f"[pangram] CHECKPOINTED task_id={task_id} before polling", flush=True)
+            print(f"[pangram] CHECKPOINTED task_id={task_id} model={self.model} before polling", flush=True)
+
         try:
             result = self.poll(task_id)
         except Exception as exc:
-            # Pending record intentionally remains pending unless Pangram terminally
-            # says STAGE_FAILED. A restart will poll the same task id.
             if "terminal failure" in str(exc):
                 cache.save_failure(self.model, self.expected_version, text, measurement_key, task_id=task_id, error=str(exc))
             self.sync(f"pangram poll state {measurement_key}")
             raise
-        cache.save_success(self.model, self.expected_version, text, measurement_key, task_id, result)
+
+        actual_version = str(result.get("version") or "")
+        if self.expected_version and actual_version != self.expected_version:
+            cache.save_wrong_version(
+                self.model, self.expected_version, text, measurement_key, task_id, result,
+                submitted_model=submitted_model,
+            )
+            self.sync(f"pangram wrong-version result {measurement_key}")
+            if submitted_model == self.model:
+                raise PangramError(
+                    f"Pangram terminal version mismatch after explicit model {self.model!r}: "
+                    f"expected {self.expected_version!r}, got {actual_version!r}; refusing another paid POST"
+                )
+            print(
+                f"[pangram] PRESERVED paid task {task_id} as terminal version {actual_version!r}; "
+                f"v2.0 had omitted the model selector. Submitting one corrected {self.model} task now.",
+                flush=True,
+            )
+            try:
+                task_id = self.submit_once(text)
+            except Exception as exc:
+                msg = str(exc)
+                lowered = msg.lower()
+                ambiguous = ("network failure" in lowered or any(f"HTTP {code}" in msg for code in (429,500,502,503,504)))
+                if ambiguous:
+                    cache.save_submit_ambiguous(self.model, self.expected_version, text, measurement_key, error=msg)
+                    self.sync(f"pangram ambiguous corrected submit {measurement_key}")
+                else:
+                    cache.save_failure(self.model, self.expected_version, text, measurement_key, error=msg)
+                    self.sync(f"pangram corrected submit failure {measurement_key}")
+                raise
+            submitted_model = self.model
+            cache.save_pending(self.model, self.expected_version, text, measurement_key, task_id, submitted_model=self.model)
+            self.sync(f"pangram corrected task checkpoint {measurement_key}")
+            print(f"[pangram] CHECKPOINTED corrected task_id={task_id} model={self.model} before polling", flush=True)
+            result = self.poll(task_id)
+            actual_version = str(result.get("version") or "")
+            if self.expected_version and actual_version != self.expected_version:
+                cache.save_wrong_version(
+                    self.model, self.expected_version, text, measurement_key, task_id, result,
+                    submitted_model=self.model,
+                )
+                self.sync(f"pangram corrected wrong-version result {measurement_key}")
+                raise PangramError(
+                    f"Pangram terminal version mismatch after corrected explicit model {self.model!r}: "
+                    f"expected {self.expected_version!r}, got {actual_version!r}; refusing another paid POST"
+                )
+
+        cache.save_success(
+            self.model, self.expected_version, text, measurement_key, task_id, result,
+            submitted_model=submitted_model,
+        )
         self.sync(f"pangram result {measurement_key}")
         print(f"[pangram] SAVED {measurement_key}: {result.get('headline') or result.get('prediction_short')} AI={result.get('fraction_ai')} assisted={result.get('fraction_ai_assisted')} human={result.get('fraction_human')}", flush=True)
         return result

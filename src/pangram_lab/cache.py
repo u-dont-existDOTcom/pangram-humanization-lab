@@ -56,7 +56,7 @@ class PangramCache:
             return None
         return json.loads(path.read_text(encoding="utf-8"))
 
-    def save_pending(self, model: str, version: str, text: str, measurement_key: str, task_id: str, *, source: str = "live") -> Path:
+    def save_pending(self, model: str, version: str, text: str, measurement_key: str, task_id: str, *, source: str = "live", submitted_model: str = "") -> Path:
         path = self.path_for(model, version, text, measurement_key)
         old = self.lookup(model, version, text, measurement_key) or {}
         value = {
@@ -68,6 +68,7 @@ class PangramCache:
             "measurement_key": measurement_key,
             "status": "pending",
             "task_id": task_id,
+            "submitted_model": submitted_model or old.get("submitted_model", ""),
             "source": source,
             "created_utc": old.get("created_utc") or utc_now(),
             "updated_utc": utc_now(),
@@ -77,7 +78,7 @@ class PangramCache:
         _atomic_write_json(path, value)
         return path
 
-    def save_success(self, model: str, version: str, text: str, measurement_key: str, task_id: str, result: dict, *, source: str = "live") -> Path:
+    def save_success(self, model: str, version: str, text: str, measurement_key: str, task_id: str, result: dict, *, source: str = "live", submitted_model: str = "") -> Path:
         path = self.path_for(model, version, text, measurement_key)
         old = self.lookup(model, version, text, measurement_key) or {}
         value = {
@@ -89,6 +90,7 @@ class PangramCache:
             "measurement_key": measurement_key,
             "status": "success",
             "task_id": task_id,
+            "submitted_model": submitted_model or old.get("submitted_model", ""),
             "source": source,
             "created_utc": old.get("created_utc") or utc_now(),
             "updated_utc": utc_now(),
@@ -97,6 +99,34 @@ class PangramCache:
         }
         _atomic_write_json(path, value)
         return path
+
+    def save_wrong_version(self, model: str, version: str, text: str, measurement_key: str, task_id: str, result: dict, *, submitted_model: str = "", source: str = "live") -> Path:
+        old = self.lookup(model, version, text, measurement_key) or {}
+        value = {
+            "format": "pangram-cache-v2",
+            "model": model,
+            "expected_version": version,
+            "text_sha256": text_sha256(text),
+            "text": text,
+            "measurement_key": measurement_key,
+            "status": "terminal_wrong_version",
+            "task_id": task_id,
+            "submitted_model": submitted_model or old.get("submitted_model", ""),
+            "source": source,
+            "created_utc": old.get("created_utc") or utc_now(),
+            "updated_utc": utc_now(),
+            "result": result,
+            "last_error": f"terminal version {result.get('version')!r} did not match expected {version!r}",
+        }
+        # Preserve the incompatible terminal response under its own measurement key
+        # before the canonical measurement is replaced by a corrected submission.
+        archive_key = f"{measurement_key}.wrong-version.{task_id}"
+        archive_path = self.path_for(model, version, text, archive_key)
+        archive_value = dict(value)
+        archive_value["measurement_key"] = archive_key
+        _atomic_write_json(archive_path, archive_value)
+        _atomic_write_json(self.path_for(model, version, text, measurement_key), value)
+        return archive_path
 
 
     def save_submit_ambiguous(self, model: str, version: str, text: str, measurement_key: str, *, error: str, source: str = "live") -> Path:

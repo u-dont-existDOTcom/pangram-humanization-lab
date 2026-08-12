@@ -3,7 +3,7 @@ set -euo pipefail
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 cd "$ROOT"
 
-echo "[setup] Pangram Humanization Lab v2"
+echo "[setup] Pangram Humanization Lab v2.0.1"
 python3 --version
 
 if [[ ! -d .venv ]]; then

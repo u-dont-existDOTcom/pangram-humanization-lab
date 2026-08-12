@@ -1,4 +1,4 @@
-# Pangram Humanization Lab v2
+# Pangram Humanization Lab v2.0.1
 
 Adaptive detector-research harness for Joel Rosenblum's humanization work.
 
@@ -67,4 +67,6 @@ The Human endpoint remains editorial authority. Synthetic probes must preserve m
 
 ## Current external async transport note
 
-The durable cache comes from the older proven harness design, but the transport contract follows the newer target-machine correction: `x-api-key` authentication; zero-task `GET /task/<nonexistent UUID>` auth probe; `POST /task` with `text` + `public_dashboard_link`; then `GET /task/{task_id}` polling. It does not use the superseded `/models` preflight or request-time `model` field. Terminal results must still report version `4.0` or the run fails closed.
+Target-machine evidence on 2026-08-12 corrected one part of the Aug. 11 transport assumption. Authentication remains `x-api-key`, and the zero-task `GET /task/<nonexistent UUID>` probe remains non-billable. But a live async submission without a model selector returned terminal version `3.3.2`. The previously validated Pangram-4 harness explicitly requested `model: pangram-4` and returned terminal version `4.0`, so v2.0.1 restores that request field while retaining the newer authentication header.
+
+If an old v2.0 pending task resolves as `3.3.2`, the complete terminal response is archived and pushed to GitHub before one corrected `pangram-4` submission is made. New pending records remember `submitted_model`; if an explicit `pangram-4` request itself ever returns another version, the harness fails closed and will not automatically buy another call.

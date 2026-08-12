@@ -9,20 +9,20 @@
     {
       "executable": true,
       "path": "INSTALL-AND-RUN.sh",
-      "sha256": "80c68de2783bbcf750f133f483df91589c2bc82dde0c0f55832746e1139fcb1a",
-      "size_bytes": 2751
+      "sha256": "5e76cef41d863d4096e80787e264b7767c6505976572b8ebf609f8b04931f0c2",
+      "size_bytes": 2755
     },
     {
       "executable": false,
       "path": "README.md",
-      "sha256": "25fab9713121834645e6ac8ae435662449fe262fec9eb984f8959557e68df065",
-      "size_bytes": 3762
+      "sha256": "30c9a12c26d92905bb79aae774878973b2321e9b51890188ab2a244fc6a21a1d",
+      "size_bytes": 4166
     },
     {
       "executable": false,
       "path": "RELEASE-NOTES.md",
-      "sha256": "ca1c3dcadd23380ae13b96ba074f67c74ed9e6b87f3b0e3aaa449f43a5da93ce",
-      "size_bytes": 2220
+      "sha256": "921623bfa2ff60917eab900a82d56bba800895baabdbda77ddb647de4cc13362",
+      "size_bytes": 1694
     },
     {
       "executable": true,
@@ -33,7 +33,7 @@
     {
       "executable": false,
       "path": "SOURCE-COMMIT.txt",
-      "sha256": "0aa45cf87e46115f832fa115f1c4131cdf663ddcc653a959dc6a6f3c7587260f",
+      "sha256": "551b7dea0b1464a075a491167d00b35cad0ac47ed28aef4092ef15aa56dcfe53",
       "size_bytes": 41
     },
     {
@@ -69,7 +69,7 @@
     {
       "executable": false,
       "path": "pyproject.toml",
-      "sha256": "059249c423b7b8ecb6180b3dc09b9da1c236b5902d810a3d2b18273d1de2957a",
+      "sha256": "f4ea6b6066694b6848a9d9bbfa741012760c2467ff47b3505279bd944272685b",
       "size_bytes": 444
     },
     {
@@ -93,7 +93,7 @@
     {
       "executable": false,
       "path": "src/pangram_lab/__init__.py",
-      "sha256": "ffb3a541d6d590ae2369dd022dda48d20ad3fb31006feaa01661f9985cc35e20",
+      "sha256": "c00c642bcc35defaa8178ec0f22a96752948811457999890d11e3078f65fce1b",
       "size_bytes": 22
     },
     {
@@ -105,8 +105,8 @@
     {
       "executable": false,
       "path": "src/pangram_lab/cache.py",
-      "sha256": "84bb381c462230b35493330ad91a611d25d04c91e2062196f3b5fa477ca6080e",
-      "size_bytes": 5260
+      "sha256": "68138ba54249a13aa2314377293f0a1a131b1e63695d8a714d349f04a9816516",
+      "size_bytes": 6990
     },
     {
       "executable": false,
@@ -141,8 +141,8 @@
     {
       "executable": false,
       "path": "src/pangram_lab/pangram4.py",
-      "sha256": "d4740cdd5f74b3c74d1e749abf96edb385c6ebabc15782ca83f6749681067b6f",
-      "size_bytes": 9546
+      "sha256": "ab2619f8595a91d209b1f1764e119379c592b92eae422e0db7539f80e2961fe8",
+      "size_bytes": 12670
     },
     {
       "executable": false,
@@ -225,8 +225,8 @@
     {
       "executable": false,
       "path": "tests/test_pangram.py",
-      "sha256": "f57ba13beec9bc9bb865ce85a9dc372067cca3db3c085da19772246ba5c090c0",
-      "size_bytes": 4520
+      "sha256": "2ae58c74ad7af4e577e950a178aa01182b3ce6e977bc5dc70a014e1a09fc73a2",
+      "size_bytes": 7978
     },
     {
       "executable": false,
@@ -248,5 +248,5 @@
     }
   ],
   "format": "pangram-humanization-lab-release-v2",
-  "source_commit": "7191f39b9d2155f1b17ee371a413b39a6c8be4e2"
+  "source_commit": "81c89f80bded3f8f968a49c139ec97a4e04e0f63"
 }
