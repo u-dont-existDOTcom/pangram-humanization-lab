@@ -127,6 +127,8 @@ The current restart behavior is changed. A promoted repair must **not** call `ru
 
 The source/program lineage remains auditable, but program version no longer destroys conceptual continuity after a repair. New user-initiated runs may continue to use content/program-derived IDs as appropriate; autonomous repair restart is explicitly same-thread.
 
+Legacy compatibility cannot assume that the terminal state contains `failure_origin_node`: releases affected by the returned-failure evidence defect may have finalized a valid `machine_failure` chain without that field. Recovery must inspect only the newest terminal lineage, stop before any older terminal checkpoint, find the newest `machine_failure`, and accept its allowlisted origin or phase as the replay node. It then selects the newest checkpoint whose `next` contains that node. If either inference is unavailable, recovery fails closed without replaying an older lineage or reseeding the article.
+
 ### 7. Repair-node continuation semantics
 
 A promoted code repair returns a restart-required status that exits the old process only far enough for the CLI restart hook to `exec` the new program image. The checkpoint must retain the repair result and the pre-failure conceptual state. On `resume`, routing re-enters the repaired machine path rather than finalizing or reseeding.

@@ -316,20 +316,47 @@ _TERMINAL_RECOVERY_NODES={
 }
 
 
-def _terminal_failure_replay_config(app, graph_config:dict[str,Any], result:dict[str,Any]):
-    """Return the newest checkpoint immediately before the failed machine node."""
+def _terminal_failure_replay_target(
+    app, graph_config:dict[str,Any], result:dict[str,Any],
+)->tuple[str,Any|None]:
+    """Return the failed node and newest replayable checkpoint in this terminal lineage."""
     if str(result.get("status") or "") != "bounded_machine_stop":
-        return None
-    origin=str(result.get("failure_origin_node") or "")
-    if origin not in _TERMINAL_RECOVERY_NODES:
-        return None
+        return "",None
     latest=app.get_state(graph_config)
     if tuple(getattr(latest,"next",()) or ()):
-        return None
+        return "",None
+
+    history=[]
     for snapshot in app.get_state_history(graph_config):
+        values=dict(getattr(snapshot,"values",{}) or {})
+        next_nodes=tuple(getattr(snapshot,"next",()) or ())
+        if history and not next_nodes and str(values.get("status") or "") == "bounded_machine_stop":
+            break
+        history.append(snapshot)
+
+    origin=str(result.get("failure_origin_node") or "")
+    if origin not in _TERMINAL_RECOVERY_NODES:
+        origin=""
+        for snapshot in history[1:]:
+            values=dict(getattr(snapshot,"values",{}) or {})
+            if str(values.get("status") or "") != "machine_failure":
+                continue
+            candidate=str(values.get("failure_origin_node") or values.get("phase") or "")
+            if candidate in _TERMINAL_RECOVERY_NODES:
+                origin=candidate
+                break
+    if not origin:
+        return "",None
+
+    for snapshot in history:
         if origin in tuple(getattr(snapshot,"next",()) or ()):
-            return getattr(snapshot,"config",None)
-    return None
+            return origin,getattr(snapshot,"config",None)
+    return "",None
+
+
+def _terminal_failure_replay_config(app, graph_config:dict[str,Any], result:dict[str,Any]):
+    """Return the newest checkpoint immediately before the failed machine node."""
+    return _terminal_failure_replay_target(app,graph_config,result)[1]
 
 
 def replay_terminal_machine_failure_on_app(app, graph_config:dict[str,Any], result:dict[str,Any])->dict[str,Any]:
@@ -390,16 +417,12 @@ def recover_terminal_machine_failure(
         terminal=result if result is not None else latest_values
         if str(terminal.get("status") or "") != "bounded_machine_stop":
             return None if result is None else result
-        origin=str(terminal.get("failure_origin_node") or "")
-        if origin not in _TERMINAL_RECOVERY_NODES:
-            return terminal
-
         version=program_version(config.root)
         marker=_bounded_recovery_marker(config,thread_id,version)
         if marker.is_file():
             return terminal
 
-        replay_config=_terminal_failure_replay_config(app,graph_config,terminal)
+        origin,replay_config=_terminal_failure_replay_target(app,graph_config,terminal)
         if replay_config is None:
             return terminal
 
