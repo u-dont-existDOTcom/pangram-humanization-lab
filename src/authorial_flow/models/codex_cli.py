@@ -11,8 +11,10 @@ from ..pause import OperationContext
 from ..process_runner import ProcessRunner, ProcessSpec
 from ..secrets import child_env
 from .common import (
-    ModelAttempt, ModelCall, ModelResult, ProviderFailure, stable_request_id,
-    validate_json_schema,
+    FailureKind, ModelAttempt, ModelCall, ModelResult, ProviderFailure,
+    capability_signature, classify_attempt_failure, stable_request_id,
+    stops_provider_fallback, unique_model_profiles, validate_json_schema,
+    validate_schema_contract,
 )
 
 
@@ -36,6 +38,18 @@ class CodexCLI:
         request_id = call.request_id or stable_request_id("codex", call.role, call.prompt, call.schema)
         attempts: list[ModelAttempt] = []
         safe_env = child_env(self.base_env, {"PANGRAM_API_KEY", "BRAVE_SEARCH_API_KEY"})
+        profiles = unique_model_profiles(self.models)
+        try:
+            validate_schema_contract(call.schema)
+        except ValueError as exc:
+            model = profiles[0] if profiles else None
+            resolved = model or "CLI-default"
+            attempts.append(ModelAttempt(
+                resolved, -1, error=f"invalid schema: {type(exc).__name__}",
+                failure_kind=FailureKind.INVALID_SCHEMA.value,
+                capability_signature=capability_signature("codex", resolved, call.schema),
+            ))
+            raise ProviderFailure("codex", call.role, request_id, attempts, schema=call.schema) from exc
         tmp_root = store.root / "tmp" / request_id
         if tmp_root.exists():
             shutil.rmtree(tmp_root)
@@ -43,7 +57,9 @@ class CodexCLI:
         try:
             schema_path = tmp_root / "schema.json"
             schema_path.write_text(json.dumps(call.schema or {"type": "object"}, sort_keys=True, indent=2), encoding="utf-8")
-            for model in self.models:
+            for model in profiles:
+                resolved = model or "CLI-default"
+                signature = capability_signature("codex", resolved, call.schema)
                 output_path = tmp_root / f"output-{len(attempts)+1}.json"
                 argv = [
                     "codex", "exec", "--ephemeral", "--sandbox", "read-only",
@@ -72,21 +88,36 @@ class CodexCLI:
                     "provider": "codex", "role": call.role, "request_id": request_id,
                     "model": model or "CLI-default", "stream": "stderr",
                 }).sha256 if result.stderr else ""
-                resolved = model or "CLI-default"
                 if result.returncode != 0 or not output_path.exists():
-                    attempts.append(ModelAttempt(resolved, result.returncode, out_ref, err_ref, "nonzero exit or missing output"))
+                    error = "nonzero exit" if result.returncode != 0 else "missing structured output"
+                    kind = classify_attempt_failure(
+                        returncode=result.returncode, stdout=result.stdout,
+                        stderr=result.stderr, error=error,
+                    )
+                    attempts.append(ModelAttempt(
+                        resolved, result.returncode, out_ref, err_ref, error,
+                        kind.value, signature,
+                    ))
+                    if stops_provider_fallback(kind):
+                        break
                     continue
                 try:
                     parsed = json.loads(output_path.read_text(encoding="utf-8"))
                     validate_json_schema(parsed, call.schema)
                 except Exception as exc:
-                    attempts.append(ModelAttempt(resolved, result.returncode, out_ref, err_ref, f"parse/schema: {type(exc).__name__}"))
+                    attempts.append(ModelAttempt(
+                        resolved, result.returncode, out_ref, err_ref,
+                        f"parse/schema: {type(exc).__name__}",
+                        FailureKind.STRUCTURED_CONTRACT.value, signature,
+                    ))
                     continue
                 raw_ref = store.put_bytes(output_path.read_bytes(), "json", {
                     "provider": "codex", "role": call.role, "request_id": request_id,
                     "model": resolved, "kind": "structured-output",
                 }).sha256
-                attempts.append(ModelAttempt(resolved, result.returncode, out_ref, err_ref, ""))
+                attempts.append(ModelAttempt(
+                    resolved, result.returncode, out_ref, err_ref, "", "", signature,
+                ))
                 return ModelResult(
                     provider="codex", role=call.role, request_id=request_id,
                     model=resolved, cli_version=self.cli_version, parsed=parsed,

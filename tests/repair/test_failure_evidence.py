@@ -124,3 +124,68 @@ def test_guarded_node_persists_evidence_bundle_as_repair_ref(tmp_path: Path, mon
     assert payload["expected_schema"]["required"] == ["verdict"]
     assert "bad structured output" in payload["provider_attempts"][0]["stdout_text"]
     assert update["failure_class"] == "PROVIDER_PLUMBING"
+
+
+def test_guarded_node_normalizes_returned_machine_failure_with_safe_evidence(tmp_path: Path):
+    from authorial_flow.runtime import RuntimeServices, _guarded_node
+
+    store=ArtifactStore(tmp_path/'artifacts')
+    services=RuntimeServices.for_tests(
+        claude=object(),codex=object(),pangram=None,artifact_store=store,
+    )
+
+    update=_guarded_node('generation',lambda _state:{
+        'status':'machine_failure','phase':'generation',
+        'failure_class':'POLICY_CONTRADICTION',
+        'generation_boundary_id':'b'*64,'decision_boundary_id':'a'*64,
+        'generation_rejection_class':'UNSAFE_ARRIVAL_ROLLBACK',
+        'uncovered_required_count':6,
+    },services)({
+        'thread_id':'same-thread','source_hash':'source-hash',
+        'program_version':'program-hash','accepted_moves':['private article prose'],
+    })
+
+    assert update['failure_class']=='POLICY_CONTRADICTION'
+    assert update['failure_origin_node']=='generation'
+    assert update['failure_record_ref']==update['last_error_ref']
+    artifact=store.find(update['failure_record_ref'])
+    assert artifact is not None
+    payload=json.loads(artifact.path.read_text())
+    assert payload['failure_class']=='POLICY_CONTRADICTION'
+    assert payload['originating_node']=='generation'
+    assert payload['decision_trace']['uncovered_required_count']==6
+    assert 'private article prose' not in artifact.path.read_text()
+
+
+def test_failure_decision_trace_contains_only_content_safe_controller_facts(tmp_path: Path):
+    store=ArtifactStore(tmp_path/'artifacts')
+    secret='TRACE-SECRET-4927'
+    record=FailureRecord(originating_node='generation',failure_code='policy contradiction')
+    bundle=build_failure_evidence(
+        record=record,
+        failure_class='POLICY_CONTRADICTION',
+        state={
+            'accepted_moves':['raw accepted prose'],
+            'candidate_text':'raw candidate prose',
+            'raw_prompt':f'hidden {secret}',
+            'generation_boundary_id':'b'*64,
+            'decision_boundary_id':'b'*64,
+            'uncovered_required_count':4,
+            'committed_pressure':{'state':'NATURAL_STOP','confidence':0.91,'boundary_id':'b'*64,'live_pressure':'raw pressure prose'},
+            'pressure_votes':[{'state':'NATURAL_STOP','confidence':0.9,'provider':'codex','why':'raw rationale'}],
+            'entry_edge_result':{'verdict':'STOP_BEFORE_CANDIDATE','confidence':0.96,'boundary_id':'b'*64,'reason':'raw edge prose'},
+            'proposal_ref':'c'*64,
+            'generation_rejection_class':'STOP_BEFORE_CANDIDATE',
+            'retry_count':4,'rollback_count':1,
+        },
+        exc=RuntimeError(f'controller stop {secret}'),store=store,secret_values=[secret],
+    )
+
+    trace=bundle.decision_trace
+    assert trace['boundary_id']=='b'*64
+    assert trace['candidate_sha256']=='c'*64
+    assert trace['uncovered_required_count']==4
+    assert trace['edge']['verdict']=='STOP_BEFORE_CANDIDATE'
+    dumped=json.dumps(trace)
+    for forbidden in ('raw accepted prose','raw candidate prose','raw pressure prose','raw edge prose',secret):
+        assert forbidden not in dumped

@@ -27,6 +27,7 @@ class AuthorialState(TypedDict, total=False):
     source_provenance: str
     task_mode: str
     semantic_sanity_ref: str
+    semantic_escalation_error: str
     escalation_reason: str
     escalation_count: int
     resolved_concept_ref: str
@@ -47,6 +48,11 @@ class AuthorialState(TypedDict, total=False):
     accepted_move_coverage: list[dict[str, Any]]
     coverage_reconciliation_required: bool
     accepted_prefix_hash: str
+    generation_boundary_id: str
+    decision_boundary_id: str
+    generation_rejection_class: str
+    uncovered_required_count: int
+    decision_trace: dict[str, Any]
     move_index: int
     retry_count: int
     rollback_count: int
@@ -113,6 +119,9 @@ class AuthorialState(TypedDict, total=False):
     review_ref: str
     repair_resume_node: str
     repair_commit: str
+    repair_outcome: str
+    repair_plan_signature: str
+    repair_history: list[dict[str, Any]]
     failure_evidence_ref: str
 
     # Runtime

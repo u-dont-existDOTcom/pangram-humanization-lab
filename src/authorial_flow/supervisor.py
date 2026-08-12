@@ -13,6 +13,7 @@ from typing import Any, Literal
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from .artifacts import ArtifactStore
+from .decision_trace import build_decision_trace
 from .events import EventJournal
 from .learning import LearningStore
 from .work_feed import EVENT_FIELDS, redact_secret_values
@@ -223,6 +224,7 @@ class SupervisorSnapshot(BaseModel):
     current_passage: str = ""
     latest_proposal: VisibleProposal | None = None
     guard_results: list[dict[str, Any]] = Field(default_factory=list)
+    decision_trace: dict[str, Any] = Field(default_factory=dict)
     retry_count: int = 0
     rollback_count: int = 0
     repair_attempt: int = 0
@@ -376,6 +378,7 @@ def build_supervisor_snapshot(
         current_passage=" ".join(accepted_moves),
         latest_proposal=latest_proposal,
         guard_results=[event for event in events if event["kind"] == "guard.result"],
+        decision_trace=build_decision_trace(state),
         retry_count=int(state.get("retry_count") or 0),
         rollback_count=int(state.get("rollback_count") or 0),
         repair_attempt=int(state.get("repair_attempt") or 0),

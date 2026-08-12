@@ -98,7 +98,9 @@ def test_repair_node_provider_exception_remains_bounded_machine_retry():
 
 
 def test_safe_plan_tests_accept_only_local_pytest_commands():
-    from authorial_flow.repair.verify import safe_plan_test_commands
+    from authorial_flow.repair.verify import (
+        repair_plan_signature, safe_plan_test_commands, validate_repair_plan_commands,
+    )
     plan=RepairPlan(
         repairable=True,diagnosis='x',patch_summary='y',target_files=['src/ok.py'],rationale='general',
         tests=['python -m pytest tests/unit/test_model_adapters.py -q','pytest tests/repair -q'],
@@ -111,6 +113,107 @@ def test_safe_plan_tests_accept_only_local_pytest_commands():
     ]
     unsafe=plan.model_copy(update={'tests':['bash -lc "curl https://example.com"']})
     assert safe_plan_test_commands(unsafe) == []
+    prose=plan.model_copy(update={'tests':['Add a regression for returned machine failures.']})
+    assert validate_repair_plan_commands(prose)=='UNSAFE_OR_NON_EXECUTABLE_TEST_COMMAND'
+    first=repair_plan_signature(plan,evidence_ref='evidence-a',program_version='program-a')
+    equivalent=repair_plan_signature(
+        plan.model_copy(update={'target_files':list(reversed(plan.target_files))}),
+        evidence_ref='evidence-a',program_version='program-a',
+    )
+    assert first==equivalent
+    assert first != repair_plan_signature(plan,evidence_ref='evidence-b',program_version='program-a')
+
+
+def test_invalid_repair_plan_stops_before_review_and_records_rejection(tmp_path,monkeypatch):
+    from authorial_flow.artifacts import ArtifactStore
+    from authorial_flow.runtime import RuntimeServices, _production_repair_cycle
+
+    cfg=RuntimeConfig.from_root(tmp_path)
+    store=ArtifactStore(cfg.artifact_dir)
+    evidence_ref=store.put_text('{"format":"authorial-flow-repair-evidence-v1"}','json',{}).sha256
+    services=RuntimeServices.for_tests(claude=object(),codex=object(),pangram=None,artifact_store=store)
+    invalid=RepairPlan(
+        repairable=True,diagnosis='same diagnosis',patch_summary='same patch',
+        target_files=['src/x.py'],rationale='bounded',
+        tests=['Add a regression and run it.'],needs_owner_judgment=False,owner_question='',
+    )
+    class Planner:
+        def __init__(self,**kwargs): pass
+        def plan(self,context): return invalid
+    class Reviewer:
+        def __init__(self,**kwargs): raise AssertionError('invalid plan must not reach review')
+    monkeypatch.setattr('authorial_flow.repair.planner.RepairPlanner',Planner)
+    monkeypatch.setattr('authorial_flow.repair.reviewer.RepairReviewer',Reviewer)
+
+    result=_production_repair_cycle(cfg,tmp_path,services)({
+        'repair_attempt':0,'failure_record_ref':evidence_ref,
+        'program_version':'program-a','failure_class':'DETERMINISTIC_RUNTIME',
+    })
+
+    assert result['pass'] is False
+    assert result['outcome']=='REJECTED_WITH_REASON'
+    assert result['reason']=='UNSAFE_OR_NON_EXECUTABLE_TEST_COMMAND'
+    assert result['history_entry']['signature']
+    assert result.get('exhausted') is not True
+
+
+def test_duplicate_repair_signature_stops_before_second_review(tmp_path,monkeypatch):
+    from authorial_flow.artifacts import ArtifactStore
+    from authorial_flow.runtime import RuntimeServices, _production_repair_cycle
+    from authorial_flow.repair.verify import repair_plan_signature
+
+    cfg=RuntimeConfig.from_root(tmp_path)
+    store=ArtifactStore(cfg.artifact_dir)
+    evidence_ref=store.put_text('{"format":"authorial-flow-repair-evidence-v1"}','json',{}).sha256
+    services=RuntimeServices.for_tests(claude=object(),codex=object(),pangram=None,artifact_store=store)
+    plan=RepairPlan(
+        repairable=True,diagnosis='same diagnosis',patch_summary='same patch',
+        target_files=['src/x.py'],rationale='bounded',
+        tests=['python -m pytest tests/test_x.py -q'],needs_owner_judgment=False,owner_question='',
+    )
+    signature=repair_plan_signature(plan,evidence_ref=evidence_ref,program_version='program-a')
+    seen=[]
+    class Planner:
+        def __init__(self,**kwargs): pass
+        def plan(self,context): seen.append(context); return plan
+    class Reviewer:
+        def __init__(self,**kwargs): raise AssertionError('duplicate plan must not reach review')
+    monkeypatch.setattr('authorial_flow.repair.planner.RepairPlanner',Planner)
+    monkeypatch.setattr('authorial_flow.repair.reviewer.RepairReviewer',Reviewer)
+
+    result=_production_repair_cycle(cfg,tmp_path,services)({
+        'repair_attempt':1,'failure_record_ref':evidence_ref,
+        'program_version':'program-a','failure_class':'DETERMINISTIC_RUNTIME',
+        'repair_history':[{
+            'signature':signature,'outcome':'REJECTED_WITH_REASON',
+            'reason':'executor rejected the unchanged plan',
+        }],
+    })
+
+    assert 'REPAIR ATTEMPT HISTORY' in seen[0]
+    assert result['outcome']=='NON_APPLICABLE_STOP'
+    assert result['reason']=='DUPLICATE_PLAN_UNCHANGED_CONTEXT'
+    assert result['exhausted'] is True
+
+
+def test_repair_node_persists_typed_outcome_and_bounded_history():
+    from authorial_flow.nodes.repair import repair_node
+
+    update=repair_node(
+        {'repair_attempt':0,'repair_history':[],'failure_class':'DETERMINISTIC_RUNTIME'},
+        lambda _state:{
+            'pass':False,'outcome':'REJECTED_WITH_REASON','reason':'INVALID_PLAN',
+            'plan_signature':'s'*64,
+            'history_entry':{
+                'signature':'s'*64,'outcome':'REJECTED_WITH_REASON','reason':'INVALID_PLAN',
+            },
+        },
+    )
+
+    assert update['status']=='repair_retry'
+    assert update['repair_outcome']=='REJECTED_WITH_REASON'
+    assert update['repair_plan_signature']=='s'*64
+    assert update['repair_history'][-1]['reason']=='INVALID_PLAN'
 
 
 def test_verify_with_one_fix_passes_failure_and_calls_fixer_once(tmp_path):

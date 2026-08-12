@@ -27,3 +27,10 @@ Before delivery:
 19. Verify the confirmed action continues on the same thread without duplicating an accepted move, or type `leave paused` and prove the next `./RUN.sh` reopens the same durable session.
 20. Record the first real Pangram task ID before polling, the returned detector version, and whether resume polled without another submission. A zero-task authentication probe is not evidence of candidate acceptance.
 21. Do not approve the target Zorin plane until live Claude, Codex, Pangram, Ctrl+C, supervisor question, confirmed redirect, and same-thread continuation or durable continued pause all pass for the exact delivered ZIP.
+22. For the 1.2 bounded-failure release, replay the captured semantic FAIL with an invalid natural-language escalation and prove it cannot reach generation.
+23. Replay the arrival-with-uncovered-authority boundary. Confirm `STOP_BEFORE_CANDIDATE` stops or performs one validated rollback; unsafe rollback must produce `POLICY_CONTRADICTION` without another writer call.
+24. Confirm every pressure/edge decision names the exact boundary ID and the rendered decision trace contains no source, accepted, candidate, prompt, transcript, or credential text.
+25. Submit an approved-looking repair plan whose tests are prose. Confirm it is rejected before plan review, worktree creation, or write-capable Codex. Repeat its exact signature on unchanged evidence/program and confirm `NON_APPLICABLE_STOP` before a second review.
+26. Exercise auth, unsupported-model, invalid-schema, structured-contract, and transient provider failures. Confirm typed attempt evidence and that no equivalent profile is retried.
+27. Copy an existing 1.1 `.state` directory into a 1.2 checkout, run status/resume read-only checks, and compare checkpoint/evidence hashes before and after. Never delete or rewrite the original state during validation.
+28. For Git delivery, verify the published branch tree equals the locally verified tree and record the exact commit. The upgrade command must create a backup ref for the prior head and preserve `.state`.

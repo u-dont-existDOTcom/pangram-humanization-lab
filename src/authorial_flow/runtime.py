@@ -14,6 +14,7 @@ from .artifacts import ArtifactStore
 from .authority import Authority, AuthorityUnit
 from .candidates import CandidateRecord
 from .config import RuntimeConfig
+from .decision_trace import build_decision_trace
 from .events import EventJournal
 from .failures import FailureRecord, classify_failure
 from .graph import GraphDependencies
@@ -26,10 +27,11 @@ from .models.pangram import PangramClient
 from .pause import PauseController
 from .project import ProjectInputs
 from .nodes.cold_audit import AuditDefect, ColdAuditResult
+from .nodes.boundary import generation_boundary_id
 from .nodes.developmental import ArchitectureCard, build_developmental_result
 from .nodes.detector_search import detector_node
 from .nodes.fidelity import relation_guard
-from .nodes.flow import judge_full_edge
+from .nodes.flow import is_natural_arrival, judge_full_edge
 from .nodes.generate import candidate_semantic_spans, writer_payload
 from .nodes.owner_interrupt import capture_owner_response, research_adoption_payload
 from .nodes.owner_interrupt import supervisor_pause_node
@@ -102,7 +104,10 @@ REPRESENTATION_SCHEMA = {
                 "status": {"type": "string", "enum": ["PASS", "FAIL"]},
                 "defect_types": {"type": "array", "items": {"type": "string"}},
                 "research_trigger": {"type": "boolean"},
-                "recommended_escalation": {"type": "string"},
+                "recommended_escalation": {
+                    "type": "string",
+                    "enum": ["BASIC", "P3", "P4", "RESEARCH", "OWNER"],
+                },
                 "owner_question": {"type": "string"},
             },
             "required": ["status", "defect_types", "research_trigger", "recommended_escalation", "owner_question"],
@@ -174,6 +179,22 @@ MOVE_COVERAGE_CHECK_SCHEMA = {
     },
     "required": ["verdict", "reason"],
 }
+
+
+def runtime_schema_inventory() -> dict[str, dict[str, Any]]:
+    """Return every structured contract used by the live graph for local preflight."""
+    return {
+        "pressure": PRESSURE_SCHEMA,
+        "edge": EDGE_SCHEMA,
+        "fidelity": FIDELITY_SCHEMA,
+        "representation": REPRESENTATION_SCHEMA,
+        "developmental": DEVELOPMENTAL_SCHEMA,
+        "research_question": RESEARCH_QUESTION_SCHEMA,
+        "research_summary": RESEARCH_SUMMARY_SCHEMA,
+        "cold_audit": COLD_SCHEMA,
+        "move_coverage": MOVE_COVERAGE_SCHEMA,
+        "move_coverage_check": MOVE_COVERAGE_CHECK_SCHEMA,
+    }
 
 _DIRECTION_SCOPES = {"CURRENT_ARTICLE", "GENERAL_RULE_CANDIDATE"}
 _DIRECTION_STAGES = {
@@ -437,13 +458,11 @@ class RuntimeServices:
                 return None
             return BraveSearchProvider(key)
 
-        pangram = make_pangram() if (os.environ.get("PANGRAM_API_KEY") or "").strip() else None
-        research_provider = make_research_provider() if (os.environ.get("BRAVE_SEARCH_API_KEY") or "").strip() else None
         return cls(
-            claude=claude, codex=codex, pangram=pangram, runner=runner,
+            claude=claude, codex=codex, pangram=None, runner=runner,
             artifact_store=store, learning_store=LearningStore(config.state_dir), journal=journal,
             pause_controller=pause_controller, work_feed=work_feed,
-            research_provider=research_provider, pangram_factory=make_pangram,
+            research_provider=None, pangram_factory=make_pangram,
             research_provider_factory=make_research_provider,
         )
 
@@ -722,6 +741,44 @@ def _resume_owner_position_choice(state: dict[str, Any], store: ArtifactStore) -
         "active_interrupt_kind":"",
     }
 
+_SEMANTIC_ESCALATIONS = {"BASIC", "P3", "P4", "RESEARCH", "OWNER"}
+
+
+def _normalized_semantic_escalation(
+    sanity: dict[str, Any],
+    *,
+    owner_resolved: bool,
+) -> tuple[str, str]:
+    """Return the next required action and a fail-closed diagnostic code."""
+    status = str(sanity.get("status") or "").upper()
+    escalation = str(sanity.get("recommended_escalation") or "").upper()
+    owner_question = str(sanity.get("owner_question") or "").strip()
+    research_required = bool(sanity.get("research_trigger"))
+    if escalation not in _SEMANTIC_ESCALATIONS:
+        return "OWNER", "UNKNOWN_ESCALATION"
+    if status == "PASS":
+        if escalation != "BASIC" or research_required or owner_question:
+            return "OWNER", "CONTRADICTORY_PASS"
+        return "BASIC", ""
+    if status != "FAIL":
+        return "OWNER", "UNKNOWN_SANITY_STATUS"
+    if escalation == "BASIC":
+        return "OWNER", "FAIL_WITHOUT_ACTION"
+    # A developmental route may need to construct the concrete alternative before
+    # its owner question is meaningful. Research-plus-owner ambiguity, by contrast,
+    # must be owner-grounded before any source-role search proceeds.
+    owner_first = escalation == "OWNER" or (owner_question and research_required)
+    if owner_first and not owner_resolved:
+        return "OWNER", ""
+    if research_required:
+        return "RESEARCH", ""
+    if escalation == "OWNER":
+        # A checkpointed owner answer resolves only the owner action. It does not
+        # rewrite the model's semantic-sanity result into an artificial PASS.
+        return "BASIC", ""
+    return escalation, ""
+
+
 def _representation_node(state: dict[str, Any], services: RuntimeServices, project_root: Path) -> dict[str, Any]:
     store = services.artifact_store
     owner_choice=_resume_owner_position_choice(state,store)
@@ -796,9 +853,9 @@ def _representation_node(state: dict[str, Any], services: RuntimeServices, proje
                 exact_lock=False,reason="owner-resolved authorial ambiguity",
             ))
         units=updated_units
-        # The owner answer resolves this ambiguity for the resumed conceptual pass; do not
-        # immediately ask the same question again because the model retained stale sanity metadata.
-        sanity={**sanity,"status":"PASS","recommended_escalation":"BASIC","owner_question":""}
+        # The answer resolves only the owner action. Research or developmental work
+        # signalled by the same sanity result remains pending on this resumed pass.
+        sanity={**sanity,"owner_question":""}
 
     if corrections:
         correction_ids = {row["id"] for row in corrections}
@@ -823,7 +880,26 @@ def _representation_node(state: dict[str, Any], services: RuntimeServices, proje
     faithful_position_ref=""
     better_reasoned_alternative_ref=""
     research_ref=""
-    escalation=str(sanity.get("recommended_escalation") or "BASIC").upper()
+    escalation, escalation_error = _normalized_semantic_escalation(
+        sanity,
+        owner_resolved=bool(resolved_answer),
+    )
+    if escalation_error:
+        return {
+            "phase": "representation",
+            "status": "owner_ambiguity_required",
+            "source_provenance": provenance.value,
+            "task_mode": mode.mode.value,
+            "semantic_sanity_ref": sanity_ref,
+            "semantic_escalation_error": escalation_error,
+            "interrupt_payload": {
+                "kind": "AUTHORIAL_AMBIGUITY",
+                "question": str(sanity.get("owner_question") or (
+                    "Semantic sanity failed without a valid bounded escalation. "
+                    "Which meaning and source role should control?"
+                )),
+            },
+        }
 
     if sanity.get("status") == "FAIL" and escalation in {"P3", "P4"}:
         if not mode.substantive_permission:
@@ -1057,15 +1133,23 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
     coverage = dict(state.get("atom_coverage") or {})
     units_for_stop = [u.model_copy(update={"disposition": "used" if coverage.get(u.id) else "unresolved"}) for u in units]
     moves = list(state.get("accepted_moves") or [])
+    boundary_id = generation_boundary_id(
+        moves,
+        coverage,
+        graph_version=str(state.get("graph_version") or ""),
+        program_version=str(state.get("program_version") or ""),
+    )
     if int(state.get("retry_count", 0)) >= config.writer_attempts:
         return {
             "status":"machine_failure","phase":"generation","failure_class":"GENERATION_DEAD_END",
             "budget":"writer_attempts","budget_limit":config.writer_attempts,
+            "generation_boundary_id":boundary_id,"decision_boundary_id":boundary_id,
         }
     if len(moves) >= config.max_moves:
         return {
             "status":"machine_failure","phase":"generation","failure_class":"GENERATION_DEAD_END",
             "budget":"accepted_moves","budget_limit":config.max_moves,
+            "generation_boundary_id":boundary_id,"decision_boundary_id":boundary_id,
         }
 
     if moves:
@@ -1079,13 +1163,26 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
         pressure = CommittedPressure("OPEN", 1.0, opening.live_pressure, (opening,), "opening move")
 
     stop = decide_stop(pressure, units_for_stop)
+    pressure_votes_state = [{
+        "state": vote.state,
+        "confidence": vote.confidence,
+        "provider": vote.provider,
+        "boundary_id": boundary_id,
+    } for vote in pressure.votes]
+    uncovered_required_count = sum(
+        1 for unit in units
+        if unit.must_preserve and not bool(coverage.get(unit.id))
+    )
     pressure_state = {
         "state": pressure.state, "confidence": pressure.confidence, "live_pressure": pressure.live_pressure,
-        "rationale": pressure.rationale,
+        "rationale": pressure.rationale, "boundary_id": boundary_id,
     }
     if stop.action == "STOP":
         return {"status": "generated", "phase": "generation", "committed_pressure": pressure_state,
-                "stop_result": {"action": stop.action, "reason": stop.reason}}
+                "stop_result": {"action": stop.action, "reason": stop.reason},
+                "generation_boundary_id":boundary_id,"decision_boundary_id":boundary_id,
+                "pressure_votes":pressure_votes_state,
+                "uncovered_required_count":uncovered_required_count}
     if stop.action == "ROLLBACK" and moves:
         if int(state.get("rollback_count", 0)) >= config.max_rollbacks:
             return {"status": "machine_failure", "phase": "generation", "failure_class": "GENERATION_DEAD_END"}
@@ -1110,14 +1207,23 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
             for row in retained_ledger
             for unit_id in row["covered_unit_ids"]
         }
+        retained_coverage = {unit_id: unit_id in retained_units for unit_id in coverage}
+        next_boundary_id = generation_boundary_id(
+            moves[:-1], retained_coverage,
+            graph_version=str(state.get("graph_version") or ""),
+            program_version=str(state.get("program_version") or ""),
+        )
         return {
             "status": "continue_generation", "phase": "generation",
             "accepted_moves": moves[:-1], "rollback_count": int(state.get("rollback_count", 0)) + 1,
             "accepted_move_coverage": retained_ledger,
             "coverage_reconciliation_required": False,
-            "atom_coverage": {unit_id: unit_id in retained_units for unit_id in coverage},
+            "atom_coverage": retained_coverage,
             "accepted_prefix_hash": sha256(" ".join(moves[:-1]).encode("utf-8")).hexdigest(),
             "committed_pressure": pressure_state,
+            "pressure_votes":pressure_votes_state,
+            "uncovered_required_count":uncovered_required_count,
+            "generation_boundary_id":next_boundary_id,"decision_boundary_id":boundary_id,
             "branch_memory": [{"kind": "rollback_before_stop", "removed": moves[-1], "unresolved_required": list(stop.unresolved_required)}],
         }
 
@@ -1173,7 +1279,95 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
             "phase": "generation",
             "retry_count": retry_count,
             "proposal_ref": proposal_ref,
+            "committed_pressure": pressure_state,
+            "pressure_votes": pressure_votes_state,
+            "uncovered_required_count": uncovered_required_count,
+            "generation_boundary_id": boundary_id,
+            "decision_boundary_id": boundary_id,
             **update,
+        })
+
+    def stop_before_candidate(
+        stage: str,
+        result_row: dict[str, Any],
+    ) -> dict[str, Any]:
+        result_key = "full_edge_result" if stage == "full_edge" else "entry_edge_result"
+        required = [
+            unit.id for unit in units
+            if unit.must_preserve and not bool(coverage.get(unit.id))
+        ]
+        common = {
+            "committed_pressure": pressure_state,
+            "pressure_votes": pressure_votes_state,
+            "uncovered_required_count": len(required),
+            "generation_boundary_id": boundary_id,
+            "decision_boundary_id": boundary_id,
+            "generation_rejection_class": "STOP_BEFORE_CANDIDATE",
+            "proposal_ref": proposal_ref,
+            result_key: result_row,
+        }
+        if not required:
+            return checkpoint({
+                "status": "generated",
+                "phase": "generation",
+                "stop_result": {
+                    "action": "STOP",
+                    "reason": "accepted boundary already arrived; proposed candidate discarded",
+                },
+                **common,
+            })
+        ledger = _validated_move_coverage(
+            moves,
+            state.get("accepted_move_coverage"),
+            set(coverage),
+        )
+        if (
+            not moves
+            or ledger is None
+            or not is_natural_arrival(moves[-1])
+            or int(state.get("rollback_count", 0)) >= config.max_rollbacks
+        ):
+            return checkpoint({
+                "status": "machine_failure",
+                "phase": "generation",
+                "failure_class": "POLICY_CONTRADICTION",
+                "generation_rejection_class": "UNSAFE_ARRIVAL_ROLLBACK",
+                "uncovered_required_count": len(required),
+                **{key: value for key, value in common.items() if key != "generation_rejection_class"},
+            })
+        retained_ledger = ledger[:-1]
+        retained_units = {
+            unit_id
+            for row in retained_ledger
+            for unit_id in row["covered_unit_ids"]
+        }
+        retained_coverage = {
+            unit_id: unit_id in retained_units
+            for unit_id in coverage
+        }
+        next_boundary_id = generation_boundary_id(
+            moves[:-1], retained_coverage,
+            graph_version=str(state.get("graph_version") or ""),
+            program_version=str(state.get("program_version") or ""),
+        )
+        return checkpoint({
+            "status": "continue_generation",
+            "phase": "generation",
+            "accepted_moves": moves[:-1],
+            "accepted_move_coverage": retained_ledger,
+            "coverage_reconciliation_required": False,
+            "atom_coverage": retained_coverage,
+            "accepted_prefix_hash": sha256(" ".join(moves[:-1]).encode("utf-8")).hexdigest(),
+            "retry_count": 0,
+            "rollback_count": int(state.get("rollback_count", 0)) + 1,
+            "generation_boundary_id": next_boundary_id,
+            "decision_boundary_id": boundary_id,
+            "branch_memory": [{
+                "kind": "rollback_before_stop",
+                "removed_sha256": sha256(moves[-1].encode("utf-8")).hexdigest(),
+                "unresolved_required": required,
+            }],
+            **{key: value for key, value in common.items() if key not in {"generation_boundary_id", "decision_boundary_id"}},
         })
 
     if candidate == "<STOP>":
@@ -1192,6 +1386,7 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
 
     if moves:
         deterministic = judge_full_edge(moves, candidate, pressure)
+        deterministic_row = {**deterministic.__dict__, "boundary_id": boundary_id}
         _emit(services, "guard.result", {
             "node": "generation",
             "gate": "deterministic_edge",
@@ -1200,10 +1395,13 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
             "proposal_ref": proposal_ref,
         })
         if deterministic.verdict != "PASS":
+            if deterministic.verdict == "STOP_BEFORE_CANDIDATE":
+                return stop_before_candidate("deterministic_edge", deterministic_row)
             return retry(
                 "deterministic_edge",
                 deterministic.reason or deterministic.verdict,
-                entry_edge_result=deterministic.__dict__,
+                entry_edge_result=deterministic_row,
+                generation_rejection_class=str(deterministic.verdict),
                 branch_memory=[{"kind": "edge_fail", "candidate": candidate, "verdict": deterministic.verdict}],
             )
         edge_input = {"accepted_moves": moves, "pressure": pressure_state, "candidate": candidate}
@@ -1213,6 +1411,7 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
             + json.dumps(edge_input, ensure_ascii=False, indent=2)
             + entry_direction_block,
             EDGE_SCHEMA, "entry_edge"), services.runner, store).parsed
+        entry = {**entry, "boundary_id": boundary_id}
         _emit(services, "guard.result", {
             "node": "generation",
             "gate": "entry_edge",
@@ -1221,10 +1420,13 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
             "proposal_ref": proposal_ref,
         })
         if entry["verdict"] != "PASS":
+            if entry["verdict"] == "STOP_BEFORE_CANDIDATE":
+                return stop_before_candidate("entry_edge", entry)
             return retry(
                 "entry_edge",
                 str(entry.get("reason") or entry["verdict"]),
                 entry_edge_result=entry,
+                generation_rejection_class=str(entry["verdict"]),
                 branch_memory=[{"kind": "entry_edge_fail", "candidate": candidate, "result": entry}],
             )
         full_direction_block, _ = _owner_direction_block(state, "full_edge")
@@ -1233,6 +1435,7 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
             + json.dumps(edge_input, ensure_ascii=False, indent=2)
             + full_direction_block,
             EDGE_SCHEMA, "full_edge"), services.runner, store).parsed
+        full = {**full, "boundary_id": boundary_id}
         _emit(services, "guard.result", {
             "node": "generation",
             "gate": "full_edge",
@@ -1241,14 +1444,17 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
             "proposal_ref": proposal_ref,
         })
         if full["verdict"] != "PASS":
+            if full["verdict"] == "STOP_BEFORE_CANDIDATE":
+                return stop_before_candidate("full_edge", full)
             return retry(
                 "full_edge",
                 str(full.get("reason") or full["verdict"]),
                 full_edge_result=full,
+                generation_rejection_class=str(full["verdict"]),
                 branch_memory=[{"kind": "full_edge_fail", "candidate": candidate, "result": full}],
             )
     else:
-        entry = full = {"verdict": "PASS", "confidence": 1.0, "failure_type": "none", "reason": "opening", "challenge": ""}
+        entry = full = {"verdict": "PASS", "confidence": 1.0, "failure_type": "none", "reason": "opening", "challenge": "", "boundary_id": boundary_id}
 
     source = _artifact_text(store, state["source_ref"])
     if TaskMode(str(state.get("task_mode") or "P2S")) is TaskMode.P2S:
@@ -1293,9 +1499,27 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
             semantic_result=fidelity,
             branch_memory=[{"kind": "fidelity_fail", "candidate": candidate, "result": fidelity}],
         )
+    candidate_coverage = dict(coverage)
     for unit_id in fidelity.get("covered_unit_ids") or []:
-        if unit_id in coverage:
-            coverage[unit_id] = True
+        if unit_id in candidate_coverage:
+            candidate_coverage[unit_id] = True
+    uncovered_after_candidate = [
+        unit.id for unit in units
+        if unit.must_preserve and not bool(candidate_coverage.get(unit.id))
+    ]
+    if is_natural_arrival(candidate) and uncovered_after_candidate:
+        return retry(
+            "premature_arrival",
+            "candidate arrives before required authority units are covered",
+            generation_rejection_class="PREMATURE_ARRIVAL",
+            uncovered_required_count=len(uncovered_after_candidate),
+            branch_memory=[{
+                "kind": "premature_arrival",
+                "candidate_sha256": sha256(candidate.encode("utf-8")).hexdigest(),
+                "unresolved_required": uncovered_after_candidate,
+            }],
+        )
+    coverage = candidate_coverage
     existing_ledger = _validated_move_coverage(
         moves,
         state.get("accepted_move_coverage"),
@@ -1310,15 +1534,27 @@ def _generation_node(state: dict[str, Any], services: RuntimeServices, project_r
         }),
     }
     ledger = [*existing_ledger, coverage_row] if existing_ledger is not None else []
+    next_boundary_id = generation_boundary_id(
+        moves + [candidate], coverage,
+        graph_version=str(state.get("graph_version") or ""),
+        program_version=str(state.get("program_version") or ""),
+    )
     return checkpoint({
         "status": "continue_generation", "phase": "generation",
         "accepted_moves": moves + [candidate], "move_index": len(moves) + 1,
         "retry_count": 0, "committed_pressure": pressure_state, "candidate_spans": spans,
+        "pressure_votes": pressure_votes_state,
+        "uncovered_required_count": sum(
+            1 for unit in units
+            if unit.must_preserve and not bool(coverage.get(unit.id))
+        ),
         "entry_edge_result": entry, "full_edge_result": full, "semantic_result": fidelity,
         "atom_coverage": coverage,
         "accepted_move_coverage": ledger,
         "coverage_reconciliation_required": existing_ledger is None,
         "accepted_prefix_hash": sha256(" ".join(moves + [candidate]).encode("utf-8")).hexdigest(),
+        "generation_boundary_id": next_boundary_id,
+        "decision_boundary_id": boundary_id,
         "proposal_ref": proposal_ref,
     })
 
@@ -1903,6 +2139,119 @@ def _emit_checkpointed_prose_events(
     })
 
 
+def _normalize_machine_failure(
+    *,
+    name: str,
+    state: dict[str, Any],
+    services: RuntimeServices,
+    update: dict[str, Any] | None = None,
+    exc: BaseException | None = None,
+) -> dict[str, Any]:
+    update = dict(update or {})
+    merged = {**state, **update}
+    existing_ref = str(update.get("failure_record_ref") or "")
+    declared_class = str(update.get("failure_class") or "")
+    existing_evidence = False
+    if existing_ref:
+        found = services.artifact_store.find(existing_ref)
+        if found is not None:
+            try:
+                existing_evidence = (
+                    json.loads(found.path.read_text(encoding="utf-8")).get("format")
+                    == "authorial-flow-repair-evidence-v1"
+                )
+            except (OSError, ValueError, AttributeError):
+                existing_evidence = False
+    if existing_evidence:
+        return {
+            **update,
+            "phase": str(update.get("phase") or name),
+            "status": "machine_failure",
+            "failure_class": declared_class or str(state.get("failure_class") or "DETERMINISTIC_RUNTIME"),
+            "failure_origin_node": str(update.get("failure_origin_node") or name),
+            "last_error_ref": existing_ref,
+            "failure_evidence_ref": existing_ref,
+        }
+
+    attempts: list[str] = []
+    for attempt in getattr(exc, "attempts", ()) or ():
+        for ref in (getattr(attempt, "stdout_ref", ""), getattr(attempt, "stderr_ref", "")):
+            if ref:
+                attempts.append(ref)
+    failure_code = str(
+        update.get("failure_code")
+        or declared_class
+        or (str(exc) if exc is not None else "returned machine failure")
+    )
+    record = FailureRecord(
+        originating_node=name,
+        failure_code=failure_code,
+        exception_type=type(exc).__name__ if exc is not None else "ReturnedMachineFailure",
+        exception_message=(str(exc) or type(exc).__name__) if exc is not None else failure_code,
+        provider_attempt_refs=tuple(attempts),
+        checkpoint_id=str(merged.get("checkpoint_id") or ""),
+        source_hash=str(merged.get("source_hash") or ""),
+        program_hash=str(merged.get("program_version") or ""),
+        local_gate_state=dict(merged.get("final_local_gates") or {}),
+        authorial_information_missing=bool(
+            update.get("authorial_information_missing")
+            or getattr(exc, "authorial_information_missing", False)
+        ),
+    )
+    failure_class = declared_class or classify_failure(record).value
+    legacy_ref = _put_json(
+        services.artifact_store,
+        record.model_dump(mode="json"),
+        "failure-record",
+        node=name,
+    )
+    from .repair.evidence import build_failure_evidence
+    secret_values = [
+        os.environ.get("PANGRAM_API_KEY", ""),
+        os.environ.get("BRAVE_SEARCH_API_KEY", ""),
+        os.environ.get("OPENAI_API_KEY", ""),
+        os.environ.get("ANTHROPIC_API_KEY", ""),
+    ]
+    event_context = services.journal.latest() if services.journal is not None else {}
+    evidence_exc = exc or RuntimeError(failure_code)
+    bundle = build_failure_evidence(
+        record=record,
+        failure_class=failure_class,
+        state=merged,
+        exc=evidence_exc,
+        store=services.artifact_store,
+        program_version=str(merged.get("program_version") or ""),
+        event_context=event_context or {},
+        secret_values=secret_values,
+        failure_record_ref=legacy_ref,
+    )
+    ref = _put_json(
+        services.artifact_store,
+        bundle.model_dump(mode="json"),
+        "repair-evidence",
+        node=name,
+        failure_record_ref=legacy_ref,
+    )
+    if services.journal is not None:
+        services.journal.append("machine-failure", {
+            "node": name,
+            "failure_class": failure_class,
+            "failure_record_ref": ref,
+            "legacy_failure_record_ref": legacy_ref,
+        })
+    return {
+        **update,
+        "phase": str(update.get("phase") or name),
+        "status": "machine_failure",
+        "failure_class": failure_class,
+        "failure_origin_node": name,
+        "failure_record_ref": ref,
+        "failure_evidence_ref": ref,
+        "last_error_ref": ref,
+        "authorial_information_missing": record.authorial_information_missing,
+    }
+
+
 def _guarded_node(name: str, fn, services: RuntimeServices, natural_next=None):
     def wrapped(state: dict[str, Any]) -> dict[str, Any]:
         services.work_feed.emit("flow.phase", {
@@ -1936,54 +2285,26 @@ def _guarded_node(name: str, fn, services: RuntimeServices, natural_next=None):
         except KeyboardInterrupt:
             raise
         except Exception as exc:
-            attempts = []
-            for attempt in getattr(exc, "attempts", ()) or ():
-                for ref in (getattr(attempt, "stdout_ref", ""), getattr(attempt, "stderr_ref", "")):
-                    if ref:
-                        attempts.append(ref)
-            record = FailureRecord(
-                originating_node=name,
-                failure_code=str(exc) or type(exc).__name__,
-                exception_type=type(exc).__name__,
-                exception_message=str(exc) or type(exc).__name__,
-                provider_attempt_refs=tuple(attempts),
-                checkpoint_id=str(state.get("checkpoint_id") or ""),
-                source_hash=str(state.get("source_hash") or ""),
-                program_hash=str(state.get("program_version") or ""),
-                local_gate_state=dict(state.get("final_local_gates") or {}),
-                authorial_information_missing=bool(getattr(exc, "authorial_information_missing", False)),
+            if name == "generation":
+                trace = build_decision_trace(state)
+                _emit(services, "decision.trace", trace)
+            return _normalize_machine_failure(
+                name=name,
+                state=state,
+                services=services,
+                exc=exc,
             )
-            failure_class = classify_failure(record)
-            legacy_ref = _put_json(services.artifact_store, record.model_dump(mode="json"), "failure-record", node=name)
-            from .repair.evidence import build_failure_evidence
-            secret_values = [
-                os.environ.get("PANGRAM_API_KEY", ""),
-                os.environ.get("BRAVE_SEARCH_API_KEY", ""),
-                os.environ.get("OPENAI_API_KEY", ""),
-                os.environ.get("ANTHROPIC_API_KEY", ""),
-            ]
-            event_context = services.journal.latest() if services.journal is not None else {}
-            bundle = build_failure_evidence(
-                record=record, failure_class=failure_class, state=state, exc=exc,
-                store=services.artifact_store, program_version=str(state.get("program_version") or ""),
-                event_context=event_context or {}, secret_values=secret_values,
-                failure_record_ref=legacy_ref,
+        if name == "generation":
+            trace = build_decision_trace({**state, **update})
+            update["decision_trace"] = trace
+            _emit(services, "decision.trace", trace)
+        if str(update.get("status") or "") == "machine_failure":
+            update = _normalize_machine_failure(
+                name=name,
+                state=state,
+                services=services,
+                update=update,
             )
-            ref = _put_json(
-                services.artifact_store, bundle.model_dump(mode="json"), "repair-evidence",
-                node=name, failure_record_ref=legacy_ref,
-            )
-            if services.journal is not None:
-                services.journal.append("machine-failure", {
-                    "node": name, "failure_class": failure_class.value,
-                    "failure_record_ref": ref, "legacy_failure_record_ref": legacy_ref,
-                })
-            return {
-                "phase": name, "status": "machine_failure",
-                "failure_class": failure_class.value, "failure_origin_node": name,
-                "failure_record_ref": ref, "last_error_ref": ref,
-                "authorial_information_missing": record.authorial_information_missing,
-            }
         _emit_checkpointed_prose_events(name, state, update, services)
         if services.pause_controller.requested():
             merged = {**state, **update}
@@ -2010,7 +2331,11 @@ def _production_repair_cycle(
     from .repair.planner import RepairPlanner
     from .repair.protection import ProtectedSnapshot
     from .repair.reviewer import RepairReviewer
-    from .repair.verify import RepairVerifier, verify_with_one_fix
+    from .repair.schemas import RepairOutcome
+    from .repair.verify import (
+        RepairVerifier, repair_plan_signature, validate_repair_plan_commands,
+        verify_with_one_fix,
+    )
     from .repair.worktree import WorktreeManager
 
     project_root = Path(project_root).resolve()
@@ -2023,15 +2348,62 @@ def _production_repair_cycle(
             "repair_commit": str(payload.get("repair_commit") or payload.get("candidate_commit") or ""),
             "pass": bool(payload.get("pass_")) if "pass_" in payload else False,
             "reason": str(payload.get("reason") or ""),
+            "outcome": str(payload.get("outcome") or ""),
+            "plan_signature": str(payload.get("plan_signature") or ""),
         }
         _emit(services, "repair.state", event)
 
     def cycle(state: dict[str, Any]) -> dict[str, Any]:
         attempt = int(state.get("repair_attempt", 0))
-        if attempt >= config.repair_rounds:
-            return {"pass": False, "exhausted": True, "error_ref": state.get("failure_record_ref", "")}
-
         evidence_ref = str(state.get("failure_record_ref") or state.get("last_error_ref") or "")
+        program_version = str(state.get("program_version") or "")
+        history = [
+            dict(row) for row in list(state.get("repair_history") or [])[-10:]
+            if isinstance(row, dict)
+        ]
+
+        def finish(
+            outcome: RepairOutcome,
+            reason: str,
+            *,
+            signature: str = "",
+            pass_: bool = False,
+            exhausted: bool = False,
+            error_ref: str = "",
+            **payload: Any,
+        ) -> dict[str, Any]:
+            entry = {
+                "attempt": attempt + 1,
+                "signature": signature,
+                "outcome": outcome.value,
+                "reason": str(reason or "")[:2000],
+                "evidence_ref": evidence_ref,
+                "program_version": program_version,
+            }
+            progress(
+                "outcome", state, outcome=outcome.value, reason=reason,
+                plan_signature=signature, pass_=pass_,
+                repair_commit=payload.get("repair_commit", ""),
+            )
+            return {
+                "pass": pass_,
+                "outcome": outcome.value,
+                "reason": reason,
+                "plan_signature": signature,
+                "history_entry": entry,
+                "exhausted": exhausted,
+                "error_ref": error_ref,
+                **payload,
+            }
+
+        if attempt >= config.repair_rounds:
+            return finish(
+                RepairOutcome.NON_APPLICABLE_STOP,
+                "REPAIR_BUDGET_EXHAUSTED",
+                exhausted=True,
+                error_ref=evidence_ref,
+            )
+
         if evidence_ref:
             try:
                 failure_context = _artifact_text(services.artifact_store, evidence_ref)
@@ -2049,24 +2421,68 @@ def _production_repair_cycle(
                 "thread_id": state.get("thread_id", ""),
                 "source_hash": state.get("source_hash", ""),
             }, ensure_ascii=False, sort_keys=True, indent=2)
+        if history:
+            failure_context += "\n\nREPAIR ATTEMPT HISTORY (a new plan must differ causally):\n" + json.dumps(
+                history, ensure_ascii=False, sort_keys=True, indent=2,
+            )
 
         progress("diagnose",state,evidence_ref=evidence_ref)
         planner = RepairPlanner(codex=services.codex, runner=services.runner, store=services.artifact_store)
         plan = planner.plan(failure_context)
         plan_ref = _put_json(services.artifact_store, plan.model_dump(mode="json"), "repair-plan", repair_attempt=attempt+1)
+        signature = repair_plan_signature(
+            plan,
+            evidence_ref=evidence_ref,
+            program_version=program_version,
+        )
+        if any(str(row.get("signature") or "") == signature for row in history):
+            return finish(
+                RepairOutcome.NON_APPLICABLE_STOP,
+                "DUPLICATE_PLAN_UNCHANGED_CONTEXT",
+                signature=signature,
+                exhausted=True,
+                error_ref=plan_ref,
+                plan_ref=plan_ref,
+            )
         if not plan.repairable:
-            return {"pass": False, "exhausted": True, "error_ref": plan_ref}
+            return finish(
+                RepairOutcome.NON_APPLICABLE_STOP,
+                "PLANNER_MARKED_NON_REPAIRABLE",
+                signature=signature,
+                exhausted=True,
+                error_ref=plan_ref,
+                plan_ref=plan_ref,
+            )
         if plan.needs_owner_judgment:
             if bool(state.get("authorial_information_missing")):
-                return {
-                    "pass": False, "owner_judgment_required": True,
-                    "owner_question": plan.owner_question or "Which meaning is actually yours?",
-                    "error_ref": plan_ref,
-                }
-            return {"pass": False, "error_ref": _put_json(
+                return finish(
+                    RepairOutcome.STAGED_FOR_OWNER,
+                    "AUTHORIAL_INFORMATION_REQUIRED",
+                    signature=signature,
+                    error_ref=plan_ref,
+                    owner_judgment_required=True,
+                    owner_question=plan.owner_question or "Which meaning is actually yours?",
+                )
+            rejected_ref = _put_json(
                 services.artifact_store, plan.model_dump(mode="json"), "rejected-repair-plan",
                 reason="machine planner requested owner input without authorial-information flag",
-            )}
+            )
+            return finish(
+                RepairOutcome.REJECTED_WITH_REASON,
+                "UNJUSTIFIED_OWNER_ESCALATION",
+                signature=signature,
+                error_ref=rejected_ref,
+                plan_ref=plan_ref,
+            )
+        command_error = validate_repair_plan_commands(plan)
+        if command_error:
+            return finish(
+                RepairOutcome.REJECTED_WITH_REASON,
+                command_error,
+                signature=signature,
+                error_ref=plan_ref,
+                plan_ref=plan_ref,
+            )
 
         progress("plan-review",state,plan_ref=plan_ref)
         reviewer = RepairReviewer(
@@ -2079,7 +2495,14 @@ def _production_repair_cycle(
             "repair-plan-review", provider=reviewed.provider,
         )
         if reviewed.decision.verdict != "APPROVE":
-            return {"pass": False, "error_ref": review_plan_ref}
+            return finish(
+                RepairOutcome.REJECTED_WITH_REASON,
+                "PLAN_REVIEW_REJECTED",
+                signature=signature,
+                error_ref=review_plan_ref,
+                plan_ref=plan_ref,
+                review_ref=review_plan_ref,
+            )
 
         worktrees = WorktreeManager(project_root, config.state_dir / "repair-worktrees")
         repair_id = f"repair-{attempt + 1:03d}-{sha256(failure_context.encode()).hexdigest()[:8]}"
@@ -2097,10 +2520,19 @@ def _production_repair_cycle(
                 evidence_bundle_text=failure_context,
             )
             if not implementation.success:
-                return {
-                    "pass": False,
-                    "error_ref": implementation.stderr_ref or implementation.stdout_ref or implementation.transcript_ref,
-                }
+                return finish(
+                    RepairOutcome.REJECTED_WITH_REASON,
+                    "IMPLEMENTATION_REJECTED",
+                    signature=signature,
+                    error_ref=(
+                        implementation.stderr_ref
+                        or implementation.stdout_ref
+                        or implementation.transcript_ref
+                        or plan_ref
+                    ),
+                    plan_ref=plan_ref,
+                    review_ref=review_plan_ref,
+                )
             progress("codex-red",state,red_ref=implementation.red_ref)
             progress("patch",state,green_ref=implementation.green_ref,candidate_commit=implementation.commit_sha)
 
@@ -2153,15 +2585,31 @@ def _production_repair_cycle(
                 "transcript_refs": transcript_refs,
             }, "repair-verification", repair_attempt=attempt+1)
             if not verification.pass_:
-                return {"pass": False, "error_ref": test_ref}
+                return finish(
+                    RepairOutcome.REJECTED_WITH_REASON,
+                    "VERIFICATION_REJECTED",
+                    signature=signature,
+                    error_ref=test_ref,
+                    plan_ref=plan_ref,
+                    review_ref=review_plan_ref,
+                    test_ref=test_ref,
+                )
 
             progress("promote",state,repair_commit=final_commit,test_ref=test_ref)
             promoted = worktrees.promote(ref, final_commit)
-            return {
-                "pass": True, "program_version": promoted, "restart_required": True,
-                "repair_commit": final_commit, "plan_ref": plan_ref, "test_ref": test_ref,
-                "review_ref": review_plan_ref, "failure_evidence_ref": evidence_ref,
-            }
+            return finish(
+                RepairOutcome.APPLIED_VERIFIED,
+                "PROMOTED_AFTER_FULL_VERIFICATION",
+                signature=signature,
+                pass_=True,
+                program_version=promoted,
+                restart_required=True,
+                repair_commit=final_commit,
+                plan_ref=plan_ref,
+                test_ref=test_ref,
+                review_ref=review_plan_ref,
+                failure_evidence_ref=evidence_ref,
+            )
         finally:
             worktrees.discard(ref)
 

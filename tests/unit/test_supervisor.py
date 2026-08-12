@@ -43,6 +43,15 @@ def test_snapshot_contains_only_safe_operational_state(tmp_path):
         "pangram_task_id": "task-1",
         "PANGRAM_API_KEY": "SECRET",
         "raw_prompt": "HIDDEN",
+        "generation_boundary_id": "b" * 64,
+        "decision_boundary_id": "b" * 64,
+        "uncovered_required_count": 2,
+        "committed_pressure": {
+            "state": "OPEN", "confidence": 0.88, "boundary_id": "b" * 64,
+            "live_pressure": "private pressure prose",
+        },
+        "proposal_ref": "c" * 64,
+        "generation_rejection_class": "PREMATURE_ARRIVAL",
     }
     store = ArtifactStore(tmp_path / "artifacts")
 
@@ -59,6 +68,9 @@ def test_snapshot_contains_only_safe_operational_state(tmp_path):
     assert "SECRET" not in blob
     assert "HIDDEN" not in blob
     assert "raw_prompt" not in blob
+    assert snapshot.decision_trace["uncovered_required_count"] == 2
+    assert snapshot.decision_trace["candidate_sha256"] == "c" * 64
+    assert "private pressure prose" not in blob
 
     ref = persist_supervisor_snapshot(snapshot, store)
     found = store.find(ref)
