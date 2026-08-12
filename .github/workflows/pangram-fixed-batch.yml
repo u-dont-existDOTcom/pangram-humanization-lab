@@ -16,7 +16,7 @@ permissions:
   contents: write
 
 jobs:
-  test:
+  test-and-run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,3 +29,20 @@ jobs:
         run: python -m pip install -e '.[test]'
       - name: Test fixed-batch path
         run: pytest -q tests/test_fixed_batch.py tests/test_pangram.py tests/test_cache.py tests/test_git_sync.py
+      - name: Configure git checkpoint identity
+        run: |
+          git config user.name "Pangram Lab Actions"
+          git config user.email "pangram-lab-actions@users.noreply.github.com"
+      - name: Verify Pangram secret is configured
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+        run: |
+          test -n "$PANGRAM_API_KEY" || { echo "PANGRAM_API_KEY secret is missing"; exit 1; }
+          echo "PANGRAM_API_KEY is configured"
+      - name: Run oxytocin minimal-pair batch
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+        run: |
+          python scripts/run_fixed_batch.py \
+            experiments/romance-oxytocin-r1-2026-08-12.json \
+            --out state/experiments/romance-oxytocin-r1-2026-08-12-results.json
