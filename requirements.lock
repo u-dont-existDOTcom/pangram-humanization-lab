@@ -1,0 +1,11 @@
+# Exact direct inputs for the pre-install pip resolution pass.
+# INSTALL-AND-RUN.sh turns the complete transitive pip report into a persisted SHA-256 lock
+# before installing any project dependency, then installs under --require-hashes.
+httpx==0.28.1
+langgraph==1.2.9
+langgraph-checkpoint-sqlite==3.1.0
+pydantic==2.13.4
+pytest==8.4.2
+pytest-timeout==2.4.0
+setuptools==80.9.0
+wheel==0.45.1

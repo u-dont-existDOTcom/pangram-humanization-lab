@@ -1,0 +1,34 @@
+{
+  "format": "human-flow-ground-truth-v1",
+  "provenance": "Direct owner labels from the prior Pangram-Human cycle-2 candidate. Evaluator regression cases only; never writer input.",
+  "cases": [
+    {
+      "id": "owner-neg-sidestep-live-question",
+      "accepted_moves": [
+        "The free-will question bothered me for almost the same reason.",
+        "I don't think I have ever seen the phrase \"free will\" in the suttas.",
+        "Because if everything arises from conditions, then so do my choices.",
+        "So who is making these conditioned choices, and on what basis?"
+      ],
+      "candidate": "Not that choices don't matter — AN 3.61 rejects the views that would make effort pointless, and AN 6.63 says intention is kamma, contact is its source.",
+      "expected": "FAIL",
+      "owner_label": "The candidate does not follow from the question immediately before it.",
+      "abstract_relation": "sidesteps_live_pressure"
+    },
+    {
+      "id": "owner-neg-reopen-after-arrival",
+      "accepted_moves": [
+        "The free-will question bothered me for almost the same reason.",
+        "I don't think I have ever seen the phrase \"free will\" in the suttas.",
+        "Because if everything arises from conditions, then so do my choices.",
+        "So who is making these conditioned choices, and on what basis?",
+        "Not that choices don't matter — AN 3.61 rejects the views that would make effort pointless, and AN 6.63 says intention is kamma, contact is its source.",
+        "Where I get lost-ish is the chooser — someone standing outside all the conditions the choices arise from."
+      ],
+      "candidate": "Choices happen and matter, and they become conditions for whatever comes next.",
+      "expected": "STOP_BEFORE_CANDIDATE",
+      "owner_label": "The candidate does not follow; the previous sentence has already arrived at the live unresolved point.",
+      "abstract_relation": "reopens_settled_material_after_arrival"
+    }
+  ]
+}

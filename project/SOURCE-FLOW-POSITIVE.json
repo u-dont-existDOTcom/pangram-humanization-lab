@@ -1,0 +1,70 @@
+{
+  "format": "source-intended-flow-positive-v1",
+  "provenance": "Positive evaluator controls derived from adjacent semantic moves in the supplied development source. Development-only; not writer input and not claimed universal.",
+  "cases": [
+    {
+      "id": "source-pos-conditioned-choice-to-agency-question",
+      "accepted_moves": [
+        "The free-will question bothered me for almost the same reason.",
+        "If everything arises from conditions, my choices do too."
+      ],
+      "candidate": "So who's making them, and based on what?",
+      "expected": "PASS"
+    },
+    {
+      "id": "source-pos-agency-question-to-framing-observation",
+      "accepted_moves": [
+        "The free-will question bothered me for almost the same reason.",
+        "If everything arises from conditions, my choices do too.",
+        "So who's making them, and based on what?"
+      ],
+      "candidate": "I don't think I've ever even seen the phrase “free will” in the suttas.",
+      "expected": "PASS"
+    },
+    {
+      "id": "source-pos-framing-observation-to-sutta-content",
+      "accepted_moves": [
+        "The free-will question bothered me for almost the same reason.",
+        "If everything arises from conditions, my choices do too.",
+        "So who's making them, and based on what?",
+        "I don't think I've ever even seen the phrase “free will” in the suttas."
+      ],
+      "candidate": "AN 6.63 says intention is kamma and that contact is its source.",
+      "expected": "PASS"
+    },
+    {
+      "id": "source-pos-first-source-to-second-source",
+      "accepted_moves": [
+        "I don't think I've ever even seen the phrase “free will” in the suttas.",
+        "AN 6.63 says intention is kamma and that contact is its source."
+      ],
+      "candidate": "AN 3.61 rejects views that would make effort meaningless.",
+      "expected": "PASS"
+    },
+    {
+      "id": "source-pos-effort-to-choices-matter",
+      "accepted_moves": [
+        "AN 3.61 rejects views that would make effort meaningless."
+      ],
+      "candidate": "Choices happen and matter.",
+      "expected": "PASS"
+    },
+    {
+      "id": "source-pos-choices-matter-to-conditioning-next",
+      "accepted_moves": [
+        "Choices happen and matter."
+      ],
+      "candidate": "They become conditions for what happens next.",
+      "expected": "PASS"
+    },
+    {
+      "id": "source-pos-conditioning-next-to-lost-ish",
+      "accepted_moves": [
+        "Choices happen and matter.",
+        "They become conditions for what happens next."
+      ],
+      "candidate": "Where I get lost-ish is the idea of a chooser somehow outside all those conditions.",
+      "expected": "PASS"
+    }
+  ]
+}

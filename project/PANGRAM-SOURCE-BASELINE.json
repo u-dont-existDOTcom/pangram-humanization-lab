@@ -1,0 +1,67 @@
+{
+  "format": "authorial-autopilot-pangram4-v1",
+  "submitted_sha256": "fbe68ae57cd71cdba2fbdc30f661af54d62b0151a8a7709f3fc6a5e26672cc2a",
+  "submitted_text": "The free-will question bothered me for almost the same reason. If everything arises from conditions, my choices do too. So who's making them, and based on what? I don't think I've ever even seen the phrase “free will” in the suttas. AN 6.63 says intention is kamma and that contact is its source; AN 3.61 rejects views that would make effort meaningless. Choices happen and matter. They become conditions for what happens next. Where I get lost-ish is the idea of a chooser somehow outside all those conditions.\n",
+  "model": "pangram-4",
+  "task_id": "ad8fca4c-2652-4d2d-9db1-a51550e8b00d",
+  "stage": "STAGE_SUCCESS",
+  "created_response": {
+    "task_id": "ad8fca4c-2652-4d2d-9db1-a51550e8b00d"
+  },
+  "last_response": {
+    "stage": "STAGE_SUCCESS",
+    "text": "The free-will question bothered me for almost the same reason. If everything arises from conditions, my choices do too. So who's making them, and based on what? I don't think I've ever even seen the phrase “free will” in the suttas. AN 6.63 says intention is kamma and that contact is its source; AN 3.61 rejects views that would make effort meaningless. Choices happen and matter. They become conditions for what happens next. Where I get lost-ish is the idea of a chooser somehow outside all those conditions.",
+    "version": "4.0",
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_segments": 1,
+    "num_ai_assisted_segments": 0,
+    "num_human_segments": 0,
+    "windows": [
+      {
+        "text": "The free-will question bothered me for almost the same reason. If everything arises from conditions, my choices do too. So who's making them, and based on what? I don't think I've ever even seen the phrase “free will” in the suttas. AN 6.63 says intention is kamma and that contact is its source; AN 3.61 rejects views that would make effort meaningless. Choices happen and matter. They become conditions for what happens next. Where I get lost-ish is the idea of a chooser somehow outside all those conditions.",
+        "label": "AI-Generated",
+        "ai_assistance_score": 0.8778098821640015,
+        "confidence": "High",
+        "start_index": 0,
+        "end_index": 511,
+        "word_count": 88,
+        "token_length": 121,
+        "is_humanized": false,
+        "humanizer_score": 0.007403749506920576
+      }
+    ]
+  },
+  "last_polled_at": "2026-08-10T01:54:14Z",
+  "version": "4.0",
+  "headline": "AI Generated",
+  "prediction_short": "AI",
+  "fraction_ai": 1.0,
+  "fraction_ai_assisted": 0.0,
+  "fraction_human": 0.0,
+  "num_ai_segments": 1,
+  "num_ai_assisted_segments": 0,
+  "num_human_segments": 0,
+  "windows": [
+    {
+      "text": "The free-will question bothered me for almost the same reason. If everything arises from conditions, my choices do too. So who's making them, and based on what? I don't think I've ever even seen the phrase “free will” in the suttas. AN 6.63 says intention is kamma and that contact is its source; AN 3.61 rejects views that would make effort meaningless. Choices happen and matter. They become conditions for what happens next. Where I get lost-ish is the idea of a chooser somehow outside all those conditions.",
+      "label": "AI-Generated",
+      "ai_assistance_score": 0.8778098821640015,
+      "confidence": "High",
+      "start_index": 0,
+      "end_index": 511,
+      "word_count": 88,
+      "token_length": 121,
+      "is_humanized": false,
+      "humanizer_score": 0.007403749506920576
+    }
+  ],
+  "returned_text": "The free-will question bothered me for almost the same reason. If everything arises from conditions, my choices do too. So who's making them, and based on what? I don't think I've ever even seen the phrase “free will” in the suttas. AN 6.63 says intention is kamma and that contact is its source; AN 3.61 rejects views that would make effort meaningless. Choices happen and matter. They become conditions for what happens next. Where I get lost-ish is the idea of a chooser somehow outside all those conditions.",
+  "returned_sha256": "0ad4df01c7467de0d0150bda298d2fd5aa4c187f1c6c77dd3e79a3aa8da25007",
+  "whitespace_normalization_only": true,
+  "pass": false
+}

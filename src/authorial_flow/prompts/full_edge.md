@@ -1,0 +1,1 @@
+Judge whether the atomic candidate grows from the live pressure of the immediately previous accepted move without jumping backward, reopening settled material, adding aftercare, or following an invisible outline. Do not infer source order. If the previous move is already an honest arrival, stop before the candidate.

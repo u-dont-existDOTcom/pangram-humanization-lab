@@ -1,19 +1,29 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pangram-humanization-lab"
-version = "2.0.1"
-description = "Adaptive, resumable Pangram 4 experiment lab for Joel humanization research"
+name = "authorial-flow-graph"
+version = "1.1.0.dev1"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+  "langgraph==1.2.9",
+  "langgraph-checkpoint-sqlite==3.1.0",
+  "httpx>=0.28,<0.29",
+  "pydantic>=2.11,<3",
+]
 
 [project.optional-dependencies]
-test = ["pytest>=8"]
+test = ["pytest>=8.4,<9", "pytest-timeout>=2.4,<3"]
+optimizer = ["dspy==3.2.1"]
 
 [project.scripts]
-pangram-lab = "pangram_lab.cli:main"
+authorial-flow = "authorial_flow.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+pythonpath = ["src"]

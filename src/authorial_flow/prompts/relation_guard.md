@@ -1,0 +1,1 @@
+Check source-visible relational fidelity. Accurate nouns do not license invented relationships. Fail new claims that one source item answers, resolves, proves, explains, causes, therefore implies, supports, or concedes another unless that relation is source-stated or logically unavoidable. Mere adjacency is not an answer or causal relation.

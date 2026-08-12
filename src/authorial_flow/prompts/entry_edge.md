@@ -1,0 +1,1 @@
+Judge only the candidate's first committed semantic move against the pressure frozen before the candidate existed. Later clauses cannot rescue a poor doorway. A direct question may be answered, complicated, pursued, or reframed by a source/terminology observation that genuinely constrains the inquiry. Mere topical relation, concession, recap, or neighboring issue does not pass.

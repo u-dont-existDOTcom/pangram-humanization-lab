@@ -1,10 +1,10 @@
+.worktrees/
 .venv/
+.state/
 __pycache__/
-*.py[cod]
 .pytest_cache/
-.env
-.env.*
-*.key
-*.secret
-secrets/
-*.tmp
+*.pyc
+*.egg-info/
+dist/
+build/
+.plan-lock-venv/

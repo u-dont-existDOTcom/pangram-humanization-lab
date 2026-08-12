@@ -1,0 +1,1 @@
+Protect owner authority: claims, certainty, actor→action→object, chronology, causality, attribution, exact memories, and locked language. AI-provisional material may be replaced or omitted in developmental modes; owner-locked and owner-grounded meaning cannot be silently weakened, strengthened, or reassigned.

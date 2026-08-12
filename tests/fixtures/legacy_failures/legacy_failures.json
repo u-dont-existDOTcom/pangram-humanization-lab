@@ -1,0 +1,16 @@
+{
+  "format": "authorial-flow-legacy-failures-v1",
+  "cases": [
+    {"id":"owner-bad-edge-question-sidestep","provenance":"owner-labeled","expected_failure_class":"sidesteps_live_pressure","authority":"hard"},
+    {"id":"owner-bad-edge-after-natural-arrival","provenance":"owner-labeled","expected_failure_class":"reopens_after_arrival","authority":"hard"},
+    {"id":"later-clause-rescue","provenance":"legacy-v6-v7-regression","expected_failure_class":"entry_edge_rescue","authority":"diagnostic"},
+    {"id":"invented-answer-relation","provenance":"objective-source-fidelity","expected_failure_class":"invented_answer_relation","authority":"hard"},
+    {"id":"invented-so-relation","provenance":"objective-source-fidelity","expected_failure_class":"invented_causal_relation","authority":"hard"},
+    {"id":"premature-natural-stop-rollback","provenance":"legacy-v8-runtime","expected_failure_class":"premature_stop","authority":"diagnostic"},
+    {"id":"stale-regression-contamination","provenance":"legacy-supervisor-v1","expected_failure_class":"stale_suite_provenance","authority":"mechanical"},
+    {"id":"near-copy-replay","provenance":"legacy-autopilot-v2","expected_failure_class":"source_replay","authority":"mechanical"},
+    {"id":"pangram-human-editorially-bad","provenance":"legacy-cycle2-owner-review","expected_failure_class":"detector_green_editorial_fail","authority":"owner-labeled"},
+    {"id":"missing-package-asset","provenance":"legacy-supervisor-v2","expected_failure_class":"missing_runtime_asset","authority":"mechanical"},
+    {"id":"silent-child-observability","provenance":"legacy-live-snapshot","expected_failure_class":"silent_child_no_heartbeat","authority":"mechanical"}
+  ]
+}

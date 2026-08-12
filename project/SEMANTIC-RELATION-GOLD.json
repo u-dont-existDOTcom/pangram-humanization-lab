@@ -1,0 +1,28 @@
+{
+  "format": "semantic-relation-ground-truth-v1",
+  "provenance": "Objective source-fidelity regressions extracted from v7 final-audit failures. Evaluator-only; never writer input.",
+  "source": "The free-will question bothered me for almost the same reason. If everything arises from conditions, my choices do too. So who's making them, and based on what? I don't think I've ever even seen the phrase “free will” in the suttas. AN 6.63 says intention is kamma and that contact is its source; AN 3.61 rejects views that would make effort meaningless. Choices happen and matter. They become conditions for what happens next. Where I get lost-ish is the idea of a chooser somehow outside all those conditions.\n",
+  "cases": [
+    {
+      "id": "relation-answers-question",
+      "accepted": "The conditional nature of choices raises the questions of who makes them and what they are based on.",
+      "candidate": "The suttas actually give an answer to the second question: AN 6.63 says intention is kamma, and that contact is the source of intention.",
+      "expected": "FAIL",
+      "reason": "The source juxtaposes the question and citation but never claims AN 6.63 answers that question."
+    },
+    {
+      "id": "relation-so-conclusion",
+      "accepted": "AN 6.63 says intention is kamma, and that contact is its source.",
+      "candidate": "So choices happen, they matter, and they become conditions for what happens next.",
+      "expected": "FAIL",
+      "reason": "The source states these claims separately; it does not present them as a conclusion from AN 6.63."
+    },
+    {
+      "id": "invented-timing-evaluation",
+      "accepted": "If everything arises from conditions, then my choices arise from conditions too.",
+      "candidate": "Which immediately raises the awkward questions: who is making these choices, and what are they based on?",
+      "expected": "FAIL",
+      "reason": "“Immediately” and “awkward” add timing/evaluation not stated in the source."
+    }
+  ]
+}
