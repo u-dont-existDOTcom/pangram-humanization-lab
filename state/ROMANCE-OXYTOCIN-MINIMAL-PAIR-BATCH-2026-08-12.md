@@ -2,7 +2,7 @@
 
 Goal: isolate why the model-written oxytocin/attachment paragraph remains high-confidence AI while Joel's one-pass rewrite is high-confidence Human, without changing the underlying explanation more than necessary.
 
-## Known endpoints (owner-reported, Pangram 4)
+## Known endpoints
 
 ### AI endpoint
 
@@ -10,74 +10,94 @@ People call oxytocin the “love hormone,” which makes it sound like bonding s
 
 Owner report: full high-confidence AI.
 
-### Human endpoint
+### Owner endpoint as actually pasted
 
 People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or if  people disappeared on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious. You might feel worthless or fight or flight mode may kick in.
 
-Owner report: full high-confidence Human.
+Owner report: full high-confidence Human. Note the two ASCII spaces after the second `if`; this turned out to be detector-causal in this exact boundary.
 
-## First batch: 2×2 on information topology only
+## Factors
 
-Hold the reaction content constant as closely as possible. Factors:
+- **R — conditional restart:** `or people disappearing on you` → `or if people disappeared on you`
+- **S — reaction-inventory split:** one coordinated reaction sentence → sentence break after `suspicious`
+- **C — reaction realization/content:** `turn hostile, feel worthless, or just want to run` → `feel worthless or fight or flight mode may kick in`
+- **W — one additional ASCII space:** `or if people` → `or if  people`
 
-- R = conditional restart before the interpersonal event: `or people disappearing on you` → `or if people disappeared on you`
-- S = split the reaction inventory after `suspicious` instead of packaging all reactions in one sentence
+R, S, and C are visible editorial changes. W is an accidental formatting difference and must not be treated as a human-writing technique.
 
-### R0S0 — baseline
+## First batch — R/S topology with original reaction realization
 
-People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or people disappearing on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious, turn hostile, feel worthless, or just want to run.
+| Cell | R | S | C | Pangram 4.0 result | AI fraction |
+|---|---:|---:|---:|---|---:|
+| R1S0 | 1 | 0 | 0 | AI, high confidence | 1.0 |
+| R0S1 | 0 | 1 | 0 | AI, high confidence | 1.0 |
+| R1S1 | 1 | 1 | 0 | AI, high confidence | 1.0 |
 
-### R1S0 — conditional restart only
+Conclusion: neither R, S, nor R×S was sufficient. The original topology-only hypothesis was falsified for this boundary.
 
-People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or if people disappeared on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious, turn hostile, feel worthless, or just want to run.
+## Second batch — add owner reaction realization C
 
-### R0S1 — sentence split only
+| Cell | R | S | C | W | Pangram 4.0 result | AI fraction |
+|---|---:|---:|---:|---:|---|---:|
+| C1 | 0 | 0 | 1 | 0 | AI, high confidence | 1.0 |
+| C2 | 0 | 1 | 1 | 0 | AI | 1.0 |
+| C7 | 1 | 0 | 1 | 0 | AI | full-text AI classification |
+| C3 | 1 | 1 | 1 | 0 | Mixed | 0.4439140856 |
+| C4 owner exact | 1 | 1 | 1 | 1 | Human, high confidence | 0.0 |
 
-People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or people disappearing on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious. You might turn hostile, feel worthless, or just want to run.
+The visible owner changes form a local three-way interaction: every tested one- or two-factor subset remained fully AI, while R+S+C together moved the boundary to Mixed. None of the visible components should be promoted as an independent humanization rule.
 
-### R1S1 — both topology changes
+## Whitespace minimal pair and repeat
 
-People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or if people disappeared on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious. You might turn hostile, feel worthless, or just want to run.
+The exact C3/C4 difference is one additional ordinary ASCII space after `if`:
 
-## Interpretation of first batch
+- **C3:** `or if people disappeared ...` → Mixed, AI fraction 0.4439140856
+- **C4:** `or if  people disappeared ...` → Human, AI fraction 0.0, high confidence
 
-- If R1S0 flips while R0S1 does not: the local issue is primarily the flattened noun/gerund list versus restarted condition.
-- If R0S1 flips while R1S0 does not: the local issue is primarily the single polished reaction inventory versus uneven sentence progression.
-- If only R1S1 flips: interaction between conditional restart and inventory topology.
-- If none flips: the owner reaction-content change matters and requires the second batch.
-- If multiple cells flip: repeat the smallest changed Human cell before promoting any rule.
+Fresh independent measurement keys reproduced the effect:
 
-## Second batch only if first batch does not explain the endpoint
+- **C6 repeat, single space:** Mixed again, AI fraction 0.4439140856
+- **C5 repeat, double space:** Human again, AI fraction 0.0, high confidence
 
-Reaction-content factor C changes the last reactions from `turn hostile ... just want to run` to Joel's `fight or flight mode may kick in`. This is not a pure syntax test because content/realization changes, so do not mix it into the first factorial.
+Therefore the final jump from Mixed to full high-confidence Human is a reproducible **Pangram whitespace artifact in this exact boundary**. The detector is sensitive to an invisible formatting difference that has no plausible authorship meaning.
 
-### C1 — owner reaction content, baseline conditional, one-sentence inventory
+## What this does and does not teach
 
-People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or people disappearing on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious, feel worthless, or fight or flight mode may kick in.
+### Supported
 
-### C2 — owner reaction content, baseline conditional, split inventory
+1. The model repeatedly over-organized this material, but the initially suspected R/S topology changes alone did not explain Pangram's classification.
+2. Joel's visible rewrite did materially alter the detector boundary only as a combination: conditional restart + sentence split + changed reaction realization moved the text from full AI to Mixed.
+3. The owner-reported full-Human endpoint was confounded by an accidental double space. The one-space version of the same visible prose is Mixed, not full Human.
+4. Pangram 4 can be extremely sensitive to whitespace in a short boundary. Detector endpoints must therefore be checked for invisible formatting differences before they are used as writing evidence.
+5. Exact-text SHA-256, whitespace normalization comparison, and repeated measurements are necessary when a one-pass owner edit appears to produce a dramatic detector flip.
 
-People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or people disappearing on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious. You might feel worthless or fight or flight mode may kick in.
+### Not supported
 
-### C3 — exact owner wording normalized to one space
+- `repeat if = human`
+- `split the sentence = human`
+- `fight or flight = human`
+- `double spaces = human`
+- deliberate typo/spacing injection as a humanization technique
+- treating the full-Human C4/C5 result as proof that its prose is more naturally human than C3
 
-People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or if people disappeared on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious. You might feel worthless or fight or flight mode may kick in.
+## Editorial consequence
 
-Compare C3 with the owner-reported exact endpoint containing a double space after `if`. This rules out a whitespace artifact cheaply if needed.
+Do not preserve or introduce a double space merely to satisfy Pangram. Choose wording on semantic, coherence, and voice grounds, normalize accidental formatting for publication, and treat the detector result as confounded when normalization changes the verdict. If a normalized, editorially preferred passage remains Mixed, improve it only for a real prose reason; do not add invisible noise to force green.
 
-## Run discipline
+## Run discipline and evidence
 
-1. Use exact complete boundaries above; do not test isolated sentences.
-2. Pangram model must be explicit `pangram-4`; terminal result version must be `4.0`.
-3. Reuse content-addressed cache if an exact variant is already present.
-4. First run R1S0, R0S1, R1S1. R0S0 is already owner-reported AI; repeat only if needed for current-version stability.
-5. If one first-batch cell flips Human, repeat that exact cell once before interpreting.
-6. Run C1/C2/C3 only if the first batch does not isolate the effect.
-7. Preserve exact text, SHA-256, detector version, AI fraction/classification, and repeated-call stability in the case record.
-8. Do not promote `repeat if = human`, `sentence split = human`, or `fight-or-flight = human`. The target lesson is the editorial operation and its interaction, not a phrase blacklist.
+- Detector: Pangram 4, terminal version `4.0` in every recorded cell.
+- Exact texts and SHA-256s are stored in `state/experiments/romance-oxytocin-r1-2026-08-12-results.json` and `state/experiments/romance-oxytocin-c-2026-08-12-results.json`.
+- Exact repeat measurement keys were used for C5/C6 rather than reading the original result from cache under the same measurement identity.
+- The GitHub Actions fixed-batch path checkpoints task IDs and terminal results to the private repository before proceeding to another paid call.
 
-## Editorial hypothesis before measurement
+## Process lesson
 
-The strongest current hypothesis is that the model keeps flattening semantically non-equivalent material into grammatically uniform conceptual classes. Two possible manifestations are being separated here: (a) `neglect / abuse / people disappearing` rendered as one noun/gerund list rather than letting the interpersonal event restart the condition, and (b) several downstream reactions rendered as one polished exhaustive inventory rather than arriving in uneven thought-sized units.
+When an owner rewrite seems to solve in one obvious try while the model repeatedly fails, compare the literal strings before inventing a psychological or rhetorical explanation. Distinguish:
 
-This hypothesis is provisional until the controlled batch runs.
+1. visible editorial changes;
+2. interactions among those changes;
+3. invisible formatting changes;
+4. detector variance.
+
+Only after those are separated should the result become a humanization lesson. In this case, the visible edit was useful evidence, but the final green classification was partly a detector-formatting accident.
