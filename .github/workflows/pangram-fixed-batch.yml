@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/pangram-fixed-batch.yml'
       - 'experiments/romance-oxytocin-r1-2026-08-12.json'
+      - 'experiments/romance-oxytocin-c-2026-08-12.json'
       - 'src/pangram_lab/fixed_batch.py'
       - 'scripts/run_fixed_batch.py'
       - 'tests/test_fixed_batch.py'
@@ -39,10 +40,10 @@ jobs:
         run: |
           test -n "$PANGRAM_API_KEY" || { echo "PANGRAM_API_KEY secret is missing"; exit 1; }
           echo "PANGRAM_API_KEY is configured"
-      - name: Run oxytocin minimal-pair batch
+      - name: Run oxytocin reaction-content batch
         env:
           PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
         run: |
           python scripts/run_fixed_batch.py \
-            experiments/romance-oxytocin-r1-2026-08-12.json \
-            --out state/experiments/romance-oxytocin-r1-2026-08-12-results.json
+            experiments/romance-oxytocin-c-2026-08-12.json \
+            --out state/experiments/romance-oxytocin-c-2026-08-12-results.json
