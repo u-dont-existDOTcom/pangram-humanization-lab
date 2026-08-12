@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-idealization-r1-2026-08-12_CANDIDATE_E",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "The signs tend to show up early. She already knows we’re twin flames, or she tells me what I’m thinking before she’s asked me much, or I’m suddenly Lord Krishna. Maybe I really am much better than the men she’s used to. Fine. If she still can’t imagine anything about me disappointing her, she doesn’t know me yet.\nI don’t help that fantasy by pretending my past disappeared. I still love women I’ve loved before, and sometimes I talk about them because they’re on my mind. I’m not trying to make her jealous. She can ask me to talk about them less. That’s fair. But if she needs me to act as if they vanished from my heart when I met her, she isn’t ready for me.\nI also don’t want a rule where her whole inner life is welcome but mine has to be edited first.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.8174447417259216,
+        "confidence": "High",
+        "end_index": 759,
+        "humanizer_score": 0.020006300881505013,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "The signs tend to show up early. She already knows we’re twin flames, or she tells me what I’m thinking before she’s asked me much, or I’m suddenly Lord Krishna. Maybe I really am much better than the men she’s used to. Fine. If she still can’t imagine anything about me disappointing her, she doesn’t know me yet.\nI don’t help that fantasy by pretending my past disappeared. I still love women I’ve loved before, and sometimes I talk about them because they’re on my mind. I’m not trying to make her jealous. She can ask me to talk about them less. That’s fair. But if she needs me to act as if they vanished from my heart when I met her, she isn’t ready for me.\nI also don’t want a rule where her whole inner life is welcome but mine has to be edited first.",
+        "token_length": 178,
+        "word_count": 147
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "1424edf9-2efb-4404-b9e7-ff7c12ed19d5",
   "text": "The signs tend to show up early. She already knows we’re twin flames, or she tells me what I’m thinking before she’s asked me much, or I’m suddenly Lord Krishna. Maybe I really am much better than the men she’s used to. Fine. If she still can’t imagine anything about me disappointing her, she doesn’t know me yet.\n\nI don’t help that fantasy by pretending my past disappeared. I still love women I’ve loved before, and sometimes I talk about them because they’re on my mind. I’m not trying to make her jealous. She can ask me to talk about them less. That’s fair. But if she needs me to act as if they vanished from my heart when I met her, she isn’t ready for me.\n\nI also don’t want a rule where her whole inner life is welcome but mine has to be edited first.",
   "text_sha256": "8cee66abe59beccd09869e9b1a2aa04be2c387bfd7bf3853cf4831c3751a51dc",
-  "updated_utc": "2026-08-12T20:20:40.781055+00:00"
+  "updated_utc": "2026-08-12T20:20:42.005407+00:00"
 }
