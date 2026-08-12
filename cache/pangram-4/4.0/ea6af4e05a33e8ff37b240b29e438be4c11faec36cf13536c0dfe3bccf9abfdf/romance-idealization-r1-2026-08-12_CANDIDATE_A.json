@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-idealization-r1-2026-08-12_CANDIDATE_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "The clues are usually there early: instant twin flame claims, huge conclusions before she has asked many questions, assuming my motives, or acting like I’m Lord Krishna or something. Maybe I really am way better than the other guys she has found. That can be true. She should still assume there are flaws she hasn’t found yet.\nThe women I’ve loved before don’t disappear from my heart when I meet someone new. I still talk about them sometimes. If that ruins the fairy tale a little, good. I’m not doing it to make her jealous. If she needs me to pretend they’re gone, she isn’t ready for me.\nShe can ask, “Can you talk less about your exes or other women?” Fine. But if I’m expected to listen to everything on her mind while parts of mine have to stay unsaid, that tells me something.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.7517691850662231,
+        "confidence": "High",
+        "end_index": 785,
+        "humanizer_score": 0.01156583521515131,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "The clues are usually there early: instant twin flame claims, huge conclusions before she has asked many questions, assuming my motives, or acting like I’m Lord Krishna or something. Maybe I really am way better than the other guys she has found. That can be true. She should still assume there are flaws she hasn’t found yet.\nThe women I’ve loved before don’t disappear from my heart when I meet someone new. I still talk about them sometimes. If that ruins the fairy tale a little, good. I’m not doing it to make her jealous. If she needs me to pretend they’re gone, she isn’t ready for me.\nShe can ask, “Can you talk less about your exes or other women?” Fine. But if I’m expected to listen to everything on her mind while parts of mine have to stay unsaid, that tells me something.",
+        "token_length": 177,
+        "word_count": 145
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "10a21f5b-5963-4665-ae72-353ec56e819f",
   "text": "The clues are usually there early: instant twin flame claims, huge conclusions before she has asked many questions, assuming my motives, or acting like I’m Lord Krishna or something. Maybe I really am way better than the other guys she has found. That can be true. She should still assume there are flaws she hasn’t found yet.\n\nThe women I’ve loved before don’t disappear from my heart when I meet someone new. I still talk about them sometimes. If that ruins the fairy tale a little, good. I’m not doing it to make her jealous. If she needs me to pretend they’re gone, she isn’t ready for me.\n\nShe can ask, “Can you talk less about your exes or other women?” Fine. But if I’m expected to listen to everything on her mind while parts of mine have to stay unsaid, that tells me something.",
   "text_sha256": "ea6af4e05a33e8ff37b240b29e438be4c11faec36cf13536c0dfe3bccf9abfdf",
-  "updated_utc": "2026-08-12T20:17:26.624132+00:00"
+  "updated_utc": "2026-08-12T20:17:29.915841+00:00"
 }
