@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-oxytocin-r1-2026-08-12_R1S0",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or if people disappeared on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious, turn hostile, feel worthless, or just want to run.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.8640025854110718,
+        "confidence": "High",
+        "end_index": 408,
+        "humanizer_score": 0.027596365660429,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or if people disappeared on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious, turn hostile, feel worthless, or just want to run.",
+        "token_length": 92,
+        "word_count": 74
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "3ab4a980-8a9b-45c5-a93c-c5be89488ab3",
   "text": "People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or if people disappeared on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious, turn hostile, feel worthless, or just want to run.",
   "text_sha256": "64d8d2bd93619a205c2f84db4a0e3428b1e83a2fb2064a03ab661a159b85a8d7",
-  "updated_utc": "2026-08-12T18:28:27.574391+00:00"
+  "updated_utc": "2026-08-12T18:28:29.182409+00:00"
 }
