@@ -10,7 +10,7 @@ from authorial_flow.finalize import build_evidence_package
 def test_cli_has_required_commands():
     p=parser()
     text=p.format_help()
-    for name in ["run","resume","status","answer","package"]:
+    for name in ["run","resume","status","answer","package","publish-results"]:
         assert name in text
 
 

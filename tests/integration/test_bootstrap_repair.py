@@ -277,3 +277,80 @@ def test_bootstrap_live_smoke_payment_required_skips_codex_repair(tmp_path,capsy
     assert rc == 4
     assert repair_calls == []
     assert 'bootstrap_account_action_required=PANGRAM_CREDITS' in captured.err
+
+
+def test_bootstrap_outcomes_reach_diagnostics_without_raw_command_output(tmp_path):
+    from authorial_flow.bootstrap_repair import run_preflight
+
+    root=_root(tmp_path); cfg=RuntimeConfig.from_root(root)
+    store=ArtifactStore(cfg.artifact_dir)
+    services=SimpleNamespace(artifact_store=store,journal=None)
+    calls=[]
+    rc=run_preflight(
+        cfg,['python','-m','pytest','-q'],services=services,
+        command_runner=lambda command,cwd: Result(0,'SECRET-STDOUT','SECRET-STDERR'),
+        repair_cycle_factory=lambda *args: (_ for _ in ()).throw(AssertionError('must not repair')),
+        package_builder=lambda *args,**kwargs: (_ for _ in ()).throw(AssertionError('must not package')),
+        diagnostic_publisher=lambda *args,**kwargs: calls.append(kwargs),
+    )
+    assert rc == 0
+    assert len(calls) == 1
+    assert calls[0]['phase'] == 'installer-preflight'
+    assert calls[0]['outcome'] == 'pass'
+    assert calls[0]['returncode'] == 0
+    encoded=json.dumps(calls[0],sort_keys=True,default=str)
+    assert 'SECRET-STDOUT' not in encoded
+    assert 'SECRET-STDERR' not in encoded
+
+
+def test_bootstrap_credential_and_account_stops_publish_typed_outcomes(tmp_path):
+    from authorial_flow.bootstrap_repair import run_preflight
+
+    for key,returncode,outcome in (
+        ('credential_required',3,'credential_required'),
+        ('account_action_required',4,'account_action_required'),
+    ):
+        case_root=tmp_path/key; case_root.mkdir()
+        root=_root(case_root); cfg=RuntimeConfig.from_root(root)
+        store=ArtifactStore(cfg.artifact_dir)
+        services=SimpleNamespace(artifact_store=store,journal=None)
+        report=root/'.state'/'live-smoke'/'install-report.json'; report.parent.mkdir(parents=True)
+        report.write_text(json.dumps({
+            'format':'authorial-flow-live-smoke-v1',key:'PANGRAM_API_KEY' if returncode==3 else 'PANGRAM_CREDITS',
+        }),encoding='utf-8')
+        calls=[]
+        rc=run_preflight(
+            cfg,['python','scripts/live_smoke.py','--pangram'],services=services,
+            command_runner=lambda command,cwd,code=returncode: Result(code,'SECRET-STDOUT','SECRET-STDERR'),
+            repair_cycle_factory=lambda *args: (_ for _ in ()).throw(AssertionError('must not repair')),
+            evidence_file=report,phase='installer-live-smoke',failure_class='PROVIDER_PLUMBING',
+            originating_node='provider-smoke',diagnostic_publisher=lambda *args,**kwargs: calls.append(kwargs),
+        )
+        assert rc == returncode
+        assert len(calls) == 1
+        assert calls[0]['outcome'] == outcome
+        assert calls[0]['report_path'] == report
+
+
+def test_bootstrap_exhaustion_publishes_after_package_without_changing_exit_code(tmp_path):
+    from authorial_flow.bootstrap_repair import run_preflight
+
+    root=_root(tmp_path); cfg=RuntimeConfig.from_root(root)
+    store=ArtifactStore(cfg.artifact_dir)
+    services=SimpleNamespace(artifact_store=store,journal=None)
+    package=root/'.state'/'evidence'/'bounded.zip'; package.parent.mkdir(parents=True); package.write_bytes(b'evidence')
+    calls=[]
+    rc=run_preflight(
+        cfg,['python','-m','pytest','-q'],services=services,
+        command_runner=lambda command,cwd: Result(7,'SECRET-STDOUT','SECRET-STDERR'),
+        repair_cycle_factory=lambda *args: (lambda state:{'pass':False,'exhausted':True,'error_ref':state['failure_record_ref']}),
+        package_builder=lambda config,reason: package,
+        diagnostic_publisher=lambda *args,**kwargs: calls.append(kwargs),
+    )
+    assert rc == 7
+    assert len(calls) == 1
+    assert calls[0]['outcome'] == 'bounded_machine_stop'
+    assert calls[0]['result']['evidence_package_path'] == str(package)
+    encoded=json.dumps(calls[0],sort_keys=True,default=str)
+    assert 'SECRET-STDOUT' not in encoded
+    assert 'SECRET-STDERR' not in encoded

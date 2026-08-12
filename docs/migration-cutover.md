@@ -38,7 +38,7 @@ Until then, the legacy artifacts remain evidence only; they are never reintroduc
 
 ## In-place checkpoint compatibility
 
-Version 1.1 added optional state fields for supervisor snapshots/sessions, owner directions, rejected proposals, per-move coverage, and pause metadata. Version 1.2 adds optional boundary IDs, safe decision traces, provider failure kinds/capability signatures, and bounded repair history/outcomes. Existing SQLite checkpoints remain valid because every added field is optional. There is no destructive database migration, checkpoint rewrite, or `.state` reset.
+Version 1.1 added optional state fields for supervisor snapshots/sessions, owner directions, rejected proposals, per-move coverage, and pause metadata. Version 1.2 adds optional boundary IDs, safe decision traces, provider failure kinds/capability signatures, and bounded repair history/outcomes. Version 1.3 adds only `.state/diagnostics/` outbox/status files and a separate remote diagnostics branch. Existing SQLite checkpoints remain valid because every graph-state field added in earlier versions is optional and 1.3 does not alter the checkpoint schema. There is no destructive database migration, checkpoint rewrite, or `.state` reset.
 
 An installed project resumes from `.state/current-thread.json` and therefore preserves its stored thread ID. The release-baseline reconciler may update the local source commit while retaining `.state`; it must never reseed an interrupted article. A legacy checkpoint without per-move coverage may continue normally, but rollback fails closed until bounded two-call coverage reconciliation validates the exact move hashes and authority-unit mapping.
 

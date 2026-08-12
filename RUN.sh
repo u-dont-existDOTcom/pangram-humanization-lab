@@ -13,6 +13,6 @@ if [ "$#" -eq 0 ]; then
   exec .venv/bin/authorial-flow run
 fi
 case "$1" in
-  run|resume|status|answer|package) exec .venv/bin/authorial-flow "$@" ;;
+  run|resume|status|answer|package|publish-results) exec .venv/bin/authorial-flow "$@" ;;
   *) exec .venv/bin/authorial-flow run "$@" ;;
 esac

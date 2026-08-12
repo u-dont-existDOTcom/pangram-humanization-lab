@@ -14,6 +14,15 @@ from .config import RuntimeConfig
 from .artifacts import ArtifactStore
 from .events import EventJournal
 from .finalize import build_evidence_package
+from .diagnostics import (
+    DIAGNOSTICS_BRANCH,
+    build_diagnostic_record,
+    format_publication_status,
+    load_queued_diagnostics,
+    PublicationResult,
+    queue_diagnostic,
+    safely_publish_diagnostic,
+)
 from .graph import open_graph
 from .pause import PauseObservation, temporary_sigint_pause
 from .runtime import RuntimeServices, build_runtime_dependencies, seed_initial_state
@@ -48,6 +57,7 @@ def parser() -> argparse.ArgumentParser:
     ans.add_argument('response')
     pkg=sub.add_parser('package',help='build a secret-free evidence package')
     pkg.add_argument('--reason',choices=['final','bounded-failure','manual'],default='manual')
+    sub.add_parser('publish-results',help='publish a privacy-safe status record and flush queued diagnostics')
     return p
 
 
@@ -571,9 +581,10 @@ def command_run(config:RuntimeConfig,source:Path|None)->int:
     initial.update({'thread_id':thread_id,'source_hash':file_sha(source)})
     result=_run_graph(config,thread_id,initial,services=services)
     journal.append('run-return',{'thread_id':thread_id,'status':result.get('status',''),'phase':result.get('phase','')})
-    maybe_restart_after_repair(config,result)
     result=finalize_bounded_failure(config,result)
     result=finalize_if_accepted(config,result)
+    _publish_runtime_result(config,phase="runtime-run",result=result)
+    maybe_restart_after_repair(config,result)
     _print_result(result)
     return 0
 
@@ -602,9 +613,10 @@ def command_resume(config:RuntimeConfig)->int:
     if machine_interrupt is not None:
         result=_run_graph(config,thread_id,_machine_restart_command(),services=services)
     EventJournal(config.event_path).append('resume-return',{'thread_id':thread_id,'status':result.get('status','')})
-    maybe_restart_after_repair(config,result)
     result=finalize_bounded_failure(config,result)
     result=finalize_if_accepted(config,result)
+    _publish_runtime_result(config,phase="runtime-resume",result=result)
+    maybe_restart_after_repair(config,result)
     _print_result(result); return 0
 
 
@@ -615,9 +627,10 @@ def command_answer(config:RuntimeConfig,response_text:str)->int:
     services=RuntimeServices.from_config(config,pangram_key_provider=ensure_pangram_key,research_key_provider=ensure_brave_key)
     result=_run_graph(config,thread_id,Command(resume=response),services=services)
     EventJournal(config.event_path).append('owner-answer',{'thread_id':thread_id,'kind':response.get('kind',''),'status':result.get('status','')})
-    maybe_restart_after_repair(config,result)
     result=finalize_bounded_failure(config,result)
     result=finalize_if_accepted(config,result)
+    _publish_runtime_result(config,phase="runtime-answer",result=result)
+    maybe_restart_after_repair(config,result)
     _print_result(result); return 0
 
 
@@ -634,6 +647,53 @@ def command_status(config:RuntimeConfig)->int:
         moves=int(event.get('moves',0) or 0),last_event=str(event.get('kind') or 'no events'),
     )
     print(line); return 0
+
+
+def _diagnostic_outcome(result:dict[str,Any])->str:
+    if _supervisor_interrupt(result) is not None:
+        return "supervisor_paused"
+    if result.get("__interrupt__"):
+        return "owner_input_required"
+    status=str(result.get("status") or "").strip().lower()
+    if status in {
+        "accepted","bounded_machine_stop","repair_promoted_restart_required",
+        "machine_failure","ok","interrupted",
+    }:
+        return status
+    if status in {"done","finalized","complete","continue_generation","repair_retry"}:
+        return "ok"
+    return "failed"
+
+
+def _publish_runtime_result(config:RuntimeConfig,*,phase:str,result:dict[str,Any])->PublicationResult:
+    publication=safely_publish_diagnostic(
+        config,phase=phase,outcome=_diagnostic_outcome(result),result=result,
+    )
+    print(format_publication_status(publication),flush=True)
+    return publication
+
+
+def command_publish_results(config:RuntimeConfig)->int:
+    publication=safely_publish_diagnostic(
+        config,phase="manual-status",outcome="snapshot",result={},
+    )
+    print(format_publication_status(publication),flush=True)
+    return 0 if publication.status in {"published","already_published","nothing_to_publish"} else 2
+
+
+def _queue_interrupted_diagnostic(config:RuntimeConfig)->None:
+    try:
+        record=build_diagnostic_record(
+            config,phase="cli-interrupted",outcome="interrupted",result={},
+        )
+        path=queue_diagnostic(config,record)
+        publication=PublicationResult(
+            status="queued",run_id=path.stem,branch=DIAGNOSTICS_BRANCH,
+            queued_count=len(load_queued_diagnostics(config)),failure_kind="INTERRUPTED",
+        )
+        print(format_publication_status(publication),flush=True)
+    except Exception:
+        pass
 
 
 def _print_result(result:dict[str,Any])->None:
@@ -657,9 +717,11 @@ def main(argv:list[str]|None=None)->int:
         if args.command=='answer': return command_answer(config,args.response)
         if args.command=='package':
             print(build_evidence_package(config,reason=args.reason)); return 0
+        if args.command=='publish-results': return command_publish_results(config)
         raise RuntimeError(f'unknown command {args.command}')
     except KeyboardInterrupt:
         EventJournal(config.event_path).append('interrupted',{})
+        _queue_interrupted_diagnostic(config)
         print('Interrupted safely. Run the same command or `authorial-flow resume` to continue.',file=sys.stderr)
         return 130
 

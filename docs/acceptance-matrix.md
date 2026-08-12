@@ -34,6 +34,17 @@ This matrix maps the owner-approved v1 acceptance criteria to deterministic test
 | BF-07 | Unsafe/testless plans stop before review/execution and unchanged plan signatures stop before a second review. | Deterministic | repair-resume and repair-pipeline tests | Covered |
 | BF-08 | Existing 1.1 SQLite/artifact state opens in 1.2 without destructive migration. | Deterministic/target | copied incident thread opened with ten history records; SQLite SHA-256 remained byte-identical | Covered in build; target upgrade pending |
 
+## Automatic diagnostics publication criteria (1.3)
+
+| ID | Criterion | Plane | Deterministic evidence | Status |
+|---|---|---|---|---|
+| DP-01 | Installer and runtime result boundaries queue and attempt publication before returning or restarting. | Deterministic/live | bootstrap, CLI, and diagnostics end-to-end tests | Covered; target authentication pending |
+| DP-02 | Remote records use a strict allowlist and exclude prose, prompts, transcripts, raw errors, credentials, paths, and ZIP bytes. | Deterministic | diagnostics sentinel and schema-validation tests | Covered |
+| DP-03 | Publication uses an isolated orphan branch and leaves source HEAD/status unchanged. | Deterministic | real local bare-Git integration and CLI-boundary tests | Covered |
+| DP-04 | Network/auth/push failure preserves the wrapped result and queues the record for retry. | Deterministic/live | queue recovery and nonblocking-facade tests | Covered; target network pending |
+| DP-05 | Replays are idempotent and non-fast-forward races refetch without force-pushing. | Deterministic | sequential/idempotency/race Git tests | Covered |
+| DP-06 | `./RUN.sh publish-results` creates a snapshot and flushes queued records. | Deterministic/live | wrapper and real transport command-boundary tests | Covered; target invocation pending |
+
 ## Interactive-supervisor design criteria
 
 These 21 rows are the approved interactive-supervisor contract. “Covered” means deterministic evidence exists in this checkout; it does not replace the final target-machine plane.
