@@ -1,0 +1,31 @@
+name: Pangram fixed batch
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/pangram-fixed-batch.yml'
+      - 'experiments/romance-oxytocin-r1-2026-08-12.json'
+      - 'src/pangram_lab/fixed_batch.py'
+      - 'scripts/run_fixed_batch.py'
+      - 'tests/test_fixed_batch.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install
+        run: python -m pip install -e '.[test]'
+      - name: Test
+        run: pytest -q
