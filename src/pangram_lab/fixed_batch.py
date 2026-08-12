@@ -39,3 +39,28 @@ def load_spec(path: Path, max_variants: int = 8) -> dict[str, Any]:
 
 def text_sha256(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Path) -> dict[str, Any]:
+    experiment_id = spec["experiment_id"]
+    aggregate: dict[str, Any] = {
+        "format": "pangram-fixed-batch-results-v1",
+        "experiment_id": experiment_id,
+        "results": [],
+    }
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    for variant in spec["variants"]:
+        variant_id = variant["id"]
+        text = variant["text"]
+        measurement_key = f"{experiment_id}_{variant_id}"
+        detector = client.detect_cached(text, cache, measurement_key=measurement_key)
+        aggregate["results"].append({
+            "id": variant_id,
+            "measurement_key": measurement_key,
+            "text": text,
+            "text_sha256": text_sha256(text),
+            "detector": detector,
+        })
+        output_path.write_text(json.dumps(aggregate, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return aggregate
