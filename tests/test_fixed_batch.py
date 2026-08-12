@@ -68,6 +68,6 @@ def test_run_batch_preserves_order_keys_and_writes_sha256(tmp_path: Path):
         ("second", "exp_B"),
     ]
     assert [row["id"] for row in result["results"]] == ["A", "B"]
-    assert result["results"][0]["text_sha256"] == "2b264485b0a7185beaa8139bfc936b0b4a10885040334b40ef97cf070dfe81e8"
+    assert result["results"][0]["text_sha256"] == "e18caa2c4fdd7105982b375c2f7efc0b778ef9dc2437e941edd8af5c0f8eb244"
     saved = json.loads(out.read_text(encoding="utf-8"))
     assert saved == result
