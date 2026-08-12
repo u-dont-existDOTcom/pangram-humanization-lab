@@ -21,6 +21,19 @@ This matrix maps the owner-approved v1 acceptance criteria to deterministic test
 | AC-15 | Final completion produces accepted text plus one reproducible evidence package. | Owner/live | evidence/release tests; first owner-accepted live thread | Owner/live pending |
 | AC-16 | All migrated known failure cases have explicit passing regression coverage, including Claude structured-role schema plumbing and autonomous repair restart semantics. | Deterministic | model-adapter + owner-flow + relation + provenance + fallback + atomicity + repair + packaging suites | Covered |
 
+## Bounded-failure control criteria (1.2)
+
+| ID | Criterion | Plane | Deterministic evidence | Status |
+|---|---|---|---|---|
+| BF-01 | Invalid or actionless semantic FAIL output cannot reach generation; owner and research requirements remain sequential. | Deterministic | semantic-escalation runtime dependency regressions | Covered |
+| BF-02 | Pressure and edge results control only their exact accepted boundary; stale 1.1 values are ignored. | Deterministic | generation-boundary unit and runtime regressions | Covered |
+| BF-03 | `STOP_BEFORE_CANDIDATE` stops, performs one validated arrival rollback, or fails as `POLICY_CONTRADICTION` without generic writer retry. | Deterministic | bounded stopping/rollback runtime regressions | Covered |
+| BF-04 | A premature arrival cannot strand protected authority units in accepted prose. | Deterministic | premature-arrival acceptance regression | Covered |
+| BF-05 | Returned and raised machine failures both carry redacted, dereferenceable evidence and a content-free decision trace. | Deterministic | failure-evidence, work-feed, supervisor, and security regressions | Covered |
+| BF-06 | Deterministic provider failures do not repeat equivalent profiles; attempts expose typed causes and capability signatures. | Deterministic/live | model-adapter and live-smoke schema-inventory tests | Covered; target profiles pending |
+| BF-07 | Unsafe/testless plans stop before review/execution and unchanged plan signatures stop before a second review. | Deterministic | repair-resume and repair-pipeline tests | Covered |
+| BF-08 | Existing 1.1 SQLite/artifact state opens in 1.2 without destructive migration. | Deterministic/target | copied incident thread opened with ten history records; SQLite SHA-256 remained byte-identical | Covered in build; target upgrade pending |
+
 ## Interactive-supervisor design criteria
 
 These 21 rows are the approved interactive-supervisor contract. “Covered” means deterministic evidence exists in this checkout; it does not replace the final target-machine plane.

@@ -14,7 +14,10 @@ class RepairPlanner:
         prompt=(
             'Design one small causal machine repair. Do not ask the owner to perform debugging, '
             'do not hardcode current article/source text, do not weaken owner authority, and do not '
-            'optimize detector score at the expense of fidelity.\n\nFAILURE CONTEXT:\n'+failure_context
+            'optimize detector score at the expense of fidelity. For every executable repair, tests '
+            'must contain one or more exact local commands beginning with `pytest` or `python -m pytest`; '
+            'never put prose test descriptions in tests. A rejected prior attempt must be changed '
+            'causally, not merely reworded.\n\nFAILURE CONTEXT:\n'+failure_context
         )
         result=self.codex.call(ModelCall(
             prompt=prompt,schema=RepairPlan.model_json_schema(),role='repair_plan'

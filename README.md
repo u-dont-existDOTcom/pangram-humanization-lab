@@ -2,16 +2,17 @@
 
 A checkpointed LangGraph runtime for improving and humanizing prose by advancing from the live state of a thought rather than filling a predicted completed outline. It implements the Joel Articles P0–P4 preservation hierarchy, source-provenance authority, semantic-sanity escalation, bounded research, downstream detector use, scoped owner learning, and autonomous repair.
 
-The current release is a **candidate** until the exact ZIP passes the live and owner acceptance planes on the target Zorin machine. Deterministic build-container success is reported separately from live Claude/Codex/Pangram/research plumbing and owner-confirmed thought-flow quality.
+The current release is a **candidate** until the exact Git commit passes the live and owner acceptance planes on the target Zorin machine. Deterministic build-container success is reported separately from live Claude/Codex/Pangram/research plumbing and owner-confirmed thought-flow quality.
 
 ## One-command local workflow
 
-On Joel's French Zorin system:
+On Joel's French Zorin system, install from the versioned Git branch:
 
 ```bash
-cd ~/Téléchargements
-unzip -q ~/Téléchargements/authorial-flow-graph-v1.zip -d ~/Téléchargements
-cd ~/Téléchargements/authorial-flow-graph-v1
+git clone --branch install/authorial-flow-graph-v1-1.2.0-dev1 \
+  https://github.com/u-dont-existDOTcom/pangram-humanization-lab.git \
+  ~/authorial-flow-graph-v1
+cd ~/authorial-flow-graph-v1
 ./INSTALL-AND-RUN.sh
 ```
 
@@ -76,7 +77,17 @@ Machine-repairable runtime/provider/regression failures are handled inside the r
 
 Installer preflight uses the same machinery one stage earlier: if the full pytest gate fails before LangGraph can start, the controller persists the exact command/stdout/stderr evidence, invokes the isolated repair cycle, promotes only a verified patch, and reruns the exact pytest command. Bounded exhaustion creates the evidence ZIP automatically rather than making the owner relay terminal logs. Repair worktrees also place the installed project `.venv/bin` first on `PATH`, so Codex RED/GREEN commands test the candidate with the runtime's actual dependency environment rather than Zorin's system Python.
 
-The controller—not Codex—runs the declared targeted tests plus integration and full-suite gates, protected-hash/source-hardcoding checks, and independent plan/diff review. One bounded Codex correction is allowed if controller verification fails; a second correction is not. Only the verified commit is promoted. Promotion checkpoints a machine-only restart interrupt, the stale process exits, and the new program image resumes the **same LangGraph thread/checkpoint** at the failed machine stage rather than reseeding the article. High-level repair phases remain visible while this happens. If the bounded repair budget is exhausted, the runtime automatically creates a secret-free evidence ZIP and stops with `bounded_machine_stop`; it does not ask the owner to collect or upload routine logs.
+The controller—not Codex—runs the declared targeted tests plus integration and full-suite gates, protected-hash/source-hardcoding checks, and independent plan/diff review. Plans must name exact local pytest commands; prose test descriptions stop before review or write-capable execution. Each plan is signed against its failure evidence and program version, and the same plan cannot be reviewed twice on unchanged context. Every attempt ends explicitly as `APPLIED_VERIFIED`, `STAGED_FOR_OWNER`, `REJECTED_WITH_REASON`, or `NON_APPLICABLE_STOP`, with the reason available to any permitted next planner call.
+
+One bounded Codex correction is allowed if controller verification fails; a second correction is not. Only the verified commit is promoted. Promotion checkpoints a machine-only restart interrupt, the stale process exits, and the new program image resumes the **same LangGraph thread/checkpoint** at the failed machine stage rather than reseeding the article. High-level repair phases remain visible while this happens. If the bounded repair budget is exhausted, the runtime automatically creates a secret-free evidence ZIP and stops with `bounded_machine_stop`; it does not ask the owner to collect or upload routine logs.
+
+## Bounded-failure controls in 1.2
+
+Semantic-sanity escalation is fail-closed: only `BASIC`, `P3`, `P4`, `RESEARCH`, and `OWNER` are valid, and a semantic FAIL cannot fall through to generation. An owner answer resolves only the owner question; pending research or developmental work remains required.
+
+Generation pressure and edge judgments carry a SHA-256 identity for the exact accepted passage, move count, authority coverage, graph version, and program version. Stale decisions cannot govern a changed boundary. `STOP_BEFORE_CANDIDATE` now discards the extra candidate and either stops on the accepted passage or rolls back a validated arrival when protected meaning remains. If safe rollback cannot be proven, the controller stops as `POLICY_CONTRADICTION` without spending more writer attempts. A candidate that visibly arrives while protected units remain cannot enter accepted prose.
+
+Returned machine failures receive the same redacted, dereferenceable evidence as exceptions. A content-free decision trace shows boundary hashes, counts, pressure/edge enums, confidences, rejection class, and budgets without source, accepted, candidate, prompt, transcript, or credential text. Provider attempts likewise record typed failure causes and capability signatures; deterministic auth/schema failures stop, while fallback can move only to a distinct configured profile.
 
 ## Evidence and packaging
 
@@ -84,7 +95,7 @@ The controller—not Codex—runs the declared targeted tests plus integration a
 
 ## Validation status
 
-- **Deterministic:** the current implementation passes the unit, regression, real LangGraph/SQLite, integration-with-fakes, repair, optimizer, release, heartbeat, provenance, authority-isolation, detector-downstream, supervisor-security, and packaging suites in the build environment. Exact final counts and ZIP hashes are recorded in `docs/2026-08-12-interactive-supervisor-review.md`.
+- **Deterministic:** the current implementation passes the unit, regression, real LangGraph/SQLite, integration-with-fakes, repair, optimizer, release, heartbeat, provenance, authority-isolation, detector-downstream, supervisor-security, and packaging suites in the build environment. Exact 1.2 counts and copied-incident-state compatibility evidence are recorded in `docs/2026-08-12-bounded-failure-control-review.md`.
 - **LangGraph checkpoint integration:** deterministic real-SQLite tests cover cancelled-node replay, Pangram task-ID checkpoint/poll resume, repair-promotion consistency, invalid-action reinterrupts, and durable same-thread supervisor resume. The exact candidate still requires the target Zorin run; deterministic signal tests do not prove terminal behavior on that machine.
 - **Live Claude/Codex:** earlier releases supplied provider evidence, but the interactive-supervisor candidate requires fresh target-machine smoke and one real same-terminal supervisor conversation.
 - **Live Pangram:** current async-API authentication is checked without creating a task; real candidate submission remains downstream of local gates, checkpoints the task ID before polling, and accepts only returned version `4.0` with Human/zero-AI status. Target-machine evidence required.

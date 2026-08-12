@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from hashlib import sha256
+import json
+import re
 import shlex
 import subprocess
 import sys
@@ -47,6 +50,40 @@ def safe_plan_test_commands(plan:RepairPlan)->list[list[str]]:
             continue
         accepted.append(argv)
     return accepted
+
+
+def validate_repair_plan_commands(plan: RepairPlan) -> str:
+    if not plan.repairable or plan.needs_owner_judgment:
+        return ""
+    if not plan.tests:
+        return "MISSING_TEST_COMMAND"
+    commands = safe_plan_test_commands(plan)
+    if len(commands) != len(plan.tests):
+        return "UNSAFE_OR_NON_EXECUTABLE_TEST_COMMAND"
+    return ""
+
+
+def _normalized_text(value: str) -> str:
+    return re.sub(r"\s+", " ", str(value or "")).strip().lower()
+
+
+def repair_plan_signature(
+    plan: RepairPlan,
+    *,
+    evidence_ref: str,
+    program_version: str,
+) -> str:
+    commands = [shlex.join(argv) for argv in safe_plan_test_commands(plan)]
+    payload = {
+        "diagnosis": _normalized_text(plan.diagnosis),
+        "patch_summary": _normalized_text(plan.patch_summary),
+        "target_files": sorted({_normalized_text(path) for path in plan.target_files}),
+        "tests": sorted(commands),
+        "evidence_ref": str(evidence_ref or ""),
+        "program_version": str(program_version or ""),
+    }
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    return sha256(canonical.encode("utf-8")).hexdigest()
 
 
 class RepairVerifier:

@@ -11,6 +11,7 @@ from typing import Any, Iterable
 from pydantic import BaseModel, ConfigDict, Field
 
 from ..artifacts import ArtifactStore
+from ..decision_trace import build_decision_trace
 from ..failures import FailureClass, FailureRecord
 
 _MAX_PROVIDER_TEXT = 6000
@@ -31,6 +32,8 @@ class ProviderAttemptEvidence(BaseModel):
     stdout_text: str = ""
     stderr_text: str = ""
     error: str = ""
+    failure_kind: str = ""
+    capability_signature: str = ""
 
 
 class RepairEvidenceBundle(BaseModel):
@@ -60,6 +63,7 @@ class RepairEvidenceBundle(BaseModel):
     runtime_context: dict[str, Any] = Field(default_factory=dict)
     event_context: dict[str, Any] = Field(default_factory=dict)
     state_context: dict[str, Any] = Field(default_factory=dict)
+    decision_trace: dict[str, Any] = Field(default_factory=dict)
     suggested_test_command: str = ""
 
 
@@ -134,6 +138,8 @@ def build_failure_evidence(
             stdout_text=_bounded_artifact_text(store, stdout_ref, secrets),
             stderr_text=_bounded_artifact_text(store, stderr_ref, secrets),
             error=_redact(str(getattr(attempt, "error", "") or ""), secrets),
+            failure_kind=str(getattr(attempt, "failure_kind", "") or ""),
+            capability_signature=str(getattr(attempt, "capability_signature", "") or ""),
         ))
 
     safe_state = {
@@ -173,6 +179,7 @@ def build_failure_evidence(
         runtime_context=runtime_context,
         event_context=dict(event_context or {}),
         state_context=safe_state,
+        decision_trace=build_decision_trace(state),
         suggested_test_command=_suggested_test(record.originating_node),
     )
 

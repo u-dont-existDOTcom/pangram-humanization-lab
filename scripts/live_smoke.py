@@ -18,10 +18,13 @@ sys.path.insert(0, str(ROOT / "src"))
 from authorial_flow.artifacts import ArtifactStore
 from authorial_flow.models.claude_cli import ClaudeCLI
 from authorial_flow.models.codex_cli import CodexCLI
-from authorial_flow.models.common import ModelCall
+from authorial_flow.models.common import (
+    ModelCall, ProviderFailure, unique_model_profiles, validate_schema_contract,
+)
 from authorial_flow.models.pangram import PangramClient
 from authorial_flow.process_runner import ProcessRunner, ProcessSpec
 from authorial_flow.research.fetch import HTTPFetcher
+from authorial_flow.runtime import runtime_schema_inventory
 
 
 FIXED_SCHEMA = {
@@ -30,6 +33,21 @@ FIXED_SCHEMA = {
     "properties": {"status": {"type": "string", "enum": ["ok"]}},
     "required": ["status"],
 }
+
+
+def validate_runtime_schema_inventory() -> dict[str, Any]:
+    invalid=[]
+    schemas=runtime_schema_inventory()
+    for name,schema in schemas.items():
+        try:
+            validate_schema_contract(schema)
+        except ValueError as exc:
+            invalid.append({"name":name,"error":f"{type(exc).__name__}: {exc}"})
+    return {
+        "status":"pass" if not invalid else "fail",
+        "schema_count":len(schemas),
+        "invalid":invalid,
+    }
 
 
 def redact(value: Any, secret_values: list[str]) -> Any:
@@ -96,24 +114,51 @@ def _model_smoke(provider: str, runner: ProcessRunner, store: ArtifactStore, arg
     call = ModelCall(prompt=prompt, schema=FIXED_SCHEMA, role="live_smoke")
     started = time.monotonic()
     if provider == "claude":
-        models = [m.strip() for m in args.claude_models.split(",") if m.strip()]
+        models = unique_model_profiles([m.strip() for m in args.claude_models.split(",") if m.strip()])
         cli_version = _version(["claude", "--version"])
-        adapter = ClaudeCLI(models, cli_version=cli_version, timeout_seconds=args.timeout)
     else:
-        models = [m.strip() or None for m in args.codex_models.split(",")]
+        models = unique_model_profiles([m.strip() or None for m in args.codex_models.split(",")])
         cli_version = _version(["codex", "--version"])
-        adapter = CodexCLI(models, cli_version=cli_version, timeout_seconds=args.timeout)
-    result = adapter.call(call, runner, store)
+    profiles=[]
+    for model in models:
+        adapter = (
+            ClaudeCLI([model], cli_version=cli_version, timeout_seconds=args.timeout)
+            if provider == "claude"
+            else CodexCLI([model], cli_version=cli_version, timeout_seconds=args.timeout)
+        )
+        try:
+            result = adapter.call(call, runner, store)
+        except ProviderFailure as exc:
+            profiles.append({
+                "configured_model":model or "CLI-default",
+                "status":"fail",
+                "attempts":[{
+                    "model":attempt.model,
+                    "failure_kind":attempt.failure_kind,
+                    "capability_signature":attempt.capability_signature,
+                    "returncode":attempt.returncode,
+                } for attempt in exc.attempts],
+            })
+        else:
+            profiles.append({
+                "configured_model":model or "CLI-default",
+                "resolved_model":result.model,
+                "status":"pass",
+                "request_id":result.request_id,
+                "attempts":[{
+                    "model":attempt.model,
+                    "failure_kind":attempt.failure_kind,
+                    "capability_signature":attempt.capability_signature,
+                    "returncode":attempt.returncode,
+                } for attempt in result.attempts],
+            })
     return {
-        "status": "pass",
+        "status": "pass" if profiles and all(row["status"]=="pass" for row in profiles) else "fail",
         "provider": provider,
         "cli_version": cli_version,
-        "resolved_model": result.model,
         "duration_seconds": time.monotonic() - started,
-        "request_id": result.request_id,
-        "stdout_ref": result.stdout_ref,
-        "stderr_ref": result.stderr_ref,
-        "attempt_count": len(result.attempts),
+        "schema_preflight":validate_runtime_schema_inventory(),
+        "profiles":profiles,
     }
 
 
@@ -222,6 +267,7 @@ def main(argv: list[str] | None = None) -> int:
     report: dict[str, Any] = {
         "format": "authorial-flow-live-smoke-v1",
         "started_at": time.time(),
+        "schema_preflight":validate_runtime_schema_inventory(),
         "results": {},
     }
     active_check=""

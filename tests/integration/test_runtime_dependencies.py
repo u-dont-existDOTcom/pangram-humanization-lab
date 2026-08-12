@@ -460,6 +460,18 @@ def test_runtime_services_default_codex_models_skip_unsupported_plain_gpt_5_6(tm
     assert services.codex.models == ['gpt-5.6-sol', None]
 
 
+def test_runtime_services_do_not_construct_live_clients_from_ambient_keys(tmp_path,monkeypatch):
+    monkeypatch.setenv('PANGRAM_API_KEY','ambient-pangram-key')
+    monkeypatch.setenv('BRAVE_SEARCH_API_KEY','ambient-brave-key')
+
+    services=RuntimeServices.from_config(RuntimeConfig.from_root(tmp_path))
+
+    assert services.pangram is None
+    assert services.research_provider is None
+    assert services.pangram_factory is not None
+    assert services.research_provider_factory is not None
+
+
 def test_detector_invalidates_rejected_pangram_key_and_retries_with_key_provider(tmp_path,monkeypatch):
     import httpx
     root=Path(__file__).resolve().parents[2]
@@ -761,6 +773,115 @@ def test_owner_authorial_answer_is_installed_as_grounded_unit_on_resumed_represe
     assert units[0]['authority']=='OWNER_GROUNDED'
 
 
+def test_unknown_semantic_escalation_fails_closed_before_generation(tmp_path):
+    root=Path(__file__).resolve().parents[2]
+    cfg=RuntimeConfig.from_root(tmp_path)
+    services=_fake_services(tmp_path)
+    services.codex.responses['representation']={
+        'section_job':'free will inquiry',
+        'semantic_sanity':{
+            'status':'FAIL','defect_types':['source_role'],'research_trigger':True,
+            'recommended_escalation':'First ask the owner, then research the source role.',
+            'owner_question':'Which meaning controls?',
+        },
+        'units':[{'id':'u1','text':'Unresolved reconstruction.','reason':'open meaning'}],
+    }
+    deps=build_runtime_dependencies(cfg,project_root=root,services=services)
+    state=seed_initial_state(cfg,project_root=root,source_path=root/'project'/'INPUT.md',services=services)
+
+    update=deps.representation(state)
+
+    assert update['status']=='owner_ambiguity_required'
+    assert update['interrupt_payload']['kind']=='AUTHORIAL_AMBIGUITY'
+    assert update['semantic_escalation_error']=='UNKNOWN_ESCALATION'
+    assert not any(call.role=='writer' for call in services.claude.calls)
+
+
+def test_failed_semantic_sanity_cannot_use_basic_fallthrough(tmp_path):
+    root=Path(__file__).resolve().parents[2]
+    cfg=RuntimeConfig.from_root(tmp_path)
+    services=_fake_services(tmp_path)
+    services.codex.responses['representation']={
+        'section_job':'free will inquiry',
+        'semantic_sanity':{
+            'status':'FAIL','defect_types':['wrong_thought'],'research_trigger':False,
+            'recommended_escalation':'BASIC','owner_question':'',
+        },
+        'units':[{'id':'u1','text':'Unresolved reconstruction.','reason':'failed sanity'}],
+    }
+    deps=build_runtime_dependencies(cfg,project_root=root,services=services)
+    state=seed_initial_state(cfg,project_root=root,source_path=root/'project'/'INPUT.md',services=services)
+
+    update=deps.representation(state)
+
+    assert update['status']=='owner_ambiguity_required'
+    assert update['semantic_escalation_error']=='FAIL_WITHOUT_ACTION'
+
+
+def test_owner_resolution_does_not_erase_pending_research(tmp_path):
+    from authorial_flow.research.base import SearchHit, RetrievedSource
+    from authorial_flow.research.evidence import AccessLevel
+
+    class Provider:
+        def search(self,query,limit):
+            return [SearchHit(title='Primary',url='https://example.test/primary',primary_hint=True)]
+
+    class Fetcher:
+        def fetch(self,url):
+            return RetrievedSource(
+                url=url,final_url=url,mime_type='text/plain',body='Primary text.',
+                body_sha256='abc',retrieved_at=1.0,access_level=AccessLevel.FULL_TEXT,headers={},
+            )
+
+    root=Path(__file__).resolve().parents[2]
+    cfg=RuntimeConfig.from_root(tmp_path)
+    services=_fake_services(tmp_path)
+    services.research_provider=Provider(); services.research_fetcher=Fetcher()
+    services.codex.responses['representation']={
+        'section_job':'free will inquiry',
+        'semantic_sanity':{
+            'status':'FAIL','defect_types':['authorial_ambiguity','source_role'],
+            'research_trigger':True,'recommended_escalation':'RESEARCH',
+            'owner_question':'Which meaning controls?',
+        },
+        'units':[{'id':'u7','text':'Ambiguous inherited source role.','reason':'open meaning'}],
+    }
+    services.codex.responses['research_question']={
+        'uncertainty':'Does the source support the owner-resolved meaning?',
+        'material_consequence':'The source role may change.','query':'bounded primary-source query',
+    }
+    services.codex.responses['research_evidence']={
+        'evidence':[],'stable':True,'access_limits':[],
+    }
+    services.codex.responses['research_developmental']={
+        'architecture_card':{
+            'heading_promise':'free will','real_pressure':'what is choosing?','reader_stake':'understand it',
+            'controlling_claim':'owner-resolved claim','certainty':'supported','motive_obligation':'',
+            'intellectual_lived_route':[],'actor_action_object':[],'causality_chronology':[],
+            'source_landscape':[],'strongest_complication':'','governing_movement':'inquiry',
+            'paragraph_jobs':[],'stopping_point':'open','exact_language_reasons':[],
+        },
+        'corrected_units':[{
+            'id':'u7','text':'Research-qualified owner meaning.','disposition':'use',
+            'reason':'source role checked','origin':'research_candidate',
+        }],
+        'owner_position_diverges':False,'unresolved_authorial':[],
+    }
+    deps=build_runtime_dependencies(cfg,project_root=root,services=services)
+    state=seed_initial_state(cfg,project_root=root,source_path=root/'project'/'INPUT.md',services=services)
+
+    first=deps.representation(state)
+    assert first['status']=='owner_ambiguity_required'
+
+    resumed={**state,**first,'resolved_authorial_answer':'Choosing occurs without a separate chooser.',
+             'open_authorial_unit_id':'u7'}
+    second=deps.representation(resumed)
+
+    assert second['status']=='represented'
+    assert second['research_ref']
+    assert any(call.role=='research_question' for call in services.codex.calls)
+
+
 def test_owner_adopted_research_alternative_resumes_directly_from_adopted_units(tmp_path):
     root=Path(__file__).resolve().parents[2]
     cfg=RuntimeConfig.from_root(tmp_path)
@@ -835,6 +956,142 @@ def test_generation_stops_durably_at_configured_writer_attempt_budget_without_an
     assert update['budget']=='writer_attempts'
     assert len(services.claude.calls)==claude_before
     assert len(services.codex.calls)==codex_before
+
+
+def _owner_generation_state(tmp_path):
+    root=Path(__file__).resolve().parents[2]
+    cfg=RuntimeConfig.from_root(tmp_path)
+    services=_fake_services(tmp_path)
+    open_pressure={
+        'state':'OPEN','confidence':0.91,'live_pressure':'Required meaning remains uncovered.',
+        'previous_move_function':'opens the issue','already_settled':[],
+        'backward_reopen_risks':[],'why_stop_might_be_natural':'',
+    }
+    services.codex.responses['pressure_reader']=open_pressure
+    services.claude.responses['pressure_reader']=open_pressure
+    deps=build_runtime_dependencies(cfg,project_root=root,services=services)
+    state=seed_initial_state(cfg,project_root=root,source_path=root/'project'/'INPUT.md',services=services)
+    state['source_metadata']={'provenance_override':'OWNER_DRAFT'}
+    state.update(deps.representation(state))
+    return cfg,services,deps,state
+
+
+def test_stop_before_candidate_finishes_on_covered_accepted_boundary(tmp_path):
+    _cfg,services,deps,state=_owner_generation_state(tmp_path)
+    arrival='Where I get lost is whether any chooser remains outside those conditions.'
+    state.update({
+        'accepted_moves':[arrival],
+        'accepted_move_coverage':[{
+            'move_sha256':sha256(arrival.encode()).hexdigest(),
+            'covered_unit_ids':['u001','u002'],
+        }],
+        'atom_coverage':{'u001':True,'u002':True},
+        'accepted_prefix_hash':sha256(arrival.encode()).hexdigest(),
+    })
+    writer_before=len([call for call in services.claude.calls if call.role=='writer'])
+
+    update=deps.generation(state)
+
+    assert update['status']=='generated'
+    assert update['stop_result']['action']=='STOP'
+    assert update['generation_rejection_class']=='STOP_BEFORE_CANDIDATE'
+    assert update['entry_edge_result']['boundary_id']==update['generation_boundary_id']
+    assert len([call for call in services.claude.calls if call.role=='writer'])==writer_before+1
+
+
+def test_stale_pressure_from_prior_boundary_cannot_govern_current_boundary(tmp_path):
+    _cfg,services,deps,state=_owner_generation_state(tmp_path)
+    move='The protected thought is now fully placed.'
+    state.update({
+        'accepted_moves':[move],
+        'accepted_move_coverage':[{
+            'move_sha256':sha256(move.encode()).hexdigest(),
+            'covered_unit_ids':['u001','u002'],
+        }],
+        'atom_coverage':{'u001':True,'u002':True},
+        'committed_pressure':{
+            'state':'OPEN','confidence':0.99,'live_pressure':'stale',
+            'boundary_id':'prior-boundary',
+        },
+        'generation_boundary_id':'prior-boundary',
+    })
+    natural={
+        'state':'NATURAL_STOP','confidence':0.96,'live_pressure':'The current thought has arrived.',
+        'previous_move_function':'arrival','already_settled':[],
+        'backward_reopen_risks':[],'why_stop_might_be_natural':'Nothing remains required.',
+    }
+    services.codex.responses['pressure_reader']=natural
+    services.claude.responses['pressure_reader']=natural
+    writer_before=len([call for call in services.claude.calls if call.role=='writer'])
+
+    update=deps.generation(state)
+
+    assert update['status']=='generated'
+    assert update['committed_pressure']['state']=='NATURAL_STOP'
+    assert update['committed_pressure']['boundary_id'] != 'prior-boundary'
+    assert update['generation_boundary_id']==update['committed_pressure']['boundary_id']
+    assert len([call for call in services.claude.calls if call.role=='writer'])==writer_before
+
+
+def test_stop_before_candidate_rolls_back_arrival_when_required_units_remain(tmp_path):
+    _cfg,services,deps,state=_owner_generation_state(tmp_path)
+    arrival='Where I get lost is whether any chooser remains outside those conditions.'
+    state.update({
+        'accepted_moves':[arrival],
+        'accepted_move_coverage':[{
+            'move_sha256':sha256(arrival.encode()).hexdigest(),
+            'covered_unit_ids':['u001'],
+        }],
+        'atom_coverage':{'u001':True,'u002':False},
+        'accepted_prefix_hash':sha256(arrival.encode()).hexdigest(),
+    })
+
+    update=deps.generation(state)
+
+    assert update['status']=='continue_generation'
+    assert update['accepted_moves']==[]
+    assert update['atom_coverage']=={'u001':False,'u002':False}
+    assert update['rollback_count']==1
+    assert update['retry_count']==0
+    assert update['decision_boundary_id'] != update['generation_boundary_id']
+    assert update['generation_rejection_class']=='STOP_BEFORE_CANDIDATE'
+
+
+def test_stop_before_candidate_fails_closed_when_arrival_rollback_is_unsafe(tmp_path):
+    _cfg,services,deps,state=_owner_generation_state(tmp_path)
+    arrival='Where I get lost is whether any chooser remains outside those conditions.'
+    state.update({
+        'accepted_moves':[arrival],
+        'accepted_move_coverage':[],
+        'atom_coverage':{'u001':True,'u002':False},
+        'accepted_prefix_hash':sha256(arrival.encode()).hexdigest(),
+    })
+    writer_before=len([call for call in services.claude.calls if call.role=='writer'])
+
+    update=deps.generation(state)
+
+    assert update['status']=='machine_failure'
+    assert update['failure_class']=='POLICY_CONTRADICTION'
+    assert update['generation_rejection_class']=='UNSAFE_ARRIVAL_ROLLBACK'
+    assert len([call for call in services.claude.calls if call.role=='writer'])==writer_before+1
+
+
+def test_premature_arrival_is_rejected_before_it_can_enter_accepted_moves(tmp_path):
+    _cfg,services,deps,state=_owner_generation_state(tmp_path)
+    candidate='Where I get lost is whether any chooser remains outside those conditions.'
+    services.claude.responses['writer']=candidate
+    services.codex.responses['fidelity_guard']={
+        'verdict':'PASS','confidence':0.96,'failure_type':'none','reason':'',
+        'covered_unit_ids':['u001'],
+    }
+
+    update=deps.generation(state)
+
+    assert update['status']=='continue_generation'
+    assert update.get('accepted_moves',[])==[]
+    assert update['retry_count']==1
+    assert update['generation_rejection_class']=='PREMATURE_ARRIVAL'
+    assert update['committed_pressure']['boundary_id']==update['generation_boundary_id']
 
 
 def test_runtime_pangram_checkpoints_async_task_before_poll_and_resumes_without_resubmit(tmp_path):

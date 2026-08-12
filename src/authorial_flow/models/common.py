@@ -3,6 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from hashlib import sha256
 import json
+import re
+from enum import StrEnum
 from typing import Any
 
 
@@ -84,6 +86,107 @@ def validate_json_schema(value: Any, schema: dict | None) -> None:
         raise ValueError(f"value {value!r} not in enum")
 
 
+class FailureKind(StrEnum):
+    AUTH = "AUTH"
+    UNSUPPORTED_MODEL = "UNSUPPORTED_MODEL"
+    INVALID_SCHEMA = "INVALID_SCHEMA"
+    STRUCTURED_CONTRACT = "STRUCTURED_CONTRACT"
+    TRANSIENT = "TRANSIENT"
+    UNKNOWN = "UNKNOWN"
+
+
+def validate_schema_contract(schema: dict | None) -> None:
+    """Validate the local subset before paying for a provider attempt."""
+    if schema is None:
+        return
+    if not isinstance(schema, dict):
+        raise ValueError("schema must be an object")
+
+    def walk(node: Any, path: str) -> None:
+        if not isinstance(node, dict):
+            raise ValueError(f"{path} must be an object")
+        typ = node.get("type")
+        if typ is not None and typ not in {"object", "array", "string", "integer", "number", "boolean", "null"}:
+            raise ValueError(f"{path}.type is unsupported")
+        if typ == "object":
+            props = node.get("properties", {})
+            required = node.get("required", [])
+            if not isinstance(props, dict) or not isinstance(required, list):
+                raise ValueError(f"{path} object contract is malformed")
+            if any(not isinstance(item, str) for item in required):
+                raise ValueError(f"{path}.required must contain strings")
+            for key, child in props.items():
+                walk(child, f"{path}.properties.{key}")
+        if typ == "array" and "items" in node:
+            walk(node["items"], f"{path}.items")
+        if "enum" in node and (not isinstance(node["enum"], list) or not node["enum"]):
+            raise ValueError(f"{path}.enum must be a non-empty list")
+        for combiner in ("anyOf", "oneOf", "allOf"):
+            if combiner in node:
+                values = node[combiner]
+                if not isinstance(values, list) or not values:
+                    raise ValueError(f"{path}.{combiner} must be a non-empty list")
+                for index, child in enumerate(values):
+                    walk(child, f"{path}.{combiner}[{index}]")
+        definitions = node.get("$defs", {})
+        if definitions:
+            if not isinstance(definitions, dict):
+                raise ValueError(f"{path}.$defs must be an object")
+            for key, child in definitions.items():
+                walk(child, f"{path}.$defs.{key}")
+        if "$ref" in node and not isinstance(node["$ref"], str):
+            raise ValueError(f"{path}.$ref must be a string")
+
+    walk(schema, "root")
+
+
+def capability_signature(provider: str, model: str, schema: dict | None) -> str:
+    payload = canonical_json({
+        "provider": str(provider),
+        "model": str(model),
+        "structured": schema is not None,
+        "schema_sha256": sha256(canonical_json(schema or {}).encode("utf-8")).hexdigest(),
+    })
+    return sha256(payload.encode("utf-8")).hexdigest()
+
+
+def unique_model_profiles(models: list[Any]) -> list[Any]:
+    unique: list[Any] = []
+    seen: set[str] = set()
+    for model in models:
+        key = "<CLI_DEFAULT>" if model is None else str(model)
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(model)
+    return unique
+
+
+def classify_attempt_failure(*, returncode: int, stdout: str, stderr: str, error: str) -> FailureKind:
+    text = " ".join((str(stdout or ""), str(stderr or ""), str(error or ""))).lower()
+    if re.search(r"\b(401|403)\b|unauthori[sz]ed|authentication|invalid api key|login required|not logged in", text):
+        return FailureKind.AUTH
+    if "model does not exist" in text or "model not found" in text or "unsupported model" in text:
+        return FailureKind.UNSUPPORTED_MODEL
+    if "invalid json schema" in text or "schema is invalid" in text or "unsupported schema" in text:
+        return FailureKind.INVALID_SCHEMA
+    if any(token in text for token in (
+        "parse/schema", "structured output", "missing structured output",
+        "expected exactly one json", "missing required field", "schema requires",
+    )):
+        return FailureKind.STRUCTURED_CONTRACT
+    if any(token in text for token in (
+        "timed out", "timeout", "rate limit", "429", "overloaded", "capacity",
+        "temporarily unavailable", "connection reset", "connection refused",
+    )):
+        return FailureKind.TRANSIENT
+    return FailureKind.UNKNOWN
+
+
+def stops_provider_fallback(kind: FailureKind) -> bool:
+    return kind in {FailureKind.AUTH, FailureKind.INVALID_SCHEMA}
+
+
 @dataclass(frozen=True)
 class ModelCall:
     prompt: str
@@ -99,6 +202,8 @@ class ModelAttempt:
     stdout_ref: str = ""
     stderr_ref: str = ""
     error: str = ""
+    failure_kind: str = ""
+    capability_signature: str = ""
 
 
 @dataclass(frozen=True)

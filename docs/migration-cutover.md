@@ -38,6 +38,8 @@ Until then, the legacy artifacts remain evidence only; they are never reintroduc
 
 ## In-place checkpoint compatibility
 
-Version 1.1 adds optional state fields for supervisor snapshots/sessions, owner directions, rejected proposals, per-move coverage, and pause metadata. Existing SQLite checkpoints remain valid because every added field is optional. There is no destructive database migration, checkpoint rewrite, or `.state` reset.
+Version 1.1 added optional state fields for supervisor snapshots/sessions, owner directions, rejected proposals, per-move coverage, and pause metadata. Version 1.2 adds optional boundary IDs, safe decision traces, provider failure kinds/capability signatures, and bounded repair history/outcomes. Existing SQLite checkpoints remain valid because every added field is optional. There is no destructive database migration, checkpoint rewrite, or `.state` reset.
 
 An installed project resumes from `.state/current-thread.json` and therefore preserves its stored thread ID. The release-baseline reconciler may update the local source commit while retaining `.state`; it must never reseed an interrupted article. A legacy checkpoint without per-move coverage may continue normally, but rollback fails closed until bounded two-call coverage reconciliation validates the exact move hashes and authority-unit mapping.
+
+Legacy pressure and edge results without a 1.2 boundary ID remain historical observations only; the generation node recomputes pressure for the current accepted boundary before using it. A legacy repair history begins empty. The first 1.2 repair attempt records a signature and typed outcome, after which an unchanged duplicate stops before review. Upgrading does not replay or mutate accepted prose merely to populate these optional fields.

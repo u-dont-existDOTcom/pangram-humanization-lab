@@ -16,7 +16,7 @@ class EdgeResult:
     challenge: str = ""
 
 
-def _natural_arrival(text: str) -> bool:
+def is_natural_arrival(text: str) -> bool:
     low = text.lower()
     markers = (
         "where i get lost", "where i'm lost", "where i get stuck", "where i'm stuck",
@@ -43,7 +43,7 @@ def judge_full_edge(accepted_moves: list[str], candidate: str, precommitted: Com
     previous = accepted_moves[-1]
     if precommitted and precommitted.state == "NATURAL_STOP":
         return EdgeResult("STOP_BEFORE_CANDIDATE", .98, "reopens_after_arrival", "candidate appears after a precommitted natural stop")
-    if _natural_arrival(previous):
+    if is_natural_arrival(previous):
         return EdgeResult("STOP_BEFORE_CANDIDATE", .96, "reopens_after_arrival", "previous move states the live unresolved boundary")
     entry = candidate_semantic_spans(candidate)[0] if candidate_semantic_spans(candidate) else candidate
     if precommitted:
@@ -60,7 +60,7 @@ def judge_edge_locally(accepted_moves: list[str], candidate: str) -> EdgeResult:
     if not accepted_moves:
         return EdgeResult("PASS", 1.0)
     previous = accepted_moves[-1]
-    if _natural_arrival(previous):
+    if is_natural_arrival(previous):
         return EdgeResult("STOP_BEFORE_CANDIDATE", .97, "reopens_settled_material_after_arrival", "previous move is a stated epistemic arrival")
     entry = candidate_semantic_spans(candidate)[0] if candidate_semantic_spans(candidate) else candidate
     if previous.rstrip().endswith("?") and entry.strip().lower().startswith("not that "):

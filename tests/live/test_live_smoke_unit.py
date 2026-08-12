@@ -47,3 +47,13 @@ def test_default_codex_models_use_supported_sol_then_cli_default(monkeypatch):
     monkeypatch.delenv('AUTHORIAL_CODEX_MODELS',raising=False)
     args=mod.build_parser().parse_args(['--codex'])
     assert args.codex_models == 'gpt-5.6-sol,'
+
+
+def test_runtime_schema_inventory_passes_local_preflight():
+    mod=load_module()
+
+    report=mod.validate_runtime_schema_inventory()
+
+    assert report['status']=='pass'
+    assert report['schema_count'] >= 8
+    assert report['invalid']==[]

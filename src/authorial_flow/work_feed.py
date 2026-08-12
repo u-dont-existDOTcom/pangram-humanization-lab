@@ -23,6 +23,11 @@ EVENT_FIELDS: dict[str, frozenset[str]] = {
     "generation.retry": frozenset({
         "node", "stage", "reason", "retry_count", "proposal_ref",
     }),
+    "decision.trace": frozenset({
+        "boundary_id", "decision_boundary_id", "accepted_move_count",
+        "uncovered_required_count", "pressure_votes", "committed_pressure",
+        "edge", "candidate_sha256", "rejection_class", "budgets",
+    }),
     "move.accepted": frozenset({
         "node", "move_index", "proposal_ref", "text", "covered_unit_ids",
     }),
@@ -34,6 +39,7 @@ EVENT_FIELDS: dict[str, frozenset[str]] = {
     }),
     "repair.state": frozenset({
         "phase", "repair_attempt", "failure_class", "repair_commit", "pass", "reason",
+        "outcome", "plan_signature",
     }),
     "supervisor.paused": frozenset({
         "thread_id", "node", "operation", "pause_mode", "resume_node", "snapshot_ref",
@@ -72,6 +78,15 @@ def render_work_event(event: Mapping[str, Any]) -> str:
             f"generation retry {event.get('retry_count', '')} | "
             f"{event.get('stage', '')} | {event.get('reason', '')}"
         )
+    if kind == "decision.trace":
+        pressure = event.get("committed_pressure") or {}
+        edge = event.get("edge") or {}
+        return (
+            f"decision {event.get('rejection_class', '') or edge.get('verdict', '')} | "
+            f"pressure={pressure.get('state', '')} | "
+            f"uncovered_required={event.get('uncovered_required_count', 0)} | "
+            f"boundary={str(event.get('decision_boundary_id') or '')[:12]}"
+        )
     if kind == "move.accepted":
         return f"move accepted {event.get('move_index', '')}\n{event.get('text', '')}"
     if kind == "passage.current":
@@ -97,7 +112,7 @@ def render_work_event(event: Mapping[str, Any]) -> str:
         )
     if kind == "repair.state":
         return (
-            f"repair {event.get('phase', '')} | {event.get('failure_class', '')} | "
+            f"repair {event.get('phase', '')} | {event.get('outcome', '') or event.get('failure_class', '')} | "
             f"{event.get('reason', '')}"
         )
     if kind == "supervisor.paused":

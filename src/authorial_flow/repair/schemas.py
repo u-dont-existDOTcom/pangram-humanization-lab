@@ -1,6 +1,15 @@
 from __future__ import annotations
 
-from pydantic import BaseModel, ConfigDict
+from enum import StrEnum
+
+from pydantic import BaseModel, ConfigDict, Field
+
+
+class RepairOutcome(StrEnum):
+    APPLIED_VERIFIED = "APPLIED_VERIFIED"
+    STAGED_FOR_OWNER = "STAGED_FOR_OWNER"
+    REJECTED_WITH_REASON = "REJECTED_WITH_REASON"
+    NON_APPLICABLE_STOP = "NON_APPLICABLE_STOP"
 
 
 class RepairPlan(BaseModel):
@@ -10,7 +19,7 @@ class RepairPlan(BaseModel):
     patch_summary: str
     target_files: list[str]
     rationale: str
-    tests: list[str]
+    tests: list[str] = Field(description="Exact local pytest commands; prose test descriptions are invalid")
     needs_owner_judgment: bool
     owner_question: str
 

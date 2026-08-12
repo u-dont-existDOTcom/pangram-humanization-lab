@@ -3,7 +3,8 @@ import json
 import pytest
 from authorial_flow.artifacts import ArtifactStore
 from authorial_flow.models.common import (
-    ModelCall, ProviderFailure, extract_json_object, stable_request_id,
+    FailureKind, ModelCall, ProviderFailure, classify_attempt_failure,
+    extract_json_object, stable_request_id,
 )
 from authorial_flow.models.claude_cli import ClaudeCLI
 from authorial_flow.process_runner import ProcessResult
@@ -144,3 +145,58 @@ def test_all_pydantic_structured_output_schemas_are_recursively_codex_strict():
 
     for model in (ArchitectureCard, ResearchQuestion, ResearchSummary):
         assert_strict(model.model_json_schema(),model.__name__)
+
+
+@pytest.mark.parametrize(('text','expected'),[
+    ('401 unauthorized; please log in',FailureKind.AUTH),
+    ('model does not exist',FailureKind.UNSUPPORTED_MODEL),
+    ('invalid JSON schema: required property missing',FailureKind.INVALID_SCHEMA),
+    ('parse/schema: ValueError',FailureKind.STRUCTURED_CONTRACT),
+    ('request timed out while provider was overloaded',FailureKind.TRANSIENT),
+    ('unexpected failure',FailureKind.UNKNOWN),
+])
+def test_provider_failure_classification_is_deterministic(text,expected):
+    assert classify_attempt_failure(returncode=1,stdout='',stderr=text,error='') is expected
+
+
+def test_auth_failure_stops_equivalent_claude_fallbacks(tmp_path: Path):
+    runner=FakeRunner([_result(1,stderr='401 unauthorized; login required')])
+    adapter=ClaudeCLI(models=['claude-opus-5','claude-fable-5'],base_env={'PATH':'/bin'})
+
+    with pytest.raises(ProviderFailure) as exc:
+        adapter.call(ModelCall(prompt='x',schema={'type':'object'},role='r'),runner,ArtifactStore(tmp_path/'a'))
+
+    assert len(runner.specs)==1
+    assert exc.value.attempts[0].failure_kind==FailureKind.AUTH.value
+    assert exc.value.attempts[0].capability_signature
+
+
+def test_duplicate_model_profile_is_not_retried_after_unsupported_model(tmp_path: Path):
+    runner=FakeRunner([
+        _result(1,stderr='model does not exist'),
+        _result(0,stdout=json.dumps({'result':'{"verdict":"PASS"}','model':'b'})),
+    ])
+    adapter=ClaudeCLI(models=['a','a','b'],base_env={'PATH':'/bin'})
+
+    got=adapter.call(
+        ModelCall(prompt='x',schema={'type':'object'},role='r'),runner,ArtifactStore(tmp_path/'a'),
+    )
+
+    assert [spec.operation.model for spec in runner.specs]==['a','b']
+    assert got.attempts[0].failure_kind==FailureKind.UNSUPPORTED_MODEL.value
+
+
+def test_invalid_schema_fails_preflight_without_spawning_provider(tmp_path: Path):
+    runner=FakeRunner([])
+    adapter=ClaudeCLI(models=['a','b'],base_env={'PATH':'/bin'})
+    invalid={
+        'type':'object','additionalProperties':False,
+        'properties':{},'required':'missing',
+    }
+
+    with pytest.raises(ProviderFailure) as exc:
+        adapter.call(ModelCall(prompt='x',schema=invalid,role='r'),runner,ArtifactStore(tmp_path/'a'))
+
+    assert runner.specs==[]
+    assert len(exc.value.attempts)==1
+    assert exc.value.attempts[0].failure_kind==FailureKind.INVALID_SCHEMA.value

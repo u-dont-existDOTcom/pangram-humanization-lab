@@ -136,6 +136,32 @@ def test_supervisor_action_preserves_event_kind_and_action_kind(tmp_path):
     assert row["action_kind"] == "REDIRECT"
 
 
+def test_decision_trace_event_is_allowlisted_and_renders_controller_decision(tmp_path):
+    rendered=[]
+    journal=EventJournal(tmp_path/'events.jsonl')
+    feed=WorkFeed(journal=journal,renderer=rendered.append,secret_values=lambda:['TRACE-SECRET'])
+
+    feed.emit('decision.trace',{
+        'boundary_id':'b'*64,
+        'decision_boundary_id':'b'*64,
+        'accepted_move_count':3,
+        'uncovered_required_count':6,
+        'committed_pressure':{'state':'NATURAL_STOP','confidence':0.9,'boundary_id':'b'*64},
+        'edge':{'verdict':'STOP_BEFORE_CANDIDATE','confidence':0.96,'boundary_id':'b'*64},
+        'candidate_sha256':'c'*64,
+        'rejection_class':'STOP_BEFORE_CANDIDATE',
+        'budgets':{'retry_count':4,'rollback_count':0},
+        'raw_candidate':'must disappear TRACE-SECRET',
+    })
+
+    row=journal.latest()
+    assert row['kind']=='decision.trace'
+    assert row['uncovered_required_count']==6
+    assert 'raw_candidate' not in row
+    assert 'STOP_BEFORE_CANDIDATE' in rendered[-1]
+    assert 'must disappear' not in rendered[-1]
+
+
 def test_runtime_services_wire_one_pause_controller_and_work_feed(tmp_path, monkeypatch):
     monkeypatch.delenv("PANGRAM_API_KEY", raising=False)
     monkeypatch.delenv("BRAVE_SEARCH_API_KEY", raising=False)
