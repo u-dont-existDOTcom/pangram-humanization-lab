@@ -12,6 +12,7 @@ from pathlib import Path
 import pytest
 
 from authorial_flow.release import ReleaseError, build_release, verify_release
+from authorial_flow.version import GRAPH_VERSION
 
 
 REPO = Path(__file__).resolve().parents[2]
@@ -75,6 +76,68 @@ def test_release_manifest_and_checksums_match_exact_members(tmp_path):
         assert payload["source_commit_sha"] == manifest.source_commit_sha
         assert payload["graph_version"]
         assert payload["policy_version"]
+
+
+def test_root_metadata_sync_is_rebuild_stable_after_metadata_only_commit(tmp_path):
+    root = tmp_path / "Téléchargements" / "authorial-flow-graph-v1"
+    root.mkdir(parents=True)
+    for name, data in {
+        "INSTALL-AND-RUN.sh": "#!/bin/sh\nexit 0\n",
+        "RUN.sh": "#!/bin/sh\nexit 0\n",
+        "requirements.lock": "# locked\n",
+        "pyproject.toml": "[project]\nname='synthetic-release'\nversion='1'\n",
+        "README.md": "# Synthetic release\n",
+        "PASTE_INTO_PROJECT_INSTRUCTIONS.txt": "instructions\n",
+        "source.txt": "release member\n",
+        "MANIFEST.json": '{"graph_version":"stale"}\n',
+        "SHA256SUMS.txt": "stale\n",
+    }.items():
+        (root / name).write_text(data, encoding="utf-8")
+    (root / "INSTALL-AND-RUN.sh").chmod(0o755)
+    (root / "RUN.sh").chmod(0o755)
+    policy = root / "policy" / "test-policy"
+    policy.mkdir(parents=True)
+    (policy / "MASTER.md").write_text("policy\n", encoding="utf-8")
+    subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+    subprocess.run(["git", "config", "user.email", "test@example.invalid"], cwd=root, check=True)
+    subprocess.run(["git", "config", "user.name", "Test"], cwd=root, check=True)
+    subprocess.run(["git", "add", "-A"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-qm", "content release"], cwd=root, check=True)
+    content_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+
+    proc = subprocess.run(
+        [sys.executable, str(REPO / "scripts" / "build_release.py"), "--repo", str(root), "--write-root-metadata"],
+        text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+    )
+
+    assert proc.returncode == 0, proc.stderr
+    assert "root_metadata=PASS" in proc.stdout
+    payload = json.loads((root / "MANIFEST.json").read_text(encoding="utf-8"))
+    assert payload["graph_version"] == GRAPH_VERSION
+    assert payload["source_commit_sha"] == content_commit
+    rows = {row["path"]: row for row in payload["members"]}
+    assert "MANIFEST.json" not in rows
+    assert "SHA256SUMS.txt" not in rows
+    for rel, row in rows.items():
+        source = root / rel
+        assert row["size_bytes"] == len(source.read_bytes())
+        assert row["sha256"] == hashlib.sha256(source.read_bytes()).hexdigest()
+        assert row["executable"] == bool(source.stat().st_mode & stat.S_IXUSR)
+    sums = {}
+    for line in (root / "SHA256SUMS.txt").read_text(encoding="utf-8").splitlines():
+        digest, rel = line.split("  ", 1)
+        sums[rel] = digest
+    assert sums == {rel: row["sha256"] for rel, row in rows.items()}
+
+    subprocess.run(["git", "add", "MANIFEST.json", "SHA256SUMS.txt"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-qm", "finalize release metadata"], cwd=root, check=True)
+    rebuilt = tmp_path / "rebuilt.zip"
+    manifest = build_release(root, rebuilt)
+    assert manifest.source_commit_sha == content_commit
+    with zipfile.ZipFile(rebuilt) as archive:
+        prefix = manifest.archive_root + "/"
+        assert archive.read(prefix + "MANIFEST.json") == (root / "MANIFEST.json").read_bytes()
+        assert archive.read(prefix + "SHA256SUMS.txt") == (root / "SHA256SUMS.txt").read_bytes()
 
 
 def test_release_build_is_deterministic_for_same_commit(tmp_path):

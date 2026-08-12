@@ -92,6 +92,48 @@ def test_publish_creates_orphan_diagnostics_branch_without_mutating_source_check
     assert not list((cfg.state_dir / "diagnostics" / "tmp").glob("*"))
 
 
+def test_git_transport_stabilizes_messages_without_losing_utf8_paths(
+    tmp_path: Path, monkeypatch,
+) -> None:
+    import authorial_flow.diagnostics as diagnostics
+
+    checkout = tmp_path / "Téléchargements" / "diagnostics-checkout"
+    checkout.mkdir(parents=True)
+    fake_bin = tmp_path / "bin"
+    fake_bin.mkdir()
+    fake_git = fake_bin / "git"
+    fake_git.write_text(
+        """#!/bin/sh
+if [ "$1" = "fetch" ]; then
+    if [ -z "${LC_ALL+x}" ] && [ "$LC_MESSAGES" = "C" ] && [ "$LANGUAGE" = "C" ] && [ "$LC_CTYPE" = "fr_FR.UTF-8" ]; then
+        printf "%s\\n" "fatal: couldn't find remote ref refs/heads/diagnostics/authorial-flow-graph-v1" >&2
+    else
+        printf "%s\\n" "fatal: référence distante introuvable" >&2
+    fi
+    exit 128
+fi
+exit 0
+""",
+        encoding="utf-8",
+    )
+    fake_git.chmod(0o755)
+    monkeypatch.setenv("PATH", f"{fake_bin}{os.pathsep}{os.environ['PATH']}")
+    monkeypatch.setenv("LC_ALL", "fr_FR.UTF-8")
+    monkeypatch.delenv("LC_CTYPE", raising=False)
+    monkeypatch.setenv("LC_MESSAGES", "fr_FR.UTF-8")
+    monkeypatch.setenv("LANGUAGE", "fr")
+
+    mode = diagnostics._prepare_diagnostics_checkout(
+        checkout,
+        remote_url="https://github.com/u-dont-existDOTcom/pangram-humanization-lab.git",
+        branch=DIAGNOSTICS_BRANCH,
+        timeout_seconds=10,
+    )
+
+    assert mode == "orphan"
+    assert os.environ["LC_ALL"] == "fr_FR.UTF-8"
+
+
 def test_repeated_and_sequential_publication_is_idempotent_and_append_only(tmp_path: Path) -> None:
     _, remote, cfg = _source_and_remote(tmp_path)
     first = build_diagnostic_record(cfg, phase="runtime-run", outcome="bounded_machine_stop", now=1.0)

@@ -1,7 +1,7 @@
 {
   "archive_root": "authorial-flow-graph-v1",
   "format": "authorial-flow-release-v1",
-  "graph_version": "1.2.0-dev1",
+  "graph_version": "1.3.0-dev1",
   "members": [
     {
       "executable": false,
@@ -24,14 +24,14 @@
     {
       "executable": false,
       "path": "README.md",
-      "sha256": "661b00d41f2856f59deafa118dbe910072827e04966b923be88ff62acaf09ba0",
-      "size_bytes": 12526
+      "sha256": "c448fb9694d8d618af844d2eda968a3b985230a6a1866bfdc5cb42a4a494e4db",
+      "size_bytes": 13439
     },
     {
       "executable": true,
       "path": "RUN.sh",
-      "sha256": "30196d2b4b37b46475eb66e80fc02de43355cdf96cb4a904e7196daaf7c78bda",
-      "size_bytes": 515
+      "sha256": "9a245eb946c62fe0ef2760cf5eb8afbcc6a77124680e3aa574cd3ea1381edd60",
+      "size_bytes": 531
     },
     {
       "executable": false,
@@ -65,6 +65,12 @@
     },
     {
       "executable": false,
+      "path": "docs/2026-08-12-automatic-diagnostics-publication-review.md",
+      "sha256": "d0d0ad0dd47b6aa865dd0b92326542b5c0f5d1397c3ca8ccefc18bab183a5cee",
+      "size_bytes": 6745
+    },
+    {
+      "executable": false,
       "path": "docs/2026-08-12-bounded-failure-control-review.md",
       "sha256": "3ab864e0502e364e0239036b3d915accdbc866d2fa8fe49e854fa69e60c72ace",
       "size_bytes": 3859
@@ -78,8 +84,8 @@
     {
       "executable": false,
       "path": "docs/acceptance-matrix.md",
-      "sha256": "6d08169214491cec830b7a94d2a4eaadc8ffc9921382bcc9377990c55ba5d463",
-      "size_bytes": 10811
+      "sha256": "4682cf6506df6233302205b1532eec81a99001ade66d579d36a33d9bdc1c8d69",
+      "size_bytes": 12125
     },
     {
       "executable": false,
@@ -108,14 +114,14 @@
     {
       "executable": false,
       "path": "docs/migration-cutover.md",
-      "sha256": "d51053649d83db183cd18d194847add1791275fd32ae3312feb638ee50cc6147",
-      "size_bytes": 3398
+      "sha256": "268fe6d52211b1243d8c43688c2d5dd6ceb52921fe3c08cd47b5f6cdc64ae715",
+      "size_bytes": 3581
     },
     {
       "executable": false,
       "path": "docs/release-checklist.md",
-      "sha256": "cc9b1dfa229452f120c51ff23f33b2a5caaaff045db962268a27544b050c169a",
-      "size_bytes": 5909
+      "sha256": "f39ef9f194f35ffdcd648a11bb0a6122ca35036a60e3e485571624d33eda1482",
+      "size_bytes": 6700
     },
     {
       "executable": false,
@@ -149,6 +155,12 @@
     },
     {
       "executable": false,
+      "path": "docs/superpowers/plans/2026-08-12-automatic-diagnostics-publication.md",
+      "sha256": "2fab5cf5b39558bf79223cf2f6139cd18323307de1e3d3303929bad3a26e3783",
+      "size_bytes": 10606
+    },
+    {
+      "executable": false,
       "path": "docs/superpowers/plans/2026-08-12-bounded-failure-control.md",
       "sha256": "82b9bf9e0aeef6a32a677735abd7767f84a3444ecbfb9e58312b77dedc1451d5",
       "size_bytes": 8465
@@ -158,6 +170,18 @@
       "path": "docs/superpowers/plans/2026-08-12-interactive-supervisor-pause.md",
       "sha256": "6f48e75165433890d1e66add6c5ff6afdb74e3b61e59369266e0206d42f0010b",
       "size_bytes": 71393
+    },
+    {
+      "executable": false,
+      "path": "docs/superpowers/plans/2026-08-12-locale-stable-diagnostics-git.md",
+      "sha256": "d5438245eb297fb60ddfd0bb87ee54490b7e95690171f706fca5ec02dffb9026",
+      "size_bytes": 7741
+    },
+    {
+      "executable": false,
+      "path": "docs/superpowers/plans/2026-08-12-root-release-metadata-sync.md",
+      "sha256": "370f54708760d7e6fddd6094d47b918dee923759793192a34c84028c2d97d358",
+      "size_bytes": 11212
     },
     {
       "executable": false,
@@ -173,6 +197,12 @@
     },
     {
       "executable": false,
+      "path": "docs/superpowers/specs/2026-08-12-automatic-diagnostics-publication-design.md",
+      "sha256": "fd1f41ab18fe0bd5cb358d9db9ac984a0001ac02c1a7aad392ed24012ffdcd6f",
+      "size_bytes": 6145
+    },
+    {
+      "executable": false,
       "path": "docs/superpowers/specs/2026-08-12-bounded-failure-control-design.md",
       "sha256": "7a1b0d7aab35a7e4642f1e0d20794757abecf878ef4a70e840b3ad1167269a87",
       "size_bytes": 8459
@@ -182,6 +212,18 @@
       "path": "docs/superpowers/specs/2026-08-12-interactive-supervisor-pause-design.md",
       "sha256": "73972c75a661b70efc2dafac9442164cde2f3fc0b00f9d4f760b17d492d6c0db",
       "size_bytes": 19175
+    },
+    {
+      "executable": false,
+      "path": "docs/superpowers/specs/2026-08-12-locale-stable-diagnostics-git-design.md",
+      "sha256": "4f657b40314bfb4e477e4b7bf9e4f0e4cd7cef52d148d5d4189f295552b5a96b",
+      "size_bytes": 4552
+    },
+    {
+      "executable": false,
+      "path": "docs/superpowers/specs/2026-08-12-root-release-metadata-sync-design.md",
+      "sha256": "ea9e53d4a6c40f278a89547fda261b8e6fb822c7929d0da1c5004316666b7cf1",
+      "size_bytes": 3944
     },
     {
       "executable": false,
@@ -306,7 +348,7 @@
     {
       "executable": false,
       "path": "pyproject.toml",
-      "sha256": "a435b0a44281c83ab7043cfbe389be6ad545ae48595209033dc88890157fb448",
+      "sha256": "1c80f990b6884bd99cd62e41e23c99fa675f669583032c566e3eae55272bddce",
       "size_bytes": 634
     },
     {
@@ -318,8 +360,8 @@
     {
       "executable": true,
       "path": "scripts/build_release.py",
-      "sha256": "4de823a4f5b6bd277563a1b1e8685f7c17f60d693a1f54bf3880e2d454fd9710",
-      "size_bytes": 1232
+      "sha256": "64996635d73ce3c51484bf069ef655434055bf3fb599b90e78d7cf1e7c2f10bd",
+      "size_bytes": 1910
     },
     {
       "executable": true,
@@ -366,8 +408,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/bootstrap_repair.py",
-      "sha256": "51656006b91a601f8c20600f82010deaf7350071109da1bece9cd6de218b82eb",
-      "size_bytes": 11353
+      "sha256": "fc7bc09c8a240bac1fe709fcde5ca4a42c42784d3e993ef85f390febe3fbd032",
+      "size_bytes": 13501
     },
     {
       "executable": false,
@@ -378,8 +420,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/cli.py",
-      "sha256": "4454f9bcf48511314e2c7da1424a131aad801d0b36bd670f7a3b68f53e212864",
-      "size_bytes": 28869
+      "sha256": "fe140e78b8826c72b19baaf9f2f7b678e9b6c083ea7f1fc6279d81ce57b3ea68",
+      "size_bytes": 31321
     },
     {
       "executable": false,
@@ -398,6 +440,12 @@
       "path": "src/authorial_flow/dependency_lock.py",
       "sha256": "82c1f211265656c7861df98ae631f9d4884d25f066332c3aead972ee5f511233",
       "size_bytes": 4836
+    },
+    {
+      "executable": false,
+      "path": "src/authorial_flow/diagnostics.py",
+      "sha256": "3dd2be99f1c82df9aee64618eb8f800a03aeaf8c2a34417a9c40a3079bf3d303",
+      "size_bytes": 34614
     },
     {
       "executable": false,
@@ -786,8 +834,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/release.py",
-      "sha256": "746092fd4908918f189f9a8c97a970e6bc457b9e054ca156ff14e30aa6e81c7f",
-      "size_bytes": 12978
+      "sha256": "4c24394ff1da73dcf6c0e84d33659fd6a847587b57d369356de5df2ce53b518f",
+      "size_bytes": 14685
     },
     {
       "executable": false,
@@ -912,7 +960,7 @@
     {
       "executable": false,
       "path": "src/authorial_flow/version.py",
-      "sha256": "d742a2aa4507a897862cb126483c785f8c0a5f2b435e8f665fc5f49b1a9c4b4e",
+      "sha256": "e79eb035d00be6626c196b4deea94918b280aea595f9067ba6a011a23f58b467",
       "size_bytes": 29
     },
     {
@@ -954,14 +1002,14 @@
     {
       "executable": false,
       "path": "tests/integration/test_bootstrap_repair.py",
-      "sha256": "fba21901d5f21b034f285003820b7a4f00d891719f2716a3cffa0087aaa8678e",
-      "size_bytes": 13006
+      "sha256": "beb39d0c7218b2cead93f71db460dd3e3523aec6de29bfdb5d910eedf116a445",
+      "size_bytes": 16863
     },
     {
       "executable": false,
       "path": "tests/integration/test_cli.py",
-      "sha256": "7daab48aaeb47064e6bd2a7653ca187b978f62593171cfff93ea132cbeb86bbb",
-      "size_bytes": 17819
+      "sha256": "00f9553da306ac5dfa1edbc5fab4df6b1df4201969d582978c7dfdfb5c5ff790",
+      "size_bytes": 17837
     },
     {
       "executable": false,
@@ -974,6 +1022,18 @@
       "path": "tests/integration/test_detector_downstream.py",
       "sha256": "f97c2c0dc5abed93ad6d09a1245cc5260b809016d6ca2ab91b426a7d2b66ed20",
       "size_bytes": 2474
+    },
+    {
+      "executable": false,
+      "path": "tests/integration/test_diagnostics_end_to_end.py",
+      "sha256": "ca1dc667e36bd4a22c9e1b0d240508f8d740d9c307065569bfe0a5f5dfcc8f25",
+      "size_bytes": 9164
+    },
+    {
+      "executable": false,
+      "path": "tests/integration/test_diagnostics_git.py",
+      "sha256": "7ef375d7e79fc6dc2377bb0b1c23bbeeccecc77bc93008a282f4bc4ec56d2b10",
+      "size_bytes": 10022
     },
     {
       "executable": false,
@@ -1110,8 +1170,8 @@
     {
       "executable": false,
       "path": "tests/release/test_release_package.py",
-      "sha256": "1813bbe3634ca1e737af8bd16ef20565146cb8f10af5b48f1225444f3c5763ce",
-      "size_bytes": 14512
+      "sha256": "769e2462dfc242b551884c2ab66917482a05211782b73e545ea60fe866ccca81",
+      "size_bytes": 17795
     },
     {
       "executable": false,
@@ -1148,6 +1208,12 @@
       "path": "tests/unit/test_developmental_authority.py",
       "sha256": "fc66131aca199a9104dd1ccf5f6f87ca2e4e077fb0c0bd91ac6ee6748c98c967",
       "size_bytes": 2682
+    },
+    {
+      "executable": false,
+      "path": "tests/unit/test_diagnostics.py",
+      "sha256": "f0075f8607b34d4bf2da40dcb53776415f1c58eeb4cd1c26f06c80e87bcf9831",
+      "size_bytes": 9792
     },
     {
       "executable": false,
@@ -1206,8 +1272,8 @@
     {
       "executable": false,
       "path": "tests/unit/test_release_guardrails.py",
-      "sha256": "74dd185cf79db748f9dc4eb1d72894f1b1f0fa912088e6c469ae3af021106207",
-      "size_bytes": 504
+      "sha256": "6a10300e340011c29d5ba7767bfcf75019dfcc0f27bdc65e3a8c5df6d0db6eb4",
+      "size_bytes": 952
     },
     {
       "executable": false,
@@ -1247,5 +1313,5 @@
     }
   ],
   "policy_version": "joel-articles-4.12.0-candidate",
-  "source_commit_sha": "5a5c15e473dd83bd507c9da017f6b3e2b10176d9"
+  "source_commit_sha": "b4ff0f625f3803bac362a5a111915b24d816e83b"
 }

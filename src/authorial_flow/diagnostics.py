@@ -681,13 +681,25 @@ def _git_result(
     timeout_seconds: float,
     check: bool = True,
 ) -> subprocess.CompletedProcess[str]:
-    environment = {
-        **os.environ,
-        "GIT_TERMINAL_PROMPT": "0",
-        "GIT_ASKPASS": "false",
-        "SSH_ASKPASS": "false",
-        "GIT_CONFIG_NOSYSTEM": "1",
-    }
+    environment = {**os.environ}
+    effective_ctype = (
+        environment.get("LC_CTYPE")
+        or environment.get("LC_ALL")
+        or environment.get("LANG")
+    )
+    environment.pop("LC_ALL", None)
+    if effective_ctype:
+        environment["LC_CTYPE"] = effective_ctype
+    environment.update(
+        {
+            "LC_MESSAGES": "C",
+            "LANGUAGE": "C",
+            "GIT_TERMINAL_PROMPT": "0",
+            "GIT_ASKPASS": "false",
+            "SSH_ASKPASS": "false",
+            "GIT_CONFIG_NOSYSTEM": "1",
+        }
+    )
     result = subprocess.run(
         ["git", *args],
         cwd=cwd,
