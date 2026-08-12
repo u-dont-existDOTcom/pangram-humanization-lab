@@ -1,0 +1,68 @@
+{
+  "artifacts": {
+    "failure_evidence_sha256": "72d69a6c2ed32418016b7582714e12fa0febca432c96e037f04bf617585464a2",
+    "local_package_sha256": "aa499ea9b01b2b1d9787c875406c8d7b3089b07ad66d48e5d57f4052ba8d97fb"
+  },
+  "command_kind": "pytest",
+  "counts": {
+    "accepted_moves": 0,
+    "event_count": 178,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "uncovered_required_count": 0
+  },
+  "created_utc": 1786558334.928554,
+  "decision_trace": {
+    "accepted_move_count": 0,
+    "boundary_id": "",
+    "budgets": {
+      "active_budget": "",
+      "budget_limit": 0,
+      "retry_count": 0,
+      "rollback_count": 0
+    },
+    "candidate_sha256": "",
+    "committed_pressure": {
+      "boundary_id": "",
+      "confidence": 0.0,
+      "state": ""
+    },
+    "decision_boundary_id": "",
+    "edge": {},
+    "pressure_votes": [],
+    "rejection_class": "",
+    "schema_version": 1,
+    "uncovered_required_count": 0
+  },
+  "failure": {
+    "class": "REGRESSION_ARCHITECTURE",
+    "origin_node": "regressions",
+    "repair_outcome": ""
+  },
+  "format": "authorial-flow-diagnostic-v1",
+  "graph_version": "1.3.0-dev1",
+  "outcome": "bounded_machine_stop",
+  "phase": "installer-preflight",
+  "privacy": {
+    "excluded_categories": [
+      "source_or_article_text",
+      "accepted_candidate_or_rejected_prose",
+      "prompts_or_transcripts",
+      "stdout_or_stderr_bodies",
+      "exception_messages",
+      "credentials_or_environment_values",
+      "full_local_paths",
+      "evidence_zip_bytes"
+    ],
+    "schema_version": 1
+  },
+  "program_version": "2622306c2e61606c99104b74a6cf9e52dcdd290c",
+  "providers": {},
+  "returncode": 1,
+  "run_id": "cef9f65df8c25cb5da2608780f4c1c7ee9b77ec149f1234312bd1f0e74dc2ec8",
+  "source_branch": "local/authorial-flow-graph-v1-1.3.0-dev1",
+  "thread": {
+    "source_sha256": "fbe68ae57cd71cdba2fbdc30f661af54d62b0151a8a7709f3fc6a5e26672cc2a",
+    "thread_id": "f51ae3b6a22e44371ee58c4abbcf49a4e2302fe5cf1a3ec71365d77d3e0daac0"
+  }
+}

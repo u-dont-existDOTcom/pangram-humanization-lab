@@ -1,0 +1,68 @@
+{
+  "artifacts": {
+    "failure_evidence_sha256": "",
+    "local_package_sha256": ""
+  },
+  "command_kind": "",
+  "counts": {
+    "accepted_moves": 0,
+    "event_count": 178,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "uncovered_required_count": 0
+  },
+  "created_utc": 1786559326.7338493,
+  "decision_trace": {
+    "accepted_move_count": 0,
+    "boundary_id": "",
+    "budgets": {
+      "active_budget": "",
+      "budget_limit": 0,
+      "retry_count": 0,
+      "rollback_count": 0
+    },
+    "candidate_sha256": "",
+    "committed_pressure": {
+      "boundary_id": "",
+      "confidence": 0.0,
+      "state": ""
+    },
+    "decision_boundary_id": "",
+    "edge": {},
+    "pressure_votes": [],
+    "rejection_class": "",
+    "schema_version": 1,
+    "uncovered_required_count": 0
+  },
+  "failure": {
+    "class": "",
+    "origin_node": "",
+    "repair_outcome": ""
+  },
+  "format": "authorial-flow-diagnostic-v1",
+  "graph_version": "1.3.0-dev1",
+  "outcome": "snapshot",
+  "phase": "manual-status",
+  "privacy": {
+    "excluded_categories": [
+      "source_or_article_text",
+      "accepted_candidate_or_rejected_prose",
+      "prompts_or_transcripts",
+      "stdout_or_stderr_bodies",
+      "exception_messages",
+      "credentials_or_environment_values",
+      "full_local_paths",
+      "evidence_zip_bytes"
+    ],
+    "schema_version": 1
+  },
+  "program_version": "2622306c2e61606c99104b74a6cf9e52dcdd290c",
+  "providers": {},
+  "returncode": 0,
+  "run_id": "ea5d5139549349a6ab3d325f807811bb888ba68cee81f65c5195d4c8db4da7c0",
+  "source_branch": "local/authorial-flow-graph-v1-1.3.0-dev1",
+  "thread": {
+    "source_sha256": "fbe68ae57cd71cdba2fbdc30f661af54d62b0151a8a7709f3fc6a5e26672cc2a",
+    "thread_id": "f51ae3b6a22e44371ee58c4abbcf49a4e2302fe5cf1a3ec71365d77d3e0daac0"
+  }
+}
