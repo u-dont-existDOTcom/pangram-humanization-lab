@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "r01:P_A0B0:r2",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Then we use the same word for romantic love: I want you. I want your attention and your body. I want to be special to you, and I want our lives tangled up together. I don’t think there’s anything fake or shameful about this. Romantic love is one of the most powerful feelings we get. Here I’m wanting something from one particular person.\nA good relationship can have both kinds of love at once. Trouble starts when there’s a lot of romantic love and there is hardly any selfless love. I can adore how you make me feel and what you give me. I can even adore who I get to be with you, while caring a lot less about what’s actually best for you.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.19194376468658447,
+        "confidence": "High",
+        "end_index": 643,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Then we use the same word for romantic love: I want you. I want your attention and your body. I want to be special to you, and I want our lives tangled up together. I don’t think there’s anything fake or shameful about this. Romantic love is one of the most powerful feelings we get. Here I’m wanting something from one particular person.\nA good relationship can have both kinds of love at once. Trouble starts when there’s a lot of romantic love and there is hardly any selfless love. I can adore how you make me feel and what you give me. I can even adore who I get to be with you, while caring a lot less about what’s actually best for you.",
+        "token_length": 148,
+        "word_count": 125
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "342bd5f0-21f3-4056-86d2-d969b4336a03",
   "text": "Then we use the same word for romantic love: I want you. I want your attention and your body. I want to be special to you, and I want our lives tangled up together. I don’t think there’s anything fake or shameful about this. Romantic love is one of the most powerful feelings we get. Here I’m wanting something from one particular person.\n\nA good relationship can have both kinds of love at once. Trouble starts when there’s a lot of romantic love and there is hardly any selfless love. I can adore how you make me feel and what you give me. I can even adore who I get to be with you, while caring a lot less about what’s actually best for you.\n",
   "text_sha256": "6baec87907a7520f1629fd3a50c4d8129a44613f890cea4266f245157a7ae86a",
-  "updated_utc": "2026-08-12T03:03:03.973779+00:00"
+  "updated_utc": "2026-08-12T03:03:07.459653+00:00"
 }
