@@ -35,6 +35,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "CANDIDATE_D",
+      "measurement_key": "romance-idealization-r1-2026-08-12_CANDIDATE_D",
+      "text": "I get wary when a woman seems to know me before she knows me. Maybe we’re twin flames already. Maybe she knows my motives better than I do. Maybe I’m Lord Krishna. Meanwhile she hasn’t asked that many questions yet. Maybe I really am way better than the other guys she’s found. Fine. I’m still going to turn out to be human.\n\nI don’t hide that I still love women I’ve loved before. They come up because I actually think about them. Sometimes that ruins whatever perfect-man story she’s building around me. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\n\nIf she says, “Can you talk about your exes less?” sure. Maybe I’m talking about them too much. But I don’t want a relationship where her whole inner world gets to come into the room and mine has to be edited first.",
+      "text_sha256": "7cd37a89ca32f82d158cd01fbb549b6bf77af908d01c0978f716f76bef2c1535",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I get wary when a woman seems to know me before she knows me. Maybe we’re twin flames already. Maybe she knows my motives better than I do. Maybe I’m Lord Krishna. Meanwhile she hasn’t asked that many questions yet. Maybe I really am way better than the other guys she’s found. Fine. I’m still going to turn out to be human.\nI don’t hide that I still love women I’ve loved before. They come up because I actually think about them. Sometimes that ruins whatever perfect-man story she’s building around me. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk about your exes less?” sure. Maybe I’m talking about them too much. But I don’t want a relationship where her whole inner world gets to come into the room and mine has to be edited first.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "I get wary when a woman seems to know me before she knows me. Maybe we’re twin flames already. Maybe she knows my motives better than I do. Maybe I’m Lord Krishna. Meanwhile she hasn’t asked that many questions yet. Maybe I really am way better than the other guys she’s found. Fine. I’m still going to turn out to be human.\nI don’t hide that I still love women I’ve loved before. They come up because I actually think about them. Sometimes that ruins whatever perfect-man story she’s building around me. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk about your exes less?” sure. Maybe I’m talking about them too much. But I don’t want a relationship where her whole inner world gets to come into the room and mine has to be edited first.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6251500248908997,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 823,
+            "word_count": 155,
+            "token_length": 190,
+            "is_humanized": false,
+            "humanizer_score": 0.039816007018089294
+          }
+        ]
+      }
     }
   ]
 }
