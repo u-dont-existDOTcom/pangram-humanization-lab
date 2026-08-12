@@ -35,6 +35,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "R0S1",
+      "measurement_key": "romance-oxytocin-r1-2026-08-12_R0S1",
+      "text": "People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or people disappearing on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious. You might turn hostile, feel worthless, or just want to run.",
+      "text_sha256": "83cd1e8a116b0cbc23fc17b0fb8c1f7519138d2d02e3a16999896db55fb82ea3",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or people disappearing on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious. You might turn hostile, feel worthless, or just want to run.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or people disappearing on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious. You might turn hostile, feel worthless, or just want to run.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.8723264932632446,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 416,
+            "word_count": 75,
+            "token_length": 93,
+            "is_humanized": false,
+            "humanizer_score": 0.026746461167931557
+          }
+        ]
+      }
     }
   ]
 }
