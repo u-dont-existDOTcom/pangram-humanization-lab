@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-idealization-r1-2026-08-12_CANDIDATE_F",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.3022598922252655,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.6977401375770569,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I loved before her. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous, and she can tell me, “Can you talk less about your exes?” Sure. What I can’t do is pretend those women stopped mattering to me because a new relationship started.\nIf everything in her heart gets to be real while mine has to be cleaned up first, that’s not going to work for me.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.33369317650794983,
+        "confidence": "High",
+        "end_index": 494,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I loved before her. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous, and she can tell me, “Can you talk less about your exes?” Sure.",
+        "token_length": 118,
+        "word_count": 93
+      },
+      {
+        "ai_assistance_score": 0.770923376083374,
+        "confidence": "High",
+        "end_index": 708,
+        "humanizer_score": 0.055523671209812164,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 494,
+        "text": " What I can’t do is pretend those women stopped mattering to me because a new relationship started.\nIf everything in her heart gets to be real while mine has to be cleaned up first, that’s not going to work for me.",
+        "token_length": 47,
+        "word_count": 41
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "67b0c738-8c95-4f98-b3a8-c010ebfe84e0",
   "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I loved before her. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous, and she can tell me, “Can you talk less about your exes?” Sure. What I can’t do is pretend those women stopped mattering to me because a new relationship started.\n\nIf everything in her heart gets to be real while mine has to be cleaned up first, that’s not going to work for me.",
   "text_sha256": "ff5c0b70c03e79a7845569c2b9daee9b16e55c69994479da58f0e942112ab5d9",
-  "updated_utc": "2026-08-12T20:20:43.261610+00:00"
+  "updated_utc": "2026-08-12T20:20:44.503125+00:00"
 }
