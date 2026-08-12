@@ -35,6 +35,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "CANDIDATE_B",
+      "measurement_key": "romance-idealization-r1-2026-08-12_CANDIDATE_B",
+      "text": "I get nervous when a woman starts deciding who I am before she’s had much chance to find out. Sometimes that’s an instant twin flame claim; sometimes she’s already explaining my motives to me or acting like I’m Lord Krishna or something. Maybe I really am way better than the other guys she has found. That can be true. She should still assume there are flaws she hasn’t found yet.\n\nThe women I’ve loved before don’t disappear from my heart when I meet someone new. I still talk about them sometimes. If that ruins the fairy tale a little, good. I’m not doing it to make her jealous. If she needs me to pretend they’re gone, she isn’t ready for me.\n\nShe can ask, “Can you talk less about your exes or other women?” Fine. But if I’m expected to listen to everything on her mind while parts of mine have to stay unsaid, that tells me something.",
+      "text_sha256": "b6af2e39bdbd95ea16fb78ba2786efc9c561add00c101a09df9cea33b30b5ecd",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I get nervous when a woman starts deciding who I am before she’s had much chance to find out. Sometimes that’s an instant twin flame claim; sometimes she’s already explaining my motives to me or acting like I’m Lord Krishna or something. Maybe I really am way better than the other guys she has found. That can be true. She should still assume there are flaws she hasn’t found yet.\nThe women I’ve loved before don’t disappear from my heart when I meet someone new. I still talk about them sometimes. If that ruins the fairy tale a little, good. I’m not doing it to make her jealous. If she needs me to pretend they’re gone, she isn’t ready for me.\nShe can ask, “Can you talk less about your exes or other women?” Fine. But if I’m expected to listen to everything on her mind while parts of mine have to stay unsaid, that tells me something.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "I get nervous when a woman starts deciding who I am before she’s had much chance to find out. Sometimes that’s an instant twin flame claim; sometimes she’s already explaining my motives to me or acting like I’m Lord Krishna or something. Maybe I really am way better than the other guys she has found. That can be true. She should still assume there are flaws she hasn’t found yet.\nThe women I’ve loved before don’t disappear from my heart when I meet someone new. I still talk about them sometimes. If that ruins the fairy tale a little, good. I’m not doing it to make her jealous. If she needs me to pretend they’re gone, she isn’t ready for me.\nShe can ask, “Can you talk less about your exes or other women?” Fine. But if I’m expected to listen to everything on her mind while parts of mine have to stay unsaid, that tells me something.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7906831502914429,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 840,
+            "word_count": 158,
+            "token_length": 191,
+            "is_humanized": false,
+            "humanizer_score": 0.015089059248566628
+          }
+        ]
+      }
     }
   ]
 }
