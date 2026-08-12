@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "historical-whitespace-audit-r1-2026-08-12_R16_X111_NORMALIZED",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.19391025602817535,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.8060897588729858,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 2,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "How the Experiential Key Can Fade\nAfter 15 years of reading popular & obscure Buddhist books, plus countless hours on forums like SuttaCentral.net, I never once found a positive definition of what nibbāna actually is. Everyone says what nibbana does (liberates), what it ends (rebirth, consciousness, defilements), what it isn't (anything), and then gives me the aggregates, sense bases, dependent origination, and no-self again. But what is the experience? What are all those lists pointing to? Why is it no Theravadan monk ever told me anything useful despite devoting their life to this?\nThese books did at least tell me that everything arises from conditions. That was interesting, but it also begged the free-will question, which seemed to me like the elephant in the room. If my choices are conditioned, what exactly is free about them? I don't think I've ever even seen the phrase \"free will\" in the suttas at all, and that makes sense because the phrase itself is illogical. Instead, we find debates about what conditions choices. AN 6.63 says intention is kamma and contact causes it. AN 3.61 rejects theories that make effort meaningless. Choices happen. They're important because they become conditions for what happens next. That part makes sense to me. Where I get lost is, who's making the choices and based on what?\nI think both questions share the same missing key. And they were never explained concisely for the same reason.\nThe canon itself says something like this could happen. In SN 16.13, Mahā Kassapa asks why there are more rules but fewer monks reaching final knowledge. The Buddha says counterfeit Dhamma gradually makes the true Dhamma disappear.\nAnd the strange thing is that the words themselves may have survived surprisingly well. The discourses were transmitted orally for centuries, but they were transmitted communally, and the separately preserved early collections agree on an enormous amount. There are variants, rearrangements, and later material. Still, this is not just a four-hundred-year telephone game. The words could survive while the people reciting them no longer knew the experience that made them make sense.\nI argue in the main section that the Buddha was deliberately vague sometimes. He didn't want Dhamma copycats. He wanted the Eureka to happen inside the person. That makes sense while enough realized people are still around to recognize what is happening. Once they are not, the same terseness can help hide the fact that the key is gone.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.15430445969104767,
+        "confidence": "High",
+        "end_index": 1674,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "How the Experiential Key Can Fade\nAfter 15 years of reading popular & obscure Buddhist books, plus countless hours on forums like SuttaCentral.net, I never once found a positive definition of what nibbāna actually is. Everyone says what nibbana does (liberates), what it ends (rebirth, consciousness, defilements), what it isn't (anything), and then gives me the aggregates, sense bases, dependent origination, and no-self again. But what is the experience? What are all those lists pointing to? Why is it no Theravadan monk ever told me anything useful despite devoting their life to this?\nThese books did at least tell me that everything arises from conditions. That was interesting, but it also begged the free-will question, which seemed to me like the elephant in the room. If my choices are conditioned, what exactly is free about them? I don't think I've ever even seen the phrase \"free will\" in the suttas at all, and that makes sense because the phrase itself is illogical. Instead, we find debates about what conditions choices. AN 6.63 says intention is kamma and contact causes it. AN 3.61 rejects theories that make effort meaningless. Choices happen. They're important because they become conditions for what happens next. That part makes sense to me. Where I get lost is, who's making the choices and based on what?\nI think both questions share the same missing key. And they were never explained concisely for the same reason.\nThe canon itself says something like this could happen. In SN 16.13, Mahā Kassapa asks why there are more rules but fewer monks reaching final knowledge. The Buddha says counterfeit Dhamma gradually makes the true Dhamma disappear.",
+        "token_length": 377,
+        "word_count": 275
+      },
+      {
+        "ai_assistance_score": 0.8001815676689148,
+        "confidence": "High",
+        "end_index": 2158,
+        "humanizer_score": 0.00114941387437284,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1674,
+        "text": "\nAnd the strange thing is that the words themselves may have survived surprisingly well. The discourses were transmitted orally for centuries, but they were transmitted communally, and the separately preserved early collections agree on an enormous amount. There are variants, rearrangements, and later material. Still, this is not just a four-hundred-year telephone game. The words could survive while the people reciting them no longer knew the experience that made them make sense.",
+        "token_length": 89,
+        "word_count": 72
+      },
+      {
+        "ai_assistance_score": 0.32108762860298157,
+        "confidence": "High",
+        "end_index": 2496,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 2158,
+        "text": "\nI argue in the main section that the Buddha was deliberately vague sometimes. He didn't want Dhamma copycats. He wanted the Eureka to happen inside the person. That makes sense while enough realized people are still around to recognize what is happening. Once they are not, the same terseness can help hide the fact that the key is gone.",
+        "token_length": 71,
+        "word_count": 59
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "88b3317a-b154-4d92-b583-4f8dda2b0ed0",
   "text": "How the Experiential Key Can Fade\n\nAfter 15 years of reading popular & obscure Buddhist books, plus countless hours on forums like SuttaCentral.net, I never once found a positive definition of what nibbāna actually is. Everyone says what nibbana does (liberates), what it ends (rebirth, consciousness, defilements), what it isn't (anything), and then gives me the aggregates, sense bases, dependent origination, and no-self again. But what is the experience? What are all those lists pointing to? Why is it no Theravadan monk ever told me anything useful despite devoting their life to this?\n\nThese books did at least tell me that everything arises from conditions. That was interesting, but it also begged the free-will question, which seemed to me like the elephant in the room. If my choices are conditioned, what exactly is free about them? I don't think I've ever even seen the phrase \"free will\" in the suttas at all, and that makes sense because the phrase itself is illogical. Instead, we find debates about what conditions choices. AN 6.63 says intention is kamma and contact causes it. AN 3.61 rejects theories that make effort meaningless. Choices happen. They're important because they become conditions for what happens next. That part makes sense to me. Where I get lost is, who's making the choices and based on what?\n\nI think both questions share the same missing key. And they were never explained concisely for the same reason.\n\nThe canon itself says something like this could happen. In SN 16.13, Mahā Kassapa asks why there are more rules but fewer monks reaching final knowledge. The Buddha says counterfeit Dhamma gradually makes the true Dhamma disappear.\n\nAnd the strange thing is that the words themselves may have survived surprisingly well. The discourses were transmitted orally for centuries, but they were transmitted communally, and the separately preserved early collections agree on an enormous amount. There are variants, rearrangements, and later material. Still, this is not just a four-hundred-year telephone game. The words could survive while the people reciting them no longer knew the experience that made them make sense.\n\nI argue in the main section that the Buddha was deliberately vague sometimes. He didn't want Dhamma copycats. He wanted the Eureka to happen inside the person. That makes sense while enough realized people are still around to recognize what is happening. Once they are not, the same terseness can help hide the fact that the key is gone.",
   "text_sha256": "21d29b3dc117732e81f2b9e2073cced4e94c856b9a705a5c58e1e169ba54a927",
-  "updated_utc": "2026-08-12T18:59:23.617496+00:00"
+  "updated_utc": "2026-08-12T18:59:25.244727+00:00"
 }
