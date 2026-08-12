@@ -2,7 +2,7 @@ from pathlib import Path
 import json
 import pytest
 
-from pangram_lab.fixed_batch import load_spec
+from pangram_lab.fixed_batch import load_spec, run_batch
 
 
 def test_load_spec_preserves_exact_order_and_text(tmp_path: Path):
@@ -32,3 +32,42 @@ def test_load_spec_rejects_duplicate_ids(tmp_path: Path):
     }), encoding="utf-8")
     with pytest.raises(ValueError, match="duplicate"):
         load_spec(p)
+
+
+class FakeClient:
+    def __init__(self):
+        self.calls = []
+
+    def detect_cached(self, text, cache, measurement_key="base"):
+        self.calls.append((text, measurement_key))
+        return {
+            "stage": "STAGE_SUCCESS",
+            "version": "4.0",
+            "headline": "Human Written",
+            "prediction_short": "Human",
+            "fraction_ai": 0.0,
+            "fraction_ai_assisted": 0.0,
+            "fraction_human": 1.0,
+        }
+
+
+def test_run_batch_preserves_order_keys_and_writes_sha256(tmp_path: Path):
+    spec = {
+        "format": "pangram-fixed-batch-v1",
+        "experiment_id": "exp",
+        "variants": [
+            {"id": "A", "text": "first  text"},
+            {"id": "B", "text": "second"},
+        ],
+    }
+    out = tmp_path / "results.json"
+    client = FakeClient()
+    result = run_batch(spec, client=client, cache=object(), output_path=out)
+    assert client.calls == [
+        ("first  text", "exp_A"),
+        ("second", "exp_B"),
+    ]
+    assert [row["id"] for row in result["results"]] == ["A", "B"]
+    assert result["results"][0]["text_sha256"] == "2b264485b0a7185beaa8139bfc936b0b4a10885040334b40ef97cf070dfe81e8"
+    saved = json.loads(out.read_text(encoding="utf-8"))
+    assert saved == result
