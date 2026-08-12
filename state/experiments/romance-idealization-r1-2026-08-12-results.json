@@ -3,13 +3,13 @@
   "experiment_id": "romance-idealization-r1-2026-08-12",
   "results": [
     {
-      "id": "CANDIDATE_G",
-      "measurement_key": "romance-idealization-r1-2026-08-12_CANDIDATE_G",
-      "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I loved before her. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.",
-      "text_sha256": "91127ab92588b7f584953cfe129035dd678c9eb3c26eb8a544874c52411f8678",
+      "id": "CANDIDATE_I_FINAL",
+      "measurement_key": "romance-idealization-r1-2026-08-12_CANDIDATE_I_FINAL",
+      "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\n\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.",
+      "text_sha256": "87a39c27973d4e276bc34607e88a61a6d7116cbc7b1046fa388b5a550216704d",
       "detector": {
         "stage": "STAGE_SUCCESS",
-        "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I loved before her. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.",
+        "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.",
         "version": "4.0",
         "prediction": "We believe that this entire text is human-written.",
         "prediction_short": "Human",
@@ -22,48 +22,14 @@
         "num_human_segments": 1,
         "windows": [
           {
-            "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I loved before her. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.",
+            "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.",
             "label": "Human Written",
-            "ai_assistance_score": 0.2741197943687439,
+            "ai_assistance_score": 0.3064035177230835,
             "confidence": "High",
             "start_index": 0,
-            "end_index": 667,
-            "word_count": 127,
-            "token_length": 159,
-            "is_humanized": false,
-            "humanizer_score": 0.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "CANDIDATE_H",
-      "measurement_key": "romance-idealization-r1-2026-08-12_CANDIDATE_H",
-      "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I loved before her. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me. She can ask me, “Can you talk less about your exes?” Sure. Maybe I do. But if I’m expected to hear everything on her mind while I have to pretend this isn’t on mine, that’s different.",
-      "text_sha256": "4c65d1c30b9f0d8bd7e7f8fb4e4a5743e8f7e6ab2041a7b9c57304d30dc396ba",
-      "detector": {
-        "stage": "STAGE_SUCCESS",
-        "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I loved before her. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me. She can ask me, “Can you talk less about your exes?” Sure. Maybe I do. But if I’m expected to hear everything on her mind while I have to pretend this isn’t on mine, that’s different.",
-        "version": "4.0",
-        "prediction": "We believe that this entire text is human-written.",
-        "prediction_short": "Human",
-        "fraction_ai": 0.0,
-        "fraction_ai_assisted": 0.0,
-        "fraction_human": 1.0,
-        "headline": "Human Written",
-        "num_ai_segments": 0,
-        "num_ai_assisted_segments": 0,
-        "num_human_segments": 1,
-        "windows": [
-          {
-            "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I loved before her. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me. She can ask me, “Can you talk less about your exes?” Sure. Maybe I do. But if I’m expected to hear everything on her mind while I have to pretend this isn’t on mine, that’s different.",
-            "label": "Human Written",
-            "ai_assistance_score": 0.20556391775608063,
-            "confidence": "High",
-            "start_index": 0,
-            "end_index": 682,
-            "word_count": 130,
-            "token_length": 165,
+            "end_index": 734,
+            "word_count": 140,
+            "token_length": 177,
             "is_humanized": false,
             "humanizer_score": 0.0
           }
