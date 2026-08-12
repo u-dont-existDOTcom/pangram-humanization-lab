@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-08-12T02:37:26.168993+00:00",
+  "expected_version": "4.0",
+  "format": "pangram-cache-v2",
+  "last_error": "",
+  "measurement_key": "base",
+  "model": "pangram-4",
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Then we use the same word for romantic love: I want you. I want your attention and your body. I want to be special to you, and I want our lives tangled up together. I don’t think there’s anything fake or shameful about this. Romantic love is one of the most powerful feelings we get. Here I’m wanting something from one particular person.\nA good relationship can have both kinds of love at once. The trouble is when there’s a whole lot of I want you and hardly any I want you to be happy. I can adore how you make me feel and what you give me. I can even adore who I get to be with you, while caring a lot less about what’s actually best for you.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.07096938043832779,
+        "confidence": "High",
+        "end_index": 646,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Then we use the same word for romantic love: I want you. I want your attention and your body. I want to be special to you, and I want our lives tangled up together. I don’t think there’s anything fake or shameful about this. Romantic love is one of the most powerful feelings we get. Here I’m wanting something from one particular person.\nA good relationship can have both kinds of love at once. The trouble is when there’s a whole lot of I want you and hardly any I want you to be happy. I can adore how you make me feel and what you give me. I can even adore who I get to be with you, while caring a lot less about what’s actually best for you.",
+        "token_length": 152,
+        "word_count": 130
+      }
+    ]
+  },
+  "source": "legacy:/home/joel/Téléchargements/pangram-experiment-harness-v1/runs/a9e35636299ce4e7e351/state.json",
+  "status": "success",
+  "task_id": "imported",
+  "text": "Then we use the same word for romantic love: I want you. I want your attention and your body. I want to be special to you, and I want our lives tangled up together. I don’t think there’s anything fake or shameful about this. Romantic love is one of the most powerful feelings we get. Here I’m wanting something from one particular person.\n\nA good relationship can have both kinds of love at once. The trouble is when there’s a whole lot of I want you and hardly any I want you to be happy. I can adore how you make me feel and what you give me. I can even adore who I get to be with you, while caring a lot less about what’s actually best for you.\n",
+  "text_sha256": "f9e199e2a2321958a105d3852c008029522e5640e51db2003770f9ace28f27a0",
+  "updated_utc": "2026-08-12T02:37:26.169009+00:00"
+}
