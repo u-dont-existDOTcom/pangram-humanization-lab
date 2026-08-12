@@ -6,7 +6,7 @@ on:
       - automation/pangram-fixed-batch
     paths:
       - '.github/workflows/pangram-fixed-batch.yml'
-      - 'experiments/romance-casual-honesty-r1-2026-08-12.json'
+      - 'experiments/romance-idealization-r1-2026-08-12.json'
       - 'src/pangram_lab/fixed_batch.py'
       - 'scripts/run_fixed_batch.py'
       - 'tests/test_fixed_batch.py'
@@ -39,10 +39,10 @@ jobs:
         run: |
           test -n "$PANGRAM_API_KEY" || { echo "PANGRAM_API_KEY secret is missing"; exit 1; }
           echo "PANGRAM_API_KEY is configured"
-      - name: Run casual honesty repair batch
+      - name: Run idealization repair batch
         env:
           PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
         run: |
           python scripts/run_fixed_batch.py \
-            experiments/romance-casual-honesty-r1-2026-08-12.json \
-            --out state/experiments/romance-casual-honesty-r1-2026-08-12-results.json
+            experiments/romance-idealization-r1-2026-08-12.json \
+            --out state/experiments/romance-idealization-r1-2026-08-12-results.json
