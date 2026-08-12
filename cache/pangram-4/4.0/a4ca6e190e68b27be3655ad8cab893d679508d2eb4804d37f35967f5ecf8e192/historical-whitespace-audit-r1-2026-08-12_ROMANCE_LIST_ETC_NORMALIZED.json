@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "historical-whitespace-audit-r1-2026-08-12_ROMANCE_LIST_ETC_NORMALIZED",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "English isn't a scientific language when it comes to love. This leads to a lot of romantic confusion because we don't have one word for one meaning.\nOne meaning is selfless love—what contemplative traditions call agape, metta, loving-kindness, divine love, etc. In Buddhist metta practice you sit there wishing, may they be well, may they be safe, may they be happy. It's not about them being yours.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.21223168075084686,
+        "confidence": "High",
+        "end_index": 399,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "English isn't a scientific language when it comes to love. This leads to a lot of romantic confusion because we don't have one word for one meaning.\nOne meaning is selfless love—what contemplative traditions call agape, metta, loving-kindness, divine love, etc. In Buddhist metta practice you sit there wishing, may they be well, may they be safe, may they be happy. It's not about them being yours.",
+        "token_length": 92,
+        "word_count": 67
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "0435f15c-1b38-4954-b0cb-3530930c8cc9",
   "text": "English isn't a scientific language when it comes to love. This leads to a lot of romantic confusion because we don't have one word for one meaning.\n\nOne meaning is selfless love—what contemplative traditions call agape, metta, loving-kindness, divine love, etc. In Buddhist metta practice you sit there wishing, may they be well, may they be safe, may they be happy. It's not about them being yours.",
   "text_sha256": "a4ca6e190e68b27be3655ad8cab893d679508d2eb4804d37f35967f5ecf8e192",
-  "updated_utc": "2026-08-12T18:59:09.159130+00:00"
+  "updated_utc": "2026-08-12T18:59:10.799486+00:00"
 }
