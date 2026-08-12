@@ -69,6 +69,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "ROMANCE_LIST_ETC_NORMALIZED",
+      "measurement_key": "historical-whitespace-audit-r1-2026-08-12_ROMANCE_LIST_ETC_NORMALIZED",
+      "text": "English isn't a scientific language when it comes to love. This leads to a lot of romantic confusion because we don't have one word for one meaning.\n\nOne meaning is selfless love—what contemplative traditions call agape, metta, loving-kindness, divine love, etc. In Buddhist metta practice you sit there wishing, may they be well, may they be safe, may they be happy. It's not about them being yours.",
+      "text_sha256": "a4ca6e190e68b27be3655ad8cab893d679508d2eb4804d37f35967f5ecf8e192",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "English isn't a scientific language when it comes to love. This leads to a lot of romantic confusion because we don't have one word for one meaning.\nOne meaning is selfless love—what contemplative traditions call agape, metta, loving-kindness, divine love, etc. In Buddhist metta practice you sit there wishing, may they be well, may they be safe, may they be happy. It's not about them being yours.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "English isn't a scientific language when it comes to love. This leads to a lot of romantic confusion because we don't have one word for one meaning.\nOne meaning is selfless love—what contemplative traditions call agape, metta, loving-kindness, divine love, etc. In Buddhist metta practice you sit there wishing, may they be well, may they be safe, may they be happy. It's not about them being yours.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.21223168075084686,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 399,
+            "word_count": 67,
+            "token_length": 92,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      }
     }
   ]
 }
