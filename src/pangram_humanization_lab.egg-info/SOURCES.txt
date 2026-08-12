@@ -12,6 +12,7 @@ src/pangram_lab/cache.py
 src/pangram_lab/cli.py
 src/pangram_lab/codex_stream.py
 src/pangram_lab/engine.py
+src/pangram_lab/fixed_batch.py
 src/pangram_lab/git_sync.py
 src/pangram_lab/legacy_import.py
 src/pangram_lab/pangram4.py
@@ -24,6 +25,7 @@ tests/test_engine_call_budget.py
 tests/test_engine_codex_failure_persisted.py
 tests/test_engine_plan_failure_persisted.py
 tests/test_engine_plan_repair.py
+tests/test_fixed_batch.py
 tests/test_git_sync.py
 tests/test_legacy_import.py
 tests/test_pangram.py
