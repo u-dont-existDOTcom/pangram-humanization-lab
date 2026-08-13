@@ -83,6 +83,41 @@
         ]
       },
       "section_id": "R1_DEFINITION"
+    },
+    {
+      "id": "TALK_A_L39_41",
+      "measurement_key": "romance-r1-decomposition-r4-2026-08-13_TALK_A_L39_41",
+      "text": "That difference is one reason to talk before sex. Most couples wait until they’re already having sex to talk honestly about sex. By then honesty has consequences: it might interrupt the thing that has already begun. The earlier conversation can go places the later one often can’t, and having it is already part of the difference between making love together and merely having sex.\n\nWhat do you actually desire? What helps your body feel safe? Are there kinks or particular dynamics that matter to you? What has your history taught you about your erotic wiring? What reliably doesn’t work? How often do you each imagine wanting sex, and what would a mismatch mean? Is sex recreation, bonding, sacred practice, stress relief, all of those, or something else entirely?\n",
+      "text_sha256": "5f37467a8254fd849490f3580eea75bdf0944606e2bbd0411b61028242adc981",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "That difference is one reason to talk before sex. Most couples wait until they’re already having sex to talk honestly about sex. By then honesty has consequences: it might interrupt the thing that has already begun. The earlier conversation can go places the later one often can’t, and having it is already part of the difference between making love together and merely having sex.\nWhat do you actually desire? What helps your body feel safe? Are there kinks or particular dynamics that matter to you? What has your history taught you about your erotic wiring? What reliably doesn’t work? How often do you each imagine wanting sex, and what would a mismatch mean? Is sex recreation, bonding, sacred practice, stress relief, all of those, or something else entirely?",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "That difference is one reason to talk before sex. Most couples wait until they’re already having sex to talk honestly about sex. By then honesty has consequences: it might interrupt the thing that has already begun. The earlier conversation can go places the later one often can’t, and having it is already part of the difference between making love together and merely having sex.\nWhat do you actually desire? What helps your body feel safe? Are there kinks or particular dynamics that matter to you? What has your history taught you about your erotic wiring? What reliably doesn’t work? How often do you each imagine wanting sex, and what would a mismatch mean? Is sex recreation, bonding, sacred practice, stress relief, all of those, or something else entirely?",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9170876145362854,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 765,
+            "word_count": 128,
+            "token_length": 151,
+            "is_humanized": false,
+            "humanizer_score": 0.014925006777048111
+          }
+        ]
+      },
+      "section_id": "R1_TALK_A"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -229,6 +264,20 @@
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
         "first_human_measurement_key": "romance-r1-decomposition-r4-2026-08-13_DEFINITION_L35_37"
+      },
+      {
+        "section_id": "R1_TALK_A",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
       }
     ]
   }
