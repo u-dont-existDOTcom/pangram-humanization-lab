@@ -1,0 +1,51 @@
+name: Pangram spiritual bypassing r04
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/pangram-spiritual-bypassing-r04.yml'
+      - 'scripts/apply_spiritual_bypassing_r04.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install
+        run: python -m pip install -e '.[test]'
+      - name: Verify detector path
+        run: pytest -q tests/test_fixed_batch.py tests/test_pangram.py tests/test_cache.py tests/test_git_sync.py
+      - name: Configure git checkpoint identity
+        run: |
+          git config user.name "Pangram Lab Actions"
+          git config user.email "pangram-lab-actions@users.noreply.github.com"
+      - name: Verify Pangram secret
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+        run: test -n "$PANGRAM_API_KEY"
+      - name: Reconstruct r04
+        run: python scripts/apply_spiritual_bypassing_r04.py
+      - name: Build fixed-batch spec
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          source = Path('/tmp/spiritual-bypassing-r04.md')
+          spec = {'format':'pangram-fixed-batch-v1','experiment_id':'spiritual-bypassing-r04-2026-08-13','variants':[{'id':'FULL_R04','text':source.read_text(encoding='utf-8')}]}
+          Path('/tmp/spiritual-bypassing-r04.json').write_text(json.dumps(spec,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Run exact Pangram-4 detection
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+        run: python scripts/run_fixed_batch.py /tmp/spiritual-bypassing-r04.json --out state/experiments/spiritual-bypassing-r04-2026-08-13-results.json
