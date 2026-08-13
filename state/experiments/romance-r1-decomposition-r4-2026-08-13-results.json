@@ -188,6 +188,41 @@
         ]
       },
       "section_id": "R1_TALK_FULL"
+    },
+    {
+      "id": "CASUAL_START_L49_51",
+      "measurement_key": "romance-r1-decomposition-r4-2026-08-13_CASUAL_START_L49_51",
+      "text": "## Can Casual Sex or a Situationship Actually Be Honest?\n\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n",
+      "text_sha256": "8ee577b7673364984ddf86f9edfc6ef528e8b30de88c53463983220db9d4bcf7",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "## Can Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "## Can Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.2935439348220825,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 445,
+            "word_count": 77,
+            "token_length": 100,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R1_CASUAL_START"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -376,6 +411,20 @@
         "paid_calls_to_human": null,
         "estimated_credits_to_human": null,
         "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R1_CASUAL_START",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-r1-decomposition-r4-2026-08-13_CASUAL_START_L49_51"
       }
     ]
   }
