@@ -137,6 +137,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "DECISION_PRACTICES",
+      "measurement_key": "romance-checklist-pairs-r15-2026-08-13_DECISION_PRACTICES",
+      "text": "Wanting somebody doesn't tell me whether I should have children with her or build a life with her. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.\n\nAnd don't stop your own practices just because you're in love. If I stop reparenting and meditating because my partner makes me feel okay, then she's doing part of that job for me whether we say so or not.",
+      "text_sha256": "18f1b1114773473067788d0f67260c071f7c75277952d78a8f7f4a5ab896a39c",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Wanting somebody doesn't tell me whether I should have children with her or build a life with her. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.\nAnd don't stop your own practices just because you're in love. If I stop reparenting and meditating because my partner makes me feel okay, then she's doing part of that job for me whether we say so or not.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Wanting somebody doesn't tell me whether I should have children with her or build a life with her. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.\nAnd don't stop your own practices just because you're in love. If I stop reparenting and meditating because my partner makes me feel okay, then she's doing part of that job for me whether we say so or not.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6732223033905029,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 619,
+            "word_count": 113,
+            "token_length": 139,
+            "is_humanized": false,
+            "humanizer_score": 0.01098424568772316
+          }
+        ]
+      }
     }
   ]
 }
