@@ -1,0 +1,40 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-checklist-subitems-r9-2026-08-13",
+  "results": [
+    {
+      "id": "COHAB",
+      "measurement_key": "romance-checklist-subitems-r9-2026-08-13_COHAB",
+      "text": "I don't think having sex means you should move in. Those decisions get tied together because sex makes the relationship feel further along than it necessarily is. Housing can complicate that. But once you're sharing rent and a bed every night, leaving or even slowing down gets harder for reasons that have nothing to do with whether the relationship is good. I like deciding beforehand when we're going to sit down and ask whether this is still working.",
+      "text_sha256": "2e55166d6bf3db669a809179e218e2715b845248aa77eee54a44c1b4b74512bf",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I don't think having sex means you should move in. Those decisions get tied together because sex makes the relationship feel further along than it necessarily is. Housing can complicate that. But once you're sharing rent and a bed every night, leaving or even slowing down gets harder for reasons that have nothing to do with whether the relationship is good. I like deciding beforehand when we're going to sit down and ask whether this is still working.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "I don't think having sex means you should move in. Those decisions get tied together because sex makes the relationship feel further along than it necessarily is. Housing can complicate that. But once you're sharing rent and a bed every night, leaving or even slowing down gets harder for reasons that have nothing to do with whether the relationship is good. I like deciding beforehand when we're going to sit down and ask whether this is still working.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9461380839347839,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 454,
+            "word_count": 78,
+            "token_length": 88,
+            "is_humanized": false,
+            "humanizer_score": 0.029977181926369667
+          }
+        ]
+      }
+    }
+  ]
+}
