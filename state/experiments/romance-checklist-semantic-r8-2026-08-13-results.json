@@ -137,6 +137,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "L3A",
+      "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L3A",
+      "text": "I can know pretty quickly that I want to be with somebody. That tells me a lot less about whether I should raise children with her, share a house for twenty years, or build the rest of my life around her. A wonderful lover can still be a terrible long-term partner. One thing I try to catch is when “I’m taking a chance on this person” turns into “this is the right person” without any new evidence.\n\nAnd being loved doesn’t mean I’m finished with my own inner practices. If I stop reparenting myself and regulating myself because she’s doing enough of it for me, I’ve made the relationship carry something it shouldn’t have to carry.",
+      "text_sha256": "08a84885eefb0265ca542c6fd1a1e25583d54662a08b1be52ae853d4dc3e6892",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I can know pretty quickly that I want to be with somebody. That tells me a lot less about whether I should raise children with her, share a house for twenty years, or build the rest of my life around her. A wonderful lover can still be a terrible long-term partner. One thing I try to catch is when “I’m taking a chance on this person” turns into “this is the right person” without any new evidence.\nAnd being loved doesn’t mean I’m finished with my own inner practices. If I stop reparenting myself and regulating myself because she’s doing enough of it for me, I’ve made the relationship carry something it shouldn’t have to carry.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "I can know pretty quickly that I want to be with somebody. That tells me a lot less about whether I should raise children with her, share a house for twenty years, or build the rest of my life around her. A wonderful lover can still be a terrible long-term partner. One thing I try to catch is when “I’m taking a chance on this person” turns into “this is the right person” without any new evidence.\nAnd being loved doesn’t mean I’m finished with my own inner practices. If I stop reparenting myself and regulating myself because she’s doing enough of it for me, I’ve made the relationship carry something it shouldn’t have to carry.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9988917708396912,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 633,
+            "word_count": 116,
+            "token_length": 138,
+            "is_humanized": false,
+            "humanizer_score": 0.026107147336006165
+          }
+        ]
+      }
     }
   ]
 }
