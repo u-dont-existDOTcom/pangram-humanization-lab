@@ -1,0 +1,67 @@
+name: Pangram Romance reconstruction r17
+
+on:
+  push:
+    branches:
+      - task/romance-reconstruction-r17
+    paths:
+      - '.github/workflows/pangram-romance-reconstruction-r17.yml'
+      - 'experiments/romance-reconstruction-r17-2026-08-13.json'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install
+        run: python -m pip install -e '.[test]'
+      - name: Test fixed-batch path
+        run: >-
+          pytest -q
+          tests/test_fixed_batch.py
+          tests/test_pangram.py
+          tests/test_cache.py
+          tests/test_git_sync.py
+          tests/test_call_budget.py
+          tests/test_call_budget_pangram.py
+          tests/test_call_budget_fixed_batch.py
+
+  detector:
+    needs: test
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install
+        run: python -m pip install -e '.[test]'
+      - name: Configure git checkpoint identity
+        run: |
+          git config user.name "Pangram Lab Actions"
+          git config user.email "pangram-lab-actions@users.noreply.github.com"
+      - name: Verify Pangram secret is configured
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+        run: |
+          test -n "$PANGRAM_API_KEY" || { echo "PANGRAM_API_KEY secret is missing"; exit 1; }
+          echo "PANGRAM_API_KEY is configured"
+      - name: Run Romance reconstruction batch r17
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+        run: |
+          python scripts/run_fixed_batch.py \
+            experiments/romance-reconstruction-r17-2026-08-13.json \
+            --out state/experiments/romance-reconstruction-r17-2026-08-13-results.json
