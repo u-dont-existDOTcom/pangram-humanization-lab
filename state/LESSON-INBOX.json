@@ -919,6 +919,29 @@
           "section_id": "R5_PRACTICAL_REPAIR"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T20:28:12.951703+00:00",
+      "experiment_id": "romance-reconstruction-r24-2026-08-13",
+      "id": "Q-ac8c8fdb44e7b1b3",
+      "sections": [
+        "R1_LOVE_REPAIR"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r24-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r24",
+      "source_sha256": "df670baf0bd5f5b3f6233de3ed9d3c6d3d4aa4dd514ea00759c07b36bfe8ce38",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.1540178507566452,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8459821343421936,
+          "id": "R1_LOVE_COMPOSITION_D",
+          "prediction_short": "Mixed",
+          "section_id": "R1_LOVE_REPAIR"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
