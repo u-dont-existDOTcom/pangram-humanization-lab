@@ -1,0 +1,174 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-nearpass-boundaries-r3-2026-08-13",
+  "results": [
+    {
+      "id": "R2_I_FINAL_CONTROL",
+      "measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R2_I_FINAL_CONTROL",
+      "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\n\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\n",
+      "text_sha256": "8dda0300ea6ddbf630839672dd1db0acea4e586d119baeb0766cc18d0630ce10",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.3006570637226105,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 734,
+            "word_count": 140,
+            "token_length": 177,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R2_IDEALIZATION_CONTROL"
+    }
+  ],
+  "audit_id": "romance-full-human-2026-08-13",
+  "call_accounting": {
+    "audit_id": "romance-full-human-2026-08-13",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.95,
+        "estimated_credits": 19,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "FULL_ARTICLE",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_1",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.25,
+        "estimated_credits": 5,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_2",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_3",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_4",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_5",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_6",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_7",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R2_IDEALIZATION_CONTROL",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R2_I_FINAL_CONTROL"
+      }
+    ]
+  }
+}
