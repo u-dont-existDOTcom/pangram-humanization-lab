@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r10-2026-08-13_COHAB_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "If I can avoid it, I don't want to live together early. Once we do, a bad relationship can start surviving because rent is expensive or one of us has nowhere easy to go. That's not evidence the relationship is working. The check-in date is mostly there so we don't wait until one of us is desperate to ask.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.7830358743667603,
+        "confidence": "High",
+        "end_index": 306,
+        "humanizer_score": 0.03940102830529213,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "If I can avoid it, I don't want to live together early. Once we do, a bad relationship can start surviving because rent is expensive or one of us has nowhere easy to go. That's not evidence the relationship is working. The check-in date is mostly there so we don't wait until one of us is desperate to ask.",
+        "token_length": 69,
+        "word_count": 59
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "4505140a-8b4f-4aff-be41-8165fd1dc5c2",
   "text": "If I can avoid it, I don't want to live together early. Once we do, a bad relationship can start surviving because rent is expensive or one of us has nowhere easy to go. That's not evidence the relationship is working. The check-in date is mostly there so we don't wait until one of us is desperate to ask.",
   "text_sha256": "4889747d42aacd998140099f3ef17b596cd144812545fa06ccc900dc3d4402e3",
-  "updated_utc": "2026-08-13T01:39:02.902761+00:00"
+  "updated_utc": "2026-08-13T01:39:04.107234+00:00"
 }
