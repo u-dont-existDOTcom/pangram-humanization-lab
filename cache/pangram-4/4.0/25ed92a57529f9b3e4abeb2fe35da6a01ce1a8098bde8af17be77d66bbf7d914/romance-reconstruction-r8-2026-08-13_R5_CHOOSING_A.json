@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-reconstruction-r8-2026-08-13_R5_CHOOSING_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.13197025656700134,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.8680297136306763,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 2,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "# What are you actually choosing together?\nA lot of romantic pain starts with two lovey bunnies entering one of the biggest arrangements of their lives without ever discussing their ideas, dreams, and fears about it.\n“We’re together” ... what does that mean exactly? It conjures up for me thoughts of romance, sex, exclusivity, living together, shared money, children, caregiving, spiritual partnership, family identity, or just “we really like each other and we’ll see.” That looseness can be a nice way to flow. It can also let each person imagine a different bundle, then either not label anything or assume one relationship label settled it.\nOne honest option is basically a \"practical partnership.\" This is very common, especially outside the modern West. Two people may share a home, raise children, support each other financially, take care of each other, and maybe have sex, without pretending that overwhelming romantic love is what holds it all together.\nThis feels wrong to me and anyone else who has been in love. Arguably, though, there is nothing inherently wrong with it if both people know what they are choosing. This arrangement has been promoted throughout history because it isn't based on highly fluctuating feelings.\nIt can still become unstable. One day you find your heartthrob at work or church or somewhere else, and suddenly you wonder why you ever settled for less.\nAnother honest option is a romance with humility, even if romance and humility seem to clash. Two people really are in love, really do want to build something together, and really do take the bond seriously, without pretending they can guarantee the feeling forever.\nThey can still choose exclusivity, shack up, have children, and plan a life. They also admit that feelings can change and talk beforehand about what that would mean. If the romance fades, maybe they revive it, or maybe they renegotiate the arrangement.\nMy actual ideal is to have intimacy embedded in community. Obviously, most people are not going to live in a free-love community unless we really have a New Earth soon. But, as Pema Chodron says to prisoners when teaching them meditation, “Start Where You Are.” Build mutual friendships, and keep other sources of meaning and support alive.\nBefore you commit to one type of relationship, ask each other some real questions:\nWhat are we deciding to join together, and why?\nIs this mainly a romance, a practical partnership, or both?\nAre we promising actions, or quietly pretending to promise permanent feelings?\nIf the romance changes, which parts of this agreement still remain?\nAnd the biggie: what happens if one of us falls in love with someone else?\nWhat counts as betrayal, and what just means we need a serious conversation?\nWhich needs should still be supported mostly outside the relationship?\nHow should we plan on revisiting this agreement when our lives change?\nIf we separate, what do we still owe each other, and what do we owe any children involved?\nThese are just a few questions I could think of to start the ball rolling, but be creative and see what you come up with! You can make a card game out of this and have some fun with it. If there's real love, it will survive a bit of honest curiosity.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.3592713475227356,
+        "confidence": "High",
+        "end_index": 1487,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "# What are you actually choosing together?\nA lot of romantic pain starts with two lovey bunnies entering one of the biggest arrangements of their lives without ever discussing their ideas, dreams, and fears about it.\n“We’re together” ... what does that mean exactly? It conjures up for me thoughts of romance, sex, exclusivity, living together, shared money, children, caregiving, spiritual partnership, family identity, or just “we really like each other and we’ll see.” That looseness can be a nice way to flow. It can also let each person imagine a different bundle, then either not label anything or assume one relationship label settled it.\nOne honest option is basically a \"practical partnership.\" This is very common, especially outside the modern West. Two people may share a home, raise children, support each other financially, take care of each other, and maybe have sex, without pretending that overwhelming romantic love is what holds it all together.\nThis feels wrong to me and anyone else who has been in love. Arguably, though, there is nothing inherently wrong with it if both people know what they are choosing. This arrangement has been promoted throughout history because it isn't based on highly fluctuating feelings.\nIt can still become unstable. One day you find your heartthrob at work or church or somewhere else, and suddenly you wonder why you ever settled for less.\nAnother honest option is a romance with humility, even if romance and humility seem to clash.",
+        "token_length": 304,
+        "word_count": 244
+      },
+      {
+        "ai_assistance_score": 0.6678925156593323,
+        "confidence": "High",
+        "end_index": 1913,
+        "humanizer_score": 0.033231984823942184,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1487,
+        "text": " Two people really are in love, really do want to build something together, and really do take the bond seriously, without pretending they can guarantee the feeling forever.\nThey can still choose exclusivity, shack up, have children, and plan a life. They also admit that feelings can change and talk beforehand about what that would mean. If the romance fades, maybe they revive it, or maybe they renegotiate the arrangement.",
+        "token_length": 88,
+        "word_count": 70
+      },
+      {
+        "ai_assistance_score": 0.2293391078710556,
+        "confidence": "High",
+        "end_index": 3228,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 1913,
+        "text": "\nMy actual ideal is to have intimacy embedded in community. Obviously, most people are not going to live in a free-love community unless we really have a New Earth soon. But, as Pema Chodron says to prisoners when teaching them meditation, “Start Where You Are.” Build mutual friendships, and keep other sources of meaning and support alive.\nBefore you commit to one type of relationship, ask each other some real questions:\nWhat are we deciding to join together, and why?\nIs this mainly a romance, a practical partnership, or both?\nAre we promising actions, or quietly pretending to promise permanent feelings?\nIf the romance changes, which parts of this agreement still remain?\nAnd the biggie: what happens if one of us falls in love with someone else?\nWhat counts as betrayal, and what just means we need a serious conversation?\nWhich needs should still be supported mostly outside the relationship?\nHow should we plan on revisiting this agreement when our lives change?\nIf we separate, what do we still owe each other, and what do we owe any children involved?\nThese are just a few questions I could think of to start the ball rolling, but be creative and see what you come up with! You can make a card game out of this and have some fun with it. If there's real love, it will survive a bit of honest curiosity.",
+        "token_length": 276,
+        "word_count": 232
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "b240f2bd-f830-4680-b8fd-98d7ad81760a",
   "text": "# What are you actually choosing together?\n\nA lot of romantic pain starts with two lovey bunnies entering one of the biggest arrangements of their lives without ever discussing their ideas, dreams, and fears about it.\n\n“We’re together” ... what does that mean exactly? It conjures up for me thoughts of romance, sex, exclusivity, living together, shared money, children, caregiving, spiritual partnership, family identity, or just “we really like each other and we’ll see.” That looseness can be a nice way to flow. It can also let each person imagine a different bundle, then either not label anything or assume one relationship label settled it.\n\nOne honest option is basically a \"practical partnership.\" This is very common, especially outside the modern West. Two people may share a home, raise children, support each other financially, take care of each other, and maybe have sex, without pretending that overwhelming romantic love is what holds it all together.\n\nThis feels wrong to me and anyone else who has been in love. Arguably, though, there is nothing inherently wrong with it if both people know what they are choosing. This arrangement has been promoted throughout history because it isn't based on highly fluctuating feelings.\n\nIt can still become unstable. One day you find your heartthrob at work or church or somewhere else, and suddenly you wonder why you ever settled for less.\n\nAnother honest option is a romance with humility, even if romance and humility seem to clash. Two people really are in love, really do want to build something together, and really do take the bond seriously, without pretending they can guarantee the feeling forever.\n\nThey can still choose exclusivity, shack up, have children, and plan a life. They also admit that feelings can change and talk beforehand about what that would mean. If the romance fades, maybe they revive it, or maybe they renegotiate the arrangement.\n\nMy actual ideal is to have intimacy embedded in community. Obviously, most people are not going to live in a free-love community unless we really have a New Earth soon. But, as Pema Chodron says to prisoners when teaching them meditation, “Start Where You Are.” Build mutual friendships, and keep other sources of meaning and support alive.\n\nBefore you commit to one type of relationship, ask each other some real questions:\n\nWhat are we deciding to join together, and why?\n\nIs this mainly a romance, a practical partnership, or both?\n\nAre we promising actions, or quietly pretending to promise permanent feelings?\n\nIf the romance changes, which parts of this agreement still remain?\n\nAnd the biggie: what happens if one of us falls in love with someone else?\n\nWhat counts as betrayal, and what just means we need a serious conversation?\n\nWhich needs should still be supported mostly outside the relationship?\n\nHow should we plan on revisiting this agreement when our lives change?\n\nIf we separate, what do we still owe each other, and what do we owe any children involved?\n\nThese are just a few questions I could think of to start the ball rolling, but be creative and see what you come up with! You can make a card game out of this and have some fun with it. If there's real love, it will survive a bit of honest curiosity.\n",
   "text_sha256": "25ed92a57529f9b3e4abeb2fe35da6a01ce1a8098bde8af17be77d66bbf7d914",
-  "updated_utc": "2026-08-13T17:24:50.892816+00:00"
+  "updated_utc": "2026-08-13T17:24:52.377175+00:00"
 }
