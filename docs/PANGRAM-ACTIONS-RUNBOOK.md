@@ -130,7 +130,7 @@ Pangram 4 is requested explicitly by the repository client. A result from anothe
 
 ## Acceptance and authorial handoff
 
-Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies. A successful detector request or `Human` classification is not enough. The exact intended delivery boundary must satisfy `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`. A partial result such as 93% or 99% Human is progress only; it is not a detector pass.
+Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies. A successful detector request or `Human` classification is not enough. The exact intended delivery boundary must satisfy `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`. A partial result such as 93% or 99% Human is progress only; it is not a pass.
 
 Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
 
