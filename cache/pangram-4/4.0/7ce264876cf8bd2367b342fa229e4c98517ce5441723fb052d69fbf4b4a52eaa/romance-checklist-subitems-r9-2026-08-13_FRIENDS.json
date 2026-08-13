@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r9-2026-08-13_FRIENDS",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "I'd also try to make some real friends together. My friends are going to hear me first and hers are going to hear her first. That's normal; they're our friends. The problem is when every person around the relationship only knows one of us well. Then the first serious conflict turns into two teams arguing about two different relationships.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.04357879236340523,
+        "confidence": "High",
+        "end_index": 340,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "I'd also try to make some real friends together. My friends are going to hear me first and hers are going to hear her first. That's normal; they're our friends. The problem is when every person around the relationship only knows one of us well. Then the first serious conflict turns into two teams arguing about two different relationships.",
+        "token_length": 68,
+        "word_count": 59
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "0c4a387a-e1f0-4b7b-9a6f-b726e030f789",
   "text": "I'd also try to make some real friends together. My friends are going to hear me first and hers are going to hear her first. That's normal; they're our friends. The problem is when every person around the relationship only knows one of us well. Then the first serious conflict turns into two teams arguing about two different relationships.",
   "text_sha256": "7ce264876cf8bd2367b342fa229e4c98517ce5441723fb052d69fbf4b4a52eaa",
-  "updated_utc": "2026-08-13T01:37:40.035394+00:00"
+  "updated_utc": "2026-08-13T01:37:43.489985+00:00"
 }
