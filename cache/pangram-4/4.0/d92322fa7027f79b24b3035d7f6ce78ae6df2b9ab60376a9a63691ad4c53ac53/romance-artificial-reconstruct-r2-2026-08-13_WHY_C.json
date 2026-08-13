@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-artificial-reconstruct-r2-2026-08-13_WHY_C",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.6229685544967651,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.3770314157009125,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nPart of the problem is that I’m trying to tell two people how to do by themselves what I think a healthy community should be helping them do. Friends and elders would already be around. Other people would know the relationship, and there would be somewhere else to take some of the emotional weight. Most of us don’t have much of that, so yes, the substitute is clumsy.\nYou might even suspect that I'm subtly trying to influence you into wanting to forget all this and just join a community! I couldn't even say you're wrong.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.36822202801704407,
+        "confidence": "High",
+        "end_index": 348,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?",
+        "token_length": 64,
+        "word_count": 51
+      },
+      {
+        "ai_assistance_score": 0.8741509914398193,
+        "confidence": "High",
+        "end_index": 923,
+        "humanizer_score": 0.8900855779647827,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 348,
+        "text": "\nWell, you caught me. It is painfully artificial.\nPart of the problem is that I’m trying to tell two people how to do by themselves what I think a healthy community should be helping them do. Friends and elders would already be around. Other people would know the relationship, and there would be somewhere else to take some of the emotional weight. Most of us don’t have much of that, so yes, the substitute is clumsy.\nYou might even suspect that I'm subtly trying to influence you into wanting to forget all this and just join a community! I couldn't even say you're wrong.",
+        "token_length": 124,
+        "word_count": 104
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "333d95fd-5140-469d-aeec-979d9d13d7fe",
   "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\n\nWell, you caught me. It is painfully artificial.\n\nPart of the problem is that I’m trying to tell two people how to do by themselves what I think a healthy community should be helping them do. Friends and elders would already be around. Other people would know the relationship, and there would be somewhere else to take some of the emotional weight. Most of us don’t have much of that, so yes, the substitute is clumsy.\n\nYou might even suspect that I'm subtly trying to influence you into wanting to forget all this and just join a community! I couldn't even say you're wrong.",
   "text_sha256": "d92322fa7027f79b24b3035d7f6ce78ae6df2b9ab60376a9a63691ad4c53ac53",
-  "updated_utc": "2026-08-13T01:25:19.066045+00:00"
+  "updated_utc": "2026-08-13T01:25:20.282729+00:00"
 }
