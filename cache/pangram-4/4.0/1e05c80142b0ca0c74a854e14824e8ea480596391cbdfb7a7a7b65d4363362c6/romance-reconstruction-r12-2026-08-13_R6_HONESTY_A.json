@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-reconstruction-r12-2026-08-13_R6_HONESTY_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.3150569498538971,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.6849430799484253,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 2,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "# If you’re already in it\nOne person can’t create mutual honesty. I learned that in all three of my reference relationships. Actually, it’s probably just common sense. I could keep bringing up the same problem, but I couldn’t make the other person look at it with me.\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.\nI kept saying, “It’s not possible to have a relationship without trust.” I think their all-or-nothing rigidity came from trauma and never really growing up.\nEven dishonesty was sometimes hard for me to define in these relationships. Bee once opened a door and, a second later, said she hadn’t opened it. That drove me crazy. Why would she lie like that? But looking back on it now, I could have just seen it as some kind of mental illness rather than \"lying\" since there was no strategy behind it, and in fact she was usually quite honest.\nSome things were less mysterious. They were acting as if the trust problem wasn’t there because they still wanted the relationship. Attractions to other people sometimes went unsaid too, and sometimes got imagined from nowhere. Some people keep a relationship like this going for a long time, just sweeping everything under the rug.\nI'm not saying to start dumping every hidden thought on your partner and announcing that you’re finally being honest. Ask whether both of you actually want to prioritize radical honesty, first.\nOnce you've agreed honesty is important, start with the pinkest elephant in the room:\n“I don’t think we really trust each other.”\n“I’m resentful about this.”\n“I’m attracted to somebody else.”\n“I don’t know whether I still want the same kind of relationship.”\nSee whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person wants to open that door before the other. If I’m the one asking for honesty, I have to care about what is genuinely best for both of us, even if the relationship changes in a way I don’t want. That’s where the selfless kind of love from the beginning comes in. The other person can’t keep saying “not now” forever either. After a while, refusing to choose is a choice.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.30761778354644775,
+        "confidence": "Low",
+        "end_index": 267,
+        "humanizer_score": 0.0031825469341129065,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "# If you’re already in it\nOne person can’t create mutual honesty. I learned that in all three of my reference relationships. Actually, it’s probably just common sense. I could keep bringing up the same problem, but I couldn’t make the other person look at it with me.",
+        "token_length": 58,
+        "word_count": 48
+      },
+      {
+        "ai_assistance_score": 0.28744903206825256,
+        "confidence": "High",
+        "end_index": 1891,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 267,
+        "text": "\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.\nI kept saying, “It’s not possible to have a relationship without trust.” I think their all-or-nothing rigidity came from trauma and never really growing up.\nEven dishonesty was sometimes hard for me to define in these relationships. Bee once opened a door and, a second later, said she hadn’t opened it. That drove me crazy. Why would she lie like that? But looking back on it now, I could have just seen it as some kind of mental illness rather than \"lying\" since there was no strategy behind it, and in fact she was usually quite honest.\nSome things were less mysterious. They were acting as if the trust problem wasn’t there because they still wanted the relationship. Attractions to other people sometimes went unsaid too, and sometimes got imagined from nowhere. Some people keep a relationship like this going for a long time, just sweeping everything under the rug.\nI'm not saying to start dumping every hidden thought on your partner and announcing that you’re finally being honest. Ask whether both of you actually want to prioritize radical honesty, first.\nOnce you've agreed honesty is important, start with the pinkest elephant in the room:\n“I don’t think we really trust each other.”\n“I’m resentful about this.”\n“I’m attracted to somebody else.”\n“I don’t know whether I still want the same kind of relationship.”\nSee whether the other person will stay in the conversation.",
+        "token_length": 345,
+        "word_count": 277
+      },
+      {
+        "ai_assistance_score": 0.6565993428230286,
+        "confidence": "High",
+        "end_index": 2371,
+        "humanizer_score": 0.0031825469341129065,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1891,
+        "text": " If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person wants to open that door before the other. If I’m the one asking for honesty, I have to care about what is genuinely best for both of us, even if the relationship changes in a way I don’t want. That’s where the selfless kind of love from the beginning comes in. The other person can’t keep saying “not now” forever either. After a while, refusing to choose is a choice.",
+        "token_length": 107,
+        "word_count": 87
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "762e0cfd-9a0d-46a6-98c7-784a087b7637",
   "text": "# If you’re already in it\n\nOne person can’t create mutual honesty. I learned that in all three of my reference relationships. Actually, it’s probably just common sense. I could keep bringing up the same problem, but I couldn’t make the other person look at it with me.\n\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.\n\nI kept saying, “It’s not possible to have a relationship without trust.” I think their all-or-nothing rigidity came from trauma and never really growing up.\n\nEven dishonesty was sometimes hard for me to define in these relationships. Bee once opened a door and, a second later, said she hadn’t opened it. That drove me crazy. Why would she lie like that? But looking back on it now, I could have just seen it as some kind of mental illness rather than \"lying\" since there was no strategy behind it, and in fact she was usually quite honest.\n\nSome things were less mysterious. They were acting as if the trust problem wasn’t there because they still wanted the relationship. Attractions to other people sometimes went unsaid too, and sometimes got imagined from nowhere. Some people keep a relationship like this going for a long time, just sweeping everything under the rug.\n\nI'm not saying to start dumping every hidden thought on your partner and announcing that you’re finally being honest. Ask whether both of you actually want to prioritize radical honesty, first.\n\nOnce you've agreed honesty is important, start with the pinkest elephant in the room:\n\n“I don’t think we really trust each other.”\n\n“I’m resentful about this.”\n\n“I’m attracted to somebody else.”\n\n“I don’t know whether I still want the same kind of relationship.”\n\nSee whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\n\nUsually one person wants to open that door before the other. If I’m the one asking for honesty, I have to care about what is genuinely best for both of us, even if the relationship changes in a way I don’t want. That’s where the selfless kind of love from the beginning comes in. The other person can’t keep saying “not now” forever either. After a while, refusing to choose is a choice.\n",
   "text_sha256": "1e05c80142b0ca0c74a854e14824e8ea480596391cbdfb7a7a7b65d4363362c6",
-  "updated_utc": "2026-08-13T18:34:53.370569+00:00"
+  "updated_utc": "2026-08-13T18:34:54.901575+00:00"
 }
