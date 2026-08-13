@@ -1,8 +1,10 @@
 import json
+import subprocess
 from pathlib import Path
 
 import pytest
 
+from pangram_lab.lesson_closeout import audit_ref
 from pangram_lab.review_queue import ReviewQueue, ReviewQueueMismatch
 
 
@@ -51,3 +53,39 @@ def test_resolve_rejects_changed_hash(tmp_path: Path):
     queue.register("state/experiments/result.json", "branch", "a" * 64, meta())
     with pytest.raises(ReviewQueueMismatch):
         queue.resolve("state/experiments/result.json", "branch", "b" * 64, ledger_entry_ids=["L-1"])
+
+
+def _git(root: Path, *args: str):
+    return subprocess.run(args, cwd=root, text=True, capture_output=True, check=True)
+
+
+def _cross_ref_repo(root: Path):
+    _git(root, "git", "init", "-b", "main")
+    _git(root, "git", "config", "user.email", "test@example.com")
+    _git(root, "git", "config", "user.name", "Test")
+    (root / "state").mkdir()
+    (root / "state" / "lesson-closeout-config.json").write_text(json.dumps({"enforcement_started_at_utc": "2099-01-01T00:00:00Z", "tracked_globs": []}), encoding="utf-8")
+    (root / "state" / "LESSON-LEDGER.json").write_text('{"schema_version": 1, "entries": []}\n', encoding="utf-8")
+    _git(root, "git", "add", ".")
+    _git(root, "git", "commit", "-m", "base")
+    _git(root, "git", "switch", "-c", "evidence")
+    ReviewQueue(root).register("state/experiments/e.json", "evidence", "a" * 64, {})
+    _git(root, "git", "add", ".")
+    _git(root, "git", "commit", "-m", "queue")
+    _git(root, "git", "switch", "main")
+
+
+def test_audit_reports_cross_ref_queue_item_without_main_disposition(tmp_path: Path):
+    _cross_ref_repo(tmp_path)
+    report = audit_ref(tmp_path, "evidence")
+    assert report["ok"] is False
+    assert len(report["pending_review"]) == 1
+
+
+def test_audit_treats_matching_main_ledger_entry_as_reviewed(tmp_path: Path):
+    _cross_ref_repo(tmp_path)
+    ledger = {"schema_version": 1, "entries": [{"id": "L-1", "source_path": "state/experiments/e.json", "source_sha256": "a" * 64, "finding": "Reviewed result.", "disposition": "article-specific", "reason": "Local finding.", "promoted_to": [], "recorded_at_utc": "2026-08-13T00:00:00+00:00", "source_ref": "evidence"}]}
+    (tmp_path / "state" / "LESSON-LEDGER.json").write_text(json.dumps(ledger) + "\n", encoding="utf-8")
+    report = audit_ref(tmp_path, "evidence")
+    assert report["pending_review"] == []
+    assert report["ok"] is True
