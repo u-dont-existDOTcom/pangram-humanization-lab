@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-localize-r7-2026-08-13_L2_SPEED_FRIENDS",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Don’t let everything speed up at once. Resist early cohabitation, and set real check-in dates before there’s a crisis. Housing may make separate living difficult, but once you live together, practical necessity starts narrowing your choices.\nMake deep friends together, and remember that old friends will naturally be partial. The goal is to have some friends who know both of you as a couple instead of arriving only as defenders of one person’s story.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9439440369606018,
+        "confidence": "High",
+        "end_index": 453,
+        "humanizer_score": 0.2211046814918518,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Don’t let everything speed up at once. Resist early cohabitation, and set real check-in dates before there’s a crisis. Housing may make separate living difficult, but once you live together, practical necessity starts narrowing your choices.\nMake deep friends together, and remember that old friends will naturally be partial. The goal is to have some friends who know both of you as a couple instead of arriving only as defenders of one person’s story.",
+        "token_length": 90,
+        "word_count": 74
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "a3d6a8a4-695e-4c5b-a192-d28ce3551504",
   "text": "Don’t let everything speed up at once. Resist early cohabitation, and set real check-in dates before there’s a crisis. Housing may make separate living difficult, but once you live together, practical necessity starts narrowing your choices.\n\nMake deep friends together, and remember that old friends will naturally be partial. The goal is to have some friends who know both of you as a couple instead of arriving only as defenders of one person’s story.",
   "text_sha256": "fd6ee90d7f158dd0414762f2d900c9bb757d0a0b315590e04eaaaf531d999593",
-  "updated_utc": "2026-08-13T01:32:43.399918+00:00"
+  "updated_utc": "2026-08-13T01:32:44.909454+00:00"
 }
