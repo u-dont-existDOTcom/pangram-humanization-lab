@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-cohab-decision-r11-2026-08-13_COHAB_ONLY",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Don't move in together early if you can avoid it. Once you're living together, leaving gets mixed up with rent, housing, furniture, sleep, all the boring stuff. That makes it much harder to tell whether you're staying because you want the relationship or because getting out is a pain in the ass. Housing can force the issue sometimes; I'm talking about when you actually have a choice.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.6075782775878906,
+        "confidence": "High",
+        "end_index": 386,
+        "humanizer_score": 0.012359119020402431,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Don't move in together early if you can avoid it. Once you're living together, leaving gets mixed up with rent, housing, furniture, sleep, all the boring stuff. That makes it much harder to tell whether you're staying because you want the relationship or because getting out is a pain in the ass. Housing can force the issue sometimes; I'm talking about when you actually have a choice.",
+        "token_length": 81,
+        "word_count": 67
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "a34a6976-b1e8-44f6-ac49-229547663ce6",
   "text": "Don't move in together early if you can avoid it. Once you're living together, leaving gets mixed up with rent, housing, furniture, sleep, all the boring stuff. That makes it much harder to tell whether you're staying because you want the relationship or because getting out is a pain in the ass. Housing can force the issue sometimes; I'm talking about when you actually have a choice.",
   "text_sha256": "d946aac8339760a4dd2b7c1a85d7f51269add3aad06331f01c116d13a69c6f9c",
-  "updated_utc": "2026-08-13T01:41:03.750609+00:00"
+  "updated_utc": "2026-08-13T01:41:07.007681+00:00"
 }
