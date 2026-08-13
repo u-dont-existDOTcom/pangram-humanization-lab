@@ -417,8 +417,8 @@
     },
     "R3_SLOW_COMPOSITION\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "estimated_credits": 1,
@@ -443,10 +443,18 @@
           "text_sha256": "f3b223579fa48c42135224f0331c6b175ef80edd4175cb9a74e3cc314277f808",
           "type": "paid_post_reserved",
           "word_count": 704
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r8-2026-08-13_R3_CURRENT_SLOW_FULL",
+          "recorded_at_utc": "2026-08-13T17:24:36.312650+00:00",
+          "text_sha256": "223ce3c4de1915515681d5ed12375b329acc4af32e1e90a6cc6b41af4e4ffef5",
+          "type": "paid_post_reserved",
+          "word_count": 625
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "R3_SLOW_COMPOSITION",
       "version": "4.0"
