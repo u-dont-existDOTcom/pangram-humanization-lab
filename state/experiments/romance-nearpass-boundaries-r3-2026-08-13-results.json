@@ -71,6 +71,53 @@
         ]
       },
       "section_id": "R2_NEXT_POTENTIAL"
+    },
+    {
+      "id": "R2_I_FINAL_PLUS_FIRST_NEXT",
+      "measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R2_I_FINAL_PLUS_FIRST_NEXT",
+      "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\n\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\n\nSeeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:\n",
+      "text_sha256": "ee3632c8a9aa8cf28933ce720e3551f4e535dc22481fd5c4a1baed062920183e",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nSeeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.34138309955596924,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.6586169004440308,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.24920347332954407,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 600,
+            "word_count": 113,
+            "token_length": 144,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": " But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nSeeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6388337016105652,
+            "confidence": "High",
+            "start_index": 600,
+            "end_index": 911,
+            "word_count": 58,
+            "token_length": 68,
+            "is_humanized": false,
+            "humanizer_score": 0.001149416551925242
+          }
+        ]
+      },
+      "section_id": "R2_BOUNDARY_SHORT"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -217,6 +264,20 @@
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
         "first_human_measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R2_NEXT_POTENTIAL_L249_251"
+      },
+      {
+        "section_id": "R2_BOUNDARY_SHORT",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
       }
     ]
   }
