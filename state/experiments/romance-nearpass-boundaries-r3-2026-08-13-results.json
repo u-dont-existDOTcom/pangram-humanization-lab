@@ -36,6 +36,41 @@
         ]
       },
       "section_id": "R2_IDEALIZATION_CONTROL"
+    },
+    {
+      "id": "R2_NEXT_POTENTIAL_L249_251",
+      "measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R2_NEXT_POTENTIAL_L249_251",
+      "text": "Seeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:\n\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\n",
+      "text_sha256": "be3d2e7f33d3935f21678653afe54d1e9113960c2b41fd369688e41becf48196",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Seeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Seeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”",
+            "label": "Human Written",
+            "ai_assistance_score": 0.4013877511024475,
+            "confidence": "Medium",
+            "start_index": 0,
+            "end_index": 259,
+            "word_count": 48,
+            "token_length": 58,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R2_NEXT_POTENTIAL"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -168,6 +203,20 @@
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
         "first_human_measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R2_I_FINAL_CONTROL"
+      },
+      {
+        "section_id": "R2_NEXT_POTENTIAL",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R2_NEXT_POTENTIAL_L249_251"
       }
     ]
   }
