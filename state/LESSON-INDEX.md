@@ -6,7 +6,8 @@ Use this file as the starting point for current lesson retrieval.
 
 1. `state/WORKING-LESSONS.md` — consolidated lessons through 2026-08-12.
 2. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md` — newer Romance detector, semantic-sanity, architecture, routing, provenance, and large-reconstruction lessons. Newer owner correction / controlled evidence here supersedes older conflicting guidance.
-3. For exact evidence behind a lesson, inspect the cited incident note and experiment/result JSON rather than generalizing from the summary.
+3. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md` — protected rhetorical function, hard detector-acceptance gating when Pangram is explicitly required, trauma-informed language testing, and measured choice-diff rules.
+4. For exact evidence behind a lesson, inspect the cited incident note and experiment/result JSON rather than generalizing from the summary.
 
 ## Completion gate
 
@@ -33,6 +34,10 @@ Key current evidence on `automation/pangram-fixed-batch` includes:
 - `state/ROMANCE-MONOGAMY-POLYAMORY-INCIDENT-2026-08-13.md`
 - `state/ROMANCE-ARTIFICIAL-CHECKLIST-INCIDENT-2026-08-13.md`
 - `notes/romance-recap-removal-routing-2026-08-13.md`
+- `state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json`
+- `state/experiments/spiritual-bypassing-r12-2026-08-13-results.json`
+- `state/experiments/spiritual-bypassing-r13-interaction-2026-08-13-results.json`
+- `state/experiments/spiritual-bypassing-r14-minimal-alternatives-2026-08-13-results.json`
 - exact result JSON under `state/experiments/`
 
 ## Authority order
@@ -46,8 +51,8 @@ For lesson application:
 5. older incident notes / historical detector outcomes
 6. synthetic probes
 
-Detector status is never authorship provenance. Pangram green does not certify natural owner authorship, and Pangram red does not override coherent faithful prose.
+Detector status is never authorship provenance. Pangram green does not certify natural owner authorship, and Pangram red does not override coherent faithful prose. When Pangram success is an explicit delivery requirement, however, the exact intended delivery boundary must actually pass before the humanization task is called complete.
 
 ## Scope
 
-Do not load every historical experiment indiscriminately. Start with the two lesson summaries, then open exact evidence only where the current task needs it.
+Do not load every historical experiment indiscriminately. Start with the current lesson summaries, then open exact evidence only where the current task needs it.
