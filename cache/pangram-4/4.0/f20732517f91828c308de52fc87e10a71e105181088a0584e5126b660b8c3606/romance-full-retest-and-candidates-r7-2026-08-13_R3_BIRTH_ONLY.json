@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R3_BIRTH_ONLY",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Men should understand they actually do have safe birth-control options that work better than condoms, including Gandarussa herb, and it makes sense to use that. It doesn’t make impulsiveness okay. It just makes pregnancy a bit less likely. Emotional attachment is still just as likely.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.12162403762340546,
+        "confidence": "High",
+        "end_index": 285,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Men should understand they actually do have safe birth-control options that work better than condoms, including Gandarussa herb, and it makes sense to use that. It doesn’t make impulsiveness okay. It just makes pregnancy a bit less likely. Emotional attachment is still just as likely.",
+        "token_length": 58,
+        "word_count": 45
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "ed9d52c5-6375-401f-ad81-0a2477740712",
   "text": "Men should understand they actually do have safe birth-control options that work better than condoms, including Gandarussa herb, and it makes sense to use that. It doesn’t make impulsiveness okay. It just makes pregnancy a bit less likely. Emotional attachment is still just as likely.\n",
   "text_sha256": "f20732517f91828c308de52fc87e10a71e105181088a0584e5126b660b8c3606",
-  "updated_utc": "2026-08-13T17:01:28.887722+00:00"
+  "updated_utc": "2026-08-13T17:01:30.570716+00:00"
 }
