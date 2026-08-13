@@ -1,0 +1,40 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-checklist-semantic-r8-2026-08-13",
+  "results": [
+    {
+      "id": "L1A",
+      "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L1A",
+      "text": "I learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it.\n\nBefore making love, I want to know enough about the hard stuff that I’m not finding it all out after I’m bonded. Jealousy, attraction to other people, what happens under stress, old patterns, how recent the healing is, what each of us wants when things go bad, money. But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation.",
+      "text_sha256": "2c448511d14947834156ecd6b3ac81ca30d84c172975ee30795648f58d772b1a",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it.\nBefore making love, I want to know enough about the hard stuff that I’m not finding it all out after I’m bonded. Jealousy, attraction to other people, what happens under stress, old patterns, how recent the healing is, what each of us wants when things go bad, money. But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "I learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it.\nBefore making love, I want to know enough about the hard stuff that I’m not finding it all out after I’m bonded. Jealousy, attraction to other people, what happens under stress, old patterns, how recent the healing is, what each of us wants when things go bad, money. But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.32621467113494873,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 554,
+            "word_count": 104,
+            "token_length": 128,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      }
+    }
+  ]
+}
