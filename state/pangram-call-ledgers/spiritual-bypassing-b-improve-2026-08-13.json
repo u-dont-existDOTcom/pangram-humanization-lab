@@ -5,8 +5,8 @@
   "sections": {
     "FULL_ARTICLE\u001fpangram-4\u001f4.0": {
       "cache_hits": 1,
-      "estimated_cost_usd": 0.2,
-      "estimated_credits": 4,
+      "estimated_cost_usd": 0.3,
+      "estimated_credits": 6,
       "events": [
         {
           "estimated_credits": 2,
@@ -29,10 +29,18 @@
           "text_sha256": "e05fcd090da184be2c1398eb84fb6dc2e9fb442536c97f9d71ec2dfb42e84042",
           "type": "paid_post_reserved",
           "word_count": 1510
+        },
+        {
+          "estimated_credits": 2,
+          "measurement_key": "spiritual-bypassing-b-repair-r2-2026-08-13_DARK_C_FULL",
+          "recorded_at_utc": "2026-08-13T22:51:02.760935+00:00",
+          "text_sha256": "054ae3a2a3c20c2a06b805adf93840a58c7a8a17d7d6d175a733918d0a0a8b3a",
+          "type": "paid_post_reserved",
+          "word_count": 1492
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "FULL_ARTICLE",
       "version": "4.0"
