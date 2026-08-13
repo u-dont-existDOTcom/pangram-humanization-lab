@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-reconstruction-r24-2026-08-13_R1_LOVE_COMPOSITION_D",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.1540178507566452,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.8459821343421936,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Agape or divine love does two jobs at once to rescue the erotic love. First, most obviously, it keeps eros from becoming totally selfish and fickle by making the other person's happiness part of the wanting: I want you because I know you'll be happy with me. Second, it gives eros a landing pad. When two people pull away because eros seems unreciprocated for a moment, the backdrop of actual, genuine care, keeps the couple from simply abandoning each other, and then they might even rekindle the eros when they see that it's based on something deeper.\nEros can help build the agape too. It has a drive to it: it keeps pulling me toward this particular person, and over time that closeness can grow an agape that survives the drive itself.\nThat drive can weaken for reasons that aren't really my fault. I can get old, sick, depressed, or grieving, and I would hope the agape is deep enough that she sticks by me through some of that even if it puts strain on eros. But if I just get bored with life, stop having much of a life outside her, and make her responsible for nearly all my warmth, meaning, reassurance, and excitement, that's different. I don't get to be shocked if she wants me less.\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\nSome couples may eventually care more about the life they made together than about the eros that started it. Fine. But that isn't the same as one person staying as a concession while the other still wants them. Nobody at the wedding knows which future their bond will become.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.19478988647460938,
+        "confidence": "High",
+        "end_index": 1516,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Agape or divine love does two jobs at once to rescue the erotic love. First, most obviously, it keeps eros from becoming totally selfish and fickle by making the other person's happiness part of the wanting: I want you because I know you'll be happy with me. Second, it gives eros a landing pad. When two people pull away because eros seems unreciprocated for a moment, the backdrop of actual, genuine care, keeps the couple from simply abandoning each other, and then they might even rekindle the eros when they see that it's based on something deeper.\nEros can help build the agape too. It has a drive to it: it keeps pulling me toward this particular person, and over time that closeness can grow an agape that survives the drive itself.\nThat drive can weaken for reasons that aren't really my fault. I can get old, sick, depressed, or grieving, and I would hope the agape is deep enough that she sticks by me through some of that even if it puts strain on eros. But if I just get bored with life, stop having much of a life outside her, and make her responsible for nearly all my warmth, meaning, reassurance, and excitement, that's different. I don't get to be shocked if she wants me less.\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.",
+        "token_length": 350,
+        "word_count": 281
+      },
+      {
+        "ai_assistance_score": 0.5647066235542297,
+        "confidence": "High",
+        "end_index": 1792,
+        "humanizer_score": 0.11852298676967621,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1516,
+        "text": "\nSome couples may eventually care more about the life they made together than about the eros that started it. Fine. But that isn't the same as one person staying as a concession while the other still wants them. Nobody at the wedding knows which future their bond will become.",
+        "token_length": 54,
+        "word_count": 49
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "9344f0fc-ed74-4aaf-bff9-90a02cf4cea6",
   "text": "Agape or divine love does two jobs at once to rescue the erotic love. First, most obviously, it keeps eros from becoming totally selfish and fickle by making the other person's happiness part of the wanting: I want you because I know you'll be happy with me. Second, it gives eros a landing pad. When two people pull away because eros seems unreciprocated for a moment, the backdrop of actual, genuine care, keeps the couple from simply abandoning each other, and then they might even rekindle the eros when they see that it's based on something deeper.\n\nEros can help build the agape too. It has a drive to it: it keeps pulling me toward this particular person, and over time that closeness can grow an agape that survives the drive itself.\n\nThat drive can weaken for reasons that aren't really my fault. I can get old, sick, depressed, or grieving, and I would hope the agape is deep enough that she sticks by me through some of that even if it puts strain on eros. But if I just get bored with life, stop having much of a life outside her, and make her responsible for nearly all my warmth, meaning, reassurance, and excitement, that's different. I don't get to be shocked if she wants me less.\n\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\n\nSome couples may eventually care more about the life they made together than about the eros that started it. Fine. But that isn't the same as one person staying as a concession while the other still wants them. Nobody at the wedding knows which future their bond will become.\n",
   "text_sha256": "77df49c149789f0acd3a368c9db4a850b9e1e19db54d408f8fb38fa1299ab39e",
-  "updated_utc": "2026-08-13T20:28:10.118025+00:00"
+  "updated_utc": "2026-08-13T20:28:11.698949+00:00"
 }
