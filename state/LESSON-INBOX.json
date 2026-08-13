@@ -580,6 +580,29 @@
           "section_id": "R7_TOUGH_LOVE_DIAGNOSTIC"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T18:03:33.006921+00:00",
+      "experiment_id": "romance-reconstruction-r10-2026-08-13",
+      "id": "Q-4a6f8b9f8341bab0",
+      "sections": [
+        "R3_SLOW_COMPOSITION"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r10-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r10",
+      "source_sha256": "57d9b81cc668503d23aaebedd84c77821ea052050b31e59e88a2ace899a27ae2",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.7961112856864929,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.20388874411582947,
+          "id": "R3_SLOW_FINAL_B",
+          "prediction_short": "Mixed",
+          "section_id": "R3_SLOW_COMPOSITION"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
