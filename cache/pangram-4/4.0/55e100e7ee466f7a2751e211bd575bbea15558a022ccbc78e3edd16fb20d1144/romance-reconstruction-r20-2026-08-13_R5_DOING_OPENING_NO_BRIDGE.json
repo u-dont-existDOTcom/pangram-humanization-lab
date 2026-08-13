@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-reconstruction-r20-2026-08-13_R5_DOING_OPENING_NO_BRIDGE",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "# Doing it consciously 🧭\nI learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it. All of this advice is also way too idealistic and unrealistic, and I expect most people will fail at most of it, as I have. But even if they can implement a portion, it will help.\n## Imagination as a discernment tool\nI'm sure I'm not alone here. Everyone does this. You meet someone and you automatically start imagining how good it could be to have them as your partner. You start thinking you know this person because of how your fantasies went, but really all you know from that is what you want. Actually, that's the most useful thing about the fantasy, to figure out what you want. But I usually make the mistake of playing out just the first part of the fantasy.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.0008914814097806811,
+        "confidence": "High",
+        "end_index": 810,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "# Doing it consciously 🧭\nI learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it. All of this advice is also way too idealistic and unrealistic, and I expect most people will fail at most of it, as I have. But even if they can implement a portion, it will help.\n## Imagination as a discernment tool\nI'm sure I'm not alone here. Everyone does this. You meet someone and you automatically start imagining how good it could be to have them as your partner. You start thinking you know this person because of how your fantasies went, but really all you know from that is what you want. Actually, that's the most useful thing about the fantasy, to figure out what you want. But I usually make the mistake of playing out just the first part of the fantasy.",
+        "token_length": 184,
+        "word_count": 155
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "32ae3323-b575-4436-b526-8efaf78ca0e7",
   "text": "# Doing it consciously 🧭\n\nI learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it. All of this advice is also way too idealistic and unrealistic, and I expect most people will fail at most of it, as I have. But even if they can implement a portion, it will help.\n\n## Imagination as a discernment tool\n\nI'm sure I'm not alone here. Everyone does this. You meet someone and you automatically start imagining how good it could be to have them as your partner. You start thinking you know this person because of how your fantasies went, but really all you know from that is what you want. Actually, that's the most useful thing about the fantasy, to figure out what you want. But I usually make the mistake of playing out just the first part of the fantasy.\n",
   "text_sha256": "55e100e7ee466f7a2751e211bd575bbea15558a022ccbc78e3edd16fb20d1144",
-  "updated_utc": "2026-08-13T19:54:30.681034+00:00"
+  "updated_utc": "2026-08-13T19:54:32.315486+00:00"
 }
