@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-progress-signals-r1-2026-08-13_CANDIDATE_D",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "That was where I fooled myself. I knew the meditations were helping them; I didn’t know how much was still unresolved. Someone can make huge progress from a terrible starting point and still be unstable in a relationship. Show me the last ugly conflict and I’ll learn more than I will from the best meditation you’ve ever had.\nIt’s easy to sound self-aware talking about old problems too. If everything bad is finished and every ex was the problem, I want to know what you’re still doing that you wish you weren’t.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.7618517279624939,
+        "confidence": "High",
+        "end_index": 514,
+        "humanizer_score": 0.31741863489151,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "That was where I fooled myself. I knew the meditations were helping them; I didn’t know how much was still unresolved. Someone can make huge progress from a terrible starting point and still be unstable in a relationship. Show me the last ugly conflict and I’ll learn more than I will from the best meditation you’ve ever had.\nIt’s easy to sound self-aware talking about old problems too. If everything bad is finished and every ex was the problem, I want to know what you’re still doing that you wish you weren’t.",
+        "token_length": 110,
+        "word_count": 92
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "8b6967ad-8fcd-4d75-bd6f-6d5cc4e65ce5",
   "text": "That was where I fooled myself. I knew the meditations were helping them; I didn’t know how much was still unresolved. Someone can make huge progress from a terrible starting point and still be unstable in a relationship. Show me the last ugly conflict and I’ll learn more than I will from the best meditation you’ve ever had.\n\nIt’s easy to sound self-aware talking about old problems too. If everything bad is finished and every ex was the problem, I want to know what you’re still doing that you wish you weren’t.",
   "text_sha256": "09704097a942d375210ec5f285bf8f055b330d2b234bc5fa496c1fbaf2be45d1",
-  "updated_utc": "2026-08-13T00:23:10.675989+00:00"
+  "updated_utc": "2026-08-13T00:23:12.517899+00:00"
 }
