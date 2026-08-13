@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R2_I_FINAL_PLUS_FIRST_NEXT",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.34138309955596924,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.6586169004440308,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nSeeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.24920347332954407,
+        "confidence": "High",
+        "end_index": 600,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes.",
+        "token_length": 144,
+        "word_count": 113
+      },
+      {
+        "ai_assistance_score": 0.6388337016105652,
+        "confidence": "High",
+        "end_index": 911,
+        "humanizer_score": 0.001149416551925242,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 600,
+        "text": " But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nSeeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:",
+        "token_length": 68,
+        "word_count": 58
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "2962da02-dab9-424f-9776-568010206bb1",
   "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\n\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\n\nSeeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:\n",
   "text_sha256": "ee3632c8a9aa8cf28933ce720e3551f4e535dc22481fd5c4a1baed062920183e",
-  "updated_utc": "2026-08-13T16:28:42.801850+00:00"
+  "updated_utc": "2026-08-13T16:28:49.089420+00:00"
 }
