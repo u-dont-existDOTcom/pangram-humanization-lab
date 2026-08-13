@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-repair-candidates-r5-2026-08-13_R2_JOIN_B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nI can also idealize a woman by seeing her highest potential and forgetting to look at what is actually there. Maybe I really do see something before she fully lives it. I still need to ask whether she wants to reach for it too:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\nIf she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?\nPartners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well. Like the FM Laeti song here says, “Inspire her to see the best in herself, actualize that.” If something severe is happening, sometimes a demand or boundary is necessary too.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.2788213789463043,
+        "confidence": "High",
+        "end_index": 1645,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nI can also idealize a woman by seeing her highest potential and forgetting to look at what is actually there. Maybe I really do see something before she fully lives it. I still need to ask whether she wants to reach for it too:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\nIf she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?\nPartners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well. Like the FM Laeti song here says, “Inspire her to see the best in herself, actualize that.” If something severe is happening, sometimes a demand or boundary is necessary too.",
+        "token_length": 385,
+        "word_count": 313
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "9e223d32-debb-4abc-88d7-1379ce753a23",
   "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\n\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\n\nI can also idealize a woman by seeing her highest potential and forgetting to look at what is actually there. Maybe I really do see something before she fully lives it. I still need to ask whether she wants to reach for it too:\n\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\n\nIf she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?\n\nPartners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well. Like the FM Laeti song here says, “Inspire her to see the best in herself, actualize that.” If something severe is happening, sometimes a demand or boundary is necessary too.\n",
   "text_sha256": "d9b81d6bb1f6064825c972be4e9b9d48b7354db5505960670f4de3d3554058bd",
-  "updated_utc": "2026-08-13T16:34:18.603436+00:00"
+  "updated_utc": "2026-08-13T16:34:19.798883+00:00"
 }
