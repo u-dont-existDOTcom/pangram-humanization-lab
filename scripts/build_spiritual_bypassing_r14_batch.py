@@ -26,3 +26,7 @@ spec = {
     ],
 }
 Path('/tmp/spiritual-bypassing-r14-batch.json').write_text(json.dumps(spec, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+
+candidate = Path('state/candidates/spiritual-bypassing-r14-source-faithful.md')
+candidate.parent.mkdir(parents=True, exist_ok=True)
+candidate.write_text(variant, encoding='utf-8')
