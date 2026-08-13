@@ -352,6 +352,92 @@
           "section_id": "R5_PRACTICAL_REPAIR"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T17:01:42.465625+00:00",
+      "experiment_id": "romance-full-retest-and-candidates-r7-2026-08-13",
+      "id": "Q-c45cf4345cb7c060",
+      "sections": [
+        "FULL_ARTICLE",
+        "R4_OPENING_REPAIR",
+        "R4_DESIRE_PERFORMANCE_REPAIR",
+        "R5_SCRIPTURE_REPAIR",
+        "R3_PLAN_DIAGNOSTIC",
+        "R3_BIRTH_DIAGNOSTIC",
+        "R7_AFTER_LEAVING_DIAGNOSTIC",
+        "R7_TOUGH_LOVE_DIAGNOSTIC"
+      ],
+      "source_path": "state/experiments/romance-full-retest-and-candidates-r7-2026-08-13-results.json",
+      "source_ref": "task/romance-full-retest-and-candidates-r7",
+      "source_sha256": "bf34997b88c5fcb1f42b750b76feb75f2f3716533142578b47219f1c094e5897",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.10966093838214874,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8903390765190125,
+          "id": "FULL_ARTICLE_R2",
+          "prediction_short": "Mixed",
+          "section_id": "FULL_ARTICLE"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R4_OPENING_A",
+          "prediction_short": "Human",
+          "section_id": "R4_OPENING_REPAIR"
+        },
+        {
+          "fraction_ai": 0.489107221364975,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.5108928084373474,
+          "id": "R4_DESIRE_PERFORMANCE_A",
+          "prediction_short": "Mixed",
+          "section_id": "R4_DESIRE_PERFORMANCE_REPAIR"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R5_SCRIPTURE_A",
+          "prediction_short": "Human",
+          "section_id": "R5_SCRIPTURE_REPAIR"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R3_PLAN_ONLY",
+          "prediction_short": "Human",
+          "section_id": "R3_PLAN_DIAGNOSTIC"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R3_BIRTH_ONLY",
+          "prediction_short": "Human",
+          "section_id": "R3_BIRTH_DIAGNOSTIC"
+        },
+        {
+          "fraction_ai": 0.8224138021469116,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.17758621275424957,
+          "id": "R7_AFTER_LEAVING",
+          "prediction_short": "AI",
+          "section_id": "R7_AFTER_LEAVING_DIAGNOSTIC"
+        },
+        {
+          "fraction_ai": 0.29485630989074707,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7051436901092529,
+          "id": "R7_TOUGH_LOVE_ENDING",
+          "prediction_short": "Mixed",
+          "section_id": "R7_TOUGH_LOVE_DIAGNOSTIC"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
