@@ -896,6 +896,29 @@
           "section_id": "R6_STEPCHILDREN_CONTINUITY"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T20:22:09.087780+00:00",
+      "experiment_id": "romance-reconstruction-r23-2026-08-13",
+      "id": "Q-a60b6237fd416447",
+      "sections": [
+        "R5_PRACTICAL_REPAIR"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r23-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r23",
+      "source_sha256": "6c42b670114c61d17c77242e6a8c1936a67ecc3b6acab81b06b7876f792b7e48",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.8643708825111389,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.13562913239002228,
+          "id": "R5_CHOOSING_SOURCE_C",
+          "prediction_short": "AI",
+          "section_id": "R5_PRACTICAL_REPAIR"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
