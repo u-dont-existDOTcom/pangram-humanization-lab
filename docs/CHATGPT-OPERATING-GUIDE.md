@@ -2,13 +2,15 @@
 
 This private repository is the canonical detector-research store for Joel Rosenblum article humanization work. Fresh chats should inspect GitHub directly rather than asking Joel to paste logs/results already committed here.
 
-## Read before detector claims
+## Start here
 
-1. `README.md`
-2. `state/WORKING-LESSONS.md`
-3. relevant case-study file under `state/`
-4. relevant `cases/<case-id>/history.json`
-5. round `plan.json`, `review.json`, `stats.json` when interpretation depends on them
+**Always begin with `state/LESSON-INDEX.md`.** It is the canonical retrieval entry point and controls the current lesson read order, authority order, and branch-specific evidence routing. Do not hard-code an older lesson sequence from memory.
+
+After the index directs you:
+1. read the current promoted lesson summaries it names;
+2. open the relevant case-study / incident note under `state/` only as needed;
+3. inspect the relevant `cases/<case-id>/history.json` and round `plan.json`, `review.json`, `stats.json` when interpretation depends on exact experimental evidence;
+4. for detector disputes or newer incidents, follow the branch instructions in `state/LESSON-INDEX.md` and inspect the cited branch rather than assuming `main` contains every raw experiment.
 
 If the case ID is unknown, inspect recent commits for `state: rXX analysis` / `state: rXX deterministic stats` and open the changed case path.
 
