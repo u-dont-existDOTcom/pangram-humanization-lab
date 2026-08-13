@@ -69,6 +69,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "CANDIDATE_J",
+      "measurement_key": "romance-monogamy-polyamory-r1-2026-08-13_CANDIDATE_J",
+      "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\n\nIf you can't do monogamy, I still think you should say so. Sometimes hiding that from your partner does more damage than an outside connection would have.",
+      "text_sha256": "261d8cab671bd73364ac7f78c9baa20100de7d9c37c5c96f0ba1f63fd8fb9077",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nIf you can't do monogamy, I still think you should say so. Sometimes hiding that from your partner does more damage than an outside connection would have.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nIf you can't do monogamy, I still think you should say so. Sometimes hiding that from your partner does more damage than an outside connection would have.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.030572570860385895,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 391,
+            "word_count": 67,
+            "token_length": 81,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      }
     }
   ]
 }
