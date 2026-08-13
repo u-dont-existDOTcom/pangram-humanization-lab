@@ -96,10 +96,26 @@ A green workflow is necessary but not sufficient. Inspect the committed result J
 - `text_sha256` matches the independently recorded UTF-8 SHA-256;
 - `detector.stage` is `STAGE_SUCCESS`;
 - `detector.version` is `4.0`;
+- for a requested Joel humanization completion, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`;
 - the result belongs to the intended document/paragraph boundary; and
 - the result path, result commit, workflow run URL, and workflow head SHA are recorded in the editorial report or experiment note.
 
 Pangram 4 is requested explicitly by the repository client. A result from another detector version does not satisfy this gate.
+
+## Acceptance and unresolved-author handoff
+
+For Joel's requested Pangram-humanization work, a successful detector request or `Human` classification is not enough. The exact intended delivery boundary must be 100% Human under the fraction checks above. Results such as 93% or 99% are progress only.
+
+Continue faithful, coherence-preserving repair and exact-boundary retesting until the 100% criterion is met. If the worker genuinely does not know another faithful and coherent repair, stop as an unresolved authorial handoff and record:
+
+- the exact failing span and measured boundary;
+- the exact result path, text hash, score, and detector version;
+- the faithful approaches already attempted and their measured results;
+- the claims, memories, tone, rhetorical functions, links, and native objects that cannot be sacrificed;
+- why no further faithful repair is known; and
+- the narrow question, lived detail, natural wording, or other raw author input needed from Joel.
+
+Do not call that state complete or passing. A section/API-call cap is a spending and escalation boundary, not an acceptance threshold. If it pauses paid calls, state whether a known faithful next repair remains.
 
 ## Exact-text and staleness rule
 

@@ -25,6 +25,20 @@
       "promoted_to": [],
       "recorded_at_utc": "2026-08-13T14:53:25Z",
       "source_ref": "agent/pangram-actions-runbook-corrections"
+    },
+    {
+      "id": "L-830ab4ba19-01",
+      "source_path": "state/PANGRAM-100-PERCENT-COMPLETION-INCIDENT-2026-08-13.md",
+      "source_sha256": "830ab4ba190ac049f71a5c13bb7dc4f88cd4ab72f835d9560dbc6099af6698db",
+      "finding": "Joel's requested Pangram-humanization passes require 100% Human on the exact intended delivery boundary; partial Human scores are progress only, and a worker who lacks a further faithful repair must make an exact unresolved authorial handoff.",
+      "disposition": "promoted",
+      "reason": "",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
+      ],
+      "recorded_at_utc": "2026-08-13T15:44:53Z",
+      "source_ref": "agent/pangram-100-human-completion-gate"
     }
   ]
 }

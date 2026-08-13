@@ -15,6 +15,8 @@ For every task that requires a measured Pangram result, read `docs/PANGRAM-ACTIO
 
 A worker may use the label `pre-Pangram candidate` only after the runbook's local and GitHub routes have both failed with a recorded blocker. The repository secret remains inside Actions; never retrieve, reveal, print, commit, or ask Joel to paste it.
 
+Joel's standing completion target for requested Pangram humanization is 100% Human on the exact intended delivery boundary: `fraction_human == 1.0`, `fraction_ai == 0.0`, and `fraction_ai_assisted == 0.0` from a successful Pangram 4 result. A Human headline or a partial score such as 93% is not a pass. Continue faithful repair until 100%, or make an explicit unresolved authorial handoff describing the exact span and narrow help needed; never silently stop at the best partial score.
+
 ## Completion gate
 
 Before reporting any substantive editorial, detector, reconstruction, or experiment pass complete, use `docs/LESSON-CLOSEOUT.md` and the canonical `state/LESSON-LEDGER.json`.

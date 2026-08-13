@@ -30,14 +30,18 @@ For trauma-informed or other sensitive writing in particular:
 - **do not assume invitational language is detector-hostile; test it;**
 - distinguish functional permission/choice language from empty performed coziness or generic therapeutic scaffolding;
 - if the exact wording is detector-red, preserve the function and test a minimal alternative realization before deleting it;
-- do not treat Pangram as a reason to soften or remove the owner's intended argument, but do treat a required Pangram pass as a hard delivery constraint: keep iterating until a faithful passing realization is found or report the unresolved conflict precisely.
+- do not treat Pangram as a reason to soften or remove the owner's intended argument, but do treat a requested Pangram pass as a hard delivery constraint. Joel's standing acceptance target is 100% Human on the exact intended delivery boundary. Keep iterating through faithful, coherence-preserving realizations until that target is reached or the worker genuinely does not know a further faithful fix and requests narrow authorial help.
 
 A requested humanization pass is **not complete** until all of the following are true:
 1. semantic sanity, coherence, fidelity, and protected-function audits pass;
 2. the exact intended delivery boundary has an actual Pangram result from the current required detector/version;
-3. the delivered prose meets the required Pangram criterion;
+3. the result has `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`;
 4. any detector-driven change has been re-audited for semantic and rhetorical loss;
 5. the user-facing diff labels detector status only from measured results, never prediction or intuition.
+
+A `Human` headline, `prediction_short == "Human"`, or partial score such as 93% or 99% Human is progress only. It is not a pass. This owner-specific acceptance rule supersedes general advice that tiny score differences within a Human classification need not control editorial choice.
+
+Do not stop merely because the current candidate is the best so far. If the worker genuinely cannot identify another faithful and coherent repair, pause as an **unresolved authorial handoff** and report the exact failing span and boundary, current score and result hash, attempted approaches and their results, protected claims/functions, why no further faithful fix is known, and the narrow question or raw author input needed from Joel. Do not call the pass complete. A section/API-call budget may pause paid calls for explicit escalation, but it cannot accept a partial score or close the task; state whether a known faithful next repair remains.
 
 Do not infer that Pangram access is unavailable merely because the current worker has no local `PANGRAM_API_KEY`, a local key is rejected, or the Pangram web dashboard is signed out. Before labeling a candidate pre-Pangram, complete the access-resolution gate in `docs/PANGRAM-ACTIONS-RUNBOOK.md`, including the repository-secret GitHub Actions route based on `automation/pangram-fixed-batch`. Never retrieve, print, commit, or ask Joel to paste the repository secret.
 
