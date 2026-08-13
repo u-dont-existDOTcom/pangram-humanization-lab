@@ -106,6 +106,41 @@
         ]
       },
       "section_id": "R6_HONESTY_REPAIR"
+    },
+    {
+      "id": "R6_HONESTY_B",
+      "measurement_key": "romance-repair-candidates-r5-2026-08-13_R6_HONESTY_B",
+      "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\n\nUsually one person gets to this conversation first. This is where the selfless kind of love I described at the beginning becomes real: can that person care about what is best for both people, even if the relationship has to change in a way they don't want? The other person may need time. But “not now” can't mean never, because refusing the choice forever is a choice.\n\n## Outside help can sometimes break the loop fast\n\nBee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.\n",
+      "text_sha256": "0136b34391d38d56f11ba2c9573b23a1cfd034167cc8adb21a021e387d6c121e",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person gets to this conversation first. This is where the selfless kind of love I described at the beginning becomes real: can that person care about what is best for both people, even if the relationship has to change in a way they don't want? The other person may need time. But “not now” can't mean never, because refusing the choice forever is a choice.\n## Outside help can sometimes break the loop fast\nBee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person gets to this conversation first. This is where the selfless kind of love I described at the beginning becomes real: can that person care about what is best for both people, even if the relationship has to change in a way they don't want? The other person may need time. But “not now” can't mean never, because refusing the choice forever is a choice.\n## Outside help can sometimes break the loop fast\nBee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.2501848042011261,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 868,
+            "word_count": 151,
+            "token_length": 178,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R6_HONESTY_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -355,11 +390,11 @@
         "section_id": "R6_HONESTY_REPAIR",
         "model": "pangram-4",
         "version": "4.0",
-        "paid_api_calls": 1,
+        "paid_api_calls": 2,
         "cache_hits": 0,
         "pending_resumes": 0,
-        "estimated_credits": 1,
-        "estimated_cost_usd": 0.05,
+        "estimated_credits": 2,
+        "estimated_cost_usd": 0.1,
         "cap": 6,
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
