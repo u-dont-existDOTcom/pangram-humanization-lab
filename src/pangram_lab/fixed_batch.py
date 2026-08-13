@@ -49,26 +49,27 @@ def text_sha256(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Path) -> dict[str, Any]:
+def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Path, call_ledger: Any | None = None) -> dict[str, Any]:
     experiment_id = spec["experiment_id"]
-    aggregate: dict[str, Any] = {
-        "format": "pangram-fixed-batch-results-v1",
-        "experiment_id": experiment_id,
-        "results": [],
-    }
+    aggregate: dict[str, Any] = {"format": "pangram-fixed-batch-results-v1", "experiment_id": experiment_id, "results": []}
+    if spec.get("audit_id") is not None:
+        aggregate["audit_id"] = spec["audit_id"]
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     for variant in spec["variants"]:
         variant_id = variant["id"]
         text = variant["text"]
+        section_id = variant.get("section_id")
         measurement_key = f"{experiment_id}_{variant_id}"
-        detector = client.detect_cached(text, cache, measurement_key=measurement_key)
-        aggregate["results"].append({
-            "id": variant_id,
-            "measurement_key": measurement_key,
-            "text": text,
-            "text_sha256": text_sha256(text),
-            "detector": detector,
-        })
+        if call_ledger is None:
+            detector = client.detect_cached(text, cache, measurement_key=measurement_key)
+        else:
+            detector = client.detect_cached(text, cache, measurement_key=measurement_key, section_id=section_id)
+        row: dict[str, Any] = {"id": variant_id, "measurement_key": measurement_key, "text": text, "text_sha256": text_sha256(text), "detector": detector}
+        if section_id is not None:
+            row["section_id"] = section_id
+        aggregate["results"].append(row)
+        if call_ledger is not None:
+            aggregate["call_accounting"] = call_ledger.audit_summary()
         output_path.write_text(json.dumps(aggregate, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return aggregate
