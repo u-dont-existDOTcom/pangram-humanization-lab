@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r9-2026-08-13_PRACTICES",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "I also keep doing my own reparenting and meditation. If I stop because being loved makes me feel fine, I'm just waiting for the relationship to become responsible for how I feel. That's exactly the dependence I'm trying not to create.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.7162447571754456,
+        "confidence": "High",
+        "end_index": 234,
+        "humanizer_score": 0.08313077688217163,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "I also keep doing my own reparenting and meditation. If I stop because being loved makes me feel fine, I'm just waiting for the relationship to become responsible for how I feel. That's exactly the dependence I'm trying not to create.",
+        "token_length": 50,
+        "word_count": 41
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "95bbca3c-e01d-4b30-b8f5-640855329f5e",
   "text": "I also keep doing my own reparenting and meditation. If I stop because being loved makes me feel fine, I'm just waiting for the relationship to become responsible for how I feel. That's exactly the dependence I'm trying not to create.",
   "text_sha256": "7efcbf10a7e1571ffe64ac6c5db333f0e2ace82dacdad62a13598568c7de7b10",
-  "updated_utc": "2026-08-13T01:37:47.752060+00:00"
+  "updated_utc": "2026-08-13T01:37:51.344445+00:00"
 }
