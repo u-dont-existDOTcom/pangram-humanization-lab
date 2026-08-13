@@ -1,0 +1,40 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-checklist-pairs-r15-2026-08-13",
+  "results": [
+    {
+      "id": "L1_PACING",
+      "measurement_key": "romance-checklist-pairs-r15-2026-08-13_L1_PACING",
+      "text": "I learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it.\n\nBefore making love, I want to know enough about the hard stuff that I’m not finding it all out after I’m bonded. Jealousy, attraction to other people, what happens under stress, old patterns, how recent the healing is, what each of us wants when things go bad, money. But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation.\n\nI can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.",
+      "text_sha256": "79ec5bef50f7bde7070c18098692c8a4052b53f1787153554d8de03318bcae8c",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it.\nBefore making love, I want to know enough about the hard stuff that I’m not finding it all out after I’m bonded. Jealousy, attraction to other people, what happens under stress, old patterns, how recent the healing is, what each of us wants when things go bad, money. But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation.\nI can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "I learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it.\nBefore making love, I want to know enough about the hard stuff that I’m not finding it all out after I’m bonded. Jealousy, attraction to other people, what happens under stress, old patterns, how recent the healing is, what each of us wants when things go bad, money. But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation.\nI can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.8788132667541504,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 912,
+            "word_count": 168,
+            "token_length": 204,
+            "is_humanized": false,
+            "humanizer_score": 0.42362144589424133
+          }
+        ]
+      }
+    }
+  ]
+}
