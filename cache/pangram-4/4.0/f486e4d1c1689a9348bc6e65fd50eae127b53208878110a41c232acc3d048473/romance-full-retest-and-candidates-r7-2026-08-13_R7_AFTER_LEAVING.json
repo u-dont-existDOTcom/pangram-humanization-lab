@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R7_AFTER_LEAVING",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.8224138021469116,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.17758621275424957,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "## After leaving\nOften times the breakup is hard, but the aftermath is worse. Public demonization should be avoided, but that doesn't mean you should hide the truth about the relationship just to save face. Sometimes the truth is abuse, coercion, or serious deception. How much you say, who you say it to, and how public you make it depends on what happened and why you are telling people.\nPart of that truth-telling is that a breakup can also expose things you genuinely couldn't see while you were bonded. Seeing them now doesn’t automatically mean you are demonizing the other person. Try to see the situation from their perspective. Try to see where they may be internally conflicted. Don’t jump straight to the conclusion that they were fake all along merely because that story makes the whole relationship easier to explain. Don’t rule it out either if it is actually the most parsimonious explanation.\nSeek opinions from people who aren’t heavily invested in seeing your innocence. A therapist, a pastor, or even a stranger can sometimes look at the evidence more clearly than a lifelong friend, and even the curiosity itself can be therapeutic for you.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.2971805930137634,
+        "confidence": "High",
+        "end_index": 206,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "## After leaving\nOften times the breakup is hard, but the aftermath is worse. Public demonization should be avoided, but that doesn't mean you should hide the truth about the relationship just to save face.",
+        "token_length": 42,
+        "word_count": 35
+      },
+      {
+        "ai_assistance_score": 0.7600060105323792,
+        "confidence": "High",
+        "end_index": 1160,
+        "humanizer_score": 0.20390808582305908,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 206,
+        "text": " Sometimes the truth is abuse, coercion, or serious deception. How much you say, who you say it to, and how public you make it depends on what happened and why you are telling people.\nPart of that truth-telling is that a breakup can also expose things you genuinely couldn't see while you were bonded. Seeing them now doesn’t automatically mean you are demonizing the other person. Try to see the situation from their perspective. Try to see where they may be internally conflicted. Don’t jump straight to the conclusion that they were fake all along merely because that story makes the whole relationship easier to explain. Don’t rule it out either if it is actually the most parsimonious explanation.\nSeek opinions from people who aren’t heavily invested in seeing your innocence. A therapist, a pastor, or even a stranger can sometimes look at the evidence more clearly than a lifelong friend, and even the curiosity itself can be therapeutic for you.",
+        "token_length": 192,
+        "word_count": 161
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "246905d1-55f7-4e6a-ada8-fa3aeaffd046",
   "text": "## After leaving\n\nOften times the breakup is hard, but the aftermath is worse. Public demonization should be avoided, but that doesn't mean you should hide the truth about the relationship just to save face. Sometimes the truth is abuse, coercion, or serious deception. How much you say, who you say it to, and how public you make it depends on what happened and why you are telling people.\n\nPart of that truth-telling is that a breakup can also expose things you genuinely couldn't see while you were bonded. Seeing them now doesn’t automatically mean you are demonizing the other person. Try to see the situation from their perspective. Try to see where they may be internally conflicted. Don’t jump straight to the conclusion that they were fake all along merely because that story makes the whole relationship easier to explain. Don’t rule it out either if it is actually the most parsimonious explanation.\n\nSeek opinions from people who aren’t heavily invested in seeing your innocence. A therapist, a pastor, or even a stranger can sometimes look at the evidence more clearly than a lifelong friend, and even the curiosity itself can be therapeutic for you.\n",
   "text_sha256": "f486e4d1c1689a9348bc6e65fd50eae127b53208878110a41c232acc3d048473",
-  "updated_utc": "2026-08-13T17:01:33.595667+00:00"
+  "updated_utc": "2026-08-13T17:01:35.220254+00:00"
 }
