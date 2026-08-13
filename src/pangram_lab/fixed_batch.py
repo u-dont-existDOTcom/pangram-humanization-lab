@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from .call_budget import SectionCallCapReached
+from .call_stats import CallStats
 
 
 FORMAT = "pangram-fixed-batch-v1"
@@ -60,6 +61,7 @@ def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Pat
     aggregate: dict[str, Any] = {"format": "pangram-fixed-batch-results-v1", "experiment_id": experiment_id, "results": []}
     if spec.get("audit_id") is not None:
         aggregate["audit_id"] = spec["audit_id"]
+    stats = CallStats(call_ledger) if call_ledger is not None else None
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     for variant in spec["variants"]:
@@ -78,14 +80,15 @@ def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Pat
             handoff = call_ledger.write_handoff(section_id, model, version, completed_results=aggregate["results"])
             aggregate["status"] = "section_call_cap_reached"
             aggregate["handoff_path"] = str(handoff)
-            aggregate["call_accounting"] = call_ledger.audit_summary()
+            aggregate["call_accounting"] = stats.summary()
             _write(output_path, aggregate)
             raise
         row: dict[str, Any] = {"id": variant_id, "measurement_key": measurement_key, "text": text, "text_sha256": text_sha256(text), "detector": detector}
         if section_id is not None:
             row["section_id"] = section_id
         aggregate["results"].append(row)
-        if call_ledger is not None:
-            aggregate["call_accounting"] = call_ledger.audit_summary()
+        if stats is not None:
+            stats.note(section_id, getattr(client, "model", "pangram-4"), getattr(client, "expected_version", "4.0"), measurement_key, detector)
+            aggregate["call_accounting"] = stats.summary()
         _write(output_path, aggregate)
     return aggregate
