@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L2A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Sex can speed the whole thing up enough by itself. I don’t want to also move in immediately and let that answer a bunch of questions I haven’t answered yet. Sometimes housing makes separate living unrealistic. Fine. But once we share a home, now there are practical reasons to stay even if one of us is having doubts. That’s why I like having a date on the calendar when we actually ask how it’s going instead of waiting for a crisis.\nI also want some friends who know both of us. My old friends are going to be partial to me and hers to her. That isn’t a defect in the friendship. It just means I don’t want two separate cheering sections to be the only people around the relationship.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9972159266471863,
+        "confidence": "High",
+        "end_index": 686,
+        "humanizer_score": 0.5084594488143921,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Sex can speed the whole thing up enough by itself. I don’t want to also move in immediately and let that answer a bunch of questions I haven’t answered yet. Sometimes housing makes separate living unrealistic. Fine. But once we share a home, now there are practical reasons to stay even if one of us is having doubts. That’s why I like having a date on the calendar when we actually ask how it’s going instead of waiting for a crisis.\nI also want some friends who know both of us. My old friends are going to be partial to me and hers to her. That isn’t a defect in the friendship. It just means I don’t want two separate cheering sections to be the only people around the relationship.",
+        "token_length": 149,
+        "word_count": 130
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "b5ea104e-805c-4003-abed-bb4de0e9cabc",
   "text": "Sex can speed the whole thing up enough by itself. I don’t want to also move in immediately and let that answer a bunch of questions I haven’t answered yet. Sometimes housing makes separate living unrealistic. Fine. But once we share a home, now there are practical reasons to stay even if one of us is having doubts. That’s why I like having a date on the calendar when we actually ask how it’s going instead of waiting for a crisis.\n\nI also want some friends who know both of us. My old friends are going to be partial to me and hers to her. That isn’t a defect in the friendship. It just means I don’t want two separate cheering sections to be the only people around the relationship.",
   "text_sha256": "b624380e3b70b4b3c3321474776d01644432d279b99a915618a707e4d90c483f",
-  "updated_utc": "2026-08-13T01:35:05.840422+00:00"
+  "updated_utc": "2026-08-13T01:35:09.052676+00:00"
 }
