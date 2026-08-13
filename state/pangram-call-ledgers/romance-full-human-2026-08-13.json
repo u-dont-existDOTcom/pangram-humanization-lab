@@ -605,8 +605,8 @@
     },
     "R6_HONESTY_REPAIR\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -623,10 +623,18 @@
           "text_sha256": "0136b34391d38d56f11ba2c9573b23a1cfd034167cc8adb21a021e387d6c121e",
           "type": "paid_post_reserved",
           "word_count": 151
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r12-2026-08-13_R6_HONESTY_A",
+          "recorded_at_utc": "2026-08-13T18:34:51.670346+00:00",
+          "text_sha256": "1e05c80142b0ca0c74a854e14824e8ea480596391cbdfb7a7a7b65d4363362c6",
+          "type": "paid_post_reserved",
+          "word_count": 412
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "R6_HONESTY_REPAIR",
       "version": "4.0"
