@@ -294,6 +294,53 @@
         ]
       },
       "section_id": "R6_RIGHT_BOUNDARY"
+    },
+    {
+      "id": "R6_PRIOR_FLAGGED_NEXT",
+      "measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R6_PRIOR_FLAGGED_NEXT",
+      "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\n\nUsually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.\n\n## Outside help can sometimes break the loop fast\n\nBee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.\n",
+      "text_sha256": "85dabfc4669841f5cbfc1a36d504d0c0e28b2820dfdac6ab92c299527cd53f48",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.\n## Outside help can sometimes break the loop fast\nBee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.582932710647583,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.4170673191547394,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7692580223083496,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 485,
+            "word_count": 85,
+            "token_length": 100,
+            "is_humanized": false,
+            "humanizer_score": 0.0031541225034743547
+          },
+          {
+            "text": "\n## Outside help can sometimes break the loop fast\nBee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.19412584602832794,
+            "confidence": "High",
+            "start_index": 485,
+            "end_index": 832,
+            "word_count": 60,
+            "token_length": 69,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R6_FULL_BOUNDARY"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -499,6 +546,20 @@
       },
       {
         "section_id": "R6_RIGHT_BOUNDARY",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R6_FULL_BOUNDARY",
         "model": "pangram-4",
         "version": "4.0",
         "paid_api_calls": 1,

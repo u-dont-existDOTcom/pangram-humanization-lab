@@ -99,6 +99,92 @@
           "section_id": "REGION_7"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T16:29:15.073034+00:00",
+      "experiment_id": "romance-nearpass-boundaries-r3-2026-08-13",
+      "id": "Q-06258bb1d74073ba",
+      "sections": [
+        "R2_IDEALIZATION_CONTROL",
+        "R2_NEXT_POTENTIAL",
+        "R2_BOUNDARY_SHORT",
+        "R2_BOUNDARY_FULL",
+        "R6_FLAGGED",
+        "R6_LEFT_BOUNDARY",
+        "R6_RIGHT_BOUNDARY",
+        "R6_FULL_BOUNDARY"
+      ],
+      "source_path": "state/experiments/romance-nearpass-boundaries-r3-2026-08-13-results.json",
+      "source_ref": "task/romance-diagnostic-nearpass-r3",
+      "source_sha256": "7a9b3836722069ede194be5c539284ef5df1d6130e091b2005aa0251dec2c511",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R2_I_FINAL_CONTROL",
+          "prediction_short": "Human",
+          "section_id": "R2_IDEALIZATION_CONTROL"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R2_NEXT_POTENTIAL_L249_251",
+          "prediction_short": "Human",
+          "section_id": "R2_NEXT_POTENTIAL"
+        },
+        {
+          "fraction_ai": 0.34138309955596924,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6586169004440308,
+          "id": "R2_I_FINAL_PLUS_FIRST_NEXT",
+          "prediction_short": "Mixed",
+          "section_id": "R2_BOUNDARY_SHORT"
+        },
+        {
+          "fraction_ai": 0.22132796049118042,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7786720395088196,
+          "id": "R2_I_FINAL_PLUS_NEXT_PARA",
+          "prediction_short": "Mixed",
+          "section_id": "R2_BOUNDARY_FULL"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R6_FLAGGED_L822",
+          "prediction_short": "AI",
+          "section_id": "R6_FLAGGED"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R6_PRIOR_PLUS_FLAGGED",
+          "prediction_short": "AI",
+          "section_id": "R6_LEFT_BOUNDARY"
+        },
+        {
+          "fraction_ai": 0.489705890417099,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.5102941393852234,
+          "id": "R6_FLAGGED_PLUS_NEXT",
+          "prediction_short": "Mixed",
+          "section_id": "R6_RIGHT_BOUNDARY"
+        },
+        {
+          "fraction_ai": 0.582932710647583,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.4170673191547394,
+          "id": "R6_PRIOR_FLAGGED_NEXT",
+          "prediction_short": "Mixed",
+          "section_id": "R6_FULL_BOUNDARY"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
