@@ -137,6 +137,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "PACING",
+      "measurement_key": "romance-checklist-subitems-r9-2026-08-13_PACING",
+      "text": "I can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.",
+      "text_sha256": "02d9391a7b4043a683fe46d79ff9d5f291a10c2b0db49fcad929623e4ac8fe2a",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "I can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.0034584172535687685,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 357,
+            "word_count": 64,
+            "token_length": 76,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      }
     }
   ]
 }
