@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r10-2026-08-13_DECISION_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "I need to stop treating “I want to be with her” as an answer to questions it doesn't answer. Do I want to raise children with her? Live with her? Build a community with her? Those need their own answers. I also want to notice when “I’m taking a chance on this person” has quietly changed into “she’s the right person.” Maybe I learned something new. Maybe I just got more attached.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9730507135391235,
+        "confidence": "High",
+        "end_index": 381,
+        "humanizer_score": 0.04645762965083122,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "I need to stop treating “I want to be with her” as an answer to questions it doesn't answer. Do I want to raise children with her? Live with her? Build a community with her? Those need their own answers. I also want to notice when “I’m taking a chance on this person” has quietly changed into “she’s the right person.” Maybe I learned something new. Maybe I just got more attached.",
+        "token_length": 88,
+        "word_count": 72
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "5680d39d-e974-4498-ab7e-383dd3aafc1d",
   "text": "I need to stop treating “I want to be with her” as an answer to questions it doesn't answer. Do I want to raise children with her? Live with her? Build a community with her? Those need their own answers. I also want to notice when “I’m taking a chance on this person” has quietly changed into “she’s the right person.” Maybe I learned something new. Maybe I just got more attached.",
   "text_sha256": "d890a6ae2e9e91162aa6e84ea83f1abbc780ec0bc8370fa173a4061d61a6d914",
-  "updated_utc": "2026-08-13T01:39:07.912245+00:00"
+  "updated_utc": "2026-08-13T01:39:11.319925+00:00"
 }
