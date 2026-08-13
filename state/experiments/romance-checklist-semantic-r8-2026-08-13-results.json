@@ -35,6 +35,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "L1B",
+      "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L1B",
+      "text": "Most of this I learned by getting it wrong. Some of it I figured out by thinking, and I’m still testing parts of it.\n\nBefore making love, I’d rather talk about the stuff that will be harder for me to hear once I’m attached. If she says she handles jealousy well, okay, but what does that mean when I’m attracted to somebody else? What does she do when she’s stressed? What old pattern still shows up? How recent is the healing? What does she want from me in a bad moment? What happens with money? I trust those answers more when we put an actual situation around them.",
+      "text_sha256": "8b91d37dc63013199dc6328fb5b4a74681e28475196faf3ddb3975df381df255",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Most of this I learned by getting it wrong. Some of it I figured out by thinking, and I’m still testing parts of it.\nBefore making love, I’d rather talk about the stuff that will be harder for me to hear once I’m attached. If she says she handles jealousy well, okay, but what does that mean when I’m attracted to somebody else? What does she do when she’s stressed? What old pattern still shows up? How recent is the healing? What does she want from me in a bad moment? What happens with money? I trust those answers more when we put an actual situation around them.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Most of this I learned by getting it wrong. Some of it I figured out by thinking, and I’m still testing parts of it.\nBefore making love, I’d rather talk about the stuff that will be harder for me to hear once I’m attached. If she says she handles jealousy well, okay, but what does that mean when I’m attracted to somebody else? What does she do when she’s stressed? What old pattern still shows up? How recent is the healing? What does she want from me in a bad moment? What happens with money? I trust those answers more when we put an actual situation around them.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9664438962936401,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 567,
+            "word_count": 108,
+            "token_length": 127,
+            "is_humanized": false,
+            "humanizer_score": 0.39481645822525024
+          }
+        ]
+      }
     }
   ]
 }
