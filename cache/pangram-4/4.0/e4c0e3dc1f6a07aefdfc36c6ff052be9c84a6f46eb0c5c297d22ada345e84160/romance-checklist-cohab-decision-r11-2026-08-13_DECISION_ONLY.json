@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-cohab-decision-r11-2026-08-13_DECISION_ONLY",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "I can want someone and still have no idea whether I should build a life with her. Those aren't different degrees of the same decision. I can be completely sure I want the romance and still not know what kind of co-parent she'd be, whether we'd want the same community, or whether we'd even like sharing ordinary life for years.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.91267991065979,
+        "confidence": "High",
+        "end_index": 327,
+        "humanizer_score": 0.01061540748924017,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "I can want someone and still have no idea whether I should build a life with her. Those aren't different degrees of the same decision. I can be completely sure I want the romance and still not know what kind of co-parent she'd be, whether we'd want the same community, or whether we'd even like sharing ordinary life for years.",
+        "token_length": 70,
+        "word_count": 60
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "32d331a5-20ce-4df9-a6db-725623083484",
   "text": "I can want someone and still have no idea whether I should build a life with her. Those aren't different degrees of the same decision. I can be completely sure I want the romance and still not know what kind of co-parent she'd be, whether we'd want the same community, or whether we'd even like sharing ordinary life for years.",
   "text_sha256": "e4c0e3dc1f6a07aefdfc36c6ff052be9c84a6f46eb0c5c297d22ada345e84160",
-  "updated_utc": "2026-08-13T01:41:10.269476+00:00"
+  "updated_utc": "2026-08-13T01:41:13.432346+00:00"
 }
