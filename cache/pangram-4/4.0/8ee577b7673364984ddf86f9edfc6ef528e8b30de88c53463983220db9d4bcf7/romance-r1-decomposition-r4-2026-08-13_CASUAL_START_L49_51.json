@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-r1-decomposition-r4-2026-08-13_CASUAL_START_L49_51",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "## Can Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.2935439348220825,
+        "confidence": "High",
+        "end_index": 445,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "## Can Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.",
+        "token_length": 100,
+        "word_count": 77
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "b22a680d-594a-4a49-aa3c-ea2e80fdb9a9",
   "text": "## Can Casual Sex or a Situationship Actually Be Honest?\n\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n",
   "text_sha256": "8ee577b7673364984ddf86f9edfc6ef528e8b30de88c53463983220db9d4bcf7",
-  "updated_utc": "2026-08-13T16:29:25.167748+00:00"
+  "updated_utc": "2026-08-13T16:29:26.981803+00:00"
 }
