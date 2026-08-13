@@ -4,35 +4,40 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-# Retry trigger: resume the durable B-section Pangram task from the current branch head.
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "state/experiments/spiritual-bypassing-r13-interaction-2026-08-13-results.json"
+SOURCE = ROOT / "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json"
 OUT = Path("/tmp/spiritual-bypassing-invitation-batch.json")
-EXPECTED_B_SHA = "192f8d3d34f05a39208451b5ce740c569a546a3a66467818261c63561eab12a9"
 AUDIT_ID = "spiritual-bypassing-b-improve-2026-08-13"
+EXPECTED_R1_B_FULL_SHA = "e05fcd090da184be2c1398eb84fb6dc2e9fb442536c97f9d71ec2dfb42e84042"
 
-OLD = """I’d start with metta. If that felt steady and I still wanted more, maybe trauma-informed mindfulness or Mindfulness-Based Stress Reduction with a therapist. If I still wanted a retreat after that, I’d ask [Insight Meditation Society](http://dharma.org), [Plum Village](http://plumvillage.org), or whoever I was considering how they handle destabilization and whether pausing the practice is treated as an ordinary option.
+OLD = """That leaves the question the application can’t answer. If I start dissociating on day five, how am I supposed to tell the difference between “something difficult is coming up” and “this is actually making me worse”? I don’t want the fact that I’m reacting to become evidence that I need to practice non-reaction harder.
 
-That matters to me. A trauma-informed retreat shouldn’t turn continuing into a test of character. Your path is yours to shape."""
+There are plenty of “dark night” accounts on [r/vipassana](http://Reddit.com/r/vipassana). Critics describe a “push through” culture, and some teachers compare intense practice without emotional groundwork to revving an engine without oil. Things can seize up.
+
+That is where spiritual bypassing enters the picture for me. Equanimity can become a way to avoid emotional mess instead of healing it. It can also become a way to ignore injustice while calling that inner peace. Remember some of the Buddhist responses to the Myanmar coup?"""
 
 CANDIDATES = {
-    "A": """I’d start with metta. Trauma-informed mindfulness—maybe Mindfulness-Based Stress Reduction with a therapist—is another option before ten silent days. [Insight Meditation Society](http://dharma.org) and [Plum Village](http://plumvillage.org) are two places I’d look if I still wanted a retreat.
+    "C": """If I start dissociating on day five, how am I supposed to know whether something difficult is coming up or the practice is making me worse? From inside the retreat, “keep observing” can sound exactly the same in both situations.
 
-What I’d ask before going is simple: what happens if the practice starts destabilizing me? I want stopping to be an ordinary option, not a test of character. Your path is yours to shape.""",
-    "B": """The alternative I keep coming back to is metta first. Maybe trauma-informed mindfulness or Mindfulness-Based Stress Reduction with a therapist after that. If I still wanted a retreat, [Insight Meditation Society](http://dharma.org) and [Plum Village](http://plumvillage.org) are two places I’d look.
+Critics describe a “push through” culture on [r/vipassana](http://Reddit.com/r/vipassana), and some teachers compare intense practice without emotional groundwork to revving an engine without oil. Things can seize up.
 
-The question I’d care about before I went is what happens if I start destabilizing. Can I just stop? That should be an ordinary option, not a test of character. Your path is yours to shape.""",
+That is where equanimity can turn into spiritual bypassing for me: instead of healing the emotional mess, it becomes a way to stand above it. It can do the same thing with injustice: ignore it and call that inner peace. Remember some of the Buddhist responses to the Myanmar coup?""",
+    "D": """If I start dissociating on day five, what exactly am I supposed to do with that information? If the answer is still “observe and don’t react,” then the same instruction is being used for pain that may be moving through and for a practice that may be making me worse.
+
+There are plenty of “dark night” accounts on [r/vipassana](http://Reddit.com/r/vipassana). Critics describe a “push through” culture, and some teachers compare intense practice without emotional groundwork to revving an engine without oil. Things can seize up.
+
+That overlap is what I mean by spiritual bypassing here. Equanimity becomes a way to get around the emotional mess rather than heal it. It can also become a way to ignore injustice while calling that inner peace. Remember some of the Buddhist responses to the Myanmar coup?""",
 }
 
 
 def main() -> int:
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
-    selected = next(row for row in source["results"] if row["id"] == "ALT_INVITATIONAL")
-    if selected["text_sha256"] != EXPECTED_B_SHA:
-        raise SystemExit(f"owner-selected B hash mismatch: {selected['text_sha256']}")
+    selected = next(row for row in source["results"] if row["id"] == "ALT_B_FULL")
+    if selected["text_sha256"] != EXPECTED_R1_B_FULL_SHA:
+        raise SystemExit(f"r1 B-full hash mismatch: {selected['text_sha256']}")
     base = selected["text"]
     if base.count(OLD) != 1:
-        raise SystemExit(f"expected one owner-selected Alternatives block, found {base.count(OLD)}")
+        raise SystemExit(f"expected one Dark Side target block, found {base.count(OLD)}")
 
     variants = []
     for name, replacement in CANDIDATES.items():
@@ -40,13 +45,13 @@ def main() -> int:
         parts = [part.strip() for part in full.split("\n---\n")]
         if len(parts) != 6:
             raise SystemExit(f"expected six article boundaries, got {len(parts)}")
-        alternatives = parts[4]
-        variants.append({"id": f"ALT_{name}_SECTION", "section_id": "alternatives", "text": alternatives})
-        variants.append({"id": f"ALT_{name}_FULL", "section_id": "FULL_ARTICLE", "text": full})
+        dark_side = parts[1]
+        variants.append({"id": f"DARK_{name}_SECTION", "section_id": "dark-side-transition", "text": dark_side})
+        variants.append({"id": f"DARK_{name}_FULL", "section_id": "FULL_ARTICLE", "text": full})
 
     spec = {
         "format": "pangram-fixed-batch-v1",
-        "experiment_id": "spiritual-bypassing-b-repair-r1-2026-08-13",
+        "experiment_id": "spiritual-bypassing-b-repair-r2-2026-08-13",
         "audit_id": AUDIT_ID,
         "variants": variants,
     }
