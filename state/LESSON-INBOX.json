@@ -4,214 +4,88 @@
       "audit_id": "spiritual-bypassing-b-improve-2026-08-13",
       "created_at_utc": "2026-08-13T22:46:32.902854+00:00",
       "experiment_id": "spiritual-bypassing-b-repair-r1-2026-08-13",
-      "id": "Q-73eb563d13310203",
-      "sections": [
-        "alternatives",
-        "FULL_ARTICLE"
-      ],
+      "id": "Q-c9245872db8a8665",
+      "sections": ["alternatives", "FULL_ARTICLE"],
       "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
-      "source_ref": "automation/pangram-fixed-batch",
+      "source_ref": "e299e6c575c3a5dc905dfc2d75f9be12319343db",
       "source_sha256": "038b958dcbb562bc40fa0205c5d94ba466ae355b6b2618e76de6b6bc29e3278b",
       "status": "pending",
       "variants": [
-        {
-          "fraction_ai": 0.3451015055179596,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.6548985242843628,
-          "id": "ALT_A_SECTION",
-          "prediction_short": "Mixed",
-          "section_id": "alternatives"
-        },
-        {
-          "fraction_ai": 0.08540832251310349,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.9145916700363159,
-          "id": "ALT_A_FULL",
-          "prediction_short": "Human",
-          "section_id": "FULL_ARTICLE"
-        },
-        {
-          "fraction_ai": 0.2583187520503998,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.7416812777519226,
-          "id": "ALT_B_SECTION",
-          "prediction_short": "Mixed",
-          "section_id": "alternatives"
-        },
-        {
-          "fraction_ai": 0.06907351315021515,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.930926501750946,
-          "id": "ALT_B_FULL",
-          "prediction_short": "Human",
-          "section_id": "FULL_ARTICLE"
-        }
+        {"fraction_ai":0.3451015055179596,"fraction_ai_assisted":0.0,"fraction_human":0.6548985242843628,"id":"ALT_A_SECTION","prediction_short":"Mixed","section_id":"alternatives"},
+        {"fraction_ai":0.08540832251310349,"fraction_ai_assisted":0.0,"fraction_human":0.9145916700363159,"id":"ALT_A_FULL","prediction_short":"Human","section_id":"FULL_ARTICLE"},
+        {"fraction_ai":0.2583187520503998,"fraction_ai_assisted":0.0,"fraction_human":0.7416812777519226,"id":"ALT_B_SECTION","prediction_short":"Mixed","section_id":"alternatives"},
+        {"fraction_ai":0.06907351315021515,"fraction_ai_assisted":0.0,"fraction_human":0.930926501750946,"id":"ALT_B_FULL","prediction_short":"Human","section_id":"FULL_ARTICLE"}
       ]
     },
     {
       "audit_id": "spiritual-bypassing-b-improve-2026-08-13",
       "created_at_utc": "2026-08-13T22:51:15.390194+00:00",
       "experiment_id": "spiritual-bypassing-b-repair-r2-2026-08-13",
-      "id": "Q-23fa93ea14858229",
-      "sections": [
-        "dark-side-transition",
-        "FULL_ARTICLE"
-      ],
+      "id": "Q-4e1a4d55ef507197",
+      "sections": ["dark-side-transition", "FULL_ARTICLE"],
       "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
-      "source_ref": "automation/pangram-fixed-batch",
+      "source_ref": "a9cb89b1b759fa561b71dce85e5a22b3eba19603",
       "source_sha256": "4f041c131c63345b05764c3dc4d99ceafc3adfa93d391137143972513c254d3e",
       "status": "pending",
       "variants": [
-        {
-          "fraction_ai": 0.17794586718082428,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.8220541477203369,
-          "id": "DARK_C_SECTION",
-          "prediction_short": "Mixed",
-          "section_id": "dark-side-transition"
-        },
-        {
-          "fraction_ai": 0.03932090103626251,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.9606791138648987,
-          "id": "DARK_C_FULL",
-          "prediction_short": "Human",
-          "section_id": "FULL_ARTICLE"
-        },
-        {
-          "fraction_ai": 0.34570765495300293,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.6542923450469971,
-          "id": "DARK_D_SECTION",
-          "prediction_short": "Mixed",
-          "section_id": "dark-side-transition"
-        },
-        {
-          "fraction_ai": 0.06476140767335892,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.9352385997772217,
-          "id": "DARK_D_FULL",
-          "prediction_short": "Human",
-          "section_id": "FULL_ARTICLE"
-        }
+        {"fraction_ai":0.17794586718082428,"fraction_ai_assisted":0.0,"fraction_human":0.8220541477203369,"id":"DARK_C_SECTION","prediction_short":"Mixed","section_id":"dark-side-transition"},
+        {"fraction_ai":0.03932090103626251,"fraction_ai_assisted":0.0,"fraction_human":0.9606791138648987,"id":"DARK_C_FULL","prediction_short":"Human","section_id":"FULL_ARTICLE"},
+        {"fraction_ai":0.34570765495300293,"fraction_ai_assisted":0.0,"fraction_human":0.6542923450469971,"id":"DARK_D_SECTION","prediction_short":"Mixed","section_id":"dark-side-transition"},
+        {"fraction_ai":0.06476140767335892,"fraction_ai_assisted":0.0,"fraction_human":0.9352385997772217,"id":"DARK_D_FULL","prediction_short":"Human","section_id":"FULL_ARTICLE"}
       ]
     },
     {
       "audit_id": "spiritual-bypassing-b-improve-2026-08-13",
       "created_at_utc": "2026-08-13T22:52:43.591047+00:00",
       "experiment_id": "spiritual-bypassing-b-repair-r3-2026-08-13",
-      "id": "Q-012d7f863569c001",
-      "sections": [
-        "dark-side-transition",
-        "FULL_ARTICLE"
-      ],
+      "id": "Q-dd858358217d9302",
+      "sections": ["dark-side-transition", "FULL_ARTICLE"],
       "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
-      "source_ref": "automation/pangram-fixed-batch",
+      "source_ref": "a01736afc2a044f9e510214b990522d74312423b",
       "source_sha256": "de88904e0cbd971e5b0dbf33e0939454c38a1d37fdd0f2d82e3673e4e5472b81",
       "status": "pending",
       "variants": [
-        {
-          "fraction_ai": 0.2459612339735031,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.7540387511253357,
-          "id": "DARK_E_SECTION",
-          "prediction_short": "Mixed",
-          "section_id": "dark-side-transition"
-        },
-        {
-          "fraction_ai": 0.027532650157809258,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.9724673628807068,
-          "id": "DARK_E_FULL",
-          "prediction_short": "Human",
-          "section_id": "FULL_ARTICLE"
-        },
-        {
-          "fraction_ai": 0.2532038688659668,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.7467961311340332,
-          "id": "DARK_F_SECTION",
-          "prediction_short": "Mixed",
-          "section_id": "dark-side-transition"
-        },
-        {
-          "fraction_ai": 0.05703787878155708,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.942962110042572,
-          "id": "DARK_F_FULL",
-          "prediction_short": "Human",
-          "section_id": "FULL_ARTICLE"
-        }
+        {"fraction_ai":0.2459612339735031,"fraction_ai_assisted":0.0,"fraction_human":0.7540387511253357,"id":"DARK_E_SECTION","prediction_short":"Mixed","section_id":"dark-side-transition"},
+        {"fraction_ai":0.027532650157809258,"fraction_ai_assisted":0.0,"fraction_human":0.9724673628807068,"id":"DARK_E_FULL","prediction_short":"Human","section_id":"FULL_ARTICLE"},
+        {"fraction_ai":0.2532038688659668,"fraction_ai_assisted":0.0,"fraction_human":0.7467961311340332,"id":"DARK_F_SECTION","prediction_short":"Mixed","section_id":"dark-side-transition"},
+        {"fraction_ai":0.05703787878155708,"fraction_ai_assisted":0.0,"fraction_human":0.942962110042572,"id":"DARK_F_FULL","prediction_short":"Human","section_id":"FULL_ARTICLE"}
       ]
     },
     {
       "audit_id": "spiritual-bypassing-authorial-repair-2026-08-13",
       "created_at_utc": "2026-08-13T23:07:42.031610+00:00",
       "experiment_id": "spiritual-bypassing-authorial-repair-r4-2026-08-13",
-      "id": "Q-c9d5e4c205768aa4",
-      "sections": [
-        "FULL_ARTICLE"
-      ],
+      "id": "Q-70c366873803d9cd",
+      "sections": ["FULL_ARTICLE"],
       "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
-      "source_ref": "automation/pangram-fixed-batch",
+      "source_ref": "b4d642d8890b58f679594ea91246f2a543c07f70",
       "source_sha256": "f928bb1f080f3325b835b335858ba7b8fd1aa5b08caf07d2a0a1bf008fb13b97",
       "status": "pending",
-      "variants": [
-        {
-          "fraction_ai": 0.0,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 1.0,
-          "id": "AUTHORIAL_OBSERVE_AWAY_FULL",
-          "prediction_short": "Human",
-          "section_id": "FULL_ARTICLE"
-        }
-      ]
+      "variants": [{"fraction_ai":0.0,"fraction_ai_assisted":0.0,"fraction_human":1.0,"id":"AUTHORIAL_OBSERVE_AWAY_FULL","prediction_short":"Human","section_id":"FULL_ARTICLE"}]
     },
     {
       "audit_id": "spiritual-bypassing-authorial-repair-2026-08-13",
       "created_at_utc": "2026-08-13T23:09:29.664818+00:00",
       "experiment_id": "spiritual-bypassing-authorial-repair-r5-2026-08-13",
-      "id": "Q-fe5a7037aba31624",
-      "sections": [
-        "FULL_ARTICLE"
-      ],
+      "id": "Q-51e7d803305bd0d3",
+      "sections": ["FULL_ARTICLE"],
       "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
-      "source_ref": "automation/pangram-fixed-batch",
+      "source_ref": "3bf1262cba1424171e545c7180328ae85c6d5583",
       "source_sha256": "5d4a6ad8d96b44947c9497e074454e326b6e96717bdb832b30c6feade20cef1f",
       "status": "pending",
-      "variants": [
-        {
-          "fraction_ai": 0.03419101610779762,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 0.9658089876174927,
-          "id": "OWNER_B_ALT_RESTORED_FULL",
-          "prediction_short": "Human",
-          "section_id": "FULL_ARTICLE"
-        }
-      ]
+      "variants": [{"fraction_ai":0.03419101610779762,"fraction_ai_assisted":0.0,"fraction_human":0.9658089876174927,"id":"OWNER_B_ALT_RESTORED_FULL","prediction_short":"Human","section_id":"FULL_ARTICLE"}]
     },
     {
       "audit_id": "spiritual-bypassing-authorial-repair-2026-08-13",
       "created_at_utc": "2026-08-13T23:10:37.088687+00:00",
       "experiment_id": "spiritual-bypassing-authorial-repair-r6-2026-08-13",
-      "id": "Q-dfc433affd9e5771",
-      "sections": [
-        "FULL_ARTICLE"
-      ],
+      "id": "Q-88c391ca7c5b7a80",
+      "sections": ["FULL_ARTICLE"],
       "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
-      "source_ref": "automation/pangram-fixed-batch",
+      "source_ref": "692a452cf3ad85a034dc1ef9b5b88cab3db10f82",
       "source_sha256": "bced50227946e8b2a25bafd228cd927b224c50adb94505fea479002154d77ed0",
       "status": "pending",
-      "variants": [
-        {
-          "fraction_ai": 0.0,
-          "fraction_ai_assisted": 0.0,
-          "fraction_human": 1.0,
-          "id": "OWNER_B_MINIMAL_COMPRESS_FULL",
-          "prediction_short": "Human",
-          "section_id": "FULL_ARTICLE"
-        }
-      ]
+      "variants": [{"fraction_ai":0.0,"fraction_ai_assisted":0.0,"fraction_human":1.0,"id":"OWNER_B_MINIMAL_COMPRESS_FULL","prediction_short":"Human","section_id":"FULL_ARTICLE"}]
     }
   ],
   "format": "lesson-review-v1"
