@@ -1,44 +1,116 @@
 {
-  "schema_version": 1,
   "entries": [
     {
-      "id": "L-2db732f42c-01",
-      "source_path": "state/PANGRAM-ACTIONS-ACCESS-INCIDENT-2026-08-13.md",
-      "source_sha256": "2db732f42cd062a0fffcfd0248ce51d7c7dadd8a9422ed6ff72c6ae1f732cfa6",
+      "disposition": "promoted",
       "finding": "Missing local Pangram credentials or a signed-out dashboard do not establish detector unavailability; workers must resolve access through the proven repository-secret GitHub Actions route before using a pre-Pangram label.",
-      "disposition": "promoted",
-      "reason": "",
+      "id": "L-2db732f42c-01",
       "promoted_to": [
         "state/LESSON-INDEX.md",
         "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
       ],
+      "reason": "",
       "recorded_at_utc": "2026-08-13T14:42:07Z",
-      "source_ref": "agent/pangram-actions-key-routing"
-    },
-    {
-      "id": "L-fc8c0079da-01",
       "source_path": "state/PANGRAM-ACTIONS-ACCESS-INCIDENT-2026-08-13.md",
-      "source_sha256": "fc8c0079da3155aedf8b489d212c0ac370aea826370553ca2a4aff83366b6e5d",
-      "finding": "The corrected runbook uses the runner's actual JSON spec format, exact task-branch trigger filters, and the proven two-step secret scope.",
-      "disposition": "no-new-lesson",
-      "reason": "These are executability and safety corrections to the already promoted Actions access-resolution lesson; they do not add a separate transferable editorial or detector finding.",
-      "promoted_to": [],
-      "recorded_at_utc": "2026-08-13T14:53:25Z",
-      "source_ref": "agent/pangram-actions-runbook-corrections"
+      "source_ref": "agent/pangram-actions-key-routing",
+      "source_sha256": "2db732f42cd062a0fffcfd0248ce51d7c7dadd8a9422ed6ff72c6ae1f732cfa6"
     },
     {
-      "id": "L-d4ee8e1ee2-01",
-      "source_path": "state/PANGRAM-100-PERCENT-COMPLETION-INCIDENT-2026-08-13.md",
-      "source_sha256": "d4ee8e1ee239a2d45a027d7a383faf3a6c633c9acf7e2fc91679ab5b9978f2e7",
-      "finding": "Joel's requested Pangram-humanization passes require 100% Human on the exact intended delivery boundary; partial Human scores are progress only, and a worker who lacks a further faithful repair must make an exact unresolved authorial handoff.",
+      "disposition": "no-new-lesson",
+      "finding": "The corrected runbook uses the runner's actual JSON spec format, exact task-branch trigger filters, and the proven two-step secret scope.",
+      "id": "L-fc8c0079da-01",
+      "promoted_to": [],
+      "reason": "These are executability and safety corrections to the already promoted Actions access-resolution lesson; they do not add a separate transferable editorial or detector finding.",
+      "recorded_at_utc": "2026-08-13T14:53:25Z",
+      "source_path": "state/PANGRAM-ACTIONS-ACCESS-INCIDENT-2026-08-13.md",
+      "source_ref": "agent/pangram-actions-runbook-corrections",
+      "source_sha256": "fc8c0079da3155aedf8b489d212c0ac370aea826370553ca2a4aff83366b6e5d"
+    },
+    {
       "disposition": "promoted",
-      "reason": "",
+      "finding": "Joel's requested Pangram-humanization passes require 100% Human on the exact intended delivery boundary; partial Human scores are progress only, and a worker who lacks a further faithful repair must make an exact unresolved authorial handoff.",
+      "id": "L-d4ee8e1ee2-01",
       "promoted_to": [
         "state/LESSON-INDEX.md",
         "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
       ],
+      "reason": "",
       "recorded_at_utc": "2026-08-13T15:44:53Z",
-      "source_ref": "agent/pangram-100-human-completion-gate"
+      "source_path": "state/PANGRAM-100-PERCENT-COMPLETION-INCIDENT-2026-08-13.md",
+      "source_ref": "agent/pangram-100-human-completion-gate",
+      "source_sha256": "d4ee8e1ee239a2d45a027d7a383faf3a6c633c9acf7e2fc91679ab5b9978f2e7"
+    },
+    {
+      "disposition": "superseded",
+      "finding": "Historical control reviewed.",
+      "id": "L-5d4a6ad8d9-01",
+      "promoted_to": [],
+      "reason": "Superseded by the next experiment.",
+      "recorded_at_utc": "2026-08-13T23:23:21.944715+00:00",
+      "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
+      "source_ref": "3bf1262cba1424171e545c7180328ae85c6d5583",
+      "source_sha256": "5d4a6ad8d96b44947c9497e074454e326b6e96717bdb832b30c6feade20cef1f"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Early alternatives variants did not improve the selected full boundary.",
+      "id": "L-038b958dcb-01",
+      "promoted_to": [],
+      "reason": "Already covered by existing lessons on full-boundary interaction and non-compositional local detector behavior.",
+      "recorded_at_utc": "2026-08-13T23:23:21.952102+00:00",
+      "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
+      "source_ref": "e299e6c575c3a5dc905dfc2d75f9be12319343db",
+      "source_sha256": "038b958dcbb562bc40fa0205c5d94ba466ae355b6b2618e76de6b6bc29e3278b"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "A detector-improving Dark Side rewrite reached 96.07% full-boundary Human but dropped the explicit dark-night-accounts claim during compression.",
+      "id": "L-4f041c131c-01",
+      "promoted_to": [],
+      "reason": "This is an article-specific instance of the existing fidelity-over-detector and cold-audit rules; the dropped claim was restored before acceptance.",
+      "recorded_at_utc": "2026-08-13T23:23:21.959075+00:00",
+      "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
+      "source_ref": "a9cb89b1b759fa561b71dce85e5a22b3eba19603",
+      "source_sha256": "4f041c131c63345b05764c3dc4d99ceafc3adfa93d391137143972513c254d3e"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The first audit exhausted its six paid full-article calls at a best faithful result of 97.25% Human and correctly suspended for narrow owner input about the remaining causal transition.",
+      "id": "L-de88904e0c-01",
+      "promoted_to": [],
+      "reason": "The result is important provenance for this Spiritual Bypassing handoff; the transferable bounded-call and authorial-handoff rules are already separately promoted.",
+      "recorded_at_utc": "2026-08-13T23:23:21.965973+00:00",
+      "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
+      "source_ref": "a01736afc2a044f9e510214b990522d74312423b",
+      "source_sha256": "de88904e0cbd971e5b0dbf33e0939454c38a1d37fdd0f2d82e3673e4e5472b81"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "When bounded repair stalls on an abstraction, ask the owner the smallest question that exposes the actual lived mechanism before spending more calls; treat materially new owner input as new semantic evidence, not as a magic phrase.",
+      "id": "L-f928bb1f08-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md"
+      ],
+      "reason": "After the earlier full-article budget exhausted below the completion gate, a narrow owner explanation supplied missing causal content; the first complete-boundary test built from that mechanism passed.",
+      "recorded_at_utc": "2026-08-13T23:23:21.973428+00:00",
+      "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
+      "source_ref": "b4d642d8890b58f679594ea91246f2a543c07f70",
+      "source_sha256": "f928bb1f080f3325b835b335858ba7b8fd1aa5b08caf07d2a0a1bf008fb13b97"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "After a detector pass, restore higher-authority owner wording as far as possible; if exact rollback reopens the detector signal, localize the interaction and make the smallest function-preserving change, then retest the complete boundary.",
+      "id": "L-bced502279-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md"
+      ],
+      "reason": "The audit produced a complete-boundary pass, then showed that exact restoration of the selected Alternatives tail reopened the signal while a minimal localized rewrite restored the pass without dropping its rhetorical functions.",
+      "recorded_at_utc": "2026-08-13T23:23:21.980885+00:00",
+      "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
+      "source_ref": "692a452cf3ad85a034dc1ef9b5b88cab3db10f82",
+      "source_sha256": "bced50227946e8b2a25bafd228cd927b224c50adb94505fea479002154d77ed0"
     }
-  ]
+  ],
+  "schema_version": 1
 }

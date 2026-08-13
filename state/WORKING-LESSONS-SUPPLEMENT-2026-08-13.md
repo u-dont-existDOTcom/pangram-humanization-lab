@@ -132,3 +132,9 @@ Do not infer universal rules such as:
 - Pangram green proves natural authorship.
 
 Treat detector behavior as contextual and nonlinear. Promote only the editorial principle justified independently of the score, with exact controls retained for the detector claim.
+<!-- closeout-request:spiritual-bypassing-r4-authorial-mechanism -->
+### Recover the missing authorial mechanism before more paraphrase
+When bounded detector repair stalls on an abstract formulation, stop paraphrasing the same abstraction. Ask the owner the smallest authorial question that exposes what the person is actually doing, noticing, fearing, or meaning. Treat materially new owner input as new semantic evidence, rebuild from that mechanism, cold-audit it, and test the exact delivery boundary once before generating more variants. In the Spiritual Bypassing case, the first full-article test after mechanism recovery satisfied the complete detector gate. That supports the workflow, not any phrase whitelist or detector trick.
+<!-- closeout-request:spiritual-bypassing-r6-closeout -->
+### Restore owner authority after a detector pass
+A complete detector pass does not authorize keeping a broader model rewrite. Cold-audit the passing text against the highest-authority owner baseline and try to restore owner-selected wording and function. If exact restoration reopens the detector signal, localize the interaction and make the smallest function-preserving repair that is actually needed, then retest the exact delivery boundary. This separates detector compliance from prose authority; it is not a phrase rule.

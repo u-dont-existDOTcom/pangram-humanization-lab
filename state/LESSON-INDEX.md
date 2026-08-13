@@ -73,3 +73,7 @@ Detector status is never authorship provenance. Pangram green does not certify n
 ## Scope
 
 Do not load every historical experiment indiscriminately. Start with the current lesson summaries and operating guide, then open exact evidence only where the current task needs it.
+<!-- closeout-request:spiritual-bypassing-r4-authorial-mechanism -->
+- **Authorial mechanism recovery:** if bounded repair stalls on an abstraction, ask for the smallest piece of lived authorial mechanism before further paraphrase; materially new owner input is new semantic evidence and should be tested directly. See `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md`.
+<!-- closeout-request:spiritual-bypassing-r6-closeout -->
+- **Owner-authority rollback after a detector pass:** after reaching the detector gate, restore higher-authority owner prose as far as possible; if the exact rollback breaks the measured boundary, localize and minimally repair rather than retaining a broader model rewrite. See `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md`.

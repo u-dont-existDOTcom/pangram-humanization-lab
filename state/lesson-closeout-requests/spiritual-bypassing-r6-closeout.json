@@ -1,14 +1,22 @@
 {
-  "schema_version": 1,
+  "disposition": "promoted",
+  "finding": "After a detector pass, restore higher-authority owner wording as far as possible; if exact rollback reopens the detector signal, localize the interaction and make the smallest function-preserving change, then retest the complete boundary.",
+  "index_block": "- **Owner-authority rollback after a detector pass:** after reaching the detector gate, restore higher-authority owner prose as far as possible; if the exact rollback breaks the measured boundary, localize and minimally repair rather than retaining a broader model rewrite. See `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md`.",
+  "ledger_entry_ids": [
+    "L-bced502279-01"
+  ],
+  "lesson_block": "### Restore owner authority after a detector pass\nA complete detector pass does not authorize keeping a broader model rewrite. Cold-audit the passing text against the highest-authority owner baseline and try to restore owner-selected wording and function. If exact restoration reopens the detector signal, localize the interaction and make the smallest function-preserving repair that is actually needed, then retest the exact delivery boundary. This separates detector compliance from prose authority; it is not a phrase rule.",
+  "processed_at_utc": "2026-08-13T23:23:21.981253+00:00",
+  "promoted_to": [
+    "state/LESSON-INDEX.md",
+    "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md"
+  ],
+  "reason": "The audit produced a complete-boundary pass, then showed that exact restoration of the selected Alternatives tail reopened the signal while a minimal localized rewrite restored the pass without dropping its rhetorical functions.",
   "request_id": "spiritual-bypassing-r6-closeout",
+  "schema_version": 1,
   "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
   "source_ref": "692a452cf3ad85a034dc1ef9b5b88cab3db10f82",
   "source_sha256": "bced50227946e8b2a25bafd228cd927b224c50adb94505fea479002154d77ed0",
-  "finding": "After a detector pass, restore higher-authority owner wording as far as possible; if exact rollback reopens the detector signal, localize the interaction and make the smallest function-preserving change, then retest the complete boundary.",
-  "disposition": "promoted",
-  "reason": "The audit produced a complete-boundary pass, then showed that exact restoration of the selected Alternatives tail reopened the signal while a minimal localized rewrite restored the pass without dropping its rhetorical functions.",
-  "promoted_to": ["state/LESSON-INDEX.md", "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md"],
-  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md",
-  "lesson_block": "### Restore owner authority after a detector pass\nA complete detector pass does not authorize keeping a broader model rewrite. Cold-audit the passing text against the highest-authority owner baseline and try to restore owner-selected wording and function. If exact restoration reopens the detector signal, localize the interaction and make the smallest function-preserving repair that is actually needed, then retest the exact delivery boundary. This separates detector compliance from prose authority; it is not a phrase rule.",
-  "index_block": "- **Owner-authority rollback after a detector pass:** after reaching the detector gate, restore higher-authority owner prose as far as possible; if the exact rollback breaks the measured boundary, localize and minimally repair rather than retaining a broader model rewrite. See `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md`."
+  "status": "processed",
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md"
 }

@@ -1,10 +1,15 @@
 {
-  "schema_version": 1,
+  "disposition": "superseded",
+  "finding": "Historical control reviewed.",
+  "ledger_entry_ids": [
+    "L-5d4a6ad8d9-01"
+  ],
+  "processed_at_utc": "2026-08-13T23:23:21.945135+00:00",
+  "reason": "Superseded by the next experiment.",
   "request_id": "closeout-r5-20260813",
+  "schema_version": 1,
   "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
   "source_ref": "3bf1262cba1424171e545c7180328ae85c6d5583",
   "source_sha256": "5d4a6ad8d96b44947c9497e074454e326b6e96717bdb832b30c6feade20cef1f",
-  "finding": "Historical control reviewed.",
-  "disposition": "superseded",
-  "reason": "Superseded by the next experiment."
+  "status": "processed"
 }
