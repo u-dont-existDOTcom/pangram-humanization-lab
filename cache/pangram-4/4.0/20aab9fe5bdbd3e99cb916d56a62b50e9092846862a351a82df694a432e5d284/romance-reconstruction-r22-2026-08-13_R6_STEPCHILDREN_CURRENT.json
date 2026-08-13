@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-reconstruction-r22-2026-08-13_R6_STEPCHILDREN_CURRENT",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "When it comes to stepchildren, even if they aren't technically your children, they still become attached. If you've been acting as their parent for years, it's not right to vanish from their life just because the marriage ended. You don't have parental rights legally, but you can stay a mentor or close friend, and hopefully your partner would agree with this. When children have parental figures come and go, it can damage their ability to have good relationships as adults.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.04036825895309448,
+        "confidence": "High",
+        "end_index": 476,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "When it comes to stepchildren, even if they aren't technically your children, they still become attached. If you've been acting as their parent for years, it's not right to vanish from their life just because the marriage ended. You don't have parental rights legally, but you can stay a mentor or close friend, and hopefully your partner would agree with this. When children have parental figures come and go, it can damage their ability to have good relationships as adults.",
+        "token_length": 95,
+        "word_count": 80
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "c29d2f67-2bc4-4a26-a362-cefe62f5363a",
   "text": "When it comes to stepchildren, even if they aren't technically your children, they still become attached. If you've been acting as their parent for years, it's not right to vanish from their life just because the marriage ended. You don't have parental rights legally, but you can stay a mentor or close friend, and hopefully your partner would agree with this. When children have parental figures come and go, it can damage their ability to have good relationships as adults.\n",
   "text_sha256": "20aab9fe5bdbd3e99cb916d56a62b50e9092846862a351a82df694a432e5d284",
-  "updated_utc": "2026-08-13T20:16:38.817482+00:00"
+  "updated_utc": "2026-08-13T20:16:40.082506+00:00"
 }
