@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-cohab-decision-r11-2026-08-13_CHECKIN_ONLY",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Pick a date to check in before something goes wrong. Otherwise “we'll see how it goes” can turn into never asking how it's going until one of you is already done. I don't mean a formal relationship performance review. Just a day when both people know they're allowed to say, actually, this part isn't working for me.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9973613023757935,
+        "confidence": "High",
+        "end_index": 316,
+        "humanizer_score": 0.012070011347532272,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Pick a date to check in before something goes wrong. Otherwise “we'll see how it goes” can turn into never asking how it's going until one of you is already done. I don't mean a formal relationship performance review. Just a day when both people know they're allowed to say, actually, this part isn't working for me.",
+        "token_length": 70,
+        "word_count": 57
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "56b1a49d-fa8b-44bf-8641-5dcc1ded8336",
   "text": "Pick a date to check in before something goes wrong. Otherwise “we'll see how it goes” can turn into never asking how it's going until one of you is already done. I don't mean a formal relationship performance review. Just a day when both people know they're allowed to say, actually, this part isn't working for me.",
   "text_sha256": "82328bd3958a2ca6bd7ffe776995160dc736795d530696e2233d7fcbb99cf2df",
-  "updated_utc": "2026-08-13T01:41:08.118028+00:00"
+  "updated_utc": "2026-08-13T01:41:09.205960+00:00"
 }
