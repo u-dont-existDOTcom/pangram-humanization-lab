@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-repair-candidates-r5-2026-08-13_R6_HONESTY_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person wants to open this door before the other. If I'm the one asking for honesty, I have to be willing to hear that the relationship may need to change in a way I don't want. That's where the selfless kind of love from the beginning comes in. But the other person can't keep saying “not now” forever. After a while, refusing to choose is a choice.\n## Outside help can sometimes break the loop fast\nBee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.34418362379074097,
+        "confidence": "Medium",
+        "end_index": 860,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person wants to open this door before the other. If I'm the one asking for honesty, I have to be willing to hear that the relationship may need to change in a way I don't want. That's where the selfless kind of love from the beginning comes in. But the other person can't keep saying “not now” forever. After a while, refusing to choose is a choice.\n## Outside help can sometimes break the loop fast\nBee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.",
+        "token_length": 182,
+        "word_count": 153
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "7b138233-0038-4f3f-ab24-498c15bc2290",
   "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\n\nUsually one person wants to open this door before the other. If I'm the one asking for honesty, I have to be willing to hear that the relationship may need to change in a way I don't want. That's where the selfless kind of love from the beginning comes in. But the other person can't keep saying “not now” forever. After a while, refusing to choose is a choice.\n\n## Outside help can sometimes break the loop fast\n\nBee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.\n",
   "text_sha256": "bb8a11e9f3032757522190eea60b17d93162e65e779c6dde25b90cd9ec8b8c29",
-  "updated_utc": "2026-08-13T16:34:22.712906+00:00"
+  "updated_utc": "2026-08-13T16:34:24.075523+00:00"
 }
