@@ -643,6 +643,29 @@
           "section_id": "R7_TOUGH_LOVE_DIAGNOSTIC"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T18:34:56.233841+00:00",
+      "experiment_id": "romance-reconstruction-r12-2026-08-13",
+      "id": "Q-cbcb8d1eef0e3286",
+      "sections": [
+        "R6_HONESTY_REPAIR"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r12-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r12",
+      "source_sha256": "0085506429ed43de5369b9aa2c4635cd4c6076292ad0f86423ed4e79390d5b7a",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.3150569498538971,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6849430799484253,
+          "id": "R6_HONESTY_A",
+          "prediction_short": "Mixed",
+          "section_id": "R6_HONESTY_REPAIR"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
