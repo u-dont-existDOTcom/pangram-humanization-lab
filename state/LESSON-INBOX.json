@@ -185,6 +185,89 @@
           "section_id": "R1_STI"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T16:34:46.599907+00:00",
+      "experiment_id": "romance-repair-candidates-r5-2026-08-13",
+      "id": "Q-450e53cc7c011a76",
+      "sections": [
+        "R2_JOIN_REPAIR",
+        "R6_HONESTY_REPAIR",
+        "R1_LOVE_REPAIR",
+        "R1_TALK_REPAIR",
+        "R1_QUOTE_REPAIR"
+      ],
+      "source_path": "state/experiments/romance-repair-candidates-r5-2026-08-13-results.json",
+      "source_ref": "task/romance-repair-candidates-r5",
+      "source_sha256": "e1fd8c6d194d9a65851cc32414c9b4881e9ee8ab9c826d57795cdd9776a60036",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R2_JOIN_A",
+          "prediction_short": "Human",
+          "section_id": "R2_JOIN_REPAIR"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R2_JOIN_B",
+          "prediction_short": "Human",
+          "section_id": "R2_JOIN_REPAIR"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R6_HONESTY_A",
+          "prediction_short": "Human",
+          "section_id": "R6_HONESTY_REPAIR"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R6_HONESTY_B",
+          "prediction_short": "Human",
+          "section_id": "R6_HONESTY_REPAIR"
+        },
+        {
+          "fraction_ai": 0.4482758641242981,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.5517241358757019,
+          "id": "R1_LOVE_A",
+          "prediction_short": "Mixed",
+          "section_id": "R1_LOVE_REPAIR"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R1_TALK_A",
+          "prediction_short": "AI",
+          "section_id": "R1_TALK_REPAIR"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R1_TALK_B",
+          "prediction_short": "AI",
+          "section_id": "R1_TALK_REPAIR"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R1_QUOTE_OBLIGATION_A",
+          "prediction_short": "AI",
+          "section_id": "R1_QUOTE_REPAIR"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"

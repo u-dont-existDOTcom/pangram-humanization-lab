@@ -258,6 +258,41 @@
         ]
       },
       "section_id": "R1_TALK_REPAIR"
+    },
+    {
+      "id": "R1_QUOTE_OBLIGATION_A",
+      "measurement_key": "romance-repair-candidates-r5-2026-08-13_R1_QUOTE_OBLIGATION_A",
+      "text": "“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\n\nThat's honest about what you want right now. It still leaves the larger question untouched: what do you owe each other if sex creates something neither of you expected? Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\n",
+      "text_sha256": "3ea83da6568e80d53967359489781d3c93b85b7089b494dd5e1a55d0e5a2e0af",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nThat's honest about what you want right now. It still leaves the larger question untouched: what do you owe each other if sex creates something neither of you expected? Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nThat's honest about what you want right now. It still leaves the larger question untouched: what do you owe each other if sex creates something neither of you expected? Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.709398090839386,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 543,
+            "word_count": 98,
+            "token_length": 122,
+            "is_humanized": false,
+            "humanizer_score": 0.16747646033763885
+          }
+        ]
+      },
+      "section_id": "R1_QUOTE_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -540,6 +575,20 @@
         "pending_resumes": 0,
         "estimated_credits": 2,
         "estimated_cost_usd": 0.1,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R1_QUOTE_REPAIR",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
         "cap": 6,
         "paid_calls_to_human": null,
         "estimated_credits_to_human": null,
