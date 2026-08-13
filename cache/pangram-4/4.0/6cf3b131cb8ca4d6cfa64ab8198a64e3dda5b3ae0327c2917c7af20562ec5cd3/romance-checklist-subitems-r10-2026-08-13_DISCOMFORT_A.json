@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r10-2026-08-13_DISCOMFORT_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "If something feels off, I slow down. I don't need to decide whether it's intuition or anxiety first. The point is just not to let being excited make me skip the question I was about to ask.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9351366758346558,
+        "confidence": "High",
+        "end_index": 189,
+        "humanizer_score": 0.0917234793305397,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "If something feels off, I slow down. I don't need to decide whether it's intuition or anxiety first. The point is just not to let being excited make me skip the question I was about to ask.",
+        "token_length": 43,
+        "word_count": 37
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "d23b8ce3-28c5-4ea4-b6b2-b98af727fb4f",
   "text": "If something feels off, I slow down. I don't need to decide whether it's intuition or anxiety first. The point is just not to let being excited make me skip the question I was about to ask.",
   "text_sha256": "6cf3b131cb8ca4d6cfa64ab8198a64e3dda5b3ae0327c2917c7af20562ec5cd3",
-  "updated_utc": "2026-08-13T01:39:39.412514+00:00"
+  "updated_utc": "2026-08-13T01:39:40.679748+00:00"
 }
