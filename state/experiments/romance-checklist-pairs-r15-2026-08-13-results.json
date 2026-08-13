@@ -103,6 +103,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "FRIENDS_PRACTICES",
+      "measurement_key": "romance-checklist-pairs-r15-2026-08-13_FRIENDS_PRACTICES",
+      "text": "I'd also try to make some real friends together. My friends are going to hear me first and hers are going to hear her first. That's normal; they're our friends. The problem is when every person around the relationship only knows one of us well. Then the first serious conflict turns into two teams arguing about two different relationships.\n\nAnd don't stop your own practices just because you're in love. If I stop reparenting and meditating because my partner makes me feel okay, then she's doing part of that job for me whether we say so or not.",
+      "text_sha256": "d4ac8a1628deeadf8eba22382352bcbd4a82a214d39140d70d4f4ca178af7013",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I'd also try to make some real friends together. My friends are going to hear me first and hers are going to hear her first. That's normal; they're our friends. The problem is when every person around the relationship only knows one of us well. Then the first serious conflict turns into two teams arguing about two different relationships.\nAnd don't stop your own practices just because you're in love. If I stop reparenting and meditating because my partner makes me feel okay, then she's doing part of that job for me whether we say so or not.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "I'd also try to make some real friends together. My friends are going to hear me first and hers are going to hear her first. That's normal; they're our friends. The problem is when every person around the relationship only knows one of us well. Then the first serious conflict turns into two teams arguing about two different relationships.\nAnd don't stop your own practices just because you're in love. If I stop reparenting and meditating because my partner makes me feel okay, then she's doing part of that job for me whether we say so or not.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9617434144020081,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 546,
+            "word_count": 98,
+            "token_length": 117,
+            "is_humanized": false,
+            "humanizer_score": 0.055557798594236374
+          }
+        ]
+      }
     }
   ]
 }
