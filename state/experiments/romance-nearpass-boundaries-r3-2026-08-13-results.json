@@ -118,6 +118,65 @@
         ]
       },
       "section_id": "R2_BOUNDARY_SHORT"
+    },
+    {
+      "id": "R2_I_FINAL_PLUS_NEXT_PARA",
+      "measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R2_I_FINAL_PLUS_NEXT_PARA",
+      "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\n\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\n\nSeeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:\n\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\n",
+      "text_sha256": "cfa7eb3b1a0fe2592e37bf8d98f42eb0de3df491b1b4f5be56922664789b6653",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nSeeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.22132796049118042,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.7786720395088196,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 2,
+        "windows": [
+          {
+            "text": "I’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.24011893570423126,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 600,
+            "word_count": 113,
+            "token_length": 144,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": " But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nSeeing someone’s highest potential is different from ignoring what is actually there.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6405873894691467,
+            "confidence": "High",
+            "start_index": 600,
+            "end_index": 820,
+            "word_count": 39,
+            "token_length": 47,
+            "is_humanized": false,
+            "humanizer_score": 0.0005262013291940093
+          },
+          {
+            "text": " You can see something in a person before she fully lives it, but then you have to ask her:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”",
+            "label": "Human Written",
+            "ai_assistance_score": 0.42156341671943665,
+            "confidence": "Medium",
+            "start_index": 820,
+            "end_index": 994,
+            "word_count": 36,
+            "token_length": 43,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R2_BOUNDARY_FULL"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -267,6 +326,20 @@
       },
       {
         "section_id": "R2_BOUNDARY_SHORT",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R2_BOUNDARY_FULL",
         "model": "pangram-4",
         "version": "4.0",
         "paid_api_calls": 1,
