@@ -200,6 +200,41 @@
         ]
       },
       "section_id": "R1_QUOTE_REPAIR"
+    },
+    {
+      "id": "R3_SCHNARCH_A",
+      "measurement_key": "romance-repair-candidates-r6-2026-08-13_R3_SCHNARCH_A",
+      "text": "# Are you ready for the crucible?\n\nI call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in [*Passionate Marriage*](https://www.crucible4points.com/books/passionate-marriage/). His focus was differentiation: remaining a distinct person while getting closer to your partner. He described emotionally committed relationships as “people-growing” crucibles. That was the part I recognized.\n\nI didn’t know what a crucible was either. It’s basically a container where things get heated until they change.\n\nThat’s definitely what relationship does.\n",
+      "text_sha256": "10dd119fcedd0747f81d46b0f7269e10aa161662b10aa5b4f58927fbb8298b33",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "# Are you ready for the crucible?\nI call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in [*Passionate Marriage*](https://www.crucible4points.com/books/passionate-marriage/). His focus was differentiation: remaining a distinct person while getting closer to your partner. He described emotionally committed relationships as “people-growing” crucibles. That was the part I recognized.\nI didn’t know what a crucible was either. It’s basically a container where things get heated until they change.\nThat’s definitely what relationship does.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "# Are you ready for the crucible?\nI call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in [*Passionate Marriage*](https://www.crucible4points.com/books/passionate-marriage/). His focus was differentiation: remaining a distinct person while getting closer to your partner. He described emotionally committed relationships as “people-growing” crucibles. That was the part I recognized.\nI didn’t know what a crucible was either. It’s basically a container where things get heated until they change.\nThat’s definitely what relationship does.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.1618943214416504,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 580,
+            "word_count": 77,
+            "token_length": 120,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R3_SCHNARCH_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -500,6 +535,20 @@
         "paid_calls_to_human": null,
         "estimated_credits_to_human": null,
         "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R3_SCHNARCH_REPAIR",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-repair-candidates-r6-2026-08-13_R3_SCHNARCH_A"
       }
     ]
   }
