@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-repair-candidates-r5-2026-08-13_R1_LOVE_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.4482758641242981,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.5517241358757019,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "If the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\nMaybe some couples end up treasuring the life they built more than the desire that started it. Maybe staying without eros feels like settling, and neither person feels good about that. No one standing at the wedding can know which marriage theirs will become.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.11869316548109055,
+        "confidence": "High",
+        "end_index": 320,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "If the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.",
+        "token_length": 79,
+        "word_count": 63
+      },
+      {
+        "ai_assistance_score": 0.5471896529197693,
+        "confidence": "High",
+        "end_index": 580,
+        "humanizer_score": 0.004457781556993723,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 320,
+        "text": "\nMaybe some couples end up treasuring the life they built more than the desire that started it. Maybe staying without eros feels like settling, and neither person feels good about that. No one standing at the wedding can know which marriage theirs will become.",
+        "token_length": 49,
+        "word_count": 44
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "8f9d91bd-cbfe-4aa7-8015-7b41c88d8585",
   "text": "If the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\n\nMaybe some couples end up treasuring the life they built more than the desire that started it. Maybe staying without eros feels like settling, and neither person feels good about that. No one standing at the wedding can know which marriage theirs will become.\n",
   "text_sha256": "324f6011ae5156494d24b3e6c72efaee38cab1426475434057d433ba39e7d864",
-  "updated_utc": "2026-08-13T16:34:30.858592+00:00"
+  "updated_utc": "2026-08-13T16:34:32.250160+00:00"
 }
