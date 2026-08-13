@@ -103,6 +103,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "CERTAINTY_ONLY",
+      "measurement_key": "romance-checklist-cohab-decision-r11-2026-08-13_CERTAINTY_ONLY",
+      "text": "One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+      "text_sha256": "feaff83eeeb0b7342702c9e313a9d2d75f53be2134b5ce4a8509c5aaa0b5f7d3",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.06315762549638748,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 314,
+            "word_count": 56,
+            "token_length": 69,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      }
     }
   ]
 }
