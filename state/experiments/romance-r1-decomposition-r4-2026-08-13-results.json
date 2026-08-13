@@ -223,6 +223,41 @@
         ]
       },
       "section_id": "R1_CASUAL_START"
+    },
+    {
+      "id": "QUOTE_OBLIGATION_L53_55",
+      "measurement_key": "romance-r1-decomposition-r4-2026-08-13_QUOTE_OBLIGATION_L53_55",
+      "text": "“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\n\nThat may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\n",
+      "text_sha256": "af7e2fb7d4c4fc6e32e553f15b446014546f05beda873103ec4ca2fc984fbf0a",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nThat may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nThat may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6037787199020386,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 520,
+            "word_count": 96,
+            "token_length": 118,
+            "is_humanized": false,
+            "humanizer_score": 0.12240707874298096
+          }
+        ]
+      },
+      "section_id": "R1_QUOTE_OBLIGATION"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -425,6 +460,20 @@
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
         "first_human_measurement_key": "romance-r1-decomposition-r4-2026-08-13_CASUAL_START_L49_51"
+      },
+      {
+        "section_id": "R1_QUOTE_OBLIGATION",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
       }
     ]
   }
