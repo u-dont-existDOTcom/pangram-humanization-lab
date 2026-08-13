@@ -10,7 +10,9 @@ Durable rule: **diagnose function separately from realization.** Do not delete a
 
 When Joel explicitly requires Pangram, a measured Pangram result on the exact intended full boundary is a hard delivery gate. Editorial quality and fidelity remain the authority over what the prose is allowed to mean, but an unmeasured or detector-red candidate is not a completed Pangram-humanization delivery. A detector-green version with semantic or provenance loss also fails the gate.
 
-If detector access is unavailable, label the prose `pre-Pangram candidate`; never report it as a completed humanization pass.
+Do not infer that Pangram access is unavailable merely because the current worker has no local `PANGRAM_API_KEY`, the local key is rejected, or the Pangram web dashboard is signed out. Before labeling a candidate pre-Pangram, complete the access-resolution gate in `docs/PANGRAM-ACTIONS-RUNBOOK.md`, including the repository-secret GitHub Actions route based on `automation/pangram-fixed-batch`. Only report access unavailable after both the direct/local route and the secret-backed Actions route are unusable, and record the exact blocker. Never retrieve, print, commit, or ask Joel to paste the repository secret.
+
+An unmeasured candidate remains a `pre-Pangram candidate`; never report it as a completed humanization pass.
 
 ## Trauma-informed language: test, do not presume
 
