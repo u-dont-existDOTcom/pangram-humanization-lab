@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-artificial-localize-r1-2026-08-13_CHECKLIST_ORIGINAL",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "## What doing it consciously looks like\nSome of these lessons came through thought. Most arrived through failure. A few are still being tested.\n- Have the big conversations before making love. Talk while you can still hear each other clearly about jealousy, attraction to other people, stress behavior, old patterns, how recent the healing is, what each person wants in a hard moment, and money. Use scenarios: When X happens, I would want Y and probably do Z. Abstract answers usually mean there is no answer yet.\n- Don’t let everything speed up at once. Resist early cohabitation, and set real check-in dates before there’s a crisis. Housing may make separate living difficult, but once you live together, practical necessity starts narrowing your choices.\n- Make deep friends together, and remember that old friends will naturally be partial. The goal is to have some friends who know both of you as a couple instead of arriving only as defenders of one person’s story.\n- Separate the romantic decision from the long-term decision. Somebody may be a wonderful lover and a terrible co-parent, community member, or life partner. Also notice when “I’m taking a chance on this person” quietly becomes “this is the right person.” The first answer may come quickly. The second needs more time.\n- Keep your inner practices. Don’t let being loved become the reason you stop learning to love and regulate yourself.\n- Pace the heavy conversations. Ten profound talks in one weekend can feel deep before the relationship has roots. Let play and ordinary time sit between them. Some information is better observed than extracted.\n- Let discomfort remain information. Wait. I want to slow down. Something doesn’t fit. I need to ask this. Don’t let early chemistry automatically overrule that part of you.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9947628974914551,
+        "confidence": "High",
+        "end_index": 1794,
+        "humanizer_score": 0.07113339006900787,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "## What doing it consciously looks like\nSome of these lessons came through thought. Most arrived through failure. A few are still being tested.\n- Have the big conversations before making love. Talk while you can still hear each other clearly about jealousy, attraction to other people, stress behavior, old patterns, how recent the healing is, what each person wants in a hard moment, and money. Use scenarios: When X happens, I would want Y and probably do Z. Abstract answers usually mean there is no answer yet.\n- Don’t let everything speed up at once. Resist early cohabitation, and set real check-in dates before there’s a crisis. Housing may make separate living difficult, but once you live together, practical necessity starts narrowing your choices.\n- Make deep friends together, and remember that old friends will naturally be partial. The goal is to have some friends who know both of you as a couple instead of arriving only as defenders of one person’s story.\n- Separate the romantic decision from the long-term decision. Somebody may be a wonderful lover and a terrible co-parent, community member, or life partner. Also notice when “I’m taking a chance on this person” quietly becomes “this is the right person.” The first answer may come quickly. The second needs more time.\n- Keep your inner practices. Don’t let being loved become the reason you stop learning to love and regulate yourself.\n- Pace the heavy conversations. Ten profound talks in one weekend can feel deep before the relationship has roots. Let play and ordinary time sit between them. Some information is better observed than extracted.\n- Let discomfort remain information. Wait. I want to slow down. Something doesn’t fit. I need to ask this. Don’t let early chemistry automatically overrule that part of you.",
+        "token_length": 361,
+        "word_count": 299
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "67f23ea8-d68e-4e65-9b96-c65999096633",
   "text": "## What doing it consciously looks like\n\nSome of these lessons came through thought. Most arrived through failure. A few are still being tested.\n\n- Have the big conversations before making love. Talk while you can still hear each other clearly about jealousy, attraction to other people, stress behavior, old patterns, how recent the healing is, what each person wants in a hard moment, and money. Use scenarios: When X happens, I would want Y and probably do Z. Abstract answers usually mean there is no answer yet.\n- Don’t let everything speed up at once. Resist early cohabitation, and set real check-in dates before there’s a crisis. Housing may make separate living difficult, but once you live together, practical necessity starts narrowing your choices.\n- Make deep friends together, and remember that old friends will naturally be partial. The goal is to have some friends who know both of you as a couple instead of arriving only as defenders of one person’s story.\n- Separate the romantic decision from the long-term decision. Somebody may be a wonderful lover and a terrible co-parent, community member, or life partner. Also notice when “I’m taking a chance on this person” quietly becomes “this is the right person.” The first answer may come quickly. The second needs more time.\n- Keep your inner practices. Don’t let being loved become the reason you stop learning to love and regulate yourself.\n- Pace the heavy conversations. Ten profound talks in one weekend can feel deep before the relationship has roots. Let play and ordinary time sit between them. Some information is better observed than extracted.\n- Let discomfort remain information. Wait. I want to slow down. Something doesn’t fit. I need to ask this. Don’t let early chemistry automatically overrule that part of you.",
   "text_sha256": "220d5ad9f4f834f817e0a3c12182bdeb1a76082598b0ca6b9369f2331ae868c5",
-  "updated_utc": "2026-08-13T01:22:28.558712+00:00"
+  "updated_utc": "2026-08-13T01:22:30.022308+00:00"
 }
