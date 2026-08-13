@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-repair-candidates-r6-2026-08-13_R3_ADULT_CHILD_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "[Inner-child reparenting](https://innerchild.u-dont-exist.com) is a big part of this. The present-day adult has to learn how to parent the child part instead of quietly hiring the partner for the job.\nWhen that doesn't happen, I often see an adult expect the partner to know what they need without being told. They don't take responsibility for their own behavior, may barely notice the pattern, and deny it when somebody points it out. That's entitlement, whether they mean it that way or not.\nSelf-reflection is a good place to start, but it can’t see what it can’t see.\nA peer can give another angle. Your partner is also usually trying to keep you, so they have an ulterior motive that a peer counselor hopefully does not.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.14297908544540405,
+        "confidence": "High",
+        "end_index": 726,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "[Inner-child reparenting](https://innerchild.u-dont-exist.com) is a big part of this. The present-day adult has to learn how to parent the child part instead of quietly hiring the partner for the job.\nWhen that doesn't happen, I often see an adult expect the partner to know what they need without being told. They don't take responsibility for their own behavior, may barely notice the pattern, and deny it when somebody points it out. That's entitlement, whether they mean it that way or not.\nSelf-reflection is a good place to start, but it can’t see what it can’t see.\nA peer can give another angle. Your partner is also usually trying to keep you, so they have an ulterior motive that a peer counselor hopefully does not.",
+        "token_length": 164,
+        "word_count": 123
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "1a250186-d282-4372-b99d-cc5d7ddd89e0",
   "text": "[Inner-child reparenting](https://innerchild.u-dont-exist.com) is a big part of this. The present-day adult has to learn how to parent the child part instead of quietly hiring the partner for the job.\n\nWhen that doesn't happen, I often see an adult expect the partner to know what they need without being told. They don't take responsibility for their own behavior, may barely notice the pattern, and deny it when somebody points it out. That's entitlement, whether they mean it that way or not.\n\nSelf-reflection is a good place to start, but it can’t see what it can’t see.\n\nA peer can give another angle. Your partner is also usually trying to keep you, so they have an ulterior motive that a peer counselor hopefully does not.\n",
   "text_sha256": "a0985e7f5f1988ff5335f4b266c505495d18dd2c14fec9ba5a99b30617c73f65",
-  "updated_utc": "2026-08-13T16:43:04.380926+00:00"
+  "updated_utc": "2026-08-13T16:43:05.549514+00:00"
 }
