@@ -103,6 +103,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "L2B",
+      "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L2B",
+      "text": "If we start having sex, I don’t want moving in to become the automatic next thing. Housing can make that difficult, but living together gives both people practical reasons not to reconsider the relationship. So if we do it, I’d rather decide in advance when we’re going to ask each other whether it’s actually working.\n\nAnd I want people around who know us together. Old friends are naturally going to hear one side first. Mine love me; hers love her. I don’t expect neutrality from them. I just don’t want them to be the only witnesses we have.",
+      "text_sha256": "41a99dcbad298a83cf30b7e64ccb16d37fcdeed650173863238a0b1e2a81932a",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "If we start having sex, I don’t want moving in to become the automatic next thing. Housing can make that difficult, but living together gives both people practical reasons not to reconsider the relationship. So if we do it, I’d rather decide in advance when we’re going to ask each other whether it’s actually working.\nAnd I want people around who know us together. Old friends are naturally going to hear one side first. Mine love me; hers love her. I don’t expect neutrality from them. I just don’t want them to be the only witnesses we have.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "If we start having sex, I don’t want moving in to become the automatic next thing. Housing can make that difficult, but living together gives both people practical reasons not to reconsider the relationship. So if we do it, I’d rather decide in advance when we’re going to ask each other whether it’s actually working.\nAnd I want people around who know us together. Old friends are naturally going to hear one side first. Mine love me; hers love her. I don’t expect neutrality from them. I just don’t want them to be the only witnesses we have.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9706459045410156,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 544,
+            "word_count": 98,
+            "token_length": 116,
+            "is_humanized": false,
+            "humanizer_score": 0.02598915435373783
+          }
+        ]
+      }
     }
   ]
 }
