@@ -850,6 +850,29 @@
           "section_id": "R5_TOOLS_BRIDGE"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T20:06:03.001227+00:00",
+      "experiment_id": "romance-reconstruction-r21-2026-08-13",
+      "id": "Q-9b5b0ae125482fab",
+      "sections": [
+        "FULL_ARTICLE"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r21-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r21",
+      "source_sha256": "a67c87940e63c9ac6f25e84cfd72a44c1c7eea92ef360d9e9fd2488f1278e311",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.09645774215459824,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9035422801971436,
+          "id": "FULL_ARTICLE_R4",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
