@@ -141,6 +141,65 @@
         ]
       },
       "section_id": "R1_TALK_REPAIR"
+    },
+    {
+      "id": "R1_QUOTE_B",
+      "measurement_key": "romance-repair-candidates-r6-2026-08-13_R1_QUOTE_B",
+      "text": "## Can Casual Sex or a Situationship Actually Be Honest?\n\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n\n“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\n\nOkay. But sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\n\nThe STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.\n",
+      "text_sha256": "a2f7f1022fbccb30f0e473881af8a762a88691d39a8ef3d1a4f0ca9dd3438a24",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "## Can Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nOkay. But sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\nThe STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.4841417968273163,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.5158582329750061,
+        "headline": "AI Detected",
+        "num_ai_segments": 2,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "## Can Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7038754820823669,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 277,
+            "word_count": 49,
+            "token_length": 67,
+            "is_humanized": false,
+            "humanizer_score": 0.1442870944738388
+          },
+          {
+            "text": " Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nOkay. But sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.2351149469614029,
+            "confidence": "High",
+            "start_index": 277,
+            "end_index": 830,
+            "word_count": 99,
+            "token_length": 125,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": "\nThe STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.699498176574707,
+            "confidence": "High",
+            "start_index": 830,
+            "end_index": 1072,
+            "word_count": 48,
+            "token_length": 60,
+            "is_humanized": false,
+            "humanizer_score": 0.1442870944738388
+          }
+        ]
+      },
+      "section_id": "R1_QUOTE_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -234,10 +293,10 @@
       },
       {
         "cache_hits": 0,
-        "estimated_cost_usd": 0.05,
-        "estimated_credits": 1,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
         "model": "pangram-4",
-        "paid_api_calls": 1,
+        "paid_api_calls": 2,
         "pending_resumes": 0,
         "section_id": "R1_QUOTE_REPAIR",
         "version": "4.0",
