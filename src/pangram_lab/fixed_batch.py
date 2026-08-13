@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .call_budget import SectionCallCapReached
+
 
 FORMAT = "pangram-fixed-batch-v1"
 
@@ -49,6 +51,10 @@ def text_sha256(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+def _write(path: Path, aggregate: dict[str, Any]) -> None:
+    path.write_text(json.dumps(aggregate, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Path, call_ledger: Any | None = None) -> dict[str, Any]:
     experiment_id = spec["experiment_id"]
     aggregate: dict[str, Any] = {"format": "pangram-fixed-batch-results-v1", "experiment_id": experiment_id, "results": []}
@@ -61,15 +67,25 @@ def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Pat
         text = variant["text"]
         section_id = variant.get("section_id")
         measurement_key = f"{experiment_id}_{variant_id}"
-        if call_ledger is None:
-            detector = client.detect_cached(text, cache, measurement_key=measurement_key)
-        else:
-            detector = client.detect_cached(text, cache, measurement_key=measurement_key, section_id=section_id)
+        try:
+            if call_ledger is None:
+                detector = client.detect_cached(text, cache, measurement_key=measurement_key)
+            else:
+                detector = client.detect_cached(text, cache, measurement_key=measurement_key, section_id=section_id)
+        except SectionCallCapReached:
+            model = getattr(client, "model", "pangram-4")
+            version = getattr(client, "expected_version", "4.0")
+            handoff = call_ledger.write_handoff(section_id, model, version, completed_results=aggregate["results"])
+            aggregate["status"] = "section_call_cap_reached"
+            aggregate["handoff_path"] = str(handoff)
+            aggregate["call_accounting"] = call_ledger.audit_summary()
+            _write(output_path, aggregate)
+            raise
         row: dict[str, Any] = {"id": variant_id, "measurement_key": measurement_key, "text": text, "text_sha256": text_sha256(text), "detector": detector}
         if section_id is not None:
             row["section_id"] = section_id
         aggregate["results"].append(row)
         if call_ledger is not None:
             aggregate["call_accounting"] = call_ledger.audit_summary()
-        output_path.write_text(json.dumps(aggregate, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        _write(output_path, aggregate)
     return aggregate
