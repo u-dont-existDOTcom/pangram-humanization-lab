@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-cohab-decision-r11-2026-08-13_CERTAINTY_ONLY",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.06315762549638748,
+        "confidence": "High",
+        "end_index": 314,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+        "token_length": 69,
+        "word_count": 56
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "baf25901-f3c8-4375-aab2-4458ea6e160f",
   "text": "One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
   "text_sha256": "feaff83eeeb0b7342702c9e313a9d2d75f53be2134b5ce4a8509c5aaa0b5f7d3",
-  "updated_utc": "2026-08-13T01:41:14.598347+00:00"
+  "updated_utc": "2026-08-13T01:41:17.824964+00:00"
 }
