@@ -438,6 +438,89 @@
           "section_id": "R7_TOUGH_LOVE_DIAGNOSTIC"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T17:25:00.927634+00:00",
+      "experiment_id": "romance-reconstruction-r8-2026-08-13",
+      "id": "Q-f3ff0a152ff506d3",
+      "sections": [
+        "FULL_ARTICLE",
+        "R3_SLOW_COMPOSITION",
+        "R4_DESIRE_PERFORMANCE_REPAIR",
+        "R5_PRACTICAL_REPAIR",
+        "R7_AFTER_LEAVING_DIAGNOSTIC"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r8-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r8",
+      "source_sha256": "fd4a363ef5ca52b368fb4dd83c68fe8d6d2622ee5c18ed5adba39dcba7c844b2",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.09275224804878235,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9072477221488953,
+          "id": "FULL_ARTICLE_R3",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        },
+        {
+          "fraction_ai": 0.06743421405553818,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9325658082962036,
+          "id": "R3_SLOW_HUMAN_PLUS_PLAN",
+          "prediction_short": "Human",
+          "section_id": "R3_SLOW_COMPOSITION"
+        },
+        {
+          "fraction_ai": 0.23179347813129425,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7682065367698669,
+          "id": "R3_SLOW_HUMAN_PLUS_BIRTH",
+          "prediction_short": "Mixed",
+          "section_id": "R3_SLOW_COMPOSITION"
+        },
+        {
+          "fraction_ai": 0.3591763973236084,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6408236026763916,
+          "id": "R3_SLOW_HUMAN_PLUS_PLAN_BIRTH",
+          "prediction_short": "Mixed",
+          "section_id": "R3_SLOW_COMPOSITION"
+        },
+        {
+          "fraction_ai": 0.7024418115615845,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.2975582182407379,
+          "id": "R3_CURRENT_SLOW_FULL",
+          "prediction_short": "Mixed",
+          "section_id": "R3_SLOW_COMPOSITION"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R4_NOT_PERFORMANCE_A",
+          "prediction_short": "AI",
+          "section_id": "R4_DESIRE_PERFORMANCE_REPAIR"
+        },
+        {
+          "fraction_ai": 0.13197025656700134,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8680297136306763,
+          "id": "R5_CHOOSING_A",
+          "prediction_short": "Mixed",
+          "section_id": "R5_PRACTICAL_REPAIR"
+        },
+        {
+          "fraction_ai": 0.3074534237384796,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6925466060638428,
+          "id": "R7_AFTER_LEAVING_A",
+          "prediction_short": "Mixed",
+          "section_id": "R7_AFTER_LEAVING_DIAGNOSTIC"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
