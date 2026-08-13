@@ -143,6 +143,29 @@
           "section_id": "FULL_ARTICLE"
         }
       ]
+    },
+    {
+      "audit_id": "spiritual-bypassing-authorial-repair-2026-08-13",
+      "created_at_utc": "2026-08-13T23:07:42.031610+00:00",
+      "experiment_id": "spiritual-bypassing-authorial-repair-r4-2026-08-13",
+      "id": "Q-c9d5e4c205768aa4",
+      "sections": [
+        "FULL_ARTICLE"
+      ],
+      "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
+      "source_ref": "automation/pangram-fixed-batch",
+      "source_sha256": "f928bb1f080f3325b835b335858ba7b8fd1aa5b08caf07d2a0a1bf008fb13b97",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "AUTHORIAL_OBSERVE_AWAY_FULL",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
