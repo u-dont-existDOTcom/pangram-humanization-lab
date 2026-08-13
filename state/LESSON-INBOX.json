@@ -873,6 +873,29 @@
           "section_id": "FULL_ARTICLE"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T20:16:41.296161+00:00",
+      "experiment_id": "romance-reconstruction-r22-2026-08-13",
+      "id": "Q-a3a1ddbe208c39e2",
+      "sections": [
+        "R6_STEPCHILDREN_CONTINUITY"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r22-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r22",
+      "source_sha256": "8d44329c922bdda19f0cee199581c1b7daf0f9c1b4dfdbdb23700cfb6db83b7c",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R6_STEPCHILDREN_CURRENT",
+          "prediction_short": "Human",
+          "section_id": "R6_STEPCHILDREN_CONTINUITY"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
