@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-artificial-localize-r1-2026-08-13_IF_ORIGINAL",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.8029375672340393,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.1970624178647995,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "# If you’re already in it\nMost of this article is about what to do before the relationship gets its own momentum. If you’re already married, raising children, living together, or ten years in, advice about slowing down arrives a little late.\nI wish I had a special method for fixing that. Mostly I learned the obvious thing the hard way: one person can’t create mutual honesty.\nI learned that in all three of my reference relationships. Actually, it’s probably just common sense. I could keep bringing up the same problem, but I couldn’t make the other person look at it with me.\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.49513983726501465,
+        "confidence": "Medium",
+        "end_index": 656,
+        "humanizer_score": 0.1995488852262497,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "# If you’re already in it\nMost of this article is about what to do before the relationship gets its own momentum. If you’re already married, raising children, living together, or ten years in, advice about slowing down arrives a little late.\nI wish I had a special method for fixing that. Mostly I learned the obvious thing the hard way: one person can’t create mutual honesty.\nI learned that in all three of my reference relationships. Actually, it’s probably just common sense. I could keep bringing up the same problem, but I couldn’t make the other person look at it with me.\nWith Bee and Key, the biggest thing sitting underneath everything was trust.",
+        "token_length": 137,
+        "word_count": 115
+      },
+      {
+        "ai_assistance_score": 0.4224645793437958,
+        "confidence": "High",
+        "end_index": 817,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 656,
+        "text": " They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+        "token_length": 40,
+        "word_count": 31
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "cde598fe-9033-4169-b60f-fc538c1b3b46",
   "text": "# If you’re already in it\n\nMost of this article is about what to do before the relationship gets its own momentum. If you’re already married, raising children, living together, or ten years in, advice about slowing down arrives a little late.\n\nI wish I had a special method for fixing that. Mostly I learned the obvious thing the hard way: one person can’t create mutual honesty.\n\nI learned that in all three of my reference relationships. Actually, it’s probably just common sense. I could keep bringing up the same problem, but I couldn’t make the other person look at it with me.\n\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
   "text_sha256": "6cca864fa137072e03945a079fce5135f35e40cbce4bd81e2d8847f8a8e2c343",
-  "updated_utc": "2026-08-13T01:22:31.529530+00:00"
+  "updated_utc": "2026-08-13T01:22:35.464732+00:00"
 }
