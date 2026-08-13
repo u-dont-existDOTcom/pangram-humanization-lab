@@ -1,0 +1,40 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-checklist-subitems-r10-2026-08-13",
+  "results": [
+    {
+      "id": "COHAB_A",
+      "measurement_key": "romance-checklist-subitems-r10-2026-08-13_COHAB_A",
+      "text": "If I can avoid it, I don't want to live together early. Once we do, a bad relationship can start surviving because rent is expensive or one of us has nowhere easy to go. That's not evidence the relationship is working. The check-in date is mostly there so we don't wait until one of us is desperate to ask.",
+      "text_sha256": "4889747d42aacd998140099f3ef17b596cd144812545fa06ccc900dc3d4402e3",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "If I can avoid it, I don't want to live together early. Once we do, a bad relationship can start surviving because rent is expensive or one of us has nowhere easy to go. That's not evidence the relationship is working. The check-in date is mostly there so we don't wait until one of us is desperate to ask.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "If I can avoid it, I don't want to live together early. Once we do, a bad relationship can start surviving because rent is expensive or one of us has nowhere easy to go. That's not evidence the relationship is working. The check-in date is mostly there so we don't wait until one of us is desperate to ask.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7830358743667603,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 306,
+            "word_count": 59,
+            "token_length": 69,
+            "is_humanized": false,
+            "humanizer_score": 0.03940102830529213
+          }
+        ]
+      }
+    }
+  ]
+}
