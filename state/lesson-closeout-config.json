@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "enforcement_started_at_utc": "2026-08-13T03:35:00Z",
+  "tracked_globs": [
+    "state/ROMANCE-*.md",
+    "state/PANGRAM-*.md",
+    "state/HISTORICAL-*.md",
+    "state/experiments/*.json",
+    "state/experiments/**/*.json",
+    "notes/*.md",
+    "notes/**/*.md"
+  ],
+  "lesson_index": "state/LESSON-INDEX.md",
+  "lesson_summary_globs": [
+    "state/WORKING-LESSONS*.md"
+  ],
+  "audit_refs": [
+    "main",
+    "automation/pangram-fixed-batch"
+  ]
+}

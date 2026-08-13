@@ -4,7 +4,7 @@ This private repository is the canonical detector-research store for Joel Rosenb
 
 ## Start here
 
-**Always begin with `state/LESSON-INDEX.md`.** It is the canonical retrieval entry point and controls the current lesson read order, authority order, and branch-specific evidence routing. Do not hard-code an older lesson sequence from memory.
+**Always begin with `state/LESSON-INDEX.md`.** It is the canonical retrieval entry point and controls the current lesson read order, authority order, branch-specific evidence routing, and the lesson-closeout requirement. Do not hard-code an older lesson sequence from memory.
 
 After the index directs you:
 1. read the current promoted lesson summaries it names;
@@ -19,6 +19,19 @@ If the case ID is unknown, inspect recent commits for `state: rXX analysis` / `s
 Joel/model does the human editorial work. The lab does repetitive detector science: controlled probe design, blind semantic/editorial review, Pangram submit/cache/poll, preregistered exact repeats, interaction analysis, falsification, stopping rule, and durable GitHub evidence.
 
 Do not send Joel through manual chains of one-off detector variants when the lab can run them.
+
+## Learning closeout is a completion gate
+
+Before reporting any substantive editorial/detector/reconstruction/experiment pass complete:
+
+1. identify each actual new finding;
+2. disposition it in `state/LESSON-LEDGER.json` via the current `pangram-lesson-closeout` command;
+3. use `promoted`, `provisional`, `article-specific`, `superseded`, or `no-new-lesson` as appropriate;
+4. for anything promoted, update `state/LESSON-INDEX.md` and a current `state/WORKING-LESSONS*.md` summary;
+5. run the repository closeout check/audit and verify it passes;
+6. only then claim completion.
+
+Read `docs/LESSON-CLOSEOUT.md` for exact commands and cross-branch handling. Do not ask Joel to remember or periodically police this process. GitHub CI and the weekly audit are the backstop.
 
 ## Paid-call safety
 
@@ -60,4 +73,4 @@ For new endpoint pairs, use the current repo README/CLI help rather than an old 
 
 ## Promotion boundary
 
-Raw/cached detector evidence and experiment histories stay here. Promote only durable editorial lessons into the canonical `u-dont-existDOTcom/joel-articles` repository, with provenance, tested boundary, what was falsified, repeats/version, and whether the finding is local or cross-case replicated.
+Raw/cached detector evidence and experiment histories stay here. Promote only durable editorial lessons into the current canonical lesson summary/index, with provenance, tested boundary, what was falsified, repeats/version, and whether the finding is local or cross-case replicated. If/when the separate canonical `u-dont-existDOTcom/joel-articles` repository is available, durable article-skill lessons should also be synchronized there according to its repository map.
