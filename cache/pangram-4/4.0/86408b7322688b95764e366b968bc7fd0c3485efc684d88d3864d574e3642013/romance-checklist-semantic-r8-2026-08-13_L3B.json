@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L3B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Wanting somebody romantically is one decision. Building a life with them is another. I might know the first one in a week. I cannot know in a week what she’ll be like as a co-parent or what years of ordinary life with her will feel like. So I watch for the moment “I’m taking a chance on this person” somehow becomes “this is the right person.” What happened between those two sentences?\nI also keep doing my own practices. Being loved is wonderful, but it’s not evidence that I no longer need to know how to love and regulate myself.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9963348507881165,
+        "confidence": "High",
+        "end_index": 534,
+        "humanizer_score": 0.09203847497701645,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Wanting somebody romantically is one decision. Building a life with them is another. I might know the first one in a week. I cannot know in a week what she’ll be like as a co-parent or what years of ordinary life with her will feel like. So I watch for the moment “I’m taking a chance on this person” somehow becomes “this is the right person.” What happened between those two sentences?\nI also keep doing my own practices. Being loved is wonderful, but it’s not evidence that I no longer need to know how to love and regulate myself.",
+        "token_length": 118,
+        "word_count": 100
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "80b057da-b460-4bcb-b6c8-f10e662f98a2",
   "text": "Wanting somebody romantically is one decision. Building a life with them is another. I might know the first one in a week. I cannot know in a week what she’ll be like as a co-parent or what years of ordinary life with her will feel like. So I watch for the moment “I’m taking a chance on this person” somehow becomes “this is the right person.” What happened between those two sentences?\n\nI also keep doing my own practices. Being loved is wonderful, but it’s not evidence that I no longer need to know how to love and regulate myself.",
   "text_sha256": "86408b7322688b95764e366b968bc7fd0c3485efc684d88d3864d574e3642013",
-  "updated_utc": "2026-08-13T01:35:17.064659+00:00"
+  "updated_utc": "2026-08-13T01:35:20.565303+00:00"
 }
