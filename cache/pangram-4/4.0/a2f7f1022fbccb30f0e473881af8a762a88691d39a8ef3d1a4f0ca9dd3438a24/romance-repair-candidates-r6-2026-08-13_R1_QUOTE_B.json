@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-repair-candidates-r6-2026-08-13_R1_QUOTE_B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.4841417968273163,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.5158582329750061,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 2,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "## Can Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nOkay. But sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\nThe STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.7038754820823669,
+        "confidence": "High",
+        "end_index": 277,
+        "humanizer_score": 0.1442870944738388,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "## Can Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call.",
+        "token_length": 67,
+        "word_count": 49
+      },
+      {
+        "ai_assistance_score": 0.2351149469614029,
+        "confidence": "High",
+        "end_index": 830,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 277,
+        "text": " Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nOkay. But sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.",
+        "token_length": 125,
+        "word_count": 99
+      },
+      {
+        "ai_assistance_score": 0.699498176574707,
+        "confidence": "High",
+        "end_index": 1072,
+        "humanizer_score": 0.1442870944738388,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 830,
+        "text": "\nThe STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.",
+        "token_length": 60,
+        "word_count": 48
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "c2afe92e-a2fe-4b91-b1fc-e8859d8dd18a",
   "text": "## Can Casual Sex or a Situationship Actually Be Honest?\n\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n\n“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\n\nOkay. But sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\n\nThe STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.\n",
   "text_sha256": "a2f7f1022fbccb30f0e473881af8a762a88691d39a8ef3d1a4f0ca9dd3438a24",
-  "updated_utc": "2026-08-13T16:42:55.649948+00:00"
+  "updated_utc": "2026-08-13T16:42:56.954567+00:00"
 }
