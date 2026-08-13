@@ -666,6 +666,29 @@
           "section_id": "R6_HONESTY_REPAIR"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T18:46:46.781480+00:00",
+      "experiment_id": "romance-reconstruction-r13-2026-08-13",
+      "id": "Q-a9ecf8f0b1e85376",
+      "sections": [
+        "R6_HONESTY_REPAIR"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r13-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r13",
+      "source_sha256": "7f0f40192c1a488176ec3f02596fd75a552a07a6008b87eefc0c4eede3960920",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.326444536447525,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6735554337501526,
+          "id": "R6_HONESTY_LIVED_B",
+          "prediction_short": "Mixed",
+          "section_id": "R6_HONESTY_REPAIR"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
