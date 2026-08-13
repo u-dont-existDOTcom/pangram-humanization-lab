@@ -629,8 +629,8 @@
     },
     "R5_PRACTICAL_REPAIR\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "estimated_credits": 1,
@@ -655,10 +655,18 @@
           "text_sha256": "e77cdb13c24d0abf69b9d9e8cfd1a05c8590354b53a7a477fb801d6f642b370e",
           "type": "paid_post_reserved",
           "word_count": 553
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r23-2026-08-13_R5_CHOOSING_SOURCE_C",
+          "recorded_at_utc": "2026-08-13T20:22:02.156206+00:00",
+          "text_sha256": "dc1c22c8d4b11912ceb4ced00accde40714606a9603d23768eb6df0f500da0a2",
+          "type": "paid_post_reserved",
+          "word_count": 636
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "R5_PRACTICAL_REPAIR",
       "version": "4.0"
