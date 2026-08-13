@@ -54,6 +54,26 @@ pangram-lesson-closeout record \
   --reason "Bound to this Romance section."
 ```
 
+## Automatic review inbox
+
+New fixed-batch detector results register themselves in `state/LESSON-INBOX.json` on the evidence branch. The inbox entry is metadata-only: exact source path/ref/SHA-256, experiment/audit/section identifiers, variant IDs, and detector triage fields. It does **not** copy the tested article passage.
+
+Registration is idempotent for an exact path/ref/hash. A changed result hash creates a new review obligation. The weekly integrity audit reads the inbox on long-lived evidence refs and treats an item as resolved only when the canonical `main` ledger contains a disposition with the same source path, source ref, and SHA-256.
+
+This is the durable fallback for interrupted sessions or connector safety blocks: even if semantic closeout cannot be written immediately, the experiment cannot silently disappear from review.
+
+## Metadata-only closeout requests
+
+When a direct ledger/index write from chat is blocked or would require resending sensitive article content, create a small request under:
+
+`state/lesson-closeout-requests/<request-id>.json`
+
+The request contains only source identity and semantic disposition metadata: `source_path`, `source_ref`, `source_sha256`, `finding`, `disposition`, `reason`, and `promoted_to`. A promoted request may additionally contain an explicit lesson block, index block, and summary target. It must never contain the source article or detector result body.
+
+The existing trusted `.github/workflows/lesson-integrity.yml` Action processes these requests on `main`. It verifies the named source ref and SHA-256 before mutating canonical state, invokes the canonical closeout logic, applies explicitly supplied promoted blocks idempotently, records the processed request as a receipt, and commits the resulting ledger/index/summary state. The Action has no Pangram secret.
+
+If even the small metadata request is blocked, leave the inbox item pending and report that durable unresolved state. Do not pretend the lesson was saved; do not discard the obligation.
+
 ## Gates
 
 Audit the current ref:
@@ -68,14 +88,15 @@ Check only a changed range (used by CI/PRs):
 pangram-lesson-closeout check --base <base-sha> --head HEAD
 ```
 
-The gate tracks new research artifacts after the configured enforcement timestamp. Older evidence is grandfathered, but any tracked artifact modified after enforcement must be dispositioned for its new exact hash.
+The gate tracks new research artifacts after the configured enforcement timestamp. Older evidence is grandfathered, but any tracked artifact modified after enforcement must be dispositioned for its new exact hash. Pending review-inbox items also fail the relevant long-lived-ref audit until a matching canonical disposition exists.
 
 ## GitHub enforcement
 
 `.github/workflows/lesson-integrity.yml` provides:
 
-1. **Push / pull-request gate** — changed tracked research artifacts must be dispositioned. If a finding is promoted, the canonical index and summary target(s) must be updated in the same range.
-2. **Weekly audit** — audits current `main` plus configured long-lived evidence refs. If orphaned research is found, the workflow opens or updates one `Lesson integrity audit: unresolved findings` GitHub issue automatically.
+1. **Metadata request processor** — on eligible `main` pushes, tests and processes unprocessed closeout requests using a trusted contents-write job.
+2. **Push / pull-request gate** — changed tracked research artifacts must be dispositioned. If a finding is promoted, the canonical index and summary target(s) must be updated in the same range.
+3. **Weekly audit** — audits current `main` plus configured long-lived evidence refs. If orphaned research or pending review obligations are found, the workflow opens or updates one `Lesson integrity audit: unresolved findings` GitHub issue automatically.
 
 The weekly audit is a backstop for interruptions and workers that skipped closeout. It is not a substitute for the completion gate.
 
@@ -84,10 +105,11 @@ The weekly audit is a backstop for interruptions and workers that skipped closeo
 Before reporting a substantive pass complete:
 
 1. identify each actual new finding;
-2. record its disposition in the ledger (or one `no-new-lesson` record when appropriate);
-3. promote durable findings into the current lesson summary/index;
-4. run the lesson-closeout audit/check appropriate to the branch;
-5. verify the gate passes;
-6. only then claim the pass complete.
+2. ensure every new detector result is durably registered for review;
+3. record its semantic disposition in the canonical ledger, directly or through a metadata-only closeout request;
+4. promote durable findings into the current lesson summary/index;
+5. run the lesson-closeout audit/check appropriate to the branch;
+6. verify the gate passes;
+7. only then claim the pass complete.
 
 Do not ask Joel to remind you to do this.
