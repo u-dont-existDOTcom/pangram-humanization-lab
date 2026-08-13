@@ -31,7 +31,6 @@ def _parse_time(value: str) -> datetime:
 
 
 def _matches(path: str, patterns: list[str]) -> bool:
-    # fnmatch treats / as an ordinary character, which gives the desired ** behavior here.
     return any(fnmatch.fnmatch(path, pattern) for pattern in patterns)
 
 
@@ -51,6 +50,16 @@ def _git_last_modified(repo: Path, ref: str, path: str) -> datetime:
     if not value:
         return datetime.fromtimestamp(0, timezone.utc)
     return _parse_time(value)
+
+
+def _review_entries(repo: Path, ref: str) -> list[dict]:
+    exists = _run(repo, 'git', 'cat-file', '-e', f'{ref}:state/LESSON-INBOX.json', check=False).returncode == 0
+    if not exists:
+        return []
+    obj = json.loads(_git_bytes(repo, ref, 'state/LESSON-INBOX.json').decode('utf-8'))
+    if obj.get('format') != 'lesson-review-v1' or not isinstance(obj.get('entries'), list):
+        raise ValueError(f'invalid lesson review queue at {ref}:state/LESSON-INBOX.json')
+    return [entry for entry in obj['entries'] if isinstance(entry, dict)]
 
 
 def validate_ledger(ledger: dict, config: dict) -> list[str]:
@@ -113,10 +122,29 @@ def audit_ref(repo: Path | str, ref: str = 'HEAD') -> dict:
     tracked_globs = config.get('tracked_globs', [])
 
     by_key: dict[tuple[str, str], list[dict]] = {}
-    for entry in ledger.get('entries', []):
-        if isinstance(entry, dict):
-            key = (str(entry.get('source_path') or ''), str(entry.get('source_sha256') or '').lower())
-            by_key.setdefault(key, []).append(entry)
+    ledger_entries = [entry for entry in ledger.get('entries', []) if isinstance(entry, dict)]
+    for entry in ledger_entries:
+        key = (str(entry.get('source_path') or ''), str(entry.get('source_sha256') or '').lower())
+        by_key.setdefault(key, []).append(entry)
+
+    pending_review: list[dict] = []
+    for queued in _review_entries(repo, ref):
+        source_path = str(queued.get('source_path') or '')
+        source_ref = str(queued.get('source_ref') or '')
+        source_sha = str(queued.get('source_sha256') or '').lower()
+        matches = [
+            entry for entry in ledger_entries
+            if str(entry.get('source_path') or '') == source_path
+            and str(entry.get('source_sha256') or '').lower() == source_sha
+            and str(entry.get('source_ref') or '') == source_ref
+        ]
+        if not matches:
+            pending_review.append({
+                'id': queued.get('id'),
+                'source_path': source_path,
+                'source_ref': source_ref,
+                'source_sha256': source_sha,
+            })
 
     orphans: list[dict] = []
     grandfathered: list[dict] = []
@@ -142,14 +170,14 @@ def audit_ref(repo: Path | str, ref: str = 'HEAD') -> dict:
             reviewed.append({'path': path, 'sha256': sha, 'entries': [e.get('id') for e in matching]})
 
     return {
-        'ok': not ledger_errors and not orphans,
+        'ok': not ledger_errors and not orphans and not pending_review,
         'ref': ref,
         'ledger_errors': ledger_errors,
         'orphans': orphans,
+        'pending_review': pending_review,
         'reviewed': reviewed,
         'grandfathered': grandfathered,
     }
-
 
 
 def check_range(repo: Path | str, base: str, head: str = "HEAD") -> dict:
@@ -168,7 +196,6 @@ def check_range(repo: Path | str, base: str, head: str = "HEAD") -> dict:
 
     reviewed = []
     for path in tracked:
-        # Ignore deletions.
         exists = _run(repo, "git", "cat-file", "-e", f"{head}:{path}", check=False).returncode == 0
         if not exists:
             continue
@@ -192,6 +219,7 @@ def check_range(repo: Path | str, base: str, head: str = "HEAD") -> dict:
         "reviewed": reviewed,
         "errors": errors,
     }
+
 
 def _write_json(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False, sort_keys=True) + '\n', encoding='utf-8')
