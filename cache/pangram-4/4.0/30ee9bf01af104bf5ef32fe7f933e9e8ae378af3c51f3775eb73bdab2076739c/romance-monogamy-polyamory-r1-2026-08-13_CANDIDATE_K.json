@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-monogamy-polyamory-r1-2026-08-13_CANDIDATE_K",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nBut if monogamy isn't something you can really do, I'd rather know that. Hiding what's actually true between two people can do more damage than an outside connection.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.2790380120277405,
+        "confidence": "High",
+        "end_index": 403,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nBut if monogamy isn't something you can really do, I'd rather know that. Hiding what's actually true between two people can do more damage than an outside connection.",
+        "token_length": 85,
+        "word_count": 68
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "4bc632c4-878e-421b-b7ce-6d9af99ae553",
   "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\n\nBut if monogamy isn't something you can really do, I'd rather know that. Hiding what's actually true between two people can do more damage than an outside connection.",
   "text_sha256": "30ee9bf01af104bf5ef32fe7f933e9e8ae378af3c51f3775eb73bdab2076739c",
-  "updated_utc": "2026-08-13T00:55:01.384839+00:00"
+  "updated_utc": "2026-08-13T00:55:05.128778+00:00"
 }
