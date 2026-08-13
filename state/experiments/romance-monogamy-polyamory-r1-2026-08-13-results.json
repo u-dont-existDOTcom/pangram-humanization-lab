@@ -69,6 +69,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "CANDIDATE_F",
+      "measurement_key": "romance-monogamy-polyamory-r1-2026-08-13_CANDIDATE_F",
+      "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\n\nThat isn't everybody. And I don't see why polyamory itself would be wrong. If you can't actually do monogamy, admitting that is more honest than pretending you can.\n\nWhat bothers me more is when a monogamous relationship only works as long as both people leave things unsaid. An attraction shows up. Feelings change. One person gets possessive. The other person knows it. Nobody says the whole thing. Sometimes the concealment does more damage than the outside connection would have.\n\nLove is real. The form built around it can still be broken. A foundational, permanent, exclusive romantic partnership is promised far more often than it is actually lived.",
+      "text_sha256": "d20e4522861f58331e8de2735daacd0610a05ed07d85c0cf32a44ac1ffc9466c",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nThat isn't everybody. And I don't see why polyamory itself would be wrong. If you can't actually do monogamy, admitting that is more honest than pretending you can.\nWhat bothers me more is when a monogamous relationship only works as long as both people leave things unsaid. An attraction shows up. Feelings change. One person gets possessive. The other person knows it. Nobody says the whole thing. Sometimes the concealment does more damage than the outside connection would have.\nLove is real. The form built around it can still be broken. A foundational, permanent, exclusive romantic partnership is promised far more often than it is actually lived.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nThat isn't everybody. And I don't see why polyamory itself would be wrong. If you can't actually do monogamy, admitting that is more honest than pretending you can.\nWhat bothers me more is when a monogamous relationship only works as long as both people leave things unsaid. An attraction shows up. Feelings change. One person gets possessive. The other person knows it. Nobody says the whole thing. Sometimes the concealment does more damage than the outside connection would have.\nLove is real. The form built around it can still be broken. A foundational, permanent, exclusive romantic partnership is promised far more often than it is actually lived.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9776506423950195,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 891,
+            "word_count": 147,
+            "token_length": 186,
+            "is_humanized": false,
+            "humanizer_score": 0.2091742902994156
+          }
+        ]
+      }
     }
   ]
 }
