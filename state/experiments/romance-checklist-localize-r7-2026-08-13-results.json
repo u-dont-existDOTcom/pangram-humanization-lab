@@ -35,6 +35,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "L2_SPEED_FRIENDS",
+      "measurement_key": "romance-checklist-localize-r7-2026-08-13_L2_SPEED_FRIENDS",
+      "text": "Don’t let everything speed up at once. Resist early cohabitation, and set real check-in dates before there’s a crisis. Housing may make separate living difficult, but once you live together, practical necessity starts narrowing your choices.\n\nMake deep friends together, and remember that old friends will naturally be partial. The goal is to have some friends who know both of you as a couple instead of arriving only as defenders of one person’s story.",
+      "text_sha256": "fd6ee90d7f158dd0414762f2d900c9bb757d0a0b315590e04eaaaf531d999593",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Don’t let everything speed up at once. Resist early cohabitation, and set real check-in dates before there’s a crisis. Housing may make separate living difficult, but once you live together, practical necessity starts narrowing your choices.\nMake deep friends together, and remember that old friends will naturally be partial. The goal is to have some friends who know both of you as a couple instead of arriving only as defenders of one person’s story.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Don’t let everything speed up at once. Resist early cohabitation, and set real check-in dates before there’s a crisis. Housing may make separate living difficult, but once you live together, practical necessity starts narrowing your choices.\nMake deep friends together, and remember that old friends will naturally be partial. The goal is to have some friends who know both of you as a couple instead of arriving only as defenders of one person’s story.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9439440369606018,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 453,
+            "word_count": 74,
+            "token_length": 90,
+            "is_humanized": false,
+            "humanizer_score": 0.2211046814918518
+          }
+        ]
+      }
     }
   ]
 }
