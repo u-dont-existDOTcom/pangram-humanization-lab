@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r10-2026-08-13_DISCOMFORT_B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Sometimes the only thing I have is a little “wait” feeling. It doesn't prove anything. But if I'm about to ignore a question because I really want this to work, that's enough reason for me to ask the question before I keep going.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.17394942045211792,
+        "confidence": "High",
+        "end_index": 229,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Sometimes the only thing I have is a little “wait” feeling. It doesn't prove anything. But if I'm about to ignore a question because I really want this to work, that's enough reason for me to ask the question before I keep going.",
+        "token_length": 52,
+        "word_count": 43
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "e1fe624b-f53e-4721-85e5-aa2e5b170817",
   "text": "Sometimes the only thing I have is a little “wait” feeling. It doesn't prove anything. But if I'm about to ignore a question because I really want this to work, that's enough reason for me to ask the question before I keep going.",
   "text_sha256": "ea20cfc89993a7532489e45de62a1c472da304820c2f1d71006b863013ff9b80",
-  "updated_utc": "2026-08-13T01:39:42.180758+00:00"
+  "updated_utc": "2026-08-13T01:39:43.466883+00:00"
 }
