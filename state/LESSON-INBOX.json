@@ -1,0 +1,53 @@
+{
+  "entries": [
+    {
+      "audit_id": "spiritual-bypassing-b-improve-2026-08-13",
+      "created_at_utc": "2026-08-13T22:46:32.902854+00:00",
+      "experiment_id": "spiritual-bypassing-b-repair-r1-2026-08-13",
+      "id": "Q-73eb563d13310203",
+      "sections": [
+        "alternatives",
+        "FULL_ARTICLE"
+      ],
+      "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
+      "source_ref": "automation/pangram-fixed-batch",
+      "source_sha256": "038b958dcbb562bc40fa0205c5d94ba466ae355b6b2618e76de6b6bc29e3278b",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.3451015055179596,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6548985242843628,
+          "id": "ALT_A_SECTION",
+          "prediction_short": "Mixed",
+          "section_id": "alternatives"
+        },
+        {
+          "fraction_ai": 0.08540832251310349,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9145916700363159,
+          "id": "ALT_A_FULL",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        },
+        {
+          "fraction_ai": 0.2583187520503998,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7416812777519226,
+          "id": "ALT_B_SECTION",
+          "prediction_short": "Mixed",
+          "section_id": "alternatives"
+        },
+        {
+          "fraction_ai": 0.06907351315021515,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.930926501750946,
+          "id": "ALT_B_FULL",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        }
+      ]
+    }
+  ],
+  "format": "lesson-review-v1"
+}
