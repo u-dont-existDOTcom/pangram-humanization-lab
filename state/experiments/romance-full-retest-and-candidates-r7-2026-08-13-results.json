@@ -528,6 +528,41 @@
         ]
       },
       "section_id": "FULL_ARTICLE"
+    },
+    {
+      "id": "R4_OPENING_A",
+      "measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R4_OPENING_A",
+      "text": "# Primal attraction: channeling the Divine Masculine & Feminine\n\n[NATIVE IMAGE — preserve from Substack source — https://substack-post-media.s3.amazonaws.com/public/images/cbf41294-3c6b-4ac7-b5b6-dd52b242b919_1055x1491.png]\n\nSo far I keep coming back to honesty, closeness, and equal dignity. I want all three in basically any relationship. They still don't explain why two people want to tear each other's clothes off each night.\n\nFor me, safety gives desire room to come out. It doesn't light the spark.\n\nWhen I feel safe with a woman, we can actually tell each other our fantasies without worrying that the other person is going to be horrified or weaponize it later. We can imagine pregnancy and really enjoy the thought that we might be making a baby, rather than imagining I’m ejaculating into a condom and hoping nothing happens.\n",
+      "text_sha256": "82984fd0d846b15d7b786944928865ab37e4b7c74d0bad4fd5cd40293837060c",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "# Primal attraction: channeling the Divine Masculine & Feminine\n[NATIVE IMAGE — preserve from Substack source — https://substack-post-media.s3.amazonaws.com/public/images/cbf41294-3c6b-4ac7-b5b6-dd52b242b919_1055x1491.png]\nSo far I keep coming back to honesty, closeness, and equal dignity. I want all three in basically any relationship. They still don't explain why two people want to tear each other's clothes off each night.\nFor me, safety gives desire room to come out. It doesn't light the spark.\nWhen I feel safe with a woman, we can actually tell each other our fantasies without worrying that the other person is going to be horrified or weaponize it later. We can imagine pregnancy and really enjoy the thought that we might be making a baby, rather than imagining I’m ejaculating into a condom and hoping nothing happens.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "# Primal attraction: channeling the Divine Masculine & Feminine\n[NATIVE IMAGE — preserve from Substack source — https://substack-post-media.s3.amazonaws.com/public/images/cbf41294-3c6b-4ac7-b5b6-dd52b242b919_1055x1491.png]\nSo far I keep coming back to honesty, closeness, and equal dignity. I want all three in basically any relationship. They still don't explain why two people want to tear each other's clothes off each night.\nFor me, safety gives desire room to come out. It doesn't light the spark.\nWhen I feel safe with a woman, we can actually tell each other our fantasies without worrying that the other person is going to be horrified or weaponize it later. We can imagine pregnancy and really enjoy the thought that we might be making a baby, rather than imagining I’m ejaculating into a condom and hoping nothing happens.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.22874078154563904,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 832,
+            "word_count": 126,
+            "token_length": 211,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R4_OPENING_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -870,6 +905,20 @@
         "paid_calls_to_human": null,
         "estimated_credits_to_human": null,
         "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R4_OPENING_REPAIR",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R4_OPENING_A"
       }
     ]
   }
