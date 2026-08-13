@@ -1,0 +1,40 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-artificial-scenario-r4-2026-08-13",
+  "results": [
+    {
+      "id": "WHY_E",
+      "measurement_key": "romance-artificial-scenario-r4-2026-08-13_WHY_E",
+      "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\n\nWell, you caught me. It is painfully artificial.\n\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.",
+      "text_sha256": "561578bc07a23394e6d9c66fece0366ee8fa0c7505d676f6e7af4868db1a2b5c",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.015219662338495255,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 556,
+            "word_count": 85,
+            "token_length": 107,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      }
+    }
+  ]
+}
