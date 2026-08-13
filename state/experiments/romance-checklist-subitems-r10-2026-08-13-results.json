@@ -205,6 +205,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "DISCOMFORT_A",
+      "measurement_key": "romance-checklist-subitems-r10-2026-08-13_DISCOMFORT_A",
+      "text": "If something feels off, I slow down. I don't need to decide whether it's intuition or anxiety first. The point is just not to let being excited make me skip the question I was about to ask.",
+      "text_sha256": "6cf3b131cb8ca4d6cfa64ab8198a64e3dda5b3ae0327c2917c7af20562ec5cd3",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "If something feels off, I slow down. I don't need to decide whether it's intuition or anxiety first. The point is just not to let being excited make me skip the question I was about to ask.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "If something feels off, I slow down. I don't need to decide whether it's intuition or anxiety first. The point is just not to let being excited make me skip the question I was about to ask.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9351366758346558,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 189,
+            "word_count": 37,
+            "token_length": 43,
+            "is_humanized": false,
+            "humanizer_score": 0.0917234793305397
+          }
+        ]
+      }
     }
   ]
 }
