@@ -20,6 +20,29 @@ Joel/model does the human editorial work. The lab does repetitive detector scien
 
 Do not send Joel through manual chains of one-off detector variants when the lab can run them.
 
+## Humanization execution and completion gate
+
+When Joel asks to **humanize**, **make it pass Pangram**, or otherwise makes Pangram success a delivery requirement, detector validation is part of the task definition, not an optional postscript.
+
+Before rewriting, identify any **protected rhetorical functions** in the source. These are functions that must survive even when the wording changes: reader agency and permission, trauma-informed invitation, non-coercive choice, pacing around sensitive material, exact claim/certainty, severe-claim agency, lived memories, humor/idiolect, links/media, chronology, causality, and other owner-intended functions. Do not classify a function as expendable merely because its current realization resembles a known AI pattern such as generic warmth, reassurance, invitation, recap, or explanatory aftercare. Diagnose the function separately from the wording.
+
+For trauma-informed or other sensitive writing in particular:
+- **do not assume invitational language is detector-hostile; test it;**
+- distinguish functional permission/choice language from empty performed coziness or generic therapeutic scaffolding;
+- if the exact wording is detector-red, preserve the function and test a minimal alternative realization before deleting it;
+- do not treat Pangram as a reason to soften or remove the owner's intended argument, but do treat a required Pangram pass as a hard delivery constraint: keep iterating until a faithful passing realization is found or report the unresolved conflict precisely.
+
+A requested humanization pass is **not complete** until all of the following are true:
+1. semantic sanity, coherence, fidelity, and protected-function audits pass;
+2. the exact intended delivery boundary has an actual Pangram result from the current required detector/version;
+3. the delivered prose meets the required Pangram criterion;
+4. any detector-driven change has been re-audited for semantic and rhetorical loss;
+5. the user-facing diff labels detector status only from measured results, never prediction or intuition.
+
+If detector access is temporarily unavailable, the prose may be delivered only as an explicitly labeled **pre-Pangram candidate**. Never call the humanization complete, never say a version “passes,” and never substitute an internal stylistic judgment for the detector call.
+
+When preparing a choice diff, default to the single best passing faithful version. Show multiple passing choices only when alternatives preserve different owner-valued functions, tones, claims, or tradeoffs. Do not manufacture options merely because several detector-green phrasings exist.
+
 ## Learning closeout is a completion gate
 
 Before reporting any substantive editorial/detector/reconstruction/experiment pass complete:
@@ -63,12 +86,12 @@ For new endpoint pairs, use the current repo README/CLI help rather than an old 
 
 ## Interpretation
 
-- Human editorial quality, semantic sanity and fidelity outrank Pangram.
+- Human editorial quality, semantic sanity and fidelity outrank Pangram as editorial authorities; when Pangram success is an explicit delivery requirement, the detector pass is nevertheless a hard acceptance gate.
 - Exact submitted boundary matters; short samples are less reliable.
 - Preserve nulls and counterexamples.
 - Test interactions; do not infer magic words from one case.
 - Pangram green does not justify stopping if a real thought thread remains.
-- Pangram red does not justify worse prose or altered meaning.
+- Pangram red does not justify worse prose or altered meaning; keep searching for a faithful passing realization rather than silently accepting semantic loss.
 - Stop once the local hypothesis is adequately discriminated; avoid token hunting.
 
 ## Promotion boundary
