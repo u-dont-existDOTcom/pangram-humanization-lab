@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-progress-signals-r1-2026-08-13_CANDIDATE_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "That was my mistake. If somebody started with a huge amount of trauma, they can change a lot and still get badly thrown around in a real conflict. So now I care more about what happens in the last actual fight than about how powerful somebody’s meditation experiences are.\nSame with people who can explain their past perfectly. If every bad pattern is over, every ex was the problem, and nothing like that is happening now, I still don’t know much. What are you struggling with now? What am I likely to run into if we get close?",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.8335211873054504,
+        "confidence": "High",
+        "end_index": 528,
+        "humanizer_score": 0.7824739813804626,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "That was my mistake. If somebody started with a huge amount of trauma, they can change a lot and still get badly thrown around in a real conflict. So now I care more about what happens in the last actual fight than about how powerful somebody’s meditation experiences are.\nSame with people who can explain their past perfectly. If every bad pattern is over, every ex was the problem, and nothing like that is happening now, I still don’t know much. What are you struggling with now? What am I likely to run into if we get close?",
+        "token_length": 111,
+        "word_count": 98
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "b82b83f2-62c7-4a22-b9da-6450d17700c3",
   "text": "That was my mistake. If somebody started with a huge amount of trauma, they can change a lot and still get badly thrown around in a real conflict. So now I care more about what happens in the last actual fight than about how powerful somebody’s meditation experiences are.\n\nSame with people who can explain their past perfectly. If every bad pattern is over, every ex was the problem, and nothing like that is happening now, I still don’t know much. What are you struggling with now? What am I likely to run into if we get close?",
   "text_sha256": "e1762c176274bd3b56c005fe5f9453ea4bf02e795d65c58a61087068009cb524",
-  "updated_utc": "2026-08-13T00:22:05.073068+00:00"
+  "updated_utc": "2026-08-13T00:22:06.685457+00:00"
 }
