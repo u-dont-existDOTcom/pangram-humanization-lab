@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-repair-candidates-r6-2026-08-13_R1_LOVE_C",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "That drive can weaken for reasons that aren't really my fault. I can get old, sick, depressed, or grieving, and I would hope the agape is deep enough that she sticks by me through some of that even if it puts strain on eros. But if I just get bored with life, stop having much of a life outside her, and make her responsible for nearly all my warmth, meaning, reassurance, and excitement, that's different. I don't get to be shocked if she wants me less.\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\nSome couples may eventually care more about the life they made together than about the eros that started it. Fine. But that isn't the same as one person staying as a concession while the other still wants them. Nobody at the wedding knows which future their bond will become.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.1206914409995079,
+        "confidence": "High",
+        "end_index": 1051,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "That drive can weaken for reasons that aren't really my fault. I can get old, sick, depressed, or grieving, and I would hope the agape is deep enough that she sticks by me through some of that even if it puts strain on eros. But if I just get bored with life, stop having much of a life outside her, and make her responsible for nearly all my warmth, meaning, reassurance, and excitement, that's different. I don't get to be shocked if she wants me less.\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\nSome couples may eventually care more about the life they made together than about the eros that started it. Fine. But that isn't the same as one person staying as a concession while the other still wants them. Nobody at the wedding knows which future their bond will become.",
+        "token_length": 239,
+        "word_count": 198
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "0982381e-6994-4f98-adb3-b7731a44416e",
   "text": "That drive can weaken for reasons that aren't really my fault. I can get old, sick, depressed, or grieving, and I would hope the agape is deep enough that she sticks by me through some of that even if it puts strain on eros. But if I just get bored with life, stop having much of a life outside her, and make her responsible for nearly all my warmth, meaning, reassurance, and excitement, that's different. I don't get to be shocked if she wants me less.\n\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\n\nSome couples may eventually care more about the life they made together than about the eros that started it. Fine. But that isn't the same as one person staying as a concession while the other still wants them. Nobody at the wedding knows which future their bond will become.\n",
   "text_sha256": "083a6fe61f7d4f1320ff6082c858c8c622f137a3bc67a03007e5f8ba9de801da",
-  "updated_utc": "2026-08-13T16:42:41.543175+00:00"
+  "updated_utc": "2026-08-13T16:42:42.739671+00:00"
 }
