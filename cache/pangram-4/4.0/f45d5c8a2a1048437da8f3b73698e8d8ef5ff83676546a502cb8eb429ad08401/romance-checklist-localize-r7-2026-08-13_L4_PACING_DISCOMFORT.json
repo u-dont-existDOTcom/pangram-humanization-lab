@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-localize-r7-2026-08-13_L4_PACING_DISCOMFORT",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Pace the heavy conversations. Ten profound talks in one weekend can feel deep before the relationship has roots. Let play and ordinary time sit between them. Some information is better observed than extracted.\nLet discomfort remain information. Wait. I want to slow down. Something doesn’t fit. I need to ask this. Don’t let early chemistry automatically overrule that part of you.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9998601675033569,
+        "confidence": "High",
+        "end_index": 381,
+        "humanizer_score": 0.21863384544849396,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Pace the heavy conversations. Ten profound talks in one weekend can feel deep before the relationship has roots. Let play and ordinary time sit between them. Some information is better observed than extracted.\nLet discomfort remain information. Wait. I want to slow down. Something doesn’t fit. I need to ask this. Don’t let early chemistry automatically overrule that part of you.",
+        "token_length": 75,
+        "word_count": 61
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "8ca1da81-576a-445a-8151-110e9abb9799",
   "text": "Pace the heavy conversations. Ten profound talks in one weekend can feel deep before the relationship has roots. Let play and ordinary time sit between them. Some information is better observed than extracted.\n\nLet discomfort remain information. Wait. I want to slow down. Something doesn’t fit. I need to ask this. Don’t let early chemistry automatically overrule that part of you.",
   "text_sha256": "f45d5c8a2a1048437da8f3b73698e8d8ef5ff83676546a502cb8eb429ad08401",
-  "updated_utc": "2026-08-13T01:32:49.842148+00:00"
+  "updated_utc": "2026-08-13T01:32:51.397607+00:00"
 }
