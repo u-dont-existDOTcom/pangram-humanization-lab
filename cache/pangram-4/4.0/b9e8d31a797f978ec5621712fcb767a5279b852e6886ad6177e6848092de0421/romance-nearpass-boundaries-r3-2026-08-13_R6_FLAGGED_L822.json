@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R6_FLAGGED_L822",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Usually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.6943978667259216,
+        "confidence": "High",
+        "end_index": 333,
+        "humanizer_score": 0.018625039607286453,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Usually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.",
+        "token_length": 71,
+        "word_count": 61
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "6fa83c62-9e28-4ba8-a988-90f01e18ee32",
   "text": "Usually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.\n",
   "text_sha256": "b9e8d31a797f978ec5621712fcb767a5279b852e6886ad6177e6848092de0421",
-  "updated_utc": "2026-08-13T16:28:57.027756+00:00"
+  "updated_utc": "2026-08-13T16:28:58.820781+00:00"
 }
