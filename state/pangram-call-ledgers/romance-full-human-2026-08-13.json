@@ -609,8 +609,8 @@
     },
     "R7_AFTER_LEAVING_DIAGNOSTIC\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -627,10 +627,18 @@
           "text_sha256": "3b6699b3885abe47ba74641739b5d5be8d4b1bcc60db3accc7c27d2f2b42eb43",
           "type": "paid_post_reserved",
           "word_count": 379
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r9-2026-08-13_R7_AFTER_LEAVING_B",
+          "recorded_at_utc": "2026-08-13T17:43:51.684230+00:00",
+          "text_sha256": "55b7f9201cadfae880aa03e54014373e80c7e946e1948cd061893b5d02853647",
+          "type": "paid_post_reserved",
+          "word_count": 370
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "R7_AFTER_LEAVING_DIAGNOSTIC",
       "version": "4.0"
