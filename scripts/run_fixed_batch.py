@@ -12,31 +12,60 @@ from pangram_lab.call_budget import PangramCallLedger
 from pangram_lab.fixed_batch import load_spec, run_batch
 from pangram_lab.git_sync import GitSync
 from pangram_lab.pangram4 import PangramClient
+from pangram_lab.result_paths import (
+    load_compatible_existing_result,
+    resolve_result_path,
+    result_is_complete,
+)
 from pangram_lab.review_registration import register_result
 from pangram_lab.tracked_pangram import TrackedPangramClient
 
 
-def current_ref(root: Path) -> str:
-    value = os.environ.get("GITHUB_REF_NAME", "").strip()
-    if value:
-        return value
-    cp = subprocess.run(["git", "branch", "--show-current"], cwd=root, text=True, capture_output=True, check=False)
-    return cp.stdout.strip() or "HEAD"
+def current_commit(root: Path) -> str:
+    cp = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=root,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    return cp.stdout.strip()
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run an exact fixed Pangram-4 batch")
     parser.add_argument("spec", type=Path)
-    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument(
+        "--out",
+        type=Path,
+        help="compatibility-only; when supplied it must equal state/experiments/<experiment_id>-results.json",
+    )
     parser.add_argument("--max-variants", type=int, default=8)
     args = parser.parse_args()
 
     root = Path(__file__).resolve().parents[1]
+    spec = load_spec(args.spec, max_variants=args.max_variants)
+    output_path = resolve_result_path(root, spec, args.out)
+    existing = load_compatible_existing_result(spec, output_path)
+    if existing is not None and result_is_complete(spec, existing):
+        print(
+            json.dumps(
+                {
+                    "experiment_id": existing["experiment_id"],
+                    "result_count": len(existing.get("results", [])),
+                    "output": str(output_path.relative_to(root)),
+                    "reused_result": True,
+                    "spec_sha256": existing.get("spec_sha256"),
+                },
+                indent=2,
+            )
+        )
+        return 0
+
     key = os.environ.get("PANGRAM_API_KEY", "").strip()
     if not key:
         raise SystemExit("PANGRAM_API_KEY is not set")
 
-    spec = load_spec(args.spec, max_variants=args.max_variants)
     git = GitSync(root, require_remote=True)
     call_ledger = PangramCallLedger(root, spec["audit_id"]) if spec.get("audit_id") else None
     if call_ledger is None:
@@ -48,16 +77,25 @@ def main() -> int:
         spec,
         client=client,
         cache=PangramCache(root / "cache"),
-        output_path=args.out,
+        output_path=output_path,
         call_ledger=call_ledger,
     )
-    review_entry = register_result(root, args.out, current_ref(root), result)
-    git.sync(f"fixed batch {spec['experiment_id']} complete")
+
+    # Commit and push the exact result bytes before registering review metadata.
+    # The inbox therefore points to an immutable commit, not a moving branch name.
+    git.sync(f"fixed batch {spec['experiment_id']} result")
+    result_ref = current_commit(root)
+    review_entry = register_result(root, output_path, result_ref, result)
+    git.sync(f"lesson review {spec['experiment_id']}")
+
     report = {
         "experiment_id": result["experiment_id"],
         "result_count": len(result["results"]),
-        "output": str(args.out),
+        "output": str(output_path.relative_to(root)),
+        "result_ref": result_ref,
         "lesson_review_id": review_entry["id"],
+        "reused_result": False,
+        "spec_sha256": result.get("spec_sha256"),
     }
     if result.get("call_accounting") is not None:
         report["call_accounting"] = result["call_accounting"]
