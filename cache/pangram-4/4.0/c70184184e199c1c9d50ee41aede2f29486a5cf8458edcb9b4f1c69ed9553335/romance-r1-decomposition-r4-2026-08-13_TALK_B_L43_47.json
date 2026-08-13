@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-r1-decomposition-r4-2026-08-13_TALK_B_L43_47",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "A lot of people can’t answer cleanly because they don’t know yet. That’s still an answer. *I don’t know, but I’m willing to find out honestly with you* is a much better beginning than silently assuming the bodies will somehow negotiate everything on their own.\nSexual compatibility isn’t just whether two bodies fit. It’s whether two people can stay honest while maximally exposed. If you can talk frankly before your clothes come off, you’ve already practiced some of the trust, attention, and willingness to be seen that making love requires.\nName the possibility of mismatched desire, too. In long relationships, one person usually wants more sex, less sex, or different sex for at least some stretch. It’s one of the great factories of quiet resentment. Talking about how you might handle it before either person is hurt won’t solve it in advance, but it gives you somewhere to begin.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9999369978904724,
+        "confidence": "High",
+        "end_index": 888,
+        "humanizer_score": 0.03548138216137886,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "A lot of people can’t answer cleanly because they don’t know yet. That’s still an answer. *I don’t know, but I’m willing to find out honestly with you* is a much better beginning than silently assuming the bodies will somehow negotiate everything on their own.\nSexual compatibility isn’t just whether two bodies fit. It’s whether two people can stay honest while maximally exposed. If you can talk frankly before your clothes come off, you’ve already practiced some of the trust, attention, and willingness to be seen that making love requires.\nName the possibility of mismatched desire, too. In long relationships, one person usually wants more sex, less sex, or different sex for at least some stretch. It’s one of the great factories of quiet resentment. Talking about how you might handle it before either person is hurt won’t solve it in advance, but it gives you somewhere to begin.",
+        "token_length": 183,
+        "word_count": 149
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "1a9bc605-fb89-4bca-a14f-54a0674c1b5b",
   "text": "A lot of people can’t answer cleanly because they don’t know yet. That’s still an answer. *I don’t know, but I’m willing to find out honestly with you* is a much better beginning than silently assuming the bodies will somehow negotiate everything on their own.\n\nSexual compatibility isn’t just whether two bodies fit. It’s whether two people can stay honest while maximally exposed. If you can talk frankly before your clothes come off, you’ve already practiced some of the trust, attention, and willingness to be seen that making love requires.\n\nName the possibility of mismatched desire, too. In long relationships, one person usually wants more sex, less sex, or different sex for at least some stretch. It’s one of the great factories of quiet resentment. Talking about how you might handle it before either person is hurt won’t solve it in advance, but it gives you somewhere to begin.\n",
   "text_sha256": "c70184184e199c1c9d50ee41aede2f29486a5cf8458edcb9b4f1c69ed9553335",
-  "updated_utc": "2026-08-13T16:29:15.211329+00:00"
+  "updated_utc": "2026-08-13T16:29:16.916191+00:00"
 }
