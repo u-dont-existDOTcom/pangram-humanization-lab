@@ -35,6 +35,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "COHAB_B",
+      "measurement_key": "romance-checklist-subitems-r10-2026-08-13_COHAB_B",
+      "text": "Living together early scares me for a very unromantic reason. Once two people share rent, a bedroom, furniture, maybe a pet, slowing the relationship down becomes a practical mess. Sometimes housing means you don't have much choice. But if I do have a choice, I don't want logistics deciding that the relationship continues. I also want a date when we ask each other how it's going before the answer is already a crisis.",
+      "text_sha256": "7458d18d7e11b9d4eb32203c464a97af7a4bf4c66c5a7a8dfbd825a56474a710",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Living together early scares me for a very unromantic reason. Once two people share rent, a bedroom, furniture, maybe a pet, slowing the relationship down becomes a practical mess. Sometimes housing means you don't have much choice. But if I do have a choice, I don't want logistics deciding that the relationship continues. I also want a date when we ask each other how it's going before the answer is already a crisis.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Living together early scares me for a very unromantic reason. Once two people share rent, a bedroom, furniture, maybe a pet, slowing the relationship down becomes a practical mess. Sometimes housing means you don't have much choice. But if I do have a choice, I don't want logistics deciding that the relationship continues. I also want a date when we ask each other how it's going before the answer is already a crisis.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.5547853112220764,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 420,
+            "word_count": 73,
+            "token_length": 89,
+            "is_humanized": false,
+            "humanizer_score": 0.1880936622619629
+          }
+        ]
+      }
     }
   ]
 }
