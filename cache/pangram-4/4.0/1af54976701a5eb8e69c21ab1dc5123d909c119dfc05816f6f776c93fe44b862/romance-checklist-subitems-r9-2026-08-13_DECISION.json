@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r9-2026-08-13_DECISION",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "I can know fast that I want somebody. I can't know fast that I want to raise kids with her or grow old with her, because I haven't seen enough of her life yet. Those are different questions. So I try to notice when “I’m taking a chance on this person” has somehow become “this is the right person.” If nothing new happened between those two thoughts, I probably just got more attached.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.5253849625587463,
+        "confidence": "Medium",
+        "end_index": 385,
+        "humanizer_score": 0.025109775364398956,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "I can know fast that I want somebody. I can't know fast that I want to raise kids with her or grow old with her, because I haven't seen enough of her life yet. Those are different questions. So I try to notice when “I’m taking a chance on this person” has somehow become “this is the right person.” If nothing new happened between those two thoughts, I probably just got more attached.",
+        "token_length": 86,
+        "word_count": 73
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "5280c4f0-3ca9-494e-aec4-80aadfffee66",
   "text": "I can know fast that I want somebody. I can't know fast that I want to raise kids with her or grow old with her, because I haven't seen enough of her life yet. Those are different questions. So I try to notice when “I’m taking a chance on this person” has somehow become “this is the right person.” If nothing new happened between those two thoughts, I probably just got more attached.",
   "text_sha256": "1af54976701a5eb8e69c21ab1dc5123d909c119dfc05816f6f776c93fe44b862",
-  "updated_utc": "2026-08-13T01:37:44.804987+00:00"
+  "updated_utc": "2026-08-13T01:37:46.412463+00:00"
 }
