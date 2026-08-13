@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-repair-candidates-r5-2026-08-13_R1_TALK_B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Before sex, I want to know whether we can talk about sex. What do you actually desire? What helps your body feel safe? Are there kinks or dynamics that matter? What has your history taught you, and what reliably doesn't work? If you imagine sex as bonding or sacred practice and I imagine recreation or stress relief, that matters. So does how often each of us thinks we'll want it.\nWe may not know. Fine. *I don't know, but I'm willing to find out honestly with you* is a real answer. The point is not to finish the conversation in advance. It is to find out whether we can have it.\nMost couples wait until they're already sleeping together. By then an honest answer might interrupt something that has started, so there are places the later conversation often can't go. Talking while either person can still say no is already part of the difference between making love and merely having sex.\nDesire will probably become mismatched at some point in a long relationship. One person will want more, less, or something different for a while, and that mismatch is one of the great factories of quiet resentment. We can't solve it beforehand. We can find out whether we'll be able to speak when it happens.\nFor me, sexual compatibility is not only whether two bodies fit. It is whether two people can stay honest while they are maximally exposed. If we can do that before our clothes come off, we've already practiced some of the trust, attention, and willingness to be seen that making love requires.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9931488037109375,
+        "confidence": "High",
+        "end_index": 1496,
+        "humanizer_score": 0.009439127519726753,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Before sex, I want to know whether we can talk about sex. What do you actually desire? What helps your body feel safe? Are there kinks or dynamics that matter? What has your history taught you, and what reliably doesn't work? If you imagine sex as bonding or sacred practice and I imagine recreation or stress relief, that matters. So does how often each of us thinks we'll want it.\nWe may not know. Fine. *I don't know, but I'm willing to find out honestly with you* is a real answer. The point is not to finish the conversation in advance. It is to find out whether we can have it.\nMost couples wait until they're already sleeping together. By then an honest answer might interrupt something that has started, so there are places the later conversation often can't go. Talking while either person can still say no is already part of the difference between making love and merely having sex.\nDesire will probably become mismatched at some point in a long relationship. One person will want more, less, or something different for a while, and that mismatch is one of the great factories of quiet resentment. We can't solve it beforehand. We can find out whether we'll be able to speak when it happens.\nFor me, sexual compatibility is not only whether two bodies fit. It is whether two people can stay honest while they are maximally exposed. If we can do that before our clothes come off, we've already practiced some of the trust, attention, and willingness to be seen that making love requires.",
+        "token_length": 314,
+        "word_count": 266
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "50905d85-7b1d-4438-bea5-9d4014f4ff02",
   "text": "Before sex, I want to know whether we can talk about sex. What do you actually desire? What helps your body feel safe? Are there kinks or dynamics that matter? What has your history taught you, and what reliably doesn't work? If you imagine sex as bonding or sacred practice and I imagine recreation or stress relief, that matters. So does how often each of us thinks we'll want it.\n\nWe may not know. Fine. *I don't know, but I'm willing to find out honestly with you* is a real answer. The point is not to finish the conversation in advance. It is to find out whether we can have it.\n\nMost couples wait until they're already sleeping together. By then an honest answer might interrupt something that has started, so there are places the later conversation often can't go. Talking while either person can still say no is already part of the difference between making love and merely having sex.\n\nDesire will probably become mismatched at some point in a long relationship. One person will want more, less, or something different for a while, and that mismatch is one of the great factories of quiet resentment. We can't solve it beforehand. We can find out whether we'll be able to speak when it happens.\n\nFor me, sexual compatibility is not only whether two bodies fit. It is whether two people can stay honest while they are maximally exposed. If we can do that before our clothes come off, we've already practiced some of the trust, attention, and willingness to be seen that making love requires.\n",
   "text_sha256": "54cb396305a6a38c20baad2a9105298ca3165c5d6ea054fa9dad6d6180bc268a",
-  "updated_utc": "2026-08-13T16:34:39.128014+00:00"
+  "updated_utc": "2026-08-13T16:34:40.433483+00:00"
 }
