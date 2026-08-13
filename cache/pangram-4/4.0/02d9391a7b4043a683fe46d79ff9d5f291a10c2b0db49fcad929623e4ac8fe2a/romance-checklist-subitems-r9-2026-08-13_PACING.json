@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r9-2026-08-13_PACING",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "I can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.0034584172535687685,
+        "confidence": "High",
+        "end_index": 357,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "I can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.",
+        "token_length": 76,
+        "word_count": 64
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "aa076a71-c55d-45f0-b7c9-708deddc0af3",
   "text": "I can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.",
   "text_sha256": "02d9391a7b4043a683fe46d79ff9d5f291a10c2b0db49fcad929623e4ac8fe2a",
-  "updated_utc": "2026-08-13T01:37:52.733681+00:00"
+  "updated_utc": "2026-08-13T01:37:56.212005+00:00"
 }
