@@ -1,0 +1,103 @@
+name: Lesson integrity
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '17 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  change-gate:
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Determine comparison base
+        id: base
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            echo "sha=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            before="${{ github.event.before }}"
+            if [[ -z "$before" || "$before" =~ ^0+$ ]]; then
+              before=$(git rev-parse "$GITHUB_SHA^" 2>/dev/null || git rev-list --max-parents=0 "$GITHUB_SHA" | tail -1)
+            fi
+            echo "sha=$before" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check changed research closeout
+        run: PYTHONPATH=src python -m pangram_lab.lesson_closeout check --base "${{ steps.base.outputs.sha }}" --head "$GITHUB_SHA"
+      - name: Audit current ref
+        run: PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref "$GITHUB_SHA"
+
+  weekly-audit:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch long-lived evidence branch
+        run: git fetch origin automation/pangram-fixed-batch:refs/remotes/origin/automation/pangram-fixed-batch || true
+      - name: Audit lesson integrity
+        id: audit
+        shell: bash
+        run: |
+          set +e
+          PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref HEAD --json-out audit-main.json
+          s1=$?
+          if git show-ref --verify --quiet refs/remotes/origin/automation/pangram-fixed-batch; then
+            PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref origin/automation/pangram-fixed-batch --json-out audit-automation.json
+            s2=$?
+          else
+            printf '{"ok":true,"note":"automation branch not found"}\n' > audit-automation.json
+            s2=0
+          fi
+          cat audit-main.json audit-automation.json > lesson-audit-report.txt
+          if [[ $s1 -ne 0 || $s2 -ne 0 ]]; then
+            echo "orphans=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "orphans=false" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
+      - name: Open or update orphan issue
+        if: steps.audit.outputs.orphans == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          title='Lesson integrity audit: unresolved findings'
+          body_file=lesson-audit-report.txt
+          number=$(gh issue list --state open --search '"Lesson integrity audit: unresolved findings" in:title' --json number --jq '.[0].number // empty')
+          if [[ -n "$number" ]]; then
+            gh issue comment "$number" --body-file "$body_file"
+          else
+            gh issue create --title "$title" --body-file "$body_file"
+          fi
+          exit 1
+      - name: Close resolved orphan issue
+        if: steps.audit.outputs.orphans == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          number=$(gh issue list --state open --search '"Lesson integrity audit: unresolved findings" in:title' --json number --jq '.[0].number // empty')
+          if [[ -n "$number" ]]; then
+            gh issue comment "$number" --body 'Weekly lesson-integrity audit is clean; closing.'
+            gh issue close "$number"
+          fi

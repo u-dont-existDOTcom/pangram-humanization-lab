@@ -8,6 +8,12 @@ Use this file as the starting point for current lesson retrieval.
 2. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md` — newer Romance detector, semantic-sanity, architecture, routing, provenance, and large-reconstruction lessons. Newer owner correction / controlled evidence here supersedes older conflicting guidance.
 3. For exact evidence behind a lesson, inspect the cited incident note and experiment/result JSON rather than generalizing from the summary.
 
+## Completion gate
+
+Before reporting any substantive editorial, detector, reconstruction, or experiment pass complete, use `docs/LESSON-CLOSEOUT.md` and the canonical `state/LESSON-LEDGER.json`.
+
+Every substantive finding must be dispositioned as `promoted`, `provisional`, `article-specific`, `superseded`, or `no-new-lesson`. Promoted findings must update this index plus the current lesson summary. Run the repository lesson-closeout gate before claiming completion. Do not ask Joel to remind you.
+
 ## Important branch note
 
 The default `main` branch contains the canonical lesson summaries above, but many of the newest exact incident notes and Pangram-4 experiment/result files currently live on branch:
