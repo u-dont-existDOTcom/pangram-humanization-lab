@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-progress-signals-r1-2026-08-13_BOUNDARY_F",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Key was an inner-child therapist and Reiki healer. Both Key and Bee were extremely curious and open-minded, which I loved about them. They were open to spiritual experiences, very connected to childlike wonder, meditated a lot, and were always seeing what they needed to work on. They both said those meditations helped them a lot.\nI saw all that and thought anyone with that much spiritual depth and curiosity must already be far along on the path.\nI was reading too much into the meditation. It may have helped them a lot; that didn’t tell me what would happen in a fight. Somebody can climb a long way out of a hole and still not be very stable.\nMy own blind spot is that I have trouble understanding where people are at mentally and emotionally. A partner may agree with everything I say and then tell me later, “Didn’t you understand I was FAWNING?”\nNo. I didn’t understand. Don’t expect me to.\nIf you are fawning, tell me when you can. I may notice things other people miss and completely miss something that feels obvious inside you.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.041193537414073944,
+        "confidence": "High",
+        "end_index": 1040,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Key was an inner-child therapist and Reiki healer. Both Key and Bee were extremely curious and open-minded, which I loved about them. They were open to spiritual experiences, very connected to childlike wonder, meditated a lot, and were always seeing what they needed to work on. They both said those meditations helped them a lot.\nI saw all that and thought anyone with that much spiritual depth and curiosity must already be far along on the path.\nI was reading too much into the meditation. It may have helped them a lot; that didn’t tell me what would happen in a fight. Somebody can climb a long way out of a hole and still not be very stable.\nMy own blind spot is that I have trouble understanding where people are at mentally and emotionally. A partner may agree with everything I say and then tell me later, “Didn’t you understand I was FAWNING?”\nNo. I didn’t understand. Don’t expect me to.\nIf you are fawning, tell me when you can. I may notice things other people miss and completely miss something that feels obvious inside you.",
+        "token_length": 226,
+        "word_count": 187
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "d4036cf3-4ad2-46ad-8aa2-47bb28e13ead",
   "text": "Key was an inner-child therapist and Reiki healer. Both Key and Bee were extremely curious and open-minded, which I loved about them. They were open to spiritual experiences, very connected to childlike wonder, meditated a lot, and were always seeing what they needed to work on. They both said those meditations helped them a lot.\n\nI saw all that and thought anyone with that much spiritual depth and curiosity must already be far along on the path.\n\nI was reading too much into the meditation. It may have helped them a lot; that didn’t tell me what would happen in a fight. Somebody can climb a long way out of a hole and still not be very stable.\n\nMy own blind spot is that I have trouble understanding where people are at mentally and emotionally. A partner may agree with everything I say and then tell me later, “Didn’t you understand I was FAWNING?”\n\nNo. I didn’t understand. Don’t expect me to.\n\nIf you are fawning, tell me when you can. I may notice things other people miss and completely miss something that feels obvious inside you.",
   "text_sha256": "766eac7752a7c35138601dc5b90697d22e23667858df70262eb9d668b3e45c57",
-  "updated_utc": "2026-08-13T00:24:22.575393+00:00"
+  "updated_utc": "2026-08-13T00:24:26.359696+00:00"
 }
