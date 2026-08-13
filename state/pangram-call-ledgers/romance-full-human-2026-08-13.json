@@ -5,8 +5,8 @@
   "sections": {
     "FULL_ARTICLE\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 2.85,
-      "estimated_credits": 57,
+      "estimated_cost_usd": 3.8,
+      "estimated_credits": 76,
       "events": [
         {
           "estimated_credits": 19,
@@ -31,10 +31,18 @@
           "text_sha256": "26ff4e5c2bc13b86808e48a70dc05da6864ddbeec0a5124b4779354a3b7b6dfa",
           "type": "paid_post_reserved",
           "word_count": 18760
+        },
+        {
+          "estimated_credits": 19,
+          "measurement_key": "romance-reconstruction-r21-2026-08-13_FULL_ARTICLE_R4",
+          "recorded_at_utc": "2026-08-13T20:05:55.175915+00:00",
+          "text_sha256": "e407aa9b564e1856bbe6eb58ef171e655b59c2765d96ee5478cc3727f1865c54",
+          "type": "paid_post_reserved",
+          "word_count": 18695
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "FULL_ARTICLE",
       "version": "4.0"
