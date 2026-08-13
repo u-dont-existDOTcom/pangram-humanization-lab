@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-artificial-reconstruct-r2-2026-08-13_CHECKLIST_C",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "## What doing it consciously looks like\nMost of these lessons came through failure. Some came through thought. A few I’m still testing.\nBefore making love, I’d want the big conversations while we can still hear answers we don’t like. Jealousy, attraction to other people, what we do under stress, old patterns, how recent the healing is, what each of us wants in a bad moment, money. I’d rather use a real scenario than ask, ‘How do you handle conflict?’ If X happens, what would you want, and what would you probably do? If the answer stays abstract, there probably isn’t an answer yet.\nBut even that can get stupid if you overdo it. Ten profound conversations in one weekend can feel like depth before the relationship has roots. Leave room for play and ordinary life. Some things I’d rather watch than ask about.\nI also wouldn’t let every decision speed up at once. If we start having sex, that doesn’t mean we also need to move in. Housing can make separate living unrealistic, but once you live together, practical necessity starts narrowing your choices. I’d set an actual date to ask how it’s going before there’s a crisis. And I’d keep asking whether I’m choosing a lover or somebody I should build a life with. A wonderful lover can be a terrible co-parent, community member, or life partner. ‘I’m taking a chance on this person’ can quietly become ‘this is the right person.’ The second answer needs more time.\nI’d want some deep friends who know both of us too. Old friends are naturally partial; yours love you, mine love me. That’s fine. It just means I don’t want those to be the only people around the relationship.\nAnd I need to keep my own practices. Being loved is not a reason to stop learning to love and regulate myself. If some part of me says, Wait. Slow down. Something doesn’t fit. I need to ask this, I don’t want chemistry making that decision for me.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9988551735877991,
+        "confidence": "High",
+        "end_index": 1878,
+        "humanizer_score": 0.3980052173137665,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "## What doing it consciously looks like\nMost of these lessons came through failure. Some came through thought. A few I’m still testing.\nBefore making love, I’d want the big conversations while we can still hear answers we don’t like. Jealousy, attraction to other people, what we do under stress, old patterns, how recent the healing is, what each of us wants in a bad moment, money. I’d rather use a real scenario than ask, ‘How do you handle conflict?’ If X happens, what would you want, and what would you probably do? If the answer stays abstract, there probably isn’t an answer yet.\nBut even that can get stupid if you overdo it. Ten profound conversations in one weekend can feel like depth before the relationship has roots. Leave room for play and ordinary life. Some things I’d rather watch than ask about.\nI also wouldn’t let every decision speed up at once. If we start having sex, that doesn’t mean we also need to move in. Housing can make separate living unrealistic, but once you live together, practical necessity starts narrowing your choices. I’d set an actual date to ask how it’s going before there’s a crisis. And I’d keep asking whether I’m choosing a lover or somebody I should build a life with. A wonderful lover can be a terrible co-parent, community member, or life partner. ‘I’m taking a chance on this person’ can quietly become ‘this is the right person.’ The second answer needs more time.\nI’d want some deep friends who know both of us too. Old friends are naturally partial; yours love you, mine love me. That’s fine. It just means I don’t want those to be the only people around the relationship.\nAnd I need to keep my own practices. Being loved is not a reason to stop learning to love and regulate myself. If some part of me says, Wait. Slow down. Something doesn’t fit. I need to ask this, I don’t want chemistry making that decision for me.",
+        "token_length": 415,
+        "word_count": 337
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "196fa9d3-43ed-472f-9e76-32a3fbe0a442",
   "text": "## What doing it consciously looks like\n\nMost of these lessons came through failure. Some came through thought. A few I’m still testing.\n\nBefore making love, I’d want the big conversations while we can still hear answers we don’t like. Jealousy, attraction to other people, what we do under stress, old patterns, how recent the healing is, what each of us wants in a bad moment, money. I’d rather use a real scenario than ask, ‘How do you handle conflict?’ If X happens, what would you want, and what would you probably do? If the answer stays abstract, there probably isn’t an answer yet.\n\nBut even that can get stupid if you overdo it. Ten profound conversations in one weekend can feel like depth before the relationship has roots. Leave room for play and ordinary life. Some things I’d rather watch than ask about.\n\nI also wouldn’t let every decision speed up at once. If we start having sex, that doesn’t mean we also need to move in. Housing can make separate living unrealistic, but once you live together, practical necessity starts narrowing your choices. I’d set an actual date to ask how it’s going before there’s a crisis. And I’d keep asking whether I’m choosing a lover or somebody I should build a life with. A wonderful lover can be a terrible co-parent, community member, or life partner. ‘I’m taking a chance on this person’ can quietly become ‘this is the right person.’ The second answer needs more time.\n\nI’d want some deep friends who know both of us too. Old friends are naturally partial; yours love you, mine love me. That’s fine. It just means I don’t want those to be the only people around the relationship.\n\nAnd I need to keep my own practices. Being loved is not a reason to stop learning to love and regulate myself. If some part of me says, Wait. Slow down. Something doesn’t fit. I need to ask this, I don’t want chemistry making that decision for me.",
   "text_sha256": "f909e813b939d7118c0621414cfa42409af78e52e47810f11d20dcceada1b7f8",
-  "updated_utc": "2026-08-13T01:25:21.473262+00:00"
+  "updated_utc": "2026-08-13T01:25:22.596749+00:00"
 }
