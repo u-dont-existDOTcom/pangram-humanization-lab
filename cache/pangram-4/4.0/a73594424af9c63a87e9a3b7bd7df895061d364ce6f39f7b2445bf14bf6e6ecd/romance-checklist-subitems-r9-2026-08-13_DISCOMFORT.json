@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r9-2026-08-13_DISCOMFORT",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "If I keep getting a little feeling that something is off, I don't have to call it intuition or assume it's right. I also don't have to talk myself out of it because everything else feels good. I can just slow down enough to ask what it's about. Maybe it disappears once I understand it. Maybe it doesn't.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9961326122283936,
+        "confidence": "High",
+        "end_index": 304,
+        "humanizer_score": 0.05240043252706528,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "If I keep getting a little feeling that something is off, I don't have to call it intuition or assume it's right. I also don't have to talk myself out of it because everything else feels good. I can just slow down enough to ask what it's about. Maybe it disappears once I understand it. Maybe it doesn't.",
+        "token_length": 69,
+        "word_count": 58
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "98a15617-1e63-453a-8e09-74bb2374c628",
   "text": "If I keep getting a little feeling that something is off, I don't have to call it intuition or assume it's right. I also don't have to talk myself out of it because everything else feels good. I can just slow down enough to ask what it's about. Maybe it disappears once I understand it. Maybe it doesn't.",
   "text_sha256": "a73594424af9c63a87e9a3b7bd7df895061d364ce6f39f7b2445bf14bf6e6ecd",
-  "updated_utc": "2026-08-13T01:37:57.536447+00:00"
+  "updated_utc": "2026-08-13T01:37:58.888436+00:00"
 }
