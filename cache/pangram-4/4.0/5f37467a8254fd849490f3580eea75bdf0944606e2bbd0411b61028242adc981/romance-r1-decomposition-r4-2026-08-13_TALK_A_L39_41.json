@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-r1-decomposition-r4-2026-08-13_TALK_A_L39_41",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "That difference is one reason to talk before sex. Most couples wait until they’re already having sex to talk honestly about sex. By then honesty has consequences: it might interrupt the thing that has already begun. The earlier conversation can go places the later one often can’t, and having it is already part of the difference between making love together and merely having sex.\nWhat do you actually desire? What helps your body feel safe? Are there kinks or particular dynamics that matter to you? What has your history taught you about your erotic wiring? What reliably doesn’t work? How often do you each imagine wanting sex, and what would a mismatch mean? Is sex recreation, bonding, sacred practice, stress relief, all of those, or something else entirely?",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9170876145362854,
+        "confidence": "High",
+        "end_index": 765,
+        "humanizer_score": 0.014925006777048111,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "That difference is one reason to talk before sex. Most couples wait until they’re already having sex to talk honestly about sex. By then honesty has consequences: it might interrupt the thing that has already begun. The earlier conversation can go places the later one often can’t, and having it is already part of the difference between making love together and merely having sex.\nWhat do you actually desire? What helps your body feel safe? Are there kinks or particular dynamics that matter to you? What has your history taught you about your erotic wiring? What reliably doesn’t work? How often do you each imagine wanting sex, and what would a mismatch mean? Is sex recreation, bonding, sacred practice, stress relief, all of those, or something else entirely?",
+        "token_length": 151,
+        "word_count": 128
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "d66306f6-94dc-423e-8d5a-1a0db0392204",
   "text": "That difference is one reason to talk before sex. Most couples wait until they’re already having sex to talk honestly about sex. By then honesty has consequences: it might interrupt the thing that has already begun. The earlier conversation can go places the later one often can’t, and having it is already part of the difference between making love together and merely having sex.\n\nWhat do you actually desire? What helps your body feel safe? Are there kinks or particular dynamics that matter to you? What has your history taught you about your erotic wiring? What reliably doesn’t work? How often do you each imagine wanting sex, and what would a mismatch mean? Is sex recreation, bonding, sacred practice, stress relief, all of those, or something else entirely?\n",
   "text_sha256": "5f37467a8254fd849490f3580eea75bdf0944606e2bbd0411b61028242adc981",
-  "updated_utc": "2026-08-13T16:29:10.086477+00:00"
+  "updated_utc": "2026-08-13T16:29:11.924478+00:00"
 }
