@@ -177,6 +177,41 @@
         ]
       },
       "section_id": "R2_BOUNDARY_FULL"
+    },
+    {
+      "id": "R6_FLAGGED_L822",
+      "measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R6_FLAGGED_L822",
+      "text": "Usually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.\n",
+      "text_sha256": "b9e8d31a797f978ec5621712fcb767a5279b852e6886ad6177e6848092de0421",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Usually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Usually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6943978667259216,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 333,
+            "word_count": 61,
+            "token_length": 71,
+            "is_humanized": false,
+            "humanizer_score": 0.018625039607286453
+          }
+        ]
+      },
+      "section_id": "R6_FLAGGED"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -340,6 +375,20 @@
       },
       {
         "section_id": "R2_BOUNDARY_FULL",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R6_FLAGGED",
         "model": "pangram-4",
         "version": "4.0",
         "paid_api_calls": 1,
