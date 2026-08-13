@@ -7,6 +7,7 @@ from typing import Any
 
 from .call_budget import SectionCallCapReached
 from .call_stats import CallStats
+from .result_paths import new_result_envelope
 
 
 FORMAT = "pangram-fixed-batch-v1"
@@ -58,9 +59,7 @@ def _write(path: Path, aggregate: dict[str, Any]) -> None:
 
 def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Path, call_ledger: Any | None = None) -> dict[str, Any]:
     experiment_id = spec["experiment_id"]
-    aggregate: dict[str, Any] = {"format": "pangram-fixed-batch-results-v1", "experiment_id": experiment_id, "results": []}
-    if spec.get("audit_id") is not None:
-        aggregate["audit_id"] = spec["audit_id"]
+    aggregate = new_result_envelope(spec)
     stats = CallStats(call_ledger) if call_ledger is not None else None
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -83,12 +82,24 @@ def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Pat
             aggregate["call_accounting"] = stats.summary()
             _write(output_path, aggregate)
             raise
-        row: dict[str, Any] = {"id": variant_id, "measurement_key": measurement_key, "text": text, "text_sha256": text_sha256(text), "detector": detector}
+        row: dict[str, Any] = {
+            "id": variant_id,
+            "measurement_key": measurement_key,
+            "text": text,
+            "text_sha256": text_sha256(text),
+            "detector": detector,
+        }
         if section_id is not None:
             row["section_id"] = section_id
         aggregate["results"].append(row)
         if stats is not None:
-            stats.note(section_id, getattr(client, "model", "pangram-4"), getattr(client, "expected_version", "4.0"), measurement_key, detector)
+            stats.note(
+                section_id,
+                getattr(client, "model", "pangram-4"),
+                getattr(client, "expected_version", "4.0"),
+                measurement_key,
+                detector,
+            )
             aggregate["call_accounting"] = stats.summary()
         _write(output_path, aggregate)
     return aggregate
