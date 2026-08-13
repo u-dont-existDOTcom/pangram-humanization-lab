@@ -69,6 +69,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "L3_DECISION_PRACTICES",
+      "measurement_key": "romance-checklist-localize-r7-2026-08-13_L3_DECISION_PRACTICES",
+      "text": "Separate the romantic decision from the long-term decision. Somebody may be a wonderful lover and a terrible co-parent, community member, or life partner. Also notice when “I’m taking a chance on this person” quietly becomes “this is the right person.” The first answer may come quickly. The second needs more time.\n\nKeep your inner practices. Don’t let being loved become the reason you stop learning to love and regulate yourself.",
+      "text_sha256": "dfaf6562c9ac601365977fc5991b56db1c8814e9d6363e794dbd8708feebf082",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Separate the romantic decision from the long-term decision. Somebody may be a wonderful lover and a terrible co-parent, community member, or life partner. Also notice when “I’m taking a chance on this person” quietly becomes “this is the right person.” The first answer may come quickly. The second needs more time.\nKeep your inner practices. Don’t let being loved become the reason you stop learning to love and regulate yourself.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Separate the romantic decision from the long-term decision. Somebody may be a wonderful lover and a terrible co-parent, community member, or life partner. Also notice when “I’m taking a chance on this person” quietly becomes “this is the right person.” The first answer may come quickly. The second needs more time.\nKeep your inner practices. Don’t let being loved become the reason you stop learning to love and regulate yourself.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9861209988594055,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 431,
+            "word_count": 70,
+            "token_length": 88,
+            "is_humanized": false,
+            "humanizer_score": 0.09123888611793518
+          }
+        ]
+      }
     }
   ]
 }
