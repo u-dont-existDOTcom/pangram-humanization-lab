@@ -241,8 +241,8 @@
     },
     "R1_TALK_REPAIR\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "estimated_credits": 1,
@@ -267,10 +267,18 @@
           "text_sha256": "fcac878fbd39e9fdb5777b5d58e19045fcb8ea2bc4e4d104e2f08c6ccb49b759",
           "type": "paid_post_reserved",
           "word_count": 311
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-repair-candidates-r6-2026-08-13_R1_TALK_D",
+          "recorded_at_utc": "2026-08-13T16:42:49.675561+00:00",
+          "text_sha256": "198b8a292073c26d21c91f38bdc0671ec485bb71a5281fd0ba0e75027aa2c8c0",
+          "type": "paid_post_reserved",
+          "word_count": 302
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "R1_TALK_REPAIR",
       "version": "4.0"

@@ -71,6 +71,41 @@
         ]
       },
       "section_id": "R1_LOVE_REPAIR"
+    },
+    {
+      "id": "R1_TALK_C",
+      "measurement_key": "romance-repair-candidates-r6-2026-08-13_R1_TALK_C",
+      "text": "# Talk about making love before you do it\n\nFrom here on, when I say making love, I'm talking about two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced this, it may be like trying to explain the taste of an orange. If you don’t know what love is, you don’t know. That’s another conversation, and I'd suggest reading my inner child reparenting guide.\n\nHaving sex is just the physical act, whether that connection is there or not. But sometimes it can create the connection also.\n\nMost couples do this backward. They start having sex and then try to talk honestly about sex. Now an honest answer might interrupt something that is already happening, so of course the conversation gets harder.\n\nI want to know what she actually desires and what helps her body feel safe. Kinks? What flat-out doesn't work? What did her history teach her about her erotic wiring? What did mine teach me? Does sex mean recreation, bonding, sacred practice, stress relief, some mess of all those? I have to answer too.\n\nAnd how often do we think we'll want it? That's not a very sexy question. But in a long relationship, one person is probably going to want more, less, or different sex for a while. That mismatch is one of the great factories of quiet resentment.\n\nMaybe we don't know yet. Fine. Say that. *I don't know, but I'm willing to find out honestly with you.* I would rather hear that than pretend our bodies will handle the negotiation.\n\nThat's sexual compatibility too. Not only whether the bodies fit, but whether the people can tell the truth while maximally exposed. Before our clothes come off, let's find out whether we can do that. The conversation is already part of making love.\n",
+      "text_sha256": "fcac878fbd39e9fdb5777b5d58e19045fcb8ea2bc4e4d104e2f08c6ccb49b759",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "# Talk about making love before you do it\nFrom here on, when I say making love, I'm talking about two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced this, it may be like trying to explain the taste of an orange. If you don’t know what love is, you don’t know. That’s another conversation, and I'd suggest reading my inner child reparenting guide.\nHaving sex is just the physical act, whether that connection is there or not. But sometimes it can create the connection also.\nMost couples do this backward. They start having sex and then try to talk honestly about sex. Now an honest answer might interrupt something that is already happening, so of course the conversation gets harder.\nI want to know what she actually desires and what helps her body feel safe. Kinks? What flat-out doesn't work? What did her history teach her about her erotic wiring? What did mine teach me? Does sex mean recreation, bonding, sacred practice, stress relief, some mess of all those? I have to answer too.\nAnd how often do we think we'll want it? That's not a very sexy question. But in a long relationship, one person is probably going to want more, less, or different sex for a while. That mismatch is one of the great factories of quiet resentment.\nMaybe we don't know yet. Fine. Say that. *I don't know, but I'm willing to find out honestly with you.* I would rather hear that than pretend our bodies will handle the negotiation.\nThat's sexual compatibility too. Not only whether the bodies fit, but whether the people can tell the truth while maximally exposed. Before our clothes come off, let's find out whether we can do that. The conversation is already part of making love.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "# Talk about making love before you do it\nFrom here on, when I say making love, I'm talking about two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced this, it may be like trying to explain the taste of an orange. If you don’t know what love is, you don’t know. That’s another conversation, and I'd suggest reading my inner child reparenting guide.\nHaving sex is just the physical act, whether that connection is there or not. But sometimes it can create the connection also.\nMost couples do this backward. They start having sex and then try to talk honestly about sex. Now an honest answer might interrupt something that is already happening, so of course the conversation gets harder.\nI want to know what she actually desires and what helps her body feel safe. Kinks? What flat-out doesn't work? What did her history teach her about her erotic wiring? What did mine teach me? Does sex mean recreation, bonding, sacred practice, stress relief, some mess of all those? I have to answer too.\nAnd how often do we think we'll want it? That's not a very sexy question. But in a long relationship, one person is probably going to want more, less, or different sex for a while. That mismatch is one of the great factories of quiet resentment.\nMaybe we don't know yet. Fine. Say that. *I don't know, but I'm willing to find out honestly with you.* I would rather hear that than pretend our bodies will handle the negotiation.\nThat's sexual compatibility too. Not only whether the bodies fit, but whether the people can tell the truth while maximally exposed. Before our clothes come off, let's find out whether we can do that. The conversation is already part of making love.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9278591275215149,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1760,
+            "word_count": 311,
+            "token_length": 378,
+            "is_humanized": false,
+            "humanizer_score": 0.6345580220222473
+          }
+        ]
+      },
+      "section_id": "R1_TALK_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -234,10 +269,10 @@
       },
       {
         "cache_hits": 0,
-        "estimated_cost_usd": 0.1,
-        "estimated_credits": 2,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
         "model": "pangram-4",
-        "paid_api_calls": 2,
+        "paid_api_calls": 3,
         "pending_resumes": 0,
         "section_id": "R1_TALK_REPAIR",
         "version": "4.0",
