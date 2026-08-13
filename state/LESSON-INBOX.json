@@ -758,6 +758,29 @@
           "section_id": "R3_ADULT_CHILD_REPAIR"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T19:40:49.853005+00:00",
+      "experiment_id": "romance-reconstruction-r17-2026-08-13",
+      "id": "Q-54ba8af049d437b7",
+      "sections": [
+        "R3_ADULT_CHILD_REPAIR"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r17-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r17",
+      "source_sha256": "190af7f868fac1336c7ff488580fd2148e8724ac05d242533107fd923c76b16e",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.10959772020578384,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8904022574424744,
+          "id": "R3_SUPPORT_BODY_WITH_READINESS_A",
+          "prediction_short": "Mixed",
+          "section_id": "R3_ADULT_CHILD_REPAIR"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
