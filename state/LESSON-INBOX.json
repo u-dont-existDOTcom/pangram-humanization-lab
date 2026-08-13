@@ -735,6 +735,29 @@
           "section_id": "R4_MUSES_DIRECTORS"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T19:26:10.048748+00:00",
+      "experiment_id": "romance-reconstruction-r16-2026-08-13",
+      "id": "Q-549a6f1eaf9bda2f",
+      "sections": [
+        "R3_ADULT_CHILD_REPAIR"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r16-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r16",
+      "source_sha256": "b9b57e1177bcaa26e7073cf4605d0b744fddd2f9ac4cdd1cdab81dbb42b1fc21",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.12317550927400589,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8768244981765747,
+          "id": "R3_SUPPORT_BODY_A",
+          "prediction_short": "Mixed",
+          "section_id": "R3_ADULT_CHILD_REPAIR"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
