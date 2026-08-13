@@ -353,8 +353,8 @@
     },
     "R3_ADULT_CHILD_REPAIR\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -363,10 +363,18 @@
           "text_sha256": "a0985e7f5f1988ff5335f4b266c505495d18dd2c14fec9ba5a99b30617c73f65",
           "type": "paid_post_reserved",
           "word_count": 123
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r16-2026-08-13_R3_SUPPORT_BODY_A",
+          "recorded_at_utc": "2026-08-13T19:26:05.994267+00:00",
+          "text_sha256": "682c931b8d85c4e6beff8da50f9d2da69116c3069b2ca1a8da0ffe1062867a9d",
+          "type": "paid_post_reserved",
+          "word_count": 441
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "R3_ADULT_CHILD_REPAIR",
       "version": "4.0"
