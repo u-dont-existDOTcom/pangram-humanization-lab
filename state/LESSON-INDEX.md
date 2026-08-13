@@ -7,11 +7,14 @@ Use this file as the starting point for current lesson retrieval.
 1. `state/WORKING-LESSONS.md` — consolidated lessons through 2026-08-12.
 2. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md` — newer Romance detector, semantic-sanity, architecture, routing, provenance, and large-reconstruction lessons. Newer owner correction / controlled evidence here supersedes older conflicting guidance.
 3. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md` — protected rhetorical function, the standing detector-acceptance gate for Joel humanization requests, trauma-informed language testing, and measured choice-diff rules.
-4. For exact evidence behind a lesson, inspect the cited incident note and experiment/result JSON rather than generalizing from the summary.
+4. `docs/CHATGPT-OPERATING-GUIDE.md` — current execution/completion contract, including the six-paid-call per-section cap and durable lesson-review fallback.
+5. For exact evidence behind a lesson, inspect the cited incident note and experiment/result JSON rather than generalizing from the summary.
 
 ## Pangram execution/access gate
 
 For every task that requires a measured Pangram result, read `docs/PANGRAM-ACTIONS-RUNBOOK.md` before deciding whether detector access exists. Missing local environment credentials and a signed-out browser session do not establish unavailability. The canonical fallback uses the repository Actions secret through the proven fixed-batch path on `automation/pangram-fixed-batch`.
+
+For every new paid audit, also follow `docs/CHATGPT-OPERATING-GUIDE.md` and the current `docs/PANGRAM-SECTION-CALL-BUDGET.md` on `automation/pangram-fixed-batch`. The hard budget is six new paid Pangram POSTs per independently tested section per audit. Cache hits, auth probes, polling, and pending-task resumes are free for budget purposes. Before a seventh paid POST, stop and request narrow help from Joel; do not reset the budget by inventing a new batch, chat, or audit ID.
 
 A worker may use the label `pre-Pangram candidate` only after the runbook's local and GitHub routes have both failed with a recorded blocker. The repository secret remains inside Actions; never retrieve, reveal, print, commit, or ask Joel to paste it.
 
@@ -19,13 +22,15 @@ Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pa
 
 Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
 
-The repair task has only two terminal states: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an unresolved authorial handoff. While a known faithful and coherent repair remains, continue the task. The handoff must identify the exact span and boundary; exact `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempts and measured results; protected claims/functions; the reason no further faithful repair is known; and the narrow help needed from Joel. A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
+The normal editorial terminal states are: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an unresolved authorial handoff. The six-paid-call section cap creates a mandatory operational suspension even if another faithful repair may exist: stop before the seventh paid POST, preserve the measured state, and ask Joel for narrow help. A budget suspension is not a detector pass and is not completion. The handoff must identify the exact span and boundary; exact `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempts and measured results; protected claims/functions; and the narrow help needed from Joel. A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
 
 ## Completion gate
 
 Before reporting any substantive editorial, detector, reconstruction, or experiment pass complete, use `docs/LESSON-CLOSEOUT.md` and the canonical `state/LESSON-LEDGER.json`.
 
-Every substantive finding must be dispositioned as `promoted`, `provisional`, `article-specific`, `superseded`, or `no-new-lesson`. Promoted findings must update this index plus the current lesson summary. Run the repository lesson-closeout gate before claiming completion. Do not ask Joel to remind you.
+Every new detector result must also be durably registered for semantic review. The current fixed-batch runner writes metadata-only source identity and detector triage into `state/LESSON-INBOX.json` on the evidence ref. A queue item remains unresolved until `main` contains a ledger disposition matching the same source path, source ref, and exact SHA-256.
+
+Every substantive finding must be dispositioned as `promoted`, `provisional`, `article-specific`, `superseded`, or `no-new-lesson`. Promoted findings must update this index plus the current lesson summary. If a direct ledger write is blocked, use the metadata-only `state/lesson-closeout-requests/` route processed by the trusted `lesson-integrity.yml` Action. Run the repository lesson-closeout gate before claiming completion. Do not ask Joel to remind you.
 
 ## Important branch note
 
@@ -63,8 +68,8 @@ For lesson application:
 5. older incident notes / historical detector outcomes
 6. synthetic probes
 
-Detector status is never authorship provenance. Pangram green does not certify natural owner authorship, and Pangram red does not override coherent faithful prose. For every Joel humanization request covered by the standing gate above, the exact intended delivery boundary must actually pass before the humanization task is called complete.
+Detector status is never authorship provenance. Pangram green does not certify natural owner authorship, and Pangram red does not override coherent faithful prose. For every Joel humanization request covered by the standing gate above, the exact intended delivery boundary must actually pass before the humanization task is called complete; a paid-cap suspension remains explicitly unresolved.
 
 ## Scope
 
-Do not load every historical experiment indiscriminately. Start with the current lesson summaries, then open exact evidence only where the current task needs it.
+Do not load every historical experiment indiscriminately. Start with the current lesson summaries and operating guide, then open exact evidence only where the current task needs it.
