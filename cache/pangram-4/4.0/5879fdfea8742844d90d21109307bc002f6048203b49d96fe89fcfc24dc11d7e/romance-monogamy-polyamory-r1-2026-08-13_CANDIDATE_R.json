@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-monogamy-polyamory-r1-2026-08-13_CANDIDATE_R",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nIf you can't do monogamy, saying so is still more honest than pretending you can. If your feelings change, you should be able to say that too. Sometimes both people know before either one admits it, and hiding it does more damage than an outside connection would have.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.682340145111084,
+        "confidence": "High",
+        "end_index": 505,
+        "humanizer_score": 0.03197261691093445,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nIf you can't do monogamy, saying so is still more honest than pretending you can. If your feelings change, you should be able to say that too. Sometimes both people know before either one admits it, and hiding it does more damage than an outside connection would have.",
+        "token_length": 105,
+        "word_count": 88
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "5d30135e-ddb7-4e55-8ec4-5abcecfa5bc0",
   "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\n\nIf you can't do monogamy, saying so is still more honest than pretending you can. If your feelings change, you should be able to say that too. Sometimes both people know before either one admits it, and hiding it does more damage than an outside connection would have.",
   "text_sha256": "5879fdfea8742844d90d21109307bc002f6048203b49d96fe89fcfc24dc11d7e",
-  "updated_utc": "2026-08-13T00:56:06.568470+00:00"
+  "updated_utc": "2026-08-13T00:56:07.703893+00:00"
 }
