@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L2B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "If we start having sex, I don’t want moving in to become the automatic next thing. Housing can make that difficult, but living together gives both people practical reasons not to reconsider the relationship. So if we do it, I’d rather decide in advance when we’re going to ask each other whether it’s actually working.\nAnd I want people around who know us together. Old friends are naturally going to hear one side first. Mine love me; hers love her. I don’t expect neutrality from them. I just don’t want them to be the only witnesses we have.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9706459045410156,
+        "confidence": "High",
+        "end_index": 544,
+        "humanizer_score": 0.02598915435373783,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "If we start having sex, I don’t want moving in to become the automatic next thing. Housing can make that difficult, but living together gives both people practical reasons not to reconsider the relationship. So if we do it, I’d rather decide in advance when we’re going to ask each other whether it’s actually working.\nAnd I want people around who know us together. Old friends are naturally going to hear one side first. Mine love me; hers love her. I don’t expect neutrality from them. I just don’t want them to be the only witnesses we have.",
+        "token_length": 116,
+        "word_count": 98
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "9b6f088c-ac3a-4cde-895e-31df8af19365",
   "text": "If we start having sex, I don’t want moving in to become the automatic next thing. Housing can make that difficult, but living together gives both people practical reasons not to reconsider the relationship. So if we do it, I’d rather decide in advance when we’re going to ask each other whether it’s actually working.\n\nAnd I want people around who know us together. Old friends are naturally going to hear one side first. Mine love me; hers love her. I don’t expect neutrality from them. I just don’t want them to be the only witnesses we have.",
   "text_sha256": "41a99dcbad298a83cf30b7e64ccb16d37fcdeed650173863238a0b1e2a81932a",
-  "updated_utc": "2026-08-13T01:35:10.316169+00:00"
+  "updated_utc": "2026-08-13T01:35:11.443565+00:00"
 }
