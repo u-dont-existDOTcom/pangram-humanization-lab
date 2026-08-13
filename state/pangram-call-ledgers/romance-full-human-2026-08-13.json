@@ -265,8 +265,8 @@
     },
     "R1_TALK_REPAIR\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.2,
-      "estimated_credits": 4,
+      "estimated_cost_usd": 0.25,
+      "estimated_credits": 5,
       "events": [
         {
           "estimated_credits": 1,
@@ -299,10 +299,18 @@
           "text_sha256": "198b8a292073c26d21c91f38bdc0671ec485bb71a5281fd0ba0e75027aa2c8c0",
           "type": "paid_post_reserved",
           "word_count": 302
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r11-2026-08-13_R1_TALK_TIME_A",
+          "recorded_at_utc": "2026-08-13T18:17:22.796250+00:00",
+          "text_sha256": "8f6b95bed481fba1b8534e027278e36d7ef586790c7d66750d530f5916d3a628",
+          "type": "paid_post_reserved",
+          "word_count": 403
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 4,
+      "paid_api_calls": 5,
       "pending_resumes": 0,
       "section_id": "R1_TALK_REPAIR",
       "version": "4.0"
