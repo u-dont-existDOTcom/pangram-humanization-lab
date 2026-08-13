@@ -1,14 +1,14 @@
-# Per-section Pangram budget and usage accounting design
+# Per-section Pangram budget and call accounting design
 
 ## Goal
 
-Make paid Pangram use measurable and bounded. Every audit boundary has a persistent budget of at most six new paid detector submissions, while cache reuse and pending-task resume remain free for budget purposes. Record enough usage data to show whether future humanization work is becoming cheaper as lessons improve.
+Make paid Pangram use measurable and bounded. Every tested boundary has a persistent budget of at most six new paid detector submissions per audit, while cache reuse and pending-task resume remain free for budget purposes. Record enough evidence to show whether future humanization work is becoming cheaper as lessons improve.
 
 ## Budget identity
 
-The budget key is `(audit_id, section_id, detector_model, expected_version)`. The six-call cap resets only when a genuinely new `audit_id` begins. Re-running the same section in another batch or workflow inside the same audit must continue the existing count.
+The budget key is `(audit_id, section_id, detector_model, expected_version)`. The six-call cap resets only when a genuinely new `audit_id` begins. Re-running the same section in another batch or workflow inside the same audit continues the existing count.
 
-A whole-article acceptance boundary is treated as a boundary with its own `section_id` (for example `FULL_ARTICLE`).
+A whole-article acceptance boundary is treated as another section with its own `section_id`, such as `FULL_ARTICLE`.
 
 ## Counted and uncounted operations
 
@@ -24,34 +24,34 @@ Do not count against the cap:
 - polling GET requests;
 - resuming an already-paid pending task.
 
-The budget reservation is persisted and Git-synced before the POST so an interruption cannot reset the count.
+The call reservation is persisted and Git-synced before the POST so an interruption cannot reset the count.
 
-## Usage record
+## Call record
 
-Persist one usage state file per audit under `state/usage/pangram/<audit_id>.json`. For each section record:
+Persist one call ledger per audit under `state/pangram-call-ledgers/<audit_id>.json`. For each section record:
 
-- paid submission count and cap;
+- paid API call count and cap;
 - cache hits;
 - pending-task resumes;
 - submitted word count for each paid POST;
-- estimated whole developer credits using `ceil(words / 1000)`;
+- estimated developer credits using `ceil(words / 1000)`;
 - estimated cost using the published $0.05 per 1,000-word credit;
 - measurement keys and text SHA-256 values.
 
-The detector API response currently does not expose a credit-consumption or remaining-balance field. Therefore usage derived from word counts must be labeled `estimated_credits`, not exact credits. If Pangram later returns authoritative usage metadata, store it separately as `reported_credits` and prefer it in summaries.
+Pangram's current AI-detection response does not expose a credit-consumption or remaining-balance field. Word-count-derived values are therefore labeled `estimated_credits`, not exact credits. If Pangram later returns authoritative usage metadata, store it separately as `reported_credits` and prefer it in summaries.
 
-Each fixed-batch result JSON must include an audit usage summary so editorial workers do not need to inspect internal state files to report spend.
+Each fixed-batch result JSON includes call accounting so editorial workers can report spend without opening the internal ledger.
 
 ## Exhaustion behavior
 
-Before a seventh paid POST for the same budget key, fail closed without submitting. Write a handoff JSON under `state/handoffs/pangram/<audit_id>-<section_id>.json` containing the six measured attempts, best measured result available, remaining detector-red windows when available, and the explicit reason `paid_section_budget_exhausted`.
+Before a seventh paid POST for the same budget key, fail closed without submitting. Write a handoff JSON under `state/handoffs/pangram/<audit_id>-<section_id>.json` with reason `section_call_cap_reached`, the section's call summary, and completed results already available in the batch.
 
-The worker must then ask Joel for help rather than silently raising the cap or starting a new audit merely to reset it.
+The worker then asks Joel for help rather than raising the cap or manufacturing a new audit merely to reset it.
 
 ## Efficiency metric
 
-Record `paid_calls_to_human` and `estimated_credits_to_human` for sections that reach Pangram `Human`. Historical summaries should make it possible to trend median paid calls per successful section over time. The intended direction is downward as promoted lessons improve.
+For a section that reaches Pangram `Human`, the result records `paid_calls_to_human`, `estimated_credits_to_human`, and the first successful measurement key. Historical summaries can therefore trend paid calls per successful section. The intended direction is downward as promoted lessons improve.
 
 ## Compatibility
 
-Legacy fixed-batch v1 specs without `audit_id` or `section_id` continue to run with legacy behavior. New humanization audits must provide them; the operating guide/runbook will require them. No existing historical cache key or detector result is rewritten.
+Legacy fixed-batch v1 specs without `audit_id` or `section_id` continue to run with legacy behavior. New humanization audits provide both identities. No existing historical cache key or detector result is rewritten.
