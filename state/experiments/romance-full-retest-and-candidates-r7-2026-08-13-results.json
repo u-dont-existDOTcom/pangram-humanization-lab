@@ -645,6 +645,41 @@
         ]
       },
       "section_id": "R5_SCRIPTURE_REPAIR"
+    },
+    {
+      "id": "R3_PLAN_ONLY",
+      "measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R3_PLAN_ONLY",
+      "text": "Plan for the horny, impulsive person you really are. Before meeting somebody you’re extremely attracted to, masturbate a lot. Then imagine you already had sex with her. How do you feel now? Keep that feeling in mind, especially when you get horny again.\n",
+      "text_sha256": "9950a003b71aee1f361ef834654e362ba835c8ad962e824b5a8b34e66b4d1ce2",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Plan for the horny, impulsive person you really are. Before meeting somebody you’re extremely attracted to, masturbate a lot. Then imagine you already had sex with her. How do you feel now? Keep that feeling in mind, especially when you get horny again.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Plan for the horny, impulsive person you really are. Before meeting somebody you’re extremely attracted to, masturbate a lot. Then imagine you already had sex with her. How do you feel now? Keep that feeling in mind, especially when you get horny again.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.04662073403596878,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 253,
+            "word_count": 43,
+            "token_length": 57,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R3_PLAN_DIAGNOSTIC"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -1029,6 +1064,20 @@
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
         "first_human_measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R5_SCRIPTURE_A"
+      },
+      {
+        "section_id": "R3_PLAN_DIAGNOSTIC",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R3_PLAN_ONLY"
       }
     ]
   }
