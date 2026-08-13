@@ -69,6 +69,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "DECISION_ONLY",
+      "measurement_key": "romance-checklist-cohab-decision-r11-2026-08-13_DECISION_ONLY",
+      "text": "I can want someone and still have no idea whether I should build a life with her. Those aren't different degrees of the same decision. I can be completely sure I want the romance and still not know what kind of co-parent she'd be, whether we'd want the same community, or whether we'd even like sharing ordinary life for years.",
+      "text_sha256": "e4c0e3dc1f6a07aefdfc36c6ff052be9c84a6f46eb0c5c297d22ada345e84160",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I can want someone and still have no idea whether I should build a life with her. Those aren't different degrees of the same decision. I can be completely sure I want the romance and still not know what kind of co-parent she'd be, whether we'd want the same community, or whether we'd even like sharing ordinary life for years.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "I can want someone and still have no idea whether I should build a life with her. Those aren't different degrees of the same decision. I can be completely sure I want the romance and still not know what kind of co-parent she'd be, whether we'd want the same community, or whether we'd even like sharing ordinary life for years.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.91267991065979,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 327,
+            "word_count": 60,
+            "token_length": 70,
+            "is_humanized": false,
+            "humanizer_score": 0.01061540748924017
+          }
+        ]
+      }
     }
   ]
 }
