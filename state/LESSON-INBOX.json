@@ -99,6 +99,92 @@
           "section_id": "REGION_7"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T16:29:38.649791+00:00",
+      "experiment_id": "romance-r1-decomposition-r4-2026-08-13",
+      "id": "Q-10d4e922ac5d22f0",
+      "sections": [
+        "R1_LOVE_TAIL",
+        "R1_DEFINITION",
+        "R1_TALK_A",
+        "R1_TALK_B",
+        "R1_TALK_FULL",
+        "R1_CASUAL_START",
+        "R1_QUOTE_OBLIGATION",
+        "R1_STI"
+      ],
+      "source_path": "state/experiments/romance-r1-decomposition-r4-2026-08-13-results.json",
+      "source_ref": "task/romance-diagnostic-r1-r4",
+      "source_sha256": "f054970d66a5608a7c3525f014cf3f9b3764c07bdb3d09e35dfb75c4b82550ca",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.45392492413520813,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.5460751056671143,
+          "id": "LOVE_TAIL_L29_31",
+          "prediction_short": "Mixed",
+          "section_id": "R1_LOVE_TAIL"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "DEFINITION_L35_37",
+          "prediction_short": "Human",
+          "section_id": "R1_DEFINITION"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "TALK_A_L39_41",
+          "prediction_short": "AI",
+          "section_id": "R1_TALK_A"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "TALK_B_L43_47",
+          "prediction_short": "AI",
+          "section_id": "R1_TALK_B"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "TALK_FULL_L39_47",
+          "prediction_short": "AI",
+          "section_id": "R1_TALK_FULL"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "CASUAL_START_L49_51",
+          "prediction_short": "Human",
+          "section_id": "R1_CASUAL_START"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "QUOTE_OBLIGATION_L53_55",
+          "prediction_short": "AI",
+          "section_id": "R1_QUOTE_OBLIGATION"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "STI_L57",
+          "prediction_short": "Human",
+          "section_id": "R1_STI"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"

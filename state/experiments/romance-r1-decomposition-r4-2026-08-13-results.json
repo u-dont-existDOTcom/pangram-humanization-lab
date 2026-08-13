@@ -258,6 +258,41 @@
         ]
       },
       "section_id": "R1_QUOTE_OBLIGATION"
+    },
+    {
+      "id": "STI_L57",
+      "measurement_key": "romance-r1-decomposition-r4-2026-08-13_STI_L57",
+      "text": "The STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.\n",
+      "text_sha256": "9b42dfb017d049d0d2df7f64b69ce2af61ec5bd8d93e9935f0078696ccf716f2",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "The STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "The STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.13775044679641724,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 241,
+            "word_count": 48,
+            "token_length": 60,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R1_STI"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -474,6 +509,20 @@
         "paid_calls_to_human": null,
         "estimated_credits_to_human": null,
         "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R1_STI",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-r1-decomposition-r4-2026-08-13_STI_L57"
       }
     ]
   }
