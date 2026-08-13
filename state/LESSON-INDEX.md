@@ -63,7 +63,7 @@ For lesson application:
 5. older incident notes / historical detector outcomes
 6. synthetic probes
 
-Detector status is never authorship provenance. Pangram green does not certify natural owner authorship, and Pangram red does not override coherent faithful prose. When Pangram success is an explicit delivery requirement, however, the exact intended delivery boundary must actually pass before the humanization task is called complete.
+Detector status is never authorship provenance. Pangram green does not certify natural owner authorship, and Pangram red does not override coherent faithful prose. For every Joel humanization request covered by the standing gate above, the exact intended delivery boundary must actually pass before the humanization task is called complete.
 
 ## Scope
 

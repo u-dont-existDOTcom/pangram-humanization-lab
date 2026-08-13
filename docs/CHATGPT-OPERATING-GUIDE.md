@@ -98,7 +98,7 @@ For new endpoint pairs, use the current repo README/CLI help rather than an old 
 
 ## Interpretation
 
-- Human editorial quality, semantic sanity and fidelity outrank Pangram as editorial authorities; when Pangram success is an explicit delivery requirement, the detector pass is nevertheless a hard acceptance gate.
+- Human editorial quality, semantic sanity and fidelity outrank Pangram as editorial authorities; for every Joel humanization request covered by the standing gate above, the detector pass is nevertheless a hard acceptance gate.
 - Exact submitted boundary matters; short samples are less reliable.
 - Preserve nulls and counterexamples.
 - Test interactions; do not infer magic words from one case.

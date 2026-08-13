@@ -60,6 +60,7 @@ def test_joel_pangram_completion_requires_exact_100_percent_and_handoff():
     assert "score and result hash" not in combined
     assert "may pause paid calls" not in combined
     assert "section/API-call budget" not in combined
+    assert "when Pangram success is an explicit delivery requirement" not in combined
 
     assert (
         "For controlled research probes, stop once the local hypothesis is adequately "
