@@ -529,8 +529,8 @@
     },
     "R4_MUSES_DIRECTORS\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -539,10 +539,18 @@
           "text_sha256": "609ddbe513d05bb8b50546d061d7cf0a217e8eea54541e38ffaf2fb62710a56d",
           "type": "paid_post_reserved",
           "word_count": 545
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r15-2026-08-13_R4_MUSES_MODEL_B",
+          "recorded_at_utc": "2026-08-13T19:18:08.301679+00:00",
+          "text_sha256": "b9ec82c43c8a65f175472100a51f3963bd066b19624ed045c405e51989cf3ba3",
+          "type": "paid_post_reserved",
+          "word_count": 548
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "R4_MUSES_DIRECTORS",
       "version": "4.0"
