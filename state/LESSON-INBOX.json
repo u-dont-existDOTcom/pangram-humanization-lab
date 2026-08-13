@@ -47,6 +47,54 @@
           "section_id": "FULL_ARTICLE"
         }
       ]
+    },
+    {
+      "audit_id": "spiritual-bypassing-b-improve-2026-08-13",
+      "created_at_utc": "2026-08-13T22:51:15.390194+00:00",
+      "experiment_id": "spiritual-bypassing-b-repair-r2-2026-08-13",
+      "id": "Q-23fa93ea14858229",
+      "sections": [
+        "dark-side-transition",
+        "FULL_ARTICLE"
+      ],
+      "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
+      "source_ref": "automation/pangram-fixed-batch",
+      "source_sha256": "4f041c131c63345b05764c3dc4d99ceafc3adfa93d391137143972513c254d3e",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.17794586718082428,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8220541477203369,
+          "id": "DARK_C_SECTION",
+          "prediction_short": "Mixed",
+          "section_id": "dark-side-transition"
+        },
+        {
+          "fraction_ai": 0.03932090103626251,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9606791138648987,
+          "id": "DARK_C_FULL",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        },
+        {
+          "fraction_ai": 0.34570765495300293,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6542923450469971,
+          "id": "DARK_D_SECTION",
+          "prediction_short": "Mixed",
+          "section_id": "dark-side-transition"
+        },
+        {
+          "fraction_ai": 0.06476140767335892,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9352385997772217,
+          "id": "DARK_D_FULL",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
