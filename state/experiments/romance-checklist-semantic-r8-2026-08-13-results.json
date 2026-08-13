@@ -205,6 +205,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "L4A",
+      "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L4A",
+      "text": "There’s also such a thing as talking too much. Ten profound conversations in one weekend can make me feel like I know someone when mostly I know what she says about herself. Then I need ordinary time. I need to see things I can’t get by asking better questions.\n\nAnd if something feels off, I don’t have to decide that the feeling is true. I can just slow down long enough to find out what it was reacting to. That’s different from letting the chemistry tell me the feeling was stupid.",
+      "text_sha256": "2cc75292e2d8ee9ca71ae71d920aa89c7e97e6cb869a3a62a839616ece935a53",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "There’s also such a thing as talking too much. Ten profound conversations in one weekend can make me feel like I know someone when mostly I know what she says about herself. Then I need ordinary time. I need to see things I can’t get by asking better questions.\nAnd if something feels off, I don’t have to decide that the feeling is true. I can just slow down long enough to find out what it was reacting to. That’s different from letting the chemistry tell me the feeling was stupid.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "There’s also such a thing as talking too much. Ten profound conversations in one weekend can make me feel like I know someone when mostly I know what she says about herself. Then I need ordinary time. I need to see things I can’t get by asking better questions.\nAnd if something feels off, I don’t have to decide that the feeling is true. I can just slow down long enough to find out what it was reacting to. That’s different from letting the chemistry tell me the feeling was stupid.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9940693378448486,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 484,
+            "word_count": 91,
+            "token_length": 103,
+            "is_humanized": false,
+            "humanizer_score": 0.13585132360458374
+          }
+        ]
+      }
     }
   ]
 }
