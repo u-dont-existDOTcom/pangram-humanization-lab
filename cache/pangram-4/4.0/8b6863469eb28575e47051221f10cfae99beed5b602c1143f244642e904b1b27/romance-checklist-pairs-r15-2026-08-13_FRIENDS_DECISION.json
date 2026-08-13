@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-pairs-r15-2026-08-13_FRIENDS_DECISION",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "I'd also try to make some real friends together. My friends are going to hear me first and hers are going to hear her first. That's normal; they're our friends. The problem is when every person around the relationship only knows one of us well. Then the first serious conflict turns into two teams arguing about two different relationships.\nWanting somebody doesn't tell me whether I should have children with her or build a life with her. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.6857134699821472,
+        "confidence": "High",
+        "end_index": 754,
+        "humanizer_score": 0.05067891627550125,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "I'd also try to make some real friends together. My friends are going to hear me first and hers are going to hear her first. That's normal; they're our friends. The problem is when every person around the relationship only knows one of us well. Then the first serious conflict turns into two teams arguing about two different relationships.\nWanting somebody doesn't tell me whether I should have children with her or build a life with her. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+        "token_length": 158,
+        "word_count": 133
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "502825fc-3654-4392-80ab-8270496633df",
   "text": "I'd also try to make some real friends together. My friends are going to hear me first and hers are going to hear her first. That's normal; they're our friends. The problem is when every person around the relationship only knows one of us well. Then the first serious conflict turns into two teams arguing about two different relationships.\n\nWanting somebody doesn't tell me whether I should have children with her or build a life with her. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
   "text_sha256": "8b6863469eb28575e47051221f10cfae99beed5b602c1143f244642e904b1b27",
-  "updated_utc": "2026-08-13T01:49:45.247474+00:00"
+  "updated_utc": "2026-08-13T01:49:48.453411+00:00"
 }
