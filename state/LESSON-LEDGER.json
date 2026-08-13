@@ -14,6 +14,17 @@
       ],
       "recorded_at_utc": "2026-08-13T14:42:07Z",
       "source_ref": "agent/pangram-actions-key-routing"
+    },
+    {
+      "id": "L-fc8c0079da-01",
+      "source_path": "state/PANGRAM-ACTIONS-ACCESS-INCIDENT-2026-08-13.md",
+      "source_sha256": "fc8c0079da3155aedf8b489d212c0ac370aea826370553ca2a4aff83366b6e5d",
+      "finding": "The corrected runbook uses the runner's actual JSON spec format, exact task-branch trigger filters, and the proven two-step secret scope.",
+      "disposition": "no-new-lesson",
+      "reason": "These are executability and safety corrections to the already promoted Actions access-resolution lesson; they do not add a separate transferable editorial or detector finding.",
+      "promoted_to": [],
+      "recorded_at_utc": "2026-08-13T14:53:25Z",
+      "source_ref": "agent/pangram-actions-runbook-corrections"
     }
   ]
 }

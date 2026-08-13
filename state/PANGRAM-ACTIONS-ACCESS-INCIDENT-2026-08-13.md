@@ -13,7 +13,7 @@ The instruction defect was not a missing detector-completion rule. It was a miss
 ## Controlled evidence
 
 - Branch `automation/pangram-fixed-batch` contains `.github/workflows/pangram-fixed-batch.yml`.
-- The workflow supplies `${{ secrets.PANGRAM_API_KEY }}` only through the detector step environment, checks that it is non-empty without printing it, runs the fixed-batch tests, and invokes `scripts/run_fixed_batch.py`.
+- The workflow supplies `${{ secrets.PANGRAM_API_KEY }}` only through step-level environments for its non-billable secret check and detector run—never at workflow or job scope—and checks that it is non-empty without printing it before invoking `scripts/run_fixed_batch.py`.
 - The runner performs the non-billable authentication probe, uses the Pangram 4 client, content-addressed cache, recorded task IDs, and Git checkpoints.
 - The client explicitly requests Pangram 4, requires terminal detector version `4.0`, resumes known pending task IDs, and does not automatically retry ambiguous POST requests.
 - GitHub Actions run `31661055171` completed both `Verify Pangram secret is configured` and `Run starting-scenarios batch` successfully.
@@ -28,4 +28,3 @@ The repository secret must remain inside GitHub Actions. Workers must never retr
 ## Scope
 
 This is an operational access and provenance lesson. It does not change the editorial rule that coherence, fidelity, and semantic sanity precede detector testing, nor does it make a Pangram result editorial approval.
-

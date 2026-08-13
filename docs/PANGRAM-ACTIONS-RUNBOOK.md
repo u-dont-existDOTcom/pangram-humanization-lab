@@ -29,7 +29,10 @@ Use:
 - stable, unique variant IDs;
 - a unique spec path and result path;
 - a narrow task workflow or a coordinated change to the existing branch; and
-- branch and path filters that name only the task workflow, spec, builder, runner, and tests needed for that batch.
+- `on.push.branches` set to the exact unique task branch; and
+- path filters limited to task-specific inputs such as that workflow, spec, and task-specific builder file.
+
+Copying the workflow onto a new branch is not enough: the inherited workflow filters on `automation/pangram-fixed-batch` and will not run until its branch filter names the new task branch. Run the shared runner and tests inside the job, but do not normally include shared runner or test paths in every historical task workflow's push filters. A later edit to a shared path could otherwise wake multiple old paid workflows. Never include cache or result paths as triggers.
 
 The current proven trigger is a push to the repository branch that contains the trusted workflow. Do not describe `workflow_dispatch` as canonical until a manual-dispatch path has been promoted and successfully tested.
 
@@ -45,8 +48,8 @@ The task workflow must preserve these properties of `.github/workflows/pangram-f
 - installation of `.[test]`;
 - tests for `tests/test_fixed_batch.py`, `tests/test_pangram.py`, `tests/test_cache.py`, and `tests/test_git_sync.py` before the paid batch;
 - a configured checkpoint Git identity;
-- `PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}` supplied only in the detector step's `env` block;
-- a non-empty-secret check such as `test -n "$PANGRAM_API_KEY"` that never echoes the value;
+- `PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}` supplied only through step-level `env` blocks for the non-billable secret/authentication check and the detector run—never at workflow or job scope, and never in a command, file, output, or artifact;
+- a separate non-empty-secret check such as `test -n "$PANGRAM_API_KEY"` that never echoes the value;
 - `python scripts/run_fixed_batch.py SPEC --out RESULT`; and
 - trigger exclusions for `cache/**` and `state/experiments/**`, so evidence/checkpoint commits cannot recursively trigger paid detector calls.
 
@@ -54,15 +57,19 @@ Keep the workflow narrow. Do not add debugging that enumerates the environment o
 
 ## Spec contract
 
-Use the fixed-batch v1 format:
+The spec file is JSON. Use the fixed-batch v1 format:
 
-```yaml
-format: pangram-fixed-batch-v1
-experiment_id: unique-task-id
-variants:
-  - id: stable-variant-id
-    text: |-
-      Exact text, including its intended line and paragraph boundaries.
+```json
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "unique-task-id",
+  "variants": [
+    {
+      "id": "stable-variant-id",
+      "text": "First exact paragraph.\n\nSecond exact paragraph."
+    }
+  ]
+}
 ```
 
 The runner accepts at most eight variants unless the limit is consciously changed and reviewed. The `text` field is the literal detector input. Do not silently substitute a paragraph for a document, merge boundaries, remove a heading, normalize whitespace, or change link/native-marker text.
@@ -103,4 +110,3 @@ If the exact text hash, boundary, model, and detector version are unchanged, a v
 ## How to report unavailable access
 
 Do not write “Pangram was unavailable” without completing the access-resolution gate. Report which route was tried and the exact blocker. If the local route failed but the Actions route succeeded, record the Actions result normally; do not describe the candidate as pre-Pangram.
-
