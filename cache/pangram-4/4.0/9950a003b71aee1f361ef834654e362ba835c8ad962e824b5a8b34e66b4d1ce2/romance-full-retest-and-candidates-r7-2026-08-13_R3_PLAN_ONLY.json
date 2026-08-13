@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R3_PLAN_ONLY",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Plan for the horny, impulsive person you really are. Before meeting somebody you’re extremely attracted to, masturbate a lot. Then imagine you already had sex with her. How do you feel now? Keep that feeling in mind, especially when you get horny again.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.04662073403596878,
+        "confidence": "High",
+        "end_index": 253,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Plan for the horny, impulsive person you really are. Before meeting somebody you’re extremely attracted to, masturbate a lot. Then imagine you already had sex with her. How do you feel now? Keep that feeling in mind, especially when you get horny again.",
+        "token_length": 57,
+        "word_count": 43
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "b4231050-1c8a-40b1-bd9a-a733b40bbefb",
   "text": "Plan for the horny, impulsive person you really are. Before meeting somebody you’re extremely attracted to, masturbate a lot. Then imagine you already had sex with her. How do you feel now? Keep that feeling in mind, especially when you get horny again.\n",
   "text_sha256": "9950a003b71aee1f361ef834654e362ba835c8ad962e824b5a8b34e66b4d1ce2",
-  "updated_utc": "2026-08-13T17:01:24.614014+00:00"
+  "updated_utc": "2026-08-13T17:01:26.115092+00:00"
 }
