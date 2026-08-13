@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-subitems-r10-2026-08-13_DECISION_B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Wanting her is not the same question as whether I want her as my co-parent or life partner. I keep forgetting that because romance makes the first answer feel enormous. So when “I’m taking a chance on this person” turns into “this is the right person,” I want to know what changed. Did I actually learn something, or did the relationship just get harder to question?",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.8781282305717468,
+        "confidence": "High",
+        "end_index": 366,
+        "humanizer_score": 0.011895734816789627,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Wanting her is not the same question as whether I want her as my co-parent or life partner. I keep forgetting that because romance makes the first answer feel enormous. So when “I’m taking a chance on this person” turns into “this is the right person,” I want to know what changed. Did I actually learn something, or did the relationship just get harder to question?",
+        "token_length": 78,
+        "word_count": 66
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "10a9b166-ed70-4b05-91aa-4b7111dcd020",
   "text": "Wanting her is not the same question as whether I want her as my co-parent or life partner. I keep forgetting that because romance makes the first answer feel enormous. So when “I’m taking a chance on this person” turns into “this is the right person,” I want to know what changed. Did I actually learn something, or did the relationship just get harder to question?",
   "text_sha256": "cee0312620fb27814eac07fa1cdc99320b39b86a9349a34ca87d1c546b15fdcf",
-  "updated_utc": "2026-08-13T01:39:12.586590+00:00"
+  "updated_utc": "2026-08-13T01:39:24.310806+00:00"
 }
