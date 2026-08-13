@@ -31,7 +31,7 @@ All other defects found during reconstruction were direct applications of alread
 
 ### PROVISIONAL / NEEDS CONTROL
 
-None. Pangram was not available, so this pass generated no detector evidence to promote or hold provisionally.
+None. This reconstruction generated no Pangram result before the repository-secret Actions route was identified. Remote measurement of the current exact candidate is pending, so there is still no detector evidence from this pass to promote or hold provisionally.
 
 ### SUPERSEDED
 
@@ -39,11 +39,11 @@ No newer owner correction or controlled result superseded a map decision during 
 
 ## Detector closeout
 
-Pangram remained downstream of editorial acceptance. The canonical Pangram 4 repository client was inspected, but no `PANGRAM_API_KEY` was exposed. The connected Pangram dashboard redirected to a signed-out login. No region was scored, no substitute detector was used, and no score was inferred.
+Pangram remained downstream of editorial acceptance. A later access correction established that the existing GitHub Actions fixed-batch route can use the configured repository `PANGRAM_API_KEY` secret even when no key is exposed locally and the connected dashboard is signed out. Remote validation is pending against the current exact candidate hash; no stale result may be transferred across the C53 change.
 
 ## Open author/source flags
 
-- C53: the comparison class in `best possible outcome` remains irreducible from the two source versions and is preserved exactly.
+- C53: Joel resolved the comparison class on 2026-08-13. Once attachment has begun, no further contact or pull is the best outcome still available because continued involvement could deepen it into a life bond. The reconstructed sentence now states that meaning directly.
 - C61 and C121: the `numb or robotic` attachment exception and repression inference remain meaning/source flags.
 - Publication source review remains open for the monasticism claims, attachment mechanism, Gandarussa safety/effectiveness, Komisaruk/Whipple and educator claims, scriptural and relationship-history claims, nuclear-family effects, psychedelic mechanisms, Rumi attribution, and Somé/Dagara characterization.
 
