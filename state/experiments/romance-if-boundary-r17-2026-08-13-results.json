@@ -59,6 +59,52 @@
           }
         ]
       }
+    },
+    {
+      "id": "IF_E",
+      "measurement_key": "romance-if-boundary-r17-2026-08-13_IF_E",
+      "text": "## Why all of this sounds artificial\n\nBy now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\n\nWell, you caught me. It is painfully artificial.\n\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.\n\n---\n\n# If you’re already in it\n\nMost of this advice is for before the relationship gets its own momentum. If you’re already married, living together, raising children, or ten years in, that part is late.\n\nI wish I had a special method for what to do instead. I don’t. The thing I had to learn in all three relationships was embarrassingly basic: I could keep bringing up the same problem, but I couldn’t make the other person look at it with me. One person can’t create mutual honesty.\n\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+      "text_sha256": "a8eaae8f41832f3211b7b7adf7a07cb666d971e2fbcd7bf486e77b345b9ca98e",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "## Why all of this sounds artificial\nBy now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.\n---\n# If you’re already in it\nMost of this advice is for before the relationship gets its own momentum. If you’re already married, living together, raising children, or ten years in, that part is late.\nI wish I had a special method for what to do instead. I don’t. The thing I had to learn in all three relationships was embarrassingly basic: I could keep bringing up the same problem, but I couldn’t make the other person look at it with me. One person can’t create mutual honesty.\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.5487062335014343,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.4512937664985657,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "## Why all of this sounds artificial\nBy now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.35517314076423645,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 593,
+            "word_count": 92,
+            "token_length": 114,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": "\n---\n# If you’re already in it\nMost of this advice is for before the relationship gets its own momentum. If you’re already married, living together, raising children, or ten years in, that part is late.\nI wish I had a special method for what to do instead. I don’t. The thing I had to learn in all three relationships was embarrassingly basic: I could keep bringing up the same problem, but I couldn’t make the other person look at it with me. One person can’t create mutual honesty.\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7612826824188232,
+            "confidence": "High",
+            "start_index": 593,
+            "end_index": 1314,
+            "word_count": 132,
+            "token_length": 161,
+            "is_humanized": false,
+            "humanizer_score": 0.5126729011535645
+          }
+        ]
+      }
     }
   ]
 }
