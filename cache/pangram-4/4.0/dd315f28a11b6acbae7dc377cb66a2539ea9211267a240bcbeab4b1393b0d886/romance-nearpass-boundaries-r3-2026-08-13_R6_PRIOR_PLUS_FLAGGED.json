@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-nearpass-boundaries-r3-2026-08-13_R6_PRIOR_PLUS_FLAGGED",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.880800724029541,
+        "confidence": "High",
+        "end_index": 485,
+        "humanizer_score": 0.019932350143790245,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\nUsually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.",
+        "token_length": 100,
+        "word_count": 85
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "13ae3685-cd4c-4895-bdfb-33a4da456f9e",
   "text": "See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.\n\nUsually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.\n",
   "text_sha256": "dd315f28a11b6acbae7dc377cb66a2539ea9211267a240bcbeab4b1393b0d886",
-  "updated_utc": "2026-08-13T16:29:02.174845+00:00"
+  "updated_utc": "2026-08-13T16:29:04.169648+00:00"
 }
