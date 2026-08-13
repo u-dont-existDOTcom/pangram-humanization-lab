@@ -712,6 +712,29 @@
           "section_id": "R4_MUSES_DIRECTORS"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T19:18:15.445539+00:00",
+      "experiment_id": "romance-reconstruction-r15-2026-08-13",
+      "id": "Q-91c47d5673bb72fc",
+      "sections": [
+        "R4_MUSES_DIRECTORS"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r15-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r15",
+      "source_sha256": "5396bb0cef5bb062ed116b01a2dd05ac5564189ba78ee7e843fa5b5aa2672d6b",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.10744336247444153,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8925566077232361,
+          "id": "R4_MUSES_MODEL_B",
+          "prediction_short": "Mixed",
+          "section_id": "R4_MUSES_DIRECTORS"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
