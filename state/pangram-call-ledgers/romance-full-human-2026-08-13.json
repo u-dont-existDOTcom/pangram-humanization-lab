@@ -89,8 +89,8 @@
     },
     "R1_LOVE_REPAIR\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "estimated_credits": 1,
@@ -115,10 +115,18 @@
           "text_sha256": "083a6fe61f7d4f1320ff6082c858c8c622f137a3bc67a03007e5f8ba9de801da",
           "type": "paid_post_reserved",
           "word_count": 198
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r24-2026-08-13_R1_LOVE_COMPOSITION_D",
+          "recorded_at_utc": "2026-08-13T20:28:08.385352+00:00",
+          "text_sha256": "77df49c149789f0acd3a368c9db4a850b9e1e19db54d408f8fb38fa1299ab39e",
+          "type": "paid_post_reserved",
+          "word_count": 330
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "R1_LOVE_REPAIR",
       "version": "4.0"
