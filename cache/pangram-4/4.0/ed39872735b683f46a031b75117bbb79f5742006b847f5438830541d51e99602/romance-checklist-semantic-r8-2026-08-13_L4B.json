@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L4B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "I don’t want to manufacture depth by interviewing each other all weekend either. If we have ten profound conversations, of course it can feel profound. I still haven’t seen what she does on a boring Tuesday or when something irritates her. Some answers only show up by waiting.\nSame with the little “wait” feeling. It might be wrong. I don’t need to treat it like intuition from God. I also don’t want to erase it because I’m excited. Slow down, ask the thing I was about to avoid, and see what happens.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9998180270195007,
+        "confidence": "High",
+        "end_index": 503,
+        "humanizer_score": 0.08066455274820328,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "I don’t want to manufacture depth by interviewing each other all weekend either. If we have ten profound conversations, of course it can feel profound. I still haven’t seen what she does on a boring Tuesday or when something irritates her. Some answers only show up by waiting.\nSame with the little “wait” feeling. It might be wrong. I don’t need to treat it like intuition from God. I also don’t want to erase it because I’m excited. Slow down, ask the thing I was about to avoid, and see what happens.",
+        "token_length": 112,
+        "word_count": 92
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "40829a9b-d00d-4654-8cbb-ed9352b402e0",
   "text": "I don’t want to manufacture depth by interviewing each other all weekend either. If we have ten profound conversations, of course it can feel profound. I still haven’t seen what she does on a boring Tuesday or when something irritates her. Some answers only show up by waiting.\n\nSame with the little “wait” feeling. It might be wrong. I don’t need to treat it like intuition from God. I also don’t want to erase it because I’m excited. Slow down, ask the thing I was about to avoid, and see what happens.",
   "text_sha256": "ed39872735b683f46a031b75117bbb79f5742006b847f5438830541d51e99602",
-  "updated_utc": "2026-08-13T01:35:26.190196+00:00"
+  "updated_utc": "2026-08-13T01:35:29.365045+00:00"
 }
