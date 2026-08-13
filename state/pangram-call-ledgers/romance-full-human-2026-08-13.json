@@ -185,8 +185,8 @@
     },
     "R2_JOIN_REPAIR\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -195,10 +195,18 @@
           "text_sha256": "aa2bbcdeaf97edf700292396c68c96ec19cd4716d1535c884af64bf7f83891ab",
           "type": "paid_post_reserved",
           "word_count": 301
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-repair-candidates-r5-2026-08-13_R2_JOIN_B",
+          "recorded_at_utc": "2026-08-13T16:34:17.307324+00:00",
+          "text_sha256": "d9b81d6bb1f6064825c972be4e9b9d48b7354db5505960670f4de3d3554058bd",
+          "type": "paid_post_reserved",
+          "word_count": 313
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "R2_JOIN_REPAIR",
       "version": "4.0"
