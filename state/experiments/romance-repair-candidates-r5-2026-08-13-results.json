@@ -188,6 +188,41 @@
         ]
       },
       "section_id": "R1_LOVE_REPAIR"
+    },
+    {
+      "id": "R1_TALK_A",
+      "measurement_key": "romance-repair-candidates-r5-2026-08-13_R1_TALK_A",
+      "text": "Why talk before sex? Because once we're already having it, an honest answer might interrupt the thing that has begun. Beforehand, the conversation can go wherever it needs to. Having it is already part of the difference between making love and merely having sex.\n\nI would want to know what she desires and what helps her body feel safe. Are there kinks or particular dynamics that matter? What has her erotic history taught her? What has mine taught me? What reliably doesn't work? Is sex recreation, bonding, sacred practice, stress relief, or all of that? How often do we imagine wanting it? If one of us wants more, less, or something different—and over a long relationship, one of us probably will for a while—what do we do then? Mismatched desire is one of the great factories of quiet resentment.\n\nMaybe we don't know yet. That's a real answer. *I don't know, but I'm willing to find out honestly with you* is better than assuming our bodies will negotiate everything for us.\n\nTo me, sexual compatibility is not only whether two bodies fit. It is whether two people can stay honest while they are maximally exposed. If we can talk this frankly before our clothes come off, we've already practiced some of the trust, attention, and willingness to be seen that making love requires.\n",
+      "text_sha256": "e8c2428593b2ed455f5df2da1ce703d77dd02503371735e1e64ac82919538316",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Why talk before sex? Because once we're already having it, an honest answer might interrupt the thing that has begun. Beforehand, the conversation can go wherever it needs to. Having it is already part of the difference between making love and merely having sex.\nI would want to know what she desires and what helps her body feel safe. Are there kinks or particular dynamics that matter? What has her erotic history taught her? What has mine taught me? What reliably doesn't work? Is sex recreation, bonding, sacred practice, stress relief, or all of that? How often do we imagine wanting it? If one of us wants more, less, or something different—and over a long relationship, one of us probably will for a while—what do we do then? Mismatched desire is one of the great factories of quiet resentment.\nMaybe we don't know yet. That's a real answer. *I don't know, but I'm willing to find out honestly with you* is better than assuming our bodies will negotiate everything for us.\nTo me, sexual compatibility is not only whether two bodies fit. It is whether two people can stay honest while they are maximally exposed. If we can talk this frankly before our clothes come off, we've already practiced some of the trust, attention, and willingness to be seen that making love requires.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Why talk before sex? Because once we're already having it, an honest answer might interrupt the thing that has begun. Beforehand, the conversation can go wherever it needs to. Having it is already part of the difference between making love and merely having sex.\nI would want to know what she desires and what helps her body feel safe. Are there kinks or particular dynamics that matter? What has her erotic history taught her? What has mine taught me? What reliably doesn't work? Is sex recreation, bonding, sacred practice, stress relief, or all of that? How often do we imagine wanting it? If one of us wants more, less, or something different—and over a long relationship, one of us probably will for a while—what do we do then? Mismatched desire is one of the great factories of quiet resentment.\nMaybe we don't know yet. That's a real answer. *I don't know, but I'm willing to find out honestly with you* is better than assuming our bodies will negotiate everything for us.\nTo me, sexual compatibility is not only whether two bodies fit. It is whether two people can stay honest while they are maximally exposed. If we can talk this frankly before our clothes come off, we've already practiced some of the trust, attention, and willingness to be seen that making love requires.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9742094278335571,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1283,
+            "word_count": 223,
+            "token_length": 273,
+            "is_humanized": false,
+            "humanizer_score": 0.0032293202821165323
+          }
+        ]
+      },
+      "section_id": "R1_TALK_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -449,6 +484,20 @@
       },
       {
         "section_id": "R1_LOVE_REPAIR",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R1_TALK_REPAIR",
         "model": "pangram-4",
         "version": "4.0",
         "paid_api_calls": 1,
