@@ -270,6 +270,53 @@
         ]
       },
       "section_id": "R3_ADULT_CHILD_REPAIR"
+    },
+    {
+      "id": "R5_PRACTICAL_A",
+      "measurement_key": "romance-repair-candidates-r6-2026-08-13_R5_PRACTICAL_A",
+      "text": "# What are you actually choosing together?\n\nA lot of romantic pain starts with two lovey bunnies entering one of the biggest arrangements of their lives without ever discussing their ideas, dreams, and fears about it.\n\n“We’re together” ... what does that mean exactly? It conjures up for me thoughts of romance, sex, exclusivity, living together, shared money, children, caregiving, spiritual partnership, family identity, or just “we really like each other and we’ll see.” Lack of specificity is sometimes a nice way to flow, but the problem is that each person could be imagining a different bundle from those pieces, then either not labeling anything or assuming one relationship label settled it.\n\nOne honest option is basically a “practical partnership.” Arrangements like this have been common throughout history, especially outside the modern West. Two people may share a home, raise children, support each other financially, take care of each other, and maybe have sex, without pretending the whole thing rests on overwhelming romantic love.\n\nI wouldn't want that, and I doubt many people who've been in love would. But there is nothing inherently wrong with it if both people understand what they're doing. Societies have often promoted it for exactly that stability: the home, money, children, and caregiving don't depend on feeling romantic every morning. The weakness appears if one of them still longs for romance. Then a heartthrob shows up at work or church, and suddenly the practical deal feels like settling.\n\nAnother honest option is a romance with humility, even if romance and humility seem to clash. Two people really are in love, really do want to build something together, and really do take the bond seriously, but they do not pretend they can guarantee the feeling forever.\n\nThey can still choose exclusivity, shack up, have children, and plan a life. The honest part is that they admit feelings can change, and they talk beforehand about what that would mean. If the romance fades, maybe they revive it, or maybe they renegotiate the arrangement.\n",
+      "text_sha256": "92e8c609dc0471f66ff37124644eba292d5342c76fef9d2e6e875322b323f9d2",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "# What are you actually choosing together?\nA lot of romantic pain starts with two lovey bunnies entering one of the biggest arrangements of their lives without ever discussing their ideas, dreams, and fears about it.\n“We’re together” ... what does that mean exactly? It conjures up for me thoughts of romance, sex, exclusivity, living together, shared money, children, caregiving, spiritual partnership, family identity, or just “we really like each other and we’ll see.” Lack of specificity is sometimes a nice way to flow, but the problem is that each person could be imagining a different bundle from those pieces, then either not labeling anything or assuming one relationship label settled it.\nOne honest option is basically a “practical partnership.” Arrangements like this have been common throughout history, especially outside the modern West. Two people may share a home, raise children, support each other financially, take care of each other, and maybe have sex, without pretending the whole thing rests on overwhelming romantic love.\nI wouldn't want that, and I doubt many people who've been in love would. But there is nothing inherently wrong with it if both people understand what they're doing. Societies have often promoted it for exactly that stability: the home, money, children, and caregiving don't depend on feeling romantic every morning. The weakness appears if one of them still longs for romance. Then a heartthrob shows up at work or church, and suddenly the practical deal feels like settling.\nAnother honest option is a romance with humility, even if romance and humility seem to clash. Two people really are in love, really do want to build something together, and really do take the bond seriously, but they do not pretend they can guarantee the feeling forever.\nThey can still choose exclusivity, shack up, have children, and plan a life. The honest part is that they admit feelings can change, and they talk beforehand about what that would mean. If the romance fades, maybe they revive it, or maybe they renegotiate the arrangement.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.6623125076293945,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.3376874625682831,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "# What are you actually choosing together?\nA lot of romantic pain starts with two lovey bunnies entering one of the biggest arrangements of their lives without ever discussing their ideas, dreams, and fears about it.\n“We’re together” ... what does that mean exactly? It conjures up for me thoughts of romance, sex, exclusivity, living together, shared money, children, caregiving, spiritual partnership, family identity, or just “we really like each other and we’ll see.” Lack of specificity is sometimes a nice way to flow, but the problem is that each person could be imagining a different bundle from those pieces, then either not labeling anything or assuming one relationship label settled it.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.39016181230545044,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 698,
+            "word_count": 112,
+            "token_length": 141,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": "\nOne honest option is basically a “practical partnership.” Arrangements like this have been common throughout history, especially outside the modern West. Two people may share a home, raise children, support each other financially, take care of each other, and maybe have sex, without pretending the whole thing rests on overwhelming romantic love.\nI wouldn't want that, and I doubt many people who've been in love would. But there is nothing inherently wrong with it if both people understand what they're doing. Societies have often promoted it for exactly that stability: the home, money, children, and caregiving don't depend on feeling romantic every morning. The weakness appears if one of them still longs for romance. Then a heartthrob shows up at work or church, and suddenly the practical deal feels like settling.\nAnother honest option is a romance with humility, even if romance and humility seem to clash. Two people really are in love, really do want to build something together, and really do take the bond seriously, but they do not pretend they can guarantee the feeling forever.\nThey can still choose exclusivity, shack up, have children, and plan a life. The honest part is that they admit feelings can change, and they talk beforehand about what that would mean. If the romance fades, maybe they revive it, or maybe they renegotiate the arrangement.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.8510184288024902,
+            "confidence": "High",
+            "start_index": 698,
+            "end_index": 2067,
+            "word_count": 224,
+            "token_length": 278,
+            "is_humanized": false,
+            "humanizer_score": 0.02885025180876255
+          }
+        ]
+      },
+      "section_id": "R5_PRACTICAL_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -598,6 +645,20 @@
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
         "first_human_measurement_key": "romance-repair-candidates-r6-2026-08-13_R3_ADULT_CHILD_A"
+      },
+      {
+        "section_id": "R5_PRACTICAL_REPAIR",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
       }
     ]
   }

@@ -268,6 +268,90 @@
           "section_id": "R1_QUOTE_REPAIR"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T16:43:10.186940+00:00",
+      "experiment_id": "romance-repair-candidates-r6-2026-08-13",
+      "id": "Q-6efd687465d3c359",
+      "sections": [
+        "R1_LOVE_REPAIR",
+        "R1_TALK_REPAIR",
+        "R1_QUOTE_REPAIR",
+        "R3_SCHNARCH_REPAIR",
+        "R3_ADULT_CHILD_REPAIR",
+        "R5_PRACTICAL_REPAIR"
+      ],
+      "source_path": "state/experiments/romance-repair-candidates-r6-2026-08-13-results.json",
+      "source_ref": "task/romance-repair-candidates-r6",
+      "source_sha256": "af5e778c83672c9b1dfff7d026921e78138a553dfa37cc67f7bfc12369389889",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R1_LOVE_B",
+          "prediction_short": "Human",
+          "section_id": "R1_LOVE_REPAIR"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R1_LOVE_C",
+          "prediction_short": "Human",
+          "section_id": "R1_LOVE_REPAIR"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R1_TALK_C",
+          "prediction_short": "AI",
+          "section_id": "R1_TALK_REPAIR"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R1_TALK_D",
+          "prediction_short": "AI",
+          "section_id": "R1_TALK_REPAIR"
+        },
+        {
+          "fraction_ai": 0.4841417968273163,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.5158582329750061,
+          "id": "R1_QUOTE_B",
+          "prediction_short": "Mixed",
+          "section_id": "R1_QUOTE_REPAIR"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R3_SCHNARCH_A",
+          "prediction_short": "Human",
+          "section_id": "R3_SCHNARCH_REPAIR"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R3_ADULT_CHILD_A",
+          "prediction_short": "Human",
+          "section_id": "R3_ADULT_CHILD_REPAIR"
+        },
+        {
+          "fraction_ai": 0.6623125076293945,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.3376874625682831,
+          "id": "R5_PRACTICAL_A",
+          "prediction_short": "Mixed",
+          "section_id": "R5_PRACTICAL_REPAIR"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
