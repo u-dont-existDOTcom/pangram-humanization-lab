@@ -1,0 +1,21 @@
+{
+  "format": "owner-selected-detector-candidate-v1",
+  "article": "A Primer on Spiritual Bypassing",
+  "owner": "Joel Rosenblum",
+  "owner_selected_at": "2026-08-13",
+  "selection": "B",
+  "variant_id": "ALT_INVITATIONAL",
+  "source_result_path": "state/experiments/spiritual-bypassing-r13-interaction-2026-08-13-results.json",
+  "detector": {
+    "name": "Pangram",
+    "version": "4.0",
+    "prediction_short": "Human",
+    "fraction_human": 0.931279182434082,
+    "fraction_ai": 0.06872078776359558,
+    "fraction_ai_assisted": 0.0
+  },
+  "text_sha256": "192f8d3d34f05a39208451b5ce740c569a546a3a66467818261c63561eab12a9",
+  "status": "owner-selected",
+  "detector_gate_note": "Owner selected this measured candidate. Its Pangram result is below the standing exact-100%-Human detector completion gate; preserve the owner selection and do not relabel it as a 100% detector pass.",
+  "selection_note": "Joel explicitly chose option B after reviewing the two measured trauma-informed alternatives."
+}
