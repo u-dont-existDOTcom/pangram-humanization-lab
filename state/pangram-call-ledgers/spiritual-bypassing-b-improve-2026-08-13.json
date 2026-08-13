@@ -95,8 +95,8 @@
     },
     "dark-side-transition\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -113,10 +113,18 @@
           "text_sha256": "4f8332b33d4a3a4fa4f4e485c68c632dcdba374380183836f6958f910dfdb105",
           "type": "paid_post_reserved",
           "word_count": 377
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "spiritual-bypassing-b-repair-r3-2026-08-13_DARK_E_SECTION",
+          "recorded_at_utc": "2026-08-13T22:52:28.070230+00:00",
+          "text_sha256": "092a7e1ee1e6038f68192e2c6f3c843f0cf7aa4bca541aa1115ae4f8ecc7257f",
+          "type": "paid_post_reserved",
+          "word_count": 356
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "dark-side-transition",
       "version": "4.0"
