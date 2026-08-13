@@ -103,6 +103,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "L4_PACING_DISCOMFORT",
+      "measurement_key": "romance-checklist-localize-r7-2026-08-13_L4_PACING_DISCOMFORT",
+      "text": "Pace the heavy conversations. Ten profound talks in one weekend can feel deep before the relationship has roots. Let play and ordinary time sit between them. Some information is better observed than extracted.\n\nLet discomfort remain information. Wait. I want to slow down. Something doesn’t fit. I need to ask this. Don’t let early chemistry automatically overrule that part of you.",
+      "text_sha256": "f45d5c8a2a1048437da8f3b73698e8d8ef5ff83676546a502cb8eb429ad08401",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Pace the heavy conversations. Ten profound talks in one weekend can feel deep before the relationship has roots. Let play and ordinary time sit between them. Some information is better observed than extracted.\nLet discomfort remain information. Wait. I want to slow down. Something doesn’t fit. I need to ask this. Don’t let early chemistry automatically overrule that part of you.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Pace the heavy conversations. Ten profound talks in one weekend can feel deep before the relationship has roots. Let play and ordinary time sit between them. Some information is better observed than extracted.\nLet discomfort remain information. Wait. I want to slow down. Something doesn’t fit. I need to ask this. Don’t let early chemistry automatically overrule that part of you.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9998601675033569,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 381,
+            "word_count": 61,
+            "token_length": 75,
+            "is_humanized": false,
+            "humanizer_score": 0.21863384544849396
+          }
+        ]
+      }
     }
   ]
 }
