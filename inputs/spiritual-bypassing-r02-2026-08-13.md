@@ -1,0 +1,127 @@
+# A Primer on Spiritual Bypassing
+
+Hey lovey bunnies. This one is about Goenka retreats, trauma, and spiritual bypassing, so I’m going to try not to turn it into either a takedown or a meditation pep talk.
+
+If you’ve had a wonderful Goenka retreat, I’m not trying to argue you out of what helped you. If you’ve been harmed by one, I’m also not going to tell you the harm was just a “dark night” you should have pushed through. I’m interested in what happens when a practice built around not reacting meets a nervous system that may have very good reasons for reacting.
+
+And because this is sensitive territory, take what is useful and leave what isn’t. You don’t owe any meditation method your trust just because it is old, Buddhist, or worked beautifully for somebody else.
+
+For me, healing has to start with learning how to be kind to the parts of us that hurt. That is what I mean by [inner-child self love reparenting](http://Innerchild.u-dont-exist.com).
+
+---
+
+# The Dark Side of Deep Dives: When Intensity Meets Unhealed Wounds
+
+A Goenka retreat is ten days of silence, scanning body sensations, watching whatever comes up and trying not to react while old *sankharas*—mental habits—surface. For plenty of people this is powerful and life-changing. It can build discipline and give a real taste of equanimity.
+
+But it is also a lot to throw at somebody.
+
+Anyone with a recent history of mental instability is not allowed into a Goenka retreat, nor most Theravada Buddhist retreats, because the risk of destabilization is already known to be high ([three times greater long-term dysfunction likelihood compared with an ayahuasca retreat](https://g.co/gemini/share/3ea68c3b75a0)).
+
+The strange part is that rejected applicants are offered no alternative. That leads many of them to lie in order to get accepted, violating the first principle of spirituality and Buddhism: honesty.
+
+I’ve heard stories—[including some from people close to me that have been quite scary for me to deal with](https://ibogaqueen.substack.com/p/love-each-other-instead-of-goenka?r=5vdc6m)—of people coming out of these intensive retreats not enlightened, but chaotically shattered into something resembling DP/DR or Dissociative Identity Disorder: multiple personalities, with amnesia.
+
+There are reports of psychotic breaks, deep depression, and suicide. A [2024 *Financial Times* article](https://www.ft.com/content/b3ec8e57-5cf9-4f96-9267-56c3bcd9c1025cb4e1) covered hidden incidents, including Megan Vogt’s heartbreaking story. The accounts I found on Reddit include someone becoming dissociated after a near-death sensation, somebody whose OCD and violent thoughts intensified, and a family member becoming manic after being sent home early. I left those links at the end.
+
+If this is close to home for you, you can skip that postscript. The point does not depend on reading nine frightening stories in a row.
+
+The Goenka instruction is to observe whatever comes up without reacting. That can be useful. But when what comes up is trauma, simply witnessing it may not be enough. You can uncover something enormous without yet having a way to work through it.
+
+Forums like [r/vipassana](http://Reddit.com/r/vipassana) are full of these “dark night” experiences. The practice can bring buried material to the surface while giving the practitioner little besides continued non-reaction with which to meet it. Retreat centers do screen for problems, but critics say the screening is not enough, and that the “push through” ethos can nudge people past their limits. Some teachers warn that without emotional groundwork it is a bit like revving an engine without oil: eventually something can seize up.
+
+And this is where spiritual bypassing enters the picture for me. Equanimity can become a way to avoid emotional mess instead of healing it. It can also become a way to ignore injustice while calling that inner peace. Remember some of the Buddhist responses to the Myanmar coup?
+
+So I keep coming back to a pretty simple question: why not teach people how to meet suffering with love before asking them to sit inside it for ten days?
+
+---
+
+# Loving Kindness: The Cozy Blanket Before the Storm
+
+I know “cozy blanket” sounds almost comically soft next to ten days of vipassana. That is partly the point.
+
+My own experience was weird. I had an awesome childhood, but I was depressed from age twelve to twenty-six because of how much suffering I saw in the world. Therapists had no answers for me. Some even told me I was basically right to be depressed.
+
+Metta meditation solved it instantly.
+
+I realized it doesn’t help to spread negativity just because misery loves company. I’ve been preaching metta ever since 😊❣️. Still trying to realize that deeper tho!
+
+The Buddha understood the need for that kind of groundwork too. In suttas like the [Metta Sutta or MN 118](https://suttacentral.net/snp1.8/en/mills?lang=en), the practice is to wish ease and happiness for all beings, including the tricky one: yourself. Metta is a prelim to vipassana: it calms the hindrances, builds goodwill, and helps the mind want suffering to end without turning that wish into desperation or fear of failure.
+
+Theravada and most Mahayana Buddhist traditions treat metta as essential groundwork before the deeper work of [unweaving the sense streams](http://nibbana.u-dont-exist.com) that make up the mind.
+
+In [Goenka’s](http://Dhamma.org) system, though, metta shows up briefly on day ten, mainly as a way of sharing merit. To me that feels backwards. It skips the Buddha’s kindness-first approach, which he taught was necessary to bring the mind to a state ready for real [nibbana](http://nibbana.u-dont-exist.com) meditation. The kindness I would most want available when somebody’s trauma starts surfacing is introduced after nine days of the intense part.
+
+My buddy Oliver spent five weeks on a cave retreat following [Ajahn Sona’s metta meditation teachings](http://love.u-dont-exist.com). It healed his cPTSD better than any shrink session. What ultimately helped him most was [Cinnamon Ayahuasca](https://youtu.be/ZIOWAqXmKUM?si=3rrT-KIDqphhgzr2), altho he has yet to try my new [Ultimate Psychedelic Protocol](http://loveyhuasca.info).
+
+You don’t have to take Oliver’s experience as a recipe for yours. I’m including it because it is one reason I take the “metta first” possibility seriously.
+
+---
+
+# True Insight: Not Just Watching, But Unraveling the Knots
+
+There is another problem I have with the Goenka approach even apart from trauma.
+
+Vipassana, as I understand it, is supposed to unweave perception—not just leave somebody watching experience from the position of a cosmic spectator. Goenka’s body scanning can refine awareness and make *anicca*—impermanence—very obvious, but some Theravada practitioners say it can leave the “unified witness” intact.
+
+And if you think about it, any technique that requires strong mental focus causes more stress. How could more stress be the path to the end of stress?
+
+Punching bags don’t help [rid you of anger](https://open.substack.com/pub/ibogaqueen/p/anger-cant-afford-the-rent-my-heart?utm_source=share\&utm_medium=android\&r=5vdc6m); they just help you use it better. I think intense concentration can do something similar: create temporary calm without fully unwinding what is underneath. If trauma is still there, that calm can eventually flip back into distress.
+
+Maybe Goenka’s path sparks nibbana for some people. A Goenka volunteer told me she had never heard of anyone reaching stream entry through his method. I think the practice would go much further with more of the actual unweaving:
+
+[Spirit and Mind Health](https://ibogaqueen.substack.com/p/what-if-everything-is-already-perfect-bdc)
+
+## [What If Everything Is Already Perfect? (v2.0) - Nirvāna & Enlightenment explained 🫶🏿💗](https://ibogaqueen.substack.com/p/what-if-everything-is-already-perfect-bdc)
+
+[u-dont-exist.com](https://substack.com/profile/355021294-u-dont-existcom)
+
+·
+
+11 août
+
+Introduction & Navigation
+
+[Read full story](https://ibogaqueen.substack.com/p/what-if-everything-is-already-perfect-bdc)
+
+---
+
+# Trauma-Informed Retreat Alternatives
+
+I don’t think the choice should be “do Goenka” or “don’t meditate.” If you know that sitting with intense internal material can destabilize you, there are gentler ways to explore what meditation can do.
+
+A metta-heavy retreat is one possibility. Trauma-informed mindfulness is another. Mindfulness-Based Stress Reduction combined with therapy may fit some people better. So might working with a teacher who is actually willing to slow down when your nervous system says no. [Insight Meditation Society](http://dharma.org) and [Plum Village](http://plumvillage.org) are two places to look.
+
+None of those names means you have to hand over your judgment. Ask questions. Notice how teachers respond when somebody says a practice is making them worse. If something feels destabilizing, you are allowed to stop.
+
+Your path is yours to shape.
+
+Thanks for reading. Drop your thoughts in the comments, or ask to join my therapycircle chat on Signal. I also have a lot of [resources](https://open.substack.com/pub/ibogaqueen/p/the-modernized-buddhist-path-to-freedom?utm_source=share\&utm_medium=android\&r=5vdc6m) here on my Substack, so make sure to peruse those at your leisure. 😊😊😊💕🙏🏿
+
+Stay grounded, stay kind—may all beings, including you, find ease. 🌌
+
+---
+
+## Postscript: Goenka Survivor Anecdotes
+
+Here are some of the most severe personal accounts I found about negative experiences at Goenka Vipassana retreats. I prioritized reports involving intense psychological breakdowns, hospitalization, and long-term distress. These are direct permalinks to threads where people—or their loved ones—describe what happened.
+
+They are anecdotal. Many contain detailed descriptions of mental-health crises, so there is no reason to read them just to prove to yourself that you can.
+
+- **Psychosis after a Goenka retreat, described as a possible “dark night,” with hallucinations, paranoia, and hospitalization:** [The user recounts](https://www.reddit.com/r/streamentry/comments/dy1vxo/vipassana_psychosis_after_goenka_retreat_dark/) extreme visual hallucinations, feelings of conspiracy, and being committed to a psychiatric hospital after day ten.
+
+- **Psychosis following a second ten-day retreat, leading to ongoing delusions and medical intervention:** [The original poster describes](https://www.reddit.com/r/streamentry/comments/xsrw0f/psychosis_after_10_day_vipassana_retreat/) the rapid onset of psychosis, warnings about genetic predisposition, and advice to avoid intense practices because of the risk of brain damage.
+
+- **[Vipassana-induced psychosis in a family member, resulting in mania, hospitalization, and months of destabilization](https://www.reddit.com/r/vipassana/comments/eo127w/vipassana_induced_psychosis/):** The relative was asked to leave on day seven and then descended into severe psychosis. The poster criticizes the center’s inadequate response.
+
+- **[Anxiety about attending a first retreat after reading accounts of psychosis, depression, and suicidal thoughts](https://www.reddit.com/r/vipassana/comments/15xd21v/im_about_to_go_in_my_first_10_day_vipassana/):** The thread includes people sharing or referring to breakdowns, emotional storms, and deep pain after buried trauma resurfaced.
+
+- **Risks of intensive retreats such as Goenka’s, including psychosis and bad-trip-like experiences:** [Users describe](https://www.reddit.com/r/Wakingupapp/comments/18o4t27/what_are_the_risks_of_an_intensive_retreat/) Goenka retreats triggering psychosis, with one person comparing a derailment on day five to a psychedelic crisis.
+
+- **[Rejection from a retreat because of a history of mental illness, followed by discussion of psychosis, depersonalization, and suicide risk](https://www.reddit.com/r/Meditation/comments/pbz09o/i_was_rejected_from_doing_a_10day_vipassana/):** Comments describe psychotic breaks, resurfacing trauma, and why Goenka-style practice is unsafe for vulnerable people.
+
+- **[A story about someone becoming suicidal after a retreat, beginning with escalating anxiety](https://www.reddit.com/r/Buddhism/comments/a6m9z8/i_have_read_a_story_about_a_person_who_went_into/):** Users recount Goenka retreats causing deep depression, nihilism, and unprocessed trauma surfacing as suicidal ideation.
+
+- **A retreat ending in psychosis—or a dark night—with three-dimensional hallucinations and psychiatric commitment:** [This detailed personal log](https://www.dharmaoverground.org/discussion/-/message_boards/message/16879352) describes jhana-like states turning into a breakdown on day ten, with mixed techniques exacerbating the crisis.
+
+- **Severe harm to mental health through an exacerbation of OCD:** [The original poster explains](https://www.reddit.com/r/vipassana/comments/1d25cj6/vipassana_retreats_severely_harm_my_mental_health/) how retreats intensified intrusive thoughts and compulsions to a debilitating level and advises caution for people with similar conditions.
