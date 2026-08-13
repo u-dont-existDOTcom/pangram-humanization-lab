@@ -521,6 +521,65 @@
           "section_id": "R7_AFTER_LEAVING_DIAGNOSTIC"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T17:43:58.314148+00:00",
+      "experiment_id": "romance-reconstruction-r9-2026-08-13",
+      "id": "Q-dcf28971aa3751aa",
+      "sections": [
+        "R3_SLOW_COMPOSITION",
+        "R4_DESIRE_PERFORMANCE_REPAIR",
+        "R5_PRACTICAL_REPAIR",
+        "R7_AFTER_LEAVING_DIAGNOSTIC",
+        "R7_TOUGH_LOVE_DIAGNOSTIC"
+      ],
+      "source_path": "state/experiments/romance-reconstruction-r9-2026-08-13-results.json",
+      "source_ref": "task/romance-reconstruction-r9",
+      "source_sha256": "f1c25dbd5bd8759b2d2bd4574ab4747f741bb0e4b98ca66297fb001e08947e13",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.7017643451690674,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.29823562502861023,
+          "id": "R3_SLOW_CLOCKS_A",
+          "prediction_short": "Mixed",
+          "section_id": "R3_SLOW_COMPOSITION"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R4_NOT_PERFORMANCE_B",
+          "prediction_short": "AI",
+          "section_id": "R4_DESIRE_PERFORMANCE_REPAIR"
+        },
+        {
+          "fraction_ai": 0.4967938959598541,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.5032061338424683,
+          "id": "R5_CHOOSING_B",
+          "prediction_short": "Mixed",
+          "section_id": "R5_PRACTICAL_REPAIR"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R7_AFTER_LEAVING_B",
+          "prediction_short": "Human",
+          "section_id": "R7_AFTER_LEAVING_DIAGNOSTIC"
+        },
+        {
+          "fraction_ai": 0.2918088734149933,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7081910967826843,
+          "id": "R7_TOUGH_LOVE_A",
+          "prediction_short": "Mixed",
+          "section_id": "R7_TOUGH_LOVE_DIAGNOSTIC"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
