@@ -1,0 +1,52 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-artificial-localize-r1-2026-08-13",
+  "results": [
+    {
+      "id": "WHY_ORIGINAL",
+      "measurement_key": "romance-artificial-localize-r1-2026-08-13_WHY_ORIGINAL",
+      "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\n\nWell, you caught me. It is painfully artificial. In a healthy communal society, the couple would have access to witnesses, elders, friends, and other emotional outlets and resources. Most of us these days don’t have that, so we’re trying to recreate consciously and clumsily some of what the wider field would have done without a checklist. You might even suspect that I'm subtly trying to influence you into wanting to forget all this and just join a community! And I couldn't even say you're wrong.",
+      "text_sha256": "686e286001ac786bb575a3f1bce07d635fe301b003dd96790420cb4b22be16fa",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial. In a healthy communal society, the couple would have access to witnesses, elders, friends, and other emotional outlets and resources. Most of us these days don’t have that, so we’re trying to recreate consciously and clumsily some of what the wider field would have done without a checklist. You might even suspect that I'm subtly trying to influence you into wanting to forget all this and just join a community! And I couldn't even say you're wrong.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.5323910713195801,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.4676089584827423,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.3085394501686096,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 397,
+            "word_count": 59,
+            "token_length": 76,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": " In a healthy communal society, the couple would have access to witnesses, elders, friends, and other emotional outlets and resources. Most of us these days don’t have that, so we’re trying to recreate consciously and clumsily some of what the wider field would have done without a checklist. You might even suspect that I'm subtly trying to influence you into wanting to forget all this and just join a community! And I couldn't even say you're wrong.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.48385369777679443,
+            "confidence": "Medium",
+            "start_index": 397,
+            "end_index": 849,
+            "word_count": 77,
+            "token_length": 93,
+            "is_humanized": false,
+            "humanizer_score": 0.7925565838813782
+          }
+        ]
+      }
+    }
+  ]
+}
