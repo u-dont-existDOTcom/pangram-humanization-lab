@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R5_SCRIPTURE_A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "## Why marriage vows are dishonest\nConventional marriage vows are dishonest, and most people know it. You can't promise how you'll feel in the future. You can promise actions if you really believe you're capable of delivering them. So for example, you could promise to tell the truth, to keep showing up, to support the children, or whatever else you genuinely believe you can do.\nEcclesiastes 5:4–6 says it is better not to make a vow than to make one and fail to fulfill it. It also warns that God will be angry with your words and destroy your work if you tell the priest, “I didn’t mean what I promised.” Matthew 5:33–37, echoed in James 5:12, says let your “Yes” be “Yes” and your “No” be “No,” and says anything beyond that comes from evil. Those passages are not talking about romance. But they make me suspicious of the promise itself: if my plain yes isn't trustworthy, why would more swearing make it so?\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.\nYou can sign a contract about what you’ll do. You can’t sign one saying what your heart will feel ten years from now and expect the contract to produce the feeling.\nMarriage itself is a sham in many ways. You could honestly say, “I’ll love you to the best of my ability, in accordance with how you love me.” But “I’ll always love you more than anyone else”—based on what? Because God wants you to?",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.24856898188591003,
+        "confidence": "High",
+        "end_index": 1570,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "## Why marriage vows are dishonest\nConventional marriage vows are dishonest, and most people know it. You can't promise how you'll feel in the future. You can promise actions if you really believe you're capable of delivering them. So for example, you could promise to tell the truth, to keep showing up, to support the children, or whatever else you genuinely believe you can do.\nEcclesiastes 5:4–6 says it is better not to make a vow than to make one and fail to fulfill it. It also warns that God will be angry with your words and destroy your work if you tell the priest, “I didn’t mean what I promised.” Matthew 5:33–37, echoed in James 5:12, says let your “Yes” be “Yes” and your “No” be “No,” and says anything beyond that comes from evil. Those passages are not talking about romance. But they make me suspicious of the promise itself: if my plain yes isn't trustworthy, why would more swearing make it so?\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.\nYou can sign a contract about what you’ll do. You can’t sign one saying what your heart will feel ten years from now and expect the contract to produce the feeling.\nMarriage itself is a sham in many ways. You could honestly say, “I’ll love you to the best of my ability, in accordance with how you love me.” But “I’ll always love you more than anyone else”—based on what? Because God wants you to?",
+        "token_length": 366,
+        "word_count": 285
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "7c6ed733-05bc-42c9-a665-3e8a01235aeb",
   "text": "## Why marriage vows are dishonest\n\nConventional marriage vows are dishonest, and most people know it. You can't promise how you'll feel in the future. You can promise actions if you really believe you're capable of delivering them. So for example, you could promise to tell the truth, to keep showing up, to support the children, or whatever else you genuinely believe you can do.\n\nEcclesiastes 5:4–6 says it is better not to make a vow than to make one and fail to fulfill it. It also warns that God will be angry with your words and destroy your work if you tell the priest, “I didn’t mean what I promised.” Matthew 5:33–37, echoed in James 5:12, says let your “Yes” be “Yes” and your “No” be “No,” and says anything beyond that comes from evil. Those passages are not talking about romance. But they make me suspicious of the promise itself: if my plain yes isn't trustworthy, why would more swearing make it so?\n\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.\n\nYou can sign a contract about what you’ll do. You can’t sign one saying what your heart will feel ten years from now and expect the contract to produce the feeling.\n\nMarriage itself is a sham in many ways. You could honestly say, “I’ll love you to the best of my ability, in accordance with how you love me.” But “I’ll always love you more than anyone else”—based on what? Because God wants you to?\n",
   "text_sha256": "64ab696c705cc34792add19124c5503abd7a04b74c84147819854fe010791b4e",
-  "updated_utc": "2026-08-13T17:01:20.424756+00:00"
+  "updated_utc": "2026-08-13T17:01:21.796451+00:00"
 }
