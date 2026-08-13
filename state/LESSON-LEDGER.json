@@ -1,4 +1,19 @@
 {
   "schema_version": 1,
-  "entries": []
+  "entries": [
+    {
+      "id": "L-2db732f42c-01",
+      "source_path": "state/PANGRAM-ACTIONS-ACCESS-INCIDENT-2026-08-13.md",
+      "source_sha256": "2db732f42cd062a0fffcfd0248ce51d7c7dadd8a9422ed6ff72c6ae1f732cfa6",
+      "finding": "Missing local Pangram credentials or a signed-out dashboard do not establish detector unavailability; workers must resolve access through the proven repository-secret GitHub Actions route before using a pre-Pangram label.",
+      "disposition": "promoted",
+      "reason": "",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
+      ],
+      "recorded_at_utc": "2026-08-13T14:42:07Z",
+      "source_ref": "agent/pangram-actions-key-routing"
+    }
+  ]
 }

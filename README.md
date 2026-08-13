@@ -61,6 +61,8 @@ The importer reads the earlier `campaign-state.json`/raw-response form and the n
 
 The repository is private by default. The installer uses your current `gh` account; it never hardcodes a GitHub username. API credentials are never written to the repository. `.env`, key/secret files, and `.venv` are ignored.
 
+Workers without a local Pangram key must use the repository-secret Actions route described in `docs/PANGRAM-ACTIONS-RUNBOOK.md`; absence of a local key or a signed-out dashboard does not mean Pangram is unavailable. The secret remains inside Actions and must never be retrieved or printed.
+
 ## Experimental contract
 
 The Human endpoint remains editorial authority. Synthetic probes must preserve meaning. The blind reviewer runs before any new Pangram measurements. The planner uses explicit factor assignments rather than brittle `factor_bits`, and contrasts may reference only literal probe IDs; factorial effects/interactions are computed by deterministic code.

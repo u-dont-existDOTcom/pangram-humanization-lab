@@ -39,7 +39,9 @@ A requested humanization pass is **not complete** until all of the following are
 4. any detector-driven change has been re-audited for semantic and rhetorical loss;
 5. the user-facing diff labels detector status only from measured results, never prediction or intuition.
 
-If detector access is temporarily unavailable, the prose may be delivered only as an explicitly labeled **pre-Pangram candidate**. Never call the humanization complete, never say a version “passes,” and never substitute an internal stylistic judgment for the detector call.
+Do not infer that Pangram access is unavailable merely because the current worker has no local `PANGRAM_API_KEY`, a local key is rejected, or the Pangram web dashboard is signed out. Before labeling a candidate pre-Pangram, complete the access-resolution gate in `docs/PANGRAM-ACTIONS-RUNBOOK.md`, including the repository-secret GitHub Actions route based on `automation/pangram-fixed-batch`. Never retrieve, print, commit, or ask Joel to paste the repository secret.
+
+Only after both the direct/local route and the secret-backed Actions route are unusable may the prose be delivered as an explicitly labeled **pre-Pangram candidate**. Record the exact blocker. Never call the humanization complete, never say a version “passes,” and never substitute an internal stylistic judgment for the detector call.
 
 When preparing a choice diff, default to the single best passing faithful version. Show multiple passing choices only when alternatives preserve different owner-valued functions, tones, claims, or tradeoffs. Do not manufacture options merely because several detector-green phrasings exist.
 
