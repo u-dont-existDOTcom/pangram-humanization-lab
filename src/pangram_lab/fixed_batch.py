@@ -16,6 +16,9 @@ def load_spec(path: Path, max_variants: int = 8) -> dict[str, Any]:
     experiment_id = data.get("experiment_id")
     if not isinstance(experiment_id, str) or not experiment_id.strip():
         raise ValueError("experiment_id must be a non-empty string")
+    audit_id = data.get("audit_id")
+    if audit_id is not None and (not isinstance(audit_id, str) or not audit_id.strip()):
+        raise ValueError("audit_id must be a non-empty string when supplied")
     variants = data.get("variants")
     if not isinstance(variants, list) or not variants:
         raise ValueError("variants must be a non-empty list")
@@ -34,6 +37,11 @@ def load_spec(path: Path, max_variants: int = 8) -> dict[str, Any]:
         seen.add(variant_id)
         if not isinstance(text, str) or not text:
             raise ValueError(f"variant {variant_id} text must be non-empty")
+        section_id = variant.get("section_id")
+        if audit_id is not None and (not isinstance(section_id, str) or not section_id.strip()):
+            raise ValueError(f"variant {variant_id} section_id must be a non-empty string for audit {audit_id}")
+        if audit_id is None and section_id is not None:
+            raise ValueError("section_id requires top-level audit_id")
     return data
 
 
