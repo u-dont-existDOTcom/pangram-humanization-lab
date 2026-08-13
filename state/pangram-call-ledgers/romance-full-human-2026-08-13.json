@@ -669,8 +669,8 @@
     },
     "R7_TOUGH_LOVE_DIAGNOSTIC\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -687,10 +687,18 @@
           "text_sha256": "0f386ba236d62ddbcadbc4968d234ae42a3c27edee6fbe594c9e20b093555d0a",
           "type": "paid_post_reserved",
           "word_count": 716
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r11-2026-08-13_R7_TOUGH_LOVE_B",
+          "recorded_at_utc": "2026-08-13T18:17:32.338282+00:00",
+          "text_sha256": "3f3eae49cf7a8000328b4a88a5a1098332f31c1bf9900067cc6e4ab297de5fbe",
+          "type": "paid_post_reserved",
+          "word_count": 722
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "R7_TOUGH_LOVE_DIAGNOSTIC",
       "version": "4.0"
