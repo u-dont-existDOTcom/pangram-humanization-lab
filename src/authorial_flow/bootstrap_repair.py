@@ -18,6 +18,7 @@ import sys
 from typing import Any, Callable, Sequence
 
 from .config import RuntimeConfig
+from .diagnostics import format_publication_status, safely_publish_diagnostic
 from .finalize import build_evidence_package
 
 _MAX_TEXT=12000
@@ -155,6 +156,15 @@ def _acceptance_command(root:Path,command:Sequence[str])->list[str]:
         argv[0]=str((root/argv[0]).resolve())
     return argv
 
+
+def _publish_preflight(publisher:Callable[...,Any],config:RuntimeConfig,**kwargs:Any)->None:
+    try:
+        result=publisher(config,**kwargs)
+    except Exception:
+        return
+    if result is not None and hasattr(result,"status"):
+        print(format_publication_status(result),flush=True)
+
 def run_preflight(
     config:RuntimeConfig,
     command:Sequence[str],
@@ -169,6 +179,7 @@ def run_preflight(
     source_provenance:str="INSTALLER_PREFLIGHT",
     evidence_file:Path|None=None,
     verify_before_promotion:bool=False,
+    diagnostic_publisher:Callable[...,Any]|None=None,
 )->int:
     """Run installer preflight and repair one machine-fixable failure autonomously.
 
@@ -187,19 +198,36 @@ def run_preflight(
         from .runtime import _production_repair_cycle
         repair_cycle_factory=_production_repair_cycle
     command_runner=command_runner or _default_command_runner
+    diagnostic_publisher=diagnostic_publisher or safely_publish_diagnostic
 
     initial=command_runner(command,root)
     _emit_result(initial)
     if int(getattr(initial,"returncode",1)) == 0:
+        _publish_preflight(
+            diagnostic_publisher,config,phase=phase,outcome="pass",result={},
+            report_path=evidence_file,command=command,returncode=0,
+        )
         return 0
 
     credential=_credential_requirement(root,evidence_file)
     if credential:
         print(f"bootstrap_credential_required={credential}",file=sys.stderr,flush=True)
+        _publish_preflight(
+            diagnostic_publisher,config,phase=phase,outcome="credential_required",
+            result={"failure_class":failure_class,"failure_origin_node":originating_node},
+            report_path=evidence_file,command=command,
+            returncode=int(getattr(initial,"returncode",3) or 3),
+        )
         return 3
     account_action=_account_action_requirement(root,evidence_file)
     if account_action:
         print(f"bootstrap_account_action_required={account_action}",file=sys.stderr,flush=True)
+        _publish_preflight(
+            diagnostic_publisher,config,phase=phase,outcome="account_action_required",
+            result={"failure_class":failure_class,"failure_origin_node":originating_node},
+            report_path=evidence_file,command=command,
+            returncode=int(getattr(initial,"returncode",4) or 4),
+        )
         return 4
 
     source_ref,source_hash=_source_snapshot(services,root)
@@ -249,6 +277,14 @@ def run_preflight(
         rerun=command_runner(command,root)
         _emit_result(rerun)
         if int(getattr(rerun,"returncode",1)) == 0:
+            _publish_preflight(
+                diagnostic_publisher,config,phase=phase,outcome="pass",
+                result={
+                    **dict(outcome),"failure_class":failure_class,
+                    "failure_origin_node":originating_node,"repair_outcome":"APPLIED_VERIFIED",
+                },
+                report_path=evidence_file,command=command,returncode=0,
+            )
             return 0
         evidence_ref=_persist_failure(
             services=services,root=root,command=command,result=rerun,
@@ -259,6 +295,15 @@ def run_preflight(
 
     package=package_builder(config,reason="bounded-failure")
     print(f"bootstrap_repair_evidence={package}",flush=True)
+    _publish_preflight(
+        diagnostic_publisher,config,phase=phase,outcome="bounded_machine_stop",
+        result={
+            **state,"failure_class":failure_class,"failure_origin_node":originating_node,
+            "evidence_package_path":str(package),
+        },
+        report_path=evidence_file,command=command,
+        returncode=int(getattr(initial,"returncode",1) or 1),
+    )
     return int(getattr(initial,"returncode",1) or 1)
 
 

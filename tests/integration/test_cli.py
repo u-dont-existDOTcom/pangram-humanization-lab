@@ -10,7 +10,7 @@ from authorial_flow.finalize import build_evidence_package
 def test_cli_has_required_commands():
     p=parser()
     text=p.format_help()
-    for name in ["run","resume","status","answer","package"]:
+    for name in ["run","resume","status","answer","package","publish-results"]:
         assert name in text
 
 
@@ -334,6 +334,76 @@ def test_terminal_bounded_stop_recovery_replays_failed_checkpoint_once_per_progr
     second=cli.recover_terminal_machine_failure(cfg,'same-thread',bounded,services=services)
     assert second is bounded
     assert len(calls)==1
+
+
+def test_terminal_bounded_stop_recovery_infers_missing_legacy_origin_from_current_failure_history(monkeypatch,tmp_path):
+    import contextlib
+    from types import SimpleNamespace
+    import authorial_flow.cli as cli
+
+    cfg=RuntimeConfig.from_root(tmp_path)
+    graph_cfg={'configurable':{'thread_id':'legacy-thread'}}
+    terminal=SimpleNamespace(
+        next=(),values={'status':'bounded_machine_stop','phase':'finalized'},config=graph_cfg,
+    )
+    before_finalize=SimpleNamespace(
+        next=('finalize',),
+        values={'status':'bounded_machine_stop','phase':'generation'},
+        config={'configurable':{'thread_id':'legacy-thread','checkpoint_id':'before-finalize'}},
+    )
+    failed_generation=SimpleNamespace(
+        next=('repair',),
+        values={'status':'machine_failure','phase':'generation','failure_class':'GENERATION_DEAD_END'},
+        config={'configurable':{'thread_id':'legacy-thread','checkpoint_id':'failed-generation'}},
+    )
+    before_generation=SimpleNamespace(
+        next=('generation',),
+        values={'status':'continue_generation','phase':'generation'},
+        config={'configurable':{'thread_id':'legacy-thread','checkpoint_id':'before-generation'}},
+    )
+    older_terminal=SimpleNamespace(
+        next=(),
+        values={
+            'status':'bounded_machine_stop','phase':'finalized',
+            'failure_origin_node':'detector',
+        },
+        config={'configurable':{'thread_id':'legacy-thread','checkpoint_id':'older-terminal'}},
+    )
+    calls=[]
+
+    class FakeApp:
+        def get_state(self, config):
+            return terminal
+        def get_state_history(self, config):
+            return iter([terminal,before_finalize,failed_generation,before_generation,older_terminal])
+        def invoke(self, initial, config):
+            calls.append((initial,config))
+            return {'status':'continue_generation','accepted_moves':['preserved']}
+
+    @contextlib.contextmanager
+    def fake_open(config,deps):
+        yield FakeApp()
+
+    monkeypatch.setattr(cli,'program_version',lambda root:'origin-inference-fix')
+    monkeypatch.setattr(cli,'build_runtime_dependencies',lambda *a,**k: object())
+    monkeypatch.setattr(cli,'open_graph',fake_open)
+    bounded={
+        'status':'bounded_machine_stop','failure_class':'GENERATION_DEAD_END',
+        'failure_origin_node':'','accepted_moves':['preserved'],'repair_attempt':6,
+    }
+
+    recovered=cli.recover_terminal_machine_failure(
+        cfg,'legacy-thread',bounded,services=object(),
+    )
+
+    assert recovered['status']=='continue_generation'
+    assert recovered['accepted_moves']==['preserved']
+    assert calls==[(None,before_generation.config)]
+    markers=list((cfg.state_dir/'bounded-recovery').glob('*.json'))
+    assert len(markers)==1
+    marker=json.loads(markers[0].read_text())
+    assert marker['failure_origin_node']=='generation'
+    assert marker['checkpoint_id']=='before-generation'
 
 
 def test_command_resume_attempts_terminal_machine_recovery_before_packaging(monkeypatch,tmp_path):

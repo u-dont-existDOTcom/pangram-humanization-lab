@@ -21,6 +21,7 @@ EXCLUDED_PARTS = {
 }
 EXCLUDED_PREFIXES = ("RESULT-", "UPLOAD-", "AUTHORIAL-SUPERVISOR-LIVE-SNAPSHOT-")
 EXCLUDED_SUFFIXES = (".pyc", ".pyo")
+ROOT_RELEASE_METADATA = {"MANIFEST.json", "SHA256SUMS.txt"}
 
 
 class ReleaseError(RuntimeError):
@@ -49,17 +50,33 @@ def _sha(data: bytes) -> str:
     return sha256(data).hexdigest()
 
 
-def _source_commit(repo_root: Path) -> str:
+def _git_text(repo_root: Path, *args: str) -> str:
     try:
-        p = subprocess.run(
-            ["git", "rev-parse", "HEAD"], cwd=repo_root, text=True,
+        result = subprocess.run(
+            ["git", *args], cwd=repo_root, text=True,
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=10,
         )
-        if p.returncode == 0 and p.stdout.strip():
-            return p.stdout.strip()
-    except Exception:
-        pass
-    return "unversioned"
+    except (OSError, subprocess.SubprocessError):
+        return ""
+    return result.stdout.strip() if result.returncode == 0 else ""
+
+
+def _source_commit(repo_root: Path) -> str:
+    candidate = _git_text(repo_root, "rev-parse", "HEAD")
+    if not candidate:
+        return "unversioned"
+    while True:
+        changed = _git_text(
+            repo_root, "diff-tree", "--root", "--no-commit-id",
+            "--name-only", "-r", candidate,
+        )
+        paths = {line.strip() for line in changed.splitlines() if line.strip()}
+        if not paths or not paths.issubset(ROOT_RELEASE_METADATA):
+            return candidate
+        parent = _git_text(repo_root, "rev-parse", f"{candidate}^")
+        if not parent:
+            return candidate
+        candidate = parent
 
 
 def _project_name(repo_root: Path) -> str:
@@ -94,7 +111,7 @@ def _include_file(repo_root: Path, path: Path, out_zip: Path) -> bool:
         return False
     if path.name.endswith(EXCLUDED_SUFFIXES):
         return False
-    if path.name in {"MANIFEST.json", "SHA256SUMS.txt"} and len(rel.parts) == 1:
+    if path.name in ROOT_RELEASE_METADATA and len(rel.parts) == 1:
         # Root release metadata is generated from the exact build, never copied from an old build.
         return False
     return True
@@ -174,6 +191,32 @@ def build_release(repo_root: Path, out_zip: Path) -> ReleaseManifest:
         policy_version=policy_version,
         member_count=len(source_members) + 2,
     )
+
+
+def write_root_release_metadata(repo_root: Path) -> ReleaseManifest:
+    repo_root = Path(repo_root).resolve()
+    with tempfile.TemporaryDirectory(prefix="authorial-flow-root-metadata-") as td:
+        release_zip = Path(td) / "release.zip"
+        manifest = build_release(repo_root, release_zip)
+        prefix = manifest.archive_root + "/"
+        with zipfile.ZipFile(release_zip) as archive:
+            payloads = {
+                name: archive.read(prefix + name)
+                for name in sorted(ROOT_RELEASE_METADATA)
+            }
+    staged: dict[str, Path] = {}
+    try:
+        for name, data in payloads.items():
+            temporary = repo_root / f".{name}.{os.getpid()}.tmp"
+            temporary.write_bytes(data)
+            os.chmod(temporary, 0o644)
+            staged[name] = temporary
+        for name, temporary in staged.items():
+            os.replace(temporary, repo_root / name)
+    finally:
+        for temporary in staged.values():
+            temporary.unlink(missing_ok=True)
+    return manifest
 
 
 def _safe_member(name: str) -> bool:

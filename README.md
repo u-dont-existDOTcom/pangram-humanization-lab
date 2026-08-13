@@ -9,7 +9,7 @@ The current release is a **candidate** until the exact Git commit passes the liv
 On Joel's French Zorin system, install from the versioned Git branch:
 
 ```bash
-git clone --branch install/authorial-flow-graph-v1-1.2.0-dev1 \
+git clone --branch install/authorial-flow-graph-v1-1.3.0-dev1 \
   https://github.com/u-dont-existDOTcom/pangram-humanization-lab.git \
   ~/authorial-flow-graph-v1
 cd ~/authorial-flow-graph-v1
@@ -93,9 +93,11 @@ Returned machine failures receive the same redacted, dereferenceable evidence as
 
 `./RUN.sh package --reason bounded-failure` creates a secret-free evidence ZIP containing policy/project manifests, checkpoint/event data, content-addressed artifacts, regression evidence, detector output, and owner-response state. Internal artifacts stay internal; the runtime does not print transient `UPLOAD THIS FILE` paths that later disappear.
 
+Version 1.3 also publishes a compact privacy-safe result record automatically after installer checks and significant runtime outcomes. It uses the separate orphan branch `diagnostics/authorial-flow-graph-v1` in the canonical private repository, without switching or dirtying the installed source branch. Records contain only typed outcomes, counts, hashes, provider capability status, and the content-free boundary trace; article text, prompts, transcripts, stdout/stderr bodies, exceptions, credentials, full local paths, and evidence ZIP bytes are permanently excluded. If Git authentication or the network is unavailable, the outcome is unchanged and the record remains in `.state/diagnostics/outbox/` for the next run. `./RUN.sh publish-results` creates a current snapshot and retries the queue manually.
+
 ## Validation status
 
-- **Deterministic:** the current implementation passes the unit, regression, real LangGraph/SQLite, integration-with-fakes, repair, optimizer, release, heartbeat, provenance, authority-isolation, detector-downstream, supervisor-security, and packaging suites in the build environment. Exact 1.2 counts and copied-incident-state compatibility evidence are recorded in `docs/2026-08-12-bounded-failure-control-review.md`.
+- **Deterministic:** the current implementation passes the unit, regression, real LangGraph/SQLite, real local-Git diagnostics publication, integration-with-fakes, repair, optimizer, release, heartbeat, provenance, authority-isolation, detector-downstream, supervisor-security, and packaging suites in the build environment. Exact 1.2 control evidence is recorded in `docs/2026-08-12-bounded-failure-control-review.md`; 1.3 publication evidence is recorded in `docs/2026-08-12-automatic-diagnostics-publication-review.md`.
 - **LangGraph checkpoint integration:** deterministic real-SQLite tests cover cancelled-node replay, Pangram task-ID checkpoint/poll resume, repair-promotion consistency, invalid-action reinterrupts, and durable same-thread supervisor resume. The exact candidate still requires the target Zorin run; deterministic signal tests do not prove terminal behavior on that machine.
 - **Live Claude/Codex:** earlier releases supplied provider evidence, but the interactive-supervisor candidate requires fresh target-machine smoke and one real same-terminal supervisor conversation.
 - **Live Pangram:** current async-API authentication is checked without creating a task; real candidate submission remains downstream of local gates, checkpoints the task ID before polling, and accepts only returned version `4.0` with Human/zero-AI status. Target-machine evidence required.
