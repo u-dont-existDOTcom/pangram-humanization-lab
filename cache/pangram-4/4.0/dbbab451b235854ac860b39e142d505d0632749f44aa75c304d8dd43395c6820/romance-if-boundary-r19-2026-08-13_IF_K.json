@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-if-boundary-r19-2026-08-13_IF_K",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "## Why all of this sounds artificial\nBy now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.\n---\n# If you’re already in it\nI could keep bringing up the same problem, but I couldn’t make the other person look at it with me. I learned that in all three of my reference relationships. Actually, it’s probably just common sense. One person can’t create mutual honesty.\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.028588792309165,
+        "confidence": "High",
+        "end_index": 1103,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "## Why all of this sounds artificial\nBy now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.\n---\n# If you’re already in it\nI could keep bringing up the same problem, but I couldn’t make the other person look at it with me. I learned that in all three of my reference relationships. Actually, it’s probably just common sense. One person can’t create mutual honesty.\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+        "token_length": 227,
+        "word_count": 184
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "e88ac739-e760-4613-bbb7-6337f8799c0c",
   "text": "## Why all of this sounds artificial\n\nBy now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\n\nWell, you caught me. It is painfully artificial.\n\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.\n\n---\n\n# If you’re already in it\n\nI could keep bringing up the same problem, but I couldn’t make the other person look at it with me. I learned that in all three of my reference relationships. Actually, it’s probably just common sense. One person can’t create mutual honesty.\n\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
   "text_sha256": "dbbab451b235854ac860b39e142d505d0632749f44aa75c304d8dd43395c6820",
-  "updated_utc": "2026-08-13T02:20:16.873409+00:00"
+  "updated_utc": "2026-08-13T02:20:18.205313+00:00"
 }
