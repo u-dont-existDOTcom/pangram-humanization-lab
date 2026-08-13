@@ -153,6 +153,41 @@
         ]
       },
       "section_id": "R1_TALK_B"
+    },
+    {
+      "id": "TALK_FULL_L39_47",
+      "measurement_key": "romance-r1-decomposition-r4-2026-08-13_TALK_FULL_L39_47",
+      "text": "That difference is one reason to talk before sex. Most couples wait until they’re already having sex to talk honestly about sex. By then honesty has consequences: it might interrupt the thing that has already begun. The earlier conversation can go places the later one often can’t, and having it is already part of the difference between making love together and merely having sex.\n\nWhat do you actually desire? What helps your body feel safe? Are there kinks or particular dynamics that matter to you? What has your history taught you about your erotic wiring? What reliably doesn’t work? How often do you each imagine wanting sex, and what would a mismatch mean? Is sex recreation, bonding, sacred practice, stress relief, all of those, or something else entirely?\n\nA lot of people can’t answer cleanly because they don’t know yet. That’s still an answer. *I don’t know, but I’m willing to find out honestly with you* is a much better beginning than silently assuming the bodies will somehow negotiate everything on their own.\n\nSexual compatibility isn’t just whether two bodies fit. It’s whether two people can stay honest while maximally exposed. If you can talk frankly before your clothes come off, you’ve already practiced some of the trust, attention, and willingness to be seen that making love requires.\n\nName the possibility of mismatched desire, too. In long relationships, one person usually wants more sex, less sex, or different sex for at least some stretch. It’s one of the great factories of quiet resentment. Talking about how you might handle it before either person is hurt won’t solve it in advance, but it gives you somewhere to begin.\n",
+      "text_sha256": "ef534aa8c17f90967c05f7821251b9b2b4bfda400e9632888967bfeede7909c2",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "That difference is one reason to talk before sex. Most couples wait until they’re already having sex to talk honestly about sex. By then honesty has consequences: it might interrupt the thing that has already begun. The earlier conversation can go places the later one often can’t, and having it is already part of the difference between making love together and merely having sex.\nWhat do you actually desire? What helps your body feel safe? Are there kinks or particular dynamics that matter to you? What has your history taught you about your erotic wiring? What reliably doesn’t work? How often do you each imagine wanting sex, and what would a mismatch mean? Is sex recreation, bonding, sacred practice, stress relief, all of those, or something else entirely?\nA lot of people can’t answer cleanly because they don’t know yet. That’s still an answer. *I don’t know, but I’m willing to find out honestly with you* is a much better beginning than silently assuming the bodies will somehow negotiate everything on their own.\nSexual compatibility isn’t just whether two bodies fit. It’s whether two people can stay honest while maximally exposed. If you can talk frankly before your clothes come off, you’ve already practiced some of the trust, attention, and willingness to be seen that making love requires.\nName the possibility of mismatched desire, too. In long relationships, one person usually wants more sex, less sex, or different sex for at least some stretch. It’s one of the great factories of quiet resentment. Talking about how you might handle it before either person is hurt won’t solve it in advance, but it gives you somewhere to begin.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "That difference is one reason to talk before sex. Most couples wait until they’re already having sex to talk honestly about sex. By then honesty has consequences: it might interrupt the thing that has already begun. The earlier conversation can go places the later one often can’t, and having it is already part of the difference between making love together and merely having sex.\nWhat do you actually desire? What helps your body feel safe? Are there kinks or particular dynamics that matter to you? What has your history taught you about your erotic wiring? What reliably doesn’t work? How often do you each imagine wanting sex, and what would a mismatch mean? Is sex recreation, bonding, sacred practice, stress relief, all of those, or something else entirely?\nA lot of people can’t answer cleanly because they don’t know yet. That’s still an answer. *I don’t know, but I’m willing to find out honestly with you* is a much better beginning than silently assuming the bodies will somehow negotiate everything on their own.\nSexual compatibility isn’t just whether two bodies fit. It’s whether two people can stay honest while maximally exposed. If you can talk frankly before your clothes come off, you’ve already practiced some of the trust, attention, and willingness to be seen that making love requires.\nName the possibility of mismatched desire, too. In long relationships, one person usually wants more sex, less sex, or different sex for at least some stretch. It’s one of the great factories of quiet resentment. Talking about how you might handle it before either person is hurt won’t solve it in advance, but it gives you somewhere to begin.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999395608901978,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1654,
+            "word_count": 277,
+            "token_length": 334,
+            "is_humanized": false,
+            "humanizer_score": 0.025663718581199646
+          }
+        ]
+      },
+      "section_id": "R1_TALK_FULL"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -316,6 +351,20 @@
       },
       {
         "section_id": "R1_TALK_B",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R1_TALK_FULL",
         "model": "pangram-4",
         "version": "4.0",
         "paid_api_calls": 1,
