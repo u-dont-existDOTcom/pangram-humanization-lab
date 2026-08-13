@@ -81,6 +81,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "IF_C",
+      "measurement_key": "romance-artificial-reconstruct-r2-2026-08-13_IF_C",
+      "text": "# If you’re already in it\n\nIf you’re already married, living together, raising children, or ten years in, you can’t use the part about slowing down before the relationship has momentum. It already has momentum.\n\nI wish I had a special method for this part. I don’t. In all three of my reference relationships I could keep bringing up the same problem, but I couldn’t make the other person look at it with me. One person can’t create mutual honesty. It’s probably common sense; I still had to learn it.\n\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+      "text_sha256": "54b4b1d5b3cd48c574667a81e0349cbccbb8a0895b1e5f574bacf6aea3f025bd",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "# If you’re already in it\nIf you’re already married, living together, raising children, or ten years in, you can’t use the part about slowing down before the relationship has momentum. It already has momentum.\nI wish I had a special method for this part. I don’t. In all three of my reference relationships I could keep bringing up the same problem, but I couldn’t make the other person look at it with me. One person can’t create mutual honesty. It’s probably common sense; I still had to learn it.\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "# If you’re already in it\nIf you’re already married, living together, raising children, or ten years in, you can’t use the part about slowing down before the relationship has momentum. It already has momentum.\nI wish I had a special method for this part. I don’t. In all three of my reference relationships I could keep bringing up the same problem, but I couldn’t make the other person look at it with me. One person can’t create mutual honesty. It’s probably common sense; I still had to learn it.\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.38015636801719666,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 737,
+            "word_count": 133,
+            "token_length": 164,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      }
     }
   ]
 }
