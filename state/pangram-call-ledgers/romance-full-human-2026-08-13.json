@@ -469,8 +469,8 @@
     },
     "R4_DESIRE_PERFORMANCE_REPAIR\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -487,10 +487,18 @@
           "text_sha256": "8977736e86399474d49434d96f62f7c2c764825afea2de661faa906c313a8327",
           "type": "paid_post_reserved",
           "word_count": 260
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-reconstruction-r9-2026-08-13_R4_NOT_PERFORMANCE_B",
+          "recorded_at_utc": "2026-08-13T17:43:36.738279+00:00",
+          "text_sha256": "1247d0e52aa1df5d8a9c54292f1242e414954141530ec51ada6a015f99fe96c1",
+          "type": "paid_post_reserved",
+          "word_count": 268
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "R4_DESIRE_PERFORMANCE_REPAIR",
       "version": "4.0"
