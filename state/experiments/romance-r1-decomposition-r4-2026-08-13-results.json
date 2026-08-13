@@ -1,0 +1,186 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-r1-decomposition-r4-2026-08-13",
+  "results": [
+    {
+      "id": "LOVE_TAIL_L29_31",
+      "measurement_key": "romance-r1-decomposition-r4-2026-08-13_LOVE_TAIL_L29_31",
+      "text": "If the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\n\nFor some couples, maybe they eventually treasure what they’ve built more than the drive that started it. For others, staying without eros would just be a concession, which doesn’t feel good for either person. You can’t know at the wedding what the bond will become.\n",
+      "text_sha256": "e63257639a281f1adf90a6f0da45775ec6d5ca753155dd6159510d81fcdfb2a8",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "If the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\nFor some couples, maybe they eventually treasure what they’ve built more than the drive that started it. For others, staying without eros would just be a concession, which doesn’t feel good for either person. You can’t know at the wedding what the bond will become.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.45392492413520813,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.5460751056671143,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "If the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.25737035274505615,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 320,
+            "word_count": 63,
+            "token_length": 79,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": "\nFor some couples, maybe they eventually treasure what they’ve built more than the drive that started it. For others, staying without eros would just be a concession, which doesn’t feel good for either person. You can’t know at the wedding what the bond will become.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.5597764253616333,
+            "confidence": "High",
+            "start_index": 320,
+            "end_index": 586,
+            "word_count": 45,
+            "token_length": 54,
+            "is_humanized": false,
+            "humanizer_score": 0.025455279275774956
+          }
+        ]
+      },
+      "section_id": "R1_LOVE_TAIL"
+    }
+  ],
+  "audit_id": "romance-full-human-2026-08-13",
+  "call_accounting": {
+    "audit_id": "romance-full-human-2026-08-13",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.95,
+        "estimated_credits": 19,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "FULL_ARTICLE",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_1",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.25,
+        "estimated_credits": 5,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_2",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_3",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_4",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_5",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_6",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "REGION_7",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "R1_LOVE_TAIL",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
