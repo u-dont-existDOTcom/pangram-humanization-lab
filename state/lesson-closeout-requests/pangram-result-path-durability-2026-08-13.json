@@ -1,17 +1,22 @@
 {
-  "schema_version": 1,
-  "request_id": "pangram-result-path-durability-2026-08-13",
-  "source_path": "state/PANGRAM-RESULT-PATH-DURABILITY-INCIDENT-2026-08-13.md",
-  "source_ref": "bfeb87e4db9204dead2f79437ef900bc5401956c",
-  "source_sha256": "b26e112c24cdf32e03ca1801d8fa443240b96647d7a08253a37d76d74d294e81",
-  "finding": "Fixed-batch detector evidence must derive its result pathname from experiment identity, fingerprint the exact batch spec, fail before detector access on path/spec reuse conflicts, and register semantic review only after the exact result is committed at an immutable ref.",
   "disposition": "promoted",
-  "reason": "",
+  "finding": "Fixed-batch detector evidence must derive its result pathname from experiment identity, fingerprint the exact batch spec, fail before detector access on path/spec reuse conflicts, and register semantic review only after the exact result is committed at an immutable ref.",
+  "index_block": "- **Immutable detector-result identity:** fixed-batch results are derived from `experiment_id`, spec-fingerprinted, fail closed on path/spec reuse conflicts before detector access, and lesson-review registration points to the immutable result commit. See the humanization-gate supplement.",
+  "ledger_entry_ids": [
+    "L-b26e112c24-01"
+  ],
+  "lesson_block": "### Bind detector evidence to immutable experiment identity\nFixed-batch result identity must be mechanical, not a workflow naming convention. Derive the canonical result path from `experiment_id`, fingerprint the exact batch spec, reject a mismatched output path or changed-spec reuse before detector access, and allow an identical completed experiment to reuse its result without another paid call. Commit the exact result before lesson-review registration and bind the review obligation to that immutable result commit. A mutable branch plus a reusable pathname is not durable provenance.",
+  "processed_at_utc": "2026-08-13T23:51:38.838021+00:00",
   "promoted_to": [
     "state/LESSON-INDEX.md",
     "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
   ],
-  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md",
-  "lesson_block": "### Bind detector evidence to immutable experiment identity\nFixed-batch result identity must be mechanical, not a workflow naming convention. Derive the canonical result path from `experiment_id`, fingerprint the exact batch spec, reject a mismatched output path or changed-spec reuse before detector access, and allow an identical completed experiment to reuse its result without another paid call. Commit the exact result before lesson-review registration and bind the review obligation to that immutable result commit. A mutable branch plus a reusable pathname is not durable provenance.",
-  "index_block": "- **Immutable detector-result identity:** fixed-batch results are derived from `experiment_id`, spec-fingerprinted, fail closed on path/spec reuse conflicts before detector access, and lesson-review registration points to the immutable result commit. See the humanization-gate supplement."
+  "reason": "",
+  "request_id": "pangram-result-path-durability-2026-08-13",
+  "schema_version": 1,
+  "source_path": "state/PANGRAM-RESULT-PATH-DURABILITY-INCIDENT-2026-08-13.md",
+  "source_ref": "bfeb87e4db9204dead2f79437ef900bc5401956c",
+  "source_sha256": "b26e112c24cdf32e03ca1801d8fa443240b96647d7a08253a37d76d74d294e81",
+  "status": "processed",
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
 }

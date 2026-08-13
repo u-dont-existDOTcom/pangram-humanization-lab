@@ -49,3 +49,6 @@ Current raw evidence is on branch `automation/pangram-fixed-batch`, including:
 - `state/candidates/spiritual-bypassing-owner-selected-B.json`
 
 The detector version and exact text hashes live in those result records. Preserve the full records rather than extracting phrase rules.
+<!-- closeout-request:pangram-result-path-durability-2026-08-13 -->
+### Bind detector evidence to immutable experiment identity
+Fixed-batch result identity must be mechanical, not a workflow naming convention. Derive the canonical result path from `experiment_id`, fingerprint the exact batch spec, reject a mismatched output path or changed-spec reuse before detector access, and allow an identical completed experiment to reuse its result without another paid call. Commit the exact result before lesson-review registration and bind the review obligation to that immutable result commit. A mutable branch plus a reusable pathname is not durable provenance.

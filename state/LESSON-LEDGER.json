@@ -110,6 +110,34 @@
       "source_path": "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json",
       "source_ref": "692a452cf3ad85a034dc1ef9b5b88cab3db10f82",
       "source_sha256": "bced50227946e8b2a25bafd228cd927b224c50adb94505fea479002154d77ed0"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Fixed-batch detector evidence must derive its result pathname from experiment identity, fingerprint the exact batch spec, fail before detector access on path/spec reuse conflicts, and register semantic review only after the exact result is committed at an immutable ref.",
+      "id": "L-b26e112c24-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-08-13T23:51:38.837349+00:00",
+      "source_path": "state/PANGRAM-RESULT-PATH-DURABILITY-INCIDENT-2026-08-13.md",
+      "source_ref": "bfeb87e4db9204dead2f79437ef900bc5401956c",
+      "source_sha256": "b26e112c24cdf32e03ca1801d8fa443240b96647d7a08253a37d76d74d294e81"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Before repeated detector paraphrases, recover the governing authorial mechanism from article-wide evidence or ask the smallest missing lived question; preserve valuable displaced owner input in a rolling destination ledger; make paid calls decision-changing and reserve the fresh exact full-boundary call for final certification where possible.",
+      "id": "L-35b081648b-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md"
+      ],
+      "reason": "Owner-confirmed correction backed by costly Romance call history and independently valuable editorial logic.",
+      "recorded_at_utc": "2026-08-13T23:51:38.844545+00:00",
+      "source_path": "state/ROMANCE-AUTHORIAL-SUFFICIENCY-CALL-EFFICIENCY-2026-08-13.md",
+      "source_ref": "main",
+      "source_sha256": "35b081648b04ca45eef77ef66099da0b9271d29176f44f3264958919a9bc95a5"
     }
   ],
   "schema_version": 1
