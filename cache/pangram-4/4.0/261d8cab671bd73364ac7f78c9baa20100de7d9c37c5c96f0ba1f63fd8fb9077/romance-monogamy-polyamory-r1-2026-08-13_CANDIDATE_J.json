@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-monogamy-polyamory-r1-2026-08-13_CANDIDATE_J",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nIf you can't do monogamy, I still think you should say so. Sometimes hiding that from your partner does more damage than an outside connection would have.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.030572570860385895,
+        "confidence": "High",
+        "end_index": 391,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nIf you can't do monogamy, I still think you should say so. Sometimes hiding that from your partner does more damage than an outside connection would have.",
+        "token_length": 81,
+        "word_count": 67
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "d7c0fa3b-0a45-4637-98e2-024aee5795cc",
   "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\n\nIf you can't do monogamy, I still think you should say so. Sometimes hiding that from your partner does more damage than an outside connection would have.",
   "text_sha256": "261d8cab671bd73364ac7f78c9baa20100de7d9c37c5c96f0ba1f63fd8fb9077",
-  "updated_utc": "2026-08-13T00:54:55.819908+00:00"
+  "updated_utc": "2026-08-13T00:54:59.922479+00:00"
 }
