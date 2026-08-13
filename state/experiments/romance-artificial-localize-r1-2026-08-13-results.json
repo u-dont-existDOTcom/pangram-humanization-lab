@@ -47,6 +47,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "WHY_REWRITE",
+      "measurement_key": "romance-artificial-localize-r1-2026-08-13_WHY_REWRITE",
+      "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\n\nWell, you caught me. It is painfully artificial.\n\nIn a healthy communal society, I think a lot of this would just happen around you. Friends would know both of you. Older people would have seen you together enough to notice when something was off. If your partner was the last person you could talk to about the problem, there would be somebody else. Most of us are trying to do all that with two people and a calendar.\n\nMaybe the actual answer is to build the community and need less of the calendar.",
+      "text_sha256": "fd007a5467754ec7c66d21a0809c0ce4ffd8f92215d95c2956a4c3a2ce44052c",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nIn a healthy communal society, I think a lot of this would just happen around you. Friends would know both of you. Older people would have seen you together enough to notice when something was off. If your partner was the last person you could talk to about the problem, there would be somebody else. Most of us are trying to do all that with two people and a calendar.\nMaybe the actual answer is to build the community and need less of the calendar.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nIn a healthy communal society, I think a lot of this would just happen around you. Friends would know both of you. Older people would have seen you together enough to notice when something was off. If your partner was the last person you could talk to about the problem, there would be somebody else. Most of us are trying to do all that with two people and a calendar.\nMaybe the actual answer is to build the community and need less of the calendar.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9819168448448181,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 848,
+            "word_count": 144,
+            "token_length": 169,
+            "is_humanized": false,
+            "humanizer_score": 0.562878429889679
+          }
+        ]
+      }
     }
   ]
 }
