@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import subprocess
 from pathlib import Path
 
 from pangram_lab.cache import PangramCache
@@ -11,7 +12,16 @@ from pangram_lab.call_budget import PangramCallLedger
 from pangram_lab.fixed_batch import load_spec, run_batch
 from pangram_lab.git_sync import GitSync
 from pangram_lab.pangram4 import PangramClient
+from pangram_lab.review_registration import register_result
 from pangram_lab.tracked_pangram import TrackedPangramClient
+
+
+def current_ref(root: Path) -> str:
+    value = os.environ.get("GITHUB_REF_NAME", "").strip()
+    if value:
+        return value
+    cp = subprocess.run(["git", "branch", "--show-current"], cwd=root, text=True, capture_output=True, check=False)
+    return cp.stdout.strip() or "HEAD"
 
 
 def main() -> int:
@@ -41,11 +51,13 @@ def main() -> int:
         output_path=args.out,
         call_ledger=call_ledger,
     )
+    review_entry = register_result(root, args.out, current_ref(root), result)
     git.sync(f"fixed batch {spec['experiment_id']} complete")
     report = {
         "experiment_id": result["experiment_id"],
         "result_count": len(result["results"]),
         "output": str(args.out),
+        "lesson_review_id": review_entry["id"],
     }
     if result.get("call_accounting") is not None:
         report["call_accounting"] = result["call_accounting"]
