@@ -8,10 +8,12 @@ on:
       - '.github/workflows/pangram-fixed-batch.yml'
       - 'experiments/romance-starting-scenarios-r25-2026-08-13.json'
       - 'src/pangram_lab/fixed_batch.py'
+      - 'src/pangram_lab/result_paths.py'
       - 'src/pangram_lab/call_budget.py'
       - 'src/pangram_lab/tracked_pangram.py'
       - 'scripts/run_fixed_batch.py'
       - 'tests/test_fixed_batch.py'
+      - 'tests/test_result_paths.py'
       - 'tests/test_call_budget*.py'
   workflow_dispatch:
 
@@ -34,6 +36,7 @@ jobs:
         run: >-
           pytest -q
           tests/test_fixed_batch.py
+          tests/test_result_paths.py
           tests/test_pangram.py
           tests/test_cache.py
           tests/test_git_sync.py
@@ -69,7 +72,4 @@ jobs:
       - name: Run starting-scenarios batch
         env:
           PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
-        run: |
-          python scripts/run_fixed_batch.py \
-            experiments/romance-starting-scenarios-r25-2026-08-13.json \
-            --out state/experiments/romance-starting-scenarios-r25-2026-08-13-results.json
+        run: python scripts/run_fixed_batch.py experiments/romance-starting-scenarios-r25-2026-08-13.json
