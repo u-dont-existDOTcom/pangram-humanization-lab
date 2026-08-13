@@ -35,6 +35,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "CANDIDATE_B",
+      "measurement_key": "romance-progress-signals-r1-2026-08-13_CANDIDATE_B",
+      "text": "I was giving those things too much credit. Someone can make enormous progress and still be in pretty rough shape if they started from far enough back. A dramatic meditation or insight interests me a lot less than what happened in their last real conflict.\n\nI’m wary of a flawless autobiography for the same reason. If every ugly pattern ended years ago and every ex was the problem, what am I supposed to learn about being with this person now? I’d rather hear what they still do badly and what might actually be hard about loving them.",
+      "text_sha256": "a17f929d28efc528528c75dd54c09c269e3bb33fdb2fb5501bf676aa3e435b73",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I was giving those things too much credit. Someone can make enormous progress and still be in pretty rough shape if they started from far enough back. A dramatic meditation or insight interests me a lot less than what happened in their last real conflict.\nI’m wary of a flawless autobiography for the same reason. If every ugly pattern ended years ago and every ex was the problem, what am I supposed to learn about being with this person now? I’d rather hear what they still do badly and what might actually be hard about loving them.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "I was giving those things too much credit. Someone can make enormous progress and still be in pretty rough shape if they started from far enough back. A dramatic meditation or insight interests me a lot less than what happened in their last real conflict.\nI’m wary of a flawless autobiography for the same reason. If every ugly pattern ended years ago and every ex was the problem, what am I supposed to learn about being with this person now? I’d rather hear what they still do badly and what might actually be hard about loving them.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9987970590591431,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 535,
+            "word_count": 97,
+            "token_length": 107,
+            "is_humanized": false,
+            "humanizer_score": 0.01987958326935768
+          }
+        ]
+      }
     }
   ]
 }
