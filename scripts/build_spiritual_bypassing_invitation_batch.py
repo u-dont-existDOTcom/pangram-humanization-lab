@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+# Retry trigger: resume the durable B-section Pangram task from the current branch head.
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "state/experiments/spiritual-bypassing-r13-interaction-2026-08-13-results.json"
 OUT = Path("/tmp/spiritual-bypassing-invitation-batch.json")
