@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-monogamy-polyamory-r1-2026-08-13_CANDIDATE_I",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nThat isn't everyone. If you can't do monogamy, admitting it is still more honest than pretending you can. Sometimes the dishonesty causes more damage than an outside connection would have.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.23159752786159515,
+        "confidence": "High",
+        "end_index": 425,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\nThat isn't everyone. If you can't do monogamy, admitting it is still more honest than pretending you can. Sometimes the dishonesty causes more damage than an outside connection would have.",
+        "token_length": 88,
+        "word_count": 70
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "11f00433-a3b5-48a6-8b40-7785f7861f67",
   "text": "These days, I believe polyamory is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical.\n\nThat isn't everyone. If you can't do monogamy, admitting it is still more honest than pretending you can. Sometimes the dishonesty causes more damage than an outside connection would have.",
   "text_sha256": "1806d5f61913eebbf30e0e83b7622a7ae30ec575e8df732d2b59dd6d07f4135c",
-  "updated_utc": "2026-08-13T00:54:50.290316+00:00"
+  "updated_utc": "2026-08-13T00:54:54.138816+00:00"
 }
