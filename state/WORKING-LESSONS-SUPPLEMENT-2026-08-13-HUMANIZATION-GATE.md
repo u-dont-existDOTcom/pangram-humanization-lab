@@ -12,9 +12,11 @@ Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pa
 
 Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
 
-The repair task has only two terminal states: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an unresolved authorial handoff. While a known faithful and coherent repair remains, continue the task.
+The repair task has only two terminal states: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an unresolved authorial handoff.
 
-The unresolved authorial handoff must identify the exact failing span and measured boundary; exact `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempted faithful approaches and their measured results; protected claims/functions; why no further faithful repair is known; and the narrow help needed from Joel. A spending limit may change batching or trigger internal coordination, but while a known faithful repair remains it cannot end the task, create an authorial handoff, or make Joel supply prose. Any operational suspension remains an open blocker, not a delivery.
+A separate cost-control rule can suspend the repair before either terminal state. Each independently tested section/boundary has a hard budget of at most six **new paid Pangram POSTs per audit**. Cache hits, auth probes, polling GETs, and resuming an already-paid pending task do not count. Ambiguous POST attempts and corrective paid POSTs do count. Before a seventh paid POST for that section, stop, preserve the exact measured state, and ask Joel for narrow help. This is a mandatory operational suspension, not a detector pass or completion. Never invent a new batch, workflow, chat, or audit ID solely to reset the same section's budget.
+
+The unresolved authorial handoff or paid-cap suspension must identify the exact failing span and measured boundary; exact `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempted faithful approaches and their measured results; protected claims/functions; paid API calls used for that section and available estimated/reported credit usage; and the narrow help needed from Joel.
 
 Editorial quality and fidelity remain the authority over what the prose is allowed to mean. An unmeasured or partially Human candidate is not a completed Pangram-humanization delivery. A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
 
@@ -26,15 +28,15 @@ An unmeasured candidate remains a `pre-Pangram candidate`; never report it as a 
 
 Do not assume that invitational or trauma-informed language is detector-hostile. Test the actual full boundary.
 
-In the Spiritual Bypassing article experiment on 2026-08-13, a full article classified Human while retaining situated reader-agency language, including optional source material, non-prescriptive framing around another person's experience, gentler alternatives, and `Your path is yours to shape.` These fragments were present inside the measured full passing boundary; they were not independently proven causal.
+In the Spiritual Bypassing article experiment on 2026-08-13, a full article classified `Human` while retaining situated reader-agency language, including optional source material, non-prescriptive framing around another person's experience, gentler alternatives, and `Your path is yours to shape.` The owner-selected B variant measured 93.127918% Human on Pangram 4.0. Under the standing exact-100% completion gate this is measured progress, not a detector pass. These fragments were present inside the measured full boundary; they were not independently proven causal.
 
 Several additional opening-level permission formulations caused the same full article backbone to classify Mixed. That is article/boundary-specific interaction evidence, not a phrase blacklist and not evidence that permission language generally fails.
 
-Durable rule: **preserve the trauma-informed function, test the realization, and interpret results at the measured boundary.** Do not predict that a category of language will fail, and do not preserve a detector-red realization merely because its function matters; find another faithful realization.
+Durable rule: **preserve the trauma-informed function, test the realization, and interpret results at the measured boundary.** Do not predict that a category of language will fail, and do not preserve a detector-red realization merely because its function matters; find another faithful realization within the paid-call budget, then request narrow authorial help if the section cap is reached.
 
 ## Choice-diff rule
 
-For detector-required humanization, label a version `passes` only from an actual measurement of that exact text. Default to the single best passing faithful version. Offer multiple passing choices only when they preserve meaningfully different owner-valued functions, tones, or tradeoffs. Do not generate decorative alternatives merely because several phrasings could be tested.
+For detector-required humanization, label a version `passes` only from an actual measurement of that exact text that satisfies the standing detector gate. Default to the single best measured faithful version. Offer multiple measured choices only when they preserve meaningfully different owner-valued functions, tones, or tradeoffs. Do not generate decorative alternatives merely because several phrasings could be tested.
 
 ## Exact evidence
 
@@ -44,5 +46,6 @@ Current raw evidence is on branch `automation/pangram-fixed-batch`, including:
 - `state/experiments/spiritual-bypassing-r12-2026-08-13-results.json`
 - `state/experiments/spiritual-bypassing-r13-interaction-2026-08-13-results.json`
 - `state/experiments/spiritual-bypassing-r14-minimal-alternatives-2026-08-13-results.json`
+- `state/candidates/spiritual-bypassing-owner-selected-B.json`
 
 The detector version and exact text hashes live in those result records. Preserve the full records rather than extracting phrase rules.
