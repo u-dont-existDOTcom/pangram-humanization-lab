@@ -35,6 +35,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "CANDIDATE_D",
+      "measurement_key": "romance-progress-signals-r1-2026-08-13_CANDIDATE_D",
+      "text": "That was where I fooled myself. I knew the meditations were helping them; I didn’t know how much was still unresolved. Someone can make huge progress from a terrible starting point and still be unstable in a relationship. Show me the last ugly conflict and I’ll learn more than I will from the best meditation you’ve ever had.\n\nIt’s easy to sound self-aware talking about old problems too. If everything bad is finished and every ex was the problem, I want to know what you’re still doing that you wish you weren’t.",
+      "text_sha256": "09704097a942d375210ec5f285bf8f055b330d2b234bc5fa496c1fbaf2be45d1",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "That was where I fooled myself. I knew the meditations were helping them; I didn’t know how much was still unresolved. Someone can make huge progress from a terrible starting point and still be unstable in a relationship. Show me the last ugly conflict and I’ll learn more than I will from the best meditation you’ve ever had.\nIt’s easy to sound self-aware talking about old problems too. If everything bad is finished and every ex was the problem, I want to know what you’re still doing that you wish you weren’t.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "That was where I fooled myself. I knew the meditations were helping them; I didn’t know how much was still unresolved. Someone can make huge progress from a terrible starting point and still be unstable in a relationship. Show me the last ugly conflict and I’ll learn more than I will from the best meditation you’ve ever had.\nIt’s easy to sound self-aware talking about old problems too. If everything bad is finished and every ex was the problem, I want to know what you’re still doing that you wish you weren’t.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7618517279624939,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 514,
+            "word_count": 92,
+            "token_length": 110,
+            "is_humanized": false,
+            "humanizer_score": 0.31741863489151
+          }
+        ]
+      }
     }
   ]
 }
