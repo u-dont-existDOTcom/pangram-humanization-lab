@@ -5,8 +5,8 @@
   "sections": {
     "FULL_ARTICLE\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "estimated_credits": 2,
@@ -15,10 +15,18 @@
           "text_sha256": "4f1ab8eb9ff3786009a75a5a1c1835879ba7ed33ebc28ab4f61c2ab70d510148",
           "type": "paid_post_reserved",
           "word_count": 1499
+        },
+        {
+          "estimated_credits": 2,
+          "measurement_key": "spiritual-bypassing-authorial-repair-r5-2026-08-13_OWNER_B_ALT_RESTORED_FULL",
+          "recorded_at_utc": "2026-08-13T23:09:24.906562+00:00",
+          "text_sha256": "facb3c95e693957d028a11b8ec30cb8c1670396eae491d5916607a7e042e2c40",
+          "type": "paid_post_reserved",
+          "word_count": 1503
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "FULL_ARTICLE",
       "version": "4.0"
