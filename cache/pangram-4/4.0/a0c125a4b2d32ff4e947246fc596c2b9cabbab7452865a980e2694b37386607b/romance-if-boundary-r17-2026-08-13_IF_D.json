@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-if-boundary-r17-2026-08-13_IF_D",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.42442747950553894,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.5755724906921387,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 2,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "## Why all of this sounds artificial\nBy now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.\n---\n# If you’re already in it\nIf you’re already married, living together, raising children, or ten years in, obviously you can’t go back and do the beginning more slowly. So now it’s a different problem.\nI wish I had a special method for that. I don’t. Actually, it’s probably just common sense: I could keep bringing up the same problem, but I couldn’t make the other person look at it with me. I learned that in all three relationships. One person can’t create mutual honesty.\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.34928902983665466,
+        "confidence": "High",
+        "end_index": 593,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "## Why all of this sounds artificial\nBy now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\nWell, you caught me. It is painfully artificial.\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.",
+        "token_length": 114,
+        "word_count": 92
+      },
+      {
+        "ai_assistance_score": 0.6917445063591003,
+        "confidence": "High",
+        "end_index": 1149,
+        "humanizer_score": 0.45952123403549194,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 593,
+        "text": "\n---\n# If you’re already in it\nIf you’re already married, living together, raising children, or ten years in, obviously you can’t go back and do the beginning more slowly. So now it’s a different problem.\nI wish I had a special method for that. I don’t. Actually, it’s probably just common sense: I could keep bringing up the same problem, but I couldn’t make the other person look at it with me. I learned that in all three relationships. One person can’t create mutual honesty.\nWith Bee and Key, the biggest thing sitting underneath everything was trust.",
+        "token_length": 122,
+        "word_count": 98
+      },
+      {
+        "ai_assistance_score": 0.47895434498786926,
+        "confidence": "Medium",
+        "end_index": 1310,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 1149,
+        "text": " They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
+        "token_length": 40,
+        "word_count": 31
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "fde26b88-cd3a-42fd-9644-71077555dcd5",
   "text": "## Why all of this sounds artificial\n\nBy now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?\n\nWell, you caught me. It is painfully artificial.\n\nThat’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.\n\n---\n\n# If you’re already in it\n\nIf you’re already married, living together, raising children, or ten years in, obviously you can’t go back and do the beginning more slowly. So now it’s a different problem.\n\nI wish I had a special method for that. I don’t. Actually, it’s probably just common sense: I could keep bringing up the same problem, but I couldn’t make the other person look at it with me. I learned that in all three relationships. One person can’t create mutual honesty.\n\nWith Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.",
   "text_sha256": "a0c125a4b2d32ff4e947246fc596c2b9cabbab7452865a980e2694b37386607b",
-  "updated_utc": "2026-08-13T01:52:50.681735+00:00"
+  "updated_utc": "2026-08-13T01:52:53.867441+00:00"
 }
