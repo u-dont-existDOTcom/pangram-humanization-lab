@@ -137,6 +137,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "PRACTICES_A",
+      "measurement_key": "romance-checklist-subitems-r10-2026-08-13_PRACTICES_A",
+      "text": "And don't stop your own practices just because you're in love. If I stop reparenting and meditating because my partner makes me feel okay, then she's doing part of that job for me whether we say so or not.",
+      "text_sha256": "fbffefd74f05296766f72c8c7213bf0a39060a4a9c8553d06c24c32dd4d1bf9b",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "And don't stop your own practices just because you're in love. If I stop reparenting and meditating because my partner makes me feel okay, then she's doing part of that job for me whether we say so or not.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "And don't stop your own practices just because you're in love. If I stop reparenting and meditating because my partner makes me feel okay, then she's doing part of that job for me whether we say so or not.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.012370523065328598,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 205,
+            "word_count": 39,
+            "token_length": 49,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      }
     }
   ]
 }
