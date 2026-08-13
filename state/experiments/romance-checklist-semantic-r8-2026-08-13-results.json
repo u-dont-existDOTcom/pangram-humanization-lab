@@ -171,6 +171,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "L3B",
+      "measurement_key": "romance-checklist-semantic-r8-2026-08-13_L3B",
+      "text": "Wanting somebody romantically is one decision. Building a life with them is another. I might know the first one in a week. I cannot know in a week what she’ll be like as a co-parent or what years of ordinary life with her will feel like. So I watch for the moment “I’m taking a chance on this person” somehow becomes “this is the right person.” What happened between those two sentences?\n\nI also keep doing my own practices. Being loved is wonderful, but it’s not evidence that I no longer need to know how to love and regulate myself.",
+      "text_sha256": "86408b7322688b95764e366b968bc7fd0c3485efc684d88d3864d574e3642013",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Wanting somebody romantically is one decision. Building a life with them is another. I might know the first one in a week. I cannot know in a week what she’ll be like as a co-parent or what years of ordinary life with her will feel like. So I watch for the moment “I’m taking a chance on this person” somehow becomes “this is the right person.” What happened between those two sentences?\nI also keep doing my own practices. Being loved is wonderful, but it’s not evidence that I no longer need to know how to love and regulate myself.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Wanting somebody romantically is one decision. Building a life with them is another. I might know the first one in a week. I cannot know in a week what she’ll be like as a co-parent or what years of ordinary life with her will feel like. So I watch for the moment “I’m taking a chance on this person” somehow becomes “this is the right person.” What happened between those two sentences?\nI also keep doing my own practices. Being loved is wonderful, but it’s not evidence that I no longer need to know how to love and regulate myself.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9963348507881165,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 534,
+            "word_count": 100,
+            "token_length": 118,
+            "is_humanized": false,
+            "humanizer_score": 0.09203847497701645
+          }
+        ]
+      }
     }
   ]
 }
