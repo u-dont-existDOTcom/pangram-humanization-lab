@@ -36,6 +36,41 @@
         ]
       },
       "section_id": "R1_LOVE_REPAIR"
+    },
+    {
+      "id": "R1_LOVE_C",
+      "measurement_key": "romance-repair-candidates-r6-2026-08-13_R1_LOVE_C",
+      "text": "That drive can weaken for reasons that aren't really my fault. I can get old, sick, depressed, or grieving, and I would hope the agape is deep enough that she sticks by me through some of that even if it puts strain on eros. But if I just get bored with life, stop having much of a life outside her, and make her responsible for nearly all my warmth, meaning, reassurance, and excitement, that's different. I don't get to be shocked if she wants me less.\n\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\n\nSome couples may eventually care more about the life they made together than about the eros that started it. Fine. But that isn't the same as one person staying as a concession while the other still wants them. Nobody at the wedding knows which future their bond will become.\n",
+      "text_sha256": "083a6fe61f7d4f1320ff6082c858c8c622f137a3bc67a03007e5f8ba9de801da",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "That drive can weaken for reasons that aren't really my fault. I can get old, sick, depressed, or grieving, and I would hope the agape is deep enough that she sticks by me through some of that even if it puts strain on eros. But if I just get bored with life, stop having much of a life outside her, and make her responsible for nearly all my warmth, meaning, reassurance, and excitement, that's different. I don't get to be shocked if she wants me less.\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\nSome couples may eventually care more about the life they made together than about the eros that started it. Fine. But that isn't the same as one person staying as a concession while the other still wants them. Nobody at the wedding knows which future their bond will become.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "That drive can weaken for reasons that aren't really my fault. I can get old, sick, depressed, or grieving, and I would hope the agape is deep enough that she sticks by me through some of that even if it puts strain on eros. But if I just get bored with life, stop having much of a life outside her, and make her responsible for nearly all my warmth, meaning, reassurance, and excitement, that's different. I don't get to be shocked if she wants me less.\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\nSome couples may eventually care more about the life they made together than about the eros that started it. Fine. But that isn't the same as one person staying as a concession while the other still wants them. Nobody at the wedding knows which future their bond will become.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.1206914409995079,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1051,
+            "word_count": 198,
+            "token_length": 239,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R1_LOVE_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -87,10 +122,10 @@
       },
       {
         "cache_hits": 0,
-        "estimated_cost_usd": 0.1,
-        "estimated_credits": 2,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
         "model": "pangram-4",
-        "paid_api_calls": 2,
+        "paid_api_calls": 3,
         "pending_resumes": 0,
         "section_id": "R1_LOVE_REPAIR",
         "version": "4.0",
