@@ -680,6 +680,41 @@
         ]
       },
       "section_id": "R3_PLAN_DIAGNOSTIC"
+    },
+    {
+      "id": "R3_BIRTH_ONLY",
+      "measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R3_BIRTH_ONLY",
+      "text": "Men should understand they actually do have safe birth-control options that work better than condoms, including Gandarussa herb, and it makes sense to use that. It doesn’t make impulsiveness okay. It just makes pregnancy a bit less likely. Emotional attachment is still just as likely.\n",
+      "text_sha256": "f20732517f91828c308de52fc87e10a71e105181088a0584e5126b660b8c3606",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Men should understand they actually do have safe birth-control options that work better than condoms, including Gandarussa herb, and it makes sense to use that. It doesn’t make impulsiveness okay. It just makes pregnancy a bit less likely. Emotional attachment is still just as likely.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Men should understand they actually do have safe birth-control options that work better than condoms, including Gandarussa herb, and it makes sense to use that. It doesn’t make impulsiveness okay. It just makes pregnancy a bit less likely. Emotional attachment is still just as likely.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.12162403762340546,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 285,
+            "word_count": 45,
+            "token_length": 58,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R3_BIRTH_DIAGNOSTIC"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -1078,6 +1113,20 @@
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
         "first_human_measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R3_PLAN_ONLY"
+      },
+      {
+        "section_id": "R3_BIRTH_DIAGNOSTIC",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-full-retest-and-candidates-r7-2026-08-13_R3_BIRTH_ONLY"
       }
     ]
   }
