@@ -6,7 +6,7 @@ Use this file as the starting point for current lesson retrieval.
 
 1. `state/WORKING-LESSONS.md` — consolidated lessons through 2026-08-12.
 2. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md` — newer Romance detector, semantic-sanity, architecture, routing, provenance, and large-reconstruction lessons. Newer owner correction / controlled evidence here supersedes older conflicting guidance.
-3. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md` — protected rhetorical function, hard detector-acceptance gating when Pangram is explicitly required, trauma-informed language testing, and measured choice-diff rules.
+3. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md` — protected rhetorical function, the standing detector-acceptance gate for Joel humanization requests, trauma-informed language testing, and measured choice-diff rules.
 4. For exact evidence behind a lesson, inspect the cited incident note and experiment/result JSON rather than generalizing from the summary.
 
 ## Pangram execution/access gate
@@ -15,7 +15,11 @@ For every task that requires a measured Pangram result, read `docs/PANGRAM-ACTIO
 
 A worker may use the label `pre-Pangram candidate` only after the runbook's local and GitHub routes have both failed with a recorded blocker. The repository secret remains inside Actions; never retrieve, reveal, print, commit, or ask Joel to paste it.
 
-Joel's standing completion target for requested Pangram humanization is 100% Human on the exact intended delivery boundary: `fraction_human == 1.0`, `fraction_ai == 0.0`, and `fraction_ai_assisted == 0.0` from a successful Pangram 4 result. A Human headline or a partial score such as 93% is not a pass. Continue faithful repair until 100%, or make an explicit unresolved authorial handoff describing the exact span and narrow help needed; never silently stop at the best partial score.
+Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies. Joel's standing completion target is 100% Human on the exact intended delivery boundary: `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`. A Human headline or a partial score such as 93% is progress only; it is not a pass.
+
+Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
+
+The repair task has only two terminal states: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an unresolved authorial handoff. While a known faithful and coherent repair remains, continue the task. The handoff must identify the exact span and boundary; exact `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempts and measured results; protected claims/functions; the reason no further faithful repair is known; and the narrow help needed from Joel. A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
 
 ## Completion gate
 

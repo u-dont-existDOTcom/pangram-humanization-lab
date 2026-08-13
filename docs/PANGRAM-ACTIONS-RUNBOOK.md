@@ -104,18 +104,22 @@ Pangram 4 is requested explicitly by the repository client. A result from anothe
 
 ## Acceptance and unresolved-author handoff
 
-For Joel's requested Pangram-humanization work, a successful detector request or `Human` classification is not enough. The exact intended delivery boundary must be 100% Human under the fraction checks above. Results such as 93% or 99% are progress only.
+Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies. A successful detector request or `Human` classification is not enough. The exact intended delivery boundary must satisfy `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`. A partial result such as 93% or 99% Human is progress only; it is not a pass.
 
-Continue faithful, coherence-preserving repair and exact-boundary retesting until the 100% criterion is met. If the worker genuinely does not know another faithful and coherent repair, stop as an unresolved authorial handoff and record:
+Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
+
+The repair task has only two terminal states: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an unresolved authorial handoff. While a known faithful and coherent repair remains, continue the task.
+
+The unresolved authorial handoff must record:
 
 - the exact failing span and measured boundary;
-- the exact result path, text hash, score, and detector version;
+- exact `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; and result commit;
 - the faithful approaches already attempted and their measured results;
 - the claims, memories, tone, rhetorical functions, links, and native objects that cannot be sacrificed;
 - why no further faithful repair is known; and
 - the narrow question, lived detail, natural wording, or other raw author input needed from Joel.
 
-Do not call that state complete or passing. A section/API-call cap is a spending and escalation boundary, not an acceptance threshold. If it pauses paid calls, state whether a known faithful next repair remains.
+Do not call that state complete or passing. A spending limit may change batching or trigger internal coordination, but while a known faithful repair remains it cannot end the task, create an authorial handoff, or make Joel supply prose. Any operational suspension remains an open blocker, not a delivery. A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
 
 ## Exact-text and staleness rule
 

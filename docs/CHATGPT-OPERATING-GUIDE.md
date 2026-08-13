@@ -22,7 +22,7 @@ Do not send Joel through manual chains of one-off detector variants when the lab
 
 ## Humanization execution and completion gate
 
-When Joel asks to **humanize**, **make it pass Pangram**, or otherwise makes Pangram success a delivery requirement, detector validation is part of the task definition, not an optional postscript.
+Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies. Detector validation is part of the task definition, not an optional postscript.
 
 Before rewriting, identify any **protected rhetorical functions** in the source. These are functions that must survive even when the wording changes: reader agency and permission, trauma-informed invitation, non-coercive choice, pacing around sensitive material, exact claim/certainty, severe-claim agency, lived memories, humor/idiolect, links/media, chronology, causality, and other owner-intended functions. Do not classify a function as expendable merely because its current realization resembles a known AI pattern such as generic warmth, reassurance, invitation, recap, or explanatory aftercare. Diagnose the function separately from the wording.
 
@@ -39,9 +39,15 @@ A requested humanization pass is **not complete** until all of the following are
 4. any detector-driven change has been re-audited for semantic and rhetorical loss;
 5. the user-facing diff labels detector status only from measured results, never prediction or intuition.
 
+Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
+
 A `Human` headline, `prediction_short == "Human"`, or partial score such as 93% or 99% Human is progress only. It is not a pass. This owner-specific acceptance rule supersedes general advice that tiny score differences within a Human classification need not control editorial choice.
 
-Do not stop merely because the current candidate is the best so far. If the worker genuinely cannot identify another faithful and coherent repair, pause as an **unresolved authorial handoff** and report the exact failing span and boundary, current score and result hash, attempted approaches and their results, protected claims/functions, why no further faithful fix is known, and the narrow question or raw author input needed from Joel. Do not call the pass complete. A section/API-call budget may pause paid calls for explicit escalation, but it cannot accept a partial score or close the task; state whether a known faithful next repair remains.
+The repair task has only two terminal states: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an **unresolved authorial handoff**. While a known faithful and coherent repair remains, continue the task.
+
+The unresolved authorial handoff must report the exact failing span and measured boundary; exact `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempted faithful approaches and their measured results; protected claims/functions; why no further faithful repair is known; and the narrow question or raw author input needed from Joel. Do not call that state complete or passing.
+
+A spending limit may change batching or trigger internal coordination, but while a known faithful repair remains it cannot end the task, create an authorial handoff, or make Joel supply prose. Any operational suspension remains an open blocker, not a delivery. A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
 
 Do not infer that Pangram access is unavailable merely because the current worker has no local `PANGRAM_API_KEY`, a local key is rejected, or the Pangram web dashboard is signed out. Before labeling a candidate pre-Pangram, complete the access-resolution gate in `docs/PANGRAM-ACTIONS-RUNBOOK.md`, including the repository-secret GitHub Actions route based on `automation/pangram-fixed-batch`. Never retrieve, print, commit, or ask Joel to paste the repository secret.
 
@@ -98,7 +104,7 @@ For new endpoint pairs, use the current repo README/CLI help rather than an old 
 - Test interactions; do not infer magic words from one case.
 - Pangram green does not justify stopping if a real thought thread remains.
 - Pangram red does not justify worse prose or altered meaning; keep searching for a faithful passing realization rather than silently accepting semantic loss.
-- Stop once the local hypothesis is adequately discriminated; avoid token hunting.
+- For controlled research probes, stop once the local hypothesis is adequately discriminated; avoid token hunting. This research stopping rule never ends requested humanization repair before one of the two terminal states above.
 
 ## Promotion boundary
 

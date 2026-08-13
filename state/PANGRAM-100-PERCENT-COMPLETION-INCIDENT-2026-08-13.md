@@ -16,7 +16,7 @@ The missing definition allowed 93% Human to be treated as terminal progress inst
 
 ## Promoted rule
 
-When Joel requests Pangram humanization, completion requires the exact intended delivery boundary to return all of the following from Pangram 4:
+Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies. Completion requires the exact intended delivery boundary to return all of the following from Pangram 4:
 
 - `detector.stage == "STAGE_SUCCESS"`;
 - `detector.version == "4.0"`;
@@ -26,13 +26,15 @@ When Joel requests Pangram humanization, completion requires the exact intended 
 
 A `Human` headline, `prediction_short == "Human"`, or partial result such as 93% or 99% Human is progress only. It is not a pass and must not be reported as complete.
 
-Continue faithful, coherence-preserving repair and exact-boundary retesting until the criterion is met. Stop the editorial repair loop only when the worker genuinely lacks a further faithful and coherent repair. That is an unresolved authorial handoff, not completion. Report the exact failing span and boundary, current exact score and result hash, attempted approaches and results, protected claims/functions that cannot be sacrificed, why the worker is stuck, and the narrow question or raw author input needed from Joel.
+Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
 
-An API-call or section budget may pause paid calls for explicit escalation, but it cannot convert the best-so-far candidate into an accepted result or close the task. The worker must state whether a known faithful next repair remains.
+The repair task has only two terminal states: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an unresolved authorial handoff. While a known faithful and coherent repair remains, continue the task.
+
+The unresolved authorial handoff must report the exact failing span and measured boundary; exact `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempted faithful approaches and their measured results; protected claims/functions that cannot be sacrificed; why no further faithful repair is known; and the narrow question or raw author input needed from Joel.
+
+A spending limit may change batching or trigger internal coordination, but while a known faithful repair remains it cannot end the task, create an authorial handoff, or make Joel supply prose. Any operational suspension remains an open blocker, not a delivery.
 
 ## Scope and safeguards
 
-This is Joel's standing detector-acceptance target for requested Pangram-humanization work. Editorial quality, semantic sanity, fidelity, provenance, and protected rhetorical function remain independent required gates. A 100% Human result with semantic or editorial regression still fails. Detector repair may not weaken Joel's argument, invent lived material, drop evidence, or accept worse prose merely to reach the number.
-
-Section-level measurements are diagnostic unless a section is itself the intended delivery. The final exact delivery boundary must independently satisfy the 100% criterion after every accepted edit.
+This is Joel's standing detector-acceptance target for humanization work. Editorial quality, semantic sanity, fidelity, provenance, and protected rhetorical function remain independent required gates. A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate. Detector repair may not weaken Joel's argument, invent lived material, drop evidence, or accept worse prose merely to reach the number.
 
