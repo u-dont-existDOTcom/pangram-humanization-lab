@@ -22,6 +22,83 @@
           "section_id": "FULL_ARTICLE"
         }
       ]
+    },
+    {
+      "audit_id": "romance-full-human-2026-08-13",
+      "created_at_utc": "2026-08-13T16:21:14.484706+00:00",
+      "experiment_id": "romance-seven-regions-r2-2026-08-13",
+      "id": "Q-12a821af9ed414d3",
+      "sections": [
+        "REGION_1",
+        "REGION_2",
+        "REGION_3",
+        "REGION_4",
+        "REGION_5",
+        "REGION_6",
+        "REGION_7"
+      ],
+      "source_path": "state/experiments/romance-seven-regions-r2-2026-08-13-results.json",
+      "source_ref": "task/romance-full-human-2026-08-13-regions-r2",
+      "source_sha256": "3866a64e46d9ddd0e8605e1fa3cb2b69b53572c8a8799827f5ff22f5423c3ce3",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.2969428300857544,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7030571699142456,
+          "id": "R1_LINES_1_82",
+          "prediction_short": "Mixed",
+          "section_id": "REGION_1"
+        },
+        {
+          "fraction_ai": 0.008323891088366508,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9916760921478271,
+          "id": "R2_LINES_83_262",
+          "prediction_short": "Human",
+          "section_id": "REGION_2"
+        },
+        {
+          "fraction_ai": 0.13236480951309204,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.867635190486908,
+          "id": "R3_LINES_263_456",
+          "prediction_short": "Mixed",
+          "section_id": "REGION_3"
+        },
+        {
+          "fraction_ai": 0.10195056349039078,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8980494141578674,
+          "id": "R4_LINES_457_652",
+          "prediction_short": "Mixed",
+          "section_id": "REGION_4"
+        },
+        {
+          "fraction_ai": 0.12230121344327927,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8776987791061401,
+          "id": "R5_LINES_653_795",
+          "prediction_short": "Mixed",
+          "section_id": "REGION_5"
+        },
+        {
+          "fraction_ai": 0.04102200269699097,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.958977997303009,
+          "id": "R6_LINES_796_867",
+          "prediction_short": "Human",
+          "section_id": "REGION_6"
+        },
+        {
+          "fraction_ai": 0.1130494773387909,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8869504928588867,
+          "id": "R7_LINES_868_940",
+          "prediction_short": "Mixed",
+          "section_id": "REGION_7"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
