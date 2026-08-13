@@ -235,6 +235,41 @@
         ]
       },
       "section_id": "R3_SCHNARCH_REPAIR"
+    },
+    {
+      "id": "R3_ADULT_CHILD_A",
+      "measurement_key": "romance-repair-candidates-r6-2026-08-13_R3_ADULT_CHILD_A",
+      "text": "[Inner-child reparenting](https://innerchild.u-dont-exist.com) is a big part of this. The present-day adult has to learn how to parent the child part instead of quietly hiring the partner for the job.\n\nWhen that doesn't happen, I often see an adult expect the partner to know what they need without being told. They don't take responsibility for their own behavior, may barely notice the pattern, and deny it when somebody points it out. That's entitlement, whether they mean it that way or not.\n\nSelf-reflection is a good place to start, but it can’t see what it can’t see.\n\nA peer can give another angle. Your partner is also usually trying to keep you, so they have an ulterior motive that a peer counselor hopefully does not.\n",
+      "text_sha256": "a0985e7f5f1988ff5335f4b266c505495d18dd2c14fec9ba5a99b30617c73f65",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "[Inner-child reparenting](https://innerchild.u-dont-exist.com) is a big part of this. The present-day adult has to learn how to parent the child part instead of quietly hiring the partner for the job.\nWhen that doesn't happen, I often see an adult expect the partner to know what they need without being told. They don't take responsibility for their own behavior, may barely notice the pattern, and deny it when somebody points it out. That's entitlement, whether they mean it that way or not.\nSelf-reflection is a good place to start, but it can’t see what it can’t see.\nA peer can give another angle. Your partner is also usually trying to keep you, so they have an ulterior motive that a peer counselor hopefully does not.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "[Inner-child reparenting](https://innerchild.u-dont-exist.com) is a big part of this. The present-day adult has to learn how to parent the child part instead of quietly hiring the partner for the job.\nWhen that doesn't happen, I often see an adult expect the partner to know what they need without being told. They don't take responsibility for their own behavior, may barely notice the pattern, and deny it when somebody points it out. That's entitlement, whether they mean it that way or not.\nSelf-reflection is a good place to start, but it can’t see what it can’t see.\nA peer can give another angle. Your partner is also usually trying to keep you, so they have an ulterior motive that a peer counselor hopefully does not.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.14297908544540405,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 726,
+            "word_count": 123,
+            "token_length": 164,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "R3_ADULT_CHILD_REPAIR"
     }
   ],
   "audit_id": "romance-full-human-2026-08-13",
@@ -549,6 +584,20 @@
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
         "first_human_measurement_key": "romance-repair-candidates-r6-2026-08-13_R3_SCHNARCH_A"
+      },
+      {
+        "section_id": "R3_ADULT_CHILD_REPAIR",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-repair-candidates-r6-2026-08-13_R3_ADULT_CHILD_A"
       }
     ]
   }
