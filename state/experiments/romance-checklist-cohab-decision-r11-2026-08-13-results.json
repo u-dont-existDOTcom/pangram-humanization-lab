@@ -1,0 +1,40 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-checklist-cohab-decision-r11-2026-08-13",
+  "results": [
+    {
+      "id": "COHAB_ONLY",
+      "measurement_key": "romance-checklist-cohab-decision-r11-2026-08-13_COHAB_ONLY",
+      "text": "Don't move in together early if you can avoid it. Once you're living together, leaving gets mixed up with rent, housing, furniture, sleep, all the boring stuff. That makes it much harder to tell whether you're staying because you want the relationship or because getting out is a pain in the ass. Housing can force the issue sometimes; I'm talking about when you actually have a choice.",
+      "text_sha256": "d946aac8339760a4dd2b7c1a85d7f51269add3aad06331f01c116d13a69c6f9c",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Don't move in together early if you can avoid it. Once you're living together, leaving gets mixed up with rent, housing, furniture, sleep, all the boring stuff. That makes it much harder to tell whether you're staying because you want the relationship or because getting out is a pain in the ass. Housing can force the issue sometimes; I'm talking about when you actually have a choice.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Don't move in together early if you can avoid it. Once you're living together, leaving gets mixed up with rent, housing, furniture, sleep, all the boring stuff. That makes it much harder to tell whether you're staying because you want the relationship or because getting out is a pain in the ass. Housing can force the issue sometimes; I'm talking about when you actually have a choice.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6075782775878906,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 386,
+            "word_count": 67,
+            "token_length": 81,
+            "is_humanized": false,
+            "humanizer_score": 0.012359119020402431
+          }
+        ]
+      }
+    }
+  ]
+}
