@@ -35,6 +35,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "DECISION_CERTAINTY_BRIDGE",
+      "measurement_key": "romance-checklist-assembly-r12-2026-08-13_DECISION_CERTAINTY_BRIDGE",
+      "text": "Wanting somebody doesn't tell me whether I should have children with her or build a life with her. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+      "text_sha256": "4a157604bf84d59bedfa3caae52ddcca5f58bd2ccce52b8d068d12d90299583e",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Wanting somebody doesn't tell me whether I should have children with her or build a life with her. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Wanting somebody doesn't tell me whether I should have children with her or build a life with her. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.2902238368988037,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 413,
+            "word_count": 74,
+            "token_length": 90,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      }
     }
   ]
 }
