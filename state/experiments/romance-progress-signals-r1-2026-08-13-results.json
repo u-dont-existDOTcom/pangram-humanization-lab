@@ -3,13 +3,13 @@
   "experiment_id": "romance-progress-signals-r1-2026-08-13",
   "results": [
     {
-      "id": "CANDIDATE_A",
-      "measurement_key": "romance-progress-signals-r1-2026-08-13_CANDIDATE_A",
-      "text": "That was my mistake. If somebody started with a huge amount of trauma, they can change a lot and still get badly thrown around in a real conflict. So now I care more about what happens in the last actual fight than about how powerful somebody’s meditation experiences are.\n\nSame with people who can explain their past perfectly. If every bad pattern is over, every ex was the problem, and nothing like that is happening now, I still don’t know much. What are you struggling with now? What am I likely to run into if we get close?",
-      "text_sha256": "e1762c176274bd3b56c005fe5f9453ea4bf02e795d65c58a61087068009cb524",
+      "id": "CANDIDATE_C",
+      "measurement_key": "romance-progress-signals-r1-2026-08-13_CANDIDATE_C",
+      "text": "I had no idea where they started. If somebody came from a really bad place, meditation could change their life and they could still be a mess in a relationship. I’d learn more from the last real conflict than from the biggest spiritual experience they ever had.\n\nSomeone can sound very self-aware talking about old problems too. Then I notice every problem is safely over and every ex was the problem. Okay, what are you still doing now? What am I going to find out later?",
+      "text_sha256": "85ad1c3b959fd604120b8d2b2bb5065b1bd63ea0ab816925afd9e7a0deee0a7a",
       "detector": {
         "stage": "STAGE_SUCCESS",
-        "text": "That was my mistake. If somebody started with a huge amount of trauma, they can change a lot and still get badly thrown around in a real conflict. So now I care more about what happens in the last actual fight than about how powerful somebody’s meditation experiences are.\nSame with people who can explain their past perfectly. If every bad pattern is over, every ex was the problem, and nothing like that is happening now, I still don’t know much. What are you struggling with now? What am I likely to run into if we get close?",
+        "text": "I had no idea where they started. If somebody came from a really bad place, meditation could change their life and they could still be a mess in a relationship. I’d learn more from the last real conflict than from the biggest spiritual experience they ever had.\nSomeone can sound very self-aware talking about old problems too. Then I notice every problem is safely over and every ex was the problem. Okay, what are you still doing now? What am I going to find out later?",
         "version": "4.0",
         "prediction": "We believe that this entire text is AI.",
         "prediction_short": "AI",
@@ -22,50 +22,16 @@
         "num_human_segments": 0,
         "windows": [
           {
-            "text": "That was my mistake. If somebody started with a huge amount of trauma, they can change a lot and still get badly thrown around in a real conflict. So now I care more about what happens in the last actual fight than about how powerful somebody’s meditation experiences are.\nSame with people who can explain their past perfectly. If every bad pattern is over, every ex was the problem, and nothing like that is happening now, I still don’t know much. What are you struggling with now? What am I likely to run into if we get close?",
+            "text": "I had no idea where they started. If somebody came from a really bad place, meditation could change their life and they could still be a mess in a relationship. I’d learn more from the last real conflict than from the biggest spiritual experience they ever had.\nSomeone can sound very self-aware talking about old problems too. Then I notice every problem is safely over and every ex was the problem. Okay, what are you still doing now? What am I going to find out later?",
             "label": "AI-Generated",
-            "ai_assistance_score": 0.8335211873054504,
+            "ai_assistance_score": 0.7563424110412598,
             "confidence": "High",
             "start_index": 0,
-            "end_index": 528,
-            "word_count": 98,
-            "token_length": 111,
+            "end_index": 471,
+            "word_count": 86,
+            "token_length": 98,
             "is_humanized": false,
-            "humanizer_score": 0.7824739813804626
-          }
-        ]
-      }
-    },
-    {
-      "id": "CANDIDATE_B",
-      "measurement_key": "romance-progress-signals-r1-2026-08-13_CANDIDATE_B",
-      "text": "I was giving those things too much credit. Someone can make enormous progress and still be in pretty rough shape if they started from far enough back. A dramatic meditation or insight interests me a lot less than what happened in their last real conflict.\n\nI’m wary of a flawless autobiography for the same reason. If every ugly pattern ended years ago and every ex was the problem, what am I supposed to learn about being with this person now? I’d rather hear what they still do badly and what might actually be hard about loving them.",
-      "text_sha256": "a17f929d28efc528528c75dd54c09c269e3bb33fdb2fb5501bf676aa3e435b73",
-      "detector": {
-        "stage": "STAGE_SUCCESS",
-        "text": "I was giving those things too much credit. Someone can make enormous progress and still be in pretty rough shape if they started from far enough back. A dramatic meditation or insight interests me a lot less than what happened in their last real conflict.\nI’m wary of a flawless autobiography for the same reason. If every ugly pattern ended years ago and every ex was the problem, what am I supposed to learn about being with this person now? I’d rather hear what they still do badly and what might actually be hard about loving them.",
-        "version": "4.0",
-        "prediction": "We believe that this entire text is AI.",
-        "prediction_short": "AI",
-        "fraction_ai": 1.0,
-        "fraction_ai_assisted": 0.0,
-        "fraction_human": 0.0,
-        "headline": "AI Generated",
-        "num_ai_segments": 1,
-        "num_ai_assisted_segments": 0,
-        "num_human_segments": 0,
-        "windows": [
-          {
-            "text": "I was giving those things too much credit. Someone can make enormous progress and still be in pretty rough shape if they started from far enough back. A dramatic meditation or insight interests me a lot less than what happened in their last real conflict.\nI’m wary of a flawless autobiography for the same reason. If every ugly pattern ended years ago and every ex was the problem, what am I supposed to learn about being with this person now? I’d rather hear what they still do badly and what might actually be hard about loving them.",
-            "label": "AI-Generated",
-            "ai_assistance_score": 0.9987970590591431,
-            "confidence": "High",
-            "start_index": 0,
-            "end_index": 535,
-            "word_count": 97,
-            "token_length": 107,
-            "is_humanized": false,
-            "humanizer_score": 0.01987958326935768
+            "humanizer_score": 0.6794054508209229
           }
         ]
       }
