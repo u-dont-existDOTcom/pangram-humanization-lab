@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-progress-signals-r1-2026-08-13_CANDIDATE_C",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "I had no idea where they started. If somebody came from a really bad place, meditation could change their life and they could still be a mess in a relationship. I’d learn more from the last real conflict than from the biggest spiritual experience they ever had.\nSomeone can sound very self-aware talking about old problems too. Then I notice every problem is safely over and every ex was the problem. Okay, what are you still doing now? What am I going to find out later?",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.7563424110412598,
+        "confidence": "High",
+        "end_index": 471,
+        "humanizer_score": 0.6794054508209229,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "I had no idea where they started. If somebody came from a really bad place, meditation could change their life and they could still be a mess in a relationship. I’d learn more from the last real conflict than from the biggest spiritual experience they ever had.\nSomeone can sound very self-aware talking about old problems too. Then I notice every problem is safely over and every ex was the problem. Okay, what are you still doing now? What am I going to find out later?",
+        "token_length": 98,
+        "word_count": 86
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "9905a301-11ce-4ac0-9a92-97cebf76687f",
   "text": "I had no idea where they started. If somebody came from a really bad place, meditation could change their life and they could still be a mess in a relationship. I’d learn more from the last real conflict than from the biggest spiritual experience they ever had.\n\nSomeone can sound very self-aware talking about old problems too. Then I notice every problem is safely over and every ex was the problem. Okay, what are you still doing now? What am I going to find out later?",
   "text_sha256": "85ad1c3b959fd604120b8d2b2bb5065b1bd63ea0ab816925afd9e7a0deee0a7a",
-  "updated_utc": "2026-08-13T00:23:07.038600+00:00"
+  "updated_utc": "2026-08-13T00:23:08.934346+00:00"
 }
