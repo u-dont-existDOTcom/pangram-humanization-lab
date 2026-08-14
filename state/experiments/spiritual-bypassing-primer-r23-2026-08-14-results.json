@@ -1,0 +1,89 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "spiritual-bypassing-primer-r23-2026-08-14",
+  "spec_sha256": "ae3cd9645ca4fc2302c4ba68948660acafdbc3d99285c2bc360392e7336e7f79",
+  "results": [
+    {
+      "id": "PRIMER_PARADOX",
+      "measurement_key": "spiritual-bypassing-primer-r23-2026-08-14_PRIMER_PARADOX",
+      "text": "A Primer on Spiritual Bypassing Spiritual bypassing doesn't always look like avoidance. Sometimes it looks like doing exactly what a spiritual practice told you to do. That's why I'm using Goenka retreats as the example here. The instruction is basically: whatever comes up, observe it and don't react. But what if what comes up is trauma? I'm really happy if you benefitted from your Goenka experience. It's also true that it has harmed many people, and the method itself is not built well for trauma survivors. That's why I wouldn't recommend it in general, although I can never tell anyone what would work specifically for them. My bias here is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by inner-child self love reparenting. I put the survivor accounts at the bottom so you can skip them if you already know what this kind of harm looks like.",
+      "text_sha256": "eccc7cf9185fb173ba846c6dfa3a39b708a8438bd2cbc8087c4d09865da9180b",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "A Primer on Spiritual Bypassing Spiritual bypassing doesn't always look like avoidance. Sometimes it looks like doing exactly what a spiritual practice told you to do. That's why I'm using Goenka retreats as the example here. The instruction is basically: whatever comes up, observe it and don't react. But what if what comes up is trauma? I'm really happy if you benefitted from your Goenka experience. It's also true that it has harmed many people, and the method itself is not built well for trauma survivors. That's why I wouldn't recommend it in general, although I can never tell anyone what would work specifically for them. My bias here is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by inner-child self love reparenting. I put the survivor accounts at the bottom so you can skip them if you already know what this kind of harm looks like.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.3758314847946167,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.6241685152053833,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "A Primer on Spiritual Bypassing Spiritual bypassing doesn't always look like avoidance. Sometimes it looks like doing exactly what a spiritual practice told you to do. That's why I'm using Goenka retreats as the example here. The instruction is basically: whatever comes up, observe it and don't react. But what if what comes up is trauma?",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7598665356636047,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 339,
+            "word_count": 56,
+            "token_length": 73,
+            "is_humanized": false,
+            "humanizer_score": 0.031092550605535507
+          },
+          {
+            "text": " I'm really happy if you benefitted from your Goenka experience. It's also true that it has harmed many people, and the method itself is not built well for trauma survivors. That's why I wouldn't recommend it in general, although I can never tell anyone what would work specifically for them. My bias here is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by inner-child self love reparenting. I put the survivor accounts at the bottom so you can skip them if you already know what this kind of harm looks like.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.40099525451660156,
+            "confidence": "Medium",
+            "start_index": 339,
+            "end_index": 902,
+            "word_count": 104,
+            "token_length": 123,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "primer"
+    }
+  ],
+  "audit_id": "spiritual-bypassing-primer-architecture-owner-2026-08-14",
+  "call_accounting": {
+    "audit_id": "spiritual-bypassing-primer-architecture-owner-2026-08-14",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "FULL_ARTICLE",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
+        "model": "pangram-4",
+        "paid_api_calls": 4,
+        "pending_resumes": 0,
+        "section_id": "primer",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
