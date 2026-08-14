@@ -13,17 +13,23 @@ permissions:
   contents: read
   issues: write
 
+concurrency:
+  group: pangram-lesson-integrity
+  cancel-in-progress: false
+
 jobs:
   process-requests:
-    if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'github-actions[bot]'
     permissions:
       contents: write
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
       - name: Install test dependencies
@@ -36,7 +42,9 @@ jobs:
           git config user.email "lesson-integrity-actions@users.noreply.github.com"
       - name: Process pending metadata requests
         run: PYTHONPATH=src python -m pangram_lab.request_cli
-      - name: Commit processed requests and canonical lesson state
+      - name: Commit processed requests to the pull-request branch
+        env:
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
         shell: bash
         run: |
           git add state/LESSON-LEDGER.json state/LESSON-INDEX.md state/WORKING-LESSONS*.md state/lesson-closeout-requests || true
@@ -45,16 +53,17 @@ jobs:
             exit 0
           fi
           git commit -m "lessons: process metadata request"
-          git push origin HEAD:main
+          git push origin "HEAD:$HEAD_REF"
 
   change-gate:
     if: github.event_name == 'pull_request' || github.event_name == 'push'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
       - name: Install test dependencies
@@ -81,12 +90,16 @@ jobs:
 
   weekly-audit:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: read
+      issues: write
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
       - name: Fetch long-lived evidence branch
