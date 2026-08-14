@@ -23,4 +23,4 @@ jobs:
         run: test -n "$PANGRAM_API_KEY"
       - run: python scripts/build_spiritual_bypassing_invitation_batch.py
       - env: {PANGRAM_API_KEY: '${{ secrets.PANGRAM_API_KEY }}'}
-        run: python scripts/run_fixed_batch.py /tmp/spiritual-bypassing-dark-r29-fidelity-2026-08-14.json --out state/experiments/spiritual-bypassing-dark-r29-fidelity-2026-08-14-results.json
+        run: python scripts/run_fixed_batch.py /tmp/spiritual-bypassing-full-r29-fidelity-final-2026-08-14.json --out state/experiments/spiritual-bypassing-full-r29-fidelity-final-2026-08-14-results.json
