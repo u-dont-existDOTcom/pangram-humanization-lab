@@ -23,6 +23,14 @@ Four fresh model-written attempts to explain the primer remained detector-red an
 
 The repaired primer reached 100% Human locally. After article-wide routing and removal of a heading-restatement bridge in the Loving Kindness section, the full reader-visible article reached 100% Human. A subsequent cold audit restored `Things can seize up.`; the fidelity-restored full article also reached 100% Human.
 
+## Owner correction after the second cold audit
+
+A later model proposal tried to move Joel's natural `I'm really happy if you benefitted from your Goenka experience` paragraph to the very beginning on the theory that it should lower defenses before the critique. Joel rejected that placement: it is not an introductory paragraph about spiritual bypassing and therefore does not fulfill the primer's opening job.
+
+Joel also confirmed that the primer/article scope should explicitly include the question of **what the Buddha actually taught**. That function is required; it should not be silently treated as optional roadmap language merely because the Buddhist-doctrine critique develops later under `True Insight`.
+
+This correction sharpens the incident: identifying a useful rhetorical function does not determine where the paragraph belongs. Reader-positioning, invitation, or de-escalation language must still satisfy the local heading/paragraph job at its actual position. Do not reorder prose merely because an abstract rhetorical theory says a reader should be reassured first.
+
 ## Durable rule: architecture regression
 
 Humanization never suspends ordinary editorial reasoning. Before the first detector call, and **after every detector-driven edit**, re-run an **architecture regression** from the whole article rather than from the last red window.
