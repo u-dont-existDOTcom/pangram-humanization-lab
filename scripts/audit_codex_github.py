@@ -84,14 +84,41 @@ USES_RE = re.compile(
 )
 TOP_LEVEL_PERMISSIONS_RE = re.compile(r"(?m)^permissions\s*:")
 WRITE_ALL_RE = re.compile(r"(?m)^\s*permissions\s*:\s*write-all\s*(?:#.*)?$")
-PULL_REQUEST_TARGET_RE = re.compile(
-    r"^\s*(?:"
-    r"pull_request_target\s*:\s*(?:#.*)?|"
-    r"on\s*:\s*pull_request_target\s*(?:#.*)?"
-    r")$",
-    re.MULTILINE,
+ON_LINE_RE = re.compile(
+    r"^(?P<indent>[ \\t]*)[\"']?on[\"']?[ \\t]*:[ \\t]*(?P<value>.*)$"
+)
+PULL_REQUEST_TARGET_TOKEN_RE = re.compile(
+    r"(?<![A-Za-z0-9_-])[\"']?pull_request_target[\"']?(?![A-Za-z0-9_-])"
+)
+PULL_REQUEST_TARGET_CHILD_RE = re.compile(
+    r"^(?:-[ \\t]*)?[\"']?pull_request_target[\"']?[ \\t]*(?::|,|\\]|\\}|$)"
 )
 CHECKOUT_RE = re.compile(r"(?m)^\s*-?\s*uses:\s*[\"']?actions/checkout@")
+
+
+def _workflow_uses_pull_request_target(text: str) -> bool:
+    """Recognize supported scalar, block, sequence, and flow forms of the on key."""
+    lines = text.splitlines()
+    for index, line in enumerate(lines):
+        match = ON_LINE_RE.match(line)
+        if match is None or match.group("indent"):
+            continue
+
+        value = match.group("value").split("#", 1)[0].strip()
+        if value:
+            if PULL_REQUEST_TARGET_TOKEN_RE.search(value):
+                return True
+            continue
+
+        for child in lines[index + 1 :]:
+            if not child.strip() or child.lstrip().startswith("#"):
+                continue
+            if not child.startswith((" ", "\\t")):
+                break
+            candidate = child.strip().split("#", 1)[0].strip()
+            if PULL_REQUEST_TARGET_CHILD_RE.match(candidate):
+                return True
+    return False
 
 
 def finding(
@@ -485,7 +512,7 @@ def _audit_workflows(
                 )
             )
 
-        if PULL_REQUEST_TARGET_RE.search(text) and CHECKOUT_RE.search(text):
+        if _workflow_uses_pull_request_target(text) and CHECKOUT_RE.search(text):
             findings.append(
                 finding(
                     "error",
