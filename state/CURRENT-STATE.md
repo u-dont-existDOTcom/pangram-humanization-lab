@@ -16,21 +16,24 @@ Preserve exact detector evidence while replacing historic accidental paid trigge
 ## Completed
 
 - All 14 baseline workflow blobs are preserved byte-for-byte outside `.github/workflows`.
-- One executable workflow handles read-only push/PR verification and explicitly confirmed manual paid dispatch.
+- Exactly one executable workflow handles read-only push/PR verification and explicitly confirmed manual paid dispatch.
 - Paid inputs are validated without detector access: exact confirmation, repository-relative spec, canonical output, audit ID, and section IDs.
 - Remote Actions are SHA-pinned; jobs have explicit permissions, concurrency, and timeouts.
 - The existing cache, task checkpoints, result identity, Git sync, and six-call section ledger remain unchanged.
+- Test-first RED run `31776789465` failed exactly because `scripts.validate_paid_dispatch` did not yet exist.
+- Code-bearing remediation head `41411b1ec4eb7fb0b2c8fa1c2db416162df30905` passed run `31777325504`: 74 tests passed, the audit reported 0 errors and 5 warnings, and the detector job was skipped.
+- The migration authorized and made 0 paid Pangram calls.
 
 ## Current checkpoint
 
-- PR #19 contains the evidence-workflow migration.
-- Test-first red run `31776789465` failed exactly because `scripts.validate_paid_dispatch` did not yet exist.
-- The migration itself makes no Pangram call; its push event is verification-only.
+- Draft PR #19 contains the evidence-workflow migration.
+- Compliance-report binding commit: `6bd49c35532e668f999d65dcf3fab2d822dde899`.
+- Report/current-state binding descendants are documentation-only; their exact latest PR head still requires a green verification run with the detector skipped before review.
 
 ## Remaining
 
-- Require the latest PR #19 push run to pass the full suite and repository audit with the detector job skipped.
-- Review the archived-blob map and final workflow permissions.
+- Verify the exact latest PR #19 head: full suite green, repository audit green, detector skipped.
+- Independently review the archived-blob map, final workflow permissions, validator, tests, and durable handoff.
 - Merge PR #19 into `automation/pangram-fixed-batch`, then verify the evidence-branch push run also skips the detector.
 - Promote transferable workflow-lifecycle and audit-parser lessons to `universal-dev-architecture`.
 
@@ -50,7 +53,7 @@ Preserve exact detector evidence while replacing historic accidental paid trigge
 
 ## Next safe action
 
-If PR #19 is open, confirm its latest push run has green verification and a skipped detector job, then merge. If it is merged, confirm the evidence-branch push run is green with the detector skipped; then return to `main` for universal lesson promotion and project sequencing.
+Confirm the exact PR #19 head has a successful verification run and a skipped detector job, then request independent review. After review findings are resolved and the exact reviewed head is green, merge. If already merged, confirm the evidence-branch push run is green with the detector skipped; then return to `main` for universal lesson promotion and project sequencing.
 
 ## Recovery rule
 
