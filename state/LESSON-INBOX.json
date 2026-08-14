@@ -458,6 +458,29 @@
           "section_id": "talk-and-slow"
         }
       ]
+    },
+    {
+      "audit_id": "spiritual-bypassing-visible-dedup-owner-2026-08-14",
+      "created_at_utc": "2026-08-14T02:03:15.622738+00:00",
+      "experiment_id": "spiritual-bypassing-visible-boundary-r16-dedup-2026-08-14",
+      "id": "Q-c0fe2e8ccf241326",
+      "sections": [
+        "FULL_ARTICLE"
+      ],
+      "source_path": "state/experiments/spiritual-bypassing-visible-boundary-r16-dedup-2026-08-14-results.json",
+      "source_ref": "e50e373a89ff66ab2ea27fc93057f4f2518174c6",
+      "source_sha256": "33af99aa9adc67a3b727d17a5ab6107d76a0b70250c7759e4d79293a96f40ed7",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.07066955417394638,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9293304681777954,
+          "id": "OWNER_DEDUP",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
