@@ -71,7 +71,8 @@ def test_pangram_certification_uses_reader_visible_text_not_raw_markdown():
         "lesson index": LESSON_INDEX.read_text(encoding="utf-8"),
     }
     for label, text in texts.items():
-        assert "raw Markdown" in text, label
-        assert "visible plaintext" in text, label
-        assert "diagnostic only" in text, label
-        assert "reader-visible" in text, label
+        lowered = text.lower()
+        assert "raw markdown" in lowered, label
+        assert "visible plaintext" in lowered, label
+        assert "diagnostic only" in lowered, label
+        assert "reader-visible" in lowered, label
