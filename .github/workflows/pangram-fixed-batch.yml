@@ -46,7 +46,7 @@ jobs:
 
   detector:
     needs: test
-    if: github.event_name == 'workflow_dispatch' || contains(toJson(github.event.commits), 'experiments/romance-authorial-recovery-r27-2026-08-14.json')
+    if: github.event_name == 'workflow_dispatch' || contains(toJson(github.event.head_commit.added), 'experiments/romance-authorial-recovery-r27-2026-08-14.json') || contains(toJson(github.event.head_commit.modified), 'experiments/romance-authorial-recovery-r27-2026-08-14.json')
     permissions:
       contents: write
     runs-on: ubuntu-latest
