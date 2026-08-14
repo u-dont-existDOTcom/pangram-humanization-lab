@@ -895,6 +895,29 @@
           "section_id": "talk-and-slow"
         }
       ]
+    },
+    {
+      "audit_id": "romance-authorial-recovery-2026-08-14",
+      "created_at_utc": "2026-08-14T21:58:34.679727+00:00",
+      "experiment_id": "romance-authorial-recovery-r31-childhood-memory-2026-08-14",
+      "id": "Q-0806e5f7dc7f448a",
+      "sections": [
+        "talk-and-slow"
+      ],
+      "source_path": "state/experiments/romance-authorial-recovery-r31-childhood-memory-2026-08-14-results.json",
+      "source_ref": "9ead2111e725286ba66adb61f4856f409efa1cb5",
+      "source_sha256": "4d4e777c29d9fd627a19b2d14e0f738b2a3e2055607af9bfe1a0cf26ca7c5424",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.23929430544376373,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7607057094573975,
+          "id": "TALK_AND_SLOW_R31_CHILDHOOD_MEMORY",
+          "prediction_short": "Mixed",
+          "section_id": "talk-and-slow"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
