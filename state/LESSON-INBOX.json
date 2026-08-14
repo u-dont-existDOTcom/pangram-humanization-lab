@@ -481,6 +481,29 @@
           "section_id": "FULL_ARTICLE"
         }
       ]
+    },
+    {
+      "audit_id": "spiritual-bypassing-visible-dedup-owner-2026-08-14",
+      "created_at_utc": "2026-08-14T02:04:46.780527+00:00",
+      "experiment_id": "spiritual-bypassing-visible-boundary-r17-dedup-only-2026-08-14",
+      "id": "Q-91ea0e644fcdaa4e",
+      "sections": [
+        "FULL_ARTICLE"
+      ],
+      "source_path": "state/experiments/spiritual-bypassing-visible-boundary-r17-dedup-only-2026-08-14-results.json",
+      "source_ref": "ec1a3af822f0a23360ab2f48f7c0b5259e27d0cc",
+      "source_sha256": "29498b2dab7ba15c096195da62e3a424a63108be8e28a175e6ad89e1a58a67cf",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.07948052138090134,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9205194711685181,
+          "id": "DEDUP_ONLY",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
