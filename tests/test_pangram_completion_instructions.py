@@ -60,3 +60,17 @@ def test_joel_pangram_completion_requires_exact_100_percent_and_handoff():
     operating = texts["operating guide"]
     assert "Hard limit: at most 6 new paid Pangram POSTs per section per audit" in operating
     assert "never overrides the six-paid-call section cap" in operating
+
+
+def test_pangram_certification_uses_reader_visible_text_not_raw_markdown():
+    texts = {
+        "operating guide": OPERATING_GUIDE.read_text(encoding="utf-8"),
+        "actions runbook": RUNBOOK.read_text(encoding="utf-8"),
+        "humanization gate": HUMANIZATION_GATE.read_text(encoding="utf-8"),
+        "lesson index": LESSON_INDEX.read_text(encoding="utf-8"),
+    }
+    for label, text in texts.items():
+        assert "raw Markdown" in text, label
+        assert "visible plaintext" in text, label
+        assert "diagnostic only" in text, label
+        assert "reader-visible" in text, label

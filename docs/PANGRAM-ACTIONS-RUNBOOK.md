@@ -19,6 +19,12 @@ Before calling any candidate a `pre-Pangram candidate`:
 
 An unmeasured candidate is not detector-complete.
 
+## Reader-visible representation gate
+
+Before freezing the certification boundary, derive the **reader-visible** text Pangram will actually evaluate. For Markdown article work, **raw Markdown is diagnostic only**: strip Markdown syntax, link destinations, and other source-only markup and certify the resulting **visible plaintext**. For Substack, use the rendered reader-visible text, including any embed/card text Pangram actually surfaces. Preserve the source representation separately when useful for debugging, but a pass on raw source markup cannot certify a different rendered boundary.
+
+Hash and record the exact reader-visible certification text after this representation step. If a GUI/extension result is being reproduced, first match its visible word count/text extraction as closely as possible, then compare API results. Do not interpret a raw-Markdown/API pass versus rendered-GUI failure as detector disagreement until the submitted representations have been made equivalent.
+
 ## Prepare a task-specific fixed batch
 
 Start from the current head of `automation/pangram-fixed-batch`. Before changing anything, check current branches, workflow runs, result state, cache state, and the section's persisted call ledger for overlapping Pangram work.
@@ -75,7 +81,7 @@ The spec file is JSON. New paid humanization audits use fixed-batch v1 plus audi
 
 If `audit_id` is supplied, every variant must have a non-empty `section_id`. Legacy historical specs without audit identity remain readable, but new humanization audits must use the accounted path.
 
-The runner accepts at most eight variants unless that batch-size limit is consciously changed and reviewed. The paid section cap is stricter: **at most six new paid Pangram POSTs per section per audit**, accumulated across batches. The `text` field is the literal detector input. Do not silently substitute a paragraph for a document, merge boundaries, remove a heading, normalize whitespace, or change link/native-marker text.
+The runner accepts at most eight variants unless that batch-size limit is consciously changed and reviewed. The paid section cap is stricter: **at most six new paid Pangram POSTs per section per audit**, accumulated across batches. The `text` field is the literal detector input. Do not silently substitute a paragraph for a document, merge boundaries, remove a heading, normalize whitespace, or change link/native-marker text after the reader-visible certification representation has been frozen.
 
 ## Credential, billing, and call-budget safety
 
@@ -115,13 +121,13 @@ A green workflow is necessary but not sufficient. Inspect the committed result J
 
 - its `experiment_id` and `audit_id` match the intended audit;
 - every measured row has the intended `section_id`;
-- the stored `text` is the exact submitted text;
+- the stored `text` is the exact submitted **reader-visible** text intended for certification;
 - `text_sha256` matches the independently recorded UTF-8 SHA-256;
 - `detector.stage` is `STAGE_SUCCESS`;
 - `detector.version` is `4.0`;
 - for a requested Joel humanization completion, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`;
 - `call_accounting` reports the section's exact paid-call count and estimated credit/cost fields;
-- the result belongs to the intended document/paragraph boundary; and
+- the result belongs to the intended document/paragraph boundary and representation; and
 - the result path, result commit, workflow run, workflow head SHA, paid-call count, and available credit/cost accounting are recorded in the editorial report or experiment note.
 
 The current runner also registers completed result metadata for semantic lesson review in `state/LESSON-INBOX.json` without copying the tested passage into that queue.
@@ -149,9 +155,9 @@ Do not call an unresolved state complete or passing. After materially new author
 
 ## Exact-text and staleness rule
 
-A result applies only to the exact text hash and boundary that were tested. Any later change to wording, whitespace, newlines, order, paragraph boundaries, headings, link anchors, or native-object markers makes that result inapplicable to the changed boundary.
+A result applies only to the exact text hash, representation, and boundary that were tested. Any later change to wording, whitespace, newlines, order, paragraph boundaries, headings, link anchors, visible card/embed text, or other reader-visible content makes that result inapplicable to the changed boundary.
 
-If the exact text hash, boundary, model, and detector version are unchanged, a valid content-addressed cache hit should be reused; age alone does not make it stale. A successful older workflow run is not evidence for a different candidate.
+If the exact reader-visible text hash, boundary, model, and detector version are unchanged, a valid content-addressed cache hit should be reused; age alone does not make it stale. A successful older workflow run is not evidence for a different candidate or source/render representation.
 
 ## How to report unavailable access
 
