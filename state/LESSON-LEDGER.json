@@ -138,6 +138,31 @@
       "source_path": "state/ROMANCE-AUTHORIAL-SUFFICIENCY-CALL-EFFICIENCY-2026-08-13.md",
       "source_ref": "main",
       "source_sha256": "35b081648b04ca45eef77ef66099da0b9271d29176f44f3264958919a9bc95a5"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "A rolling unincorporated-ideas ledger cannot be used to bank or remove a still-relevant owner-final point; preserve its current destination unless Joel approves a concrete move, and do not reopen a review Joel says is settled without materially new contradictory evidence, ambiguity, or his request.",
+      "id": "L-fd49a1847b-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md"
+      ],
+      "reason": "Owner-confirmed correction after the Romance recovery draft removed a protected practical point and reopened a settled evidence judgment; the rule is independently transferable to editorial and detector work.",
+      "recorded_at_utc": "2026-08-14T02:06:16.384Z",
+      "source_path": "state/ROMANCE-AUTHORIAL-SUFFICIENCY-CALL-EFFICIENCY-2026-08-13.md",
+      "source_ref": "main",
+      "source_sha256": "fd49a1847b1ac7df929958312556717a76020d7c57813d0721b7a1de3b901667"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The exact 879-word combined Romance Talk/Slow r27 boundary passed Pangram 4.0 at 100% Human, 0% AI, and 0% AI-assisted in one paid call while retaining the restored Gandarussa and scoped twin-flame points.",
+      "id": "L-a7a907a514-01",
+      "promoted_to": [],
+      "reason": "This is exact-boundary evidence for the Romance candidate. It is not a full-article certification, a phrase rule, or independent support for the Gandarussa factual claim.",
+      "recorded_at_utc": "2026-08-14T02:06:16.384Z",
+      "source_path": "state/experiments/romance-authorial-recovery-r27-2026-08-14-results.json",
+      "source_ref": "08726efc1f9a681706b385dbcae44f24b524e0a7",
+      "source_sha256": "a7a907a5149570948ff3fcdd697de051f2046faf08371df5b85d8213c8840cb0"
     }
   ],
   "schema_version": 1
