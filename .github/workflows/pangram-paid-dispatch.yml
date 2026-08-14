@@ -1,0 +1,108 @@
+name: Pangram fixed-batch safety gate
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+      - 'codex/**'
+  pull_request:
+    branches:
+      - automation/pangram-fixed-batch
+  workflow_dispatch:
+    inputs:
+      spec_path:
+        description: Repository-relative fixed-batch JSON under experiments/
+        required: true
+        type: string
+      result_path:
+        description: Optional canonical state/experiments result path
+        required: false
+        default: ''
+        type: string
+      paid_run_confirmation:
+        description: Explicit acknowledgement that this dispatch can spend Pangram credits
+        required: true
+        default: DO_NOT_RUN
+        type: choice
+        options:
+          - DO_NOT_RUN
+          - RUN_PAID_PANGRAM_FIXED_BATCH
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pangram-fixed-batch-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      spec_path: ${{ steps.preflight.outputs.spec_path }}
+      result_path: ${{ steps.preflight.outputs.result_path }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install -q -e '.[test]'
+      - name: Run complete deterministic suite
+        run: python -m pytest -q
+      - name: Audit repository-visible controls
+        run: python scripts/audit_codex_github.py --root . --fail-on error
+      - name: Validate manual paid dispatch
+        if: github.event_name == 'workflow_dispatch'
+        id: preflight
+        env:
+          SPEC_PATH: ${{ inputs.spec_path }}
+          RESULT_PATH: ${{ inputs.result_path }}
+          PAID_RUN_CONFIRMATION: ${{ inputs.paid_run_confirmation }}
+        run: >-
+          python scripts/validate_paid_dispatch.py
+          --spec "$SPEC_PATH"
+          --out "$RESULT_PATH"
+          --confirmation "$PAID_RUN_CONFIRMATION"
+          --github-output "$GITHUB_OUTPUT"
+
+  detector:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/automation/pangram-fixed-batch'
+    needs: verify
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Install fixed-batch runner
+        run: python -m pip install -q -e '.[test]'
+      - name: Configure immutable evidence commits
+        run: |
+          git config user.name "Pangram Lab Actions"
+          git config user.email "pangram-lab-actions@users.noreply.github.com"
+      - name: Enable evidence push credential
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          clean: false
+      - name: Run explicitly confirmed paid batch
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+          SPEC_PATH: ${{ needs.verify.outputs.spec_path }}
+          RESULT_PATH: ${{ needs.verify.outputs.result_path }}
+        shell: bash
+        run: |
+          test -n "$PANGRAM_API_KEY" || { echo "PANGRAM_API_KEY secret is missing"; exit 1; }
+          python scripts/run_fixed_batch.py "$SPEC_PATH" --out "$RESULT_PATH"

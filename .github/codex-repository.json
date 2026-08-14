@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "repository_kind": "software",
+  "active": true,
+  "long_running": true,
+  "visibility": "private",
+  "risk": "high",
+  "commands": {
+    "bootstrap": "python -m pip install -e '.[test]'",
+    "test": "python -m pytest -q",
+    "test_focused": "python -m pytest -q tests/test_paid_dispatch.py tests/test_fixed_batch.py tests/test_result_paths.py tests/test_call_budget_fixed_batch.py",
+    "audit": "python scripts/audit_codex_github.py --root . --fail-on error",
+    "paid_preflight": "python scripts/validate_paid_dispatch.py --spec <experiments/file.json> --out <canonical-result-or-empty> --confirmation RUN_PAID_PANGRAM_FIXED_BATCH"
+  },
+  "current_state": "state/CURRENT-STATE.md",
+  "github_controls": {
+    "default_branch_rules": "disabled",
+    "secret_scanning": "unverified",
+    "push_protection": "unverified",
+    "code_scanning": "disabled",
+    "actions_default_permissions": "unverified",
+    "vulnerability_alerts": "unverified",
+    "evidence_branch_rules": "unverified"
+  },
+  "audit_note": "This long-lived evidence branch is verified separately from main. Push and pull-request events run tests/audit only; paid work requires an explicitly confirmed manual dispatch. Hosted control observations remain tracked in main issue #17."
+}
