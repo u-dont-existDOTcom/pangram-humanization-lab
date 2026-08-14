@@ -163,6 +163,20 @@
       "source_path": "state/experiments/romance-authorial-recovery-r27-2026-08-14-results.json",
       "source_ref": "08726efc1f9a681706b385dbcae44f24b524e0a7",
       "source_sha256": "a7a907a5149570948ff3fcdd697de051f2046faf08371df5b85d8213c8840cb0"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Pangram certification must use the reader-visible representation rather than raw source markup; raw Markdown can be diagnostic but cannot certify rendered publication text.",
+      "id": "L-699e424bbb-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
+      ],
+      "reason": "The same Spiritual Bypassing content measured 100% Human as raw Markdown but 88.3194506% Human as the 1,482-word visible plaintext that reproduced the Pangram GUI, demonstrating a material representation/certification failure.",
+      "recorded_at_utc": "2026-08-14T02:20:03.646928+00:00",
+      "source_path": "state/SPIRITUAL-BYPASSING-VISIBLE-BOUNDARY-INCIDENT-2026-08-14.md",
+      "source_ref": "82654e4be54b4e4252d157c528a54a933669c342",
+      "source_sha256": "699e424bbbb52f01f4e4a11acd67da55e2e41b1d6b79907dcdf8c2032bb6f721"
     }
   ],
   "schema_version": 1

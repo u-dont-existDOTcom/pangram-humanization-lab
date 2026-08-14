@@ -12,6 +12,12 @@ Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pa
 
 Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
 
+### Certify the reader-visible representation, not source markup
+
+The detector boundary is the **reader-visible** text Pangram will actually evaluate. For Markdown article work, **raw Markdown is diagnostic only**: strip Markdown syntax, link destinations, bullets/markup that are not visible as prose, and test the resulting **visible plaintext** for certification. For Substack, use the rendered reader-visible text, including embed/card text if Pangram surfaces it. A raw Markdown pass does not certify the rendered article.
+
+This rule is grounded in the Spiritual Bypassing incident: the raw Markdown source measured 100% Human, while the normalized 1,482-word visible plaintext reproduced the Pangram GUI at about 88.3% Human. The detector was not meaningfully disagreeing with itself; the two tests supplied different representations. Preserve both hashes when doing representation research, but only the reader-visible one can satisfy the publication gate.
+
 The repair task has only two terminal states: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an unresolved authorial handoff.
 
 A separate cost-control rule can suspend the repair before either terminal state. Each independently tested section/boundary has a hard budget of at most six **new paid Pangram POSTs per audit**. Cache hits, auth probes, polling GETs, and resuming an already-paid pending task do not count. Ambiguous POST attempts and corrective paid POSTs do count. Before a seventh paid POST for that section, stop, preserve the exact measured state, and ask Joel for narrow help. This is a mandatory operational suspension, not a detector pass or completion. Never invent a new batch, workflow, chat, or audit ID solely to reset the same section's budget.
@@ -52,3 +58,6 @@ The detector version and exact text hashes live in those result records. Preserv
 <!-- closeout-request:pangram-result-path-durability-2026-08-13 -->
 ### Bind detector evidence to immutable experiment identity
 Fixed-batch result identity must be mechanical, not a workflow naming convention. Derive the canonical result path from `experiment_id`, fingerprint the exact batch spec, reject a mismatched output path or changed-spec reuse before detector access, and allow an identical completed experiment to reuse its result without another paid call. Commit the exact result before lesson-review registration and bind the review obligation to that immutable result commit. A mutable branch plus a reusable pathname is not durable provenance.
+<!-- closeout-request:spiritual-bypassing-visible-boundary-2026-08-14 -->
+### Reader-visible certification incident provenance
+The Spiritual Bypassing representation incident established that a raw Markdown Pangram pass cannot certify the reader-visible article. The same content scored 100% Human when raw Markdown was submitted but 88.3194506% Human after normalization to the 1,482-word visible plaintext that matched the GUI. Raw Markdown is diagnostic only for publication certification; the reader-visible representation is the acceptance boundary.
