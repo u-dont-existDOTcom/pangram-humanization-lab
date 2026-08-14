@@ -20,6 +20,7 @@ Preserve the lab's exact detector-evidence, editorial, and lesson-closeout archi
 - The portable universal repository audit is covered by a repository regression test and invoked by the workflow-policy gate.
 - Workflow permissions are job-scoped where writes are required; remote Actions remain pinned to full commit SHAs.
 - Hosted-setting observations and plan/integration limits are recorded without guessing.
+- Governance closeout receipts `L-6b3333a2c4-01` and `L-e96b341584-01` are processed.
 
 ## Current checkpoint
 
@@ -29,7 +30,7 @@ Preserve the lab's exact detector-evidence, editorial, and lesson-closeout archi
 
 ## Remaining
 
-- Bind this refreshed compliance report to a second immutable `no-new-lesson` closeout receipt, require the latest PR head checks to be green, and merge PR #16.
+- The first and post-review reports are already bound to `L-6b3333a2c4-01` and `L-e96b341584-01`. Require `state/lesson-closeout-requests/codex-github-compliance-final-2026-08-14.json` to be processed, then require the latest PR head checks to be green and merge PR #16.
 - Harden the evidence branch to one dispatch-only, confirmation-gated paid runner; archive historic task workflows outside `.github/workflows`.
 - Promote the transferable paid-workflow lifecycle lesson to `universal-dev-architecture` with source commit/path/hash and limits.
 - Recheck hosted settings after repository-visible changes and update hardening-audit issue #17.

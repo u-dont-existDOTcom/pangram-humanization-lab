@@ -55,11 +55,14 @@ PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref HEAD
 ## Verification evidence
 
 - TDD red checkpoint: lesson-integrity run `31774735028` failed exactly at `tests/test_codex_github_audit.py` because the audit module did not yet exist.
-- Universal-audit defect checkpoint: runs `31774980341` and `31774980358` failed because the imported regex placed a second inline multiline flag after an alternation. Commit `87537c744bb45c0c9422c79c1ea87a02ef44f788` fixes the parser without weakening the trigger rule.
-- Repository workflow policy: run `31775055295` succeeded with 0 errors and 5 declared warnings.
-- Lesson integrity: run `31775055265` succeeded; 53 tests passed, the changed-range closeout passed, and the current-ref audit passed.
+- Universal-audit import defect: runs `31774980341` and `31774980358` failed because the inherited regex placed a second inline multiline flag after an alternation; commit `87537c744bb45c0c9422c79c1ea87a02ef44f788` corrected the compile failure.
+- First clean baseline: repository-policy run `31775055295` and lesson-integrity run `31775055265` succeeded on `87537c744bb45c0c9422c79c1ea87a02ef44f788`; 53 tests and both lesson gates passed.
+- Security-review TDD checkpoint: lesson-integrity run `31775842762` failed exactly four previously undetected but valid `pull_request_target` YAML forms while 56 other tests passed.
+- Code-bearing review remediation: repository-policy run `31775932523` and lesson-integrity run `31775932515` succeeded on `61f86ae74908447c92e6320b815b07cd60d9125a`; 60 tests, changed-range closeout, and current-ref audit passed.
+- Final synchronization head before this report correction: repository-policy run `31776130741` and lesson-integrity run `31776130748` succeeded on `752fea76088d10c37b128e19bff9ecfb366e6fc7`.
+- Governance closeouts: `L-6b3333a2c4-01` and post-review `L-e96b341584-01`, both `no-new-lesson`.
+- Final report-correction closeout path: `state/lesson-closeout-requests/codex-github-compliance-final-2026-08-14.json`; its processed receipt is authoritative.
 - Durable hosted-control follow-up: issue #17, https://github.com/u-dont-existDOTcom/pangram-humanization-lab/issues/17
-- Governance closeout: request `codex-github-compliance-2026-08-14` processed at `a91197ae3429366700a4b8040fa87c84a0e281f7` as ledger entry `L-6b3333a2c4-01` (`no-new-lesson`).
 - PR: #16, https://github.com/u-dont-existDOTcom/pangram-humanization-lab/pull/16
 
-The code-bearing review-remediation head is exactly verified above. Later documentation and closeout-receipt commits do not alter executable behavior, but the latest PR head must still show executable green policy and lesson-integrity jobs before merge. The PR check suites and PR body are the authoritative final-head evidence; this durable report records the code-bearing SHA and run IDs without pretending a file can contain its own commit SHA.
+The exact code-bearing remediation and its validation are recorded above. Later documentation and closeout-receipt commits do not alter executable behavior, but the latest PR head must still show executable green policy and lesson-integrity jobs before merge. The PR check suites and PR body are the authoritative final-head evidence; this durable report records exact code-bearing SHA/run evidence without pretending a file can contain its own commit SHA.
