@@ -83,7 +83,7 @@ def validate_dispatch(
     try:
         result_path = resolve_result_path(root, spec, requested)
     except ValueError as exc:
-        raise DispatchValidationError(str(exc)) from exc
+        raise DispatchValidationError(f"canonical output path validation failed: {exc}") from exc
     try:
         result_relative = result_path.relative_to(root)
     except ValueError as exc:
