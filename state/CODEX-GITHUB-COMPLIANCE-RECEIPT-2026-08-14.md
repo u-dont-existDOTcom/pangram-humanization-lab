@@ -5,6 +5,8 @@
 - Lesson-integrity evidence: run `31775932515` — success, 60 tests plus changed-range and current-ref audits
 - Initial governance closeout: `L-6b3333a2c4-01`
 - Post-review closeout: `L-e96b341584-01`
+- Final report-correction closeout: `L-a7e801f48a-01`
+- Pre-closeout synchronization checks: policy run `31776390106` and lesson-integrity run `31776390109` — success
 - Hosted-control follow-up: issue #17
 - Paid Pangram calls made by this work: `0`
 
