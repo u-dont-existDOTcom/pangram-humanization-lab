@@ -5,8 +5,8 @@
   "sections": {
     "talk-and-slow\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -15,10 +15,18 @@
           "text_sha256": "2ad80405ef91467b173094283ba614de446106b2cf58ed9b0af0f241fb6d34ea",
           "type": "paid_post_reserved",
           "word_count": 879
+        },
+        {
+          "estimated_credits": 2,
+          "measurement_key": "romance-authorial-recovery-r29-fidelity-2026-08-14_TALK_AND_SLOW_R29_FIDELITY",
+          "recorded_at_utc": "2026-08-14T10:58:10.497283+00:00",
+          "text_sha256": "633da7d9f6ce3310fa7d87d9123492aa049174567e060769625904105358f726",
+          "type": "paid_post_reserved",
+          "word_count": 1137
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "talk-and-slow",
       "version": "4.0"
