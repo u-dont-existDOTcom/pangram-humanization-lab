@@ -1,6 +1,6 @@
 # GitHub automation instructions
 
-Only `.github/workflows/pangram-fixed-batch.yml` is executable on this evidence branch.
+Only `.github/workflows/pangram-paid-dispatch.yml` is executable on this evidence branch.
 
 - Keep push and pull-request jobs read-only and detector-free.
 - Keep all remote Actions pinned to reviewed 40-character SHAs.
