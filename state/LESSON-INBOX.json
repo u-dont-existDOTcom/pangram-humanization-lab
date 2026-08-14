@@ -872,6 +872,29 @@
           "section_id": "talk-and-slow"
         }
       ]
+    },
+    {
+      "audit_id": "romance-authorial-recovery-2026-08-14",
+      "created_at_utc": "2026-08-14T21:35:50.558809+00:00",
+      "experiment_id": "romance-authorial-recovery-r30-first-person-2026-08-14",
+      "id": "Q-1f78882c52fc1592",
+      "sections": [
+        "talk-and-slow"
+      ],
+      "source_path": "state/experiments/romance-authorial-recovery-r30-first-person-2026-08-14-results.json",
+      "source_ref": "2f7ced014e0071dc8a15b199f57166c984b088b4",
+      "source_sha256": "0b3d7462745e887d53c5c8ff7101c5f088ea3b6940269abd0efa36e9e692da04",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.38311588764190674,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6168841123580933,
+          "id": "TALK_AND_SLOW_R30_FIRST_PERSON",
+          "prediction_short": "Mixed",
+          "section_id": "talk-and-slow"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
