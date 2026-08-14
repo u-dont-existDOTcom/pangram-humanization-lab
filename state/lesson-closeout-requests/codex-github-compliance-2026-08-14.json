@@ -1,6 +1,10 @@
 {
   "disposition": "no-new-lesson",
   "finding": "The Codex + GitHub compliance audit found repository-governance and hosted-control gaps, not a new detector, editorial, or humanization lesson.",
+  "ledger_entry_ids": [
+    "L-6b3333a2c4-01"
+  ],
+  "processed_at_utc": "2026-08-14T06:10:11.895943+00:00",
   "promoted_to": [],
   "reason": "The project-specific remediation is recorded in repository policy, CI, the compliance record, and issue #17. Transferable audit-parser and paid-workflow lifecycle lessons are promoted separately to universal-dev-architecture.",
   "request_id": "codex-github-compliance-2026-08-14",
@@ -8,5 +12,5 @@
   "source_path": "docs/CODEX-GITHUB-COMPLIANCE-2026-08-14.md",
   "source_ref": "87537c744bb45c0c9422c79c1ea87a02ef44f788",
   "source_sha256": "6b3333a2c43dddfddcda0edd7f713f9b47351a1a0602e3ef8cb6f4b47702541f",
-  "status": "pending"
+  "status": "processed"
 }
