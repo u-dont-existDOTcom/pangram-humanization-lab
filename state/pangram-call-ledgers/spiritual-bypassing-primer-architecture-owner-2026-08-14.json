@@ -5,8 +5,8 @@
   "sections": {
     "FULL_ARTICLE\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.5,
-      "estimated_credits": 10,
+      "estimated_cost_usd": 0.6,
+      "estimated_credits": 12,
       "events": [
         {
           "estimated_credits": 2,
@@ -47,10 +47,18 @@
           "text_sha256": "7e95f59a1b21d812ec1623725d59e184f92cc5ddc61815e3e0b30f21ae32ef3e",
           "type": "paid_post_reserved",
           "word_count": 1500
+        },
+        {
+          "estimated_credits": 2,
+          "measurement_key": "spiritual-bypassing-full-r29-fidelity-final-2026-08-14_FULL_R29_FIDELITY_FINAL",
+          "recorded_at_utc": "2026-08-14T06:24:22.298186+00:00",
+          "text_sha256": "364dc2d117988854a54236e28fee8c0ed4a2ec7aa0820fe5fb2a445f84ecc333",
+          "type": "paid_post_reserved",
+          "word_count": 1504
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 5,
+      "paid_api_calls": 6,
       "pending_resumes": 0,
       "section_id": "FULL_ARTICLE",
       "version": "4.0"
