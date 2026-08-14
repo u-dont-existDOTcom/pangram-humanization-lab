@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "repository_kind": "software",
+  "active": true,
+  "long_running": true,
+  "visibility": "private",
+  "risk": "high",
+  "commands": {
+    "bootstrap": "./INSTALL-AND-RUN.sh"
+  },
+  "current_state": null,
+  "github_controls": {
+    "default_branch_rules": "unverified",
+    "secret_scanning": "unverified",
+    "push_protection": "unverified",
+    "code_scanning": "unverified"
+  },
+  "audit_note": "Preserve the existing lesson-index/ledger/CI architecture. Populate exact test and audit commands, and the canonical current-state path, only after inspecting current repository instructions and workflows; do not infer them from historical chat."
+}
