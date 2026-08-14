@@ -803,6 +803,29 @@
           "section_id": "primer"
         }
       ]
+    },
+    {
+      "audit_id": "spiritual-bypassing-primer-architecture-owner-2026-08-14",
+      "created_at_utc": "2026-08-14T06:23:23.292781+00:00",
+      "experiment_id": "spiritual-bypassing-dark-r29-fidelity-2026-08-14",
+      "id": "Q-7421e7dfa0f1e654",
+      "sections": [
+        "dark-side"
+      ],
+      "source_path": "state/experiments/spiritual-bypassing-dark-r29-fidelity-2026-08-14-results.json",
+      "source_ref": "8d5f4a72ee610f5dbded8d3aca8f28a5196981f4",
+      "source_sha256": "1e121caae18e7766a92dac1ef8801982392c5805f6f4a81790aff3c5b18bdf55",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.12930627167224884,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8706937432289124,
+          "id": "DARK_FIDELITY_RESTORE",
+          "prediction_short": "Mixed",
+          "section_id": "dark-side"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
