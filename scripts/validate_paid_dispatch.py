@@ -19,6 +19,12 @@ class DispatchValidationError(ValueError):
     pass
 
 
+def _single_line_identity(value: str, *, label: str) -> str:
+    if any(ord(character) < 32 or ord(character) == 127 for character in value):
+        raise DispatchValidationError(f"{label} must not contain control characters")
+    return value
+
+
 def _repository_path(root: Path, raw: str, *, label: str) -> tuple[Path, Path]:
     if not isinstance(raw, str) or not raw:
         raise DispatchValidationError(f"{label} is required")
@@ -64,17 +70,20 @@ def validate_dispatch(
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         raise DispatchValidationError(f"invalid fixed-batch spec: {exc}") from exc
 
-    audit_id = str(spec.get("audit_id") or "").strip()
-    if not audit_id:
+    audit_value = spec.get("audit_id")
+    if not isinstance(audit_value, str) or not audit_value.strip():
         raise DispatchValidationError("audit_id is required for a paid workflow dispatch")
+    audit_id = _single_line_identity(audit_value, label="audit_id").strip()
     variants = spec.get("variants")
     if not isinstance(variants, list) or not variants:
         raise DispatchValidationError("at least one variant is required")
     for variant in variants:
-        if not isinstance(variant, dict) or not str(variant.get("section_id") or "").strip():
+        section_value = variant.get("section_id") if isinstance(variant, dict) else None
+        if not isinstance(section_value, str) or not section_value.strip():
             raise DispatchValidationError(
                 "every paid workflow variant requires a non-empty section_id"
             )
+        _single_line_identity(section_value, label="section_id")
 
     requested: Path | None = None
     if output_raw:
@@ -102,9 +111,6 @@ def _write_github_output(path: Path, result: dict[str, Any]) -> None:
     lines = [
         f"spec_path={result['spec_path']}",
         f"result_path={result['result_path']}",
-        f"experiment_id={result['experiment_id']}",
-        f"audit_id={result['audit_id']}",
-        f"variant_count={result['variant_count']}",
     ]
     with path.open("a", encoding="utf-8") as handle:
         handle.write("\n".join(lines) + "\n")
