@@ -28,3 +28,5 @@ A **100% Human** result is not editorially acceptable when the architecture regr
 The 2026-08-14 Spiritual Bypassing audit demonstrated the failure directly: a reader-visible full article reached 100% Human while its first section no longer fulfilled `A Primer on Spiritual Bypassing`. Four fresh model-written primer realizations then failed; the successful repair came from finding the existing owner mechanism article-wide and routing it into the primer. A later cold audit also restored an inherited line that detector-focused editing had silently dropped.
 
 See `state/SPIRITUAL-BYPASSING-HUMANIZATION-ARCHITECTURE-INCIDENT-2026-08-14.md` for provenance and exact evidence routing.
+
+<!-- verification-trigger-after-closeout -->
