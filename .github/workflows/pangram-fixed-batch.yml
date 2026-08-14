@@ -6,7 +6,7 @@ on:
       - automation/pangram-fixed-batch
     paths:
       - '.github/workflows/pangram-fixed-batch.yml'
-      - 'experiments/romance-starting-scenarios-r25-2026-08-13.json'
+      - 'experiments/romance-authorial-recovery-r27-2026-08-14.json'
       - 'src/pangram_lab/fixed_batch.py'
       - 'src/pangram_lab/result_paths.py'
       - 'src/pangram_lab/call_budget.py'
@@ -46,7 +46,7 @@ jobs:
 
   detector:
     needs: test
-    if: github.event_name == 'workflow_dispatch' || contains(toJson(github.event.commits), 'experiments/romance-starting-scenarios-r25-2026-08-13.json')
+    if: github.event_name == 'workflow_dispatch' || contains(toJson(github.event.commits), 'experiments/romance-authorial-recovery-r27-2026-08-14.json')
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -69,7 +69,7 @@ jobs:
         run: |
           test -n "$PANGRAM_API_KEY" || { echo "PANGRAM_API_KEY secret is missing"; exit 1; }
           echo "PANGRAM_API_KEY is configured"
-      - name: Run starting-scenarios batch
+      - name: Run authorial-recovery r27
         env:
           PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
-        run: python scripts/run_fixed_batch.py experiments/romance-starting-scenarios-r25-2026-08-13.json
+        run: python scripts/run_fixed_batch.py experiments/romance-authorial-recovery-r27-2026-08-14.json
