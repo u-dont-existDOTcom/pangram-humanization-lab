@@ -13,9 +13,7 @@ AUDIT_ID = 'spiritual-bypassing-primer-architecture-owner-2026-08-14'
 
 OLD_EARLY = """I put those links at the end. Critics describe a “push through” culture.
 
-There are plenty of “dark night” stories on [r/vipassana](http://Reddit.com/r/vipassana) too.
-
-Some teachers compare intense practice without emotional groundwork to revving an engine without oil. That's the part I keep thinking about. If I start dissociating on day five, is that a warning or just another thing I'm supposed to observe?"""
+There are plenty of “dark night” stories on [r/vipassana](http://Reddit.com/r/vipassana) too. Some teachers compare intense practice without emotional groundwork to revving an engine without oil. That's the part I keep thinking about. If I start dissociating on day five, is that a warning or just another thing I'm supposed to observe?"""
 NEW_EARLY = """I put those links at the end. Critics describe a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil.
 
 There are plenty of “dark night” stories on [r/vipassana](http://Reddit.com/r/vipassana) too.
