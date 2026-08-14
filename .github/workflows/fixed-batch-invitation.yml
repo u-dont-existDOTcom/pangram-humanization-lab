@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - run: python -m pip install -e '.[test]'
-      - run: pytest -q tests/test_fixed_batch.py tests/test_pangram.py tests/test_cache.py tests/test_git_sync.py
+      - run: pytest -q tests/test_fixed_batch.py tests/test_pangram.py tests/test_cache.py tests/test_git_sync.py tests/test_result_paths.py
       - run: |
           git config user.name "Pangram Lab Actions"
           git config user.email "pangram-lab-actions@users.noreply.github.com"
@@ -23,4 +23,4 @@ jobs:
         run: test -n "$PANGRAM_API_KEY"
       - run: python scripts/build_spiritual_bypassing_invitation_batch.py
       - env: {PANGRAM_API_KEY: '${{ secrets.PANGRAM_API_KEY }}'}
-        run: python scripts/run_fixed_batch.py /tmp/spiritual-bypassing-invitation-batch.json --out state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json
+        run: python scripts/run_fixed_batch.py /tmp/spiritual-bypassing-visible-boundary-r07-2026-08-14.json --out state/experiments/spiritual-bypassing-visible-boundary-r07-2026-08-14-results.json
