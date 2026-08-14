@@ -14,11 +14,14 @@ Do not rely on remembered phrase rules or stale bundles.
 
 - Install test environment: `python -m pip install -e '.[test]'`
 - Complete deterministic gate: `python -m pytest -q`
+- Repository-visible audit: `python scripts/audit_codex_github.py --root . --fail-on error`
 - Lesson audit: `PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref HEAD`
 - Changed-range closeout: `PYTHONPATH=src python -m pangram_lab.lesson_closeout check --base <base> --head HEAD`
 - Local one-command run: `./INSTALL-AND-RUN.sh`
 
-Live Pangram calls require the established cache/checkpoint path and must never substitute for deterministic tests.
+`python -m pip install -e '.[test]'` is the non-interactive bootstrap. `./INSTALL-AND-RUN.sh` is an interactive live run that may reach paid detector work after its safety gates; never use it as a generic bootstrap or compliance check.
+
+Live Pangram calls require explicit task authorization, the established cache/checkpoint path, and call-budget accounting. They must never substitute for deterministic tests or repository audits.
 
 ## Workflow
 
