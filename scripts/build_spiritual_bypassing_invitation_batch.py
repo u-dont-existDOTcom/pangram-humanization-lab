@@ -7,22 +7,12 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "state/candidates/spiritual-bypassing-r19-visible-relocate-pushthrough.md"
-OUT = Path('/tmp/spiritual-bypassing-primer-r24-2026-08-14.json')
+SOURCE = ROOT / "state/candidates/spiritual-bypassing-r24-primer-owner-mechanism.md"
+OUT = Path('/tmp/spiritual-bypassing-full-r24-primer-dedup-2026-08-14.json')
 AUDIT_ID = 'spiritual-bypassing-primer-architecture-owner-2026-08-14'
 
-SECTION_END = "\n\n---\n\n# The Dark Side of Deep Dives: When Intensity Meets Unhealed Wounds"
-NEW_INTRO = """# A Primer on Spiritual Bypassing
-
-For me, spiritual bypassing is when a feeling comes up and, instead of healing what's underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go.
-
-Goenka retreats are a useful case study because people are taught basically one response to whatever surfaces: observe it and don't react.
-
-I'm really happy if you benefitted from your Goenka experience. It's also true that it has harmed many people, and the method itself is not built well for trauma survivors. That's why I wouldn't recommend it in general, although I can never tell anyone what would work specifically for them.
-
-My bias here is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by [inner-child self love reparenting](http://Innerchild.u-dont-exist.com).
-
-I put the survivor accounts at the bottom so you can skip them if you already know what this kind of harm looks like."""
+OLD = """For me, this is where equanimity can turn into spiritual bypassing. The feeling comes up and, instead of healing what’s underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go. It can do the same thing with injustice: ignore it and call that inner peace. Remember some of the Buddhist responses to the Myanmar coup?"""
+NEW = """For me, this is where equanimity can turn into spiritual bypassing. It can do the same thing with injustice: ignore it and call that inner peace. Remember some of the Buddhist responses to the Myanmar coup?"""
 
 
 def visible_text(markdown: str) -> str:
@@ -34,19 +24,17 @@ def visible_text(markdown: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 base = SOURCE.read_text(encoding='utf-8')
-if base.count(SECTION_END) != 1:
-    raise SystemExit('expected one first-section boundary')
-_, rest = base.split(SECTION_END, 1)
-repaired = NEW_INTRO + SECTION_END + rest
-candidate = ROOT / 'state/candidates/spiritual-bypassing-r24-primer-owner-mechanism.md'
-candidate.parent.mkdir(parents=True, exist_ok=True)
+if base.count(OLD) != 1:
+    raise SystemExit(f'expected one duplicate mechanism span, found {base.count(OLD)}')
+repaired = base.replace(OLD, NEW, 1)
+candidate = ROOT / 'state/candidates/spiritual-bypassing-r24-full-primer-dedup.md'
 candidate.write_text(repaired, encoding='utf-8')
-visible_intro = visible_text(NEW_INTRO)
+visible = visible_text(repaired)
 spec = {
     'format':'pangram-fixed-batch-v1',
-    'experiment_id':'spiritual-bypassing-primer-r24-2026-08-14',
+    'experiment_id':'spiritual-bypassing-full-r24-primer-dedup-2026-08-14',
     'audit_id':AUDIT_ID,
-    'variants':[{'id':'PRIMER_OWNER_MECHANISM','section_id':'primer','text':visible_intro}],
+    'variants':[{'id':'FULL_R24_PRIMER_DEDUP','section_id':'FULL_ARTICLE','text':visible}],
 }
 OUT.write_text(json.dumps(spec, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
-print(json.dumps({'out':str(OUT),'section_words':len(visible_intro.split()),'section_sha256':hashlib.sha256(visible_intro.encode()).hexdigest(),'candidate':str(candidate.relative_to(ROOT))}, indent=2))
+print(json.dumps({'out':str(OUT),'words':len(visible.split()),'sha256':hashlib.sha256(visible.encode()).hexdigest(),'candidate':str(candidate.relative_to(ROOT))}, indent=2))
