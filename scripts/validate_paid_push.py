@@ -9,12 +9,22 @@ import subprocess
 from pathlib import Path
 from typing import Any, Iterable
 
-from scripts.validate_paid_dispatch import (
-    PAID_RUN_CONFIRMATION,
-    DispatchValidationError,
-    _repository_path,
-    validate_dispatch,
-)
+try:
+    from scripts.validate_paid_dispatch import (
+        PAID_RUN_CONFIRMATION,
+        DispatchValidationError,
+        _repository_path,
+        validate_dispatch,
+    )
+except ModuleNotFoundError as exc:
+    if exc.name != "scripts":
+        raise
+    from validate_paid_dispatch import (  # type: ignore[no-redef]
+        PAID_RUN_CONFIRMATION,
+        DispatchValidationError,
+        _repository_path,
+        validate_dispatch,
+    )
 
 
 PAID_REQUEST_FORMAT = "pangram-paid-run-request-v1"
