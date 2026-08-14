@@ -49,7 +49,7 @@ The branch-push workflow must show the `verify` job successful and the `detector
 - Default registration: reviewed PR #22 head `092367b72a819b524575fadd6118513cc7bf7c3c` passed runs `31778554058` and `31778554047`, then merged to `main` as `81b5cd017e3be088c0638e527ce25f5df6a2f4e8`.
 - Output boundary: only validated `spec_path` and `result_path` are written to `$GITHUB_OUTPUT`; audit and section identities reject control characters and are not emitted as job outputs.
 - Credential boundary: read-only checkouts do not persist credentials; write credentials are enabled only immediately before the final runner step; `PANGRAM_API_KEY` exists only in that step.
-- Workflow lifecycle check: exactly one of the 14 audited workflow paths remains executable; all 14 archived copies match their documented source Git blob SHAs.
+- Workflow lifecycle check: 0 of the 14 audited historic workflow paths remain executable; one new registered path is executable, and all 14 archived copies match their documented source Git blob SHAs.
 - Manual dispatches made by this migration: `0`.
 - Paid Pangram calls made by this migration: `0`.
 
