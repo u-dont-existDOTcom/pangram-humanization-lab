@@ -17,7 +17,7 @@ Fourteen workflow files were executable on the long-lived branch. Historic task-
 ## Remediation
 
 - Preserve every baseline workflow using its exact Git blob SHA under a non-executable archive directory.
-- Keep one workflow in `.github/workflows`.
+- Keep one evidence implementation at `.github/workflows/pangram-paid-dispatch.yml`; default branch `main` registers the same path with a snapshot-locked fail-closed stub.
 - Run full tests and the repository audit on pushes and pull requests with read-only permissions.
 - Permit the detector job only on `workflow_dispatch`.
 - Require the exact `RUN_PAID_PANGRAM_FIXED_BATCH` choice.
@@ -44,6 +44,11 @@ The branch-push workflow must show the `verify` job successful and the `detector
 - First integrated run: `31777229767`; 73 tests passed and one rejection-message assertion failed, while the detector job was skipped.
 - Code-bearing remediation head: `41411b1ec4eb7fb0b2c8fa1c2db416162df30905`.
 - Green code-bearing run: `31777325504`; `verify` succeeded, `detector` was skipped, 74 tests passed, and the repository audit reported 0 errors and 5 warnings.
+- Security-review RED head/run: `abd78f87850a7a62ff368d0045a7b1ba23217bd2` / `31777929822`; four regressions failed exactly for CR/LF identifiers, surplus untrusted outputs, the missing registered workflow path, and the absent evidence-ref/credential-delay policy while 74 unrelated tests passed.
+- Security-remediation head/run: `e140e164828cf3128e1d8f6139fd5d1cd393d487` / `31778048629`; 78 tests passed, the audit reported 0 errors and 5 warnings, paid preflight was skipped, and the detector was skipped.
+- Default registration: reviewed PR #22 head `092367b72a819b524575fadd6118513cc7bf7c3c` passed runs `31778554058` and `31778554047`, then merged to `main` as `81b5cd017e3be088c0638e527ce25f5df6a2f4e8`.
+- Output boundary: only validated `spec_path` and `result_path` are written to `$GITHUB_OUTPUT`; audit and section identities reject control characters and are not emitted as job outputs.
+- Credential boundary: read-only checkouts do not persist credentials; write credentials are enabled only immediately before the final runner step; `PANGRAM_API_KEY` exists only in that step.
 - Workflow lifecycle check: exactly one of the 14 audited workflow paths remains executable; all 14 archived copies match their documented source Git blob SHAs.
 - Manual dispatches made by this migration: `0`.
 - Paid Pangram calls made by this migration: `0`.
