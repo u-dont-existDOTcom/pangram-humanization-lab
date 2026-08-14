@@ -7,21 +7,17 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "state/candidates/spiritual-bypassing-r10-visible-repair.md"
-OUT = Path("/tmp/spiritual-bypassing-visible-boundary-r11-2026-08-14.json")
+SOURCE = ROOT / "state/candidates/spiritual-bypassing-r11-visible-repair.md"
+OUT = Path("/tmp/spiritual-bypassing-visible-boundary-r12-2026-08-14.json")
 AUDIT_ID = "spiritual-bypassing-visible-owner-repair-2026-08-14"
 
-OLD = """Day five is where I get stuck. If I’m dissociating, is that a sign to stop or just another reaction I’m supposed to observe? I don’t see how the instruction itself tells me.
+OLD = """Day five is where I get stuck. If I’m dissociating, how do I know whether that’s a warning or something to keep observing? “Observe it and don’t react” doesn’t answer that for me.
 
-There are plenty of “dark night” accounts on [r/vipassana](http://Reddit.com/r/vipassana), and critics describe a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil.
+[r/vipassana](http://Reddit.com/r/vipassana) has plenty of “dark night” accounts, and critics describe a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil."""
 
-For me, this is where equanimity can turn into spiritual bypassing. The feeling comes up and, instead of healing what’s underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go."""
+NEW = """Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too?
 
-NEW = """Day five is where I get stuck. If I’m dissociating, how do I know whether that’s a warning or something to keep observing? “Observe it and don’t react” doesn’t answer that for me.
-
-[r/vipassana](http://Reddit.com/r/vipassana) has plenty of “dark night” accounts, and critics describe a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil.
-
-The feeling comes up and, instead of healing what’s underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go."""
+There are plenty of “dark night” stories on [r/vipassana](http://Reddit.com/r/vipassana). Critics talk about a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil."""
 
 
 def visible_text(markdown: str) -> str:
@@ -36,18 +32,18 @@ def visible_text(markdown: str) -> str:
 def main() -> int:
     base = SOURCE.read_text(encoding="utf-8")
     if base.count(OLD) != 1:
-        raise SystemExit(f"expected one remaining red span, found {base.count(OLD)}")
+        raise SystemExit(f"expected one remaining day-five span, found {base.count(OLD)}")
     repaired = base.replace(OLD, NEW, 1)
     repaired_visible = visible_text(repaired)
-    candidate = ROOT / "state/candidates/spiritual-bypassing-r11-visible-repair.md"
+    candidate = ROOT / "state/candidates/spiritual-bypassing-r12-visible-repair.md"
     candidate.parent.mkdir(parents=True, exist_ok=True)
     candidate.write_text(repaired, encoding="utf-8")
     spec = {
         "format": "pangram-fixed-batch-v1",
-        "experiment_id": "spiritual-bypassing-visible-boundary-r11-2026-08-14",
+        "experiment_id": "spiritual-bypassing-visible-boundary-r12-2026-08-14",
         "audit_id": AUDIT_ID,
         "variants": [
-            {"id": "REMOVE_ABSTRACT_BRIDGE", "section_id": "FULL_ARTICLE", "text": repaired_visible}
+            {"id": "LIVED_DAY_FIVE", "section_id": "FULL_ARTICLE", "text": repaired_visible}
         ],
     }
     OUT.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
