@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "spiritual-bypassing-visible-diagnostic-r14-2026-08-14_EVIDENCE_ONLY",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.5037037134170532,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.4962962865829468,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? There are plenty of “dark night” stories on r/vipassana. Critics talk about a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.45928457379341125,
+        "confidence": "High",
+        "end_index": 201,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too?",
+        "token_length": 48,
+        "word_count": 40
+      },
+      {
+        "ai_assistance_score": 0.7419999241828918,
+        "confidence": "High",
+        "end_index": 405,
+        "humanizer_score": 0.003156521590426564,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 201,
+        "text": " There are plenty of “dark night” stories on r/vipassana. Critics talk about a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil.",
+        "token_length": 43,
+        "word_count": 30
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "4ef9e2ef-3b40-41f0-9658-7624a147e48a",
   "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? There are plenty of “dark night” stories on r/vipassana. Critics talk about a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil.",
   "text_sha256": "d7436663db484e1c1c96239b385cbf28aa2d11afb7b9776cb8dda63624ee5eae",
-  "updated_utc": "2026-08-14T01:28:09.378321+00:00"
+  "updated_utc": "2026-08-14T01:28:10.741903+00:00"
 }
