@@ -1,17 +1,22 @@
 {
-  "schema_version": 1,
-  "request_id": "spiritual-bypassing-visible-boundary-2026-08-14",
-  "source_path": "state/SPIRITUAL-BYPASSING-VISIBLE-BOUNDARY-INCIDENT-2026-08-14.md",
-  "source_ref": "82654e4be54b4e4252d157c528a54a933669c342",
-  "source_sha256": "699e424bbbb52f01f4e4a11acd67da55e2e41b1d6b79907dcdf8c2032bb6f721",
-  "finding": "Pangram certification must use the reader-visible representation rather than raw source markup; raw Markdown can be diagnostic but cannot certify rendered publication text.",
   "disposition": "promoted",
-  "reason": "The same Spiritual Bypassing content measured 100% Human as raw Markdown but 88.3194506% Human as the 1,482-word visible plaintext that reproduced the Pangram GUI, demonstrating a material representation/certification failure.",
+  "finding": "Pangram certification must use the reader-visible representation rather than raw source markup; raw Markdown can be diagnostic but cannot certify rendered publication text.",
+  "index_block": "- **Reader-visible detector boundary:** certify the reader-visible text Pangram evaluates, not source markup. Raw Markdown is diagnostic only; strip it to visible plaintext before certification, and for Substack use the rendered reader-visible text surface including surfaced card/embed text.",
+  "ledger_entry_ids": [
+    "L-699e424bbb-01"
+  ],
+  "lesson_block": "### Reader-visible certification incident provenance\nThe Spiritual Bypassing representation incident established that a raw Markdown Pangram pass cannot certify the reader-visible article. The same content scored 100% Human when raw Markdown was submitted but 88.3194506% Human after normalization to the 1,482-word visible plaintext that matched the GUI. Raw Markdown is diagnostic only for publication certification; the reader-visible representation is the acceptance boundary.",
+  "processed_at_utc": "2026-08-14T02:20:03.647625+00:00",
   "promoted_to": [
     "state/LESSON-INDEX.md",
     "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
   ],
-  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md",
-  "lesson_block": "### Reader-visible certification incident provenance\nThe Spiritual Bypassing representation incident established that a raw Markdown Pangram pass cannot certify the reader-visible article. The same content scored 100% Human when raw Markdown was submitted but 88.3194506% Human after normalization to the 1,482-word visible plaintext that matched the GUI. Raw Markdown is diagnostic only for publication certification; the reader-visible representation is the acceptance boundary.",
-  "index_block": "- **Reader-visible detector boundary:** certify the reader-visible text Pangram evaluates, not source markup. Raw Markdown is diagnostic only; strip it to visible plaintext before certification, and for Substack use the rendered reader-visible text surface including surfaced card/embed text."
+  "reason": "The same Spiritual Bypassing content measured 100% Human as raw Markdown but 88.3194506% Human as the 1,482-word visible plaintext that reproduced the Pangram GUI, demonstrating a material representation/certification failure.",
+  "request_id": "spiritual-bypassing-visible-boundary-2026-08-14",
+  "schema_version": 1,
+  "source_path": "state/SPIRITUAL-BYPASSING-VISIBLE-BOUNDARY-INCIDENT-2026-08-14.md",
+  "source_ref": "82654e4be54b4e4252d157c528a54a933669c342",
+  "source_sha256": "699e424bbbb52f01f4e4a11acd67da55e2e41b1d6b79907dcdf8c2032bb6f721",
+  "status": "processed",
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
 }

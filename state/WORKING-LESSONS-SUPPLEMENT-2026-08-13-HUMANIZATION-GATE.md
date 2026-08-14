@@ -58,3 +58,6 @@ The detector version and exact text hashes live in those result records. Preserv
 <!-- closeout-request:pangram-result-path-durability-2026-08-13 -->
 ### Bind detector evidence to immutable experiment identity
 Fixed-batch result identity must be mechanical, not a workflow naming convention. Derive the canonical result path from `experiment_id`, fingerprint the exact batch spec, reject a mismatched output path or changed-spec reuse before detector access, and allow an identical completed experiment to reuse its result without another paid call. Commit the exact result before lesson-review registration and bind the review obligation to that immutable result commit. A mutable branch plus a reusable pathname is not durable provenance.
+<!-- closeout-request:spiritual-bypassing-visible-boundary-2026-08-14 -->
+### Reader-visible certification incident provenance
+The Spiritual Bypassing representation incident established that a raw Markdown Pangram pass cannot certify the reader-visible article. The same content scored 100% Human when raw Markdown was submitted but 88.3194506% Human after normalization to the 1,482-word visible plaintext that matched the GUI. Raw Markdown is diagnostic only for publication certification; the reader-visible representation is the acceptance boundary.
