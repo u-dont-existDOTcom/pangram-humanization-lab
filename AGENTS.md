@@ -1,17 +1,43 @@
-# Universal Project Bootstrap
+# Pangram Humanization Lab agent map
 
-Before substantive work, load current cross-project guidance from `u-dont-existDOTcom/universal-dev-architecture`, starting with `LESSON-INDEX.md`. Follow only the task-relevant current patterns/templates; do not rely on remembered lesson lists from prior chats.
+## Authority
 
-Authority order: current owner/project requirements; verified current state/evidence in this repository; current universal guidance; older summaries, stale checkpoints, and remembered chat context.
+1. Current owner and task requirements
+2. `state/LESSON-INDEX.md` for the current lesson read order and branch routing
+3. `docs/INDEX.md` for experiments, closeout, Actions, and release evidence
+4. Current case artifacts, tests, cache/state records, and Git history
+5. Relevant current patterns from `u-dont-existDOTcom/universal-dev-architecture`
 
-Treat conversation/context as disposable working memory, this repository as durable project memory, and Git history as the audit trail.
+Do not rely on remembered phrase rules or stale bundles.
 
-For long-running, multi-step, autonomous, or multi-session work, maintain one obvious project-local current-state checkpoint (`CURRENT-STATE.md`, `state/CURRENT-STATE.md`, or an existing equivalent). Keep it sufficient for a fresh worker to recover the goal, active decisions/constraints, completed work, current step, remaining work, blockers, relevant evidence/tests/branches/commits, and next safe action without the old transcript.
+## Validation
 
-Update the checkpoint at meaningful durable boundaries. After interruption, a fresh thread, context compaction, or model switch, inspect actual repository state and recent relevant commits/artifacts first; reconcile the checkpoint, identify exactly what survived, repair stale entries, and resume from the latest verified durable boundary without repeating completed work.
+- Install test environment: `python -m pip install -e '.[test]'`
+- Complete deterministic gate: `python -m pytest -q`
+- Lesson audit: `PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref HEAD`
+- Changed-range closeout: `PYTHONPATH=src python -m pangram_lab.lesson_closeout check --base <base> --head HEAD`
+- Local one-command run: `./INSTALL-AND-RUN.sh`
 
-Never let stale checkpoint/chat state outrank newer owner instructions or verified repository state.
+Live Pangram calls require the established cache/checkpoint path and must never substitute for deterministic tests.
 
-For substantive work, follow the current universal lesson-closeout pattern. Preserve project-specific evidence here and promote genuinely transferable lessons to the universal repository with provenance and limits.
+## Workflow
 
-If the universal repository cannot be accessed, do not reconstruct its current contents from memory; continue under current local project requirements and this bootstrap, and record the missing dependency for the next worker.
+Use an isolated task branch/worktree and a pull request. For substantive editorial, detector, experiment, reconstruction, or automation work, run lesson closeout before reporting completion. Record each finding as promoted, provisional, project-specific, superseded, or no-new-lesson, with exact evidence. Update the current recovery checkpoint at durable boundaries.
+
+## Branch roles
+
+- `main`: canonical code, current lessons, and project state
+- `automation/pangram-fixed-batch`: long-lived exact experiment evidence referenced by the lesson index
+- task branches: proposed code, experiment, lesson, or documentation changes
+
+## Safety
+
+Never print or commit the Pangram key. Preserve task IDs and ambiguous transport failures; do not automatically buy a duplicate detector call. Do not let an installer or stale package overwrite newer canonical Git state.
+
+## Code review rules
+
+- Human/editorial judgment remains the authority; detector outcomes are evidence, not license to damage meaning, voice, or owner-final claims.
+- Every substantive finding must be dispositioned and tied to exact evidence; changed evidence requires review again.
+- Do not promote passage-specific detector quirks into universal phrase rules without transferable evidence and limits.
+
+Treat chat as disposable working memory. A fresh worker must recover from Git without repeating completed work.
