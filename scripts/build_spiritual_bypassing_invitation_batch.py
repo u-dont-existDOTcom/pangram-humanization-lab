@@ -8,14 +8,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "state/candidates/spiritual-bypassing-r19-visible-relocate-pushthrough.md"
-OUT = Path('/tmp/spiritual-bypassing-primer-r20-2026-08-14.json')
+OUT = Path('/tmp/spiritual-bypassing-primer-r21-2026-08-14.json')
 AUDIT_ID = 'spiritual-bypassing-primer-architecture-owner-2026-08-14'
 
 SECTION_END = "\n\n---\n\n# The Dark Side of Deep Dives: When Intensity Meets Unhealed Wounds"
 
 NEW_INTRO = """# A Primer on Spiritual Bypassing
 
-Spiritual bypassing is when a spiritual idea or practice gets used to get around something that still needs healing. That's what I want to look at here, using Goenka retreats as a case study. They teach you to observe whatever comes up without reacting to it. But what happens when what comes up is trauma?
+When I say spiritual bypassing, I mean using spirituality to get around something that actually needs healing. Goenka is the example I'm using because the retreat gives you basically one response to whatever comes up: observe it and don't react. What if the thing coming up is trauma?
 
 I'm really happy if you benefitted from your Goenka experience. It's also true that it has harmed many people, and the method itself is not built well for trauma survivors. That's why I wouldn't recommend it in general, although I can never tell anyone what would work specifically for them.
 
@@ -37,16 +37,16 @@ if base.count(SECTION_END) != 1:
     raise SystemExit(f'expected one first-section boundary, found {base.count(SECTION_END)}')
 _, rest = base.split(SECTION_END, 1)
 repaired = NEW_INTRO + SECTION_END + rest
-candidate = ROOT / 'state/candidates/spiritual-bypassing-r20-primer-architecture.md'
+candidate = ROOT / 'state/candidates/spiritual-bypassing-r21-primer-simple.md'
 candidate.parent.mkdir(parents=True, exist_ok=True)
 candidate.write_text(repaired, encoding='utf-8')
 
 visible_intro = visible_text(NEW_INTRO)
 spec = {
     'format':'pangram-fixed-batch-v1',
-    'experiment_id':'spiritual-bypassing-primer-r20-2026-08-14',
+    'experiment_id':'spiritual-bypassing-primer-r21-2026-08-14',
     'audit_id':AUDIT_ID,
-    'variants':[{'id':'PRIMER_ARCHITECTURE','section_id':'primer','text':visible_intro}],
+    'variants':[{'id':'PRIMER_SIMPLE','section_id':'primer','text':visible_intro}],
 }
 OUT.write_text(json.dumps(spec, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
 print(json.dumps({
