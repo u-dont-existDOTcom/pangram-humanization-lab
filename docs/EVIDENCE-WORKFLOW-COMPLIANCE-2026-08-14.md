@@ -67,6 +67,16 @@ Documentation/state descendants do not alter executable code. Before merge, the 
 - Workflow lifecycle: 0 of the 14 historic paths remain executable; all 14 archive copies match their documented source blobs.
 - Manual dispatches and paid calls made during the original migration: `0`.
 
+## First automatic execution receipt
+
+- PR #23 merged as `34621f38d702b5739e59cb8f81831604f01e5a52`; post-merge run `31842902465` succeeded with `paid_request=false` and detector skipped.
+- r30 was staged as the sole allowed pair in commit `48272f766ecebfe016d69f25faa6d7601ac48c85`: one new immutable request and one new spec, with candidate SHA-256 `9648136e210e593429c1b1a44b1cbd210ef9bbee1950c10776f8fa8a5ae49b57` and request-bound spec SHA-256 `d093fa64e2b214508c2fe9da433e47e4a8aee7978e7e1774ee13e948909e96f3`.
+- Automatic run `31843059275` required no owner click. Verify job `94903844058` passed 87 tests, 0 audit errors, and returned `paid_request=true`; detector job `94903911646` succeeded.
+- Task `5de8788f-2c80-497d-ba02-6299e03f04b0` was checkpointed before polling. Result commit/ref is `2f7ced014e0071dc8a15b199f57166c984b088b4`; lesson-review head is `c69a250538d2e7260ea31314907a3d0963645001`.
+- Exact r30 result: Human `0.6168841123580933`, AI `0.38311588764190674`, AI-assisted `0.0`. r30 added one paid POST reservation estimated at 2 credits; the section ledger totals 3 paid posts, 5 estimated credits, and 0 pending resumes.
+- Result/checkpoint pushes did not contain a request change and did not recursively authorize detector work.
+- r30 was not installed. Because r29 and r30 are two fidelity-complete, meaningfully different failures, further autonomous variants are stopped pending narrow author evidence.
+
 ## Exceptions
 
 Hosted evidence-branch protection, secret scanning, push protection, Actions defaults, and vulnerability alerts remain unverified; code scanning is recorded disabled. Main issue #17 owns those settings/plan limits. Until hosted protection is verified, collaborators able to write the exact evidence ref are part of the paid-secret trust boundary.
