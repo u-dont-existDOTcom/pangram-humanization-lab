@@ -6,7 +6,7 @@ Use this file as the starting point for current lesson retrieval.
 
 1. `state/WORKING-LESSONS.md` — consolidated lessons through 2026-08-12.
 2. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md` — newer Romance detector, semantic-sanity, architecture, routing, provenance, and large-reconstruction lessons. Newer owner correction / controlled evidence here supersedes older conflicting guidance.
-3. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md` — protected rhetorical function, the standing detector-acceptance gate for Joel humanization requests, trauma-informed language testing, and measured choice-diff rules.
+3. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md` — protected rhetorical function, the standing detector-acceptance gate for Joel humanization requests, trauma-informed language testing, reader-visible detector representation, and measured choice-diff rules.
 4. `docs/CHATGPT-OPERATING-GUIDE.md` — current execution/completion contract, including the six-paid-call per-section cap and durable lesson-review fallback.
 5. For exact evidence behind a lesson, inspect the cited incident note and experiment/result JSON rather than generalizing from the summary.
 
@@ -15,6 +15,8 @@ Use this file as the starting point for current lesson retrieval.
 For every task that requires a measured Pangram result, read `docs/PANGRAM-ACTIONS-RUNBOOK.md` before deciding whether detector access exists. Missing local environment credentials and a signed-out browser session do not establish unavailability. The canonical fallback uses the repository Actions secret through the proven fixed-batch path on `automation/pangram-fixed-batch`.
 
 For every new paid audit, also follow `docs/CHATGPT-OPERATING-GUIDE.md` and the current `docs/PANGRAM-SECTION-CALL-BUDGET.md` on `automation/pangram-fixed-batch`. The hard budget is six new paid Pangram POSTs per independently tested section per audit. Cache hits, auth probes, polling, and pending-task resumes are free for budget purposes. Before a seventh paid POST, stop and request narrow help from Joel; do not reset the budget by inventing a new batch, chat, or audit ID.
+
+**Reader-visible detector boundary:** certification uses the **reader-visible** text Pangram actually evaluates. For Markdown article work, **raw Markdown is diagnostic only**; strip source markup/link destinations and certify the resulting **visible plaintext**. For Substack, use the rendered reader-visible text, including card/embed text surfaced to Pangram. A raw-source pass cannot certify a different rendered boundary.
 
 A worker may use the label `pre-Pangram candidate` only after the runbook's local and GitHub routes have both failed with a recorded blocker. The repository secret remains inside Actions; never retrieve, reveal, print, commit, or ask Joel to paste it.
 
@@ -81,3 +83,4 @@ Do not load every historical experiment indiscriminately. Start with the current
 - **Immutable detector-result identity:** fixed-batch results are derived from `experiment_id`, spec-fingerprinted, fail closed on path/spec reuse conflicts before detector access, and lesson-review registration points to the immutable result commit. See the humanization-gate supplement.
 <!-- closeout-request:romance-authorial-sufficiency-call-efficiency-2026-08-13 -->
 - **Authorial sufficiency / call efficiency:** before repeated detector paraphrases, recover the governing thought from article-wide evidence or request the smallest missing lived mechanism. Show the complete failing span and function ledger, bank valuable non-fitting owner ideas with named destinations, require every paid call to change the next decision, and reserve the fresh exact full-boundary measurement for final certification where possible. See `state/ROMANCE-AUTHORIAL-SUFFICIENCY-CALL-EFFICIENCY-2026-08-13.md`.
+- **Reader-visible detector boundary:** certify the reader-visible text Pangram evaluates, not source markup. Raw Markdown is diagnostic only; strip it to visible plaintext before certification, and for Substack use the rendered text surface including surfaced card/embed text. See the humanization-gate supplement.
