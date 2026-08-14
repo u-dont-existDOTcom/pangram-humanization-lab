@@ -849,6 +849,29 @@
           "section_id": "FULL_ARTICLE"
         }
       ]
+    },
+    {
+      "audit_id": "romance-authorial-recovery-2026-08-14",
+      "created_at_utc": "2026-08-14T10:58:16.709136+00:00",
+      "experiment_id": "romance-authorial-recovery-r29-fidelity-2026-08-14",
+      "id": "Q-9fbaf5d2e4d8fd96",
+      "sections": [
+        "talk-and-slow"
+      ],
+      "source_path": "state/experiments/romance-authorial-recovery-r29-fidelity-2026-08-14-results.json",
+      "source_ref": "b0dcd36bffb90c05fe4c3b0ba84bbd36c7040ddb",
+      "source_sha256": "eb7bdfbc7205197949f25b63a69ae75e8681fe7e271961240b4d3bc5397d2d4d",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.4016342759132385,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.5983657240867615,
+          "id": "TALK_AND_SLOW_R29_FIDELITY",
+          "prediction_short": "Mixed",
+          "section_id": "talk-and-slow"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
