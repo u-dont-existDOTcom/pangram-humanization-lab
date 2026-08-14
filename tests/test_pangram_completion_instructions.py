@@ -76,3 +76,22 @@ def test_pangram_certification_uses_reader_visible_text_not_raw_markdown():
         assert "visible plaintext" in lowered, label
         assert "diagnostic only" in lowered, label
         assert "reader-visible" in lowered, label
+
+
+# Regression for detector-window tunnel vision: a Pangram-green passage can still have broken article architecture.
+def test_humanization_rechecks_global_architecture_after_detector_edits():
+    texts = {
+        "operating guide": OPERATING_GUIDE.read_text(encoding="utf-8"),
+        "humanization gate": HUMANIZATION_GATE.read_text(encoding="utf-8"),
+        "lesson index": LESSON_INDEX.read_text(encoding="utf-8"),
+    }
+    for label, text in texts.items():
+        lowered = text.lower()
+        assert "architecture regression" in lowered, label
+        assert "after every detector-driven edit" in lowered, label
+        assert "heading promise" in lowered, label
+        assert "paragraph jobs" in lowered, label
+        assert "live question" in lowered, label
+        assert "article-wide" in lowered, label
+        assert "owner realization" in lowered, label
+        assert "100% human" in lowered, label
