@@ -62,6 +62,7 @@ def test_joel_pangram_completion_requires_exact_100_percent_and_handoff():
     assert "never overrides the six-paid-call section cap" in operating
 
 
+# Regression for the source-vs-rendered representation failure discovered on Spiritual Bypassing.
 def test_pangram_certification_uses_reader_visible_text_not_raw_markdown():
     texts = {
         "operating guide": OPERATING_GUIDE.read_text(encoding="utf-8"),
