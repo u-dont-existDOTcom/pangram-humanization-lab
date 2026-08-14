@@ -53,3 +53,15 @@ For full articles, section calls are diagnostic. Do not spend repeated full-arti
 ## Scope
 
 This promotes a workflow lesson: recover authorial mechanism before repeated detector paraphrase; preserve displaced value in a rolling destination ledger; use one final full-boundary measurement for certification where possible. It does not show that any literal question, anecdote, phrase, or section architecture is universally detector-favorable.
+
+## 2026-08-14 owner-final survival correction
+
+The first authorial-recovery draft misused the rolling ledger. It removed the Gandarussa male-contraception point even though Joel had explicitly required it to remain in `If slow isn’t realistic for you`, and it implicitly reopened a factual review Joel had already completed. That was not legitimate banking. It was deletion of protected material under an architectural rationale.
+
+Two transferable controls now apply:
+
+- A still-relevant owner-final point must survive in its current destination. If a concrete better destination appears, ask Joel before moving it; do not bank it as a workaround for removal.
+- A review Joel says is settled stays settled at his stated certainty unless materially new contradictory evidence appears, the authoritative claim becomes unclear, or Joel asks to reopen it. Model unease is not new evidence.
+
+A missing inline source link remains a publication-readiness problem; it does not authorize deleting, weakening, or re-reviewing protected working prose. The repaired exact r27 candidate restores Gandarussa at Joel’s settled certainty and distinguishes pregnancy risk from unchanged attachment risk. It also scopes the twin-flame question as Joel’s own rather than a universal reader test. Exact candidate SHA-256 `2ad80405ef91467b173094283ba614de446106b2cf58ed9b0af0f241fb6d34ea` (879 words) passed Pangram 4.0 at Human `1.0`, AI `0.0`, AI-assisted `0.0` in one paid call. The result confirms the combined section boundary only; it is not the eventual exact full-article certification.
+
