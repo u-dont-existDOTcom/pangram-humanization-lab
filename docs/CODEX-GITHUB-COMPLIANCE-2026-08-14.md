@@ -59,6 +59,7 @@ PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref HEAD
 - Repository workflow policy: run `31775055295` succeeded with 0 errors and 5 declared warnings.
 - Lesson integrity: run `31775055265` succeeded; 53 tests passed, the changed-range closeout passed, and the current-ref audit passed.
 - Durable hosted-control follow-up: issue #17, https://github.com/u-dont-existDOTcom/pangram-humanization-lab/issues/17
+- Governance closeout: request `codex-github-compliance-2026-08-14` processed at `a91197ae3429366700a4b8040fa87c84a0e281f7` as ledger entry `L-6b3333a2c4-01` (`no-new-lesson`).
 - PR: #16, https://github.com/u-dont-existDOTcom/pangram-humanization-lab/pull/16
 
-The final PR head and merge commit remain pending. New commits must earn fresh green checks before merge.
+The Actions-authored closeout synchronization produced `action_required` check-suite placeholders rather than runnable jobs, so this user-authored finalization commit deliberately triggers a fresh executable check pair. The final head and merge commit remain pending until those checks pass.

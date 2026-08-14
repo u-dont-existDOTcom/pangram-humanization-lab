@@ -23,13 +23,13 @@ Preserve the lab's exact detector-evidence, editorial, and lesson-closeout archi
 
 ## Current checkpoint
 
-- Draft PR #16 is green at head `87537c744bb45c0c9422c79c1ea87a02ef44f788`: repository policy run `31775055295` succeeded, and lesson-integrity run `31775055265` succeeded with 53 tests plus changed-range and current-ref audits.
+- Draft PR #16 has a processed governance closeout at `a91197ae3429366700a4b8040fa87c84a0e281f7` (`L-6b3333a2c4-01`). Its last user-authored verified head was `87537c744bb45c0c9422c79c1ea87a02ef44f788`: repository policy run `31775055295` succeeded, and lesson-integrity run `31775055265` succeeded with 53 tests plus changed-range and current-ref audits.
 - A separate evidence-branch PR is required because paid-workflow definitions live on a divergent long-lived branch and cannot be changed atomically by a PR to `main`.
 - No Pangram API call is part of this compliance work.
 
 ## Remaining
 
-- Process the metadata-only governance closeout request on PR #16, then confirm the resulting head remains green.
+- Obtain fresh green checks on the user-authored finalization commit after the Actions-produced closeout commit.
 - Harden the evidence branch to one dispatch-only, confirmation-gated paid runner; archive historic task workflows outside `.github/workflows`.
 - Promote the transferable paid-workflow lifecycle lesson to `universal-dev-architecture` with source commit/path/hash and limits.
 - Recheck hosted settings after repository-visible changes and update hardening-audit issue #17.
@@ -50,7 +50,7 @@ Preserve the lab's exact detector-evidence, editorial, and lesson-closeout archi
 
 ## Next safe action
 
-Allow the same-repository PR workflow to process the pending governance closeout request. Then review the final diff, require fresh green checks on the bot-produced head, make PR #16 review-ready, and merge it before opening the evidence-branch hardening PR.
+Wait for fresh checks on the finalization commit. If they pass, review the final diff, make PR #16 review-ready, and merge it before opening the evidence-branch hardening PR.
 
 ## Recovery rule
 
