@@ -573,6 +573,29 @@
           "section_id": "primer"
         }
       ]
+    },
+    {
+      "audit_id": "spiritual-bypassing-primer-architecture-owner-2026-08-14",
+      "created_at_utc": "2026-08-14T06:05:30.272633+00:00",
+      "experiment_id": "spiritual-bypassing-primer-r21-2026-08-14",
+      "id": "Q-ada0fd6ba22eea83",
+      "sections": [
+        "primer"
+      ],
+      "source_path": "state/experiments/spiritual-bypassing-primer-r21-2026-08-14-results.json",
+      "source_ref": "0eaac25874b1a9ead0f4e241b12c092509ca1ec6",
+      "source_sha256": "709296737ce0639cd5294d5affc0219c17e0450c27fb23a7dd440619276a071f",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.5563139915466309,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.44368600845336914,
+          "id": "PRIMER_SIMPLE",
+          "prediction_short": "Mixed",
+          "section_id": "primer"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
