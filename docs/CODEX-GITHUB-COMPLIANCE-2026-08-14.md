@@ -62,4 +62,4 @@ PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref HEAD
 - Governance closeout: request `codex-github-compliance-2026-08-14` processed at `a91197ae3429366700a4b8040fa87c84a0e281f7` as ledger entry `L-6b3333a2c4-01` (`no-new-lesson`).
 - PR: #16, https://github.com/u-dont-existDOTcom/pangram-humanization-lab/pull/16
 
-The Actions-authored closeout synchronization produced `action_required` check-suite placeholders rather than runnable jobs, so this user-authored finalization commit deliberately triggers a fresh executable check pair. The final head and merge commit remain pending until those checks pass.
+The code-bearing review-remediation head is exactly verified above. Later documentation and closeout-receipt commits do not alter executable behavior, but the latest PR head must still show executable green policy and lesson-integrity jobs before merge. The PR check suites and PR body are the authoritative final-head evidence; this durable report records the code-bearing SHA and run IDs without pretending a file can contain its own commit SHA.

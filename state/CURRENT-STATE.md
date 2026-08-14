@@ -23,13 +23,13 @@ Preserve the lab's exact detector-evidence, editorial, and lesson-closeout archi
 
 ## Current checkpoint
 
-- Draft PR #16 has a processed governance closeout at `a91197ae3429366700a4b8040fa87c84a0e281f7` (`L-6b3333a2c4-01`). Its last user-authored verified head was `87537c744bb45c0c9422c79c1ea87a02ef44f788`: repository policy run `31775055295` succeeded, and lesson-integrity run `31775055265` succeeded with 53 tests plus changed-range and current-ref audits.
+- PR #16's executable review-remediation head `61f86ae74908447c92e6320b815b07cd60d9125a` is verified: repository-policy run `31775932523` succeeded, and lesson-integrity run `31775932515` succeeded with 60 tests plus changed-range and current-ref audits. Test-first run `31775842762` had previously failed exactly four unsupported `pull_request_target` YAML forms.
 - A separate evidence-branch PR is required because paid-workflow definitions live on a divergent long-lived branch and cannot be changed atomically by a PR to `main`.
 - No Pangram API call is part of this compliance work.
 
 ## Remaining
 
-- Obtain fresh green checks on the user-authored finalization commit after the Actions-produced closeout commit.
+- Bind this refreshed compliance report to a second immutable `no-new-lesson` closeout receipt, require the latest PR head checks to be green, and merge PR #16.
 - Harden the evidence branch to one dispatch-only, confirmation-gated paid runner; archive historic task workflows outside `.github/workflows`.
 - Promote the transferable paid-workflow lifecycle lesson to `universal-dev-architecture` with source commit/path/hash and limits.
 - Recheck hosted settings after repository-visible changes and update hardening-audit issue #17.
@@ -50,7 +50,7 @@ Preserve the lab's exact detector-evidence, editorial, and lesson-closeout archi
 
 ## Next safe action
 
-Wait for fresh checks on the finalization commit. If they pass, review the final diff, make PR #16 review-ready, and merge it before opening the evidence-branch hardening PR.
+If PR #16 is still open, confirm its latest head has executable green policy and lesson-integrity checks, then merge it. If it is already merged, branch from exact evidence head `88d225f36d6da8de9b8cbff8fa11b999d01d749a` and open the isolated paid-workflow hardening PR.
 
 ## Recovery rule
 

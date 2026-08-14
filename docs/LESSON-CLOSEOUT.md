@@ -70,7 +70,7 @@ When a direct ledger/index write from chat is blocked or would require resending
 
 The request contains only source identity and semantic disposition metadata: `source_path`, `source_ref`, `source_sha256`, `finding`, `disposition`, `reason`, and `promoted_to`. A promoted request may additionally contain an explicit lesson block, index block, and summary target. It must never contain the source article or detector result body.
 
-The existing trusted `.github/workflows/lesson-integrity.yml` Action processes these requests on `main`. It verifies the named source ref and SHA-256 before mutating canonical state, invokes the canonical closeout logic, applies explicitly supplied promoted blocks idempotently, records the processed request as a receipt, and commits the resulting ledger/index/summary state. The Action has no Pangram secret.
+The existing trusted `.github/workflows/lesson-integrity.yml` Action processes these requests on eligible same-repository pull-request branches before merge. It verifies the named source ref and SHA-256 before mutating canonical state, invokes the canonical closeout logic, applies explicitly supplied promoted blocks idempotently, records the processed request as a receipt, and commits the resulting ledger/index/summary state. The Action has no Pangram secret.
 
 If even the small metadata request is blocked, leave the inbox item pending and report that durable unresolved state. Do not pretend the lesson was saved; do not discard the obligation.
 
