@@ -8,8 +8,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "state/experiments/spiritual-bypassing-invitation-batch-2026-08-13-results.json"
-OUT = Path("/tmp/spiritual-bypassing-visible-boundary-r08-2026-08-14.json")
-AUDIT_ID = "spiritual-bypassing-visible-boundary-2026-08-14"
+OUT = Path("/tmp/spiritual-bypassing-visible-boundary-r09-2026-08-14.json")
+AUDIT_ID = "spiritual-bypassing-visible-owner-repair-2026-08-14"
 EXPECTED_R6_SHA = "ec5a59dfd61d3cc3263ccff836a935d12104c85ab9d64f2707026a363ab2f4e9"
 
 OLD_OPEN = """I have a problem with Goenka retreats: people with a recent history of mental instability are screened out, but the people who get in are still taught basically one response to whatever surfaces—observe it and don’t react.
@@ -18,13 +18,11 @@ Some people love Goenka retreats. I also know people who came out in pieces. Bot
 
 My bias here is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by [inner-child self love reparenting](http://Innerchild.u-dont-exist.com)."""
 
-NEW_OPEN = """Some of you reading this probably love Goenka retreats. I’m not trying to tell you that your good experience didn’t happen. If it helped you, it helped you. I’m asking you to make room for the people who came out in pieces too.
+NEW_OPEN = """I'm really happy if you benefitted from your Goenka experience. It's also true that it has harmed many people, and the method itself is not built well for trauma survivors. That's why I wouldn't recommend it in general, although I can never tell anyone what would work specifically for them.
 
-My problem is bigger than Goenka. I worry about the point where a practice for observing pain turns into a way of avoiding what the pain is asking us to heal. That is what I mean by spiritual bypassing here.
+What I mean by spiritual bypassing here is trying to observe pain away—to see it as insubstantial, not yours, and let it go instead of healing what's underneath it. Goenka is a good example because people with a recent history of mental instability are screened out, but the people who get in are still taught basically one response to whatever surfaces—observe it and don't react.
 
-Goenka is the clearest example for me because people with a recent history of mental instability are screened out, but the people who get in are still taught basically one response to whatever surfaces—observe it and don’t react. I put the survivor accounts at the bottom so you can skip them if you already know what this kind of harm looks like.
-
-My bias is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by [inner-child self love reparenting](http://Innerchild.u-dont-exist.com)."""
+I put the survivor accounts at the bottom so you can skip them if you already know what this kind of harm looks like. My bias is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by [inner-child self love reparenting](http://Innerchild.u-dont-exist.com)."""
 
 
 def visible_text(markdown: str) -> str:
@@ -47,16 +45,16 @@ def main() -> int:
     repaired = base.replace(OLD_OPEN, NEW_OPEN, 1)
     repaired_visible = visible_text(repaired)
 
-    candidate = ROOT / "state/candidates/spiritual-bypassing-r08-minimal-invitational-opening.md"
+    candidate = ROOT / "state/candidates/spiritual-bypassing-r09-owner-invitational-opening.md"
     candidate.parent.mkdir(parents=True, exist_ok=True)
     candidate.write_text(repaired, encoding="utf-8")
 
     spec = {
         "format": "pangram-fixed-batch-v1",
-        "experiment_id": "spiritual-bypassing-visible-boundary-r08-2026-08-14",
+        "experiment_id": "spiritual-bypassing-visible-boundary-r09-2026-08-14",
         "audit_id": AUDIT_ID,
         "variants": [
-            {"id": "MINIMAL_INVITATIONAL_OPENING", "section_id": "FULL_ARTICLE", "text": repaired_visible}
+            {"id": "OWNER_INVITATIONAL_OPENING", "section_id": "FULL_ARTICLE", "text": repaired_visible}
         ],
     }
     OUT.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
