@@ -6,7 +6,7 @@ Updated: 2026-08-14
 
 Preserve the lab's exact detector evidence, editorial authority, and lesson-closeout architecture while making Codex/GitHub operation recoverable, least-privileged, and safe around paid detector work.
 
-## Authority / current baselines
+## Authority / baseline
 
 - Canonical branch: `main`; paid-route migration branch point `62495d48208136327c5e3da9bb8bc59e5f876d92`.
 - Long-lived evidence branch: `automation/pangram-fixed-batch`; audited idle migration baseline `a413d6d872d31a7f39c2c0ec5b13f270c105cef2`.
