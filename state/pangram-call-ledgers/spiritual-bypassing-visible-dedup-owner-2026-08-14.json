@@ -5,8 +5,8 @@
   "sections": {
     "FULL_ARTICLE\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "estimated_credits": 2,
@@ -15,10 +15,18 @@
           "text_sha256": "5fb3095d6e96f905c6a673b24a61944c2dcc201b6e47f978d7f39cbb9a899bd6",
           "type": "paid_post_reserved",
           "word_count": 1547
+        },
+        {
+          "estimated_credits": 2,
+          "measurement_key": "spiritual-bypassing-visible-boundary-r17-dedup-only-2026-08-14_DEDUP_ONLY",
+          "recorded_at_utc": "2026-08-14T02:04:40.334031+00:00",
+          "text_sha256": "c11f67cc3f5daa6c112e05b32de926411d060d2849bc31868d119ab21ba75731",
+          "type": "paid_post_reserved",
+          "word_count": 1536
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "FULL_ARTICLE",
       "version": "4.0"
