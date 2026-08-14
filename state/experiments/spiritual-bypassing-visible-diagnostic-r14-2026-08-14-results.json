@@ -49,6 +49,41 @@
         ]
       },
       "section_id": "day-five-diagnostic"
+    },
+    {
+      "id": "MECHANISM_ONLY",
+      "measurement_key": "spiritual-bypassing-visible-diagnostic-r14-2026-08-14_MECHANISM_ONLY",
+      "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? The feeling comes up and, instead of healing what’s underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go. It can do the same thing with injustice: ignore it and call that inner peace.",
+      "text_sha256": "9572e394f1dc0c785d48120a521575fe1fbad3fa316e11fdadf6900be3a9e99a",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? The feeling comes up and, instead of healing what’s underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go. It can do the same thing with injustice: ignore it and call that inner peace.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? The feeling comes up and, instead of healing what’s underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go. It can do the same thing with injustice: ignore it and call that inner peace.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.14735114574432373,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 427,
+            "word_count": 82,
+            "token_length": 101,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "day-five-diagnostic"
     }
   ],
   "audit_id": "spiritual-bypassing-visible-owner-repair-2026-08-14",
@@ -74,15 +109,15 @@
         "section_id": "day-five-diagnostic",
         "model": "pangram-4",
         "version": "4.0",
-        "paid_api_calls": 1,
+        "paid_api_calls": 2,
         "cache_hits": 0,
         "pending_resumes": 0,
-        "estimated_credits": 1,
-        "estimated_cost_usd": 0.05,
+        "estimated_credits": 2,
+        "estimated_cost_usd": 0.1,
         "cap": 6,
-        "paid_calls_to_human": null,
-        "estimated_credits_to_human": null,
-        "first_human_measurement_key": null
+        "paid_calls_to_human": 2,
+        "estimated_credits_to_human": 2,
+        "first_human_measurement_key": "spiritual-bypassing-visible-diagnostic-r14-2026-08-14_MECHANISM_ONLY"
       }
     ]
   }
