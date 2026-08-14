@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "spiritual-bypassing-visible-diagnostic-r14-2026-08-14_MECHANISM_ONLY",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? The feeling comes up and, instead of healing what’s underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go. It can do the same thing with injustice: ignore it and call that inner peace.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.14735114574432373,
+        "confidence": "High",
+        "end_index": 427,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? The feeling comes up and, instead of healing what’s underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go. It can do the same thing with injustice: ignore it and call that inner peace.",
+        "token_length": 101,
+        "word_count": 82
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "13141f96-968f-4e51-9798-ea0ff362d4d1",
   "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? The feeling comes up and, instead of healing what’s underneath it, you try to observe it away—to see it as insubstantial, not yours, and let it go. It can do the same thing with injustice: ignore it and call that inner peace.",
   "text_sha256": "9572e394f1dc0c785d48120a521575fe1fbad3fa316e11fdadf6900be3a9e99a",
-  "updated_utc": "2026-08-14T01:28:13.176976+00:00"
+  "updated_utc": "2026-08-14T01:28:14.663911+00:00"
 }
