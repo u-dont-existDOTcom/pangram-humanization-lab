@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "spiritual-bypassing-primer-r20-2026-08-14_PRIMER_ARCHITECTURE",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.3751387298107147,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.6248612403869629,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "A Primer on Spiritual Bypassing Spiritual bypassing is when a spiritual idea or practice gets used to get around something that still needs healing. That's what I want to look at here, using Goenka retreats as a case study. They teach you to observe whatever comes up without reacting to it. But what happens when what comes up is trauma? I'm really happy if you benefitted from your Goenka experience. It's also true that it has harmed many people, and the method itself is not built well for trauma survivors. That's why I wouldn't recommend it in general, although I can never tell anyone what would work specifically for them. My bias here is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by inner-child self love reparenting. I put the survivor accounts at the bottom so you can skip them if you already know what this kind of harm looks like.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.5432960391044617,
+        "confidence": "High",
+        "end_index": 338,
+        "humanizer_score": 0.0557345375418663,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "A Primer on Spiritual Bypassing Spiritual bypassing is when a spiritual idea or practice gets used to get around something that still needs healing. That's what I want to look at here, using Goenka retreats as a case study. They teach you to observe whatever comes up without reacting to it. But what happens when what comes up is trauma?",
+        "token_length": 72,
+        "word_count": 60
+      },
+      {
+        "ai_assistance_score": 0.3376712203025818,
+        "confidence": "High",
+        "end_index": 901,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 338,
+        "text": " I'm really happy if you benefitted from your Goenka experience. It's also true that it has harmed many people, and the method itself is not built well for trauma survivors. That's why I wouldn't recommend it in general, although I can never tell anyone what would work specifically for them. My bias here is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by inner-child self love reparenting. I put the survivor accounts at the bottom so you can skip them if you already know what this kind of harm looks like.",
+        "token_length": 123,
+        "word_count": 104
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "186a7db3-04d0-411b-9409-208e2967bc8a",
   "text": "A Primer on Spiritual Bypassing Spiritual bypassing is when a spiritual idea or practice gets used to get around something that still needs healing. That's what I want to look at here, using Goenka retreats as a case study. They teach you to observe whatever comes up without reacting to it. But what happens when what comes up is trauma? I'm really happy if you benefitted from your Goenka experience. It's also true that it has harmed many people, and the method itself is not built well for trauma survivors. That's why I wouldn't recommend it in general, although I can never tell anyone what would work specifically for them. My bias here is that healing starts with learning how to be kind to the parts of us that hurt. That is what I mean by inner-child self love reparenting. I put the survivor accounts at the bottom so you can skip them if you already know what this kind of harm looks like.",
   "text_sha256": "1720b73f50376eb6f74fb039344dbf7f2182d4335a2e26d86452059bb4415978",
-  "updated_utc": "2026-08-14T06:04:05.339380+00:00"
+  "updated_utc": "2026-08-14T06:04:06.587497+00:00"
 }
