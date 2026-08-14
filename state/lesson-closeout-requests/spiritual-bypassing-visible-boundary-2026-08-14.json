@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "spiritual-bypassing-visible-boundary-2026-08-14",
+  "source_path": "state/SPIRITUAL-BYPASSING-VISIBLE-BOUNDARY-INCIDENT-2026-08-14.md",
+  "source_ref": "a73646b1d17305e024113f02a943fd29b53c8da2",
+  "source_sha256": "699e424bbbb52f01f4e4a11acd67da55e2e41b1d6b79907dcdf8c2032bb6f721",
+  "finding": "Pangram certification must use the reader-visible representation rather than raw source markup; raw Markdown can be diagnostic but cannot certify rendered publication text.",
+  "disposition": "promoted",
+  "reason": "The same Spiritual Bypassing content measured 100% Human as raw Markdown but 88.3194506% Human as the 1,482-word visible plaintext that reproduced the Pangram GUI, demonstrating a material representation/certification failure.",
+  "promoted_to": [
+    "state/LESSON-INDEX.md",
+    "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
+  ],
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md",
+  "lesson_block": "### Reader-visible certification incident provenance\nThe Spiritual Bypassing representation incident established that a raw-Markdown Pangram pass cannot certify the reader-visible article. The same content scored 100% Human when raw Markdown was submitted but 88.3194506% Human after normalization to the 1,482-word visible plaintext that matched the GUI. Certification therefore uses the reader-visible representation; source-markup measurements are diagnostic only.",
+  "index_block": "- **Reader-visible certification evidence:** the Spiritual Bypassing incident reproduced the GUI's 88.3% result through the API only after raw Markdown was normalized to reader-visible plaintext; raw-source detector passes are diagnostic only and cannot certify rendered publication text."
+}
