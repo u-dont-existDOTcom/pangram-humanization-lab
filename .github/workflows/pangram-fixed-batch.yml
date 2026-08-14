@@ -46,7 +46,7 @@ jobs:
 
   detector:
     needs: test
-    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.head_commit.message, 'experiment: run Romance authorial recovery r27')
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.head_commit.message, 'RUN_R27')
     permissions:
       contents: write
     runs-on: ubuntu-latest
