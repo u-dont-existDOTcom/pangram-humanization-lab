@@ -5,8 +5,8 @@
   "sections": {
     "primer\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -15,10 +15,18 @@
           "text_sha256": "1720b73f50376eb6f74fb039344dbf7f2182d4335a2e26d86452059bb4415978",
           "type": "paid_post_reserved",
           "word_count": 164
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "spiritual-bypassing-primer-r21-2026-08-14_PRIMER_SIMPLE",
+          "recorded_at_utc": "2026-08-14T06:05:24.148093+00:00",
+          "text_sha256": "3b524040f04f9ba6b20aa7f25dd934cf8cb0cbf72c8a44fbeca4cbc9c1d55d47",
+          "type": "paid_post_reserved",
+          "word_count": 157
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "primer",
       "version": "4.0"
