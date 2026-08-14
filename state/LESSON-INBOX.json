@@ -381,6 +381,37 @@
           "section_id": "FULL_ARTICLE"
         }
       ]
+    },
+    {
+      "audit_id": "spiritual-bypassing-visible-owner-repair-2026-08-14",
+      "created_at_utc": "2026-08-14T01:28:17.228316+00:00",
+      "experiment_id": "spiritual-bypassing-visible-diagnostic-r14-2026-08-14",
+      "id": "Q-890e41c26d6a434a",
+      "sections": [
+        "day-five-diagnostic"
+      ],
+      "source_path": "state/experiments/spiritual-bypassing-visible-diagnostic-r14-2026-08-14-results.json",
+      "source_ref": "43758ae84919f028a581af43f153e12588181d8b",
+      "source_sha256": "61a20cb3dce6c534e0d3361393b3e832ba3c8d2f3f248be4cd56ee907ac26e7d",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.5037037134170532,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.4962962865829468,
+          "id": "EVIDENCE_ONLY",
+          "prediction_short": "Mixed",
+          "section_id": "day-five-diagnostic"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "MECHANISM_ONLY",
+          "prediction_short": "Human",
+          "section_id": "day-five-diagnostic"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
