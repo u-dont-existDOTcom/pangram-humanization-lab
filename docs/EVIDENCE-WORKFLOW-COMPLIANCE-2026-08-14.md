@@ -37,6 +37,19 @@ python scripts/validate_paid_dispatch.py --spec <experiments/file.json> --out <c
 
 The branch-push workflow must show the `verify` job successful and the `detector` job skipped. No manual dispatch is part of compliance verification.
 
+## Exact verification receipts
+
+- Test-first commit: `0972f557c0b6ec8a14f42989dd2e541d8c33ec8f`.
+- Expected RED run: `31776789465`; failure was exactly the missing `scripts.validate_paid_dispatch` module.
+- First integrated run: `31777229767`; 73 tests passed and one rejection-message assertion failed, while the detector job was skipped.
+- Code-bearing remediation head: `41411b1ec4eb7fb0b2c8fa1c2db416162df30905`.
+- Green code-bearing run: `31777325504`; `verify` succeeded, `detector` was skipped, 74 tests passed, and the repository audit reported 0 errors and 5 warnings.
+- Workflow lifecycle check: exactly one of the 14 audited workflow paths remains executable; all 14 archived copies match their documented source Git blob SHAs.
+- Manual dispatches made by this migration: `0`.
+- Paid Pangram calls made by this migration: `0`.
+
+The report/current-state binding descendants modify documentation only. Before merge, the latest PR head must also have a successful verification run with the detector skipped. Recording that latest run in PR metadata and the post-merge branch receipt avoids an infinite chain in which editing this report creates a new head that itself needs to be written back into the report.
+
 ## Exceptions
 
 Hosted evidence-branch protection, secret scanning, push protection, Actions defaults, and vulnerability alerts remain unverified; code scanning is recorded disabled. Main issue #17 owns those settings/plan limits.
