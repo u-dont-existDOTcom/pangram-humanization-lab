@@ -4,6 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OPERATING_GUIDE = ROOT / "docs" / "CHATGPT-OPERATING-GUIDE.md"
 RUNBOOK = ROOT / "docs" / "PANGRAM-ACTIONS-RUNBOOK.md"
+ARCHITECTURE_GATE = ROOT / "docs" / "HUMANIZATION-ARCHITECTURE-REGRESSION.md"
 HUMANIZATION_GATE = ROOT / "state" / "WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
 LESSON_INDEX = ROOT / "state" / "LESSON-INDEX.md"
 
@@ -81,7 +82,7 @@ def test_pangram_certification_uses_reader_visible_text_not_raw_markdown():
 # Regression for detector-window tunnel vision: a Pangram-green passage can still have broken article architecture.
 def test_humanization_rechecks_global_architecture_after_detector_edits():
     texts = {
-        "operating guide": OPERATING_GUIDE.read_text(encoding="utf-8"),
+        "architecture gate": ARCHITECTURE_GATE.read_text(encoding="utf-8"),
         "humanization gate": HUMANIZATION_GATE.read_text(encoding="utf-8"),
         "lesson index": LESSON_INDEX.read_text(encoding="utf-8"),
     }
