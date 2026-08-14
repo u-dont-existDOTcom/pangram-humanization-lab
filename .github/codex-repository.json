@@ -8,9 +8,9 @@
   "commands": {
     "bootstrap": "python -m pip install -e '.[test]'",
     "test": "python -m pytest -q",
-    "test_focused": "python -m pytest -q tests/test_paid_dispatch.py tests/test_fixed_batch.py tests/test_result_paths.py tests/test_call_budget_fixed_batch.py",
+    "test_focused": "python -m pytest -q tests/test_paid_dispatch.py tests/test_paid_push.py tests/test_paid_workflow_security.py tests/test_fixed_batch.py tests/test_result_paths.py tests/test_call_budget_fixed_batch.py",
     "audit": "python scripts/audit_codex_github.py --root . --fail-on error",
-    "paid_preflight": "python scripts/validate_paid_dispatch.py --spec <experiments/file.json> --out <canonical-result-or-empty> --confirmation RUN_PAID_PANGRAM_FIXED_BATCH"
+    "paid_preflight": "python scripts/validate_paid_push.py --base <before-sha> --head <after-sha>"
   },
   "current_state": "state/CURRENT-STATE.md",
   "github_controls": {
@@ -22,5 +22,5 @@
     "vulnerability_alerts": "unverified",
     "evidence_branch_rules": "unverified"
   },
-  "audit_note": "This long-lived evidence branch is verified separately from main. Push and pull-request events run tests/audit only; paid work requires an explicitly confirmed manual dispatch. Hosted control observations remain tracked in main issue #17."
+  "audit_note": "This long-lived evidence branch is verified separately from main. Pull requests and ordinary pushes run tests/audit only. A paid run is automatic only when the exact evidence ref receives one newly added immutable request plus its byte-hash-bound new spec, with no bundled third change. Hosted control observations remain tracked in main issue #17."
 }

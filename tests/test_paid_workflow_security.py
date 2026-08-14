@@ -78,12 +78,19 @@ def test_github_output_contains_only_validated_runner_paths(tmp_path: Path) -> N
     ]
 
 
-def test_paid_workflow_is_evidence_ref_bound_and_delays_credentials() -> None:
+def test_paid_workflow_is_exact_ref_bound_and_delays_credentials() -> None:
     workflow = WORKFLOW.read_text(encoding="utf-8")
+    assert "workflow_dispatch:" not in workflow
     assert (
-        "if: github.event_name == 'workflow_dispatch' && "
-        "github.ref == 'refs/heads/automation/pangram-fixed-batch'"
+        "if: github.event_name == 'push' && "
+        "github.ref == 'refs/heads/automation/pangram-fixed-batch' && "
+        "needs.verify.outputs.paid_request == 'true'"
     ) in workflow
+    assert "python scripts/validate_paid_push.py" in workflow
+    assert '--base "$BASE_SHA"' in workflow
+    assert '--head "$HEAD_SHA"' in workflow
     assert workflow.count("persist-credentials: false") >= 2
+    assert workflow.count("contents: write") == 1
+    assert workflow.count("${{ secrets.PANGRAM_API_KEY }}") == 1
     assert "audit_id: ${{ steps.preflight.outputs.audit_id }}" not in workflow
     assert "experiment_id: ${{ steps.preflight.outputs.experiment_id }}" not in workflow
