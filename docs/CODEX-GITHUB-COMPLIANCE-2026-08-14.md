@@ -38,6 +38,7 @@ This record separates repository-visible facts from GitHub-hosted settings. No P
 2. Secret scanning, push protection, Actions defaults, and vulnerability alerts remain unverified. Treat every credential-sensitive change as high risk until an owner verifies them in GitHub Settings. Owner: repository owner. Follow-up: hardening-audit issue.
 3. Code scanning is disabled. This repository has no runtime dependencies today, but Python and shell automation still warrant future evaluation. Owner: repository owner. Follow-up: hardening-audit issue.
 4. The long-lived evidence branch contains historic paid-task workflow definitions at the audited baseline. They require a separate PR because they are not on `main`. Until that PR merges, do not edit or manually dispatch those workflows.
+5. No recognized dependency lockfile exists. The package currently declares no runtime dependencies and only a broad pytest test extra; monthly Python Dependabot coverage reduces but does not eliminate resolution drift. Track this in issue #17.
 
 ## Verification contract
 
@@ -51,4 +52,13 @@ PYTHONPATH=src python -m pangram_lab.lesson_closeout check --base 4eb9e3f76c2d70
 PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref HEAD
 ```
 
-Exact passing run IDs, final head SHA, issue number, and merge commit are intentionally pending until GitHub Actions completes. Update this file rather than claiming success from an in-progress run.
+## Verification evidence
+
+- TDD red checkpoint: lesson-integrity run `31774735028` failed exactly at `tests/test_codex_github_audit.py` because the audit module did not yet exist.
+- Universal-audit defect checkpoint: runs `31774980341` and `31774980358` failed because the imported regex placed a second inline multiline flag after an alternation. Commit `87537c744bb45c0c9422c79c1ea87a02ef44f788` fixes the parser without weakening the trigger rule.
+- Repository workflow policy: run `31775055295` succeeded with 0 errors and 5 declared warnings.
+- Lesson integrity: run `31775055265` succeeded; 53 tests passed, the changed-range closeout passed, and the current-ref audit passed.
+- Durable hosted-control follow-up: issue #17, https://github.com/u-dont-existDOTcom/pangram-humanization-lab/issues/17
+- PR: #16, https://github.com/u-dont-existDOTcom/pangram-humanization-lab/pull/16
+
+The final PR head and merge commit remain pending. New commits must earn fresh green checks before merge.
