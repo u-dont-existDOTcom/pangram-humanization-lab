@@ -10,3 +10,14 @@ updates:
       - github-actions
     commit-message:
       prefix: chore(actions)
+
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - python
+    commit-message:
+      prefix: chore(python)

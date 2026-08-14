@@ -94,7 +94,7 @@ The gate tracks new research artifacts after the configured enforcement timestam
 
 `.github/workflows/lesson-integrity.yml` provides:
 
-1. **Metadata request processor** — on eligible `main` pushes, tests and processes unprocessed closeout requests using a trusted contents-write job.
+1. **Metadata request processor** — on eligible same-repository pull requests, tests and processes unprocessed closeout requests on the originating PR branch using a narrowly scoped contents-write job.
 2. **Push / pull-request gate** — changed tracked research artifacts must be dispositioned. If a finding is promoted, the canonical index and summary target(s) must be updated in the same range.
 3. **Weekly audit** — audits current `main` plus configured long-lived evidence refs. If orphaned research or pending review obligations are found, the workflow opens or updates one `Lesson integrity audit: unresolved findings` GitHub issue automatically.
 

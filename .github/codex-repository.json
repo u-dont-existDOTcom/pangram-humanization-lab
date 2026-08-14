@@ -6,14 +6,22 @@
   "visibility": "private",
   "risk": "high",
   "commands": {
-    "bootstrap": "./INSTALL-AND-RUN.sh"
+    "bootstrap": "python -m pip install -e '.[test]'",
+    "test": "python -m pytest -q",
+    "test_focused": "python -m pytest -q tests/test_review_queue.py tests/test_closeout_request.py tests/test_lesson_closeout.py",
+    "audit": "python scripts/audit_codex_github.py --root . --fail-on error",
+    "lesson_audit": "PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref HEAD",
+    "interactive_run": "./INSTALL-AND-RUN.sh"
   },
-  "current_state": null,
+  "current_state": "state/CURRENT-STATE.md",
   "github_controls": {
-    "default_branch_rules": "unverified",
+    "default_branch_rules": "disabled",
     "secret_scanning": "unverified",
     "push_protection": "unverified",
-    "code_scanning": "unverified"
+    "code_scanning": "disabled",
+    "actions_default_permissions": "unverified",
+    "vulnerability_alerts": "unverified",
+    "evidence_branch_rules": "unverified"
   },
-  "audit_note": "Preserve the existing lesson-index/ledger/CI architecture. Populate exact test and audit commands, and the canonical current-state path, only after inspecting current repository instructions and workflows; do not infer them from historical chat."
+  "audit_note": "Repository-visible controls are enforced in CI. Hosted-setting observations and declared exceptions are recorded in docs/CODEX-GITHUB-COMPLIANCE-2026-08-14.md; unverified means the connected integration could not read the setting and no inference was made."
 }
