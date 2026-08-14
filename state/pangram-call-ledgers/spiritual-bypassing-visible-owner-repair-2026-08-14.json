@@ -57,8 +57,8 @@
     },
     "day-five-diagnostic\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -67,10 +67,18 @@
           "text_sha256": "d7436663db484e1c1c96239b385cbf28aa2d11afb7b9776cb8dda63624ee5eae",
           "type": "paid_post_reserved",
           "word_count": 70
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "spiritual-bypassing-visible-diagnostic-r14-2026-08-14_MECHANISM_ONLY",
+          "recorded_at_utc": "2026-08-14T01:28:11.918308+00:00",
+          "text_sha256": "9572e394f1dc0c785d48120a521575fe1fbad3fa316e11fdadf6900be3a9e99a",
+          "type": "paid_post_reserved",
+          "word_count": 82
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "day-five-diagnostic",
       "version": "4.0"

@@ -1,0 +1,89 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "spiritual-bypassing-visible-diagnostic-r14-2026-08-14",
+  "spec_sha256": "99d7985ae78dfbe2dc83b7d64a91695531a7d6a628f9a76850649e75a92dd5a8",
+  "results": [
+    {
+      "id": "EVIDENCE_ONLY",
+      "measurement_key": "spiritual-bypassing-visible-diagnostic-r14-2026-08-14_EVIDENCE_ONLY",
+      "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? There are plenty of “dark night” stories on r/vipassana. Critics talk about a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil.",
+      "text_sha256": "d7436663db484e1c1c96239b385cbf28aa2d11afb7b9776cb8dda63624ee5eae",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too? There are plenty of “dark night” stories on r/vipassana. Critics talk about a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.5037037134170532,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.4962962865829468,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Day five is where I get stuck. If I started dissociating then, I wouldn’t know what the instruction wants me to do with that. Is it a warning, or am I supposed to sit there and observe the warning too?",
+            "label": "Human Written",
+            "ai_assistance_score": 0.45928457379341125,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 201,
+            "word_count": 40,
+            "token_length": 48,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": " There are plenty of “dark night” stories on r/vipassana. Critics talk about a “push through” culture. Some teachers compare intense practice without emotional groundwork to revving an engine without oil.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7419999241828918,
+            "confidence": "High",
+            "start_index": 201,
+            "end_index": 405,
+            "word_count": 30,
+            "token_length": 43,
+            "is_humanized": false,
+            "humanizer_score": 0.003156521590426564
+          }
+        ]
+      },
+      "section_id": "day-five-diagnostic"
+    }
+  ],
+  "audit_id": "spiritual-bypassing-visible-owner-repair-2026-08-14",
+  "call_accounting": {
+    "audit_id": "spiritual-bypassing-visible-owner-repair-2026-08-14",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.5,
+        "estimated_credits": 10,
+        "model": "pangram-4",
+        "paid_api_calls": 5,
+        "pending_resumes": 0,
+        "section_id": "FULL_ARTICLE",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "day-five-diagnostic",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
