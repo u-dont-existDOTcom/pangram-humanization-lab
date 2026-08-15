@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-whole-article-local-repair-r4-2026-08-15_tough-love-r4-fidelity-complete",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.3814159333705902,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.6185840964317322,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 2,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "It took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it.\nThe dominant culture creates that environment. It seals two people together and calls that privacy. Then one person is expected to become lover, family, community, therapist, and future, while whatever damage happens between them is treated as a private failure.\nThe myths around romantic love become real because we co-create them. We act as though jealousy proves love, permanent feelings can be promised, conflict should stay hidden, and the relationship failed if it ended. Then we suffer inside ideas that were never natural laws, and we walk blindly into our first, second, third, fourth, and fifth marriages!\nSpeaking of which, I wish I’d prioritized understanding the basic fears, desires, traumas, values, strengths, and weaknesses of the women I got close to in a more conscious manner. Instead, I often went with the flow of conversation and hanging out until closeness had built itself before we had decided what it meant.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.057648517191410065,
+        "confidence": "High",
+        "end_index": 242,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "It took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it.\nThe dominant culture creates that environment.",
+        "token_length": 45,
+        "word_count": 39
+      },
+      {
+        "ai_assistance_score": 0.6296213269233704,
+        "confidence": "High",
+        "end_index": 673,
+        "humanizer_score": 0.000941567646805197,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 242,
+        "text": " It seals two people together and calls that privacy. Then one person is expected to become lover, family, community, therapist, and future, while whatever damage happens between them is treated as a private failure.\nThe myths around romantic love become real because we co-create them. We act as though jealousy proves love, permanent feelings can be promised, conflict should stay hidden, and the relationship failed if it ended.",
+        "token_length": 81,
+        "word_count": 68
+      },
+      {
+        "ai_assistance_score": 0.1804712414741516,
+        "confidence": "High",
+        "end_index": 1130,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 673,
+        "text": " Then we suffer inside ideas that were never natural laws, and we walk blindly into our first, second, third, fourth, and fifth marriages!\nSpeaking of which, I wish I’d prioritized understanding the basic fears, desires, traumas, values, strengths, and weaknesses of the women I got close to in a more conscious manner. Instead, I often went with the flow of conversation and hanging out until closeness had built itself before we had decided what it meant.",
+        "token_length": 96,
+        "word_count": 76
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "9c30da65-a699-48f6-bf91-06715378e933",
   "text": "It took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it.\n\nThe dominant culture creates that environment. It seals two people together and calls that privacy. Then one person is expected to become lover, family, community, therapist, and future, while whatever damage happens between them is treated as a private failure.\n\nThe myths around romantic love become real because we co-create them. We act as though jealousy proves love, permanent feelings can be promised, conflict should stay hidden, and the relationship failed if it ended. Then we suffer inside ideas that were never natural laws, and we walk blindly into our first, second, third, fourth, and fifth marriages!\n\nSpeaking of which, I wish I’d prioritized understanding the basic fears, desires, traumas, values, strengths, and weaknesses of the women I got close to in a more conscious manner. Instead, I often went with the flow of conversation and hanging out until closeness had built itself before we had decided what it meant.",
   "text_sha256": "b2250477341ce53cc32c2245b20e62eda2a42dca0305897bce4a4764134ab989",
-  "updated_utc": "2026-08-15T10:48:16.967404+00:00"
+  "updated_utc": "2026-08-15T10:48:18.445406+00:00"
 }
