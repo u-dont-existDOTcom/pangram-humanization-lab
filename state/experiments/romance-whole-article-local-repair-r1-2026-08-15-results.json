@@ -238,6 +238,65 @@
         ]
       },
       "section_id": "choosing-together"
+    },
+    {
+      "id": "marriage-vows-scripture-r1",
+      "measurement_key": "romance-whole-article-local-repair-r1-2026-08-15_marriage-vows-scripture-r1",
+      "text": "## Why marriage vows are dishonest\n\nConventional marriage vows are dishonest, and most people know it. You can't promise how you'll feel in the future. You can promise actions if you really believe you're capable of delivering them. So for example, you could promise to tell the truth, to keep showing up, to support the children, or whatever else you genuinely believe you can do.\n\nWe also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 explicitly states that it is better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, “I didn’t mean what I promised.”\n\nMatthew 5:33–37 goes even further. Let your “Yes” be “Yes” and your “No” be “No”; anything beyond that comes from evil. James 5:12 says basically the same thing. To me, that is almost a warning that needing the extra promise can itself be a sign that the plain yes isn’t trustworthy enough.",
+      "text_sha256": "5003678f5bc038acf124fb56692e5fe7e3b1b15f3b6d2539a1560be1c13b0362",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "## Why marriage vows are dishonest\nConventional marriage vows are dishonest, and most people know it. You can't promise how you'll feel in the future. You can promise actions if you really believe you're capable of delivering them. So for example, you could promise to tell the truth, to keep showing up, to support the children, or whatever else you genuinely believe you can do.\nWe also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 explicitly states that it is better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, “I didn’t mean what I promised.”\nMatthew 5:33–37 goes even further. Let your “Yes” be “Yes” and your “No” be “No”; anything beyond that comes from evil. James 5:12 says basically the same thing. To me, that is almost a warning that needing the extra promise can itself be a sign that the plain yes isn’t trustworthy enough.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.27942681312561035,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.7205731868743896,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 2,
+        "windows": [
+          {
+            "text": "## Why marriage vows are dishonest\nConventional marriage vows are dishonest, and most people know it. You can't promise how you'll feel in the future. You can promise actions if you really believe you're capable of delivering them. So for example, you could promise to tell the truth, to keep showing up, to support the children, or whatever else you genuinely believe you can do.\nWe also find something like my warning in the New & Old Testaments.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.02613057754933834,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 448,
+            "word_count": 78,
+            "token_length": 99,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": " Ecclesiastes 5:4–6 explicitly states that it is better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, “I didn’t mean what I promised.”\nMatthew 5:33–37 goes even further.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.5231090784072876,
+            "confidence": "Medium",
+            "start_index": 448,
+            "end_index": 721,
+            "word_count": 51,
+            "token_length": 71,
+            "is_humanized": false,
+            "humanizer_score": 0.0058511109091341496
+          },
+          {
+            "text": " Let your “Yes” be “Yes” and your “No” be “No”; anything beyond that comes from evil. James 5:12 says basically the same thing. To me, that is almost a warning that needing the extra promise can itself be a sign that the plain yes isn’t trustworthy enough.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.27303585410118103,
+            "confidence": "High",
+            "start_index": 721,
+            "end_index": 977,
+            "word_count": 47,
+            "token_length": 65,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "marriage-vows"
     }
   ],
   "audit_id": "romance-current-master-final-2026-08-15",
@@ -303,6 +362,20 @@
       },
       {
         "section_id": "choosing-together",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "marriage-vows",
         "model": "pangram-4",
         "version": "4.0",
         "paid_api_calls": 1,
