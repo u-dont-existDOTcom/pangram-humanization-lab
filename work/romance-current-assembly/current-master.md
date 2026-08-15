@@ -351,7 +351,7 @@ It showed me how vulnerable I actually am when I open my heart. It’s really ea
 
 Living alone is easy in so many ways. I can make my bed whenever I want. When I have a girlfriend, making the bed in the morning can become one of the ways I show her I love her. If I don’t do it well, somehow it may become a bad omen that I don’t care about her.
 
-It shouldn’t be that serious. It really can be.
+A tiny thing can end up carrying way more emotional weight than it should.
 
 Dealing with somebody else’s emotional insecurities can also be exhausting. It’s easy to feel free when I don’t have to do that. I actually don’t have that much skill with people, and this works fine until I’m in a romantic relationship and suddenly I’m expected to mind-read, notice every emotional shift, check in constantly, and understand what a silence means.
 

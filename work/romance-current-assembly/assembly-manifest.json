@@ -7,9 +7,9 @@
   },
   "baseline_bytes": 109480,
   "baseline_sha256": "18ed9fa6850e3a20d523b9365519ef43fa4e56398ce4e06d3743022676555edc",
-  "final_bytes": 108253,
-  "final_sha256": "8c89a05c569e3dd3eb55eb52922db307299600b5d6295e0e030c0eddc6c370e8",
-  "operation_count": 11,
+  "final_bytes": 108278,
+  "final_sha256": "5f3ffc93f1a901d9878f9b2be34e24c73a3fbff19046af571e6aa45245af0538",
+  "operation_count": 12,
   "operations": [
     {
       "id": "owner-opening-2026-08-15",
@@ -60,6 +60,14 @@
       "type": "delete_exact"
     },
     {
+      "id": "crucible-small-thing-owner-tested-repair",
+      "new_bytes": 74,
+      "new_sha256": "8cb7f7dfcf7713103eb9b495c15bed0c5b55863ccc90823ddb5d7a1438eb70ab",
+      "old_bytes": 49,
+      "old_sha256": "789afb26bbac22741b66d0d19b508023a95d0a98f52140d4ce8dd610542a9c53",
+      "type": "replace_exact"
+    },
+    {
       "id": "crucible-entitlement-local-repair",
       "new_bytes": 208,
       "new_sha256": "d2c420233aad89b10e9b3953b220d436e699bfa1f0b8f463a98faa2a96dadcce",
@@ -101,5 +109,5 @@
     }
   ],
   "schema_version": 1,
-  "spec_sha256": "e919164c0d2abf195b2cd74e91e3223264df90846513fba03469869571e94573"
+  "spec_sha256": "c749430974d9e60e2b0cc75730255e292e47931eef6c245ea5aae18a5a70a285"
 }
