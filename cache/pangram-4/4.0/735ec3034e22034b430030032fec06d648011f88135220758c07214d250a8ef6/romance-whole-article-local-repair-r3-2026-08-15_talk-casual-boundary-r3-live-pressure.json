@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-whole-article-local-repair-r3-2026-08-15_talk-casual-boundary-r3-live-pressure",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.6701244711875916,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.32987552881240845,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 2,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Talk about making love before you do it\nFrom here on, when I say making love, I'm talking about two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced this, it may be like trying to explain the taste of an orange. If you don’t know what love is, you don’t know. That’s another conversation, and I'd suggest reading my inner child reparenting guide.\nHaving sex is just the physical act, whether that connection is there or not. But sometimes it can create the connection also.\nMost couples don’t talk honestly about sex until they’re already having it. Bad timing. Once I’m naked with someone, saying what I actually want can suddenly mean interrupting the whole thing or disappointing her. I’d rather have that conversation earlier, while neither of us is trying to keep a moment going.\nI don’t expect either of us to know everything already. I may not know what I want yet; she may not either. “I don’t know, but I’m willing to find out honestly with you” is a perfectly good answer. Still, there are things I’d rather find out by talking than by guessing: what helps her body relax and open, what just doesn’t work, whether there’s anything kinky she needs to be able to say, and whether her past has made her want or avoid certain things. She should know the same about me.\nWe may even be using sex for different things. One of us may be feeling bonding while the other is feeling play. Another time it may feel sacred, or just be how we come down from a bad day.\nAnd sooner or later our sex drives probably won’t match. One of us will want more, less, or something different. We can’t solve that in advance. I’d just rather make it normal to say so before the mismatch turns into quiet resentment.\nThen comes the harder version of the same conversation: we’re naked and one of us thinks the truth will disappoint the other. Can we still say it? Bodies fitting isn’t enough.\nCan Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.04175324738025665,
+        "confidence": "High",
+        "end_index": 565,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Talk about making love before you do it\nFrom here on, when I say making love, I'm talking about two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced this, it may be like trying to explain the taste of an orange. If you don’t know what love is, you don’t know. That’s another conversation, and I'd suggest reading my inner child reparenting guide.\nHaving sex is just the physical act, whether that connection is there or not. But sometimes it can create the connection also.",
+        "token_length": 121,
+        "word_count": 100
+      },
+      {
+        "ai_assistance_score": 0.7823891043663025,
+        "confidence": "High",
+        "end_index": 2180,
+        "humanizer_score": 0.01257259026169777,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 565,
+        "text": "\nMost couples don’t talk honestly about sex until they’re already having it. Bad timing. Once I’m naked with someone, saying what I actually want can suddenly mean interrupting the whole thing or disappointing her. I’d rather have that conversation earlier, while neither of us is trying to keep a moment going.\nI don’t expect either of us to know everything already. I may not know what I want yet; she may not either. “I don’t know, but I’m willing to find out honestly with you” is a perfectly good answer. Still, there are things I’d rather find out by talking than by guessing: what helps her body relax and open, what just doesn’t work, whether there’s anything kinky she needs to be able to say, and whether her past has made her want or avoid certain things. She should know the same about me.\nWe may even be using sex for different things. One of us may be feeling bonding while the other is feeling play. Another time it may feel sacred, or just be how we come down from a bad day.\nAnd sooner or later our sex drives probably won’t match. One of us will want more, less, or something different. We can’t solve that in advance. I’d just rather make it normal to say so before the mismatch turns into quiet resentment.\nThen comes the harder version of the same conversation: we’re naked and one of us thinks the truth will disappoint the other. Can we still say it? Bodies fitting isn’t enough.\nCan Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway.",
+        "token_length": 361,
+        "word_count": 294
+      },
+      {
+        "ai_assistance_score": 0.15141244232654572,
+        "confidence": "High",
+        "end_index": 2410,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 2180,
+        "text": " Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.",
+        "token_length": 47,
+        "word_count": 38
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "8158b576-f9d3-45d3-b3c3-8e23665409d2",
   "text": "Talk about making love before you do it\n\nFrom here on, when I say making love, I'm talking about two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced this, it may be like trying to explain the taste of an orange. If you don’t know what love is, you don’t know. That’s another conversation, and I'd suggest reading my inner child reparenting guide.\n\nHaving sex is just the physical act, whether that connection is there or not. But sometimes it can create the connection also.\n\nMost couples don’t talk honestly about sex until they’re already having it. Bad timing. Once I’m naked with someone, saying what I actually want can suddenly mean interrupting the whole thing or disappointing her. I’d rather have that conversation earlier, while neither of us is trying to keep a moment going.\n\nI don’t expect either of us to know everything already. I may not know what I want yet; she may not either. “I don’t know, but I’m willing to find out honestly with you” is a perfectly good answer. Still, there are things I’d rather find out by talking than by guessing: what helps her body relax and open, what just doesn’t work, whether there’s anything kinky she needs to be able to say, and whether her past has made her want or avoid certain things. She should know the same about me.\n\nWe may even be using sex for different things. One of us may be feeling bonding while the other is feeling play. Another time it may feel sacred, or just be how we come down from a bad day.\n\nAnd sooner or later our sex drives probably won’t match. One of us will want more, less, or something different. We can’t solve that in advance. I’d just rather make it normal to say so before the mismatch turns into quiet resentment.\n\nThen comes the harder version of the same conversation: we’re naked and one of us thinks the truth will disappoint the other. Can we still say it? Bodies fitting isn’t enough.\n\nCan Casual Sex or a Situationship Actually Be Honest?\n\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.",
   "text_sha256": "735ec3034e22034b430030032fec06d648011f88135220758c07214d250a8ef6",
-  "updated_utc": "2026-08-15T10:34:40.218446+00:00"
+  "updated_utc": "2026-08-15T10:34:41.551143+00:00"
 }
