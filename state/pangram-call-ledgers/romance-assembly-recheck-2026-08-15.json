@@ -61,8 +61,8 @@
     },
     "talk-about-making-love-before-you-do-it\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -71,10 +71,18 @@
           "text_sha256": "85742b2a0d700fe5e4a126b83c2fbb6c18f92f4d24d231fbd6322eb17c8db71d",
           "type": "paid_post_reserved",
           "word_count": 406
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-talk-order-localization-2026-08-15_talk-body-only",
+          "recorded_at_utc": "2026-08-15T06:54:38.067837+00:00",
+          "text_sha256": "a7a305d3a59ba0885caf457b6678c57d34ec17be8225a3e1379a034741da8cd3",
+          "type": "paid_post_reserved",
+          "word_count": 314
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "talk-about-making-love-before-you-do-it",
       "version": "4.0"
