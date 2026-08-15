@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-whole-article-local-repair-r2-2026-08-15_doing-conscious-preview-delete-r1",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "# Doing it consciously 🧭\nI learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it. All of this advice is also way too idealistic and unrealistic, and I expect most people will fail at most of it, as I have. But even if they can implement a portion, it will help.\n## Imagination as a discernment tool\nI'm sure I'm not alone here. Everyone does this. You meet someone and you automatically start imagining how good it could be to have them as your partner. You start thinking you know this person because of how your fantasies went, but really all you know from that is what you want. Actually, that's the most useful thing about the fantasy, to figure out what you want. But I usually make the mistake of playing out just the first part of the fantasy.\nI think imagination can work a lot better for starting relationships right if we use it against our tendency to idealize people. So for example, I might start with the regular lovey sexy stuff, and that's fine because that's what's drawing me in. Then after that, when I have a bit of wisdom available, I will continue onto the mundane and difficult scenes. I'm not trying to force anything or oppose anything. I just try to open my eyes when they want to close, ignore, look away.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.0007912749424576759,
+        "confidence": "High",
+        "end_index": 1292,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "# Doing it consciously 🧭\nI learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it. All of this advice is also way too idealistic and unrealistic, and I expect most people will fail at most of it, as I have. But even if they can implement a portion, it will help.\n## Imagination as a discernment tool\nI'm sure I'm not alone here. Everyone does this. You meet someone and you automatically start imagining how good it could be to have them as your partner. You start thinking you know this person because of how your fantasies went, but really all you know from that is what you want. Actually, that's the most useful thing about the fantasy, to figure out what you want. But I usually make the mistake of playing out just the first part of the fantasy.\nI think imagination can work a lot better for starting relationships right if we use it against our tendency to idealize people. So for example, I might start with the regular lovey sexy stuff, and that's fine because that's what's drawing me in. Then after that, when I have a bit of wisdom available, I will continue onto the mundane and difficult scenes. I'm not trying to force anything or oppose anything. I just try to open my eyes when they want to close, ignore, look away.",
+        "token_length": 289,
+        "word_count": 242
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "df928678-4965-41be-a28c-fa00bb5872ab",
   "text": "# Doing it consciously 🧭\n\nI learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it. All of this advice is also way too idealistic and unrealistic, and I expect most people will fail at most of it, as I have. But even if they can implement a portion, it will help.\n\n## Imagination as a discernment tool\n\nI'm sure I'm not alone here. Everyone does this. You meet someone and you automatically start imagining how good it could be to have them as your partner. You start thinking you know this person because of how your fantasies went, but really all you know from that is what you want. Actually, that's the most useful thing about the fantasy, to figure out what you want. But I usually make the mistake of playing out just the first part of the fantasy.\n\nI think imagination can work a lot better for starting relationships right if we use it against our tendency to idealize people. So for example, I might start with the regular lovey sexy stuff, and that's fine because that's what's drawing me in. Then after that, when I have a bit of wisdom available, I will continue onto the mundane and difficult scenes. I'm not trying to force anything or oppose anything. I just try to open my eyes when they want to close, ignore, look away.",
   "text_sha256": "be2a9de10813c400ce37af0bf3a6619ee4079a044b5fcd31cc7640eac41efbfe",
-  "updated_utc": "2026-08-15T10:13:31.914564+00:00"
+  "updated_utc": "2026-08-15T10:13:32.936875+00:00"
 }
