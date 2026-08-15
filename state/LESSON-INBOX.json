@@ -1574,6 +1574,29 @@
           "section_id": "tough-love-cultural-tail"
         }
       ]
+    },
+    {
+      "audit_id": "romance-authorial-recovery-2026-08-14",
+      "created_at_utc": "2026-08-15T23:05:38.877328+00:00",
+      "experiment_id": "romance-authorial-recovery-r32-owner-relation-2026-08-15",
+      "id": "Q-912ad6c9f9af2921",
+      "sections": [
+        "talk-and-slow"
+      ],
+      "source_path": "state/experiments/romance-authorial-recovery-r32-owner-relation-2026-08-15-results.json",
+      "source_ref": "a98f56859da7dd61b131b73e8e959f6d37dec8be",
+      "source_sha256": "2c077a5691a07da4fe08b83064bd8d4396aaa687777f1e7d542e5cd47232ebad",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.28532838821411133,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7146716117858887,
+          "id": "TALK_AND_SLOW_R32_OWNER_RELATION",
+          "prediction_short": "Mixed",
+          "section_id": "talk-and-slow"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
