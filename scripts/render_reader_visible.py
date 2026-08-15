@@ -83,16 +83,17 @@ def main(argv: list[str] | None = None) -> int:
     try:
         source = args.input.read_text(encoding="utf-8")
         visible = reader_visible_text(source)
+        visible_bytes = visible.encode("utf-8")
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.manifest.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(visible + "\n", encoding="utf-8")
+        args.output.write_bytes(visible_bytes)
         manifest = {
             "schema_version": 1,
             "source_path": str(args.input),
             "source_sha256": sha256_text(source),
-            "visible_sha256": sha256_text(visible),
+            "visible_sha256": hashlib.sha256(visible_bytes).hexdigest(),
             "source_bytes": len(source.encode("utf-8")),
-            "visible_bytes": len(visible.encode("utf-8")),
+            "visible_bytes": len(visible_bytes),
             "visible_words": len(visible.split()),
             "normalization": "reader-visible-plaintext-v1",
             "native_policy": {
