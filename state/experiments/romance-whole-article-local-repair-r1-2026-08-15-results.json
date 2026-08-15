@@ -37,6 +37,41 @@
         ]
       },
       "section_id": "talk-casual-boundary"
+    },
+    {
+      "id": "idealization-natural-stop-r1",
+      "measurement_key": "romance-whole-article-local-repair-r1-2026-08-15_idealization-natural-stop-r1",
+      "text": "## Beware idealization in either direction\n\nI’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\n\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\n\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\n\nYou can see something in a person before she fully lives it, but then you have to ask her:\n\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\n\nIf she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?\n\nPartners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well.",
+      "text_sha256": "e05714479749409018160a2bbd36b2ef43fad787a2165bcbe6399dacfa598569",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "## Beware idealization in either direction\nI’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nYou can see something in a person before she fully lives it, but then you have to ask her:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\nIf she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?\nPartners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "## Beware idealization in either direction\nI’ve learned to get nervous when somebody knows too much about me too soon. We’re twin flames. She knows my motives. I’m Lord Krishna. Okay, maybe I really am way better than the other guys she’s found. But if she hasn’t found anything about me that bothers her yet, she hasn’t found all of me.\nI still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nYou can see something in a person before she fully lives it, but then you have to ask her:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\nIf she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?\nPartners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.11656022816896439,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1376,
+            "word_count": 264,
+            "token_length": 326,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "idealization-transition"
     }
   ],
   "audit_id": "romance-current-master-final-2026-08-15",
@@ -71,6 +106,20 @@
         "paid_calls_to_human": null,
         "estimated_credits_to_human": null,
         "first_human_measurement_key": null
+      },
+      {
+        "section_id": "idealization-transition",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-whole-article-local-repair-r1-2026-08-15_idealization-natural-stop-r1"
       }
     ]
   }
