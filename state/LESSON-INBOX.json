@@ -1260,6 +1260,29 @@
           "section_id": "can-casual-sex-or-a-situationship-actually-be-honest"
         }
       ]
+    },
+    {
+      "audit_id": "romance-current-master-final-2026-08-15",
+      "created_at_utc": "2026-08-15T09:47:46.976585+00:00",
+      "experiment_id": "romance-current-master-visible-final-r1-2026-08-15",
+      "id": "Q-5c38f18a4e5788a8",
+      "sections": [
+        "FULL_ARTICLE"
+      ],
+      "source_path": "state/experiments/romance-current-master-visible-final-r1-2026-08-15-results.json",
+      "source_ref": "307d775ce593930eceb0b55c478f830b26dda087",
+      "source_sha256": "e6deb7869dc28afa0855e7e01bb6f51aa010467a4072551cdf26cfc965843d6c",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.09233338385820389,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9076666235923767,
+          "id": "current-reader-visible",
+          "prediction_short": "Human",
+          "section_id": "FULL_ARTICLE"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
