@@ -729,8 +729,6 @@ A foundational, permanent, exclusive romantic partnership is promised far more o
 
 I learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it. All of this advice is also way too idealistic and unrealistic, and I expect most people will fail at most of it, as I have. But even if they can implement a portion, it will help.
 
-The next two tools reach in different directions. Imagination lets us examine futures we haven't lived. Psychedelics can sometimes get past defenses hiding what is already here. Either one can also give idealization better scenery.
-
 ## Imagination as a discernment tool
 
 I'm sure I'm not alone here. Everyone does this. You meet someone and you automatically start imagining how good it could be to have them as your partner. You start thinking you know this person because of how your fantasies went, but really all you know from that is what you want. Actually, that's the most useful thing about the fantasy, to figure out what you want. But I usually make the mistake of playing out just the first part of the fantasy.
