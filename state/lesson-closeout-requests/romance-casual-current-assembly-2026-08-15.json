@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "article-specific",
+  "finding": "The coherence-first current Casual Sex/Situationship assembly passed Pangram 4.0 as Human at 96.1988% Human, 3.8012% AI, and 0% AI-assisted. Two surrounding windows totaling 797 of 834 words were High-confidence Human; one 37-word STI/feelings window was Medium-confidence AI. The section's architecture passed two cold audits, and the short medium window does not justify rewriting owner-level thought after the same audit established historical detector non-reproducibility elsewhere.",
+  "ledger_entry_ids": [
+    "L-4a0a8c8a67-01"
+  ],
+  "processed_at_utc": "2026-08-15T07:22:25.140409+00:00",
+  "promoted_to": [],
+  "reason": "Freeze the current section architecture and prose for assembly. This is article-specific detector evidence, not a new universal detector rule. The medium 37-word signal remains recorded as a counterexample rather than being erased through detector chasing.",
   "request_id": "romance-casual-current-assembly-2026-08-15",
+  "schema_version": 1,
   "source_path": "state/experiments/romance-casual-current-assembly-2026-08-15-results.json",
   "source_ref": "01ec8ba179e07808fd9a25fd3e6b77d56c4b12f9",
   "source_sha256": "4a0a8c8a670ec8deb9e192142130949b5bc4f9d034789a6f965b42c6ee185b03",
-  "finding": "The coherence-first current Casual Sex/Situationship assembly passed Pangram 4.0 as Human at 96.1988% Human, 3.8012% AI, and 0% AI-assisted. Two surrounding windows totaling 797 of 834 words were High-confidence Human; one 37-word STI/feelings window was Medium-confidence AI. The section's architecture passed two cold audits, and the short medium window does not justify rewriting owner-level thought after the same audit established historical detector non-reproducibility elsewhere.",
-  "disposition": "article-specific",
-  "reason": "Freeze the current section architecture and prose for assembly. This is article-specific detector evidence, not a new universal detector rule. The medium 37-word signal remains recorded as a counterexample rather than being erased through detector chasing.",
-  "promoted_to": []
+  "status": "processed"
 }
