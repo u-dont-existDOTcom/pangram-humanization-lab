@@ -142,6 +142,7 @@ def test_full_assembly_removes_superseded_aftercare() -> None:
     forbidden = [
         "Good sentence. Not exactly the whole curriculum.",
         "If the eros does fade, maybe the agape is enough to keep us together.",
+        "Seeing someone’s highest potential is different from ignoring what is actually there.",
         "I didn’t know what a crucible was either. It’s basically a container where things get heated until they change.",
         "It shouldn’t be that serious. It really can be.",
         "Relationship itself can grow somebody who is not fully ready.",
