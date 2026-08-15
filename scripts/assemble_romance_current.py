@@ -1,6 +1,10 @@
 from __future__ import annotations
 
+import argparse
+import difflib
 import hashlib
+import json
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -110,3 +114,89 @@ def apply_operations(
         records.append(_record(operation, old, new))
 
     return current, records
+
+
+def _load_spec(path: Path) -> tuple[str, dict[str, Any]]:
+    raw = path.read_text(encoding="utf-8")
+    try:
+        spec = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise AssemblyError(f"invalid assembly spec JSON: {exc}") from exc
+    if spec.get("schema_version") != 1:
+        raise AssemblyError("assembly spec schema_version must be 1")
+    operations = spec.get("operations")
+    if not isinstance(operations, list):
+        raise AssemblyError("assembly spec operations must be a list")
+    return raw, spec
+
+
+def _write_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+
+
+def _materialize(
+    baseline_path: Path,
+    spec_path: Path,
+    output_path: Path,
+    manifest_path: Path,
+    diff_path: Path,
+) -> dict[str, Any]:
+    baseline = baseline_path.read_text(encoding="utf-8")
+    spec_raw, spec = _load_spec(spec_path)
+    final, records = apply_operations(baseline, spec["operations"], spec_path.parent)
+
+    manifest: dict[str, Any] = {
+        "schema_version": 1,
+        "baseline_sha256": sha256_text(baseline),
+        "final_sha256": sha256_text(final),
+        "spec_sha256": sha256_text(spec_raw),
+        "baseline_bytes": _byte_len(baseline),
+        "final_bytes": _byte_len(final),
+        "operation_count": len(records),
+        "operations": records,
+    }
+    for key in ("article", "baseline"):
+        if key in spec:
+            manifest[key] = spec[key]
+
+    diff_text = "".join(
+        difflib.unified_diff(
+            baseline.splitlines(keepends=True),
+            final.splitlines(keepends=True),
+            fromfile=str(baseline_path),
+            tofile=str(output_path),
+        )
+    )
+
+    _write_text(output_path, final)
+    _write_text(manifest_path, json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
+    _write_text(diff_path, diff_text)
+    return manifest
+
+
+def _parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Deterministically assemble the current Romance master.")
+    parser.add_argument("--baseline", required=True, type=Path)
+    parser.add_argument("--spec", required=True, type=Path)
+    parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--manifest", required=True, type=Path)
+    parser.add_argument("--diff", required=True, type=Path)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = _parser().parse_args(argv)
+    try:
+        manifest = _materialize(args.baseline, args.spec, args.output, args.manifest, args.diff)
+    except (AssemblyError, OSError) as exc:
+        print(f"assembly failed: {exc}", file=sys.stderr)
+        return 2
+    print(f"final_sha256={manifest['final_sha256']}")
+    print(f"final_bytes={manifest['final_bytes']}")
+    print(f"operations={manifest['operation_count']}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
