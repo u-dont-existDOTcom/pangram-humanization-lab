@@ -143,12 +143,14 @@ def test_full_assembly_removes_superseded_aftercare() -> None:
         "Good sentence. Not exactly the whole curriculum.",
         "If the eros does fade, maybe the agape is enough to keep us together.",
         "I didn’t know what a crucible was either. It’s basically a container where things get heated until they change.",
+        "It shouldn’t be that serious. It really can be.",
         "Relationship itself can grow somebody who is not fully ready.",
         "Before entering something serious, have the conversation about flaws.",
         "That’s what I wish my dad had added. That’s what I’m trying to give you here.",
     ]
     for phrase in forbidden:
         assert phrase not in output
+    assert "A tiny thing can end up carrying way more emotional weight than it should." in output
 
 
 def test_locked_casual_section_is_byte_identical_to_baseline() -> None:
