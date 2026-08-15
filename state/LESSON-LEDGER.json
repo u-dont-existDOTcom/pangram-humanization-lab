@@ -546,6 +546,17 @@
       "source_path": "state/experiments/romance-talk-order-localization-2026-08-15-results.json",
       "source_ref": "aa9b9de5051c123ca0ebd7b51684082085d464fc",
       "source_sha256": "1dbfd0bff859bad432a1b001b141cc47ba968ac8c9fcd6d6554c06a811a1b053"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The current 685-word Romance opening boundary—Joel's corrected father provenance and missing-romance curriculum framing followed by the truncated Love section—passed Pangram 4.0 at 100% Human, 0% AI, and 0% AI-assisted with High confidence. Exact tested text SHA-256: 3ac28604d23c21ff6e81cab3e757b118e1003622f3098e74511cd07343ef6877.",
+      "id": "L-843f7c054c-01",
+      "promoted_to": [],
+      "reason": "This certifies the exact current opening-plus-Love boundary only. The substantive provenance and stopping-point lessons are already promoted; no new universal detector mechanism is inferred.",
+      "recorded_at_utc": "2026-08-15T07:18:11.659097+00:00",
+      "source_path": "state/experiments/romance-opening-plus-love-current-2026-08-15-results.json",
+      "source_ref": "196c03cefe8ba90d7d492870647a1f631f92c9c0",
+      "source_sha256": "843f7c054c9a9173eeadc0fd3cd761dbc0d3cda8e14f9697fe5fdd8dee7a6778"
     }
   ],
   "schema_version": 1
