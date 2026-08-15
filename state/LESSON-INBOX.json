@@ -1083,6 +1083,29 @@
           "section_id": "should-you-be-in-a-relationship-at-all"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T06:23:37.220300+00:00",
+      "experiment_id": "romance-tough-love-current-closing-context-2026-08-15",
+      "id": "Q-a2fe9ebcac35e03c",
+      "sections": [
+        "tough-love"
+      ],
+      "source_path": "state/experiments/romance-tough-love-current-closing-context-2026-08-15-results.json",
+      "source_ref": "3bc5a1b5f44daeb86902cd81cb740d512f5b280c",
+      "source_sha256": "496c5ecfe29e7cb71a227aa13aeaa52b27315041b8af477271d5f3516d454844",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.23796525597572327,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7620347142219543,
+          "id": "tough-love-with-current-owner-closing",
+          "prediction_short": "Mixed",
+          "section_id": "tough-love"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
