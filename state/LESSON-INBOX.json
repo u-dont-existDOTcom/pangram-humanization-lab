@@ -1028,6 +1028,38 @@
           "section_id": "are-you-ready-for-the-crucible"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T06:15:12.169893+00:00",
+      "experiment_id": "romance-assembly-recheck-flaws-crucible-r3-local-functions-2026-08-15",
+      "id": "Q-18ecbfcdb90e0340",
+      "sections": [
+        "the-conversation-about-flaws",
+        "are-you-ready-for-the-crucible"
+      ],
+      "source_path": "state/experiments/romance-assembly-recheck-flaws-crucible-r3-local-functions-2026-08-15-results.json",
+      "source_ref": "e3b07ac4eb0c3be50f65f9f2a104e6308a84d655",
+      "source_sha256": "b3b1fb4639ad6d6a3aaabd1bc120807a617df449360044f3455abccf9cdfd7c6",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "flaws-local-function-repair",
+          "prediction_short": "Human",
+          "section_id": "the-conversation-about-flaws"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "crucible-local-function-repair-prose",
+          "prediction_short": "Human",
+          "section_id": "are-you-ready-for-the-crucible"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
