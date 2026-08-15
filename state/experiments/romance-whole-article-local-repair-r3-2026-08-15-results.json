@@ -155,6 +155,41 @@
         ]
       },
       "section_id": "choosing-together-r3"
+    },
+    {
+      "id": "primal-not-performance-r3-lived-order",
+      "measurement_key": "romance-whole-article-local-repair-r3-2026-08-15_primal-not-performance-r3-lived-order",
+      "text": "Not A Performance\n\nI don’t actually think of myself as especially masculine. I step into that energy when I see that a woman would appreciate it, and then it comes naturally. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\n\nIf I have to keep checking whether I’m being “the man,” though, it stops feeling natural. Now hesitating, crying, needing help, or getting something wrong can all feel like failures of the role.\n\nI don’t want a woman having to keep proving femininity to me either. She doesn’t have to be soft, helpless, or cute every minute. Surrender means more when she could take control but prefers not to right then.\n\n“Honey, how do you see this intuitively?”\n\nor, “Can you help me think through the practical side for a minute?”\n\nThat feels much better than, “Do your female/male thing now.”",
+      "text_sha256": "06e304bf50af0efb61dd0f286c0c38de86d609dff75cc2126b1520af1ee41d95",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Not A Performance\nI don’t actually think of myself as especially masculine. I step into that energy when I see that a woman would appreciate it, and then it comes naturally. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nIf I have to keep checking whether I’m being “the man,” though, it stops feeling natural. Now hesitating, crying, needing help, or getting something wrong can all feel like failures of the role.\nI don’t want a woman having to keep proving femininity to me either. She doesn’t have to be soft, helpless, or cute every minute. Surrender means more when she could take control but prefers not to right then.\n“Honey, how do you see this intuitively?”\nor, “Can you help me think through the practical side for a minute?”\nThat feels much better than, “Do your female/male thing now.”",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Not A Performance\nI don’t actually think of myself as especially masculine. I step into that energy when I see that a woman would appreciate it, and then it comes naturally. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nIf I have to keep checking whether I’m being “the man,” though, it stops feeling natural. Now hesitating, crying, needing help, or getting something wrong can all feel like failures of the role.\nI don’t want a woman having to keep proving femininity to me either. She doesn’t have to be soft, helpless, or cute every minute. Surrender means more when she could take control but prefers not to right then.\n“Honey, how do you see this intuitively?”\nor, “Can you help me think through the practical side for a minute?”\nThat feels much better than, “Do your female/male thing now.”",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.816258430480957,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 841,
+            "word_count": 149,
+            "token_length": 192,
+            "is_humanized": false,
+            "humanizer_score": 0.06325440853834152
+          }
+        ]
+      },
+      "section_id": "primal-not-performance-r3"
     }
   ],
   "audit_id": "romance-current-master-final-2026-08-15",
@@ -301,6 +336,20 @@
         "paid_calls_to_human": 2,
         "estimated_credits_to_human": 2,
         "first_human_measurement_key": "romance-whole-article-local-repair-r3-2026-08-15_choosing-together-r3-natural-stop"
+      },
+      {
+        "section_id": "primal-not-performance-r3",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
       }
     ]
   }
