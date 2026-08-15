@@ -73,8 +73,8 @@
     },
     "marriage-vows\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -83,10 +83,18 @@
           "text_sha256": "5003678f5bc038acf124fb56692e5fe7e3b1b15f3b6d2539a1560be1c13b0362",
           "type": "paid_post_reserved",
           "word_count": 176
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-whole-article-local-repair-r2-2026-08-15_marriage-vows-r2-expanded-context",
+          "recorded_at_utc": "2026-08-15T10:13:27.830277+00:00",
+          "text_sha256": "6caa14909183d2b4ac1709ece439e44fc9bf386654fce2acd08df68d251896c3",
+          "type": "paid_post_reserved",
+          "word_count": 308
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "marriage-vows",
       "version": "4.0"
