@@ -1486,6 +1486,46 @@
           "section_id": "tough-love-r3"
         }
       ]
+    },
+    {
+      "audit_id": "romance-current-master-final-2026-08-15",
+      "created_at_utc": "2026-08-15T10:48:20.897128+00:00",
+      "experiment_id": "romance-whole-article-local-repair-r4-2026-08-15",
+      "id": "Q-c5e579b00c741124",
+      "sections": [
+        "choosing-together-r4",
+        "tough-love-r4"
+      ],
+      "source_path": "state/experiments/romance-whole-article-local-repair-r4-2026-08-15-results.json",
+      "source_ref": "3132cf382d9722532dafcc870a885f8d58124fb5",
+      "source_sha256": "0af4a84ec6d12f032d8930c41afe20dc4fa4eb5a137c824cea8bcf731cf2f32d",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "choosing-middle-r4-a",
+          "prediction_short": "Human",
+          "section_id": "choosing-together-r4"
+        },
+        {
+          "fraction_ai": 0.13617345690727234,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.86382657289505,
+          "id": "choosing-middle-r4-b",
+          "prediction_short": "Mixed",
+          "section_id": "choosing-together-r4"
+        },
+        {
+          "fraction_ai": 0.3814159333705902,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6185840964317322,
+          "id": "tough-love-r4-fidelity-complete",
+          "prediction_short": "Mixed",
+          "section_id": "tough-love-r4"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
