@@ -1106,6 +1106,29 @@
           "section_id": "tough-love"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T06:52:12.965313+00:00",
+      "experiment_id": "romance-talk-final-combination-2026-08-15",
+      "id": "Q-fea5209bf0108142",
+      "sections": [
+        "talk-about-making-love-before-you-do-it"
+      ],
+      "source_path": "state/experiments/romance-talk-final-combination-2026-08-15-results.json",
+      "source_ref": "e97004a2e6c6abd283af742f1d5b3117a4012cc6",
+      "source_sha256": "e0d4002375d43ae9b458ba7b113b8a95cfed35929f8347fe1f3416a7f9de4d03",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "talk-final-combination",
+          "prediction_short": "AI",
+          "section_id": "talk-about-making-love-before-you-do-it"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
