@@ -177,6 +177,25 @@ def test_vows_bible_rewrite_is_spoken_and_exact() -> None:
     assert replacement in output
 
 
+def test_choosing_r4_a_authority_is_exact() -> None:
+    _, output, _ = _assemble_real()
+    winning = (
+        "Sometimes I like letting a relationship flow without naming every part.\n"
+        "The problem is when we’re both flowing along and imagining different things.\n\n"
+        "Sometimes what two people want is much more practical. They want to share a home, raise children, support "
+        "each other financially, take care of each other, maybe have sex, and not pretend all of that depends on "
+        "overwhelming romantic love. I’d call that a practical partnership."
+    )
+    old = (
+        "It conjures up for me thoughts of romance, sex, exclusivity, living together, shared money, children, caregiving, "
+        "spiritual partnership, family identity, or just “we really like each other and we’ll see.” Lack of specificity is "
+        "sometimes a nice way to flow, but the problem is that each person could be imagining a different bundle from "
+        "those pieces, then either not labeling anything or assuming one relationship label settled it."
+    )
+    assert winning in output
+    assert old not in output
+
+
 def test_locked_casual_section_is_byte_identical_to_baseline() -> None:
     baseline, output, _ = _assemble_real()
     start = "## Can Casual Sex or a Situationship Actually Be Honest?"
