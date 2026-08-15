@@ -68,11 +68,37 @@ Joel also caught `They both told me the meditations helped them a lot` as locall
 
 Do not compress repeated wording by creating a pronoun/determiner reference the reader has to reverse-engineer. In conversational prose, obvious antecedents are part of speakability.
 
+## 9. Crucible localization: explanatory aftercare can be the only red sentence in an otherwise Human section
+
+Joel manually tested the reconstructed `Are you ready for the crucible?` section and reported the section Human at high confidence except for two localized spans.
+
+The first was:
+
+> I didn’t know what a crucible was when I first came across the idea, but once I looked it up the metaphor made sense: it’s a container where things get heated until they change.
+
+Joel's own diagnosis was that the sentence likely reads AI because it merely explains the paragraph immediately before it. Editorial audit agrees: the preceding paragraph has already introduced Schnarch's Crucible Approach and the pressure/growth function. The extra definition does not change the reader's position, establish a needed premise, or answer a live question. The preferred repair is **deletion, not paraphrase**.
+
+This is another concrete instance of the existing overcompletion rule: after a sentence or paragraph has done its job, do not add a tidy explanatory gloss merely to make the metaphor feel fully unpacked.
+
+## 10. Crucible localization: do not compress several already-covered claims into a difficult summary paragraph
+
+The second localized span was the section ending:
+
+> A relationship can grow somebody who isn’t fully ready, and some wounds may not even show up until someone matters enough to activate them. Even so, “not fully ready” should still mean fairly ready, with support outside the couple. You don’t have to convince each other you’re healed, because once the relationship gets serious, the crucible is going to find out anyway.
+
+Joel judged this both AI-like and genuinely hard to understand. The paragraph tries to compress at least three thoughts already established separately: intimacy can activate hidden wounds; nobody must be perfectly healed before dating; outside support matters. Compression does not synthesize them into a clearer new claim. It instead creates an abstract qualification chain (`not fully ready` / `fairly ready`) and then adds a slogan-like crucible callback.
+
+The preferred repair is again **deletion rather than another summary rewrite**. The preceding meditation paragraph is a natural stop for the Crucible support sequence, and the next owner-final section (`Don’t make your partner your whole world`) supplies a real new question: what happens when romance causes people to abandon those supports.
+
+Durable rule: when a closing paragraph combines several already-established claims into a harder-to-parse synthesis, do not assume the section needs a summary. Check whether the next heading already supplies the transition. A clear local thought followed by the next live question is better than an abstract recap.
+
 ## Detector status
 
 Joel previously reported that the affected `Should you be in a relationship at all?` section tested 100% Human at high confidence before the newest owner edits. The new wording therefore has **not** been certified as the exact same detector boundary.
 
-For `The conversation about flaws`, Joel now reports the section as Human except for the localized tail recorded above. The exact numeric detector record was not supplied in chat and should not be invented.
+For `The conversation about flaws`, Joel reports the section as Human except for the localized tail recorded above. The exact numeric detector record was not supplied in chat and should not be invented.
+
+For `Are you ready for the crucible?`, Joel reports the current reconstructed section Human at high confidence except for the two localized spans recorded in sections 9–10. Exact numeric fractions/hash were not supplied in chat. Treat these as owner-reported localization evidence, not a complete registered detector result.
 
 No new paid Pangram call should be spent at this intermediate reconstruction stage; final detector certification remains deferred until the article reconstruction is complete.
 
