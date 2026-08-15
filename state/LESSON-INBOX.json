@@ -996,6 +996,38 @@
           "section_id": "are-you-ready-for-the-crucible"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T06:12:45.823377+00:00",
+      "experiment_id": "romance-assembly-recheck-flaws-crucible-r2-authority-rollback-2026-08-15",
+      "id": "Q-23fda8d98ce66dfa",
+      "sections": [
+        "the-conversation-about-flaws",
+        "are-you-ready-for-the-crucible"
+      ],
+      "source_path": "state/experiments/romance-assembly-recheck-flaws-crucible-r2-authority-rollback-2026-08-15-results.json",
+      "source_ref": "ac97691ba5fa69c28827088055e560457a2cf348",
+      "source_sha256": "66be472995e0771fc69559f1bcf52ed7528abb58cb9bf2048a75aa39634e80cf",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.11085601896047592,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8891440033912659,
+          "id": "flaws-authority-rollback-owner-fixes",
+          "prediction_short": "Mixed",
+          "section_id": "the-conversation-about-flaws"
+        },
+        {
+          "fraction_ai": 0.08303701877593994,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9169629812240601,
+          "id": "crucible-authority-rollback-owner-fixes-prose",
+          "prediction_short": "Human",
+          "section_id": "are-you-ready-for-the-crucible"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
