@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-whole-article-local-repair-r2-2026-08-15_tough-love-cultural-tail-r2-direct-mechanism",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.10178116708993912,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.8982188105583191,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 2,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "# Tough Love\nOne of the best books that makes this point today might be the one I was reading with K: *The Spirit of Intimacy*, by Sobonfu Somé. Somé is coming from the Dagara tribe in Burkina Faso. To her people, marriage is an arranged, ritualized spiritual and communal responsibility. They're suspicious of romance.\nBut one of her ideas fits what I’m trying to say: when two people come together, something appears between them that is larger than either person alone. She calls it the spirit of the relationship.\nI don’t think that spirit belongs to us. Nobody can command it to remain. At our best, we serve it. We tell the truth, keep doing our own inner play & work (pl/ork), ask the community for help, and listen for what the relationship is becoming. When we start thinking we own it or deserve it, that presumptuousness tends to push it away.\nMy parents agreed with Somé that community matters and that we serve Spirit. They were also not romantic, though they were loving and poly. I actually wished they were in love with each other, I guess, although I couldn't have articulated that since I didn't even have that concept at the time. Also reminiscent of Somé, they also wore rose-colored glasses and taught me that everybody was basically good. So I learned something about love and community, but not how hard romance is without a community around it, or how much damage basically good people can do when their fears, trauma, and undeveloped parts take over.\nIt took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it.\nThe dominant culture creates that environment. It seals two people off and calls that privacy, then expects one person to become lover, family, community, therapist, and future. If that little world starts rotting, we mostly call it their private failure and leave them alone inside it.\nThen we walk blindly into our first, second, third, fourth, and fifth marriages!\nSpeaking of which, I wish I’d prioritized understanding the basic fears, desires, traumas, values, strengths, and weaknesses of the women I got close to in a more conscious manner. Instead, I often went with the flow of conversation and hanging out until closeness had built itself before we had decided what it meant.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.17471513152122498,
+        "confidence": "High",
+        "end_index": 1718,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "# Tough Love\nOne of the best books that makes this point today might be the one I was reading with K: *The Spirit of Intimacy*, by Sobonfu Somé. Somé is coming from the Dagara tribe in Burkina Faso. To her people, marriage is an arranged, ritualized spiritual and communal responsibility. They're suspicious of romance.\nBut one of her ideas fits what I’m trying to say: when two people come together, something appears between them that is larger than either person alone. She calls it the spirit of the relationship.\nI don’t think that spirit belongs to us. Nobody can command it to remain. At our best, we serve it. We tell the truth, keep doing our own inner play & work (pl/ork), ask the community for help, and listen for what the relationship is becoming. When we start thinking we own it or deserve it, that presumptuousness tends to push it away.\nMy parents agreed with Somé that community matters and that we serve Spirit. They were also not romantic, though they were loving and poly. I actually wished they were in love with each other, I guess, although I couldn't have articulated that since I didn't even have that concept at the time. Also reminiscent of Somé, they also wore rose-colored glasses and taught me that everybody was basically good. So I learned something about love and community, but not how hard romance is without a community around it, or how much damage basically good people can do when their fears, trauma, and undeveloped parts take over.\nIt took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it.\nThe dominant culture creates that environment.",
+        "token_length": 364,
+        "word_count": 298
+      },
+      {
+        "ai_assistance_score": 0.7733027338981628,
+        "confidence": "High",
+        "end_index": 1958,
+        "humanizer_score": 0.0017979050753638148,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1718,
+        "text": " It seals two people off and calls that privacy, then expects one person to become lover, family, community, therapist, and future. If that little world starts rotting, we mostly call it their private failure and leave them alone inside it.",
+        "token_length": 49,
+        "word_count": 40
+      },
+      {
+        "ai_assistance_score": 0.18176908791065216,
+        "confidence": "High",
+        "end_index": 2358,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 1958,
+        "text": "\nThen we walk blindly into our first, second, third, fourth, and fifth marriages!\nSpeaking of which, I wish I’d prioritized understanding the basic fears, desires, traumas, values, strengths, and weaknesses of the women I got close to in a more conscious manner. Instead, I often went with the flow of conversation and hanging out until closeness had built itself before we had decided what it meant.",
+        "token_length": 85,
+        "word_count": 66
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "91cc73d9-0d18-44a5-b780-285a5d0d1ee5",
   "text": "# Tough Love\n\nOne of the best books that makes this point today might be the one I was reading with K: *The Spirit of Intimacy*, by Sobonfu Somé. Somé is coming from the Dagara tribe in Burkina Faso. To her people, marriage is an arranged, ritualized spiritual and communal responsibility. They're suspicious of romance.\n\nBut one of her ideas fits what I’m trying to say: when two people come together, something appears between them that is larger than either person alone. She calls it the spirit of the relationship.\n\nI don’t think that spirit belongs to us. Nobody can command it to remain. At our best, we serve it. We tell the truth, keep doing our own inner play & work (pl/ork), ask the community for help, and listen for what the relationship is becoming. When we start thinking we own it or deserve it, that presumptuousness tends to push it away.\n\nMy parents agreed with Somé that community matters and that we serve Spirit. They were also not romantic, though they were loving and poly. I actually wished they were in love with each other, I guess, although I couldn't have articulated that since I didn't even have that concept at the time. Also reminiscent of Somé, they also wore rose-colored glasses and taught me that everybody was basically good. So I learned something about love and community, but not how hard romance is without a community around it, or how much damage basically good people can do when their fears, trauma, and undeveloped parts take over.\n\nIt took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it.\n\nThe dominant culture creates that environment. It seals two people off and calls that privacy, then expects one person to become lover, family, community, therapist, and future. If that little world starts rotting, we mostly call it their private failure and leave them alone inside it.\n\nThen we walk blindly into our first, second, third, fourth, and fifth marriages!\n\nSpeaking of which, I wish I’d prioritized understanding the basic fears, desires, traumas, values, strengths, and weaknesses of the women I got close to in a more conscious manner. Instead, I often went with the flow of conversation and hanging out until closeness had built itself before we had decided what it meant.",
   "text_sha256": "aae6c378193924e744b0e9511ae0fbc28414e284bd6d3d4128717d9e8f2a416c",
-  "updated_utc": "2026-08-15T10:13:34.909918+00:00"
+  "updated_utc": "2026-08-15T10:13:35.972199+00:00"
 }
