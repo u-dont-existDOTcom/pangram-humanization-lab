@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "article-specific",
+  "finding": "The exact 480-word Romance love section ending at ‘I don't get to be shocked if she wants me less.’ passed Pangram 4.0 at 100% Human, 0% AI, and 0% AI-assisted after deleting the detector-red duplicate durability tail.",
+  "ledger_entry_ids": [
+    "L-42ab0c8b78-01"
+  ],
+  "processed_at_utc": "2026-08-15T05:55:23.225879+00:00",
+  "promoted_to": [],
+  "reason": "This certifies the exact current section boundary only. It supports existing stopping-point and duplicate-routing lessons but is not a new universal detector rule or full-article certification.",
   "request_id": "romance-love-section-retest-r2-truncate-2026-08-15",
+  "schema_version": 1,
   "source_path": "state/experiments/romance-love-section-retest-r2-truncate-2026-08-15-results.json",
   "source_ref": "eed472fc1f9164081b89ce200079d553169fd3ef",
   "source_sha256": "42ab0c8b78952c66c9c44ae33c48e2655121434ff2bc6cc1fe36b6c1d75f3af7",
-  "finding": "The exact 480-word Romance love section ending at ‘I don't get to be shocked if she wants me less.’ passed Pangram 4.0 at 100% Human, 0% AI, and 0% AI-assisted after deleting the detector-red duplicate durability tail.",
-  "disposition": "article-specific",
-  "reason": "This certifies the exact current section boundary only. It supports existing stopping-point and duplicate-routing lessons but is not a new universal detector rule or full-article certification.",
-  "promoted_to": []
+  "status": "processed"
 }

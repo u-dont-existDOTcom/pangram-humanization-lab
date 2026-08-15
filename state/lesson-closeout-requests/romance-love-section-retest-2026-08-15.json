@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "The reconstructed Romance love section measured Mixed because a 108-word final tail was AI-labeled while the preceding 480 words were High-confidence Human; the tail extended into a durability/future-form conclusion already handled more naturally by a downstream owner-final section.",
+  "ledger_entry_ids": [
+    "L-606ac34c52-01"
+  ],
+  "processed_at_utc": "2026-08-15T05:55:23.218134+00:00",
+  "promoted_to": [],
+  "reason": "This is strong supporting evidence for already-promoted rules on real stopping points, overcompletion, and deleting or routing duplicate miniature arguments rather than paraphrasing them again.",
   "request_id": "romance-love-section-retest-2026-08-15",
+  "schema_version": 1,
   "source_path": "state/experiments/romance-love-section-retest-2026-08-15-results.json",
   "source_ref": "ae55759c64333fa3828b338f63e10c8e8df65276",
   "source_sha256": "606ac34c525485864312d1650450fa4f172b0e20bb71a06e655c6d111f413c3f",
-  "finding": "The reconstructed Romance love section measured Mixed because a 108-word final tail was AI-labeled while the preceding 480 words were High-confidence Human; the tail extended into a durability/future-form conclusion already handled more naturally by a downstream owner-final section.",
-  "disposition": "no-new-lesson",
-  "reason": "This is strong supporting evidence for already-promoted rules on real stopping points, overcompletion, and deleting or routing duplicate miniature arguments rather than paraphrasing them again.",
-  "promoted_to": []
+  "status": "processed"
 }

@@ -378,6 +378,28 @@
       "source_path": "state/experiments/spiritual-bypassing-full-r29-fidelity-final-2026-08-14-results.json",
       "source_ref": "8989a56cbe3add10563e6523c7d45e5362477524",
       "source_sha256": "10cd1444cd200d2cbe235d598ac63b81d06f6aaa7aab5f9b41710332b33aa08a"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The reconstructed Romance love section measured Mixed because a 108-word final tail was AI-labeled while the preceding 480 words were High-confidence Human; the tail extended into a durability/future-form conclusion already handled more naturally by a downstream owner-final section.",
+      "id": "L-606ac34c52-01",
+      "promoted_to": [],
+      "reason": "This is strong supporting evidence for already-promoted rules on real stopping points, overcompletion, and deleting or routing duplicate miniature arguments rather than paraphrasing them again.",
+      "recorded_at_utc": "2026-08-15T05:55:23.216992+00:00",
+      "source_path": "state/experiments/romance-love-section-retest-2026-08-15-results.json",
+      "source_ref": "ae55759c64333fa3828b338f63e10c8e8df65276",
+      "source_sha256": "606ac34c525485864312d1650450fa4f172b0e20bb71a06e655c6d111f413c3f"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The exact 480-word Romance love section ending at ‘I don't get to be shocked if she wants me less.’ passed Pangram 4.0 at 100% Human, 0% AI, and 0% AI-assisted after deleting the detector-red duplicate durability tail.",
+      "id": "L-42ab0c8b78-01",
+      "promoted_to": [],
+      "reason": "This certifies the exact current section boundary only. It supports existing stopping-point and duplicate-routing lessons but is not a new universal detector rule or full-article certification.",
+      "recorded_at_utc": "2026-08-15T05:55:23.224980+00:00",
+      "source_path": "state/experiments/romance-love-section-retest-r2-truncate-2026-08-15-results.json",
+      "source_ref": "eed472fc1f9164081b89ce200079d553169fd3ef",
+      "source_sha256": "42ab0c8b78952c66c9c44ae33c48e2655121434ff2bc6cc1fe36b6c1d75f3af7"
     }
   ],
   "schema_version": 1
