@@ -1183,6 +1183,37 @@
           "section_id": "talk-about-making-love-before-you-do-it"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T07:00:57.630451+00:00",
+      "experiment_id": "romance-talk-fresh-final-2026-08-15",
+      "id": "Q-d1b3c3ef0dd7f887",
+      "sections": [
+        "talk-about-making-love-before-you-do-it"
+      ],
+      "source_path": "state/experiments/romance-talk-fresh-final-2026-08-15-results.json",
+      "source_ref": "fcb94849f197e823b9dcc02c356b30220ec4f2a1",
+      "source_sha256": "994e7516beaa05a31cd87e08644d5755cffd608d02008738c2f25e44dfbf97a3",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "fresh-talk-body",
+          "prediction_short": "AI",
+          "section_id": "talk-about-making-love-before-you-do-it"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "fresh-definition-first-combination",
+          "prediction_short": "AI",
+          "section_id": "talk-about-making-love-before-you-do-it"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
