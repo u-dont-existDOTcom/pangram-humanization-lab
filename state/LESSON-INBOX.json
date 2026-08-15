@@ -918,6 +918,29 @@
           "section_id": "talk-and-slow"
         }
       ]
+    },
+    {
+      "audit_id": "romance-love-section-retest-2026-08-15",
+      "created_at_utc": "2026-08-15T05:51:06.430361+00:00",
+      "experiment_id": "romance-love-section-retest-2026-08-15",
+      "id": "Q-6019e85988309441",
+      "sections": [
+        "what-we-mean-by-love"
+      ],
+      "source_path": "state/experiments/romance-love-section-retest-2026-08-15-results.json",
+      "source_ref": "ae55759c64333fa3828b338f63e10c8e8df65276",
+      "source_sha256": "606ac34c525485864312d1650450fa4f172b0e20bb71a06e655c6d111f413c3f",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.18367347121238708,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8163265585899353,
+          "id": "current-reconstructed-after-owner-fixes",
+          "prediction_short": "Mixed",
+          "section_id": "what-we-mean-by-love"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
