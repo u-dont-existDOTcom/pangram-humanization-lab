@@ -247,9 +247,7 @@ I’ve learned to get nervous when somebody knows too much about me too soon. We
 
 I still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.
 
-If she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.
-
-Seeing someone’s highest potential is different from ignoring what is actually there. You can see something in a person before she fully lives it, but then you have to ask her:
+If she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine. You can see something in a person before she fully lives it, but then you have to ask her:
 
 “I see this in you, and I think it’s special. Do you wanna reach for it together?”
 
