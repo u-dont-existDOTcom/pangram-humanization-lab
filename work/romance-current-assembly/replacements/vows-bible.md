@@ -1,0 +1,3 @@
+We also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 says it is better not to make a vow than to make one and fail to keep it. If you tell the priest you didn’t mean what you promised, the passage warns that God will be angry and destroy your work.
+
+Matthew 5:33–37 and James 5:12 are stranger still beside wedding vows: let your “Yes” be “Yes” and your “No” be “No,” and anything beyond that comes from evil. To me, the extra promise itself starts to look suspicious. If your yes is trustworthy, why does it need another layer?
