@@ -941,6 +941,29 @@
           "section_id": "what-we-mean-by-love"
         }
       ]
+    },
+    {
+      "audit_id": "romance-love-section-retest-2026-08-15",
+      "created_at_utc": "2026-08-15T05:53:21.285416+00:00",
+      "experiment_id": "romance-love-section-retest-r2-truncate-2026-08-15",
+      "id": "Q-7cbeac9cb5dc4714",
+      "sections": [
+        "what-we-mean-by-love"
+      ],
+      "source_path": "state/experiments/romance-love-section-retest-r2-truncate-2026-08-15-results.json",
+      "source_ref": "eed472fc1f9164081b89ce200079d553169fd3ef",
+      "source_sha256": "42ab0c8b78952c66c9c44ae33c48e2655121434ff2bc6cc1fe36b6c1d75f3af7",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "truncate-at-natural-stop",
+          "prediction_short": "Human",
+          "section_id": "what-we-mean-by-love"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
