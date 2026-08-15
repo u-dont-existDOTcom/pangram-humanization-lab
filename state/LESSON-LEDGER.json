@@ -444,6 +444,39 @@
       "source_path": "state/ROMANCE-CLOSING-OWNER-PREFERRED-2026-08-15.md",
       "source_ref": "agent/romance-closing-owner-candidate-2026-08-15",
       "source_sha256": "e7cc77ebddf40635535bd0c81072ba69309997dedc01e201a842a4d7f4b5a368"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The first exact post-edit recheck showed Flaws at 88.9% Human and Crucible at 63.9% Human, with the remaining detector signal concentrated in assistant-reconstructed wording rather than newly missing authorial claims.",
+      "id": "L-c0e4f8bef0-01",
+      "promoted_to": [],
+      "reason": "This is supporting evidence for already-promoted owner-authority rollback, local-function repair, and detector-secondary rules; it does not establish a new detector mechanism.",
+      "recorded_at_utc": "2026-08-15T06:23:37.152219+00:00",
+      "source_path": "state/experiments/romance-assembly-recheck-flaws-crucible-2026-08-15-results.json",
+      "source_ref": "48d60eab453e375224c0f1126e8119413f675649",
+      "source_sha256": "c0e4f8bef0f2ebc2c6d670734963275c61c90449658413212660e1355b8a15ab"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Rolling Crucible back toward the higher-authority earlier realization while preserving Joel's actual corrections raised the boundary from 63.9% to 91.7% Human and removed the AI-assisted tail; Flaws retained one narrow unresolved function window.",
+      "id": "L-66be472995-01",
+      "promoted_to": [],
+      "reason": "This strongly confirms the already-promoted rule that a detector pass should restore owner/source authority and localize only the remaining interaction rather than retain broader assistant rewriting.",
+      "recorded_at_utc": "2026-08-15T06:23:37.160374+00:00",
+      "source_path": "state/experiments/romance-assembly-recheck-flaws-crucible-r2-authority-rollback-2026-08-15-results.json",
+      "source_ref": "ac97691ba5fa69c28827088055e560457a2cf348",
+      "source_sha256": "66be472995e0771fc69559f1bcf52ed7528abb58cb9bf2048a75aa39634e80cf"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "After authority rollback and narrow conversational re-realization of only the remaining unique functions, the exact Flaws prose boundary and Crucible prose boundary each passed Pangram 4.0 at 100% Human, 0% AI, and 0% AI-assisted.",
+      "id": "L-b3b1fb4639-01",
+      "promoted_to": [],
+      "reason": "This certifies these current Romance section prose boundaries only. It supports existing lessons on owner-authority rollback, function-preserving local repair, and speakability but does not create a new universal detector rule. Crucible's native Substack preview remains to be included in later reader-visible full-article certification.",
+      "recorded_at_utc": "2026-08-15T06:23:37.168261+00:00",
+      "source_path": "state/experiments/romance-assembly-recheck-flaws-crucible-r3-local-functions-2026-08-15-results.json",
+      "source_ref": "e3b07ac4eb0c3be50f65f9f2a104e6308a84d655",
+      "source_sha256": "b3b1fb4639ad6d6a3aaabd1bc120807a617df449360044f3455abccf9cdfd7c6"
     }
   ],
   "schema_version": 1
