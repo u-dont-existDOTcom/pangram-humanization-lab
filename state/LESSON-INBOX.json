@@ -1237,6 +1237,29 @@
           "section_id": "opening-plus-what-we-mean-by-love"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T07:19:54.204746+00:00",
+      "experiment_id": "romance-casual-current-assembly-2026-08-15",
+      "id": "Q-4659881c3c86eb15",
+      "sections": [
+        "can-casual-sex-or-a-situationship-actually-be-honest"
+      ],
+      "source_path": "state/experiments/romance-casual-current-assembly-2026-08-15-results.json",
+      "source_ref": "01ec8ba179e07808fd9a25fd3e6b77d56c4b12f9",
+      "source_sha256": "4a0a8c8a670ec8deb9e192142130949b5bc4f9d034789a6f965b42c6ee185b03",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.03801169618964195,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9619883298873901,
+          "id": "casual-current-assembly",
+          "prediction_short": "Human",
+          "section_id": "can-casual-sex-or-a-situationship-actually-be-honest"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
