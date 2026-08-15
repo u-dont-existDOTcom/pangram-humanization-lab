@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import hashlib
+import json
+import subprocess
+import sys
 from pathlib import Path
 
 from scripts.render_reader_visible import reader_visible_text
@@ -7,6 +11,7 @@ from scripts.render_reader_visible import reader_visible_text
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CURRENT_MASTER = PROJECT_ROOT / "work" / "romance-current-assembly" / "current-master.md"
+SCRIPT = PROJECT_ROOT / "scripts" / "render_reader_visible.py"
 
 
 def test_reader_visible_text_strips_source_markup_and_keeps_visible_labels() -> None:
@@ -71,3 +76,34 @@ def test_current_romance_visible_boundary_has_expected_edges_and_no_source_marku
     assert "http://" not in visible
     assert "%%share_url%%" not in visible
     assert "%%checkout_url%%" not in visible
+
+
+def test_cli_visible_hash_matches_literal_output_bytes(tmp_path: Path) -> None:
+    source = tmp_path / "source.md"
+    output = tmp_path / "visible.txt"
+    manifest = tmp_path / "visible.json"
+    source.write_text("# Heading\n\nRead [this](https://example.com).\n", encoding="utf-8")
+
+    proc = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--input",
+            str(source),
+            "--output",
+            str(output),
+            "--manifest",
+            str(manifest),
+        ],
+        cwd=PROJECT_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    assert proc.returncode == 0, proc.stderr
+    literal = output.read_bytes()
+    manifest_obj = json.loads(manifest.read_text(encoding="utf-8"))
+    assert literal == b"Heading Read this."
+    assert manifest_obj["visible_bytes"] == len(literal)
+    assert manifest_obj["visible_sha256"] == hashlib.sha256(literal).hexdigest()
