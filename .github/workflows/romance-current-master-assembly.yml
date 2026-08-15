@@ -6,6 +6,7 @@ on:
       - agent/romance-current-master-assembly-2026-08-15
     paths:
       - scripts/assemble_romance_current.py
+      - scripts/render_reader_visible.py
       - work/romance-current-assembly/baseline.md
       - work/romance-current-assembly/assembly-spec.json
       - work/romance-current-assembly/replacements/**
@@ -32,10 +33,13 @@ jobs:
       - name: Install test dependencies
         run: python -m pip install -q -e '.[test]'
 
-      - name: Verify assembly tests
-        run: python -m pytest tests/test_romance_current_assembly.py -q
+      - name: Verify assembly and visible-boundary tests
+        run: |
+          python -m pytest \
+            tests/test_romance_current_assembly.py \
+            tests/test_reader_visible_romance.py -q
 
-      - name: Materialize exact current master
+      - name: Materialize exact current master and reader-visible boundary
         run: |
           python scripts/assemble_romance_current.py \
             --baseline work/romance-current-assembly/baseline.md \
@@ -43,23 +47,35 @@ jobs:
             --output work/romance-current-assembly/current-master.md \
             --manifest work/romance-current-assembly/assembly-manifest.json \
             --diff work/romance-current-assembly/current-master.diff
+          python scripts/render_reader_visible.py \
+            --input work/romance-current-assembly/current-master.md \
+            --output work/romance-current-assembly/reader-visible.txt \
+            --manifest work/romance-current-assembly/reader-visible-manifest.json
 
       - name: Prove deterministic second materialization
         run: |
           sha256sum \
             work/romance-current-assembly/current-master.md \
             work/romance-current-assembly/assembly-manifest.json \
-            work/romance-current-assembly/current-master.diff > /tmp/first.sha256
+            work/romance-current-assembly/current-master.diff \
+            work/romance-current-assembly/reader-visible.txt \
+            work/romance-current-assembly/reader-visible-manifest.json > /tmp/first.sha256
           python scripts/assemble_romance_current.py \
             --baseline work/romance-current-assembly/baseline.md \
             --spec work/romance-current-assembly/assembly-spec.json \
             --output work/romance-current-assembly/current-master.md \
             --manifest work/romance-current-assembly/assembly-manifest.json \
             --diff work/romance-current-assembly/current-master.diff
+          python scripts/render_reader_visible.py \
+            --input work/romance-current-assembly/current-master.md \
+            --output work/romance-current-assembly/reader-visible.txt \
+            --manifest work/romance-current-assembly/reader-visible-manifest.json
           sha256sum \
             work/romance-current-assembly/current-master.md \
             work/romance-current-assembly/assembly-manifest.json \
-            work/romance-current-assembly/current-master.diff > /tmp/second.sha256
+            work/romance-current-assembly/current-master.diff \
+            work/romance-current-assembly/reader-visible.txt \
+            work/romance-current-assembly/reader-visible-manifest.json > /tmp/second.sha256
           diff -u /tmp/first.sha256 /tmp/second.sha256
 
       - name: Commit only generated artifacts
@@ -69,10 +85,12 @@ jobs:
           git add \
             work/romance-current-assembly/current-master.md \
             work/romance-current-assembly/assembly-manifest.json \
-            work/romance-current-assembly/current-master.diff
+            work/romance-current-assembly/current-master.diff \
+            work/romance-current-assembly/reader-visible.txt \
+            work/romance-current-assembly/reader-visible-manifest.json
           if git diff --cached --quiet; then
             echo "Generated artifacts already current."
             exit 0
           fi
-          git commit -m "state: materialize current Romance master"
+          git commit -m "state: materialize current Romance master and visible boundary"
           git push origin HEAD:agent/romance-current-master-assembly-2026-08-15
