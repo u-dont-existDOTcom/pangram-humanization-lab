@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-whole-article-local-repair-r3-2026-08-15_tough-love-r3-dominant-culture-mechanism",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "It took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it.\nThe dominant culture creates that environment. It seals two people together and calls that privacy. Then one person is expected to become lover, family, community, therapist, and future, while whatever damage happens between them is treated as a private failure.\nThen we walk blindly into our first, second, third, fourth, and fifth marriages!\nSpeaking of which, I wish I’d prioritized understanding the basic fears, desires, traumas, values, strengths, and weaknesses of the women I got close to in a more conscious manner. Instead, I often went with the flow of conversation and hanging out until closeness had built itself before we had decided what it meant.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.21456056833267212,
+        "confidence": "High",
+        "end_index": 858,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "It took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it.\nThe dominant culture creates that environment. It seals two people together and calls that privacy. Then one person is expected to become lover, family, community, therapist, and future, while whatever damage happens between them is treated as a private failure.\nThen we walk blindly into our first, second, third, fourth, and fifth marriages!\nSpeaking of which, I wish I’d prioritized understanding the basic fears, desires, traumas, values, strengths, and weaknesses of the women I got close to in a more conscious manner. Instead, I often went with the flow of conversation and hanging out until closeness had built itself before we had decided what it meant.",
+        "token_length": 171,
+        "word_count": 139
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "6a91d9a1-d81f-4521-819b-cdb9b69d80d8",
   "text": "It took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it.\n\nThe dominant culture creates that environment. It seals two people together and calls that privacy. Then one person is expected to become lover, family, community, therapist, and future, while whatever damage happens between them is treated as a private failure.\n\nThen we walk blindly into our first, second, third, fourth, and fifth marriages!\n\nSpeaking of which, I wish I’d prioritized understanding the basic fears, desires, traumas, values, strengths, and weaknesses of the women I got close to in a more conscious manner. Instead, I often went with the flow of conversation and hanging out until closeness had built itself before we had decided what it meant.",
   "text_sha256": "d25647ae0cf2cbb71f52c55b8f36f3b019166b7dd0452ef63eac73bc097acb85",
-  "updated_utc": "2026-08-15T10:34:58.867922+00:00"
+  "updated_utc": "2026-08-15T10:35:00.131798+00:00"
 }
