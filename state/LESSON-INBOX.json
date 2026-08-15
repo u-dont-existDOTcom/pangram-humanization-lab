@@ -1526,6 +1526,54 @@
           "section_id": "tough-love-r4"
         }
       ]
+    },
+    {
+      "audit_id": "romance-current-master-final-2026-08-15",
+      "created_at_utc": "2026-08-15T11:25:12.836283+00:00",
+      "experiment_id": "romance-whole-article-local-repair-r5-2026-08-15",
+      "id": "Q-a4a3fcb86997fef6",
+      "sections": [
+        "primal-desire-performance",
+        "tough-love-cultural-tail"
+      ],
+      "source_path": "state/experiments/romance-whole-article-local-repair-r5-2026-08-15-results.json",
+      "source_ref": "c14cccca3da104730403377f0cc6e4c6540e8bcc",
+      "source_sha256": "ccd47f1f4ec12d9869862f8d0e4647bca0e36fa4be849ff61e387698b12da732",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.6884688138961792,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.3115311861038208,
+          "id": "primal-not-performance-r5-a",
+          "prediction_short": "Mixed",
+          "section_id": "primal-desire-performance"
+        },
+        {
+          "fraction_ai": 0.3371298313140869,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6628701686859131,
+          "id": "primal-not-performance-r5-b",
+          "prediction_short": "Mixed",
+          "section_id": "primal-desire-performance"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "tough-love-r5-a",
+          "prediction_short": "Human",
+          "section_id": "tough-love-cultural-tail"
+        },
+        {
+          "fraction_ai": 0.4130982458591461,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.5869017839431763,
+          "id": "tough-love-r5-b",
+          "prediction_short": "Mixed",
+          "section_id": "tough-love-cultural-tail"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
