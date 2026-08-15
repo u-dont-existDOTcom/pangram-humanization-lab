@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-whole-article-local-repair-r3-2026-08-15_choosing-together-r3-natural-stop",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "What are you actually choosing together?\nA lot of romantic pain starts with two lovey bunnies entering one of the biggest arrangements of their lives without ever discussing their ideas, dreams, and fears about it.\n“We’re together” ... what does that mean exactly? I can hear a whole future in those two words—sex, exclusivity, living together, money, children, caregiving—while she may only mean that we really like each other and want to see what happens. Sometimes I like letting a relationship flow without naming every part. I just don’t want us to discover later that we were silently agreeing to different things.\nOne honest option is basically a “practical partnership.” Two people may share a home, raise children, support each other financially, take care of each other, and maybe have sex without pretending the whole thing rests on overwhelming romantic love. That feels wrong to me because I’ve been in love, but I don’t think there’s anything inherently wrong with it if both people know that’s what they’re doing. What would scare me is one of them meeting a heartthrob at work or church one day and suddenly wondering why they settled for less.\nAnother honest option is a romance with humility, even if romance and humility seem to clash. Two people really are in love and want to build something together. They can choose exclusivity, shack up, have children, and plan a life without pretending they can guarantee what either heart will feel ten years later.\nMy actual ideal is to have intimacy embedded in community.\nObviously most people are not going to live in a free-love community unless we really have a New Earth soon. But, as Pema Chodron says to prisoners when teaching them meditation, “Start Where You Are.” Build mutual friendships, and keep other sources of meaning and support alive.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.26615792512893677,
+        "confidence": "High",
+        "end_index": 1815,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "What are you actually choosing together?\nA lot of romantic pain starts with two lovey bunnies entering one of the biggest arrangements of their lives without ever discussing their ideas, dreams, and fears about it.\n“We’re together” ... what does that mean exactly? I can hear a whole future in those two words—sex, exclusivity, living together, money, children, caregiving—while she may only mean that we really like each other and want to see what happens. Sometimes I like letting a relationship flow without naming every part. I just don’t want us to discover later that we were silently agreeing to different things.\nOne honest option is basically a “practical partnership.” Two people may share a home, raise children, support each other financially, take care of each other, and maybe have sex without pretending the whole thing rests on overwhelming romantic love. That feels wrong to me because I’ve been in love, but I don’t think there’s anything inherently wrong with it if both people know that’s what they’re doing. What would scare me is one of them meeting a heartthrob at work or church one day and suddenly wondering why they settled for less.\nAnother honest option is a romance with humility, even if romance and humility seem to clash. Two people really are in love and want to build something together. They can choose exclusivity, shack up, have children, and plan a life without pretending they can guarantee what either heart will feel ten years later.\nMy actual ideal is to have intimacy embedded in community.\nObviously most people are not going to live in a free-love community unless we really have a New Earth soon. But, as Pema Chodron says to prisoners when teaching them meditation, “Start Where You Are.” Build mutual friendships, and keep other sources of meaning and support alive.",
+        "token_length": 373,
+        "word_count": 304
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "f078049c-bf0b-41a4-9ee1-4f3e24019ea6",
   "text": "What are you actually choosing together?\n\nA lot of romantic pain starts with two lovey bunnies entering one of the biggest arrangements of their lives without ever discussing their ideas, dreams, and fears about it.\n\n“We’re together” ... what does that mean exactly? I can hear a whole future in those two words—sex, exclusivity, living together, money, children, caregiving—while she may only mean that we really like each other and want to see what happens. Sometimes I like letting a relationship flow without naming every part. I just don’t want us to discover later that we were silently agreeing to different things.\n\nOne honest option is basically a “practical partnership.” Two people may share a home, raise children, support each other financially, take care of each other, and maybe have sex without pretending the whole thing rests on overwhelming romantic love. That feels wrong to me because I’ve been in love, but I don’t think there’s anything inherently wrong with it if both people know that’s what they’re doing. What would scare me is one of them meeting a heartthrob at work or church one day and suddenly wondering why they settled for less.\n\nAnother honest option is a romance with humility, even if romance and humility seem to clash. Two people really are in love and want to build something together. They can choose exclusivity, shack up, have children, and plan a life without pretending they can guarantee what either heart will feel ten years later.\n\nMy actual ideal is to have intimacy embedded in community.\n\nObviously most people are not going to live in a free-love community unless we really have a New Earth soon. But, as Pema Chodron says to prisoners when teaching them meditation, “Start Where You Are.” Build mutual friendships, and keep other sources of meaning and support alive.",
   "text_sha256": "37eae2166630d1e8ff47b30e178dc430012c516a33d114a4f969057527b34bb7",
-  "updated_utc": "2026-08-15T10:34:47.651644+00:00"
+  "updated_utc": "2026-08-15T10:34:48.952988+00:00"
 }
