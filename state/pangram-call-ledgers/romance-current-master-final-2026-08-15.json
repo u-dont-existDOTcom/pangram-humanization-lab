@@ -197,8 +197,8 @@
     },
     "primal-desire-performance\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "estimated_credits": 1,
@@ -223,10 +223,18 @@
           "text_sha256": "1f6e7492bded37dea3b5fd1ea8b4f4f6e105d794fcda97c78c19cba53ee86a33",
           "type": "paid_post_reserved",
           "word_count": 481
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-whole-article-local-repair-r5-2026-08-15_primal-not-performance-r5-b",
+          "recorded_at_utc": "2026-08-15T11:25:01.442898+00:00",
+          "text_sha256": "5771fb6df020c273f7514125d6113d32c7f7001898beb51f84ae9a8000cf518a",
+          "type": "paid_post_reserved",
+          "word_count": 479
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "primal-desire-performance",
       "version": "4.0"
