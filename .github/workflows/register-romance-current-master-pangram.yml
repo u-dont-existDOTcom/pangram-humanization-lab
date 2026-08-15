@@ -87,6 +87,7 @@ jobs:
 
           BASE_SHA="$(git rev-parse HEAD^)"
           HEAD_SHA="$(git rev-parse HEAD)"
-          python scripts/validate_paid_push.py --base "$BASE_SHA" --head "$HEAD_SHA"
+          PYTHONPATH="/tmp/pangram-final-registration/src:/tmp/pangram-final-registration" \
+            python scripts/validate_paid_push.py --base "$BASE_SHA" --head "$HEAD_SHA"
 
           git push origin HEAD:automation/pangram-fixed-batch
