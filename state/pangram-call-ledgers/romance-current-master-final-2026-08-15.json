@@ -81,8 +81,8 @@
     },
     "choosing-together-r4\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -91,10 +91,18 @@
           "text_sha256": "458ce1dc4966fdc20e6e025f4d6492d9e66a4ba1c387efdfaa6ce3cbc661e163",
           "type": "paid_post_reserved",
           "word_count": 454
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-whole-article-local-repair-r4-2026-08-15_choosing-middle-r4-b",
+          "recorded_at_utc": "2026-08-15T10:48:10.993376+00:00",
+          "text_sha256": "13641abbc971d56aefabc938732b9b4d79e5357eb258fa9fd2248f9e5c8ef8b4",
+          "type": "paid_post_reserved",
+          "word_count": 451
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "choosing-together-r4",
       "version": "4.0"
