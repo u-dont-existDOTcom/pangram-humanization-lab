@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -11,6 +13,7 @@ from scripts.assemble_romance_current import AssemblyError, apply_operations
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 WORK_ROOT = PROJECT_ROOT / "work" / "romance-current-assembly"
+SCRIPT = PROJECT_ROOT / "scripts" / "assemble_romance_current.py"
 
 
 def _write(root: Path, rel: str, text: str) -> str:
@@ -162,3 +165,63 @@ def test_untouched_prefix_before_share_and_native_button_survive() -> None:
     assert output[: output.index(share)] == baseline[: baseline.index(share)]
     assert button in baseline
     assert output.endswith(button + "\n") or output.endswith(button)
+
+
+def test_cli_materializes_output_manifest_and_diff(tmp_path: Path) -> None:
+    baseline = tmp_path / "baseline.md"
+    replacement = tmp_path / "replacement.md"
+    spec = tmp_path / "spec.json"
+    output = tmp_path / "current.md"
+    manifest = tmp_path / "manifest.json"
+    diff = tmp_path / "current.diff"
+
+    baseline.write_text("A OLD B\n", encoding="utf-8")
+    replacement.write_text("NEW", encoding="utf-8")
+    spec.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "operations": [
+                    {
+                        "id": "replace",
+                        "type": "replace_exact",
+                        "old": "OLD",
+                        "replacement_file": "replacement.md",
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    proc = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--baseline",
+            str(baseline),
+            "--spec",
+            str(spec),
+            "--output",
+            str(output),
+            "--manifest",
+            str(manifest),
+            "--diff",
+            str(diff),
+        ],
+        cwd=PROJECT_ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+
+    assert proc.returncode == 0, proc.stderr
+    assert output.read_text(encoding="utf-8") == "A NEW B\n"
+    manifest_obj = json.loads(manifest.read_text(encoding="utf-8"))
+    assert manifest_obj["baseline_sha256"] == _sha("A OLD B\n")
+    assert manifest_obj["final_sha256"] == _sha("A NEW B\n")
+    assert manifest_obj["operation_count"] == 1
+    assert manifest_obj["operations"][0]["id"] == "replace"
+    diff_text = diff.read_text(encoding="utf-8")
+    assert "-A OLD B" in diff_text
+    assert "+A NEW B" in diff_text
