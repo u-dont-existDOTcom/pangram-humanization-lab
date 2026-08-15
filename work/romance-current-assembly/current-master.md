@@ -683,7 +683,9 @@ These are just a few questions I could think of to start the ball rolling, but b
 
 Conventional marriage vows are dishonest, and most people know it. You can't promise how you'll feel in the future. You can promise actions if you really believe you're capable of delivering them. So for example, you could promise to tell the truth, to keep showing up, to support the children, or whatever else you genuinely believe you can do.
 
-We also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 explicitly states that it is better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, "I didn’t mean what I promised." It's also interesting that promising itself is almost an indicator of dishonesty: Matthew 5:33–37 (and parallel James 5:12) teaches that believers should let their "Yes" be "Yes" and their "No" be "No," warning that anything beyond this comes from evil.
+We also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 says it is better not to make a vow than to make one and fail to keep it. If you tell the priest you didn’t mean what you promised, the passage warns that God will be angry and destroy your work.
+
+Matthew 5:33–37 and James 5:12 are stranger still beside wedding vows: let your “Yes” be “Yes” and your “No” be “No,” and anything beyond that comes from evil. To me, the extra promise itself starts to look suspicious. If your yes is trustworthy, why does it need another layer?
 
 Where did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.
 
