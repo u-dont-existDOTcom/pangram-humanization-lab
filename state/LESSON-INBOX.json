@@ -1214,6 +1214,29 @@
           "section_id": "talk-about-making-love-before-you-do-it"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T07:16:40.670371+00:00",
+      "experiment_id": "romance-opening-plus-love-current-2026-08-15",
+      "id": "Q-e6a13d6673feb617",
+      "sections": [
+        "opening-plus-what-we-mean-by-love"
+      ],
+      "source_path": "state/experiments/romance-opening-plus-love-current-2026-08-15-results.json",
+      "source_ref": "196c03cefe8ba90d7d492870647a1f631f92c9c0",
+      "source_sha256": "843f7c054c9a9173eeadc0fd3cd761dbc0d3cda8e14f9697fe5fdd8dee7a6778",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "opening-plus-love-current",
+          "prediction_short": "Human",
+          "section_id": "opening-plus-what-we-mean-by-love"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
