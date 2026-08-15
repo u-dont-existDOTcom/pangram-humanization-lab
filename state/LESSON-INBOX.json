@@ -1597,6 +1597,29 @@
           "section_id": "talk-and-slow"
         }
       ]
+    },
+    {
+      "audit_id": "romance-authorial-recovery-2026-08-14",
+      "created_at_utc": "2026-08-15T23:09:51.153509+00:00",
+      "experiment_id": "romance-authorial-recovery-r33-live-mismatch-2026-08-15",
+      "id": "Q-58f1982d6c068ff6",
+      "sections": [
+        "talk-and-slow"
+      ],
+      "source_path": "state/experiments/romance-authorial-recovery-r33-live-mismatch-2026-08-15-results.json",
+      "source_ref": "f5b66ee95ed9061c5966528d0b22ca9f3e25d7da",
+      "source_sha256": "dd6a9e58a45cf0cd5f826f5bf1a5996ac7593b057edcbe74f90d9761dd997436",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.3986368477344513,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6013631820678711,
+          "id": "TALK_AND_SLOW_R33_LIVE_MISMATCH",
+          "prediction_short": "Mixed",
+          "section_id": "talk-and-slow"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
