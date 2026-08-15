@@ -1,0 +1,27 @@
+{
+  "audit_id": "romance-assembly-recheck-2026-08-15",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "the-conversation-about-flaws\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-assembly-recheck-flaws-crucible-2026-08-15_flaws-current-corrected",
+          "recorded_at_utc": "2026-08-15T06:08:36.893024+00:00",
+          "text_sha256": "e8970256f2ee928a2b69a02a06125cd72affb64a3f8f51f6943cd9ee089d14e9",
+          "type": "paid_post_reserved",
+          "word_count": 537
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "the-conversation-about-flaws",
+      "version": "4.0"
+    }
+  }
+}
