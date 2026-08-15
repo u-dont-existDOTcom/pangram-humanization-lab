@@ -7,10 +7,11 @@ Use this file as the starting point for current lesson retrieval.
 1. `state/WORKING-LESSONS.md` — consolidated lessons through 2026-08-12.
 2. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13.md` — newer Romance detector, semantic-sanity, architecture, routing, provenance, and large-reconstruction lessons. Newer owner correction / controlled evidence here supersedes older conflicting guidance.
 3. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md` — protected rhetorical function, the standing detector-acceptance gate for Joel humanization requests, trauma-informed language testing, and measured choice-diff rules.
-4. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-15.md` — current Romance owner corrections on source-vs-interpretation provenance and the clipped affirmative-then-reversal hard byline ban.
+4. `state/WORKING-LESSONS-SUPPLEMENT-2026-08-15.md` — current Romance owner corrections on source-vs-interpretation provenance, conversational speakability, stopping points, and the clipped affirmative-then-reversal hard byline ban.
 5. `state/ROMANCE-OWNER-STYLE-BAN-FRAGMENT-REVERSAL-2026-08-15.md` — exact source/scope for the direct Joel hard ban on generated `X. Not really/not quite/not exactly Y.` cadence; owner preference, not Pangram evidence.
-6. `docs/CHATGPT-OPERATING-GUIDE.md` — current execution/completion contract, including the six-paid-call per-section cap and durable lesson-review fallback.
-7. For exact evidence behind a lesson, inspect the cited incident note and experiment/result JSON rather than generalizing from the summary.
+6. `state/ROMANCE-OPENING-PERSONAL-PROVENANCE-2026-08-15.md` — current owner-final Romance opening plus owner-reported HIGH→MEDIUM detector controls when explicit personal/source provenance is removed; treat as a rhetorical-function/provenance hypothesis, not a `my` lexical rule.
+7. `docs/CHATGPT-OPERATING-GUIDE.md` — current execution/completion contract, including the six-paid-call per-section cap and durable lesson-review fallback.
+8. For exact evidence behind a lesson, inspect the cited incident note and experiment/result JSON rather than generalizing from the summary.
 
 ## Pangram execution/access gate
 
@@ -91,3 +92,5 @@ Do not load every historical experiment indiscriminately. Start with the current
 - **Humanization architecture regression:** before detector work and **after every detector-driven edit**, recheck the **heading promise**, **paragraph jobs**, reader's **live question**, **article-wide** duplication/placement, protected functions, fidelity, and whether an existing **owner realization** belongs in the section. A **100% Human** detector result is not acceptable when this architecture regression fails. See `docs/HUMANIZATION-ARCHITECTURE-REGRESSION.md`.
 <!-- owner-style-ban:fragment-reversal-2026-08-15 -->
 - **Joel byline hard ban — clipped reversal cadence:** do not generate `X. Not really/not quite/not exactly Y.` or close affirmative-beat-then-corrective-fragment variants. Express the actual relation between the thoughts in ordinary syntax. This is direct owner preference, not Pangram evidence. See `state/ROMANCE-OWNER-STYLE-BAN-FRAGMENT-REVERSAL-2026-08-15.md`.
+<!-- romance-opening-personal-provenance-2026-08-15 -->
+- **Personal provenance can be a real rhetorical function:** in Joel's owner-reported Romance opening controls, removing the clause grounding the guide in his particular life experience/friends/research changed HIGH-confidence Human to MEDIUM; a shorter control stayed HIGH with `my experience` and moved to MEDIUM when only `my` was removed. Treat this as evidence that explicit source-of-knowledge can turn a generic scope disclaimer into lived positioning in the exact boundary—not as a `my` token rule. See `state/ROMANCE-OPENING-PERSONAL-PROVENANCE-2026-08-15.md`.
