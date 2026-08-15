@@ -77,6 +77,16 @@ Documentation/state descendants do not alter executable code. Before merge, the 
 - Result/checkpoint pushes did not contain a request change and did not recursively authorize detector work.
 - r30 was not installed. Because r29 and r30 are two fidelity-complete, meaningfully different failures, further autonomous variants are stopped pending narrow author evidence.
 
+## Second automatic execution receipt and fidelity disposition
+
+- r31 was staged as the sole allowed pair in commit `7a641df49ce3b0caa9f00c9222a018f444fa9f97`, with candidate SHA-256 `bceb849c4a593efcedb43c650ad08597f93a25a8d5cd4b3fcab617997dd9a34f` and request-bound spec SHA-256 `3351fc3bcfa56ba3efb3ea42ad3b832779fd70405fb458c64324b39c97d14470`.
+- Automatic run `31844683111` required no owner click. Verify job `94908589238` and detector job `94908650800` succeeded; task `0049130b-470d-4576-a0a7-f3a95328bb1b` was checkpointed.
+- Result commit `925673bfff808daf63fdca560190267f6d701d4f` records Human `0.7607057094573975`, AI `0.23929430544376373`, and AI-assisted `0.0`; lesson-review head is `2114c0544ae2b994677f1217edc2cc3b192ad2a6`.
+- r31 added one paid POST reservation estimated at 2 credits. The audit ledger totals 4 paid posts, 7 estimated credits, and 0 pending resumes.
+- Result/checkpoint pushes did not alter the immutable request and could not recursively authorize paid work.
+- The owner then corrected quotation provenance: the direct quote is “Sex is what you do when you are older and you find a friend you want to have children with.” The readiness/child-rearing formulation used in r31 is a paraphrase, not direct speech.
+- r31 is therefore fidelity-invalid regardless of detector score and was not installed. Exact detector evidence remains immutable; the correction is recorded separately rather than rewriting the tested text.
+
 ## Exceptions
 
 Hosted evidence-branch protection, secret scanning, push protection, Actions defaults, and vulnerability alerts remain unverified; code scanning is recorded disabled. Main issue #17 owns those settings/plan limits. Until hosted protection is verified, collaborators able to write the exact evidence ref are part of the paid-secret trust boundary.
