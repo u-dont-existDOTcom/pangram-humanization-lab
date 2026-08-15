@@ -5,8 +5,8 @@
   "sections": {
     "are-you-ready-for-the-crucible\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -23,10 +23,18 @@
           "text_sha256": "e192e055073267d1e7dd2b1dfd009794f3e1d4830c9e0e3795547d78a6a5e2bd",
           "type": "paid_post_reserved",
           "word_count": 839
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-assembly-recheck-flaws-crucible-r3-local-functions-2026-08-15_crucible-local-function-repair-prose",
+          "recorded_at_utc": "2026-08-15T06:15:06.879672+00:00",
+          "text_sha256": "eacc4116e27a58b2b44900b8a130a2408680014867cc83fc69999141d2203f86",
+          "type": "paid_post_reserved",
+          "word_count": 850
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "are-you-ready-for-the-crucible",
       "version": "4.0"
