@@ -1,6 +1,12 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 from scripts.render_reader_visible import reader_visible_text
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+CURRENT_MASTER = PROJECT_ROOT / "work" / "romance-current-assembly" / "current-master.md"
 
 
 def test_reader_visible_text_strips_source_markup_and_keeps_visible_labels() -> None:
@@ -47,3 +53,21 @@ def test_reader_visible_text_does_not_leak_link_destinations_or_native_ids() -> 
 def test_reader_visible_text_collapses_whitespace_deterministically() -> None:
     source = "# A\n\nParagraph one.\n\n\n## B\nParagraph two.\n"
     assert reader_visible_text(source) == "A Paragraph one. B Paragraph two."
+
+
+def test_current_romance_visible_boundary_has_expected_edges_and_no_source_markup() -> None:
+    source = CURRENT_MASTER.read_text(encoding="utf-8")
+    visible = reader_visible_text(source)
+
+    assert visible.startswith(
+        "I asked my dad about sex when I was five, and he briefly explained:: “Sex is what you do"
+    )
+    assert "Somatic Modalities Strategic Sequencing Roadmap" in visible
+    assert visible.endswith("Subscribe now")
+    assert "[NATIVE " not in visible
+    assert "videoId:" not in visible
+    assert "substack-post-media.s3.amazonaws.com" not in visible
+    assert "https://" not in visible
+    assert "http://" not in visible
+    assert "%%share_url%%" not in visible
+    assert "%%checkout_url%%" not in visible
