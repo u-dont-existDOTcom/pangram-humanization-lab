@@ -964,6 +964,38 @@
           "section_id": "what-we-mean-by-love"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T06:08:58.117671+00:00",
+      "experiment_id": "romance-assembly-recheck-flaws-crucible-2026-08-15",
+      "id": "Q-06a81d2a1551d654",
+      "sections": [
+        "the-conversation-about-flaws",
+        "are-you-ready-for-the-crucible"
+      ],
+      "source_path": "state/experiments/romance-assembly-recheck-flaws-crucible-2026-08-15-results.json",
+      "source_ref": "48d60eab453e375224c0f1126e8119413f675649",
+      "source_sha256": "c0e4f8bef0f2ebc2c6d670734963275c61c90449658413212660e1355b8a15ab",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.11136814206838608,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8886318802833557,
+          "id": "flaws-current-corrected",
+          "prediction_short": "Mixed",
+          "section_id": "the-conversation-about-flaws"
+        },
+        {
+          "fraction_ai": 0.125453382730484,
+          "fraction_ai_assisted": 0.2359718382358551,
+          "fraction_human": 0.6385747790336609,
+          "id": "crucible-current-corrected-prose",
+          "prediction_short": "Mixed",
+          "section_id": "are-you-ready-for-the-crucible"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
