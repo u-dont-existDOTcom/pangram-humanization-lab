@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "article": "Romance",
+  "baseline": {
+    "source_ref": "task/romance-full-human-2026-08-13-r1",
+    "source_path": "inputs/romance-reconstructed-2026-08-13-sha18ed9fa.md",
+    "git_blob_sha": "b6a6d73b3a7e7e93efc31bc7e755f04b9d57df97"
+  },
+  "operations": [
+    {
+      "id": "owner-opening-2026-08-15",
+      "type": "replace_between",
+      "start_anchor": "[Share](%%share_url%%)\n\n",
+      "end_anchor": "# What we mean by “love” ❤️",
+      "replacement_file": "replacements/opening.md"
+    },
+    {
+      "id": "love-stop-after-less-wanted",
+      "type": "delete_exact",
+      "old": "\n\nIf the eros does fade, maybe the agape is enough to keep us together. But *maybe* cuts both ways. If I tell her, “Even if I stop wanting you, I may still stay because I love you,” what exactly did I reassure her of? I may stay without wanting her. I may leave anyway. If she still wants me, both possibilities are awful.\n\nFor some couples, maybe they eventually treasure what they’ve built more than the drive that started it. For others, staying without eros would just be a concession, which doesn’t feel good for either person. You can’t know at the wedding what the bond will become."
+    },
+    {
+      "id": "talk-current-richer-realization",
+      "type": "replace_section",
+      "start_anchor": "# Talk about making love before you do it",
+      "end_anchor": "## Can Casual Sex or a Situationship Actually Be Honest?",
+      "replacement_file": "replacements/talk.md"
+    },
+    {
+      "id": "should-owner-style-corrections",
+      "type": "replace_section",
+      "start_anchor": "# Should you be in a relationship at all?",
+      "end_anchor": "## How to find a partner",
+      "replacement_file": "replacements/should.md"
+    },
+    {
+      "id": "flaws-local-function-repair",
+      "type": "replace_section",
+      "start_anchor": "## The conversation about flaws",
+      "end_anchor": "# Are you ready for the crucible?",
+      "replacement_file": "replacements/flaws.md"
+    },
+    {
+      "id": "crucible-delete-definition-aftercare",
+      "type": "delete_exact",
+      "old": "I didn’t know what a crucible was either. It’s basically a container where things get heated until they change.\n\n"
+    },
+    {
+      "id": "crucible-entitlement-local-repair",
+      "type": "replace_exact",
+      "old": "When that doesn’t happen, I see entitlement, lack of responsibility, assumptions that the partner should mind-read, little awareness of your own behavior patterns, and then denial when somebody calls the pattern out.",
+      "replacement_file": "replacements/crucible-entitlement.md"
+    },
+    {
+      "id": "crucible-peer-consequence-local-repair",
+      "type": "replace_exact",
+      "old": "That’s why I recommend [peer counseling](https://ibogaqueen.substack.com/p/hearthwork-an-integrated-peer-counseling) outside the couple. Your partner should not have to be the only person who listens to your pain, helps you understand it, and absorbs the consequences when you don’t.",
+      "replacement_file": "replacements/crucible-peer.md"
+    },
+    {
+      "id": "crucible-body-bridge-local-repair",
+      "type": "replace_exact",
+      "old": "The body has to be included too.",
+      "replacement_file": "replacements/crucible-body-bridge.md"
+    },
+    {
+      "id": "crucible-stop-at-meditation",
+      "type": "delete_exact",
+      "old": "\n\nRelationship itself can grow somebody who is not fully ready. Some wounds may not even appear until there is a person important enough to activate them. But “not fully ready” should still mean fairly ready, and there should be support outside the couple.\n\nBefore entering something serious, have the conversation about flaws. You don’t need to announce that you are healed. The crucible will find out anyway."
+    },
+    {
+      "id": "owner-closing-2026-08-15",
+      "type": "replace_exact",
+      "old": "Maybe this whole article is the rest of the sentence my dad gave me when I was five. And maybe I wrote it for my son, Bear, who sadly, I last saw when he was about five.\n\nBear, sex can be what you do when you’re older and find a friend you want to have children with. But learn who she is before closeness makes the decision for you. Let her learn who you are. Keep friends around who know both of you. Don’t ask one woman to become your whole village. Don’t imagine they love you when they want you, and understand the difference between possession and commitment. If the relationship is real, treat it as something sacred without pretending you own the outcome.\n\nThat’s what I wish my dad had added. That’s what I’m trying to give you here.",
+      "replacement_file": "replacements/closing.md"
+    }
+  ]
+}
