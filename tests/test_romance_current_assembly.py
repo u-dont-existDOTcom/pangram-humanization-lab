@@ -1,11 +1,16 @@
 from __future__ import annotations
 
 import hashlib
+import json
 from pathlib import Path
 
 import pytest
 
 from scripts.assemble_romance_current import AssemblyError, apply_operations
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+WORK_ROOT = PROJECT_ROOT / "work" / "romance-current-assembly"
 
 
 def _write(root: Path, rel: str, text: str) -> str:
@@ -17,6 +22,26 @@ def _write(root: Path, rel: str, text: str) -> str:
 
 def _sha(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def _assemble_real() -> tuple[str, str, list[dict]]:
+    baseline = (WORK_ROOT / "baseline.md").read_text(encoding="utf-8")
+    spec = json.loads((WORK_ROOT / "assembly-spec.json").read_text(encoding="utf-8"))
+    output, records = apply_operations(baseline, spec["operations"], WORK_ROOT)
+    return baseline, output, records
+
+
+def _native_lines(text: str) -> list[str]:
+    return [line for line in text.splitlines() if line.startswith("[NATIVE ")]
+
+
+def _section(text: str, start: str, end: str) -> str:
+    assert text.count(start) == 1
+    assert text.count(end) == 1
+    start_at = text.index(start)
+    end_at = text.index(end)
+    assert start_at < end_at
+    return text[start_at:end_at]
 
 
 def test_replace_exact_requires_one_match(tmp_path: Path) -> None:
@@ -88,3 +113,52 @@ def test_operation_manifest_records_old_and_new_sha256(tmp_path: Path) -> None:
             "new_bytes": 3,
         }
     ]
+
+
+def test_full_assembly_preserves_all_native_markers() -> None:
+    baseline, output, _ = _assemble_real()
+    assert _native_lines(output) == _native_lines(baseline)
+
+
+def test_full_assembly_preserves_hd_and_does_not_substitute_hale() -> None:
+    _, output, _ = _assemble_real()
+    assert "With Bee, Key, and H.D., there was always some sense" in output
+    assert "With Bee, Key, and Hâle, there was always some sense" not in output
+
+
+def test_full_assembly_contains_exact_owner_opening_and_closing() -> None:
+    _, output, _ = _assemble_real()
+    opening = (WORK_ROOT / "replacements" / "opening.md").read_text(encoding="utf-8").strip()
+    closing = (WORK_ROOT / "replacements" / "closing.md").read_text(encoding="utf-8").strip()
+    assert opening in output
+    assert closing in output
+
+
+def test_full_assembly_removes_superseded_aftercare() -> None:
+    _, output, _ = _assemble_real()
+    forbidden = [
+        "Good sentence. Not exactly the whole curriculum.",
+        "If the eros does fade, maybe the agape is enough to keep us together.",
+        "I didn’t know what a crucible was either. It’s basically a container where things get heated until they change.",
+        "Relationship itself can grow somebody who is not fully ready.",
+        "Before entering something serious, have the conversation about flaws.",
+        "That’s what I wish my dad had added. That’s what I’m trying to give you here.",
+    ]
+    for phrase in forbidden:
+        assert phrase not in output
+
+
+def test_locked_casual_section_is_byte_identical_to_baseline() -> None:
+    baseline, output, _ = _assemble_real()
+    start = "## Can Casual Sex or a Situationship Actually Be Honest?"
+    end = "---\n\n# Should you be in a relationship at all?"
+    assert _section(output, start, end) == _section(baseline, start, end)
+
+
+def test_untouched_prefix_before_share_and_native_button_survive() -> None:
+    baseline, output, _ = _assemble_real()
+    share = "[Share](%%share_url%%)"
+    button = "[NATIVE BUTTON — Subscribe now — %%checkout_url%%]"
+    assert output[: output.index(share)] == baseline[: baseline.index(share)]
+    assert button in baseline
+    assert output.endswith(button + "\n") or output.endswith(button)
