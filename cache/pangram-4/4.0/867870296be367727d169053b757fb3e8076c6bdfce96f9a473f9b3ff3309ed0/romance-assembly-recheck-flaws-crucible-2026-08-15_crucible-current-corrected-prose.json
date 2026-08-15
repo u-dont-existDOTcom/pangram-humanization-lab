@@ -5,12 +5,99 @@
   "last_error": "",
   "measurement_key": "romance-assembly-recheck-flaws-crucible-2026-08-15_crucible-current-corrected-prose",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.125453382730484,
+    "fraction_ai_assisted": 0.2359718382358551,
+    "fraction_human": 0.6385747790336609,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 1,
+    "num_ai_segments": 2,
+    "num_human_segments": 3,
+    "prediction": "We believe that this text is a mix of AI, AI-assisted, and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Are you ready for the crucible?\nI call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in Passionate Marriage. His basic argument was that long-term relationships create enough pressure to force individual psychological growth, rather than couples therapy being only about compromise, active listening, and making each other feel safe.\nRelationships have shown me how vulnerable I actually am when I open my heart. It’s easy to feel invulnerable and strong when I’m alone, or even just with friends, because nobody has access to me in quite the same way. Taking off the masks and showing your inner child is a gamble, but I don’t know how you go very deep in yourself or with another person without doing it.\nLiving alone is easy in so many ways. I can make my bed whenever I want. When I have a girlfriend, making the bed in the morning can become one of the ways I show her I love her, so if I don’t do it well, somehow it can turn into evidence that I don’t care. A tiny thing can end up carrying way more emotional weight than it should.\nDealing with somebody else’s emotional insecurities can be exhausting too. I actually don’t have that much skill with people. That works fine when I’m alone, but in a romantic relationship I can suddenly be expected to notice every emotional shift, check in constantly, mind-read, and understand what a silence means.\nA relationship can activate wounds that were already there, or open a part of the heart that is simply very young and vulnerable even if you never knew there was a wound. You can become like a baby again. There’s a reason lovers call each other “baby” and “my baby.” If both people can handle that well, it can become an incredible therapy opportunity, but it can also fail and create more trauma.\nWith Bee, Key, and Hâle, I often felt they were remembering how their dads treated them and then judging me by how similar or different I was. That puts me in a tough position because I want to play some of the role they need without stopping being me.\nSomething smaller happened with all three of them. They could message me whenever they wanted, even a day later. If I took a day to respond, suddenly it was weird. What was I doing? What did it mean? Sometimes we’re arguing about a one-day delay in a message while the part reacting to it is five years old.\nNobody has to be completely healed before entering a relationship. My standards used to be very low, and now they’re much higher because I’m exhausted by drama. Other people will have different standards.\nAt the very least, I need honesty, real effort at improving, and some ability to stop blaming everybody else for your own problems.\nInner-child reparenting is a big part of this. The present-day adult has to learn how to parent the child part instead of quietly hiring a partner for the job.\nWhen people don’t do that, I see entitlement, lack of responsibility, assumptions that the partner should mind-read, very little awareness of their own behavior patterns, and then denial when somebody points out the pattern.\nSelf-reflection helps, but of course you can’t see what you can’t see. A peer counselor can give you another angle. Your partner is also usually trying to keep you, so she has an ulterior motive that a peer counselor hopefully doesn’t.\nThat’s one reason I recommend peer counseling outside the couple. My partner shouldn’t have to be the only person listening to my pain, helping me understand it, and then dealing with what I do when I still don’t.\nI also have to work with what happens in my body. My mind may understand that my partner is going through something difficult and that I don’t have to get dragged down with her, but my body still feels fragile and sensitive, my breathing gets shallow, and it becomes extremely hard to feel okay while she’s in pain.\nCrying helps a lot, but it may actually be harder for men once they’re in a relationship because they’re expected to be the shoulder everybody else cries on. That’s another reason I want a peer counselor.\nBreathwork is one of the easiest ways I know to calm down. Reduced breathing or the Buteyko method is especially useful to me when my partner is getting me upset and flustered with drama. Sometimes she’s deliberately trying to do that, and other times I honestly can’t tell. I explain more of the body-based options in my Somatic Modalities guide.\nMeditation matters a lot to me too, although for most people I’d still put inner-child reparenting, peer counseling, and body-based work first. A lot of people say they can’t meditate or haven’t gotten to that stage yet, and meditation can also be an easy road into spiritual bypassing.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.2761695683002472,
+        "confidence": "High",
+        "end_index": 1208,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Are you ready for the crucible?\nI call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in Passionate Marriage. His basic argument was that long-term relationships create enough pressure to force individual psychological growth, rather than couples therapy being only about compromise, active listening, and making each other feel safe.\nRelationships have shown me how vulnerable I actually am when I open my heart. It’s easy to feel invulnerable and strong when I’m alone, or even just with friends, because nobody has access to me in quite the same way. Taking off the masks and showing your inner child is a gamble, but I don’t know how you go very deep in yourself or with another person without doing it.\nLiving alone is easy in so many ways. I can make my bed whenever I want. When I have a girlfriend, making the bed in the morning can become one of the ways I show her I love her, so if I don’t do it well, somehow it can turn into evidence that I don’t care. A tiny thing can end up carrying way more emotional weight than it should.\nDealing with somebody else’s emotional insecurities can be exhausting too. I actually don’t have that much skill with people.",
+        "token_length": 259,
+        "word_count": 214
+      },
+      {
+        "ai_assistance_score": 0.638928234577179,
+        "confidence": "High",
+        "end_index": 1571,
+        "humanizer_score": 0.044156141579151154,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1208,
+        "text": " That works fine when I’m alone, but in a romantic relationship I can suddenly be expected to notice every emotional shift, check in constantly, mind-read, and understand what a silence means.\nA relationship can activate wounds that were already there, or open a part of the heart that is simply very young and vulnerable even if you never knew there was a wound.",
+        "token_length": 72,
+        "word_count": 63
+      },
+      {
+        "ai_assistance_score": 0.3512983024120331,
+        "confidence": "High",
+        "end_index": 2856,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 1571,
+        "text": " You can become like a baby again. There’s a reason lovers call each other “baby” and “my baby.” If both people can handle that well, it can become an incredible therapy opportunity, but it can also fail and create more trauma.\nWith Bee, Key, and Hâle, I often felt they were remembering how their dads treated them and then judging me by how similar or different I was. That puts me in a tough position because I want to play some of the role they need without stopping being me.\nSomething smaller happened with all three of them. They could message me whenever they wanted, even a day later. If I took a day to respond, suddenly it was weird. What was I doing? What did it mean? Sometimes we’re arguing about a one-day delay in a message while the part reacting to it is five years old.\nNobody has to be completely healed before entering a relationship. My standards used to be very low, and now they’re much higher because I’m exhausted by drama. Other people will have different standards.\nAt the very least, I need honesty, real effort at improving, and some ability to stop blaming everybody else for your own problems.\nInner-child reparenting is a big part of this. The present-day adult has to learn how to parent the child part instead of quietly hiring a partner for the job.",
+        "token_length": 277,
+        "word_count": 233
+      },
+      {
+        "ai_assistance_score": 0.551390528678894,
+        "confidence": "High",
+        "end_index": 3081,
+        "humanizer_score": 0.04399293288588524,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 2856,
+        "text": "\nWhen people don’t do that, I see entitlement, lack of responsibility, assumptions that the partner should mind-read, very little awareness of their own behavior patterns, and then denial when somebody points out the pattern.",
+        "token_length": 44,
+        "word_count": 34
+      },
+      {
+        "ai_assistance_score": 0.4100872874259949,
+        "confidence": "High",
+        "end_index": 3581,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 3081,
+        "text": "\nSelf-reflection helps, but of course you can’t see what you can’t see. A peer counselor can give you another angle. Your partner is also usually trying to keep you, so she has an ulterior motive that a peer counselor hopefully doesn’t.\nThat’s one reason I recommend peer counseling outside the couple. My partner shouldn’t have to be the only person listening to my pain, helping me understand it, and then dealing with what I do when I still don’t.\nI also have to work with what happens in my body.",
+        "token_length": 110,
+        "word_count": 90
+      },
+      {
+        "ai_assistance_score": 0.3922831416130066,
+        "confidence": "Medium",
+        "end_index": 4687,
+        "humanizer_score": 0.0019230075413361192,
+        "is_humanized": false,
+        "label": "AI-Assisted",
+        "start_index": 3581,
+        "text": " My mind may understand that my partner is going through something difficult and that I don’t have to get dragged down with her, but my body still feels fragile and sensitive, my breathing gets shallow, and it becomes extremely hard to feel okay while she’s in pain.\nCrying helps a lot, but it may actually be harder for men once they’re in a relationship because they’re expected to be the shoulder everybody else cries on. That’s another reason I want a peer counselor.\nBreathwork is one of the easiest ways I know to calm down. Reduced breathing or the Buteyko method is especially useful to me when my partner is getting me upset and flustered with drama. Sometimes she’s deliberately trying to do that, and other times I honestly can’t tell. I explain more of the body-based options in my Somatic Modalities guide.\nMeditation matters a lot to me too, although for most people I’d still put inner-child reparenting, peer counseling, and body-based work first. A lot of people say they can’t meditate or haven’t gotten to that stage yet, and meditation can also be an easy road into spiritual bypassing.",
+        "token_length": 237,
+        "word_count": 191
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "bb1faea8-2c5e-4b81-bf61-4c121cdac7df",
   "text": "Are you ready for the crucible?\n\nI call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in Passionate Marriage. His basic argument was that long-term relationships create enough pressure to force individual psychological growth, rather than couples therapy being only about compromise, active listening, and making each other feel safe.\n\nRelationships have shown me how vulnerable I actually am when I open my heart. It’s easy to feel invulnerable and strong when I’m alone, or even just with friends, because nobody has access to me in quite the same way. Taking off the masks and showing your inner child is a gamble, but I don’t know how you go very deep in yourself or with another person without doing it.\n\nLiving alone is easy in so many ways. I can make my bed whenever I want. When I have a girlfriend, making the bed in the morning can become one of the ways I show her I love her, so if I don’t do it well, somehow it can turn into evidence that I don’t care. A tiny thing can end up carrying way more emotional weight than it should.\n\nDealing with somebody else’s emotional insecurities can be exhausting too. I actually don’t have that much skill with people. That works fine when I’m alone, but in a romantic relationship I can suddenly be expected to notice every emotional shift, check in constantly, mind-read, and understand what a silence means.\n\nA relationship can activate wounds that were already there, or open a part of the heart that is simply very young and vulnerable even if you never knew there was a wound. You can become like a baby again. There’s a reason lovers call each other “baby” and “my baby.” If both people can handle that well, it can become an incredible therapy opportunity, but it can also fail and create more trauma.\n\nWith Bee, Key, and Hâle, I often felt they were remembering how their dads treated them and then judging me by how similar or different I was. That puts me in a tough position because I want to play some of the role they need without stopping being me.\n\nSomething smaller happened with all three of them. They could message me whenever they wanted, even a day later. If I took a day to respond, suddenly it was weird. What was I doing? What did it mean? Sometimes we’re arguing about a one-day delay in a message while the part reacting to it is five years old.\n\nNobody has to be completely healed before entering a relationship. My standards used to be very low, and now they’re much higher because I’m exhausted by drama. Other people will have different standards.\n\nAt the very least, I need honesty, real effort at improving, and some ability to stop blaming everybody else for your own problems.\n\nInner-child reparenting is a big part of this. The present-day adult has to learn how to parent the child part instead of quietly hiring a partner for the job.\n\nWhen people don’t do that, I see entitlement, lack of responsibility, assumptions that the partner should mind-read, very little awareness of their own behavior patterns, and then denial when somebody points out the pattern.\n\nSelf-reflection helps, but of course you can’t see what you can’t see. A peer counselor can give you another angle. Your partner is also usually trying to keep you, so she has an ulterior motive that a peer counselor hopefully doesn’t.\n\nThat’s one reason I recommend peer counseling outside the couple. My partner shouldn’t have to be the only person listening to my pain, helping me understand it, and then dealing with what I do when I still don’t.\n\nI also have to work with what happens in my body. My mind may understand that my partner is going through something difficult and that I don’t have to get dragged down with her, but my body still feels fragile and sensitive, my breathing gets shallow, and it becomes extremely hard to feel okay while she’s in pain.\n\nCrying helps a lot, but it may actually be harder for men once they’re in a relationship because they’re expected to be the shoulder everybody else cries on. That’s another reason I want a peer counselor.\n\nBreathwork is one of the easiest ways I know to calm down. Reduced breathing or the Buteyko method is especially useful to me when my partner is getting me upset and flustered with drama. Sometimes she’s deliberately trying to do that, and other times I honestly can’t tell. I explain more of the body-based options in my Somatic Modalities guide.\n\nMeditation matters a lot to me too, although for most people I’d still put inner-child reparenting, peer counseling, and body-based work first. A lot of people say they can’t meditate or haven’t gotten to that stage yet, and meditation can also be an easy road into spiritual bypassing.",
   "text_sha256": "867870296be367727d169053b757fb3e8076c6bdfce96f9a473f9b3ff3309ed0",
-  "updated_utc": "2026-08-15T06:08:54.140183+00:00"
+  "updated_utc": "2026-08-15T06:08:55.659984+00:00"
 }
