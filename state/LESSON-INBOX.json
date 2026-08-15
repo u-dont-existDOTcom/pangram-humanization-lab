@@ -1160,6 +1160,29 @@
           "section_id": "talk-about-making-love-before-you-do-it"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T06:58:02.049603+00:00",
+      "experiment_id": "romance-talk-old-green-control-2026-08-15",
+      "id": "Q-17779cfc1356144c",
+      "sections": [
+        "talk-about-making-love-before-you-do-it"
+      ],
+      "source_path": "state/experiments/romance-talk-old-green-control-2026-08-15-results.json",
+      "source_ref": "d5719a5e17a3c96d081a74b66ced7f6fa03a9968",
+      "source_sha256": "a61ddff02a708b3ea133f11d09c246d8a68fb364087f37ea3256905cb688968b",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "old-human-high-control",
+          "prediction_short": "AI",
+          "section_id": "talk-about-making-love-before-you-do-it"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
