@@ -1129,6 +1129,37 @@
           "section_id": "talk-about-making-love-before-you-do-it"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T06:54:47.951968+00:00",
+      "experiment_id": "romance-talk-order-localization-2026-08-15",
+      "id": "Q-4751999ff80a9984",
+      "sections": [
+        "talk-about-making-love-before-you-do-it"
+      ],
+      "source_path": "state/experiments/romance-talk-order-localization-2026-08-15-results.json",
+      "source_ref": "aa9b9de5051c123ca0ebd7b51684082085d464fc",
+      "source_sha256": "1dbfd0bff859bad432a1b001b141cc47ba968ac8c9fcd6d6554c06a811a1b053",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "talk-body-only",
+          "prediction_short": "AI",
+          "section_id": "talk-about-making-love-before-you-do-it"
+        },
+        {
+          "fraction_ai": 0.7498921751976013,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.2501077950000763,
+          "id": "talk-then-definition",
+          "prediction_short": "Mixed",
+          "section_id": "talk-about-making-love-before-you-do-it"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
