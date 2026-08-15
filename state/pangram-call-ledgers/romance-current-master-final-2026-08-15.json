@@ -105,8 +105,8 @@
     },
     "talk-casual-boundary\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -115,10 +115,18 @@
           "text_sha256": "58ff890d39ce771f45dc203450063cd47c473bae8af5abc2f85ab254e855e430",
           "type": "paid_post_reserved",
           "word_count": 578
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-whole-article-local-repair-r2-2026-08-15_talk-casual-boundary-r2-live-truth",
+          "recorded_at_utc": "2026-08-15T10:13:18.544085+00:00",
+          "text_sha256": "b3491c23df162980e073420af2983affcd18912621aca99d26cb954e852224a6",
+          "type": "paid_post_reserved",
+          "word_count": 431
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "talk-casual-boundary",
       "version": "4.0"
