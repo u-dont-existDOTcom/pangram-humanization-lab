@@ -48,8 +48,32 @@ Do a local repetition pass during cold audit. Vary syntax or combine sentences w
 
 The target is natural spoken logic with edited clarity: sentences a person could plausibly say aloud, while retaining organization, precision, rhythm, and argument. Do not simulate speech with filler, rambling, fake hesitations, or arbitrary fragments. The governing question is whether the prose sounds like a thoughtful person speaking naturally rather than a model performing a literary conversational style.
 
+## 7. Flaws-section detector localization: inspect the wrap-up after the personal evidence
+
+Joel manually tested the current reconstructed `The conversation about flaws` section and reported that it was Human except for the exact tail beginning:
+
+> No, I didn’t understand, and you can’t expect me to. If you’re fawning, tell me when you can. I may notice things other people miss and completely miss something that feels obvious inside you.
+
+and continuing through the section-ending advice about formal conversation, conversation-card games, wanting to know the material, and `when the opening comes, go there instead of both trying to look good.`
+
+No exact numeric Pangram fractions or screenshot/hash were supplied in chat, so preserve this as an **owner-reported detector localization**, not a fully registered exact Pangram result.
+
+Editorially, the localization is independently useful. The section's strongest lived material ends with Joel's inability to infer fawning/mind-read internal states. The assistant tail then starts explaining how the conversation should unfold, adds another conversation-card mention, and packages the section into a neat practical stopping lesson. Before paraphrasing that wrap-up again, test whether the section should simply stop after the personal limitation and the minimum communication obligation needed to make the point.
+
+Durable rule: when a detector-red tail begins exactly where lived/personal evidence turns into generalized instructional wrap-up, inspect the **real stopping point** before generating another advice paragraph. Preserve any unique function, but do not keep a conclusion merely because a section conventionally seems to need one.
+
+## 8. Antecedent clarity must survive conversational compression
+
+Joel also caught `They both told me the meditations helped them a lot` as locally unclear because the preceding sentence did not establish a specific meditation practice as a clean antecedent. In this passage, simply saying `They both meditated a lot` is clearer; later, where benefit is the point, `their meditations may really have helped them` names the referent directly.
+
+Do not compress repeated wording by creating a pronoun/determiner reference the reader has to reverse-engineer. In conversational prose, obvious antecedents are part of speakability.
+
 ## Detector status
 
-Joel reported that the affected `Should you be in a relationship at all?` section tested 100% Human at high confidence before these newest owner edits. The new wording therefore has **not** been certified as the exact same detector boundary. No new Pangram call should be spent at this intermediate reconstruction stage; final detector certification remains deferred until the article reconstruction is complete.
+Joel previously reported that the affected `Should you be in a relationship at all?` section tested 100% Human at high confidence before the newest owner edits. The new wording therefore has **not** been certified as the exact same detector boundary.
+
+For `The conversation about flaws`, Joel now reports the section as Human except for the localized tail recorded above. The exact numeric detector record was not supplied in chat and should not be invented.
+
+No new paid Pangram call should be spent at this intermediate reconstruction stage; final detector certification remains deferred until the article reconstruction is complete.
 
 The owner corrections above are direct byline authority. They should not be mislabeled as Pangram causal findings.
