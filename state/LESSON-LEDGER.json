@@ -477,6 +477,28 @@
       "source_path": "state/experiments/romance-assembly-recheck-flaws-crucible-r3-local-functions-2026-08-15-results.json",
       "source_ref": "e3b07ac4eb0c3be50f65f9f2a104e6308a84d655",
       "source_sha256": "b3b1fb4639ad6d6a3aaabd1bc120807a617df449360044f3455abccf9cdfd7c6"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The exact Romance ‘Should you be in a relationship at all?’ boundary, after Joel's meditation correction and a minimal repetition repair that preserves the three celibacy claims, passed Pangram 4.0 at 100% Human, 0% AI, and 0% AI-assisted. Exact tested text SHA-256: 910f950694b410778c064f201bc3d273567a5396879cc2744994509ce14319e8.",
+      "id": "L-4f517fc759-01",
+      "promoted_to": [],
+      "reason": "This certifies the exact current Romance section boundary only. It does not establish a general detector rule; the repetition repair was editorially justified before the detector result.",
+      "recorded_at_utc": "2026-08-15T06:48:24.293525+00:00",
+      "source_path": "state/experiments/romance-should-final-owner-style-recheck-2026-08-15-results.json",
+      "source_ref": "5ef3fab46a6cd822053e310293ac08014d5face8",
+      "source_sha256": "4f517fc7591d266f3d64ef88805c50cdca56314aefb2426a57fbfec05f13c428"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The current Tough Love boundary measured Mixed, but its entire final 258-word window containing Joel's new Bear/Rumi closing measured High-confidence Human. The two AI-labeled upstream windows are owner-final r5 prose: the Somé/spirit passage and the dominant-culture/romantic-myths synthesis. Two cold audits found both passages semantically necessary and coherent, and prior authority explicitly locks r5 against detector-driven rewriting. Preserve the prose and treat this result as boundary/version interaction evidence, not an instruction to rewrite owner-final material.",
+      "id": "L-496c5ecfe2-01",
+      "promoted_to": [],
+      "reason": "The evidence reinforces already-promoted rules: owner authority outranks detector output; detector windows are boundary-sensitive; and purposeful article-level synthesis must not be deleted merely because it repeats a theme from an earlier section. The new closing is article-specific evidence but does not need a new universal lesson.",
+      "recorded_at_utc": "2026-08-15T06:48:24.298028+00:00",
+      "source_path": "state/experiments/romance-tough-love-current-closing-context-2026-08-15-results.json",
+      "source_ref": "3bc5a1b5f44daeb86902cd81cb740d512f5b280c",
+      "source_sha256": "496c5ecfe29e7cb71a227aa13aeaa52b27315041b8af477271d5f3516d454844"
     }
   ],
   "schema_version": 1
