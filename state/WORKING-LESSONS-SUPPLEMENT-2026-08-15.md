@@ -103,3 +103,11 @@ For `Are you ready for the crucible?`, Joel reports the current reconstructed se
 No new paid Pangram call should be spent at this intermediate reconstruction stage; final detector certification remains deferred until the article reconstruction is complete.
 
 The owner corrections above are direct byline authority. They should not be mislabeled as Pangram causal findings.
+<!-- closeout-request:romance-talk-old-green-control-2026-08-15 -->
+## 11. Historical detector labels are not current certification unless they reproduce
+
+A Romance Talk passage previously recorded in the project corpus as `HUMAN/HIGH` was rerun through the current Pangram 4.0 Actions path and measured **100% AI at High confidence**. The older record did not preserve enough exact detector/version/boundary metadata to assign the discrepancy to a particular cause. It could reflect detector/version drift, normalization, boundary conditions, or another undocumented historical difference.
+
+Durable rule: an old detector label is evidence history, not current certification, unless the exact intended text boundary and detector provenance are reproducible. Before using an older green passage as the causal control for a new edit, rerun the control under the current detector. If the control itself no longer reproduces, do not blame the new edit for the regression and do not invent a phrase-level explanation. Preserve the non-reproduction as evidence, stop causal attribution, and return to editorial/owner authority.
+
+For durable detector evidence, preserve the exact text hash, reader-visible boundary, detector/version, date, repeat status, and result identity. A historical `Human/high` note without those fields cannot override a current controlled measurement or coherent owner-final prose.
