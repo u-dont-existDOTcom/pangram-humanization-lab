@@ -1060,6 +1060,29 @@
           "section_id": "are-you-ready-for-the-crucible"
         }
       ]
+    },
+    {
+      "audit_id": "romance-assembly-recheck-2026-08-15",
+      "created_at_utc": "2026-08-15T06:21:23.089827+00:00",
+      "experiment_id": "romance-should-final-owner-style-recheck-2026-08-15",
+      "id": "Q-207c62b12b0ef99b",
+      "sections": [
+        "should-you-be-in-a-relationship-at-all"
+      ],
+      "source_path": "state/experiments/romance-should-final-owner-style-recheck-2026-08-15-results.json",
+      "source_ref": "5ef3fab46a6cd822053e310293ac08014d5face8",
+      "source_sha256": "4f517fc7591d266f3d64ef88805c50cdca56314aefb2426a57fbfec05f13c428",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "should-owner-style-corrections",
+          "prediction_short": "Human",
+          "section_id": "should-you-be-in-a-relationship-at-all"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
