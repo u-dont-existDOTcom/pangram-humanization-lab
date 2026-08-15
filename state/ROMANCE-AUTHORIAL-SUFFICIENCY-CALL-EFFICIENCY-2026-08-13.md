@@ -8,7 +8,7 @@ Owner-confirmed process correction from the Romance humanization continuation. T
 
 Two Romance boundaries received repeated paid Pangram measurements while their governing authorial mechanisms were still missing or had not been recovered from article-wide evidence.
 
-- The pre-sex conversation was repeatedly realized as a comprehensive sexual questionnaire. The controlling thought was already latent in the article opening: Joel's father's single piece of advice was to ask whether the two people would want to raise children together and whether they were ready. That question generated the article and naturally opens the subordinate questions.
+- **Historical reconstruction error, superseded by the 2026-08-15 owner correction below:** the pre-sex conversation was repeatedly realized as a comprehensive sexual questionnaire. The first recovery attempt then misidentified the controlling thought as Joel's father advising the two people to ask whether they would want to raise children together and whether they were ready. That was not the father's advice; it was a later paraphrase/reconstruction error.
 - The pacing section was repeatedly realized as a precaution system. The missing lived sequence was: Joel intends to wait; an apparently small invitation becomes private/charged; the woman generally initiates; in the moment he wants to be the man who pleases her, not the man who makes her reconsider pleasure. The deeper correction is earlier perception of the whole person and her contact/communication pattern, not another heat-of-the-moment tactic.
 
 The first boundary appeared in 9 targeted paid calls (14 paid measurements including broader boundaries) before narrow authorial help was requested. The second had 8 accounted targeted calls plus a later measured variant that reached 100% partly through fidelity loss. These numbers are historical accounting, not recommended budgets.
@@ -65,3 +65,16 @@ Two transferable controls now apply:
 
 A missing inline source link remains a publication-readiness problem; it does not authorize deleting, weakening, or re-reviewing protected working prose. The repaired exact r27 candidate restores Gandarussa at Joel’s settled certainty and distinguishes pregnancy risk from unchanged attachment risk. It also scopes the twin-flame question as Joel’s own rather than a universal reader test. Exact candidate SHA-256 `2ad80405ef91467b173094283ba614de446106b2cf58ed9b0af0f241fb6d34ea` (879 words) passed Pangram 4.0 at Human `1.0`, AI `0.0`, AI-assisted `0.0` in one paid call. The result confirms the combined section boundary only; it is not the eventual exact full-article certification.
 
+## 2026-08-15 father-quote and section-scope correction
+
+Joel supplied the exact provenance of the childhood advice. His father's one direct sentence was:
+
+> “Sex is what you do when you are older and you find a friend you want to have children with.”
+
+Do not replace this with, or attribute to the father, a later readiness/co-parenting formulation such as “would we want to raise children together?” or “are we ready?” Those are later interpretations, not the quoted advice.
+
+Joel's adult sense of what the sentence left out is much broader than a pre-sex checklist: the whole question of romance; why one partner becomes different from the other friends one could hypothetically have children with; what problems people have in relationships; how to prevent or handle those problems; basically how to do romance. He explicitly does **not** fault his father for failing to provide a full guide, because that was not his father's main mission.
+
+Architectural consequence: the father's sentence is an **article-level origin point**, not the controlling mechanism of `Talk about making love before you do it`. Do not make that local section carry the entire romance curriculum or turn it into a comprehensive readiness/co-parenting questionnaire. Its local job is the sexual/intimacy conversation before sex, while the broader questions are answered across the article. When the article loops back to the father near the end, preserve the distinction between the exact childhood quote and Joel's adult expansion of what he later had to figure out.
+
+Transferable lesson: when authorial recovery discovers a compelling retrospective interpretation, preserve provenance. A later paraphrase can illuminate what a remembered sentence came to mean without becoming the remembered sentence itself, and an article-level generative question does not automatically belong as the governing thought of every local section it helped inspire.
