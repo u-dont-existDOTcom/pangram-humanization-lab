@@ -8,13 +8,13 @@ import sys
 from pathlib import Path
 
 
-_NATIVE_IMAGE_RE = re.compile(r"(?m)^\[NATIVE IMAGE —[^\n]*\]\s*$")
-_NATIVE_YOUTUBE_RE = re.compile(r"(?m)^\[NATIVE YOUTUBE —[^\n]*\]\s*$")
+_NATIVE_IMAGE_RE = re.compile(r"\[NATIVE IMAGE —[^\]]*\]")
+_NATIVE_YOUTUBE_RE = re.compile(r"\[NATIVE YOUTUBE —[^\]]*\]")
 _NATIVE_PREVIEW_RE = re.compile(
-    r"(?m)^\[NATIVE SUBSTACK PREVIEW — (?P<label>.+?) — https?://[^\]]+\]\s*$"
+    r"\[NATIVE SUBSTACK PREVIEW — (?P<label>.+?) — https?://[^\]]+\]"
 )
-_NATIVE_BUTTON_RE = re.compile(r"(?m)^\[NATIVE BUTTON — (?P<label>.+?) — [^\]]+\]\s*$")
-_SHARE_RE = re.compile(r"(?m)^\[Share\]\([^\n)]*\)\s*$")
+_NATIVE_BUTTON_RE = re.compile(r"\[NATIVE BUTTON — (?P<label>.+?) — [^\]]+\]")
+_SHARE_RE = re.compile(r"\[Share\]\([^\n)]*\)")
 _MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\([^\n)]*\)")
 _MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\([^\n)]*\)")
 _HEADING_RE = re.compile(r"(?m)^\s{0,3}#{1,6}\s+")
