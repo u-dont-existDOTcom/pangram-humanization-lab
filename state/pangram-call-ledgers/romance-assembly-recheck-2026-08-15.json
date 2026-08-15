@@ -33,8 +33,8 @@
     },
     "the-conversation-about-flaws\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -51,10 +51,18 @@
           "text_sha256": "5a37d4a33f40333a68adf8d979b4d986400afff64e96cfac89be39d7905612e4",
           "type": "paid_post_reserved",
           "word_count": 537
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-assembly-recheck-flaws-crucible-r3-local-functions-2026-08-15_flaws-local-function-repair",
+          "recorded_at_utc": "2026-08-15T06:15:02.614433+00:00",
+          "text_sha256": "b5b15c0fffbcac9ae056132f4c64c23261e40939b321662fab7541939ab7c513",
+          "type": "paid_post_reserved",
+          "word_count": 525
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "the-conversation-about-flaws",
       "version": "4.0"
