@@ -1351,6 +1351,74 @@
           "section_id": "tough-love-cultural-tail"
         }
       ]
+    },
+    {
+      "audit_id": "romance-current-master-final-2026-08-15",
+      "created_at_utc": "2026-08-15T10:13:37.945443+00:00",
+      "experiment_id": "romance-whole-article-local-repair-r2-2026-08-15",
+      "id": "Q-5541f69d4b74a303",
+      "sections": [
+        "talk-casual-boundary",
+        "primal-desire-performance",
+        "choosing-together",
+        "marriage-vows",
+        "doing-conscious-imagination-transition",
+        "tough-love-cultural-tail"
+      ],
+      "source_path": "state/experiments/romance-whole-article-local-repair-r2-2026-08-15-results.json",
+      "source_ref": "cd6157fc5bfeca69b86e8e107dbcca53934c10a2",
+      "source_sha256": "611cc5427ebc8d4f4911c642430530a6f87d5880146e0531651573ad7f50b63e",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.6627168655395508,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.33728310465812683,
+          "id": "talk-casual-boundary-r2-live-truth",
+          "prediction_short": "Mixed",
+          "section_id": "talk-casual-boundary"
+        },
+        {
+          "fraction_ai": 0.3175257742404938,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6824742555618286,
+          "id": "primal-desire-performance-r2-natural-stop",
+          "prediction_short": "Mixed",
+          "section_id": "primal-desire-performance"
+        },
+        {
+          "fraction_ai": 0.7457790374755859,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.2542209327220917,
+          "id": "choosing-together-r2-silent-contract",
+          "prediction_short": "Mixed",
+          "section_id": "choosing-together"
+        },
+        {
+          "fraction_ai": 0.31293705105781555,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6870629191398621,
+          "id": "marriage-vows-r2-expanded-context",
+          "prediction_short": "Mixed",
+          "section_id": "marriage-vows"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "doing-conscious-preview-delete-r1",
+          "prediction_short": "Human",
+          "section_id": "doing-conscious-imagination-transition"
+        },
+        {
+          "fraction_ai": 0.10178116708993912,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8982188105583191,
+          "id": "tough-love-cultural-tail-r2-direct-mechanism",
+          "prediction_short": "Mixed",
+          "section_id": "tough-love-cultural-tail"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
