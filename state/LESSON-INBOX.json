@@ -1419,6 +1419,73 @@
           "section_id": "tough-love-cultural-tail"
         }
       ]
+    },
+    {
+      "audit_id": "romance-current-master-final-2026-08-15",
+      "created_at_utc": "2026-08-15T10:35:02.333106+00:00",
+      "experiment_id": "romance-whole-article-local-repair-r3-2026-08-15",
+      "id": "Q-a3a5615314153168",
+      "sections": [
+        "talk-casual-boundary-r3",
+        "choosing-together-r3",
+        "primal-not-performance-r3",
+        "marriage-vows-r3",
+        "tough-love-r3"
+      ],
+      "source_path": "state/experiments/romance-whole-article-local-repair-r3-2026-08-15-results.json",
+      "source_ref": "366fb89dd3b49e93ff0bfef5f16e9000a4014ee2",
+      "source_sha256": "83d371d15a616cff4a3fc078d7368417802a5336acead84e4742b65c1e632232",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.6701244711875916,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.32987552881240845,
+          "id": "talk-casual-boundary-r3-live-pressure",
+          "prediction_short": "Mixed",
+          "section_id": "talk-casual-boundary-r3"
+        },
+        {
+          "fraction_ai": 0.13088403642177582,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.869115948677063,
+          "id": "choosing-together-r3-distributed",
+          "prediction_short": "Mixed",
+          "section_id": "choosing-together-r3"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "choosing-together-r3-natural-stop",
+          "prediction_short": "Human",
+          "section_id": "choosing-together-r3"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "primal-not-performance-r3-lived-order",
+          "prediction_short": "AI",
+          "section_id": "primal-not-performance-r3"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "marriage-vows-r3-bible-spoken",
+          "prediction_short": "Human",
+          "section_id": "marriage-vows-r3"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "tough-love-r3-dominant-culture-mechanism",
+          "prediction_short": "Human",
+          "section_id": "tough-love-r3"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
