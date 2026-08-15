@@ -143,6 +143,7 @@ def test_full_assembly_removes_superseded_aftercare() -> None:
         "Good sentence. Not exactly the whole curriculum.",
         "If the eros does fade, maybe the agape is enough to keep us together.",
         "Seeing someone’s highest potential is different from ignoring what is actually there.",
+        "The next two tools reach in different directions. Imagination lets us examine futures we haven't lived. Psychedelics can sometimes get past defenses hiding what is already here. Either one can also give idealization better scenery.",
         "I didn’t know what a crucible was either. It’s basically a container where things get heated until they change.",
         "It shouldn’t be that serious. It really can be.",
         "Relationship itself can grow somebody who is not fully ready.",
