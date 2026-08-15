@@ -1,17 +1,22 @@
 {
-  "schema_version": 1,
-  "request_id": "romance-talk-old-green-control-2026-08-15",
-  "source_path": "state/experiments/romance-talk-old-green-control-2026-08-15-results.json",
-  "source_ref": "d5719a5e17a3c96d081a74b66ced7f6fa03a9968",
-  "source_sha256": "a61ddff02a708b3ea133f11d09c246d8a68fb364087f37ea3256905cb688968b",
-  "finding": "The Romance Talk prose previously recorded in the project corpus as HUMAN/HIGH did not reproduce as Human when rerun under the current Pangram 4.0 path: the 291-word control measured 100% AI at High confidence. The historical label did not preserve enough exact detector/version/boundary metadata to identify whether the discrepancy comes from detector/version drift, normalization, or other historical conditions.",
   "disposition": "promoted",
-  "reason": "This is transferable detector-provenance evidence. A historical green label without a reproducible exact boundary and detector provenance must not be used as current certification or as the causal control for a later edit.",
+  "finding": "The Romance Talk prose previously recorded in the project corpus as HUMAN/HIGH did not reproduce as Human when rerun under the current Pangram 4.0 path: the 291-word control measured 100% AI at High confidence. The historical label did not preserve enough exact detector/version/boundary metadata to identify whether the discrepancy comes from detector/version drift, normalization, or other historical conditions.",
+  "index_block": "- **Historical detector-result reproducibility:** an old `Human/high` label is not a current control unless the exact intended boundary and detector provenance reproduce. If the old control itself changes under the current detector, stop attributing the regression to the newer edit; preserve the discrepancy and return to editorial/owner authority. See `state/WORKING-LESSONS-SUPPLEMENT-2026-08-15.md`.",
+  "ledger_entry_ids": [
+    "L-a61ddff02a-01"
+  ],
+  "lesson_block": "## 11. Historical detector labels are not current certification unless they reproduce\n\nA Romance Talk passage previously recorded in the project corpus as `HUMAN/HIGH` was rerun through the current Pangram 4.0 Actions path and measured **100% AI at High confidence**. The older record did not preserve enough exact detector/version/boundary metadata to assign the discrepancy to a particular cause. It could reflect detector/version drift, normalization, boundary conditions, or another undocumented historical difference.\n\nDurable rule: an old detector label is evidence history, not current certification, unless the exact intended text boundary and detector provenance are reproducible. Before using an older green passage as the causal control for a new edit, rerun the control under the current detector. If the control itself no longer reproduces, do not blame the new edit for the regression and do not invent a phrase-level explanation. Preserve the non-reproduction as evidence, stop causal attribution, and return to editorial/owner authority.\n\nFor durable detector evidence, preserve the exact text hash, reader-visible boundary, detector/version, date, repeat status, and result identity. A historical `Human/high` note without those fields cannot override a current controlled measurement or coherent owner-final prose.",
+  "processed_at_utc": "2026-08-15T07:04:09.898733+00:00",
   "promoted_to": [
     "state/WORKING-LESSONS-SUPPLEMENT-2026-08-15.md",
     "state/LESSON-INDEX.md"
   ],
-  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-15.md",
-  "lesson_block": "## 11. Historical detector labels are not current certification unless they reproduce\n\nA Romance Talk passage previously recorded in the project corpus as `HUMAN/HIGH` was rerun through the current Pangram 4.0 Actions path and measured **100% AI at High confidence**. The older record did not preserve enough exact detector/version/boundary metadata to assign the discrepancy to a particular cause. It could reflect detector/version drift, normalization, boundary conditions, or another undocumented historical difference.\n\nDurable rule: an old detector label is evidence history, not current certification, unless the exact intended text boundary and detector provenance are reproducible. Before using an older green passage as the causal control for a new edit, rerun the control under the current detector. If the control itself no longer reproduces, do not blame the new edit for the regression and do not invent a phrase-level explanation. Preserve the non-reproduction as evidence, stop causal attribution, and return to editorial/owner authority.\n\nFor durable detector evidence, preserve the exact text hash, reader-visible boundary, detector/version, date, repeat status, and result identity. A historical `Human/high` note without those fields cannot override a current controlled measurement or coherent owner-final prose.",
-  "index_block": "- **Historical detector-result reproducibility:** an old `Human/high` label is not a current control unless the exact intended boundary and detector provenance reproduce. If the old control itself changes under the current detector, stop attributing the regression to the newer edit; preserve the discrepancy and return to editorial/owner authority. See `state/WORKING-LESSONS-SUPPLEMENT-2026-08-15.md`."
+  "reason": "This is transferable detector-provenance evidence. A historical green label without a reproducible exact boundary and detector provenance must not be used as current certification or as the causal control for a later edit.",
+  "request_id": "romance-talk-old-green-control-2026-08-15",
+  "schema_version": 1,
+  "source_path": "state/experiments/romance-talk-old-green-control-2026-08-15-results.json",
+  "source_ref": "d5719a5e17a3c96d081a74b66ced7f6fa03a9968",
+  "source_sha256": "a61ddff02a708b3ea133f11d09c246d8a68fb364087f37ea3256905cb688968b",
+  "status": "processed",
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-15.md"
 }

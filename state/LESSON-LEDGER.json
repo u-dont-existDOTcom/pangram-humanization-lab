@@ -499,6 +499,53 @@
       "source_path": "state/experiments/romance-tough-love-current-closing-context-2026-08-15-results.json",
       "source_ref": "3bc5a1b5f44daeb86902cd81cb740d512f5b280c",
       "source_sha256": "496c5ecfe29e7cb71a227aa13aeaa52b27315041b8af477271d5f3516d454844"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The reconstructed Romance Talk boundary with the owner making-love definition prepended to the current richer Talk body measured 100% AI on Pangram 4.0. This did not establish that the definition or the newer desire-mismatch paragraph was causal.",
+      "id": "L-e0d4002375-01",
+      "promoted_to": [],
+      "reason": "Subsequent localization showed the owner definition could remain High-confidence Human while the Talk body was AI-labeled, and an older historically Human/high Talk control also failed to reproduce. Treat this run as supporting boundary/provenance evidence, not a phrase-level causal rule.",
+      "recorded_at_utc": "2026-08-15T07:04:09.883983+00:00",
+      "source_path": "state/experiments/romance-talk-final-combination-2026-08-15-results.json",
+      "source_ref": "e97004a2e6c6abd283af742f1d5b3117a4012cc6",
+      "source_sha256": "e0d4002375d43ae9b458ba7b113b8a95cfed35929f8347fe1f3416a7f9de4d03"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "After the historical Talk control failed to reproduce, a fresh coherence-first realization preserving all substantive Talk functions also measured 100% AI both alone and with the owner definition prepended. This exhausted the six-paid-call section cap without a faithful Pangram-4 pass.",
+      "id": "L-994e7516be-01",
+      "promoted_to": [],
+      "reason": "This records the Romance section's budget suspension. The fresh assistant rewrite had neither an authority advantage nor a detector advantage, so the current editorial choice reverts to the owner-preferred richer Talk realization while the detector issue remains unresolved. No universal lexical rule should be inferred.",
+      "recorded_at_utc": "2026-08-15T07:04:09.890685+00:00",
+      "source_path": "state/experiments/romance-talk-fresh-final-2026-08-15-results.json",
+      "source_ref": "fcb94849f197e823b9dcc02c356b30220ec4f2a1",
+      "source_sha256": "994e7516beaa05a31cd87e08644d5755cffd608d02008738c2f25e44dfbf97a3"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "The Romance Talk prose previously recorded in the project corpus as HUMAN/HIGH did not reproduce as Human when rerun under the current Pangram 4.0 path: the 291-word control measured 100% AI at High confidence. The historical label did not preserve enough exact detector/version/boundary metadata to identify whether the discrepancy comes from detector/version drift, normalization, or other historical conditions.",
+      "id": "L-a61ddff02a-01",
+      "promoted_to": [
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-15.md",
+        "state/LESSON-INDEX.md"
+      ],
+      "reason": "This is transferable detector-provenance evidence. A historical green label without a reproducible exact boundary and detector provenance must not be used as current certification or as the causal control for a later edit.",
+      "recorded_at_utc": "2026-08-15T07:04:09.897392+00:00",
+      "source_path": "state/experiments/romance-talk-old-green-control-2026-08-15-results.json",
+      "source_ref": "d5719a5e17a3c96d081a74b66ced7f6fa03a9968",
+      "source_sha256": "a61ddff02a708b3ea133f11d09c246d8a68fb364087f37ea3256905cb688968b"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Under Pangram 4.0 the current 314-word Talk body measured 100% AI, while in the reordered combined boundary the following 104-word owner making-love definition formed a separate High-confidence Human window. The definition therefore was not a sufficient explanation for the Talk regression.",
+      "id": "L-1dbfd0bff8-01",
+      "promoted_to": [],
+      "reason": "This is controlled local evidence for already-promoted boundary-interaction and localization rules. It narrows this Romance incident but does not justify a universal phrase or ordering rule.",
+      "recorded_at_utc": "2026-08-15T07:04:09.906272+00:00",
+      "source_path": "state/experiments/romance-talk-order-localization-2026-08-15-results.json",
+      "source_ref": "aa9b9de5051c123ca0ebd7b51684082085d464fc",
+      "source_sha256": "1dbfd0bff859bad432a1b001b141cc47ba968ac8c9fcd6d6554c06a811a1b053"
     }
   ],
   "schema_version": 1

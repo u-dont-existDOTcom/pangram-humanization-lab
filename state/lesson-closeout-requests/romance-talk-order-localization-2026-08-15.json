@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "Under Pangram 4.0 the current 314-word Talk body measured 100% AI, while in the reordered combined boundary the following 104-word owner making-love definition formed a separate High-confidence Human window. The definition therefore was not a sufficient explanation for the Talk regression.",
+  "ledger_entry_ids": [
+    "L-1dbfd0bff8-01"
+  ],
+  "processed_at_utc": "2026-08-15T07:04:09.907262+00:00",
+  "promoted_to": [],
+  "reason": "This is controlled local evidence for already-promoted boundary-interaction and localization rules. It narrows this Romance incident but does not justify a universal phrase or ordering rule.",
   "request_id": "romance-talk-order-localization-2026-08-15",
+  "schema_version": 1,
   "source_path": "state/experiments/romance-talk-order-localization-2026-08-15-results.json",
   "source_ref": "aa9b9de5051c123ca0ebd7b51684082085d464fc",
   "source_sha256": "1dbfd0bff859bad432a1b001b141cc47ba968ac8c9fcd6d6554c06a811a1b053",
-  "finding": "Under Pangram 4.0 the current 314-word Talk body measured 100% AI, while in the reordered combined boundary the following 104-word owner making-love definition formed a separate High-confidence Human window. The definition therefore was not a sufficient explanation for the Talk regression.",
-  "disposition": "no-new-lesson",
-  "reason": "This is controlled local evidence for already-promoted boundary-interaction and localization rules. It narrows this Romance incident but does not justify a universal phrase or ordering rule.",
-  "promoted_to": []
+  "status": "processed"
 }

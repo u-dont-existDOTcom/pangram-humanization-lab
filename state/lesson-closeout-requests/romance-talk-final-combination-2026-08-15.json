@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "The reconstructed Romance Talk boundary with the owner making-love definition prepended to the current richer Talk body measured 100% AI on Pangram 4.0. This did not establish that the definition or the newer desire-mismatch paragraph was causal.",
+  "ledger_entry_ids": [
+    "L-e0d4002375-01"
+  ],
+  "processed_at_utc": "2026-08-15T07:04:09.885228+00:00",
+  "promoted_to": [],
+  "reason": "Subsequent localization showed the owner definition could remain High-confidence Human while the Talk body was AI-labeled, and an older historically Human/high Talk control also failed to reproduce. Treat this run as supporting boundary/provenance evidence, not a phrase-level causal rule.",
   "request_id": "romance-talk-final-combination-2026-08-15",
+  "schema_version": 1,
   "source_path": "state/experiments/romance-talk-final-combination-2026-08-15-results.json",
   "source_ref": "e97004a2e6c6abd283af742f1d5b3117a4012cc6",
   "source_sha256": "e0d4002375d43ae9b458ba7b113b8a95cfed35929f8347fe1f3416a7f9de4d03",
-  "finding": "The reconstructed Romance Talk boundary with the owner making-love definition prepended to the current richer Talk body measured 100% AI on Pangram 4.0. This did not establish that the definition or the newer desire-mismatch paragraph was causal.",
-  "disposition": "no-new-lesson",
-  "reason": "Subsequent localization showed the owner definition could remain High-confidence Human while the Talk body was AI-labeled, and an older historically Human/high Talk control also failed to reproduce. Treat this run as supporting boundary/provenance evidence, not a phrase-level causal rule.",
-  "promoted_to": []
+  "status": "processed"
 }
