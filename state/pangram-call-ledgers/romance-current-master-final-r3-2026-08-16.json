@@ -1,0 +1,27 @@
+{
+  "audit_id": "romance-current-master-final-r3-2026-08-16",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "FULL_ARTICLE\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.95,
+      "estimated_credits": 19,
+      "events": [
+        {
+          "estimated_credits": 19,
+          "measurement_key": "romance-current-master-visible-final-r3-2026-08-16_current-reader-visible",
+          "recorded_at_utc": "2026-08-16T14:32:10.663772+00:00",
+          "text_sha256": "fd47cad5825ab8f3bafd810c4c0b7e0a817edff40bd802edf66dac7247b6412e",
+          "type": "paid_post_reserved",
+          "word_count": 18248
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "FULL_ARTICLE",
+      "version": "4.0"
+    }
+  }
+}
