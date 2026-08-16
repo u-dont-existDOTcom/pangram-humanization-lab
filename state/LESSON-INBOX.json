@@ -2028,6 +2028,37 @@
           "section_id": "vows-rule-tail-functional"
         }
       ]
+    },
+    {
+      "audit_id": "romance-vows-rule-learning-2026-08-16",
+      "created_at_utc": "2026-08-16T07:25:45.989161+00:00",
+      "experiment_id": "romance-vows-rule-learning-r4c-final-tail-controls-2026-08-16",
+      "id": "Q-4989f484c7950fb7",
+      "sections": [
+        "vows-rule-tail-functional"
+      ],
+      "source_path": "state/experiments/romance-vows-rule-learning-r4c-final-tail-controls-2026-08-16-results.json",
+      "source_ref": "f50c7260cb52a5bb2a7eec96a1b29e74a78ad0a2",
+      "source_sha256": "5f1c0d22431ec3013bf2088420272cf4e20c12db1dcb133bfa130c4fec79559e",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.17151007056236267,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8284898996353149,
+          "id": "TAIL_CDE_STRUCTURAL_PACKAGE",
+          "prediction_short": "Mixed",
+          "section_id": "vows-rule-tail-functional"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "TAIL_CDEF_EXACT_OWNER_LATE_TAIL",
+          "prediction_short": "Human",
+          "section_id": "vows-rule-tail-functional"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
