@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-vows-owner-rewrite-fixes-r1-2026-08-16_BIBLE_HISTORICAL_PACKED",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.2023809552192688,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.7976190447807312,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 2,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "I’d rather vow to tell the truth, keep showing up, support our children as best I can, or whatever else I genuinely believe I’m capable of delivering. Even “I’ll love you to the best of my ability, in accordance with how you love me” is something I could actually mean. But “I’ll always love you more than anyone else”—based on what? Because God wants me to?\nWe also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 explicitly states that it is better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, \"I didn’t mean what I promised.\" It's also interesting that promising itself is almost an indicator of dishonesty: Matthew 5:33–37 (and parallel James 5:12) teaches that believers should let their \"Yes\" be \"Yes\" and their \"No\" be \"No,\" warning that anything beyond this comes from evil.\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.03855854645371437,
+        "confidence": "High",
+        "end_index": 426,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "I’d rather vow to tell the truth, keep showing up, support our children as best I can, or whatever else I genuinely believe I’m capable of delivering. Even “I’ll love you to the best of my ability, in accordance with how you love me” is something I could actually mean. But “I’ll always love you more than anyone else”—based on what? Because God wants me to?\nWe also find something like my warning in the New & Old Testaments.",
+        "token_length": 98,
+        "word_count": 79
+      },
+      {
+        "ai_assistance_score": 0.5265762209892273,
+        "confidence": "Medium",
+        "end_index": 664,
+        "humanizer_score": 4.755878762807697e-06,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 426,
+        "text": " Ecclesiastes 5:4–6 explicitly states that it is better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, \"I didn’t mean what I promised.\"",
+        "token_length": 58,
+        "word_count": 46
+      },
+      {
+        "ai_assistance_score": 0.1789553463459015,
+        "confidence": "High",
+        "end_index": 1176,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 664,
+        "text": " It's also interesting that promising itself is almost an indicator of dishonesty: Matthew 5:33–37 (and parallel James 5:12) teaches that believers should let their \"Yes\" be \"Yes\" and their \"No\" be \"No,\" warning that anything beyond this comes from evil.\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.",
+        "token_length": 116,
+        "word_count": 85
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "4a19682c-1342-402d-b400-db308211399d",
   "text": "I’d rather vow to tell the truth, keep showing up, support our children as best I can, or whatever else I genuinely believe I’m capable of delivering. Even “I’ll love you to the best of my ability, in accordance with how you love me” is something I could actually mean. But “I’ll always love you more than anyone else”—based on what? Because God wants me to?\nWe also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 explicitly states that it is better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, \"I didn’t mean what I promised.\" It's also interesting that promising itself is almost an indicator of dishonesty: Matthew 5:33–37 (and parallel James 5:12) teaches that believers should let their \"Yes\" be \"Yes\" and their \"No\" be \"No,\" warning that anything beyond this comes from evil.\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.",
   "text_sha256": "78c79c7a5c2c63c15096bf5063f94d2d770766b6b894eaed564744cffc19b758",
-  "updated_utc": "2026-08-16T06:13:33.167934+00:00"
+  "updated_utc": "2026-08-16T06:13:34.436897+00:00"
 }
