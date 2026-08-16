@@ -1,0 +1,27 @@
+{
+  "audit_id": "romance-vows-owner-rewrite-fixes-2026-08-16",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "vows-full-owner-rewrite\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-vows-owner-rewrite-fixes-r1-2026-08-16_OWNER_FULL_EXACT",
+          "recorded_at_utc": "2026-08-16T06:13:20.011224+00:00",
+          "text_sha256": "1101efe49418bc47df63acb4c9916a1e39b2e8c4b64ac6ca1ff39e669e05dc95",
+          "type": "paid_post_reserved",
+          "word_count": 897
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "vows-full-owner-rewrite",
+      "version": "4.0"
+    }
+  }
+}
