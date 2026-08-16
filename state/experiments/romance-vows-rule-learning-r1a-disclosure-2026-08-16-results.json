@@ -1,0 +1,63 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-vows-rule-learning-r1a-disclosure-2026-08-16",
+  "spec_sha256": "8ce1eb3e19d905bd941e136a46d3c80ec941579a8ab44f0937594d31e3ab6591",
+  "results": [
+    {
+      "id": "DISC_A0B0_COMPACT_NO_AFTERCARE",
+      "measurement_key": "romance-vows-rule-learning-r1a-disclosure-2026-08-16_DISC_A0B0_COMPACT_NO_AFTERCARE",
+      "text": "It worked about 99% of the time. I was no longer interested in other women, aside from one extremely beautiful girl who grabbed my glance once momentarily. That amazed me, although B. never quite believed the switch was real. She even started hallucinating that I was looking at or talking to other women when I wasn’t. So her jealousy was not simply tracking what I was doing in the present. More likely it was insecure attachment from childhood filtering her reality, although she blamed witchcraft.\nJealousy shows insecurity, but sometimes that insecurity can be an important indicator that the relationship actually is not secure, rather than just a remembered script from childhood. Although, either way, it can become a self-fulfilling prophecy. Have you ever noticed how unattractive jealous partners are, or is that just me?\nInstead of stewing in jealousy and throwing out microaggressions now and then, open up.\nIn a monogamous relationship, you might say:\n“I notice you pay attention to this other girl more than me, and it makes me feel unloved and insecure. Can we talk about it? Do you really want to explore things with her? If so that's fine, but don't make the decision lightly because it's irreversible.”\nIn a polyamorous relationship the boundaries might be more negotiable, but that actually means negotiating is required.\nI do believe two people can choose sexual exclusivity honestly. They can admit that attraction to other people exists and decide not to act on it each day.\nI would rather make every attraction possible to mention casually, including the low-stakes ones. If only the serious attractions are supposed to be disclosed, each disclosure becomes such a major event that y'all are less likely to say anything at all.",
+      "text_sha256": "78aecb073644e568e30f80b42f913826130050b968b4d4881430d72bf186eac8",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "It worked about 99% of the time. I was no longer interested in other women, aside from one extremely beautiful girl who grabbed my glance once momentarily. That amazed me, although B. never quite believed the switch was real. She even started hallucinating that I was looking at or talking to other women when I wasn’t. So her jealousy was not simply tracking what I was doing in the present. More likely it was insecure attachment from childhood filtering her reality, although she blamed witchcraft.\nJealousy shows insecurity, but sometimes that insecurity can be an important indicator that the relationship actually is not secure, rather than just a remembered script from childhood. Although, either way, it can become a self-fulfilling prophecy. Have you ever noticed how unattractive jealous partners are, or is that just me?\nInstead of stewing in jealousy and throwing out microaggressions now and then, open up.\nIn a monogamous relationship, you might say:\n“I notice you pay attention to this other girl more than me, and it makes me feel unloved and insecure. Can we talk about it? Do you really want to explore things with her? If so that's fine, but don't make the decision lightly because it's irreversible.”\nIn a polyamorous relationship the boundaries might be more negotiable, but that actually means negotiating is required.\nI do believe two people can choose sexual exclusivity honestly. They can admit that attraction to other people exists and decide not to act on it each day.\nI would rather make every attraction possible to mention casually, including the low-stakes ones. If only the serious attractions are supposed to be disclosed, each disclosure becomes such a major event that y'all are less likely to say anything at all.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "It worked about 99% of the time. I was no longer interested in other women, aside from one extremely beautiful girl who grabbed my glance once momentarily. That amazed me, although B. never quite believed the switch was real. She even started hallucinating that I was looking at or talking to other women when I wasn’t. So her jealousy was not simply tracking what I was doing in the present. More likely it was insecure attachment from childhood filtering her reality, although she blamed witchcraft.\nJealousy shows insecurity, but sometimes that insecurity can be an important indicator that the relationship actually is not secure, rather than just a remembered script from childhood. Although, either way, it can become a self-fulfilling prophecy. Have you ever noticed how unattractive jealous partners are, or is that just me?\nInstead of stewing in jealousy and throwing out microaggressions now and then, open up.\nIn a monogamous relationship, you might say:\n“I notice you pay attention to this other girl more than me, and it makes me feel unloved and insecure. Can we talk about it? Do you really want to explore things with her? If so that's fine, but don't make the decision lightly because it's irreversible.”\nIn a polyamorous relationship the boundaries might be more negotiable, but that actually means negotiating is required.\nI do believe two people can choose sexual exclusivity honestly. They can admit that attraction to other people exists and decide not to act on it each day.\nI would rather make every attraction possible to mention casually, including the low-stakes ones. If only the serious attractions are supposed to be disclosed, each disclosure becomes such a major event that y'all are less likely to say anything at all.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.0038541913963854313,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1751,
+            "word_count": 289,
+            "token_length": 358,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "vows-rule-disclosure-factorial"
+    }
+  ],
+  "audit_id": "romance-vows-rule-learning-2026-08-16",
+  "call_accounting": {
+    "audit_id": "romance-vows-rule-learning-2026-08-16",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "section_id": "vows-rule-disclosure-factorial",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-vows-rule-learning-r1a-disclosure-2026-08-16_DISC_A0B0_COMPACT_NO_AFTERCARE"
+      }
+    ]
+  }
+}
