@@ -1,0 +1,63 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-cross-boundary-r1-talk-overcompletion-2026-08-16",
+  "spec_sha256": "cd4c2582769c2473aa929c295197cb72fa40b8c11f2679f1af8e67202afa10ff",
+  "results": [
+    {
+      "id": "TALK_OWNER_BASELINE",
+      "measurement_key": "romance-cross-boundary-r1-talk-overcompletion-2026-08-16_TALK_OWNER_BASELINE",
+      "text": "# Talk about making love before you do it\n\nOnce we're having sex, saying what I really think can stop the sex. That makes it a pretty bad time to begin trying to be honest about it. I'd rather have the conversation while either of us can dislike the answer without having to stop something that's already happening. To me, that conversation is already part of making love. What would I even want to know? Not every sexual preference we've ever had. I don't think either person necessarily knows. But if a kink really matters to her, or something in her past makes a particular thing feel awful, I'd like to know before I blunder into it. We should also learn what makes us relax and actually want more.\n\nSome things we only learn by being together. Mind-reading is great if it happens, but it's best to be up front about what we learn. Probably one of the biggest questions is what this sex means to each of us. I might feel we're bonding while she thinks it's just play, or she might not even be in the mood but doesn't want to ruin it for me.\n\nIt's great when you feel perfectly matched sexually with your partner, but appetites and preferences are always in flux.  That's where quiet resentment can grow if we can't talk.\n\nI guess that's why I don't reduce sexual compatibility to whether our bodies fit. Can we tell each other the truth when we're about as exposed as people get, especially when the truth is disappointing? Talking before our clothes come off won't prove it. But if we can't do it then, that's a blocker.",
+      "text_sha256": "a66a933749ce036251af28b02a96254f1cffb4ef3505d69d9c13b8b88e5e979b",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "# Talk about making love before you do it\nOnce we're having sex, saying what I really think can stop the sex. That makes it a pretty bad time to begin trying to be honest about it. I'd rather have the conversation while either of us can dislike the answer without having to stop something that's already happening. To me, that conversation is already part of making love. What would I even want to know? Not every sexual preference we've ever had. I don't think either person necessarily knows. But if a kink really matters to her, or something in her past makes a particular thing feel awful, I'd like to know before I blunder into it. We should also learn what makes us relax and actually want more.\nSome things we only learn by being together. Mind-reading is great if it happens, but it's best to be up front about what we learn. Probably one of the biggest questions is what this sex means to each of us. I might feel we're bonding while she thinks it's just play, or she might not even be in the mood but doesn't want to ruin it for me.\nIt's great when you feel perfectly matched sexually with your partner, but appetites and preferences are always in flux.  That's where quiet resentment can grow if we can't talk.\nI guess that's why I don't reduce sexual compatibility to whether our bodies fit. Can we tell each other the truth when we're about as exposed as people get, especially when the truth is disappointing? Talking before our clothes come off won't prove it. But if we can't do it then, that's a blocker.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "# Talk about making love before you do it\nOnce we're having sex, saying what I really think can stop the sex. That makes it a pretty bad time to begin trying to be honest about it. I'd rather have the conversation while either of us can dislike the answer without having to stop something that's already happening. To me, that conversation is already part of making love. What would I even want to know? Not every sexual preference we've ever had. I don't think either person necessarily knows. But if a kink really matters to her, or something in her past makes a particular thing feel awful, I'd like to know before I blunder into it. We should also learn what makes us relax and actually want more.\nSome things we only learn by being together. Mind-reading is great if it happens, but it's best to be up front about what we learn. Probably one of the biggest questions is what this sex means to each of us. I might feel we're bonding while she thinks it's just play, or she might not even be in the mood but doesn't want to ruin it for me.\nIt's great when you feel perfectly matched sexually with your partner, but appetites and preferences are always in flux.  That's where quiet resentment can grow if we can't talk.\nI guess that's why I don't reduce sexual compatibility to whether our bodies fit. Can we tell each other the truth when we're about as exposed as people get, especially when the truth is disappointing? Talking before our clothes come off won't prove it. But if we can't do it then, that's a blocker.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.00023000975488685071,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1521,
+            "word_count": 280,
+            "token_length": 334,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "cross-talk-overcompletion"
+    }
+  ],
+  "audit_id": "romance-cross-boundary-rule-learning-2026-08-16",
+  "call_accounting": {
+    "audit_id": "romance-cross-boundary-rule-learning-2026-08-16",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "section_id": "cross-talk-overcompletion",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-cross-boundary-r1-talk-overcompletion-2026-08-16_TALK_OWNER_BASELINE"
+      }
+    ]
+  }
+}
