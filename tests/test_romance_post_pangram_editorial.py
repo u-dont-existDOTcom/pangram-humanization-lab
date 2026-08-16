@@ -27,7 +27,10 @@ def test_if_slow_uses_aug14_owner_recovery_lived_sequence() -> None:
     assert "I just want to please her" in slow
     assert "Masturbating first isn't such a good solution unless I'm the one initiating, and generally I'm not." in slow
     assert "My refractory period is too short for that to be effective for more than a short while anyway." in slow
-    assert "Since I know avoidance won't work every time, Gandarussa matters too." in slow
+    assert (
+        "Since I know avoidance won't work every time, "
+        "[Gandarussa](https://thediplomat.com/2013/09/a-male-contraceptive-pill-for-indonesia/) matters too."
+    ) in slow
     assert "The evidence ranges, and nothing is 100 percent proven, but it looks quite effective as a male contraceptive." in slow
     assert "Would my twin flame behave like this?" in slow
     assert "Basically I need to stop one-dimensionalizing women as whoever they are in relation to me right now." in slow
@@ -76,3 +79,14 @@ def test_two_pillars_removes_thesis_aftercare_and_keeps_unique_lifetime_claim() 
     practical_end = "two completely separate social worlds will automatically start taking sides when something goes wrong."
     next_heading = "# What are you actually choosing together?"
     assert output.index(practical_end) < output.index(lifetime) < output.index(next_heading)
+
+
+def test_sexual_monogamy_paragraph_is_not_replaced_by_social_monogamy_analysis() -> None:
+    output = _assemble()
+    paragraph = (
+        "Sexual exclusivity has a different history. Strict sexual exclusivity backed by law and social enforcement "
+        "grew alongside agriculture, settled property, and inheritance, and became a mass norm during the Industrial "
+        "Revolution. Tribal cultures across the world have generally had more flexible forms of primary partnership, "
+        "or 'social monogamy,' with accepted ways for sexual or emotional connection to exist outside it."
+    )
+    assert paragraph in output
