@@ -7,9 +7,9 @@
   },
   "baseline_bytes": 109480,
   "baseline_sha256": "18ed9fa6850e3a20d523b9365519ef43fa4e56398ce4e06d3743022676555edc",
-  "final_bytes": 107465,
-  "final_sha256": "4c3f58cb4e61eb8a194e0a183f3ec443e84155cdafc08124642ef68d98caeb5c",
-  "operation_count": 18,
+  "final_bytes": 107005,
+  "final_sha256": "25636795b91158adb2f9dfda5d0f6a878fde9109d0f3481dd519e34d8a16de40",
+  "operation_count": 21,
   "operations": [
     {
       "id": "owner-opening-2026-08-15",
@@ -50,6 +50,14 @@
       "old_bytes": 89,
       "old_sha256": "6fa6c02819536a97ae5cef8884166e0705dffbb57665ccdd850211a51929599b",
       "type": "delete_exact"
+    },
+    {
+      "id": "if-slow-reorder-checkin-after-attachment",
+      "new_bytes": 801,
+      "new_sha256": "0ef855672aac775caca33581e5ca457d6d985c5a16f305ddbf6e3440d7d2bd82",
+      "old_bytes": 801,
+      "old_sha256": "b7cb0e3a9b6f40f25d7b09c6908756783c065800264b67d189aa44b2b81f4ea7",
+      "type": "replace_exact"
     },
     {
       "id": "flaws-local-function-repair",
@@ -108,6 +116,22 @@
       "type": "delete_exact"
     },
     {
+      "id": "two-pillars-remove-thesis-aftercare",
+      "new_bytes": 248,
+      "new_sha256": "b602a1985cf9d3bde5fd173b922267df4dcfceb5d0f61e40cdf88a3b9735d8ac",
+      "old_bytes": 463,
+      "old_sha256": "fcdb0c0ec76ab3d2dbbefe435f80c3246db5e349338e88c000c8bdf5544621de",
+      "type": "replace_exact"
+    },
+    {
+      "id": "two-pillars-stop-at-lifetime-claim",
+      "new_bytes": 49,
+      "new_sha256": "33e12b4e7e25604600b361d4351420de4825fb4b5e5622fff468a6cd647406cb",
+      "old_bytes": 294,
+      "old_sha256": "57c26507c6d3b7fb249a9e1eb5fd60b4ae4008dbe088805d4a5da6b07f8a7331",
+      "type": "replace_exact"
+    },
+    {
       "id": "choosing-r4-a-authority",
       "new_bytes": 2666,
       "new_sha256": "3543b57a4458f979d176b4b36bcfd13c52b2d709da4fe837d8f9e1e890ad2ca6",
@@ -157,5 +181,5 @@
     }
   ],
   "schema_version": 1,
-  "spec_sha256": "d585fcef54d0ec9805a2c662b477692151b2998159059111d42f44d17c1cb2df"
+  "spec_sha256": "e56c980449f0a1b9f14cb4bca293d4bec54e0aae9a0a7c1f1d67297abe47d966"
 }

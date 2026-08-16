@@ -285,9 +285,9 @@ Moving in together right away is generally a bad idea. You’re basically gettin
 
 This is one step that’s easier not to jump into unless you literally can’t pay the rent, because moving isn’t easy. Once you live together, momentum starts making decisions for you.
 
-Formal check-ins help too. Otherwise it’s very easy to assume mind reading, fawn, or idealize how things are. Pick actual dates and ask how the relationship is going before there’s a crisis. Otherwise we’re just riding blind.
-
 Wanting somebody doesn't tell me whether I should have children with her or build a life with her, and I can know the first part much faster than the second. A wonderful lover can still be a terrible co-parent, community member, or life partner. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.
+
+Formal check-ins help too. Otherwise it’s very easy to assume mind reading, fawn, or idealize how things are. Pick actual dates and ask how the relationship is going before there’s a crisis. Otherwise we’re just riding blind.
 
 At some point one of you will ask, “Why am I special to you? Why are you with me and not somebody else?” If the answer is basically, “We had sex and got hitched?” I don’t know, that’s a damn shame.
 
@@ -615,9 +615,7 @@ Let me show you how this looked for me. I’ve noticed in my own relationships t
 
 When you rely on your partner to provide nearly all the friendship, family, therapy, and spiritual meaning, the burden is overwhelming. That's too many hats to wear even for a hat model. Besides all that, there's no security when two people have to cover all the life essentials: housing, money, children, emotional, health, and other crises. Who even has time for the relationship itself at that point?
 
-Romantic love can last, but it needs the right conditions, and community is one of them. Both people have to support it, and support from a community makes that much more realistic.
-
-Community isn’t magic either. A very strong couple without much trauma can often do well without community, although it’s a struggle and I think it’s rare. A weak couple might not work even with a community if both people are too weak individually. It depends on the couple.
+A very strong couple without much trauma can often do well without community, although it’s a struggle and I think it’s rare. A weak couple might not work even with a community if both people are too weak individually. It depends on the couple.
 
 But having more people around the relationship changes what the two people have to carry. Mutual friends can notice patterns neither person sees. Somebody else can comfort your partner when you have become the wrong person to do it. And when people actually know both of you, they have some chance of telling when the story they’re hearing does not match the person they know.
 
@@ -637,7 +635,7 @@ So if you don't have a real community already, what can you do about it practica
 
 Make as much community as you can wherever you are. Go to meetups together. Make deep friendships together. Find some shared purpose beyond maintaining the relationship. Introduce your old friends to your partner and try to mutualize those friendships as much as possible, so they aren’t experienced as slyly antagonistic or partial to one side. You don’t need to spend all your time together, but two completely separate social worlds will automatically start taking sides when something goes wrong.
 
-I do think romantic love can last for a lifetime. I just don't think two people should have to become each other's entire social world to keep it alive. So keep your friendships. They aren't automatically a threat to the relationship; they're part of what keeps you healthy enough to be in one.
+I do think romantic love can last for a lifetime.
 
 # What are you actually choosing together?
 
