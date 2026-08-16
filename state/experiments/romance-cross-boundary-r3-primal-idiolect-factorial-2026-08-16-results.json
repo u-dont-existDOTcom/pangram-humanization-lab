@@ -72,6 +72,41 @@
         ]
       },
       "section_id": "cross-primal-idiolect-factorial"
+    },
+    {
+      "id": "PRIMAL_IDIOLECT_A0B1_GENERIC_CRITIC_ONLY",
+      "measurement_key": "romance-cross-boundary-r3-primal-idiolect-factorial-2026-08-16_PRIMAL_IDIOLECT_A0B1_GENERIC_CRITIC_ONLY",
+      "text": "# The Queen\n\nMany people are not even aware of how incredible sex can be when the polarity, trust, love & safety are all where they should be. Women have shown me that the cervix can open during sex and become intensely pleasurable for both of us. In fact, after you experience cervical sex, regular sex doesn't even seem like it's really \"sex\" anymore. It seems more like foreplay.\n\nHowever, I've not yet very deeply \"researched\" these experiments, because \"life\" often got in the way, and building up to this actually takes a lot of \"work\" (ahem..).\n\nWomen describe cervical and whole-body orgasms very differently from the ordinary ones based on building friction toward release. Instead, cervical orgasms are more like being taken over by a profound energy running through the whole body.\n\nAlthough some critics dismiss this topic as fiction, Komisaruk and Whipple showed that cervical stimulation can produce orgasm even in women with a severed spinal cord, because the vagus nerve can carry the signal without using the spinal route that clitoral orgasms use. That's what shows the phenomenon is unique. Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim that these can provide days of afterglow, as well as spiritual and physical healings.",
+      "text_sha256": "42d17c494dfd48a4c6a278b919cd518632703bc1380df7216595b7f8119756f7",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "# The Queen\nMany people are not even aware of how incredible sex can be when the polarity, trust, love & safety are all where they should be. Women have shown me that the cervix can open during sex and become intensely pleasurable for both of us. In fact, after you experience cervical sex, regular sex doesn't even seem like it's really \"sex\" anymore. It seems more like foreplay.\nHowever, I've not yet very deeply \"researched\" these experiments, because \"life\" often got in the way, and building up to this actually takes a lot of \"work\" (ahem..).\nWomen describe cervical and whole-body orgasms very differently from the ordinary ones based on building friction toward release. Instead, cervical orgasms are more like being taken over by a profound energy running through the whole body.\nAlthough some critics dismiss this topic as fiction, Komisaruk and Whipple showed that cervical stimulation can produce orgasm even in women with a severed spinal cord, because the vagus nerve can carry the signal without using the spinal route that clitoral orgasms use. That's what shows the phenomenon is unique. Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim that these can provide days of afterglow, as well as spiritual and physical healings.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "# The Queen\nMany people are not even aware of how incredible sex can be when the polarity, trust, love & safety are all where they should be. Women have shown me that the cervix can open during sex and become intensely pleasurable for both of us. In fact, after you experience cervical sex, regular sex doesn't even seem like it's really \"sex\" anymore. It seems more like foreplay.\nHowever, I've not yet very deeply \"researched\" these experiments, because \"life\" often got in the way, and building up to this actually takes a lot of \"work\" (ahem..).\nWomen describe cervical and whole-body orgasms very differently from the ordinary ones based on building friction toward release. Instead, cervical orgasms are more like being taken over by a profound energy running through the whole body.\nAlthough some critics dismiss this topic as fiction, Komisaruk and Whipple showed that cervical stimulation can produce orgasm even in women with a severed spinal cord, because the vagus nerve can carry the signal without using the spinal route that clitoral orgasms use. That's what shows the phenomenon is unique. Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim that these can provide days of afterglow, as well as spiritual and physical healings.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.047372810542583466,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1296,
+            "word_count": 212,
+            "token_length": 273,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "cross-primal-idiolect-factorial"
     }
   ],
   "audit_id": "romance-cross-boundary-rule-learning-2026-08-16",
@@ -111,11 +146,11 @@
         "section_id": "cross-primal-idiolect-factorial",
         "model": "pangram-4",
         "version": "4.0",
-        "paid_api_calls": 2,
+        "paid_api_calls": 3,
         "cache_hits": 0,
         "pending_resumes": 0,
-        "estimated_credits": 2,
-        "estimated_cost_usd": 0.1,
+        "estimated_credits": 3,
+        "estimated_cost_usd": 0.15,
         "cap": 6,
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
