@@ -1927,6 +1927,45 @@
           "section_id": "vows-rule-old-assistant-anchor"
         }
       ]
+    },
+    {
+      "audit_id": "romance-vows-rule-learning-2026-08-16",
+      "created_at_utc": "2026-08-16T07:13:15.451350+00:00",
+      "experiment_id": "romance-vows-rule-learning-r3-old-backbone-repairs-2026-08-16",
+      "id": "Q-f8cea5c8aa8ef96d",
+      "sections": [
+        "vows-rule-old-backbone-reverse-repairs"
+      ],
+      "source_path": "state/experiments/romance-vows-rule-learning-r3-old-backbone-repairs-2026-08-16-results.json",
+      "source_ref": "59a3bc49226d5af31ed379d59e1566f053f2ca02",
+      "source_sha256": "72ec88b2aa34710d43bbe8ea69b745f6c33b6bbf54cde0bff767e592dc9d4bf1",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.35286998748779297,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.647130012512207,
+          "id": "OLD_A1B0_OWNER_BIBLE_ONLY",
+          "prediction_short": "Mixed",
+          "section_id": "vows-rule-old-backbone-reverse-repairs"
+        },
+        {
+          "fraction_ai": 0.2858434319496155,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7141565680503845,
+          "id": "OLD_A0B1_REMOVE_OLD_ENDING_ONLY",
+          "prediction_short": "Mixed",
+          "section_id": "vows-rule-old-backbone-reverse-repairs"
+        },
+        {
+          "fraction_ai": 0.24307692050933838,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7569230794906616,
+          "id": "OLD_A1B1_OWNER_BIBLE_REMOVE_OLD_ENDING",
+          "prediction_short": "Mixed",
+          "section_id": "vows-rule-old-backbone-reverse-repairs"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
