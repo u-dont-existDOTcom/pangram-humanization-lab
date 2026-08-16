@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - agent/romance-current-master-assembly-2026-08-15
+      - agent/romance-architecture-map-2026-08-16
     paths:
       - scripts/assemble_romance_current.py
       - scripts/render_reader_visible.py
+      - tests/test_romance_current_assembly.py
+      - tests/test_romance_aug16_authority.py
+      - tests/test_reader_visible_romance.py
       - work/romance-current-assembly/baseline.md
       - work/romance-current-assembly/assembly-spec.json
       - work/romance-current-assembly/replacements/**
@@ -22,7 +26,7 @@ jobs:
       - name: Check out exact task branch
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
-          ref: agent/romance-current-master-assembly-2026-08-15
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -37,6 +41,7 @@ jobs:
         run: |
           python -m pytest \
             tests/test_romance_current_assembly.py \
+            tests/test_romance_aug16_authority.py \
             tests/test_reader_visible_romance.py -q
 
       - name: Materialize exact current master and reader-visible boundary
@@ -93,4 +98,4 @@ jobs:
             exit 0
           fi
           git commit -m "state: materialize current Romance master and visible boundary"
-          git push origin HEAD:agent/romance-current-master-assembly-2026-08-15
+          git push origin HEAD:"${GITHUB_REF_NAME}"
