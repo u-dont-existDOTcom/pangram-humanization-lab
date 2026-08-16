@@ -3,7 +3,7 @@ name: Register final Romance Pangram boundary
 on:
   push:
     branches:
-      - agent/romance-current-master-assembly-2026-08-15
+      - agent/romance-architecture-map-2026-08-16
     paths:
       - .github/workflows/register-romance-current-master-pangram.yml
 
@@ -17,7 +17,7 @@ jobs:
       - name: Check out exact private assembly branch
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
-          ref: agent/romance-current-master-assembly-2026-08-15
+          ref: agent/romance-architecture-map-2026-08-16
           fetch-depth: 0
           persist-credentials: true
 
@@ -37,22 +37,24 @@ jobs:
           literal = (root / 'reader-visible.txt').read_bytes()
           manifest = json.loads((root / 'reader-visible-manifest.json').read_text(encoding='utf-8'))
           actual = hashlib.sha256(literal).hexdigest()
-          expected = 'b6aafdab0f94339eeca50bab79f24c8d92fe64793f255a169fba401719d38e9b'
+          expected = '99c803c7eda079582a8ba76b6524dcf726ece42e44e8f85796438b929594ea40'
           assert actual == expected, (actual, expected)
           assert manifest['visible_sha256'] == expected, manifest['visible_sha256']
-          assert manifest['visible_bytes'] == len(literal), (manifest['visible_bytes'], len(literal))
-          assert manifest['source_sha256'] == '5f3ffc93f1a901d9878f9b2be34e24c73a3fbff19046af571e6aa45245af0538'
+          assert manifest['visible_bytes'] == len(literal) == 105250, (manifest['visible_bytes'], len(literal))
+          assert manifest['visible_words'] == 18357, manifest['visible_words']
+          assert manifest['source_sha256'] == '4c3f58cb4e61eb8a194e0a183f3ec443e84155cdafc08124642ef68d98caeb5c'
           print(f'literal_visible_sha256={actual}')
           print(f'literal_visible_bytes={len(literal)}')
+          print(f'literal_visible_words={manifest["visible_words"]}')
           PY
 
       - name: Create exactly two new paid-registration files
         env:
-          EXPERIMENT_ID: romance-current-master-visible-final-r1-2026-08-15
-          AUDIT_ID: romance-current-master-final-2026-08-15
+          EXPERIMENT_ID: romance-current-master-visible-final-r2-2026-08-16
+          AUDIT_ID: romance-current-master-final-2026-08-16
           SECTION_ID: FULL_ARTICLE
           VARIANT_ID: current-reader-visible
-          TEXT_SHA256: b6aafdab0f94339eeca50bab79f24c8d92fe64793f255a169fba401719d38e9b
+          TEXT_SHA256: 99c803c7eda079582a8ba76b6524dcf726ece42e44e8f85796438b929594ea40
         run: |
           set -euo pipefail
           git fetch origin automation/pangram-fixed-batch
@@ -83,7 +85,7 @@ jobs:
           test "$(git diff --cached --name-only | wc -l)" -eq 2
           test "$(git diff --cached --diff-filter=A --name-only | wc -l)" -eq 2
           git diff --cached --name-status
-          git commit -m "experiment: certify current Romance reader-visible master"
+          git commit -m "experiment: certify audited Romance reader-visible master"
 
           BASE_SHA="$(git rev-parse HEAD^)"
           HEAD_SHA="$(git rev-parse HEAD)"
