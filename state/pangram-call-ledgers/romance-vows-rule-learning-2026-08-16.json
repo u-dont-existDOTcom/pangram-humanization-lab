@@ -177,8 +177,8 @@
     },
     "vows-rule-tail-functional\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "estimated_credits": 1,
@@ -203,10 +203,18 @@
           "text_sha256": "d5fd9c20fc8dccd341b9368c0af85833c8790b83c6647657cbf2bea6269f1d5d",
           "type": "paid_post_reserved",
           "word_count": 958
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-vows-rule-learning-r4b-tail-e-de-2026-08-16_TAIL_DE_MURKY_PLUS_TAMERA",
+          "recorded_at_utc": "2026-08-16T07:20:56.057786+00:00",
+          "text_sha256": "aa6be4d2a94b1010a88e0f942c612ae8c51ee9433d08d1cebcf75956a7db53e3",
+          "type": "paid_post_reserved",
+          "word_count": 944
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "vows-rule-tail-functional",
       "version": "4.0"
