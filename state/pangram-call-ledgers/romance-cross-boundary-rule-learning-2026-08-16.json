@@ -1,0 +1,27 @@
+{
+  "audit_id": "romance-cross-boundary-rule-learning-2026-08-16",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "cross-talk-overcompletion\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-cross-boundary-r1-talk-overcompletion-2026-08-16_TALK_OWNER_BASELINE",
+          "recorded_at_utc": "2026-08-16T08:16:22.712770+00:00",
+          "text_sha256": "a66a933749ce036251af28b02a96254f1cffb4ef3505d69d9c13b8b88e5e979b",
+          "type": "paid_post_reserved",
+          "word_count": 280
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "cross-talk-overcompletion",
+      "version": "4.0"
+    }
+  }
+}
