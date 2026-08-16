@@ -39,6 +39,12 @@
       "old": "\n\nSeeing someone’s highest potential is different from ignoring what is actually there."
     },
     {
+      "id": "if-slow-reorder-checkin-after-attachment",
+      "type": "replace_exact",
+      "old": "Formal check-ins help too. Otherwise it’s very easy to assume mind reading, fawn, or idealize how things are. Pick actual dates and ask how the relationship is going before there’s a crisis. Otherwise we’re just riding blind.\n\nWanting somebody doesn't tell me whether I should have children with her or build a life with her, and I can know the first part much faster than the second. A wonderful lover can still be a terrible co-parent, community member, or life partner. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.",
+      "replacement_file": "replacements/if-slow-attachment-checkin-order.md"
+    },
+    {
       "id": "flaws-local-function-repair",
       "type": "replace_section",
       "start_anchor": "## The conversation about flaws",
@@ -78,6 +84,18 @@
       "id": "crucible-stop-at-meditation",
       "type": "delete_exact",
       "old": "\n\nRelationship itself can grow somebody who is not fully ready. Some wounds may not even appear until there is a person important enough to activate them. But “not fully ready” should still mean fairly ready, and there should be support outside the couple.\n\nBefore entering something serious, have the conversation about flaws. You don’t need to announce that you are healed. The crucible will find out anyway."
+    },
+    {
+      "id": "two-pillars-remove-thesis-aftercare",
+      "type": "replace_exact",
+      "old": "Romantic love can last, but it needs the right conditions, and community is one of them. Both people have to support it, and support from a community makes that much more realistic.\n\nCommunity isn’t magic either. A very strong couple without much trauma can often do well without community, although it’s a struggle and I think it’s rare. A weak couple might not work even with a community if both people are too weak individually. It depends on the couple.",
+      "replacement_file": "replacements/two-pillars-qualification.md"
+    },
+    {
+      "id": "two-pillars-stop-at-lifetime-claim",
+      "type": "replace_exact",
+      "old": "I do think romantic love can last for a lifetime. I just don't think two people should have to become each other's entire social world to keep it alive. So keep your friendships. They aren't automatically a threat to the relationship; they're part of what keeps you healthy enough to be in one.",
+      "replacement_file": "replacements/two-pillars-stop.md"
     },
     {
       "id": "choosing-r4-a-authority",
