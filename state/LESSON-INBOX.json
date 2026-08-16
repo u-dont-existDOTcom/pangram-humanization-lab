@@ -1966,6 +1966,37 @@
           "section_id": "vows-rule-old-backbone-reverse-repairs"
         }
       ]
+    },
+    {
+      "audit_id": "romance-vows-rule-learning-2026-08-16",
+      "created_at_utc": "2026-08-16T07:17:21.746407+00:00",
+      "experiment_id": "romance-vows-rule-learning-r4a-tail-cd-2026-08-16",
+      "id": "Q-1b7ec1f225d9c89b",
+      "sections": [
+        "vows-rule-tail-functional"
+      ],
+      "source_path": "state/experiments/romance-vows-rule-learning-r4a-tail-cd-2026-08-16-results.json",
+      "source_ref": "007e5f5c13842c80d5c4ea5073f8c0ba983401e2",
+      "source_sha256": "f31859453ddd1c873ef2a7464eddaf83ab6738c3e1fa7f9112dc15a97c81ba9d",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.3190831243991852,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.6809168457984924,
+          "id": "TAIL_C_BRIDGE_ONLY",
+          "prediction_short": "Mixed",
+          "section_id": "vows-rule-tail-functional"
+        },
+        {
+          "fraction_ai": 0.2723928689956665,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7276071310043335,
+          "id": "TAIL_D_OWNER_MURKY_ONLY",
+          "prediction_short": "Mixed",
+          "section_id": "vows-rule-tail-functional"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
