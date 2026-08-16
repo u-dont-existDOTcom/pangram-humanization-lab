@@ -6,129 +6,128 @@
 
 ## Objective
 
-The current objective is not to discover the minimum edit needed to flip Pangram 4. Joel explicitly does not consider that question important. The target is stronger: remove genuinely model-shaped realization, overcompletion, false symmetry, conceptual inventorying, and lower-authority assistant smoothing so the article's prose remains recognizably human under substantially stronger future detectors (for example Pangram 5/6), while preserving claim fidelity, article function, and Joel's actual thought.
+The current objective is not to discover the minimum edit needed to flip Pangram 4. Joel explicitly does not consider that question important. The stronger target is to remove genuinely model-shaped realization, overcompletion, false symmetry, conceptual inventorying, and lower-authority assistant smoothing so the article remains recognizably human under stronger future detectors while preserving claim fidelity, article function, and Joel's actual thought.
 
 Pangram remains secondary evidence. No new paid detector calls are authorized by this audit. The exhausted Talk/Slow Pangram-4 audit remains closed at 6/6 paid calls.
 
-## Governing operational lesson
+## Governing rule
 
-Protected source functions constrain what the passage must accomplish; they are not sentence slots. A robust rewrite should recover the live thought and realize only the next necessary moves. Do not spend sentences documenting every protected function when one lived movement can carry several of them. Sentence-level plausibility is insufficient if the aggregate passage behaves like a completed conceptual inventory.
+Protected source functions are outcome constraints, not sentence slots. A newer assembled passage is also not automatically higher authority than a direct Joel rewrite. The audit therefore distinguishes:
 
-A newer assembled passage is also not automatically higher authority than a direct Joel rewrite. The current audit therefore has two distinct operations:
+1. **authority restoration** where an assistant reconstruction silently replaced owner-final prose;
+2. **article-wide routing** where a function is preserved once in its strongest home rather than repeated because older sections each carried it;
+3. **future-robustness reconstruction** only where the active realization itself has a concrete defect.
 
-1. **authority restoration** where an assistant reconstruction silently replaced owner-final prose; and
-2. **future-robustness reconstruction** only where the active prose itself still has a concrete realization defect.
+Do not confuse these operations.
 
-Do not confuse the two.
+## Resolved local operations
 
-## Current robust candidate operations
+### Talk
+Use Joel's direct owner rewrite from `ROMANCE-TALK-OWNER-COMPRESSION-LESSON-2026-08-16.md`. Do not reopen.
 
-### `Talk about making love before you do it`
-
-Use Joel's direct owner rewrite recorded in `ROMANCE-TALK-OWNER-COMPRESSION-LESSON-2026-08-16.md`. It supersedes assistant r32/r33 and all earlier detector-repair candidates for the rewritten movement.
-
-### `Can Casual Sex or a Situationship Actually Be Honest?`
-
+### Casual Sex / Situationship
 Restore direct Joel owner-final r4 wholesale. See `ROMANCE-AUTHORITY-RESTORATIONS-2026-08-16.md`.
 
-### `Should you be in a relationship at all?` — practical partnership / wanting durability
-
-Restore the exact owner-final wanting/durability block through `No easy answers here in modern life.` Preserve the unresolved owner sentence:
+### Should — practical partnership / wanting durability
+Restore the exact owner-final block through `No easy answers here in modern life.`, including:
 
 > There is a real contradiction here. I don't think it needs to be solved into a rule.
 
-See `ROMANCE-AUTHORITY-RESTORATIONS-2026-08-16.md`.
+### Love
+`ROMANCE-LOVE-FUTURE-ROBUSTNESS-CANDIDATE-2026-08-16.md` remains a **candidate**, not installed authority. Preserve the exact owner block through the agape landing-pad paragraph, retain the unique eros→particular-agape function once, and route durability/self-abandonment to their stronger later owner homes.
 
-### `If slow isn't realistic for you`
+### How to find a partner
+Restore only the owner r7 app line:
 
-Preserve the latest locked owner version byte-for-byte absent a substantive defect.
+> Then maybe jump on the app and play Russian roulette. 😅
 
-### `What we mean by “love” ❤️`
+The rest of the current section stays. See `ROMANCE-HOW-TO-FIND-PARTNER-OWNER-R7-RESTORATION-2026-08-16.md`.
 
-The future-robustness candidate and provenance analysis are recorded in `ROMANCE-LOVE-FUTURE-ROBUSTNESS-CANDIDATE-2026-08-16.md`. Preserve the exact owner block through the agape landing-pad paragraph, keep the unique eros→particular-agape function in one live causal sentence, and route the later durability/self-abandonment material to its stronger owner destinations rather than pre-completing those later arguments in Love.
+### Starting on the right foot
+Use owner r5 as the prose baseline, restore Joel's exact attachment wording, preserve the three later unique discernment functions (scenario answers, ordinary-time observation, discomfort-as-data), retain the explicit owner-approved short pointer to Two Pillars, and leave the generic failure/self-implication recap routed to `Doing it consciously`. See `ROMANCE-STARTING-OWNER-R5-COMPOSITE-RESTORATION-2026-08-16.md`.
 
-This remains a candidate, not installed authority.
+### Anti-PTSD
+Strong owner region. Preserve `a friend of mine`, not Heidi. Preserve relationship-level severe-claim agency: the relationship almost killed Joel; do not turn that into an accusation that Bee tried/nearly killed him.
 
-### `Doing it consciously`
+### Idealization
+Restore the owner-final OCR r1 middle paragraphs rather than the Aug. 13 smoothing. See `ROMANCE-IDEALIZATION-OWNER-OCR-R1-RESTORATION-2026-08-16.md`.
 
-Delete the assistant synthesis bridge beginning `The next two tools reach in different directions...` and replace it with nothing. See `ROMANCE-AUTHORITY-RESTORATIONS-2026-08-16.md`.
+### Slow
+Preserve the latest locked version byte-for-byte. Do not reopen. GitHub detector evidence establishes that the locked/current Slow boundary includes the marriage/heart-contract passage and the later `Wanting somebody...` pacing material; that matters for article-wide duplication analysis but does **not** authorize editing Slow.
 
-### `Why all of this sounds artificial`
+### Flaws
+Assistant-produced current candidate; audited KEEP. The old four-part diagnostic taxonomy is already gone and no current substantive defect has been identified.
 
-Keep the current compressed assistant-produced realization. It has a real local job, answers it, and stops. Do not re-expand it into the historical social-theory mini-essay. See `ROMANCE-WHY-ARTIFICIAL-AND-HISTORICAL-CHECKLIST-AUDIT-2026-08-16.md`.
+### Crucible
+Assistant-produced current candidate; audited KEEP. Preserve Joel's Schnarch source correction and mixed intentionality judgment.
 
-### `When you and your partner are at different levels of maturity`
+### Whole World / Two Pillars
+Restore owner-final local syntax while retaining only justified article-wide routing. See `ROMANCE-COMMUNITY-OWNER-SYNTAX-RESTORATION-2026-08-16.md`.
 
-Restore owner-final r24. The Aug. 13 reconstruction replaced Joel's two live questions plus the temporary-asymmetry complication with completed assistant interpretation. Restore the owner questions and `Unequal care is fine for a time...` movement. See `ROMANCE-DIFFERENT-LEVELS-OWNER-R24-RESTORATION-2026-08-16.md`.
+### Different Levels
+Restore owner-final r24 live client/doctor questions and the temporary-asymmetry complication. See `ROMANCE-DIFFERENT-LEVELS-OWNER-R24-RESTORATION-2026-08-16.md`.
 
-### Community cluster — `Don't make your partner your whole world` / `Two Pillars Don't Hold The Roof Up`
+### Primal Attraction
+Preserve the Aug. 13 **block order** because it solves a real curious-reader problem, but keep Joel's owner-final prose inside the reordered blocks. Keep the semantic actor repair `The woman may argue...`, documented separately from literal owner syntax. Route the unique `shared purpose` / social-sufficiency function out of Primal only if it remains preserved in the community architecture. See `ROMANCE-PRIMAL-OWNER-SYNTAX-REORDER-AUDIT-2026-08-16.md`.
 
-Restore owner-final local syntax while retaining only justified article-wide routing: the unique shared-purpose function may live in the community architecture rather than as Primal aftercare, and future-feeling contract material may live primarily in Vows rather than being duplicated in Two Pillars. See `ROMANCE-COMMUNITY-OWNER-SYNTAX-RESTORATION-2026-08-16.md`.
+### Twin Flames
+Owner-authored untouched. Do not reopen without a concrete defect.
 
-### `What are you actually choosing together?`
+### Choosing
+Restore Joel r30 order, especially the `few options` sentence before the question exercise; preserve the card-game line as the real stop. See `ROMANCE-CHOOSING-OWNER-R30-RESTORATION-2026-08-16.md`.
 
-Restore Joel r30 order. In particular, `These are just a few options I could think of to start the ball rolling...` belongs before the question set, where `options` refers to the relationship/social forms just discussed. Preserve the card-game line as the real stop. See `ROMANCE-CHOOSING-OWNER-R30-RESTORATION-2026-08-16.md`.
+### Vows
+Restore Joel r27/r28 story-first architecture and owner late qualifications. Remove the assistant `Attraction and exclusivity` taxonomy/history-first reorder. See `ROMANCE-VOWS-AUTHORITY-RESTORATION-2026-08-16.md`.
 
-### `Why marriage vows are dishonest`
+Important routing correction: the locked Slow section already contains Joel's marriage/heart-contract passage. Do **not** duplicate the Aug. 13 reconstruction's inserted contract/heart sentences into Vows merely to make Vows conceptually complete. Vows already opens with its own owner claim that future feelings cannot be promised and actions can be. The two sections may legitimately recur on the underlying issue because their local jobs differ, but the exact Slow material stays in Slow.
 
-Restore owner r27/r28 architecture: future-feeling problem → honest-vow question → B. attraction-switch experiment → jealousy/insecurity → chosen exclusivity → history of exclusivity → polyamory/murky-middle complication → real stopping point. Remove the assistant `Attraction and exclusivity` taxonomy and history-first reorder. See `ROMANCE-VOWS-AUTHORITY-RESTORATION-2026-08-16.md`.
+### Doing
+Delete the assistant synthesis bridge `The next two tools reach in different directions...` with no replacement. Preserve the owner/self-implication provenance paragraph.
 
-## Sections audited and intentionally left alone
+### Imagination / Psychedelics
+Strong owner regions. The Imagination checklist is native to the exercise. Keep the Psychedelics skip sentence as functional navigation.
 
-### `The conversation about flaws`
+### Why all of this sounds artificial
+Keep the current compressed assistant-produced realization. Do not re-expand it into the older social-theory mini-essay. See `ROMANCE-WHY-ARTIFICIAL-AND-HISTORICAL-CHECKLIST-AUDIT-2026-08-16.md`.
 
-**Provenance:** assistant-produced current candidate; not owner-authored merely because it passes editorial recheck.
+### If you're already in it
+Keep the current owner-accepted/current exact opening for now. Do not blindly restore an older historical intro.
 
-**Decision:** keep current body for now.
-
-The earlier AI source used an overt four-part diagnostic rubric. The current reconstruction already dismantled that taxonomy. Its questions are native to the practical section function and then give way to Joel's own unflattering list, the Key/Bee mistake, the fawning blind spot, and ordinary conversational timing. No substantive weakness requiring another reconstruction has been identified.
-
-### `Are you ready for the crucible?`
-
-**Provenance:** assistant-produced current candidate containing exact owner semantic corrections and owner-supplied source/intent clarifications.
-
-**Decision:** keep current body for now.
-
-The current support material follows a lived causal route rather than a comprehensive support taxonomy. Preserve Joel's exact Schnarch source correction and mixed intentionality judgment (`deliberately for sure sometimes, other times hard to tell`) unless Joel changes them.
-
-### `Why all of this sounds artificial`
-
-**Provenance:** assistant-produced Aug. 13 reconstruction.
-
-**Decision:** keep current compressed version. Its historical longer versions are more conceptually complete but less locally necessary.
-
-### `If you're already in it`
-
-Do not blindly restore an older historical intro. The current Aug. 13 exact opening beginning `One person can’t create mutual honesty...` is assistant-produced but owner-accepted/current exact in the available article state. No concrete semantic defect currently justifies reopening it.
+### Children / Ending / Tough Love
+Strong-owner regions. Preserve the later semantic distinction between leaving the adult relationship and later stopping child visits; preserve Ending's separation of whether to leave from how to leave; do not broadly reopen Tough Love.
 
 ## Functional navigation/list exceptions
 
-Keep the Primal/Twin Flames skip note and the Psychedelics skip sentence unless a concrete route problem appears. Keep the owner Imagination checklist: an exercise may naturally be a list. Formatting class is not a detector diagnosis.
+Keep the Primal/Twin Flames skip note and Psychedelics skip sentence unless a concrete route problem appears. Keep the owner Imagination checklist. Formatting class is not a detector diagnosis.
 
-## Strong-owner rule
+## Durable records
 
-Do not broadly rewrite strong owner-final regions merely for hypothetical future-detector robustness. Where the Aug. 13 reconstruction changed them, restore owner syntax unless a later explicit Joel correction or an article-wide routing decision controls.
+- `ROMANCE-TALK-OWNER-COMPRESSION-LESSON-2026-08-16.md`
+- `ROMANCE-LOVE-FUTURE-ROBUSTNESS-CANDIDATE-2026-08-16.md`
+- `ROMANCE-AUTHORITY-RESTORATIONS-2026-08-16.md`
+- `ROMANCE-WHY-ARTIFICIAL-AND-HISTORICAL-CHECKLIST-AUDIT-2026-08-16.md`
+- `ROMANCE-DIFFERENT-LEVELS-OWNER-R24-RESTORATION-2026-08-16.md`
+- `ROMANCE-COMMUNITY-OWNER-SYNTAX-RESTORATION-2026-08-16.md`
+- `ROMANCE-CHOOSING-OWNER-R30-RESTORATION-2026-08-16.md`
+- `ROMANCE-VOWS-AUTHORITY-RESTORATION-2026-08-16.md`
+- `ROMANCE-HOW-TO-FIND-PARTNER-OWNER-R7-RESTORATION-2026-08-16.md`
+- `ROMANCE-STARTING-OWNER-R5-COMPOSITE-RESTORATION-2026-08-16.md`
+- `ROMANCE-IDEALIZATION-OWNER-OCR-R1-RESTORATION-2026-08-16.md`
+- `ROMANCE-PRIMAL-OWNER-SYNTAX-REORDER-AUDIT-2026-08-16.md`
 
-## Durable audit records
+## Next phase — whole-article routing audit
 
-- Talk owner compression: `ROMANCE-TALK-OWNER-COMPRESSION-LESSON-2026-08-16.md`
-- Love future-robustness candidate: `ROMANCE-LOVE-FUTURE-ROBUSTNESS-CANDIDATE-2026-08-16.md`
-- Casual / Should / Doing restorations: `ROMANCE-AUTHORITY-RESTORATIONS-2026-08-16.md`
-- Why Artificial + historical checklist: `ROMANCE-WHY-ARTIFICIAL-AND-HISTORICAL-CHECKLIST-AUDIT-2026-08-16.md`
-- Different Levels r24: `ROMANCE-DIFFERENT-LEVELS-OWNER-R24-RESTORATION-2026-08-16.md`
-- Community owner syntax: `ROMANCE-COMMUNITY-OWNER-SYNTAX-RESTORATION-2026-08-16.md`
-- Choosing r30: `ROMANCE-CHOOSING-OWNER-R30-RESTORATION-2026-08-16.md`
-- Vows r27/r28: `ROMANCE-VOWS-AUTHORITY-RESTORATION-2026-08-16.md`
+Local authority restoration is far enough along that the next high-value work is **not another owner-section rewrite**. Audit the reconstructed article as one architecture:
 
-## Next article-level audit targets
+1. verify every relocated function still has one strong home;
+2. identify accidental duplicates created by restoring owner prose, especially Love→Should/Whole World, Starting→Two Pillars, Primal→Two Pillars, Slow→Vows, and Doing/Why-Artificial;
+3. distinguish purposeful recurrence from repeated explanation;
+4. verify section-to-section curious-reader continuity;
+5. verify names, severe-claim agency, chronology, and actor relations across sections;
+6. produce an assembly-operations ledger before rebuilding any 18k-word master;
+7. stop if a connective span has no concrete defect rather than manufacturing a future-detector edit.
 
-The next authority-restoration targets are:
-
-1. `How to find a partner` — compare direct owner-final r7 with the Aug. 13 reconstruction, including the known app-line drift.
-2. `Starting on the right foot` — restore owner-final r5 while preserving only later **explicitly approved** consolidation/dedup changes; do not resurrect text Joel already agreed to move/remove.
-3. `Beware idealization in either direction` — compare the owner-final scan/OCR authority with Aug. 13 smoothing and restore owner prose where the reconstruction merely paraphrased it.
-
-After those are resolved, inspect only genuinely active assistant connective spans. Do not invent defects or reopen locked owner sections to keep the audit moving.
+No paid detector work belongs in this phase.
 
 ## Authority boundary
 
