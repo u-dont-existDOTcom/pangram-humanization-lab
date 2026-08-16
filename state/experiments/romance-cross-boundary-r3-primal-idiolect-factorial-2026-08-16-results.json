@@ -1,0 +1,91 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-cross-boundary-r3-primal-idiolect-factorial-2026-08-16",
+  "spec_sha256": "7c1f8f5bb4c22c43139f2539bea2697574f8812b15540de559fc352933694046",
+  "results": [
+    {
+      "id": "PRIMAL_IDIOLECT_A0B0_OWNER_BOTH",
+      "measurement_key": "romance-cross-boundary-r3-primal-idiolect-factorial-2026-08-16_PRIMAL_IDIOLECT_A0B0_OWNER_BOTH",
+      "text": "# The Queen\n\nMany people are not even aware of how incredible sex can be when the polarity, trust, love & safety are all where they should be. Women have shown me that the cervix can open during sex and become intensely pleasurable for both of us. In fact, after you experience cervical sex, regular sex doesn't even seem like it's really \"sex\" anymore. It seems more like foreplay.\n\nHowever, I've not yet very deeply \"researched\" these experiments, because \"life\" often got in the way, and building up to this actually takes a lot of \"work\" (ahem..).\n\nWomen describe cervical and whole-body orgasms very differently from the ordinary ones based on building friction toward release. Instead, cervical orgasms are more like being taken over by a profound energy running through the whole body.\n\nAlthough the peanut gallery critics and lazy fact-checkers often cry fiction on this topic, Komisaruk and Whipple showed that cervical stimulation can produce orgasm even in women with a severed spinal cord, because the vagus nerve can carry the signal without using the spinal route that clitoral orgasms use. That's what shows the phenomenon is unique. Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim that these can provide days of afterglow, as well as spiritual and physical healings.",
+      "text_sha256": "e881936fcf06648f53e0f42f6315fd44321a2cb50a0b8cbc983b7aee658109fb",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "# The Queen\nMany people are not even aware of how incredible sex can be when the polarity, trust, love & safety are all where they should be. Women have shown me that the cervix can open during sex and become intensely pleasurable for both of us. In fact, after you experience cervical sex, regular sex doesn't even seem like it's really \"sex\" anymore. It seems more like foreplay.\nHowever, I've not yet very deeply \"researched\" these experiments, because \"life\" often got in the way, and building up to this actually takes a lot of \"work\" (ahem..).\nWomen describe cervical and whole-body orgasms very differently from the ordinary ones based on building friction toward release. Instead, cervical orgasms are more like being taken over by a profound energy running through the whole body.\nAlthough the peanut gallery critics and lazy fact-checkers often cry fiction on this topic, Komisaruk and Whipple showed that cervical stimulation can produce orgasm even in women with a severed spinal cord, because the vagus nerve can carry the signal without using the spinal route that clitoral orgasms use. That's what shows the phenomenon is unique. Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim that these can provide days of afterglow, as well as spiritual and physical healings.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "# The Queen\nMany people are not even aware of how incredible sex can be when the polarity, trust, love & safety are all where they should be. Women have shown me that the cervix can open during sex and become intensely pleasurable for both of us. In fact, after you experience cervical sex, regular sex doesn't even seem like it's really \"sex\" anymore. It seems more like foreplay.\nHowever, I've not yet very deeply \"researched\" these experiments, because \"life\" often got in the way, and building up to this actually takes a lot of \"work\" (ahem..).\nWomen describe cervical and whole-body orgasms very differently from the ordinary ones based on building friction toward release. Instead, cervical orgasms are more like being taken over by a profound energy running through the whole body.\nAlthough the peanut gallery critics and lazy fact-checkers often cry fiction on this topic, Komisaruk and Whipple showed that cervical stimulation can produce orgasm even in women with a severed spinal cord, because the vagus nerve can carry the signal without using the spinal route that clitoral orgasms use. That's what shows the phenomenon is unique. Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim that these can provide days of afterglow, as well as spiritual and physical healings.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.015548772178590298,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1335,
+            "word_count": 218,
+            "token_length": 281,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "cross-primal-idiolect-factorial"
+    }
+  ],
+  "audit_id": "romance-cross-boundary-rule-learning-2026-08-16",
+  "call_accounting": {
+    "audit_id": "romance-cross-boundary-rule-learning-2026-08-16",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 2,
+        "pending_resumes": 0,
+        "section_id": "cross-primal-source-reporting",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
+        "model": "pangram-4",
+        "paid_api_calls": 3,
+        "pending_resumes": 0,
+        "section_id": "cross-talk-overcompletion",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "cross-primal-idiolect-factorial",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-cross-boundary-r3-primal-idiolect-factorial-2026-08-16_PRIMAL_IDIOLECT_A0B0_OWNER_BOTH"
+      }
+    ]
+  }
+}

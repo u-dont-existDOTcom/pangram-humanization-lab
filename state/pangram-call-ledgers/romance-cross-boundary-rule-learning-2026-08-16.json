@@ -5,8 +5,8 @@
   "sections": {
     "cross-primal-idiolect-factorial\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -15,10 +15,18 @@
           "text_sha256": "e881936fcf06648f53e0f42f6315fd44321a2cb50a0b8cbc983b7aee658109fb",
           "type": "paid_post_reserved",
           "word_count": 218
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-cross-boundary-r3-primal-idiolect-factorial-2026-08-16_PRIMAL_IDIOLECT_A1B0_GENERIC_LIFE_ONLY",
+          "recorded_at_utc": "2026-08-16T08:32:22.584731+00:00",
+          "text_sha256": "fe1b6e91893dd5d369993949d5d1186713dc8e06984facc82abebd07c5dfc885",
+          "type": "paid_post_reserved",
+          "word_count": 217
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "cross-primal-idiolect-factorial",
       "version": "4.0"
