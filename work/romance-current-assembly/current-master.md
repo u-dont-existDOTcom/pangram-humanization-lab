@@ -271,7 +271,7 @@ So my main strategy has been to avoid heat-of-the-moment situations until I'm re
 
 Phone or video first can help. So can meeting around other people and deciding beforehand that we aren't going home together. Islamic and conservative Christian cultures put much stronger barriers around a man and woman being alone before marriage. I don't accept their solution, but they noticed something real. We don't live in tribes anymore, and usually nobody around us knows both of us well enough to slow us down while we figure out what this actually is.
 
-Since I know avoidance won't work every time, Gandarussa matters too. The evidence ranges, and nothing is 100 percent proven, but it looks quite effective as a male contraceptive. That only deals with pregnancy, though. I can still get emotionally attached to somebody I barely know.
+Since I know avoidance won't work every time, [Gandarussa](https://thediplomat.com/2013/09/a-male-contraceptive-pill-for-indonesia/) matters too. The evidence ranges, and nothing is 100 percent proven, but it looks quite effective as a male contraceptive. That only deals with pregnancy, though. I can still get emotionally attached to somebody I barely know.
 
 I grew up assuming the best of everybody because that's what my parents taught me. Now I'm trying to be more suspicious and check for red flags before I'm alone with somebody I badly want to please. Why does she contact me only sometimes? What's the pattern? Is she communicating enough for me to really know her interest level and what's underneath it? Would my twin flame behave like this?
 
