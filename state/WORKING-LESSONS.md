@@ -72,3 +72,9 @@ These are authorial claims/working architecture, not generic psychological doctr
 - Before building an abstract architecture for interpersonal prose, ask: **What would an ordinary person actually feel, do, fear, hope for, or respond to here? What feedback loop exists in real relationships?**
 - Let later discoveries revise earlier framing. Do not preserve an upstream sentence merely because it was already Pangram-green if the downstream thought reveals that the earlier sentence was conceptually wrong.
 - Do not complete conceptual space merely because it can be completed. But also do not amputate a real unresolved thread just to preserve a Human detector result.
+
+## Owner syntax preference — 2026-08-16
+
+- Joel explicitly asked the model to stop using mirrored `can't X. can Y` / `can X. can't Y` antitheses in fresh prose. Treat this as an **owner voice/style constraint**, not a Pangram phrase blacklist or detector-causal claim.
+- When a useful distinction is being made, realize the thought through chronology, motive, consequence, a concrete example, or an ordinary declarative sentence rather than a pre-balanced binary sentence pair.
+- Exact historical owner prose may contain the construction. In developmental article work, do not mechanically reproduce it merely because it is present in an older owner-final version when the latest owner instruction authorizes a cleaner realization.
