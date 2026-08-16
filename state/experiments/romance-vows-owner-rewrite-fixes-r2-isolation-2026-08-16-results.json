@@ -190,6 +190,41 @@
         ]
       },
       "section_id": "vows-ending-aftercare"
+    },
+    {
+      "id": "ENDING_PLUS_LOVE_FORM_ONLY",
+      "measurement_key": "romance-vows-owner-rewrite-fixes-r2-isolation-2026-08-16_ENDING_PLUS_LOVE_FORM_ONLY",
+      "text": "I would rather make every attraction possible to mention casually, including the low-stakes ones. If only the serious attractions are supposed to be disclosed, each disclosure becomes such a major event that y'all are less likely to say anything at all.\nBut even if we choose sexual monogamy, I think it's worth understanding where it came from. Strict sexual exclusivity backed by law and social enforcement grew alongside agriculture, settled property, and inheritance, and became a mass norm during the Industrial Revolution. Tribal cultures across the world have generally had more flexible forms of primary partnership, or 'social monogamy,' with accepted ways for sexual or emotional connection to exist outside it.\nProperty and inheritance are still built into marriage, even while modern vows ask the same institution to guarantee a permanent romantic feeling.\nThat's not to say that polyamory is automatically better, because it can be dishonest too. These days, I believe (And an ex-leader of Tamera, maybe the most famous Free Love commune, agrees: https://www.facebook.com/martin.winiecki/posts/pfbid02V7nrbc7VLgPyLe91si9ximruTC7kwx2XjPBzUmUTnYr6sPViCPaTa7BxD2wmHAaJl ) it is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical. That is not true of everyone, and it does not make polyamory wrong. If monogamy isn't something you actually live, admitting that is still more honest than promising it.\nA lot of relationships end up in the murky middle between honest monogamy and polyamory. Partner deny outside attractions, try to suppress their changing feelings, and rely on possessiveness instead of real love.\nLove is real. The form built around it can still be broken.",
+      "text_sha256": "bc7951dd32cdce7ac2488ca97c624b85f808c20e6f8c87e067e8c5398aa9d867",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I would rather make every attraction possible to mention casually, including the low-stakes ones. If only the serious attractions are supposed to be disclosed, each disclosure becomes such a major event that y'all are less likely to say anything at all.\nBut even if we choose sexual monogamy, I think it's worth understanding where it came from. Strict sexual exclusivity backed by law and social enforcement grew alongside agriculture, settled property, and inheritance, and became a mass norm during the Industrial Revolution. Tribal cultures across the world have generally had more flexible forms of primary partnership, or 'social monogamy,' with accepted ways for sexual or emotional connection to exist outside it.\nProperty and inheritance are still built into marriage, even while modern vows ask the same institution to guarantee a permanent romantic feeling.\nThat's not to say that polyamory is automatically better, because it can be dishonest too. These days, I believe (And an ex-leader of Tamera, maybe the most famous Free Love commune, agrees: https://www.facebook.com/martin.winiecki/posts/pfbid02V7nrbc7VLgPyLe91si9ximruTC7kwx2XjPBzUmUTnYr6sPViCPaTa7BxD2wmHAaJl ) it is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical. That is not true of everyone, and it does not make polyamory wrong. If monogamy isn't something you actually live, admitting that is still more honest than promising it.\nA lot of relationships end up in the murky middle between honest monogamy and polyamory. Partner deny outside attractions, try to suppress their changing feelings, and rely on possessiveness instead of real love.\nLove is real. The form built around it can still be broken.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "I would rather make every attraction possible to mention casually, including the low-stakes ones. If only the serious attractions are supposed to be disclosed, each disclosure becomes such a major event that y'all are less likely to say anything at all.\nBut even if we choose sexual monogamy, I think it's worth understanding where it came from. Strict sexual exclusivity backed by law and social enforcement grew alongside agriculture, settled property, and inheritance, and became a mass norm during the Industrial Revolution. Tribal cultures across the world have generally had more flexible forms of primary partnership, or 'social monogamy,' with accepted ways for sexual or emotional connection to exist outside it.\nProperty and inheritance are still built into marriage, even while modern vows ask the same institution to guarantee a permanent romantic feeling.\nThat's not to say that polyamory is automatically better, because it can be dishonest too. These days, I believe (And an ex-leader of Tamera, maybe the most famous Free Love commune, agrees: https://www.facebook.com/martin.winiecki/posts/pfbid02V7nrbc7VLgPyLe91si9ximruTC7kwx2XjPBzUmUTnYr6sPViCPaTa7BxD2wmHAaJl ) it is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical. That is not true of everyone, and it does not make polyamory wrong. If monogamy isn't something you actually live, admitting that is still more honest than promising it.\nA lot of relationships end up in the murky middle between honest monogamy and polyamory. Partner deny outside attractions, try to suppress their changing feelings, and rely on possessiveness instead of real love.\nLove is real. The form built around it can still be broken.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.33969536423683167,
+            "confidence": "Medium",
+            "start_index": 0,
+            "end_index": 1832,
+            "word_count": 277,
+            "token_length": 409,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "vows-ending-aftercare"
     }
   ],
   "audit_id": "romance-vows-owner-rewrite-fixes-2026-08-16",
@@ -213,10 +248,10 @@
       },
       {
         "cache_hits": 0,
-        "estimated_cost_usd": 0.15,
-        "estimated_credits": 3,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
         "model": "pangram-4",
-        "paid_api_calls": 3,
+        "paid_api_calls": 4,
         "pending_resumes": 0,
         "section_id": "vows-ending-aftercare",
         "version": "4.0",
