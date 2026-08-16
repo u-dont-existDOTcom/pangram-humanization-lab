@@ -3,6 +3,26 @@
   "format": "pangram-call-ledger-v1",
   "section_call_cap": 6,
   "sections": {
+    "vows-bible-topology\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-vows-owner-rewrite-fixes-r1-2026-08-16_BIBLE_OWNER_SPLIT",
+          "recorded_at_utc": "2026-08-16T06:13:23.782885+00:00",
+          "text_sha256": "6bac03aa245ef86c2045d66510ccf2f0ac2774104430383b442d6f542e8b7e41",
+          "type": "paid_post_reserved",
+          "word_count": 210
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "vows-bible-topology",
+      "version": "4.0"
+    },
     "vows-full-owner-rewrite\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
       "estimated_cost_usd": 0.05,
