@@ -1,0 +1,1 @@
+A very strong couple without much trauma can often do well without community, although it’s a struggle and I think it’s rare. A weak couple might not work even with a community if both people are too weak individually. It depends on the couple.
