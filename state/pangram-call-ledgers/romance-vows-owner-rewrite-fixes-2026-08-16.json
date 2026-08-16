@@ -65,8 +65,8 @@
     },
     "vows-ending-aftercare\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -83,10 +83,18 @@
           "text_sha256": "506150afb7e88a4a1a9e35ef74d404a50d38f71a6d1c1a6ac9cf0abfe873e500",
           "type": "paid_post_reserved",
           "word_count": 306
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-vows-owner-rewrite-fixes-r2-isolation-2026-08-16_ENDING_PLUS_CONCEALMENT_ONLY",
+          "recorded_at_utc": "2026-08-16T06:17:18.566136+00:00",
+          "text_sha256": "72ce433776384f065b1f27bdad175daf6b465a6ebf31bd53b09a321b5ea3a384",
+          "type": "paid_post_reserved",
+          "word_count": 278
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "vows-ending-aftercare",
       "version": "4.0"
