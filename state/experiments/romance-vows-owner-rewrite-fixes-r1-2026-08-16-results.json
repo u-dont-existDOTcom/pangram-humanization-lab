@@ -37,6 +37,41 @@
         ]
       },
       "section_id": "vows-full-owner-rewrite"
+    },
+    {
+      "id": "BIBLE_OWNER_SPLIT",
+      "measurement_key": "romance-vows-owner-rewrite-fixes-r1-2026-08-16_BIBLE_OWNER_SPLIT",
+      "text": "I’d rather vow to tell the truth, keep showing up, support our children as best I can, or whatever else I genuinely believe I’m capable of delivering. Even “I’ll love you to the best of my ability, in accordance with how you love me” is something I could actually mean. But “I’ll always love you more than anyone else”—based on what? Because God wants me to?\nWe also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 teaches that it's better not to make a vow than to make one and not fulfill it. It warns that God will be angry with your words and destroy your work if you say to the priest, \"I didn’t mean what I promised.\" It's also interesting that promising itself is almost an indicator of dishonesty. Jesus, in Matthew 5:33–37 (and  James 5:12), teaches that believers should let their \"Yes\" be \"Yes\" and their \"No\" be \"No,\" warning that anything beyond this comes from Satan.\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.",
+      "text_sha256": "6bac03aa245ef86c2045d66510ccf2f0ac2774104430383b442d6f542e8b7e41",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I’d rather vow to tell the truth, keep showing up, support our children as best I can, or whatever else I genuinely believe I’m capable of delivering. Even “I’ll love you to the best of my ability, in accordance with how you love me” is something I could actually mean. But “I’ll always love you more than anyone else”—based on what? Because God wants me to?\nWe also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 teaches that it's better not to make a vow than to make one and not fulfill it. It warns that God will be angry with your words and destroy your work if you say to the priest, \"I didn’t mean what I promised.\" It's also interesting that promising itself is almost an indicator of dishonesty. Jesus, in Matthew 5:33–37 (and  James 5:12), teaches that believers should let their \"Yes\" be \"Yes\" and their \"No\" be \"No,\" warning that anything beyond this comes from Satan.\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "I’d rather vow to tell the truth, keep showing up, support our children as best I can, or whatever else I genuinely believe I’m capable of delivering. Even “I’ll love you to the best of my ability, in accordance with how you love me” is something I could actually mean. But “I’ll always love you more than anyone else”—based on what? Because God wants me to?\nWe also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 teaches that it's better not to make a vow than to make one and not fulfill it. It warns that God will be angry with your words and destroy your work if you say to the priest, \"I didn’t mean what I promised.\" It's also interesting that promising itself is almost an indicator of dishonesty. Jesus, in Matthew 5:33–37 (and  James 5:12), teaches that believers should let their \"Yes\" be \"Yes\" and their \"No\" be \"No,\" warning that anything beyond this comes from Satan.\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.0697111189365387,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1170,
+            "word_count": 210,
+            "token_length": 275,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "vows-bible-topology"
     }
   ],
   "audit_id": "romance-vows-owner-rewrite-fixes-2026-08-16",
@@ -57,6 +92,20 @@
         "paid_calls_to_human": 1,
         "estimated_credits_to_human": 1,
         "first_human_measurement_key": "romance-vows-owner-rewrite-fixes-r1-2026-08-16_OWNER_FULL_EXACT"
+      },
+      {
+        "section_id": "vows-bible-topology",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "romance-vows-owner-rewrite-fixes-r1-2026-08-16_BIBLE_OWNER_SPLIT"
       }
     ]
   }

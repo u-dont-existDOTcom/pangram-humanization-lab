@@ -5,8 +5,8 @@
   "sections": {
     "vows-bible-topology\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -15,10 +15,18 @@
           "text_sha256": "6bac03aa245ef86c2045d66510ccf2f0ac2774104430383b442d6f542e8b7e41",
           "type": "paid_post_reserved",
           "word_count": 210
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-vows-owner-rewrite-fixes-r1-2026-08-16_BIBLE_PACKED_SAME_CONTENT",
+          "recorded_at_utc": "2026-08-16T06:13:27.772719+00:00",
+          "text_sha256": "37fd547868e1d13d1a302d945e4ce15f4fed9841d6680c2f212faf684f943d09",
+          "type": "paid_post_reserved",
+          "word_count": 209
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "vows-bible-topology",
       "version": "4.0"
