@@ -1835,6 +1835,29 @@
           "section_id": "vows-rule-full-cluster-swaps"
         }
       ]
+    },
+    {
+      "audit_id": "romance-vows-rule-learning-2026-08-16",
+      "created_at_utc": "2026-08-16T07:02:55.462137+00:00",
+      "experiment_id": "romance-vows-rule-learning-r2a-formal-bible-2026-08-16",
+      "id": "Q-74ff67fc90772c7e",
+      "sections": [
+        "vows-rule-bible-ending-composition"
+      ],
+      "source_path": "state/experiments/romance-vows-rule-learning-r2a-formal-bible-2026-08-16-results.json",
+      "source_ref": "e1659384550eaa610c6905cbd3e5ee3470335ec2",
+      "source_sha256": "63e831b949c8a342c5c48c6c7715d646e7d87c88d88c3900cd5f3c58710aace8",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.04434507340192795,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9556549191474915,
+          "id": "A1B0_FORMAL_BIBLE_ONLY",
+          "prediction_short": "Human",
+          "section_id": "vows-rule-bible-ending-composition"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
