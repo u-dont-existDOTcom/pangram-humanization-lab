@@ -49,8 +49,8 @@
     },
     "vows-rule-full-cluster-swaps\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -67,10 +67,18 @@
           "text_sha256": "4bcd80da7bed3fbd65fe9a66fda10f35a530cd72893eced2ea1d1f6f795e5169",
           "type": "paid_post_reserved",
           "word_count": 957
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-vows-rule-learning-r1b-full-swaps-2026-08-16_FULL_OWNER_WITH_BOTH",
+          "recorded_at_utc": "2026-08-16T06:57:28.210695+00:00",
+          "text_sha256": "5058335cf973c52cc3a249afbcf440fd4b04737855ca50c75c1890b3adfe2287",
+          "type": "paid_post_reserved",
+          "word_count": 940
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "vows-rule-full-cluster-swaps",
       "version": "4.0"
