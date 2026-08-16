@@ -710,7 +710,7 @@ A foundational, permanent, exclusive romantic partnership is promised far more o
 
 # Doing it consciously 🧭
 
-I learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it. All of this advice is also way too idealistic and unrealistic, and I expect most people will fail at most of it, as I have. But even if they can implement a portion, it will help.
+I learned most of this by screwing it up. Some of it I just thought through, and I’m still not sure about all of it.
 
 ## Imagination as a discernment tool
 
@@ -743,41 +743,45 @@ With Bee and Key, there were many times when we could argue forever sober, then 
 
 But the problem is most people are lazy about integrating what they learn during this window of clarity. We enjoyed the understanding while it lasted, and then the same defensive story would resurface later. In neuroscience, this is called state-dependent learning. What you learn in altered states doesn't automatically translate into your normal sober mind state without the work to do that.
 
+Probably one of the most important benefits we can hope to get long term from any therapy is the ability to express what we feel in a non-combative way. Otherwise, people tend to ping pong between not expressing or downplaying their feelings and expressing them combatively. MDMA can make this temporarily much easier because all the problems can look so small and silly. The question is what happens when you're sober again.
+
+So I would say the therapy worked if a week or two later, you and your partner can comfortably say, “Honey, I'm feeling unappreciated right now. I know you're not trying to make me feel that way, and maybe you feel like I'm making you feel that way, but I'd like us to take some time soon to discuss the issue beneath this in a kinder way. What do you say?”
+
+If you don't have a partner, you can do the same thing with whoever you tend to have trouble relating with, in a less lovey way but still with compassion.
+
+It's not always possible in that moment to change a defensive posture into non-defensive loving communication. That's why I suggest setting a time soon with a nice intention, like a ritual. Sober is fine. You can put some rose petals around you or something to build the feeling, or play some song you both like.
+
 Starting a relationship through psychedelics has another danger. Key and I met and then spent a few days taking iboga with friends. We got to know each other very deeply that way, and that was great. But it was especially her higher self I was getting to know. I tend to idealize people even sober, and that gets worse when I'm high. It was still beautiful to see the real higher self potential in her, I'm not denying that. But that information didn't help me understand how we would get along in normal life.
 
 I’ve also had friends get together at MDMA parties and stuff. It’s rarely a good idea. The intimacy can be completely real. You may feel that this person understands you more deeply than anyone ever has. There is still a lot you don’t know: what happens when you’re sober, irritated, jealous, broke, bored, or trying to make a difficult decision together? Or you might even sometimes have the opposite problem, like I had with H.D., where the connection continues to deepen while sober, and it becomes something that one person might cling to desperately, never imagining they could find that again.
 
 The obvious advice is to wait before making large promises and spend time together sober, around other people, and in ordinary situations. Write down what each of you learned, do some peer counseling, check with friends to see if you're too pie-in-the-sky. But the problem is, you won't necessarily be interested in sober advice when you're high. You're "beyond all that." And the high can continue after sobriety because intimacy itself is like rose-colored glasses.
 
-The main takeaway here is, don’t let the medicine become the only time when you can understand each other, forgive, or remember why you’re together.
-
----
-
 ## Why all of this sounds artificial
 
-By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat of the moment stuff, and continuing your own reparenting practices when a warm body is available to do some of the soothing?
+By now this probably sounds terribly artificial. Is anyone actually going to do scheduled check-ins, delayed cohabitation, conversations about hypothetical disasters, imagination exercises, not to mention resisting the heat-of-the-moment stuff and continuing your own reparenting practices when a warm body is available to do some of the soothing?
 
-Well, you caught me. It is painfully artificial.
-
-That’s part of why. I’m trying to replace a missing community with instructions. Build the community and you can probably throw some of the instructions away.
+Well, yeah. It is painfully artificial. In a healthy communal society, the couple would have access to witnesses, elders, friends, and other emotional outlets and resources. Most of us these days don’t have that, so we’re trying to recreate consciously and clumsily some of what the wider field would have done without a checklist.
 
 ---
 
 # If you’re already in it
 
-One person can’t create mutual honesty. I learned that in all three of my reference relationships. Actually, it’s probably just common sense. I could keep bringing up the same problem, but I couldn’t make the other person look at it with me.
+Most of this article is about what to do before jumping head first into head over shoulders. But if you’re already married with children, advice about slowing down arrives a little late.
 
-With Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none.
+I wish I had a special method for fixing that. Mostly I learned the obvious thing the hard way: one person can’t fix the relationship (unless they're the main problem in it).
 
-I kept saying, “It’s not possible to have a relationship without trust.” I think that rigidity came from trauma and never really growing up.
+With Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none. I kept saying, “It’s not possible to have a relationship without trust.” I think that rigidity came from trauma and never really growing up.
 
 Even dishonesty was sometimes hard for me to define in these relationships. Bee once opened a door and, a second later, said she hadn’t opened it. That drove me crazy. Why would she lie like that? But looking back on it now, I could have just seen it as some kind of mental illness rather than "lying" since there was no strategy behind it, and in fact she was usually quite honest.
 
 Some things were less mysterious. They were acting as if the trust problem wasn’t there because they still wanted the relationship. Attractions to other people sometimes went unsaid too, and sometimes got imagined from nowhere. Some people keep a relationship like this going for a long time, just sweeping everything under the rug.
 
-I'm not saying to start dumping every hidden thought on your partner and announcing that you’re finally being honest. Ask whether both of you actually want to prioritize radical honesty, first.
+On the other hand, sometimes I was more honest than my partner could handle, which was its own kind of damage. Ask whether both of you actually want to prioritize radical honesty, first. But the other person also can’t keep saying “not now” forever and think that's going to save the relationship.
 
-Once you've agreed honesty is important, start with the pinkest elephant in the room:
+This is the time for agape to shine, because the best thing for both of you may not be holding onto the relationship pattern you originally committed to or dreamt of.
+
+Start with the pinkest elephants in the room:
 
 “I don’t think we really trust each other.”
 
@@ -789,15 +793,13 @@ Once you've agreed honesty is important, start with the pinkest elephant in the 
 
 See whether the other person will stay in the conversation. If they won’t, that tells you something another perfectly worded speech probably won’t fix.
 
-Usually one person wants this opening first. That person has to return to the selfless kind of love I described at the start and care about what is genuinely best for both people, even if the relationship changes in a way they don’t want. The other person also can’t keep saying “not now” forever and pretend no choice is being made.
-
 ## Outside help can sometimes break the loop fast
 
 Bee and I were once desperately misunderstanding each other, so we called my friend Eshwar, the only friend of mine whom she respected. He told a related story about something that had happened with his sister. Somehow, Bee immediately understood what I had been trying to say. It was like magic.
 
 So, don't think of outside help as a formal last resort. I think of it as a part of building community when we learn to rely on each other for this kind of intimate, real-life support. It could be calling up a mutual friend, peer counselor, couples therapist, doing Imago dialogue, Restorative Circle, and/or joining a men’s or women’s group. The key is that both people need to respect the person or process enough to hear something new.
 
-Outside help has a limit: “The only one you can change is yourself” is partly true. Restart whatever you stopped doing because the relationship was soothing you: inner-child reparenting, meditation, body practices, peer counseling.
+What they say is also partly true, "The only one you can change is yourself." Restart whatever you stopped doing because the relationship was soothing you: inner-child reparenting, meditation, body practices, peer counseling.
 
 ## What will honesty produce?
 
@@ -820,10 +822,6 @@ Before having or adopting children, sit down for an imagination session to figur
 When it comes to stepchildren, even if they aren't technically your children, they still become attached. If you've been acting as their parent for years, it's not right to vanish from their life just because the marriage ended. You don't have parental rights legally, but you can stay a mentor or close friend, and hopefully your partner would agree with this. When children have parental figures come and go, it can damage their ability to have good relationships as adults.
 
 Never recruit children into the adult war. They get their own relationship with the other parent.
-
-Children are already involved even when you think you're keeping them out of it, so talk to them directly and honestly. Don’t make them the mediators. It depends on their age, obviously, but you can say something like: “I’m sorry that you see Mommy and Daddy arguing. Sometimes in life even people who love each other can’t understand each other well. We’re trying our best to understand each other, and we’re always hoping we can do better. You’re not responsible for this, and we both love you very much. Hopefully you will be better at understanding your partner in the future.”
-
-That is the ordinary case. My situation with my first wife, Ann, became an extreme exception with two separate decisions. If the adult war is so bad that the child is unavoidably in the middle, sometimes the best thing you can do for the child is to leave the relationship. Stopping contact with the child is a different decision.
 
 This was particularly difficult for me because Ann was very much unfit at the time to care for our son, Bear. I did fight for custody, but, as my lawyer told me, there was no point, because men generally lose. Eventually I exhausted my options for fighting, and I was left with weekly supervised visits.
 
@@ -883,17 +881,17 @@ Too many people judge a relationship only by the result, so start measuring what
 
 # Tough Love
 
-Romantic love ain't easy, but it is priceless, and the things that actually make it work are not very marketable. I can't sell you the fix with one click or one monthly subscription to my love class. (Just kidding, click here!) It's worth every penny if you ask me, but I can’t give you a formula that makes it stay, aside from the obvious 1+1=2.
+Romantic love is not easy, and the things that actually make it work are not very marketable. I can't sell you the fix with one click or one monthly subscription to my love class. (Just kidding, click here!)
 
-Making it work takes both people. That's rare, and probably why romantic love has been seen with suspicion as a destabilizing force throughout history.
+Both people have to be committed to honesty, reparenting, peer counseling, community, conscious agreements, and spiritual practice. It's rare, and that's probably why romantic love has been seen with suspicion as a destabilizing force throughout history.
 
-One of the best books that makes that point today might be the one I was reading with K: The Spirit of Intimacy, by Sobonfu Somé. Somé is coming from the Dagara tribe in Burkina Faso. To her people, marriage is an arranged, ritualized spiritual and communal responsibility. They're suspicious of romance. But one of her ideas fits what I’m trying to say: when two people come together, something appears between them that is larger than either person alone. She calls it the spirit of the relationship.
+One of the best books that makes that point today might be the one I was reading with K: The Spirit of Intimacy, by Sobonfu Somé. Somé came from the Dagara tribe in Burkina Faso. To her people, marriage is an arranged, ritualized spiritual and communal responsibility. They're suspicious of romance. But one of her ideas fits what I’m trying to say: the relationship is bigger and more important than the egos in it. She calls it the spirit of the relationship.
 
-I don’t think that spirit belongs to us. Nobody can command it to remain. At our best, we serve it. We tell the truth, keep doing our own inner play & work (pl/ork), ask the community for help, and listen for what the relationship is becoming. When we start thinking we own it or deserve it, that presumptuousness tends to push it away.
+That spirit is like the universe living its desire to know itself through us, which might be why we see ourselves in ways we can't imagine prior. Nobody can command the spirit to remain. At our best, we serve it. We tell the truth, keep reparenting ourselves, ask the community for help, and listen for what Spirit wants to change. When we start thinking we own it or deserve it, that presumptuousness tends to push it away.
 
 My parents agreed with Somé that community matters and that we serve Spirit. They were also not romantic, though they were loving and poly. I actually wished they were in love with each other, I guess, although I couldn't have articulated that since I didn't even have that concept at the time. Also reminiscent of Somé, they also wore rose-colored glasses and taught me that everybody was basically good. So I learned something about love and community, but not how hard romance is without a community around it, or how much damage basically good people can do when their fears, trauma, and undeveloped parts take over.
 
-It took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology is also like mold: it festers when the environment is perfect for it. The dominant culture seals two people together, calls that privacy, tells them one person should become lover, family, community, therapist, and future, and then treats the damage as a purely private failure.
+It took me many decades to figure out what probably everyone else already knows: real private pathology exists. But pathology festers when the environment is perfect for it. The dominant culture hermetically seals two people together and calls that a luxurious privacy. It tells them that sealed room should provide all the fresh air you'd get from a lover, family, community, therapist, and so on. Then it treats the predictable failure as privately caused as well, like mold that grows out of nowhere.
 
 The myths around romantic love become real because we co-create them. We act as though jealousy proves love, permanent feelings can be promised, conflict should stay hidden, and the relationship failed if it ended. Then we suffer inside ideas that were never natural laws, and we walk blindly into our first, second, third, fourth, and fifth marriages!
 

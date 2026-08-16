@@ -7,9 +7,9 @@
   },
   "baseline_bytes": 109480,
   "baseline_sha256": "18ed9fa6850e3a20d523b9365519ef43fa4e56398ce4e06d3743022676555edc",
-  "final_bytes": 107246,
-  "final_sha256": "a16969513ef29ca8683fedab0e37c0cdfdb1983308173e7478c2c98dfd23abcb",
-  "operation_count": 16,
+  "final_bytes": 107465,
+  "final_sha256": "4c3f58cb4e61eb8a194e0a183f3ec443e84155cdafc08124642ef68d98caeb5c",
+  "operation_count": 18,
   "operations": [
     {
       "id": "owner-opening-2026-08-15",
@@ -108,14 +108,6 @@
       "type": "delete_exact"
     },
     {
-      "id": "doing-conscious-delete-preview-aftercare",
-      "new_bytes": 0,
-      "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "old_bytes": 233,
-      "old_sha256": "3a83c60905eed5fb8108165e0d05164bfa23446a7dd2aff32f593b25b9032fe4",
-      "type": "delete_exact"
-    },
-    {
       "id": "choosing-r4-a-authority",
       "new_bytes": 2666,
       "new_sha256": "3543b57a4458f979d176b4b36bcfd13c52b2d709da4fe837d8f9e1e890ad2ca6",
@@ -132,14 +124,38 @@
       "type": "replace_exact"
     },
     {
-      "id": "owner-closing-2026-08-15",
-      "new_bytes": 724,
-      "new_sha256": "a9d39acec00c7ec3752b586c0a0e0054acb14b13712a4584320bc674e1efe42d",
-      "old_bytes": 754,
-      "old_sha256": "d27eec2a91f53c95e7be06fcf158c3de77113d5f494634f427c1527ad04c5098",
-      "type": "replace_exact"
+      "id": "doing-conscious-aug16-authority",
+      "new_bytes": 7238,
+      "new_sha256": "9d108722db126c96638e56a1ddc67e5f40ded00c3d0e632b550e754c5a1b288d",
+      "old_bytes": 6428,
+      "old_sha256": "17b997a1053b13332ea59a922afe8e2cd4839538e30fda816cc4a15a003d9355",
+      "type": "replace_section"
+    },
+    {
+      "id": "if-already-in-it-aug16-owner-final",
+      "new_bytes": 3987,
+      "new_sha256": "6ebaf5dd61001412258038e3c88ad87f21fc26a5d7873f7b8fbb745fc79230e9",
+      "old_bytes": 3986,
+      "old_sha256": "1d8af7326560ad53740b95dd6332fcc229d3474bf859243c7db42ff899439d80",
+      "type": "replace_section"
+    },
+    {
+      "id": "children-remove-reconstruction-only-speech",
+      "new_bytes": 0,
+      "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_bytes": 931,
+      "old_sha256": "b40e8d834955717a5735e1332e453f0320818f17dc11be0f2cb9ecebeaa89328",
+      "type": "delete_exact"
+    },
+    {
+      "id": "tough-love-aug16-owner-final",
+      "new_bytes": 4206,
+      "new_sha256": "5616e005c6c13a0fb1e97ead076c22eab781aa69e2f6c6eba01cc75e7b3a3e20",
+      "old_bytes": 4130,
+      "old_sha256": "93d957953509bad6662fa49c7a34fd9a1d2eb26635bf02a72592c472b8e31e71",
+      "type": "replace_section"
     }
   ],
   "schema_version": 1,
-  "spec_sha256": "b7f5cd091154156de153ac6f834f38a21479f7eadd1679e8924a587eca4b2d32"
+  "spec_sha256": "d585fcef54d0ec9805a2c662b477692151b2998159059111d42f44d17c1cb2df"
 }
