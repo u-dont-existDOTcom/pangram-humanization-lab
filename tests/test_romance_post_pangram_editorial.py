@@ -48,6 +48,15 @@ def test_if_slow_owner_recovery_places_entanglement_check_before_life_choice() -
     assert output.index(attached) < output.index(checkin) < output.index(life) < output.index(special)
 
 
+def test_turtles_keeps_sex_fit_limit_without_generic_aftercare() -> None:
+    output = _assemble()
+    assert "Some of those things might get better if both partners are committed to helping each other through it. Sometimes bad sexual fit still feels like, “Let’s just be friends!”" in output
+    assert "Saying, “The sex isn’t working for me,” may sound like, “I only love you if the sex is good.” But universal love doesn’t make someone special." in output
+    assert "tomorrow’s not a given and every situation is unique" not in output
+    assert "That conversation is hard because saying" not in output
+    assert "I can still love you and not want to be in a romantic relationship with you." in output
+
+
 def test_two_pillars_removes_thesis_aftercare_and_keeps_unique_lifetime_claim() -> None:
     output = _assemble()
     assert (
