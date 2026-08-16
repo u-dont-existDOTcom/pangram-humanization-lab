@@ -5,8 +5,8 @@
   "sections": {
     "cross-talk-overcompletion\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -23,10 +23,18 @@
           "text_sha256": "d4c9231db286344cbcdbe301eb0bae892c06b29700c4b7c762719337269bc1f6",
           "type": "paid_post_reserved",
           "word_count": 302
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-cross-boundary-r1-talk-overcompletion-2026-08-16_TALK_OWNER_PLUS_THREE_AFTERCARE",
+          "recorded_at_utc": "2026-08-16T08:16:29.417132+00:00",
+          "text_sha256": "5f8bb987f4ef387b6a2570f170cff1c3686c3665d050c74e3dbc49c57093d1c5",
+          "type": "paid_post_reserved",
+          "word_count": 333
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "cross-talk-overcompletion",
       "version": "4.0"
