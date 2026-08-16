@@ -3,6 +3,26 @@
   "format": "pangram-call-ledger-v1",
   "section_call_cap": 6,
   "sections": {
+    "vows-rule-bible-ending-composition\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-vows-rule-learning-r2a-formal-bible-2026-08-16_A1B0_FORMAL_BIBLE_ONLY",
+          "recorded_at_utc": "2026-08-16T07:02:50.132833+00:00",
+          "text_sha256": "07ec84807c7d3a3e3b2341f1d018eedb74d89d66e6ee552fe2a7dcd060b4ed44",
+          "type": "paid_post_reserved",
+          "word_count": 897
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "vows-rule-bible-ending-composition",
+      "version": "4.0"
+    },
     "vows-rule-disclosure-factorial\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
       "estimated_cost_usd": 0.2,
