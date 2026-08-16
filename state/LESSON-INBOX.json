@@ -1749,6 +1749,53 @@
           "section_id": "vows-ending-aftercare"
         }
       ]
+    },
+    {
+      "audit_id": "romance-vows-rule-learning-2026-08-16",
+      "created_at_utc": "2026-08-16T06:54:24.341173+00:00",
+      "experiment_id": "romance-vows-rule-learning-r1a-disclosure-2026-08-16",
+      "id": "Q-931675afaa7c3296",
+      "sections": [
+        "vows-rule-disclosure-factorial"
+      ],
+      "source_path": "state/experiments/romance-vows-rule-learning-r1a-disclosure-2026-08-16-results.json",
+      "source_ref": "7275058c2782f205ef839b842644b25d94d444c6",
+      "source_sha256": "5578e51f300aa0f4a54f85c5f350ed504252a6164179e1e69f3f73cb52f22bb2",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "DISC_A0B0_COMPACT_NO_AFTERCARE",
+          "prediction_short": "Human",
+          "section_id": "vows-rule-disclosure-factorial"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "DISC_A1B0_EXPLICIT_NO_AFTERCARE",
+          "prediction_short": "Human",
+          "section_id": "vows-rule-disclosure-factorial"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "DISC_A0B1_COMPACT_WITH_AFTERCARE",
+          "prediction_short": "Human",
+          "section_id": "vows-rule-disclosure-factorial"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "DISC_A1B1_EXPLICIT_WITH_AFTERCARE",
+          "prediction_short": "Human",
+          "section_id": "vows-rule-disclosure-factorial"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
