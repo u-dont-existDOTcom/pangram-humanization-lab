@@ -177,8 +177,8 @@
     },
     "vows-rule-tail-functional\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "estimated_credits": 1,
@@ -195,10 +195,18 @@
           "text_sha256": "2f12bfbd42c32a582ab321a7f1bbe589e56d81c2ba50a20e6f7916ac01d06dea",
           "type": "paid_post_reserved",
           "word_count": 929
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-vows-rule-learning-r4b-tail-e-de-2026-08-16_TAIL_E_TAMERA_ONLY",
+          "recorded_at_utc": "2026-08-16T07:20:50.990045+00:00",
+          "text_sha256": "d5fd9c20fc8dccd341b9368c0af85833c8790b83c6647657cbf2bea6269f1d5d",
+          "type": "paid_post_reserved",
+          "word_count": 958
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "vows-rule-tail-functional",
       "version": "4.0"
