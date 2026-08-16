@@ -2059,6 +2059,45 @@
           "section_id": "vows-rule-tail-functional"
         }
       ]
+    },
+    {
+      "audit_id": "romance-cross-boundary-rule-learning-2026-08-16",
+      "created_at_utc": "2026-08-16T08:16:34.463048+00:00",
+      "experiment_id": "romance-cross-boundary-r1-talk-overcompletion-2026-08-16",
+      "id": "Q-0b71f8cb3a3fb249",
+      "sections": [
+        "cross-talk-overcompletion"
+      ],
+      "source_path": "state/experiments/romance-cross-boundary-r1-talk-overcompletion-2026-08-16-results.json",
+      "source_ref": "1a0989dc4cf4be126c5271f4e8d9b2fa76bd3cff",
+      "source_sha256": "f0534d250a92a8bfc8c9e4acc57128d20a1781bec4ed9743263a52491cdc2f8c",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "TALK_OWNER_BASELINE",
+          "prediction_short": "Human",
+          "section_id": "cross-talk-overcompletion"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "TALK_OWNER_PLUS_ONE_AFTERCARE",
+          "prediction_short": "Human",
+          "section_id": "cross-talk-overcompletion"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "TALK_OWNER_PLUS_THREE_AFTERCARE",
+          "prediction_short": "Human",
+          "section_id": "cross-talk-overcompletion"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
