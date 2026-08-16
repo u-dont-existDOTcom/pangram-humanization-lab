@@ -17,15 +17,35 @@ def _assemble() -> str:
     return output
 
 
-def test_if_slow_places_checkin_after_attachment_certainty_problem() -> None:
+def test_if_slow_uses_aug14_owner_recovery_lived_sequence() -> None:
     output = _assemble()
-    wanting = (
-        "Wanting somebody doesn't tell me whether I should have children with her or build a life with her, "
-        "and I can know the first part much faster than the second."
-    )
-    checkin = "Formal check-ins help too."
+    start = output.index("## If slow isn’t realistic for you")
+    end = output.index("### Slow steady may win the race, but turtles have problems too!")
+    slow = output[start:end]
+
+    assert "I pretty much always intend to wait long enough to have this conversation and figure out who I'm dealing with." in slow
+    assert "I just want to please her" in slow
+    assert "Masturbating first isn't such a good solution unless I'm the one initiating, and generally I'm not." in slow
+    assert "My refractory period is too short for that to be effective for more than a short while anyway." in slow
+    assert "Since I know avoidance won't work every time, Gandarussa matters too." in slow
+    assert "The evidence ranges, and nothing is 100 percent proven, but it looks quite effective as a male contraceptive." in slow
+    assert "Would my twin flame behave like this?" in slow
+    assert "Basically I need to stop one-dimensionalizing women as whoever they are in relation to me right now." in slow
+    assert "I can know I want her much faster than I can know whether I want to raise children with her, live in community with her, or build a life with her." in slow
+
+    assert "Men naturally love to please women" not in slow
+    assert "Before meeting somebody you’re extremely attracted to, masturbate a lot." not in slow
+    assert "safe birth-control options that work better than condoms" not in slow
+    assert "The Bible also says something, I think, about marriage beginning when you sleep in the same tent together." not in slow
+
+
+def test_if_slow_owner_recovery_places_entanglement_check_before_life_choice() -> None:
+    output = _assemble()
+    attached = "And once I'm attached, “I'm taking a chance on her” starts turning into “she's the right person”"
+    checkin = "pick actual dates to ask how it's going"
+    life = "I can know I want her much faster than I can know whether I want to raise children with her"
     special = "At some point one of you will ask, “Why am I special to you? Why are you with me and not somebody else?”"
-    assert output.index(wanting) < output.index(checkin) < output.index(special)
+    assert output.index(attached) < output.index(checkin) < output.index(life) < output.index(special)
 
 
 def test_two_pillars_removes_thesis_aftercare_and_keeps_unique_lifetime_claim() -> None:
