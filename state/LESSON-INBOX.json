@@ -1796,6 +1796,45 @@
           "section_id": "vows-rule-disclosure-factorial"
         }
       ]
+    },
+    {
+      "audit_id": "romance-vows-rule-learning-2026-08-16",
+      "created_at_utc": "2026-08-16T06:57:33.678375+00:00",
+      "experiment_id": "romance-vows-rule-learning-r1b-full-swaps-2026-08-16",
+      "id": "Q-4c7c9fc4faade6a7",
+      "sections": [
+        "vows-rule-full-cluster-swaps"
+      ],
+      "source_path": "state/experiments/romance-vows-rule-learning-r1b-full-swaps-2026-08-16-results.json",
+      "source_ref": "cfc980d8f78152a0a9c3b2f58730ee0028760fbf",
+      "source_sha256": "44f5a04c177efb4a3dbdfee69fee54544ee11c382ff6b3d99d14363504029344",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "FULL_OWNER_WITH_ASSISTANT_STORY",
+          "prediction_short": "Human",
+          "section_id": "vows-rule-full-cluster-swaps"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "FULL_OWNER_WITH_ASSISTANT_DISCLOSURE",
+          "prediction_short": "Human",
+          "section_id": "vows-rule-full-cluster-swaps"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "FULL_OWNER_WITH_BOTH",
+          "prediction_short": "Human",
+          "section_id": "vows-rule-full-cluster-swaps"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
