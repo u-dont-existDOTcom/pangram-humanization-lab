@@ -1685,6 +1685,70 @@
           "section_id": "vows-ending-aftercare"
         }
       ]
+    },
+    {
+      "audit_id": "romance-vows-owner-rewrite-fixes-2026-08-16",
+      "created_at_utc": "2026-08-16T06:17:34.668952+00:00",
+      "experiment_id": "romance-vows-owner-rewrite-fixes-r2-isolation-2026-08-16",
+      "id": "Q-ecce32247cb3c8a7",
+      "sections": [
+        "vows-bible-topology",
+        "vows-ending-aftercare"
+      ],
+      "source_path": "state/experiments/romance-vows-owner-rewrite-fixes-r2-isolation-2026-08-16-results.json",
+      "source_ref": "693af4398f5b00e172de11af762b168973b0346b",
+      "source_sha256": "0c187a0487cdb91986cbde4c64f25812e10fd2057e8dc1e43469d6cf559e92b8",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "BIBLE_PACKED_IT_IS",
+          "prediction_short": "Human",
+          "section_id": "vows-bible-topology"
+        },
+        {
+          "fraction_ai": 0.2010178118944168,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7989822030067444,
+          "id": "BIBLE_PACKED_EXPLICITLY_STATES",
+          "prediction_short": "Mixed",
+          "section_id": "vows-bible-topology"
+        },
+        {
+          "fraction_ai": 0.20169492065906525,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.798305094242096,
+          "id": "BIBLE_PACKED_EXPLICITLY_STATES_IT_IS",
+          "prediction_short": "Mixed",
+          "section_id": "vows-bible-topology"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "ENDING_PLUS_CONCEALMENT_ONLY",
+          "prediction_short": "Human",
+          "section_id": "vows-ending-aftercare"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "ENDING_PLUS_LOVE_FORM_ONLY",
+          "prediction_short": "Human",
+          "section_id": "vows-ending-aftercare"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "ENDING_PLUS_FOUNDATIONAL_ONLY",
+          "prediction_short": "Human",
+          "section_id": "vows-ending-aftercare"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
