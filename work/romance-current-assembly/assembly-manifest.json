@@ -7,8 +7,8 @@
   },
   "baseline_bytes": 109480,
   "baseline_sha256": "18ed9fa6850e3a20d523b9365519ef43fa4e56398ce4e06d3743022676555edc",
-  "final_bytes": 107005,
-  "final_sha256": "25636795b91158adb2f9dfda5d0f6a878fde9109d0f3481dd519e34d8a16de40",
+  "final_bytes": 106874,
+  "final_sha256": "b07b90c0b50da220891c177850651772ad562595233e8784385439a23156a6e3",
   "operation_count": 21,
   "operations": [
     {
@@ -52,12 +52,12 @@
       "type": "delete_exact"
     },
     {
-      "id": "if-slow-reorder-checkin-after-attachment",
-      "new_bytes": 801,
-      "new_sha256": "0ef855672aac775caca33581e5ca457d6d985c5a16f305ddbf6e3440d7d2bd82",
-      "old_bytes": 801,
-      "old_sha256": "b7cb0e3a9b6f40f25d7b09c6908756783c065800264b67d189aa44b2b81f4ea7",
-      "type": "replace_exact"
+      "id": "if-slow-owner-recovery-r27",
+      "new_bytes": 3481,
+      "new_sha256": "f2c197884b12fb5b9a5eb586213b5e99b9fdc37d66d08e7004b23ba3f9e88e3e",
+      "old_bytes": 3612,
+      "old_sha256": "c022373bb0dd44ec140e68d3c12170708a3872041caa236a2b2885de8f27daac",
+      "type": "replace_section"
     },
     {
       "id": "flaws-local-function-repair",
@@ -181,5 +181,5 @@
     }
   ],
   "schema_version": 1,
-  "spec_sha256": "e56c980449f0a1b9f14cb4bca293d4bec54e0aae9a0a7c1f1d67297abe47d966"
+  "spec_sha256": "69522975a73a44d7eddd973ca056cfef50b4854f42374dfab31f45e1e97dd8b4"
 }

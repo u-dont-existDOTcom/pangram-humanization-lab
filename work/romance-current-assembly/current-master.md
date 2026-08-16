@@ -263,31 +263,27 @@ I’ve been through the wringer so much with idealization that now no matter who
 
 ## If slow isn’t realistic for you
 
-“Slow down” is good advice if you can actually do it. This whole article is mostly about me, but I don’t think this part is unusual.
+I pretty much always intend to wait long enough to have this conversation and figure out who I'm dealing with. Then the heat of the moment hits and I just want to please her. I want her to think of me as the guy who pleases her, not the guy who makes her think twice about wanting pleasure.
 
-How fast? It depends a lot on her, I guess. I went years without sex with one girl because she was a virgin. That’s one reason I like virgins: sex is really hard to have unplanned.
+Masturbating first isn't such a good solution unless I'm the one initiating, and generally I'm not. My refractory period is too short for that to be effective for more than a short while anyway.
 
-If she’s already really into sex, it can be quick. Men naturally love to please women, and it’s hard to break the mood and say, “Hey, sorry, I’m not so keen on sex yet,” when you’re highly turned on yourself. Heat of the moment, etc. Common problem.
+So my main strategy has been to avoid heat-of-the-moment situations until I'm ready. That has definitely saved me from having ten times the body count, but it doesn't work reliably because the request often starts out small. “Hey, wanna go do something together?” Maybe she wants me to come to an event, a meditation teaching, or a walk in nature.
 
-So have the deeper conversations by phone or video first, or meet in person around other people. A meetup group, a friend’s event, whatever. Plan not to go home together, and tell her beforehand that you want to keep things less private at first. If you only say it when she asks you to come home, it sounds like rejection.
+Phone or video first can help. So can meeting around other people and deciding beforehand that we aren't going home together. Islamic and conservative Christian cultures put much stronger barriers around a man and woman being alone before marriage. I don't accept their solution, but they noticed something real. We don't live in tribes anymore, and usually nobody around us knows both of us well enough to slow us down while we figure out what this actually is.
 
-Islamic culture says a man and woman shouldn’t be alone together before marriage. Conservative Christians say similar things. I don’t accept their solution, but they noticed something real.
+Since I know avoidance won't work every time, Gandarussa matters too. The evidence ranges, and nothing is 100 percent proven, but it looks quite effective as a male contraceptive. That only deals with pregnancy, though. I can still get emotionally attached to somebody I barely know.
 
-Still, if two people are alone, attracted, and turned on, obviously things may happen. And we don’t live in tribes anymore. The people around us usually don’t know both of us, and nobody is there slowing things down while we figure out what this actually is.
+I grew up assuming the best of everybody because that's what my parents taught me. Now I'm trying to be more suspicious and check for red flags before I'm alone with somebody I badly want to please. Why does she contact me only sometimes? What's the pattern? Is she communicating enough for me to really know her interest level and what's underneath it? Would my twin flame behave like this?
 
-Plan for the horny, impulsive person you really are. Before meeting somebody you’re extremely attracted to, masturbate a lot. Then imagine you already had sex with her. How do you feel now? Keep that feeling in mind, especially when you get horny again.
+That's my question. Not everybody is searching for somebody who will naturally channel the divine in their presence.
 
-Men should understand they actually do have safe birth-control options that work better than condoms, including Gandarussa herb, and it makes sense to use that. It doesn’t make impulsiveness okay. It just makes pregnancy a bit less likely. Emotional attachment is still just as likely.
+Basically I need to stop one-dimensionalizing women as whoever they are in relation to me right now. They generally have a lot of complexity coming from friend groups, exes, childhoods, and who knows what else. Usually more of it as they get older.
 
-If you do have sex quickly, at least don’t let everything else speed up at the same time. Keep socializing with other people together. Try to have some kind of community even if you aren’t in a real one.
+And once I'm attached, “I'm taking a chance on her” starts turning into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.
 
-Moving in together right away is generally a bad idea. You’re basically getting into common-law marriage without even asking for it. The Bible also says something, I think, about marriage beginning when you sleep in the same tent together.
+If I have sex with somebody quickly, that's a reason not to move in quickly too. Moving in together right away is basically getting into a common-law marriage without discussing it. I want us to keep seeing friends, have some kind of community around the relationship, and pick actual dates to ask how it's going. Otherwise it's too easy for me to assume the relationship is going well because we're already entangled.
 
-This is one step that’s easier not to jump into unless you literally can’t pay the rent, because moving isn’t easy. Once you live together, momentum starts making decisions for you.
-
-Wanting somebody doesn't tell me whether I should have children with her or build a life with her, and I can know the first part much faster than the second. A wonderful lover can still be a terrible co-parent, community member, or life partner. One of the stupid things my brain can do is turn “I'm taking a chance on her” into “she's the right person” after we've been together for a while. Based on what? Sometimes I actually learned something. Sometimes nothing changed except that now I'm attached, and the new certainty is just harder for me to question.
-
-Formal check-ins help too. Otherwise it’s very easy to assume mind reading, fawn, or idealize how things are. Pick actual dates and ask how the relationship is going before there’s a crisis. Otherwise we’re just riding blind.
+I can know I want her much faster than I can know whether I want to raise children with her, live in community with her, or build a life with her.
 
 At some point one of you will ask, “Why am I special to you? Why are you with me and not somebody else?” If the answer is basically, “We had sex and got hitched?” I don’t know, that’s a damn shame.
 
