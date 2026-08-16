@@ -293,11 +293,9 @@ Going slowly can show you how somebody’s moods move over time, how they treat 
 
 You can know somebody for twenty years and then discover on the first night that the polarity isn’t there, touch feels wrong, smell feels wrong, your desire levels or kinks don’t fit, one person is sexually shut down, or the bodies just don’t connect.
 
-Some of those things might get better if both partners are committed to helping each other through it, but tomorrow’s not a given and every situation is unique.
+Some of those things might get better if both partners are committed to helping each other through it. Sometimes bad sexual fit still feels like, “Let’s just be friends!”
 
-Bad sexual fit basically feels like, “Let’s just be friends!”
-
-That conversation is hard because saying, “The sex isn’t working for me,” may sound like, “I only love you if the sex is good.” But universal love doesn’t make someone special. It isn’t romance. It’s the basis of any good relationship of any kind.
+Saying, “The sex isn’t working for me,” may sound like, “I only love you if the sex is good.” But universal love doesn’t make someone special. It isn’t romance. It’s the basis of any good relationship of any kind.
 
 I can still love you and not want to be in a romantic relationship with you. Romantic love generally needs good sex too, or we’re friends who care deeply about each other.
 

@@ -7,9 +7,9 @@
   },
   "baseline_bytes": 109480,
   "baseline_sha256": "18ed9fa6850e3a20d523b9365519ef43fa4e56398ce4e06d3743022676555edc",
-  "final_bytes": 106874,
-  "final_sha256": "b07b90c0b50da220891c177850651772ad562595233e8784385439a23156a6e3",
-  "operation_count": 21,
+  "final_bytes": 106785,
+  "final_sha256": "d4dd760c9b7b970b03a9f5587fd8c09f23d3d3d5cbd40f291b521d3e69f9b028",
+  "operation_count": 22,
   "operations": [
     {
       "id": "owner-opening-2026-08-15",
@@ -58,6 +58,14 @@
       "old_bytes": 3612,
       "old_sha256": "c022373bb0dd44ec140e68d3c12170708a3872041caa236a2b2885de8f27daac",
       "type": "replace_section"
+    },
+    {
+      "id": "turtles-local-flow-repair",
+      "new_bytes": 407,
+      "new_sha256": "5b2e83421c7a9df67478b1335a73788a6317f10910268170beaf6a96859a7837",
+      "old_bytes": 496,
+      "old_sha256": "8fd27cfa93140535dd0120c29eac2ef53c41e30266336087a037ad57b5159da8",
+      "type": "replace_exact"
     },
     {
       "id": "flaws-local-function-repair",
@@ -181,5 +189,5 @@
     }
   ],
   "schema_version": 1,
-  "spec_sha256": "69522975a73a44d7eddd973ca056cfef50b4854f42374dfab31f45e1e97dd8b4"
+  "spec_sha256": "c44a5fec84a4609d6e2fa12ce1978bce49b7ba568066bf47861c2641c20ba8e7"
 }
