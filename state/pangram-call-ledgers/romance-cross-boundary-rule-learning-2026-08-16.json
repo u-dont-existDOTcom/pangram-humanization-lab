@@ -3,6 +3,26 @@
   "format": "pangram-call-ledger-v1",
   "section_call_cap": 6,
   "sections": {
+    "cross-primal-source-reporting\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-cross-boundary-r2-primal-source-reporting-2026-08-16_PRIMAL_CURRENT_FORMAL_SOURCE_RELATION",
+          "recorded_at_utc": "2026-08-16T08:18:44.763893+00:00",
+          "text_sha256": "2dfdd0bca679125f30caf114cddbd668ae9b8ef57bfb203fda9d446a6ff1c6c3",
+          "type": "paid_post_reserved",
+          "word_count": 220
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "cross-primal-source-reporting",
+      "version": "4.0"
+    },
     "cross-talk-overcompletion\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
       "estimated_cost_usd": 0.15,
