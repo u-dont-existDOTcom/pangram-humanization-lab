@@ -37,12 +37,12 @@ jobs:
           literal = (root / 'reader-visible.txt').read_bytes()
           manifest = json.loads((root / 'reader-visible-manifest.json').read_text(encoding='utf-8'))
           actual = hashlib.sha256(literal).hexdigest()
-          expected = '99c803c7eda079582a8ba76b6524dcf726ece42e44e8f85796438b929594ea40'
+          expected = 'fd47cad5825ab8f3bafd810c4c0b7e0a817edff40bd802edf66dac7247b6412e'
           assert actual == expected, (actual, expected)
           assert manifest['visible_sha256'] == expected, manifest['visible_sha256']
-          assert manifest['visible_bytes'] == len(literal) == 105250, (manifest['visible_bytes'], len(literal))
-          assert manifest['visible_words'] == 18357, manifest['visible_words']
-          assert manifest['source_sha256'] == '4c3f58cb4e61eb8a194e0a183f3ec443e84155cdafc08124642ef68d98caeb5c'
+          assert manifest['visible_bytes'] == len(literal) == 104574, (manifest['visible_bytes'], len(literal))
+          assert manifest['visible_words'] == 18248, manifest['visible_words']
+          assert manifest['source_sha256'] == 'dbbc02fde8330045a945a45d51b12d87ed386167958e7c9870852caf51c479ff'
           print(f'literal_visible_sha256={actual}')
           print(f'literal_visible_bytes={len(literal)}')
           print(f'literal_visible_words={manifest["visible_words"]}')
@@ -50,11 +50,11 @@ jobs:
 
       - name: Create exactly two new paid-registration files
         env:
-          EXPERIMENT_ID: romance-current-master-visible-final-r2-2026-08-16
-          AUDIT_ID: romance-current-master-final-2026-08-16
+          EXPERIMENT_ID: romance-current-master-visible-final-r3-2026-08-16
+          AUDIT_ID: romance-current-master-final-r3-2026-08-16
           SECTION_ID: FULL_ARTICLE
           VARIANT_ID: current-reader-visible
-          TEXT_SHA256: 99c803c7eda079582a8ba76b6524dcf726ece42e44e8f85796438b929594ea40
+          TEXT_SHA256: fd47cad5825ab8f3bafd810c4c0b7e0a817edff40bd802edf66dac7247b6412e
         run: |
           set -euo pipefail
           git fetch origin automation/pangram-fixed-batch
@@ -85,7 +85,7 @@ jobs:
           test "$(git diff --cached --name-only | wc -l)" -eq 2
           test "$(git diff --cached --diff-filter=A --name-only | wc -l)" -eq 2
           git diff --cached --name-status
-          git commit -m "experiment: certify audited Romance reader-visible master"
+          git commit -m "experiment: certify post-repair Romance reader-visible master"
 
           BASE_SHA="$(git rev-parse HEAD^)"
           HEAD_SHA="$(git rev-parse HEAD)"
