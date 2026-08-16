@@ -1,0 +1,1 @@
+I do think romantic love can last for a lifetime.
