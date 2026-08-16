@@ -10,6 +10,7 @@ on:
       - scripts/render_reader_visible.py
       - tests/test_romance_current_assembly.py
       - tests/test_romance_aug16_authority.py
+      - tests/test_romance_post_pangram_editorial.py
       - tests/test_reader_visible_romance.py
       - work/romance-current-assembly/baseline.md
       - work/romance-current-assembly/assembly-spec.json
@@ -42,6 +43,7 @@ jobs:
           python -m pytest \
             tests/test_romance_current_assembly.py \
             tests/test_romance_aug16_authority.py \
+            tests/test_romance_post_pangram_editorial.py \
             tests/test_reader_visible_romance.py -q
 
       - name: Materialize exact current master and reader-visible boundary
