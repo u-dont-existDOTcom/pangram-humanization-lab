@@ -4,168 +4,153 @@ Updated: 2026-08-16
 
 ## Goal
 
-Preserve exact detector evidence and the owner's no-click operating model with one reusable, budget-aware automatic runner. Ordinary changes remain free; paid work begins only from a new immutable request that byte-binds one fixed-batch spec on the exact evidence ref.
+Preserve exact detector evidence and resumable editorial state while keeping Pangram secondary to semantic sanity, fidelity, owner authority, and article function.
 
 ## Authority / baseline
 
-- Evidence branch: `automation/pangram-fixed-batch`
-- Automatic-run code/governance merge: `34621f38d702b5739e59cb8f81831604f01e5a52` (PR #23)
+- Evidence branch: `automation/pangram-fixed-batch`.
 - Canonical article prose remains outside this evidence branch.
 - `u-dont-existDOTcom/joel-articles` still has no registered Romance article family; lab notes are editorial/evidence state, not canonical installation.
-- Direct Joel rewrites supersede assistant candidates in editorial authority.
-- A newer assembled assistant passage does not supersede owner-final prose merely because it is recent or detector-green.
-- The father's exact direct quote belongs once in the article opening: “Sex is what you do when you are older and you find a friend you want to have children with.” The readiness / raising-children formulation is Joel's later paraphrase, not father speech.
+- Direct Joel rewrites supersede assistant candidates.
+- Detector status never creates article authority.
+- The father's exact direct quote belongs once in the article opening: “Sex is what you do when you are older and you find a friend you want to have children with.”
+- Fresh model prose should avoid mirrored `can't X. can Y` / `can X. can't Y` antitheses per Joel's 2026-08-16 owner instruction.
 
-## Romance Talk checkpoint
+## Current Romance editorial disposition
 
-The `Talk about making love before you do it` detector problem is resolved at the authorial-thought level. Joel's direct rewrite supersedes assistant r32/r33 and is preserved in `state/ROMANCE-TALK-OWNER-COMPRESSION-LESSON-2026-08-16.md`.
-
-### Detector provenance
-
-- r32 Pangram 4: Human `0.7146716117858887`; AI `0.28532838821411133`; AI-assisted `0.0`.
-- r33 Pangram 4: Human `0.6013631820678711`; AI `0.3986368477344513`; AI-assisted `0.0`.
-- Joel owner rewrite normalized SHA-256: `e01827ab773eafcf4840bce5cb43750c7d5ad16ec4c325063c65ecf8d89f26d2`.
-- Owner reports the rewrite tested 100% Human, high confidence; the lab did not capture the raw owner-run task/version response.
-
-### Durable process rule
-
-> Protected functions are outcome constraints, not sentence slots. Before escalating a detector-red boundary to a global architecture rewrite, run a lossless redundancy audit: label each sentence's job, merge repeated jobs, cut interpretation after examples that already demonstrate the point, reject symmetry added only for completeness, and stop when the reader's live question has actually been answered.
-
-## Current Romance future-robustness / authority-restoration checkpoint
-
-The audit is **authority-first, routing-aware, and defect-driven**, not a Pangram-4 optimization sweep.
-
-Durable Aug. 16 records include:
-
-- `state/ROMANCE-FUTURE-DETECTOR-ROBUST-AUDIT-2026-08-16.md`
-- `state/ROMANCE-LOVE-FUTURE-ROBUSTNESS-CANDIDATE-2026-08-16.md`
-- `state/ROMANCE-AUTHORITY-RESTORATIONS-2026-08-16.md`
-- `state/ROMANCE-WHY-ARTIFICIAL-AND-HISTORICAL-CHECKLIST-AUDIT-2026-08-16.md`
-- `state/ROMANCE-DIFFERENT-LEVELS-OWNER-R24-RESTORATION-2026-08-16.md`
-- `state/ROMANCE-COMMUNITY-OWNER-SYNTAX-RESTORATION-2026-08-16.md`
-- `state/ROMANCE-CHOOSING-OWNER-R30-RESTORATION-2026-08-16.md`
-- `state/ROMANCE-VOWS-AUTHORITY-RESTORATION-2026-08-16.md` — historical/developmental Vows restoration state; superseded where the newer direct owner rewrite differs
-- `state/ROMANCE-VOWS-OWNER-REWRITE-AND-PANGRAM-ISOLATION-2026-08-16.md` — current Vows authority/evidence checkpoint
-- `state/ROMANCE-HOW-TO-FIND-PARTNER-OWNER-R7-RESTORATION-2026-08-16.md`
-- `state/ROMANCE-STARTING-OWNER-R5-COMPOSITE-RESTORATION-2026-08-16.md`
-- `state/ROMANCE-IDEALIZATION-OWNER-OCR-R1-RESTORATION-2026-08-16.md`
-- `state/ROMANCE-PRIMAL-OWNER-SYNTAX-REORDER-AUDIT-2026-08-16.md`
-- `state/ROMANCE-WHOLE-ARTICLE-RESTORATION-ROUTING-AUDIT-2026-08-16.md`
-- `state/ROMANCE-ASSEMBLY-OPERATIONS-LEDGER-2026-08-16.md`
-
-### Current editorial disposition
-
-**Direct owner replacement / locked:**
+**Direct owner replacement / preserve as controlling:**
 - Talk → Joel direct owner rewrite.
-- Vows → Joel direct 2026-08-16 rewrite; this supersedes the prior Aug. 16 developmental candidate and older r27/r28 wording where they differ.
-- Slow → preserve latest locked bytes; do not reopen.
+- Vows → Joel direct 2026-08-16 rewrite.
+- Slow → preserve latest locked bytes unless Joel explicitly reopens a concrete issue.
 - Twin Flames → owner-authored untouched.
 
-**Restore owner authority:**
+**Restore owner authority in whole-article assembly:**
 - Casual r4 wholesale.
-- Should wanting/durability exact owner block.
+- Should wanting/durability owner block.
 - How-to app line `jump on the app and play Russian roulette`.
-- Starting owner r5 syntax plus explicit later accepted/routed functions.
+- Starting owner r5 syntax plus later accepted/routed functions.
 - Idealization owner OCR r1 middle paragraphs.
 - Different Levels owner r24 live questions/temporary-asymmetry complication.
 - Whole World and Two Pillars local owner syntax.
 - Choosing r30 order.
 
 **Structural move retained:**
-- Primal keeps the Aug. 13 causal block order but owner prose inside the blocks; keep the actor repair `The woman may argue...`; route the social-sufficiency/shared-purpose function out only if preserved later.
+- Primal keeps the Aug. 13 causal block order but uses owner prose within blocks; preserve actor repair `The woman may argue...`.
 
-**Keep current assistant realization for now:**
+**Keep current assistant realization for now unless a concrete defect appears:**
 - Flaws.
 - Crucible.
 - Why all of this sounds artificial.
 - current `If you're already in it` opening.
 
 **Delete lower-authority assistant bridge:**
-- `Doing it consciously` preview beginning `The next two tools reach in different directions...` → delete with no replacement.
+- `Doing it consciously` preview beginning `The next two tools reach in different directions...`.
 
-**Candidate only, not installed:**
+**Candidate only:**
 - Love future-robustness tail/routing candidate.
 
-## Vows direct-owner checkpoint — 2026-08-16
+Primary restoration records:
 
-Joel supplied a new direct Vows rewrite after reporting that the prior assistant passage was mostly AI. The exact tested endpoint is 897 words with SHA-256 `1101efe49418bc47df63acb4c9916a1e39b2e8c4b64ac6ca1ff39e669e05dc95`.
+- `state/ROMANCE-WHOLE-ARTICLE-RESTORATION-ROUTING-AUDIT-2026-08-16.md`
+- `state/ROMANCE-ASSEMBLY-OPERATIONS-LEDGER-2026-08-16.md`
+- `state/ROMANCE-AUTHORITY-RESTORATIONS-2026-08-16.md`
+- section-specific Aug. 16 restoration notes.
 
-The exact full endpoint on Pangram 4.0 was Human `1.0`, AI `0.0`, AI-assisted `0.0`, with a High-confidence Human Written window and assistance score `0.1457953304052353`.
+## Vows direct-owner checkpoint
 
-This detector result is evidence only. The rewrite is authoritative because it is direct owner prose.
+Joel's current Vows rewrite is the controlling editorial source.
 
-### Vows routing correction
+- exact tested endpoint: 897 words;
+- SHA-256: `1101efe49418bc47df63acb4c9916a1e39b2e8c4b64ac6ca1ff39e669e05dc95`;
+- Pangram 4.0: Human `1.0`, AI `0.0`, one High-confidence Human Written window.
 
-Locked Slow still contains related marriage/heart-contract material. Earlier restoration state treated that as a reason not to repeat `Marriage itself is a contract. How can you sign a contract about your heart?` inside Vows. Joel's new direct rewrite explicitly restored that line to Vows. That direct owner decision supersedes the routing inference. Preserve both occurrences unless Joel later chooses to deduplicate them.
+Authority consequence:
 
-The new Vows rewrite also stops at the `murky middle` paragraph. Do not restore the old three-move conclusion after it merely because older owner-final Vows versions contained those lines.
+- preserve `Marriage itself is a contract. How can you sign a contract about your heart?` in Vows even though Slow has related material; Joel directly restored the recurrence;
+- preserve the new stop at the `murky middle` paragraph;
+- do not restore the older three-move conclusion merely because it existed in r27/r28;
+- keep publication cleanup separate from detector provenance (`Partner deny`, double space before `James`, Tamera-parenthetical punctuation).
 
-### Vows controlled Pangram findings
+Exact owner/evidence note:
+`state/ROMANCE-VOWS-OWNER-REWRITE-AND-PANGRAM-ISOLATION-2026-08-16.md`
 
-Evidence:
+## Vows rule-learning program — COMPLETE at 20 / 20 calls
 
-- `state/experiments/romance-vows-owner-rewrite-fixes-r1-2026-08-16-results.json`
-- `state/experiments/romance-vows-owner-rewrite-fixes-r2-isolation-2026-08-16-results.json`
-- `state/pangram-call-ledgers/romance-vows-owner-rewrite-fixes-2026-08-16.json`
+Joel clarified that the old six-call limit was primarily a repair guard and authorized up to 20 additional paid calls for controlled rule learning without renewed approval. That allowance is now exhausted.
 
-**Bible/source-reporting boundary:**
+Full synthesis:
+`state/ROMANCE-VOWS-RULE-LEARNING-R1-R4-2026-08-16.md`
 
-- exact owner split realization → Human, AI `0.0`, assistance `0.0697111189365387`;
-- same owner content packed → Human, AI `0.0`, assistance `0.10312946885824203`;
-- packed owner realization with only `it's` → `it is` → Human, AI `0.0`, assistance `0.11258269101381302`;
-- changing the owner relation to `explicitly states that...` recreated a localized Mixed result at about `0.201` AI in two controls.
+Budget record:
+`state/PANGRAM-RULE-LEARNING-BUDGET-2026-08-16.md`
 
-Interpretation: packing and contraction expansion were null in this boundary. The detector was reacting locally to a formal source-certification realization, not to long sentences as such. Do not turn `explicitly states` into a phrase blacklist; the prose-level lesson is to avoid unnecessary verification/reporting scaffolding when plain authorial source relation carries the same claim.
+Ledger:
+`state/pangram-call-ledgers/romance-vows-rule-learning-2026-08-16.json`
 
-**Ending/stopping-point boundary:**
+### Main findings
 
-- owner stop → Human;
-- append concealment consequence only → Human;
-- append `Love is real. The form built around it can still be broken.` only → Human;
-- append foundational-partnership line only → Human;
-- append all three older closing moves together → Mixed, AI `0.1885770559310913`; the terminal window scored `0.627198338508606` AI assistance, High confidence.
+1. **Middle explanatory prose is not intrinsically AI.** A 2×2 around `open up` vs the assistant-explicit setup and presence/absence of the four-sentence post-example interpretation produced four Human `1.0` cells. Full owner-backbone swaps of assistant story, assistant disclosure/aftercare, and both also remained Human `1.0`.
 
-Interpretation: no individual closing line was the culprit. The regression is a cumulative overcompletion interaction. Individually plausible/Human sentences became model-shaped as a package after the thought had already landed. This is direct controlled support for auditing the **real stopping point and package function**, not hunting lexical triggers.
+2. **Formal source-certification remained a repeatable local mechanism.** The old `explicitly states...` Ecclesiastes realization repeatedly creates a localized AI segment; Joel's plain `teaches that...` relation removes it. On the whole owner section the formal source paragraph contributes about 4.4 percentage points AI.
 
-The full owner rewrite changed many additional variables, so these two mechanisms do not explain the entire full-section improvement.
+3. **Closing overcompletion is functional/package-level.** The old three-move ending contributes about 6.8 points AI on the owner backbone and about 10.8 points on the old backbone. Each closing move had previously tested Human by itself; the package was the problem.
 
-## Paid-call state / stop rule
+4. **The exact old assistant anchor is reproduced.** 984-word SHA `8ce5810925d0ed8d19195dfa5ca177348c2d9dd19e91fcdd1bed1f18315171e3` → AI `0.3936096728` / Human `0.6063903570`.
 
-Historic Talk/Slow ledger `state/pangram-call-ledgers/romance-authorial-recovery-2026-08-14.json` remains exhausted at 6 configured Talk/Slow paid POSTs / estimated 11 credits / 0 pending resumes.
+5. **Known repairs are nearly additive but incomplete.** On the old backbone, owner Bible + removal of the old ending reduces AI from `0.3936096728` to `0.2430769205`, leaving a High-confidence AI late tail.
 
-The later future-robustness/authority-restoration audit itself made no paid calls. After Joel supplied the new direct Vows rewrite and explicitly invited controlled Pangram isolation, two fixed batches were run under one Vows audit ID.
+6. **Tail factors are epistatic/context-sensitive.** Removing `Those origins still matter.` alone worsened AI to `0.3190831244`; replacing the abstract murky paragraph with Joel's behavioral realization alone worsened to `0.2723928690`; adding Tamera provenance alone was near-null/worse at `0.2551965117`. Murky + Tamera together improved to `0.1756253392`.
 
-Current Vows ledger `state/pangram-call-ledgers/romance-vows-owner-rewrite-fixes-2026-08-16.json` records:
+7. **Final exact minimal pair demonstrates classifier threshold/idiolect sensitivity.** C+D+E with `people are less likely...` remained Mixed at AI `0.1715100706`, with a 151-word history/property AI window at assistance `0.6061039567`. Changing only that realization to Joel's `y'all are less likely...` made the entire 940-word boundary Human `1.0`, one High-confidence Human window, assistance `0.1842810959`.
 
-- `vows-bible-topology`: 6/6 paid calls, estimated 6 credits / $0.30; cap exhausted;
-- `vows-ending-aftercare`: 5/6 paid calls, estimated 5 credits / $0.25;
-- `vows-full-owner-rewrite`: 1 paid call, estimated 1 credit / $0.05;
-- total estimated: 12 credits / $0.60;
-- pending resumes: 0.
+Do **not** promote `y'all` as a trick. The current interpretation is that an author-specific lexical realization can act as a classifier anchor after larger structural changes move a boundary near Pangram's decision surface. The sign reversals and nulls show why broad phrase blacklists are unreliable.
 
-**Stop Vows Pangram work.** Do not spend the remaining ending call on phrase hunting. Evidence is sufficient.
+### Promotable rule shape
+
+Humanization appears partly **distributional and interactional**. Evaluate the thought sequence, real stopping point, provenance/situatedness, and full authorial realization as a system. A locally suspicious sentence can be detector-null on one backbone; an individually unfavorable change can become favorable in combination; a tiny idiolect perturbation can trigger a large classifier resegmentation near threshold.
+
+This is detector evidence, not a license to sprinkle idiolect markers or optimize prose around Pangram.
+
+## Paid-call state / hard stop
+
+Historic repair/isolation calls remain separately ledgered.
+
+Current rule-learning allowance: **20 / 20 used**.
+
+Allocation:
+- disclosure factorial: 4;
+- full middle-cluster swaps: 3;
+- Bible/ending composition: 3;
+- old assistant raw anchor: 1;
+- old-backbone reverse repairs: 3;
+- tail functional decomposition: 6.
+
+Pending resumes: 0.
+
+**Do not submit another paid rule-learning call without renewed Joel authorization.**
+
+If authorized, the highest-value next study is 6–8 cross-boundary holdout calls, not more Vows word subdivision: replicate cumulative overcompletion in another known owner/assistant boundary; replicate formal source-certification sensitivity in another cited passage; and test whether author-specific idiolect/near-threshold anchoring appears on another boundary without using `y'all` variants.
 
 ## Infrastructure state
 
-- No detector/evidence workflow is currently active after the completed Vows batches.
-- Historic task workflows remain non-executable archived provenance.
-- Pull requests and ordinary pushes run deterministic suite/audit only.
-- Paid eligibility still requires the exact two-file immutable request/spec push contract.
-- Hosted branch-protection / secret-control verification remains a separate repository-administration issue tracked in #17.
+- Automatic paid-run safety gate remains active on `automation/pangram-fixed-batch`.
+- Paid work requires one immutable two-file request/spec push with exact digest binding.
+- Cache, task checkpointing, section ledgers, and evidence pushes remain mandatory.
+- No paid detector run should be active after the final Vows batch completes.
 
-## Next safe action
+## Next editorial action
 
-Use the assembly operations ledger to rebuild the whole Romance article from the highest-authority source pool. For Vows specifically:
+Return to the whole-article Romance restoration/assembly unless Joel authorizes a cross-boundary detector study.
 
-1. use the direct 2026-08-16 owner rewrite;
-2. preserve its present stopping point;
-3. preserve the owner-restored contract/heart line despite related locked Slow wording;
-4. keep detector bytes/provenance separate from publication P1 cleanup such as `Partner deny` and the double space before `James`;
-5. run factual/source verification separately if requested; detector status is not evidence for the historical/biblical claims;
-6. do not run more Pangram on Vows absent a new concrete defect or a materially different future detector/version.
+For assembly:
 
-Whole-article work should continue authority-first: verify every relocated function still has a strong primary home; distinguish purposeful recurrence from accidental duplicate explanation; audit section-to-section curious-reader continuity; preserve naming, actor relations, severe-claim agency, chronology, links, headings, and native-object placement; and inspect only genuinely active assistant connective spans.
+1. use the direct owner Vows rewrite exactly as the source before publication-only cleanup;
+2. rebuild from the assembly operations ledger and exact Markdown scaffold;
+3. verify every relocated function has a strong home and distinguish purposeful recurrence from accidental duplicate explanation;
+4. preserve naming, actor relations, severe-claim agency, chronology, links, headings, and native-object placement;
+5. cold-audit the literal assembled prose twice;
+6. do not reopen owner sections merely to improve detector scores.
 
 ## Recovery rule
 
-Before any future paid request, fetch the current evidence head and active Actions runs. Recover exact task IDs, cache, call ledger, result state, request identity, and spec digest from Git; never infer them from chat and never repeat an ambiguous or already-paid POST.
+Before future paid work, fetch the current evidence head and active Actions runs. Recover exact task IDs, cache, call ledger, result state, request identity, and spec digest from Git; never infer them from chat and never repeat an ambiguous or already-paid POST.
