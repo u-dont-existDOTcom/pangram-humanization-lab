@@ -7,6 +7,7 @@ import pytest
 from scripts.validate_paid_dispatch import PAID_RUN_CONFIRMATION
 from scripts.validate_paid_push import (
     PAID_REQUEST_FORMAT,
+    PAID_TRIGGER_FORMAT,
     PaidPushValidationError,
     validate_paid_push,
     write_github_output,
@@ -61,6 +62,33 @@ def _write_request(
     return path
 
 
+def _write_trigger(
+    root: Path,
+    request: Path,
+    *,
+    request_id: str = "verified-batch",
+    request_sha256: str | None = None,
+) -> Path:
+    path = root / "triggers" / "pangram" / f"{request_id}.json"
+    path.parent.mkdir(parents=True)
+    request_relative = request.relative_to(root).as_posix()
+    path.write_text(
+        json.dumps(
+            {
+                "format": PAID_TRIGGER_FORMAT,
+                "request_id": request_id,
+                "request_path": request_relative,
+                "request_sha256": request_sha256
+                or hashlib.sha256(request.read_bytes()).hexdigest(),
+                "confirmation": PAID_RUN_CONFIRMATION,
+            },
+            sort_keys=True,
+        ),
+        encoding="utf-8",
+    )
+    return path
+
+
 def _valid_change_set(root: Path) -> list[tuple[str, str]]:
     _, raw = _write_spec(root)
     request = _write_request(root, raw)
@@ -68,6 +96,13 @@ def _valid_change_set(root: Path) -> list[tuple[str, str]]:
         ("A", "experiments/batch.json"),
         ("A", request.relative_to(root).as_posix()),
     ]
+
+
+def _registered_trigger_change_set(root: Path) -> list[tuple[str, str]]:
+    _, raw = _write_spec(root)
+    request = _write_request(root, raw)
+    trigger = _write_trigger(root, request)
+    return [("A", trigger.relative_to(root).as_posix())]
 
 
 def test_code_only_push_is_free_and_skips_paid_runner(tmp_path: Path) -> None:
@@ -141,6 +176,69 @@ def test_symlinked_request_or_spec_is_rejected(tmp_path: Path) -> None:
     ]
     with pytest.raises(PaidPushValidationError, match="symlink"):
         validate_paid_push(tmp_path, changes=changes)
+
+
+def test_registered_trigger_authorizes_existing_hash_bound_request_once(tmp_path: Path) -> None:
+    result = validate_paid_push(tmp_path, changes=_registered_trigger_change_set(tmp_path))
+    assert result == {
+        "paid_request": True,
+        "spec_path": "experiments/batch.json",
+        "result_path": "state/experiments/verified-batch-results.json",
+    }
+
+
+def test_registered_trigger_must_be_new_and_unbundled(tmp_path: Path) -> None:
+    changes = _registered_trigger_change_set(tmp_path)
+    with pytest.raises(PaidPushValidationError, match="added|immutable"):
+        validate_paid_push(tmp_path, changes=[("M", changes[0][1])])
+    with pytest.raises(PaidPushValidationError, match="exactly|bundled"):
+        validate_paid_push(
+            tmp_path,
+            changes=changes + [("M", "scripts/run_fixed_batch.py")],
+        )
+
+
+def test_registered_trigger_binds_exact_existing_request_bytes(tmp_path: Path) -> None:
+    _, raw = _write_spec(tmp_path)
+    request = _write_request(tmp_path, raw)
+    trigger = _write_trigger(tmp_path, request, request_sha256="0" * 64)
+    with pytest.raises(PaidPushValidationError, match="request_sha256|digest"):
+        validate_paid_push(
+            tmp_path,
+            changes=[("A", trigger.relative_to(tmp_path).as_posix())],
+        )
+
+
+def test_registered_trigger_identity_and_request_path_are_bound(tmp_path: Path) -> None:
+    _, raw = _write_spec(tmp_path)
+    request = _write_request(tmp_path, raw)
+    trigger = _write_trigger(tmp_path, request, request_id="other-id")
+    with pytest.raises(PaidPushValidationError, match="request_id|filename|path"):
+        validate_paid_push(
+            tmp_path,
+            changes=[("A", trigger.relative_to(tmp_path).as_posix())],
+        )
+
+
+def test_registered_trigger_rejects_when_result_already_exists(tmp_path: Path) -> None:
+    changes = _registered_trigger_change_set(tmp_path)
+    result = tmp_path / "state" / "experiments" / "verified-batch-results.json"
+    result.parent.mkdir(parents=True)
+    result.write_text("{}\n", encoding="utf-8")
+    with pytest.raises(PaidPushValidationError, match="result|already"):
+        validate_paid_push(tmp_path, changes=changes)
+
+
+def test_registered_trigger_rejects_missing_registered_request(tmp_path: Path) -> None:
+    _, raw = _write_spec(tmp_path)
+    request = _write_request(tmp_path, raw)
+    trigger = _write_trigger(tmp_path, request)
+    request.unlink()
+    with pytest.raises(PaidPushValidationError, match="request|existing"):
+        validate_paid_push(
+            tmp_path,
+            changes=[("A", trigger.relative_to(tmp_path).as_posix())],
+        )
 
 
 def test_github_output_exposes_only_gate_and_validated_paths(tmp_path: Path) -> None:
