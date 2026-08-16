@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-cross-boundary-r1-talk-overcompletion-2026-08-16_TALK_OWNER_BASELINE",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "# Talk about making love before you do it\nOnce we're having sex, saying what I really think can stop the sex. That makes it a pretty bad time to begin trying to be honest about it. I'd rather have the conversation while either of us can dislike the answer without having to stop something that's already happening. To me, that conversation is already part of making love. What would I even want to know? Not every sexual preference we've ever had. I don't think either person necessarily knows. But if a kink really matters to her, or something in her past makes a particular thing feel awful, I'd like to know before I blunder into it. We should also learn what makes us relax and actually want more.\nSome things we only learn by being together. Mind-reading is great if it happens, but it's best to be up front about what we learn. Probably one of the biggest questions is what this sex means to each of us. I might feel we're bonding while she thinks it's just play, or she might not even be in the mood but doesn't want to ruin it for me.\nIt's great when you feel perfectly matched sexually with your partner, but appetites and preferences are always in flux.  That's where quiet resentment can grow if we can't talk.\nI guess that's why I don't reduce sexual compatibility to whether our bodies fit. Can we tell each other the truth when we're about as exposed as people get, especially when the truth is disappointing? Talking before our clothes come off won't prove it. But if we can't do it then, that's a blocker.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.00023000975488685071,
+        "confidence": "High",
+        "end_index": 1521,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "# Talk about making love before you do it\nOnce we're having sex, saying what I really think can stop the sex. That makes it a pretty bad time to begin trying to be honest about it. I'd rather have the conversation while either of us can dislike the answer without having to stop something that's already happening. To me, that conversation is already part of making love. What would I even want to know? Not every sexual preference we've ever had. I don't think either person necessarily knows. But if a kink really matters to her, or something in her past makes a particular thing feel awful, I'd like to know before I blunder into it. We should also learn what makes us relax and actually want more.\nSome things we only learn by being together. Mind-reading is great if it happens, but it's best to be up front about what we learn. Probably one of the biggest questions is what this sex means to each of us. I might feel we're bonding while she thinks it's just play, or she might not even be in the mood but doesn't want to ruin it for me.\nIt's great when you feel perfectly matched sexually with your partner, but appetites and preferences are always in flux.  That's where quiet resentment can grow if we can't talk.\nI guess that's why I don't reduce sexual compatibility to whether our bodies fit. Can we tell each other the truth when we're about as exposed as people get, especially when the truth is disappointing? Talking before our clothes come off won't prove it. But if we can't do it then, that's a blocker.",
+        "token_length": 334,
+        "word_count": 280
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "0c6ff3b8-9282-4082-9a55-cbfd24296290",
   "text": "# Talk about making love before you do it\n\nOnce we're having sex, saying what I really think can stop the sex. That makes it a pretty bad time to begin trying to be honest about it. I'd rather have the conversation while either of us can dislike the answer without having to stop something that's already happening. To me, that conversation is already part of making love. What would I even want to know? Not every sexual preference we've ever had. I don't think either person necessarily knows. But if a kink really matters to her, or something in her past makes a particular thing feel awful, I'd like to know before I blunder into it. We should also learn what makes us relax and actually want more.\n\nSome things we only learn by being together. Mind-reading is great if it happens, but it's best to be up front about what we learn. Probably one of the biggest questions is what this sex means to each of us. I might feel we're bonding while she thinks it's just play, or she might not even be in the mood but doesn't want to ruin it for me.\n\nIt's great when you feel perfectly matched sexually with your partner, but appetites and preferences are always in flux.  That's where quiet resentment can grow if we can't talk.\n\nI guess that's why I don't reduce sexual compatibility to whether our bodies fit. Can we tell each other the truth when we're about as exposed as people get, especially when the truth is disappointing? Talking before our clothes come off won't prove it. But if we can't do it then, that's a blocker.",
   "text_sha256": "a66a933749ce036251af28b02a96254f1cffb4ef3505d69d9c13b8b88e5e979b",
-  "updated_utc": "2026-08-16T08:16:23.915651+00:00"
+  "updated_utc": "2026-08-16T08:16:25.052538+00:00"
 }
