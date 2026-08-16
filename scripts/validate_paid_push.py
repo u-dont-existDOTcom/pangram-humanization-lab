@@ -28,7 +28,9 @@ except ModuleNotFoundError as exc:
 
 
 PAID_REQUEST_FORMAT = "pangram-paid-run-request-v1"
+PAID_TRIGGER_FORMAT = "pangram-paid-trigger-v1"
 _REQUEST_PREFIX = ("requests", "pangram")
+_TRIGGER_PREFIX = ("triggers", "pangram")
 _REQUEST_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$")
 _SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 _GIT_SHA_RE = re.compile(r"^[0-9a-fA-F]{40}$")
@@ -37,6 +39,13 @@ _REQUEST_KEYS = {
     "request_id",
     "spec_path",
     "spec_sha256",
+    "confirmation",
+}
+_TRIGGER_KEYS = {
+    "format",
+    "request_id",
+    "request_path",
+    "request_sha256",
     "confirmation",
 }
 
@@ -53,20 +62,25 @@ def _reject_symlink_components(root: Path, relative: Path, *, label: str) -> Non
             raise PaidPushValidationError(f"{label} must not contain symlink components")
 
 
-def _request_object(path: Path) -> dict[str, Any]:
+def _strict_json_object(
+    path: Path,
+    *,
+    label: str,
+    required_keys: set[str],
+) -> dict[str, Any]:
     try:
         raw = path.read_bytes()
     except OSError as exc:
-        raise PaidPushValidationError(f"paid request is unreadable: {exc}") from exc
+        raise PaidPushValidationError(f"{label} is unreadable: {exc}") from exc
     if len(raw) > 16_384:
-        raise PaidPushValidationError("paid request exceeds the 16 KiB limit")
+        raise PaidPushValidationError(f"{label} exceeds the 16 KiB limit")
 
     def reject_duplicates(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
         obj: dict[str, Any] = {}
         for key, value in pairs:
             if key in obj:
                 raise PaidPushValidationError(
-                    f"paid request contains duplicate key {key!r}"
+                    f"{label} contains duplicate key {key!r}"
                 )
             obj[key] = value
         return obj
@@ -74,45 +88,41 @@ def _request_object(path: Path) -> dict[str, Any]:
     try:
         value = json.loads(raw.decode("utf-8"), object_pairs_hook=reject_duplicates)
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
-        raise PaidPushValidationError(f"paid request is not valid UTF-8 JSON: {exc}") from exc
-    if not isinstance(value, dict):
-        raise PaidPushValidationError("paid request must be a JSON object")
-    if set(value) != _REQUEST_KEYS:
-        missing = sorted(_REQUEST_KEYS - set(value))
-        extra = sorted(set(value) - _REQUEST_KEYS)
         raise PaidPushValidationError(
-            f"paid request keys must match the v1 contract; missing={missing}, extra={extra}"
+            f"{label} is not valid UTF-8 JSON: {exc}"
+        ) from exc
+    if not isinstance(value, dict):
+        raise PaidPushValidationError(f"{label} must be a JSON object")
+    if set(value) != required_keys:
+        missing = sorted(required_keys - set(value))
+        extra = sorted(set(value) - required_keys)
+        raise PaidPushValidationError(
+            f"{label} keys must match the v1 contract; missing={missing}, extra={extra}"
         )
     return value
 
 
-def validate_paid_push(
-    root: Path | str,
+def _request_object(path: Path) -> dict[str, Any]:
+    return _strict_json_object(
+        path,
+        label="paid request",
+        required_keys=_REQUEST_KEYS,
+    )
+
+
+def _trigger_object(path: Path) -> dict[str, Any]:
+    return _strict_json_object(
+        path,
+        label="paid trigger",
+        required_keys=_TRIGGER_KEYS,
+    )
+
+
+def _validate_request_identity(
+    root: Path,
     *,
-    changes: Iterable[tuple[str, str]],
-) -> dict[str, Any]:
-    root = Path(root).resolve()
-    changed = list(changes)
-    request_changes = [
-        (status, raw_path)
-        for status, raw_path in changed
-        if Path(raw_path).parts[:2] == _REQUEST_PREFIX
-    ]
-    if not request_changes:
-        return {"paid_request": False}
-
-    if len(request_changes) != 1 or len(changed) != 2:
-        raise PaidPushValidationError(
-            "a paid push must change exactly two files—the added request and its added spec; "
-            "bundled changes are forbidden"
-        )
-
-    request_status, request_raw = request_changes[0]
-    if request_status != "A":
-        raise PaidPushValidationError(
-            "paid request files are immutable and must be newly added"
-        )
-
+    request_raw: str,
+) -> tuple[Path, Path, dict[str, Any]]:
     try:
         request_relative, request_path = _repository_path(
             root, request_raw, label="paid request path"
@@ -142,7 +152,16 @@ def validate_paid_push(
         raise PaidPushValidationError("request_id has an invalid or unsafe form")
     if request_relative.stem != request_id:
         raise PaidPushValidationError("request_id must match the request filename")
+    return request_relative, request_path, request
 
+
+def _validate_registered_request(
+    root: Path,
+    *,
+    request_relative: Path,
+    request_path: Path,
+    request: dict[str, Any],
+) -> dict[str, Any]:
     spec_raw = request["spec_path"]
     if not isinstance(spec_raw, str):
         raise PaidPushValidationError("spec_path must be a string")
@@ -151,25 +170,14 @@ def validate_paid_push(
     except DispatchValidationError as exc:
         raise PaidPushValidationError(str(exc)) from exc
     _reject_symlink_components(root, spec_relative, label="spec path")
-
-    matching_spec_changes = [
-        status for status, raw_path in changed if raw_path == spec_relative.as_posix()
-    ]
-    if matching_spec_changes != ["A"]:
-        raise PaidPushValidationError(
-            "the referenced spec must be newly added in the same push"
-        )
-    if {raw_path for _, raw_path in changed} != {
-        request_relative.as_posix(),
-        spec_relative.as_posix(),
-    }:
-        raise PaidPushValidationError(
-            "the push must contain exactly the request and its referenced spec"
-        )
+    if not spec_path.is_file():
+        raise PaidPushValidationError("registered spec must name an existing regular file")
 
     digest = request["spec_sha256"]
     if not isinstance(digest, str) or not _SHA256_RE.fullmatch(digest):
-        raise PaidPushValidationError("spec_sha256 must be 64 lowercase hexadecimal characters")
+        raise PaidPushValidationError(
+            "spec_sha256 must be 64 lowercase hexadecimal characters"
+        )
     try:
         actual_digest = hashlib.sha256(spec_path.read_bytes()).hexdigest()
     except OSError as exc:
@@ -191,11 +199,186 @@ def validate_paid_push(
         )
     except DispatchValidationError as exc:
         raise PaidPushValidationError(str(exc)) from exc
-    if validated["experiment_id"] != request_id:
+    if validated["experiment_id"] != request["request_id"]:
         raise PaidPushValidationError(
             "request_id must equal the fixed-batch experiment_id"
         )
+    return validated
 
+
+def _validate_trigger_push(
+    root: Path,
+    *,
+    changed: list[tuple[str, str]],
+    trigger_changes: list[tuple[str, str]],
+) -> dict[str, Any]:
+    if len(trigger_changes) != 1 or len(changed) != 1:
+        raise PaidPushValidationError(
+            "a registered paid trigger push must change exactly one newly added trigger file; bundled changes are forbidden"
+        )
+
+    trigger_status, trigger_raw = trigger_changes[0]
+    if trigger_status != "A":
+        raise PaidPushValidationError(
+            "paid trigger files are immutable and must be newly added"
+        )
+    try:
+        trigger_relative, trigger_path = _repository_path(
+            root, trigger_raw, label="paid trigger path"
+        )
+    except DispatchValidationError as exc:
+        raise PaidPushValidationError(str(exc)) from exc
+    if (
+        len(trigger_relative.parts) != 3
+        or trigger_relative.parts[:2] != _TRIGGER_PREFIX
+        or trigger_relative.suffix.lower() != ".json"
+    ):
+        raise PaidPushValidationError(
+            "paid trigger path must be triggers/pangram/<request-id>.json"
+        )
+    _reject_symlink_components(root, trigger_relative, label="paid trigger path")
+    if not trigger_path.is_file():
+        raise PaidPushValidationError("paid trigger must name an existing regular file")
+
+    trigger = _trigger_object(trigger_path)
+    if trigger["format"] != PAID_TRIGGER_FORMAT:
+        raise PaidPushValidationError(
+            f"paid trigger format must equal {PAID_TRIGGER_FORMAT}"
+        )
+    trigger_id = trigger["request_id"]
+    if not isinstance(trigger_id, str) or not _REQUEST_ID_RE.fullmatch(trigger_id):
+        raise PaidPushValidationError("trigger request_id has an invalid or unsafe form")
+    if trigger_relative.stem != trigger_id:
+        raise PaidPushValidationError(
+            "trigger request_id must match the trigger filename"
+        )
+    if trigger.get("confirmation") != PAID_RUN_CONFIRMATION:
+        raise PaidPushValidationError(
+            f"paid trigger confirmation must equal {PAID_RUN_CONFIRMATION}"
+        )
+
+    request_raw = trigger["request_path"]
+    if not isinstance(request_raw, str):
+        raise PaidPushValidationError("trigger request_path must be a string")
+    request_relative, request_path, request = _validate_request_identity(
+        root,
+        request_raw=request_raw,
+    )
+    if request["request_id"] != trigger_id:
+        raise PaidPushValidationError(
+            "trigger request_id must match the registered request_id"
+        )
+
+    request_digest = trigger["request_sha256"]
+    if not isinstance(request_digest, str) or not _SHA256_RE.fullmatch(request_digest):
+        raise PaidPushValidationError(
+            "request_sha256 must be 64 lowercase hexadecimal characters"
+        )
+    try:
+        actual_request_digest = hashlib.sha256(request_path.read_bytes()).hexdigest()
+    except OSError as exc:
+        raise PaidPushValidationError(f"registered request is unreadable: {exc}") from exc
+    if actual_request_digest != request_digest:
+        raise PaidPushValidationError(
+            "request_sha256 digest does not match the exact registered request bytes"
+        )
+
+    validated = _validate_registered_request(
+        root,
+        request_relative=request_relative,
+        request_path=request_path,
+        request=request,
+    )
+    result_path = root / validated["result_path"]
+    if result_path.is_symlink() or result_path.exists():
+        raise PaidPushValidationError(
+            "the registered request already has a result; refusing a second paid trigger"
+        )
+    return {
+        "paid_request": True,
+        "spec_path": validated["spec_path"],
+        "result_path": validated["result_path"],
+    }
+
+
+def validate_paid_push(
+    root: Path | str,
+    *,
+    changes: Iterable[tuple[str, str]],
+) -> dict[str, Any]:
+    root = Path(root).resolve()
+    changed = list(changes)
+    request_changes = [
+        (status, raw_path)
+        for status, raw_path in changed
+        if Path(raw_path).parts[:2] == _REQUEST_PREFIX
+    ]
+    trigger_changes = [
+        (status, raw_path)
+        for status, raw_path in changed
+        if Path(raw_path).parts[:2] == _TRIGGER_PREFIX
+    ]
+
+    if trigger_changes:
+        if request_changes:
+            raise PaidPushValidationError(
+                "a registered paid trigger must not be bundled with a new or modified paid request"
+            )
+        return _validate_trigger_push(
+            root,
+            changed=changed,
+            trigger_changes=trigger_changes,
+        )
+
+    if not request_changes:
+        return {"paid_request": False}
+
+    if len(request_changes) != 1 or len(changed) != 2:
+        raise PaidPushValidationError(
+            "a paid push must change exactly two files—the added request and its added spec; "
+            "bundled changes are forbidden"
+        )
+
+    request_status, request_raw = request_changes[0]
+    if request_status != "A":
+        raise PaidPushValidationError(
+            "paid request files are immutable and must be newly added"
+        )
+
+    request_relative, request_path, request = _validate_request_identity(
+        root,
+        request_raw=request_raw,
+    )
+
+    spec_raw = request["spec_path"]
+    if not isinstance(spec_raw, str):
+        raise PaidPushValidationError("spec_path must be a string")
+    try:
+        spec_relative, _ = _repository_path(root, spec_raw, label="spec path")
+    except DispatchValidationError as exc:
+        raise PaidPushValidationError(str(exc)) from exc
+
+    matching_spec_changes = [
+        status for status, raw_path in changed if raw_path == spec_relative.as_posix()
+    ]
+    if matching_spec_changes != ["A"]:
+        raise PaidPushValidationError(
+            "the referenced spec must be newly added in the same push"
+        )
+    if {raw_path for _, raw_path in changed} != {
+        request_relative.as_posix(),
+        spec_relative.as_posix(),
+    }:
+        raise PaidPushValidationError(
+            "the push must contain exactly the request and its referenced spec"
+        )
+
+    validated = _validate_registered_request(
+        root,
+        request_relative=request_relative,
+        request_path=request_path,
+        request=request,
+    )
     return {
         "paid_request": True,
         "spec_path": validated["spec_path"],
@@ -278,7 +461,7 @@ def write_github_output(path: Path, result: dict[str, Any]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Validate a push-bound paid Pangram request without detector or secret access"
+            "Validate a push-bound paid Pangram request or one-shot registered trigger without detector or secret access"
         )
     )
     parser.add_argument("--base", required=True)
