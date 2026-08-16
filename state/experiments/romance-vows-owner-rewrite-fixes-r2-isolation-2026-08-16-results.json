@@ -37,6 +37,65 @@
         ]
       },
       "section_id": "vows-bible-topology"
+    },
+    {
+      "id": "BIBLE_PACKED_EXPLICITLY_STATES",
+      "measurement_key": "romance-vows-owner-rewrite-fixes-r2-isolation-2026-08-16_BIBLE_PACKED_EXPLICITLY_STATES",
+      "text": "I’d rather vow to tell the truth, keep showing up, support our children as best I can, or whatever else I genuinely believe I’m capable of delivering. Even “I’ll love you to the best of my ability, in accordance with how you love me” is something I could actually mean. But “I’ll always love you more than anyone else”—based on what? Because God wants me to?\nWe also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 explicitly states that it's better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, \"I didn’t mean what I promised.\" It's also interesting that promising itself is almost an indicator of dishonesty: Jesus, in Matthew 5:33–37 (and  James 5:12), teaches that believers should let their \"Yes\" be \"Yes\" and their \"No\" be \"No,\" warning that anything beyond this comes from Satan.\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.",
+      "text_sha256": "4375822c56551e14e75aa6a121cb17e5f36b06e0b1d44d916458ef54ebc06c1c",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I’d rather vow to tell the truth, keep showing up, support our children as best I can, or whatever else I genuinely believe I’m capable of delivering. Even “I’ll love you to the best of my ability, in accordance with how you love me” is something I could actually mean. But “I’ll always love you more than anyone else”—based on what? Because God wants me to?\nWe also find something like my warning in the New & Old Testaments. Ecclesiastes 5:4–6 explicitly states that it's better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, \"I didn’t mean what I promised.\" It's also interesting that promising itself is almost an indicator of dishonesty: Jesus, in Matthew 5:33–37 (and  James 5:12), teaches that believers should let their \"Yes\" be \"Yes\" and their \"No\" be \"No,\" warning that anything beyond this comes from Satan.\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.2010178118944168,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.7989822030067444,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 2,
+        "windows": [
+          {
+            "text": "I’d rather vow to tell the truth, keep showing up, support our children as best I can, or whatever else I genuinely believe I’m capable of delivering. Even “I’ll love you to the best of my ability, in accordance with how you love me” is something I could actually mean. But “I’ll always love you more than anyone else”—based on what? Because God wants me to?\nWe also find something like my warning in the New & Old Testaments.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.04072761908173561,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 426,
+            "word_count": 79,
+            "token_length": 98,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": " Ecclesiastes 5:4–6 explicitly states that it's better not to make a vow than to make one and not fulfill it, warning that God will be angry with your words and destroy your work if you say to the priest, \"I didn’t mean what I promised.\"",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.5772706866264343,
+            "confidence": "High",
+            "start_index": 426,
+            "end_index": 663,
+            "word_count": 45,
+            "token_length": 58,
+            "is_humanized": false,
+            "humanizer_score": 1.338455422228435e-05
+          },
+          {
+            "text": " It's also interesting that promising itself is almost an indicator of dishonesty: Jesus, in Matthew 5:33–37 (and  James 5:12), teaches that believers should let their \"Yes\" be \"Yes\" and their \"No\" be \"No,\" warning that anything beyond this comes from Satan.\nWhere did the idea of promising to have romantic interest in your partner come from, anyway? It turns out it never existed in any culture I'm aware of until the Victorian age, when romantic feelings were elevated in England to the status of immutable truth.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.16951604187488556,
+            "confidence": "High",
+            "start_index": 663,
+            "end_index": 1179,
+            "word_count": 86,
+            "token_length": 119,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "vows-bible-topology"
     }
   ],
   "audit_id": "romance-vows-owner-rewrite-fixes-2026-08-16",
@@ -46,10 +105,10 @@
     "sections": [
       {
         "cache_hits": 0,
-        "estimated_cost_usd": 0.2,
-        "estimated_credits": 4,
+        "estimated_cost_usd": 0.25,
+        "estimated_credits": 5,
         "model": "pangram-4",
-        "paid_api_calls": 4,
+        "paid_api_calls": 5,
         "pending_resumes": 0,
         "section_id": "vows-bible-topology",
         "version": "4.0",
