@@ -20,10 +20,10 @@ The owner-final architecture controls prose realization. Later whole-article rou
 
 The controlling movement is one inquiry, not two balanced modules:
 
-1. conventional vows are dishonest because future feelings cannot be promised; actions can be;
+1. conventional vows are dishonest because they claim knowledge of future feeling while conduct is the part a person may genuinely intend to undertake;
 2. biblical vow warnings complicate the institution of promising itself;
 3. Joel asks where promises of permanent romantic interest came from;
-4. the live next question is `So how can we be more honest with our vows?`;
+4. the live next question is what more honest vows would look like;
 5. Joel answers through his own B. attraction-switch experiment;
 6. that experiment opens the jealousy/insecurity problem;
 7. insecurity can be remembered from childhood or can be information that the present relationship is actually insecure;
@@ -50,7 +50,7 @@ Restore the owner-final late movement, including the qualifications that:
 
 - polyamory is not automatically better or honest;
 - the critique is not true of every polyamorous person;
-- honest inability to do monogamy may be better than pretending;
+- admitting that monogamy is not one's real arrangement may be more honest than promising it anyway;
 - many relationships inhabit a murky middle where attractions and changed feelings are suppressed;
 - concealment may do more damage than an outside connection;
 - `Love is real. The form built around it can still be broken.`
@@ -63,13 +63,13 @@ Do **not** restore superseded assistant material merely to fill perceived gaps. 
 
 ## Cross-section routing nuance
 
-The Aug. 13 reconstruction also placed owner-authored lines such as `Marriage itself is a contract. How can you sign a contract about your heart?` and `You can sign a contract about what you’ll do. You can’t sign one saying what your heart will feel ten years from now...` inside Vows.
+The Aug. 13 reconstruction also placed owner-authored lines such as `Marriage itself is a contract. How can you sign a contract about your heart?` and a mirrored conduct/heart-contract formulation inside Vows.
 
-Those sentences are not evidence that the assistant Vows architecture should control. Their article-wide home is a separate dedup/routing question because versions of that material historically appeared in Slow and Two Pillars. If one copy is retained in Vows as the primary home for the future-feeling claim, preserve the owner language without using it to justify the `Attraction and exclusivity` subheading or the history-first reorder. Do not duplicate the same sentence back into Two Pillars solely to restore an older local version.
+Those sentences are not evidence that the assistant Vows architecture should control. Their article-wide home is a separate dedup/routing question because versions of that material historically appeared in Slow and Two Pillars. If one copy is retained in Vows as the primary home for the future-feeling claim, preserve the thought without using it to justify the `Attraction and exclusivity` subheading or the history-first reorder. Do not duplicate the same sentence back into Two Pillars solely to restore an older local version.
 
 ## Cold audit 1 — semantic sanity / reality / curious-reader chain
 
-The heading promises an explanation of dishonest vows, not a taxonomy of two vow categories. The first pressure is obvious: nobody controls future feeling. Once Joel says actions can be promised, the reader naturally wants to know what an honest vow might look like. The B. experiment is therefore the right next move.
+The heading promises an explanation of dishonest vows, not a taxonomy of two vow categories. The first pressure is obvious: a sincere wedding does not produce knowledge about one's future heart. Once Joel names conduct-level vows he might genuinely undertake, the reader naturally wants to know what that honesty looks like under erotic pressure. The B. experiment is therefore the right next move.
 
 The experiment does not solve the issue cleanly: attraction was mostly switched off, but jealousy remained. That complication is what makes the section human and intellectually useful. It forces the distinction between internal insecurity, actual relational insecurity, disclosure, and chosen action. Only after Joel reaches chosen sexual exclusivity does the historical-origin question become live.
 
@@ -97,13 +97,13 @@ This restoration is driven by owner authority, coherence, and human thought sequ
 
 Joel explicitly instructed: stop using the mirrored `can't X. can Y` / `can X. can't Y` contrast structure in fresh prose. This is an owner-style constraint, not a detector token rule. Do not generate fresh antithetical sentence pairs in that form merely because the underlying distinction is useful. Exact historical owner prose may retain the construction when it is functioning as authority, but a developmental rewrite should realize the thought another way when no exact lock requires the syntax.
 
-This correction directly affects the Vows opening, whose older owner-final wording used `You can't promise... You can promise...`, and the Aug. 13 routed paragraph used `You can sign... You can't sign...`. The revised candidate below preserves the thought without those mirrored constructions.
+This correction directly affects the Vows opening, whose older owner-final wording used the mirrored form, and the Aug. 13 routed paragraph used its reverse. The revised candidate below preserves the thought without those mirrored constructions. The late owner line about being unable to do monogamy is also re-realized so the same balanced syntax does not quietly return later in the section.
 
 ## Current routing resolution
 
 The active Aug. 13 reconstructed Slow section no longer contains the old marriage-contract paragraph. The historical Slow owner scan did contain `Marriage itself is a sham in many ways. It's a contract. How can you sign a contract about your heart?...`, but that material has already been routed out of active Slow. Therefore Vows is the clean current home for the contract/heart thought; do not reinsert a duplicate into Slow.
 
-The useful owner line `Marriage itself is a contract. How can you sign a contract about your heart?` can return in Vows because it sharpens the heading's actual question without recreating the removed mirrored `can/can't` formulation.
+The useful owner line `Marriage itself is a contract. How can you sign a contract about your heart?` can return in Vows because it sharpens the heading's actual question without recreating the removed mirrored formulation.
 
 ## Developmental conclusion: no extra generic positive-vow paragraph
 
@@ -115,7 +115,7 @@ The real missing work was instead:
 2. re-home the unique contract/heart thought from historical Slow into Vows;
 3. eliminate the redundant Aug. 13 three-paragraph opening package;
 4. restore the owner late polyamory/murky-middle/concealment movement;
-5. honor Joel's new syntax constraint in the rewritten opening.
+5. honor Joel's new syntax constraint in the developmental realization.
 
 ## Revised Vows candidate — developmental, awaiting owner acceptance
 
@@ -156,7 +156,7 @@ But even if we choose sexual monogamy, I think it's worth understanding where it
 
 Those origins still matter. Property and inheritance are still built into marriage, even while modern vows ask the same institution to guarantee a permanent romantic feeling.
 
-That's not to say that polyamory is automatically better, because it can be dishonest too. These days, I believe it is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical. That is not true of everyone, and it does not make polyamory wrong. It may still be more honest than pretending you can do monogamy when you cannot.
+That's not to say that polyamory is automatically better, because it can be dishonest too. These days, I believe it is often a way to cope with an inability to connect deeply with one person, or a way to admit a lack of self-control without necessarily doing the self-development that would make the arrangement ethical. That is not true of everyone, and it does not make polyamory wrong. If monogamy isn't something you actually live, admitting that is still more honest than promising it.
 
 A lot of relationships end up in the murky middle between honest monogamy and polyamory: attractions denied, changes in feeling suppressed, possessiveness called love, and both people quietly knowing more than the agreement allows them to say. What's left unsaid is the gap where honesty breaks down.
 
@@ -169,7 +169,7 @@ Love is real. The form built around it can still be broken. A foundational, perm
 
 ### Semantic sanity / heading fit
 
-The opening now answers the heading directly through the contract/heart problem. It distinguishes present sincerity from future knowledge without the mirrored `can't/can` syntax. The next paragraph gives concrete vows Joel regards as potentially honest, so the section does not merely attack conventional vows.
+The opening now answers the heading directly through the contract/heart problem. It distinguishes present sincerity from future knowledge without the mirrored syntax. The next paragraph gives concrete vows Joel regards as potentially honest, so the section does not merely attack conventional vows.
 
 ### Curious-reader chain
 
@@ -185,4 +185,4 @@ The final line remains the stopping point. No recap follows it.
 
 ## Detector role after developmental revision
 
-No Pangram call. The opening is newly revised for owner voice and structural preference, so its detector status is unknown and deliberately not being used as an editorial decision criterion. Coherence, authority, and the latest owner syntax correction control this pass.
+No Pangram call. The opening and one late sentence are newly revised for owner voice and structural preference, so their detector status is unknown and deliberately not being used as an editorial decision criterion. Coherence, authority, and the latest owner syntax correction control this pass.
