@@ -4,8 +4,10 @@
 
 Indexes the current private Romance reconstruction. This graph is a visual recovery/control surface, not prose authority. Current explicit Joel corrections and the relevant `state/ROMANCE-*.md` records outrank the graph if a conflict is ever found.
 
-Current materialized master before the latest source-link reassembly: `work/romance-current-assembly/current-master.md` SHA-256 `d4dd760c9b7b970b03a9f5587fd8c09f23d3d3d5cbd40f291b521d3e69f9b028`.
-Prior reader-visible boundary SHA-256: `fd47cad5825ab8f3bafd810c4c0b7e0a817edff40bd802edf66dac7247b6412e` (18,248 words).
+Current materialized master: `work/romance-current-assembly/current-master.md` SHA-256 `dbbc02fde8330045a945a45d51b12d87ed386167958e7c9870852caf51c479ff`.
+Current reader-visible boundary SHA-256: `fd47cad5825ab8f3bafd810c4c0b7e0a817edff40bd802edf66dac7247b6412e` (18,248 words).
+Current whole-article cold audit: `state/ROMANCE-POST-PANGRAM-REPAIR-COLD-AUDIT-2026-08-16.md`.
+Final certification credit-block record: `state/ROMANCE-FINAL-PANGRAM-R3-CREDIT-BLOCK-2026-08-16.md`.
 Whole-article Pangram overlay for the earlier 18,357-word boundary: `state/ROMANCE-WHOLE-ARTICLE-PANGRAM-OVERLAY-2026-08-16.md` — 92.998% Human / 7.002% AI / 0% AI-assisted, 11 High-confidence AI segments.
 
 ## Article overview
@@ -122,6 +124,14 @@ The current paragraph remains owner-controlled and is not to be replaced by anal
 ### Ending / After leaving
 No change. Owner-final and previously all-green; detector segment crossed the heading and does not justify replacing the chain.
 
+## Final certification status
+
+The current 18,248-word boundary passed the two whole-article cold audits and was registered as experiment `romance-current-master-visible-final-r3-2026-08-16`.
+
+Workflow run `31952964278` passed its verification job (`95179183840`) but the detector job (`95179214894`) received Pangram HTTP 402 `Insufficient credits` at task submission. The runner durably recorded both the call reservation and submit failure. No r3 result file exists, and no final detector classification was obtained.
+
+Do not register another experiment or duplicate the request. Once credits are replenished, confirm the r3 result file still does not exist and re-run failed detector job `95179214894` (or failed jobs for run `31952964278`).
+
 ## Protected placement rules
 
 1. Do not move or delete a section merely because a nearby detector span is red. Check this map and article-wide architecture first.
@@ -135,4 +145,4 @@ No change. Owner-final and previously all-green; detector segment crossed the he
 
 ## Current next step
 
-Reassemble the Gandarussa-link change, cold-audit the current whole article against this map, then run the exact reader-visible whole-article Pangram certification. Do not spend section-level calls on unchanged Talk, Primal, Vows, or Ending merely to reproduce old results.
+Replenish Pangram credits, confirm no r3 result exists, then re-run failed detector job `95179214894`. Inspect the resulting exact-boundary evidence before any further editorial action. No further prose change is currently justified while certification is credit-blocked.
