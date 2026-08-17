@@ -1,3 +1,3 @@
 I’m pretty conservative about this. I would tell most of my friends not to date yet. First love your inner child. If you can’t even do that, forget a relationship for now. Get a cat or a puppy. If you’re dishonest, can’t care what happens to another person, or keep turning every relationship into the same disaster, come on. You’re not ready.
 
-That doesn't mean you have to be completely healed. It means the present-day adult has to be able to parent whatever intimacy wakes up inside you, and responsible enough to deal with an actual child if sex creates one. If you can't be a parent in either sense, you aren't ready to date.
+You don't have to be completely healed, but the present-day adult has to be able to parent whatever intimacy wakes up inside you, and responsible enough to deal with an actual child if sex creates one. If you can't be a parent in either sense, you aren't ready to date.
