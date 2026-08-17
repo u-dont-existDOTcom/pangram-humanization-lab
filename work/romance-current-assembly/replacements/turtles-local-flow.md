@@ -18,6 +18,6 @@ The reverse limitation exists too: good sex doesn’t supply the rest of a relat
 
 At Temple University, I had a Colombian lawyer as an English/Spanish conversation partner. Eventually we became casual sex friends. We had things we liked doing together, mainly sex, but basically nothing else in common. It ended badly because she was falling in love and I wasn’t. The sexual fit was real. It didn’t create the rest of the compatibility.
 
-Some sexual problems really can change if both partners are committed to helping each other through them. Others still feel like, “Let’s just be friends!”
+Some of those things might get better if both partners are committed to helping each other through it. Sometimes bad sexual fit still feels like, “Let’s just be friends!”
 
 Saying, “The sex isn’t working for me,” may sound like, “I only love you if the sex is good.” But universal love doesn’t make someone special. It isn’t romance. It’s the basis of any good relationship of any kind.
