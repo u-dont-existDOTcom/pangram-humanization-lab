@@ -6,6 +6,7 @@ on:
       - agent/romance-current-master-assembly-2026-08-15
       - agent/romance-architecture-map-2026-08-16
       - agent/romance-concept-flow-improvement-20260817
+      - agent/romance-primal-crucible-gui-repair-20260817
     paths:
       - scripts/assemble_romance_current.py
       - scripts/render_reader_visible.py
@@ -13,6 +14,7 @@ on:
       - tests/test_romance_current_assembly.py
       - tests/test_romance_aug16_authority.py
       - tests/test_romance_post_pangram_editorial.py
+      - tests/test_romance_current_gui_repairs.py
       - tests/test_reader_visible_romance.py
       - tests/test_render_pangram_halves.py
       - work/romance-current-assembly/baseline.md
@@ -47,6 +49,7 @@ jobs:
             tests/test_romance_current_assembly.py \
             tests/test_romance_aug16_authority.py \
             tests/test_romance_post_pangram_editorial.py \
+            tests/test_romance_current_gui_repairs.py \
             tests/test_reader_visible_romance.py \
             tests/test_render_pangram_halves.py -q
 
