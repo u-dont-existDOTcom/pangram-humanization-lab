@@ -23,9 +23,11 @@ Results are content-addressed under:
 
 ## Prerequisites
 
-- A Browserbase account with an API key and Project ID.
+- A Browserbase account with an API key.
 - Python 3.10+.
 - Pangram GUI access through your normal Pangram account.
+
+Browserbase resolves the project from the API key. Do not set or request `BROWSERBASE_PROJECT_ID` for this runner.
 
 Install this repository with browser support:
 
@@ -39,14 +41,19 @@ The runner connects to Browserbase's Chromium over CDP; it does not launch a loc
 
 Do **not** put a Pangram password in GitHub secrets or repository files.
 
-Set Browserbase credentials locally:
+Set the Browserbase API key locally:
 
 ```bash
 export BROWSERBASE_API_KEY='...'
-export BROWSERBASE_PROJECT_ID='...'
 ```
 
-If you already have a Context you want to reuse, set `BROWSERBASE_CONTEXT_ID` instead of creating another one.
+If you already have a Context you want to reuse, you may also set:
+
+```bash
+export BROWSERBASE_CONTEXT_ID='...'
+```
+
+Otherwise bootstrap creates a new Context using the API key alone.
 
 Run:
 
@@ -66,7 +73,7 @@ Save the returned Context ID somewhere private. For GitHub Actions, create these
 - `BROWSERBASE_API_KEY`
 - `BROWSERBASE_CONTEXT_ID`
 
-`BROWSERBASE_PROJECT_ID` is not needed for unattended runs once the persistent Context exists.
+There is no `BROWSERBASE_PROJECT_ID` secret or placeholder in this workflow.
 
 ## Local unattended run
 
