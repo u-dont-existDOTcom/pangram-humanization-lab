@@ -1,0 +1,78 @@
+name: Romance owner Schnarch one-shot patch
+
+on:
+  push:
+    branches:
+      - agent/romance-primal-crucible-gui-repair-20260817
+    paths:
+      - .github/workflows/romance-owner-schnarch-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out exact branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: agent/romance-primal-crucible-gui-repair-20260817
+          fetch-depth: 0
+
+      - name: Add owner-approved assembly operation idempotently
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('work/romance-current-assembly/assembly-spec.json')
+          spec = json.loads(path.read_text(encoding='utf-8'))
+          operations = spec['operations']
+          op_id = 'owner-approved-schnarch-scope-2026-08-17'
+          if not any(op.get('id') == op_id for op in operations):
+              operation = {
+                  'id': op_id,
+                  'type': 'replace_exact',
+                  'old': 'I call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in [*Passionate Marriage*](https://www.crucible4points.com/books/passionate-marriage/). It flips standard couples therapy on its head. Where traditional therapy focuses on compromise, active listening, and making each other feel safe, Schnarch argued that long-term relationships are inherently high-heat pressure cookers designed to force individual psychological growth.',
+                  'replacement_file': 'replacements/crucible-schnarch-owner-approved-2026-08-17.md',
+              }
+              tough_index = next(
+                  (i for i, op in enumerate(operations) if op.get('id') == 'tough-love-aug16-owner-final'),
+                  len(operations),
+              )
+              operations.insert(tough_index, operation)
+              path.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Validate assembly spec and exact materialization
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/assemble_romance_current.py \
+            --baseline work/romance-current-assembly/baseline.md \
+            --spec work/romance-current-assembly/assembly-spec.json \
+            --output /tmp/romance-current-master.md \
+            --manifest /tmp/romance-assembly-manifest.json \
+            --diff /tmp/romance-current.diff
+          grep -Fq 'Schnarch saw marriage as a natural “people-growing process.”' /tmp/romance-current-master.md
+          ! grep -Fq 'designed to force individual psychological growth' /tmp/romance-current-master.md
+          grep -Fq 'That’s definitely what relationship has done to me.' /tmp/romance-current-master.md
+          grep -Fq 'That laboratory evidence establishes the uniqueness of the phenomenon.' /tmp/romance-current-master.md
+
+      - name: Commit spec and remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Romance Assembly Actions'
+          git config user.email 'romance-assembly-actions@users.noreply.github.com'
+          git rm .github/workflows/romance-owner-schnarch-once.yml
+          git add work/romance-current-assembly/assembly-spec.json
+          if git diff --cached --quiet; then
+            echo 'No owner patch changes to commit.'
+            exit 0
+          fi
+          git commit -m 'article: materialize owner-approved Schnarch scope correction'
+          git push origin HEAD:agent/romance-primal-crucible-gui-repair-20260817
