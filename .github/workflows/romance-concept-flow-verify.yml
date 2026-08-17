@@ -132,7 +132,10 @@ jobs:
           test -s docs/superpowers/plans/2026-08-17-romance-concept-flow-improvement.md
 
       - name: Git whitespace check against recovered source head
-        run: git diff --check 4ac56a883f147a59a003c05c3387423399609f8b...HEAD
+        run: |
+          # current-master.diff is itself a generated patch. Literal added blank lines in
+          # a patch are represented as '+ ' and are not source-file whitespace defects.
+          git diff --check 4ac56a883f147a59a003c05c3387423399609f8b...HEAD -- . ':(exclude)work/romance-current-assembly/current-master.diff'
 
       - name: Report unavailable named validators
         run: |
