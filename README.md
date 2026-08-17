@@ -67,6 +67,8 @@ Workers without a local Pangram key must use the repository-secret Actions route
 
 The Human endpoint remains editorial authority. Synthetic probes must preserve meaning. The blind reviewer runs before any new Pangram measurements. The planner uses explicit factor assignments rather than brittle `factor_bits`, and contrasts may reference only literal probe IDs; factorial effects/interactions are computed by deterministic code.
 
+Pangram success is not evidence that a named author's idiolect survived rewriting. The active qualitative guard and provisional computational-authorship design are in `docs/IDIOLECT-PRESERVATION-PROTOCOL.md`: minimize rewrite dose, keep natural-owner reference data provenance-clean, and treat idiolect retention as a separate axis from semantic fidelity and Pangram. No Joel-specific quantitative idiolect gate exists until that protocol's calibration requirements pass.
+
 ## Current external async transport note
 
 Target-machine evidence on 2026-08-12 corrected one part of the Aug. 11 transport assumption. Authentication remains `x-api-key`, and the zero-task `GET /task/<nonexistent UUID>` probe remains non-billable. But a live async submission without a model selector returned terminal version `3.3.2`. The previously validated Pangram-4 harness explicitly requested `model: pangram-4` and returned terminal version `4.0`, so v2.0.1 restores that request field while retaining the newer authentication header.
