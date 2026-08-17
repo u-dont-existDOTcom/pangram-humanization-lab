@@ -179,7 +179,7 @@ It also didn’t exactly solve the problem. In late-eighteenth-century New Engla
 
 ---
 
-# Starting on the right foot
+# Starting on the right foot# Starting on the right foot
 
 ## The window of clarity, and how it closes
 
