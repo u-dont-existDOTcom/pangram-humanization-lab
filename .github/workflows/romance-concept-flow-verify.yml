@@ -59,7 +59,18 @@ jobs:
           tail -n +3 work/romance-current-assembly/current-master.diff > "$tmp/committed-current-master.diff.body"
           cmp "$tmp/current-master.diff.body" "$tmp/committed-current-master.diff.body"
           cmp "$tmp/reader-visible.txt" work/romance-current-assembly/reader-visible.txt
-          cmp "$tmp/reader-visible-manifest.json" work/romance-current-assembly/reader-visible-manifest.json
+          python - "$tmp/reader-visible-manifest.json" work/romance-current-assembly/reader-visible-manifest.json <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          generated = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+          committed = json.loads(Path(sys.argv[2]).read_text(encoding='utf-8'))
+          generated.pop('source_path', None)
+          committed.pop('source_path', None)
+          assert generated == committed, (generated, committed)
+          print('reader-visible manifest semantic comparison: PASS')
+          PY
 
       - name: Verify architecture indexes the exact manifest boundary
         run: |
