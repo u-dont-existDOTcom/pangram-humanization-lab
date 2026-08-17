@@ -52,15 +52,15 @@ I’m Buddhist, and the early Buddhist texts don’t teach tantric sex as a path
 
 In [DN 16](https://www.dhammatalks.org/suttas/DN/DN16.html), the Buddha talks about people who had died at Nādikā and mentions 510 lay stream-enterers, 96 once-returners, and more than fifty lay non-returners. Those are the first three of the four stages of awakening.
 
-[SN 55.24](https://suttacentral.net/sn55.24/en/sujato) has an almost comic complaint. When the Buddha declared Sarakāni a stream-enterer, other Sakyans grumbled, in effect, “Who isn’t a stream-enterer these days?” The part that matters here is how surprisingly common lay awakening had become.
+[SN 55.24](https://suttacentral.net/sn55.24/en/sujato) has an almost comic complaint. When the Buddha declared Sarakāni a stream-enterer, other Sakyans grumbled, in effect, “Who isn’t a stream-enterer these days?”
 
 And when the married couple Nakulapitā and Nakulamātā asked the Buddha how they could remain together in future lives, [AN 4.55](https://suttacentral.net/an4.55/en/bodhi) gave this advice:
 
 > *"When both husband and wife are faithful and generous, restraintful, living righteously, speaking pleasant words to each other—they come together in the future, sharing the same desires and living in bliss."*
 
-None of this means the Buddha taught cervical sex as Buddhist meditation. It does mean marriage, sex, and household life are not automatically on the opposite side from serious spiritual development.
+Marriage, sex, and household life are not automatically on the opposite side from serious spiritual development.
 
-[Kim Anami](https://kimanami.com/my-vagina-heals-everything/) goes further and treats sexual energy itself as a path into healing, creativity, worldly action, and spiritual awakening. Her work is full of her own experiences and a large body of student reports about sexuality changing health, work, money, creativity, and the rest of life. I don’t expect one result to fit every body, and I don’t see a reason to dismiss all those reports either.
+[Kim Anami](https://kimanami.com/my-vagina-heals-everything/) goes further and treats sexual energy itself as a path into healing, creativity, worldly action, and spiritual awakening. Her work is full of her own experiences and a large body of student reports about sexuality changing health, work, money, creativity, and the rest of life.
 
 Her jade-egg practice is part of that. It combines pelvic-floor training, attention, arousal, and a more conscious relationship with the vagina instead of treating it like a body part that only wakes up when a partner wants sex.
 
