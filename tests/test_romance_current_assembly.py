@@ -196,11 +196,25 @@ def test_choosing_r4_a_authority_is_exact() -> None:
     assert old not in output
 
 
-def test_locked_casual_section_is_byte_identical_to_baseline() -> None:
+def test_locked_casual_section_changes_only_authorized_labels_thought() -> None:
     baseline, output, _ = _assemble_real()
     start = "## Can Casual Sex or a Situationship Actually Be Honest?"
     end = "---\n\n# Should you be in a relationship at all?"
-    assert _section(output, start, end) == _section(baseline, start, end)
+    baseline_section = _section(baseline, start, end)
+    output_section = _section(output, start, end)
+
+    old = (
+        "But here's the funny thing many people don't understand: labels don't actually change anything.\n\n"
+        "True commitment grows out of relational depth, not a label."
+    )
+    new = (
+        "But here's the funny thing many people don't understand: labels don't create commitment. "
+        "They can still expose whether two people think they're in the same relationship, which matters a lot.\n\n"
+        "True commitment grows out of relational depth, not a label."
+    )
+    assert old in baseline_section
+    assert new in output_section
+    assert output_section.replace(new, old, 1) == baseline_section
 
 
 def test_untouched_prefix_before_share_and_native_button_survive() -> None:
