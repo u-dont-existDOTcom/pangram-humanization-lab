@@ -73,3 +73,62 @@ def test_primal_owner_order_does_not_duplicate_two_pillars_caveat() -> None:
     primal = output[start:end]
     assert "Polarity does not make two people sufficient for each other." not in primal
     assert output.count("Polarity does not make two people sufficient for each other.") == 1
+
+
+def test_toft_anami_pass_adds_new_functions_without_duplicate_doctrines() -> None:
+    output = _assemble()
+
+    assert "## Affection and the simmer" in output
+    assert output.count("https://dougtoft.substack.com/p/50-things-i-learned-from-50-years") == 1
+    assert "Kim Anami calls the current between encounters" in output
+    assert "You need both. Affection has to be safe from escalation, and the erotic current has to stay alive." in output
+
+    assert "That’s what made me fall in love with her." in output
+    assert output.count("I would rather be with you in the forest than with any other man in a mansion") == 1
+    assert "there was the forest-and-mansion line I mentioned earlier" in output
+    assert "She did nurse me, but a bit reluctantly." in output
+    assert "What makes me desirable is not the same question as what makes me loved" in output
+
+    assert "She got much better at receiving me." in output
+    assert "some sexual responsiveness seems to be co-created between particular people" in output
+    assert "At Temple University, I had a Colombian lawyer as an English/Spanish conversation partner." in output
+
+    assert "after fifty years of marriage his main spiritual practice is being in relationship with his wife" in output
+    assert "feminine energy from nature, music, poetry, art, flowers, food" in output
+    assert "Role-play isn’t the problem. Getting trapped in the role is." in output
+
+    assert "## Can making love be a spiritual practice?" in output
+    assert "reserved for monastics" in output
+    assert "When both husband and wife are faithful and generous, restraintful, living righteously, speaking pleasant words to each other" in output
+    assert "[NATIVE YOUTUBE — preserve from Substack source — videoId: Li--FKwJu0Q]" in output
+
+    assert "Maybe women are poetry and men are prose." in output
+    assert "Do you want me to help figure this out, or do you mostly want me to listen?" in output
+    assert "A woman earning more than her man doesn’t automatically make her masculine or him feminine." in output
+    assert "Women can get trapped between opposite insecurities here." in output
+
+    assert "## Boss Babe" not in output
+    assert "## Boss babe" not in output
+    assert "## Why marriage vows are honest?" not in output
+
+
+def test_toft_anami_pass_preserves_primal_native_objects_and_order() -> None:
+    output = _assemble()
+    start = output.index("# Primal attraction: channeling the Divine Masculine & Feminine")
+    end = output.index("# Twin Flames?", start)
+    primal = output[start:end]
+
+    ordered = [
+        "## Fantasy",
+        "## The Queen of Orgasms",
+        "[NATIVE YOUTUBE — preserve from Substack source — videoId: QqP3p_ysd84]",
+        "## Can making love be a spiritual practice?",
+        "[NATIVE YOUTUBE — preserve from Substack source — videoId: Li--FKwJu0Q]",
+        "## Muses & Directors",
+        "## Not A Performance",
+        "## Desire is expressed differently for men & women",
+    ]
+    positions = [primal.index(item) for item in ordered]
+    assert positions == sorted(positions)
+    for item in ordered:
+        assert primal.count(item) == 1, item
