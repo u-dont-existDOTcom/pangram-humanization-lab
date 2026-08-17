@@ -175,7 +175,7 @@ On the other hand, you may end up having sex too fast if you’re traveling toge
 
 Modern life barely has an intermediate stage between being interested in somebody and getting sexually entangled. One old example is [bundling](https://doi.org/10.1093/maghis/18.4.9), a mostly extinct practice now especially associated with the Amish even though it existed much more widely. Courting couples could spend the night together in bed, usually clothed, with the idea that they could talk and be close without having sex. It sounds a lot like the missing middle I’m talking about.
 
-It also didn’t exactly solve the problem. In late-eighteenth-century New England, bundling coexisted with a lot of premarital pregnancy: 30–40 percent of brides were already pregnant. So it was hardly a perfect containment system. I don't think we need to bring bundling back, but we do need some socially recognized way to explore tenderness and attraction without immediately sliding toward sex, cohabitation, and a life bond.
+It also didn’t exactly solve the problem. In late-eighteenth-century New England, bundling coexisted with a lot of premarital pregnancy: 30–40 percent of brides were already pregnant. So it wasn't exactly a reliable way to keep courtship nonsexual. I don't think we need to bring bundling back, but we do need some socially recognized way to explore tenderness and attraction without immediately sliding toward sex, cohabitation, and a life bond.
 
 ---
 
@@ -353,7 +353,7 @@ That’s definitely what relationship does.
 
 One warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other. Sometimes one person is terrorizing or controlling the other. If you're scared to say no, scared to tell the truth, or scared of what happens if you leave, don't turn that into a mutual communication exercise. Get other people involved and think about safety first.
 
-Relationship showed me how vulnerable I actually am when I open my heart. It’s really easy to feel invulnerable and strong when you’re alone, or even just with friends. Taking off the masks and showing your inner child is a gamble, but it’s required if you want to go deeper in yourself and deeper with another person.
+Being in a relationship showed me how vulnerable I actually am when I open my heart. It’s really easy to feel invulnerable and strong when you’re alone, or even just with friends. Taking off the masks and showing your inner child is a gamble, but it’s required if you want to go deeper in yourself and deeper with another person.
 
 Living alone is easy in so many ways. I can make my bed whenever I want. When I have a girlfriend, making the bed in the morning can become one of the ways I show her I love her. If I don’t do it well, somehow it may become a bad omen that I don’t care about her.
 
