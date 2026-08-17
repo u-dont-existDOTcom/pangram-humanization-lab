@@ -1,0 +1,5 @@
+Part of that truth-telling is that a breakup can also expose things you genuinely couldn't see while you were bonded. Make sure to look at yourself as much as you look at them, to see what you honestly contributed to the problems. Try to see your ex's perspective in so far as it may have had some kernels of truth, including their own internal conflicts, rather than one-dimensionalizing them.
+
+Don’t jump straight to the conclusion that they were fake all along merely because that story makes the whole relationship easier to explain. Don’t rule it out either if it is actually the most parsimonious explanation. Seek opinions from people who aren’t heavily invested in seeing your innocence. A therapist, a pastor, or even a stranger can sometimes look at the evidence more clearly than a lifelong friend, and even the curiosity itself can be therapeutic for you.
+
+Spiritual practice during an ending is critical, but it shouldn't be about bypassing your feelings. Pray for your ex's wellbeing. Remember what was real and good, and refuse to use your pain as permission to hate them. Avoid the New Age belief that everyone is simply a mirror of you. No, that isn’t true.
