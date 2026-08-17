@@ -1,0 +1,27 @@
+{
+  "audit_id": "romance-gui-followup-2026-08-17",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "primal-middle\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "estimated_credits": 1,
+          "measurement_key": "romance-gui-followup-r1-2026-08-17_PRIMAL_LIVED_ROUTE_R1",
+          "recorded_at_utc": "2026-08-17T03:02:07.176571+00:00",
+          "text_sha256": "faf4d081655df83bcc88a729391af4a62c02041de66e7a7268179af3cbc65d45",
+          "type": "paid_post_reserved",
+          "word_count": 595
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "primal-middle",
+      "version": "4.0"
+    }
+  }
+}
