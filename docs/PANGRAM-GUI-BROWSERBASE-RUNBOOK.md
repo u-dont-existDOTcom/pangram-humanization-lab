@@ -9,8 +9,8 @@ It is measurement tooling only. It does not edit article prose and does not prom
 For each exact UTF-8 input file, the runner:
 
 1. computes its SHA-256 and word count;
-2. refuses to rerun a completed identical SHA with the same runner unless `--force` is explicit;
-3. opens Pangram inside a Browserbase cloud Chromium session using a persistent Context;
+2. refuses to rerun a completed identical SHA or an ambiguous prior post-submit failure with the same runner unless `--force` is explicit;
+3. opens Pangram's authenticated `/dashboard` inside a Browserbase cloud Chromium session using a persistent Context;
 4. pastes the exact text into Pangram's detector;
 5. waits for the Pangram report;
 6. records the GUI report body and parses summary/segment labels, word counts and confidence;
@@ -66,7 +66,7 @@ The command prints:
 - a Browserbase Context ID;
 - a fullscreen Live View URL intended for human control.
 
-Open the Live View URL, log into Pangram normally, return to the terminal, and press Enter. The runner verifies that Pangram's detector input is visible before it closes the Browserbase session. Context changes are persisted when that session closes.
+Open the Live View URL, log into Pangram normally, return to the terminal, and press Enter. The runner navigates to `/dashboard`, rejects login/signup routes and visible account walls, and verifies that the authenticated detector input is visible before it closes the Browserbase session. Context changes are persisted when that session closes.
 
 After successful verification, the CLI saves the non-secret Context ID at
 `~/.config/pangram-gui/browserbase-context-id` with mode `0600`. Later local
@@ -104,13 +104,13 @@ python scripts/pangram_gui_browserbase.py run \
   --input work/romance-current-assembly/pangram-part-2.txt
 ```
 
-A completed identical SHA is returned as cached. To intentionally repeat the same GUI measurement:
+A completed identical SHA is returned as cached. A failure recorded after the detector button was invoked is treated as an ambiguous submission and is not repeated automatically. To intentionally repeat one of those measurements after reviewing its session/result evidence:
 
 ```bash
 python scripts/pangram_gui_browserbase.py run --force
 ```
 
-Do not use `--force` simply because a previous result was inconvenient.
+Do not use `--force` simply because a previous result was inconvenient or timed out.
 
 ## Result artifacts
 
@@ -125,7 +125,7 @@ A failed measurement contains:
 - `failure.json` — failure stage, exception, exact input SHA, Browserbase session/debug/recording references;
 - `failure.png` — best-effort full-page screenshot.
 
-A failed run does not create a completed `result.json`, so it can be resumed after the underlying issue is fixed.
+`failure.json` records whether detector submission was attempted. Pre-submit failures can be retried after the underlying issue is fixed. Post-submit failures require evidence review and explicit `--force`, because Pangram may already have accepted the text.
 
 ## Debugging failures
 
@@ -137,7 +137,7 @@ Common failure stages:
 - disconnected bordered DevTools page: use the fullscreen Live View printed by the current runner or the active Session Inspector; older runner versions selected `debuggerUrl` instead of `debuggerFullscreenUrl`.
 
 - `navigate`: Pangram or Browserbase navigation failed;
-- `find_input`: Pangram login likely expired or the detector UI changed;
+- `verify_authentication`: the saved Context reached login/signup, an account wall, or no bounded detector input on the authenticated dashboard;
 - `fill_input`: detector input no longer accepts Playwright `fill()`;
 - `submit`: Pangram's detection button name/UI changed;
 - `wait_report`: report did not finish within the bounded timeout;
@@ -148,6 +148,8 @@ The runner deliberately refuses broad selectors such as "click the first button"
 
 ## Current live-verification status
 
-The parser, identity, duplicate-defense, Browserbase REST lifecycle, and orchestration are testable without credentials. The actual Pangram GUI selectors and native-download behavior cannot be certified until a real Browserbase Context is configured and a one-time Pangram login bootstrap is performed.
+Browserbase API-key inference, Context/session creation, CDP connection, fullscreen Live View, and Context-ID persistence have run successfully. A live smoke attempt exposed and preserved a false-authentication failure: the old runner used Pangram's public marketing page, clicked its public check control, and reached `/signup` rather than a report. The current runner targets `/dashboard`, rejects login/signup/account-wall states before filling text, and refuses automatic repetition of that ambiguous post-submit hash.
+
+Authenticated cross-session Pangram persistence, current report markers, structured segment parsing, and native-download behavior still require live certification. First complete a corrected bootstrap, then open a second session without submitting text and verify `/dashboard` remains authenticated. Inspect Pangram history for any saved prior smoke before authorizing another detector call.
 
 Do not call the GUI automation fully verified until that live smoke test succeeds.

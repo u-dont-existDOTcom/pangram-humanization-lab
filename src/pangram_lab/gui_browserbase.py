@@ -9,13 +9,14 @@ import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable, Mapping
+from urllib.parse import urlsplit
 
 
 RUNNER_VERSION = "pangram-gui-browserbase-v1"
 MODEL_ID = "pangram-4"
 BROWSERBASE_API_ROOT = "https://api.browserbase.com/v1"
 PANGRAM_LOGIN_URL = "https://www.pangram.com/login"
-DEFAULT_PANGRAM_GUI_URL = "https://www.pangram.com/"
+DEFAULT_PANGRAM_GUI_URL = "https://www.pangram.com/dashboard"
 
 _SEGMENT_LABELS = (
     "Fully AI Generated",
@@ -116,6 +117,22 @@ def completed_result_exists(root: Path, input_sha256: str) -> bool:
     )
 
 
+def ambiguous_submission_exists(root: Path, input_sha256: str) -> bool:
+    receipt = measurement_dir(root, input_sha256) / "failure.json"
+    if not receipt.is_file():
+        return False
+    try:
+        value = json.loads(receipt.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return False
+    return (
+        isinstance(value, dict)
+        and value.get("status") == "failed"
+        and value.get("runner_version") == RUNNER_VERSION
+        and value.get("detector_submission_attempted") is True
+    )
+
+
 def artifact_paths(directory: Path) -> dict[str, Path]:
     return {
         "result": directory / "result.json",
@@ -142,6 +159,7 @@ def prepare_measurement(input_path: Path, *, output_root: Path, force: bool) -> 
         "word_count": len(text.split()),
         "directory": str(directory),
         "skip": completed_result_exists(output_root, digest) and not force,
+        "blocked_by_ambiguous_submission": ambiguous_submission_exists(output_root, digest) and not force,
     }
 
 
@@ -374,6 +392,29 @@ def detector_input(page: Any) -> Any:
     return locator
 
 
+def authenticated_detector_input(page: Any) -> Any:
+    """Return the detector input only from Pangram's authenticated dashboard."""
+    path = urlsplit(str(getattr(page, "url", ""))).path.lower()
+    if re.search(r"/(?:login|signup)(?:/|$)", path):
+        raise RuntimeError("authenticated Pangram dashboard is required; login did not persist")
+
+    try:
+        body = " ".join(page.locator("body").inner_text().casefold().split())
+    except Exception:
+        body = ""
+    account_wall_markers = (
+        "log in to your account",
+        "create your account to get started",
+        "sign up to gain access to the pangram dashboard",
+        "already have an account? sign in",
+        "don't have an account? sign up",
+    )
+    if any(marker in body for marker in account_wall_markers):
+        raise RuntimeError("authenticated Pangram dashboard is required; account wall is visible")
+
+    return detector_input(page)
+
+
 def detection_button(page: Any) -> Any:
     name_pattern = re.compile(r"^(?:check(?:\s+for)?\s+ai|scan(?:\s+for)?\s+ai|detect(?:\s+ai)?|analyze)$", re.IGNORECASE)
     locator = page.get_by_role("button", name=name_pattern)
@@ -449,7 +490,7 @@ def bootstrap_login(config: BrowserbaseConfig, *, input_fn: Any = input, print_f
         print_fn(f"Live debugger URL: {debugger_url}")
         input_fn("Open the debugger URL, finish Pangram login, then press Enter here to verify: ")
         page.goto(config.pangram_url, wait_until="domcontentloaded")
-        detector_input(page)
+        authenticated_detector_input(page)
     finally:
         browser.close()
         playwright.stop()
@@ -508,6 +549,7 @@ def _failure_receipt(
     session_id: str,
     debugger_url: str,
     stage: str,
+    detector_submission_attempted: bool,
     error: Exception,
 ) -> dict[str, object]:
     return {
@@ -522,6 +564,7 @@ def _failure_receipt(
         "browserbase_debugger_url": debugger_url,
         "browserbase_recording_url": f"https://browserbase.com/sessions/{session_id}",
         "stage": stage,
+        "detector_submission_attempted": detector_submission_attempted,
         "error_type": type(error).__name__,
         "error": str(error),
     }
@@ -539,6 +582,14 @@ def run_inputs(
     if config.context_id is None:
         raise RuntimeError("BROWSERBASE_CONTEXT_ID is required for unattended GUI runs")
     prepared = [prepare_measurement(path, output_root=output_root, force=force) for path in input_paths]
+    blocked = [item for item in prepared if item["blocked_by_ambiguous_submission"]]
+    if blocked:
+        identities = ", ".join(str(item["input_sha256"]) for item in blocked)
+        raise RuntimeError(
+            "refusing to repeat Pangram GUI input after an ambiguous prior submission: "
+            f"{identities}. Inspect the saved failure/session evidence; use --force only after "
+            "confirming a repeat detector call is intended."
+        )
     pending = [item for item in prepared if not item["skip"]]
     results: list[dict[str, object]] = [
         {
@@ -578,17 +629,16 @@ def run_inputs(
             paths = artifact_paths(directory)
             directory.mkdir(parents=True, exist_ok=True)
             stage = "navigate"
+            detector_submission_attempted = False
             try:
                 page.goto(config.pangram_url, wait_until="domcontentloaded")
-                if "/login" in page.url.lower():
-                    raise RuntimeError("Pangram login is required; persistent Browserbase Context authentication expired")
-
-                stage = "find_input"
-                field = detector_input(page)
+                stage = "verify_authentication"
+                field = authenticated_detector_input(page)
                 stage = "fill_input"
                 field.fill(str(item["text"]))
 
                 stage = "submit"
+                detector_submission_attempted = True
                 detection_button(page).click()
                 stage = "wait_report"
                 wait_for_report(page, timeout_ms=report_timeout_ms)
@@ -628,6 +678,7 @@ def run_inputs(
                     session_id=session_id,
                     debugger_url=debugger_url,
                     stage=stage,
+                    detector_submission_attempted=detector_submission_attempted,
                     error=exc,
                 )
                 _write_json(paths["failure"], failure)

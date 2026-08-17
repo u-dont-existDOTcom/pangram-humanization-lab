@@ -42,16 +42,16 @@ Replace Joel's repetitive manual Pangram GUI copy/paste/report-download loop wit
 - fullscreen human-control Live View URL lookup, with bordered-debugger fallback;
 - Playwright connection over the returned CDP `connectUrl`;
 - reuse of Browserbase's default browser context;
-- one-time `bootstrap_login` flow that opens Pangram login in a live Browserbase session, waits for manual login, verifies the Pangram detector is visible, then closes the session so authentication changes persist.
+- one-time `bootstrap_login` flow that opens Pangram login in a live Browserbase session, waits for manual login, navigates to the authenticated `/dashboard`, rejects login/signup/account-wall states, verifies the detector is visible, then closes the session so authentication changes persist.
 
 ### Pangram GUI runner
 
 The live runner:
 
 1. reads exact UTF-8 detector input and hashes it;
-2. skips an already completed identical SHA by default;
-3. opens Pangram using the persistent Browserbase Context;
-4. fails closed if login has expired or a bounded detector input cannot be found;
+2. skips an already completed identical SHA by default and refuses an automatic repeat after an ambiguous post-submit failure;
+3. opens Pangram's authenticated `/dashboard` using the persistent Browserbase Context;
+4. fails closed before filling text if login/signup or an account wall is visible, or if a bounded detector input cannot be found;
 5. fills exact text with Playwright;
 6. clicks only a bounded detector-action button name (`Check for AI`, `Scan for AI`, `Detect`, `Analyze` variants);
 7. waits for report markers;
@@ -59,7 +59,7 @@ The live runner:
 9. prefers a clearly named native Pangram report/PDF download;
 10. falls back to Chromium print-to-PDF only if no bounded native download succeeds, and marks the provenance as `playwright_print_fallback`;
 11. writes complete result evidence including Browserbase session/debug/recording URLs;
-12. writes `failure.json` plus best-effort screenshot and re-raises on failures.
+12. writes `failure.json` plus best-effort screenshot and re-raises on failures, recording whether detector submission may already have occurred.
 
 ### CLI
 
@@ -69,7 +69,7 @@ The live runner:
 - `run` — measure repeated `--input` files;
 - successful bootstrap saves the non-secret Context ID at `~/.config/pangram-gui/browserbase-context-id`, and future local commands reuse it automatically;
 - no explicit inputs defaults to current Romance `pangram-part-1.txt` and `pangram-part-2.txt` on a branch where those files exist;
-- `--force` is required to repeat a completed identical measurement.
+- `--force` is required to repeat a completed identical measurement or an ambiguous post-submit failure after evidence review.
 
 ### GitHub Actions
 
@@ -118,8 +118,15 @@ Live evidence on 2026-08-17 established the following without exposing or storin
 - the first session exposed a bordered `debuggerUrl`, but that page disconnected before Pangram login was verified;
 - the runner now prefers Browserbase's `debuggerFullscreenUrl`, with regression coverage;
 - the first session ended, and repeated later attempts to reuse the Context were rejected at session creation with `HTTP 401`; no second session or detector submission occurred.
+- a later `bb_live_...` key authenticated independently against Browserbase's read-only Projects API, proving those `401` responses came from pairing the new key with the old Context rather than from the current key;
+- the current key created fresh Context `64614e72-db2e-40b5-b6d9-c48833bf2025` and session `31c555ef-f2f3-4133-9abb-9866d3e4f6a6`;
+- the old runner falsely accepted the public marketing-page detector input as authenticated login verification and saved that fresh Context;
+- a second session, `f7a504fa-a868-4acf-86b8-d9b501cd8374`, filled the 121-word smoke input (SHA `00b54ca37127155ce7c146320b40ba19076ad901714f3b447f1250c764f6d835`) on the public page, clicked `Check for AI`, and timed out waiting for report markers;
+- its screenshot proves Pangram redirected to `/signup` and displayed `Create your account to get started`; no report, parsed segment, or PDF was produced;
+- because Pangram said the text was saved and would be checked after account creation, preserve this as an ambiguous post-submit attempt and do not automatically submit the same SHA again;
+- regression coverage now requires `/dashboard`, rejects login/signup/account-wall states before filling text, and blocks normal reruns of ambiguous post-submit failures.
 
-The Context exists, but authenticated Pangram state and cross-session persistence remain **unverified**. The following are still not live-certified:
+The fresh Context exists, but authenticated Pangram state and cross-session persistence remain **unverified**. The following are still not live-certified:
 
 - Pangram's current detector input selector;
 - Pangram's current detector button accessible name;
@@ -150,4 +157,4 @@ After that, normal detector runs can be unattended.
 
 ## Next safe action
 
-Reuse Context `c6b6b8ce-632f-45f1-be24-1c5fdd6e5981` with a current API key, complete Pangram login through the fullscreen Live View, and close the session. Start a second session with the same Context and prove login persistence. Then run one small smoke measurement, inspect the recording/parsed JSON/PDF provenance against the GUI, and determine whether a full GUI run consumes paid Pangram credits before submitting the two article halves.
+Reuse fresh Context `64614e72-db2e-40b5-b6d9-c48833bf2025` with the current API key and corrected `/dashboard` authentication gate, complete Pangram login through fullscreen Live View, and close the session. Start a second session with the same Context and prove login persistence without filling or submitting text. Inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should PDF provenance and full-half credit cost be assessed.

@@ -24,7 +24,7 @@ Environment variables:
 
 - `BROWSERBASE_API_KEY` — required.
 - `BROWSERBASE_CONTEXT_ID` — required for unattended GitHub Actions runs; optional locally when bootstrap has saved the Context ID under `~/.config/pangram-gui/`.
-- `PANGRAM_GUI_URL` — optional override; default `https://www.pangram.com/`.
+- `PANGRAM_GUI_URL` — optional override; default `https://www.pangram.com/dashboard`.
 
 No Pangram password is stored in GitHub. The initial login is performed manually in Browserbase's live debugger once, then persisted in the Context.
 
@@ -41,7 +41,7 @@ Behavior:
 3. Open `https://www.pangram.com/login`.
 4. Print the Browserbase live debugger URL and Context ID.
 5. Wait for the user to complete Pangram login in the live debugger and confirm locally.
-6. Navigate to Pangram's detector page, verify that a detector text input is available, then close the browser so Context changes persist.
+6. Navigate to Pangram's authenticated `/dashboard`, reject login/signup routes or a visible account wall, verify that a detector text input is available, then close the browser so Context changes persist.
 7. Save the non-secret Context ID to `~/.config/pangram-gui/browserbase-context-id` for automatic local reuse.
 
 ### Run measurements
@@ -56,8 +56,8 @@ Default Romance invocation uses:
 For each input:
 
 1. Compute exact SHA-256 and word count.
-2. Reuse a completed result if the measurement identity already exists, unless forced.
-3. Navigate to Pangram's detector page in the logged-in persistent Context.
+2. Reuse a completed result if the measurement identity already exists, unless forced. Refuse an automatic repeat when a prior failure says a detector submission may already have occurred.
+3. Navigate to Pangram's authenticated `/dashboard` in the persistent Context and fail before filling text if login/signup is visible.
 4. Find the visible text input using a bounded selector strategy (`textarea`, contenteditable textbox, generic textbox role).
 5. Fill exact text bytes as Unicode text; no labels or test metadata are added to submitted copy.
 6. Find and activate the visible Pangram detection action using bounded button-name patterns.
@@ -112,4 +112,4 @@ Add a manual `workflow_dispatch` workflow that:
 - No storage of Pangram email/password.
 - No detector-driven article rewriting.
 - No silent selector fallback that clicks arbitrary buttons.
-- No duplicate completed measurements unless explicitly forced.
+- No duplicate completed or ambiguous post-submit measurements unless explicitly forced after evidence review.

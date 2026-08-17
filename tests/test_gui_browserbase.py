@@ -20,6 +20,7 @@ from pangram_lab.gui_browserbase import (
     measurement_dir,
     parse_report_text,
     prepare_measurement,
+    run_inputs,
     sha256_text,
 )
 
@@ -210,6 +211,51 @@ def test_browserbase_config_bootstrap_needs_only_api_key() -> None:
     assert existing.context_id == "ctx_existing"
 
 
+def test_browserbase_config_defaults_to_authenticated_pangram_dashboard() -> None:
+    config = BrowserbaseConfig.from_env(
+        {"BROWSERBASE_API_KEY": "secret"},
+        require_context=False,
+    )
+
+    assert config.pangram_url == "https://www.pangram.com/dashboard"
+
+
+class _BodyText:
+    def __init__(self, text: str) -> None:
+        self._text = text
+
+    def inner_text(self) -> str:
+        return self._text
+
+
+class _AuthenticationWallPage:
+    def __init__(self, url: str, body: str) -> None:
+        self.url = url
+        self._body = _BodyText(body)
+
+    def locator(self, selector: str) -> _BodyText:
+        assert selector == "body"
+        return self._body
+
+
+@pytest.mark.parametrize("route", ("login", "signup"))
+def test_authenticated_detector_rejects_authentication_routes(route: str) -> None:
+    page = _AuthenticationWallPage(f"https://www.pangram.com/{route}", "")
+
+    with pytest.raises(RuntimeError, match="authenticated Pangram dashboard"):
+        gui_browserbase.authenticated_detector_input(page)
+
+
+def test_authenticated_detector_rejects_visible_account_wall() -> None:
+    page = _AuthenticationWallPage(
+        "https://www.pangram.com/",
+        "Sign up to gain access to the Pangram Dashboard\nCreate your account to get started",
+    )
+
+    with pytest.raises(RuntimeError, match="authenticated Pangram dashboard"):
+        gui_browserbase.authenticated_detector_input(page)
+
+
 def test_browserbase_config_reuses_saved_local_context(tmp_path: Path) -> None:
     context_file = tmp_path / "browserbase-context-id"
     context_file.write_text("ctx_saved\n", encoding="utf-8")
@@ -283,6 +329,29 @@ def test_prepare_measurement_hashes_exact_text_and_skips_completed_by_default(tm
     forced = prepare_measurement(input_path, output_root=output_root, force=True)
     assert second["skip"] is True
     assert forced["skip"] is False
+
+
+def test_run_inputs_refuses_automatic_repeat_after_ambiguous_submission(tmp_path: Path) -> None:
+    input_path = tmp_path / "smoke.txt"
+    input_path.write_text("An exact smoke boundary.\n", encoding="utf-8")
+    output_root = tmp_path / "state"
+    first = prepare_measurement(input_path, output_root=output_root, force=False)
+    directory = Path(first["directory"])
+    directory.mkdir(parents=True)
+    (directory / "failure.json").write_text(
+        json.dumps(
+            {
+                "status": "failed",
+                "runner_version": RUNNER_VERSION,
+                "detector_submission_attempted": True,
+            }
+        ),
+        encoding="utf-8",
+    )
+    config = BrowserbaseConfig(api_key="secret", context_id="ctx_saved")
+
+    with pytest.raises(RuntimeError, match="refusing to repeat.*ambiguous"):
+        run_inputs(config, [input_path], output_root=output_root)
 
 
 def test_artifact_paths_are_stable_and_explicit(tmp_path: Path) -> None:
