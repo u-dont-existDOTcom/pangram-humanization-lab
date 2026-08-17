@@ -590,6 +590,17 @@
       "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
       "source_ref": "working-tree",
       "source_sha256": "eed85f4ec6961ba2d04a5704bfc719cf94cf401f62dd53ef10353e4633155d2a"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "A human OAuth/login flow can leave the automation origin page on an account wall while the authenticated Pangram dashboard is open in another browser tab.",
+      "id": "L-9f9b45402e-01",
+      "promoted_to": [],
+      "reason": "This is project-specific Pangram bootstrap behavior now handled by bounded dashboard-tab selection and regression tests; it does not alter the lab editorial or detector-science lessons.",
+      "recorded_at_utc": "2026-08-17T21:44:07.783688+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "9f9b45402ebfb86f2b00133f9335f60487a1da61dfbce8dd6cf5a5a79e3113c7"
     }
   ],
   "schema_version": 1
