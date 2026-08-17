@@ -18,3 +18,15 @@ And can you actually say all that once you're naked? Even if you think she'll be
 
 Bodies fitting is not enough. Can you stay honest while you’re completely exposed? Talking before your clothes come off already practices some of the trust, attention, and willingness to be seen that making love needs.
 
+## Affection and the simmer
+
+Doug Toft, who has been married for fifty years, has a useful list called [*50 Things I Learned from 50 Years of Marriage*](https://dougtoft.substack.com/p/50-things-i-learned-from-50-years). One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.
+
+The opposite failure is letting the erotic current disappear except when somebody officially initiates sex. Kim Anami calls the current between encounters [“the simmer”](https://kimanami.com/meet-another-well-fked-man/). Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. It shouldn’t become relationship homework. But if two people who supposedly want each other barely flirt, tease, or show desire through the day, I would take that as a warning light rather than expect great sex to materialize from zero at bedtime.
+
+You need both. Affection has to be safe from escalation, and the erotic current has to stay alive.
+
+Sex can also be a barometer for whatever else is happening between you. If the sex changes, ask what else changed: resentment, closeness, stress, health, medication, or how wanted each person feels.
+
+Each person has some responsibility for staying sexually alive too. My partner matters enormously, but she shouldn’t have to manufacture all my desire for me. And if sex is one of the main things separating this relationship from friendship, it probably deserves more than whatever exhausted time is left after everything else.
+
