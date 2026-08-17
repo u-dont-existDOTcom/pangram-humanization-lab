@@ -1,1 +1,1 @@
-Relationship showed me how vulnerable I actually am when I open my heart.
+Being in a relationship showed me how vulnerable I actually am when I open my heart.
