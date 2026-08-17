@@ -90,3 +90,21 @@ def test_sexual_monogamy_paragraph_is_not_replaced_by_social_monogamy_analysis()
         "or 'social monogamy,' with accepted ways for sexual or emotional connection to exist outside it."
     )
     assert paragraph in output
+
+
+def test_after_leaving_uses_aug17_owner_correction_and_preserves_continuation() -> None:
+    output = _assemble()
+    start = output.index("## After leaving")
+    end = output.index("## What I gained from loss")
+    after = output[start:end]
+
+    assert "Make sure to look at yourself as much as you look at them, to see what you honestly contributed to the problems." in after
+    assert "Try to see your ex's perspective in so far as it may have had some kernels of truth, including their own internal conflicts, rather than one-dimensionalizing them." in after
+    assert "Seeing them now doesn’t automatically mean you are demonizing the other person." not in after
+    assert "Try to see the situation from their perspective. Try to see where they may be internally conflicted." not in after
+
+    # The owner correction stops at this sentence; the prior downstream thought remains.
+    owner_stop = "Avoid the New Age belief that everyone is simply a mirror of you. No, that isn’t true."
+    continuation = "We partly mirror one another, but each person is also their own unique person"
+    assert after.index(owner_stop) < after.index(continuation)
+    assert "What would Mr. Rogers do?" in after
