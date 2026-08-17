@@ -220,6 +220,126 @@ def test_browserbase_config_defaults_to_authenticated_pangram_dashboard() -> Non
     assert config.pangram_url == "https://www.pangram.com/dashboard"
 
 
+def test_bootstrap_session_ends_on_browser_disconnect(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    create_session_calls: list[dict[str, object]] = []
+
+    class FakeClient:
+        def create_session(self, context_id: str, **kwargs: object) -> dict[str, str]:
+            create_session_calls.append({"context_id": context_id, **kwargs})
+            return {"id": "session_1", "connectUrl": "wss://connect.example/session_1"}
+
+        def debug_urls(self, session_id: str) -> dict[str, str]:
+            assert session_id == "session_1"
+            return {"debuggerFullscreenUrl": "https://live.example/session_1"}
+
+    class FakePage:
+        def goto(self, url: str, *, wait_until: str) -> None:
+            assert url == gui_browserbase.PANGRAM_LOGIN_URL
+            assert wait_until == "domcontentloaded"
+
+    class FakeBrowser:
+        closed = False
+
+        def close(self) -> None:
+            self.closed = True
+
+    class FakePlaywright:
+        stopped = False
+
+        def stop(self) -> None:
+            self.stopped = True
+
+    browser = FakeBrowser()
+    playwright = FakePlaywright()
+    page = FakePage()
+    monkeypatch.setattr(gui_browserbase, "BrowserbaseRestClient", lambda api_key: FakeClient())
+    monkeypatch.setattr(gui_browserbase, "_connect_session", lambda connect_url: (playwright, browser, page))
+    monkeypatch.setattr(gui_browserbase, "select_authenticated_dashboard_page", lambda page, url: page)
+
+    result = gui_browserbase.bootstrap_login(
+        BrowserbaseConfig(api_key="secret", context_id="ctx_saved"),
+        input_fn=lambda prompt: "",
+        print_fn=lambda message: None,
+    )
+
+    assert result["verified"] is True
+    assert create_session_calls == [
+        {
+            "context_id": "ctx_saved",
+            "persist": True,
+            "keep_alive": False,
+            "timeout": 1800,
+            "user_metadata": {"task": "pangram-gui-bootstrap"},
+        }
+    ]
+    assert browser.closed is True
+    assert playwright.stopped is True
+
+
+def test_verify_login_persistence_opens_dashboard_without_submitting(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    create_session_calls: list[dict[str, object]] = []
+    verified_pages: list[object] = []
+
+    class FakeClient:
+        def create_session(self, context_id: str, **kwargs: object) -> dict[str, str]:
+            create_session_calls.append({"context_id": context_id, **kwargs})
+            return {"id": "session_verify", "connectUrl": "wss://connect.example/session_verify"}
+
+        def debug_urls(self, session_id: str) -> dict[str, str]:
+            assert session_id == "session_verify"
+            return {"debuggerFullscreenUrl": "https://live.example/session_verify"}
+
+    class FakePage:
+        url = "about:blank"
+
+        def goto(self, url: str, *, wait_until: str) -> None:
+            assert wait_until == "domcontentloaded"
+            self.url = url
+
+    class FakeBrowser:
+        closed = False
+
+        def close(self) -> None:
+            self.closed = True
+
+    class FakePlaywright:
+        stopped = False
+
+        def stop(self) -> None:
+            self.stopped = True
+
+    browser = FakeBrowser()
+    playwright = FakePlaywright()
+    page = FakePage()
+    monkeypatch.setattr(gui_browserbase, "BrowserbaseRestClient", lambda api_key: FakeClient())
+    monkeypatch.setattr(gui_browserbase, "_connect_session", lambda connect_url: (playwright, browser, page))
+    monkeypatch.setattr(gui_browserbase, "authenticated_detector_input", verified_pages.append)
+
+    result = gui_browserbase.verify_login_persistence(
+        BrowserbaseConfig(api_key="secret", context_id="ctx_saved")
+    )
+
+    assert result["verified"] is True
+    assert result["session_id"] == "session_verify"
+    assert page.url == "https://www.pangram.com/dashboard"
+    assert verified_pages == [page]
+    assert create_session_calls == [
+        {
+            "context_id": "ctx_saved",
+            "persist": True,
+            "keep_alive": False,
+            "timeout": 300,
+            "user_metadata": {"task": "pangram-gui-verify"},
+        }
+    ]
+    assert browser.closed is True
+    assert playwright.stopped is True
+
+
 class _BodyText:
     def __init__(self, text: str) -> None:
         self._text = text

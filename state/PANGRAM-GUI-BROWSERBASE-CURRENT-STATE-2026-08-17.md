@@ -38,11 +38,12 @@ Replace Joel's repetitive manual Pangram GUI copy/paste/report-download loop wit
 
 - Browserbase Context creation via REST;
 - persistent Context-bound session creation (`browserSettings.context.id`, `persist: true`);
-- session timeout/keepAlive controls;
+- session timeout/keepAlive controls, with bootstrap and verification sessions deliberately non-keep-alive so disconnect ends the session and triggers Context persistence;
 - fullscreen human-control Live View URL lookup, with bordered-debugger fallback;
 - Playwright connection over the returned CDP `connectUrl`;
 - reuse of Browserbase's default browser context;
 - one-time `bootstrap_login` flow that opens Pangram login in a live Browserbase session, waits for manual login, prefers an authenticated `/dashboard` tab opened during login (with original-tab navigation as fallback), rejects login/signup/account-wall states, verifies the detector is visible, then closes the session so authentication changes persist.
+- read-only `verify_login_persistence` flow that proves the saved authentication works in a second session without filling text or submitting a detector call.
 
 ### Pangram GUI runner
 
@@ -66,6 +67,7 @@ The live runner:
 `scripts/pangram_gui_browserbase.py`
 
 - `bootstrap` — create/reuse persistent Context and perform the one-time manual Pangram login;
+- `verify` — prove authentication persistence in a fresh session without a detector submission;
 - `run` — measure repeated `--input` files;
 - successful bootstrap saves the non-secret Context ID at `~/.config/pangram-gui/browserbase-context-id`, and future local commands reuse it automatically;
 - no explicit inputs defaults to current Romance `pangram-part-1.txt` and `pangram-part-2.txt` on a branch where those files exist;
@@ -101,8 +103,8 @@ Repository workflow-policy audit for the new manual Browserbase workflow: succes
 
 Fresh local verification after the Live View/local-Context durability changes:
 
-- focused GUI suite: `17 passed`;
-- full repository suite: `124 passed`;
+- focused GUI suite: `26 passed`;
+- full repository suite: `133 passed`;
 - repository audit: `0 error(s)`, with five pre-existing/declared warnings.
 
 ## Current blocker / unresolved
@@ -127,6 +129,11 @@ Live evidence on 2026-08-17 established the following without exposing or storin
 - regression coverage now requires `/dashboard`, rejects login/signup/account-wall states before filling text, and blocks normal reruns of ambiguous post-submit failures.
 - corrected bootstrap session `408ca4c9-c40c-409a-b1fc-915d0b36eddc` then failed closed on an account wall after Joel reported completing login; the likely remaining bootstrap defect was verifying only the original login tab while an OAuth/login flow could open the authenticated dashboard in another tab;
 - the next regression now prefers an already-open authenticated `/dashboard` tab and otherwise navigates the original page to `/dashboard`; focused GUI coverage passes with both paths.
+- tab-aware bootstrap session `31c82fb9-4a0c-4f32-b00a-1ebc1a644424` still had one page at `https://www.pangram.com/login` after Joel reported completion, proving authentication had not completed in that browser session;
+- Browserbase still reported that session `RUNNING` after Playwright disconnected because bootstrap had set `keepAlive: true`; Context state cannot finalize at that boundary and the live session can continue consuming time;
+- the owned stale session was explicitly released through Browserbase and reached `COMPLETED`;
+- bootstrap now keeps the Playwright connection open for the manual-login wait but sets `keepAlive: false`, making disconnect/close terminate the session; regression coverage locks that lifecycle behavior;
+- a new `verify` command provides the required second-session persistence check without filling or submitting detector text.
 
 The fresh Context exists, but authenticated Pangram state and cross-session persistence remain **unverified**. The following are still not live-certified:
 
@@ -159,4 +166,4 @@ After that, normal detector runs can be unattended.
 
 ## Next safe action
 
-Reuse fresh Context `64614e72-db2e-40b5-b6d9-c48833bf2025` with the current API key and tab-aware `/dashboard` authentication gate, complete Pangram login through fullscreen Live View, and close the session. Start a second session with the same Context and prove login persistence without filling or submitting text. Inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should PDF provenance and full-half credit cost be assessed.
+Reuse fresh Context `64614e72-db2e-40b5-b6d9-c48833bf2025` with the current API key and the non-keep-alive, tab-aware bootstrap. Do not confirm until Live View has left `/login` and shows the detector dashboard. Then run the read-only `verify` command in a second session to prove persistence. Inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should PDF provenance and full-half credit cost be assessed.

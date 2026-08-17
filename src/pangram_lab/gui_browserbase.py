@@ -491,7 +491,10 @@ def bootstrap_login(config: BrowserbaseConfig, *, input_fn: Any = input, print_f
     session = client.create_session(
         context_id,
         persist=True,
-        keep_alive=True,
+        # The Playwright CDP connection remains open while the user logs in.
+        # Disabling Browserbase keep-alive makes browser.close() end the session,
+        # which is the boundary at which Context changes are persisted.
+        keep_alive=False,
         timeout=1800,
         user_metadata={"task": "pangram-gui-bootstrap"},
     )
@@ -507,7 +510,10 @@ def bootstrap_login(config: BrowserbaseConfig, *, input_fn: Any = input, print_f
         page.goto(PANGRAM_LOGIN_URL, wait_until="domcontentloaded")
         print_fn(f"Browserbase Context ID: {context_id}")
         print_fn(f"Live debugger URL: {debugger_url}")
-        input_fn("Open the debugger URL, finish Pangram login, then press Enter here to verify: ")
+        input_fn(
+            "Open the debugger URL and finish Pangram login. Wait until the page leaves /login "
+            "and shows the detector dashboard, then press Enter here to verify: "
+        )
         select_authenticated_dashboard_page(page, config.pangram_url)
     finally:
         browser.close()
@@ -518,6 +524,49 @@ def bootstrap_login(config: BrowserbaseConfig, *, input_fn: Any = input, print_f
         "session_id": session_id,
         "debugger_url": debugger_url,
         "verified": True,
+    }
+
+
+def verify_login_persistence(
+    config: BrowserbaseConfig,
+    *,
+    print_fn: Any = print,
+) -> dict[str, object]:
+    """Verify a saved Context in a fresh session without submitting detector text."""
+    if config.context_id is None:
+        raise RuntimeError("BROWSERBASE_CONTEXT_ID is required to verify persisted login")
+
+    client = BrowserbaseRestClient(config.api_key)
+    session = client.create_session(
+        config.context_id,
+        persist=True,
+        keep_alive=False,
+        timeout=300,
+        user_metadata={"task": "pangram-gui-verify"},
+    )
+    session_id = str(session.get("id", "")).strip()
+    connect_url = str(session.get("connectUrl", "")).strip()
+    if not session_id or not connect_url:
+        raise RuntimeError("Browserbase session response is missing id/connectUrl")
+    debug = client.debug_urls(session_id)
+    debugger_url = select_live_view_url(debug)
+    print_fn(f"Browserbase verification session: {session_id}")
+    print_fn(f"Live debugger: {debugger_url}")
+
+    playwright, browser, page = _connect_session(connect_url)
+    try:
+        page.goto(config.pangram_url, wait_until="domcontentloaded")
+        authenticated_detector_input(page)
+    finally:
+        browser.close()
+        playwright.stop()
+
+    return {
+        "context_id": config.context_id,
+        "session_id": session_id,
+        "debugger_url": debugger_url,
+        "verified": True,
+        "submitted": False,
     }
 
 

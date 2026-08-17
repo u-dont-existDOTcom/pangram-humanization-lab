@@ -37,12 +37,18 @@ No Pangram password is stored in GitHub. The initial login is performed manually
 Behavior:
 
 1. Create a Browserbase Context from the API key if no context ID is supplied.
-2. Start a Browserbase session with Context persistence enabled and keep-alive long enough for manual login.
+2. Start a Browserbase session with Context persistence enabled and Browserbase keep-alive disabled. The Playwright CDP connection remains open throughout manual login; disabling keep-alive guarantees that disconnect/close ends the session and triggers Context persistence.
 3. Open `https://www.pangram.com/login`.
 4. Print the Browserbase live debugger URL and Context ID.
 5. Wait for the user to complete Pangram login in the live debugger and confirm locally.
 6. Prefer an authenticated `/dashboard` tab opened during interactive login; otherwise navigate the original tab to `/dashboard`. Reject login/signup routes or a visible account wall, verify that a detector text input is available, then close the browser so Context changes persist.
 7. Save the non-secret Context ID to `~/.config/pangram-gui/browserbase-context-id` for automatic local reuse.
+
+### Verify persisted login
+
+`python scripts/pangram_gui_browserbase.py verify`
+
+This starts a fresh, non-keep-alive session with the saved Context, opens the authenticated dashboard, and verifies the detector input without filling text or activating the detector. It is the safe cross-session persistence gate after bootstrap.
 
 ### Run measurements
 

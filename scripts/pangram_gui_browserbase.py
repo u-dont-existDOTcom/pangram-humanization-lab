@@ -5,7 +5,13 @@ import argparse
 import json
 from pathlib import Path
 
-from pangram_lab.gui_browserbase import BrowserbaseConfig, bootstrap_login, run_inputs, save_context_id
+from pangram_lab.gui_browserbase import (
+    BrowserbaseConfig,
+    bootstrap_login,
+    run_inputs,
+    save_context_id,
+    verify_login_persistence,
+)
 
 
 DEFAULT_INPUTS = (
@@ -27,6 +33,12 @@ def _parser() -> argparse.ArgumentParser:
         help="Create/reuse a persistent Browserbase Context and perform one-time manual Pangram login.",
     )
     bootstrap.set_defaults(command="bootstrap")
+
+    verify = sub.add_parser(
+        "verify",
+        help="Verify saved Pangram login in a fresh session without submitting detector text.",
+    )
+    verify.set_defaults(command="verify")
 
     run = sub.add_parser("run", help="Run exact Pangram GUI measurements for one or more UTF-8 text files.")
     run.add_argument(
@@ -73,6 +85,15 @@ def main(argv: list[str] | None = None) -> int:
             report_timeout_ms=args.report_timeout_ms,
         )
         print(json.dumps(results, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "verify":
+        config = BrowserbaseConfig.from_env(
+            require_context=True,
+            context_id_path=DEFAULT_CONTEXT_ID_PATH,
+        )
+        result = verify_login_persistence(config)
+        print(json.dumps(result, indent=2, sort_keys=True))
         return 0
 
     raise AssertionError(f"unhandled command: {args.command}")

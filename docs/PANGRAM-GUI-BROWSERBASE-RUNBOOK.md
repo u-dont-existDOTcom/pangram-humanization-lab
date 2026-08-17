@@ -66,7 +66,7 @@ The command prints:
 - a Browserbase Context ID;
 - a fullscreen Live View URL intended for human control.
 
-Open the Live View URL, log into Pangram normally, return to the terminal, and press Enter. The runner first checks authenticated `/dashboard` tabs opened during login, then falls back to navigating the original tab to `/dashboard`. It rejects login/signup routes and visible account walls and verifies that the authenticated detector input is visible before it closes the Browserbase session. Context changes are persisted when that session closes.
+Open the Live View URL and log into Pangram normally. Do not return to the terminal while the Live View is still on `/login`: wait until it leaves that route and shows the detector dashboard, then press Enter. The runner first checks authenticated `/dashboard` tabs opened during login, then falls back to navigating the original tab to `/dashboard`. It rejects login/signup routes and visible account walls and verifies that the authenticated detector input is visible before it closes the Browserbase session. Bootstrap disables Browserbase keep-alive while retaining the active Playwright connection, so closing or disconnecting ends the session and triggers Context persistence instead of leaving a billable session running.
 
 After successful verification, the CLI saves the non-secret Context ID at
 `~/.config/pangram-gui/browserbase-context-id` with mode `0600`. Later local
@@ -78,6 +78,14 @@ these repository secrets:
 - `BROWSERBASE_CONTEXT_ID`
 
 There is no `BROWSERBASE_PROJECT_ID` secret or placeholder in this workflow.
+
+Verify cross-session persistence before any detector submission:
+
+```bash
+python scripts/pangram_gui_browserbase.py verify
+```
+
+`verify` opens the saved Context in a fresh session and checks the authenticated detector input. It does not fill text or click Pangram's detector action.
 
 ## Local unattended run
 

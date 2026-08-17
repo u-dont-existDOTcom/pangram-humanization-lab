@@ -601,6 +601,17 @@
       "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
       "source_ref": "working-tree",
       "source_sha256": "9f9b45402ebfb86f2b00133f9335f60487a1da61dfbce8dd6cf5a5a79e3113c7"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Browserbase keep-alive prevents Context finalization after Playwright disconnect",
+      "id": "L-4c282c160e-01",
+      "promoted_to": [],
+      "reason": "Browserbase-specific session lifecycle finding is now enforced by code, tests, and the GUI runbook; it does not change the current Pangram or humanization lesson corpus.",
+      "recorded_at_utc": "2026-08-17T21:58:33.663692+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "4c282c160e570e80e6536dbc268745f6cbf888e7b3ed680f1846b1370067e7d3"
     }
   ],
   "schema_version": 1
