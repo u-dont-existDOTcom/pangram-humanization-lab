@@ -137,11 +137,14 @@ jobs:
           # a patch are represented as '+ ' and are not source-file whitespace defects.
           git diff --check 4ac56a883f147a59a003c05c3387423399609f8b...HEAD -- . ':(exclude)work/romance-current-assembly/current-master.diff'
 
+      - name: Run available repository audit
+        run: python scripts/audit_codex_github.py --root . --fail-on error
+
       - name: Report unavailable named validators
         run: |
-          for f in scripts/validate_content_repository.py scripts/validate_article_architecture_maps.py scripts/audit_codex_github.py; do
+          for f in scripts/validate_content_repository.py scripts/validate_article_architecture_maps.py; do
             if [[ -e "$f" ]]; then
-              echo "unexpectedly present: $f"
+              echo "present but not wired into this verification workflow: $f"
               exit 1
             else
               echo "not present in this repository: $f"
