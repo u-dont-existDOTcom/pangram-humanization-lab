@@ -1,0 +1,3 @@
+This section will be relevant to some readers and easy for others to skip.
+
+Before I say anything good about psychedelics in relationships, the warning has to come first. You cannot negotiate consent on MDMA. The drug is changing how safe, loving, open, and connected everything feels. I'm not saying there is some safe procedure for getting high and starting a relationship. There isn't. People need that warning before they take it, because once you're inside that feeling, sober caveats may sound ridiculous.
