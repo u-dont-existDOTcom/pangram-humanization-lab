@@ -103,8 +103,138 @@ def test_after_leaving_uses_aug17_owner_correction_and_preserves_continuation() 
     assert "Seeing them now doesn’t automatically mean you are demonizing the other person." not in after
     assert "Try to see the situation from their perspective. Try to see where they may be internally conflicted." not in after
 
-    # The owner correction stops at this sentence; the prior downstream thought remains.
     owner_stop = "Avoid the New Age belief that everyone is simply a mirror of you. No, that isn’t true."
     continuation = "We partly mirror one another, but each person is also their own unique person"
     assert after.index(owner_stop) < after.index(continuation)
     assert "What would Mr. Rogers do?" in after
+
+
+def test_card_game_closeness_is_not_treated_as_lived_evidence() -> None:
+    output = _assemble()
+    game = "A card game can create its own little high too."
+    limit = "That may mean the game worked. It doesn't mean the relationship will."
+    ordinary = "At some point, more questions mostly teach me what the person says about themself. Then I need ordinary time."
+    assert game in output
+    assert limit in output
+    assert ordinary in output
+    assert output.index(game) < output.index(limit) < output.index(ordinary)
+    assert "I can learn a lot by talking, but there's a point where more questions mostly teach me" not in output
+
+
+def test_shared_reality_seed_precedes_two_pillars_primary_home() -> None:
+    output = _assemble()
+    seed = "By community, I don't mean that she tells her friends her side while I tell mine."
+    primary = "# Two Pillars Don't Hold The Roof Up"
+    assert seed in output
+    assert "the relationship isn't the only reality in the room" in output
+    assert output.index("## Things get tricky fast") < output.index(seed) < output.index(primary)
+
+
+def test_readiness_names_inner_parenting_and_literal_parenthood_without_lowering_floor() -> None:
+    output = _assemble()
+    early = "If you can't be a parent in either sense, you aren't ready to date."
+    callback = "Nobody has to be completely healed before entering a relationship."
+    minimum = "At the very least, there needs to be honesty, real effort at improving, and some ability to stop blaming everybody else for your own problems."
+    reparent = "The present-day adult has to learn how to parent the child part instead of quietly hiring the partner for the job."
+    assert early in output
+    assert callback in output
+    assert minimum in output
+    assert reparent in output
+    assert output.index(early) < output.index(callback) < output.index(minimum) < output.index(reparent)
+
+
+def test_bundling_is_compact_historical_example_not_causal_claim() -> None:
+    output = _assemble()
+    start = output.index("Modern life barely has an intermediate stage between being interested in somebody and getting sexually entangled.")
+    end = output.index("# Starting on the right foot")
+    bundling = output[start:end]
+    assert "https://doi.org/10.1093/maghis/18.4.9" in bundling
+    assert "a mostly extinct practice now especially associated with the Amish even though it existed much more widely" in bundling
+    assert "30–40 percent of brides were already pregnant" in bundling
+    assert "the no-sex idea clearly didn't always hold" in bundling
+    assert "bundling caused" not in bundling.lower()
+    assert len(bundling.split()) < 150
+
+
+def test_idealization_bridges_spiritual_depth_to_ordinary_dependability() -> None:
+    output = _assemble()
+    bridge = "Spiritual depth also doesn't tell me how dependable somebody is."
+    ordinary = "She may meditate for two hours and still not show up for boring work, sickness, or something she promised yesterday."
+    flaws = "## The conversation about flaws"
+    assert bridge in output
+    assert ordinary in output
+    assert output.index("## Beware idealization in either direction") < output.index(bridge) < output.index(flaws)
+
+
+def test_crucible_does_not_absorb_unilateral_coercion_into_mutual_triggering() -> None:
+    output = _assemble()
+    start = output.index("# Are you ready for the crucible?")
+    end = output.index("# Don’t make your partner your whole world")
+    crucible = output[start:end]
+    warning = "sometimes this isn't two wounded people triggering each other"
+    safety = "Get other people involved and think about safety first."
+    assert warning in crucible
+    assert "Sometimes one person is terrorizing or controlling the other." in crucible
+    assert safety in crucible
+    assert crucible.index(warning) < crucible.index(safety) < crucible.index("It showed me how vulnerable I actually am when I open my heart.")
+
+
+def test_labels_reveal_shared_meaning_without_creating_commitment() -> None:
+    output = _assemble()
+    assert "labels don't create commitment" in output
+    assert "They can still expose whether two people think they're in the same relationship" in output
+    assert "True commitment grows out of relational depth, not a label." in output
+    assert "labels don't actually change anything" not in output
+
+
+def test_bee_door_keeps_lying_and_adds_context() -> None:
+    output = _assemble()
+    start = output.index("# If you’re already in it")
+    end = output.index("# Children")
+    section = output[start:end]
+    assert "Why would she lie like that? She was lying" in section
+    assert "“she lied” only named the momentary behavior" in section
+    assert "There was no strategy behind it, and she was usually quite honest." in section
+    assert "some kind of mental illness" in section
+    assert "rather than \"lying\"" not in section
+
+
+def test_vows_heading_changes_without_rewriting_existing_action_feeling_distinction() -> None:
+    output = _assemble()
+    assert "## Which marriage vows are honest?" in output
+    assert "## Why marriage vows are dishonest" not in output
+    assert "Conventional marriage vows are dishonest, and most people know it." in output
+    assert "You can't promise how you'll feel in the future. You can promise actions if you really believe you're capable of delivering them." in output
+    assert "Ecclesiastes 5:4–6" in output
+    assert "Sexual exclusivity has a different history." in output
+
+
+def test_mdma_warning_precedes_attractive_psychedelic_material_and_preserves_sober_test() -> None:
+    output = _assemble()
+    start = output.index("## Psychedelics in relationship discernment")
+    end = output.index("## Why all of this sounds artificial")
+    section = output[start:end]
+    warning = "You cannot negotiate consent on MDMA."
+    positive = "Psychedelics, especially certain types of shrooms"
+    state = "In neuroscience, this is called state-dependent learning."
+    sober = "The question is what happens when you're sober again."
+    assert warning in section
+    assert "I'm not saying there is some safe procedure for getting high and starting a relationship. There isn't." in section
+    assert section.index(warning) < section.index(positive) < section.index(state) < section.index(sober)
+
+
+def test_explicit_no_change_locks_survive_concept_flow_pass() -> None:
+    output = _assemble()
+    oxytocin = (
+        "People call oxytocin the “love hormone,” as if getting more attached should make you feel closer and safer. "
+        "If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, "
+        "abuse, or if people disappeared on you, you can get more attached and more freaked out at the same time."
+    )
+    cervical = (
+        "Komisaruk and Whipple showed that cervical stimulation can produce orgasm even in women with a severed spinal cord, "
+        "because the vagus nerve can carry the signal without using the spinal route that clitoral orgasms use."
+    )
+    promoter = "Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim"
+    assert oxytocin in output
+    assert cervical in output
+    assert promoter in output
