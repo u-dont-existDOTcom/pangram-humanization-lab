@@ -8,7 +8,7 @@ import urllib.error
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any, Iterable, Mapping
 
 
 RUNNER_VERSION = "pangram-gui-browserbase-v1"
@@ -97,6 +97,63 @@ def completed_result_exists(root: Path, input_sha256: str) -> bool:
         and value.get("status") == "complete"
         and value.get("runner_version") == RUNNER_VERSION
     )
+
+
+def artifact_paths(directory: Path) -> dict[str, Path]:
+    return {
+        "result": directory / "result.json",
+        "body": directory / "report-body.txt",
+        "pdf": directory / "report.pdf",
+        "failure": directory / "failure.json",
+        "failure_screenshot": directory / "failure.png",
+    }
+
+
+def prepare_measurement(input_path: Path, *, output_root: Path, force: bool) -> dict[str, object]:
+    try:
+        text = input_path.read_bytes().decode("utf-8")
+    except OSError as exc:
+        raise RuntimeError(f"cannot read Pangram GUI input {input_path}: {exc}") from exc
+    except UnicodeDecodeError as exc:
+        raise RuntimeError(f"Pangram GUI input must be UTF-8: {input_path}") from exc
+    digest = sha256_text(text)
+    directory = measurement_dir(output_root, digest)
+    return {
+        "input_path": str(input_path),
+        "text": text,
+        "input_sha256": digest,
+        "word_count": len(text.split()),
+        "directory": str(directory),
+        "skip": completed_result_exists(output_root, digest) and not force,
+    }
+
+
+def build_complete_receipt(
+    *,
+    input_path: str,
+    input_sha256: str,
+    word_count: int,
+    session_id: str,
+    debugger_url: str,
+    report_url: str,
+    pdf_provenance: str,
+    parsed: dict[str, object],
+) -> dict[str, object]:
+    return {
+        "schema_version": 1,
+        "status": "complete",
+        "runner_version": RUNNER_VERSION,
+        "model": MODEL_ID,
+        "input_path": input_path,
+        "input_sha256": input_sha256,
+        "word_count": word_count,
+        "browserbase_session_id": session_id,
+        "browserbase_debugger_url": debugger_url,
+        "browserbase_recording_url": f"https://browserbase.com/sessions/{session_id}",
+        "report_url": report_url,
+        "pdf_provenance": pdf_provenance,
+        "parsed": parsed,
+    }
 
 
 def build_context_payload(project_id: str) -> dict[str, str]:
@@ -315,7 +372,7 @@ def wait_for_report(page: Any, *, timeout_ms: int = 180_000) -> None:
         try:
             page.get_by_text(marker, exact=False).first.wait_for(state="visible", timeout=slice_ms)
             return
-        except Exception as exc:  # Playwright timeout type is optional at import time
+        except Exception as exc:
             last_error = exc
     raise RuntimeError("Pangram report did not become visible before timeout") from last_error
 
@@ -382,3 +439,184 @@ def bootstrap_login(config: BrowserbaseConfig, *, input_fn: Any = input, print_f
         "debugger_url": debugger_url,
         "verified": True,
     }
+
+
+def _write_json(path: Path, value: dict[str, object]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def _native_pdf_control(page: Any) -> Any:
+    pattern = re.compile(
+        r"(?:download|export).*(?:pdf|report)|(?:pdf|report).*(?:download|export)",
+        re.IGNORECASE,
+    )
+    for role in ("button", "link"):
+        locator = page.get_by_role(role, name=pattern)
+        for index in range(locator.count()):
+            candidate = locator.nth(index)
+            try:
+                if candidate.is_visible() and candidate.is_enabled():
+                    return candidate
+            except Exception:
+                continue
+    return None
+
+
+def capture_report_pdf(page: Any, path: Path) -> str:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    control = _native_pdf_control(page)
+    if control is not None:
+        try:
+            with page.expect_download(timeout=12_000) as download_info:
+                control.click()
+            download = download_info.value
+            download.save_as(str(path))
+            return "native_pangram_download"
+        except Exception:
+            pass
+    page.pdf(path=str(path), format="A4", print_background=True)
+    return "playwright_print_fallback"
+
+
+def _failure_receipt(
+    *,
+    input_path: str,
+    input_sha256: str,
+    word_count: int,
+    session_id: str,
+    debugger_url: str,
+    stage: str,
+    error: Exception,
+) -> dict[str, object]:
+    return {
+        "schema_version": 1,
+        "status": "failed",
+        "runner_version": RUNNER_VERSION,
+        "model": MODEL_ID,
+        "input_path": input_path,
+        "input_sha256": input_sha256,
+        "word_count": word_count,
+        "browserbase_session_id": session_id,
+        "browserbase_debugger_url": debugger_url,
+        "browserbase_recording_url": f"https://browserbase.com/sessions/{session_id}",
+        "stage": stage,
+        "error_type": type(error).__name__,
+        "error": str(error),
+    }
+
+
+def run_inputs(
+    config: BrowserbaseConfig,
+    input_paths: Iterable[Path],
+    *,
+    output_root: Path = Path("state/gui-runs"),
+    force: bool = False,
+    report_timeout_ms: int = 180_000,
+    print_fn: Any = print,
+) -> list[dict[str, object]]:
+    if config.context_id is None:
+        raise RuntimeError("BROWSERBASE_CONTEXT_ID is required for unattended GUI runs")
+    prepared = [prepare_measurement(path, output_root=output_root, force=force) for path in input_paths]
+    pending = [item for item in prepared if not item["skip"]]
+    results: list[dict[str, object]] = [
+        {
+            "status": "cached",
+            "input_path": item["input_path"],
+            "input_sha256": item["input_sha256"],
+            "word_count": item["word_count"],
+            "directory": item["directory"],
+        }
+        for item in prepared
+        if item["skip"]
+    ]
+    if not pending:
+        return results
+
+    client = BrowserbaseRestClient(config.api_key)
+    session = client.create_session(
+        config.context_id,
+        persist=True,
+        keep_alive=False,
+        timeout=3600,
+        user_metadata={"task": "pangram-gui", "inputCount": str(len(pending))},
+    )
+    session_id = str(session.get("id", "")).strip()
+    connect_url = str(session.get("connectUrl", "")).strip()
+    if not session_id or not connect_url:
+        raise RuntimeError("Browserbase session response is missing id/connectUrl")
+    debug = client.debug_urls(session_id)
+    debugger_url = str(debug.get("debuggerUrl", "")).strip()
+    print_fn(f"Browserbase session: {session_id}")
+    print_fn(f"Live debugger: {debugger_url}")
+
+    playwright, browser, page = _connect_session(connect_url)
+    try:
+        for item in pending:
+            directory = Path(str(item["directory"]))
+            paths = artifact_paths(directory)
+            directory.mkdir(parents=True, exist_ok=True)
+            stage = "navigate"
+            try:
+                page.goto(config.pangram_url, wait_until="domcontentloaded")
+                if "/login" in page.url.lower():
+                    raise RuntimeError("Pangram login is required; persistent Browserbase Context authentication expired")
+
+                stage = "find_input"
+                field = detector_input(page)
+                stage = "fill_input"
+                field.fill(str(item["text"]))
+
+                stage = "submit"
+                detection_button(page).click()
+                stage = "wait_report"
+                wait_for_report(page, timeout_ms=report_timeout_ms)
+
+                stage = "capture_body"
+                body = page.locator("body").inner_text()
+                paths["body"].write_text(body, encoding="utf-8")
+                parsed = parse_report_text(body)
+                if not parsed["segments"]:
+                    raise RuntimeError("Pangram report became visible but no analyzed segments could be parsed")
+
+                stage = "capture_pdf"
+                pdf_provenance = capture_report_pdf(page, paths["pdf"])
+                receipt = build_complete_receipt(
+                    input_path=str(item["input_path"]),
+                    input_sha256=str(item["input_sha256"]),
+                    word_count=int(item["word_count"]),
+                    session_id=session_id,
+                    debugger_url=debugger_url,
+                    report_url=page.url,
+                    pdf_provenance=pdf_provenance,
+                    parsed=parsed,
+                )
+                _write_json(paths["result"], receipt)
+                if paths["failure"].exists():
+                    paths["failure"].unlink()
+                results.append(receipt)
+                print_fn(
+                    f"[pangram-gui] complete sha={item['input_sha256']} words={item['word_count']} "
+                    f"pdf={pdf_provenance}"
+                )
+            except Exception as exc:
+                failure = _failure_receipt(
+                    input_path=str(item["input_path"]),
+                    input_sha256=str(item["input_sha256"]),
+                    word_count=int(item["word_count"]),
+                    session_id=session_id,
+                    debugger_url=debugger_url,
+                    stage=stage,
+                    error=exc,
+                )
+                _write_json(paths["failure"], failure)
+                try:
+                    page.screenshot(path=str(paths["failure_screenshot"]), full_page=True)
+                except Exception:
+                    pass
+                raise
+    finally:
+        browser.close()
+        playwright.stop()
+
+    return results
