@@ -57,6 +57,26 @@ Base results are keyed by Pangram model + expected API result version + exact su
 
 The importer reads the earlier `campaign-state.json`/raw-response form and the newer failed harness's `state.json` form. Pangram 3 results are retained as historical evidence but never substituted for Pangram 4 calls.
 
+## Authorship-signal retention
+
+Pangram status, editorial fidelity, and authorship-signal retention are separate results. A detector-Human passage can still be generic or unlike Joel, while a passage that resembles an author profile can still change his argument. The local idiolect commands add a non-billable third measurement axis for substantial rewriting:
+
+```bash
+pangram-lab idiolect-retention \
+  --profile-dir path/to/private-reference-texts \
+  --original original-visible-text.txt \
+  --candidate candidate-visible-text.txt \
+  --output idiolect-retention.json
+```
+
+For method-development work with multiple authors and aligned originals/rewrites:
+
+```bash
+pangram-lab idiolect-ier dataset.json --output closed-set-ier.json
+```
+
+The routine command is a **single-author retention proxy**, not Idiolect Erasure Rate. True IER requires a closed-set multi-author attribution benchmark. Reports contain hashes and aggregate measurements, not raw source text, and deliberately provide no universal pass threshold. See `docs/IDIOLECT-RETENTION-PROTOCOL.md` before using either command.
+
 ## GitHub
 
 The repository is private by default. The installer uses your current `gh` account; it never hardcodes a GitHub username. API credentials are never written to the repository. `.env`, key/secret files, and `.venv` are ignored.
@@ -66,6 +86,8 @@ Workers without a local Pangram key must use the repository-secret Actions route
 ## Experimental contract
 
 The Human endpoint remains editorial authority. Synthetic probes must preserve meaning. The blind reviewer runs before any new Pangram measurements. The planner uses explicit factor assignments rather than brittle `factor_bits`, and contrasts may reference only literal probe IDs; factorial effects/interactions are computed by deterministic code.
+
+Authorship-retention metrics are evidence, not editorial authority. Never add errors, memories, catchphrases, unusual punctuation, or corpus tics to improve a score. Use the minimum edit dose, preserve owner language and thought routes where available, and keep semantic/architecture review blocking.
 
 ## Current external async transport note
 

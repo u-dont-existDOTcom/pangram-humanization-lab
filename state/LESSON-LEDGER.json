@@ -568,6 +568,20 @@
       "source_path": "state/experiments/romance-casual-current-assembly-2026-08-15-results.json",
       "source_ref": "01ec8ba179e07808fd9a25fd3e6b77d56c4b12f9",
       "source_sha256": "4a0a8c8a670ec8deb9e192142130949b5bc4f9d034789a6f965b42c6ee185b03"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "A voice-preservation prompt is not evidence that an author's idiolect survived; substantial AI-mediated rewriting should use the minimum necessary edit dose and separately audit semantic/editorial fidelity, AI-detector status, and authorship-signal retention.",
+      "id": "L-b846706b74-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT-RETENTION.md"
+      ],
+      "reason": "The external multi-corpus IER study supplies transferable evidence that heavy rewriting can preserve semantics while erasing recoverable authorship signal, and that explicit preserve-voice prompting remains insufficient.",
+      "recorded_at_utc": "2026-08-17T23:55:28.397565+00:00",
+      "source_path": "state/IDIOLECT-ERASURE-RESEARCH-INTEGRATION-2026-08-17.md",
+      "source_ref": "research/idiolect-retention-20260817",
+      "source_sha256": "b846706b74f346b58d2b82be2cb7110553e25ff3184e3edd194ab3f337ea0fc8"
     }
   ],
   "schema_version": 1

@@ -6,6 +6,7 @@ from .cache import PangramCache
 from .codex_stream import CodexRunner
 from .engine import Engine
 from .git_sync import GitSync, GitSyncError
+from .idiolect import add_cli_parsers, run_cli
 from .legacy_import import import_legacy_tree
 from .pangram4 import PangramClient
 
@@ -19,6 +20,7 @@ def parser():
     i=sp.add_parser("import-legacy"); i.add_argument("paths",nargs="*")
     g=sp.add_parser("github-ensure"); g.add_argument("--repo-name",default="pangram-humanization-lab")
     s=sp.add_parser("cache-summary")
+    add_cli_parsers(sp)
     return p
 
 
@@ -43,6 +45,8 @@ def import_paths(paths):
 def main(argv=None):
     a=parser().parse_args(argv); rt=root()
     try:
+        if a.cmd in {"idiolect-retention","idiolect-ier"}:
+            return run_cli(a)
         if a.cmd=="github-ensure":
             # Commit the unpacked source locally first; then create/connect the
             # private GitHub repository and push that exact tree.

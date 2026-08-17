@@ -1,0 +1,22 @@
+{
+  "disposition": "promoted",
+  "finding": "A voice-preservation prompt is not evidence that an author's idiolect survived; substantial AI-mediated rewriting should use the minimum necessary edit dose and separately audit semantic/editorial fidelity, AI-detector status, and authorship-signal retention.",
+  "index_block": "- **Authorship-signal retention / edit-dose gate:** after the existing working supplements, read `state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT-RETENTION.md` and use `docs/IDIOLECT-RETENTION-PROTOCOL.md` for substantial AI-mediated rewrites. A voice-preservation prompt is not evidence; semantic fidelity, Pangram status, and authorship retention remain separate results.",
+  "ledger_entry_ids": [
+    "L-b846706b74-01"
+  ],
+  "lesson_block": "## Authorship-signal retention is a separate gate\n\nMalik and Awan's IER study shows that extensive generative rewriting can preserve semantic content while substantially reducing recoverable authorship signals. Grammar-only correction caused much less erasure, and a prompt explicitly asking the assistant to preserve the author's voice still left most deep authorship signal unrecovered.\n\nDurable rules:\n\n- **A voice-preservation prompt is an instruction, not validation.**\n- Use the minimum edit dose that solves the actual defect. Prefer mechanical correction and local repair over full regeneration; prefer actual owner wording and thought routes over assistant reconstruction.\n- Keep three results separate: semantic/editorial fidelity, Pangram status, and authorship-signal retention. Pangram Human does not prove Joel's idiolect survived, and profile similarity does not prove fidelity or natural authorship.\n- For substantial sectional or article-wide AI rewriting, compare the original and candidate against a held-out, genre-relevant corpus of genuine owner-authored or owner-edited-final work.\n- A single-author comparison is a **retention proxy**, not IER. True IER requires a closed-set multi-author attribution benchmark with disjoint profile/evaluation material and aligned originals/rewrites.\n- Do not install a universal pass threshold. Treat instrument/version, corpus, genre, boundary, baseline quality, and direction of movement as part of the result.\n- Never add errors, autobiographical detail, catchphrases, unusual punctuation, or corpus tics merely to raise similarity. Metrics remain evidence; owner authority, meaning, and editorial quality control the prose.\n- Keep private profile text out of reports. Preserve hashes, method version, sample/word counts, boundary identities, and aggregate measurements.\n\nOperational protocol and commands: `docs/IDIOLECT-RETENTION-PROTOCOL.md`. Exact research translation and limitations: `state/IDIOLECT-ERASURE-RESEARCH-INTEGRATION-2026-08-17.md`.\n",
+  "processed_at_utc": "2026-08-17T23:55:28.398985+00:00",
+  "promoted_to": [
+    "state/LESSON-INDEX.md",
+    "state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT-RETENTION.md"
+  ],
+  "reason": "The external multi-corpus IER study supplies transferable evidence that heavy rewriting can preserve semantics while erasing recoverable authorship signal, and that explicit preserve-voice prompting remains insufficient.",
+  "request_id": "idiolect-retention-research-integration-2026-08-17",
+  "schema_version": 1,
+  "source_path": "state/IDIOLECT-ERASURE-RESEARCH-INTEGRATION-2026-08-17.md",
+  "source_ref": "research/idiolect-retention-20260817",
+  "source_sha256": "b846706b74f346b58d2b82be2cb7110553e25ff3184e3edd194ab3f337ea0fc8",
+  "status": "processed",
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT-RETENTION.md"
+}
