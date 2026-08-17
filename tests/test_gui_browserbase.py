@@ -8,11 +8,14 @@ import pytest
 from pangram_lab.gui_browserbase import (
     RUNNER_VERSION,
     BrowserbaseConfig,
+    artifact_paths,
+    build_complete_receipt,
     build_context_payload,
     build_session_payload,
     completed_result_exists,
     measurement_dir,
     parse_report_text,
+    prepare_measurement,
     sha256_text,
 )
 
@@ -186,3 +189,64 @@ def test_browserbase_config_bootstrap_requires_project_only_when_context_missing
             require_context=False,
             require_project_if_context_missing=True,
         )
+
+
+def test_prepare_measurement_hashes_exact_text_and_skips_completed_by_default(tmp_path: Path) -> None:
+    input_path = tmp_path / "part.txt"
+    input_path.write_text("one two\nthree\n", encoding="utf-8")
+    output_root = tmp_path / "state"
+
+    first = prepare_measurement(input_path, output_root=output_root, force=False)
+    assert first["text"] == "one two\nthree\n"
+    assert first["word_count"] == 3
+    assert first["input_sha256"] == sha256_text("one two\nthree\n")
+    assert first["skip"] is False
+
+    directory = Path(first["directory"])
+    directory.mkdir(parents=True)
+    (directory / "result.json").write_text(
+        json.dumps({"status": "complete", "runner_version": RUNNER_VERSION}),
+        encoding="utf-8",
+    )
+
+    second = prepare_measurement(input_path, output_root=output_root, force=False)
+    forced = prepare_measurement(input_path, output_root=output_root, force=True)
+    assert second["skip"] is True
+    assert forced["skip"] is False
+
+
+def test_artifact_paths_are_stable_and_explicit(tmp_path: Path) -> None:
+    paths = artifact_paths(tmp_path)
+    assert paths == {
+        "result": tmp_path / "result.json",
+        "body": tmp_path / "report-body.txt",
+        "pdf": tmp_path / "report.pdf",
+        "failure": tmp_path / "failure.json",
+        "failure_screenshot": tmp_path / "failure.png",
+    }
+
+
+def test_complete_receipt_records_pdf_provenance_and_session() -> None:
+    parsed = {
+        "summary": {"fraction_human": 0.944},
+        "segments": [{"label": "Human Written", "word_count": 10, "confidence": "High", "text": "x"}],
+    }
+    receipt = build_complete_receipt(
+        input_path="work/part.txt",
+        input_sha256="a" * 64,
+        word_count=10,
+        session_id="sess_1",
+        debugger_url="https://debug.example/session",
+        report_url="https://www.pangram.com/report/123",
+        pdf_provenance="native_pangram_download",
+        parsed=parsed,
+    )
+    assert receipt["status"] == "complete"
+    assert receipt["runner_version"] == RUNNER_VERSION
+    assert receipt["input_sha256"] == "a" * 64
+    assert receipt["word_count"] == 10
+    assert receipt["browserbase_session_id"] == "sess_1"
+    assert receipt["browserbase_debugger_url"] == "https://debug.example/session"
+    assert receipt["report_url"] == "https://www.pangram.com/report/123"
+    assert receipt["pdf_provenance"] == "native_pangram_download"
+    assert receipt["parsed"] == parsed
