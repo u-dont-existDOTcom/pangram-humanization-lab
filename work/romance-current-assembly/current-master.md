@@ -87,7 +87,7 @@ This is a horrible catch-22. Wounded people get lonely, and loneliness itself ca
 
 I’m pretty conservative about this. I would tell most of my friends not to date yet. First love your inner child. If you can’t even do that, forget a relationship for now. Get a cat or a puppy. If you’re dishonest, can’t care what happens to another person, or keep turning every relationship into the same disaster, come on. You’re not ready.
 
-That doesn't mean you have to be completely healed. It means the present-day adult has to be able to parent whatever intimacy wakes up inside you, and responsible enough to deal with an actual child if sex creates one. If you can't be a parent in either sense, you aren't ready to date.
+You don't have to be completely healed, but the present-day adult has to be able to parent whatever intimacy wakes up inside you, and responsible enough to deal with an actual child if sex creates one. If you can't be a parent in either sense, you aren't ready to date.
 
 A good relationship can teach you self-love too, which is part of the problem: you may need one most when you’re least capable of creating a good one, recognizing one, or keeping it good. The odds are terrible.
 
@@ -175,7 +175,7 @@ On the other hand, you may end up having sex too fast if you’re traveling toge
 
 Modern life barely has an intermediate stage between being interested in somebody and getting sexually entangled. One old example is [bundling](https://doi.org/10.1093/maghis/18.4.9), a mostly extinct practice now especially associated with the Amish even though it existed much more widely. Courting couples could spend the night together in bed, usually clothed, with the idea that they could talk and be close without having sex. It sounds a lot like the missing middle I’m talking about.
 
-It also didn’t exactly solve the problem. In late-eighteenth-century New England, where bundling was common, 30–40 percent of brides were already pregnant, so the no-sex idea clearly didn't always hold. So I’m not proposing we bring bundling back. I’m saying we need some socially recognized way to explore tenderness and attraction without immediately sliding toward sex, cohabitation, and a life bond.
+It also didn’t exactly solve the problem. In late-eighteenth-century New England, bundling coexisted with a lot of premarital pregnancy: 30–40 percent of brides were already pregnant. So it was hardly a perfect containment system. I don't think we need to bring bundling back, but we do need some socially recognized way to explore tenderness and attraction without immediately sliding toward sex, cohabitation, and a life bond.
 
 ---
 
@@ -195,7 +195,7 @@ Ask deep questions. Conversation-card games may seem silly, but they can help pe
 
 But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation. If all she can give me is a general answer, I assume she probably doesn't know yet.
 
-A card game can create its own little high too. If we spend two hours telling each other things nobody else knows, we may feel incredibly understood and close. That may mean the game worked. It doesn't mean the relationship will.
+A card game can create its own little high too. If we spend two hours telling each other things nobody else knows, we may feel incredibly understood and close. That may mean the game worked without telling us whether the relationship will.
 
 At some point, more questions mostly teach me what the person says about themself. Then I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.
 
@@ -353,7 +353,7 @@ That’s definitely what relationship does.
 
 One warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other. Sometimes one person is terrorizing or controlling the other. If you're scared to say no, scared to tell the truth, or scared of what happens if you leave, don't turn that into a mutual communication exercise. Get other people involved and think about safety first.
 
-It showed me how vulnerable I actually am when I open my heart. It’s really easy to feel invulnerable and strong when you’re alone, or even just with friends. Taking off the masks and showing your inner child is a gamble, but it’s required if you want to go deeper in yourself and deeper with another person.
+Relationship showed me how vulnerable I actually am when I open my heart. It’s really easy to feel invulnerable and strong when you’re alone, or even just with friends. Taking off the masks and showing your inner child is a gamble, but it’s required if you want to go deeper in yourself and deeper with another person.
 
 Living alone is easy in so many ways. I can make my bed whenever I want. When I have a girlfriend, making the bed in the morning can become one of the ways I show her I love her. If I don’t do it well, somehow it may become a bad omen that I don’t care about her.
 
@@ -371,7 +371,7 @@ A smaller example happened with all of them. They could message me whenever they
 
 The present issue may be tiny. The part reacting to it may be five years old.
 
-Nobody has to be completely healed before entering a relationship. My standards used to be very low and now they are much higher because I’m exhausted by drama. Other people will have different standards.
+Nobody has to be completely healed before entering a relationship. My standards used to be very low and now they are much higher because I’m exhausted by drama. Other people will have different standards above that minimum.
 
 At the very least, there needs to be honesty, real effort at improving, and some ability to stop blaming everybody else for your own problems.
 
@@ -743,7 +743,7 @@ Psychedelics can make this same problem of idealization much stronger.
 
 This section will be relevant to some readers and easy for others to skip.
 
-Before I say anything good about psychedelics in relationships, the warning has to come first. You cannot negotiate consent on MDMA. The drug is changing how safe, loving, open, and connected everything feels. I'm not saying there is some safe procedure for getting high and starting a relationship. There isn't. People need that warning before they take it, because once you're inside that feeling, sober caveats may sound ridiculous.
+Before I say anything good about psychedelics in relationships, the warning has to come first. You cannot negotiate consent on MDMA. The drug is changing how safe, loving, open, and connected everything feels. Advance planning doesn't turn getting high and starting a relationship into a safe procedure. People need that warning before they take it, because once you're inside that feeling, sober caveats may sound ridiculous.
 
 Psychedelics, especially certain types of shrooms, very pure LSD, very pure therapeutic-grade MDMA, ayahuasca, [loveyhuasca haoma](http://soma.u-dont-exist.com/), and [iboga](http://iboga.u-dont-exist.com/), can be extremely useful when a couple is trapped in defensive stories.
 

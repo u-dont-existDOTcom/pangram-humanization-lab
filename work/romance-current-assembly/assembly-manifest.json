@@ -7,9 +7,9 @@
   },
   "baseline_bytes": 109480,
   "baseline_sha256": "18ed9fa6850e3a20d523b9365519ef43fa4e56398ce4e06d3743022676555edc",
-  "final_bytes": 109866,
-  "final_sha256": "4ceda6829af383358675bc0d5497f3712c99512d7a9cc2501b68649c7798046f",
-  "operation_count": 33,
+  "final_bytes": 109900,
+  "final_sha256": "85c5198d12294c6f04e6520b654e4cd8e1b44cc843c9bdd20e3e65bfc57fa313",
+  "operation_count": 35,
   "operations": [
     {
       "id": "owner-opening-2026-08-15",
@@ -189,8 +189,8 @@
     },
     {
       "id": "concept-flow-card-game-lived-evidence-2026-08-17",
-      "new_bytes": 947,
-      "new_sha256": "d9fd2688e17dd0addadc82d1a7d819e011c058159874701765e04722bee6fbe1",
+      "new_bytes": 957,
+      "new_sha256": "fa549abc79e1a13708ae857244ab38cc5f734d441ce022683d1c9ff568511809",
       "old_bytes": 763,
       "old_sha256": "85e00fd9fb4a2298e9198601e17f1ddaebb76d3df3d8059c52caa2d6c22e7b49",
       "type": "replace_exact"
@@ -205,16 +205,16 @@
     },
     {
       "id": "concept-flow-readiness-parenthood-threshold-2026-08-17",
-      "new_bytes": 641,
-      "new_sha256": "fdef089321330720cee63343b532f61e6bab70afec74d6c0672a91025fa7eb94",
+      "new_bytes": 624,
+      "new_sha256": "042df7eb3c49723d14b991d078042f4fda31b11e1d289c4e07a854549e8e09fd",
       "old_bytes": 353,
       "old_sha256": "f27619df70a49c6fe4881c26eba5253e3f9ceca94ce809eab70978d801f2e535",
       "type": "replace_exact"
     },
     {
       "id": "concept-flow-bundling-intermediate-stage-2026-08-17",
-      "new_bytes": 915,
-      "new_sha256": "5f493b8cc6ad0f4a39617423eec814c2dcec707cc5aed23f4a8530405eb75ea9",
+      "new_bytes": 936,
+      "new_sha256": "ce4a87536185bd3dae467551ff40aecb71b9dc91848cac6e4e63bae5e5fae135",
       "old_bytes": 7,
       "old_sha256": "ad1af52e2872615af2fa5e2f98419639145253a3fa6cfd93f4b62bdf1318c160",
       "type": "replace_between"
@@ -233,6 +233,22 @@
       "new_sha256": "03a23c47ef302a6c715d2e9e783706c1eea83ee127c6fc3a712eeba88a3d2c9f",
       "old_bytes": 43,
       "old_sha256": "fe1175ed1f4bed2fb0ef0109efd659774e171e57da7eed1c83eb2af8a655d00f",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-crucible-antecedent-after-warning-2026-08-17",
+      "new_bytes": 73,
+      "new_sha256": "f3274182fa77ed007284bd6c24c1c0baa38d06090f34cd6ff7bd208b3dc301e1",
+      "old_bytes": 63,
+      "old_sha256": "c69e46077b0bd0284e6acbb38e26364ac02bfd5aa3238cc695102735fcd021c0",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-crucible-standards-above-minimum-2026-08-17",
+      "new_bytes": 225,
+      "new_sha256": "0eb3e9cb932e764f536d30bcfba6294efb57b32b3627f261a62fc752b27271f5",
+      "old_bytes": 206,
+      "old_sha256": "190df07bc0d9704f01b12c297b20d835264e5c37ea518e356d31aa54141b1b6f",
       "type": "replace_exact"
     },
     {
@@ -261,8 +277,8 @@
     },
     {
       "id": "concept-flow-psychedelics-mdma-warning-first-2026-08-17",
-      "new_bytes": 511,
-      "new_sha256": "498ac8c3d7fb88ec94a2d5c96429d261d73bce9c40beba5c41362e153d359d81",
+      "new_bytes": 502,
+      "new_sha256": "47782b9b6a93889fb7d5a437119c3be6ce40baef62c15d9e784c09bd3aaa7a2d",
       "old_bytes": 74,
       "old_sha256": "6d012c672fa6a5115ce285462c3a20a5d3845c1fe2adc9bd7724bb0f5d6b9e9f",
       "type": "replace_exact"
@@ -277,5 +293,5 @@
     }
   ],
   "schema_version": 1,
-  "spec_sha256": "dae1736c1996546598cc5fd3ee3f1a3e947e97fd8f2af971302c42f5808f6fba"
+  "spec_sha256": "4ac538f8c5b5947920c0174f7dc243273164f17a6116a289ac79fe8ba70a5cfc"
 }
