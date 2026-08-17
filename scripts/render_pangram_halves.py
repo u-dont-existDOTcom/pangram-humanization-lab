@@ -6,7 +6,10 @@ import json
 import re
 from pathlib import Path
 
-import render_reader_visible as rrv
+try:
+    from scripts import render_reader_visible as rrv
+except ModuleNotFoundError:  # direct execution: python scripts/render_pangram_halves.py
+    import render_reader_visible as rrv
 
 
 _EMPHASIS_PATTERNS = (
