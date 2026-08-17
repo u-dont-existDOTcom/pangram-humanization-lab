@@ -75,6 +75,15 @@ def test_current_async_contract_uses_zero_task_auth_probe_and_explicit_pangram4_
     assert post[3] == {'text':'abc','public_dashboard_link':False,'model':'pangram-4'}
     assert post[2]['x-api-key']=='secret'
 
+
+def test_zero_task_404_does_not_claim_authentication(capsys):
+    t=CurrentContractTransport()
+    client=PangramClient('secret',transport=t,sleep=lambda _:None,sync=lambda _:None)
+    client.probe_auth()
+    output=capsys.readouterr().out
+    assert 'authentication not established' in output
+    assert 'auth probe reached' not in output
+
 class Http500SubmitTransport:
     def __init__(self): self.calls=0
     def request(self, method, url, headers=None, body=None):
