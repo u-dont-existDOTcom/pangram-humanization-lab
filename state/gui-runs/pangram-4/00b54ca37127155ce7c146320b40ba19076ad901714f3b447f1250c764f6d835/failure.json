@@ -1,0 +1,16 @@
+{
+  "browserbase_debugger_url": "https://www.browserbase.com/devtools-fullscreen/inspector.html?wss=connect.browserbase.com/debug/f7a504fa-a868-4acf-86b8-d9b501cd8374/devtools/page/629B400E53EE66D2838BC4D2791B7D01?debug=true",
+  "browserbase_recording_url": "https://browserbase.com/sessions/f7a504fa-a868-4acf-86b8-d9b501cd8374",
+  "browserbase_session_id": "f7a504fa-a868-4acf-86b8-d9b501cd8374",
+  "detector_submission_attempted": true,
+  "error": "Pangram report did not become visible before timeout",
+  "error_type": "RuntimeError",
+  "input_path": "tests/fixtures/pangram-gui-smoke.txt",
+  "input_sha256": "00b54ca37127155ce7c146320b40ba19076ad901714f3b447f1250c764f6d835",
+  "model": "pangram-4",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "stage": "wait_report",
+  "status": "failed",
+  "word_count": 121
+}
