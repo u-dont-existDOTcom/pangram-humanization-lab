@@ -12,9 +12,7 @@ The strangest part was that Bee’s body kept opening more while consciously she
 
 Women are always demanding to know why I love them. Apparently they’re allowed not to know.
 
-It felt like her body knew a truth her mind didn’t want to hear. That didn’t settle whether we should stay together. It showed me that love, desire, conscious trust, and the decision to stay can move in different directions.
-
-The reverse limitation exists too: good sex doesn’t supply the rest of a relationship.
+It felt like her body knew a truth her mind didn’t want to hear. She was still becoming more sure she wanted to leave, though.
 
 At Temple University, I had a Colombian lawyer as an English/Spanish conversation partner. Eventually we became casual sex friends. We had things we liked doing together, mainly sex, but basically nothing else in common. It ended badly because she was falling in love and I wasn’t. The sexual fit was real. It didn’t create the rest of the compatibility.
 
