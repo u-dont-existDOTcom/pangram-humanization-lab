@@ -46,6 +46,30 @@ Although the peanut gallery critics and lazy fact-checkers often cry fiction on 
 
 [NATIVE YOUTUBE — preserve from Substack source — videoId: QqP3p_ysd84]
 
+## Can making love be a spiritual practice?
+
+I’m Buddhist, and the early Buddhist texts don’t teach tantric sex as a path to awakening. But they also don’t show serious awakening as something reserved for monastics.
+
+In [DN 16](https://www.dhammatalks.org/suttas/DN/DN16.html), the Buddha talks about people who had died at Nādikā and mentions 510 lay stream-enterers, 96 once-returners, and more than fifty lay non-returners. Those are the first three of the four stages of awakening.
+
+[SN 55.24](https://suttacentral.net/sn55.24/en/sujato) has an almost comic complaint. When the Buddha declared Sarakāni a stream-enterer, other Sakyans grumbled, in effect, “Who isn’t a stream-enterer these days?” The part that matters here is how surprisingly common lay awakening had become.
+
+And when the married couple Nakulapitā and Nakulamātā asked the Buddha how they could remain together in future lives, [AN 4.55](https://suttacentral.net/an4.55/en/bodhi) gave this advice:
+
+> *"When both husband and wife are faithful and generous, restraintful, living righteously, speaking pleasant words to each other—they come together in the future, sharing the same desires and living in bliss."*
+
+None of this means the Buddha taught cervical sex as Buddhist meditation. It does mean marriage, sex, and household life are not automatically on the opposite side from serious spiritual development.
+
+[Kim Anami](https://kimanami.com/my-vagina-heals-everything/) goes further and treats sexual energy itself as a path into healing, creativity, worldly action, and spiritual awakening. Her work is full of her own experiences and a large body of student reports about sexuality changing health, work, money, creativity, and the rest of life. I don’t expect one result to fit every body, and I don’t see a reason to dismiss all those reports either.
+
+Her jade-egg practice is part of that. It combines pelvic-floor training, attention, arousal, and a more conscious relationship with the vagina instead of treating it like a body part that only wakes up when a partner wants sex.
+
+Brad and Pam Keene describe something even closer to what I mean here. Pam reports that her Kundalini completed during lovemaking and opened into a durable universal-consciousness awakening. Their marriage and sexual life became their spiritual classroom, and later she helped Brad awaken too.
+
+[NATIVE YOUTUBE — preserve from Substack source — videoId: Li--FKwJu0Q]
+
+What interests me is that for them the body, surrender, love, and awakening stopped being separate subjects. That is much closer to what I mean by sacred making love than treating sex as a distraction from spirituality.
+
 ## Muses & Directors
 
 In ordinary life, I sometimes think of the woman as the engine and myself as the steering wheel. I get motivation from her. She is the life force. She brings inspiration, beauty, intuition, creativity, and this feeling that life is worth doing.
@@ -58,11 +82,23 @@ Key could sometimes start talking and somehow teleport me outside the galaxy. I 
 
 Bee could bring out something similar--she could be talking to me for hours on end, but instead of trying to mute her with the TV remote, I felt I was in a timeless dimension of love.
 
+Maybe women are poetry and men are prose. I’m talking about masculine and feminine modes, not claiming every woman is poetic or every man literal. Some women barely have this quality at all. Some men, especially artistic ones, have much more access to it.
+
+This is one of the things I experience as intensely feminine: she brings me something emotionally, intuitively, or spiritually alive that I can’t reduce to a proposition. My reflex is to turn it into prose: What happened? What does it mean? What are we going to do about it? She may be showing me something before either of us can explain it.
+
+I think girls should have room to cultivate this capacity instead of having it trained out of them or allowed to collapse into helplessness and chaos. Boys shouldn’t be trained completely out of it either.
+
+Toft’s fifty-year-marriage list sounds like a more lived-in version of the famous *Men Are from Mars, Women Are from Venus* idea. Often she wants to be heard while he wants to solve. The species-level cartoon is too neat: men complain just to be heard too, and women often want a solution. The easy question is, “Do you want me to help figure this out, or do you mostly want me to listen?”
+
+Listening for the emotion underneath the words doesn’t mean switching my brain off. Emotional intensity is not permission to intimidate somebody, lie, make false accusations, or make them scared to say no. Poetry still has to survive reality.
+
 The muse gives the director his ineffable inspiration. She sees the big picture or feels something that has not become a plan yet. Then I have a chance to be useful by figuring out the details.
 
 The muse can influence any decision where I ask for help, and also the decisions where she suddenly intuits that she has something important to add.
 
 Micromanaging everything is totally different and not attractive. If she is refusing to trust my judgment, or simply taking over with “Let me do it,” I start feeling useless.
+
+Money can magnify the same problem. A woman earning more than her man doesn’t automatically make her masculine or him feminine. But if “I make more money” quietly becomes “I’m the competent adult and you’re my junior,” she can end up effeminating the man and then resenting the loss of polarity. The mirror failure is him asking a successful woman to shrink herself because he can’t tolerate her competence.
 
 A woman can lead wherever the man is less sure. She may know more about any particular field, even a traditionally non-feminine one. The way she leads can still preserve the polarity of roles.
 
@@ -94,6 +130,10 @@ I don’t actually think of myself as especially masculine. I step into that ene
 
 The same is true for a woman. She should not have to perform softness, helplessness, or cuteness every minute to prove she is feminine. Surrender means so much more when she could take control but prefers not to at that moment.
 
+Women can get trapped between opposite insecurities here. She may be wondering whether I still find her beautiful, whether she is too emotional or difficult, whether she makes enough logical sense, or whether she is too needy. Then she can overcorrect and decide she needs nobody, becoming so independent that receiving care or letting a man lead feels dangerous.
+
+Toft’s advice is simpler: tell her she is beautiful, and as she ages, keep noticing new forms of beauty. Anami adds that receiving is itself a skill. A strong woman can receive pleasure, help, or direction without becoming helpless. A man can receive care without becoming a child.
+
 We can invite these energies out of each other gently.
 
 “Honey, how do you see this intuitively?”
@@ -119,4 +159,3 @@ Men tend to show their wanting through providing, fixing, heavy labor, or trying
 If a man is too "needy," it tends to turn women off. The way women see it, a man should be in control of himself and able to satisfy his own basic needs. After all, how is he supposed to provide for somebody else if he can't manage himself?
 
 It's not that male pursuit is a turn-off to women (assuming they are interested in the man), but they want to see that the man can pursue strongly while staying grounded. The polarity evaporates when he keeps reaching without satisfaction, loses control of himself, or makes the woman responsible for regulating his emotions.
-
