@@ -12,18 +12,28 @@ Current Browserbase documentation is internally uneven: the standalone older `Cr
 
 For this tooling, follow the current Contexts/session guidance and Joel's onboarding material: API-key-only project resolution.
 
-## Required code correction
+## Implemented correction
 
-The current development implementation is stale in these places and must be changed before live bootstrap:
+The stale project-ID requirement has been removed from the development runner:
 
-- remove `project_id` from `BrowserbaseConfig`;
-- stop reading `BROWSERBASE_PROJECT_ID`;
-- remove `require_project_if_context_missing`;
-- replace `build_context_payload(project_id)` with an empty context-create payload `{}`;
-- change `BrowserbaseRestClient.create_context(project_id)` to `create_context()`;
-- change `bootstrap_login()` so a missing context creates one using only the API key;
-- remove all CLI/runbook/workflow language that asks for or requires a Project ID;
-- update tests first so the stale project-ID requirement fails before implementation is changed.
+- `BrowserbaseConfig` no longer has `project_id`;
+- `BROWSERBASE_PROJECT_ID` is no longer read or validated;
+- the old project-if-context-missing gate is gone;
+- `build_context_payload()` returns `{}`;
+- `BrowserbaseRestClient.create_context()` takes no project argument;
+- `bootstrap_login()` creates a Context using only the API key when no Context ID is supplied;
+- the CLI, runbook, and implementation specification no longer ask for or require a Project ID;
+- the GitHub workflow continues to require only `BROWSERBASE_API_KEY` and the persistent `BROWSERBASE_CONTEXT_ID` for unattended runs.
+
+## TDD evidence
+
+The correction was made test-first.
+
+1. `tests/test_gui_browserbase.py` was changed to require API-key-only Context creation and to reject any surviving `project_id` field.
+2. The full repository test suite then failed at the new Browserbase tests, establishing the RED gate.
+3. The config/REST/bootstrap implementation was corrected without changing Pangram interaction selectors or detector logic.
+4. The CLI and documentation were aligned with the corrected contract.
+5. At current branch head `5b0fcece499901cf0527d7b6c26351cff5028f13`, the `Lesson integrity` workflow reports the full test suite as successful. The workflow's overall red status is the existing research-closeout gate for an intentionally open branch, not a test failure. Repository workflow policy is successful.
 
 ## Context requirement that remains
 
@@ -31,7 +41,7 @@ The current development implementation is stale in these places and must be chan
 
 ## Live setup
 
-The one-time live sequence becomes:
+The one-time live sequence is now:
 
 1. API key only.
 2. Create/reuse a Browserbase Context.
@@ -42,6 +52,10 @@ The one-time live sequence becomes:
 
 No repository secret or environment placeholder named `BROWSERBASE_PROJECT_ID` should exist.
 
-## Next safe action
+## Current status / next safe action
 
-Apply the correction test-first on `agent/pangram-browserbase-gui-automation-20260817`, run the complete test suite and workflow-policy audit, then perform the first live bootstrap using the API key without ever committing or printing the key.
+**Implementation/test status: complete. Live certification: pending.**
+
+The remaining task is one real Browserbase bootstrap plus Pangram login, followed by a small smoke measurement. Until that succeeds, do not claim the current Pangram selectors, persistence across a second session, or native-PDF capture are production-verified.
+
+The API key must remain outside GitHub content and logs.
