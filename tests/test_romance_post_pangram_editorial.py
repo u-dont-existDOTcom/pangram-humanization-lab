@@ -112,7 +112,7 @@ def test_after_leaving_uses_aug17_owner_correction_and_preserves_continuation() 
 def test_card_game_closeness_is_not_treated_as_lived_evidence() -> None:
     output = _assemble()
     game = "A card game can create its own little high too."
-    limit = "That may mean the game worked. It doesn't mean the relationship will."
+    limit = "That may mean the game worked without telling us whether the relationship will."
     ordinary = "At some point, more questions mostly teach me what the person says about themself. Then I need ordinary time."
     assert game in output
     assert limit in output
@@ -134,13 +134,15 @@ def test_readiness_names_inner_parenting_and_literal_parenthood_without_lowering
     output = _assemble()
     early = "If you can't be a parent in either sense, you aren't ready to date."
     callback = "Nobody has to be completely healed before entering a relationship."
+    standards = "Other people will have different standards above that minimum."
     minimum = "At the very least, there needs to be honesty, real effort at improving, and some ability to stop blaming everybody else for your own problems."
     reparent = "The present-day adult has to learn how to parent the child part instead of quietly hiring the partner for the job."
     assert early in output
     assert callback in output
+    assert standards in output
     assert minimum in output
     assert reparent in output
-    assert output.index(early) < output.index(callback) < output.index(minimum) < output.index(reparent)
+    assert output.index(early) < output.index(callback) < output.index(standards) < output.index(minimum) < output.index(reparent)
 
 
 def test_bundling_is_compact_historical_example_not_causal_claim() -> None:
@@ -150,8 +152,9 @@ def test_bundling_is_compact_historical_example_not_causal_claim() -> None:
     bundling = output[start:end]
     assert "https://doi.org/10.1093/maghis/18.4.9" in bundling
     assert "a mostly extinct practice now especially associated with the Amish even though it existed much more widely" in bundling
+    assert "bundling coexisted with a lot of premarital pregnancy" in bundling
     assert "30–40 percent of brides were already pregnant" in bundling
-    assert "the no-sex idea clearly didn't always hold" in bundling
+    assert "hardly a perfect containment system" in bundling
     assert "bundling caused" not in bundling.lower()
     assert len(bundling.split()) < 150
 
@@ -173,10 +176,13 @@ def test_crucible_does_not_absorb_unilateral_coercion_into_mutual_triggering() -
     crucible = output[start:end]
     warning = "sometimes this isn't two wounded people triggering each other"
     safety = "Get other people involved and think about safety first."
+    resumed = "Relationship showed me how vulnerable I actually am when I open my heart."
     assert warning in crucible
     assert "Sometimes one person is terrorizing or controlling the other." in crucible
     assert safety in crucible
-    assert crucible.index(warning) < crucible.index(safety) < crucible.index("It showed me how vulnerable I actually am when I open my heart.")
+    assert resumed in crucible
+    assert crucible.index(warning) < crucible.index(safety) < crucible.index(resumed)
+    assert "It showed me how vulnerable I actually am when I open my heart." not in crucible
 
 
 def test_labels_reveal_shared_meaning_without_creating_commitment() -> None:
@@ -219,7 +225,7 @@ def test_mdma_warning_precedes_attractive_psychedelic_material_and_preserves_sob
     state = "In neuroscience, this is called state-dependent learning."
     sober = "The question is what happens when you're sober again."
     assert warning in section
-    assert "I'm not saying there is some safe procedure for getting high and starting a relationship. There isn't." in section
+    assert "Advance planning doesn't turn getting high and starting a relationship into a safe procedure." in section
     assert section.index(warning) < section.index(positive) < section.index(state) < section.index(sober)
 
 
