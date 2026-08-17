@@ -11,6 +11,7 @@
 ## Project use
 
 - `../README.md`: installation, live status, cache/checkpoint behavior, and experimental contract
+- `IDIOLECT-PRESERVATION-PROTOCOL.md`: provisional computational-authorship protocol plus the active minimum-edit/idiosyncrasy-preservation guard for named-byline humanization
 - `lesson-inbox-plan.md`: lesson-request automation design
 - `superpowers/`: accepted specifications and implementation plans
 
