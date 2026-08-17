@@ -43,7 +43,6 @@ _SEGMENT_HEADER_RE = re.compile(
 class BrowserbaseConfig:
     api_key: str
     context_id: str | None
-    project_id: str | None
     pangram_url: str = DEFAULT_PANGRAM_GUI_URL
 
     @classmethod
@@ -52,24 +51,19 @@ class BrowserbaseConfig:
         env: Mapping[str, str] | None = None,
         *,
         require_context: bool,
-        require_project_if_context_missing: bool = False,
     ) -> "BrowserbaseConfig":
         values: Mapping[str, str] = os.environ if env is None else env
         api_key = values.get("BROWSERBASE_API_KEY", "").strip()
         context_id = values.get("BROWSERBASE_CONTEXT_ID", "").strip() or None
-        project_id = values.get("BROWSERBASE_PROJECT_ID", "").strip() or None
         pangram_url = values.get("PANGRAM_GUI_URL", DEFAULT_PANGRAM_GUI_URL).strip() or DEFAULT_PANGRAM_GUI_URL
 
         if not api_key:
             raise RuntimeError("BROWSERBASE_API_KEY is required")
         if require_context and not context_id:
             raise RuntimeError("BROWSERBASE_CONTEXT_ID is required for unattended GUI runs")
-        if require_project_if_context_missing and not context_id and not project_id:
-            raise RuntimeError("BROWSERBASE_PROJECT_ID is required to create a Browserbase Context")
         return cls(
             api_key=api_key,
             context_id=context_id,
-            project_id=project_id,
             pangram_url=pangram_url,
         )
 
@@ -156,11 +150,8 @@ def build_complete_receipt(
     }
 
 
-def build_context_payload(project_id: str) -> dict[str, str]:
-    project_id = project_id.strip()
-    if not project_id:
-        raise ValueError("project_id is required")
-    return {"projectId": project_id}
+def build_context_payload() -> dict[str, object]:
+    return {}
 
 
 def build_session_payload(
@@ -220,8 +211,8 @@ class BrowserbaseRestClient:
             raise RuntimeError("Browserbase returned an unexpected non-object response")
         return decoded
 
-    def create_context(self, project_id: str) -> dict[str, Any]:
-        return self._request("POST", "contexts", build_context_payload(project_id))
+    def create_context(self) -> dict[str, Any]:
+        return self._request("POST", "contexts", build_context_payload())
 
     def create_session(
         self,
@@ -400,9 +391,7 @@ def bootstrap_login(config: BrowserbaseConfig, *, input_fn: Any = input, print_f
     client = BrowserbaseRestClient(config.api_key)
     context_id = config.context_id
     if context_id is None:
-        if config.project_id is None:
-            raise RuntimeError("BROWSERBASE_PROJECT_ID is required to create a Browserbase Context")
-        context = client.create_context(config.project_id)
+        context = client.create_context()
         context_id = str(context.get("id", "")).strip()
         if not context_id:
             raise RuntimeError("Browserbase did not return a Context ID")
