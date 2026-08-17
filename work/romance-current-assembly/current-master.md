@@ -347,7 +347,8 @@ No, I really didn’t. If you’re fawning, tell me when you can, because I can�
 
 # Are you ready for the crucible?
 
-I call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in [*Passionate Marriage*](https://www.crucible4points.com/books/passionate-marriage/). It flips standard couples therapy on its head. Where traditional therapy focuses on compromise, active listening, and making each other feel safe, Schnarch argued that long-term relationships are inherently high-heat pressure cookers designed to force individual psychological growth.
+I call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in [*Passionate Marriage*](https://www.crucible4points.com/books/passionate-marriage/). Schnarch saw marriage as a natural “people-growing process.” His idea of differentiation was learning to hold onto yourself while staying close, especially when intimacy brings anxiety and unresolved problems to the surface.
+
 
 That’s definitely what relationship has done to me.
 
