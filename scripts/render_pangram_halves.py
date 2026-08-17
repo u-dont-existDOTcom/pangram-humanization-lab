@@ -21,6 +21,7 @@ _EMPHASIS_PATTERNS = (
     r"_(.+?)_",
     r"`([^`]+)`",
 )
+_HEADING_LINE_RE = re.compile(r"^#{1,6}\s+(.+?)\s*$")
 
 
 def _sha256(text: str) -> str:
@@ -70,18 +71,19 @@ def reader_visible_with_breaks(markdown: str) -> str:
     return visible
 
 
-def _top_level_headings(markdown: str) -> set[str]:
+def _article_headings(markdown: str) -> set[str]:
     headings: set[str] = set()
     for line in markdown.splitlines():
-        if not line.startswith("# "):
+        match = _HEADING_LINE_RE.match(line)
+        if match is None:
             continue
-        rendered = reader_visible_with_breaks(line[2:]).strip()
+        rendered = reader_visible_with_breaks(match.group(1)).strip()
         if rendered:
             headings.add(rendered)
     return headings
 
 
-def split_near_half_at_h1(visible: str, h1_headings: set[str]) -> tuple[str, str, str | None]:
+def split_near_half_at_heading(visible: str, headings: set[str]) -> tuple[str, str, str | None]:
     blocks = visible.split("\n\n")
     if len(blocks) < 2:
         raise ValueError("not enough visible blocks to split")
@@ -97,13 +99,13 @@ def split_near_half_at_h1(visible: str, h1_headings: set[str]) -> tuple[str, str
         cumulative += block_words[i - 1]
         distance = abs(cumulative - target)
         all_boundaries.append((distance, i))
-        if blocks[i] in h1_headings:
+        if blocks[i] in headings:
             candidates.append((distance, i))
 
     _, split_at = min(candidates or all_boundaries)
     part1 = "\n\n".join(blocks[:split_at]).strip() + "\n"
     part2 = "\n\n".join(blocks[split_at:]).strip() + "\n"
-    split_heading = blocks[split_at] if blocks[split_at] in h1_headings else None
+    split_heading = blocks[split_at] if blocks[split_at] in headings else None
     return part1, part2, split_heading
 
 
@@ -117,7 +119,7 @@ def main() -> int:
 
     markdown = args.input.read_text(encoding="utf-8")
     visible = reader_visible_with_breaks(markdown)
-    part1, part2, split_heading = split_near_half_at_h1(visible, _top_level_headings(markdown))
+    part1, part2, split_heading = split_near_half_at_heading(visible, _article_headings(markdown))
 
     combined_collapsed = re.sub(r"\s+", " ", part1 + " " + part2).strip()
     canonical = rrv.reader_visible_text(markdown)
