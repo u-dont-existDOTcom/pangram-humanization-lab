@@ -4,9 +4,11 @@
 
 Indexes the current private Romance reconstruction. This graph is a visual recovery/control surface, not prose authority. Current explicit Joel corrections and the relevant `state/ROMANCE-*.md` records outrank the graph if a conflict is ever found.
 
-Current materialized master: `work/romance-current-assembly/current-master.md` SHA-256 `2728c77308698e8f217a5579056ece2526b627c860ed2dafbf33c44ab790d8eb`.
-Current reader-visible boundary SHA-256: `32c2e69a5bc4c3b7760aab27ba690fb19ef5a98d446ed1f02dbbefb739a151cb` (**20,612 words**).
+Current materialized master: `work/romance-current-assembly/current-master.md` SHA-256 `2d70fbd7e907e7943e1e38ba6dd723b5efe4feae73a8599bd5f2d17e7a2873d1`.
+Current reader-visible boundary SHA-256: `10359ab2119ffbe9a8a7a4a52cd0c3216bb1a6a2c0bffbd7e66fca01287f17ce` (**20,496 words**).
 Current integrated-source audit: `state/ROMANCE-TOFT-ANAMI-INTEGRATION-COLD-AUDIT-2026-08-17.md`.
+Current 20,612 GUI evidence: `state/ROMANCE-PANGRAM-GUI-20612-2026-08-17.md`.
+Current safe-repair audit: `state/ROMANCE-PANGRAM-20612-SAFE-REPAIR-2026-08-17.md`.
 Current source pool: `state/ROMANCE-TOFT-ANAMI-OWNER-SOURCE-POOL-2026-08-17.md`.
 Current concept audit: `state/ROMANCE-CONCEPT-SETUP-AUDIT-2026-08-17.md`.
 Current whole-article cold audit: `state/ROMANCE-CONCEPT-FLOW-COLD-AUDIT-2026-08-17.md`.
@@ -119,14 +121,14 @@ flowchart TD
     firstnight["First sexual experience reveals some fit"]
     develop["Some responsiveness develops/co-creates between particular people"]
     bee["Bee: response deepened dramatically without Joel simply learning technique"]
-    paradox["Love/desire/body response can diverge from conscious trust and stay/leave judgment"]
+    paradox["Body/sexual response can deepen while conscious stay/leave judgment diverges"]
     colombian["Colombian Temple partner: sexual fit without broader compatibility"]
 
     middle --> ordinary --> firstnight --> develop --> bee --> paradox
     firstnight --> colombian
 ```
 
-**Control:** `trainable` is too simple. The article also does not infer from Bee's sexual response that she should have remained in the marriage. Body response, love, conscious trust, and the decision to stay can move differently.
+**Control:** `trainable` is too simple. The article does not infer from Bee's sexual response that she should have remained in the marriage. The repaired prose keeps that point concrete: her body was opening more while she was becoming more sure she wanted to leave.
 
 ## Idealization -> healthy-adult evidence -> flaws -> Crucible
 
@@ -156,7 +158,7 @@ flowchart TD
     coercion --> safety
 ```
 
-**Control:** Toft's fifty-year-marriage observation strengthens the existing Crucible claim rather than creating a separate doctrine. Coercion is not a hotter version of the mutual Crucible; it exits the mutual-communication path.
+**Control:** Toft's fifty-year-marriage observation strengthens the existing Crucible claim rather than creating a separate doctrine. Coercion is not a hotter version of the mutual Crucible; it exits the mutual-communication path. The exact owner-approved safety warning remains untouched despite its red Pangram segment.
 
 ## Maturity: role-play versus role capture
 
@@ -165,15 +167,16 @@ flowchart TD
     play["Consensual daddy/little-girl or other asymmetrical modes can be playful/erotic/comforting"]
     capture["Failure: role becomes the whole relationship"]
     adult["Each person retains adult responsibility + self-reparenting"]
+    mother["Mirror failure: expecting her to regulate/organize/keep him functional makes her Mom"]
     unequal["Problem: one always child/patient, other always therapist/guru/dad"]
     complement["Different strengths can be complementary"]
     flip["Healthy roles can flip: teacher one day, student the next"]
     defaultCare["If one becomes default caregiver and it is taken for granted, bring in other support"]
 
-    play --> capture --> adult --> unequal --> complement --> flip --> defaultCare
+    play --> capture --> adult --> mother --> unequal --> complement --> flip --> defaultCare
 ```
 
-**Control:** the article does not deny consensual role-play merely because permanent parent/child organization is unhealthy. The prior redundant reparenting recap remains deleted.
+**Control:** the article does not deny consensual role-play merely because permanent parent/child organization is unhealthy. The tidy `Role-play isn’t the problem. Getting trapped in the role is.` recap was removed after the 20,612 GUI scan because the distinction was already demonstrated.
 
 ## Primal attraction: owner route + sacred-making-love branch
 
@@ -195,11 +198,11 @@ flowchart TD
 **Controls:**
 - Recovered owner subsection order remains Fantasy → Queen → Muses → Not A Performance → Desire; the newly authorized sacred-making-love subsection sits between Queen and Muses because it grows directly out of the embodied-sex question.
 - Existing Queen evidence prose is unchanged after Joel rejected an unnecessary evidentiary disclaimer.
-- The Brad/Pam YouTube object `Li--FKwJu0Q` is a new authorized native object and sits after their self-report, before the section's synthesis.
-- `Women are poetry and men are prose` is explicitly a masculine/feminine mode formulation, not a claim that every individual matches the average.
+- The Brad/Pam YouTube object `Li--FKwJu0Q` is a new authorized native object and now supplies the stopping point after their self-report, before `Muses & Directors`.
+- `Women are poetry and men are prose` is Joel's governing realization. The repaired prose preserves that women vary in the poetic quality and that men, especially artistic men, can access the mode too without turning the qualification into the governing paragraph.
 - Toft/Mars-Venus listening guidance applies pragmatically to both sexes; the question `solve or listen?` avoids making the average a law.
-- Emotional intensity never licenses intimidation, lies, false accusations, or fear.
-- The female-earnings idea is not a new `boss babe` doctrine. It extends the already-existing micromanaging / `Let me do it` / invitational-polarity movement. Female success is not itself the problem; rank/control can be.
+- Emotional intensity never licenses intimidation, false accusations, or fear; the repaired passage routes that boundary back to the existing Crucible safety distinction.
+- The female-earnings idea is not a new `boss babe` doctrine. It now appears directly after the lived `Let me do it` micromanagement problem. Female success is not itself the problem; rank/control can be.
 - A successful woman need not shrink herself to protect a man's identity.
 
 ## Sacred making love: unequal source roles
@@ -210,18 +213,15 @@ flowchart TD
     dn16["DN 16: lay stream-enterers / once-returners / non-returners at Nādikā"]
     sarakani["SN 55.24: Sakyans grumble at Sarakāni's stream-entry declaration"]
     an455["AN 4.55: married couple asks to remain together; shared qualities"]
-    anami["Kim Anami: sexual-energy practice + large experiential/testimonial corpus"]
-    jade["Jade egg: pelvic-floor attention / receiving / embodied sexual practice"]
-    batgap["Brad & Pam: self-report durable universal-consciousness awakening through marital sexual/spiritual practice"]
-    synthesis["Body, surrender, love and awakening need not be separate subjects"]
+    anami["Kim Anami: sexual-energy practice + experiential/testimonial corpus"]
+    jade["Jade egg: pelvic-floor attention / embodied solo sexual practice"]
+    batgap["Brad & Pam: self-report lasting universal-consciousness awakening through marital sexual/spiritual practice"]
 
     early --> dn16 --> sarakani --> an455
-    an455 --> synthesis
-    anami --> jade --> synthesis
-    batgap --> synthesis
+    an455 --> anami --> jade --> batgap
 ```
 
-**Control:** the article does not claim the early Buddha taught tantric/cervical sex. Sarakāni is not used to argue that habitual intoxication is compatible with stream entry; the alcohol dispute is deliberately not made the point. Brad/Pam's attainment language remains their report/interpretation, not externally certified attainment.
+**Control:** the article does not claim the early Buddha taught tantric/cervical sex. Sarakāni is not used to argue that habitual intoxication is compatible with stream entry; the alcohol dispute is deliberately not made the point. Brad/Pam's attainment language remains their report/interpretation, not externally certified attainment. The prior post-video interpretive recap was removed; the video now stops the subsection.
 
 ## Labels -> shared meaning -> agreements -> vows
 
@@ -274,25 +274,30 @@ flowchart TD
 ## Current authority / provenance status
 
 - **Opening / Love:** owner-controlled and unchanged in this pass.
-- **Talk:** existing sex conversation remains; Toft touch-without-agenda and Anami simmer/barometer/self-responsibility/protected-time material is newly integrated. Toft is explicitly credited and linked once.
-- **Should you be in a relationship:** owner memories control the provider/protector question, Bee forest/mansion trigger, mixed knee-care episode, and fixer counterexample.
-- **Starting right / Turtles:** owner memories control Bee sexual-development account and the Colombian Temple relationship. Assistant language supplies connective syntax; no claim that Bee's body proved the marriage should continue.
-- **Crucible:** owner-approved Schnarch correction is materialized; Toft relationship-as-spiritual-practice line is an outside experiential support.
-- **Don't make partner whole world:** Toft outside sources of feminine energy added once; duplicate sexual-self-responsibility paragraph removed in cold audit.
-- **Maturity:** owner qualification controls daddy/little-girl role-play versus permanent role-capture distinction.
-- **Primal:** recovered owner subsection order preserved. New sacred-making-love subsection is authorized owner thought using Buddhist primary texts, Anami experiential/testimonial material, and Brad/Pam self-report. Queen prose unchanged.
-- **Muses / Not A Performance:** owner poetry/prose formulation, female-insecurity thread, and income/rank thought integrated into existing owner polarity architecture. No separate boss-babe section.
-- **Vows / psychedelics / Ending / Children / Tough Love / Bear close:** no new substantive changes in this pass.
+- **Talk:** existing sex conversation remains; Toft touch-without-agenda and Anami simmer/barometer/self-responsibility/protected-time material is newly integrated. The 20,612 scan places this inside an expanded stable Talk→Casual red boundary, so no detector-only Talk rewrite was made.
+- **Should you be in a relationship:** owner memories control the provider/protector question, Bee forest/mansion trigger, mixed knee-care episode, and fixer counterexample; this new personal sequence was Human/High in the 20,612 scan.
+- **Starting right / Turtles:** owner memories control Bee sexual-development account and the Colombian Temple relationship. The 40-word abstract detector-red recap was replaced by the concrete fact that Bee was still becoming more sure she wanted to leave.
+- **Crucible:** owner-approved Schnarch correction is materialized; Toft relationship-as-spiritual-practice line is an outside experiential support. The exact 45-word safety warning is protected despite its Pangram result.
+- **Don't make partner whole world:** Toft outside sources of feminine energy added once; duplicate sexual-self-responsibility paragraph had already been removed in the earlier cold audit.
+- **Maturity:** owner qualification controls daddy/little-girl role-play versus permanent role-capture; detector-red tidy recap removed while mother-direction function remains.
+- **Primal:** recovered owner subsection order preserved. New sacred-making-love subsection is authorized owner thought using Buddhist primary texts, Anami experiential/testimonial material, and Brad/Pam self-report. Queen prose unchanged. New source exposition was rebuilt conversationally and post-video aftercare removed.
+- **Muses / Not A Performance:** owner poetry/prose formulation, female-insecurity thread, and income/rank thought remain inside existing owner polarity architecture. New realization was rebuilt after the 20,612 scan; older owner-controlled red Primal abstractions were not touched.
+- **Vows / psychedelics / Ending / Children / Tough Love / Bear close:** no detector-driven changes in this repair pass. Historical red spans inside vows-history and After leaving remain owner decisions rather than automatic rewrite targets.
 
 ## Detector evidence and status
 
-The current **20,612-word** reader-visible boundary has **not** been Pangram tested and must not inherit labels from earlier topology.
+The exact **20,612-word** reader-visible boundary was tested manually in Pangram 4.0 on Aug. 17, 2026:
+- Part 1: **10,332 words**; **92.1% Human / 7.9% AI**.
+- Part 2: **10,280 words**; **90.2% Human / 9.8% AI**.
+- Exact PDF hashes, segmentation, and old-boundary comparison: `state/ROMANCE-PANGRAM-GUI-20612-2026-08-17.md`.
 
-Current exact halves:
-- Part 1: **10,332 words**, SHA-256 `3e137394f3f1694ba69069f30bfebc9afecb8540a4472e3b5532b8f11de92f54`.
-- Part 2: **10,280 words**, SHA-256 `9016139e285e0246bd5c8fdc4545005a294b0e7dfff79dbe9104df073cb1444d`.
+A safe detector-informed editorial pass then changed only new integration prose where the red window also exposed an independent coherence/overcompletion weakness. Owner-controlled historical red spans were left untouched. Two cold audits are recorded in `state/ROMANCE-PANGRAM-20612-SAFE-REPAIR-2026-08-17.md`.
 
-The last completed manual GUI scan was the older 18,748-word boundary (94.4% Human Part 1; 94.1% Human Part 2). It is historical localization evidence only. The current topology adds approximately 1.9k words and a new native video, so detector localization must start from the new exact hashes.
+The **current 20,496-word candidate is untested** and must not inherit the 20,612 scores. Current exact halves:
+- Part 1: **10,236 words**, SHA-256 `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`.
+- Part 2: **10,260 words**, SHA-256 `2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0`.
+
+The older 18,748-word scan remains historical localization evidence only (94.4% Human Part 1; 94.1% Human Part 2). Neither historical boundary certifies the current candidate.
 
 ## Protected placement / semantic rules
 
@@ -314,7 +319,8 @@ The last completed manual GUI scan was the older 18,748-word boundary (94.4% Hum
 16. Do not duplicate break/reconnect advice already carried in the MDMA/communication material.
 17. Use the least qualification necessary; assume intelligent readers and avoid defensive aftercare.
 18. Do not invent calendar/day/time/scenery details to make prose look human.
+19. Do not rewrite the old/direct Fantasy, role-specialization, marriage-history, After-leaving, Crucible-safety, Talk/Casual, or Queen spans merely because they were red in the 20,612 split; owner/source authority controls those decisions.
 
 ## Current next step
 
-Editorial integration is locked enough for the new exact-boundary detector scan. Run Pangram only against the current 20,612-word hashes after the Browserbase GUI path is live-certified or by manual GUI/PDF if needed. Any detector repair must begin with semantic/architecture review of the exact localized span rather than stylistic rewriting by default.
+Retest only the exact current **20,496-word** halves. If remaining red is concentrated in owner-controlled historical spans, stop for an owner decision before rewriting them merely for detector compliance. Any further detector repair must re-run article-wide semantic/architecture checks first.
