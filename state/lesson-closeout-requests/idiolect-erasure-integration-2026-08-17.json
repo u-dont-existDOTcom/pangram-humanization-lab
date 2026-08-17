@@ -1,17 +1,22 @@
 {
-  "schema_version": 1,
-  "request_id": "idiolect-erasure-integration-2026-08-17",
-  "source_path": "state/IDIOLECT-ERASURE-PAPER-INTEGRATION-2026-08-17.md",
-  "source_ref": "86065aab1833acd5d3fe837473f41a186e475fc0",
-  "source_sha256": "c456983562ba78aa708882eb062db5397e6ea5d9936e6012ada001d08b8d9d2b",
-  "finding": "Named-byline humanization must preserve distinguishable author signal as a separate objective from semantic fidelity and AI-detector passing; minimize rewrite dose, keep natural-owner reference data provenance-clean, use style-sensitive attribution with topic controls when calibrated, and do not treat a preserve-voice prompt or detector-green result as proof of voice preservation.",
   "disposition": "promoted",
-  "reason": "The external IER study provides controlled cross-corpus and cross-assistant evidence for authorship-signal erosion, while the promoted rule preserves existing project authority by keeping actual Joel-specific quantitative thresholds provisional until calibration.",
+  "finding": "Named-byline humanization must preserve distinguishable author signal as a separate objective from semantic fidelity and AI-detector passing; minimize rewrite dose, keep natural-owner reference data provenance-clean, use style-sensitive attribution with topic controls when calibrated, and do not treat a preserve-voice prompt or detector-green result as proof of voice preservation.",
+  "index_block": "- **Idiolect preservation is separate from detector passing:** named-byline humanization should preserve distinguishable author signal in addition to meaning and requested detector performance. Prefer minimum rewrite dose, keep natural-owner reference corpora uncontaminated, use style-sensitive/topic-controlled attribution when calibrated, and never treat a `preserve voice` prompt or Pangram green result as proof that Joel's voice survived. See `state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT.md` and `docs/IDIOLECT-PRESERVATION-PROTOCOL.md`.",
+  "ledger_entry_ids": [
+    "L-c456983562-01"
+  ],
+  "lesson_block": "## Promoted integration receipt\n\nThe IER-derived principles in this supplement are promoted as qualitative humanization rules. Joel-specific quantitative thresholds and any automated acceptance gate remain provisional until the calibration requirements in `docs/IDIOLECT-PRESERVATION-PROTOCOL.md` pass.",
+  "processed_at_utc": "2026-08-17T23:57:34.040143+00:00",
   "promoted_to": [
     "state/LESSON-INDEX.md",
     "state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT.md"
   ],
-  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT.md",
-  "index_block": "- **Idiolect preservation is separate from detector passing:** named-byline humanization should preserve distinguishable author signal in addition to meaning and requested detector performance. Prefer minimum rewrite dose, keep natural-owner reference corpora uncontaminated, use style-sensitive/topic-controlled attribution when calibrated, and never treat a `preserve voice` prompt or Pangram green result as proof that Joel's voice survived. See `state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT.md` and `docs/IDIOLECT-PRESERVATION-PROTOCOL.md`.",
-  "lesson_block": "## Promoted integration receipt\n\nThe IER-derived principles in this supplement are promoted as qualitative humanization rules. Joel-specific quantitative thresholds and any automated acceptance gate remain provisional until the calibration requirements in `docs/IDIOLECT-PRESERVATION-PROTOCOL.md` pass."
+  "reason": "The external IER study provides controlled cross-corpus and cross-assistant evidence for authorship-signal erosion, while the promoted rule preserves existing project authority by keeping actual Joel-specific quantitative thresholds provisional until calibration.",
+  "request_id": "idiolect-erasure-integration-2026-08-17",
+  "schema_version": 1,
+  "source_path": "state/IDIOLECT-ERASURE-PAPER-INTEGRATION-2026-08-17.md",
+  "source_ref": "86065aab1833acd5d3fe837473f41a186e475fc0",
+  "source_sha256": "c456983562ba78aa708882eb062db5397e6ea5d9936e6012ada001d08b8d9d2b",
+  "status": "processed",
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT.md"
 }

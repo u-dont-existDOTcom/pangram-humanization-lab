@@ -73,3 +73,7 @@ The paper's `double erasure` has a narrower experimental definition. Use `double
 No Joel-specific IER threshold or scoring gate is established by this integration.
 
 Before quantitative use, the lab must validate natural-owner provenance, held-out source splits, above-chance baseline attribution, topic/content-light controls, register effects, and stability. See the protocol for the rollout sequence.
+<!-- closeout-request:idiolect-erasure-integration-2026-08-17 -->
+## Promoted integration receipt
+
+The IER-derived principles in this supplement are promoted as qualitative humanization rules. Joel-specific quantitative thresholds and any automated acceptance gate remain provisional until the calibration requirements in `docs/IDIOLECT-PRESERVATION-PROTOCOL.md` pass.
