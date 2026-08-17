@@ -353,6 +353,13 @@ def parse_report_text(body: str) -> dict[str, Any]:
     return {"summary": summary, "segments": segments}
 
 
+def clean_report_body_artifact(body: str) -> str:
+    """Remove non-visible end-of-line whitespace while preserving text and line structure."""
+    terminal_newline = body.endswith(("\n", "\r"))
+    cleaned = "\n".join(line.rstrip() for line in body.splitlines())
+    return cleaned + ("\n" if terminal_newline else "")
+
+
 def parse_report_for_exact_input(
     body: str,
     exact_text: str,
@@ -708,6 +715,7 @@ def recover_existing_report(
             f"SHA {input_sha256}, and press Enter here. Do not submit text: "
         )
         report_page, body = select_existing_report_page(page, exact_text)
+        body = clean_report_body_artifact(body)
         directory.mkdir(parents=True, exist_ok=True)
         paths["body"].write_text(body, encoding="utf-8")
         stage = "parse_existing_report"
@@ -918,7 +926,7 @@ def run_inputs(
                 wait_for_report(page, timeout_ms=report_timeout_ms)
 
                 stage = "capture_body"
-                body = page.locator("body").inner_text()
+                body = clean_report_body_artifact(page.locator("body").inner_text())
                 paths["body"].write_text(body, encoding="utf-8")
                 parsed = parse_report_for_exact_input(
                     body,

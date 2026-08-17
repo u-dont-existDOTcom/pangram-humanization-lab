@@ -667,6 +667,17 @@
       "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
       "source_ref": "working-tree",
       "source_sha256": "c7ab046ffffd7185d27e0aa8cfe1b3ce40487bba2948c88981085fc2a200943b"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Captured Pangram report bodies should remove non-visible end-of-line whitespace before becoming Git evidence",
+      "id": "L-db890531e3-01",
+      "promoted_to": [],
+      "reason": "This is a repository hygiene rule enforced by the Browserbase artifact writer and regression test; it does not change Pangram interpretation or the humanization lesson corpus.",
+      "recorded_at_utc": "2026-08-17T23:44:06.719760+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "db890531e3a7a7b313a2370518cfa9c00aa8ed0aef1157d16814e77388f9097b"
     }
   ],
   "schema_version": 1

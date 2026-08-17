@@ -104,8 +104,8 @@ Repository workflow-policy audit for the new manual Browserbase workflow: succes
 
 Fresh local verification after the Live View/local-Context durability changes:
 
-- focused GUI suite: `30 passed`;
-- full repository suite: `137 passed`;
+- focused GUI suite: `31 passed`;
+- full repository suite: `138 passed`;
 - repository audit: `0 error(s)`, with five pre-existing/declared warnings.
 
 ## Current blocker / unresolved

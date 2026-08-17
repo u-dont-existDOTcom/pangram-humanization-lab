@@ -97,6 +97,12 @@ def test_report_parser_uses_null_for_missing_confidence_or_summary_fields() -> N
     ]
 
 
+def test_report_body_artifact_removes_only_end_of_line_whitespace() -> None:
+    body = "Heading\t \nInternal\tspacing  \n\t\n"
+
+    assert gui_browserbase.clean_report_body_artifact(body) == "Heading\nInternal\tspacing\n\n"
+
+
 def test_short_text_overview_parser_uses_exact_input_as_single_visible_classification() -> None:
     exact = "one two three"
     body = """
