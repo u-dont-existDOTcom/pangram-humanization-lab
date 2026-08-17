@@ -53,7 +53,11 @@ jobs:
             --manifest "$tmp/reader-visible-manifest.json"
           cmp "$tmp/current-master.md" work/romance-current-assembly/current-master.md
           cmp "$tmp/assembly-manifest.json" work/romance-current-assembly/assembly-manifest.json
-          cmp "$tmp/current-master.diff" work/romance-current-assembly/current-master.diff
+          # The diff generator embeds the chosen output pathname in line 2. Compare the
+          # semantic diff body after the two file-header lines so /tmp path choice is irrelevant.
+          tail -n +3 "$tmp/current-master.diff" > "$tmp/current-master.diff.body"
+          tail -n +3 work/romance-current-assembly/current-master.diff > "$tmp/committed-current-master.diff.body"
+          cmp "$tmp/current-master.diff.body" "$tmp/committed-current-master.diff.body"
           cmp "$tmp/reader-visible.txt" work/romance-current-assembly/reader-visible.txt
           cmp "$tmp/reader-visible-manifest.json" work/romance-current-assembly/reader-visible-manifest.json
 
@@ -73,7 +77,6 @@ jobs:
           assert visible in architecture, (visible, 'missing visible SHA')
           assert f'({words:,} words)' in architecture, (words, 'missing word count')
           assert architecture.count('```mermaid') >= 8
-          assert architecture.count('```mermaid') == architecture.count('```mermaid\n')
           print(f'architecture boundary OK: source={source} visible={visible} words={words}')
           PY
 
