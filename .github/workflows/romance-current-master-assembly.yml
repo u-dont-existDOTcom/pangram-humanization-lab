@@ -9,10 +9,12 @@ on:
     paths:
       - scripts/assemble_romance_current.py
       - scripts/render_reader_visible.py
+      - scripts/render_pangram_halves.py
       - tests/test_romance_current_assembly.py
       - tests/test_romance_aug16_authority.py
       - tests/test_romance_post_pangram_editorial.py
       - tests/test_reader_visible_romance.py
+      - tests/test_render_pangram_halves.py
       - work/romance-current-assembly/baseline.md
       - work/romance-current-assembly/assembly-spec.json
       - work/romance-current-assembly/replacements/**
@@ -45,7 +47,8 @@ jobs:
             tests/test_romance_current_assembly.py \
             tests/test_romance_aug16_authority.py \
             tests/test_romance_post_pangram_editorial.py \
-            tests/test_reader_visible_romance.py -q
+            tests/test_reader_visible_romance.py \
+            tests/test_render_pangram_halves.py -q
 
       - name: Materialize exact current master and reader-visible boundary
         run: |
@@ -59,6 +62,11 @@ jobs:
             --input work/romance-current-assembly/current-master.md \
             --output work/romance-current-assembly/reader-visible.txt \
             --manifest work/romance-current-assembly/reader-visible-manifest.json
+          python scripts/render_pangram_halves.py \
+            --input work/romance-current-assembly/current-master.md \
+            --part1 work/romance-current-assembly/pangram-part-1.txt \
+            --part2 work/romance-current-assembly/pangram-part-2.txt \
+            --manifest work/romance-current-assembly/pangram-halves-manifest.json
 
       - name: Prove deterministic second materialization
         run: |
@@ -67,7 +75,10 @@ jobs:
             work/romance-current-assembly/assembly-manifest.json \
             work/romance-current-assembly/current-master.diff \
             work/romance-current-assembly/reader-visible.txt \
-            work/romance-current-assembly/reader-visible-manifest.json > /tmp/first.sha256
+            work/romance-current-assembly/reader-visible-manifest.json \
+            work/romance-current-assembly/pangram-part-1.txt \
+            work/romance-current-assembly/pangram-part-2.txt \
+            work/romance-current-assembly/pangram-halves-manifest.json > /tmp/first.sha256
           python scripts/assemble_romance_current.py \
             --baseline work/romance-current-assembly/baseline.md \
             --spec work/romance-current-assembly/assembly-spec.json \
@@ -78,12 +89,20 @@ jobs:
             --input work/romance-current-assembly/current-master.md \
             --output work/romance-current-assembly/reader-visible.txt \
             --manifest work/romance-current-assembly/reader-visible-manifest.json
+          python scripts/render_pangram_halves.py \
+            --input work/romance-current-assembly/current-master.md \
+            --part1 work/romance-current-assembly/pangram-part-1.txt \
+            --part2 work/romance-current-assembly/pangram-part-2.txt \
+            --manifest work/romance-current-assembly/pangram-halves-manifest.json
           sha256sum \
             work/romance-current-assembly/current-master.md \
             work/romance-current-assembly/assembly-manifest.json \
             work/romance-current-assembly/current-master.diff \
             work/romance-current-assembly/reader-visible.txt \
-            work/romance-current-assembly/reader-visible-manifest.json > /tmp/second.sha256
+            work/romance-current-assembly/reader-visible-manifest.json \
+            work/romance-current-assembly/pangram-part-1.txt \
+            work/romance-current-assembly/pangram-part-2.txt \
+            work/romance-current-assembly/pangram-halves-manifest.json > /tmp/second.sha256
           diff -u /tmp/first.sha256 /tmp/second.sha256
 
       - name: Commit only generated artifacts
@@ -95,7 +114,10 @@ jobs:
             work/romance-current-assembly/assembly-manifest.json \
             work/romance-current-assembly/current-master.diff \
             work/romance-current-assembly/reader-visible.txt \
-            work/romance-current-assembly/reader-visible-manifest.json
+            work/romance-current-assembly/reader-visible-manifest.json \
+            work/romance-current-assembly/pangram-part-1.txt \
+            work/romance-current-assembly/pangram-part-2.txt \
+            work/romance-current-assembly/pangram-halves-manifest.json
           if git diff --cached --quiet; then
             echo "Generated artifacts already current."
             exit 0
