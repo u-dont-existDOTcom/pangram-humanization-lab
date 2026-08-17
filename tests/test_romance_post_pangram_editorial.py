@@ -154,7 +154,7 @@ def test_bundling_is_compact_historical_example_not_causal_claim() -> None:
     assert "a mostly extinct practice now especially associated with the Amish even though it existed much more widely" in bundling
     assert "bundling coexisted with a lot of premarital pregnancy" in bundling
     assert "30–40 percent of brides were already pregnant" in bundling
-    assert "hardly a perfect containment system" in bundling
+    assert "wasn't exactly a reliable way to keep courtship nonsexual" in bundling
     assert "bundling caused" not in bundling.lower()
     assert len(bundling.split()) < 150
 
@@ -176,7 +176,7 @@ def test_crucible_does_not_absorb_unilateral_coercion_into_mutual_triggering() -
     crucible = output[start:end]
     warning = "sometimes this isn't two wounded people triggering each other"
     safety = "Get other people involved and think about safety first."
-    resumed = "Relationship showed me how vulnerable I actually am when I open my heart."
+    resumed = "Being in a relationship showed me how vulnerable I actually am when I open my heart."
     assert warning in crucible
     assert "Sometimes one person is terrorizing or controlling the other." in crucible
     assert safety in crucible
