@@ -1,0 +1,1 @@
+Relationship showed me how vulnerable I actually am when I open my heart.
