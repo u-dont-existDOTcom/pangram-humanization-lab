@@ -146,10 +146,8 @@ def test_build_session_payload_rejects_unsafe_timeout() -> None:
         )
 
 
-def test_build_context_payload_requires_project_id() -> None:
-    assert build_context_payload("proj_123") == {"projectId": "proj_123"}
-    with pytest.raises(ValueError, match="project_id"):
-        build_context_payload("  ")
+def test_build_context_payload_uses_api_key_project_inference() -> None:
+    assert build_context_payload() == {}
 
 
 def test_browserbase_config_fails_closed_for_unattended_run() -> None:
@@ -169,26 +167,27 @@ def test_browserbase_config_fails_closed_for_unattended_run() -> None:
     )
     assert config.api_key == "secret"
     assert config.context_id == "ctx_123"
-    assert config.project_id is None
+    assert not hasattr(config, "project_id")
     assert config.pangram_url == "https://www.pangram.com/"
 
 
-def test_browserbase_config_bootstrap_requires_project_only_when_context_missing() -> None:
+def test_browserbase_config_bootstrap_needs_only_api_key() -> None:
     config = BrowserbaseConfig.from_env(
+        {"BROWSERBASE_API_KEY": "secret"},
+        require_context=False,
+    )
+    assert config.api_key == "secret"
+    assert config.context_id is None
+    assert not hasattr(config, "project_id")
+
+    existing = BrowserbaseConfig.from_env(
         {
             "BROWSERBASE_API_KEY": "secret",
             "BROWSERBASE_CONTEXT_ID": "ctx_existing",
         },
         require_context=False,
     )
-    assert config.context_id == "ctx_existing"
-
-    with pytest.raises(RuntimeError, match="BROWSERBASE_PROJECT_ID"):
-        BrowserbaseConfig.from_env(
-            {"BROWSERBASE_API_KEY": "secret"},
-            require_context=False,
-            require_project_if_context_missing=True,
-        )
+    assert existing.context_id == "ctx_existing"
 
 
 def test_prepare_measurement_hashes_exact_text_and_skips_completed_by_default(tmp_path: Path) -> None:
