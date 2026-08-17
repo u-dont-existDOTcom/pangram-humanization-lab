@@ -7,6 +7,8 @@ import pytest
 
 from pangram_lab.gui_browserbase import (
     RUNNER_VERSION,
+    BrowserbaseConfig,
+    build_context_payload,
     build_session_payload,
     completed_result_exists,
     measurement_dir,
@@ -138,4 +140,49 @@ def test_build_session_payload_rejects_unsafe_timeout() -> None:
             keep_alive=False,
             timeout=30,
             user_metadata={},
+        )
+
+
+def test_build_context_payload_requires_project_id() -> None:
+    assert build_context_payload("proj_123") == {"projectId": "proj_123"}
+    with pytest.raises(ValueError, match="project_id"):
+        build_context_payload("  ")
+
+
+def test_browserbase_config_fails_closed_for_unattended_run() -> None:
+    with pytest.raises(RuntimeError, match="BROWSERBASE_API_KEY"):
+        BrowserbaseConfig.from_env({}, require_context=True)
+
+    with pytest.raises(RuntimeError, match="BROWSERBASE_CONTEXT_ID"):
+        BrowserbaseConfig.from_env({"BROWSERBASE_API_KEY": "secret"}, require_context=True)
+
+    config = BrowserbaseConfig.from_env(
+        {
+            "BROWSERBASE_API_KEY": "secret",
+            "BROWSERBASE_CONTEXT_ID": "ctx_123",
+            "PANGRAM_GUI_URL": "https://www.pangram.com/",
+        },
+        require_context=True,
+    )
+    assert config.api_key == "secret"
+    assert config.context_id == "ctx_123"
+    assert config.project_id is None
+    assert config.pangram_url == "https://www.pangram.com/"
+
+
+def test_browserbase_config_bootstrap_requires_project_only_when_context_missing() -> None:
+    config = BrowserbaseConfig.from_env(
+        {
+            "BROWSERBASE_API_KEY": "secret",
+            "BROWSERBASE_CONTEXT_ID": "ctx_existing",
+        },
+        require_context=False,
+    )
+    assert config.context_id == "ctx_existing"
+
+    with pytest.raises(RuntimeError, match="BROWSERBASE_PROJECT_ID"):
+        BrowserbaseConfig.from_env(
+            {"BROWSERBASE_API_KEY": "secret"},
+            require_context=False,
+            require_project_if_context_missing=True,
         )
