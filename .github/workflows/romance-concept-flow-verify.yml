@@ -1,0 +1,132 @@
+name: Romance concept-flow verification
+
+on:
+  push:
+    branches:
+      - agent/romance-concept-flow-improvement-20260817
+    paths:
+      - work/romance-current-assembly/**
+      - state/ROMANCE-CONCEPT-*.md
+      - tests/test_romance_current_assembly.py
+      - tests/test_romance_post_pangram_editorial.py
+      - .github/workflows/romance-concept-flow-verify.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out exact task branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: "3.12"
+
+      - name: Install test dependencies
+        run: python -m pip install -q -e '.[test]'
+
+      - name: Run full deterministic test suite
+        run: python -m pytest -q
+
+      - name: Reassemble to temporary files and compare exact generated artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          tmp="$(mktemp -d)"
+          python scripts/assemble_romance_current.py \
+            --baseline work/romance-current-assembly/baseline.md \
+            --spec work/romance-current-assembly/assembly-spec.json \
+            --output "$tmp/current-master.md" \
+            --manifest "$tmp/assembly-manifest.json" \
+            --diff "$tmp/current-master.diff"
+          python scripts/render_reader_visible.py \
+            --input "$tmp/current-master.md" \
+            --output "$tmp/reader-visible.txt" \
+            --manifest "$tmp/reader-visible-manifest.json"
+          cmp "$tmp/current-master.md" work/romance-current-assembly/current-master.md
+          cmp "$tmp/assembly-manifest.json" work/romance-current-assembly/assembly-manifest.json
+          cmp "$tmp/current-master.diff" work/romance-current-assembly/current-master.diff
+          cmp "$tmp/reader-visible.txt" work/romance-current-assembly/reader-visible.txt
+          cmp "$tmp/reader-visible-manifest.json" work/romance-current-assembly/reader-visible-manifest.json
+
+      - name: Verify architecture indexes the exact manifest boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('work/romance-current-assembly')
+          manifest = json.loads((root / 'reader-visible-manifest.json').read_text(encoding='utf-8'))
+          architecture = (root / 'ARCHITECTURE.md').read_text(encoding='utf-8')
+          source = manifest['source_sha256']
+          visible = manifest['visible_sha256']
+          words = manifest['visible_words']
+          assert source in architecture, (source, 'missing source SHA')
+          assert visible in architecture, (visible, 'missing visible SHA')
+          assert f'({words:,} words)' in architecture, (words, 'missing word count')
+          assert architecture.count('```mermaid') >= 8
+          assert architecture.count('```mermaid') == architecture.count('```mermaid\n')
+          print(f'architecture boundary OK: source={source} visible={visible} words={words}')
+          PY
+
+      - name: Verify explicit owner locks in materialized master
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          text = Path('work/romance-current-assembly/current-master.md').read_text(encoding='utf-8')
+          required = [
+              'Why would she lie like that? She was lying',
+              'If you can\'t be a parent in either sense, you aren\'t ready to date.',
+              'Other people will have different standards above that minimum.',
+              'You cannot negotiate consent on MDMA.',
+              '## Which marriage vows are honest?',
+              'People call oxytocin the “love hormone,”',
+              'Komisaruk and Whipple showed that cervical stimulation can produce orgasm',
+              'Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim',
+              "Sexual exclusivity has a different history.",
+              "or 'social monogamy,' with accepted ways for sexual or emotional connection to exist outside it.",
+              '[NATIVE BUTTON — Subscribe now — %%checkout_url%%]',
+          ]
+          forbidden = [
+              'rather than "lying" since there was no strategy behind it',
+              'labels don\'t actually change anything',
+              '## Why marriage vows are dishonest',
+              'I\'m not saying there is some safe procedure for getting high and starting a relationship. There isn\'t.',
+          ]
+          for item in required:
+              assert item in text, f'missing required owner lock: {item}'
+          for item in forbidden:
+              assert item not in text, f'superseded text survived: {item}'
+          print('owner-lock assertions: PASS')
+          PY
+
+      - name: Check concept-flow state artifacts exist
+        run: |
+          test -s state/ROMANCE-CONCEPT-SETUP-AUDIT-2026-08-17.md
+          test -s state/ROMANCE-CONCEPT-FLOW-COLD-AUDIT-2026-08-17.md
+          test -s state/ROMANCE-CONCEPT-FLOW-PROSE-CHANGE-LEDGER-2026-08-17.md
+          test -s state/ROMANCE-BUNDLING-SOURCE-NOTE-2026-08-17.md
+          test -s docs/superpowers/specs/2026-08-17-romance-concept-flow-improvement.md
+          test -s docs/superpowers/plans/2026-08-17-romance-concept-flow-improvement.md
+
+      - name: Git whitespace check against recovered source head
+        run: git diff --check 4ac56a883f147a59a003c05c3387423399609f8b...HEAD
+
+      - name: Report unavailable named validators
+        run: |
+          for f in scripts/validate_content_repository.py scripts/validate_article_architecture_maps.py scripts/audit_codex_github.py; do
+            if [[ -e "$f" ]]; then
+              echo "unexpectedly present: $f"
+              exit 1
+            else
+              echo "not present in this repository: $f"
+            fi
+          done
