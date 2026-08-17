@@ -2,6 +2,6 @@ While different maturity levels are to be expected to some degree, it can get ou
 
 Toft says, “She’s not a girl,” and “She’s not your mother.” I agree with the warning, but I’d qualify the first sentence. A lot of women enjoy a daddy/little-girl dimension with a man they trust, and I don’t see a reason to deny them that. It can be affectionate, erotic, comforting, or playful.
 
-The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself. And if I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.
+The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself.
 
-Role-play isn’t the problem. Getting trapped in the role is.
+It can run the other way too. If I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.
