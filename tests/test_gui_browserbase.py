@@ -96,6 +96,42 @@ def test_report_parser_uses_null_for_missing_confidence_or_summary_fields() -> N
     ]
 
 
+def test_short_text_overview_parser_uses_exact_input_as_single_visible_classification() -> None:
+    exact = "one two three"
+    body = """
+    one two three
+    Overview
+    Details
+    Notes
+    AI Generated
+    3 words scanned • Short text
+    Pangram 4.0
+    We believe that this entire text is AI.
+    100 %
+    of this text is AI
+    Confidence limited — short text
+    """
+
+    parsed = gui_browserbase.parse_report_for_exact_input(body, exact, expected_word_count=3)
+
+    assert parsed["summary"] == {
+        "fraction_ai": pytest.approx(1.0),
+        "fraction_moderately_ai_assisted": pytest.approx(0.0),
+        "fraction_lightly_ai_assisted": pytest.approx(0.0),
+        "fraction_human": pytest.approx(0.0),
+    }
+    assert parsed["segments"] == [
+        {
+            "label": "Fully AI Generated",
+            "word_count": 3,
+            "confidence": None,
+            "text": exact,
+        }
+    ]
+    assert parsed["report_layout"] == "short_text_overview"
+    assert parsed["confidence_note"] == "Confidence limited — short text"
+
+
 def test_measurement_identity_is_content_addressed(tmp_path: Path) -> None:
     text = "Exact Pangram GUI boundary.\n"
     digest = sha256_text(text)

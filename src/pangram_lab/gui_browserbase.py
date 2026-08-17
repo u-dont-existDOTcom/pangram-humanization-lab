@@ -353,6 +353,62 @@ def parse_report_text(body: str) -> dict[str, Any]:
     return {"summary": summary, "segments": segments}
 
 
+def parse_report_for_exact_input(
+    body: str,
+    exact_text: str,
+    *,
+    expected_word_count: int,
+) -> dict[str, Any]:
+    """Parse a segmented report or Pangram's bounded short-text Overview layout."""
+    parsed = parse_report_text(body)
+    if parsed["segments"]:
+        return parsed
+
+    normalized_body = " ".join(body.split())
+    normalized_exact = " ".join(exact_text.split())
+    words_match = re.search(r"\b(?P<words>\d[\d,]*)\s+words?\s+scanned\b", normalized_body, re.IGNORECASE)
+    percent_match = re.search(
+        r"(?P<percent>\d+(?:\.\d+)?)\s*%\s*of\s+this\s+text\s+is\s+AI\b",
+        normalized_body,
+        re.IGNORECASE,
+    )
+    is_entirely_ai = re.search(
+        r"\bWe\s+believe\s+that\s+this\s+entire\s+text\s+is\s+AI\b",
+        normalized_body,
+        re.IGNORECASE,
+    )
+    if not (
+        normalized_exact
+        and normalized_exact.casefold() in normalized_body.casefold()
+        and re.search(r"\bAI\s+Generated\b", normalized_body, re.IGNORECASE)
+        and words_match
+        and int(words_match.group("words").replace(",", "")) == expected_word_count
+        and percent_match
+        and float(percent_match.group("percent")) == 100.0
+        and is_entirely_ai
+    ):
+        return parsed
+
+    return {
+        "summary": {
+            "fraction_ai": 1.0,
+            "fraction_moderately_ai_assisted": 0.0,
+            "fraction_lightly_ai_assisted": 0.0,
+            "fraction_human": 0.0,
+        },
+        "segments": [
+            {
+                "label": "Fully AI Generated",
+                "word_count": expected_word_count,
+                "confidence": None,
+                "text": exact_text,
+            }
+        ],
+        "report_layout": "short_text_overview",
+        "confidence_note": "Confidence limited — short text",
+    }
+
+
 def report_body_matches_input(body: str, exact_text: str, *, anchor_words: int = 12) -> bool:
     """Bind a rendered History report to exact input using stable leading/trailing anchors."""
     if anchor_words < 1:
@@ -654,7 +710,10 @@ def recover_existing_report(
             f"SHA {input_sha256}, and press Enter here. Do not submit text: "
         )
         report_page, body = select_existing_report_page(page, exact_text)
-        parsed = parse_report_text(body)
+        directory.mkdir(parents=True, exist_ok=True)
+        paths["body"].write_text(body, encoding="utf-8")
+        stage = "parse_existing_report"
+        parsed = parse_report_for_exact_input(body, exact_text, expected_word_count=word_count)
         segments = list(parsed["segments"])
         if not segments:
             raise RuntimeError("the existing Pangram report contained no parseable analyzed segments")
@@ -666,8 +725,6 @@ def recover_existing_report(
             )
 
         stage = "capture_existing_report"
-        directory.mkdir(parents=True, exist_ok=True)
-        paths["body"].write_text(body, encoding="utf-8")
         pdf_provenance = capture_report_pdf(report_page, paths["pdf"])
         receipt = build_complete_receipt(
             input_path=str(item["input_path"]),
@@ -682,7 +739,12 @@ def recover_existing_report(
         receipt["evidence_source"] = "recovered_existing_report"
         receipt["detector_submission_attempted"] = False
         _write_json(paths["result"], receipt)
-        for stale in (paths["failure"], paths["failure_screenshot"]):
+        for stale in (
+            paths["failure"],
+            paths["failure_screenshot"],
+            directory / "recovery-failure.json",
+            directory / "recovery-failure.png",
+        ):
             if stale.exists():
                 stale.unlink()
         print_fn(

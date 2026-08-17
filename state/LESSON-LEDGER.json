@@ -645,6 +645,17 @@
       "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
       "source_ref": "working-tree",
       "source_sha256": "66b65c11a9a7cf4dea636600ad79824f71342edad159110e0a0828c8e842f90c"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Pangram 4 short-text History reports use a summary-only Overview layout rather than segmented report headings",
+      "id": "L-922a50c6f6-01",
+      "promoted_to": [],
+      "reason": "This is a bounded Pangram GUI layout fact now handled by the parser, recovery workflow, tests, and runbook; it does not change the current humanization lesson corpus.",
+      "recorded_at_utc": "2026-08-17T23:21:17.629884+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "922a50c6f6b51f6132d6f44087757963d819ab31b27182e1e3f9534b5a228790"
     }
   ],
   "schema_version": 1

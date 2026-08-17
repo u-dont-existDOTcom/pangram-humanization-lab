@@ -104,8 +104,8 @@ Repository workflow-policy audit for the new manual Browserbase workflow: succes
 
 Fresh local verification after the Live View/local-Context durability changes:
 
-- focused GUI suite: `28 passed`;
-- full repository suite: `135 passed`;
+- focused GUI suite: `29 passed`;
+- full repository suite: `136 passed`;
 - repository audit: `0 error(s)`, with five pre-existing/declared warnings.
 
 ## Current blocker / unresolved
@@ -142,6 +142,8 @@ Live evidence on 2026-08-17 established the following without exposing or storin
 - Joel explicitly authorized one new 121-word smoke submission after confirming the prior ambiguous attempt was absent from Pangram History;
 - Pangram completed that detector test and the report now appears in History, but the local runner exited with code `130` (interrupt) before writing a result receipt, report body, or PDF;
 - the successful detector call must not be repeated. The new `recover` command opens the existing History report, binds it to the exact fixture anchors and parsed word count, and captures normal evidence without filling text or activating Pangram's detector.
+- the first no-submit recovery selected the correct report but failed safely because Pangram's current 121-word result is a short-text Overview rather than the older segmented layout; its screenshot proves `Pangram 4.0`, `121 words scanned`, `AI Generated`, `100% of this text is AI`, and `Confidence limited — short text`;
+- the parser now handles that exact bounded Overview layout as one fully-AI 121-word segment with confidence left `null`, while retaining the visible confidence note separately. Regression coverage passes; a second recovery attempt is evidence capture only and makes no detector call.
 
 The fresh Context now has live-verified authenticated Pangram state across separate Browserbase sessions. The following report surfaces are still not live-certified:
 

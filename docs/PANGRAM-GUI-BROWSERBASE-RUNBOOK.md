@@ -95,7 +95,7 @@ If a detector submission completed in Pangram but the local runner was interrupt
 python scripts/pangram_gui_browserbase.py recover --input <exact-input-path>
 ```
 
-The command opens a non-keep-alive Browserbase session and prints a Live View URL. In Live View, select the matching existing report from Pangram History, then press Enter in the terminal. Recovery binds the report to stable leading/trailing anchors from the exact input, requires parsed segment word counts to match, and writes the normal body/PDF/result evidence with `evidence_source: recovered_existing_report` and `detector_submission_attempted: false`. It never fills detector text or clicks the detector action.
+The command opens a non-keep-alive Browserbase session and prints a Live View URL. In Live View, select the matching existing report from Pangram History, then press Enter in the terminal. Recovery binds the report to stable leading/trailing anchors from the exact input, requires parsed word counts to match, and writes the normal body/PDF/result evidence with `evidence_source: recovered_existing_report` and `detector_submission_attempted: false`. It supports both the older segmented report layout and the current bounded short-text Overview layout (`AI Generated`, scanned word count, explicit entire-text statement, and `100% of this text is AI`). It never fills detector text or clicks the detector action.
 
 ## Local unattended run
 
