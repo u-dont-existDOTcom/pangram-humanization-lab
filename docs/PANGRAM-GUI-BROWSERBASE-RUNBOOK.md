@@ -158,6 +158,6 @@ The runner deliberately refuses broad selectors such as "click the first button"
 
 Browserbase API-key inference, Context/session creation, CDP connection, fullscreen Live View, and Context-ID persistence have run successfully. A live smoke attempt exposed and preserved a false-authentication failure: the old runner used Pangram's public marketing page, clicked its public check control, and reached `/signup` rather than a report. The current runner targets `/dashboard`, rejects login/signup/account-wall states before filling text, and refuses automatic repetition of that ambiguous post-submit hash.
 
-Authenticated cross-session Pangram persistence, current report markers, structured segment parsing, and native-download behavior still require live certification. First complete a corrected bootstrap, then open a second session without submitting text and verify `/dashboard` remains authenticated. Inspect Pangram history for any saved prior smoke before authorizing another detector call.
+Authenticated cross-session Pangram persistence is now live-verified: the corrected bootstrap completed and the read-only `verify` command reached the authenticated detector in a fresh session, then closed normally without submitting text. Current report markers, structured segment parsing, and native-download behavior still require live certification. Inspect Pangram history for any saved prior smoke before authorizing another detector call.
 
 Do not call the GUI automation fully verified until that live smoke test succeeds.

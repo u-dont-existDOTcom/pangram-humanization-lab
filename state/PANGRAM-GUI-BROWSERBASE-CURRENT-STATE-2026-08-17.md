@@ -136,14 +136,15 @@ Live evidence on 2026-08-17 established the following without exposing or storin
 - a new `verify` command provides the required second-session persistence check without filling or submitting detector text.
 - after the lifecycle fix, a new bootstrap launch was canceled before API-key acceptance and before Browserbase session creation when Joel explicitly instructed Codex to stop repeated key prompts;
 - do not ask Joel to paste the Browserbase key again. A future live gate must inherit an already-provisioned `BROWSERBASE_API_KEY` through a secure execution environment or another owner-approved durable secret path without revealing the value.
+- Joel then loaded `BROWSERBASE_API_KEY` once into a private terminal environment, completed the corrected bootstrap, and ran the read-only `verify` command from the same terminal;
+- `verify` returned success in a fresh Browserbase session, proving that the Pangram login persisted across sessions. The Live View WebSocket disconnected afterward because the non-keep-alive verification session closed normally; no detector text was filled or submitted by `verify`.
 
-The fresh Context exists, but authenticated Pangram state and cross-session persistence remain **unverified**. The following are still not live-certified:
+The fresh Context now has live-verified authenticated Pangram state across separate Browserbase sessions. The following report surfaces are still not live-certified:
 
-- Pangram's current detector input selector;
 - Pangram's current detector button accessible name;
 - report-completion marker behavior under a real long submission;
 - native Pangram PDF/download control detection;
-- Browserbase persistent Pangram login surviving into a second unattended session.
+- structured extraction from a real Pangram report and its evidence path.
 
 Do not claim the GUI automation is production-verified until one real bootstrap + one real measurement succeeds.
 
@@ -168,4 +169,4 @@ After that, normal detector runs can be unattended.
 
 ## Next safe action
 
-Do not open another API-key prompt. Once `BROWSERBASE_API_KEY` is already available through an owner-approved secure execution environment, reuse fresh Context `64614e72-db2e-40b5-b6d9-c48833bf2025` with the non-keep-alive, tab-aware bootstrap. Do not confirm until Live View has left `/login` and shows the detector dashboard. Then run the read-only `verify` command in a second session to prove persistence. Inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should PDF provenance and full-half credit cost be assessed.
+Do not open another API-key prompt. Cross-session Pangram authentication is proven. The next safe action is to inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should current report selectors, PDF provenance, and full-half credit cost be assessed.

@@ -623,6 +623,17 @@
       "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
       "source_ref": "working-tree",
       "source_sha256": "e3320d373fb52470e50c458615e71a111225ccae438902ccac66c93c2ca5122d"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Corrected Browserbase bootstrap persisted authenticated Pangram state into a fresh no-submit verification session",
+      "id": "L-c308efd52b-01",
+      "promoted_to": [],
+      "reason": "This closes a project-specific live integration gate and is already reflected in the Browserbase runbook; it adds no general Pangram or humanization lesson.",
+      "recorded_at_utc": "2026-08-17T22:28:39.814330+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "c308efd52b4f1bd0699323f28e0a95d734dbf1133961802530de6d55892a7de6"
     }
   ],
   "schema_version": 1
