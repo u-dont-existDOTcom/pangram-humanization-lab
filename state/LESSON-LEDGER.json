@@ -568,6 +568,17 @@
       "source_path": "state/experiments/romance-casual-current-assembly-2026-08-15-results.json",
       "source_ref": "01ec8ba179e07808fd9a25fd3e6b77d56c4b12f9",
       "source_sha256": "4a0a8c8a670ec8deb9e192142130949b5bc4f9d034789a6f965b42c6ee185b03"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The live Browserbase bootstrap exposed a project-local Live View URL selection defect and an external API-key rejection; no Pangram detector result was produced.",
+      "id": "L-4d86652665-01",
+      "promoted_to": [],
+      "reason": "This is operational Browserbase integration evidence already captured in the project runbook and recovery state, not a transferable humanization or editorial lesson.",
+      "recorded_at_utc": "2026-08-17T13:18:21.944283+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "4d866526655175cf2094e7bed727d2e8ec459db27aa1a9d6e220b5c23ae1d8a0"
     }
   ],
   "schema_version": 1
