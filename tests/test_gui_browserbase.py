@@ -256,6 +256,65 @@ def test_authenticated_detector_rejects_visible_account_wall() -> None:
         gui_browserbase.authenticated_detector_input(page)
 
 
+class _PageContext:
+    def __init__(self, pages: list[object]) -> None:
+        self.pages = pages
+
+
+class _TabbedPage:
+    def __init__(self, url: str) -> None:
+        self.url = url
+        self.context: _PageContext | None = None
+        self.goto_calls: list[str] = []
+
+    def goto(self, url: str, *, wait_until: str) -> None:
+        self.goto_calls.append(url)
+        self.url = url
+
+
+def test_dashboard_verification_prefers_authenticated_login_tab(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    original = _TabbedPage("https://www.pangram.com/login")
+    dashboard = _TabbedPage("https://www.pangram.com/dashboard/check")
+    context = _PageContext([original, dashboard])
+    original.context = context
+    dashboard.context = context
+
+    monkeypatch.setattr(
+        gui_browserbase,
+        "authenticated_detector_input",
+        lambda page: object() if page is dashboard else (_ for _ in ()).throw(RuntimeError("not authenticated")),
+    )
+
+    selected = gui_browserbase.select_authenticated_dashboard_page(
+        original,
+        "https://www.pangram.com/dashboard",
+    )
+
+    assert selected is dashboard
+    assert original.goto_calls == []
+
+
+def test_dashboard_verification_navigates_original_when_no_dashboard_tab(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    original = _TabbedPage("https://accounts.google.com/oauth")
+    context = _PageContext([original])
+    original.context = context
+    verified: list[object] = []
+    monkeypatch.setattr(gui_browserbase, "authenticated_detector_input", verified.append)
+
+    selected = gui_browserbase.select_authenticated_dashboard_page(
+        original,
+        "https://www.pangram.com/dashboard",
+    )
+
+    assert selected is original
+    assert original.goto_calls == ["https://www.pangram.com/dashboard"]
+    assert verified == [original]
+
+
 def test_browserbase_config_reuses_saved_local_context(tmp_path: Path) -> None:
     context_file = tmp_path / "browserbase-context-id"
     context_file.write_text("ctx_saved\n", encoding="utf-8")

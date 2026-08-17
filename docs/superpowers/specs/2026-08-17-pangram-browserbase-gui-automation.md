@@ -41,7 +41,7 @@ Behavior:
 3. Open `https://www.pangram.com/login`.
 4. Print the Browserbase live debugger URL and Context ID.
 5. Wait for the user to complete Pangram login in the live debugger and confirm locally.
-6. Navigate to Pangram's authenticated `/dashboard`, reject login/signup routes or a visible account wall, verify that a detector text input is available, then close the browser so Context changes persist.
+6. Prefer an authenticated `/dashboard` tab opened during interactive login; otherwise navigate the original tab to `/dashboard`. Reject login/signup routes or a visible account wall, verify that a detector text input is available, then close the browser so Context changes persist.
 7. Save the non-secret Context ID to `~/.config/pangram-gui/browserbase-context-id` for automatic local reuse.
 
 ### Run measurements

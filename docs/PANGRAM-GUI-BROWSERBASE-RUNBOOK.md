@@ -66,7 +66,7 @@ The command prints:
 - a Browserbase Context ID;
 - a fullscreen Live View URL intended for human control.
 
-Open the Live View URL, log into Pangram normally, return to the terminal, and press Enter. The runner navigates to `/dashboard`, rejects login/signup routes and visible account walls, and verifies that the authenticated detector input is visible before it closes the Browserbase session. Context changes are persisted when that session closes.
+Open the Live View URL, log into Pangram normally, return to the terminal, and press Enter. The runner first checks authenticated `/dashboard` tabs opened during login, then falls back to navigating the original tab to `/dashboard`. It rejects login/signup routes and visible account walls and verifies that the authenticated detector input is visible before it closes the Browserbase session. Context changes are persisted when that session closes.
 
 After successful verification, the CLI saves the non-secret Context ID at
 `~/.config/pangram-gui/browserbase-context-id` with mode `0600`. Later local

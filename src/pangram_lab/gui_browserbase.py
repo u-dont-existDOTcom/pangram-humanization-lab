@@ -415,6 +415,25 @@ def authenticated_detector_input(page: Any) -> Any:
     return detector_input(page)
 
 
+def select_authenticated_dashboard_page(page: Any, dashboard_url: str) -> Any:
+    """Prefer an authenticated dashboard tab opened during interactive login."""
+    target_path = urlsplit(dashboard_url).path.rstrip("/").lower()
+    context = getattr(page, "context", None)
+    open_pages = tuple(getattr(context, "pages", ()))
+    for candidate in reversed(open_pages):
+        candidate_path = urlsplit(str(getattr(candidate, "url", ""))).path.rstrip("/").lower()
+        if candidate_path == target_path or candidate_path.startswith(target_path + "/"):
+            try:
+                authenticated_detector_input(candidate)
+            except RuntimeError:
+                continue
+            return candidate
+
+    page.goto(dashboard_url, wait_until="domcontentloaded")
+    authenticated_detector_input(page)
+    return page
+
+
 def detection_button(page: Any) -> Any:
     name_pattern = re.compile(r"^(?:check(?:\s+for)?\s+ai|scan(?:\s+for)?\s+ai|detect(?:\s+ai)?|analyze)$", re.IGNORECASE)
     locator = page.get_by_role("button", name=name_pattern)
@@ -489,8 +508,7 @@ def bootstrap_login(config: BrowserbaseConfig, *, input_fn: Any = input, print_f
         print_fn(f"Browserbase Context ID: {context_id}")
         print_fn(f"Live debugger URL: {debugger_url}")
         input_fn("Open the debugger URL, finish Pangram login, then press Enter here to verify: ")
-        page.goto(config.pangram_url, wait_until="domcontentloaded")
-        authenticated_detector_input(page)
+        select_authenticated_dashboard_page(page, config.pangram_url)
     finally:
         browser.close()
         playwright.stop()

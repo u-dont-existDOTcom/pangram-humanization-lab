@@ -42,7 +42,7 @@ Replace Joel's repetitive manual Pangram GUI copy/paste/report-download loop wit
 - fullscreen human-control Live View URL lookup, with bordered-debugger fallback;
 - Playwright connection over the returned CDP `connectUrl`;
 - reuse of Browserbase's default browser context;
-- one-time `bootstrap_login` flow that opens Pangram login in a live Browserbase session, waits for manual login, navigates to the authenticated `/dashboard`, rejects login/signup/account-wall states, verifies the detector is visible, then closes the session so authentication changes persist.
+- one-time `bootstrap_login` flow that opens Pangram login in a live Browserbase session, waits for manual login, prefers an authenticated `/dashboard` tab opened during login (with original-tab navigation as fallback), rejects login/signup/account-wall states, verifies the detector is visible, then closes the session so authentication changes persist.
 
 ### Pangram GUI runner
 
@@ -125,6 +125,8 @@ Live evidence on 2026-08-17 established the following without exposing or storin
 - its screenshot proves Pangram redirected to `/signup` and displayed `Create your account to get started`; no report, parsed segment, or PDF was produced;
 - because Pangram said the text was saved and would be checked after account creation, preserve this as an ambiguous post-submit attempt and do not automatically submit the same SHA again;
 - regression coverage now requires `/dashboard`, rejects login/signup/account-wall states before filling text, and blocks normal reruns of ambiguous post-submit failures.
+- corrected bootstrap session `408ca4c9-c40c-409a-b1fc-915d0b36eddc` then failed closed on an account wall after Joel reported completing login; the likely remaining bootstrap defect was verifying only the original login tab while an OAuth/login flow could open the authenticated dashboard in another tab;
+- the next regression now prefers an already-open authenticated `/dashboard` tab and otherwise navigates the original page to `/dashboard`; focused GUI coverage passes with both paths.
 
 The fresh Context exists, but authenticated Pangram state and cross-session persistence remain **unverified**. The following are still not live-certified:
 
@@ -157,4 +159,4 @@ After that, normal detector runs can be unattended.
 
 ## Next safe action
 
-Reuse fresh Context `64614e72-db2e-40b5-b6d9-c48833bf2025` with the current API key and corrected `/dashboard` authentication gate, complete Pangram login through fullscreen Live View, and close the session. Start a second session with the same Context and prove login persistence without filling or submitting text. Inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should PDF provenance and full-half credit cost be assessed.
+Reuse fresh Context `64614e72-db2e-40b5-b6d9-c48833bf2025` with the current API key and tab-aware `/dashboard` authentication gate, complete Pangram login through fullscreen Live View, and close the session. Start a second session with the same Context and prove login persistence without filling or submitting text. Inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should PDF provenance and full-half credit cost be assessed.
