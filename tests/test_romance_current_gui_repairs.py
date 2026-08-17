@@ -83,7 +83,7 @@ def test_toft_anami_pass_adds_new_functions_without_duplicate_doctrines() -> Non
     assert "Kim Anami calls the current between encounters" in output
     assert "You need both. Affection has to be safe from escalation, and the erotic current has to stay alive." in output
 
-    assert "That’s what made me fall in love with her." in output
+    assert output.count("That’s what made me fall in love with her.") == 1
     assert output.count("I would rather be with you in the forest than with any other man in a mansion") == 1
     assert "there was the forest-and-mansion line I mentioned earlier" in output
     assert "She did nurse me, but a bit reluctantly." in output
@@ -99,6 +99,7 @@ def test_toft_anami_pass_adds_new_functions_without_duplicate_doctrines() -> Non
 
     assert "## Can making love be a spiritual practice?" in output
     assert "reserved for monastics" in output
+    assert "The Buddha didn’t generally advise people to become monks." not in output
     assert "When both husband and wife are faithful and generous, restraintful, living righteously, speaking pleasant words to each other" in output
     assert "[NATIVE YOUTUBE — preserve from Substack source — videoId: Li--FKwJu0Q]" in output
 
