@@ -50,6 +50,12 @@ Behavior:
 
 This starts a fresh, non-keep-alive session with the saved Context, opens the authenticated dashboard, and verifies the detector input without filling text or activating the detector. It is the safe cross-session persistence gate after bootstrap.
 
+### Recover an interrupted result
+
+`python scripts/pangram_gui_browserbase.py recover --input <path>`
+
+This opens a fresh session and waits for the operator to select an already-existing Pangram History report. It binds the visible report to the exact input anchors, parses and captures the report/PDF evidence, and records recovery provenance without filling text or activating the detector.
+
 ### Run measurements
 
 `python scripts/pangram_gui_browserbase.py run --input <path> [--input <path> ...]`

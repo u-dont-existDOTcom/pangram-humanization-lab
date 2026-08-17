@@ -353,6 +353,29 @@ def parse_report_text(body: str) -> dict[str, Any]:
     return {"summary": summary, "segments": segments}
 
 
+def report_body_matches_input(body: str, exact_text: str, *, anchor_words: int = 12) -> bool:
+    """Bind a rendered History report to exact input using stable leading/trailing anchors."""
+    if anchor_words < 1:
+        raise ValueError("anchor_words must be positive")
+    words = " ".join(exact_text.split()).casefold().split()
+    if not words:
+        return False
+    width = min(anchor_words, len(words))
+    normalized_body = " ".join(body.split()).casefold()
+    leading = " ".join(words[:width])
+    trailing = " ".join(words[-width:])
+    if leading in normalized_body and trailing in normalized_body:
+        return True
+
+    parsed = parse_report_text(body)
+    reconstructed = " ".join(
+        str(segment.get("text", "")) for segment in parsed["segments"]
+    )
+    normalized_reconstructed = " ".join(reconstructed.split()).casefold()
+    normalized_exact = " ".join(words)
+    return normalized_exact in normalized_reconstructed
+
+
 def _load_playwright() -> Any:
     try:
         from playwright.sync_api import sync_playwright
@@ -432,6 +455,20 @@ def select_authenticated_dashboard_page(page: Any, dashboard_url: str) -> Any:
     page.goto(dashboard_url, wait_until="domcontentloaded")
     authenticated_detector_input(page)
     return page
+
+
+def select_existing_report_page(page: Any, exact_text: str) -> tuple[Any, str]:
+    """Select an already-open Pangram report matching the exact input anchors."""
+    context = getattr(page, "context", None)
+    open_pages = tuple(getattr(context, "pages", ())) or (page,)
+    for candidate in reversed(open_pages):
+        try:
+            body = candidate.locator("body").inner_text()
+        except Exception:
+            continue
+        if report_body_matches_input(body, exact_text):
+            return candidate, body
+    raise RuntimeError("the open Pangram History report does not match the requested exact input")
 
 
 def detection_button(page: Any) -> Any:
@@ -568,6 +605,113 @@ def verify_login_persistence(
         "verified": True,
         "submitted": False,
     }
+
+
+def recover_existing_report(
+    config: BrowserbaseConfig,
+    input_path: Path,
+    *,
+    output_root: Path = Path("state/gui-runs"),
+    input_fn: Any = input,
+    print_fn: Any = print,
+) -> dict[str, object]:
+    """Capture an existing Pangram History report without making a detector submission."""
+    if config.context_id is None:
+        raise RuntimeError("BROWSERBASE_CONTEXT_ID is required to recover a Pangram report")
+    item = prepare_measurement(input_path, output_root=output_root, force=True)
+    input_sha256 = str(item["input_sha256"])
+    exact_text = str(item["text"])
+    word_count = int(item["word_count"])
+    directory = Path(str(item["directory"]))
+    paths = artifact_paths(directory)
+
+    client = BrowserbaseRestClient(config.api_key)
+    session = client.create_session(
+        config.context_id,
+        persist=True,
+        keep_alive=False,
+        timeout=1800,
+        user_metadata={"task": "pangram-gui-recover", "inputSha256": input_sha256},
+    )
+    session_id = str(session.get("id", "")).strip()
+    connect_url = str(session.get("connectUrl", "")).strip()
+    if not session_id or not connect_url:
+        raise RuntimeError("Browserbase session response is missing id/connectUrl")
+    debug = client.debug_urls(session_id)
+    debugger_url = select_live_view_url(debug)
+    print_fn(f"Browserbase recovery session: {session_id}")
+    print_fn(f"Live debugger: {debugger_url}")
+
+    playwright, browser, page = _connect_session(connect_url)
+    stage = "navigate"
+    try:
+        page.goto(config.pangram_url, wait_until="domcontentloaded")
+        stage = "verify_authentication"
+        authenticated_detector_input(page)
+        stage = "select_existing_report"
+        input_fn(
+            "Open the Live debugger, select the existing Pangram History report for "
+            f"SHA {input_sha256}, and press Enter here. Do not submit text: "
+        )
+        report_page, body = select_existing_report_page(page, exact_text)
+        parsed = parse_report_text(body)
+        segments = list(parsed["segments"])
+        if not segments:
+            raise RuntimeError("the existing Pangram report contained no parseable analyzed segments")
+        parsed_word_count = sum(int(segment["word_count"]) for segment in segments)
+        if parsed_word_count != word_count:
+            raise RuntimeError(
+                "the existing Pangram report word count does not match the requested input: "
+                f"report={parsed_word_count} input={word_count}"
+            )
+
+        stage = "capture_existing_report"
+        directory.mkdir(parents=True, exist_ok=True)
+        paths["body"].write_text(body, encoding="utf-8")
+        pdf_provenance = capture_report_pdf(report_page, paths["pdf"])
+        receipt = build_complete_receipt(
+            input_path=str(item["input_path"]),
+            input_sha256=input_sha256,
+            word_count=word_count,
+            session_id=session_id,
+            debugger_url=debugger_url,
+            report_url=report_page.url,
+            pdf_provenance=pdf_provenance,
+            parsed=parsed,
+        )
+        receipt["evidence_source"] = "recovered_existing_report"
+        receipt["detector_submission_attempted"] = False
+        _write_json(paths["result"], receipt)
+        for stale in (paths["failure"], paths["failure_screenshot"]):
+            if stale.exists():
+                stale.unlink()
+        print_fn(
+            f"[pangram-gui] recovered sha={input_sha256} words={word_count} "
+            f"pdf={pdf_provenance}"
+        )
+        return receipt
+    except Exception as exc:
+        directory.mkdir(parents=True, exist_ok=True)
+        recovery_failure = _failure_receipt(
+            input_path=str(item["input_path"]),
+            input_sha256=input_sha256,
+            word_count=word_count,
+            session_id=session_id,
+            debugger_url=debugger_url,
+            stage=stage,
+            detector_submission_attempted=False,
+            error=exc,
+        )
+        recovery_failure["evidence_source"] = "existing_report_recovery"
+        _write_json(directory / "recovery-failure.json", recovery_failure)
+        try:
+            page.screenshot(path=str(directory / "recovery-failure.png"), full_page=True)
+        except Exception:
+            pass
+        raise
+    finally:
+        browser.close()
+        playwright.stop()
 
 
 def _write_json(path: Path, value: dict[str, object]) -> None:

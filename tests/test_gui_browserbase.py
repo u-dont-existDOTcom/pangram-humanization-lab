@@ -340,6 +340,128 @@ def test_verify_login_persistence_opens_dashboard_without_submitting(
     assert playwright.stopped is True
 
 
+def test_report_body_matches_exact_input_anchors() -> None:
+    exact = "one two three four five six seven eight nine ten eleven twelve thirteen"
+    body = (
+        "Authorship Breakdown\n100% Human Written\nAnalyzed Text\n"
+        "Human Written | 13 Words | High Confidence\n"
+        "one two three four five six seven eight nine ten eleven twelve thirteen"
+    )
+
+    assert gui_browserbase.report_body_matches_input(body, exact) is True
+    assert gui_browserbase.report_body_matches_input(body, exact + " changed") is False
+
+    segmented_body = (
+        "Analyzed Text\nHuman Written | 6 Words | High Confidence\n"
+        "one two three four five six\n"
+        "Fully AI Generated | 7 Words | High Confidence\n"
+        "seven eight nine ten eleven twelve thirteen"
+    )
+    assert gui_browserbase.report_body_matches_input(segmented_body, exact) is True
+
+
+def test_recover_existing_report_captures_without_detector_submission(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    exact = "one two three"
+    input_path = tmp_path / "smoke.txt"
+    input_path.write_text(exact, encoding="utf-8")
+    output_root = tmp_path / "runs"
+    create_session_calls: list[dict[str, object]] = []
+
+    class FakeClient:
+        def create_session(self, context_id: str, **kwargs: object) -> dict[str, str]:
+            create_session_calls.append({"context_id": context_id, **kwargs})
+            return {"id": "session_recover", "connectUrl": "wss://connect.example/recover"}
+
+        def debug_urls(self, session_id: str) -> dict[str, str]:
+            assert session_id == "session_recover"
+            return {"debuggerFullscreenUrl": "https://live.example/recover"}
+
+    class FakeBody:
+        def inner_text(self) -> str:
+            return (
+                "Authorship Breakdown\n100% Human Written\nAnalyzed Text\n"
+                "Human Written | 3 Words | High Confidence\n"
+                "one two three"
+            )
+
+    class FakeContext:
+        pages: list[object]
+
+    class FakePage:
+        url = "about:blank"
+
+        def __init__(self) -> None:
+            self.context = FakeContext()
+            self.context.pages = [self]
+
+        def goto(self, url: str, *, wait_until: str) -> None:
+            assert wait_until == "domcontentloaded"
+            self.url = url
+
+        def locator(self, selector: str) -> FakeBody:
+            assert selector == "body"
+            return FakeBody()
+
+    class FakeBrowser:
+        closed = False
+
+        def close(self) -> None:
+            self.closed = True
+
+    class FakePlaywright:
+        stopped = False
+
+        def stop(self) -> None:
+            self.stopped = True
+
+    page = FakePage()
+    browser = FakeBrowser()
+    playwright = FakePlaywright()
+    monkeypatch.setattr(gui_browserbase, "BrowserbaseRestClient", lambda api_key: FakeClient())
+    monkeypatch.setattr(gui_browserbase, "_connect_session", lambda connect_url: (playwright, browser, page))
+    monkeypatch.setattr(gui_browserbase, "authenticated_detector_input", lambda candidate: object())
+
+    def fake_pdf(candidate: object, path: Path) -> str:
+        path.write_bytes(b"%PDF-recovered")
+        return "playwright_print_fallback"
+
+    monkeypatch.setattr(gui_browserbase, "capture_report_pdf", fake_pdf)
+
+    result = gui_browserbase.recover_existing_report(
+        BrowserbaseConfig(api_key="secret", context_id="ctx_saved"),
+        input_path,
+        output_root=output_root,
+        input_fn=lambda prompt: "",
+        print_fn=lambda message: None,
+    )
+
+    assert result["status"] == "complete"
+    assert result["evidence_source"] == "recovered_existing_report"
+    assert result["detector_submission_attempted"] is False
+    assert result["parsed"]["segments"][0]["text"] == exact
+    assert create_session_calls == [
+        {
+            "context_id": "ctx_saved",
+            "persist": True,
+            "keep_alive": False,
+            "timeout": 1800,
+            "user_metadata": {
+                "task": "pangram-gui-recover",
+                "inputSha256": sha256_text(exact),
+            },
+        }
+    ]
+    paths = artifact_paths(measurement_dir(output_root, sha256_text(exact)))
+    assert paths["result"].is_file()
+    assert paths["body"].is_file()
+    assert paths["pdf"].is_file()
+    assert browser.closed is True
+    assert playwright.stopped is True
+
+
 class _BodyText:
     def __init__(self, text: str) -> None:
         self._text = text

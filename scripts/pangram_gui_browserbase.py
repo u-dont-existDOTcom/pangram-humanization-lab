@@ -8,6 +8,7 @@ from pathlib import Path
 from pangram_lab.gui_browserbase import (
     BrowserbaseConfig,
     bootstrap_login,
+    recover_existing_report,
     run_inputs,
     save_context_id,
     verify_login_persistence,
@@ -39,6 +40,14 @@ def _parser() -> argparse.ArgumentParser:
         help="Verify saved Pangram login in a fresh session without submitting detector text.",
     )
     verify.set_defaults(command="verify")
+
+    recover = sub.add_parser(
+        "recover",
+        help="Capture an existing Pangram History report without submitting detector text.",
+    )
+    recover.add_argument("--input", required=True, type=Path, help="Exact UTF-8 input represented by the report.")
+    recover.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
+    recover.set_defaults(command="recover")
 
     run = sub.add_parser("run", help="Run exact Pangram GUI measurements for one or more UTF-8 text files.")
     run.add_argument(
@@ -93,6 +102,21 @@ def main(argv: list[str] | None = None) -> int:
             context_id_path=DEFAULT_CONTEXT_ID_PATH,
         )
         result = verify_login_persistence(config)
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
+    if args.command == "recover":
+        if not args.input.is_file():
+            raise SystemExit(f"Missing Pangram GUI input: {args.input}")
+        config = BrowserbaseConfig.from_env(
+            require_context=True,
+            context_id_path=DEFAULT_CONTEXT_ID_PATH,
+        )
+        result = recover_existing_report(
+            config,
+            args.input,
+            output_root=args.output_root,
+        )
         print(json.dumps(result, indent=2, sort_keys=True))
         return 0
 

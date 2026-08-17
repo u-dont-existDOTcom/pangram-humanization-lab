@@ -68,6 +68,7 @@ The live runner:
 
 - `bootstrap` — create/reuse persistent Context and perform the one-time manual Pangram login;
 - `verify` — prove authentication persistence in a fresh session without a detector submission;
+- `recover` — select and capture an existing matching Pangram History report without filling or submitting detector text;
 - `run` — measure repeated `--input` files;
 - successful bootstrap saves the non-secret Context ID at `~/.config/pangram-gui/browserbase-context-id`, and future local commands reuse it automatically;
 - no explicit inputs defaults to current Romance `pangram-part-1.txt` and `pangram-part-2.txt` on a branch where those files exist;
@@ -103,8 +104,8 @@ Repository workflow-policy audit for the new manual Browserbase workflow: succes
 
 Fresh local verification after the Live View/local-Context durability changes:
 
-- focused GUI suite: `26 passed`;
-- full repository suite: `133 passed`;
+- focused GUI suite: `28 passed`;
+- full repository suite: `135 passed`;
 - repository audit: `0 error(s)`, with five pre-existing/declared warnings.
 
 ## Current blocker / unresolved
@@ -138,6 +139,9 @@ Live evidence on 2026-08-17 established the following without exposing or storin
 - do not ask Joel to paste the Browserbase key again. A future live gate must inherit an already-provisioned `BROWSERBASE_API_KEY` through a secure execution environment or another owner-approved durable secret path without revealing the value.
 - Joel then loaded `BROWSERBASE_API_KEY` once into a private terminal environment, completed the corrected bootstrap, and ran the read-only `verify` command from the same terminal;
 - `verify` returned success in a fresh Browserbase session, proving that the Pangram login persisted across sessions. The Live View WebSocket disconnected afterward because the non-keep-alive verification session closed normally; no detector text was filled or submitted by `verify`.
+- Joel explicitly authorized one new 121-word smoke submission after confirming the prior ambiguous attempt was absent from Pangram History;
+- Pangram completed that detector test and the report now appears in History, but the local runner exited with code `130` (interrupt) before writing a result receipt, report body, or PDF;
+- the successful detector call must not be repeated. The new `recover` command opens the existing History report, binds it to the exact fixture anchors and parsed word count, and captures normal evidence without filling text or activating Pangram's detector.
 
 The fresh Context now has live-verified authenticated Pangram state across separate Browserbase sessions. The following report surfaces are still not live-certified:
 
@@ -169,4 +173,4 @@ After that, normal detector runs can be unattended.
 
 ## Next safe action
 
-Do not open another API-key prompt. Cross-session Pangram authentication is proven. The next safe action is to inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should current report selectors, PDF provenance, and full-half credit cost be assessed.
+Do not open another API-key prompt and do not submit the 121-word smoke again. Cross-session authentication is proven and the completed smoke report exists in Pangram History. The next safe action is to run `recover --input tests/fixtures/pangram-gui-smoke.txt`, select that existing History report in Live View, and capture the structured body/PDF/result evidence without a detector call. Only after recovery succeeds should current PDF provenance and full-half credit cost be assessed.

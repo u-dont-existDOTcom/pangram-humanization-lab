@@ -4,7 +4,7 @@
 
 **Goal:** Build a deterministic Browserbase + Playwright Pangram GUI runner with persistent login, SHA-bound duplicate defense, structured report extraction, PDF evidence capture, and a manual GitHub Actions dispatch path.
 
-**Architecture:** Keep the evidence/identity/parser layer dependency-free in `src/pangram_lab/gui_browserbase.py`; load Playwright only inside the live-browser adapter so the normal repository test suite does not require browser packages. Use Browserbase's REST API through the Python standard library for Context/session/debug lifecycle. A thin CLI in `scripts/pangram_gui_browserbase.py` exposes `bootstrap`, read-only `verify`, and `run`; GitHub Actions installs the optional browser extra only when GUI measurement is explicitly dispatched.
+**Architecture:** Keep the evidence/identity/parser layer dependency-free in `src/pangram_lab/gui_browserbase.py`; load Playwright only inside the live-browser adapter so the normal repository test suite does not require browser packages. Use Browserbase's REST API through the Python standard library for Context/session/debug lifecycle. A thin CLI in `scripts/pangram_gui_browserbase.py` exposes `bootstrap`, read-only `verify`, existing-report `recover`, and `run`; GitHub Actions installs the optional browser extra only when GUI measurement is explicitly dispatched.
 
 **Tech Stack:** Python 3.10+, standard-library HTTP/JSON/hashlib/pathlib, Playwright Python over CDP, Browserbase REST API, pytest, GitHub Actions.
 
@@ -69,6 +69,7 @@
 **Interfaces:**
 - `bootstrap` creates/reuses a persistent Context, prints live debugger URL, waits for manual confirmation, and verifies detector availability before closing; its non-keep-alive session ends on disconnect so Context state can persist.
 - `verify` opens a second session with that Context and checks authentication without filling or submitting detector text.
+- `recover` captures an already-existing matching Pangram History report without making another detector submission.
 - `run` accepts repeated `--input`, `--force`, `--output-root`, and `--pangram-url`.
 
 - [ ] **Step 1: Add failing tests** for completed-result skip behavior, exact result paths, and artifact provenance fields.

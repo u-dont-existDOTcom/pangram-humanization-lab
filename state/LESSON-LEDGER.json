@@ -634,6 +634,17 @@
       "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
       "source_ref": "working-tree",
       "source_sha256": "c308efd52b4f1bd0699323f28e0a95d734dbf1133961802530de6d55892a7de6"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "An interrupted Pangram GUI runner can recover a completed History report without repeating the detector submission",
+      "id": "L-66b65c11a9-01",
+      "promoted_to": [],
+      "reason": "This is Browserbase GUI recovery behavior now encoded in the runner, tests, and runbook; the broader no-duplicate-call rule already exists in current Pangram guidance.",
+      "recorded_at_utc": "2026-08-17T23:12:16.251846+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "66b65c11a9a7cf4dea636600ad79824f71342edad159110e0a0828c8e842f90c"
     }
   ],
   "schema_version": 1

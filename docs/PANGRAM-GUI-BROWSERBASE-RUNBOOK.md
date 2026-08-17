@@ -87,6 +87,16 @@ python scripts/pangram_gui_browserbase.py verify
 
 `verify` opens the saved Context in a fresh session and checks the authenticated detector input. It does not fill text or click Pangram's detector action.
 
+## Recover an existing History report
+
+If a detector submission completed in Pangram but the local runner was interrupted before writing evidence, do not submit it again. Recover the existing report instead:
+
+```bash
+python scripts/pangram_gui_browserbase.py recover --input <exact-input-path>
+```
+
+The command opens a non-keep-alive Browserbase session and prints a Live View URL. In Live View, select the matching existing report from Pangram History, then press Enter in the terminal. Recovery binds the report to stable leading/trailing anchors from the exact input, requires parsed segment word counts to match, and writes the normal body/PDF/result evidence with `evidence_source: recovered_existing_report` and `detector_submission_attempted: false`. It never fills detector text or clicks the detector action.
+
 ## Local unattended run
 
 Set the API key:
@@ -158,6 +168,6 @@ The runner deliberately refuses broad selectors such as "click the first button"
 
 Browserbase API-key inference, Context/session creation, CDP connection, fullscreen Live View, and Context-ID persistence have run successfully. A live smoke attempt exposed and preserved a false-authentication failure: the old runner used Pangram's public marketing page, clicked its public check control, and reached `/signup` rather than a report. The current runner targets `/dashboard`, rejects login/signup/account-wall states before filling text, and refuses automatic repetition of that ambiguous post-submit hash.
 
-Authenticated cross-session Pangram persistence is now live-verified: the corrected bootstrap completed and the read-only `verify` command reached the authenticated detector in a fresh session, then closed normally without submitting text. Current report markers, structured segment parsing, and native-download behavior still require live certification. Inspect Pangram history for any saved prior smoke before authorizing another detector call.
+Authenticated cross-session Pangram persistence is now live-verified: the corrected bootstrap completed and the read-only `verify` command reached the authenticated detector in a fresh session, then closed normally without submitting text. One authorized 121-word smoke submission completed in Pangram and appears in History, but the local runner was interrupted with exit code `130` before it wrote evidence. Do not submit that hash again; use `recover` to capture the existing History report. Current structured segment parsing and native-download behavior remain uncertified until recovery succeeds.
 
 Do not call the GUI automation fully verified until that live smoke test succeeds.
