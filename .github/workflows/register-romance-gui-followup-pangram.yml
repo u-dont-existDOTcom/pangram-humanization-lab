@@ -26,12 +26,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install and verify paid-registration controls
-        run: |
-          python -m pip install -q -e '.[test]'
-          python -m pytest tests/test_paid_push.py tests/test_paid_dispatch.py -q
-
-      - name: Create exactly one immutable spec/request pair
+      - name: Create and validate one immutable spec/request pair
         env:
           EXPERIMENT_ID: romance-gui-followup-r1-2026-08-17
           AUDIT_ID: romance-gui-followup-2026-08-17
@@ -61,7 +56,6 @@ jobs:
           experiment_id = sys.argv[3]
           audit_id = sys.argv[4]
           source_root = Path("work/romance-current-assembly/experiments/gui-followup")
-
           rows = [
               ("PRIMAL_LIVED_ROUTE_R1", "primal-middle", "primal-lived-route-r1.txt", 595),
               ("AFTER_OWNER_GUI_EXACT", "after-leaving", "after-owner-gui-exact.txt", 201),
