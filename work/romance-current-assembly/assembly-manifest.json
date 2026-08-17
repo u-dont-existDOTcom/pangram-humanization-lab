@@ -7,9 +7,9 @@
   },
   "baseline_bytes": 109480,
   "baseline_sha256": "18ed9fa6850e3a20d523b9365519ef43fa4e56398ce4e06d3743022676555edc",
-  "final_bytes": 106955,
-  "final_sha256": "99b9e429f83f2aac7f879fb97abfb3daf050d3211a4f0269fb1b2caa0ca70ce6",
-  "operation_count": 23,
+  "final_bytes": 109866,
+  "final_sha256": "4ceda6829af383358675bc0d5497f3712c99512d7a9cc2501b68649c7798046f",
+  "operation_count": 33,
   "operations": [
     {
       "id": "owner-opening-2026-08-15",
@@ -188,6 +188,86 @@
       "type": "replace_exact"
     },
     {
+      "id": "concept-flow-card-game-lived-evidence-2026-08-17",
+      "new_bytes": 947,
+      "new_sha256": "d9fd2688e17dd0addadc82d1a7d819e011c058159874701765e04722bee6fbe1",
+      "old_bytes": 763,
+      "old_sha256": "85e00fd9fb4a2298e9198601e17f1ddaebb76d3df3d8059c52caa2d6c22e7b49",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-community-shared-reality-seed-2026-08-17",
+      "new_bytes": 531,
+      "new_sha256": "063b0d0ac2a498d10919d0a7aa0e6caf062b507b3782d33d50cea52e78a10996",
+      "old_bytes": 298,
+      "old_sha256": "646235458f91c745e46be1fe7f2fff73b42bc1a187456f1e700d2c6d5740e6c5",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-readiness-parenthood-threshold-2026-08-17",
+      "new_bytes": 641,
+      "new_sha256": "fdef089321330720cee63343b532f61e6bab70afec74d6c0672a91025fa7eb94",
+      "old_bytes": 353,
+      "old_sha256": "f27619df70a49c6fe4881c26eba5253e3f9ceca94ce809eab70978d801f2e535",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-bundling-intermediate-stage-2026-08-17",
+      "new_bytes": 915,
+      "new_sha256": "5f493b8cc6ad0f4a39617423eec814c2dcec707cc5aed23f4a8530405eb75ea9",
+      "old_bytes": 7,
+      "old_sha256": "ad1af52e2872615af2fa5e2f98419639145253a3fa6cfd93f4b62bdf1318c160",
+      "type": "replace_between"
+    },
+    {
+      "id": "concept-flow-idealization-dependability-2026-08-17",
+      "new_bytes": 739,
+      "new_sha256": "14defb1c2bd958df78dadd6e0b0bee5b6c32bc3c7f3ca586edf62e7e217222e1",
+      "old_bytes": 450,
+      "old_sha256": "865edff56f40e2c87a7d2006ef2cc2225971a8810ba6754195d011bd45ac8726",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-crucible-coercion-boundary-2026-08-17",
+      "new_bytes": 429,
+      "new_sha256": "03a23c47ef302a6c715d2e9e783706c1eea83ee127c6fc3a712eeba88a3d2c9f",
+      "old_bytes": 43,
+      "old_sha256": "fe1175ed1f4bed2fb0ef0109efd659774e171e57da7eed1c83eb2af8a655d00f",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-labels-shared-meaning-2026-08-17",
+      "new_bytes": 251,
+      "new_sha256": "90f5fbccc92d83b8090d79d569c5fd9bd43d62e734a8382326fd04fcbb3fcc3b",
+      "old_bytes": 156,
+      "old_sha256": "4b5176468d45b04cfa20a3e8ad432e4670553bd8606b553e39abbf1a9348e9d2",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-bee-door-lying-context-2026-08-17",
+      "new_bytes": 475,
+      "new_sha256": "93dadde88c9144618f4918f59d18a463f598a5cab449d5f144e383beb13407fc",
+      "old_bytes": 384,
+      "old_sha256": "9654f2136f3e8f6a2aa4181aa6f54107c866c96cf7d9faeb0fd44859782df956",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-vows-heading-2026-08-17",
+      "new_bytes": 34,
+      "new_sha256": "68d21f8c1c5e7e5b21e470e7360eba30261ae3b6a045aa0af4fb63366d1642b7",
+      "old_bytes": 34,
+      "old_sha256": "c683c1c9dcde4d593f540120b9ad1e6413db9f103529b355b7ab622631fc492b",
+      "type": "replace_exact"
+    },
+    {
+      "id": "concept-flow-psychedelics-mdma-warning-first-2026-08-17",
+      "new_bytes": 511,
+      "new_sha256": "498ac8c3d7fb88ec94a2d5c96429d261d73bce9c40beba5c41362e153d359d81",
+      "old_bytes": 74,
+      "old_sha256": "6d012c672fa6a5115ce285462c3a20a5d3845c1fe2adc9bd7724bb0f5d6b9e9f",
+      "type": "replace_exact"
+    },
+    {
       "id": "tough-love-aug16-owner-final",
       "new_bytes": 4206,
       "new_sha256": "5616e005c6c13a0fb1e97ead076c22eab781aa69e2f6c6eba01cc75e7b3a3e20",
@@ -197,5 +277,5 @@
     }
   ],
   "schema_version": 1,
-  "spec_sha256": "bc715b2a04b76cf36490ccd682baf72722b17b968d4ce9d4ceb5c4ca6ed407fe"
+  "spec_sha256": "dae1736c1996546598cc5fd3ee3f1a3e947e97fd8f2af971302c42f5808f6fba"
 }

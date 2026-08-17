@@ -69,7 +69,7 @@ And “Why are you making this heavy?” can be a real question. They may actual
 
 I had something sort of like that with H., although ours was much deeper than what people normally mean by situationship. We were BFFs and spent nearly all our time together. She was falling in love with me, and I wasn’t falling in love with her. She felt more like a sister to me, partly because I’m not attracted to white women. Ours wasn’t superficial. It was just painfully uneven.
 
-But here's the funny thing many people don't understand: labels don't actually change anything.
+But here's the funny thing many people don't understand: labels don't create commitment. They can still expose whether two people think they're in the same relationship, which matters a lot.
 
 True commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me. I don’t need to promise that on paper. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag.
 
@@ -86,6 +86,8 @@ If you want something closer to “casual love-making” without quite so many w
 This is a horrible catch-22. Wounded people get lonely, and loneliness itself can kill. But the wounds that make somebody desperate for a relationship may also make them a terrible person to be in one with. People don’t only trigger each other and learn lessons. Sometimes they terrorize or kill each other.
 
 I’m pretty conservative about this. I would tell most of my friends not to date yet. First love your inner child. If you can’t even do that, forget a relationship for now. Get a cat or a puppy. If you’re dishonest, can’t care what happens to another person, or keep turning every relationship into the same disaster, come on. You’re not ready.
+
+That doesn't mean you have to be completely healed. It means the present-day adult has to be able to parent whatever intimacy wakes up inside you, and responsible enough to deal with an actual child if sex creates one. If you can't be a parent in either sense, you aren't ready to date.
 
 A good relationship can teach you self-love too, which is part of the problem: you may need one most when you’re least capable of creating a good one, recognizing one, or keeping it good. The odds are terrible.
 
@@ -171,6 +173,10 @@ But if you don't have community, the move is to find someone who is also looking
 
 On the other hand, you may end up having sex too fast if you’re traveling together, but I'd still rather have sex with someone who's trying to find a commune with me than someone I met at a party.
 
+Modern life barely has an intermediate stage between being interested in somebody and getting sexually entangled. One old example is [bundling](https://doi.org/10.1093/maghis/18.4.9), a mostly extinct practice now especially associated with the Amish even though it existed much more widely. Courting couples could spend the night together in bed, usually clothed, with the idea that they could talk and be close without having sex. It sounds a lot like the missing middle I’m talking about.
+
+It also didn’t exactly solve the problem. In late-eighteenth-century New England, where bundling was common, 30–40 percent of brides were already pregnant, so the no-sex idea clearly didn't always hold. So I’m not proposing we bring bundling back. I’m saying we need some socially recognized way to explore tenderness and attraction without immediately sliding toward sex, cohabitation, and a life bond.
+
 ---
 
 # Starting on the right foot
@@ -189,7 +195,9 @@ Ask deep questions. Conversation-card games may seem silly, but they can help pe
 
 But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation. If all she can give me is a general answer, I assume she probably doesn't know yet.
 
-I can learn a lot by talking, but there's a point where more questions mostly teach me what the person says about themself. After that I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.
+A card game can create its own little high too. If we spend two hours telling each other things nobody else knows, we may feel incredibly understood and close. That may mean the game worked. It doesn't mean the relationship will.
+
+At some point, more questions mostly teach me what the person says about themself. Then I need ordinary time. Ten profound conversations in one weekend may tell me we can have profound conversations. They don't tell me what she's like on a boring day, or when she's annoyed and doesn't have an answer prepared.
 
 You can also bring the person to a party and see how they act, bring them around your family or friends, or take them to activities you enjoy and see if they really enjoy them too. Try doing what you would normally do in your day alone, but with them, and see how it feels. Is it weird? Are they wondering why you do this stuff? Do they look bored, like they’d rather just hit you up later than be with you while you’re doing ordinary stuff? Can you guys be normal together and not just romantic or dating?
 
@@ -206,6 +214,8 @@ Couples withdraw from friends who aren’t supportive of the romantic dyad, and 
 Sometimes withdrawing isn’t wrong. Telling your friend, “Can you believe what my girlfriend is doing to me?” can be a privacy violation. It’s just important to realize what is happening.
 
 The relationship can close off at exactly the point when both people most need a view from outside it.
+
+By community, I don't mean that she tells her friends her side while I tell mine. I mean people who actually know both of us over time, well enough that the relationship isn't the only reality in the room. I’ll come back to that.
 
 ## Anti-PTSD Can Be Just As Dangerous As PTSD
 
@@ -254,6 +264,8 @@ If she says, “Can you talk less about your exes?” Sure. Maybe I do talk abou
 If she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?
 
 Partners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well. Like the FM Laeti song here says, “Inspire her to see the best in herself, actualize that.” If something severe is happening, sometimes a demand or boundary is necessary too.
+
+Spiritual depth also doesn't tell me how dependable somebody is. She may meditate for two hours and still not show up for boring work, sickness, or something she promised yesterday. I may be seeing the divine archetype while ignoring the adult I would actually have to build a life with.
 
 So hold your horses a bit more than you’d like to. See if your partner still praises you after a cold feud.
 
@@ -338,6 +350,8 @@ No, I really didn’t. If you’re fawning, tell me when you can, because I can�
 I call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in [*Passionate Marriage*](https://www.crucible4points.com/books/passionate-marriage/). It flips standard couples therapy on its head. Where traditional therapy focuses on compromise, active listening, and making each other feel safe, Schnarch argued that long-term relationships are inherently high-heat pressure cookers designed to force individual psychological growth.
 
 That’s definitely what relationship does.
+
+One warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other. Sometimes one person is terrorizing or controlling the other. If you're scared to say no, scared to tell the truth, or scared of what happens if you leave, don't turn that into a mutual communication exercise. Get other people involved and think about safety first.
 
 It showed me how vulnerable I actually am when I open my heart. It’s really easy to feel invulnerable and strong when you’re alone, or even just with friends. Taking off the masks and showing your inner child is a gamble, but it’s required if you want to go deeper in yourself and deeper with another person.
 
@@ -652,7 +666,7 @@ And the biggie: what happens if one of us falls in love with someone else? What 
 
 These are just a few questions I could think of to start the ball rolling, but be creative and see what you come up with! You can make a card game out of this and have some fun with it. If there's real love, it will survive a bit of honest curiosity.
 
-## Why marriage vows are dishonest
+## Which marriage vows are honest?
 
 Conventional marriage vows are dishonest, and most people know it. You can't promise how you'll feel in the future. You can promise actions if you really believe you're capable of delivering them. So for example, you could promise to tell the truth, to keep showing up, to support the children, or whatever else you genuinely believe you can do.
 
@@ -729,6 +743,8 @@ Psychedelics can make this same problem of idealization much stronger.
 
 This section will be relevant to some readers and easy for others to skip.
 
+Before I say anything good about psychedelics in relationships, the warning has to come first. You cannot negotiate consent on MDMA. The drug is changing how safe, loving, open, and connected everything feels. I'm not saying there is some safe procedure for getting high and starting a relationship. There isn't. People need that warning before they take it, because once you're inside that feeling, sober caveats may sound ridiculous.
+
 Psychedelics, especially certain types of shrooms, very pure LSD, very pure therapeutic-grade MDMA, ayahuasca, [loveyhuasca haoma](http://soma.u-dont-exist.com/), and [iboga](http://iboga.u-dont-exist.com/), can be extremely useful when a couple is trapped in defensive stories.
 
 With Bee and Key, there were many times when we could argue forever sober, then take something and finally understand each other. It could feel like we were telepathically synced. Instead of each person defending their version, we directly understood what the other was perceiving, feeling, misunderstanding.
@@ -765,7 +781,7 @@ I wish I had a special method for fixing that. Mostly I learned the obvious thin
 
 With Bee and Key, the biggest thing sitting underneath everything was trust. They wanted to be with me and would say they trusted me, but really they didn’t trust me, themself, or anyone else. It was all or nothing: blind trust, or none. I kept saying, “It’s not possible to have a relationship without trust.” I think that rigidity came from trauma and never really growing up.
 
-Even dishonesty was sometimes hard for me to define in these relationships. Bee once opened a door and, a second later, said she hadn’t opened it. That drove me crazy. Why would she lie like that? But looking back on it now, I could have just seen it as some kind of mental illness rather than "lying" since there was no strategy behind it, and in fact she was usually quite honest.
+Even dishonesty was sometimes hard for me to define in these relationships. Bee once opened a door and, a second later, said she hadn’t opened it. That drove me crazy. Why would she lie like that? She was lying, but “she lied” only named the momentary behavior. There was no strategy behind it, and she was usually quite honest. Looking back, I could have understood the lie in the context of some kind of mental illness instead of treating it like ordinary dishonesty.
 
 Some things were less mysterious. They were acting as if the trust problem wasn’t there because they still wanted the relationship. Attractions to other people sometimes went unsaid too, and sometimes got imagined from nowhere. Some people keep a relationship like this going for a long time, just sweeping everything under the rug.
 
