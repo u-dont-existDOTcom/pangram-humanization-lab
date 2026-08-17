@@ -95,7 +95,8 @@ def test_toft_anami_pass_adds_new_functions_without_duplicate_doctrines() -> Non
 
     assert "after fifty years of marriage his main spiritual practice is being in relationship with his wife" in output
     assert "feminine energy from nature, music, poetry, art, flowers, food" in output
-    assert "Role-play isn’t the problem. Getting trapped in the role is." in output
+    assert "It can run the other way too. If I expect her to regulate me" in output
+    assert "Role-play isn’t the problem. Getting trapped in the role is." not in output
 
     assert "## Can making love be a spiritual practice?" in output
     assert "reserved for monastics" in output
@@ -105,12 +106,46 @@ def test_toft_anami_pass_adds_new_functions_without_duplicate_doctrines() -> Non
 
     assert "Maybe women are poetry and men are prose." in output
     assert "Do you want me to help figure this out, or do you mostly want me to listen?" in output
-    assert "A woman earning more than her man doesn’t automatically make her masculine or him feminine." in output
-    assert "Women can get trapped between opposite insecurities here." in output
+    assert "A woman earning more than her man isn’t the problem." in output
+    assert "Women can get pulled in two directions here." in output
 
     assert "## Boss Babe" not in output
     assert "## Boss babe" not in output
     assert "## Why marriage vows are honest?" not in output
+
+
+def test_20612_repairs_remove_new_integration_aftercare_without_touching_protected_owner_spans() -> None:
+    output = _assemble()
+
+    # Bee/body paradox stays concrete instead of becoming an abstract four-category recap.
+    assert "She was still becoming more sure she wanted to leave, though." in output
+    assert "It showed me that love, desire, conscious trust, and the decision to stay can move in different directions." not in output
+    assert "The reverse limitation exists too: good sex doesn’t supply the rest of a relationship." not in output
+
+    # Spiritual-sex source roles survive, but the post-video interpretive aftercare is gone.
+    assert "She has collected a ton of stories from students" in output
+    assert "Her jade-egg practice is part of the same idea." in output
+    assert "Brad and Pam Keene are an example I really like." in output
+    assert "What interests me is that for them the body, surrender, love, and awakening stopped being separate subjects." not in output
+
+    # Owner thought is realized through lived poetic/prosaic difference and the existing Crucible safety route.
+    assert "Men can go into it too; artistic men often live much closer to it." in output
+    assert "If the intensity turns into intimidation, false accusations, or making somebody scared to say no" in output
+    assert "that’s the safety problem I already talked about in the Crucible." in output
+
+    # Income/status stays inside the micromanagement movement rather than becoming a separate doctrine.
+    assert "she can effeminate him in the relationship and then wonder where the polarity went." in output
+    assert "A man can wreck it from the other side by needing a successful woman to shrink" in output
+
+    # The new women/receiving material stays, but in a less symmetric instructional realization.
+    assert "Toft’s advice after fifty years is simple: tell her she’s beautiful" in output
+    assert "Anami makes the other half explicit: receiving is a skill." in output
+
+    # Protected older red spans remain untouched by this repair pass.
+    assert "Sometimes one person is terrorizing or controlling the other." in output
+    assert "The masculine charge comes partly from directly offering a direction." in output
+    assert "Strict sexual exclusivity backed by law and social enforcement grew alongside agriculture" in output
+    assert "A therapist, a pastor, or even a stranger can sometimes look at the evidence more clearly" in output
 
 
 def test_toft_anami_pass_preserves_primal_native_objects_and_order() -> None:
