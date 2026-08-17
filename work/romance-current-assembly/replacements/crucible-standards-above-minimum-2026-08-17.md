@@ -1,0 +1,1 @@
+Nobody has to be completely healed before entering a relationship. My standards used to be very low and now they are much higher because I’m exhausted by drama. Other people will have different standards above that minimum.
