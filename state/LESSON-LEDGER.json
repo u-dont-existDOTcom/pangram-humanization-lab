@@ -678,6 +678,28 @@
       "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
       "source_ref": "working-tree",
       "source_sha256": "db890531e3a7a7b313a2370518cfa9c00aa8ed0aef1157d16814e77388f9097b"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Browserbase Context and session creation infer the project from the API key and must not require a separate project ID in this integration",
+      "id": "L-be8726c46c-01",
+      "promoted_to": [],
+      "reason": "This Browserbase-specific contract is implemented and documented in the integration; it does not change the Pangram or humanization lesson corpus.",
+      "recorded_at_utc": "2026-08-17T23:47:41.781067+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-NO-PROJECT-ID-CORRECTION-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "be8726c46cb0f65050bb19f41805fbd7c22a24602b88e9c42075dc499c719111"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The 18,748-word Romance GUI split produced boundary-specific Pangram 4 evidence and localized article repair candidates",
+      "id": "L-9046a92e58-01",
+      "promoted_to": [],
+      "reason": "The measurements, windows, and editorial implications are specific to that exact Romance article boundary and should not be generalized into the shared lesson corpus.",
+      "recorded_at_utc": "2026-08-17T23:47:49.822937+00:00",
+      "source_path": "state/ROMANCE-PANGRAM-GUI-18748-2026-08-17.md",
+      "source_ref": "0ef64a3",
+      "source_sha256": "9046a92e581dae114ee7f07ce2626fa3c8cfb985ff759fa7dc584d0242663304"
     }
   ],
   "schema_version": 1
