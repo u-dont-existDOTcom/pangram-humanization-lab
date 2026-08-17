@@ -118,9 +118,14 @@ def test_operation_manifest_records_old_and_new_sha256(tmp_path: Path) -> None:
     ]
 
 
-def test_full_assembly_preserves_all_native_markers() -> None:
+def test_full_assembly_preserves_all_native_markers_plus_approved_brad_pam_video() -> None:
     baseline, output, _ = _assemble_real()
-    assert _native_lines(output) == _native_lines(baseline)
+    expected = _native_lines(baseline)
+    approved = "[NATIVE YOUTUBE — preserve from Substack source — videoId: Li--FKwJu0Q]"
+    queen = "[NATIVE YOUTUBE — preserve from Substack source — videoId: QqP3p_ysd84]"
+    insert_at = expected.index(queen) + 1
+    expected.insert(insert_at, approved)
+    assert _native_lines(output) == expected
 
 
 def test_full_assembly_preserves_hd_and_does_not_substitute_hale() -> None:
