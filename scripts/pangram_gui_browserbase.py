@@ -5,7 +5,7 @@ import argparse
 import json
 from pathlib import Path
 
-from pangram_lab.gui_browserbase import BrowserbaseConfig, bootstrap_login, run_inputs
+from pangram_lab.gui_browserbase import BrowserbaseConfig, bootstrap_login, run_inputs, save_context_id
 
 
 DEFAULT_INPUTS = (
@@ -13,6 +13,7 @@ DEFAULT_INPUTS = (
     Path("work/romance-current-assembly/pangram-part-2.txt"),
 )
 DEFAULT_OUTPUT_ROOT = Path("state/gui-runs")
+DEFAULT_CONTEXT_ID_PATH = Path.home() / ".config" / "pangram-gui" / "browserbase-context-id"
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -45,14 +46,21 @@ def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
 
     if args.command == "bootstrap":
-        config = BrowserbaseConfig.from_env(require_context=False)
+        config = BrowserbaseConfig.from_env(
+            require_context=False,
+            context_id_path=DEFAULT_CONTEXT_ID_PATH,
+        )
         result = bootstrap_login(config)
+        save_context_id(DEFAULT_CONTEXT_ID_PATH, str(result["context_id"]))
         print(json.dumps(result, indent=2, sort_keys=True))
-        print("Store the returned context_id as BROWSERBASE_CONTEXT_ID for future unattended runs.")
+        print(f"Saved the Context ID to {DEFAULT_CONTEXT_ID_PATH} for future local runs.")
         return 0
 
     if args.command == "run":
-        config = BrowserbaseConfig.from_env(require_context=True)
+        config = BrowserbaseConfig.from_env(
+            require_context=True,
+            context_id_path=DEFAULT_CONTEXT_ID_PATH,
+        )
         inputs = tuple(args.inputs) if args.inputs else DEFAULT_INPUTS
         missing = [str(path) for path in inputs if not path.is_file()]
         if missing:

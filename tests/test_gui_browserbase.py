@@ -1,9 +1,13 @@
 from __future__ import annotations
 
+import importlib.util
 import json
+import stat
 from pathlib import Path
 
 import pytest
+
+import pangram_lab.gui_browserbase as gui_browserbase
 
 from pangram_lab.gui_browserbase import (
     RUNNER_VERSION,
@@ -150,6 +154,22 @@ def test_build_context_payload_uses_api_key_project_inference() -> None:
     assert build_context_payload() == {}
 
 
+def test_live_view_url_prefers_fullscreen_human_control_url() -> None:
+    debug_response = {
+        "debuggerFullscreenUrl": "https://live.example/fullscreen",
+        "debuggerUrl": "https://live.example/bordered-devtools",
+        "pages": [],
+        "wsUrl": "wss://live.example/socket",
+    }
+
+    assert gui_browserbase.select_live_view_url(debug_response) == "https://live.example/fullscreen"
+
+
+def test_live_view_url_rejects_response_without_human_control_url() -> None:
+    with pytest.raises(RuntimeError, match="Live View URL"):
+        gui_browserbase.select_live_view_url({"pages": [], "wsUrl": "wss://live.example/socket"})
+
+
 def test_browserbase_config_fails_closed_for_unattended_run() -> None:
     with pytest.raises(RuntimeError, match="BROWSERBASE_API_KEY"):
         BrowserbaseConfig.from_env({}, require_context=True)
@@ -188,6 +208,57 @@ def test_browserbase_config_bootstrap_needs_only_api_key() -> None:
         require_context=False,
     )
     assert existing.context_id == "ctx_existing"
+
+
+def test_browserbase_config_reuses_saved_local_context(tmp_path: Path) -> None:
+    context_file = tmp_path / "browserbase-context-id"
+    context_file.write_text("ctx_saved\n", encoding="utf-8")
+
+    config = BrowserbaseConfig.from_env(
+        {"BROWSERBASE_API_KEY": "secret"},
+        require_context=True,
+        context_id_path=context_file,
+    )
+
+    assert config.context_id == "ctx_saved"
+
+
+def test_bootstrap_cli_persists_context_id_with_private_permissions(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    script_path = Path(__file__).parents[1] / "scripts" / "pangram_gui_browserbase.py"
+    spec = importlib.util.spec_from_file_location("pangram_gui_browserbase_script", script_path)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    context_file = tmp_path / "config" / "browserbase-context-id"
+    monkeypatch.setattr(module, "DEFAULT_CONTEXT_ID_PATH", context_file)
+    monkeypatch.setenv("BROWSERBASE_API_KEY", "secret")
+    monkeypatch.delenv("BROWSERBASE_CONTEXT_ID", raising=False)
+    monkeypatch.setattr(
+        module,
+        "bootstrap_login",
+        lambda config: {
+            "context_id": "ctx_created",
+            "session_id": "session_1",
+            "debugger_url": "https://live.example/session",
+            "verified": True,
+        },
+    )
+
+    assert module.main(["bootstrap"]) == 0
+    assert context_file.read_text(encoding="utf-8") == "ctx_created\n"
+    assert stat.S_IMODE(context_file.stat().st_mode) == 0o600
+
+
+def test_gui_workflow_defaults_to_current_exact_article_source_branch() -> None:
+    workflow = (
+        Path(__file__).parents[1] / ".github" / "workflows" / "pangram-gui-browserbase.yml"
+    ).read_text(encoding="utf-8")
+
+    assert "default: agent/romance-primal-crucible-gui-repair-20260817" in workflow
+    assert "default: agent/romance-concept-flow-improvement-20260817" not in workflow
 
 
 def test_prepare_measurement_hashes_exact_text_and_skips_completed_by_default(tmp_path: Path) -> None:

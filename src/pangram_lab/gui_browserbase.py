@@ -51,10 +51,13 @@ class BrowserbaseConfig:
         env: Mapping[str, str] | None = None,
         *,
         require_context: bool,
+        context_id_path: Path | None = None,
     ) -> "BrowserbaseConfig":
         values: Mapping[str, str] = os.environ if env is None else env
         api_key = values.get("BROWSERBASE_API_KEY", "").strip()
         context_id = values.get("BROWSERBASE_CONTEXT_ID", "").strip() or None
+        if context_id is None and context_id_path is not None:
+            context_id = load_context_id(context_id_path)
         pangram_url = values.get("PANGRAM_GUI_URL", DEFAULT_PANGRAM_GUI_URL).strip() or DEFAULT_PANGRAM_GUI_URL
 
         if not api_key:
@@ -66,6 +69,26 @@ class BrowserbaseConfig:
             context_id=context_id,
             pangram_url=pangram_url,
         )
+
+
+def load_context_id(path: Path) -> str | None:
+    try:
+        context_id = path.read_text(encoding="utf-8").strip()
+    except FileNotFoundError:
+        return None
+    except (OSError, UnicodeError) as exc:
+        raise RuntimeError(f"cannot read saved Browserbase Context ID from {path}: {exc}") from exc
+    return context_id or None
+
+
+def save_context_id(path: Path, context_id: str) -> None:
+    context_id = context_id.strip()
+    if not context_id:
+        raise ValueError("Browserbase Context ID is required")
+    path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+    path.parent.chmod(0o700)
+    path.write_text(context_id + "\n", encoding="utf-8")
+    path.chmod(0o600)
 
 
 def sha256_text(text: str) -> str:
@@ -239,6 +262,15 @@ class BrowserbaseRestClient:
         return self._request("GET", f"sessions/{session_id}/debug")
 
 
+def select_live_view_url(debug_response: Mapping[str, Any]) -> str:
+    """Return Browserbase's human-control Live View, preferring fullscreen."""
+    for field in ("debuggerFullscreenUrl", "debuggerUrl"):
+        url = str(debug_response.get(field, "")).strip()
+        if url:
+            return url
+    raise RuntimeError("Browserbase debug response is missing a Live View URL")
+
+
 def _canonical_label(raw: str) -> str:
     compact = " ".join(raw.split()).lower()
     for label in _SEGMENT_LABELS:
@@ -408,7 +440,7 @@ def bootstrap_login(config: BrowserbaseConfig, *, input_fn: Any = input, print_f
     if not session_id or not connect_url:
         raise RuntimeError("Browserbase session response is missing id/connectUrl")
     debug = client.debug_urls(session_id)
-    debugger_url = str(debug.get("debuggerUrl", "")).strip()
+    debugger_url = select_live_view_url(debug)
 
     playwright, browser, page = _connect_session(connect_url)
     try:
@@ -535,7 +567,7 @@ def run_inputs(
     if not session_id or not connect_url:
         raise RuntimeError("Browserbase session response is missing id/connectUrl")
     debug = client.debug_urls(session_id)
-    debugger_url = str(debug.get("debuggerUrl", "")).strip()
+    debugger_url = select_live_view_url(debug)
     print_fn(f"Browserbase session: {session_id}")
     print_fn(f"Live debugger: {debugger_url}")
 

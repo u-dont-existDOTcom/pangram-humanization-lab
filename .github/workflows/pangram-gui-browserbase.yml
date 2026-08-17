@@ -6,7 +6,7 @@ on:
       source_ref:
         description: Git ref containing pangram-part-1.txt and pangram-part-2.txt
         required: true
-        default: agent/romance-concept-flow-improvement-20260817
+        default: agent/romance-primal-crucible-gui-repair-20260817
         type: string
       force:
         description: Repeat already-completed identical SHAs

@@ -64,11 +64,15 @@ python scripts/pangram_gui_browserbase.py bootstrap
 The command prints:
 
 - a Browserbase Context ID;
-- a live debugger URL.
+- a fullscreen Live View URL intended for human control.
 
-Open the debugger URL, log into Pangram normally, return to the terminal, and press Enter. The runner verifies that Pangram's detector input is visible before it closes the Browserbase session. Context changes are persisted when that session closes.
+Open the Live View URL, log into Pangram normally, return to the terminal, and press Enter. The runner verifies that Pangram's detector input is visible before it closes the Browserbase session. Context changes are persisted when that session closes.
 
-Save the returned Context ID somewhere private. For GitHub Actions, create these repository secrets:
+After successful verification, the CLI saves the non-secret Context ID at
+`~/.config/pangram-gui/browserbase-context-id` with mode `0600`. Later local
+`bootstrap` and `run` commands reuse it automatically; an explicit
+`BROWSERBASE_CONTEXT_ID` still takes precedence. For GitHub Actions, create
+these repository secrets:
 
 - `BROWSERBASE_API_KEY`
 - `BROWSERBASE_CONTEXT_ID`
@@ -77,12 +81,14 @@ There is no `BROWSERBASE_PROJECT_ID` secret or placeholder in this workflow.
 
 ## Local unattended run
 
-Set:
+Set the API key:
 
 ```bash
 export BROWSERBASE_API_KEY='...'
-export BROWSERBASE_CONTEXT_ID='...'
 ```
+
+The runner reads the Context ID saved by the successful bootstrap. Set
+`BROWSERBASE_CONTEXT_ID` only to intentionally override that local Context.
 
 Then run the current Romance halves:
 
@@ -126,6 +132,9 @@ A failed run does not create a completed `result.json`, so it can be resumed aft
 The first place to look is the Browserbase session/recording URL in `failure.json`. Browserbase records sessions by default, so UI drift and expired login state can be inspected without guessing.
 
 Common failure stages:
+
+- Browserbase `HTTP 401`: the API rejected the supplied API key before Context/session work; copy a current key and retry. Do not add a Project ID.
+- disconnected bordered DevTools page: use the fullscreen Live View printed by the current runner or the active Session Inspector; older runner versions selected `debuggerUrl` instead of `debuggerFullscreenUrl`.
 
 - `navigate`: Pangram or Browserbase navigation failed;
 - `find_input`: Pangram login likely expired or the detector UI changed;

@@ -8,6 +8,9 @@ Replace Joel's repetitive manual Pangram GUI copy/paste/report-download loop wit
 
 - Development branch: `agent/pangram-browserbase-gui-automation-20260817`.
 - Draft PR: #35, currently based on `agent/romance-concept-flow-improvement-20260817` for access to the exact current Romance split inputs during development.
+- Current GUI source ref: `agent/romance-primal-crucible-gui-repair-20260817`, verified at `ea74343a8e8eb01af1cc029370d1d7b1ed081b9f`.
+- Exact reader-visible SHA: `378d4afcf7e1dc7684d1b67eafd7b3ac5166a3fab8a59ddf0b3d88144e36453d` (18,702 words).
+- Exact Part 1 SHA: `884eb308b7fd12398c6577cb8c93cd8fe3d14d28d0cc8c5b82abdcd64a27d070` (9,330 words); Part 2 SHA: `892904cd38e16893fd78fe6ed217357d192b7b6b4350e8cde1385251dbd7ddf9` (9,372 words).
 - This subsystem is detector tooling only. It cannot modify article prose or article authority.
 - Browserbase/Pangram credentials are never repository content.
 
@@ -36,7 +39,7 @@ Replace Joel's repetitive manual Pangram GUI copy/paste/report-download loop wit
 - Browserbase Context creation via REST;
 - persistent Context-bound session creation (`browserSettings.context.id`, `persist: true`);
 - session timeout/keepAlive controls;
-- live debugger URL lookup;
+- fullscreen human-control Live View URL lookup, with bordered-debugger fallback;
 - Playwright connection over the returned CDP `connectUrl`;
 - reuse of Browserbase's default browser context;
 - one-time `bootstrap_login` flow that opens Pangram login in a live Browserbase session, waits for manual login, verifies the Pangram detector is visible, then closes the session so authentication changes persist.
@@ -64,6 +67,7 @@ The live runner:
 
 - `bootstrap` — create/reuse persistent Context and perform the one-time manual Pangram login;
 - `run` — measure repeated `--input` files;
+- successful bootstrap saves the non-secret Context ID at `~/.config/pangram-gui/browserbase-context-id`, and future local commands reuse it automatically;
 - no explicit inputs defaults to current Romance `pangram-part-1.txt` and `pangram-part-2.txt` on a branch where those files exist;
 - `--force` is required to repeat a completed identical measurement.
 
@@ -95,11 +99,27 @@ Latest known full-test evidence on the implementation path: the `Lesson integrit
 
 Repository workflow-policy audit for the new manual Browserbase workflow: success.
 
+Fresh local verification after the Live View/local-Context durability changes:
+
+- focused GUI suite: `17 passed`;
+- full repository suite: `124 passed`;
+- repository audit: `0 error(s)`, with five pre-existing/declared warnings.
+
 ## Current blocker / unresolved
 
 ### Live Browserbase + Pangram smoke test
 
-No Browserbase API key, Project ID, or persistent Context has been supplied to this work session. Therefore the following are **implemented but not yet live-certified**:
+Live evidence on 2026-08-17 established the following without exposing or storing the API key:
+
+- the original `/tmp/pangram-browserbase-bootstrap.2702145.log` failed at `POST /v1/contexts` with Browserbase `HTTP 401 Unauthorized`;
+- the documented API-key-only request contract (`X-BB-API-Key`, `POST /v1/contexts`, body `{}`) matches the implementation;
+- a later current API key succeeded and created Context `c6b6b8ce-632f-45f1-be24-1c5fdd6e5981` without a Project ID;
+- Browserbase session creation and Playwright CDP connection succeeded;
+- the first session exposed a bordered `debuggerUrl`, but that page disconnected before Pangram login was verified;
+- the runner now prefers Browserbase's `debuggerFullscreenUrl`, with regression coverage;
+- the first session ended, and repeated later attempts to reuse the Context were rejected at session creation with `HTTP 401`; no second session or detector submission occurred.
+
+The Context exists, but authenticated Pangram state and cross-session persistence remain **unverified**. The following are still not live-certified:
 
 - Pangram's current detector input selector;
 - Pangram's current detector button accessible name;
@@ -118,16 +138,16 @@ Development currently sits on a branch derived from the active Romance assembly 
 One-time:
 
 1. Create/use a Browserbase account.
-2. Obtain Browserbase API key and Project ID.
+2. Obtain a current Browserbase API key.
 3. Locally install `.[browser]`.
-4. Set `BROWSERBASE_API_KEY` and `BROWSERBASE_PROJECT_ID`.
+4. Set only `BROWSERBASE_API_KEY`.
 5. Run `python scripts/pangram_gui_browserbase.py bootstrap`.
-6. Open the printed live debugger URL and log into Pangram normally.
-7. Press Enter in the terminal; retain the returned Context ID.
+6. Open the printed fullscreen Live View URL and log into Pangram normally.
+7. Press Enter in the terminal; the runner saves the Context ID locally.
 8. Store `BROWSERBASE_API_KEY` and `BROWSERBASE_CONTEXT_ID` as GitHub repository secrets.
 
 After that, normal detector runs can be unattended.
 
 ## Next safe action
 
-Perform the one-time Browserbase/Pangram bootstrap and run a smoke measurement on a small known Pangram text first. Inspect the Browserbase recording and parsed JSON against the GUI. If that succeeds, run the two current Romance halves, confirm that native-PDF capture or explicitly marked fallback behaves correctly, then port the validated tooling to a clean `main`-based PR and close out the durable lesson/tooling state.
+Reuse Context `c6b6b8ce-632f-45f1-be24-1c5fdd6e5981` with a current API key, complete Pangram login through the fullscreen Live View, and close the session. Start a second session with the same Context and prove login persistence. Then run one small smoke measurement, inspect the recording/parsed JSON/PDF provenance against the GUI, and determine whether a full GUI run consumes paid Pangram credits before submitting the two article halves.

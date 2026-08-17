@@ -11,7 +11,7 @@ Automate Joel's current manual Pangram GUI workflow while the Pangram API creden
 - A completed GUI result for the same input SHA and GUI runner version is reused unless `--force` is explicitly supplied.
 - Browserbase API credentials and Pangram authentication state must never be committed.
 - Pangram cookies/authentication live only inside a Browserbase persistent Context.
-- Browserbase Context IDs are supplied through environment/secret configuration, not embedded in article prose or detector result files.
+- Browserbase Context IDs are supplied through environment/secret configuration or the local ignored bootstrap file, not embedded in article prose or detector result files.
 - GUI automation is secondary detector evidence under the existing Pangram lab rules.
 
 ## Browser architecture
@@ -23,7 +23,7 @@ Browserbase resolves the project from the API key; this subsystem does not reque
 Environment variables:
 
 - `BROWSERBASE_API_KEY` — required.
-- `BROWSERBASE_CONTEXT_ID` — required for unattended detector runs; optional during bootstrap because bootstrap can create a Context using the API key alone.
+- `BROWSERBASE_CONTEXT_ID` — required for unattended GitHub Actions runs; optional locally when bootstrap has saved the Context ID under `~/.config/pangram-gui/`.
 - `PANGRAM_GUI_URL` — optional override; default `https://www.pangram.com/`.
 
 No Pangram password is stored in GitHub. The initial login is performed manually in Browserbase's live debugger once, then persisted in the Context.
@@ -42,6 +42,7 @@ Behavior:
 4. Print the Browserbase live debugger URL and Context ID.
 5. Wait for the user to complete Pangram login in the live debugger and confirm locally.
 6. Navigate to Pangram's detector page, verify that a detector text input is available, then close the browser so Context changes persist.
+7. Save the non-secret Context ID to `~/.config/pangram-gui/browserbase-context-id` for automatic local reuse.
 
 ### Run measurements
 
