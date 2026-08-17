@@ -1,0 +1,7 @@
+While different maturity levels are to be expected to some degree, it can get out of hand at the extremes. What I noticed in all three of my reference relationships, is when one person is always the child and the other is always the therapist, guru, doctor, or dad, then it’s too unequal, and eventually there will be some kind of pendulum swing or backlash. When I became consistently the responsible one, that also made me responsible for everything that went wrong, not to mention the unhealthy clinginess, jealousy, and all the rest which went along with that dynamic.
+
+Toft says, “She’s not a girl,” and “She’s not your mother.” I agree with the warning, but I’d qualify the first sentence. A lot of women enjoy a daddy/little-girl dimension with a man they trust, and I don’t see a reason to deny them that. It can be affectionate, erotic, comforting, or playful.
+
+The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself. And if I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.
+
+Role-play isn’t the problem. Getting trapped in the role is.
