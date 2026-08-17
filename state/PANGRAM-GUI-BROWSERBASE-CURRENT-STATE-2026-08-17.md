@@ -104,8 +104,8 @@ Repository workflow-policy audit for the new manual Browserbase workflow: succes
 
 Fresh local verification after the Live View/local-Context durability changes:
 
-- focused GUI suite: `29 passed`;
-- full repository suite: `136 passed`;
+- focused GUI suite: `30 passed`;
+- full repository suite: `137 passed`;
 - repository audit: `0 error(s)`, with five pre-existing/declared warnings.
 
 ## Current blocker / unresolved
@@ -144,15 +144,15 @@ Live evidence on 2026-08-17 established the following without exposing or storin
 - the successful detector call must not be repeated. The new `recover` command opens the existing History report, binds it to the exact fixture anchors and parsed word count, and captures normal evidence without filling text or activating Pangram's detector.
 - the first no-submit recovery selected the correct report but failed safely because Pangram's current 121-word result is a short-text Overview rather than the older segmented layout; its screenshot proves `Pangram 4.0`, `121 words scanned`, `AI Generated`, `100% of this text is AI`, and `Confidence limited — short text`;
 - the parser now handles that exact bounded Overview layout as one fully-AI 121-word segment with confidence left `null`, while retaining the visible confidence note separately. Regression coverage passes; a second recovery attempt is evidence capture only and makes no detector call.
+- the second no-submit recovery completed. The content-bound `result.json`, raw `report-body.txt`, and valid PDF were written for exact SHA `00b54ca37127155ce7c146320b40ba19076ad901714f3b447f1250c764f6d835`; the result records Pangram 4.0, 121 words, `fraction_ai: 1.0`, all other fractions `0.0`, one fully-AI segment, and `playwright_print_fallback` provenance;
+- the live report completion matcher now accepts the current short-text phrase `of this text is AI` in addition to the older segmented-layout markers, and normal runs use the same exact-input-aware parser proven by recovery. No duplicate detector call was made.
 
-The fresh Context now has live-verified authenticated Pangram state across separate Browserbase sessions. The following report surfaces are still not live-certified:
+The fresh Context now has live-verified authenticated Pangram state across separate Browserbase sessions, and the short-text smoke measurement is complete. The following long-document surfaces are still not live-certified:
 
-- Pangram's current detector button accessible name;
-- report-completion marker behavior under a real long submission;
 - native Pangram PDF/download control detection;
-- structured extraction from a real Pangram report and its evidence path.
+- the current long-document segmented report layout and completion behavior.
 
-Do not claim the GUI automation is production-verified until one real bootstrap + one real measurement succeeds.
+The short-text Browserbase integration gate is satisfied by one real bootstrap, cross-session verification, one real detector call, and content-bound no-submit recovery. This does not certify long-document or native-download behavior.
 
 ### Final promotion branch
 
@@ -175,4 +175,4 @@ After that, normal detector runs can be unattended.
 
 ## Next safe action
 
-Do not open another API-key prompt and do not submit the 121-word smoke again. Cross-session authentication is proven and the completed smoke report exists in Pangram History. The next safe action is to run `recover --input tests/fixtures/pangram-gui-smoke.txt`, select that existing History report in Live View, and capture the structured body/PDF/result evidence without a detector call. Only after recovery succeeds should current PDF provenance and full-half credit cost be assessed.
+Do not open another API-key prompt and do not submit the 121-word smoke again. Its content-bound structured result and PDF fallback are complete. Before submitting either 9,000-word article half, assess Pangram plan/credit impact and obtain explicit authority for those long-document detector calls; the current long-document layout and native-download path remain unverified.

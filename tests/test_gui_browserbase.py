@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import re
 import stat
 from pathlib import Path
 
@@ -205,6 +206,37 @@ def test_live_view_url_prefers_fullscreen_human_control_url() -> None:
 def test_live_view_url_rejects_response_without_human_control_url() -> None:
     with pytest.raises(RuntimeError, match="Live View URL"):
         gui_browserbase.select_live_view_url({"pages": [], "wsUrl": "wss://live.example/socket"})
+
+
+def test_wait_for_report_accepts_current_short_text_overview_marker() -> None:
+    observed: dict[str, object] = {}
+
+    class FakeLocator:
+        @property
+        def first(self) -> "FakeLocator":
+            return self
+
+        def wait_for(self, *, state: str, timeout: int) -> None:
+            observed["state"] = state
+            observed["timeout"] = timeout
+
+    class FakePage:
+        def get_by_text(self, marker: object, *, exact: bool) -> FakeLocator:
+            observed["marker"] = marker
+            observed["exact"] = exact
+            return FakeLocator()
+
+    gui_browserbase.wait_for_report(FakePage(), timeout_ms=12_345)
+
+    marker = observed["marker"]
+    assert isinstance(marker, type(re.compile("")))
+    assert "of\\s+this\\s+text" in marker.pattern
+    assert observed == {
+        "marker": marker,
+        "exact": False,
+        "state": "visible",
+        "timeout": 12_345,
+    }
 
 
 def test_browserbase_config_fails_closed_for_unattended_run() -> None:

@@ -1,0 +1,34 @@
+{
+  "browserbase_debugger_url": "https://www.browserbase.com/devtools-fullscreen/inspector.html?wss=connect.browserbase.com/debug/f8646d01-fd56-4262-bfec-44a95834c443/devtools/page/1F07090E415805E52A62968D264007FF?debug=true",
+  "browserbase_recording_url": "https://browserbase.com/sessions/f8646d01-fd56-4262-bfec-44a95834c443",
+  "browserbase_session_id": "f8646d01-fd56-4262-bfec-44a95834c443",
+  "detector_submission_attempted": false,
+  "evidence_source": "recovered_existing_report",
+  "input_path": "tests/fixtures/pangram-gui-smoke.txt",
+  "input_sha256": "00b54ca37127155ce7c146320b40ba19076ad901714f3b447f1250c764f6d835",
+  "model": "pangram-4",
+  "parsed": {
+    "confidence_note": "Confidence limited — short text",
+    "report_layout": "short_text_overview",
+    "segments": [
+      {
+        "confidence": null,
+        "label": "Fully AI Generated",
+        "text": "On Tuesday morning, a neighborhood library opened its doors after a week of repairs. The front steps were dry, the lights worked, and every shelf stood in its usual place. A volunteer returned three mystery novels, then helped a child find a book about tide pools. Near the window, two students compared notes for a history assignment while the librarian sorted yesterday's newspapers. Nothing unusual happened. People came in from the heat, filled their water bottles, read for a while, and left with books tucked under their arms. At noon, the librarian watered a small fern beside the desk and wrote the date of the next community meeting on the notice board. By closing time, the returns cart was empty again.\n",
+        "word_count": 121
+      }
+    ],
+    "summary": {
+      "fraction_ai": 1.0,
+      "fraction_human": 0.0,
+      "fraction_lightly_ai_assisted": 0.0,
+      "fraction_moderately_ai_assisted": 0.0
+    }
+  },
+  "pdf_provenance": "playwright_print_fallback",
+  "report_url": "https://www.pangram.com/history?history=eb6c121e-6937-4e83-98c2-be1f4a670421",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "status": "complete",
+  "word_count": 121
+}

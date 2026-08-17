@@ -541,16 +541,14 @@ def detection_button(page: Any) -> Any:
 
 
 def wait_for_report(page: Any, *, timeout_ms: int = 180_000) -> None:
-    markers = ("Authorship Breakdown", "Analyzed Text")
-    last_error: Exception | None = None
-    slice_ms = max(5_000, timeout_ms // len(markers))
-    for marker in markers:
-        try:
-            page.get_by_text(marker, exact=False).first.wait_for(state="visible", timeout=slice_ms)
-            return
-        except Exception as exc:
-            last_error = exc
-    raise RuntimeError("Pangram report did not become visible before timeout") from last_error
+    marker = re.compile(
+        r"Authorship\s+Breakdown|Analyzed\s+Text|of\s+this\s+text\s+is\s+(?:AI|human)",
+        re.IGNORECASE,
+    )
+    try:
+        page.get_by_text(marker, exact=False).first.wait_for(state="visible", timeout=timeout_ms)
+    except Exception as exc:
+        raise RuntimeError("Pangram report did not become visible before timeout") from exc
 
 
 def _connect_session(connect_url: str) -> tuple[Any, Any, Any]:
@@ -913,13 +911,20 @@ def run_inputs(
                 stage = "submit"
                 detector_submission_attempted = True
                 detection_button(page).click()
+                print_fn(
+                    f"[pangram-gui] submitted sha={item['input_sha256']}; waiting for report"
+                )
                 stage = "wait_report"
                 wait_for_report(page, timeout_ms=report_timeout_ms)
 
                 stage = "capture_body"
                 body = page.locator("body").inner_text()
                 paths["body"].write_text(body, encoding="utf-8")
-                parsed = parse_report_text(body)
+                parsed = parse_report_for_exact_input(
+                    body,
+                    str(item["text"]),
+                    expected_word_count=int(item["word_count"]),
+                )
                 if not parsed["segments"]:
                     raise RuntimeError("Pangram report became visible but no analyzed segments could be parsed")
 
@@ -936,8 +941,14 @@ def run_inputs(
                     parsed=parsed,
                 )
                 _write_json(paths["result"], receipt)
-                if paths["failure"].exists():
-                    paths["failure"].unlink()
+                for stale in (
+                    paths["failure"],
+                    paths["failure_screenshot"],
+                    directory / "recovery-failure.json",
+                    directory / "recovery-failure.png",
+                ):
+                    if stale.exists():
+                        stale.unlink()
                 results.append(receipt)
                 print_fn(
                     f"[pangram-gui] complete sha={item['input_sha256']} words={item['word_count']} "
