@@ -47,6 +47,18 @@ And can you actually say all that once you're naked? Even if you think she'll be
 
 Bodies fitting is not enough. Can you stay honest while you’re completely exposed? Talking before your clothes come off already practices some of the trust, attention, and willingness to be seen that making love needs.
 
+## Affection and the simmer
+
+Doug Toft, who has been married for fifty years, has a useful list called [*50 Things I Learned from 50 Years of Marriage*](https://dougtoft.substack.com/p/50-things-i-learned-from-50-years). One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.
+
+The opposite failure is letting the erotic current disappear except when somebody officially initiates sex. Kim Anami calls the current between encounters [“the simmer”](https://kimanami.com/meet-another-well-fked-man/). Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. It shouldn’t become relationship homework. But if two people who supposedly want each other barely flirt, tease, or show desire through the day, I would take that as a warning light rather than expect great sex to materialize from zero at bedtime.
+
+You need both. Affection has to be safe from escalation, and the erotic current has to stay alive.
+
+Sex can also be a barometer for whatever else is happening between you. If the sex changes, ask what else changed: resentment, closeness, stress, health, medication, or how wanted each person feels.
+
+Each person has some responsibility for staying sexually alive too. My partner matters enormously, but she shouldn’t have to manufacture all my desire for me. And if sex is one of the main things separating this relationship from friendship, it probably deserves more than whatever exhausted time is left after everything else.
+
 ## Can Casual Sex or a Situationship Actually Be Honest?
 
 Your body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.
@@ -101,9 +113,9 @@ Relationships ALWAYS reveal what I can’t see. My selfishness. The depth that i
 
 I’ve used spirituality as a replacement for intimacy a lot because intimacy was simply unavailable. As a boy and young man, I was so deprived of female touch that it was driving me insane. Meditation sometimes helped me cope better with the deprivation, but it wasn't a cure.
 
-I don’t believe most people can be truly happy celibate. People generally aren’t so serious about spiritual liberation that giving up sex and partnership for life makes sense. The Buddha didn’t generally advise people to become monks.
+I don’t believe most people can be truly happy celibate. People generally aren’t so serious about spiritual liberation that giving up sex and partnership for life makes sense. The Buddha didn’t generally advise people to become monastics.
 
-If becoming a monk or nun genuinely makes you happier and more peaceful, stay. It might work for some very advanced people, or if your sexual desire is already low, or you’re old, etc.
+If becoming a monastic genuinely makes you happier and more peaceful, stay. It might work for some very advanced people, or if your sexual desire is already low, or you’re old, etc.
 
 But how do you know what you’re not aware of? Inner-child reparenting can help a lot with that, because often the inner child is being ignored while the adult is feeling some kind of liberation.
 
@@ -128,6 +140,18 @@ It’s reasonable for a woman to want support, since after all she has to provid
 And hey, sometimes being objectified is kinda sexy, too. Men like to be objectified to a certain degree as providers and defenders, just as women often like being seen as sex dolls by the men they want. Being wanted that way feels good, but feeling held is important as well.
 
 I don’t want to be just a provider-and-defender machine, because that's vulnerable to hypergamy. I wanna know that if I fall ill or lose my job, I can count on my wife still. Guys want a ride-or-die chick. A woman also wants to know that when she gets old, sick, or no longer looks like the fantasy that first attracted her man, he will still happily stay.
+
+There’s another male insecurity inside the provider role: how much does she love me, and how much does she love what I can do for her?
+
+I don’t need the answer to be that provision had nothing to do with attraction. Being competent, protective, useful, and able to make things happen may be part of what draws a woman to a man, just as her beauty and sexuality may be part of what draws him to her. I want the bond to become bigger than the qualities that first made us desirable.
+
+I had wondered for years how much a woman would love me if I couldn’t really provide for her. Then Bee told me, “I would rather be with you in the forest than with any other man in a mansion.” That’s what made me fall in love with her. She had answered the question I was most afraid to ask.
+
+I got a smaller and much less romantic test later. Bee gave me some shoes to try that didn’t fit. I wore them for a day, and somehow my knee ended up messed up for about a month. She did nurse me, but a bit reluctantly. She also kept pushing me toward thinking maybe it was partly in my head or wasn’t really that bad. I understood why—neither of us could believe one day in the wrong shoes could do that—but it still felt dismissive, and maybe partly reflected what she wanted to be true.
+
+Before me, Bee had also stayed with a boyfriend who was totally broke and crazy and supported him for a while. Later she blamed herself for staying through that, and I agree. Helping carry somebody through temporary incapacity is different from becoming the permanent support system for a man who won’t take responsibility. Some women are fixer types, which can create the opposite pattern.
+
+What makes me desirable is not the same question as what makes me loved when I temporarily stop being desirable in that particular way.
 
 But beyond all that practical stuff, sex is extremely important for building and renewing the connection. I also think that if two people aren't having sex, it becomes hard to explain how they're different from regular friends. There is a real contradiction here. I don't think it needs to be solved into a rule.
 
@@ -227,7 +251,7 @@ My second marriage to Bee is the clearest example. I knew within a week of her v
 
 That dynamic alone isn’t necessarily the main problem. A lot of women have seen me that way. The question is whether they can hold it lightly, playfully, and curiously, or whether it turns into something deeply traumatic—like they’re acting out a taboo fantasy, or they start taking everything they feel about their dad out on me as if I’m him. With Bee, the main issues were the BPD and that her aunts had badly witchcrafted her as a child. She would tell you the same.
 
-She loved me openly and intensely and seemed to understand me spiritually. Most of all, she said the magic words: “I would rather be with you in the forest than with any other man in a mansion.”
+She loved me openly and intensely and seemed to understand me spiritually. Most of all, there was the forest-and-mansion line I mentioned earlier.
 
 Best drug I ever had.
 
@@ -305,6 +329,26 @@ Going slowly can show you how somebody’s moods move over time, how they treat 
 
 You can know somebody for twenty years and then discover on the first night that the polarity isn’t there, touch feels wrong, smell feels wrong, your desire levels or kinks don’t fit, one person is sexually shut down, or the bodies just don’t connect.
 
+But the first night isn’t necessarily the final ceiling either.
+
+At the beginning of my sexual relationship with Bee, she told me, “You’re going to get a lot better at sex.” Funny thing is, I don’t think I did. She got much better at receiving me.
+
+About eighteen months later, she could orgasm almost immediately from penetration without foreplay, have dozens of orgasms in an hour, and squirt so much we were flooding the bed. We were often making love for at least four hours a day. It didn’t feel like I had learned some amazing technique. Something that developed between us had changed what her body could do with me.
+
+After we broke up, I was extremely curious whether that would simply transfer to another man. Last year she told me that in the five years since me, she had tried having sex with somebody else once. It felt so bad that she stopped after about a minute.
+
+So “trainable” doesn’t quite describe what I mean. Some sexual abilities can obviously be trained, but some sexual responsiveness seems to be co-created between particular people.
+
+The strangest part was that Bee’s body kept opening more while consciously she was trusting me less and becoming more sure that she wanted to separate. She used to say, “I can’t stand you! but i LOVE you and I don’t know why!”
+
+Women are always demanding to know why I love them. Apparently they’re allowed not to know.
+
+It felt like her body knew a truth her mind didn’t want to hear. That didn’t settle whether we should stay together. It showed me that love, desire, conscious trust, and the decision to stay can move in different directions.
+
+The reverse limitation exists too: good sex doesn’t supply the rest of a relationship.
+
+At Temple University, I had a Colombian lawyer as an English/Spanish conversation partner. Eventually we became casual sex friends. We had things we liked doing together, mainly sex, but basically nothing else in common. It ended badly because she was falling in love and I wasn’t. The sexual fit was real. It didn’t create the rest of the compatibility.
+
 Some of those things might get better if both partners are committed to helping each other through it. Sometimes bad sexual fit still feels like, “Let’s just be friends!”
 
 Saying, “The sex isn’t working for me,” may sound like, “I only love you if the sex is good.” But universal love doesn’t make someone special. It isn’t romance. It’s the basis of any good relationship of any kind.
@@ -352,6 +396,8 @@ I call relationship a crucible because I was thinking of Dr. David Schnarch’s 
 That’s definitely what relationship has done to me.
 
 One warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other. Sometimes one person is terrorizing or controlling the other. If you're scared to say no, scared to tell the truth, or scared of what happens if you leave, don't turn that into a mutual communication exercise. Get other people involved and think about safety first.
+
+Toft says meditation, yoga, prayer, and church are all fine, but after fifty years of marriage his main spiritual practice is being in relationship with his wife. I understand what he means. It’s much easier for me to feel spiritually advanced when nobody is close enough to expose the parts of me that aren’t.
 
 Being in a relationship showed me how vulnerable I actually am when I open my heart. It’s really easy to feel invulnerable and strong when you’re alone, or even just with friends. Taking off the masks and showing your inner child is a gamble, but it’s required if you want to go deeper in yourself and deeper with another person.
 
@@ -407,6 +453,10 @@ You don’t need to spend as much time with friends as you did before the romanc
 
 For me, that also means keeping close friends, outside therapy when I need it, a mission of my own, separate interests, some connection to community, and the ability to be alone.
 
+Toft also points out that a man can receive feminine energy from nature, music, poetry, art, flowers, food, and other parts of life. I like that because otherwise I can make one woman my only portal to beauty, sensuality, inspiration, and softness on top of everything else she is already carrying.
+
+Anami makes a related point about sexual energy. My partner can help open my erotic life without being solely responsible for keeping it alive. Each of us has some responsibility for staying connected to our own body, imagination, and desire.
+
 It’s better to schedule some alone time than to suddenly announce, “I need time for myself!” when you’re already overwhelmed and make it sound like the relationship is the problem.
 
 And proactively bring each other out into the world. Don’t sequester each other like a hidden treasure.
@@ -414,6 +464,12 @@ And proactively bring each other out into the world. Don’t sequester each othe
 ## When you and your partner are at different levels of maturity
 
 While different maturity levels are to be expected to some degree, it can get out of hand at the extremes. What I noticed in all three of my reference relationships, is when one person is always the child and the other is always the therapist, guru, doctor, or dad, then it’s too unequal, and eventually there will be some kind of pendulum swing or backlash. When I became consistently the responsible one, that also made me responsible for everything that went wrong, not to mention the unhealthy clinginess, jealousy, and all the rest which went along with that dynamic.
+
+Toft says, “She’s not a girl,” and “She’s not your mother.” I agree with the warning, but I’d qualify the first sentence. A lot of women enjoy a daddy/little-girl dimension with a man they trust, and I don’t see a reason to deny them that. It can be affectionate, erotic, comforting, or playful.
+
+The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself. And if I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.
+
+Role-play isn’t the problem. Getting trapped in the role is.
 
 All three women told me at some point that they felt like my patient. Which is true, I really was the one they asked about almost every medical, mental-health, and practical problem:
 
@@ -499,6 +555,30 @@ Although the peanut gallery critics and lazy fact-checkers often cry fiction on 
 
 [NATIVE YOUTUBE — preserve from Substack source — videoId: QqP3p_ysd84]
 
+## Can making love be a spiritual practice?
+
+I’m Buddhist, and the early Buddhist texts don’t teach tantric sex as a path to awakening. But they also don’t show serious awakening as something reserved for monastics.
+
+In [DN 16](https://www.dhammatalks.org/suttas/DN/DN16.html), the Buddha talks about people who had died at Nādikā and mentions 510 lay stream-enterers, 96 once-returners, and more than fifty lay non-returners. Those are the first three of the four stages of awakening.
+
+[SN 55.24](https://suttacentral.net/sn55.24/en/sujato) has an almost comic complaint. When the Buddha declared Sarakāni a stream-enterer, other Sakyans grumbled, in effect, “Who isn’t a stream-enterer these days?” The part that matters here is how surprisingly common lay awakening had become.
+
+And when the married couple Nakulapitā and Nakulamātā asked the Buddha how they could remain together in future lives, [AN 4.55](https://suttacentral.net/an4.55/en/bodhi) gave this advice:
+
+> *"When both husband and wife are faithful and generous, restraintful, living righteously, speaking pleasant words to each other—they come together in the future, sharing the same desires and living in bliss."*
+
+None of this means the Buddha taught cervical sex as Buddhist meditation. It does mean marriage, sex, and household life are not automatically on the opposite side from serious spiritual development.
+
+[Kim Anami](https://kimanami.com/my-vagina-heals-everything/) goes further and treats sexual energy itself as a path into healing, creativity, worldly action, and spiritual awakening. Her work is full of her own experiences and a large body of student reports about sexuality changing health, work, money, creativity, and the rest of life. I don’t expect one result to fit every body, and I don’t see a reason to dismiss all those reports either.
+
+Her jade-egg practice is part of that. It combines pelvic-floor training, attention, arousal, and a more conscious relationship with the vagina instead of treating it like a body part that only wakes up when a partner wants sex.
+
+Brad and Pam Keene describe something even closer to what I mean here. Pam reports that her Kundalini completed during lovemaking and opened into a durable universal-consciousness awakening. Their marriage and sexual life became their spiritual classroom, and later she helped Brad awaken too.
+
+[NATIVE YOUTUBE — preserve from Substack source — videoId: Li--FKwJu0Q]
+
+What interests me is that for them the body, surrender, love, and awakening stopped being separate subjects. That is much closer to what I mean by sacred making love than treating sex as a distraction from spirituality.
+
 ## Muses & Directors
 
 In ordinary life, I sometimes think of the woman as the engine and myself as the steering wheel. I get motivation from her. She is the life force. She brings inspiration, beauty, intuition, creativity, and this feeling that life is worth doing.
@@ -511,11 +591,23 @@ Key could sometimes start talking and somehow teleport me outside the galaxy. I 
 
 Bee could bring out something similar--she could be talking to me for hours on end, but instead of trying to mute her with the TV remote, I felt I was in a timeless dimension of love.
 
+Maybe women are poetry and men are prose. I’m talking about masculine and feminine modes, not claiming every woman is poetic or every man literal. Some women barely have this quality at all. Some men, especially artistic ones, have much more access to it.
+
+This is one of the things I experience as intensely feminine: she brings me something emotionally, intuitively, or spiritually alive that I can’t reduce to a proposition. My reflex is to turn it into prose: What happened? What does it mean? What are we going to do about it? She may be showing me something before either of us can explain it.
+
+I think girls should have room to cultivate this capacity instead of having it trained out of them or allowed to collapse into helplessness and chaos. Boys shouldn’t be trained completely out of it either.
+
+Toft’s fifty-year-marriage list sounds like a more lived-in version of the famous *Men Are from Mars, Women Are from Venus* idea. Often she wants to be heard while he wants to solve. The species-level cartoon is too neat: men complain just to be heard too, and women often want a solution. The easy question is, “Do you want me to help figure this out, or do you mostly want me to listen?”
+
+Listening for the emotion underneath the words doesn’t mean switching my brain off. Emotional intensity is not permission to intimidate somebody, lie, make false accusations, or make them scared to say no. Poetry still has to survive reality.
+
 The muse gives the director his ineffable inspiration. She sees the big picture or feels something that has not become a plan yet. Then I have a chance to be useful by figuring out the details.
 
 The muse can influence any decision where I ask for help, and also the decisions where she suddenly intuits that she has something important to add.
 
 Micromanaging everything is totally different and not attractive. If she is refusing to trust my judgment, or simply taking over with “Let me do it,” I start feeling useless.
+
+Money can magnify the same problem. A woman earning more than her man doesn’t automatically make her masculine or him feminine. But if “I make more money” quietly becomes “I’m the competent adult and you’re my junior,” she can end up effeminating the man and then resenting the loss of polarity. The mirror failure is him asking a successful woman to shrink herself because he can’t tolerate her competence.
 
 A woman can lead wherever the man is less sure. She may know more about any particular field, even a traditionally non-feminine one. The way she leads can still preserve the polarity of roles.
 
@@ -547,6 +639,10 @@ I don’t actually think of myself as especially masculine. I step into that ene
 
 The same is true for a woman. She should not have to perform softness, helplessness, or cuteness every minute to prove she is feminine. Surrender means so much more when she could take control but prefers not to at that moment.
 
+Women can get trapped between opposite insecurities here. She may be wondering whether I still find her beautiful, whether she is too emotional or difficult, whether she makes enough logical sense, or whether she is too needy. Then she can overcorrect and decide she needs nobody, becoming so independent that receiving care or letting a man lead feels dangerous.
+
+Toft’s advice is simpler: tell her she is beautiful, and as she ages, keep noticing new forms of beauty. Anami adds that receiving is itself a skill. A strong woman can receive pleasure, help, or direction without becoming helpless. A man can receive care without becoming a child.
+
 We can invite these energies out of each other gently.
 
 “Honey, how do you see this intuitively?”
@@ -572,7 +668,6 @@ Men tend to show their wanting through providing, fixing, heavy labor, or trying
 If a man is too "needy," it tends to turn women off. The way women see it, a man should be in control of himself and able to satisfy his own basic needs. After all, how is he supposed to provide for somebody else if he can't manage himself?
 
 It's not that male pursuit is a turn-off to women (assuming they are interested in the man), but they want to see that the man can pursue strongly while staying grounded. The polarity evaporates when he keeps reaching without satisfaction, loses control of himself, or makes the woman responsible for regulating his emotions.
-
 # Twin Flames?
 
 [NATIVE IMAGE — old source — https://substack-post-media.s3.amazonaws.com/public/images/abc295d2-f1ec-414c-83e0-c4df99fe5de3_1024x1535.png]
