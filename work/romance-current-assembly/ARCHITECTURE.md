@@ -4,11 +4,12 @@
 
 Indexes the current private Romance reconstruction. This graph is a visual recovery/control surface, not prose authority. Current explicit Joel corrections and the relevant `state/ROMANCE-*.md` records outrank the graph if a conflict is ever found.
 
-Current materialized master: `work/romance-current-assembly/current-master.md` SHA-256 `dbbc02fde8330045a945a45d51b12d87ed386167958e7c9870852caf51c479ff`.
-Current reader-visible boundary SHA-256: `fd47cad5825ab8f3bafd810c4c0b7e0a817edff40bd802edf66dac7247b6412e` (18,248 words).
-Current whole-article cold audit: `state/ROMANCE-POST-PANGRAM-REPAIR-COLD-AUDIT-2026-08-16.md`.
-Final certification credit-block record: `state/ROMANCE-FINAL-PANGRAM-R3-CREDIT-BLOCK-2026-08-16.md`.
-Whole-article Pangram overlay for the earlier 18,357-word boundary: `state/ROMANCE-WHOLE-ARTICLE-PANGRAM-OVERLAY-2026-08-16.md` — 92.998% Human / 7.002% AI / 0% AI-assisted, 11 High-confidence AI segments.
+Current materialized master: `work/romance-current-assembly/current-master.md` SHA-256 `2d9fdbe0d2406fad2c9778130aeebfeb4a157061fad46597d42817ad876739b1`.
+Current reader-visible boundary SHA-256: `7a972576aab329e2afa10278b598596e2acfcc4f6d56a8656785a91df6b5213c` (18,748 words).
+Current concept audit: `state/ROMANCE-CONCEPT-SETUP-AUDIT-2026-08-17.md`.
+Current whole-article cold audit: `state/ROMANCE-CONCEPT-FLOW-COLD-AUDIT-2026-08-17.md`.
+Current prose-change ledger: `state/ROMANCE-CONCEPT-FLOW-PROSE-CHANGE-LEDGER-2026-08-17.md`.
+Current task state: `state/ROMANCE-CONCEPT-FLOW-CURRENT-STATE-2026-08-17.md`.
 
 ## Article overview
 
@@ -17,13 +18,14 @@ flowchart TD
     opening["Opening: father quote, missing romance curriculum, scope"]
     love["What we mean by love: agape and eros"]
     talk["Talk before sex: making love, honesty, casual sex"]
-    should["Should you be in a relationship: readiness and loneliness"]
+    should["Should you be in a relationship: categorical readiness and loneliness"]
+    find["How to find a partner: community observation and missing courtship middle"]
     starting["Starting on the right foot: discern before attachment closes"]
-    crucible["Crucible: intimacy activates wounds and growth"]
+    crucible["Crucible: intimacy activates wounds; coercion is a separate safety case"]
     primal["Primal attraction: polarity inside safety"]
     twin["Twin Flames: de-ontologize deep connection"]
     pillars["Two Pillars: couple needs shared community"]
-    choosing["Choosing together: agreements, vows, exclusivity"]
+    choosing["Choosing together: labels, agreements, vows, exclusivity"]
     conscious["Doing it consciously: imagination and psychedelic integration"]
     already["If already in it: trust, honesty, agape, outside help"]
     children["Children: obligations that survive adult romance"]
@@ -31,7 +33,7 @@ flowchart TD
     tough["Tough Love: cultural and spiritual synthesis"]
     bear["Bear and Rumi: return to opening and stop"]
 
-    opening --> love --> talk --> should --> starting --> crucible --> primal --> twin --> pillars --> choosing --> conscious --> already --> children --> ending --> tough --> bear
+    opening --> love --> talk --> should --> find --> starting --> crucible --> primal --> twin --> pillars --> choosing --> conscious --> already --> children --> ending --> tough --> bear
 ```
 
 ## Non-linear dependencies
@@ -40,8 +42,9 @@ flowchart TD
 flowchart LR
     opening["Father sex talk"] -. "terminal callback" .-> bear["Bear sex talk"]
     love["Agape and eros"] -. "agape under pressure" .-> already["If already in it"]
-    should["Readiness question"] -. "relationship reveals readiness" .-> crucible["Crucible"]
-    starting["Idealization and attachment window"] -. "discernment tools" .-> conscious["Imagination and psychedelics"]
+    should["Readiness threshold"] -. "tested under intimacy" .-> crucible["Crucible"]
+    find["Missing courtship middle"] -. "attachment closes clarity" .-> starting["Window of clarity"]
+    starting["Idealization and ordinary evidence"] -. "discernment tools" .-> conscious["Imagination and psychedelics"]
     pillars["Shared community"] -. "outside help" .-> already["If already in it"]
     pillars -. "children need a village" .-> children["Children"]
     pillars -. "witnesses during conflict" .-> ending["Ending consciously"]
@@ -49,19 +52,92 @@ flowchart LR
     ending -. "lessons from B K H" .-> tough
 ```
 
-## Community thread drill-down
+## Card-game intimacy -> lived evidence
 
 ```mermaid
 flowchart TD
-    dyad["Problem: isolated dyad carries too much"]
-    pillars["Two Pillars: shared friends and community"]
-    conscious["Why this sounds artificial: missing communal functions"]
+    cards["Card game: deep answers and felt closeness"]
+    testimony["Self-description / predicted behavior"]
+    ordinary["Ordinary-life evidence: boredom, irritation, friends, follow-through"]
+    revisit["Revisit what each person predicted after lived experience"]
+
+    cards --> testimony --> ordinary --> revisit
+```
+
+**Control:** the game can produce real closeness and still only establish that the conversation worked. The primary evidence shift is from what someone says about themself to what ordinary life reveals. The later agreements/card-game passage is a callback, not a second primary explanation.
+
+## Readiness -> missing intermediate stage -> entanglement
+
+```mermaid
+flowchart TD
+    readiness["Readiness floor: parent the inner child and face literal parenthood"]
+    intermediate["Missing intermediate courtship stage: tenderness without immediate life-bond escalation"]
+    bundling["Bundling: imperfect historical example, not proposed solution"]
+    sex["Sex: bonding, pregnancy, emotional attachment"]
+    entangle["Cohabitation / life bond can close clarity further"]
+
+    readiness --> intermediate --> sex --> entangle
+    intermediate -. "historical example" .-> bundling
+```
+
+**Control:** `Nobody has to be completely healed` does not weaken the floor. Personal standards vary only above the stated minimum. Bundling is illustrative only; the article does not claim it caused historical pregnancy rates or should be revived.
+
+## Idealization -> healthy-adult evidence -> flaws -> crucible
+
+```mermaid
+flowchart TD
+    idealization["Idealization: spiritual depth, beautiful answers, archetypes"]
+    adult["Healthy-adult evidence: boring work, sickness, promises, ordinary follow-through"]
+    flaws["Conversation about flaws: recent conduct, dependability, repair"]
+    crucible["Crucible: what happens under actual relational heat"]
+
+    idealization --> adult --> flaws --> crucible
+```
+
+**Control:** spiritual depth may be real without establishing dependability. The bridge creates the question; `The conversation about flaws` remains the practical examination and the Crucible remains the stress test.
+
+## Crucible: mutual activation versus coercion
+
+```mermaid
+flowchart TD
+    crucible["Crucible metaphor: relational heat can expose wounds and growth edges"]
+    mutual["Mutual activation: both people can reflect, repair, and reparent"]
+    coercion["Unilateral terror/control: fear of saying no, truth, or leaving"]
+    safety["Outside people and safety before mutual-dialogue framing"]
+
+    crucible --> mutual
+    coercion --> safety
+```
+
+**Control:** coercion is not a hotter version of the mutual Crucible. It exits the mutual-communication path. The article later returns to outside help and unsafe-to-stay exceptions.
+
+## Labels -> shared meaning -> agreements -> vows
+
+```mermaid
+flowchart TD
+    labels["Labels do not create commitment"]
+    sharedMeaning["Naming can reveal whether both people imagine the same relationship"]
+    agreements["Explicit agreements and actual obligations"]
+    vows["Which vows are honest: chosen conduct versus uncontrollable future feeling"]
+
+    labels --> sharedMeaning --> agreements --> vows
+```
+
+**Control:** refusing a label does not erase responsibility. Naming also does not manufacture relational depth. The vows section already contained the action-versus-feeling distinction; the heading now matches it.
+
+## Community: seed -> primary home -> applications
+
+```mermaid
+flowchart TD
+    communitySeed["Things get tricky fast: shared social reality means people who know both partners"]
+    pillars["Two Pillars: full community mechanism and dyad load"]
+    conscious["Why this sounds artificial: consciously rebuilding missing communal functions"]
     already["If already in it: mutual friend, peer counselor, therapist, group"]
     children["Children: stability should not rise and fall with romance"]
-    ending["Ending: friends can witness and mediate rather than take sides"]
+    ending["Ending: friends can witness and mediate rather than merely take sides"]
     tough["Tough Love: sealed private dyad creates conditions for pathology"]
 
-    dyad --> pillars
+    communitySeed -. "primary explanation" .-> pillars
     pillars --> conscious
     pillars --> already
     pillars --> children
@@ -69,80 +145,85 @@ flowchart TD
     pillars --> tough
 ```
 
+**Control:** the early seed does not repeat Two Pillars. It only establishes the meaning of shared reality before later sections rely on it.
+
+## Psychedelic intimacy -> warning -> state-dependent learning -> sober evidence
+
+```mermaid
+flowchart TD
+    altered["Psychedelic / MDMA intimacy can feel extraordinarily real"]
+    warning["Warning before attraction: MDMA changes felt safety, love, openness and connection; consent cannot be negotiated there"]
+    stateDependent["State-dependent understanding may not transfer automatically"]
+    sober["Sober test: non-combative communication and ordinary-life functioning"]
+
+    warning --> altered --> stateDependent --> sober
+```
+
+**Control:** the warning appears before the positive possibilities. The section does not offer an imagined safe procedure for getting high and beginning a relationship. The later Key/iboga and MDMA-party material tests whether intimacy survives ordinary sober life.
+
+## Honesty / privacy / timing thread
+
+No new generic framework was inserted because the continuous article already establishes the needed distinctions in place:
+
+- talk before sex and disclose what is known/unknown;
+- privacy can constrain what is told to friends;
+- separate confidants can create one-sided echo chambers;
+- labels and agreements establish shared meaning;
+- excess honesty can itself cause damage;
+- radical honesty should be mutually prioritized rather than imposed;
+- later public truth-telling depends on what happened and why disclosure is occurring.
+
+This remains a distributed thread rather than a single doctrinal section.
+
 ## Current authority status
 
 - **Opening:** Aug. 15 direct owner-final opening is materialized.
-- **Doing it consciously / Psychedelics:** Aug. 16 approved boundary is materialized.
-- **If you're already in it:** Aug. 16 direct owner-final rewrite is materialized and owner-reported fully Human / High confidence.
+- **Talk:** preserved. Earlier detector-driven rewrite failed badly and is superseded; no current semantic defect justifies another rewrite.
+- **Casual/situationship:** prior text remains intact except the Aug. 17 authorized labels/shared-meaning correction. Regression test proves the rest of the section is unchanged after masking that replacement.
+- **Should you be in a relationship:** Aug. 17 categorical two-parenthood readiness floor is materialized; later Crucible standards explicitly remain above that minimum.
+- **How to find a partner:** sourced bundling example added only as an imperfect historical illustration of the missing intermediate stage.
+- **Starting on the right foot:** card-game closeness is now explicitly separated from ordinary-life evidence; community gets an early shared-reality seed; idealization gets an ordinary-dependability bridge.
+- **Crucible:** unilateral terror/control is now explicitly outside the mutual-triggering/growth path.
+- **Primal attraction:** manually owner-corrected architecture and claims remain. Current detector uncertainty is not by itself a semantic defect.
+- **Twin Flames:** preserved as central Joel worldview, not moved to an appendix.
+- **Two Pillars:** remains the full explanatory home for community mechanisms.
+- **Choosing together / vows:** labels -> shared meaning -> agreements -> conduct-versus-feeling vows route is explicit; heading is now `Which marriage vows are honest?`.
+- **Doing it consciously / Psychedelics:** MDMA warning now precedes positive altered-state material; state-dependent-learning and sober-transfer test remain intact.
+- **If you're already in it:** Bee door passage explicitly preserves that she lied while adding possible mental-illness context; existing honesty/privacy qualification remains.
 - **Children:** current owner-final co-parenting / stepchildren / Bear / village function is materialized; reconstruction-only child speech is excluded.
-- **Ending consciously / After leaving / What I gained:** direct owner-final source chain, previously owner-reported all green. Preserve unless a genuine semantic/factual defect is found.
-- **Primal attraction:** manually owner-corrected architecture and claims. Some exact Desire wording was assistant-realized, but current section was owner-reviewed. Preserve unless a real thought defect emerges.
-- **Tough Love:** corrected Aug. 16 direct owner-final section is materialized and owner-reported fully Human / High confidence.
-- **Terminal close:** Bear/Rumi is the only terminal prose before Subscribe.
+- **Ending consciously / After leaving / What I gained:** Aug. 17 owner correction to After leaving is materialized; self-contribution and ex-perspective/internal-conflict route preserved without automatic demonization.
+- **Tough Love / terminal close:** owner-controlled synthesis remains; Bear/Rumi is the only terminal prose before Subscribe.
 
-## Post-Pangram repair/disposition overlay
+## Detector evidence and status
 
-The 11 red segments came from the prior reader-visible SHA `99c803c7eda079582a8ba76b6524dcf726ece42e44e8f85796438b929594ea40`; they are not labels on the current boundary.
+The current 18,748-word reader-visible boundary has **not** been Pangram-certified.
 
-```mermaid
-flowchart LR
-    talk["1 Talk to Casual boundary"] --> preserve1["Preserve: mixed authority"]
-    slow["2 to 4 Slow and Turtles"] --> repaired1["Repaired: owner recovery and local cut"]
-    primal["5 to 6 Primal"] --> preserve2["Preserve: owner-corrected thought"]
-    pillars["7 to 8 Two Pillars"] --> repaired2["Repaired: thesis recaps removed"]
-    vows["9 Sexual exclusivity history"] --> preserve4["Preserve: prior objection conflated social and sexual monogamy"]
-    ending["10 to 11 Ending"] --> preserve3["Preserve: owner-final source chain"]
-```
+Manual Pangram 4.0 PDFs supplied by Joel correspond to the immediately earlier 18,248-word split boundary:
 
-### Talk / Casual
-No change. Detector segment crossed from current Talk into locked Casual; no live coherence defect requires rewriting it.
+- Part 1: 11,506 words, 92.5% Human / 7.5% AI, with High-confidence block localization.
+- Part 2: 6,742 words, 98.9% Human / 1.1% AI, with High-confidence block localization.
+- A separate 574-word Primal diagnostic returned 54% AI / 46% Human and exposed alternating red/green blocks.
 
-### Slow / Turtles
-Repaired for fidelity and flow.
-- `If slow isn’t realistic for you` is restored from the Aug. 14 owner-recovery r27 source pool, previously 100% Human on Pangram 4.
-- Owner-final Gandarussa wording is retained exactly. `Gandarussa` now links to Mark Wilson, `A Male Contraceptive Pill for Indonesia?`, *The Diplomat* (2013), which reports Prajogo's >20-year research program, clinical trials beginning in 2008, >500 male participants, one reported pregnancy, few reported side effects, and reported return of fertility after one month off treatment. The link is offered so readers can inspect the evidence; do not replace Joel's wording with assistant-generated risk language.
-- Separate anti-HIV evidence exists, but it is not being inserted into this contraception paragraph. Published work reports in-vitro anti-HIV activity from *J. gendarussa* extracts/constituents. Do not translate this into a clinical HIV-treatment claim without a separate owner decision.
-- `Turtles` removes only generic/meta aftercare; substantive sex-fit claims remain.
+These GUI PDFs are useful localization evidence but are not classifications of the current hash.
 
-### Primal
-No change. The intended topology remains safety/closeness → Muses/Directors and role flexibility → gendered desire channels → Not A Performance → Fantasy → cervical/whole-body culmination. Detector symmetry alone is not a semantic defect.
+The repository-secret API route currently reaches Pangram but POST submission fails with HTTP 401 `Invalid API key`. Joel has contacted Pangram support. Do not launch duplicate paid work while this credential issue remains unresolved.
 
-### Two Pillars
-Repaired for overcompletion: thesis recap and generic `Community isn’t magic either` framing removed; final close reduced to the unique lifetime-love claim.
-
-### Sexual exclusivity history
-**Previous assistant factual objection withdrawn.** It conflated socially monogamous marriage/pair-bonding with sexual monogamy. The article explicitly distinguishes them. Evidence that one-spouse marriage or long-term pair bonds are ancient does not rebut the history of strict sexual exclusivity.
-
-Relevant evidence supports keeping the distinction visible:
-- ancient Rome could impose monogamous marriage while permitting male extramarital sex;
-- cross-cultural work reports substantial extra-pair sex within socially recognized pair bonds, including formally or informally sanctioned arrangements in some societies;
-- partible-paternity systems in lowland South America can institutionalize multiple sexual partners/cofathers within primary social relationships;
-- modern ethnographic work explicitly warns against assuming the Western companionate-marriage ideal of marital sexual fidelity is universal.
-
-The current paragraph remains owner-controlled and is not to be replaced by analysis of social monogamy. A future source-linking pass may add citations specifically about sexual exclusivity if useful, but no substantive rewrite is authorized by the prior research.
-
-### Ending / After leaving
-No change. Owner-final and previously all-green; detector segment crossed the heading and does not justify replacing the chain.
-
-## Final certification status
-
-The current 18,248-word boundary passed the two whole-article cold audits and was registered as experiment `romance-current-master-visible-final-r3-2026-08-16`.
-
-Workflow run `31952964278` passed its verification job (`95179183840`) but the detector job (`95179214894`) received Pangram HTTP 402 `Insufficient credits` at task submission. The runner durably recorded both the call reservation and submit failure. No r3 result file exists, and no final detector classification was obtained.
-
-Do not register another experiment or duplicate the request. Once credits are replenished, confirm the r3 result file still does not exist and re-run failed detector job `95179214894` (or failed jobs for run `31952964278`).
+Historical whole-article Pangram records remain evidence for their exact prior hashes only; they do not transfer to this boundary.
 
 ## Protected placement rules
 
 1. Do not move or delete a section merely because a nearby detector span is red. Check this map and article-wide architecture first.
 2. Repeated people/concepts are not duplication when they perform different jobs.
 3. Before deleting or relocating prose, identify every job/dependency and destination; orphaned function blocks the edit.
-4. New owner-final topology must update this map in the same change as assembly authority.
+4. New owner-final topology must update this map alongside assembly authority.
 5. A mismatch between this map and materialized master is explicit assembly drift, not permission to reinterpret authority.
 6. Older surviving source is not automatically current owner-final prose; current owner correction controls.
 7. A detector segment crossing a heading/authority boundary must be split by article function before rewrite.
 8. Do not substitute evidence about **social monogamy** for evidence about **sexual monogamy / sexual exclusivity**.
+9. The categorical readiness floor may not be softened into an individualized gradient.
+10. The Bee door event remains a lie; explanatory context may not erase the behavior.
+11. MDMA warning stays before attractive altered-state material and may not be converted into a supposed safe-use procedure.
 
 ## Current next step
 
-Replenish Pangram credits, confirm no r3 result exists, then re-run failed detector job `95179214894`. Inspect the resulting exact-boundary evidence before any further editorial action. No further prose change is currently justified while certification is credit-blocked.
+Use the manual Pangram GUI only on the stable current boundary while the API key problem is unresolved. Prefer full current Part 1 / Part 2 boundaries for article-level localization; use focused PDFs only to understand a flagged region. Do not rewrite Primal or Talk unless detector evidence and an independent semantic/coherence review identify a faithful repair.
