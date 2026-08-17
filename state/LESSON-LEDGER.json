@@ -579,6 +579,17 @@
       "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
       "source_ref": "working-tree",
       "source_sha256": "4d866526655175cf2094e7bed727d2e8ec459db27aa1a9d6e220b5c23ae1d8a0"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Live Pangram GUI evidence showed that a public detector-like input can masquerade as authenticated access and that a post-click timeout must block automatic identical resubmission.",
+      "id": "L-eed85f4ec6-01",
+      "promoted_to": [],
+      "reason": "This is project-specific Browserbase/Pangram integration safety evidence now enforced in code, regression tests, the runbook, and recovery state; it does not change the transferable editorial or detector-science lessons.",
+      "recorded_at_utc": "2026-08-17T21:09:11.811035+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "eed85f4ec6961ba2d04a5704bfc719cf94cf401f62dd53ef10353e4633155d2a"
     }
   ],
   "schema_version": 1
