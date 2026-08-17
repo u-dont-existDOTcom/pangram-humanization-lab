@@ -69,22 +69,35 @@ class PangramClient:
             raise PangramError("Pangram returned non-object JSON")
         return obj
 
-    def probe_auth(self) -> None:
-        """Verify the current async external API without creating a billable task."""
+    def probe_connectivity(self) -> None:
+        """Check async task-API reachability without creating a billable task.
+
+        An invented task id cannot prove that the supplied API key is accepted for
+        task submission. Pangram can return 404 here even when a subsequent POST
+        rejects the same key with HTTP 401.
+        """
         url=f"{self.base_url}/task/00000000-0000-0000-0000-000000000000"
         try:
             response=self.transport.request("GET",url,headers=self._headers(False),body=None)
         except (OSError, urllib.error.URLError, TimeoutError) as exc:
-            raise PangramError(f"Pangram auth probe network failure: {exc}") from exc
+            raise PangramError(f"Pangram connectivity probe network failure: {exc}") from exc
         status=int(response.get("status",0))
         if status in {200,403,404}:
-            print(f"[pangram] auth probe reached task API (HTTP {status}); no billable task created",flush=True)
+            print(
+                f"[pangram] connectivity probe reached task API (HTTP {status}); "
+                "authentication not established; no billable task created",
+                flush=True,
+            )
             return
         if status == 401:
-            raise PangramError("Pangram API key rejected (HTTP 401)")
+            raise PangramError("Pangram API key rejected by connectivity probe (HTTP 401)")
         if status == 402:
             raise PangramError("Pangram account has insufficient credits (HTTP 402)")
-        raise PangramError(f"Unexpected Pangram auth-probe HTTP {status}: {response.get('json',{})}")
+        raise PangramError(f"Unexpected Pangram connectivity-probe HTTP {status}: {response.get('json',{})}")
+
+    def probe_auth(self) -> None:
+        """Backward-compatible alias for the non-billable connectivity probe."""
+        self.probe_connectivity()
 
     def _get_with_retry(self, url: str) -> dict:
         delay = 1.0
