@@ -55,8 +55,8 @@ Owner accepts these Anami-derived ideas for integration, subject to article cohe
 - Joel thinks many men struggle to know how much a woman loves the man himself versus the provision/protection/competence function that helped attract her.
 - Do not flatten this into “provision should play no role.” Provider/protector qualities may genuinely be part of attraction, just as beauty/sexuality can be part of male attraction.
 - Governing question: **What makes me desirable is not the same question as what makes me loved when I temporarily stop being desirable in that particular way.**
-- Bee’s line “I would rather be with you in the forest than with any other man in a mansion” strongly affected Joel because it answered this fear. Current article already uses the line in Anti-PTSD; if moved to the provider passage, retain a functional callback rather than duplicate it mechanically.
-- Bee knee memory: Bee gave Joel shoes to try that did not fit; after wearing them about a day, Joel’s knee was badly affected for around a month. Bee nursed him while also being incredulous because the injury seemed implausible; Joel found it implausible too. Use as lived evidence of temporary role reversal/care without overclaiming shoe causality.
+- Bee’s line “I would rather be with you in the forest than with any other man in a mansion” did not merely “hit hard”: **Joel identifies this as what made him fall in love with Bee**, because it directly answered his fear about whether a woman would love him apart from provision/status. Current article already uses the line in Anti-PTSD; if moved to the provider passage, retain a functional callback rather than duplicate it mechanically.
+- Bee knee memory: Bee gave Joel shoes to try that did not fit; after wearing them about a day, Joel’s knee was badly affected for around a month. Bee nursed him **somewhat reluctantly**. She pushed him somewhat toward thinking the problem might be in his head or not as severe as he felt. Joel can understand a possibly good intention because the mechanism seemed implausible to him too, but it felt dismissive and may also have reflected what she wanted to believe. Do not rewrite this as simple devoted nursing or simple neglect; the mixed response is the point.
 - Bee also had a prior boyfriend who was broke and badly unstable; she supported him for a period and later blamed herself for staying through it. Joel agrees. Distinction: helping a partner through temporary incapacity is different from becoming a permanent support system for someone who will not take responsibility.
 - Some women are “fixer types”; provision/protection attraction is not one universal female pattern.
 
@@ -65,6 +65,7 @@ Owner accepts these Anami-derived ideas for integration, subject to article cohe
 - Concern: because provider/protector is often coded masculine, an income/status reversal can become a relationship-rank dynamic; a woman can pull a man into a subordinate/effeminated role if she treats higher earnings/competence as proof she should dominate or manage him, and then resent the diminished polarity.
 - Mirror guardrail: a man must not use polarity language to demand that a competent/successful woman shrink herself so he can avoid his own insecurity.
 - Empirical guardrail: female-breadwinner outcomes are culturally contingent; current research supports gender-script/gender-threat mechanisms rather than a universal rule that female earnings harm relationships.
+- **Duplication guardrail:** do not add this as a separate generic “boss babe” doctrine. Current `Muses & Directors` already carries the functional problem through `Micromanaging everything is totally different and not attractive`, `Let me do it`, and the man feeling useless; `Not A Performance` already carries strong-woman/invitational polarity. Income/status should be a compact extension or concrete example inside that existing architecture, not another explanation of female control.
 
 ### Women’s relationship insecurities
 Owner wants a concise thread including:
@@ -88,8 +89,9 @@ Owner wants a new/expanded passage, likely after `## The Queen of Orgasms` and b
 
 Required elements:
 - Joel is Buddhist; do **not** claim the early Buddha taught tantric/cervical sex as a Buddhist path.
+- Use **monastics**, not `monks`, when referring to the ordained path generically; `monks` is too male-specific when nuns are also included.
 - Early texts do show substantial lay awakening: DN 16 reports more than 50 lay non-returners, 96 once-returners, and 510 stream-enterers at Nādikā.
-- SN 55.24 Sarakāni is useful as a colorful additional example: Sakyans complain, effectively, “Who can’t become a stream-enterer these days?” after the Buddha declares Sarakāni a stream-enterer despite his drinking; the Buddha defends the declaration.
+- SN 55.24 Sarakāni is useful only for the narrow colorful point that other Sakyans objected, effectively, “Who can’t become a stream-enterer these days?” after the Buddha declared Sarakāni a stream-enterer. **Do not summarize this as “the Buddha declared him a stream-enterer despite his drinking.”** The sutta reports the other Sakyans accusing Sarakāni of being weak in the training and drinking; their accusation is part of the dispute, not neutral narrator voice. Joel remembers a commentary associated with Sujato’s translation arguing that Sarakāni’s drinking reputation was somewhat slanderous/exaggerated; that exact commentary source should be recovered before making the stronger historical claim in publication prose. The article does not need Sarakāni as evidence that regular intoxication is compatible with stream entry. Joel’s doctrinal point is the opposite: regular intoxicant use that reduces mindfulness/ethics is incompatible with the stream-entry standard. Keep the passage focused on the Sakyans’ disbelief that awakening had become so common.
 - AN 4.55: Nakulapitā and Nakulamātā ask how to remain together in present/future lives; Buddha tells them to match in faith, ethical conduct, generosity, and wisdom.
 - Joel explicitly wants this wording preserved in the article:
 
@@ -97,8 +99,9 @@ Required elements:
 
 Treat this as Joel’s preferred quotation wording; link AN 4.55. Do not silently substitute another translation.
 - Insert the Brad & Pam Keene BatGap YouTube video directly in this spiritual-sex passage: https://www.youtube.com/watch?v=Li--FKwJu0Q
-- Independent chapter metadata verifies `Kundalini Complete` around 00:48:47 and `The Power of Sexual Experience and Spiritual Practice` around 00:52:11. Gemini/user-provided summary gives more detailed intercourse/cosmic-light description; verify the actual video/transcript before asserting precise mechanics in publication prose.
-- Frame Brad/Pam’s enlightenment/Kundalini interpretation as their report, not as independently certified attainment or proof of a cervical-sex mechanism.
+- Owner has personally watched the relevant passage and confirms Pam describes the Kundalini-completion/cosmic-light experience during intercourse, including the beam/light/Milky-Way material. Those visual mechanics are **not the main article point** and need not be recited merely because they are vivid.
+- Governing Brad/Pam function: Pam reports a durable higher-self/universal-consciousness awakening in connection with their sexual/spiritual practice, and later helped/taught Brad toward awakening as well. Frame these as Brad and Pam’s reports/interpretations, not as externally certified attainment or proof of a cervical-sex mechanism.
+- The useful article claim is that some couples explicitly experience marriage/sexual intimacy as a genuine spiritual path and report durable nondual/awakening shifts—not that one specific Kundalini phenomenology is required.
 
 ## Research guardrails recorded 2026-08-17
 
@@ -112,10 +115,10 @@ Treat this as Joel’s preferred quotation wording; link AN 4.55. Do not silentl
 ## Proposed article destinations (not yet approved prose)
 
 1. `Talk about making love before you do it`: Toft touch-without-agenda + Anami simmer.
-2. `Should you be in a relationship at all?` practical partnerships: provider/protector desirability versus durable love; Bee care/fixer distinction; consider moving forest/mansion quote here and retaining callback in Anti-PTSD.
+2. `Should you be in a relationship at all?` practical partnerships: provider/protector desirability versus durable love; Bee mixed/reluctant care + fixer distinction; move forest/mansion quote here as the moment Joel fell in love, then retain only a functional callback in Anti-PTSD.
 3. `Slow steady may win...`: Colombian casual-sex counterexample + Bee partner-specific/developed sexual responsiveness; replace simple “trainable” model with “developed/co-created between two people.”
 4. `When you and your partner are at different levels of maturity`: Toft girl/mother warning qualified by consensual daddy/little-girl role-play versus role capture.
 5. `Don’t make your partner your whole world`: feminine/poetic energy can come from nature/art/music/etc.; partner need not carry the whole dimension.
-6. `The Queen of Orgasms` → new spiritual bridge: lay Buddhist awakening, AN 4.55 quote, Brad/Pam Keene video, Anami sexual-spiritual practice.
-7. `Muses & Directors` / `Not A Performance`: poetry/prose; Toft/Mars-Venus listen-vs-solve; women’s insecurity double-bind; boss-babe/income-as-rank issue with explicit non-abuse and non-shrinking-success guardrails.
+6. `The Queen of Orgasms` → new spiritual bridge: lay Buddhist awakening, AN 4.55 quote, Brad/Pam Keene video, Anami sexual-spiritual practice. Sarakāni only if the narrow “awakening seemed surprisingly common” function remains useful; do not make alcohol the point.
+7. `Muses & Directors` / `Not A Performance`: poetry/prose; Toft/Mars-Venus listen-vs-solve; women’s insecurity double-bind; fold income/status rank into the **existing** micromanaging/invitational-polarity movement rather than duplicating it.
 8. Agreements/exclusivity: Toft’s attraction-to-others-as-reflex versus behavior distinction, only if it adds a function not already carried by current honesty/exclusivity material.
