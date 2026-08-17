@@ -6,3 +6,4 @@ It also didn’t exactly solve the problem. In late-eighteenth-century New Engla
 
 ---
 
+# Starting on the right foot
