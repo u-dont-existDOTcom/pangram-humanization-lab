@@ -349,7 +349,6 @@ No, I really didn’t. If you’re fawning, tell me when you can, because I can�
 
 I call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in [*Passionate Marriage*](https://www.crucible4points.com/books/passionate-marriage/). Schnarch saw marriage as a natural “people-growing process.” His idea of differentiation was learning to hold onto yourself while staying close, especially when intimacy brings anxiety and unresolved problems to the surface.
 
-
 That’s definitely what relationship has done to me.
 
 One warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other. Sometimes one person is terrorizing or controlling the other. If you're scared to say no, scared to tell the truth, or scared of what happens if you leave, don't turn that into a mutual communication exercise. Get other people involved and think about safety first.
