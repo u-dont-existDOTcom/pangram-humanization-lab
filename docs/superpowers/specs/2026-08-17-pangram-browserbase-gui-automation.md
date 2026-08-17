@@ -18,11 +18,12 @@ Automate Joel's current manual Pangram GUI workflow while the Pangram API creden
 
 Use Browserbase cloud Chromium sessions controlled by Playwright over CDP. Browserbase's REST API creates sessions and returns `connectUrl`; Browserbase Contexts persist Pangram login cookies across sessions. The runner uses the default recorded Browserbase browser context rather than launching a local browser.
 
+Browserbase resolves the project from the API key; this subsystem does not request, store, or set `BROWSERBASE_PROJECT_ID`.
+
 Environment variables:
 
 - `BROWSERBASE_API_KEY` — required.
-- `BROWSERBASE_CONTEXT_ID` — required for unattended detector runs.
-- `BROWSERBASE_PROJECT_ID` — required only when creating a new persistent Context with the bootstrap command.
+- `BROWSERBASE_CONTEXT_ID` — required for unattended detector runs; optional during bootstrap because bootstrap can create a Context using the API key alone.
 - `PANGRAM_GUI_URL` — optional override; default `https://www.pangram.com/`.
 
 No Pangram password is stored in GitHub. The initial login is performed manually in Browserbase's live debugger once, then persisted in the Context.
@@ -35,7 +36,7 @@ No Pangram password is stored in GitHub. The initial login is performed manually
 
 Behavior:
 
-1. Create a Browserbase Context if no context ID is supplied and a project ID is available.
+1. Create a Browserbase Context from the API key if no context ID is supplied.
 2. Start a Browserbase session with Context persistence enabled and keep-alive long enough for manual login.
 3. Open `https://www.pangram.com/login`.
 4. Print the Browserbase live debugger URL and Context ID.
