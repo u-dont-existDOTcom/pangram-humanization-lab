@@ -117,4 +117,6 @@ Controlling distinctions:
 - Part 1: 10,332 words; SHA-256 `3e137394f3f1694ba69069f30bfebc9afecb8540a4472e3b5532b8f11de92f54`
 - Part 2: 10,280 words; SHA-256 `9016139e285e0246bd5c8fdc4545005a294b0e7dfff79dbe9104df073cb1444d`
 
+Validation: deterministic materialization passes; full repository test suite passes. The open branch's `Lesson integrity` remains red only at the research-closeout gate, not at tests.
+
 Detector status: not yet tested on this topology. Do not transfer old Pangram labels.
