@@ -4,10 +4,11 @@
 
 Indexes the current private Romance reconstruction. This graph is a visual recovery/control surface, not prose authority. Current explicit Joel corrections and the relevant `state/ROMANCE-*.md` records outrank the graph if a conflict is ever found.
 
-Current materialized master: `work/romance-current-assembly/current-master.md` SHA-256 `2d9fdbe0d2406fad2c9778130aeebfeb4a157061fad46597d42817ad876739b1`.
-Current reader-visible boundary SHA-256: `7a972576aab329e2afa10278b598596e2acfcc4f6d56a8656785a91df6b5213c` (18,748 words).
+Current materialized master: `work/romance-current-assembly/current-master.md` SHA-256 `02ea7fec6bebbc6f28f6082dba7357d82de574eff431dfb5342429bcb3438ad1`.
+Current reader-visible boundary SHA-256: `6cb3eaa6283281c46657450988b69fbde9449a018d616a360649cf718e55803c` (18,705 words).
 Current concept audit: `state/ROMANCE-CONCEPT-SETUP-AUDIT-2026-08-17.md`.
 Current whole-article cold audit: `state/ROMANCE-CONCEPT-FLOW-COLD-AUDIT-2026-08-17.md`.
+Current owner-order Primal audit: `state/ROMANCE-PRIMAL-OWNER-ORDER-COLD-AUDIT-2026-08-17.md`.
 Current prose-change ledger: `state/ROMANCE-CONCEPT-FLOW-PROSE-CHANGE-LEDGER-2026-08-17.md`.
 Current task state: `state/ROMANCE-CONCEPT-FLOW-CURRENT-STATE-2026-08-17.md`.
 
@@ -45,6 +46,7 @@ flowchart LR
     should["Readiness threshold"] -. "tested under intimacy" .-> crucible["Crucible"]
     find["Missing courtship middle"] -. "attachment closes clarity" .-> starting["Window of clarity"]
     starting["Idealization and ordinary evidence"] -. "discernment tools" .-> conscious["Imagination and psychedelics"]
+    primal["Polarity inside safety"] -. "sacred complementary symbiosis" .-> twin["Twin Flames"]
     pillars["Shared community"] -. "outside help" .-> already["If already in it"]
     pillars -. "children need a village" .-> children["Children"]
     pillars -. "witnesses during conflict" .-> ending["Ending consciously"]
@@ -109,7 +111,40 @@ flowchart TD
     coercion --> safety
 ```
 
-**Control:** coercion is not a hotter version of the mutual Crucible. It exits the mutual-communication path. The article later returns to outside help and unsafe-to-stay exceptions.
+**Control:** coercion is not a hotter version of the mutual Crucible. It exits the mutual-communication path. The article later returns to outside help and unsafe-to-stay exceptions. **Open source-precision issue:** the current introductory description of Schnarch still overgeneralizes `traditional therapy` and frames relationships as `designed to force` growth more teleologically than recovered primary Crucible materials warrant. No claim correction is materialized without Joel's approval.
+
+## Maturity: complementarity versus permanent caregiving
+
+```mermaid
+flowchart TD
+    unequal["Problem: one person always child/patient, other always therapist/guru/dad"]
+    complement["Different strengths can be complementary"]
+    flip["Healthy roles can flip: teacher one day, student the next"]
+    defaultCare["If one becomes default caregiver and it is taken for granted, bring in other support"]
+
+    unequal --> complement --> flip --> defaultCare
+```
+
+**Control:** the current boundary removes a redundant recap saying partners cannot permanently reparent each other's inner child. That principle already lives earlier in the Crucible. Here the next necessary move after role flexibility is the consequence when flexibility disappears.
+
+## Primal attraction: restored owner subsection route
+
+```mermaid
+flowchart TD
+    premise["Safety creates room for desire and polarity"]
+    fantasy["Fantasy: turn polarity up inside real consent/safety"]
+    queen["Queen of Orgasms: intense embodied polarity"]
+    muses["Muses & Directors: ordinary-life complementarity and direction"]
+    performance["Not A Performance: roles remain invitational, not identity costumes"]
+    desire["Desire expressed differently: need, usefulness, grounded pursuit"]
+    twin["Twin Flames: broader sacred complementary symbiosis"]
+
+    premise --> fantasy --> queen --> muses --> performance --> desire --> twin
+```
+
+**Control:** this is the recovered direct-owner/no-yellow subsection order. The current reconstruction had drifted to Muses → Desire → Not A Performance → Fantasy → Queen. The current 18,705-word boundary restores owner order while retaining the exact current prose in every subsection. The historical `What I'm Not Saying` caveat is not duplicated here because its unique couple-needs-community function is already carried once by `Two Pillars Don't Hold The Roof Up` after the Twin Flames branch.
+
+**Open source-precision issue:** the Queen paragraph accurately points to Komisaruk/Whipple evidence for vaginal-cervical sensation/orgasm and a vagus-mediated spinal-cord-bypass pathway, but the owner's sentence `That laboratory evidence establishes the uniqueness of the phenomenon` is broader/vaguer than the experiment itself. No claim-scope change is materialized without Joel's approval.
 
 ## Labels -> shared meaning -> agreements -> vows
 
@@ -151,8 +186,8 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    altered["Psychedelic / MDMA intimacy can feel extraordinarily real"]
     warning["Warning before attraction: MDMA changes felt safety, love, openness and connection; consent cannot be negotiated there"]
+    altered["Psychedelic / MDMA intimacy can feel extraordinarily real"]
     stateDependent["State-dependent understanding may not transfer automatically"]
     sober["Sober test: non-combative communication and ordinary-life functioning"]
 
@@ -182,33 +217,34 @@ This remains a distributed thread rather than a single doctrinal section.
 - **Casual/situationship:** prior text remains intact except the Aug. 17 authorized labels/shared-meaning correction. Regression test proves the rest of the section is unchanged after masking that replacement.
 - **Should you be in a relationship:** Aug. 17 categorical two-parenthood readiness floor is materialized; later Crucible standards explicitly remain above that minimum.
 - **How to find a partner:** sourced bundling example added only as an imperfect historical illustration of the missing intermediate stage.
-- **Starting on the right foot:** card-game closeness is now explicitly separated from ordinary-life evidence; community gets an early shared-reality seed; idealization gets an ordinary-dependability bridge.
-- **Crucible:** unilateral terror/control is now explicitly outside the mutual-triggering/growth path.
-- **Primal attraction:** manually owner-corrected architecture and claims remain. Current detector uncertainty is not by itself a semantic defect.
+- **Starting on the right foot:** card-game closeness is explicitly separated from ordinary-life evidence; community has an early shared-reality seed; idealization has an ordinary-dependability bridge.
+- **Crucible:** unilateral terror/control remains explicitly outside the mutual-triggering/growth path; Schnarch attribution precision remains open.
+- **Maturity:** redundant 43-word reparenting recap removed; complementarity now flows directly into the default-caregiver consequence.
+- **Primal attraction:** direct-owner/no-yellow subsection order restored without rewriting the current owner prose. The current red detector windows belonged to the prior 18,748-word order and do not transfer to this boundary.
 - **Twin Flames:** preserved as central Joel worldview, not moved to an appendix.
-- **Two Pillars:** remains the full explanatory home for community mechanisms.
-- **Choosing together / vows:** labels -> shared meaning -> agreements -> conduct-versus-feeling vows route is explicit; heading is now `Which marriage vows are honest?`.
-- **Doing it consciously / Psychedelics:** MDMA warning now precedes positive altered-state material; state-dependent-learning and sober-transfer test remain intact.
-- **If you're already in it:** Bee door passage explicitly preserves that she lied while adding possible mental-illness context; existing honesty/privacy qualification remains.
+- **Two Pillars:** remains the full explanatory home for community mechanisms, including the caveat historically duplicated inside Primal.
+- **Choosing together / vows:** labels → shared meaning → agreements → conduct-versus-feeling vows route is explicit; heading is `Which marriage vows are honest?`.
+- **Doing it consciously / Psychedelics:** MDMA warning precedes positive altered-state material; the current 18,748-word GUI boundary classified the full psychedelic region Human/High.
+- **If you're already in it:** Bee door passage explicitly preserves that she lied while adding possible mental-illness context; current long-boundary GUI evidence classified it Human/High.
 - **Children:** current owner-final co-parenting / stepchildren / Bear / village function is materialized; reconstruction-only child speech is excluded.
-- **Ending consciously / After leaving / What I gained:** Aug. 17 owner correction to After leaving is materialized; self-contribution and ex-perspective/internal-conflict route preserved without automatic demonization.
+- **Ending consciously / After leaving / What I gained:** Aug. 17 owner correction remains materialized; the current 18,748-word GUI boundary classified the long Ending/After leaving region Human/High despite its isolated prior AI/humanizer label.
 - **Tough Love / terminal close:** owner-controlled synthesis remains; Bear/Rumi is the only terminal prose before Subscribe.
 
 ## Detector evidence and status
 
-The current 18,748-word reader-visible boundary has **not** been Pangram-certified.
+The current **18,705-word** reader-visible boundary has not yet been Pangram tested.
 
-Manual Pangram 4.0 PDFs supplied by Joel correspond to the immediately earlier 18,248-word split boundary:
+The immediately previous exact 18,748-word GUI boundary was tested manually in two Pangram 4.0 halves:
 
-- Part 1: 11,506 words, 92.5% Human / 7.5% AI, with High-confidence block localization.
-- Part 2: 6,742 words, 98.9% Human / 1.1% AI, with High-confidence block localization.
-- A separate 574-word Primal diagnostic returned 54% AI / 46% Human and exposed alternating red/green blocks.
+- Part 1: 9,377 words; 94.4% Human / 5.6% AI / 0 assisted.
+- Part 2: 9,371 words; 94.1% Human / 5.9% AI / 0 assisted.
+- Durable report: `state/ROMANCE-PANGRAM-GUI-18748-2026-08-17.md`.
 
-These GUI PDFs are useful localization evidence but are not classifications of the current hash.
+The prior GUI evidence identified a 43-word maturity recap (now removed), several Primal red blocks (now reordered using recovered owner architecture rather than rewritten), a 97-word Crucible opening that remains open for source-precision correction, a 58-word Medium-confidence Queen evidence sentence that remains open for source precision, and the stable mixed Talk/Casual boundary.
 
-The repository-secret API route currently reaches Pangram but POST submission fails with HTTP 401 `Invalid API key`. Joel has contacted Pangram support. Do not launch duplicate paid work while this credential issue remains unresolved.
+Do not transfer any prior red label to the 18,705-word boundary after topology changed.
 
-Historical whole-article Pangram records remain evidence for their exact prior hashes only; they do not transfer to this boundary.
+The direct Pangram API credential route remains unreliable; the Browserbase/Playwright GUI automation is implemented on a separate tooling branch but is not live-certified until a real persistent Pangram login Context is supplied and smoke-tested.
 
 ## Protected placement rules
 
@@ -217,7 +253,7 @@ Historical whole-article Pangram records remain evidence for their exact prior h
 3. Before deleting or relocating prose, identify every job/dependency and destination; orphaned function blocks the edit.
 4. New owner-final topology must update this map alongside assembly authority.
 5. A mismatch between this map and materialized master is explicit assembly drift, not permission to reinterpret authority.
-6. Older surviving source is not automatically current owner-final prose; current owner correction controls.
+6. Older surviving source is not automatically current owner-final prose; current owner correction controls. When an explicit owner-final architecture survives and later reconstruction silently changed it, recover the owner architecture before rewriting its prose.
 7. A detector segment crossing a heading/authority boundary must be split by article function before rewrite.
 8. Do not substitute evidence about **social monogamy** for evidence about **sexual monogamy / sexual exclusivity**.
 9. The categorical readiness floor may not be softened into an individualized gradient.
@@ -226,4 +262,4 @@ Historical whole-article Pangram records remain evidence for their exact prior h
 
 ## Current next step
 
-Use the manual Pangram GUI only on the stable current boundary while the API key problem is unresolved. Prefer full current Part 1 / Part 2 boundaries for article-level localization; use focused PDFs only to understand a flagged region. Do not rewrite Primal or Talk unless detector evidence and an independent semantic/coherence review identify a faithful repair.
+Resolve the two claim-scope questions that cannot be silently edited: the Schnarch/Crucible attribution and the Queen-of-Orgasms laboratory-evidence sentence. Then materialize any owner-approved correction, run two literal cold audits, and use the current line-preserved Part 1/Part 2 boundaries for the next Pangram GUI measurement. Do not rewrite direct owner Primal prose solely to chase the prior detector windows.
