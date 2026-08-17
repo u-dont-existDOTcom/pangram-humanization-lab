@@ -612,6 +612,17 @@
       "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
       "source_ref": "working-tree",
       "source_sha256": "4c282c160e570e80e6536dbc268745f6cbf888e7b3ed680f1846b1370067e7d3"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Repeated ephemeral API-key prompts are no longer an acceptable Browserbase credential path for this task",
+      "id": "L-e3320d373f-01",
+      "promoted_to": [],
+      "reason": "This is an owner-specific execution constraint preserved in the Browserbase state handoff; it does not change the repository Pangram or humanization lesson corpus.",
+      "recorded_at_utc": "2026-08-17T22:02:57.817802+00:00",
+      "source_path": "state/PANGRAM-GUI-BROWSERBASE-CURRENT-STATE-2026-08-17.md",
+      "source_ref": "working-tree",
+      "source_sha256": "e3320d373fb52470e50c458615e71a111225ccae438902ccac66c93c2ca5122d"
     }
   ],
   "schema_version": 1

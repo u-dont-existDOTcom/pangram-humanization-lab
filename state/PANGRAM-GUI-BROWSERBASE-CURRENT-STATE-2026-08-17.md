@@ -134,6 +134,8 @@ Live evidence on 2026-08-17 established the following without exposing or storin
 - the owned stale session was explicitly released through Browserbase and reached `COMPLETED`;
 - bootstrap now keeps the Playwright connection open for the manual-login wait but sets `keepAlive: false`, making disconnect/close terminate the session; regression coverage locks that lifecycle behavior;
 - a new `verify` command provides the required second-session persistence check without filling or submitting detector text.
+- after the lifecycle fix, a new bootstrap launch was canceled before API-key acceptance and before Browserbase session creation when Joel explicitly instructed Codex to stop repeated key prompts;
+- do not ask Joel to paste the Browserbase key again. A future live gate must inherit an already-provisioned `BROWSERBASE_API_KEY` through a secure execution environment or another owner-approved durable secret path without revealing the value.
 
 The fresh Context exists, but authenticated Pangram state and cross-session persistence remain **unverified**. The following are still not live-certified:
 
@@ -166,4 +168,4 @@ After that, normal detector runs can be unattended.
 
 ## Next safe action
 
-Reuse fresh Context `64614e72-db2e-40b5-b6d9-c48833bf2025` with the current API key and the non-keep-alive, tab-aware bootstrap. Do not confirm until Live View has left `/login` and shows the detector dashboard. Then run the read-only `verify` command in a second session to prove persistence. Inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should PDF provenance and full-half credit cost be assessed.
+Do not open another API-key prompt. Once `BROWSERBASE_API_KEY` is already available through an owner-approved secure execution environment, reuse fresh Context `64614e72-db2e-40b5-b6d9-c48833bf2025` with the non-keep-alive, tab-aware bootstrap. Do not confirm until Live View has left `/login` and shows the detector dashboard. Then run the read-only `verify` command in a second session to prove persistence. Inspect Pangram history for the saved 121-word SHA before deciding whether any new smoke submission is necessary; do not repeat the ambiguous attempt automatically. Only after one real report is recovered or safely measured should PDF provenance and full-half credit cost be assessed.
