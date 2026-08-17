@@ -1,6 +1,6 @@
 # Romance — Toft / Anami / owner source pool — 2026-08-17
 
-Status: owner-supplied source pool and research guardrails. The accepted functions below are now materialized in the 20,612-word Romance boundary unless explicitly marked omitted/non-promoted. Literal integration/cold-audit authority: `state/ROMANCE-TOFT-ANAMI-INTEGRATION-COLD-AUDIT-2026-08-17.md`. Current architecture: `work/romance-current-assembly/ARCHITECTURE.md`.
+Status: owner-supplied source pool and research guardrails. The accepted functions below are materialized in the current Romance candidate unless explicitly marked omitted/non-promoted. Literal integration/cold-audit authority: `state/ROMANCE-TOFT-ANAMI-INTEGRATION-COLD-AUDIT-2026-08-17.md`. Exact 20,612 GUI evidence: `state/ROMANCE-PANGRAM-GUI-20612-2026-08-17.md`. Safe repair after that scan: `state/ROMANCE-PANGRAM-20612-SAFE-REPAIR-2026-08-17.md`. Current architecture: `work/romance-current-assembly/ARCHITECTURE.md`.
 
 ## Doug Toft source
 
@@ -49,7 +49,7 @@ Materialized subject to the placements/limits in the current architecture:
 - Governing owner inference: `trainable` is not quite the right model; something developed between the two of them and appeared strongly partner/relationship specific.
 - Preserve paradox: Bee’s sexual openness/responsiveness deepened while her conscious trust in Joel was declining and she was becoming more convinced she wanted separation.
 - Exact owner memory: “I can’t stand you! but i LOVE you and I don’t know why!”
-- Owner realization: it felt like “her body knew the truth her mind didn’t want to hear.” This may not be silently strengthened into a claim that her body proved she should stay. The materialized consequence is that love/desire, conscious trust, and stay/leave judgment can move differently.
+- Owner realization: it felt like “her body knew the truth her mind didn’t want to hear.” This may not be silently strengthened into a claim that her body proved she should stay. After the 20,612 scan, the published realization keeps the distinction concrete: she was still becoming more sure she wanted to leave.
 - Owner joke retained: women may demand to know why Joel loves them while sometimes being unable to give a clear reason for their own love.
 
 ### Provider/protector desire versus durable love
@@ -65,7 +65,7 @@ Materialized subject to the placements/limits in the current architecture:
 - A woman earning more does not automatically destroy polarity.
 - Concern: because provider/protector is often coded masculine, income/status can become relationship rank; a woman can pull a man into a subordinate/effeminated role if she treats higher earnings/competence as proof she should dominate/manage him, then resent diminished polarity.
 - Mirror guardrail: a man may not use polarity language to demand that a competent/successful woman shrink herself so he can avoid his own insecurity.
-- **Materialized only as an extension of existing Muses/Not A Performance architecture.** No separate boss-babe doctrine/heading.
+- **Materialized only as an extension of existing Muses/Not A Performance architecture.** After the 20,612 scan it was tightened further so money follows directly from the existing `Let me do it`/uselessness movement. No separate boss-babe doctrine/heading.
 
 ### Women’s relationship insecurities
 Materialized as a concise double-bind thread:
@@ -74,6 +74,7 @@ Materialized as a concise double-bind thread:
 - fear of being overly dependent/needy;
 - opposite defense of becoming so independent that receiving/surrender/letting a partner lead feels dangerous.
 - Femininity is not equated with helplessness or irrationality.
+- After the 20,612 scan this was rebuilt around the lived double-bind rather than a balanced checklist, while retaining Toft’s beauty advice and Anami’s receiving function.
 
 ### Poetry / prose
 - Owner formulation: women are poetry, men are prose.
@@ -82,6 +83,7 @@ Materialized as a concise double-bind thread:
 - Artistic men may have more access to poetic/feminine mode.
 - **Not promoted:** speculative tangent that this explains greater artistic angst.
 - Owner judgment materialized: girls should have room to cultivate intuitive/poetic/feminine capacities without helplessness/chaos; boys should not be trained entirely out of the mode either.
+- After the 20,612 scan the owner line `Maybe women are poetry and men are prose.` was restored as the governing movement rather than being swallowed by a long qualification block.
 
 ## Romance as spiritual practice
 
@@ -99,6 +101,7 @@ Controlling distinctions:
 - Brad & Pam Keene BatGap YouTube object is materialized directly in the subsection: `Li--FKwJu0Q`.
 - Joel personally watched the relevant passage and confirms Pam describes Kundalini completion/cosmic-light experience during intercourse. Those visual mechanics are not the article point and are not recited merely because they are vivid.
 - Governing Brad/Pam function: Pam reports a durable higher-self/universal-consciousness awakening connected with their marital sexual/spiritual practice, and later helped/taught Brad toward awakening. These remain their reports/interpretations, not externally certified attainment or proof of one cervical-sex mechanism.
+- After the 20,612 scan the separate post-video interpretive recap was removed; the video now stops the subsection before `Muses & Directors`.
 
 ## Research guardrails / omissions
 
@@ -109,14 +112,23 @@ Controlling distinctions:
 - Female-breadwinner outcomes are culturally contingent; do not state female earnings inherently damage relationship quality or polarity.
 - Body-image research supports the attractiveness-insecurity thread, but the article does not turn that research into a mechanistic doctrine.
 
-## Current article boundary after materialization and cold audit
+## Current article boundary after the 20,612 GUI scan and safe repair
 
-- source SHA-256: `2728c77308698e8f217a5579056ece2526b627c860ed2dafbf33c44ab790d8eb`
-- reader-visible SHA-256: `32c2e69a5bc4c3b7760aab27ba690fb19ef5a98d446ed1f02dbbefb739a151cb`
-- reader-visible words: **20,612**
-- Part 1: 10,332 words; SHA-256 `3e137394f3f1694ba69069f30bfebc9afecb8540a4472e3b5532b8f11de92f54`
-- Part 2: 10,280 words; SHA-256 `9016139e285e0246bd5c8fdc4545005a294b0e7dfff79dbe9104df073cb1444d`
+Measured parent boundary:
+- 20,612 reader-visible words
+- Part 1: 10,332 words; Pangram 4.0 = **92.1% Human / 7.9% AI**
+- Part 2: 10,280 words; Pangram 4.0 = **90.2% Human / 9.8% AI**
+- exact evidence/localization: `state/ROMANCE-PANGRAM-GUI-20612-2026-08-17.md`
 
-Validation: deterministic materialization passes; full repository test suite passes. The open branch's `Lesson integrity` remains red only at the research-closeout gate, not at tests.
+Current post-repair candidate:
+- source SHA-256: `2d70fbd7e907e7943e1e38ba6dd723b5efe4feae73a8599bd5f2d17e7a2873d1`
+- reader-visible SHA-256: `10359ab2119ffbe9a8a7a4a52cd0c3216bb1a6a2c0bffbd7e66fca01287f17ce`
+- reader-visible words: **20,496**
+- Part 1: 10,236 words; SHA-256 `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`
+- Part 2: 10,260 words; SHA-256 `2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0`
 
-Detector status: not yet tested on this topology. Do not transfer old Pangram labels.
+Safe-repair authority: `state/ROMANCE-PANGRAM-20612-SAFE-REPAIR-2026-08-17.md`.
+
+Validation: deterministic materialization and focused assembly/authority/reader-visible tests pass after the final cold-audit repair.
+
+Detector status: **current 20,496-word candidate untested**. Do not transfer the 20,612 scores.
