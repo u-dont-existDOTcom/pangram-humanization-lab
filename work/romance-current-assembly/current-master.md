@@ -343,9 +343,7 @@ The strangest part was that Bee’s body kept opening more while consciously she
 
 Women are always demanding to know why I love them. Apparently they’re allowed not to know.
 
-It felt like her body knew a truth her mind didn’t want to hear. That didn’t settle whether we should stay together. It showed me that love, desire, conscious trust, and the decision to stay can move in different directions.
-
-The reverse limitation exists too: good sex doesn’t supply the rest of a relationship.
+It felt like her body knew a truth her mind didn’t want to hear. She was still becoming more sure she wanted to leave, though.
 
 At Temple University, I had a Colombian lawyer as an English/Spanish conversation partner. Eventually we became casual sex friends. We had things we liked doing together, mainly sex, but basically nothing else in common. It ended badly because she was falling in love and I wasn’t. The sexual fit was real. It didn’t create the rest of the compatibility.
 
@@ -465,9 +463,9 @@ While different maturity levels are to be expected to some degree, it can get ou
 
 Toft says, “She’s not a girl,” and “She’s not your mother.” I agree with the warning, but I’d qualify the first sentence. A lot of women enjoy a daddy/little-girl dimension with a man they trust, and I don’t see a reason to deny them that. It can be affectionate, erotic, comforting, or playful.
 
-The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself. And if I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.
+The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself.
 
-Role-play isn’t the problem. Getting trapped in the role is.
+It can run the other way too. If I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.
 
 All three women told me at some point that they felt like my patient. Which is true, I really was the one they asked about almost every medical, mental-health, and practical problem:
 
@@ -567,15 +565,15 @@ And when the married couple Nakulapitā and Nakulamātā asked the Buddha how th
 
 Marriage, sex, and household life are not automatically on the opposite side from serious spiritual development.
 
-[Kim Anami](https://kimanami.com/my-vagina-heals-everything/) goes further and treats sexual energy itself as a path into healing, creativity, worldly action, and spiritual awakening. Her work is full of her own experiences and a large body of student reports about sexuality changing health, work, money, creativity, and the rest of life.
+[Kim Anami](https://kimanami.com/my-vagina-heals-everything/) goes further and treats sexual energy itself as a path into healing, creativity, worldly action, and spiritual awakening.
 
-Her jade-egg practice is part of that. It combines pelvic-floor training, attention, arousal, and a more conscious relationship with the vagina instead of treating it like a body part that only wakes up when a partner wants sex.
+She has collected a ton of stories from students who say those practices spilled over into their health, work, money, creativity, and the rest of life.
 
-Brad and Pam Keene describe something even closer to what I mean here. Pam reports that her Kundalini completed during lovemaking and opened into a durable universal-consciousness awakening. Their marriage and sexual life became their spiritual classroom, and later she helped Brad awaken too.
+Her jade-egg practice is part of the same idea. It gives a woman a way to work with pelvic-floor strength, attention, and arousal when there isn’t a partner involved.
+
+Brad and Pam Keene are an example I really like. Pam says her Kundalini awakening completed while they were making love and became a lasting universal-consciousness awakening. She later helped Brad awaken too, so the marriage itself became part of the path.
 
 [NATIVE YOUTUBE — preserve from Substack source — videoId: Li--FKwJu0Q]
-
-What interests me is that for them the body, surrender, love, and awakening stopped being separate subjects. That is much closer to what I mean by sacred making love than treating sex as a distraction from spirituality.
 
 ## Muses & Directors
 
@@ -589,23 +587,23 @@ Key could sometimes start talking and somehow teleport me outside the galaxy. I 
 
 Bee could bring out something similar--she could be talking to me for hours on end, but instead of trying to mute her with the TV remote, I felt I was in a timeless dimension of love.
 
-Maybe women are poetry and men are prose. I’m talking about masculine and feminine modes, not claiming every woman is poetic or every man literal. Some women barely have this quality at all. Some men, especially artistic ones, have much more access to it.
+Maybe women are poetry and men are prose.
 
-This is one of the things I experience as intensely feminine: she brings me something emotionally, intuitively, or spiritually alive that I can’t reduce to a proposition. My reflex is to turn it into prose: What happened? What does it mean? What are we going to do about it? She may be showing me something before either of us can explain it.
+Of course, some women barely have that poetic quality. Men can go into it too; artistic men often live much closer to it. But it’s one of the things I experience as highly feminine. She may be feeling or seeing something before either of us can explain it, while I’m already trying to turn it into prose: What happened? What does it mean? What are we going to do about it?
 
-I think girls should have room to cultivate this capacity instead of having it trained out of them or allowed to collapse into helplessness and chaos. Boys shouldn’t be trained completely out of it either.
+I think girls should be encouraged to develop that side without either having it trained out of them or letting it turn into helplessness and chaos. Boys need access to it too.
 
-Toft’s fifty-year-marriage list sounds like a more lived-in version of the famous *Men Are from Mars, Women Are from Venus* idea. Often she wants to be heard while he wants to solve. The species-level cartoon is too neat: men complain just to be heard too, and women often want a solution. The easy question is, “Do you want me to help figure this out, or do you mostly want me to listen?”
+Toft’s fifty-year-marriage advice is basically the old *Men Are from Mars, Women Are from Venus* problem in lived form. She may want to talk and be heard while he immediately starts fixing. Men complain just to be heard too, although I think men are more often looking for a solution. The easy question is, “Do you want me to help figure this out, or do you mostly want me to listen?”
 
-Listening for the emotion underneath the words doesn’t mean switching my brain off. Emotional intensity is not permission to intimidate somebody, lie, make false accusations, or make them scared to say no. Poetry still has to survive reality.
+I can listen for the feeling without pretending every literal statement is true. If the intensity turns into intimidation, false accusations, or making somebody scared to say no, that’s the safety problem I already talked about in the Crucible.
 
-The muse gives the director his ineffable inspiration. She sees the big picture or feels something that has not become a plan yet. Then I have a chance to be useful by figuring out the details.
+Poetry still has to survive reality. The muse gives the director his ineffable inspiration. She sees the big picture or feels something that has not become a plan yet. Then I have a chance to be useful by figuring out the details.
 
 The muse can influence any decision where I ask for help, and also the decisions where she suddenly intuits that she has something important to add.
 
-Micromanaging everything is totally different and not attractive. If she is refusing to trust my judgment, or simply taking over with “Let me do it,” I start feeling useless.
+Micromanaging everything is totally different and not attractive.
 
-Money can magnify the same problem. A woman earning more than her man doesn’t automatically make her masculine or him feminine. But if “I make more money” quietly becomes “I’m the competent adult and you’re my junior,” she can end up effeminating the man and then resenting the loss of polarity. The mirror failure is him asking a successful woman to shrink herself because he can’t tolerate her competence.
+If she keeps taking over with “Let me do it,” I start feeling useless. Money can make the same thing worse. A woman earning more than her man isn’t the problem. But if it turns into, “I make more, so I’m the competent adult here,” she can effeminate him in the relationship and then wonder where the polarity went. A man can wreck it from the other side by needing a successful woman to shrink so he can feel masculine.
 
 A woman can lead wherever the man is less sure. She may know more about any particular field, even a traditionally non-feminine one. The way she leads can still preserve the polarity of roles.
 
@@ -637,9 +635,9 @@ I don’t actually think of myself as especially masculine. I step into that ene
 
 The same is true for a woman. She should not have to perform softness, helplessness, or cuteness every minute to prove she is feminine. Surrender means so much more when she could take control but prefers not to at that moment.
 
-Women can get trapped between opposite insecurities here. She may be wondering whether I still find her beautiful, whether she is too emotional or difficult, whether she makes enough logical sense, or whether she is too needy. Then she can overcorrect and decide she needs nobody, becoming so independent that receiving care or letting a man lead feels dangerous.
+Women can get pulled in two directions here. She may worry that I don’t find her beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy. Then she can overcorrect into needing nobody and make receiving care or letting a man lead feel like weakness.
 
-Toft’s advice is simpler: tell her she is beautiful, and as she ages, keep noticing new forms of beauty. Anami adds that receiving is itself a skill. A strong woman can receive pleasure, help, or direction without becoming helpless. A man can receive care without becoming a child.
+Toft’s advice after fifty years is simple: tell her she’s beautiful, and keep noticing new kinds of beauty as she ages. Anami makes the other half explicit: receiving is a skill. Letting a man help, lead, or give her pleasure doesn’t make a strong woman helpless. A man receiving care doesn’t make him a child either.
 
 We can invite these energies out of each other gently.
 
