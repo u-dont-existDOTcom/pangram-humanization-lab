@@ -45,10 +45,7 @@ def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
 
     if args.command == "bootstrap":
-        config = BrowserbaseConfig.from_env(
-            require_context=False,
-            require_project_if_context_missing=True,
-        )
+        config = BrowserbaseConfig.from_env(require_context=False)
         result = bootstrap_login(config)
         print(json.dumps(result, indent=2, sort_keys=True))
         print("Store the returned context_id as BROWSERBASE_CONTEXT_ID for future unattended runs.")
