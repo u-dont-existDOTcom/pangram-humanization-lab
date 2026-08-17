@@ -443,7 +443,7 @@ So I do believe in mutual coaching and complementarity.
 
 I could teach these women about loving and reparenting their inner child, Buddhism, meditation, and other things I understood better. They could pull me into life more, show me where I was missing people, and sometimes be the skeptic when I was seeing the best in someone and missing their hidden motives.
 
-The roles can flip, teacher one day, student the next. That’s healthy. A partner can comfort you, teach you, protect you, or carry more for a while, but they can’t permanently take over the job of reparenting your inner child. Each person still has to do that for themself, but that's easier said than done.
+The roles can flip, teacher one day, student the next. That’s healthy.
 
 Once one person has become the default caregiver and that's taken for granted, it's time to bring in other support, lest the romance collapse under the burden. Maybe the romance actually does need less intensity, maybe it becomes friendship, or maybe it ends. I can't answer that for others, and I couldn't always answer it for myself, but asking the question out loud is usually where it starts.
 
@@ -472,6 +472,32 @@ Some women may only get turned on by pathology and danger. A woman may also feel
 A lot of women want to feel that the man is dangerous in some way, but preferably in an exciting and defending way rather than threatening. Beauty and the Beast is a "tale as old as time" for a reason.
 
 The real question is whether polarity stays alive inside the safety.
+
+## Fantasy
+
+Inside real safety, people can turn the polarity dial all the way to the right.
+
+Fantasy is one of the best ways to experiment with that. Domination fantasies are common in many forms, and they enable extreme masculine-feminine polarity without actual harm, because the real person still has consent and can stop.
+
+Nobody is entitled to another person’s fantasies. They are private until the person decides to share them. When somebody does share one, it can be an extraordinary act of trust.
+
+Esther Perel makes the distinction that fantasy is play rather than a real-life request. A rape fantasy is not a request to be raped in real life.
+
+The couple can leave it in imagination or agree to bring some part of it into the room.
+
+Fantasy should also add to arousal rather than become the only possible route to it. I want to be able to enjoy the actual woman and the actual experience too.
+
+## The Queen of Orgasms
+
+Many people are not even aware of how incredible sex can be when the polarity, trust, love & safety are all where they should be. Women have shown me that the cervix can open during sex and become intensely pleasurable for both of us. In fact, after you experience cervical sex, regular sex doesn't even seem like it's really "sex" anymore. It seems more like foreplay.
+
+However, I've not yet very deeply "researched" these experiments, because "life" often got in the way, and building up to this actually takes a lot of "work" (ahem..).
+
+Women describe cervical and whole-body orgasms very differently from the ordinary ones based on building friction toward release. Instead, cervical orgasms are more like being taken over by a profound energy running through the whole body.
+
+Although the peanut gallery critics and lazy fact-checkers often cry fiction on this topic, Komisaruk and Whipple showed that cervical stimulation can produce orgasm even in women with a severed spinal cord, because the vagus nerve can carry the signal without using the spinal route that clitoral orgasms use. That laboratory evidence establishes the uniqueness of the phenomenon. Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim that these can provide days of afterglow, as well as spiritual and physical healings.
+
+[NATIVE YOUTUBE — preserve from Substack source — videoId: QqP3p_ysd84]
 
 ## Muses & Directors
 
@@ -511,16 +537,6 @@ Every respectful leader makes sure to take the other person’s ideas as serious
 
 The point is not to tally every act and force the totals to match.
 
-## Desire is expressed differently for men & women
-
-Women often show wanting directly. They ask, reach, name what they want, and ask the man to do things for them, even when they could do it themselves.
-
-Men tend to show their wanting through providing, fixing, heavy labor, or trying to become indispensable. Not because men are less needy, but their neediness partly consists of being needed. Emotionally, women express their needs more, but this also allows them to get supported more often and by a wider social net. Men, on the other hand, tend to keep their needs to themselves or put them all onto their woman, especially when it comes to the need for a confidant.
-
-If a man is too "needy," it tends to turn women off. The way women see it, a man should be in control of himself and able to satisfy his own basic needs. After all, how is he supposed to provide for somebody else if he can't manage himself?
-
-It's not that male pursuit is a turn-off to women (assuming they are interested in the man), but they want to see that the man can pursue strongly while staying grounded. The polarity evaporates when he keeps reaching without satisfaction, loses control of himself, or makes the woman responsible for regulating his emotions.
-
 ## Not A Performance
 
 I also don’t want masculinity or femininity to become an identity performance.
@@ -547,31 +563,15 @@ When a woman doesn't know how to gently invite a man to lead, she may manufactur
 
 Unfortunately, I've seen a lot of the latter.
 
-## Fantasy
+## Desire is expressed differently for men & women
 
-Inside real safety, people can turn the polarity dial all the way to the right.
+Women often show wanting directly. They ask, reach, name what they want, and ask the man to do things for them, even when they could do it themselves.
 
-Fantasy is one of the best ways to experiment with that. Domination fantasies are common in many forms, and they enable extreme masculine-feminine polarity without actual harm, because the real person still has consent and can stop.
+Men tend to show their wanting through providing, fixing, heavy labor, or trying to become indispensable. Not because men are less needy, but their neediness partly consists of being needed. Emotionally, women express their needs more, but this also allows them to get supported more often and by a wider social net. Men, on the other hand, tend to keep their needs to themselves or put them all onto their woman, especially when it comes to the need for a confidant.
 
-Nobody is entitled to another person’s fantasies. They are private until the person decides to share them. When somebody does share one, it can be an extraordinary act of trust.
+If a man is too "needy," it tends to turn women off. The way women see it, a man should be in control of himself and able to satisfy his own basic needs. After all, how is he supposed to provide for somebody else if he can't manage himself?
 
-Esther Perel makes the distinction that fantasy is play rather than a real-life request. A rape fantasy is not a request to be raped in real life.
-
-The couple can leave it in imagination or agree to bring some part of it into the room.
-
-Fantasy should also add to arousal rather than become the only possible route to it. I want to be able to enjoy the actual woman and the actual experience too.
-
-## The Queen of Orgasms
-
-Many people are not even aware of how incredible sex can be when the polarity, trust, love & safety are all where they should be. Women have shown me that the cervix can open during sex and become intensely pleasurable for both of us. In fact, after you experience cervical sex, regular sex doesn't even seem like it's really "sex" anymore. It seems more like foreplay.
-
-However, I've not yet very deeply "researched" these experiments, because "life" often got in the way, and building up to this actually takes a lot of "work" (ahem..).
-
-Women describe cervical and whole-body orgasms very differently from the ordinary ones based on building friction toward release. Instead, cervical orgasms are more like being taken over by a profound energy running through the whole body.
-
-Although the peanut gallery critics and lazy fact-checkers often cry fiction on this topic, Komisaruk and Whipple showed that cervical stimulation can produce orgasm even in women with a severed spinal cord, because the vagus nerve can carry the signal without using the spinal route that clitoral orgasms use. That laboratory evidence establishes the uniqueness of the phenomenon. Kim Anami, Diana Richardson, and other popular educators and promoters of cervical orgasms further claim that these can provide days of afterglow, as well as spiritual and physical healings.
-
-[NATIVE YOUTUBE — preserve from Substack source — videoId: QqP3p_ysd84]
+It's not that male pursuit is a turn-off to women (assuming they are interested in the man), but they want to see that the man can pursue strongly while staying grounded. The polarity evaporates when he keeps reaching without satisfaction, loses control of himself, or makes the woman responsible for regulating his emotions.
 
 # Twin Flames?
 

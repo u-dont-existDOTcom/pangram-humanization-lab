@@ -7,9 +7,9 @@
   },
   "baseline_bytes": 109480,
   "baseline_sha256": "18ed9fa6850e3a20d523b9365519ef43fa4e56398ce4e06d3743022676555edc",
-  "final_bytes": 109929,
-  "final_sha256": "2d9fdbe0d2406fad2c9778130aeebfeb4a157061fad46597d42817ad876739b1",
-  "operation_count": 35,
+  "final_bytes": 109690,
+  "final_sha256": "02ea7fec6bebbc6f28f6082dba7357d82de574eff431dfb5342429bcb3438ad1",
+  "operation_count": 37,
   "operations": [
     {
       "id": "owner-opening-2026-08-15",
@@ -284,6 +284,22 @@
       "type": "replace_exact"
     },
     {
+      "id": "gui-maturity-remove-redundant-reparenting-recap-2026-08-17",
+      "new_bytes": 0,
+      "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_bytes": 239,
+      "old_sha256": "d500db4ff406b07369d807a6dfd8859c94206f7a196bf493638a4a73480bf8b3",
+      "type": "delete_exact"
+    },
+    {
+      "id": "gui-primal-restore-owner-subsection-order-2026-08-17",
+      "new_bytes": 9995,
+      "new_sha256": "07d24dc6f0974dca443746f0bde3051682942de622038997b267cb881b79d137",
+      "old_bytes": 9995,
+      "old_sha256": "bb76083a67d8f1504e0226d27bebf4e0b7128414b83c9a97371590ef2226ef1c",
+      "type": "replace_section"
+    },
+    {
       "id": "tough-love-aug16-owner-final",
       "new_bytes": 4206,
       "new_sha256": "5616e005c6c13a0fb1e97ead076c22eab781aa69e2f6c6eba01cc75e7b3a3e20",
@@ -293,5 +309,5 @@
     }
   ],
   "schema_version": 1,
-  "spec_sha256": "df7d76f500db33b06edd54c990e03069d41e77dc6c3355da6c089b94a6ea7827"
+  "spec_sha256": "3aaa5f9f0addfb4abb364792ca3a26ea244590815c487e66a357a0b14630c7b8"
 }
