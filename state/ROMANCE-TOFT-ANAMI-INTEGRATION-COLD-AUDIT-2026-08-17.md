@@ -17,6 +17,8 @@ Pangram halves:
 
 This state supersedes the 18,702 / 18,705 working-boundary references for the integrated source pass. It does not supersede older detector evidence as historical evidence; old detector labels simply do not transfer to the new topology.
 
+Source-pool disposition is synchronized in `state/ROMANCE-TOFT-ANAMI-OWNER-SOURCE-POOL-2026-08-17.md`.
+
 ## Heading fit
 
 PASS.
@@ -175,7 +177,8 @@ TDD / assembly history:
 - deterministic replacement files and assembly operations were then added;
 - a legacy native-object regression correctly failed when the newly authorized Brad/Pam video appeared; the test was changed to preserve every legacy native marker plus exactly that authorized new video;
 - a legacy turtles exact-prose regression caught an unnecessary paraphrase; the prior wording was restored;
-- final assembly/materialization workflow passed focused assembly/authority/visible-boundary tests, materialization, deterministic second materialization, and generated-artifact commit.
+- final assembly/materialization workflow passed focused assembly/authority/visible-boundary tests, materialization, deterministic second materialization, and generated-artifact commit;
+- `Lesson integrity` ran the complete test suite successfully. Its overall red result came only from the intentional `Check changed research closeout` gate on this still-open editorial/research branch, not from a test failure.
 
 ## Largest remaining weakness
 
