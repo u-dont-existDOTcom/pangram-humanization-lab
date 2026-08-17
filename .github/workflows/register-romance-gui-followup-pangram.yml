@@ -1,0 +1,169 @@
+name: Register Romance GUI follow-up Pangram candidates
+
+on:
+  push:
+    branches:
+      - agent/romance-architecture-map-2026-08-16
+    paths:
+      - .github/workflows/register-romance-gui-followup-pangram.yml
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out exact editorial branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: agent/romance-architecture-map-2026-08-16
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: "3.12"
+
+      - name: Install and verify paid-registration controls
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest tests/test_paid_push.py tests/test_paid_dispatch.py -q
+
+      - name: Create exactly one immutable spec/request pair
+        env:
+          EXPERIMENT_ID: romance-gui-followup-r1-2026-08-17
+          AUDIT_ID: romance-gui-followup-2026-08-17
+        run: |
+          set -euo pipefail
+          git fetch origin automation/pangram-fixed-batch
+          rm -rf /tmp/romance-gui-followup-registration
+          git worktree add --detach /tmp/romance-gui-followup-registration origin/automation/pangram-fixed-batch
+
+          SPEC_REL="experiments/${EXPERIMENT_ID}.json"
+          REQUEST_REL="requests/pangram/${EXPERIMENT_ID}.json"
+          test ! -e "/tmp/romance-gui-followup-registration/${SPEC_REL}"
+          test ! -e "/tmp/romance-gui-followup-registration/${REQUEST_REL}"
+
+          SPEC_OUT="/tmp/romance-gui-followup-registration/${SPEC_REL}"
+          REQUEST_OUT="/tmp/romance-gui-followup-registration/${REQUEST_REL}"
+          mkdir -p "$(dirname "$SPEC_OUT")" "$(dirname "$REQUEST_OUT")"
+
+          python - "$SPEC_OUT" "$REQUEST_OUT" "$EXPERIMENT_ID" "$AUDIT_ID" <<'PY'
+          from __future__ import annotations
+          import hashlib
+          import json
+          import sys
+          from pathlib import Path
+
+          spec_out = Path(sys.argv[1])
+          request_out = Path(sys.argv[2])
+          experiment_id = sys.argv[3]
+          audit_id = sys.argv[4]
+
+          primal = '''A woman can lead wherever the man is less sure. She may know more about any particular field, even a traditionally non-feminine one. The way she leads can still preserve the polarity of roles.
+
+“Honey, let me help you with this,” is still sexy, but pushing him out of the way is not.
+
+She can also guide me without pretending I’m always right. “Thank you, I’ll consider that. What do you think about doing it this way?” can change my direction without turning the disagreement into a contest over who’s driving.
+
+In my experience, women often like stronger and more direct leadership from a man: “This is where I want to go. This is what I think we should do. Are you game?” She can argue with the plan, improve it, or refuse.
+
+That doesn't mean she obeys. The charge is that I offered a direction and she answered it. If I enjoy driving and she enjoys cooking, we don't have to trade jobs until the totals match. I still listen to her. Mandar obedeciendo, as the Zapatistas say.
+
+## Desire is expressed differently for men & women
+
+I notice a woman often shows she wants me by asking me for things, even little things she could do herself. My wanting often comes out as trying to be useful to her. I fix something, carry something, make a plan, or try to become indispensable. Sometimes being needed is the need.
+
+The risk is that she may tell several people what she feels and ask directly for support, while I barely admit that I need any until one woman is expected to be my whole confidant.
+
+If a man is too “needy,” it tends to turn women off. The way women see it, a man should be in control of himself and able to satisfy his own basic needs. After all, how is he supposed to provide for somebody else if he can't manage himself?
+
+It's not that male pursuit is a turn-off to women, assuming they are interested in the man, but they want to see that the man can pursue strongly while staying grounded. I can want her intensely without asking her to keep me emotionally stable while I do it.
+
+## Not A Performance
+
+I don’t walk around trying to be masculine. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, but it also didn’t make me worry that I had lost my man card. The masculine energy comes out when a woman responds to it and wants more of it from me.
+
+If I have to defend it every time I cry, hesitate, need help, or get something wrong, it has become a costume. I don't want her stuck proving she's feminine by acting soft, helpless, or cute all day either. I like her surrender because I know she could take control and sometimes chooses not to.
+
+We can ask for what brings the energy out. “Honey, how do you see this intuitively?” Or, “Can you help me think through the practical side for a minute?” She can ask me to drive because she likes how it feels when I do, not because she forgot how.
+
+That's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?
+
+When a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.
+
+Unfortunately, I've seen a lot of the latter.'''
+
+          after_owner = '''Part of that truth-telling is that a breakup can also expose things you genuinely couldn't see while you were bonded. Make sure to look at yourself as much as you look at them, to see what you honestly contributed to the problems. Try to see your ex's perspective in so far as it may have had some kernels of truth, including their own internal conflicts, rather than one-dimensionalizing them.
+
+Don’t jump straight to the conclusion that they were fake all along merely because that story makes the whole relationship easier to explain. Don’t rule it out either if it is actually the most parsimonious explanation. Seek opinions from people who aren’t heavily invested in seeing your innocence. A therapist, a pastor, or even a stranger can sometimes look at the evidence more clearly than a lifelong friend, and even the curiosity itself can be therapeutic for you.
+
+Spiritual practice during an ending is critical, but it shouldn't be about bypassing your feelings. Pray for your ex's wellbeing. Remember what was real and good, and refuse to use your pain as permission to hate them. Avoid the New Age belief that everyone is simply a mirror of you. No, that isn’t true.'''
+
+          after_candidate = '''Part of truth-telling after a breakup is admitting that the breakup itself may let you see things you genuinely couldn't see while bonded. But if all your new vision is aimed at your ex, that's suspicious. What did you honestly contribute? Which parts of her perspective were true? Sometimes what looked like one clean motive was actually her fighting with herself, and turning her into one simple thing afterward doesn't help you understand it.
+
+Maybe she really was fake all along. Sometimes that's the most parsimonious explanation. It's also a wonderfully convenient story because it explains the whole relationship at once. This is when I want someone who isn't heavily invested in my innocence—a therapist, pastor, or even a stranger who can look at the evidence without needing me to be right.
+
+Spiritual practice helps me do that without pretending I don't hurt. I can pray for my ex's wellbeing, remember what was real and good, and refuse to use my pain as permission to hate her. That doesn't mean accepting the New Age belief that everyone is simply a mirror of me. No, that isn't true.'''
+
+          spec = {
+              "format": "pangram-fixed-batch-v1",
+              "experiment_id": experiment_id,
+              "audit_id": audit_id,
+              "variants": [
+                  {
+                      "id": "PRIMAL_LIVED_ROUTE_R1",
+                      "section_id": "primal-middle",
+                      "text": primal,
+                  },
+                  {
+                      "id": "AFTER_OWNER_GUI_EXACT",
+                      "section_id": "after-leaving",
+                      "text": after_owner,
+                  },
+                  {
+                      "id": "AFTER_LIVED_ROUTE_R1",
+                      "section_id": "after-leaving",
+                      "text": after_candidate,
+                  },
+              ],
+          }
+          spec_bytes = (json.dumps(spec, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+          spec_out.write_bytes(spec_bytes)
+
+          request = {
+              "format": "pangram-paid-run-request-v1",
+              "request_id": experiment_id,
+              "spec_path": f"experiments/{experiment_id}.json",
+              "spec_sha256": hashlib.sha256(spec_bytes).hexdigest(),
+              "confirmation": "RUN_PAID_PANGRAM_FIXED_BATCH",
+          }
+          request_out.write_text(
+              json.dumps(request, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+
+          assert len(primal.split()) == 595
+          assert len(after_owner.split()) == 201
+          assert len(after_candidate.split()) == 187
+          print("primal_sha256=" + hashlib.sha256(primal.encode("utf-8")).hexdigest())
+          print("after_owner_sha256=" + hashlib.sha256(after_owner.encode("utf-8")).hexdigest())
+          print("after_candidate_sha256=" + hashlib.sha256(after_candidate.encode("utf-8")).hexdigest())
+          print("spec_sha256=" + hashlib.sha256(spec_bytes).hexdigest())
+          PY
+
+          cd /tmp/romance-gui-followup-registration
+          git config user.name "Romance Pangram Registration Actions"
+          git config user.email "romance-pangram-registration-actions@users.noreply.github.com"
+          git add "$SPEC_REL" "$REQUEST_REL"
+          test "$(git diff --cached --name-only | wc -l)" -eq 2
+          test "$(git diff --cached --diff-filter=A --name-only | wc -l)" -eq 2
+          git commit -m "experiment: register Romance GUI follow-up candidates"
+
+          BASE_SHA="$(git rev-parse HEAD^)"
+          HEAD_SHA="$(git rev-parse HEAD)"
+          PYTHONPATH="/tmp/romance-gui-followup-registration/src:/tmp/romance-gui-followup-registration" \
+            python scripts/validate_paid_push.py --base "$BASE_SHA" --head "$HEAD_SHA"
+          git push origin HEAD:automation/pangram-fixed-batch
