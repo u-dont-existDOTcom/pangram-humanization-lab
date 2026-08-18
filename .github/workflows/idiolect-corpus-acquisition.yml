@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 concurrency:
   group: idiolect-corpus-acquisition-${{ github.ref }}
@@ -48,7 +49,7 @@ jobs:
           echo "command_status=$status" >> "$GITHUB_OUTPUT"
           exit 0
 
-      - name: Print metadata-only acquisition receipt
+      - name: Build and print metadata-only acquisition receipt
         env:
           ACQUISITION_COMMAND_STATUS: ${{ steps.acquire.outputs.command_status }}
         run: |
@@ -58,10 +59,14 @@ jobs:
           from pathlib import Path
 
           path = Path('.local/idiolect-corpus/acquisition-manifest.json')
-          if not path.is_file():
-              raise SystemExit('acquisition manifest was not created')
+          if path.is_file():
+              data = json.loads(path.read_text(encoding='utf-8'))
+          else:
+              data = {
+                  'results': [],
+                  'errors': [{'sample_id': None, 'error': 'acquisition-manifest-not-created'}],
+              }
 
-          data = json.loads(path.read_text(encoding='utf-8'))
           results = []
           for row in data.get('results', []):
               row = dict(row)
@@ -78,13 +83,40 @@ jobs:
               'results': results,
               'errors': data.get('errors', []),
           }
-          print('BEGIN_IDIOLECT_ACQUISITION_METADATA')
-          print(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True))
-          print('END_IDIOLECT_ACQUISITION_METADATA')
+          out = Path('.local/idiolect-corpus/acquisition-receipt.json')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
 
-          if not results:
-              raise SystemExit('no corpus samples were acquired')
+          print('BEGIN_IDIOLECT_ACQUISITION_METADATA')
+          print(out.read_text(encoding='utf-8'), end='')
+          print('END_IDIOLECT_ACQUISITION_METADATA')
           PY
+
+      - name: Publish latest metadata receipt issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          receipt = Path('.local/idiolect-corpus/acquisition-receipt.json').read_text(encoding='utf-8').rstrip()
+          body = (
+              'Automated **metadata-only** idiolect corpus acquisition receipt. No raw or canonical Joel prose is included here.\n\n'
+              f'Workflow run: {os.environ["RUN_URL"]}\n\n'
+              '```json\n' + receipt + '\n```\n'
+          )
+          Path('/tmp/idiolect-acquisition-issue.md').write_text(body, encoding='utf-8')
+          PY
+
+          title='Idiolect corpus acquisition: latest metadata receipt'
+          number="$(gh issue list --state all --limit 100 --json number,title --jq '.[] | select(.title == "Idiolect corpus acquisition: latest metadata receipt") | .number' | head -n1)"
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --title "$title" --body-file /tmp/idiolect-acquisition-issue.md
+          else
+            gh issue create --title "$title" --body-file /tmp/idiolect-acquisition-issue.md
+          fi
 
       - name: Verify no acquired prose is tracked
         run: |
@@ -93,4 +125,14 @@ jobs:
             git status --short --untracked-files=all >&2
             exit 1
           fi
-          git check-ignore -q .local/idiolect-corpus/acquisition-manifest.json
+          git check-ignore -q .local/idiolect-corpus/acquisition-receipt.json
+
+      - name: Fail if acquisition produced no samples
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          receipt = json.loads(Path('.local/idiolect-corpus/acquisition-receipt.json').read_text(encoding='utf-8'))
+          if receipt.get('acquired_count', 0) < 1:
+              raise SystemExit('no corpus samples were acquired; see the metadata receipt issue for errors')
+          PY
