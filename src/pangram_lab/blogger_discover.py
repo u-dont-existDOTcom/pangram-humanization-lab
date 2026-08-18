@@ -30,6 +30,11 @@ def _root_from_url(url: str) -> str:
     return urlunparse(("https", parsed.netloc.lower(), "", "", "", ""))
 
 
+def _https_url(url: str) -> str:
+    parsed = urlparse(url)
+    return urlunparse(("https", parsed.netloc.lower(), parsed.path, parsed.params, parsed.query, parsed.fragment))
+
+
 def _iso(value: str) -> datetime:
     value = value.strip()
     if value.endswith("Z"):
@@ -47,7 +52,8 @@ def _canonical_post_url(url: str) -> str:
 
 def _feed_url(root: str, *, start_index: int, max_results: int) -> str:
     # Blogger documents max-results and 1-based start-index for feed paging.
-    # We sort by published timestamp locally, so no orderby parameter is needed.
+    # The service can cap a page below the requested max-results, so callers
+    # must follow the feed's rel=next link rather than infer EOF from length.
     query = urlencode(
         {
             "alt": "atom",
@@ -70,9 +76,16 @@ def fetch_atom(url: str, *, timeout: int = 30) -> tuple[bytes, str]:
     return body, hashlib.sha256(body).hexdigest()
 
 
-def parse_atom_posts(body: bytes) -> list[BloggerPost]:
+def parse_atom_page(body: bytes) -> tuple[list[BloggerPost], str | None]:
     root = ET.fromstring(body)
     posts: list[BloggerPost] = []
+    next_url = None
+
+    for link in root.findall(f"{ATOM}link"):
+        if link.attrib.get("rel") == "next" and link.attrib.get("href"):
+            next_url = _https_url(link.attrib["href"])
+            break
+
     for entry in root.findall(f"{ATOM}entry"):
         entry_id = (entry.findtext(f"{ATOM}id") or "").strip()
         title = (entry.findtext(f"{ATOM}title") or "").strip()
@@ -104,7 +117,11 @@ def parse_atom_posts(body: bytes) -> list[BloggerPost]:
                 labels=labels,
             )
         )
-    return posts
+    return posts, next_url
+
+
+def parse_atom_posts(body: bytes) -> list[BloggerPost]:
+    return parse_atom_page(body)[0]
 
 
 def discover_blog(
@@ -117,29 +134,33 @@ def discover_blog(
 ) -> dict:
     root = _root_from_url(blog_url)
     cutoff = _iso(published_before) if published_before else None
-    start = 1
+    url = _feed_url(root, start_index=1, max_results=page_size)
     pages: list[dict] = []
     posts: dict[str, BloggerPost] = {}
+    seen_urls: set[str] = set()
 
-    for _ in range(max_pages):
-        url = _feed_url(root, start_index=start, max_results=page_size)
+    for page_number in range(1, max_pages + 1):
+        if url in seen_urls:
+            raise RuntimeError(f"Blogger feed pagination loop detected: {url}")
+        seen_urls.add(url)
         body, body_sha = fetch_atom(url, timeout=timeout)
-        batch = parse_atom_posts(body)
+        batch, next_url = parse_atom_page(body)
         pages.append(
             {
-                "start_index": start,
+                "page_number": page_number,
                 "feed_url": url,
                 "feed_sha256": body_sha,
                 "entry_count": len(batch),
+                "next_url": next_url,
             }
         )
         for post in batch:
             if cutoff and _iso(post.published) >= cutoff:
                 continue
             posts[post.entry_id] = post
-        if len(batch) < page_size:
+        if not next_url:
             break
-        start += len(batch)
+        url = next_url
     else:
         raise RuntimeError(f"Blogger feed paging exceeded max_pages={max_pages}: {root}")
 
