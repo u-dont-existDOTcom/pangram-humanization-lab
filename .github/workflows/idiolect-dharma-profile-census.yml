@@ -1,0 +1,90 @@
+name: Idiolect Dharma profile census
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-dharma-profile-census.yml
+      - state/IDIOLECT-DHARMA-PROFILE-CENSUS-2026-08-18.json
+      - src/pangram_lab/dharma_author_discover.py
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/idiolect-dharma-profile-census.yml
+      - state/IDIOLECT-DHARMA-PROFILE-CENSUS-2026-08-18.json
+      - src/pangram_lab/dharma_author_discover.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and run discovery tests
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q tests/test_dharma_author_discover.py
+
+      - name: Census all target speakers
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from pangram_lab.dharma_author_discover import discover_dharma_authors
+
+          spec = json.loads(Path('state/IDIOLECT-DHARMA-PROFILE-CENSUS-2026-08-18.json').read_text(encoding='utf-8'))
+          rows = []
+          for target in spec['targets']:
+              result = discover_dharma_authors(spec['blog'], target_speaker=target['speaker'])
+              total_posts = int(result['target_post_count'])
+              overlap = int(target['known_overlap_threads_with_controls' if target['role'] == 'target-author' else 'known_overlap_threads_with_joel'])
+              nonoverlap = max(0, total_posts - overlap)
+              rows.append({
+                  'speaker': target['speaker'],
+                  'role': target['role'],
+                  'target_post_count': total_posts,
+                  'known_overlap_post_count': overlap,
+                  'estimated_nonoverlap_post_count': nonoverlap,
+                  'feed_page_count': len(result.get('feed_pages', [])),
+                  'target_posts': [
+                      {
+                          'entry_id': post.get('entry_id'),
+                          'title': post.get('title'),
+                          'published': post.get('published'),
+                          'url': post.get('url'),
+                          'raw_target_occurrences': post.get('raw_target_occurrences'),
+                          'target_label_count': post.get('target_label_count'),
+                      }
+                      for post in result.get('target_posts', [])
+                  ],
+              })
+
+          receipt = {
+              'schema_version': 1,
+              'raw_or_canonical_prose_in_receipt': False,
+              'blog': spec['blog'],
+              'targets': rows,
+          }
+          out = Path('.local/idiolect-corpus/dharma-profile-census.json')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          print(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True))
+          PY
+
+      - name: Upload metadata-only profile census
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-dharma-profile-census
+          path: .local/idiolect-corpus/dharma-profile-census.json
+          if-no-files-found: error
+          retention-days: 30

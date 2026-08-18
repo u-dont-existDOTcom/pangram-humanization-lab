@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "purpose": "Count independent Dharma Connection posts for matched closed-set pilot authors before profile extraction. Metadata only; not an attribution result.",
+  "blog": "https://dharmaconnectiongroup.blogspot.com/",
+  "raw_text_in_git": false,
+  "targets": [
+    {
+      "speaker": "Joel Rosenblum",
+      "role": "target-author",
+      "known_overlap_threads_with_controls": 4
+    },
+    {
+      "speaker": "David Vardy",
+      "role": "matched-control",
+      "known_overlap_threads_with_joel": 3
+    },
+    {
+      "speaker": "Stian Gudmundsen Høiland",
+      "role": "matched-control",
+      "known_overlap_threads_with_joel": 3
+    }
+  ],
+  "sufficiency_guidance": {
+    "preferred_min_independent_posts_total": 5,
+    "preferred_min_nonoverlap_profile_posts": 2,
+    "note": "Counts alone do not establish sufficiency; extracted word totals, concentration, quotations, and boundary audits still apply."
+  }
+}
