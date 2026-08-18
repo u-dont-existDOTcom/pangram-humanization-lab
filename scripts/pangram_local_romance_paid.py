@@ -208,6 +208,7 @@ def execute() -> dict[str, object]:
             detector_submission_attempted = False
             measurement_key = f"gui:{digest}"
             call_summary: dict[str, object] | None = None
+            report_page = page
             try:
                 page.goto(config.pangram_url, wait_until="domcontentloaded")
                 stage = "verify_authentication"
@@ -252,25 +253,23 @@ def execute() -> dict[str, object]:
                 detector_submission_attempted = True
                 button.click()
                 print(
-                    f"[pangram-local-paid] submitted part={number} sha={digest}; waiting for report",
+                    f"[pangram-local-paid] submitted part={number} sha={digest}; waiting for exact report",
                     flush=True,
                 )
 
-                stage = "wait_report"
-                gui_core.wait_for_report(page, timeout_ms=180_000)
-                stage = "capture_body"
-                body = gui_core.clean_report_body_artifact(page.locator("body").inner_text())
-                paths["body"].write_text(body, encoding="utf-8")
-                parsed = gui_core.parse_report_for_exact_input(
-                    body,
+                # Pangram may render the result in the current dashboard or open
+                # another tab. Never treat a generic marker as completion. Bind
+                # the result to exact input anchors and exact parsed word count.
+                stage = "wait_exact_report"
+                report_page, body, parsed = local_transport.wait_for_exact_report_page(
+                    context,
                     str(item["text"]),
                     expected_word_count=int(item["word_count"]),
+                    timeout_ms=180_000,
                 )
+                stage = "capture_body"
+                paths["body"].write_text(body, encoding="utf-8")
                 segments = list(parsed["segments"])
-                if not segments:
-                    raise RuntimeError(
-                        "Pangram report became visible but no analyzed segments could be parsed"
-                    )
                 parsed_word_count = sum(int(segment["word_count"]) for segment in segments)
                 if parsed_word_count != int(item["word_count"]):
                     raise RuntimeError(
@@ -279,11 +278,11 @@ def execute() -> dict[str, object]:
                     )
 
                 stage = "capture_pdf"
-                pdf_provenance = local_transport.capture_report_pdf(page, paths["pdf"])
+                pdf_provenance = local_transport.capture_report_pdf(report_page, paths["pdf"])
                 receipt = local_core.build_complete_receipt(
                     config,
                     item=item,
-                    report_url=page.url,
+                    report_url=report_page.url,
                     pdf_provenance=pdf_provenance,
                     parsed=parsed,
                     body=body,
@@ -307,6 +306,10 @@ def execute() -> dict[str, object]:
                     f"[pangram-local-paid] complete part={number} sha={digest} pdf={pdf_provenance}",
                     flush=True,
                 )
+
+                # Keep exactly one working tab between parts. The next iteration
+                # can navigate this tab back to the detector dashboard.
+                page = local_transport.normalize_context_tabs(context, keep=report_page)
             except Exception as exc:
                 if stage == "persist_evidence":
                     raise
@@ -333,9 +336,12 @@ def execute() -> dict[str, object]:
                 )
                 local_core._write_json(paths["failure"], failure)
                 try:
-                    page.screenshot(path=str(paths["failure_screenshot"]), full_page=True)
+                    report_page.screenshot(path=str(paths["failure_screenshot"]), full_page=True)
                 except Exception:
-                    pass
+                    try:
+                        page.screenshot(path=str(paths["failure_screenshot"]), full_page=True)
+                    except Exception:
+                        pass
                 try:
                     durability(directory, failure)
                 except Exception as durability_error:
@@ -345,7 +351,7 @@ def execute() -> dict[str, object]:
                     ) from durability_error
                 raise
     finally:
-        local_core._close_local_session(playwright, context)
+        local_transport._close_local_session(playwright, context)
 
     return {
         "status": "complete",
