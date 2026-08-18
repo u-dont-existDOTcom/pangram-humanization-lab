@@ -1,0 +1,183 @@
+name: Idiolect synchronized source-snapshot audit
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-snapshot-repro-audit.yml
+      - src/pangram_lab/idiolect_snapshot_fingerprint.py
+      - tests/test_idiolect_snapshot_fingerprint.py
+      - src/pangram_lab/content_light_matched_control.py
+      - src/pangram_lab/luar_matched_pilot.py
+      - src/pangram_lab/luar_content_controls.py
+      - src/pangram_lab/dharma_speaker_acquire.py
+      - state/IDIOLECT-CONTENT-LIGHT-MATCHED-CONTROL-SPEC-2026-08-18.json
+      - state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json
+      - state/IDIOLECT-LUAR-CONTENT-CONTROLS-SPEC-2026-08-18.json
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
+      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  HF_HUB_DISABLE_TELEMETRY: "1"
+  TOKENIZERS_PARALLELISM: "false"
+
+jobs:
+  synchronized-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and isolated CPU research environment
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pip install -q --index-url https://download.pytorch.org/whl/cpu 'torch>=2.2,<3'
+          python -m pip install -q \
+            'transformers>=4.40,<5' \
+            'einops>=0.7,<1' \
+            'safetensors>=0.4,<1' \
+            'scikit-learn>=1.3,<2'
+
+      - name: Run snapshot and instrument regression tests
+        run: |
+          python -m pytest -q \
+            tests/test_idiolect_snapshot_fingerprint.py \
+            tests/test_content_light_matched_control.py \
+            tests/test_luar_matched_pilot.py \
+            tests/test_luar_content_controls.py \
+            tests/test_dharma_speaker_acquire.py
+
+      - name: Acquire Joel-only supplements
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json \
+            --sample-id dc-2013-06-lucid-dreaming \
+            --sample-id dc-2013-06-sound-bahiya \
+            --out-dir .local/idiolect-corpus/snapshot-supplement-text \
+            --manifest-out .local/idiolect-corpus/snapshot-supplement-manifest.json
+
+      - name: Acquire frozen non-overlap control training set
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/snapshot-control-text \
+            --manifest-out .local/idiolect-corpus/snapshot-control-manifest.json
+
+      - name: Space public-source acquisition bursts
+        run: sleep 65
+
+      - name: Acquire matched held-out author-thread set
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/snapshot-matched-text \
+            --manifest-out .local/idiolect-corpus/snapshot-matched-manifest.json
+
+      - name: Freeze metadata-only source snapshot fingerprint
+        run: |
+          python -m pangram_lab.idiolect_snapshot_fingerprint \
+            --supplement-manifest .local/idiolect-corpus/snapshot-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/snapshot-control-manifest.json \
+            --matched-manifest .local/idiolect-corpus/snapshot-matched-manifest.json \
+            --out .local/idiolect-corpus/idiolect-source-snapshot.json
+
+      - name: Run Pangram content-light control twice on identical bytes
+        run: |
+          python -m pangram_lab.content_light_matched_control \
+            state/IDIOLECT-CONTENT-LIGHT-MATCHED-CONTROL-SPEC-2026-08-18.json \
+            --matched-manifest .local/idiolect-corpus/snapshot-matched-manifest.json \
+            --supplement-manifest .local/idiolect-corpus/snapshot-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/snapshot-control-manifest.json \
+            --working-dir .local/idiolect-corpus/content-light-sync-a \
+            --out .local/idiolect-corpus/content-light-sync-a.json
+          python -m pangram_lab.content_light_matched_control \
+            state/IDIOLECT-CONTENT-LIGHT-MATCHED-CONTROL-SPEC-2026-08-18.json \
+            --matched-manifest .local/idiolect-corpus/snapshot-matched-manifest.json \
+            --supplement-manifest .local/idiolect-corpus/snapshot-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/snapshot-control-manifest.json \
+            --working-dir .local/idiolect-corpus/content-light-sync-b \
+            --out .local/idiolect-corpus/content-light-sync-b.json
+          cmp .local/idiolect-corpus/content-light-sync-a.json .local/idiolect-corpus/content-light-sync-b.json
+
+      - name: Run pinned LUAR baseline on the identical snapshot
+        run: |
+          python -m pangram_lab.luar_matched_pilot \
+            state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json \
+            --matched-manifest .local/idiolect-corpus/snapshot-matched-manifest.json \
+            --supplement-manifest .local/idiolect-corpus/snapshot-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/snapshot-control-manifest.json \
+            --working-dir .local/idiolect-corpus/luar-sync-normalized \
+            --out .local/idiolect-corpus/luar-sync-baseline.json
+
+      - name: Run pinned LUAR content controls on the identical snapshot
+        run: |
+          python -m pangram_lab.luar_content_controls \
+            state/IDIOLECT-LUAR-CONTENT-CONTROLS-SPEC-2026-08-18.json \
+            --matched-manifest .local/idiolect-corpus/snapshot-matched-manifest.json \
+            --supplement-manifest .local/idiolect-corpus/snapshot-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/snapshot-control-manifest.json \
+            --working-dir .local/idiolect-corpus/luar-sync-controls \
+            --out .local/idiolect-corpus/luar-sync-controls.json
+
+      - name: Enforce synchronized metadata and privacy invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          base = Path('.local/idiolect-corpus')
+          snapshot = json.loads((base / 'idiolect-source-snapshot.json').read_text())
+          assert snapshot['raw_or_canonical_prose_in_output'] is False
+          assert snapshot['row_counts'] == {'supplement': 2, 'control': 12, 'matched': 11}
+          assert snapshot['network_fetch_counts']['supplement'] == 2
+          assert snapshot['network_fetch_counts']['control'] == 11
+          assert snapshot['network_fetch_counts']['matched'] == 5
+          assert snapshot['same_page_snapshot_consistent_within_role'] is True
+          assert len(snapshot['snapshot_sha256']) == 64
+          assert all('local_text_path' not in row for row in snapshot['rows'])
+          assert all('url' not in row for row in snapshot['rows'])
+
+          content_a = json.loads((base / 'content-light-sync-a.json').read_text())
+          content_b = json.loads((base / 'content-light-sync-b.json').read_text())
+          assert content_a == content_b
+          assert content_a['pilot_status'] == 'content-light-matched-control-not-IER'
+
+          luar = json.loads((base / 'luar-sync-baseline.json').read_text())
+          assert luar['pilot_status'] == 'luar-mean-profile-nearest-cosine-pilot-not-IER'
+          assert luar['model']['requested_revision'] == 'e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d'
+
+          controls = json.loads((base / 'luar-sync-controls.json').read_text())
+          assert controls['pilot_status'] == 'luar-content-controls-diagnostic-not-IER'
+          assert controls['model']['requested_revision'] == 'e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d'
+
+          for data in (content_a, luar, controls):
+              assert data['raw_or_canonical_prose_in_output'] is False
+              encoded = json.dumps(data, ensure_ascii=False, sort_keys=True)
+              for forbidden in ('local_text_path', 'raw_text', 'canonical_text'):
+                  assert forbidden not in encoded
+
+          assert luar['embeddings_persisted_in_output'] is False
+          assert controls['embeddings_persisted_in_output'] is False
+          PY
+
+      - name: Upload synchronized metadata-only benchmark receipts
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-synchronized-source-snapshot
+          path: |
+            .local/idiolect-corpus/idiolect-source-snapshot.json
+            .local/idiolect-corpus/content-light-sync-a.json
+            .local/idiolect-corpus/luar-sync-baseline.json
+            .local/idiolect-corpus/luar-sync-controls.json
+          if-no-files-found: error
+          retention-days: 30
