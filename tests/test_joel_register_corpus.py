@@ -197,7 +197,7 @@ def test_source_snapshot_drift_fails_closed_without_url_or_prose(tmp_path):
 
 
 def test_register_gate_failure_is_explicit(tmp_path):
-    sample_texts = {"profile-a": "Owner prose " * 80}
+    sample_texts = {"profile-a": "Owner prose " * 150}
     canon = canonicalize(sample_texts["profile-a"])
     register = {
         "register_id": "test-register",
@@ -240,7 +240,7 @@ def test_register_gate_failure_is_explicit(tmp_path):
 
 def test_duplicate_source_group_across_partitions_is_rejected(tmp_path):
     sample_texts = {
-        "profile-a": "Owner prose " * 80,
+        "profile-a": "Owner prose " * 150,
         "holdout-a": "Held out owner prose " * 80,
     }
 
