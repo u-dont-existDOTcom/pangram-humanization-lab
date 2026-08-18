@@ -1,0 +1,145 @@
+name: Idiolect corpus structural audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/idiolect-corpus-structural-audit.yml
+      - state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json
+      - src/pangram_lab/corpus_structure_audit.py
+      - src/pangram_lab/corpus_acquire.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: idiolect-source-network-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audit-structure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and test structural audit
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q tests/test_corpus_structure_audit.py tests/test_corpus_acquire.py
+
+      - name: Audit triage-source structure without storing prose
+        id: audit
+        shell: bash
+        run: |
+          set +e
+          python -m pangram_lab.corpus_structure_audit \
+            state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json \
+            --out .local/idiolect-corpus/structural-audit.json
+          status=$?
+          echo "command_status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Build compact structural receipt
+        env:
+          AUDIT_COMMAND_STATUS: ${{ steps.audit.outputs.command_status }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/structural-audit.json')
+          if path.is_file():
+              data = json.loads(path.read_text(encoding='utf-8'))
+          else:
+              data = {'results': [], 'errors': [{'sample_id': None, 'error': 'structural-audit-output-not-created'}]}
+
+          rows = data.get('results', [])
+          flagged = [
+              {
+                  'sample_id': r['sample_id'],
+                  'retained_word_count': r['retained_word_count'],
+                  'blockquote_fraction': r['blockquote_fraction'],
+                  'retained_fraction_of_unquoted_body': r['retained_fraction_of_unquoted_body'],
+                  'explicit_q_marker_count': r['explicit_q_marker_count'],
+                  'message_other_marker_count': r['message_other_marker_count'],
+                  'generic_label_line_count': r['generic_label_line_count'],
+                  'quality_flags': r['quality_flags'],
+              }
+              for r in rows
+              if r.get('quality_flags') or r.get('blockquote_word_count_removed') or r.get('mode_removed_word_count')
+          ]
+          receipt = {
+              'schema_version': 1,
+              'raw_or_canonical_prose_in_receipt': False,
+              'command_status': int(os.environ.get('AUDIT_COMMAND_STATUS', '1')),
+              'run_url': os.environ['RUN_URL'],
+              'audited_count': len(rows),
+              'error_count': len(data.get('errors', [])),
+              'flagged_count': len(flagged),
+              'flagged': flagged,
+              'errors': data.get('errors', []),
+          }
+          out = Path('.local/idiolect-corpus/structural-audit-receipt.json')
+          out.write_text(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          print(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True))
+          PY
+
+      - name: Upload full metadata-only structural audit
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-corpus-structural-audit-metadata
+          path: .local/idiolect-corpus/structural-audit.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish latest compact structural receipt issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          receipt = Path('.local/idiolect-corpus/structural-audit-receipt.json').read_text(encoding='utf-8').rstrip()
+          body = (
+              'Automated **metadata-only** structural audit of the legacy idiolect triage corpus. No Joel prose is included.\n\n'
+              '```json\n' + receipt + '\n```\n'
+          )
+          Path('/tmp/idiolect-structural-audit-issue.md').write_text(body, encoding='utf-8')
+          PY
+
+          title='Idiolect corpus structural audit: latest metadata receipt'
+          number="$(gh issue list --state all --limit 100 --json number,title --jq '.[] | select(.title == "Idiolect corpus structural audit: latest metadata receipt") | .number' | head -n1)"
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --title "$title" --body-file /tmp/idiolect-structural-audit-issue.md
+          else
+            gh issue create --title "$title" --body-file /tmp/idiolect-structural-audit-issue.md
+          fi
+
+      - name: Verify no prose became repository-visible
+        run: |
+          if git status --short --untracked-files=all | grep -v '^?? .local/' | grep -q .; then
+            echo 'Structural audit unexpectedly modified repository-visible files.' >&2
+            git status --short --untracked-files=all >&2
+            exit 1
+          fi
+          git check-ignore -q .local/idiolect-corpus/structural-audit.json
+
+      - name: Fail if no samples were audited
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          receipt = json.loads(Path('.local/idiolect-corpus/structural-audit-receipt.json').read_text(encoding='utf-8'))
+          if receipt.get('audited_count', 0) < 1:
+              raise SystemExit('no samples were structurally audited; see receipt issue for errors')
+          PY
