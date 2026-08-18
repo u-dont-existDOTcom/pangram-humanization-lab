@@ -46,5 +46,85 @@ def test_normalize_rows_writes_exact_window_and_metadata_only_audit(tmp_path: Pa
     assert "text" not in audit[0]
 
 
+def test_short_training_exclusion_requires_named_non_test_row_under_window(tmp_path: Path):
+    short_path = tmp_path / "short.txt"
+    short_path.write_text(" ".join(["x"] * 13), encoding="utf-8")
+    long_path = tmp_path / "long.txt"
+    long_path.write_text(" ".join(["y"] * 70), encoding="utf-8")
+    rows = [
+        {
+            "sample_id": "short",
+            "source_group": "train-only",
+            "speaker": "Joel Rosenblum",
+            "word_count": 13,
+            "local_text_path": str(short_path),
+        },
+        {
+            "sample_id": "long",
+            "source_group": "held-out",
+            "speaker": "Joel Rosenblum",
+            "word_count": 70,
+            "local_text_path": str(long_path),
+        },
+    ]
+    kept, audit = ln._apply_short_training_exclusions(
+        rows,
+        [{"sample_id": "short", "reason": "preflight"}],
+        held_out_groups={"held-out"},
+        required_words=50,
+    )
+    assert [row["sample_id"] for row in kept] == ["long"]
+    assert audit == [
+        {
+            "sample_id": "short",
+            "source_group": "train-only",
+            "speaker": "Joel Rosenblum",
+            "source_word_count_reported": 13,
+            "source_whitespace_token_count": 13,
+            "required_window_words": 50,
+            "reason": "preflight",
+            "model_outcome_used_for_exclusion": False,
+        }
+    ]
+
+
+def test_short_training_exclusion_cannot_remove_held_out_test_row(tmp_path: Path):
+    path = tmp_path / "short.txt"
+    path.write_text(" ".join(["x"] * 13), encoding="utf-8")
+    row = {
+        "sample_id": "short",
+        "source_group": "held-out",
+        "speaker": "A",
+        "word_count": 13,
+        "local_text_path": str(path),
+    }
+    with pytest.raises(ValueError, match="is a held-out test row"):
+        ln._apply_short_training_exclusions(
+            [row],
+            [{"sample_id": "short"}],
+            held_out_groups={"held-out"},
+            required_words=50,
+        )
+
+
+def test_short_training_exclusion_cannot_drop_feasible_row(tmp_path: Path):
+    path = tmp_path / "long.txt"
+    path.write_text(" ".join(["x"] * 50), encoding="utf-8")
+    row = {
+        "sample_id": "long",
+        "source_group": "train-only",
+        "speaker": "A",
+        "word_count": 50,
+        "local_text_path": str(path),
+    }
+    with pytest.raises(ValueError, match="it is not shorter than required window 50"):
+        ln._apply_short_training_exclusions(
+            [row],
+            [{"sample_id": "long"}],
+            held_out_groups=set(),
+            required_words=50,
+        )
+
+
 def test_safe_name_removes_path_and_shell_punctuation():
     assert ln._safe_name("../a b/$c") == "..-a-b-c"
