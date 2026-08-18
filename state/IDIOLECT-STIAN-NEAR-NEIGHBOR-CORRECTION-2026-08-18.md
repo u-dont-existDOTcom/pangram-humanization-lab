@@ -90,15 +90,42 @@ The synchronized LUAR result remains numerically unchanged:
 
 Under the corrected role model, the exact-50 outcome primarily exposes unstable short-text discrimination between a target and an owner-identified near-neighbor. It is not clean evidence that short Joel text lacks idiolect, and it is not a reason to remove Stian.
 
+## Full-vector follow-up
+
+The frozen artifacts were re-read rather than recomputed. The complete owner-endpoint score movement is:
+
+- Joel: `+0.092580`;
+- Stian: `+0.104337`;
+- David: `+0.109486`.
+
+David—not Stian—had the largest cosine increase. Joel's margin against Stian narrowed by `0.011757`, while Joel's margin against David narrowed by `0.016906`.
+
+This further restricts the interpretation. The owner endpoint became more similar to **all three** available profiles. It does not support a specific claim that the rewrite moved into a Joel–Stian neighborhood. The supported reading is narrower:
+
+- the Joel-to-Stian winner flip is not clean erasure evidence;
+- Joel-only similarity increase is not sufficient retention evidence;
+- the pair is a broad, cross-author, cross-register movement counterexample;
+- it is ineligible for IER or rewrite-degradation calibration.
+
+The natural-original score ledgers also show that Stian is the harder negative specifically at exact 50 words: Joel is `1/4` against Stian but `4/4` against David. Whole-document evidence is less one-sided. All four current held-out source groups are shared-thread material, with zero non-overlap held-out groups, so the present evidence cannot distinguish general author proximity from topic, prompt, thread, or discourse accommodation.
+
+Exact metadata-only receipts:
+
+- `state/IDIOLECT-NATURAL-AUTHOR-NEIGHBORHOOD-DIAGNOSTIC-2026-08-18.json`
+- `state/IDIOLECT-NATURAL-AUTHOR-NEIGHBORHOOD-SCORES-WHOLE-2026-08-18.json`
+- `state/IDIOLECT-NATURAL-AUTHOR-NEIGHBORHOOD-SCORES-50W-2026-08-18.json`
+
 ## Next gate
 
 Before another transformation run:
 
-1. freeze the register-balanced Joel original corpus;
-2. census and admit at least one additional ordinary Dharma control beyond David;
-3. produce per-document cosine-score receipts for independent held-out originals;
-4. report the required strata and candidate-set ablations;
-5. estimate original target-vs-hard-negative and target-vs-ordinary margin distributions;
-6. only then define a provisional abstention region and test aligned rewrites.
+1. census and admit at least one additional ordinary Dharma control beyond David;
+2. add non-overlap held-out originals for Joel, Stian, and ordinary controls;
+3. only then batch a LUAR rerun that emits direct profile-to-profile cosines and complete per-document score receipts;
+4. estimate natural-original target-vs-hard-negative and target-vs-ordinary margin distributions;
+5. define a provisional abstention region from those originals;
+6. test aligned rewrites only inside a register whose original attribution is stable under the predeclared condition.
 
-No IER, Tier-A threshold, `validated-for-register`, or erasure claim is authorized by this correction alone.
+The register-separated Joel corpus infrastructure is merged at `cf61352256832cd2fdf6f7a556559c418c2c4d71`, but no live corpus freeze or new LUAR run was performed by this diagnostic.
+
+No IER, Tier-A threshold, `validated-for-register`, neighborhood-retention claim, or erasure claim is authorized by this correction alone.

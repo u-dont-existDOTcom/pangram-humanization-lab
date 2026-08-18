@@ -1,0 +1,192 @@
+{
+  "artifact_zip_sha256": "d17c212459a52a86d5ad7f3130888a50e55bd63a615e5923ff8b274147b50a81",
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "baseline_member_sha256": "965881fe2fd29a1fc24d58c0779fc078049a1f6e8d5ceb713da93e84c7cff755",
+  "canonical_hash_set_sha256": "ffe9cc36f33c38dfc1fa5f5d5324a9283127790f68a296b5492955894d77715e",
+  "condition": "equal_50_word",
+  "date": "2026-08-18",
+  "documents": [
+    {
+      "actual_author": "Joel Rosenblum",
+      "actual_author_minus_best_alternative_margin": -0.001447,
+      "actual_author_rank": 2,
+      "canonical_sha256": "2a74006fadef347a2648c44a63380f5b07593dba96d076231a66721b4a8de43a",
+      "cosine_scores": {
+        "David Vardy": 0.48997,
+        "Joel Rosenblum": 0.654786,
+        "Stian Gudmundsen Høiland": 0.656233
+      },
+      "full_winner": "Stian Gudmundsen Høiland",
+      "joel_minus_david_margin": 0.164816,
+      "joel_minus_stian_margin": -0.001447,
+      "sample_id": "dcp-joel-can-anything-known",
+      "source_group": "dc-thread-can-anything-known-2014-08-09",
+      "word_count": 50
+    },
+    {
+      "actual_author": "David Vardy",
+      "actual_author_minus_best_alternative_margin": 0.127442,
+      "actual_author_rank": 1,
+      "canonical_sha256": "2b0df4d221799213f3d17f8d2051e35562de98d59b6faf1da79b43009781a0cf",
+      "cosine_scores": {
+        "David Vardy": 0.689402,
+        "Joel Rosenblum": 0.447014,
+        "Stian Gudmundsen Høiland": 0.56196
+      },
+      "full_winner": "David Vardy",
+      "joel_minus_david_margin": -0.242388,
+      "joel_minus_stian_margin": -0.114946,
+      "sample_id": "dcp-david-can-anything-known",
+      "source_group": "dc-thread-can-anything-known-2014-08-09",
+      "word_count": 50
+    },
+    {
+      "actual_author": "Stian Gudmundsen Høiland",
+      "actual_author_minus_best_alternative_margin": 0.058183,
+      "actual_author_rank": 1,
+      "canonical_sha256": "f416918bb67dc5bd6fbc462eed39b084920940313b8675e85f2b0fb291ccefbb",
+      "cosine_scores": {
+        "David Vardy": 0.616418,
+        "Joel Rosenblum": 0.650809,
+        "Stian Gudmundsen Høiland": 0.708992
+      },
+      "full_winner": "Stian Gudmundsen Høiland",
+      "joel_minus_david_margin": 0.034391,
+      "joel_minus_stian_margin": -0.058183,
+      "sample_id": "dcp-stian-can-anything-known",
+      "source_group": "dc-thread-can-anything-known-2014-08-09",
+      "word_count": 50
+    },
+    {
+      "actual_author": "Joel Rosenblum",
+      "actual_author_minus_best_alternative_margin": -0.010936,
+      "actual_author_rank": 2,
+      "canonical_sha256": "771ef905946f4dcbb104d824c7e5e8a22fd748e853e8a6ba8c7a41dc16fedbe3",
+      "cosine_scores": {
+        "David Vardy": 0.559684,
+        "Joel Rosenblum": 0.596574,
+        "Stian Gudmundsen Høiland": 0.60751
+      },
+      "full_winner": "Stian Gudmundsen Høiland",
+      "joel_minus_david_margin": 0.03689,
+      "joel_minus_stian_margin": -0.010936,
+      "sample_id": "dcp-joel-holographic",
+      "source_group": "dc-thread-holographic-2014-02-04",
+      "word_count": 50
+    },
+    {
+      "actual_author": "Stian Gudmundsen Høiland",
+      "actual_author_minus_best_alternative_margin": 0.069342,
+      "actual_author_rank": 1,
+      "canonical_sha256": "05e89da1425e7e3af9658d95905daa39f62ac250ad46cb2b647f5b165f9d84e9",
+      "cosine_scores": {
+        "David Vardy": 0.571215,
+        "Joel Rosenblum": 0.542338,
+        "Stian Gudmundsen Høiland": 0.640557
+      },
+      "full_winner": "Stian Gudmundsen Høiland",
+      "joel_minus_david_margin": -0.028877,
+      "joel_minus_stian_margin": -0.098219,
+      "sample_id": "dcp-stian-holographic",
+      "source_group": "dc-thread-holographic-2014-02-04",
+      "word_count": 50
+    },
+    {
+      "actual_author": "Joel Rosenblum",
+      "actual_author_minus_best_alternative_margin": -0.002045,
+      "actual_author_rank": 2,
+      "canonical_sha256": "6bc30645dcdb008840d157902a7d44beebc04750ebd729abdbaefb828ed5c942",
+      "cosine_scores": {
+        "David Vardy": 0.491332,
+        "Joel Rosenblum": 0.617179,
+        "Stian Gudmundsen Høiland": 0.619224
+      },
+      "full_winner": "Stian Gudmundsen Høiland",
+      "joel_minus_david_margin": 0.125847,
+      "joel_minus_stian_margin": -0.002045,
+      "sample_id": "dcp-joel-insights-anatta",
+      "source_group": "dc-thread-insights-anatta-2014-08-09",
+      "word_count": 50
+    },
+    {
+      "actual_author": "David Vardy",
+      "actual_author_minus_best_alternative_margin": 0.165325,
+      "actual_author_rank": 1,
+      "canonical_sha256": "12d74f48d242e488a83b95a84c2c7b76777aa3623e105569232ad4ab5c7e24b3",
+      "cosine_scores": {
+        "David Vardy": 0.61553,
+        "Joel Rosenblum": 0.411834,
+        "Stian Gudmundsen Høiland": 0.450205
+      },
+      "full_winner": "David Vardy",
+      "joel_minus_david_margin": -0.203696,
+      "joel_minus_stian_margin": -0.038371,
+      "sample_id": "dcp-david-insights-anatta",
+      "source_group": "dc-thread-insights-anatta-2014-08-09",
+      "word_count": 50
+    },
+    {
+      "actual_author": "Stian Gudmundsen Høiland",
+      "actual_author_minus_best_alternative_margin": 0.027021,
+      "actual_author_rank": 1,
+      "canonical_sha256": "1d38549747682c862f4cf324a9106c472b907542d1447f764f9f4db589973a09",
+      "cosine_scores": {
+        "David Vardy": 0.569427,
+        "Joel Rosenblum": 0.666096,
+        "Stian Gudmundsen Høiland": 0.693117
+      },
+      "full_winner": "Stian Gudmundsen Høiland",
+      "joel_minus_david_margin": 0.096669,
+      "joel_minus_stian_margin": -0.027021,
+      "sample_id": "dcp-stian-insights-anatta",
+      "source_group": "dc-thread-insights-anatta-2014-08-09",
+      "word_count": 50
+    },
+    {
+      "actual_author": "Joel Rosenblum",
+      "actual_author_minus_best_alternative_margin": 0.060866,
+      "actual_author_rank": 1,
+      "canonical_sha256": "33d9218e614d523badede374154597d30877902ebe935ea023433cb32ccf671e",
+      "cosine_scores": {
+        "David Vardy": 0.496182,
+        "Joel Rosenblum": 0.706701,
+        "Stian Gudmundsen Høiland": 0.645835
+      },
+      "full_winner": "Joel Rosenblum",
+      "joel_minus_david_margin": 0.210519,
+      "joel_minus_stian_margin": 0.060866,
+      "sample_id": "dcp-joel-supramundane-jhanas",
+      "source_group": "dc-thread-supramundane-jhanas-2014-08-09",
+      "word_count": 50
+    },
+    {
+      "actual_author": "David Vardy",
+      "actual_author_minus_best_alternative_margin": -0.042564,
+      "actual_author_rank": 3,
+      "canonical_sha256": "b30596ad7eece6a59f5aa315bcd62561f75261608ce822f5d942ad3aa697f82f",
+      "cosine_scores": {
+        "David Vardy": 0.610414,
+        "Joel Rosenblum": 0.652978,
+        "Stian Gudmundsen Høiland": 0.622784
+      },
+      "full_winner": "Joel Rosenblum",
+      "joel_minus_david_margin": 0.042564,
+      "joel_minus_stian_margin": 0.030194,
+      "sample_id": "dcp-david-supramundane-jhanas",
+      "source_group": "dc-thread-supramundane-jhanas-2014-08-09",
+      "word_count": 50
+    }
+  ],
+  "privacy": {
+    "embeddings": false,
+    "local_paths_or_urls": false,
+    "raw_or_canonical_prose": false
+  },
+  "schema_version": 1,
+  "source_stratum": "all held-out documents are shared-thread material; no nonoverlap held-out group exists",
+  "status": "frozen-per-document-score-ledger-metadata-only"
+}
