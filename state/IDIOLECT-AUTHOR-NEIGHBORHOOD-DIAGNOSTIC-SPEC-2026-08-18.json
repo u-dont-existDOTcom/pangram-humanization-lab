@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "purpose": "Calibrate naturally confusable author pairs and hard negatives before interpreting aligned rewrite degradation.",
+  "owner_author": "Joel Rosenblum",
+  "owner_supplied_neighbor_hypotheses": [
+    {
+      "author": "Stian Gudmundsen Høiland",
+      "status": "owner-supplied-plausible-near-neighbor-not-empirically-established",
+      "owner_reason": "Joel reports that Stian naturally writes/thinks somewhat like him and that this affinity is part of why they clicked."
+    }
+  ],
+  "existing_work_decision": "adapt-and-compose",
+  "existing_work_classes": [
+    "authorship verification",
+    "impostor and hard-negative comparison",
+    "metric-embedding nearest-profile attribution",
+    "score and margin calibration",
+    "source-group held-out evaluation"
+  ],
+  "non_invention_rule": "Do not create an operational author-neighborhood metric or universal decision threshold while standard score vectors, pairwise confusions, margins, resampling stability, and verification-style evidence remain sufficient.",
+  "input_contract": {
+    "raw_prose_allowed": false,
+    "embeddings_in_durable_input": false,
+    "required_author_count_minimum": 3,
+    "required_fields": [
+      "condition_id",
+      "instrument",
+      "authors",
+      "owner_author",
+      "declared_neighbor_hypotheses",
+      "profile_identities",
+      "originals"
+    ],
+    "original_required_fields": [
+      "sample_id",
+      "true_author",
+      "source_group",
+      "register",
+      "canonical_sha256",
+      "word_count",
+      "scores_by_author",
+      "original_reliability_status"
+    ],
+    "optional_fields": [
+      "profile_cosine_matrix",
+      "rewrites",
+      "resampling_receipts"
+    ]
+  },
+  "diagnostics": [
+    "pairwise author-profile cosine matrix when frozen profile scores are available",
+    "natural-original confusion matrix",
+    "ordered-pair confusion counts",
+    "true-author margin against the highest-scoring alternative",
+    "per-author and per-source-group margin distributions",
+    "easy-negative and hard-negative ranking from natural originals",
+    "declared-neighbor confusion rate",
+    "aligned rewrite score deltas against every author",
+    "aligned rewrite target-versus-nearest-alternative margin delta",
+    "whether the winning rewrite alternative was already a natural-original hard negative",
+    "separate counts for reliable and naturally ambiguous originals"
+  ],
+  "reliability_boundary": {
+    "automatic_threshold": false,
+    "eligible_status_literal": "eligible",
+    "rule": "The analyzer never invents a reliability threshold. Upstream evaluation must assign original_reliability_status from a predeclared held-out/resampling rule. Only originals marked eligible may count toward rewrite-degradation or IER interpretation.",
+    "ambiguous_statuses": [
+      "ambiguous",
+      "insufficient-evidence",
+      "not-evaluated"
+    ]
+  },
+  "interpretation_guardrails": [
+    "A nearest-author flip is not automatically idiolect erasure.",
+    "A rise in similarity to Joel is not sufficient evidence of unique Joel identifiability.",
+    "A declared neighbor is retained as a hard negative rather than removed to improve accuracy.",
+    "Owner-reported affinity motivates the near-neighbor hypothesis but does not prove the cause or magnitude of similarity.",
+    "Shared-thread versus non-overlap comparisons can characterize context dependence but cannot by themselves separate homophily from accommodation.",
+    "No result authorizes changing owner-final prose or lowering semantic/editorial fidelity requirements.",
+    "No IER, Tier-A threshold, or validated-for-register claim is authorized until original attribution is reliably above chance under the registered condition."
+  ],
+  "cost_boundary": {
+    "first_choice": "reuse existing synchronized metadata, score vectors, and frozen artifacts",
+    "new_heavy_run": "only after documenting a specific missing-data field that cannot be recovered from existing evidence",
+    "github_actions_note": "Batch any necessary heavy embedding work after the register-corpus authority is resolved; do not spend private Actions minutes on redundant recomputation."
+  },
+  "privacy": {
+    "raw_prose_in_git": false,
+    "private_profile_text_in_git": false,
+    "embeddings_in_git": false,
+    "durable_outputs_allowed": [
+      "hashes",
+      "word counts",
+      "source groups",
+      "register labels",
+      "score vectors",
+      "cosine matrices",
+      "margins",
+      "confusion counts",
+      "aggregate uncertainty"
+    ]
+  },
+  "status": "diagnostic-spec-not-yet-run"
+}
