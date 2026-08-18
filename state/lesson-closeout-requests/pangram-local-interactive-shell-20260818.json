@@ -1,5 +1,6 @@
 {
   "schema_version": 1,
+  "request_id": "pangram-local-interactive-shell-20260818",
   "disposition": "no-new-lesson",
   "finding": "A naked set -e in an assistant-supplied copy/paste setup block leaked errexit into the user's ordinary interactive shell, so a later nonzero local Playwright smoke command could terminate the terminal before its underlying browser error was retained.",
   "promoted_to": [],
