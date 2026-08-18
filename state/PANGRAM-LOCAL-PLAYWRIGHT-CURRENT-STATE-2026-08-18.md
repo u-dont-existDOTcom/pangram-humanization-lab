@@ -30,8 +30,9 @@ Implemented behavior:
 
 - dedicated default profile `~/.config/pangram-local-browser/`;
 - refusal of normal browser profiles without explicit override;
-- refusal of persistent profiles inside Git repositories without explicit override;
+- refusal of persistent profiles inside real Git worktrees without explicit override, while an inert home-level `.git` marker does not create a false positive;
 - headed browser by default;
+- Chromium sandboxing explicitly enabled for authenticated local persistent sessions;
 - system Brave/Chromium-family discovery, with explicit executable support;
 - persistent-context lifecycle with closure in success and failure paths;
 - one-time manual login bootstrap;
@@ -71,33 +72,39 @@ Default `status`/`run` fetch the live Romance source branch, read the current ma
 
 ### Tests and documentation
 
-Added focused tests for profile safety, headed launch, close-on-success/failure, read-only verification, cache compatibility, exact-SHA preflight, post-click ambiguity, recovery, exact source materialization, and path-scoped Git commits.
+Added focused tests for profile safety, headed launch, Chromium sandboxing, inert-home-`.git` handling, close-on-success/failure, read-only verification, cache compatibility, exact-SHA preflight, post-click ambiguity, recovery, exact source materialization, and path-scoped Git commits.
 
 Operator documentation: `docs/PANGRAM-GUI-LOCAL-PLAYWRIGHT-RUNBOOK.md`.
 
 ## Current verification status
 
-Repository implementation is complete on the task branch, but the final full repository test/audit and hosted GitHub Actions receipts must be read from the completed branch/PR checks before promotion. Do not infer green CI from this state note.
+Repository-side exact-head gates are green on the current local-Playwright branch: the complete deterministic test suite, lesson-integrity audit, and repository workflow-policy check passed after the sandbox/profile hardening.
 
-The following require Joel's actual Zorin graphical session and are not certified by repository unit tests:
+Owner-machine live verification now confirms:
 
-- visible headed launch using the installed system browser;
-- manual Pangram login in the dedicated profile;
-- authentication persistence across fresh local processes;
+- visible headed Brave launch on Zorin using `/opt/brave.com/brave/brave`;
+- Playwright 1.62.0 in the repository virtual environment;
+- dedicated persistent profile `~/.config/pangram-local-browser/`;
+- clean context close;
+- corrected launch without the prior `--no-sandbox` warning;
+- one-time manual Pangram login completed in the dedicated profile.
+
+The following remain unverified and must not be inferred from the successful login bootstrap:
+
+- authentication persistence across a fresh local process;
+- read-only detector dashboard verification after relaunch;
+- exact current Romance cache/ambiguity status after fresh source materialization;
 - current long-document Pangram report/PDF behavior;
 - paid submission of the two current exact halves.
 
-No paid Pangram call was performed by implementation work.
+No paid Pangram call was performed by smoke, bootstrap, or repository implementation work.
 
 ## Next safe action
 
-1. Complete the stacked draft PR and obtain green repository tests/audits.
-2. On Joel's Zorin machine, install `.[test,browser]` from the branch.
-3. Run `pangram-local status --environment-only --launch-smoke`.
-4. Run `pangram-local bootstrap` and complete manual login.
-5. Run `pangram-local verify`.
-6. Run read-only `pangram-local status` and inspect exact cache/ambiguity state.
-7. Only then run `pangram-local run` for the two exact current halves, without `--force`.
+1. Run `pangram-local verify` in a fresh local process; it must verify the authenticated detector without filling or submitting text.
+2. Run read-only `pangram-local status` and inspect the exact current Romance source commit, hashes, cache state, and ambiguity flags.
+3. If both exact halves remain uncached and unambiguous and authentication persists, run `pangram-local run` once, without `--force`.
+4. If the first paid half fails after detector activation may have occurred, stop the batch and use History/recovery before any repeat or Part 2.
 
 ## Stop conditions
 
@@ -107,5 +114,5 @@ Stop before:
 - bypassing an ambiguity block;
 - repeating a paid exact SHA instead of checking History/recovery;
 - committing profile/cookie/auth material;
-- claiming a live Zorin/Pangram surface is verified without its receipt;
+- claiming fresh-process authentication persistence without its receipt;
 - rewriting Romance prose solely to facilitate transport or detector behavior.
