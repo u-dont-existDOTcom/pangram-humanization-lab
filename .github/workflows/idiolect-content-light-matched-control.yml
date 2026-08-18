@@ -9,6 +9,8 @@ on:
       - tests/test_content_light_matched_control.py
       - src/pangram_lab/idiolect.py
       - src/pangram_lab/luar_matched_pilot.py
+      - src/pangram_lab/dharma_speaker_acquire.py
+      - tests/test_dharma_speaker_acquire.py
       - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
       - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
       - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
@@ -21,6 +23,8 @@ on:
       - tests/test_content_light_matched_control.py
       - src/pangram_lab/idiolect.py
       - src/pangram_lab/luar_matched_pilot.py
+      - src/pangram_lab/dharma_speaker_acquire.py
+      - tests/test_dharma_speaker_acquire.py
       - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
       - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
       - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
@@ -67,14 +71,43 @@ jobs:
             --manifest-out .local/idiolect-corpus/content-light-control-manifest.json
 
       - name: Space Blogger acquisition bursts
-        run: sleep 10
+        run: sleep 20
 
-      - name: Rebuild matched held-out set
+      - name: Rebuild matched held-out set with shared-page cache
         run: |
           python -m pangram_lab.dharma_speaker_acquire \
             state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json \
             --out-dir .local/idiolect-corpus/content-light-matched-text \
             --manifest-out .local/idiolect-corpus/content-light-matched-manifest.json
+
+      - name: Verify acquisition caching and completeness
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          supplement = json.loads(Path('.local/idiolect-corpus/content-light-supplement-manifest.json').read_text())
+          control = json.loads(Path('.local/idiolect-corpus/content-light-control-manifest.json').read_text())
+          matched = json.loads(Path('.local/idiolect-corpus/content-light-matched-manifest.json').read_text())
+          for label, data in [('supplement', supplement), ('control', control), ('matched', matched)]:
+              if data.get('errors'):
+                  raise SystemExit(f"{label} errors: {data['errors']}")
+          assert len(supplement['results']) == 2
+          assert supplement['network_fetch_count'] == 2
+          assert len(control['results']) == 12
+          assert control['network_fetch_count'] == 11
+          assert len(matched['results']) == 11
+          # Eleven author-thread rows occupy only five unique Blogger posts.
+          assert matched['network_fetch_count'] == 5
+          print(json.dumps({
+              'supplement_rows': len(supplement['results']),
+              'supplement_fetches': supplement['network_fetch_count'],
+              'control_rows': len(control['results']),
+              'control_fetches': control['network_fetch_count'],
+              'matched_rows': len(matched['results']),
+              'matched_fetches': matched['network_fetch_count'],
+          }, indent=2))
+          PY
 
       - name: Run matched content-light control
         run: |
