@@ -1,4 +1,4 @@
-Ask deep questions. Conversation-card games may seem silly, but they can help people get past superficial talk and see if they’re compatible.
+Ask deep questions. [Conversation-card games](https://innerself.love/blog/romance-card-game/) may seem silly, but they can help people get past superficial talk and see if they’re compatible.
 
 But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation. If all she can give me is a general answer, I assume she probably doesn't know yet.
 
