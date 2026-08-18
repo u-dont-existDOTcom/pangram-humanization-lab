@@ -23,4 +23,6 @@ The wrapper:
 
 A nonzero `SMOKE_EXIT` still means the browser smoke itself failed. Inspect or share the captured terminal output/log to diagnose the underlying Playwright/browser/session problem. Do not infer the child failure from the parent-terminal behavior.
 
-The exact originating shell-state incident and its disposition are preserved in `state/PANGRAM-LOCAL-INTERACTIVE-SHELL-INCIDENT-2026-08-18.md` and the canonical lesson ledger. The transferable rule is merged into `u-dont-existDOTcom/universal-dev-architecture` as `patterns/interactive-shell-command-safety.md`.
+The repository-side test suite for this branch passes **161 tests** after correcting the Playwright factory test fake. This does not certify the Zorin graphical smoke; that live browser/session boundary remains the purpose of this wrapper.
+
+The exact originating shell-state incident and its disposition are preserved in `state/PANGRAM-LOCAL-INTERACTIVE-SHELL-INCIDENT-2026-08-18.md` and the canonical lesson ledger. The local-Playwright current-state checkpoint also has its required `no-new-lesson` disposition. The transferable shell-safety rule is merged into `u-dont-existDOTcom/universal-dev-architecture` as `patterns/interactive-shell-command-safety.md`.
