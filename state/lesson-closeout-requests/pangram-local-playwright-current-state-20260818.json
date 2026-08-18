@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
-  "request_id": "pangram-local-playwright-current-state-20260818",
   "disposition": "no-new-lesson",
   "finding": "The local Playwright current-state note records the implementation checkpoint, exact current Romance SHA gates, preserved Browserbase fallback, repository-test boundary, and remaining owner-machine live verification steps.",
+  "ledger_entry_ids": [
+    "L-4846c9c448-01"
+  ],
+  "processed_at_utc": "2026-08-18T12:44:32.394102+00:00",
   "promoted_to": [],
   "reason": "This is an operational recovery checkpoint. Its reusable local-browser, duplicate-defense, evidence-durability, and shell-safety rules are implemented in code/runbooks or promoted separately; the note adds no distinct detector-science or humanization lesson.",
+  "request_id": "pangram-local-playwright-current-state-20260818",
+  "schema_version": 1,
   "source_path": "state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md",
   "source_ref": "agent/pangram-local-playwright-gpt-20260818",
-  "source_sha256": "4846c9c448ac3e10b53107fad7504e2b064ea5aa27d3adaed624d4ec666a362e"
+  "source_sha256": "4846c9c448ac3e10b53107fad7504e2b064ea5aa27d3adaed624d4ec666a362e",
+  "status": "processed"
 }
