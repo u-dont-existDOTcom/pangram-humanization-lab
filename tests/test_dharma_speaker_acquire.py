@@ -41,6 +41,20 @@ def test_inline_target_label_is_preserved_and_other_inline_speaker_is_excluded()
     assert result.other_speaker_boundary_count == 1
 
 
+def test_bold_inline_speaker_labels_get_boundaries_without_leaking_other_speakers():
+    html = """
+    <div class="post-body entry-content">
+      <div><b>Other Person:</b>Other text.
+      <b>Joel Rosenblum:</b>Joel text here.
+      <b>Greg Goode:</b>Greg text.</div>
+    </div>
+    """
+    result = ds.extract_blogspot_named_speaker(html, "Joel Rosenblum")
+    assert result.text == "Joel text here."
+    assert result.target_marker_count == 1
+    assert result.other_speaker_boundary_count == 1
+
+
 def test_standalone_multiword_name_ends_active_target_block():
     text = """
     Joel Rosenblum
