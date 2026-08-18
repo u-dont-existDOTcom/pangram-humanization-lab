@@ -109,7 +109,7 @@ def _find_or_open_report(context: Any, page: Any, exact_text: str) -> tuple[Any,
     # navigation and look for the exact result again. Never click a detector
     # action here.
     page = local_transport.normalize_context_tabs(context, keep=page)
-    page.goto(local_transport.DEFAULT_PANGRAM_GUI_URL, wait_until="domcontentloaded")
+    page.goto(gui_core.DEFAULT_PANGRAM_GUI_URL, wait_until="domcontentloaded")
     local_transport.wait_for_authenticated_detector_input(page)
     opened_history = _try_open_history(page)
     if opened_history:
