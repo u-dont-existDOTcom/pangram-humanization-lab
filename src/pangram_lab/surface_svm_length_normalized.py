@@ -34,6 +34,56 @@ def _safe_name(value: object) -> str:
     return text or "sample"
 
 
+def _whitespace_token_count(row: dict) -> int:
+    return len(_WORD_RE.findall(Path(str(row["local_text_path"])).read_text(encoding="utf-8")))
+
+
+def _apply_short_training_exclusions(
+    rows: list[dict],
+    exclusions: list[dict],
+    *,
+    held_out_groups: set[str],
+    required_words: int,
+) -> tuple[list[dict], list[dict]]:
+    """Apply only explicit, feasibility-driven exclusions to training-only rows.
+
+    An exclusion is valid only if it names one unique row, that row cannot be a
+    held-out test source group, and the live extracted text is genuinely too
+    short for the precommitted window. This prevents outcome-driven filtering.
+    """
+    retained = list(rows)
+    audit: list[dict] = []
+    for exclusion in exclusions:
+        sample_id = str(exclusion["sample_id"])
+        matches = [row for row in retained if str(row.get("sample_id")) == sample_id]
+        if len(matches) != 1:
+            raise ValueError(f"short-training exclusion {sample_id} matched {len(matches)} rows")
+        row = matches[0]
+        source_group = str(row.get("source_group") or "")
+        if source_group in held_out_groups:
+            raise ValueError(f"short-training exclusion {sample_id} is a held-out test row")
+        live_words = _whitespace_token_count(row)
+        if live_words >= required_words:
+            raise ValueError(
+                f"short-training exclusion {sample_id} has {live_words} words; "
+                f"it is not shorter than required window {required_words}"
+            )
+        retained.remove(row)
+        audit.append(
+            {
+                "sample_id": row.get("sample_id"),
+                "source_group": row.get("source_group"),
+                "speaker": row.get("speaker"),
+                "source_word_count_reported": int(row.get("word_count", 0)),
+                "source_whitespace_token_count": live_words,
+                "required_window_words": required_words,
+                "reason": exclusion.get("reason") or "training-only-source-shorter-than-precommitted-window",
+                "model_outcome_used_for_exclusion": False,
+            }
+        )
+    return retained, audit
+
+
 def _normalize_rows(
     rows: list[dict],
     *,
@@ -46,7 +96,12 @@ def _normalize_rows(
     for index, row in enumerate(rows, start=1):
         source_path = Path(str(row["local_text_path"]))
         text = source_path.read_text(encoding="utf-8")
-        window, start, total = centered_word_window(text, words)
+        try:
+            window, start, total = centered_word_window(text, words)
+        except ValueError as exc:
+            raise ValueError(
+                f"{row.get('sample_id')} ({row.get('speaker')}, {row.get('source_group')}): {exc}"
+            ) from exc
         normalized_sha = hashlib.sha256(window.encode("utf-8")).hexdigest()
         sample_id = str(row.get("sample_id") or f"sample-{index}")
         target = out_dir / f"{index:03d}-{_safe_name(sample_id)}-{normalized_sha[:12]}.txt"
@@ -109,10 +164,21 @@ def run_length_normalized(
 
     authors = [str(value) for value in spec["authors"]]
     n_train = int(spec["fold_training"]["documents_per_author"])
+    held_out_groups = {str(value) for value in spec["held_out_source_groups"]}
 
-    # Preserve exactly the previous pilot's control-document selection before
-    # length normalization. Otherwise equalized word_count values would change
-    # deterministic ranking/tie-breaks and confound the sensitivity comparison.
+    # The first live feasibility run established that one Joel training-only
+    # source contains fewer than 50 extracted words. Preserve the 50-word
+    # precommit and exclude only that named, non-test row. The runtime verifies
+    # the exclusion remains genuinely necessary before applying it.
+    matched_rows, short_training_exclusions = _apply_short_training_exclusions(
+        list(matched.get("results", [])),
+        list(spec["length_normalization"].get("short_training_exclusions", [])),
+        held_out_groups=held_out_groups,
+        required_words=words,
+    )
+
+    # Preserve the previous pilot's deterministic control-document ranking, but
+    # select the new feasible per-author depth before changing word_count to 50.
     selected_controls: list[dict] = []
     for author in authors:
         if author == "Joel Rosenblum":
@@ -132,7 +198,7 @@ def run_length_normalized(
 
     work_dir = out_path.parent / "surface-svm-length-normalized-50w"
     normalized_matched, audit_matched = _normalize_rows(
-        list(matched.get("results", [])), out_dir=work_dir / "matched", words=words
+        matched_rows, out_dir=work_dir / "matched", words=words
     )
     normalized_supplement, audit_supplement = _normalize_rows(
         selected_supplement, out_dir=work_dir / "supplement", words=words
@@ -161,8 +227,9 @@ def run_length_normalized(
         "window_words": words,
         "training_words_per_author_per_fold": words * n_train,
         "test_words_per_document": words,
-        "selection_frozen_before_normalization": True,
+        "control_selection_occurs_before_normalization": True,
         "normalization_is_content_blind": True,
+        "short_training_exclusions": short_training_exclusions,
         "documented_control_exclusions_before_selection": [
             {
                 "sample_id": row.get("sample_id"),
