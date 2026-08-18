@@ -125,11 +125,69 @@ def test_acquisition_writes_prose_only_to_local_path_and_metadata_only_manifest(
 
     assert runtime["errors"] == []
     assert len(runtime["results"]) == 1
+    assert runtime["network_fetch_count"] == 1
     result = runtime["results"][0]
     assert result["canonical_sha256"]
     assert result["target_marker_count"] == 1
     assert "text" not in result
     saved = json.loads(meta.read_text())
     assert saved["raw_or_canonical_prose_in_output"] is False
+    assert saved["network_fetch_count"] == 1
     assert "Joel's multiline comment" in (out / "thread-one.txt").read_text()
     assert "Other text" not in (out / "thread-one.txt").read_text()
+
+
+def test_acquisition_fetches_shared_thread_once_for_multiple_speakers(tmp_path, monkeypatch):
+    shared_url = "https://example.blogspot.com/shared.html"
+    inventory = {
+        "sources": [
+            {
+                "source_id": "shared-thread-authors",
+                "source_group": "shared-thread-authors",
+                "provenance": "public-human-control-explicit-speaker",
+                "modality": "written",
+                "registers": ["dialogue-QA"],
+                "known_threads": [
+                    {
+                        "sample_id": "shared-joel",
+                        "source_group": "same-thread",
+                        "url": shared_url,
+                        "extraction_mode": "speaker-prefix:Joel Rosenblum",
+                    },
+                    {
+                        "sample_id": "shared-david",
+                        "source_group": "same-thread",
+                        "url": shared_url,
+                        "extraction_mode": "speaker-prefix:David Vardy",
+                    },
+                ],
+            }
+        ]
+    }
+    inv = tmp_path / "inventory.json"
+    inv.write_text(json.dumps(inventory), encoding="utf-8")
+    html = """
+    <div class="post-body entry-content">
+      <div><b>Joel Rosenblum:</b>Joel has enough distinct words for this extraction fixture to be nonempty.</div>
+      <div><b>David Vardy:</b>David also has enough distinct words for this extraction fixture to be nonempty.</div>
+    </div>
+    """
+    calls = []
+
+    def fake_fetch(url, timeout=30):
+        calls.append(url)
+        return html, "shared-raw-hash"
+
+    monkeypatch.setattr(ds, "fetch_html", fake_fetch)
+    runtime = ds.acquire_speaker_inventory(
+        inv,
+        out_dir=tmp_path / "text",
+        manifest_out=tmp_path / "manifest.json",
+    )
+
+    assert runtime["errors"] == []
+    assert len(runtime["results"]) == 2
+    assert runtime["network_fetch_count"] == 1
+    assert calls == [shared_url]
+    assert {row["speaker"] for row in runtime["results"]} == {"Joel Rosenblum", "David Vardy"}
+    assert {row["source_html_sha256"] for row in runtime["results"]} == {"shared-raw-hash"}

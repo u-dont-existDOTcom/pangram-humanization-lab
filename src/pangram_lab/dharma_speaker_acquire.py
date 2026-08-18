@@ -189,6 +189,11 @@ def acquire_speaker_inventory(
     results: list[dict] = []
     errors: list[dict] = []
 
+    # Multiple authors from one discussion page are separate corpus rows but
+    # must not cause repeated network fetches. Reuse the exact raw HTML + hash
+    # for every requested speaker on the same URL within this acquisition run.
+    fetch_cache: dict[str, tuple[str, str]] = {}
+
     for item in iter_inventory_items(inventory):
         sample_id = item.get("sample_id")
         if not sample_id or (sample_ids and sample_id not in sample_ids):
@@ -202,7 +207,9 @@ def acquire_speaker_inventory(
             errors.append({"sample_id": sample_id, "error": "missing-url-or-speaker"})
             continue
         try:
-            raw_html, raw_sha = fetch_html(url, timeout=timeout)
+            if url not in fetch_cache:
+                fetch_cache[url] = fetch_html(url, timeout=timeout)
+            raw_html, raw_sha = fetch_cache[url]
             extraction = extract_blogspot_named_speaker(raw_html, speaker)
             if extraction.target_marker_count == 0:
                 raise ValueError("target-speaker-marker-not-found")
@@ -226,6 +233,7 @@ def acquire_speaker_inventory(
                     "provenance": item.get("provenance"),
                     "modality": item.get("modality"),
                     "registers": item.get("registers", []),
+                    "extraction_mode": mode,
                     "source_html_sha256": raw_sha,
                     "canonical_sha256": canon.sha256,
                     "word_count": canon.word_count,
@@ -245,6 +253,7 @@ def acquire_speaker_inventory(
         "schema_version": 1,
         "inventory": str(inventory_path),
         "raw_or_canonical_prose_in_output": False,
+        "network_fetch_count": len(fetch_cache),
         "results": results,
         "errors": errors,
     }
@@ -285,6 +294,7 @@ def main(argv=None) -> int:
             {
                 "acquired": len(runtime["results"]),
                 "errors": len(runtime["errors"]),
+                "network_fetch_count": runtime["network_fetch_count"],
                 "manifest": args.manifest_out,
             },
             indent=2,
