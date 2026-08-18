@@ -3,7 +3,6 @@ from pathlib import Path
 
 import pytest
 
-from pangram_lab import dharma_author_discover as da
 from pangram_lab import dharma_ordinary_control_census as census
 
 
@@ -90,10 +89,10 @@ def _spec(path: Path, role_path: Path) -> None:
 
 def test_configured_single_token_label_is_exactly_allowlisted():
     html = "<b>Soh:</b>x<b>Interesting:</b>heading<b>Greg Goode:</b>y"
-    assert da._speaker_labels(
+    assert census._speaker_labels(
         html, allowed_single_token_labels=["Soh"]
     ) == ["Soh", "Greg Goode"]
-    assert da._speaker_labels(html) == ["Greg Goode"]
+    assert census._speaker_labels(html) == ["Greg Goode"]
 
 
 def test_atom_page_scan_returns_hashes_and_labels_but_no_post_metadata():
