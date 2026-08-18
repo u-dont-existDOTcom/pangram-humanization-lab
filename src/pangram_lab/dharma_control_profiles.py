@@ -8,6 +8,8 @@ from pathlib import Path
 from .dharma_author_discover import discover_dharma_authors
 from .dharma_speaker_acquire import acquire_speaker_inventory
 
+_EMPTY_EXPLICIT_BLOCK_ERROR = "target-speaker-marker-found-but-no-authored-words"
+
 
 def _sample_id(author_id: str, url: str) -> str:
     slug = url.rstrip("/").rsplit("/", 1)[-1]
@@ -68,10 +70,20 @@ def build_profile_inventory(spec: dict, discoveries: dict[str, dict]) -> tuple[d
     return {"sources": sources}, census_rows
 
 
-def summarize_profiles(results: list[dict], spec: dict, census_rows: list[dict]) -> dict:
+def summarize_profiles(
+    results: list[dict],
+    spec: dict,
+    census_rows: list[dict],
+    *,
+    empty_explicit_rejections: list[dict] | None = None,
+) -> dict:
     by_speaker: dict[str, list[dict]] = {}
     for row in results:
         by_speaker.setdefault(row["speaker"], []).append(row)
+
+    rejected_by_speaker: dict[str, list[dict]] = {}
+    for row in empty_explicit_rejections or []:
+        rejected_by_speaker.setdefault(row.get("speaker", ""), []).append(row)
 
     guidance = spec.get("feasibility_guidance", {})
     min_posts = int(guidance.get("preferred_min_explicit_nonoverlap_posts", 4))
@@ -83,6 +95,7 @@ def summarize_profiles(results: list[dict], spec: dict, census_rows: list[dict])
     for target in spec.get("targets", []):
         speaker = target["speaker"]
         rows = sorted(by_speaker.get(speaker, []), key=lambda row: row["source_group"])
+        empty_rows = rejected_by_speaker.get(speaker, [])
         total_words = sum(int(row["word_count"]) for row in rows)
         largest = max((int(row["word_count"]) for row in rows), default=0)
         largest_fraction = round(largest / total_words, 6) if total_words else None
@@ -95,9 +108,20 @@ def summarize_profiles(results: list[dict], spec: dict, census_rows: list[dict])
             flags.append("largest-source-overconcentrated")
         if any(row.get("quality_flags") for row in rows):
             flags.append("one-or-more-samples-require-manual-quality-review")
+        if empty_rows:
+            flags.append("one-or-more-explicit-label-posts-had-zero-authored-words")
         authors[speaker] = {
             **census_by.get(speaker, {}),
             "extracted_post_count": len(rows),
+            "rejected_empty_explicit_post_count": len(empty_rows),
+            "rejected_empty_explicit_samples": [
+                {
+                    "sample_id": row.get("sample_id"),
+                    "url": row.get("url"),
+                    "error": row.get("error"),
+                }
+                for row in empty_rows
+            ],
             "total_words": total_words,
             "largest_source_words": largest,
             "largest_source_fraction": largest_fraction,
@@ -146,14 +170,30 @@ def extract_control_profiles(
         manifest_out=acquisition_manifest,
         timeout=timeout,
     )
-    if runtime.get("errors"):
+
+    empty_explicit_rejections = [
+        row for row in runtime.get("errors", [])
+        if row.get("error") == _EMPTY_EXPLICIT_BLOCK_ERROR
+    ]
+    hard_errors = [
+        row for row in runtime.get("errors", [])
+        if row.get("error") != _EMPTY_EXPLICIT_BLOCK_ERROR
+    ]
+    if hard_errors:
         return {
             "schema_version": 1,
             "raw_or_canonical_prose_in_output": False,
-            "errors": runtime["errors"],
+            "errors": hard_errors,
+            "empty_explicit_rejections": empty_explicit_rejections,
             "authors": {},
         }
-    receipt = summarize_profiles(runtime.get("results", []), spec, census_rows)
+
+    receipt = summarize_profiles(
+        runtime.get("results", []),
+        spec,
+        census_rows,
+        empty_explicit_rejections=empty_explicit_rejections,
+    )
     receipt["errors"] = []
     receipt_out.parent.mkdir(parents=True, exist_ok=True)
     receipt_out.write_text(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
