@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "purpose": "Enumerate metadata-only pre-ChatGPT posts from owner-confirmed Blogger sites before selecting independent source documents for idiolect calibration.",
+  "default_pre_llm_cutoff": "2022-11-30T00:00:00Z",
+  "content_storage": "none",
+  "blogs": [
+    {
+      "source_id": "jr-legacy-tafka-archive",
+      "blog_url": "https://tafkajestdr.blogspot.com/",
+      "published_before": "2022-11-30T00:00:00Z",
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "notes": "Use discovery to expand beyond the five already-acquired posts; 2026 update material remains outside this pre-LLM discovery set."
+    },
+    {
+      "source_id": "jr-legacy-dharma-connection",
+      "blog_url": "https://dharmaconnectiongroup.blogspot.com/",
+      "published_before": "2022-11-30T00:00:00Z",
+      "provenance": "natural-owner-confirmed-comments-only",
+      "owner_confirmation": "2026-08-18: Joel confirmed comments under Joel Rosenblum are his and there is no other Joel Rosenblum there",
+      "notes": "Discovery identifies thread permalinks only. Each thread still requires speaker-boundary extraction; other authors' post/comment text is not Joel corpus material."
+    },
+    {
+      "source_id": "jr-legacy-government-scam-blog",
+      "blog_url": "https://government-scam.blogspot.com/",
+      "published_before": "2022-11-30T00:00:00Z",
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "notes": "Political/polemical source diversity."
+    },
+    {
+      "source_id": "jr-legacy-insurgency-blog",
+      "blog_url": "https://theinsurgencyisworking.blogspot.com/",
+      "published_before": "2022-11-30T00:00:00Z",
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "notes": "Political/polemical source diversity."
+    },
+    {
+      "source_id": "jr-legacy-love4nanou-blog",
+      "blog_url": "https://love4nanou.blogspot.com/",
+      "published_before": "2022-11-30T00:00:00Z",
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "notes": "Do not infer register from blog name; classify only after text audit."
+    },
+    {
+      "source_id": "jr-legacy-ann-gayma-talkpa-truth",
+      "blog_url": "https://ann-gayma-rosenblum-talkpa-truth.blogspot.com/",
+      "published_before": "2022-11-30T00:00:00Z",
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "notes": "Personal/polemical source; quoted third-party material and private-person identifiers require later text-level audit."
+    }
+  ]
+}

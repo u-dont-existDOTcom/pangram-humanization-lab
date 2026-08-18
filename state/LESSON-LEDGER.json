@@ -615,6 +615,17 @@
       "source_path": "state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json",
       "source_ref": "task/idiolect-corpus-manifest-20260818",
       "source_sha256": "56851a5c5cc1fa38f4210eb11d4a0a8320e7a9bb475e11ce6cb4300c35abdfae"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The Blogger discovery queue records confirmed-owner blog roots and a conservative pre-ChatGPT cutoff for metadata-only enumeration before prose acquisition.",
+      "id": "L-8dd7a37242-01",
+      "promoted_to": [],
+      "reason": "This is source-discovery/provenance infrastructure. It does not establish a new humanization, detector, or authorship-retention result.",
+      "recorded_at_utc": "2026-08-18T02:20:21.662106+00:00",
+      "source_path": "state/IDIOLECT-BLOGGER-DISCOVERY-QUEUE-2026-08-18.json",
+      "source_ref": "task/idiolect-blogger-discovery-20260818",
+      "source_sha256": "8dd7a37242097900f42cd71529d747ac6718cdf315038c5219b5b9b3a81d9deb"
     }
   ],
   "schema_version": 1

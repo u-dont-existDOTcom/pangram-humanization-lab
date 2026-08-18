@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse, getpass, json, os, shutil, subprocess, sys
 from pathlib import Path
+from .blogger_discover import add_cli_parsers as add_blogger_cli_parsers, run_cli as run_blogger_cli
 from .cache import PangramCache
 from .codex_stream import CodexRunner
 from .corpus_acquire import add_cli_parsers as add_corpus_cli_parsers, run_cli as run_corpus_cli
@@ -23,6 +24,7 @@ def parser():
     s=sp.add_parser("cache-summary")
     add_idiolect_cli_parsers(sp)
     add_corpus_cli_parsers(sp)
+    add_blogger_cli_parsers(sp)
     return p
 
 
@@ -53,6 +55,8 @@ def main(argv=None):
             if a.inventory=="state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json":
                 a.inventory="state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json"
             return run_corpus_cli(a)
+        if a.cmd=="idiolect-blogger-discover":
+            return run_blogger_cli(a)
         if a.cmd=="github-ensure":
             # Commit the unpacked source locally first; then create/connect the
             # private GitHub repository and push that exact tree.
