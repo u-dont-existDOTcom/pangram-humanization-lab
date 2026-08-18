@@ -1,10 +1,15 @@
 {
-  "schema_version": 1,
+  "disposition": "provisional",
+  "finding": "The dependency-free single-author retention proxy is useful as directional evidence but is not yet research-grade validated for Joel's registers; before stronger operational interpretation, compare it against paper-faithful surface attribution, LUAR, topic/content controls, and held-out register-specific datasets, preserving disagreements rather than averaging them away.",
+  "ledger_entry_ids": [
+    "L-2c5e548f6a-01"
+  ],
+  "processed_at_utc": "2026-08-18T00:03:50.672915+00:00",
+  "reason": "The methodological need is supported by the IER paper and by the local instrument's intentionally different design, but no Joel-specific Tier-A versus Tier-B calibration results exist yet.",
   "request_id": "idiolect-proxy-validation-gap-2026-08-17",
+  "schema_version": 1,
   "source_path": "state/IDIOLECT-PROXY-VALIDATION-GAP-2026-08-17.md",
   "source_ref": "56ddd090284d7028e9360aa6e52022cec575ea6c",
   "source_sha256": "2c5e548f6a857be85e33b7af106d70f5e4cfc4f6a296b5a7271cf4f9a6e7e82a",
-  "finding": "The dependency-free single-author retention proxy is useful as directional evidence but is not yet research-grade validated for Joel's registers; before stronger operational interpretation, compare it against paper-faithful surface attribution, LUAR, topic/content controls, and held-out register-specific datasets, preserving disagreements rather than averaging them away.",
-  "disposition": "provisional",
-  "reason": "The methodological need is supported by the IER paper and by the local instrument's intentionally different design, but no Joel-specific Tier-A versus Tier-B calibration results exist yet."
+  "status": "processed"
 }
