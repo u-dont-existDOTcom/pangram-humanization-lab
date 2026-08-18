@@ -20,7 +20,8 @@
   ],
   "matched_queue": "state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json",
   "joel_supplement_queue": "state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json",
-  "control_profile_spec": "state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json",
+  "control_training_queue": "state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json",
+  "control_selection_provenance": "Frozen from the six largest usable non-overlap explicit-speaker documents per control in merged PR #63. The compact queue avoids re-fetching the complete control profile during every heavy-model run.",
   "held_out_source_groups": [
     "dc-thread-can-anything-known-2014-08-09",
     "dc-thread-holographic-2014-02-04",
@@ -35,7 +36,7 @@
         "dc-2013-06-sound-bahiya"
       ],
       "joel_rule": "The two Joel-only Dharma supplements plus every non-held-out Joel matched-queue document, including the short Anatta fragment, for six documents per fold.",
-      "control_rule": "Six largest non-overlap explicit-speaker Dharma documents per control.",
+      "control_rule": "The six frozen non-overlap explicit-speaker Dharma documents per control from the compact control queue.",
       "tokenization": "Each document is truncated by the LUAR tokenizer at 512 tokens."
     },
     "equal_50_word": {
@@ -46,7 +47,7 @@
         "dc-2013-06-lucid-dreaming"
       ],
       "joel_rule": "Lucid Dreaming plus the three non-held-out matched Joel documents that have at least 50 words. Exclude the 13-word Anatta and 47-word Sound/Bahiya fragments.",
-      "control_rule": "Four largest non-overlap explicit-speaker Dharma documents per control, each at least 50 words.",
+      "control_rule": "Four largest documents from the six-source frozen control queue per control, each at least 50 words.",
       "normalization": "Preserve original characters, punctuation and whitespace through the end of the 50th word token; discard the suffix. Held-out documents are normalized identically."
     }
   },
