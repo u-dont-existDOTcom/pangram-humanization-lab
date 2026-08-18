@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "purpose": "Third surface-authorship calibration pilot: eliminate document-length/training-word-mass asymmetry by using exactly four 50-word source prefixes per author in each matched-platform leave-one-source-group-out fold, and 50-word prefixes for every held-out document.",
+  "raw_text_in_git": false,
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "word_budget_per_document": 50,
+  "documents_per_author_per_fold": 4,
+  "training_words_per_author_per_fold": 200,
+  "matched_queue": "state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json",
+  "joel_supplement_queue": "state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json",
+  "joel_supplement_sample_id": "dc-2013-06-lucid-dreaming",
+  "control_profile_spec": "state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json",
+  "held_out_source_groups": [
+    "dc-thread-can-anything-known-2014-08-09",
+    "dc-thread-holographic-2014-02-04",
+    "dc-thread-insights-anatta-2014-08-09",
+    "dc-thread-supramundane-jhanas-2014-08-09"
+  ],
+  "selection": {
+    "joel": "For each fold: Lucid Dreaming plus the three non-held-out matched Joel documents having at least 50 words. The 13-word Anatta fragment and 47-word Sound/Bahiya fragment are excluded from this equal-budget experiment.",
+    "controls": "Four largest non-overlap explicit-speaker Dharma documents per control, each required to contain at least 50 words.",
+    "normalization": "Preserve original canonical characters, punctuation and whitespace through the end of the 50th word token; discard the suffix. Do not reconstruct or re-tokenize prose.",
+    "source_group_leakage_forbidden": true
+  },
+  "models": [
+    {
+      "model_id": "paper-described-char2-4-word1-2-linear-svm",
+      "feature_mode": "char+word",
+      "C": 1.0
+    },
+    {
+      "model_id": "char2-4-only-sensitivity",
+      "feature_mode": "char",
+      "C": 1.0
+    },
+    {
+      "model_id": "word1-2-only-sensitivity",
+      "feature_mode": "word",
+      "C": 1.0
+    }
+  ],
+  "evaluation": {
+    "group_bootstrap_accuracy": {
+      "unit": "held-out source_group",
+      "iterations": 10000,
+      "seed": 260800928
+    }
+  },
+  "interpretation": {
+    "chance_accuracy": 0.3333333333,
+    "do_not_call_ier": true,
+    "no_threshold_claim": true,
+    "comparison_target": "If character-based Joel attribution remains weak after exact 50-word equalization, document-length/training-word-mass imbalance is not sufficient to explain the surface instrument failure. If it materially improves, retain length normalization as a mandatory calibration control."
+  }
+}
