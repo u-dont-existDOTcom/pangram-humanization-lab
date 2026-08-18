@@ -1,0 +1,123 @@
+{
+  "queue_version": "0.1.1",
+  "parent_inventory": "state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json",
+  "purpose": "Operational fetch queue for public pre-LLM Joel samples with explicit extraction modes. Raw/canonical prose remains local and gitignored.",
+  "sources": [
+    {
+      "source_id": "jr-legacy-tafka-archive",
+      "source_group": "tafkajestdr",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": [
+        "research-conversational",
+        "polemical-irreverent",
+        "personal-tender",
+        "dialogue-QA"
+      ],
+      "known_posts": [
+        {
+          "sample_id": "tafka-2020-04-19-consciousness-conditions",
+          "date": "2020-04-19",
+          "title": "Could it be that consciousness creates the conditions instead of vice versa?",
+          "url": "https://tafkajestdr.blogspot.com/2020/04/could-it-be-that-consciousness-creates.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2019-08-02-buddhism-sect",
+          "date": "2019-08-02",
+          "title": "Which sect of Buddhism has the true teachings of Buddha?",
+          "url": "https://tafkajestdr.blogspot.com/2019/08/which-sect-of-buddhism-has-true.html",
+          "extraction_mode": "post-body"
+        },
+        {
+          "sample_id": "tafka-2019-07-22-psychedelic-brain",
+          "date": "2019-07-22",
+          "title": "How does the brain construct the psychedelic experience?",
+          "url": "https://tafkajestdr.blogspot.com/2019/07/how-does-brain-construct-psychedelic.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2019-07-16-awakening-family",
+          "date": "2019-07-16",
+          "title": "Is awakening a proper goal for a family man/woman?",
+          "url": "https://tafkajestdr.blogspot.com/2019/07/is-awakening-proper-goal-for-family.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2019-03-08-plant-spirits",
+          "date": "2019-03-08",
+          "title": "Are plant spirits real or are they all in my mind when I eat psychedelic plants?",
+          "url": "https://tafkajestdr.blogspot.com/2019/03/are-plant-spirits-real-or-are-they-all.html",
+          "extraction_mode": "message-by-you"
+        }
+      ]
+    },
+    {
+      "source_id": "jr-legacy-dharma-connection",
+      "source_group": "dharma-connection",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": [
+        "dialogue-QA",
+        "research-conversational",
+        "polemical-irreverent"
+      ],
+      "known_threads": [
+        {
+          "sample_id": "dc-2014-02-04-holographic-universe",
+          "date": "2014-02-04",
+          "title": "Holographic Universe So What?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/holographic-universe-so-what_68.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2013-06-lucid-dreaming",
+          "date": "2013-06",
+          "title": "Lucid Dreaming, Dreams Of Clarity & More",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/lucid-dreaming-dreams-of-clarity-more_22.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2013-06-sound-bahiya",
+          "date": "2013-06",
+          "title": "Sound And The Bahiya Sutta",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/sound-and-bahiya-sutta.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2013-07-anatta-email",
+          "date": "2013-07",
+          "title": "Excerpts From An Email Discussing Anattā",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/07/excerpts-from-email-discussing-anatta_82.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        }
+      ]
+    }
+  ],
+  "manual_queue": [
+    {
+      "source_id": "jr-legacy-buddhism-stackexchange-2021",
+      "reason": "StackExchange answer-body selector not yet implemented; do not scrape the complete multi-author question page as Joel prose."
+    },
+    {
+      "source_id": "jr-legacy-government-scam-blog",
+      "reason": "Public fetch unresolved in current environment."
+    },
+    {
+      "source_id": "jr-legacy-insurgency-blog",
+      "reason": "Public fetch unresolved in current environment."
+    },
+    {
+      "source_id": "jr-legacy-love4nanou-blog",
+      "reason": "Public fetch unresolved in current environment."
+    },
+    {
+      "source_id": "jr-legacy-ann-gayma-talkpa-truth",
+      "reason": "Public fetch unresolved in current environment."
+    },
+    {
+      "source_id": "jr-legacy-jews-love-antisemites-owner-paste",
+      "reason": "Owner-supplied text is available in conversation, but canonical public URL/file is not yet fixed."
+    }
+  ]
+}

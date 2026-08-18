@@ -4,9 +4,10 @@ import argparse, getpass, json, os, shutil, subprocess, sys
 from pathlib import Path
 from .cache import PangramCache
 from .codex_stream import CodexRunner
+from .corpus_acquire import add_cli_parsers as add_corpus_cli_parsers, run_cli as run_corpus_cli
 from .engine import Engine
 from .git_sync import GitSync, GitSyncError
-from .idiolect import add_cli_parsers, run_cli
+from .idiolect import add_cli_parsers as add_idiolect_cli_parsers, run_cli as run_idiolect_cli
 from .legacy_import import import_legacy_tree
 from .pangram4 import PangramClient
 
@@ -20,7 +21,8 @@ def parser():
     i=sp.add_parser("import-legacy"); i.add_argument("paths",nargs="*")
     g=sp.add_parser("github-ensure"); g.add_argument("--repo-name",default="pangram-humanization-lab")
     s=sp.add_parser("cache-summary")
-    add_cli_parsers(sp)
+    add_idiolect_cli_parsers(sp)
+    add_corpus_cli_parsers(sp)
     return p
 
 
@@ -46,7 +48,11 @@ def main(argv=None):
     a=parser().parse_args(argv); rt=root()
     try:
         if a.cmd in {"idiolect-retention","idiolect-ier"}:
-            return run_cli(a)
+            return run_idiolect_cli(a)
+        if a.cmd=="idiolect-corpus-acquire":
+            if a.inventory=="state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json":
+                a.inventory="state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json"
+            return run_corpus_cli(a)
         if a.cmd=="github-ensure":
             # Commit the unpacked source locally first; then create/connect the
             # private GitHub repository and push that exact tree.
