@@ -26,20 +26,9 @@ CONTROLLER sees:
 
 CONTROLLER never writes the candidate passage and never tells WRITER what connection to make.
 
-At each turn CONTROLLER outputs exactly one of:
+At each turn CONTROLLER returns `REVEAL` with exactly one source ID and a hidden analysis `FUNCTION`, or `STOP`.
 
-```text
-REVEAL: <source_id>
-FUNCTION: <generation_function>
-```
-
-or
-
-```text
-STOP
-```
-
-The `FUNCTION` is an analysis label retained in the trace and hidden from WRITER. Allowed provisional labels:
+Allowed provisional generation-function labels:
 
 - `CONCRETIZE`
 - `COMPLICATE`
@@ -72,20 +61,14 @@ WRITER sees only:
 WRITER never sees:
 
 - unrevealed source elements;
-- source order;
+- source order or source-position metadata;
 - remaining-coverage count;
 - paragraph or article outline;
 - target conclusion;
 - CONTROLLER's selection rationale or `FUNCTION` label;
 - evaluator labels.
 
-WRITER outputs exactly one of:
-
-```text
-MORE
-```
-
-or the natural amount of prose that has actually become sayable.
+WRITER returns `MORE` if the available material has not generated an actual thought worth expressing, or the natural amount of new prose that has become sayable.
 
 Rules:
 
@@ -99,16 +82,13 @@ Rules:
 
 ### FIDELITY GATE
 
-FIDELITY sees the authoritative source/claim ledger, accepted prose, and candidate delta. It outputs:
-
-- `PASS`; or
-- `FAIL` plus the smallest explicit unsupported/changed relation.
+FIDELITY sees the authoritative source/claim ledger, accepted prose, and candidate delta. It outputs `PASS` or `FAIL` plus the smallest explicit unsupported/changed relation.
 
 It checks meaning only: claims, certainty, actors, chronology, causality, attribution, quotations/identity strings, autobiographical stance, and protected rhetorical function. It does not decide whether the candidate is a natural next thought.
 
 ### FLOW GATE
 
-FLOW sees accepted prose plus the candidate delta but not the unrevealed source inventory or source order. It outputs:
+FLOW sees accepted prose plus the candidate delta but not the source ledger, unrevealed source inventory, or source order. It outputs:
 
 - `PASS`;
 - `BAD_EDGE`;
@@ -117,73 +97,73 @@ FLOW sees accepted prose plus the candidate delta but not the unrevealed source 
 
 It asks whether the candidate is an earned continuation from the live state rather than merely topically related. Later material cannot retroactively rescue a bad entry edge.
 
+## Why the roles must be isolated
+
+A valid source-gating experiment cannot run CONTROLLER and WRITER in one shared model conversation, because the WRITER would already have latent access to the unrevealed source packet. The repository runner therefore invokes each role through a fresh **ephemeral Codex process**. CONTROLLER receives the full packet; WRITER receives only the accepted prose and the cumulative revealed pool; FLOW is source-blind. The cumulative WRITER pool is deterministically reordered by source ID hash so neither original source order nor reveal order is exposed.
+
+This is an experimental-control requirement, not a claim that ordinary production must use separate models.
+
 ## Turn protocol
 
 For each turn:
 
 1. Compute a hash of the accepted prose-so-far.
 2. CONTROLLER chooses one unrevealed source ID or `STOP`.
-3. If `REVEAL`, add that source item to WRITER's cumulative available pool. Do not disclose `FUNCTION`.
+3. If `REVEAL`, add that source item to WRITER's cumulative available pool. Do not disclose `FUNCTION` or source-position information.
 4. WRITER returns `MORE` or a candidate prose delta.
-5. If `MORE`, record the event and return to CONTROLLER. Nothing is added to prose.
+5. If `MORE`, record the event and return to a fresh CONTROLLER call. Nothing is added to prose.
 6. If WRITER emits prose, run FIDELITY and FLOW separately.
-7. Only a candidate passing both gates becomes accepted prose.
-8. A rejected candidate is retained in the trace by hash/labels so equivalent dead ends are not silently repeated.
+7. Only a candidate passing FIDELITY and receiving `PASS` or `NATURAL_STOP` from FLOW becomes accepted prose.
+8. A rejected candidate is retained in the local trace and the feasibility run stops rather than automatically paraphrasing until a judge accepts it.
 9. After acceptance, recompute the live state from the new prose; do not reuse the old controller ranking.
-10. CONTROLLER may `STOP`. If authoritative coverage is complete and FLOW agrees the thought is complete, terminate. If coverage remains but nothing is live, record a **coverage/flow conflict** and roll back or open a new thought rather than forcing an unused source item into the old trajectory.
+10. CONTROLLER may `STOP`. If authoritative coverage is complete, terminate. If coverage remains but nothing is live, record a **coverage/flow conflict** rather than forcing an unused source item into the old trajectory.
+11. `NATURAL_STOP` behaves the same way: with unused authoritative material it records a coverage/flow conflict; with complete coverage it terminates successfully.
 
-## Controller prompt template
+## Automated local runner
 
-```text
-You are CONTROLLER in a composition-process experiment.
+Raw source packets and generated prose remain local and are excluded from Git under `.local/authorial-flow/`. The committed trace contains hashes and structural/manual labels only.
 
-You see the complete authoritative source ledger, source elements already revealed,
-and the accepted PROSE SO FAR. The writer does not see unrevealed material.
+After installing the repository branch, run:
 
-Choose at most ONE unrevealed source element whose arrival is made live by the
-prose that already exists. Prefer an element that concretizes, complicates, tests,
-qualifies, reframes, recalls, applies, reopens, or otherwise changes the current
-thought. Do not choose an element merely because it is next in source order or
-still needs coverage. Do not plan an ending. Do not tell the writer what
-connection to make.
-
-If no unrevealed element is presently live, output STOP even if unused material remains.
-
-Output only:
-REVEAL: <source_id>
-FUNCTION: <one allowed label>
-
-or:
-STOP
+```bash
+pangram-lab authorial-flow-rsg-ls .local/authorial-flow/relationship-spirit-packet.json
 ```
 
-## Writer prompt template
+Optional controls:
 
-```text
-You are WRITER in a composition-process experiment.
-
-AVAILABLE SO FAR:
-<all source elements revealed so far, unordered>
-
-PROSE SO FAR:
-<accepted prose only>
-
-Decide whether the available material has generated an actual thought worth
-expressing yet. Do not paraphrase the newest fact merely to use it. Do not try
-to cover the available set. Do not infer a paragraph plan or ending.
-
-If nothing has genuinely become sayable, output exactly:
-MORE
-
-Otherwise write only the natural amount of prose that has become sayable.
-Output no analysis or labels.
+```bash
+pangram-lab authorial-flow-rsg-ls \
+  .local/authorial-flow/relationship-spirit-packet.json \
+  --model gpt-5.6-sol \
+  --reasoning-effort xhigh
 ```
+
+The runner checkpoints after every turn. Re-running an already terminal experiment with the same exact packet hash returns the saved result without buying or duplicating model work. Pangram is not called by this command.
+
+The local packet shape is:
+
+```json
+{
+  "schema_version": "authorial-flow-rsg-ls-input/v1",
+  "experiment_id": "relationship-spirit-feasibility-001",
+  "source_items": [
+    {"id": "s1", "position": 1, "text": "<authoritative source element>"},
+    {"id": "s2", "position": 2, "text": "<authoritative source element>"}
+  ],
+  "initial_revealed_source_ids": ["s1"],
+  "initial_prose": "<accepted prose at the checkpoint, or empty>",
+  "constraints": ["<fixed fidelity/protected-function constraint>"],
+  "max_steps": 12
+}
+```
+
+For a continuation of an already-run recurrent-accumulation pilot, put every source element that had already been revealed into `initial_revealed_source_ids` and put the exact accepted prose checkpoint in `initial_prose`. This lets the new condition continue from the existing evidence rather than regenerating it.
 
 ## Trace contract
 
-Do not commit raw private prose or source packets to Git. The canonical experiment trace may contain source IDs, source positions, hashes, manual labels, model/version metadata, and local artifact references. A local untracked trace may additionally contain the actual text needed to run the experiment.
+Do not commit raw private prose or source packets to Git. The canonical experiment trace may contain source IDs, source positions, hashes, manual labels, model/version metadata, and local artifact references. A local ignored trace may additionally contain the actual text needed to run the experiment.
 
-Minimal trace shape:
+Minimal metadata trace shape:
 
 ```json
 {
@@ -191,15 +171,18 @@ Minimal trace shape:
   "experiment_id": "relationship-spirit-feasibility-001",
   "condition": "RSG-LS",
   "source_packet_sha256": "<64 hex>",
-  "model": {"provider": "<provider>", "name": "<name>", "version": "<version-or-null>"},
+  "initial_prose_sha256": "<64 hex>",
+  "initial_revealed_source_ids": ["s1"],
+  "initial_revealed_source_positions": {"s1": 1},
+  "model": {"provider": "<provider>", "name": "<name>", "version": null},
   "steps": [
     {
       "step": 1,
       "controller_action": "REVEAL",
-      "selected_source_id": "s2",
-      "selected_source_position": 2,
+      "selected_source_id": "s3",
+      "selected_source_position": 3,
       "selection_function": "COMPLICATE",
-      "revealed_source_ids_after": ["s1", "s2"],
+      "revealed_source_ids_after": ["s1", "s3"],
       "writer_action": "MORE",
       "candidate_delta_sha256": null,
       "accepted_prose_sha256_after": "<64 hex>",
@@ -216,22 +199,23 @@ Minimal trace shape:
 
 ## Deterministic summary metrics
 
-The repository helper may compute only metrics derivable without semantic inference:
+The repository helper computes only metrics derivable without semantic inference:
 
+- initial revealed count;
 - reveal count;
 - stop count;
 - write count;
 - `MORE` count/rate;
 - number of available source elements at each emitted move;
 - mean/min/max accumulation depth before emitted moves;
-- source-position monotonicity / exact-next-position use when source positions are supplied;
+- source-position monotonicity / exact-next-position use for newly selected material;
 - counts of manually supplied immediate-discharge, fidelity, flow, discourse-relation, and generation-function labels.
 
 It must **not** infer thought occurrence, immediate discharge, causality, or authorial authenticity from pause length, lexical overlap, or one scalar score.
 
 ## Feasibility packet
 
-The first run continues the relationship-spirit case already recorded in issue #41. Preserve those existing pilot outcomes as controls rather than regenerating them. The RSG-LS run should start from the same frozen source/claim packet and compare its trace against:
+The first run continues the relationship-spirit case already recorded in issue #41. Preserve those existing pilot outcomes as controls rather than regenerating them. The RSG-LS run should start from the same frozen source/claim packet and the accepted recurrent-accumulation checkpoint, then compare its trace against:
 
 - static authorial-state card;
 - recurrent generation with the whole source packet visible;
@@ -248,7 +232,7 @@ Failure includes any of the following:
 - CONTROLLER walks the source list in order without live justification;
 - WRITER converts each reveal into an immediate sentence;
 - `FUNCTION` labels become instructions that leak into WRITER;
-- unrevealed inventory or destination information leaks to WRITER;
+- unrevealed inventory, source positions, or destination information leak to WRITER;
 - fidelity is sacrificed for a more interesting transition;
 - the system must force leftover source material into a thought that has naturally ended.
 
