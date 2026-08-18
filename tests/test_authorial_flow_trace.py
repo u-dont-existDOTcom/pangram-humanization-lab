@@ -102,7 +102,7 @@ def test_summary_keeps_axes_separate_and_measures_source_reordering():
     assert summary["manual_immediate_discharge_counts"] == {
         "true": 1,
         "false": 1,
-        "unreviewed": 2,
+        "unreviewed": 0,
     }
     assert summary["selection_function_counts"] == {
         "COMPLICATE": 1,
