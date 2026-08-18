@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "status": "surface-svm-disconfirmed-for-current-joel-dharma-pilot",
+  "raw_or_canonical_prose_in_record": false,
+  "source_pr": 70,
+  "workflow_run_id": 32120266095,
+  "artifact_id": 9318248466,
+  "scikit_learn_version": "1.9.0",
+  "design": {
+    "authors": [
+      "Joel Rosenblum",
+      "David Vardy",
+      "Stian Gudmundsen Høiland"
+    ],
+    "folds": 4,
+    "platform_and_register": "Dharma Connection speaker-labeled discussion text",
+    "documents_per_author_per_fold": 4,
+    "word_budget_per_document": 50,
+    "training_words_per_author_per_fold": 200,
+    "held_out_documents": 10,
+    "held_out_source_groups": 4,
+    "held_out_word_budget_per_document": 50,
+    "source_group_leakage": false,
+    "normalization": "Original canonical characters, punctuation, and whitespace are preserved through the end of the 50th word token; the suffix is discarded. No prose is reconstructed from tokens."
+  },
+  "results": {
+    "paper_described_char2_4_plus_word1_2_linear_svm": {
+      "accuracy": 0.4,
+      "balanced_accuracy": 0.416667,
+      "macro_f1": 0.392593,
+      "group_bootstrap_accuracy_95pct": [0.333333, 0.5],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.25,
+        "David Vardy": 0.333333,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [1, 0, 3],
+        [1, 1, 1],
+        [0, 1, 2]
+      ]
+    },
+    "char2_4_only": {
+      "accuracy": 0.3,
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.266667,
+      "group_bootstrap_accuracy_95pct": [0.111111, 0.444444],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.0,
+        "David Vardy": 0.333333,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [0, 0, 4],
+        [1, 1, 1],
+        [0, 1, 2]
+      ]
+    },
+    "word1_2_only": {
+      "accuracy": 0.4,
+      "balanced_accuracy": 0.416667,
+      "macro_f1": 0.392593,
+      "group_bootstrap_accuracy_95pct": [0.333333, 0.5],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.25,
+        "David Vardy": 0.333333,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [1, 0, 3],
+        [1, 1, 1],
+        [0, 1, 2]
+      ]
+    }
+  },
+  "comparison_across_surface_pilots": {
+    "cross_register_char_plus_word_accuracy": 0.7,
+    "matched_platform_unequal_length_char_plus_word_accuracy": 0.5,
+    "matched_platform_equal_50w_char_plus_word_accuracy": 0.4,
+    "cross_register_joel_char_only_accuracy": 0.25,
+    "matched_platform_unequal_length_joel_char_only_accuracy": 0.25,
+    "matched_platform_equal_50w_joel_char_only_accuracy": 0.0,
+    "observation": "Controlling platform/register and then exact training/test word budgets does not rescue the character-based surface signal for Joel. The combined char-plus-word model again reproduces the word-only result rather than adding a reliable independent character-style signal."
+  },
+  "interpretation": {
+    "calibration_advanced": false,
+    "ier_claim": false,
+    "operational_threshold_authorized": false,
+    "universal_surface_svm_rejection": false,
+    "register_specific_conclusion": "For the current Joel-vs-Dharma-control corpus and held-out discussion register, the paper-described surface SVM family is not sufficiently reliable to serve as the operational idiolect-retention calibration target. The char-only condition is at chance balanced accuracy and fails to identify any held-out Joel document. The remaining combined-model signal is indistinguishable from the lexical word-only condition in aggregate metrics and confusion pattern.",
+    "what_this_rules_out": [
+      "Asymmetric TAFKA-vs-Dharma platform/register mismatch is not sufficient to explain the weak Joel character signal.",
+      "Unequal training document word mass is not sufficient to explain the weak Joel character signal."
+    ],
+    "what_this_does_not_rule_out": [
+      "Surface SVM usefulness for other authors, larger corpora, other registers, other segmentation schemes, or other hyperparameters.",
+      "A deep authorship representation such as LUAR retaining useful Joel-specific signal.",
+      "Interpretable content-light/function-word controls detecting stable stylistic differences that this high-dimensional char model misses."
+    ],
+    "next_test": "Deprioritize surface SVM as the calibration target. Implement an isolated LUAR mean-profile nearest-neighbor lane on the same leakage-safe matched corpus, alongside content-light/function-word and word-order-shuffle controls. MiniLM remains a semantic/topic confound monitor rather than an authorship metric."
+  }
+}
