@@ -1,16 +1,7 @@
 name: Idiolect transformation sensitivity
+# actions-cost-class: manual-heavy-research
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/idiolect-transformation-sensitivity.yml
-      - src/pangram_lab/idiolect_transformation_sensitivity.py
-      - tests/test_idiolect_transformation_sensitivity.py
-      - state/IDIOLECT-TRANSFORMATION-SENSITIVITY-SPEC-2026-08-18.json
-      - state/ROMANCE-OXYTOCIN-MINIMAL-PAIR-BATCH-2026-08-12.md
-      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
-      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
-      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
   workflow_dispatch:
 
 permissions:
