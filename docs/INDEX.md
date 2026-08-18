@@ -11,6 +11,8 @@
 ## Project use
 
 - `../README.md`: installation, live status, cache/checkpoint behavior, and experimental contract
+- `PANGRAM-GUI-LOCAL-PLAYWRIGHT-RUNBOOK.md`: primary local headed Pangram GUI transport, dedicated-profile login, exact current Romance run, recovery, and per-result Git durability
+- `PANGRAM-GUI-BROWSERBASE-RUNBOOK.md`: optional remote Browserbase fallback and its evidence contract
 - `lesson-inbox-plan.md`: lesson-request automation design
 - `superpowers/`: accepted specifications and implementation plans
 
