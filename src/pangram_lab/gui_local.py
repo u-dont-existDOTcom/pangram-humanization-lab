@@ -55,7 +55,67 @@ def containing_git_root(path: Path, *, home: Path | None = None) -> Path | None:
 _legacy.containing_git_root = containing_git_root
 
 
-def _launch_persistent_context(config: Any) -> tuple[Any, Any, Any]:
+def _page_is_closed(page: Any) -> bool:
+    try:
+        value = getattr(page, "is_closed", None)
+        return bool(value() if callable(value) else value)
+    except Exception:
+        return False
+
+
+def _close_page(page: Any) -> None:
+    if _page_is_closed(page):
+        return
+    close = getattr(page, "close", None)
+    if not callable(close):
+        return
+    try:
+        close(run_before_unload=False)
+    except TypeError:
+        close()
+    except Exception:
+        pass
+
+
+def normalize_context_tabs(
+    context: Any,
+    *,
+    keep: Any | None = None,
+    blank_keep: bool = False,
+) -> Any:
+    """Reduce a persistent browser context to one working tab.
+
+    Persistent Chromium-family profiles can restore every tab that was open at
+    shutdown. Local automation does not need that tab history; keeping it causes
+    visible clutter and can make result selection ambiguous. This helper leaves
+    one tab alive and closes every other tab explicitly before the browser
+    context is closed.
+    """
+    pages = [page for page in tuple(getattr(context, "pages", ())) if not _page_is_closed(page)]
+    if keep is None or keep not in pages:
+        keep = pages[-1] if pages else context.new_page()
+        pages = [page for page in tuple(getattr(context, "pages", ())) if not _page_is_closed(page)]
+    for candidate in pages:
+        if candidate is not keep:
+            _close_page(candidate)
+    if blank_keep and keep is not None and not _page_is_closed(keep):
+        try:
+            keep.goto("about:blank", wait_until="domcontentloaded", timeout=5_000)
+        except TypeError:
+            try:
+                keep.goto("about:blank", wait_until="domcontentloaded")
+            except Exception:
+                pass
+        except Exception:
+            pass
+    return keep
+
+
+def _launch_persistent_context(
+    config: Any,
+    *,
+    normalize_tabs: bool = True,
+) -> tuple[Any, Any, Any]:
     profile_dir = _legacy.validate_profile_dir(
         config.profile_dir,
         allow_ordinary_profile=config.allow_ordinary_profile,
@@ -82,9 +142,23 @@ def _launch_persistent_context(config: Any) -> tuple[Any, Any, Any]:
     except Exception:
         playwright.stop()
         raise
-    pages = context.pages
-    page = pages[0] if pages else context.new_page()
+    pages = tuple(getattr(context, "pages", ()))
+    page = pages[-1] if pages else context.new_page()
+    if normalize_tabs:
+        page = normalize_context_tabs(context, keep=page)
     return playwright, context, page
+
+
+def _close_local_session(playwright: Any, context: Any) -> None:
+    """Close local persistent automation without leaving restored-tab clutter."""
+    try:
+        pages = [page for page in tuple(getattr(context, "pages", ())) if not _page_is_closed(page)]
+        keep = pages[-1] if pages else None
+        if keep is not None:
+            normalize_context_tabs(context, keep=keep, blank_keep=True)
+        context.close()
+    finally:
+        playwright.stop()
 
 
 def _visible_locator_stats(page: Any, selector: str) -> dict[str, int | None]:
@@ -125,16 +199,18 @@ def _visible_texts(page: Any, selector: str, *, limit: int = 12) -> list[str]:
     return values
 
 
+def _safe_page_url(page: Any) -> str:
+    raw_url = str(getattr(page, "url", ""))
+    parsed = urlsplit(raw_url)
+    if parsed.scheme and parsed.netloc:
+        return f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
+    return parsed.path or raw_url.split("?", 1)[0].split("#", 1)[0]
+
+
 def auth_surface_diagnostic(page: Any) -> dict[str, object]:
     """Return a privacy-bounded structural snapshot of the current auth surface."""
     raw_url = str(getattr(page, "url", ""))
     parsed = urlsplit(raw_url)
-    safe_url = ""
-    if parsed.scheme and parsed.netloc:
-        safe_url = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
-    else:
-        safe_url = parsed.path or raw_url.split("?", 1)[0].split("#", 1)[0]
-
     try:
         title = str(page.title())[:200]
     except Exception:
@@ -161,7 +237,7 @@ def auth_surface_diagnostic(page: Any) -> dict[str, object]:
     }
     return {
         "captured_at_utc": _legacy.utc_now_iso(),
-        "safe_url": safe_url,
+        "safe_url": _safe_page_url(page),
         "path": parsed.path,
         "title": title,
         "body_character_count": len(body),
@@ -256,10 +332,149 @@ def re_search_login_path(path: str) -> bool:
     return lowered.endswith("/login") or lowered.endswith("/signup")
 
 
+def _report_candidate(
+    page: Any,
+    exact_text: str,
+    expected_word_count: int,
+) -> tuple[Any, str, dict[str, object]] | None:
+    if _page_is_closed(page):
+        return None
+    try:
+        body = _legacy.gui_core.clean_report_body_artifact(page.locator("body").inner_text())
+    except Exception:
+        return None
+    try:
+        parsed = _legacy.gui_core.parse_report_for_exact_input(
+            body,
+            exact_text,
+            expected_word_count=expected_word_count,
+        )
+    except Exception:
+        return None
+    segments = list(parsed.get("segments", []))
+    if not segments:
+        return None
+    try:
+        parsed_words = sum(int(segment.get("word_count", 0)) for segment in segments)
+    except Exception:
+        return None
+    if parsed_words != expected_word_count:
+        return None
+    if not _legacy.gui_core.report_body_matches_input(body, exact_text):
+        return None
+    return page, body, parsed
+
+
+def find_exact_report_in_open_pages(
+    context: Any,
+    exact_text: str,
+    *,
+    expected_word_count: int,
+) -> tuple[Any, str, dict[str, object]] | None:
+    """Find an already-open exact Pangram report without clicking or submitting."""
+    pages = tuple(getattr(context, "pages", ()))
+    for candidate in reversed(pages):
+        matched = _report_candidate(candidate, exact_text, expected_word_count)
+        if matched is not None:
+            return matched
+    return None
+
+
+def report_surface_diagnostic(context: Any) -> dict[str, object]:
+    pages: list[dict[str, object]] = []
+    for candidate in tuple(getattr(context, "pages", ())):
+        if _page_is_closed(candidate):
+            continue
+        try:
+            title = str(candidate.title())[:200]
+        except Exception:
+            title = ""
+        try:
+            body = " ".join(candidate.locator("body").inner_text().split())
+        except Exception:
+            body = ""
+        folded = body.casefold()
+        pages.append(
+            {
+                "safe_url": _safe_page_url(candidate),
+                "title": title,
+                "body_character_count": len(body),
+                "markers": {
+                    "authorship_breakdown": "authorship breakdown" in folded,
+                    "analyzed_text": "analyzed text" in folded,
+                    "human_written": "human written" in folded,
+                    "fully_ai_generated": "fully ai generated" in folded,
+                    "words_scanned": "words scanned" in folded,
+                },
+            }
+        )
+    return {
+        "captured_at_utc": _legacy.utc_now_iso(),
+        "open_page_count": len(pages),
+        "pages": pages,
+        "privacy_note": "No cookies, storage values, HTML, form values, or body excerpts captured.",
+    }
+
+
+def _write_report_diagnostic(
+    context: Any,
+    *,
+    diagnostic_dir: Path | None = None,
+) -> dict[str, str]:
+    directory = diagnostic_dir or (Path.home() / "Téléchargements")
+    directory.mkdir(parents=True, exist_ok=True)
+    json_path = directory / "pangram-local-report-diagnostic.json"
+    diagnostic = report_surface_diagnostic(context)
+    json_path.write_text(
+        json.dumps(diagnostic, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return {"json": str(json_path)}
+
+
+def wait_for_exact_report_page(
+    context: Any,
+    exact_text: str,
+    *,
+    expected_word_count: int,
+    timeout_ms: int = 180_000,
+    poll_ms: int = 1_000,
+    diagnostic_dir: Path | None = None,
+) -> tuple[Any, str, dict[str, object]]:
+    """Wait across all tabs for the exact report boundary, not a generic UI marker."""
+    if timeout_ms < 1:
+        raise ValueError("timeout_ms must be positive")
+    if poll_ms < 1:
+        raise ValueError("poll_ms must be positive")
+    deadline = time.monotonic() + (timeout_ms / 1000.0)
+    while True:
+        matched = find_exact_report_in_open_pages(
+            context,
+            exact_text,
+            expected_word_count=expected_word_count,
+        )
+        if matched is not None:
+            return matched
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            paths = _write_report_diagnostic(context, diagnostic_dir=diagnostic_dir)
+            raise RuntimeError(
+                "Pangram exact report did not become available before timeout; "
+                f"diagnostic_json={paths['json']}"
+            )
+        sleep_ms = min(poll_ms, max(1, int(remaining * 1000)))
+        pages = [page for page in tuple(getattr(context, "pages", ())) if not _page_is_closed(page)]
+        if pages and hasattr(pages[-1], "wait_for_timeout"):
+            pages[-1].wait_for_timeout(sleep_ms)
+        else:
+            time.sleep(sleep_ms / 1000.0)
+
+
 def _sync_core_seams() -> None:
     """Keep legacy core calls aligned with wrapper-level test/runtime seams."""
     _legacy.containing_git_root = containing_git_root
-    _legacy._launch_persistent_context = _launch_persistent_context
+    _legacy._launch_persistent_context = globals()["_launch_persistent_context"]
+    _legacy._close_local_session = globals()["_close_local_session"]
     # Existing tests and recovery code intentionally monkeypatch this public
     # seam on gui_local; propagate the current wrapper value before delegation.
     _legacy.capture_report_pdf = globals()["capture_report_pdf"]
