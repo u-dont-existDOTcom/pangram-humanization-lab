@@ -35,10 +35,10 @@ Owner-machine evidence confirmed a successful visible headed launch using:
 - clean persistent-context close;
 - no Pangram authentication and no detector submission.
 
-The first guard failure was caused by a stale/inert `$HOME/.git` marker. A safety guard must distinguish a valid enclosing Git worktree from a mere `.git` filesystem marker; the current local wrapper preserves the real-worktree prohibition while ignoring inert markers.
+The first guard failure was caused by a stale/inert `$HOME/.git` marker. The hardened guard ignores an inert marker only at the actual home root; valid Git worktrees remain blocked, and unresolved `.git` markers elsewhere remain conservatively blocked.
 
 The first visible Brave smoke also exposed Playwright's documented Chromium default of disabled sandboxing (`chromium_sandbox=false`), which caused Brave to show a `--no-sandbox` warning. Before any authenticated Pangram profile is created, the local transport must request `chromium_sandbox=True` and re-pass the visible smoke without that warning.
 
-The repository-side suite passed **161 tests** before this hardening pass. The hardening pass adds regressions for stale `.git` markers, real Git-worktree blocking, and Chromium sandbox enablement; use the exact-head CI receipt rather than the historical count as the current code gate.
+The repository-side suite passed **161 tests** before this hardening pass. The hardening pass adds regressions for the inert-home-marker exception, real Git-worktree blocking, and Chromium sandbox enablement; use the exact-head CI receipt rather than the historical count as the current code gate.
 
 The exact originating shell-state incident and its disposition are preserved in `state/PANGRAM-LOCAL-INTERACTIVE-SHELL-INCIDENT-2026-08-18.md` and the canonical lesson ledger. The local-Playwright current-state checkpoint, inherited Browserbase free-minute blocker, and local-Playwright handoff also have their required `no-new-lesson` dispositions. The transferable shell-safety rule is merged into `u-dont-existDOTcom/universal-dev-architecture` as `patterns/interactive-shell-command-safety.md`.
