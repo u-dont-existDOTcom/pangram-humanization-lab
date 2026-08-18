@@ -1,0 +1,45 @@
+{
+  "queue_version": "0.1.0",
+  "purpose": "Owner-confirmed Dharma Connection pages previously surfaced as containing Joel Rosenblum comments. This replaces the six zero-occurrence triage candidates for speaker-extraction validation.",
+  "raw_text_in_git": false,
+  "selection_status": "speaker-extraction-validation-only",
+  "sources": [
+    {
+      "source_id": "jr-legacy-dharma-owner-confirmed",
+      "source_group": "dharma-connection",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "polemical-irreverent"],
+      "known_threads": [
+        {
+          "sample_id": "dc-2014-02-04-holographic-universe",
+          "date": "2014-02-04",
+          "title": "Holographic Universe So What?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/holographic-universe-so-what_68.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2013-06-lucid-dreaming",
+          "date": "2013-06",
+          "title": "Lucid Dreaming, Dreams Of Clarity & More",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/lucid-dreaming-dreams-of-clarity-more_22.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2013-06-sound-bahiya",
+          "date": "2013-06",
+          "title": "Sound And The Bahiya Sutta",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/sound-and-bahiya-sutta.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2013-07-anatta-email",
+          "date": "2013-07",
+          "title": "Excerpts From An Email Discussing Anattā",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/07/excerpts-from-email-discussing-anatta_82.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        }
+      ]
+    }
+  ]
+}
