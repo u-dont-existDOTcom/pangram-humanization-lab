@@ -43,6 +43,32 @@ class SpeakerExtraction:
     ambiguous_single_word_line_count: int
 
 
+class SpeakerPostBodyParser(PostBodyParser):
+    """Post-body parser that preserves inline discussion-speaker boundaries.
+
+    Some Dharma Connection posts render ``<b>Joel Rosenblum:</b>comment`` inside
+    one block element. The generic post-body parser correctly treats ``b`` as
+    inline markup, but speaker extraction needs a structural separator at those
+    labels so the name cannot be glued to adjacent prose. This subclass changes
+    only the named-speaker acquisition path; generic corpus extraction remains
+    untouched.
+    """
+
+    _SPEAKER_BOUNDARY_TAGS = {"b", "strong", "cite"}
+
+    def handle_starttag(self, tag: str, attrs):
+        tag_l = tag.lower()
+        if self.capture and tag_l in self._SPEAKER_BOUNDARY_TAGS:
+            self._sep()
+        super().handle_starttag(tag, attrs)
+
+    def handle_endtag(self, tag: str):
+        tag_l = tag.lower()
+        super().handle_endtag(tag)
+        if self.capture and tag_l in self._SPEAKER_BOUNDARY_TAGS:
+            self._sep()
+
+
 def _speaker_key(value: str) -> str:
     return re.sub(r"\s+", " ", value.strip().rstrip(":"), flags=re.UNICODE).casefold()
 
@@ -142,7 +168,7 @@ def extract_named_speaker_blocks(text: str, speaker: str) -> SpeakerExtraction:
 
 
 def extract_blogspot_named_speaker(html: str, speaker: str) -> SpeakerExtraction:
-    parser = PostBodyParser(drop_blockquotes=True)
+    parser = SpeakerPostBodyParser(drop_blockquotes=True)
     parser.feed(html)
     if not parser.found_body:
         raise ValueError("no recognized authored post-body container found")
