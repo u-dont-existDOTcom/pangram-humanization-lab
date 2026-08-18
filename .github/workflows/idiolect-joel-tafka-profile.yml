@@ -1,0 +1,101 @@
+name: Idiolect Joel TAFKA profile
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-joel-tafka-profile.yml
+      - src/pangram_lab/profile_candidate_audit.py
+      - tests/test_profile_candidate_audit.py
+      - state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json
+      - src/pangram_lab/corpus_acquire.py
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/idiolect-joel-tafka-profile.yml
+      - src/pangram_lab/profile_candidate_audit.py
+      - tests/test_profile_candidate_audit.py
+      - state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json
+      - src/pangram_lab/corpus_acquire.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and run audit tests
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q tests/test_profile_candidate_audit.py tests/test_corpus_acquire.py
+
+      - name: Acquire all owner-confirmed TAFKA candidates locally
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from pangram_lab.corpus_acquire import acquire_inventory
+
+          ids = {
+              'tafka-2013-01-05-intro-journey',
+              'tafka-2015-01-17-sam-harris-review',
+              'tafka-2015-02-02-true-love',
+              'tafka-2015-02-12-no-way-to-know',
+              'tafka-2015-02-23-right-view-humility',
+              'tafka-2016-06-08-already-perfect',
+              'tafka-2019-03-08-plant-spirits',
+              'tafka-2019-07-22-psychedelic-brain',
+          }
+          runtime = acquire_inventory(
+              Path('state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json'),
+              out_dir=Path('.local/idiolect-corpus/joel-tafka-text'),
+              manifest_out=Path('.local/idiolect-corpus/joel-tafka-acquisition.json'),
+              sample_ids=ids,
+              timeout=30,
+          )
+          if runtime.get('errors'):
+              raise SystemExit(json.dumps(runtime['errors'], ensure_ascii=False))
+          if len(runtime.get('results', [])) != len(ids):
+              raise SystemExit(f"Expected {len(ids)} samples, got {len(runtime.get('results', []))}")
+          PY
+
+      - name: Build metadata-only TAFKA candidate receipt
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from pangram_lab.profile_candidate_audit import audit_acquired_candidates
+
+          receipt = audit_acquired_candidates(Path('.local/idiolect-corpus/joel-tafka-acquisition.json'))
+          words = [int(row['word_count']) for row in receipt['samples']]
+          total = sum(words)
+          receipt['profile_feasibility'] = {
+              'independent_post_count': len(words),
+              'total_words': total,
+              'largest_source_words': max(words, default=0),
+              'largest_source_fraction': round(max(words, default=0) / total, 6) if total else None,
+              'posts_at_least_250_words': sum(1 for value in words if value >= 250),
+              'posts_with_dialogue_label_tokens': sum(1 for row in receipt['samples'] if row['dialogue_label_tokens']),
+          }
+          out = Path('.local/idiolect-corpus/joel-tafka-profile-receipt.json')
+          out.write_text(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          print(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True))
+          PY
+
+      - name: Upload metadata-only Joel TAFKA receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-joel-tafka-profile-metadata
+          path: .local/idiolect-corpus/joel-tafka-profile-receipt.json
+          if-no-files-found: error
+          retention-days: 30
