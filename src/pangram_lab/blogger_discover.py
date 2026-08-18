@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import re
 import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -28,8 +27,7 @@ def _root_from_url(url: str) -> str:
     parsed = urlparse(url if "://" in url else "https://" + url)
     if not parsed.netloc:
         raise ValueError(f"invalid Blogger URL: {url}")
-    scheme = "https"
-    return urlunparse((scheme, parsed.netloc.lower(), "", "", "", ""))
+    return urlunparse(("https", parsed.netloc.lower(), "", "", "", ""))
 
 
 def _iso(value: str) -> datetime:
@@ -48,10 +46,11 @@ def _canonical_post_url(url: str) -> str:
 
 
 def _feed_url(root: str, *, start_index: int, max_results: int) -> str:
+    # Blogger documents max-results and 1-based start-index for feed paging.
+    # We sort by published timestamp locally, so no orderby parameter is needed.
     query = urlencode(
         {
             "alt": "atom",
-            "orderby": "published",
             "start-index": start_index,
             "max-results": max_results,
         }
@@ -113,8 +112,8 @@ def discover_blog(
     *,
     published_before: str | None = None,
     timeout: int = 30,
-    page_size: int = 150,
-    max_pages: int = 20,
+    page_size: int = 100,
+    max_pages: int = 50,
 ) -> dict:
     root = _root_from_url(blog_url)
     cutoff = _iso(published_before) if published_before else None
