@@ -1,0 +1,99 @@
+name: Pangram GUI Browserbase submit current Romance once
+
+on:
+  push:
+    branches:
+      - agent/pangram-browserbase-gui-automation-20260817
+    paths:
+      - .github/workflows/pangram-gui-browserbase-submit-current-once.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pangram-gui-browserbase
+  cancel-in-progress: false
+
+jobs:
+  measure:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      BROWSERBASE_API_KEY: ${{ secrets.BROWSERBASE_API_KEY }}
+      BROWSERBASE_CONTEXT_ID: ${{ secrets.BROWSERBASE_CONTEXT_ID }}
+      SOURCE_REF: agent/romance-primal-crucible-gui-repair-20260817
+      EXPECTED_PART1_SHA: ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8
+      EXPECTED_PART2_SHA: 2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0
+    steps:
+      - name: Check out Browserbase tooling branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: agent/pangram-browserbase-gui-automation-20260817
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+
+      - name: Validate Browserbase secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ -n "$BROWSERBASE_API_KEY" ]] || { echo 'Missing BROWSERBASE_API_KEY secret'; exit 2; }
+          [[ -n "$BROWSERBASE_CONTEXT_ID" ]] || { echo 'Missing BROWSERBASE_CONTEXT_ID secret'; exit 2; }
+
+      - name: Install GUI runner
+        run: python -m pip install -q -e '.[test,browser]'
+
+      - name: Extract and verify exact current Romance halves
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "+refs/heads/${SOURCE_REF}:refs/remotes/origin/pangram-source"
+          source_commit=$(git rev-parse 'refs/remotes/origin/pangram-source^{commit}')
+          mkdir -p /tmp/pangram-inputs
+          git show "${source_commit}:work/romance-current-assembly/pangram-part-1.txt" > /tmp/pangram-inputs/part-1.txt
+          git show "${source_commit}:work/romance-current-assembly/pangram-part-2.txt" > /tmp/pangram-inputs/part-2.txt
+          p1=$(sha256sum /tmp/pangram-inputs/part-1.txt | awk '{print $1}')
+          p2=$(sha256sum /tmp/pangram-inputs/part-2.txt | awk '{print $1}')
+          printf 'source_commit=%s\npart1_sha=%s\npart2_sha=%s\n' "$source_commit" "$p1" "$p2"
+          [[ "$p1" == "$EXPECTED_PART1_SHA" ]] || { echo "Part 1 SHA mismatch: $p1"; exit 3; }
+          [[ "$p2" == "$EXPECTED_PART2_SHA" ]] || { echo "Part 2 SHA mismatch: $p2"; exit 3; }
+          printf 'source_commit=%s\n' "$source_commit" >> "$GITHUB_ENV"
+
+      - name: Run exact Pangram GUI measurements
+        shell: bash
+        run: |
+          set +e
+          python scripts/pangram_gui_browserbase.py run \
+            --input /tmp/pangram-inputs/part-1.txt \
+            --input /tmp/pangram-inputs/part-2.txt \
+            --output-root state/gui-runs
+          rc=$?
+          echo "DETECTOR_EXIT=$rc" >> "$GITHUB_ENV"
+          exit 0
+
+      - name: Persist Browserbase/Pangram evidence and retire one-shot workflow on success
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Pangram GUI Browserbase Actions'
+          git config user.email 'pangram-gui-browserbase-actions@users.noreply.github.com'
+          git add state/gui-runs/pangram-4 || true
+          if [[ "${DETECTOR_EXIT:-99}" == "0" ]]; then
+            git rm .github/workflows/pangram-gui-browserbase-submit-current-once.yml
+          fi
+          if git diff --cached --quiet; then
+            echo 'No new evidence or workflow cleanup to commit.'
+          else
+            git commit -m "evidence: Browserbase Pangram current Romance ${source_commit:0:12}"
+            git push origin HEAD:agent/pangram-browserbase-gui-automation-20260817
+          fi
+
+      - name: Propagate detector failure after evidence persistence
+        if: always()
+        shell: bash
+        run: |
+          exit "${DETECTOR_EXIT:-99}"
