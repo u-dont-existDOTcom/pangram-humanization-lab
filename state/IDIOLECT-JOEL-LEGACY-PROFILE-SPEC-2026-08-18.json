@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "purpose": "Freeze a conservative pre-LLM Joel written profile candidate for first closed-set calibration. Raw/canonical prose remains local only.",
+  "source_inventory": "state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json",
+  "raw_text_in_git": false,
+  "profile_status": "candidate-not-yet-calibrated",
+  "include": [
+    {
+      "sample_id": "tafka-2013-01-05-intro-journey",
+      "cleanup_rule": "whole-after-existing-blockquote-drop",
+      "rationale": "Owner-confirmed pre-LLM long-form source; dialogue flag is a heading-like label only (`A few quotes before we begin`)."
+    },
+    {
+      "sample_id": "tafka-2015-02-02-true-love",
+      "cleanup_rule": "after-first-label:Answer",
+      "rationale": "Conservatively exclude the Question portion and retain only material explicitly introduced as Answer."
+    },
+    {
+      "sample_id": "tafka-2015-02-12-no-way-to-know",
+      "cleanup_rule": "before-first-label:And here's a useful snippet I snagged",
+      "rationale": "Conservatively exclude the explicitly described snagged snippet and anything after its marker."
+    },
+    {
+      "sample_id": "tafka-2015-02-23-right-view-humility",
+      "cleanup_rule": "whole-after-existing-blockquote-drop",
+      "rationale": "Owner-confirmed pre-LLM Buddhist/philosophical source with no structural quality flags."
+    },
+    {
+      "sample_id": "tafka-2016-06-08-already-perfect",
+      "cleanup_rule": "whole-after-existing-blockquote-drop",
+      "rationale": "Owner-confirmed pre-LLM philosophical source; `Remember` is retained as an owner-authored rhetorical label unless later manual audit disproves that assumption."
+    },
+    {
+      "sample_id": "tafka-2019-03-08-plant-spirits",
+      "cleanup_rule": "whole-message-by-you-extraction",
+      "rationale": "Existing extraction already isolates `Message by You:` turns and the source has no remaining structural quality flags."
+    }
+  ],
+  "exclude_for_first_profile": [
+    {
+      "sample_id": "tafka-2015-01-17-sam-harris-review",
+      "reason": "77 words; too thin for standalone profile use."
+    },
+    {
+      "sample_id": "tafka-2019-07-22-psychedelic-brain",
+      "reason": "Contains a `Ben asked` prompt boundary without an equally reliable explicit answer-start marker; exclude rather than infer where third-party text ends."
+    }
+  ],
+  "split_rule": "No TAFKA profile source may appear in the Dharma matched held-out test set; no source-derived fragment may cross profile/test partitions.",
+  "interpretation_rule": "This profile is a provenance-clean acquisition object, not evidence that a classifier is calibrated or that any candidate text is Joel-authored."
+}
