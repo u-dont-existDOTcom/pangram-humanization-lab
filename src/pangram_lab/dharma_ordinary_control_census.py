@@ -9,11 +9,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from .blogger_discover import ATOM, _feed_url, _https_url, _root_from_url, fetch_atom
-from .dharma_author_discover import (
-    _canonical_post_url,
-    _entry_html,
-    _speaker_labels,
-)
+from .dharma_author_discover import _canonical_post_url, _entry_html, _speaker_labels
 
 
 class OrdinaryControlCensusError(ValueError):
@@ -38,11 +34,11 @@ def scan_all_speakers_atom_page(
     target_author: str,
     allowed_single_token_labels: Iterable[str] = (),
 ) -> tuple[list[dict[str, Any]], str | None, dict[str, int]]:
-    """Scan one Atom page for explicit speaker-label metadata only.
+    """Return explicit-label metadata for every post on one Atom page.
 
-    No title, URL, entry ID, or surrounding prose is returned. Each row keeps a
-    one-way post identity hash, the explicit labels found in that post, and
-    whether the target author was explicitly labeled there.
+    Titles, URLs, entry IDs, and surrounding post prose are never returned.
+    The post identity is a one-way hash over the source entry ID and canonical
+    URL so repeated feed pages can be deduplicated without exposing either.
     """
 
     root = ET.fromstring(body)
@@ -55,7 +51,7 @@ def scan_all_speakers_atom_page(
     target_key = target_author.casefold()
     rows: list[dict[str, Any]] = []
     total_entries = 0
-    explicitly_labeled_entries = 0
+    labeled_entries = 0
     for entry in root.findall(f"{ATOM}entry"):
         total_entries += 1
         identity = _post_identity(entry)
@@ -66,7 +62,7 @@ def scan_all_speakers_atom_page(
             allowed_single_token_labels=allowed_single_token_labels,
         )
         if labels:
-            explicitly_labeled_entries += 1
+            labeled_entries += 1
         rows.append(
             {
                 "post_identity_sha256": identity,
@@ -78,7 +74,7 @@ def scan_all_speakers_atom_page(
         )
     return rows, next_url, {
         "entry_count": total_entries,
-        "explicitly_labeled_entry_count": explicitly_labeled_entries,
+        "explicitly_labeled_entry_count": labeled_entries,
     }
 
 
@@ -86,8 +82,7 @@ def _load_role_spec(path: Path) -> dict[str, Any]:
     obj = json.loads(path.read_text(encoding="utf-8"))
     if obj.get("schema_version") != 1:
         raise OrdinaryControlCensusError("role spec schema_version must be 1")
-    active = obj.get("active_authors")
-    if not isinstance(active, list) or not active:
+    if not isinstance(obj.get("active_authors"), list) or not obj["active_authors"]:
         raise OrdinaryControlCensusError("role spec active_authors must be non-empty")
     return obj
 
@@ -121,8 +116,7 @@ def _configured_path(spec_path: Path, value: str) -> Path:
     cwd_path = Path.cwd() / path
     if cwd_path.exists():
         return cwd_path
-    repo_relative = spec_path.resolve().parent.parent / path
-    return repo_relative
+    return spec_path.resolve().parent.parent / path
 
 
 def _choose_display_name(counts: collections.Counter[str]) -> str:
@@ -178,10 +172,9 @@ def _build_speaker_rows(
         non_overlap_threads = total_threads - overlap_threads
         active = active_roles.get(key)
         excluded_as_active = active is not None
-        is_target = key == target_key
         qualifies = (
             not excluded_as_active
-            and not is_target
+            and key != target_key
             and total_threads >= thresholds["minimum_explicit_threads"]
             and non_overlap_threads
             >= thresholds["minimum_non_target_overlap_threads"]
@@ -238,6 +231,31 @@ def _validate_spec(spec: dict[str, Any]) -> None:
             )
 
 
+def _assert_metadata_only(value: Any, *, path: str = "$") -> None:
+    forbidden_keys = {
+        "local_text_path",
+        "raw_text",
+        "canonical_text",
+        "post_title",
+        "post_url",
+        "entry_id",
+        "title",
+        "url",
+        "content",
+        "summary",
+    }
+    if isinstance(value, dict):
+        for key, child in value.items():
+            if str(key) in forbidden_keys:
+                raise OrdinaryControlCensusError(
+                    f"forbidden metadata key at {path}: {key}"
+                )
+            _assert_metadata_only(child, path=f"{path}.{key}")
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            _assert_metadata_only(child, path=f"{path}[{index}]")
+
+
 def run_census(
     spec_path: Path,
     *,
@@ -267,19 +285,17 @@ def run_census(
     ]
 
     root = _root_from_url(spec["blog_root"])
-    url = _feed_url(root, start_index=1, max_results=page_size)
-    seen_urls: set[str] = set()
+    next_feed_url = _feed_url(root, start_index=1, max_results=page_size)
+    seen_feed_urls: set[str] = set()
     posts_by_id: dict[str, dict[str, Any]] = {}
     page_rows: list[dict[str, Any]] = []
 
     for page_number in range(1, max_pages + 1):
-        if url in seen_urls:
-            raise OrdinaryControlCensusError(
-                "Blogger feed pagination loop detected"
-            )
-        seen_urls.add(url)
-        body, feed_sha = fetch_atom(url, timeout=timeout)
-        posts, next_url, page_stats = scan_all_speakers_atom_page(
+        if next_feed_url in seen_feed_urls:
+            raise OrdinaryControlCensusError("Blogger feed pagination loop detected")
+        seen_feed_urls.add(next_feed_url)
+        body, feed_sha = fetch_atom(next_feed_url, timeout=timeout)
+        posts, returned_next_url, page_stats = scan_all_speakers_atom_page(
             body,
             target_author=target_author,
             allowed_single_token_labels=allowed_single,
@@ -292,7 +308,7 @@ def run_census(
                 "explicitly_labeled_entry_count": page_stats[
                     "explicitly_labeled_entry_count"
                 ],
-                "next_present": bool(next_url),
+                "next_present": bool(returned_next_url),
             }
         )
         for post in posts:
@@ -303,9 +319,9 @@ def run_census(
                     f"conflicting duplicate post identity: {identity}"
                 )
             posts_by_id[identity] = post
-        if not next_url:
+        if not returned_next_url:
             break
-        url = next_url
+        next_feed_url = returned_next_url
     else:
         raise OrdinaryControlCensusError(
             f"Blogger feed paging exceeded max_pages={max_pages}"
@@ -356,14 +372,9 @@ def run_census(
         "date": spec.get("date"),
         "status": "ordinary-control-speaker-census-not-profile-admission",
         "raw_or_canonical_prose_in_output": False,
-        "post_titles_in_output": False,
-        "post_urls_in_output": False,
-        "entry_ids_in_output": False,
         "method_decision": spec.get("method_decision"),
         "target_author": target_author,
-        "active_author_roles": [
-            active_roles[key] for key in sorted(active_roles)
-        ],
+        "active_author_roles": [active_roles[key] for key in sorted(active_roles)],
         "candidate_thresholds": thresholds,
         "allowed_single_token_labels": allowed_single,
         "feed_page_count": len(page_rows),
@@ -387,21 +398,12 @@ def run_census(
         "interpretation_rule": spec.get("interpretation_rule"),
     }
 
+    _assert_metadata_only(result)
     encoded = json.dumps(result, ensure_ascii=False, sort_keys=True)
-    for forbidden in (
-        "local_text_path",
-        "raw_text",
-        "canonical_text",
-        "post_title",
-        "post_url",
-        "entry_id",
-        "http://",
-        "https://",
-    ):
-        if forbidden in encoded:
-            raise OrdinaryControlCensusError(
-                f"metadata census unexpectedly contains forbidden content: {forbidden}"
-            )
+    if "http://" in encoded or "https://" in encoded:
+        raise OrdinaryControlCensusError(
+            "metadata census unexpectedly contains a raw URL"
+        )
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(
