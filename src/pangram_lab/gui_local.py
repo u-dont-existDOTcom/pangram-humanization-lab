@@ -8,13 +8,21 @@ from pangram_lab.gui_local_legacy import *  # noqa: F401,F403
 from pangram_lab import gui_local_legacy as _legacy
 
 
-def containing_git_root(path: Path) -> Path | None:
-    """Return an enclosing *valid* Git worktree root, ignoring stale .git markers."""
+def containing_git_root(path: Path, *, home: Path | None = None) -> Path | None:
+    """Return an enclosing Git root while ignoring an inert marker at $HOME.
+
+    A valid Git worktree is always blocked. Outside the user's home directory,
+    an unreadable/inert `.git` marker is treated conservatively as a repository
+    boundary. The special case exists only because stale `$HOME/.git` debris
+    otherwise makes every normal config directory appear unsafe.
+    """
     current = _legacy._resolved(path)
+    selected_home = _legacy._resolved(Path.home() if home is None else home)
     if current.is_file():
         current = current.parent
     for candidate in (current, *current.parents):
-        if not (candidate / ".git").exists():
+        marker = candidate / ".git"
+        if not marker.exists():
             continue
         completed = subprocess.run(
             ["git", "-C", str(candidate), "rev-parse", "--show-toplevel"],
@@ -22,20 +30,22 @@ def containing_git_root(path: Path) -> Path | None:
             capture_output=True,
             text=True,
         )
-        if completed.returncode != 0:
+        if completed.returncode == 0 and completed.stdout.strip():
+            top = Path(completed.stdout.strip()).expanduser().resolve(strict=False)
+            if top == candidate.expanduser().resolve(strict=False):
+                return top
+        if candidate == selected_home:
+            # Inert home-level markers are not repositories. This is the exact
+            # live Zorin failure mode observed on 2026-08-18.
             continue
-        raw = completed.stdout.strip()
-        if not raw:
-            continue
-        top = Path(raw).expanduser().resolve(strict=False)
-        if top == candidate.expanduser().resolve(strict=False):
-            return top
+        # Elsewhere fail closed: a .git marker may represent a damaged or
+        # unusual worktree that we should not put persistent auth material in.
+        return candidate.expanduser().resolve(strict=False)
     return None
 
 
-# validate_profile_dir and LocalPlaywrightConfig are defined in the legacy core;
-# they resolve this global dynamically, so patch the semantic Git-root probe in
-# the core instead of weakening the profile safety policy.
+# validate_profile_dir and LocalPlaywrightConfig are defined in the preserved
+# transport core; they resolve containing_git_root dynamically.
 _legacy.containing_git_root = containing_git_root
 
 
@@ -71,10 +81,38 @@ def _launch_persistent_context(config: Any) -> tuple[Any, Any, Any]:
     return playwright, context, page
 
 
-# Public functions imported above execute in gui_local_legacy's module globals.
-# Patch that core launch seam so bootstrap/verify/run/recover all inherit the
-# sandboxed local transport without duplicating detector logic.
-_legacy._launch_persistent_context = _launch_persistent_context
+def _sync_core_seams() -> None:
+    """Keep legacy core calls aligned with wrapper-level test/runtime seams."""
+    _legacy.containing_git_root = containing_git_root
+    _legacy._launch_persistent_context = _launch_persistent_context
+    # Existing tests and recovery code intentionally monkeypatch this public
+    # seam on gui_local; propagate the current wrapper value before delegation.
+    _legacy.capture_report_pdf = globals()["capture_report_pdf"]
+
+
+def bootstrap_login(*args: Any, **kwargs: Any) -> dict[str, object]:
+    _sync_core_seams()
+    return _legacy.bootstrap_login(*args, **kwargs)
+
+
+def verify_login_persistence(*args: Any, **kwargs: Any) -> dict[str, object]:
+    _sync_core_seams()
+    return _legacy.verify_login_persistence(*args, **kwargs)
+
+
+def launch_smoke_test(*args: Any, **kwargs: Any) -> dict[str, object]:
+    _sync_core_seams()
+    return _legacy.launch_smoke_test(*args, **kwargs)
+
+
+def run_inputs(*args: Any, **kwargs: Any) -> list[dict[str, object]]:
+    _sync_core_seams()
+    return _legacy.run_inputs(*args, **kwargs)
+
+
+def recover_existing_report(*args: Any, **kwargs: Any) -> dict[str, object]:
+    _sync_core_seams()
+    return _legacy.recover_existing_report(*args, **kwargs)
 
 
 def __getattr__(name: str) -> Any:
