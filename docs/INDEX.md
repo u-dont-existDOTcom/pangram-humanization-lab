@@ -21,6 +21,8 @@
 
 ## Research integration
 
+- `AUTHORIAL-FLOW-ACADEMIC-INTEGRATION-2026-08-18.md`: writing-process, discourse, process-idiolect, and sentence-history research translated into the authorial-flow architecture
+- `AUTHORIAL-FLOW-RSG-LS-PILOT.md`: next recurrent source-gated live-selection feasibility protocol, role separation, trace contract, and deterministic measurements
 - `../state/IDIOLECT-ERASURE-RESEARCH-INTEGRATION-2026-08-17.md`: paper findings, repository translation, implementation boundary, and non-conclusions
 - `../state/IDIOLECT-PROXY-VALIDATION-GAP-2026-08-17.md`: current gap between the dependency-free operational proxy and research-grade style-sensitive validation
 - `../state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json`: metadata-only Joel source/provenance inventory; raw prose is excluded from Git
