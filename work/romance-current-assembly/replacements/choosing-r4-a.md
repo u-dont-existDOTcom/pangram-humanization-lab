@@ -17,5 +17,5 @@ Then the questions change for me. If the romance changes, which parts are still 
 
 And the biggie: what happens if one of us falls in love with someone else? What counts as betrayal, and what just means we need a serious conversation? If our lives change, can we revisit the agreement honestly? If we separate, what do we still owe each other, and what do we owe any children involved?
 
-These are just a few questions I could think of to start the ball rolling, but be creative and see what you come up with! You can make a card game out of this and have some fun with it. If there's real love, it will survive a bit of honest curiosity.
+These are just a few questions I could think of to start the ball rolling, but be creative and see what you come up with! You can make a [card game](https://innerself.love/blog/romance-card-game/) out of this and have some fun with it. If there's real love, it will survive a bit of honest curiosity.
 
