@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "purpose": "First deep-authorship calibration pilot after the surface-SVM lane was disconfirmed for the current Joel/Dharma register. Evaluate LUAR mean-document profiles with nearest-profile cosine under both whole-document and equal-50-word matched-platform conditions.",
+  "raw_text_in_git": false,
+  "model": {
+    "model_id": "rrivera1849/LUAR-MUD",
+    "revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "revision_reason": "This verified LUAR-MUD revision pins its upstream sentence-transformer backbone revision in config, reducing silent dependency drift.",
+    "upstream_backbone_revision_from_model_config": "48bffbbd27bf028ecdd0cd55abb51236ec12ef1b",
+    "embedding_size": 512,
+    "max_token_length": 512,
+    "episode_length_for_document_embedding": 1,
+    "document_profile_rule": "Embed each document as a one-document LUAR episode; compute the arithmetic mean of raw training-document embeddings for each author; classify each held-out document by maximum cosine similarity to the three author means.",
+    "trust_remote_code": true
+  },
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "matched_queue": "state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json",
+  "joel_supplement_queue": "state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json",
+  "control_profile_spec": "state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json",
+  "held_out_source_groups": [
+    "dc-thread-can-anything-known-2014-08-09",
+    "dc-thread-holographic-2014-02-04",
+    "dc-thread-insights-anatta-2014-08-09",
+    "dc-thread-supramundane-jhanas-2014-08-09"
+  ],
+  "conditions": {
+    "whole_document": {
+      "documents_per_author_per_fold": 6,
+      "joel_supplement_sample_ids": [
+        "dc-2013-06-lucid-dreaming",
+        "dc-2013-06-sound-bahiya"
+      ],
+      "joel_rule": "The two Joel-only Dharma supplements plus every non-held-out Joel matched-queue document, including the short Anatta fragment, for six documents per fold.",
+      "control_rule": "Six largest non-overlap explicit-speaker Dharma documents per control.",
+      "tokenization": "Each document is truncated by the LUAR tokenizer at 512 tokens."
+    },
+    "equal_50_word": {
+      "documents_per_author_per_fold": 4,
+      "word_budget_per_document": 50,
+      "training_words_per_author_per_fold": 200,
+      "joel_supplement_sample_ids": [
+        "dc-2013-06-lucid-dreaming"
+      ],
+      "joel_rule": "Lucid Dreaming plus the three non-held-out matched Joel documents that have at least 50 words. Exclude the 13-word Anatta and 47-word Sound/Bahiya fragments.",
+      "control_rule": "Four largest non-overlap explicit-speaker Dharma documents per control, each at least 50 words.",
+      "normalization": "Preserve original characters, punctuation and whitespace through the end of the 50th word token; discard the suffix. Held-out documents are normalized identically."
+    }
+  },
+  "evaluation": {
+    "metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_f1",
+      "per_author_accuracy",
+      "confusion_matrix"
+    ],
+    "group_bootstrap_accuracy": {
+      "unit": "held-out source_group",
+      "iterations": 10000,
+      "seed": 260800929
+    },
+    "cosine_tie_break": "author order in this spec, only after exact numeric equality"
+  },
+  "interpretation": {
+    "chance_accuracy": 0.3333333333,
+    "do_not_call_ier": true,
+    "no_threshold_claim": true,
+    "calibration_rule": "Do not advance calibration on aggregate accuracy alone. Require useful Joel-specific held-out performance, consistency across whole-document and equal-budget conditions, and follow-up word-order/content-light controls before any operational interpretation.",
+    "paper_relationship": "This implements the deep-authorship direction used in the idiolect-erasure research integration: LUAR representations, mean author profiles, and nearest-profile cosine. It is a closed-set original-authorship pilot, not an original-vs-rewrite IER experiment."
+  }
+}
