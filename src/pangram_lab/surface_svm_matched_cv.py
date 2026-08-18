@@ -11,6 +11,19 @@ from .surface_svm_pilot import (
     select_largest_documents,
 )
 
+_EMPTY_EXPLICIT_BLOCK_ERROR = "target-speaker-marker-found-but-no-authored-words"
+
+
+def _hard_control_errors(errors: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Separate the already-defined empty-block exclusion from hard failures."""
+    documented_empty = [
+        row for row in errors if row.get("error") == _EMPTY_EXPLICIT_BLOCK_ERROR
+    ]
+    hard = [
+        row for row in errors if row.get("error") != _EMPTY_EXPLICIT_BLOCK_ERROR
+    ]
+    return hard, documented_empty
+
 
 def _metadata_row(row: dict) -> dict:
     return {
@@ -79,8 +92,11 @@ def run_matched_cv(
         raise ValueError(f"matched acquisition errors: {matched['errors']}")
     if supplement.get("errors"):
         raise ValueError(f"supplement acquisition errors: {supplement['errors']}")
-    if controls.get("errors"):
-        raise ValueError(f"control acquisition errors: {controls['errors']}")
+    hard_control_errors, documented_control_exclusions = _hard_control_errors(
+        controls.get("errors", [])
+    )
+    if hard_control_errors:
+        raise ValueError(f"control acquisition errors: {hard_control_errors}")
 
     matched_rows = matched.get("results", [])
     supplement_ids = set(spec["joel_supplement_sample_ids"])
@@ -222,6 +238,14 @@ def run_matched_cv(
         "fold_count": len(fold_records),
         "documents_per_author_per_fold": n_train,
         "source_group_leakage": False,
+        "documented_control_exclusions": [
+            {
+                "sample_id": row.get("sample_id"),
+                "speaker": row.get("speaker"),
+                "error": row.get("error"),
+            }
+            for row in documented_control_exclusions
+        ],
         "folds": fold_records,
         "aggregate_models": aggregate_models,
         "interpretation_guardrails": spec["interpretation"],
