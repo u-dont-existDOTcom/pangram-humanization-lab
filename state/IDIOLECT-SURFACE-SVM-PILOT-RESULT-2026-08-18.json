@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "status": "pilot-confounded-not-calibrated",
+  "raw_or_canonical_prose_in_record": false,
+  "source_pr": 66,
+  "workflow_run_id": 32118796962,
+  "artifact_id": 9317726326,
+  "scikit_learn_version": "1.9.0",
+  "design": {
+    "authors": [
+      "Joel Rosenblum",
+      "David Vardy",
+      "Stian Gudmundsen Høiland"
+    ],
+    "training_documents_per_author": 6,
+    "held_out_documents": 10,
+    "held_out_source_groups": 4,
+    "source_group_leakage": false,
+    "joel_training_register": "TAFKA pre-LLM long-form/philosophical writing",
+    "control_training_register": "Dharma Connection speaker-labeled discussion text",
+    "held_out_register": "Dharma Connection speaker-labeled discussion text"
+  },
+  "results": {
+    "paper_described_char2_4_plus_word1_2_linear_svm": {
+      "accuracy": 0.7,
+      "balanced_accuracy": 0.722222,
+      "macro_f1": 0.694444,
+      "group_bootstrap_accuracy_95pct": [0.5, 0.909091],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.5,
+        "David Vardy": 1.0,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_labels": [
+        "Joel Rosenblum",
+        "David Vardy",
+        "Stian Gudmundsen Høiland"
+      ],
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [2, 1, 1],
+        [0, 3, 0],
+        [0, 1, 2]
+      ]
+    },
+    "char2_4_only": {
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.638889,
+      "macro_f1": 0.6,
+      "group_bootstrap_accuracy_95pct": [0.222222, 0.909091],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.25,
+        "David Vardy": 1.0,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [1, 3, 0],
+        [0, 3, 0],
+        [0, 1, 2]
+      ]
+    },
+    "word1_2_only": {
+      "accuracy": 0.7,
+      "balanced_accuracy": 0.722222,
+      "macro_f1": 0.694444,
+      "group_bootstrap_accuracy_95pct": [0.5, 0.909091],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.5,
+        "David Vardy": 1.0,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [2, 1, 1],
+        [0, 3, 0],
+        [0, 1, 2]
+      ]
+    }
+  },
+  "interpretation": {
+    "calibration_advanced": false,
+    "ier_claim": false,
+    "operational_threshold_authorized": false,
+    "primary_observation": "The word-only condition reproduces the primary char-plus-word confusion pattern and overall performance, while char-only degrades Joel attribution to 25 percent.",
+    "confound": "Joel profile documents are from TAFKA long-form writing while control profiles and held-out documents are Dharma Connection discussion text. The asymmetric register/platform match can make the classifier prefer controls for Dharma test passages independently of stable idiolect.",
+    "conclusion": "Treat this as a platform/register-mismatch counterexample and evidence that cross-register surface attribution cannot calibrate the operational proxy. Do not average the 70 percent result into a positive idiolect claim.",
+    "next_test": "Run leave-one-Dharma-source-group-out evaluation so Joel training comes from other Dharma speaker-labeled threads and all authors share the platform/register. Compare char-plus-word, char-only, and word-only again."
+  }
+}
