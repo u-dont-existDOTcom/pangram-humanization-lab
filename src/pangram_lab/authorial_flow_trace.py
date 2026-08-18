@@ -168,9 +168,9 @@ def summarize_trace(trace: dict) -> dict:
     exact_next_pairs = sum(b == a + 1 for a, b in zip(positions, positions[1:]))
 
     immediate_counts = {
-        "true": sum(step.get("manual_immediate_discharge") is True for step in steps),
-        "false": sum(step.get("manual_immediate_discharge") is False for step in steps),
-        "unreviewed": sum(step.get("manual_immediate_discharge") is None for step in steps),
+        "true": sum(step.get("manual_immediate_discharge") is True for step in write_steps),
+        "false": sum(step.get("manual_immediate_discharge") is False for step in write_steps),
+        "unreviewed": sum(step.get("manual_immediate_discharge") is None for step in write_steps),
     }
 
     return {
