@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
-  "request_id": "pangram-local-interactive-shell-20260818",
   "disposition": "no-new-lesson",
   "finding": "A naked set -e in an assistant-supplied copy/paste setup block leaked errexit into the user's ordinary interactive shell, so a later nonzero local Playwright smoke command could terminate the terminal before its underlying browser error was retained.",
+  "ledger_entry_ids": [
+    "L-eaafea590f-01"
+  ],
+  "processed_at_utc": "2026-08-18T12:41:56.853246+00:00",
   "promoted_to": [],
   "reason": "This is not a new Pangram detector or humanization lesson. Exact project provenance is retained here, while the transferable CLI/bootstrap rule is promoted to u-dont-existDOTcom/universal-dev-architecture as interactive-shell command safety.",
+  "request_id": "pangram-local-interactive-shell-20260818",
+  "schema_version": 1,
   "source_path": "state/PANGRAM-LOCAL-INTERACTIVE-SHELL-INCIDENT-2026-08-18.md",
   "source_ref": "c981edac8c77935cc735f89ebb0a48087848e099",
-  "source_sha256": "eaafea590f7a642e04b2e8a816de6b27da625671101ae127d9fbf21f525838ed"
+  "source_sha256": "eaafea590f7a642e04b2e8a816de6b27da625671101ae127d9fbf21f525838ed",
+  "status": "processed"
 }
