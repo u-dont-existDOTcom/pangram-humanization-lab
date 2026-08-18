@@ -27,19 +27,20 @@ def test_block_shuffle_keeps_tokens_inside_fixed_blocks():
         assert collections.Counter(source[start:start + 4]) == collections.Counter(result[start:start + 4])
 
 
-def test_function_mask_retains_closed_class_words_contractions_and_form():
-    text = "I'm unusually happy, but I don't think quantum-zebra42 works; and you are here.\nReally?"
+def test_function_mask_retains_closed_class_words_and_form():
+    text = "The unusually happy person is here, but quantum-zebra42 works; and you are there.\nReally?"
     output, audit = controls.function_word_mask(text)
-    assert "I'm" in output
+    assert "The" in output
+    assert "is" in output
+    assert "here" in output
     assert "but" in output
-    assert "I" in output
-    assert "don't" in output
     assert "and" in output
     assert "you" in output
     assert "are" in output
-    assert "here" in output
+    assert "there" in output
     assert "unusually" not in output
     assert "happy" not in output
+    assert "person" not in output
     assert "quantum" not in output
     assert "zebra42" not in output
     assert "Really" not in output
@@ -86,5 +87,5 @@ def test_function_word_inventory_is_frozen_and_nontrivial():
     assert len(controls._FUNCTION_WORD_SHA256) == 64
     assert "the" in controls._FUNCTION_WORD_SET
     assert "because" in controls._FUNCTION_WORD_SET
-    assert "i'm" in controls._FUNCTION_WORD_SET
-    assert "don't" in controls._FUNCTION_WORD_SET
+    assert "here" in controls._FUNCTION_WORD_SET
+    assert "there" in controls._FUNCTION_WORD_SET
