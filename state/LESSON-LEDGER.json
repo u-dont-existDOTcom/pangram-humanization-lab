@@ -593,6 +593,28 @@
       "source_path": "state/IDIOLECT-PROXY-VALIDATION-GAP-2026-08-17.md",
       "source_ref": "56ddd090284d7028e9360aa6e52022cec575ea6c",
       "source_sha256": "2c5e548f6a857be85e33b7af106d70f5e4cfc4f6a296b5a7271cf4f9a6e7e82a"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The reviewed acquisition queue assigns explicit extraction modes only to public legacy samples whose authorship/page structure can be bounded conservatively.",
+      "id": "L-5150b7bf7b-01",
+      "promoted_to": [],
+      "reason": "This is acquisition infrastructure and metadata routing, not evidence of a transferable prose, detector, or authorship-retention effect.",
+      "recorded_at_utc": "2026-08-18T02:05:54.639467+00:00",
+      "source_path": "state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json",
+      "source_ref": "task/idiolect-corpus-manifest-20260818",
+      "source_sha256": "5150b7bf7b9742c64547118714c22214cf6c08423f7349d56fca7959f3012d57"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The source inventory records owner-confirmed provenance, modality, mixed-authorship boundaries, and acquisition exclusions for the idiolect calibration corpus.",
+      "id": "L-56851a5c5c-01",
+      "promoted_to": [],
+      "reason": "This is source-acquisition and provenance bookkeeping required to make later calibration valid; it does not establish a new transferable humanization or detector lesson.",
+      "recorded_at_utc": "2026-08-18T02:05:54.645945+00:00",
+      "source_path": "state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json",
+      "source_ref": "task/idiolect-corpus-manifest-20260818",
+      "source_sha256": "56851a5c5cc1fa38f4210eb11d4a0a8320e7a9bb475e11ce6cb4300c35abdfae"
     }
   ],
   "schema_version": 1

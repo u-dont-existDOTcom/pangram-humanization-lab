@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "The source inventory records owner-confirmed provenance, modality, mixed-authorship boundaries, and acquisition exclusions for the idiolect calibration corpus.",
+  "ledger_entry_ids": [
+    "L-56851a5c5c-01"
+  ],
+  "processed_at_utc": "2026-08-18T02:05:54.657417+00:00",
+  "promoted_to": [],
+  "reason": "This is source-acquisition and provenance bookkeeping required to make later calibration valid; it does not establish a new transferable humanization or detector lesson.",
   "request_id": "idiolect-corpus-source-inventory-2026-08-18",
+  "schema_version": 1,
   "source_path": "state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json",
   "source_ref": "task/idiolect-corpus-manifest-20260818",
   "source_sha256": "56851a5c5cc1fa38f4210eb11d4a0a8320e7a9bb475e11ce6cb4300c35abdfae",
-  "finding": "The source inventory records owner-confirmed provenance, modality, mixed-authorship boundaries, and acquisition exclusions for the idiolect calibration corpus.",
-  "disposition": "no-new-lesson",
-  "reason": "This is source-acquisition and provenance bookkeeping required to make later calibration valid; it does not establish a new transferable humanization or detector lesson.",
-  "promoted_to": []
+  "status": "processed"
 }
