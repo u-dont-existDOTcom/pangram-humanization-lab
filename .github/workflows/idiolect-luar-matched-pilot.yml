@@ -107,6 +107,59 @@ jobs:
             --working-dir .local/idiolect-corpus/luar-normalized \
             --out .local/idiolect-corpus/luar-matched-pilot-receipt.json
 
+      - name: Normalize pinned LUAR config provenance in receipt
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from transformers import AutoConfig
+
+          receipt_path = Path('.local/idiolect-corpus/luar-matched-pilot-receipt.json')
+          spec_path = Path('state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json')
+          data = json.loads(receipt_path.read_text(encoding='utf-8'))
+          spec = json.loads(spec_path.read_text(encoding='utf-8'))
+          model_spec = spec['model']
+          config = AutoConfig.from_pretrained(
+              model_spec['model_id'],
+              revision=model_spec['revision'],
+              trust_remote_code=True,
+          )
+          actual_backbone_revision = (
+              getattr(config, 'transformer_revision', None)
+              or getattr(config, 'upstream_transformer_revision', None)
+          )
+          if not actual_backbone_revision:
+              raise SystemExit('Pinned LUAR config exposed no transformer revision field')
+          data['model']['upstream_transformer_revision'] = actual_backbone_revision
+          data['model']['config_revision_field'] = (
+              'transformer_revision'
+              if getattr(config, 'transformer_revision', None)
+              else 'upstream_transformer_revision'
+          )
+          receipt_path.write_text(
+              json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + '\n',
+              encoding='utf-8',
+          )
+          print(json.dumps({
+              'requested_revision': data['model']['requested_revision'],
+              'resolved_commit_hash': data['model'].get('resolved_commit_hash'),
+              'upstream_transformer_revision': actual_backbone_revision,
+              'config_revision_field': data['model']['config_revision_field'],
+              'torch_version': data['model'].get('torch_version'),
+              'transformers_version': data['model'].get('transformers_version'),
+          }, indent=2, sort_keys=True))
+          PY
+
+      # Upload before invariant enforcement so an unexpected future metadata
+      # mismatch still leaves a prose-free receipt that can be inspected.
+      - name: Upload metadata-only LUAR receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-luar-matched-pilot-metadata
+          path: .local/idiolect-corpus/luar-matched-pilot-receipt.json
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Enforce LUAR metadata and leakage invariants
         run: |
           python - <<'PY'
@@ -123,6 +176,7 @@ jobs:
           assert model['model_id'] == 'rrivera1849/LUAR-MUD'
           assert model['requested_revision'] == 'e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d'
           assert model['upstream_transformer_revision'] == '48bffbbd27bf028ecdd0cd55abb51236ec12ef1b'
+          assert model['config_revision_field'] in {'transformer_revision', 'upstream_transformer_revision'}
           assert model['embedding_size'] in (0, 512)
           assert model['episode_length_for_document_embedding'] == 1
           assert model['embeddings_persisted_in_receipt'] is False
@@ -157,11 +211,3 @@ jobs:
           for forbidden in ('local_text_path', 'raw_text', 'canonical_text'):
               assert forbidden not in encoded
           PY
-
-      - name: Upload metadata-only LUAR receipt
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: idiolect-luar-matched-pilot-metadata
-          path: .local/idiolect-corpus/luar-matched-pilot-receipt.json
-          if-no-files-found: error
-          retention-days: 30
