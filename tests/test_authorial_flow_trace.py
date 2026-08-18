@@ -17,6 +17,9 @@ def valid_trace():
         "experiment_id": "feasibility-001",
         "condition": "RSG-LS",
         "source_packet_sha256": H0,
+        "initial_prose_sha256": H0,
+        "initial_revealed_source_ids": [],
+        "initial_revealed_source_positions": {},
         "model": {"provider": "test", "name": "writer", "version": None},
         "steps": [
             {
@@ -85,6 +88,7 @@ def valid_trace():
 
 def test_summary_keeps_axes_separate_and_measures_source_reordering():
     summary = aft.summarize_trace(valid_trace())
+    assert summary["initial_revealed_count"] == 0
     assert summary["reveal_count"] == 3
     assert summary["write_count"] == 2
     assert summary["more_count"] == 1
@@ -111,6 +115,34 @@ def test_summary_keeps_axes_separate_and_measures_source_reordering():
     }
     assert summary["fidelity_label_counts"] == {"PASS": 2}
     assert summary["flow_label_counts"] == {"NATURAL_STOP": 1, "PASS": 2}
+
+
+def test_trace_can_resume_from_an_existing_recurrent_checkpoint():
+    trace = valid_trace()
+    trace["initial_revealed_source_ids"] = ["seed-a", "seed-b", "seed-c"]
+    trace["initial_revealed_source_positions"] = {
+        "seed-a": 7,
+        "seed-b": 8,
+        "seed-c": 9,
+    }
+    for step in trace["steps"]:
+        step["revealed_source_ids_after"] = [
+            "seed-a",
+            "seed-b",
+            "seed-c",
+            *step["revealed_source_ids_after"],
+        ]
+    summary = aft.summarize_trace(trace)
+    assert summary["initial_revealed_count"] == 3
+    assert summary["accumulation_depth_at_write"]["values"] == [5, 6]
+
+
+def test_initial_reveal_positions_must_match_checkpoint_ids():
+    trace = valid_trace()
+    trace["initial_revealed_source_ids"] = ["seed-a"]
+    trace["initial_revealed_source_positions"] = {}
+    with pytest.raises(ValueError, match="keys must exactly match"):
+        aft.validate_trace(trace)
 
 
 def test_more_cannot_smuggle_a_candidate_hash():
