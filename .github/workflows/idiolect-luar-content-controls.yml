@@ -1,31 +1,7 @@
 name: Idiolect LUAR content controls
+# actions-cost-class: manual-heavy-research
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/idiolect-luar-content-controls.yml
-      - state/IDIOLECT-LUAR-CONTENT-CONTROLS-SPEC-2026-08-18.json
-      - src/pangram_lab/luar_content_controls.py
-      - tests/test_luar_content_controls.py
-      - src/pangram_lab/luar_matched_pilot.py
-      - src/pangram_lab/surface_svm_equal_budget.py
-      - src/pangram_lab/surface_svm_matched_cv.py
-      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
-      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
-      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/idiolect-luar-content-controls.yml
-      - state/IDIOLECT-LUAR-CONTENT-CONTROLS-SPEC-2026-08-18.json
-      - src/pangram_lab/luar_content_controls.py
-      - tests/test_luar_content_controls.py
-      - src/pangram_lab/luar_matched_pilot.py
-      - src/pangram_lab/surface_svm_equal_budget.py
-      - src/pangram_lab/surface_svm_matched_cv.py
-      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
-      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
-      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
   workflow_dispatch:
 
 permissions:
