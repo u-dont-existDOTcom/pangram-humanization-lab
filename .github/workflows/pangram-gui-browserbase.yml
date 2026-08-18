@@ -13,6 +13,11 @@ on:
         required: true
         default: false
         type: boolean
+  push:
+    branches:
+      - agent/pangram-browserbase-gui-automation-20260817
+    paths:
+      - .github/workflows/pangram-gui-browserbase.yml
 
 permissions:
   contents: write
@@ -51,7 +56,9 @@ jobs:
 
       - name: Extract exact detector inputs from source ref
         env:
-          SOURCE_REF: ${{ inputs.source_ref }}
+          SOURCE_REF: ${{ inputs.source_ref || 'agent/romance-primal-crucible-gui-repair-20260817' }}
+          EXPECTED_PART1_SHA: ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8
+          EXPECTED_PART2_SHA: 2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0
         shell: bash
         run: |
           set -euo pipefail
@@ -64,12 +71,17 @@ jobs:
           mkdir -p /tmp/pangram-inputs
           git show "${source_commit}:work/romance-current-assembly/pangram-part-1.txt" > /tmp/pangram-inputs/part-1.txt
           git show "${source_commit}:work/romance-current-assembly/pangram-part-2.txt" > /tmp/pangram-inputs/part-2.txt
+          p1=$(sha256sum /tmp/pangram-inputs/part-1.txt | awk '{print $1}')
+          p2=$(sha256sum /tmp/pangram-inputs/part-2.txt | awk '{print $1}')
+          printf 'source_commit=%s\npart1_sha=%s\npart2_sha=%s\n' "$source_commit" "$p1" "$p2"
+          [[ "$p1" == "$EXPECTED_PART1_SHA" ]] || { echo "Part 1 SHA mismatch: $p1"; exit 3; }
+          [[ "$p2" == "$EXPECTED_PART2_SHA" ]] || { echo "Part 2 SHA mismatch: $p2"; exit 3; }
           printf 'source_commit=%s\n' "$source_commit" >> "$GITHUB_ENV"
           sha256sum /tmp/pangram-inputs/part-1.txt /tmp/pangram-inputs/part-2.txt
 
       - name: Run Pangram GUI measurements
         env:
-          FORCE_RERUN: ${{ inputs.force }}
+          FORCE_RERUN: ${{ inputs.force || 'false' }}
         shell: bash
         run: |
           set -euo pipefail
