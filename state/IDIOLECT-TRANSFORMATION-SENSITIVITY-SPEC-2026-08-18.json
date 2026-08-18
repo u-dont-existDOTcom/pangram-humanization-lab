@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "diagnostic-not-IER",
+  "purpose": "Test whether the pinned LUAR authorship instrument responds directionally to independently frozen transformations of one exact Joel-related detector case before expanding to independent real edit pairs.",
+  "source_snapshot": {
+    "required_canonical_hash_set_sha256": "ffe9cc36f33c38dfc1fa5f5d5324a9283127790f68a296b5492955894d77715e",
+    "metadata_file": "state/IDIOLECT-DHARMA-SYNCHRONIZED-SNAPSHOT-2026-08-18.json"
+  },
+  "model": {
+    "model_id": "rrivera1849/LUAR-MUD",
+    "revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "max_token_length": 512,
+    "profile_rule": "mean raw one-document embeddings; nearest profile by cosine"
+  },
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "profile_sample_ids": {
+    "Joel Rosenblum": [
+      "dcp-joel-can-anything-known",
+      "dcp-joel-holographic",
+      "dcp-joel-insights-anatta",
+      "dcp-joel-supramundane-jhanas",
+      "dc-2013-06-lucid-dreaming",
+      "dc-2013-06-sound-bahiya"
+    ],
+    "David Vardy": [
+      "luar-david-osho",
+      "luar-david-pure-experiencing",
+      "luar-david-two-techniques",
+      "luar-david-when-seeing-expressed",
+      "luar-david-integrating-activities-dreams",
+      "luar-david-lucid-dreams"
+    ],
+    "Stian Gudmundsen Høiland": [
+      "luar-stian-did-buddha-teach-atman",
+      "luar-stian-two-techniques",
+      "luar-stian-experience-actualization-anatta",
+      "luar-stian-experience-skandha-ignorance",
+      "luar-stian-fabrications-middle-way",
+      "luar-stian-causality-self-perfection"
+    ]
+  },
+  "pair_source": {
+    "path": "state/ROMANCE-OXYTOCIN-MINIMAL-PAIR-BATCH-2026-08-12.md",
+    "git_blob_sha1": "e9f5932d21846ef331f33b8968c662d0da30f9bf"
+  },
+  "pairs": [
+    {
+      "pair_id": "oxy-r1s0",
+      "original_heading": "AI endpoint",
+      "candidate_heading": "R1S0 — conditional restart only",
+      "transformation_class": "controlled-conditional-restart",
+      "candidate_provenance": "synthetic-controlled-probe"
+    },
+    {
+      "pair_id": "oxy-r0s1",
+      "original_heading": "AI endpoint",
+      "candidate_heading": "R0S1 — sentence split only",
+      "transformation_class": "controlled-sentence-topology",
+      "candidate_provenance": "synthetic-controlled-probe"
+    },
+    {
+      "pair_id": "oxy-r1s1",
+      "original_heading": "AI endpoint",
+      "candidate_heading": "R1S1 — both topology changes",
+      "transformation_class": "controlled-combined-topology",
+      "candidate_provenance": "synthetic-controlled-probe"
+    },
+    {
+      "pair_id": "oxy-owner-endpoint",
+      "original_heading": "AI endpoint",
+      "candidate_heading": "Human endpoint",
+      "transformation_class": "owner-one-pass-rewrite",
+      "candidate_provenance": "detector-targeted-owner"
+    }
+  ],
+  "interpretation_guardrails": {
+    "not_ier": true,
+    "not_calibrated": true,
+    "single_source_family": true,
+    "cross_register_profile_mismatch": true,
+    "no_operational_threshold": true,
+    "no_metric_averaging": true,
+    "required_next_step": "If the harness is sensitive and stable, add multiple independent frozen original/candidate source groups spanning mechanical, bounded-repair, owner-final, generic-heavy-polish, and voice-preserve transformations."
+  }
+}
