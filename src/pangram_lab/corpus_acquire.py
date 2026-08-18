@@ -5,10 +5,13 @@ import html as html_lib
 import json
 import re
 import sys
+import time
 from dataclasses import dataclass
+from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 _BLOCK_TAGS = {
@@ -19,6 +22,7 @@ _BLOCK_TAGS = {
 }
 _VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 _SKIP_TAGS = {"script", "style", "noscript", "svg", "canvas", "iframe", "template"}
+_RETRYABLE_HTTP = {429, 500, 502, 503, 504}
 
 _EMAIL_RE = re.compile(r"(?<![\w.+-])[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}")
 _URL_RE = re.compile(r"(?i)\b(?:https?://|www\.)[^\s<>()]+")
@@ -227,17 +231,39 @@ def canonicalize(text: str) -> CanonicalText:
     )
 
 
-def fetch_html(url: str, *, timeout: int = 30) -> tuple[str, str]:
+def _retry_after_seconds(exc: HTTPError, *, attempt: int) -> float:
+    raw = (exc.headers.get("Retry-After") or "").strip() if exc.headers else ""
+    if raw.isdigit():
+        return min(60.0, max(0.0, float(raw)))
+    if raw:
+        try:
+            target = parsedate_to_datetime(raw)
+            if target.tzinfo is None:
+                target = target.replace(tzinfo=timezone.utc)
+            return min(60.0, max(0.0, target.timestamp() - time.time()))
+        except (TypeError, ValueError, OverflowError):
+            pass
+    return min(30.0, 1.5 * (2 ** attempt))
+
+
+def fetch_html(url: str, *, timeout: int = 30, max_attempts: int = 5) -> tuple[str, str]:
     req = Request(
         url,
         headers={
             "User-Agent": "Mozilla/5.0 (compatible; pangram-humanization-lab idiolect corpus acquisition)"
         },
     )
-    with urlopen(req, timeout=timeout) as resp:
-        body = resp.read()
-        encoding = resp.headers.get_content_charset() or "utf-8"
-    return body.decode(encoding, errors="replace"), hashlib.sha256(body).hexdigest()
+    for attempt in range(max_attempts):
+        try:
+            with urlopen(req, timeout=timeout) as resp:
+                body = resp.read()
+                encoding = resp.headers.get_content_charset() or "utf-8"
+            return body.decode(encoding, errors="replace"), hashlib.sha256(body).hexdigest()
+        except HTTPError as exc:
+            if exc.code not in _RETRYABLE_HTTP or attempt >= max_attempts - 1:
+                raise
+            time.sleep(_retry_after_seconds(exc, attempt=attempt))
+    raise RuntimeError("unreachable retry loop")
 
 
 def extract_blogspot(html: str, *, mode: str) -> str:
