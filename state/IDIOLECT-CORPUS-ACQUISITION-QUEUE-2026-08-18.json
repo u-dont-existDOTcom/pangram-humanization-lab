@@ -1,5 +1,5 @@
 {
-  "queue_version": "0.1.0",
+  "queue_version": "0.1.1",
   "parent_inventory": "state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json",
   "purpose": "Operational fetch queue for public pre-LLM Joel samples with explicit extraction modes. Raw/canonical prose remains local and gitignored.",
   "sources": [
@@ -8,7 +8,12 @@
       "source_group": "tafkajestdr",
       "provenance": "natural-owner-confirmed",
       "modality": "written",
-      "registers": ["research-conversational", "polemical-irreverent", "personal-tender", "dialogue-QA"],
+      "registers": [
+        "research-conversational",
+        "polemical-irreverent",
+        "personal-tender",
+        "dialogue-QA"
+      ],
       "known_posts": [
         {
           "sample_id": "tafka-2020-04-19-consciousness-conditions",
@@ -52,7 +57,11 @@
       "source_group": "dharma-connection",
       "provenance": "natural-owner-confirmed",
       "modality": "written",
-      "registers": ["dialogue-QA", "research-conversational", "polemical-irreverent"],
+      "registers": [
+        "dialogue-QA",
+        "research-conversational",
+        "polemical-irreverent"
+      ],
       "known_threads": [
         {
           "sample_id": "dc-2014-02-04-holographic-universe",
