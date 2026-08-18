@@ -1,0 +1,213 @@
+name: Idiolect LUAR matched pilot
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-luar-matched-pilot.yml
+      - state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json
+      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
+      - src/pangram_lab/luar_matched_pilot.py
+      - tests/test_luar_matched_pilot.py
+      - src/pangram_lab/surface_svm_pilot.py
+      - src/pangram_lab/surface_svm_matched_cv.py
+      - src/pangram_lab/surface_svm_equal_budget.py
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
+      - src/pangram_lab/dharma_speaker_acquire.py
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/idiolect-luar-matched-pilot.yml
+      - state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json
+      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
+      - src/pangram_lab/luar_matched_pilot.py
+      - tests/test_luar_matched_pilot.py
+      - src/pangram_lab/surface_svm_pilot.py
+      - src/pangram_lab/surface_svm_matched_cv.py
+      - src/pangram_lab/surface_svm_equal_budget.py
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
+      - src/pangram_lab/dharma_speaker_acquire.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  HF_HUB_DISABLE_TELEMETRY: "1"
+  TOKENIZERS_PARALLELISM: "false"
+
+jobs:
+  luar-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and isolated CPU research environment
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pip install -q --index-url https://download.pytorch.org/whl/cpu 'torch>=2.2,<3'
+          python -m pip install -q \
+            'transformers>=4.40,<5' \
+            'einops>=0.7,<1' \
+            'safetensors>=0.4,<1' \
+            'scikit-learn>=1.3,<2'
+
+      - name: Run LUAR adapter and acquisition regression tests
+        run: |
+          python -m pytest -q \
+            tests/test_luar_matched_pilot.py \
+            tests/test_surface_svm_equal_budget.py \
+            tests/test_surface_svm_matched_cv.py \
+            tests/test_dharma_speaker_acquire.py
+
+      # Fetch the two critical Joel-only sources first. A prior live run fetched
+      # the full control corpus before this step and Blogger returned 429 on the
+      # final Sound/Bahiya request even after bounded retry.
+      - name: Rebuild required Joel-only Dharma supplements first
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json \
+            --sample-id dc-2013-06-lucid-dreaming \
+            --sample-id dc-2013-06-sound-bahiya \
+            --out-dir .local/idiolect-corpus/luar-joel-supplement-text \
+            --manifest-out .local/idiolect-corpus/luar-joel-supplement-manifest.json
+
+      - name: Acquire frozen six-source control profiles only
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/luar-control-text \
+            --manifest-out .local/idiolect-corpus/luar-control-manifest.json
+
+      - name: Briefly space Blogger acquisition bursts
+        run: sleep 10
+
+      - name: Rebuild matched Dharma author-thread set
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/luar-matched-text \
+            --manifest-out .local/idiolect-corpus/luar-matched-manifest.json
+
+      - name: Run pinned LUAR whole-document and equal-budget pilots
+        run: |
+          python -m pangram_lab.luar_matched_pilot \
+            state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json \
+            --matched-manifest .local/idiolect-corpus/luar-matched-manifest.json \
+            --supplement-manifest .local/idiolect-corpus/luar-joel-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/luar-control-manifest.json \
+            --working-dir .local/idiolect-corpus/luar-normalized \
+            --out .local/idiolect-corpus/luar-matched-pilot-receipt.json
+
+      - name: Normalize pinned LUAR config provenance in receipt
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from transformers import AutoConfig
+
+          receipt_path = Path('.local/idiolect-corpus/luar-matched-pilot-receipt.json')
+          spec_path = Path('state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json')
+          data = json.loads(receipt_path.read_text(encoding='utf-8'))
+          spec = json.loads(spec_path.read_text(encoding='utf-8'))
+          model_spec = spec['model']
+          config = AutoConfig.from_pretrained(
+              model_spec['model_id'],
+              revision=model_spec['revision'],
+              trust_remote_code=True,
+          )
+          actual_backbone_revision = (
+              getattr(config, 'transformer_revision', None)
+              or getattr(config, 'upstream_transformer_revision', None)
+          )
+          if not actual_backbone_revision:
+              raise SystemExit('Pinned LUAR config exposed no transformer revision field')
+          data['model']['upstream_transformer_revision'] = actual_backbone_revision
+          data['model']['config_revision_field'] = (
+              'transformer_revision'
+              if getattr(config, 'transformer_revision', None)
+              else 'upstream_transformer_revision'
+          )
+          receipt_path.write_text(
+              json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + '\n',
+              encoding='utf-8',
+          )
+          print(json.dumps({
+              'requested_revision': data['model']['requested_revision'],
+              'resolved_commit_hash': data['model'].get('resolved_commit_hash'),
+              'upstream_transformer_revision': actual_backbone_revision,
+              'config_revision_field': data['model']['config_revision_field'],
+              'torch_version': data['model'].get('torch_version'),
+              'transformers_version': data['model'].get('transformers_version'),
+          }, indent=2, sort_keys=True))
+          PY
+
+      # Upload before invariant enforcement so an unexpected future metadata
+      # mismatch still leaves a prose-free receipt that can be inspected.
+      - name: Upload metadata-only LUAR receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-luar-matched-pilot-metadata
+          path: .local/idiolect-corpus/luar-matched-pilot-receipt.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Enforce LUAR metadata and leakage invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/luar-matched-pilot-receipt.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          assert data['raw_or_canonical_prose_in_output'] is False
+          assert data['embeddings_persisted_in_output'] is False
+          assert data['pilot_status'] == 'luar-mean-profile-nearest-cosine-pilot-not-IER'
+          assert data['source_group_leakage'] is False
+          model = data['model']
+          assert model['model_id'] == 'rrivera1849/LUAR-MUD'
+          assert model['requested_revision'] == 'e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d'
+          assert model['upstream_transformer_revision'] == '48bffbbd27bf028ecdd0cd55abb51236ec12ef1b'
+          assert model['config_revision_field'] in {'transformer_revision', 'upstream_transformer_revision'}
+          assert model['embedding_size'] in (0, 512)
+          assert model['episode_length_for_document_embedding'] == 1
+          assert model['embeddings_persisted_in_receipt'] is False
+          assert set(data['conditions']) == {'whole_document', 'equal_50_word'}
+          for condition in data['conditions'].values():
+              assert condition['fold_count'] == 4
+              aggregate = condition['aggregate']
+              assert len(aggregate['predictions']) == 10
+              assert aggregate['group_bootstrap_accuracy_95pct']['groups'] == 4
+              for key in ('accuracy', 'balanced_accuracy', 'macro_f1'):
+                  assert 0.0 <= float(aggregate[key]) <= 1.0
+
+          # Metadata may legitimately contain field names such as
+          # `episode_length_for_document_embedding`. Reject actual vector-bearing
+          # keys recursively instead of using substring matches that false-fire
+          # on descriptive metadata.
+          forbidden_vector_keys = {
+              'embedding', 'embeddings', 'vector', 'vectors',
+              'raw_embedding', 'raw_embeddings',
+          }
+          def walk(value):
+              if isinstance(value, dict):
+                  for key, child in value.items():
+                      assert key not in forbidden_vector_keys, key
+                      walk(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      walk(child)
+          walk(data)
+
+          encoded = path.read_text(encoding='utf-8')
+          for forbidden in ('local_text_path', 'raw_text', 'canonical_text'):
+              assert forbidden not in encoded
+          PY

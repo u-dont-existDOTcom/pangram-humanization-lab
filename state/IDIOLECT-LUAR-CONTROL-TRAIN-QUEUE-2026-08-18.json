@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "purpose": "Compact frozen LUAR control-training acquisition queue: the six largest usable non-overlap explicit-speaker Dharma documents per control from the merged #63 profile receipt. This avoids reacquiring the entire control census on every heavy-model run.",
+  "raw_text_in_git": false,
+  "selection_provenance": {
+    "source_profile_pr": 63,
+    "source_profile_merge": "095d34efdd10d48ef844ee82bd6f799182243c64",
+    "rule": "six largest canonical word-count non-overlap explicit-speaker documents per control"
+  },
+  "sources": [
+    {
+      "source_id": "luar-control-david-vardy",
+      "site_group": "dharma-connection",
+      "provenance": "public-human-control-explicit-speaker",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "philosophical"],
+      "known_threads": [
+        {
+          "sample_id": "luar-david-lucid-dreams",
+          "source_group": "dc-thread-8864539321750513395",
+          "title": "Lucid Dreams",
+          "date": "2014-08-09",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/lucid-dreams_12.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "luar-david-pure-experiencing",
+          "source_group": "dc-thread-442182990219876274",
+          "title": "Pure Experiencing",
+          "date": "2014-08-11",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/pure-experiencing_53.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "luar-david-two-techniques",
+          "source_group": "dc-thread-4960827698552253636",
+          "title": "Two Techniques for Dealing with Painful Clinging",
+          "date": "2014-08-08",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/two-techniques-for-dealing-with-painful.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "luar-david-integrating-activities-dreams",
+          "source_group": "dc-thread-624998290513123243",
+          "title": "Integrating with Activities, Dreams",
+          "date": "2014-08-09",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/integrating-with-activities-dreams_81.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "luar-david-osho",
+          "source_group": "dc-thread-2927665278974761460",
+          "title": "Osho",
+          "date": "2014-08-18",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/osho_30.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "luar-david-when-seeing-expressed",
+          "source_group": "dc-thread-5362662832705964938",
+          "title": "When isn't Seeing itself Expressed as What's Seen?",
+          "date": "2014-08-09",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/when-isn-seeing-itself-expressed-as_14.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        }
+      ]
+    },
+    {
+      "source_id": "luar-control-stian-hoiland",
+      "site_group": "dharma-connection",
+      "provenance": "public-human-control-explicit-speaker",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "philosophical"],
+      "known_threads": [
+        {
+          "sample_id": "luar-stian-experience-skandha-ignorance",
+          "source_group": "dc-thread-761662024753954182",
+          "title": "Experience, Skandha and Ignorance",
+          "date": "2014-08-10",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/experience-skandha-and-ignorance.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "luar-stian-fabrications-middle-way",
+          "source_group": "dc-thread-955056025704312309",
+          "title": "Fabrications and Middle Way",
+          "date": "2014-08-12",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/fabrications-and-middle-way_26.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "luar-stian-two-techniques",
+          "source_group": "dc-thread-4960827698552253636",
+          "title": "Two Techniques for Dealing with Painful Clinging",
+          "date": "2014-08-08",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/two-techniques-for-dealing-with-painful.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "luar-stian-did-buddha-teach-atman",
+          "source_group": "dc-thread-3079478924172374697",
+          "title": "Did the Buddha Teach an Atman?",
+          "date": "2014-02-03",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/did-buddha-teach-atman_7.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "luar-stian-experience-actualization-anatta",
+          "source_group": "dc-thread-6266197889093613190",
+          "title": "Experience and Actualization of Anatta",
+          "date": "2014-08-09",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/experience-and-actualization-of-anatta_72.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "luar-stian-causality-self-perfection",
+          "source_group": "dc-thread-958058664579671905",
+          "title": "Causality and Self-Perfection",
+          "date": "2014-08-10",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/causality-and-self-perfection_54.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        }
+      ]
+    }
+  ]
+}
