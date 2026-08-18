@@ -1,0 +1,293 @@
+{
+  "queue_version": "0.1.0",
+  "purpose": "Acquire a deliberately diverse pre-ChatGPT Joel written-source tranche for length/quality/duplicate triage before final corpus admission. This is not a train/test split.",
+  "selection_status": "triage-only",
+  "raw_text_in_git": false,
+  "selection_principles": [
+    "Prefer independent whole posts/threads over many fragments from one source.",
+    "Bias toward topic and register diversity so authorship models cannot rely mainly on Buddhism/health nouns.",
+    "Use conservative blockquote dropping on owner-exclusive blogs; remaining third-party text still requires manual audit.",
+    "Use named-speaker extraction on Dharma Connection multi-author threads.",
+    "Do not admit a sample merely because acquisition succeeds; length, author boundary, quotations, duplicates, and source independence are audited later."
+  ],
+  "sources": [
+    {
+      "source_id": "jr-legacy-tafka-triage",
+      "source_group": "tafkajestdr",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": ["research-conversational", "polemical-irreverent", "personal-tender", "philosophical"],
+      "known_posts": [
+        {
+          "sample_id": "tafka-2013-01-05-intro-journey",
+          "date": "2013-01-05",
+          "title": "Intro to Tafka Jestdr's journey",
+          "url": "https://tafkajestdr.blogspot.com/2013/01/intro-to-tafka-jestdrs-journey.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2015-01-17-sam-harris-review",
+          "date": "2015-01-17",
+          "title": "My Amazon review of Sam Harris' book Waking Up",
+          "url": "https://tafkajestdr.blogspot.com/2015/01/my-amazon-review-of-sam-harris-book.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2015-02-02-true-love",
+          "date": "2015-02-02",
+          "title": "To detach or engage? What is true love?",
+          "url": "https://tafkajestdr.blogspot.com/2015/02/to-detach-or-engage-what-is-true-love.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2015-02-12-no-way-to-know",
+          "date": "2015-02-12",
+          "title": "No way to know anything, so what's the point?",
+          "url": "https://tafkajestdr.blogspot.com/2015/02/no-way-to-know-anything-so-whats-point.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2015-02-23-right-view-humility",
+          "date": "2015-02-23",
+          "title": "Right View and Humility: The Middle Path Mind",
+          "url": "https://tafkajestdr.blogspot.com/2015/02/right-view-and-humility.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2016-06-08-already-perfect",
+          "date": "2016-06-08",
+          "title": "What if everything is already perfect?",
+          "url": "https://tafkajestdr.blogspot.com/2016/06/what-if-everything-is-already-perfect.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2019-03-08-plant-spirits",
+          "date": "2019-03-08",
+          "title": "Are plant spirits real or are they all in my mind when I eat psychedelic plants?",
+          "url": "https://tafkajestdr.blogspot.com/2019/03/are-plant-spirits-real-or-are-they-all.html",
+          "extraction_mode": "message-by-you"
+        },
+        {
+          "sample_id": "tafka-2019-07-22-psychedelic-brain",
+          "date": "2019-07-22",
+          "title": "How does the brain construct the psychedelic experience?",
+          "url": "https://tafkajestdr.blogspot.com/2019/07/how-does-brain-construct-psychedelic.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        }
+      ]
+    },
+    {
+      "source_id": "jr-legacy-government-scam-triage",
+      "source_group": "government-scam",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": ["polemical-irreverent", "political", "research-conversational"],
+      "known_posts": [
+        {
+          "sample_id": "gov-2020-06-20-everything-lie",
+          "date": "2020-06-20",
+          "title": "Everything you were taught is a lie.",
+          "url": "https://government-scam.blogspot.com/2020/06/everything-you-were-taught-is-lie.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "gov-2020-06-28-life-expectancy",
+          "date": "2020-06-28",
+          "title": "Our Lives Are Not Longer, Only Sicker",
+          "url": "https://government-scam.blogspot.com/2020/06/life-expectancy.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "gov-2020-06-30-stupid-violent-apes",
+          "date": "2020-06-30",
+          "title": "But weren't humans \"stupid, violent apes\" before civilization?",
+          "url": "https://government-scam.blogspot.com/2020/06/but-werent-humans-stupid-apes-before.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "gov-2020-09-06-civilization-imposed",
+          "date": "2020-09-06",
+          "title": "How Did Civilization Get Imposed On Us?",
+          "url": "https://government-scam.blogspot.com/2020/09/how-did-civilization-get-imposed-on-us.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "gov-2020-09-29-buddha-civilization",
+          "date": "2020-09-29",
+          "title": "Would Buddha Beg to Differ? Maybe Civilization Is The Necessary Evil?",
+          "url": "https://government-scam.blogspot.com/2020/09/would-buddha-beg-to-differ-maybe.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        }
+      ]
+    },
+    {
+      "source_id": "jr-legacy-insurgency-triage",
+      "source_group": "theinsurgencyisworking",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": ["polemical-irreverent", "political", "journalistic-commentary"],
+      "known_posts": [
+        {
+          "sample_id": "ins-2008-09-01-nader-accuracy",
+          "date": "2008-09-01",
+          "title": "Criticism of Ralph Nader -- Accuracy in Reporting?",
+          "url": "https://theinsurgencyisworking.blogspot.com/2008/09/criticism-of-ralph-nader-accuracy-in.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "ins-2008-09-04-protest-or-die",
+          "date": "2008-09-04",
+          "title": "VOTE OR DIE? How about \"PROTEST OR DIE\"?",
+          "url": "https://theinsurgencyisworking.blogspot.com/2008/09/vote-or-die-how-about-protest-or-die.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "ins-2008-09-09-afghanistan",
+          "date": "2008-09-09",
+          "title": "War Strategists Can't Solve Afghanistan",
+          "url": "https://theinsurgencyisworking.blogspot.com/2008/09/war-strategists-cant-solve-afghanistan.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "ins-2008-09-14-obama-supporters",
+          "date": "2008-09-14",
+          "title": "Do Obama Supporters Actually Believe In Anything?",
+          "url": "https://theinsurgencyisworking.blogspot.com/2008/09/do-obama-supporters-actually-believe-in.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "ins-2009-01-08-free-market",
+          "date": "2009-01-08",
+          "title": "Re: The Free Market Myth",
+          "url": "https://theinsurgencyisworking.blogspot.com/2009/01/re-free-market-myth.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "ins-2009-04-17-israel-palestine",
+          "date": "2009-04-17",
+          "title": "Blame Israel for Palestine, Not for Everything Else",
+          "url": "https://theinsurgencyisworking.blogspot.com/2009/04/blame-israel-for-palestine-not-for.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "ins-2012-02-01-police-athletic-league",
+          "date": "2012-02-01",
+          "title": "Why do we need the Police Athletic League?",
+          "url": "https://theinsurgencyisworking.blogspot.com/2012/02/why-do-we-need-police-athletic-league.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        }
+      ]
+    },
+    {
+      "source_id": "jr-legacy-love4nanou-triage",
+      "source_group": "love4nanou",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": ["personal-tender", "relationship", "polemical-irreverent"],
+      "known_posts": [
+        {
+          "sample_id": "nanou-2020-09-15-disney-tale",
+          "date": "2020-09-15",
+          "title": "Welcome to Our Real-Life Disney Tale",
+          "url": "https://love4nanou.blogspot.com/2020/09/welcome-to-our-real-life-disney-tale.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "nanou-2020-09-15-too-good-to-be-true",
+          "date": "2020-09-15",
+          "title": "If it's too good to be true, it probably isn't. Unless it is. But don't chance it?",
+          "url": "https://love4nanou.blogspot.com/2020/09/if-its-too-good-to-be-true-it-probably.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "nanou-2020-09-15-blind-spots",
+          "date": "2020-09-15",
+          "title": "Blind spots in the Mirror of Love",
+          "url": "https://love4nanou.blogspot.com/2020/09/blind-spots-in-mirror-of-love.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "nanou-2020-09-15-love-reverse-war",
+          "date": "2020-09-15",
+          "title": "Love is Reverse War",
+          "url": "https://love4nanou.blogspot.com/2020/09/love-is-reverse-war.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "nanou-2020-09-15-easy-love",
+          "date": "2020-09-15",
+          "title": "Easy Love Teaches Little",
+          "url": "https://love4nanou.blogspot.com/2020/09/easy-love-teaches-little.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        }
+      ]
+    },
+    {
+      "source_id": "jr-legacy-ann-gayma-triage",
+      "source_group": "ann-gayma-talkpa-truth-2020",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": ["personal", "polemical-irreverent", "relationship-conflict"],
+      "known_posts": [
+        {
+          "sample_id": "ann-2020-10-29-assault-custody",
+          "date": "2020-10-29",
+          "title": "Ann Gayma Talkpa-Rosenblum's assault on Judith Rosenblum (2017) and Stealing of Custody of Balthazar",
+          "url": "https://ann-gayma-rosenblum-talkpa-truth.blogspot.com/2020/10/ann-gayma-talkpa-rosenblums-assault-on.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        }
+      ]
+    },
+    {
+      "source_id": "jr-legacy-dharma-triage",
+      "source_group": "dharma-connection",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "polemical-irreverent"],
+      "known_threads": [
+        {
+          "sample_id": "dc-2013-07-11-rebirth-anatta",
+          "date": "2013-07-11",
+          "title": "In The Absence Of Self, Who Or What Is Reborn?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/07/in-absence-of-self-who-or-what-is-reborn_13.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2014-02-03-consciousness-self",
+          "date": "2014-02-03",
+          "title": "Is Consciousness the Essence of the Self?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/is-consciousness-essence-of-self.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2014-02-03-metta-methods",
+          "date": "2014-02-03",
+          "title": "Metta and Methods",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/metta-and-methods_16.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2014-02-04-worldly-life",
+          "date": "2014-02-04",
+          "title": "Worldly Life, Dharma, Tao and Samsara",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/worldly-life-dharma-tao-and-samsara_31.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2014-08-09-alcohol",
+          "date": "2014-08-09",
+          "title": "Alcohol",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/alcohol_54.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dc-2014-08-12-spiritual-diversity",
+          "date": "2014-08-12",
+          "title": "Spiritual Diversity",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/spiritual-diversity_20.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        }
+      ]
+    }
+  ]
+}
