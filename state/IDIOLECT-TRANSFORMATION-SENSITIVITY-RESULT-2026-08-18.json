@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "status": "diagnostic-complete-cross-register-profile-disconfirmed-not-IER",
+  "source_pr": 79,
+  "workflow_run_id": 32129713607,
+  "artifact": {
+    "name": "idiolect-transformation-sensitivity",
+    "artifact_id": 9321769728,
+    "sha256": "7d0569a5e41b39f3b6fcf5e56589d673be0b2eb32258758704f8004d52cf62b6"
+  },
+  "source_snapshot": {
+    "canonical_hash_set_sha256": "ffe9cc36f33c38dfc1fa5f5d5324a9283127790f68a296b5492955894d77715e",
+    "pair_source_git_blob_sha1": "e9f5932d21846ef331f33b8968c662d0da30f9bf"
+  },
+  "model": {
+    "model_id": "rrivera1849/LUAR-MUD",
+    "revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "upstream_transformer_revision": "48bffbbd27bf028ecdd0cd55abb51236ec12ef1b",
+    "profile_documents_per_author": 6
+  },
+  "pairs": [
+    {
+      "pair_id": "oxy-r1s0",
+      "transformation_class": "controlled-conditional-restart",
+      "candidate_provenance": "synthetic-controlled-probe",
+      "original_sha256": "0d64fa9f66747789fb8b661ef723ef411cbac7e20b5db34556d8f941d067e0cf",
+      "candidate_sha256": "64d8d2bd93619a205c2f84db4a0e3428b1e83a2fb2064a03ab661a159b85a8d7",
+      "original_predicted_author": "Joel Rosenblum",
+      "candidate_predicted_author": "Joel Rosenblum",
+      "delta_joel_cosine": -0.002906,
+      "delta_joel_margin_vs_best_other": -0.001667
+    },
+    {
+      "pair_id": "oxy-r0s1",
+      "transformation_class": "controlled-sentence-topology",
+      "candidate_provenance": "synthetic-controlled-probe",
+      "original_sha256": "0d64fa9f66747789fb8b661ef723ef411cbac7e20b5db34556d8f941d067e0cf",
+      "candidate_sha256": "83cd1e8a116b0cbc23fc17b0fb8c1f7519138d2d02e3a16999896db55fb82ea3",
+      "original_predicted_author": "Joel Rosenblum",
+      "candidate_predicted_author": "Joel Rosenblum",
+      "delta_joel_cosine": 0.033433,
+      "delta_joel_margin_vs_best_other": 0.004656
+    },
+    {
+      "pair_id": "oxy-r1s1",
+      "transformation_class": "controlled-combined-topology",
+      "candidate_provenance": "synthetic-controlled-probe",
+      "original_sha256": "0d64fa9f66747789fb8b661ef723ef411cbac7e20b5db34556d8f941d067e0cf",
+      "candidate_sha256": "0da745a977b14d8cf6c5e42f8058978ee0e2d991bb9f22905a95d504aa262bba",
+      "original_predicted_author": "Joel Rosenblum",
+      "candidate_predicted_author": "Joel Rosenblum",
+      "delta_joel_cosine": 0.030474,
+      "delta_joel_margin_vs_best_other": 0.002139
+    },
+    {
+      "pair_id": "oxy-owner-endpoint",
+      "transformation_class": "owner-one-pass-rewrite",
+      "candidate_provenance": "detector-targeted-owner",
+      "original_sha256": "0d64fa9f66747789fb8b661ef723ef411cbac7e20b5db34556d8f941d067e0cf",
+      "candidate_sha256": "e7d7a776fdfb1cea382812a058a59e496c34b2e30facb75aea306e2f1cef5160",
+      "original_predicted_author": "Joel Rosenblum",
+      "candidate_predicted_author": "Stian Gudmundsen Høiland",
+      "original_joel_cosine": 0.422345,
+      "candidate_joel_cosine": 0.514925,
+      "delta_joel_cosine": 0.09258,
+      "original_joel_margin_vs_best_other": 0.010959,
+      "candidate_joel_margin_vs_best_other": -0.000798,
+      "delta_joel_margin_vs_best_other": -0.011757
+    }
+  ],
+  "interpretation": {
+    "harness_disposition": "The harness is technically functional, source-frozen, and sensitive to small transformations, but this cross-register Dharma-profile-to-Romance use is not valid for calibrating rewrite retention.",
+    "key_counterexample": "Joel's owner one-pass rewrite increased raw cosine similarity to the Joel profile by 0.09258, yet increased similarity to Stian slightly more, flipping the closed-set prediction from Joel to Stian and worsening Joel's margin by 0.011757. A single-author cosine increase would therefore have produced false reassurance in this case.",
+    "controlled_probe_result": "Sentence splitting and the combined topology change modestly improved Joel's closed-set margin, while the conditional restart alone slightly worsened it. This confirms the instrument reacts to local transformation structure but does not establish that any of these edits are generally more Joel-like.",
+    "calibration_decision": "cross-register-profile-disconfirmed-for-transformation-calibration",
+    "method_decision": "Do not expand Romance transformation pairs against the Dharma-only author profile. First establish a larger independent, register-relevant multi-author profile/holdout or run transformations inside the already-matched Dharma register. Preserve the present result as a counterexample against Joel-only similarity metrics.",
+    "next_required_work": [
+      "freeze the broader Joel natural-owner written corpus manifest by register/source group",
+      "acquire or select register-relevant human comparison authors without source leakage",
+      "rerun original held-out attribution before any rewrite-degradation interpretation",
+      "only then expand independent transformation pairs across edit-dose classes"
+    ],
+    "forbidden_claims": [
+      "not IER",
+      "no validated-for-register status",
+      "no operational threshold",
+      "no claim that sentence splitting or any phrase is intrinsically Joel-like",
+      "no use of raw Joel cosine movement alone as retention evidence"
+    ]
+  },
+  "privacy": {
+    "raw_pair_prose_in_result": false,
+    "embeddings_in_result": false,
+    "raw_private_corpus_prose_in_git": false
+  }
+}
