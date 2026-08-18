@@ -102,23 +102,25 @@ jobs:
           assert data['raw_or_canonical_prose_in_output'] is False
           assert data['pilot_status'] == 'matched-platform-length-normalized-50w-not-IER'
           assert data['fold_count'] == 4
-          assert data['documents_per_author_per_fold'] == 5
+          assert data['documents_per_author_per_fold'] == 4
           assert data['source_group_leakage'] is False
           norm = data['length_normalization']
           assert norm['window_words'] == 50
-          assert norm['training_words_per_author_per_fold'] == 250
+          assert norm['training_words_per_author_per_fold'] == 200
           assert norm['test_words_per_document'] == 50
           assert norm['control_selection_occurs_before_normalization'] is True
-          assert len(norm['short_training_exclusions']) == 1
-          excluded = norm['short_training_exclusions'][0]
-          assert excluded['sample_id'] == 'dcp-joel-anatta-email'
-          assert excluded['source_whitespace_token_count'] < 50
-          assert excluded['model_outcome_used_for_exclusion'] is False
+          assert len(norm['short_training_exclusions']) == 2
+          excluded = {row['sample_id']: row for row in norm['short_training_exclusions']}
+          assert set(excluded) == {'dcp-joel-anatta-email', 'dc-2013-06-sound-bahiya'}
+          assert excluded['dcp-joel-anatta-email']['source_whitespace_token_count'] == 13
+          assert excluded['dc-2013-06-sound-bahiya']['source_whitespace_token_count'] == 48
+          assert all(row['source_whitespace_token_count'] < 50 for row in excluded.values())
+          assert all(row['model_outcome_used_for_exclusion'] is False for row in excluded.values())
           assert len(data['folds']) == 4
           for fold in data['folds']:
               for author in data['authors']:
-                  assert fold['training'][author]['document_count'] == 5
-                  assert fold['training'][author]['total_words'] == 250
+                  assert fold['training'][author]['document_count'] == 4
+                  assert fold['training'][author]['total_words'] == 200
               assert all(row['word_count'] == 50 for row in fold['test_documents'])
           for model in data['aggregate_models'].values():
               assert len(model['predictions']) == 10
