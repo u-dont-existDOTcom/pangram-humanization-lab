@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "status": "matched-platform-pilot-negative-not-calibrated",
+  "raw_or_canonical_prose_in_record": false,
+  "source_pr": 67,
+  "workflow_run_id": 32119586167,
+  "artifact_id": 9318008022,
+  "scikit_learn_version": "1.9.0",
+  "design": {
+    "folds": 4,
+    "authors": [
+      "Joel Rosenblum",
+      "David Vardy",
+      "Stian Gudmundsen Høiland"
+    ],
+    "documents_per_author_per_fold": 6,
+    "held_out_documents": 10,
+    "held_out_source_groups": 4,
+    "source_group_leakage": false,
+    "all_training_and_test_platform": "Dharma Connection",
+    "known_asymmetry": "Document counts are equal but training word mass is not. Joel has roughly 776-1276 words per fold, David 9525, and Stian 12119."
+  },
+  "results": {
+    "paper_described_char2_4_plus_word1_2_linear_svm": {
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.527778,
+      "macro_f1": 0.492063,
+      "group_bootstrap_accuracy_95pct": [0.363636, 0.636364],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.25,
+        "David Vardy": 1.0,
+        "Stian Gudmundsen Høiland": 0.333333
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [1, 1, 2],
+        [0, 3, 0],
+        [2, 0, 1]
+      ]
+    },
+    "char2_4_only": {
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.527778,
+      "macro_f1": 0.492063,
+      "group_bootstrap_accuracy_95pct": [0.363636, 0.636364],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.25,
+        "David Vardy": 1.0,
+        "Stian Gudmundsen Høiland": 0.333333
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [1, 1, 2],
+        [0, 3, 0],
+        [2, 0, 1]
+      ]
+    },
+    "word1_2_only": {
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.472222,
+      "macro_f1": 0.466667,
+      "group_bootstrap_accuracy_95pct": [0.363636, 0.636364],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.75,
+        "David Vardy": 0.333333,
+        "Stian Gudmundsen Høiland": 0.333333
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [3, 1, 0],
+        [1, 1, 1],
+        [2, 0, 1]
+      ]
+    }
+  },
+  "comparison_to_cross_register_pilot": {
+    "char_plus_word_accuracy": [0.7, 0.5],
+    "char_only_accuracy": [0.6, 0.5],
+    "word_only_accuracy": [0.7, 0.5],
+    "joel_char_plus_word_accuracy": [0.5, 0.25],
+    "joel_char_only_accuracy": [0.25, 0.25],
+    "joel_word_only_accuracy": [0.5, 0.75],
+    "interpretation": "Same-platform training did not rescue Joel's character-based attribution. It improved Joel lexical attribution while redistributing lexical errors to controls. Therefore asymmetric platform/register mismatch was not sufficient to explain the weak character signal."
+  },
+  "interpretation": {
+    "calibration_advanced": false,
+    "ier_claim": false,
+    "operational_threshold_authorized": false,
+    "primary_observation": "Char-plus-word collapses exactly to the char-only confusion pattern, while word-only has a different pattern and recognizes Joel much better. The surface channels disagree materially.",
+    "remaining_confound": "The equal-document design is severely unequal in words per class because Joel's available Dharma documents are much shorter than control documents. TF-IDF normalizes individual vectors but this does not make the training information content or feature coverage equal across classes.",
+    "next_test": "Repeat the matched-platform folds after deterministically length-normalizing every training and held-out document to a common 50-word window, preserving source-group splits. If character attribution remains poor under equal text budgets, deprioritize surface SVM as an operational calibration target and move to LUAR/content-light controls."
+  }
+}
