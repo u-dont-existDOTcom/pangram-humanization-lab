@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "purpose": "Third surface-authorship sensitivity pilot: keep the matched Dharma Connection leave-one-source-group-out design from PR #67 while equalizing every train and held-out document to one deterministic 50-word window, so each author contributes exactly 300 training words per fold.",
+  "raw_text_in_git": false,
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "matched_queue": "state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json",
+  "joel_supplement_queue": "state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json",
+  "joel_supplement_sample_ids": [
+    "dc-2013-06-lucid-dreaming",
+    "dc-2013-06-sound-bahiya"
+  ],
+  "control_profile_spec": "state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json",
+  "held_out_source_groups": [
+    "dc-thread-can-anything-known-2014-08-09",
+    "dc-thread-holographic-2014-02-04",
+    "dc-thread-insights-anatta-2014-08-09",
+    "dc-thread-supramundane-jhanas-2014-08-09"
+  ],
+  "fold_training": {
+    "documents_per_author": 6,
+    "joel_rule": "two non-heldout Joel-only Dharma supplement documents plus all Joel matched-queue documents except the current held-out source group",
+    "control_rule": "the same six largest explicit-speaker non-overlap Dharma profile documents per control selected before normalization, preserving the PR #67 document-selection rule",
+    "whole_documents": false,
+    "equal_document_count": true,
+    "equal_word_budget": true,
+    "source_group_leakage_forbidden": true
+  },
+  "length_normalization": {
+    "window_words": 50,
+    "strategy": "centered-whitespace-token-window",
+    "window_selection": "content-blind deterministic center; start=floor((N-50)/2)",
+    "train_words_per_author_per_fold": 300,
+    "test_words_per_document": 50,
+    "control_document_selection_occurs_before_normalization": true,
+    "reason": "PR #67 balanced six documents per author but Joel supplied only about 776-1276 training words per fold versus 9525 for David Vardy and 12119 for Stian Gudmundsen Høiland. This test removes that text-mass asymmetry without changing source groups or candidate authors."
+  },
+  "models": [
+    {
+      "model_id": "paper-described-char2-4-word1-2-linear-svm",
+      "feature_mode": "char+word",
+      "C": 1.0
+    },
+    {
+      "model_id": "char2-4-only-sensitivity",
+      "feature_mode": "char",
+      "C": 1.0
+    },
+    {
+      "model_id": "word1-2-only-sensitivity",
+      "feature_mode": "word",
+      "C": 1.0
+    }
+  ],
+  "evaluation": {
+    "aggregate_metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_f1",
+      "per_author_accuracy",
+      "confusion_matrix"
+    ],
+    "group_bootstrap_accuracy": {
+      "unit": "held-out source_group",
+      "iterations": 10000,
+      "seed": 260800928
+    }
+  },
+  "interpretation": {
+    "chance_accuracy": 0.3333333333,
+    "do_not_call_ier": true,
+    "no_threshold_claim": true,
+    "comparison_target": "Compare directly with the matched-platform whole-document result in state/IDIOLECT-SURFACE-SVM-MATCHED-PLATFORM-CV-RESULT-2026-08-18.json. If character-based Joel attribution remains poor after exact text-budget equalization, document-length/profile-mass imbalance is not sufficient to explain the weak surface signal and surface SVM should be deprioritized as the operational calibration target. If it improves materially, expand the length-normalized evaluation before drawing any idiolect conclusion.",
+    "stop_rule": "Do not repeatedly tune window size/position against these same ten held-out documents. This 50-word centered window is a precommitted sensitivity test, not a hyperparameter search."
+  }
+}
