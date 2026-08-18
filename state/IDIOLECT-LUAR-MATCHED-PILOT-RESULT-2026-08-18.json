@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "status": "pilot-complete-not-calibrated-for-register-not-IER",
+  "source_pr": 71,
+  "workflow_run_id": 32121727932,
+  "artifact": {
+    "name": "idiolect-luar-matched-pilot-metadata",
+    "artifact_id": 9318843073,
+    "sha256": "e0c1fb6b8e75ae55bf027a18d3637dbc6dee90f532dd698b1c82ee34b82eb2bc"
+  },
+  "design": {
+    "task": "closed-set original-authorship attribution",
+    "authors": [
+      "Joel Rosenblum",
+      "David Vardy",
+      "Stian Gudmundsen Høiland"
+    ],
+    "held_out_source_groups": 4,
+    "held_out_documents": 10,
+    "source_group_leakage": false,
+    "profile_rule": "arithmetic mean of raw one-document LUAR embeddings; nearest mean profile by cosine",
+    "conditions": [
+      "whole_document",
+      "equal_50_word"
+    ]
+  },
+  "model": {
+    "model_id": "rrivera1849/LUAR-MUD",
+    "requested_revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "resolved_commit_hash": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "upstream_transformer_revision": "48bffbbd27bf028ecdd0cd55abb51236ec12ef1b",
+    "embedding_size": 512,
+    "max_token_length": 512,
+    "episode_length_for_document_embedding": 1,
+    "torch_version": "2.13.0+cpu",
+    "transformers_version": "4.57.6",
+    "unique_document_embeddings_computed": 44,
+    "embeddings_persisted": false
+  },
+  "results": {
+    "whole_document": {
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.805556,
+      "macro_f1": 0.802381,
+      "source_group_bootstrap_accuracy_95pct": [
+        0.5,
+        1.0
+      ],
+      "per_author": {
+        "Joel Rosenblum": {
+          "correct": 3,
+          "documents": 4,
+          "accuracy": 0.75
+        },
+        "David Vardy": {
+          "correct": 3,
+          "documents": 3,
+          "accuracy": 1.0
+        },
+        "Stian Gudmundsen Høiland": {
+          "correct": 2,
+          "documents": 3,
+          "accuracy": 0.666667
+        }
+      },
+      "confusion_matrix_labels": [
+        "Joel Rosenblum",
+        "David Vardy",
+        "Stian Gudmundsen Høiland"
+      ],
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [3, 1, 0],
+        [0, 3, 0],
+        [1, 0, 2]
+      ]
+    },
+    "equal_50_word": {
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.638889,
+      "macro_f1": 0.6,
+      "source_group_bootstrap_accuracy_95pct": [
+        0.5,
+        0.666667
+      ],
+      "per_author": {
+        "Joel Rosenblum": {
+          "correct": 1,
+          "documents": 4,
+          "accuracy": 0.25
+        },
+        "David Vardy": {
+          "correct": 2,
+          "documents": 3,
+          "accuracy": 0.666667
+        },
+        "Stian Gudmundsen Høiland": {
+          "correct": 3,
+          "documents": 3,
+          "accuracy": 1.0
+        }
+      },
+      "confusion_matrix_labels": [
+        "Joel Rosenblum",
+        "David Vardy",
+        "Stian Gudmundsen Høiland"
+      ],
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [1, 0, 3],
+        [1, 2, 0],
+        [0, 0, 3]
+      ]
+    }
+  },
+  "interpretation": {
+    "whole_document_signal": "LUAR materially outperformed the prior surface-SVM pilots on this matched Dharma closed set, including 3/4 held-out Joel documents correct.",
+    "equal_budget_correction": "The Joel-specific result collapsed to 1/4 when every document was restricted to the exact 50-word equal-budget condition, while aggregate accuracy remained 0.60 largely because Stian was 3/3.",
+    "calibration_decision": "Do not call LUAR calibrated for Joel or validated for this register. The discrepancy between whole-document and equal-budget Joel performance is too large, and four held-out source groups are too few.",
+    "surface_svm_comparison": "LUAR is a more promising deep-authorship lane than the disconfirmed surface SVM, but its strongest signal is currently evidence-length sensitive.",
+    "next_required_controls": [
+      "deterministic word-order shuffle preserving lexical inventory",
+      "content-light/function-word control",
+      "transformation sensitivity before any IER or operational threshold claim"
+    ],
+    "forbidden_claims": [
+      "not IER",
+      "no Tier-A operational threshold",
+      "no validated-for-register status",
+      "no claim that whole-document accuracy isolates idiolect from topic or lexical content"
+    ]
+  },
+  "privacy": {
+    "raw_or_canonical_prose_in_git": false,
+    "embedding_vectors_in_git": false,
+    "result_contains_only_metadata_and_aggregate_metrics": true
+  }
+}
