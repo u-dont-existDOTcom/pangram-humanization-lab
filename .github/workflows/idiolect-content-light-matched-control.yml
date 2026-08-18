@@ -1,0 +1,120 @@
+name: Idiolect content-light matched control
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-content-light-matched-control.yml
+      - state/IDIOLECT-CONTENT-LIGHT-MATCHED-CONTROL-SPEC-2026-08-18.json
+      - src/pangram_lab/content_light_matched_control.py
+      - tests/test_content_light_matched_control.py
+      - src/pangram_lab/idiolect.py
+      - src/pangram_lab/luar_matched_pilot.py
+      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/idiolect-content-light-matched-control.yml
+      - state/IDIOLECT-CONTENT-LIGHT-MATCHED-CONTROL-SPEC-2026-08-18.json
+      - src/pangram_lab/content_light_matched_control.py
+      - tests/test_content_light_matched_control.py
+      - src/pangram_lab/idiolect.py
+      - src/pangram_lab/luar_matched_pilot.py
+      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  content-light:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and run dependency-free control tests
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q \
+            tests/test_content_light_matched_control.py \
+            tests/test_idiolect.py \
+            tests/test_dharma_speaker_acquire.py
+
+      - name: Rebuild Joel supplements first
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json \
+            --sample-id dc-2013-06-lucid-dreaming \
+            --sample-id dc-2013-06-sound-bahiya \
+            --out-dir .local/idiolect-corpus/content-light-supplement-text \
+            --manifest-out .local/idiolect-corpus/content-light-supplement-manifest.json
+
+      - name: Acquire frozen control training set
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/content-light-control-text \
+            --manifest-out .local/idiolect-corpus/content-light-control-manifest.json
+
+      - name: Space Blogger acquisition bursts
+        run: sleep 10
+
+      - name: Rebuild matched held-out set
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/content-light-matched-text \
+            --manifest-out .local/idiolect-corpus/content-light-matched-manifest.json
+
+      - name: Run matched content-light control
+        run: |
+          python -m pangram_lab.content_light_matched_control \
+            state/IDIOLECT-CONTENT-LIGHT-MATCHED-CONTROL-SPEC-2026-08-18.json \
+            --matched-manifest .local/idiolect-corpus/content-light-matched-manifest.json \
+            --supplement-manifest .local/idiolect-corpus/content-light-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/content-light-control-manifest.json \
+            --working-dir .local/idiolect-corpus/content-light-normalized \
+            --out .local/idiolect-corpus/content-light-control-receipt.json
+
+      - name: Enforce metadata and fold invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/content-light-control-receipt.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          assert data['raw_or_canonical_prose_in_output'] is False
+          assert data['pilot_status'] == 'content-light-matched-control-not-IER'
+          assert data['source_group_leakage'] is False
+          assert data['algorithm']['source_algorithm_version'] == 'pangram-lab-surface-idiolect-v1'
+          assert set(data['conditions']) == {'whole_document', 'equal_50_word'}
+          for condition in data['conditions'].values():
+              assert condition['fold_count'] == 4
+              aggregate = condition['aggregate']
+              assert len(aggregate['predictions']) == 10
+              assert aggregate['group_bootstrap_accuracy_95pct']['groups'] == 4
+              for key in ('accuracy', 'balanced_accuracy', 'macro_f1'):
+                  assert 0.0 <= float(aggregate[key]) <= 1.0
+          encoded = path.read_text(encoding='utf-8')
+          for forbidden in ('local_text_path', 'raw_text', 'canonical_text'):
+              assert forbidden not in encoded
+          PY
+
+      - name: Upload metadata-only content-light receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-content-light-matched-control
+          path: .local/idiolect-corpus/content-light-control-receipt.json
+          if-no-files-found: error
+          retention-days: 30
