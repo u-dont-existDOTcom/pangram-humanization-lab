@@ -36,6 +36,18 @@ def test_publication_secret_scanner_is_pinned_and_redacted():
     assert "gh run view" in text
 
 
+def test_generic_api_key_false_positive_handling_is_narrow_and_source_verified():
+    text = SCRIPT.read_text(encoding="utf-8")
+    assert 'finding.get("RuleID") != "generic-api-key"' in text
+    assert '"measurement_key"' in text
+    assert 'FIXTURE_LITERAL = "PANGRAM-SECRET-FIXTURE-4927"' in text
+    assert '["git", "show", f"{commit}:{file_name}"]' in text
+    assert "--exclude-rule=generic-api-key" not in text
+    assert '"git_raw_findings"' in text
+    assert '"git_known_false_positives_ignored"' in text
+    assert '"git_secret_findings"' in text
+
+
 def test_profile_stays_truthfully_private_until_hosted_toggle():
     import json
 
