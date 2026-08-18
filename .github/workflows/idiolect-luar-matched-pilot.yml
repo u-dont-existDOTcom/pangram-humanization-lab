@@ -134,8 +134,27 @@ jobs:
               assert aggregate['group_bootstrap_accuracy_95pct']['groups'] == 4
               for key in ('accuracy', 'balanced_accuracy', 'macro_f1'):
                   assert 0.0 <= float(aggregate[key]) <= 1.0
+
+          # Metadata may legitimately contain field names such as
+          # `episode_length_for_document_embedding`. Reject actual vector-bearing
+          # keys recursively instead of using substring matches that false-fire
+          # on descriptive metadata.
+          forbidden_vector_keys = {
+              'embedding', 'embeddings', 'vector', 'vectors',
+              'raw_embedding', 'raw_embeddings',
+          }
+          def walk(value):
+              if isinstance(value, dict):
+                  for key, child in value.items():
+                      assert key not in forbidden_vector_keys, key
+                      walk(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      walk(child)
+          walk(data)
+
           encoded = path.read_text(encoding='utf-8')
-          for forbidden in ('local_text_path', 'raw_text', 'canonical_text', 'embedding":', 'embeddings":'):
+          for forbidden in ('local_text_path', 'raw_text', 'canonical_text'):
               assert forbidden not in encoded
           PY
 
