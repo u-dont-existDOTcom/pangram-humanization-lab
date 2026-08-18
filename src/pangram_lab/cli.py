@@ -50,6 +50,8 @@ def main(argv=None):
         if a.cmd in {"idiolect-retention","idiolect-ier"}:
             return run_idiolect_cli(a)
         if a.cmd=="idiolect-corpus-acquire":
+            if a.inventory=="state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json":
+                a.inventory="state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json"
             return run_corpus_cli(a)
         if a.cmd=="github-ensure":
             # Commit the unpacked source locally first; then create/connect the
