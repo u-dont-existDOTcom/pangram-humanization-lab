@@ -44,20 +44,25 @@ def _apply_short_training_exclusions(
     *,
     held_out_groups: set[str],
     required_words: int,
+    source_set: str,
 ) -> tuple[list[dict], list[dict]]:
     """Apply only explicit, feasibility-driven exclusions to training-only rows.
 
-    An exclusion is valid only if it names one unique row, that row cannot be a
-    held-out test source group, and the live extracted text is genuinely too
-    short for the precommitted window. This prevents outcome-driven filtering.
+    An exclusion is valid only if it names one unique row in the declared source
+    set, that row cannot be a held-out test source group, and the live extracted
+    text is genuinely too short for the precommitted window. This prevents
+    outcome-driven filtering.
     """
     retained = list(rows)
     audit: list[dict] = []
-    for exclusion in exclusions:
+    relevant = [row for row in exclusions if str(row.get("source_set")) == source_set]
+    for exclusion in relevant:
         sample_id = str(exclusion["sample_id"])
         matches = [row for row in retained if str(row.get("sample_id")) == sample_id]
         if len(matches) != 1:
-            raise ValueError(f"short-training exclusion {sample_id} matched {len(matches)} rows")
+            raise ValueError(
+                f"short-training exclusion {sample_id} in {source_set} matched {len(matches)} rows"
+            )
         row = matches[0]
         source_group = str(row.get("source_group") or "")
         if source_group in held_out_groups:
@@ -74,6 +79,7 @@ def _apply_short_training_exclusions(
                 "sample_id": row.get("sample_id"),
                 "source_group": row.get("source_group"),
                 "speaker": row.get("speaker"),
+                "source_set": source_set,
                 "source_word_count_reported": int(row.get("word_count", 0)),
                 "source_whitespace_token_count": live_words,
                 "required_window_words": required_words,
@@ -165,17 +171,31 @@ def run_length_normalized(
     authors = [str(value) for value in spec["authors"]]
     n_train = int(spec["fold_training"]["documents_per_author"])
     held_out_groups = {str(value) for value in spec["held_out_source_groups"]}
+    exclusions = list(spec["length_normalization"].get("short_training_exclusions", []))
 
-    # The first live feasibility run established that one Joel training-only
-    # source contains fewer than 50 extracted words. Preserve the 50-word
-    # precommit and exclude only that named, non-test row. The runtime verifies
-    # the exclusion remains genuinely necessary before applying it.
-    matched_rows, short_training_exclusions = _apply_short_training_exclusions(
+    # Live preflight is allowed to remove only the explicitly named training-only
+    # rows recorded after feasibility failures, never a held-out document. Each
+    # configured exclusion is revalidated against the live extracted text.
+    matched_rows, matched_exclusions = _apply_short_training_exclusions(
         list(matched.get("results", [])),
-        list(spec["length_normalization"].get("short_training_exclusions", [])),
+        exclusions,
         held_out_groups=held_out_groups,
         required_words=words,
+        source_set="matched",
     )
+    supplement_rows, supplement_exclusions = _apply_short_training_exclusions(
+        list(supplement.get("results", [])),
+        exclusions,
+        held_out_groups=held_out_groups,
+        required_words=words,
+        source_set="supplement",
+    )
+    short_training_exclusions = matched_exclusions + supplement_exclusions
+    if len(short_training_exclusions) != len(exclusions):
+        raise ValueError(
+            f"expected to validate {len(exclusions)} short-training exclusions, "
+            f"validated {len(short_training_exclusions)}"
+        )
 
     # Preserve the previous pilot's deterministic control-document ranking, but
     # select the new feasible per-author depth before changing word_count to 50.
@@ -190,7 +210,7 @@ def run_length_normalized(
 
     supplement_ids = set(spec["joel_supplement_sample_ids"])
     selected_supplement = [
-        row for row in supplement.get("results", []) if row.get("sample_id") in supplement_ids
+        row for row in supplement_rows if row.get("sample_id") in supplement_ids
     ]
     if {row.get("sample_id") for row in selected_supplement} != supplement_ids:
         missing = sorted(supplement_ids - {row.get("sample_id") for row in selected_supplement})
