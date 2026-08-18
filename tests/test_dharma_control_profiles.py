@@ -88,3 +88,44 @@ def test_summary_reports_word_depth_and_concentration_flags():
     assert author["largest_source_fraction"] == 0.9
     assert "largest-source-overconcentrated" in author["feasibility_flags"]
     assert "one-or-more-samples-require-manual-quality-review" in author["feasibility_flags"]
+
+
+def test_summary_records_empty_explicit_block_as_rejection_not_profile_text():
+    spec = {
+        "feasibility_guidance": {
+            "preferred_min_explicit_nonoverlap_posts": 1,
+            "preferred_min_total_words": 1,
+            "preferred_max_largest_source_fraction": 1.0,
+        },
+        "targets": [{"speaker": "Stian Gudmundsen Høiland", "author_id": "stian-hoiland"}],
+    }
+    results = [
+        {
+            "speaker": "Stian Gudmundsen Høiland",
+            "sample_id": "kept",
+            "source_group": "g1",
+            "canonical_sha256": "x",
+            "word_count": 200,
+            "target_marker_count": 2,
+            "quality_flags": [],
+        }
+    ]
+    rejected = [
+        {
+            "speaker": "Stian Gudmundsen Høiland",
+            "sample_id": "empty",
+            "url": "https://example.blogspot.com/empty.html",
+            "error": dp._EMPTY_EXPLICIT_BLOCK_ERROR,
+        }
+    ]
+    receipt = dp.summarize_profiles(
+        results,
+        spec,
+        [{"speaker": "Stian Gudmundsen Høiland", "selected_explicit_nonoverlap_posts": 2}],
+        empty_explicit_rejections=rejected,
+    )
+    author = receipt["authors"]["Stian Gudmundsen Høiland"]
+    assert author["extracted_post_count"] == 1
+    assert author["rejected_empty_explicit_post_count"] == 1
+    assert author["rejected_empty_explicit_samples"][0]["sample_id"] == "empty"
+    assert "one-or-more-explicit-label-posts-had-zero-authored-words" in author["feasibility_flags"]
