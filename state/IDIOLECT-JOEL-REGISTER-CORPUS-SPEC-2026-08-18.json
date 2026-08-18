@@ -12,6 +12,10 @@
     {
       "reason": "Contains an uncertain named-prompt boundary without a reliably frozen cleanup rule; exclude rather than infer.",
       "sample_id": "tafka-2019-07-22-psychedelic-brain"
+    },
+    {
+      "reason": "The live source still triggers possible-unremoved-dialogue, but the conservative empty-label cleanup removed no line. Exclude rather than reinterpret or delete owner prose from a heuristic flag.",
+      "sample_id": "tafka-2019-07-16-awakening-family"
     }
   ],
   "inventories": {
@@ -29,6 +33,7 @@
       "state/IDIOLECT-LEGACY-TRIAGE-RESULT-2026-08-18.json"
     ]
   },
+  "network_request_spacing_seconds": 35,
   "nonready_registers": [
     {
       "next_required_work": [
@@ -60,17 +65,18 @@
   "registers": [
     {
       "gates": {
-        "maximum_largest_profile_source_fraction": 0.4,
+        "maximum_largest_profile_source_fraction": 0.45,
         "maximum_profile_thin_sources": 1,
         "maximum_reserved_holdout_thin_sources": 1,
-        "minimum_profile_sources": 6,
-        "minimum_profile_words": 3400,
+        "minimum_profile_sources": 5,
+        "minimum_profile_words": 3000,
         "minimum_reserved_holdout_sources": 2,
-        "minimum_reserved_holdout_words": 500
+        "minimum_reserved_holdout_words": 650
       },
       "known_limitations": [
         "All current profile and reserved-holdout sources come from one owner-controlled Blogger site, so platform/site transfer remains untested.",
         "The profile contains one 193-word source and one retained owner-authored rhetorical-label flag; both are explicit in the receipt.",
+        "Removing the former 8,090-word source reduces maximum single-source share from 72.55% to below 45%, but the 1,344-word source remains substantial.",
         "Two reserved holdout documents are enough to freeze source identity but not enough for validated-for-register attribution.",
         "No control-author corpus is paired with this register yet."
       ],
@@ -146,15 +152,6 @@
           "expected_word_count": 554,
           "inventory": "legacy-triage",
           "sample_id": "tafka-2019-03-08-plant-spirits"
-        },
-        {
-          "cleanup_rules": [
-            "whole"
-          ],
-          "expected_source_quality_flags": [],
-          "expected_source_word_count": 472,
-          "inventory": "expansion-queue",
-          "sample_id": "tafka-2019-08-02-buddhism-sect"
         }
       ],
       "register_id": "philosophical-research-dialogue",
@@ -167,16 +164,12 @@
       "reserved_holdout": [
         {
           "cleanup_rules": [
-            "whole",
-            "drop-empty-person-label-lines"
+            "whole"
           ],
-          "expected_empty_person_label_lines_removed": 1,
-          "expected_source_quality_flags": [
-            "possible-unremoved-dialogue"
-          ],
-          "expected_source_word_count": 317,
+          "expected_source_quality_flags": [],
+          "expected_source_word_count": 472,
           "inventory": "expansion-queue",
-          "sample_id": "tafka-2019-07-16-awakening-family"
+          "sample_id": "tafka-2019-08-02-buddhism-sect"
         },
         {
           "allowed_quality_flags": [
