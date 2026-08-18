@@ -60,6 +60,52 @@ def test_canonical_hash_is_stable_and_paragraph_sensitive():
     assert a.word_count == 4
 
 
+def test_nested_documents_get_independent_source_groups_and_shared_site_group():
+    inventory = {
+        "sources": [
+            {
+                "source_id": "legacy-blog",
+                "source_group": "legacy-site",
+                "provenance": "natural-owner-confirmed",
+                "modality": "written",
+                "registers": ["polemical-irreverent"],
+                "known_posts": [
+                    {"sample_id": "post-one", "url": "https://x.blogspot.com/1", "extraction_mode": "post-body"},
+                    {"sample_id": "post-two", "url": "https://x.blogspot.com/2", "extraction_mode": "post-body"},
+                ],
+            }
+        ]
+    }
+    rows = list(ca.iter_inventory_items(inventory))
+    assert [row["source_group"] for row in rows] == ["post-one", "post-two"]
+    assert [row["site_group"] for row in rows] == ["legacy-site", "legacy-site"]
+
+
+def test_explicit_nested_source_group_is_preserved():
+    inventory = {
+        "sources": [
+            {
+                "source_id": "legacy-blog",
+                "site_group": "site-a",
+                "source_group": "old-parent-group",
+                "provenance": "natural-owner-confirmed",
+                "modality": "written",
+                "known_posts": [
+                    {
+                        "sample_id": "post-one",
+                        "source_group": "shared-document-family",
+                        "url": "https://x.blogspot.com/1",
+                        "extraction_mode": "post-body",
+                    }
+                ],
+            }
+        ]
+    }
+    row = list(ca.iter_inventory_items(inventory))[0]
+    assert row["source_group"] == "shared-document-family"
+    assert row["site_group"] == "site-a"
+
+
 def test_fetch_html_retries_429_and_honors_zero_retry_after(monkeypatch):
     calls = []
     sleeps = []
@@ -137,6 +183,8 @@ def test_acquire_inventory_writes_only_canonical_text_and_metadata(tmp_path, mon
     result = runtime["results"][0]
     assert result["source_html_sha256"] == "rawhash"
     assert result["canonical_sha256"]
+    assert result["site_group"] == "legacy-blog"
+    assert result["source_group"] == "sample-one"
     assert "This is not Joel's text." not in (out / "sample-one.txt").read_text()
     saved = json.loads(meta.read_text())
     assert saved["raw_text_committed"] is False
