@@ -215,7 +215,7 @@ The attachment theory part isn’t just from my own experience. It comes from re
 
 Before the wisdom window closes, the main thing is to find out whether you are actually compatible. Do you have the same goals and values, especially around children, health, love, and romance? Where do you want to live? Do you both want to find a community? What kind of relationship do you want with technology and money?
 
-Ask deep questions. Conversation-card games may seem silly, but they can help people get past superficial talk and see if they’re compatible.
+Ask deep questions. [Conversation-card games](https://innerself.love/blog/romance-card-game/) may seem silly, but they can help people get past superficial talk and see if they’re compatible.
 
 But asking, “How do you handle jealousy?” can get me a beautiful answer that tells me almost nothing. I’d rather ask what she thinks she would do in an actual situation. If all she can give me is a general answer, I assume she probably doesn't know yet.
 
@@ -755,7 +755,7 @@ Then the questions change for me. If the romance changes, which parts are still 
 
 And the biggie: what happens if one of us falls in love with someone else? What counts as betrayal, and what just means we need a serious conversation? If our lives change, can we revisit the agreement honestly? If we separate, what do we still owe each other, and what do we owe any children involved?
 
-These are just a few questions I could think of to start the ball rolling, but be creative and see what you come up with! You can make a card game out of this and have some fun with it. If there's real love, it will survive a bit of honest curiosity.
+These are just a few questions I could think of to start the ball rolling, but be creative and see what you come up with! You can make a [card game](https://innerself.love/blog/romance-card-game/) out of this and have some fun with it. If there's real love, it will survive a bit of honest curiosity.
 
 ## Which marriage vows are honest?
 
