@@ -71,6 +71,20 @@ jobs:
             tests/test_dharma_speaker_acquire.py \
             tests/test_dharma_control_profiles.py
 
+      # Fetch the two critical Joel-only sources before the bulk Dharma census.
+      # A prior live run acquired all controls/matched pages first and the final
+      # Sound/Bahiya request exhausted Blogger's temporary request budget even
+      # after bounded retry. Restricting this step to the two inputs actually
+      # used by the LUAR spec also avoids two irrelevant page requests.
+      - name: Rebuild required Joel-only Dharma supplements first
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json \
+            --sample-id dc-2013-06-lucid-dreaming \
+            --sample-id dc-2013-06-sound-bahiya \
+            --out-dir .local/idiolect-corpus/luar-joel-supplement-text \
+            --manifest-out .local/idiolect-corpus/luar-joel-supplement-manifest.json
+
       - name: Rebuild non-overlap Dharma control profiles
         run: |
           python -m pangram_lab.dharma_control_profiles \
@@ -83,13 +97,6 @@ jobs:
             state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json \
             --out-dir .local/idiolect-corpus/luar-matched-text \
             --manifest-out .local/idiolect-corpus/luar-matched-manifest.json
-
-      - name: Rebuild Joel-only Dharma supplements
-        run: |
-          python -m pangram_lab.dharma_speaker_acquire \
-            state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json \
-            --out-dir .local/idiolect-corpus/luar-joel-supplement-text \
-            --manifest-out .local/idiolect-corpus/luar-joel-supplement-manifest.json
 
       - name: Run pinned LUAR whole-document and equal-budget pilots
         run: |
