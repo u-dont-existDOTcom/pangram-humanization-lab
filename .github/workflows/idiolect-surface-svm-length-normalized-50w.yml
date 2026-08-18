@@ -102,18 +102,23 @@ jobs:
           assert data['raw_or_canonical_prose_in_output'] is False
           assert data['pilot_status'] == 'matched-platform-length-normalized-50w-not-IER'
           assert data['fold_count'] == 4
-          assert data['documents_per_author_per_fold'] == 6
+          assert data['documents_per_author_per_fold'] == 5
           assert data['source_group_leakage'] is False
           norm = data['length_normalization']
           assert norm['window_words'] == 50
-          assert norm['training_words_per_author_per_fold'] == 300
+          assert norm['training_words_per_author_per_fold'] == 250
           assert norm['test_words_per_document'] == 50
-          assert norm['selection_frozen_before_normalization'] is True
+          assert norm['control_selection_occurs_before_normalization'] is True
+          assert len(norm['short_training_exclusions']) == 1
+          excluded = norm['short_training_exclusions'][0]
+          assert excluded['sample_id'] == 'dcp-joel-anatta-email'
+          assert excluded['source_whitespace_token_count'] < 50
+          assert excluded['model_outcome_used_for_exclusion'] is False
           assert len(data['folds']) == 4
           for fold in data['folds']:
               for author in data['authors']:
-                  assert fold['training'][author]['document_count'] == 6
-                  assert fold['training'][author]['total_words'] == 300
+                  assert fold['training'][author]['document_count'] == 5
+                  assert fold['training'][author]['total_words'] == 250
               assert all(row['word_count'] == 50 for row in fold['test_documents'])
           for model in data['aggregate_models'].values():
               assert len(model['predictions']) == 10
