@@ -1,7 +1,7 @@
 # Private GitHub Actions cost boundary
 
 Date: 2026-08-18
-Status: implementation candidate on `chore/actions-cost-boundary-20260818`
+Status: implemented on `main`; Dharma-network follow-up in progress
 
 ## Goal
 
@@ -45,15 +45,37 @@ A workflow containing this marker is an explicit manual research execution bound
 
 Marked workflows must expose `workflow_dispatch` and must not expose `pull_request`, `push`, or `schedule` triggers. `tests/test_private_actions_cost_policy.py` enforces that invariant.
 
-The first migrated set is:
+The current migrated set includes:
 
 - `idiolect-luar-matched-pilot.yml`
 - `idiolect-content-light-matched-control.yml`
 - `idiolect-luar-content-controls.yml`
 - `idiolect-snapshot-repro-audit.yml`
 - `idiolect-transformation-sensitivity.yml`
+- `idiolect-dharma-author-census.yml`
+- `idiolect-dharma-profile-census.yml`
+- `idiolect-dharma-control-profile-extract.yml`
+- `idiolect-ordinary-control-census.yml`
 
 Their research steps, pinned models, acquisition behavior, privacy checks, and metadata-only artifacts remain unchanged. Only automatic hosted execution is removed.
+
+The Dharma network workflows share a non-cancellable source-network concurrency group. This does not make parallel jobs wait across already-started runs when GitHub has already scheduled them, but it prevents a manually requested source-network operation from being silently superseded or cancelled halfway through a rate-limited evidence acquisition.
+
+## Shared-path fan-out incident
+
+During the hard-negative control-author work, an initial implementation extended the shared `src/pangram_lab/dharma_author_discover.py` module. Three pre-existing workflows listed that path in automatic pull-request filters:
+
+- Dharma author census;
+- Dharma profile census;
+- Dharma control-profile extraction.
+
+All three were activated even though the intended task required only deterministic code changes and a new, separately controlled census. The runs succeeded, but consumed private Actions minutes and repeated public-source work unnecessarily.
+
+The shared-file change was reverted and the new one-pass census was isolated in its own module. The durable rule is broader:
+
+> Before editing a shared path in a cost-sensitive repository, inspect every workflow whose path filter includes that path. Treat the resulting trigger fan-out as part of the change's execution cost and external-side-effect surface.
+
+When the desired extension does not need to alter the old behavior, prefer a separate module whose only live workflow is manual-only. When a shared edit is genuinely necessary, first convert or explicitly justify every automatically triggered live-network/model workflow. Do not discover the trigger graph by paying for it.
 
 ## New heavy workflows
 
@@ -78,6 +100,7 @@ A self-hosted runner is a separate trust boundary and should not be shared with 
 `tests/test_private_actions_cost_policy.py` fails if:
 
 - a marked heavy research workflow regains an automatic trigger;
+- a known live Dharma source-network workflow lacks the manual-heavy marker or shared concurrency boundary;
 - ordinary validation regains automatic `main`-push duplication;
 - superseded read-only PR validation stops being cancellable; or
 - closeout mutation loses its narrow request-path trigger/non-cancellable boundary.

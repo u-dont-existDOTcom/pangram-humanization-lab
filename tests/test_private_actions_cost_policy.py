@@ -5,6 +5,25 @@ ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = ROOT / ".github" / "workflows"
 HEAVY_MARKER = "# actions-cost-class: manual-heavy-research"
 
+REQUIRED_MANUAL_HEAVY_WORKFLOWS = {
+    "idiolect-luar-matched-pilot.yml",
+    "idiolect-content-light-matched-control.yml",
+    "idiolect-luar-content-controls.yml",
+    "idiolect-snapshot-repro-audit.yml",
+    "idiolect-transformation-sensitivity.yml",
+    "idiolect-dharma-author-census.yml",
+    "idiolect-dharma-profile-census.yml",
+    "idiolect-dharma-control-profile-extract.yml",
+    "idiolect-ordinary-control-census.yml",
+}
+
+NETWORK_RESEARCH_WORKFLOWS = {
+    "idiolect-dharma-author-census.yml",
+    "idiolect-dharma-profile-census.yml",
+    "idiolect-dharma-control-profile-extract.yml",
+    "idiolect-ordinary-control-census.yml",
+}
+
 
 def _top_level_on_block(text: str) -> str:
     lines = text.splitlines()
@@ -23,6 +42,14 @@ def _top_level_on_block(text: str) -> str:
     return "\n".join(block)
 
 
+def _assert_manual_only(name: str, text: str) -> None:
+    triggers = _top_level_on_block(text)
+    assert "workflow_dispatch:" in triggers, name
+    assert "pull_request" not in triggers, name
+    assert "push:" not in triggers, name
+    assert "schedule:" not in triggers, name
+
+
 def test_marked_heavy_research_workflows_are_manual_only():
     marked = []
     for path in sorted(WORKFLOWS.glob("*.y*ml")):
@@ -30,19 +57,18 @@ def test_marked_heavy_research_workflows_are_manual_only():
         if HEAVY_MARKER not in text:
             continue
         marked.append(path.name)
-        triggers = _top_level_on_block(text)
-        assert "workflow_dispatch:" in triggers, path.name
-        assert "pull_request" not in triggers, path.name
-        assert "push:" not in triggers, path.name
-        assert "schedule:" not in triggers, path.name
+        _assert_manual_only(path.name, text)
 
-    assert set(marked) >= {
-        "idiolect-luar-matched-pilot.yml",
-        "idiolect-content-light-matched-control.yml",
-        "idiolect-luar-content-controls.yml",
-        "idiolect-snapshot-repro-audit.yml",
-        "idiolect-transformation-sensitivity.yml",
-    }
+    assert set(marked) >= REQUIRED_MANUAL_HEAVY_WORKFLOWS
+
+
+def test_known_live_network_research_workflows_are_marked_and_manual_only():
+    for name in sorted(NETWORK_RESEARCH_WORKFLOWS):
+        text = (WORKFLOWS / name).read_text(encoding="utf-8")
+        assert HEAVY_MARKER in text, name
+        _assert_manual_only(name, text)
+        assert "group: idiolect-source-network-${{ github.ref }}" in text, name
+        assert "cancel-in-progress: false" in text, name
 
 
 def test_ordinary_validation_does_not_duplicate_on_main_push():

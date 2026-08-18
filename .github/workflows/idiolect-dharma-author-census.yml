@@ -1,21 +1,15 @@
 name: Idiolect Dharma author census
+# actions-cost-class: manual-heavy-research
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/idiolect-dharma-author-census.yml
-      - src/pangram_lab/dharma_author_discover.py
-      - tests/test_dharma_author_discover.py
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/idiolect-dharma-author-census.yml
-      - src/pangram_lab/dharma_author_discover.py
-      - tests/test_dharma_author_discover.py
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: idiolect-source-network-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   census:
