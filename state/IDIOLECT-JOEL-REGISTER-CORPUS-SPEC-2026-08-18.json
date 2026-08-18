@@ -1,0 +1,271 @@
+{
+  "date": "2026-08-18",
+  "excluded_sources": [
+    {
+      "reason": "8,090 words and 72.55% of the earlier six-source TAFKA profile; exclude from this freeze to prevent one source from dominating.",
+      "sample_id": "tafka-2013-01-05-intro-journey"
+    },
+    {
+      "reason": "77 words; too thin for standalone profile or holdout use.",
+      "sample_id": "tafka-2015-01-17-sam-harris-review"
+    },
+    {
+      "reason": "Contains an uncertain named-prompt boundary without a reliably frozen cleanup rule; exclude rather than infer.",
+      "sample_id": "tafka-2019-07-22-psychedelic-brain"
+    },
+    {
+      "reason": "The live source still triggers possible-unremoved-dialogue, but the conservative empty-label cleanup removed no line. Exclude rather than reinterpret or delete owner prose from a heuristic flag.",
+      "sample_id": "tafka-2019-07-16-awakening-family"
+    }
+  ],
+  "inventories": {
+    "expansion-queue": "state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json",
+    "legacy-triage": "state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json"
+  },
+  "method_decision": {
+    "choice": "adapt-existing",
+    "new_remainder": "A register-aware metadata receipt with source-drift checks, explicit profile/holdout partitions, source-dominance gates, and nonready-register dispositions.",
+    "rationale": "The underlying acquisition, provenance, canonicalization, source-group separation, and profile/holdout concepts are already established in the repository and authorship-attribution literature. This task composes and tightens those existing components rather than inventing a new metric.",
+    "reused": [
+      "docs/IDIOLECT-VALIDATION-PROTOCOL.md",
+      "src/pangram_lab/corpus_acquire.py",
+      "src/pangram_lab/joel_legacy_profile.py",
+      "state/IDIOLECT-LEGACY-TRIAGE-RESULT-2026-08-18.json"
+    ]
+  },
+  "network_request_spacing_seconds": 35,
+  "nonready_registers": [
+    {
+      "next_required_work": [
+        "audit and pool the thin posts without crossing source-group boundaries",
+        "complete sensitive-source quotation/privacy review",
+        "add independent natural-owner relationship writing before calibration"
+      ],
+      "reason": "Five Love4Nanou posts are individually thin and same-day/same-site; the one long relationship-conflict source requires a separate sensitive quotation/privacy audit. Current material is too concentrated for a reliable profile/holdout split.",
+      "register_id": "relationship-personal-written",
+      "status": "not-ready"
+    },
+    {
+      "next_required_work": [
+        "freeze exact public-source captures for DYOR, DMSO, and Autism",
+        "segment Cancer into owner-written and known-AI spans using owner provenance",
+        "acquire register-matched human control authors and reserve original holdouts"
+      ],
+      "reason": "DYOR, DMSO, and Autism are owner-confirmed zero-AI written sources, but exact canonical extraction/hashes are not yet frozen in Pangram-lab. The Cancer article is mixed and requires owner-authoritative span segmentation.",
+      "register_id": "health-practical-research",
+      "status": "not-ready"
+    },
+    {
+      "reason": "The tender transcript is confirmed spoken voice rather than authored writing and must not be mixed into the written profile outside an explicit cross-modal experiment.",
+      "register_id": "spoken-tender",
+      "status": "separate-modality"
+    }
+  ],
+  "purpose": "Freeze source-separated natural-owner written corpus slices by register, with a reserved original-text holdout where current provenance and source boundaries support one. This is corpus infrastructure only: not attribution calibration, not IER, and not a Tier-A threshold.",
+  "registers": [
+    {
+      "gates": {
+        "maximum_largest_profile_source_fraction": 0.45,
+        "maximum_profile_thin_sources": 1,
+        "maximum_reserved_holdout_thin_sources": 1,
+        "minimum_profile_sources": 5,
+        "minimum_profile_words": 3000,
+        "minimum_reserved_holdout_sources": 2,
+        "minimum_reserved_holdout_words": 650
+      },
+      "known_limitations": [
+        "All current profile and reserved-holdout sources come from one owner-controlled Blogger site, so platform/site transfer remains untested.",
+        "The profile contains one 193-word source and one retained owner-authored rhetorical-label flag; both are explicit in the receipt.",
+        "Removing the former 8,090-word source reduces maximum single-source share from 72.55% to below 45%, but the 1,344-word source remains substantial.",
+        "Two reserved holdout documents are enough to freeze source identity but not enough for validated-for-register attribution.",
+        "No control-author corpus is paired with this register yet."
+      ],
+      "profile": [
+        {
+          "cleanup_rules": [
+            "after-first-label:Answer"
+          ],
+          "expected_canonical_sha256": "52465ea2e75ee3b944b9ab57848289aa2aa2e9d32a633d95891f5004032a0e52",
+          "expected_source_canonical_sha256": "1da3c215f02ecbf793fb5c0defbb6c7000688653f5df3b4607cd9c2d8d447b89",
+          "expected_source_quality_flags": [
+            "possible-unremoved-dialogue"
+          ],
+          "expected_source_word_count": 701,
+          "expected_word_count": 667,
+          "inventory": "legacy-triage",
+          "sample_id": "tafka-2015-02-02-true-love"
+        },
+        {
+          "allowed_quality_flags": [
+            "thin-for-authorship-attribution"
+          ],
+          "cleanup_rules": [
+            "before-first-label:And here's a useful snippet I snagged"
+          ],
+          "expected_canonical_sha256": "65cdbb5100ab60d568f9d6abb1a8eca701118bcbc5400acf9d6c75adae689ec3",
+          "expected_source_canonical_sha256": "a5e5ec50884239f0710515944827879150ab92f08391423e4dcbf98f6929a736",
+          "expected_source_quality_flags": [
+            "possible-unremoved-dialogue"
+          ],
+          "expected_source_word_count": 898,
+          "expected_word_count": 193,
+          "inventory": "legacy-triage",
+          "sample_id": "tafka-2015-02-12-no-way-to-know"
+        },
+        {
+          "cleanup_rules": [
+            "whole-after-existing-blockquote-drop"
+          ],
+          "expected_canonical_sha256": "81e67cab315aa4c22d0fdb5cfb05881a8c6699d0da09aded9da1a7f5021ee042",
+          "expected_source_canonical_sha256": "81e67cab315aa4c22d0fdb5cfb05881a8c6699d0da09aded9da1a7f5021ee042",
+          "expected_source_quality_flags": [],
+          "expected_source_word_count": 303,
+          "expected_word_count": 303,
+          "inventory": "legacy-triage",
+          "sample_id": "tafka-2015-02-23-right-view-humility"
+        },
+        {
+          "allowed_quality_flags": [
+            "possible-unremoved-dialogue"
+          ],
+          "cleanup_rules": [
+            "whole-after-existing-blockquote-drop"
+          ],
+          "expected_canonical_sha256": "05cd4ffcea24e471558574f74f85728255641a35190b9e5e815f7548fa0b903d",
+          "expected_source_canonical_sha256": "05cd4ffcea24e471558574f74f85728255641a35190b9e5e815f7548fa0b903d",
+          "expected_source_quality_flags": [
+            "possible-unremoved-dialogue"
+          ],
+          "expected_source_word_count": 1344,
+          "expected_word_count": 1344,
+          "inventory": "legacy-triage",
+          "sample_id": "tafka-2016-06-08-already-perfect"
+        },
+        {
+          "cleanup_rules": [
+            "whole-message-by-you-extraction"
+          ],
+          "expected_canonical_sha256": "fdaf86daeee090fe0af36d744abefac423ad527c72792e0caca9b96e902f45fe",
+          "expected_source_canonical_sha256": "fdaf86daeee090fe0af36d744abefac423ad527c72792e0caca9b96e902f45fe",
+          "expected_source_quality_flags": [],
+          "expected_source_word_count": 554,
+          "expected_word_count": 554,
+          "inventory": "legacy-triage",
+          "sample_id": "tafka-2019-03-08-plant-spirits"
+        }
+      ],
+      "register_id": "philosophical-research-dialogue",
+      "register_labels": [
+        "philosophical",
+        "research-conversational",
+        "dialogue-QA",
+        "polemical-irreverent"
+      ],
+      "reserved_holdout": [
+        {
+          "cleanup_rules": [
+            "whole"
+          ],
+          "expected_source_quality_flags": [],
+          "expected_source_word_count": 472,
+          "inventory": "expansion-queue",
+          "sample_id": "tafka-2019-08-02-buddhism-sect"
+        },
+        {
+          "allowed_quality_flags": [
+            "thin-for-authorship-attribution"
+          ],
+          "cleanup_rules": [
+            "whole"
+          ],
+          "expected_source_quality_flags": [
+            "thin-for-authorship-attribution"
+          ],
+          "expected_source_word_count": 233,
+          "inventory": "expansion-queue",
+          "sample_id": "tafka-2020-04-19-consciousness-conditions"
+        }
+      ],
+      "status": "profile-and-reserved-holdout-frozen-not-calibrated",
+      "support": [],
+      "target_voice": "natural-owner-confirmed-written"
+    },
+    {
+      "gates": {
+        "maximum_largest_profile_source_fraction": 0.35,
+        "maximum_profile_thin_sources": 0,
+        "minimum_profile_sources": 4,
+        "minimum_profile_words": 1500
+      },
+      "known_limitations": [
+        "Only four structurally clean independent sources are currently admitted.",
+        "No reserved held-out originals are frozen, so no transformation or attribution interpretation is authorized.",
+        "All admitted sources are from one owner-controlled Blogger site.",
+        "Additional political posts remain pending conservative dialogue/quotation audit rather than being admitted from a heuristic flag alone."
+      ],
+      "profile": [
+        {
+          "cleanup_rules": [
+            "whole-after-existing-blockquote-drop"
+          ],
+          "expected_canonical_sha256": "99c7639af2ff8703afe16d0c34fdfd76f2485efb556c230c681fc16a2ebbe074",
+          "expected_source_canonical_sha256": "99c7639af2ff8703afe16d0c34fdfd76f2485efb556c230c681fc16a2ebbe074",
+          "expected_source_quality_flags": [],
+          "expected_source_word_count": 505,
+          "expected_word_count": 505,
+          "inventory": "legacy-triage",
+          "sample_id": "ins-2008-09-01-nader-accuracy"
+        },
+        {
+          "cleanup_rules": [
+            "whole-after-existing-blockquote-drop"
+          ],
+          "expected_canonical_sha256": "9c53af8e298351ec6637344fdc52342ea47cca530908c4605d5dd5e08c3ba125",
+          "expected_source_canonical_sha256": "9c53af8e298351ec6637344fdc52342ea47cca530908c4605d5dd5e08c3ba125",
+          "expected_source_quality_flags": [],
+          "expected_source_word_count": 383,
+          "expected_word_count": 383,
+          "inventory": "legacy-triage",
+          "sample_id": "ins-2008-09-09-afghanistan"
+        },
+        {
+          "cleanup_rules": [
+            "whole-after-existing-blockquote-drop"
+          ],
+          "expected_canonical_sha256": "f264b02127e4e779a72b9f10eb7a129151edf35eeb08ddf775857879a23c2ec8",
+          "expected_source_canonical_sha256": "f264b02127e4e779a72b9f10eb7a129151edf35eeb08ddf775857879a23c2ec8",
+          "expected_source_quality_flags": [],
+          "expected_source_word_count": 303,
+          "expected_word_count": 303,
+          "inventory": "legacy-triage",
+          "sample_id": "ins-2009-04-17-israel-palestine"
+        },
+        {
+          "cleanup_rules": [
+            "whole-after-existing-blockquote-drop"
+          ],
+          "expected_canonical_sha256": "806e8c7cce3abd10dcfcdb2b58ea372aee3972709944e8758a7f2887831890a2",
+          "expected_source_canonical_sha256": "806e8c7cce3abd10dcfcdb2b58ea372aee3972709944e8758a7f2887831890a2",
+          "expected_source_quality_flags": [],
+          "expected_source_word_count": 426,
+          "expected_word_count": 426,
+          "inventory": "legacy-triage",
+          "sample_id": "ins-2012-02-01-police-athletic-league"
+        }
+      ],
+      "register_id": "political-polemical-longform",
+      "register_labels": [
+        "political",
+        "polemical-irreverent",
+        "journalistic-commentary",
+        "research-conversational"
+      ],
+      "reserved_holdout": [],
+      "status": "profile-candidate-frozen-holdout-insufficient",
+      "support": [],
+      "target_voice": "natural-owner-confirmed-written"
+    }
+  ],
+  "schema_version": 1,
+  "status": "register-corpus-source-freeze-not-calibrated"
+}

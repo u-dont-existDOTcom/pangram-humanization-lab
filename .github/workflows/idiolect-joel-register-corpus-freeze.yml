@@ -1,0 +1,125 @@
+name: Idiolect Joel register corpus freeze
+# actions-cost-class: manual-heavy-research
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: idiolect-source-network-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and run focused tests
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q \
+            tests/test_joel_register_corpus.py \
+            tests/test_joel_register_corpus_network.py \
+            tests/test_joel_legacy_profile.py \
+            tests/test_corpus_acquire.py
+
+      - name: Build paced register-aware natural-owner corpus locally
+        run: |
+          python -m pangram_lab.joel_register_corpus_network \
+            state/IDIOLECT-JOEL-REGISTER-CORPUS-SPEC-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/joel-register-corpus-text \
+            --receipt-out .local/idiolect-corpus/joel-register-corpus-receipt.json
+
+      - name: Enforce corpus gates and metadata-only output
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/joel-register-corpus-receipt.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          if data.get('errors'):
+              raise SystemExit(data['errors'])
+          if data.get('status') != 'register-corpus-source-freeze-not-calibrated':
+              raise SystemExit(f"Unexpected status: {data.get('status')}")
+          if data.get('raw_or_canonical_prose_in_output') is not False:
+              raise SystemExit('Receipt prose/privacy flag is not false')
+          if len(str(data.get('corpus_identity_sha256', ''))) != 64:
+              raise SystemExit('Missing corpus identity hash')
+
+          acquisition = data.get('source_acquisition', {})
+          if acquisition.get('strategy') != 'one-sample-at-a-time-global-spacing':
+              raise SystemExit(f'Unexpected network strategy: {acquisition}')
+          if acquisition.get('spacing_seconds') != 35.0:
+              raise SystemExit(f'Unexpected request spacing: {acquisition}')
+          if acquisition.get('request_count') != 11:
+              raise SystemExit(f'Expected 11 paced source requests: {acquisition}')
+          if acquisition.get('sleep_count') != 10:
+              raise SystemExit(f'Expected 10 inter-request sleeps: {acquisition}')
+
+          philosophical = data['registers']['philosophical-research-dialogue']
+          p_profile = philosophical['partitions']['profile']
+          p_holdout = philosophical['partitions']['reserved_holdout']
+          if p_profile['independent_source_count'] != 5:
+              raise SystemExit(f"Expected 5 philosophical profile sources: {p_profile}")
+          if p_profile['total_words'] != 3061:
+              raise SystemExit(f"Unexpected philosophical profile words: {p_profile}")
+          if p_holdout['independent_source_count'] != 2:
+              raise SystemExit(f"Expected 2 philosophical holdouts: {p_holdout}")
+          if p_holdout['total_words'] != 705:
+              raise SystemExit(f"Unexpected philosophical holdout words: {p_holdout}")
+          if p_profile['largest_source_fraction'] > 0.45:
+              raise SystemExit(f"Profile source dominance too high: {p_profile}")
+          if p_profile['thin_under_250_count'] > 1:
+              raise SystemExit(f"Too many thin philosophical profile sources: {p_profile}")
+          if p_holdout['thin_under_250_count'] > 1:
+              raise SystemExit(f"Too many thin philosophical holdouts: {p_holdout}")
+
+          political = data['registers']['political-polemical-longform']
+          pol_profile = political['partitions']['profile']
+          if pol_profile['independent_source_count'] != 4:
+              raise SystemExit(f"Expected 4 political profile sources: {pol_profile}")
+          if pol_profile['total_words'] != 1617:
+              raise SystemExit(f"Unexpected political profile words: {pol_profile}")
+          if political['partitions']['reserved_holdout']['document_count'] != 0:
+              raise SystemExit('Political register must remain explicitly holdout-insufficient')
+
+          encoded = json.dumps(data, ensure_ascii=False, sort_keys=True)
+          for forbidden in (
+              'local_text_path',
+              'raw_text',
+              'canonical_text',
+              'http://',
+              'https://',
+          ):
+              if forbidden in encoded:
+                  raise SystemExit(f'Forbidden receipt field/content: {forbidden}')
+          PY
+
+      - name: Verify no corpus prose is repository-visible
+        run: |
+          if git status --short --untracked-files=all | grep -v '^?? .local/' | grep -q .; then
+            echo 'Corpus freeze unexpectedly modified repository-visible files.' >&2
+            git status --short --untracked-files=all >&2
+            exit 1
+          fi
+          git check-ignore -q .local/idiolect-corpus/joel-register-corpus-receipt.json
+
+      - name: Upload metadata-only register corpus receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-joel-register-corpus-metadata
+          path: .local/idiolect-corpus/joel-register-corpus-receipt.json
+          if-no-files-found: error
+          retention-days: 30
