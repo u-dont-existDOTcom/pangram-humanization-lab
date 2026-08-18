@@ -2,9 +2,6 @@ name: Lesson integrity
 
 on:
   pull_request:
-  push:
-    branches:
-      - main
   schedule:
     - cron: '17 5 * * 1'
   workflow_dispatch:
@@ -13,49 +10,12 @@ permissions:
   contents: read
 
 concurrency:
-  group: pangram-lesson-integrity
-  cancel-in-progress: false
+  group: pangram-lesson-integrity-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  process-requests:
-    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'github-actions[bot]'
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.ref }}
-      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
-        with:
-          python-version: '3.12'
-      - name: Install test dependencies
-        run: python -m pip install -q -e '.[test]'
-      - name: Test metadata closeout path
-        run: python -m pytest -q tests/test_review_queue.py tests/test_closeout_request.py tests/test_lesson_closeout.py
-      - name: Configure git identity
-        run: |
-          git config user.name "Lesson Integrity Actions"
-          git config user.email "lesson-integrity-actions@users.noreply.github.com"
-      - name: Process pending metadata requests
-        run: PYTHONPATH=src python -m pangram_lab.request_cli
-      - name: Commit processed requests to the pull-request branch
-        env:
-          HEAD_REF: ${{ github.event.pull_request.head.ref }}
-        shell: bash
-        run: |
-          git add state/LESSON-LEDGER.json state/LESSON-INDEX.md state/WORKING-LESSONS*.md state/lesson-closeout-requests || true
-          if git diff --cached --quiet; then
-            echo "No pending metadata requests"
-            exit 0
-          fi
-          git commit -m "lessons: process metadata request"
-          git push origin "HEAD:$HEAD_REF"
-
   change-gate:
-    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -72,16 +32,7 @@ jobs:
       - name: Determine comparison base
         id: base
         shell: bash
-        run: |
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            echo "sha=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
-          else
-            before="${{ github.event.before }}"
-            if [[ -z "$before" || "$before" =~ ^0+$ ]]; then
-              before=$(git rev-parse "$GITHUB_SHA^" 2>/dev/null || git rev-list --max-parents=0 "$GITHUB_SHA" | tail -1)
-            fi
-            echo "sha=$before" >> "$GITHUB_OUTPUT"
-          fi
+        run: echo "sha=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
       - name: Check changed research closeout
         run: PYTHONPATH=src python -m pangram_lab.lesson_closeout check --base "${{ steps.base.outputs.sha }}" --head "$GITHUB_SHA"
       - name: Audit current ref
