@@ -7,7 +7,6 @@ on:
       - .github/workflows/idiolect-blogger-discovery.yml
       - state/IDIOLECT-BLOGGER-DISCOVERY-QUEUE-2026-08-18.json
       - src/pangram_lab/blogger_discover.py
-      - src/pangram_lab/cli.py
   workflow_dispatch:
 
 permissions:
@@ -15,8 +14,8 @@ permissions:
   issues: write
 
 concurrency:
-  group: idiolect-blogger-discovery-${{ github.ref }}
-  cancel-in-progress: true
+  group: idiolect-source-network-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   discover-metadata:
