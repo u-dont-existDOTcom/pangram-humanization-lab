@@ -1,0 +1,123 @@
+name: Idiolect Dharma closed-set pilot
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-dharma-closed-set-pilot.yml
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - src/pangram_lab/dharma_speaker_acquire.py
+      - tests/test_dharma_speaker_acquire.py
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/idiolect-dharma-closed-set-pilot.yml
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - src/pangram_lab/dharma_speaker_acquire.py
+      - tests/test_dharma_speaker_acquire.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and run speaker tests
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q tests/test_dharma_speaker_acquire.py
+
+      - name: Extract matched three-author tranche
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json \
+            --manifest-out .local/idiolect-corpus/dharma-closed-set-manifest.json \
+            --out-dir .local/idiolect-corpus/dharma-closed-set-text
+
+      - name: Require complete extraction and build metadata-only feasibility receipt
+        run: |
+          python - <<'PY'
+          import collections
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/dharma-closed-set-manifest.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          rows = data.get('results', [])
+          errors = data.get('errors', [])
+          expected = 11
+          if errors:
+              raise SystemExit(f'Extraction errors: {errors}')
+          if len(rows) != expected:
+              raise SystemExit(f'Expected {expected} author-thread samples, got {len(rows)}')
+          if any(int(row.get('word_count', 0)) <= 0 for row in rows):
+              raise SystemExit('At least one author-thread extraction is zero-word')
+          if any(int(row.get('target_marker_count', 0)) <= 0 for row in rows):
+              raise SystemExit('At least one author-thread extraction lacks explicit target markers')
+
+          by_author = collections.defaultdict(list)
+          for row in rows:
+              by_author[row['speaker']].append(row)
+
+          expected_authors = {
+              'Joel Rosenblum': 5,
+              'David Vardy': 3,
+              'Stian Gudmundsen Høiland': 3,
+          }
+          if {author: len(items) for author, items in by_author.items()} != expected_authors:
+              raise SystemExit(f'Unexpected author/sample distribution: { {a: len(v) for a, v in by_author.items()} }')
+
+          receipt = {
+              'schema_version': 1,
+              'raw_or_canonical_prose_in_receipt': False,
+              'sample_count': len(rows),
+              'error_count': 0,
+              'authors': {},
+          }
+          for author in sorted(by_author):
+              items = sorted(by_author[author], key=lambda row: row['source_group'])
+              total_words = sum(int(row['word_count']) for row in items)
+              receipt['authors'][author] = {
+                  'thread_count': len(items),
+                  'total_words': total_words,
+                  'feasibility_flags': ([
+                      'total-under-1000-words'
+                  ] if total_words < 1000 else []) + ([
+                      'fewer-than-4-independent-threads'
+                  ] if len(items) < 4 else []),
+                  'samples': [
+                      {
+                          'sample_id': row['sample_id'],
+                          'source_group': row['source_group'],
+                          'canonical_sha256': row['canonical_sha256'],
+                          'word_count': row['word_count'],
+                          'target_marker_count': row['target_marker_count'],
+                          'other_speaker_boundary_count': row['other_speaker_boundary_count'],
+                          'quality_flags': row['quality_flags'],
+                      }
+                      for row in items
+                  ],
+              }
+
+          out = Path('.local/idiolect-corpus/dharma-closed-set-feasibility.json')
+          out.write_text(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          print(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True))
+          PY
+
+      - name: Upload metadata-only pilot receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-dharma-closed-set-feasibility
+          path: .local/idiolect-corpus/dharma-closed-set-feasibility.json
+          if-no-files-found: error
+          retention-days: 30

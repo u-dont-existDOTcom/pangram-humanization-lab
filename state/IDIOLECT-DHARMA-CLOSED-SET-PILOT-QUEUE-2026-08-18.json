@@ -1,0 +1,124 @@
+{
+  "queue_version": "0.1.0",
+  "purpose": "Matched pre-LLM Dharma Connection extraction pilot for Joel Rosenblum plus two recurring same-thread control speakers. This is acquisition/feasibility only, not a train/test split or attribution result.",
+  "raw_text_in_git": false,
+  "selection_status": "closed-set-feasibility-only",
+  "partition_rule": "All author samples sharing one source_group/thread must remain in the same eventual profile/validation/test partition.",
+  "sources": [
+    {
+      "source_id": "dharma-pilot-joel",
+      "site_group": "dharma-connection",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "polemical-irreverent", "philosophical"],
+      "known_threads": [
+        {
+          "sample_id": "dcp-joel-anatta-email",
+          "source_group": "dc-thread-anatta-email-2013-07-11",
+          "date": "2013-07-11",
+          "title": "Excerpts From An Email Discussing Anattā",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/07/excerpts-from-email-discussing-anatta_82.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dcp-joel-holographic",
+          "source_group": "dc-thread-holographic-2014-02-04",
+          "date": "2014-02-04",
+          "title": "Holographic Universe So What?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/holographic-universe-so-what_68.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dcp-joel-can-anything-known",
+          "source_group": "dc-thread-can-anything-known-2014-08-09",
+          "date": "2014-08-09",
+          "title": "Can Anything be Known?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/can-anything-be-known.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dcp-joel-supramundane-jhanas",
+          "source_group": "dc-thread-supramundane-jhanas-2014-08-09",
+          "date": "2014-08-09",
+          "title": "Supramundane Jhanas",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/supramundane-jhanas.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dcp-joel-insights-anatta",
+          "source_group": "dc-thread-insights-anatta-2014-08-09",
+          "date": "2014-08-09",
+          "title": "Insights, Anatta, +A, -A",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/insights-anatta-a_8.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        }
+      ]
+    },
+    {
+      "source_id": "dharma-pilot-david-vardy",
+      "site_group": "dharma-connection",
+      "provenance": "public-human-control-explicit-speaker",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "philosophical"],
+      "known_threads": [
+        {
+          "sample_id": "dcp-david-can-anything-known",
+          "source_group": "dc-thread-can-anything-known-2014-08-09",
+          "date": "2014-08-09",
+          "title": "Can Anything be Known?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/can-anything-be-known.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "dcp-david-supramundane-jhanas",
+          "source_group": "dc-thread-supramundane-jhanas-2014-08-09",
+          "date": "2014-08-09",
+          "title": "Supramundane Jhanas",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/supramundane-jhanas.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "dcp-david-insights-anatta",
+          "source_group": "dc-thread-insights-anatta-2014-08-09",
+          "date": "2014-08-09",
+          "title": "Insights, Anatta, +A, -A",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/insights-anatta-a_8.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        }
+      ]
+    },
+    {
+      "source_id": "dharma-pilot-stian-hoiland",
+      "site_group": "dharma-connection",
+      "provenance": "public-human-control-explicit-speaker",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "philosophical"],
+      "known_threads": [
+        {
+          "sample_id": "dcp-stian-holographic",
+          "source_group": "dc-thread-holographic-2014-02-04",
+          "date": "2014-02-04",
+          "title": "Holographic Universe So What?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/holographic-universe-so-what_68.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "dcp-stian-can-anything-known",
+          "source_group": "dc-thread-can-anything-known-2014-08-09",
+          "date": "2014-08-09",
+          "title": "Can Anything be Known?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/can-anything-be-known.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "dcp-stian-insights-anatta",
+          "source_group": "dc-thread-insights-anatta-2014-08-09",
+          "date": "2014-08-09",
+          "title": "Insights, Anatta, +A, -A",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/insights-anatta-a_8.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        }
+      ]
+    }
+  ]
+}
