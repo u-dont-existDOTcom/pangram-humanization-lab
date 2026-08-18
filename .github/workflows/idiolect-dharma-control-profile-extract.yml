@@ -1,0 +1,73 @@
+name: Idiolect Dharma control profile extract
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-dharma-control-profile-extract.yml
+      - state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json
+      - src/pangram_lab/dharma_control_profiles.py
+      - tests/test_dharma_control_profiles.py
+      - src/pangram_lab/dharma_author_discover.py
+      - src/pangram_lab/dharma_speaker_acquire.py
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/idiolect-dharma-control-profile-extract.yml
+      - state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json
+      - src/pangram_lab/dharma_control_profiles.py
+      - tests/test_dharma_control_profiles.py
+      - src/pangram_lab/dharma_author_discover.py
+      - src/pangram_lab/dharma_speaker_acquire.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and run profile tests
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q tests/test_dharma_control_profiles.py tests/test_dharma_author_discover.py tests/test_dharma_speaker_acquire.py
+
+      - name: Extract explicit-label non-overlap control profiles
+        run: |
+          python -m pangram_lab.dharma_control_profiles \
+            state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json \
+            --receipt-out .local/idiolect-corpus/dharma-control-profile-receipt.json
+
+      - name: Require both profiles to have nonzero text
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path('.local/idiolect-corpus/dharma-control-profile-receipt.json').read_text(encoding='utf-8'))
+          if data.get('errors'):
+              raise SystemExit(data['errors'])
+          expected = {'David Vardy', 'Stian Gudmundsen Høiland'}
+          if set(data.get('authors', {})) != expected:
+              raise SystemExit(f"Unexpected authors: {sorted(data.get('authors', {}))}")
+          for speaker, row in data['authors'].items():
+              if int(row.get('extracted_post_count', 0)) <= 0 or int(row.get('total_words', 0)) <= 0:
+                  raise SystemExit(f'Empty profile for {speaker}')
+          PY
+
+      - name: Upload metadata-only profile receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-dharma-control-profile-metadata
+          path: .local/idiolect-corpus/dharma-control-profile-receipt.json
+          if-no-files-found: error
+          retention-days: 30
