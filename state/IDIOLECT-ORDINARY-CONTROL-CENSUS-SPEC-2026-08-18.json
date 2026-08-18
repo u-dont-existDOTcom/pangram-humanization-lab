@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "purpose": "Census explicit speaker labels across the complete pre-LLM Dharma Connection archive once, so additional ordinary matched controls can be selected without repeated per-author feed fetches or prose collection.",
+  "status": "metadata-census-design-not-profile-admission",
+  "method_decision": "adapt-existing-atom-speaker-discovery",
+  "method_note": "Reuse the existing Blogger Atom pagination and explicit bold/strong/cite label scanner. Expand from target-centered co-speaker discovery to one-pass all-speaker counts; do not invent a new extraction or authorship method.",
+  "blog_root": "https://dharmaconnectiongroup.blogspot.com/",
+  "target_author": "Joel Rosenblum",
+  "role_spec": "state/IDIOLECT-CONTROL-AUTHOR-ROLE-SPEC-2026-08-18.json",
+  "allowed_single_token_labels": [
+    "Soh"
+  ],
+  "candidate_thresholds": {
+    "minimum_explicit_threads": 5,
+    "minimum_non_target_overlap_threads": 4,
+    "minimum_target_overlap_threads": 1
+  },
+  "candidate_rules": [
+    "Count one independent thread at most once per exact casefolded speaker label, regardless of repeated turns in that thread.",
+    "Marker count may record repeated explicit turns but never substitutes for independent thread count.",
+    "Exclude the target author and all already-active target/hard-negative/ordinary-control authors from new-candidate ranking.",
+    "Do not merge aliases or assume that similar labels identify the same person; exact-label identity review remains mandatory.",
+    "One-token labels are rejected unless exactly allowlisted because ordinary bold headings are otherwise easily mistaken for speakers.",
+    "A census candidate is not profile-admitted until explicit-speaker prose extraction, word sufficiency, concentration, quotation, duplicate, and source-group audits pass."
+  ],
+  "output_privacy": {
+    "raw_or_canonical_prose": false,
+    "post_titles": false,
+    "post_urls": false,
+    "entry_ids": false,
+    "allowed_metadata": [
+      "speaker labels",
+      "independent-thread counts",
+      "marker counts",
+      "target-overlap and non-overlap counts",
+      "post-identity-set hashes",
+      "feed-page hashes"
+    ]
+  },
+  "interpretation_rule": "This census only identifies preliminary ordinary-control candidates and reduces network work. It does not prove identity, human authorship, word sufficiency, stylistic distance, benchmark suitability, IER, or validated-for-register status."
+}
