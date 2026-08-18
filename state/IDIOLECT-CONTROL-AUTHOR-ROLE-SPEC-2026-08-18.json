@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "purpose": "Encode owner-informed control-author roles and stratified evaluation requirements for Joel idiolect calibration without changing any historical prediction or inventing a new authorship metric.",
+  "status": "design-frozen-diagnostic-only",
+  "method_decision": "adapt-and-compose-established-hard-negative-authorship-evaluation",
+  "owner_correction": {
+    "speaker": "Stian Gudmundsen Høiland",
+    "reported_relation": "Joel reports that Stian naturally writes and thinks similarly to him, and that this resemblance was part of why they connected.",
+    "methodological_effect": "Stian is an owner-identified stylistic near-neighbor and hard negative, not an ordinary control. Joel-to-Stian confusion alone is not clean evidence of idiolect erasure."
+  },
+  "active_authors": [
+    {
+      "author": "Joel Rosenblum",
+      "role": "target-author",
+      "status": "active"
+    },
+    {
+      "author": "Stian Gudmundsen Høiland",
+      "role": "owner-identified-hard-negative",
+      "status": "active",
+      "do_not_remove_to_improve_accuracy": true
+    },
+    {
+      "author": "David Vardy",
+      "role": "ordinary-matched-control",
+      "status": "active"
+    }
+  ],
+  "pending_ordinary_control_candidates": [
+    {
+      "author": "Greg Goode",
+      "status": "explicit-speaker-census-and-sufficiency-pending"
+    },
+    {
+      "author": "John Ahn",
+      "status": "explicit-speaker-census-and-sufficiency-pending"
+    },
+    {
+      "author": "Soh",
+      "status": "exact-speaker-label-and-identity-resolution-pending"
+    }
+  ],
+  "minimum_evidence": {
+    "ordinary_matched_controls_before_rewrite_degradation_claim": 2,
+    "minimum_target_holdout_documents": 4,
+    "minimum_hard_negative_holdout_documents": 3,
+    "require_source_group_disjoint_profiles_and_holdouts": true,
+    "require_register_and_platform_conditioning": true,
+    "require_canonical_hash_conditioning": true
+  },
+  "required_reporting_strata": [
+    {
+      "stratum_id": "full-active-candidate-set",
+      "members": "all active authors",
+      "role": "primary closed-set diagnostic"
+    },
+    {
+      "stratum_id": "target-vs-hard-negative",
+      "members": [
+        "Joel Rosenblum",
+        "Stian Gudmundsen Høiland"
+      ],
+      "role": "hard-neighbor discrimination diagnostic"
+    },
+    {
+      "stratum_id": "target-vs-ordinary-controls",
+      "members": "target plus all active ordinary matched controls",
+      "role": "ordinary same-topic/platform discrimination diagnostic"
+    },
+    {
+      "stratum_id": "without-hard-negative-sensitivity",
+      "members": "all active authors except owner-identified hard negatives",
+      "role": "secondary candidate-set sensitivity analysis only",
+      "may_not_be_headline_result": true
+    }
+  ],
+  "required_per_document_fields": [
+    "actual_author",
+    "full_candidate_set_winner",
+    "target_rank",
+    "target_score",
+    "target_minus_each_hard_negative_margin",
+    "target_minus_best_ordinary_control_margin",
+    "restricted_winner_by_reporting_stratum",
+    "source_group",
+    "sample_id"
+  ],
+  "interpretation_rules": [
+    "A Joel-to-Stian winner flip is not by itself evidence that Joel's idiolect was erased.",
+    "A rise in Joel-only similarity is not sufficient retention evidence when a hard negative rises more.",
+    "Removing Stian may be reported only as a candidate-set ablation, never as a way to improve the primary accuracy.",
+    "Hard-negative discrimination and ordinary-control discrimination must remain separate; do not average them into one voice-preservation verdict.",
+    "No abstention or pass threshold is authorized until original same-author and cross-author margin distributions are frozen for the register.",
+    "Historical aggregate metrics remain historically correct, but their interpretation must reflect the owner-identified near-neighbor relationship."
+  ],
+  "forbidden_claims": [
+    "Stian confusion proves erasure",
+    "Stian should be removed because he is too similar",
+    "target-versus-ordinary accuracy substitutes for target-versus-hard-negative discrimination",
+    "candidate-set ablation is a calibrated operational threshold",
+    "this design is IER"
+  ]
+}
