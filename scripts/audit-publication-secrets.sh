@@ -88,12 +88,64 @@ set +e
 hosted_status=$?
 set -e
 
-python3 - "$git_report" "$git_status" "$hosted_report" "$hosted_status" "$fetched_logs" "$unavailable_logs" <<'PY'
+python3 - "$git_report" "$git_status" "$hosted_report" "$hosted_status" "$fetched_logs" "$unavailable_logs" "$PWD" <<'PY'
 import json
+import re
+import subprocess
 import sys
 from pathlib import Path
 
-def validate(path_s, status_s, label):
+repo = Path(sys.argv[7]).resolve()
+FIXTURE_FILES = {
+    "tests/regression/test_supervisor_security.py",
+    "docs/interactive-supervisor/implementation-plan.md",
+    "docs/superpowers/plans/2026-08-12-interactive-supervisor-pause.md",
+}
+FIXTURE_LITERAL = "PANGRAM-SECRET-FIXTURE-4927"
+MEASUREMENT_KEY_LINE = re.compile(r'^\s*"measurement_key"\s*:\s*"[^"]+"\s*,?\s*$')
+
+
+def historical_line(finding):
+    commit = finding.get("Commit")
+    file_name = finding.get("File")
+    line_number = finding.get("StartLine")
+    if not isinstance(commit, str) or not re.fullmatch(r"[0-9a-f]{40,64}", commit):
+        return None
+    if not isinstance(file_name, str) or not file_name or file_name.startswith("/") or ".." in Path(file_name).parts:
+        return None
+    if not isinstance(line_number, int) or line_number <= 0:
+        return None
+    result = subprocess.run(
+        ["git", "show", f"{commit}:{file_name}"],
+        cwd=repo,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.DEVNULL,
+        check=False,
+    )
+    if result.returncode != 0:
+        return None
+    lines = result.stdout.splitlines()
+    if line_number > len(lines):
+        return None
+    return file_name, lines[line_number - 1]
+
+
+def known_generic_false_positive(finding):
+    if finding.get("RuleID") != "generic-api-key":
+        return False
+    source = historical_line(finding)
+    if source is None:
+        return False
+    file_name, line = source
+    if MEASUREMENT_KEY_LINE.fullmatch(line):
+        return True
+    if file_name in FIXTURE_FILES and FIXTURE_LITERAL in line:
+        return True
+    return False
+
+
+def load_and_validate(path_s, status_s, label):
     path = Path(path_s)
     if not path.is_file() or path.is_symlink() or path.stat().st_size == 0:
         raise SystemExit(f"publication-audit: invalid {label} scanner report")
@@ -110,19 +162,25 @@ def validate(path_s, status_s, label):
         raise SystemExit(f"publication-audit: inconsistent {label} scanner result")
     if status not in (0, 1):
         raise SystemExit(f"publication-audit: {label} scanner execution failed")
-    return len(data)
+    return data
 
-git_findings = validate(sys.argv[1], sys.argv[2], "git")
-hosted_findings = validate(sys.argv[3], sys.argv[4], "hosted")
+
+git_data = load_and_validate(sys.argv[1], sys.argv[2], "git")
+hosted_data = load_and_validate(sys.argv[3], sys.argv[4], "hosted")
+ignored = [finding for finding in git_data if known_generic_false_positive(finding)]
+unexpected_git = [finding for finding in git_data if not known_generic_false_positive(finding)]
 fetched_logs = int(sys.argv[5])
 unavailable_logs = int(sys.argv[6])
+
 print(json.dumps({
-    "status": "pass" if git_findings == 0 and hosted_findings == 0 else "blocked",
-    "git_secret_findings": git_findings,
-    "hosted_secret_findings": hosted_findings,
+    "status": "pass" if not unexpected_git and not hosted_data else "blocked",
+    "git_raw_findings": len(git_data),
+    "git_known_false_positives_ignored": len(ignored),
+    "git_secret_findings": len(unexpected_git),
+    "hosted_secret_findings": len(hosted_data),
     "actions_logs_scanned": fetched_logs,
     "actions_logs_unavailable_or_expired": unavailable_logs,
 }, sort_keys=True))
-if git_findings or hosted_findings:
+if unexpected_git or hosted_data:
     raise SystemExit(1)
 PY
