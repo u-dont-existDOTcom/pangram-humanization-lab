@@ -1,6 +1,6 @@
 from pathlib import Path
 
-import numpy as np
+import pytest
 
 from pangram_lab import luar_matched_pilot as lp
 
@@ -19,6 +19,7 @@ def _row(tmp_path, sample, speaker, group, text):
 
 
 def test_cosine_rejects_zero_norm_and_scores_identity():
+    np = pytest.importorskip("numpy")
     assert lp._cosine(np.array([1.0, 0.0]), np.array([1.0, 0.0])) == 1.0
     try:
         lp._cosine(np.array([0.0, 0.0]), np.array([1.0, 0.0]))
@@ -29,6 +30,7 @@ def test_cosine_rejects_zero_norm_and_scores_identity():
 
 
 def test_nearest_profile_uses_mean_training_embeddings_and_author_order_tie_break(tmp_path):
+    np = pytest.importorskip("numpy")
     train = [
         _row(tmp_path, "a1", "A", "ta1", "alpha one"),
         _row(tmp_path, "a2", "A", "ta2", "alpha two"),
