@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
-  "request_id": "pangram-browserbase-free-minutes-blocker-20260818",
   "disposition": "no-new-lesson",
   "finding": "The Browserbase free-minute blocker records that exact current Romance hashes were verified but Browserbase returned HTTP 402 before any Pangram text fill or detector activation, leaving both current halves unsubmitted and unambiguous.",
+  "ledger_entry_ids": [
+    "L-14f58ddf53-01"
+  ],
+  "processed_at_utc": "2026-08-18T12:46:21.999981+00:00",
   "promoted_to": [],
   "reason": "This is project-specific external account-capacity and execution provenance. The reusable duplicate-defense, pre-submit gating, and browser-session lifecycle lessons are already implemented or recorded elsewhere; no distinct humanization or detector-science lesson is added.",
+  "request_id": "pangram-browserbase-free-minutes-blocker-20260818",
+  "schema_version": 1,
   "source_path": "state/PANGRAM-GUI-BROWSERBASE-FREE-MINUTES-BLOCKER-2026-08-18.md",
   "source_ref": "agent/pangram-local-playwright-gpt-20260818",
-  "source_sha256": "14f58ddf5395ef555ea401f1ce3834ad941a40aacba18ad1b5adb4ce9a7a289c"
+  "source_sha256": "14f58ddf5395ef555ea401f1ce3834ad941a40aacba18ad1b5adb4ce9a7a289c",
+  "status": "processed"
 }
