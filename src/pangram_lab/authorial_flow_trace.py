@@ -42,6 +42,29 @@ def _label(value: object, field: str) -> str | None:
     return value.strip()
 
 
+def _initial_state(trace: dict) -> tuple[list[str], dict[str, int]]:
+    revealed = trace.get("initial_revealed_source_ids", [])
+    if not isinstance(revealed, list) or any(not isinstance(x, str) or not x for x in revealed):
+        raise ValueError("initial_revealed_source_ids must be an array of non-empty strings")
+    if len(revealed) != len(set(revealed)):
+        raise ValueError("initial_revealed_source_ids contains duplicates")
+
+    positions = trace.get("initial_revealed_source_positions", {})
+    if not isinstance(positions, dict):
+        raise ValueError("initial_revealed_source_positions must be an object")
+    if set(positions) != set(revealed):
+        raise ValueError("initial_revealed_source_positions keys must exactly match initial_revealed_source_ids")
+    normalized: dict[str, int] = {}
+    for source_id in revealed:
+        position = positions[source_id]
+        if not isinstance(position, int) or isinstance(position, bool) or position < 1:
+            raise ValueError("initial source positions must be positive integers")
+        if position in normalized.values():
+            raise ValueError("initial source positions must be unique")
+        normalized[source_id] = position
+    return list(revealed), normalized
+
+
 def validate_trace(trace: dict) -> dict:
     if not isinstance(trace, dict):
         raise ValueError("trace must be a JSON object")
@@ -53,6 +76,7 @@ def validate_trace(trace: dict) -> dict:
     if not isinstance(experiment_id, str) or not experiment_id.strip():
         raise ValueError("experiment_id must be a non-empty string")
     _require_hex64(trace.get("source_packet_sha256"), "source_packet_sha256")
+    _require_hex64(trace.get("initial_prose_sha256"), "initial_prose_sha256")
 
     model = trace.get("model")
     if not isinstance(model, dict):
@@ -68,8 +92,7 @@ def validate_trace(trace: dict) -> dict:
     if not isinstance(steps, list):
         raise ValueError("steps must be an array")
 
-    revealed: list[str] = []
-    selected_positions: dict[str, int] = {}
+    revealed, selected_positions = _initial_state(trace)
     stopped = False
     for index, step in enumerate(steps, start=1):
         if not isinstance(step, dict):
@@ -155,6 +178,7 @@ def _count_labels(steps: list[dict], field: str) -> dict[str, int]:
 def summarize_trace(trace: dict) -> dict:
     validate_trace(trace)
     steps = trace["steps"]
+    initial_revealed, _ = _initial_state(trace)
     reveal_steps = [step for step in steps if step["controller_action"] == "REVEAL"]
     writer_steps = [step for step in reveal_steps if step.get("writer_action") in {"MORE", "WRITE"}]
     write_steps = [step for step in writer_steps if step["writer_action"] == "WRITE"]
@@ -178,7 +202,9 @@ def summarize_trace(trace: dict) -> dict:
         "experiment_id": trace["experiment_id"],
         "condition": trace["condition"],
         "source_packet_sha256": trace["source_packet_sha256"],
+        "initial_prose_sha256": trace["initial_prose_sha256"],
         "model": trace["model"],
+        "initial_revealed_count": len(initial_revealed),
         "step_count": len(steps),
         "reveal_count": len(reveal_steps),
         "stop_count": len(stop_steps),
