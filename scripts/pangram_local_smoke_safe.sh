@@ -27,7 +27,22 @@ log_dir="${HOME}/Téléchargements"
 mkdir -p "$log_dir"
 log_path="$log_dir/pangram-local-smoke.log"
 
-printf '%s\n' "=== Pangram local environment ===" | tee "$log_path"
+printf '%s\n' "=== Home Git diagnosis ===" | tee "$log_path"
+if [ -e "$HOME/.git" ]; then
+  home_top="$(git -C "$HOME" rev-parse --show-toplevel 2>/dev/null)"
+  home_head="$(git -C "$HOME" rev-parse --verify HEAD 2>/dev/null)"
+  home_tracked="$(git -C "$HOME" ls-files -z 2>/dev/null | tr -cd '\0' | wc -c)"
+  home_origin="$(git -C "$HOME" remote get-url origin 2>/dev/null)"
+  printf 'HOME_DOT_GIT_PRESENT=yes\n' | tee -a "$log_path"
+  printf 'HOME_GIT_TOPLEVEL=%s\n' "${home_top:-unknown}" | tee -a "$log_path"
+  printf 'HOME_GIT_HEAD=%s\n' "${home_head:-none}" | tee -a "$log_path"
+  printf 'HOME_GIT_TRACKED_FILES=%s\n' "${home_tracked:-unknown}" | tee -a "$log_path"
+  printf 'HOME_GIT_ORIGIN=%s\n' "${home_origin:-none}" | tee -a "$log_path"
+else
+  printf 'HOME_DOT_GIT_PRESENT=no\n' | tee -a "$log_path"
+fi
+
+printf '\n%s\n' "=== Pangram local environment ===" | tee -a "$log_path"
 "$runner" status --environment-only 2>&1 | tee -a "$log_path"
 env_rc=${PIPESTATUS[0]}
 printf '\nENVIRONMENT_EXIT=%s\n\n' "$env_rc" | tee -a "$log_path"
