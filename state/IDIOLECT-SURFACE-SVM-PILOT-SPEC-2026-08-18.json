@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "purpose": "First closed-set pre-LLM surface-authorship calibration pilot for Joel Rosenblum versus two same-platform/topic controls. This is a pilot, not a validated register threshold.",
+  "raw_text_in_git": false,
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "training": {
+    "documents_per_author": 6,
+    "joel_profile_spec": "state/IDIOLECT-JOEL-LEGACY-PROFILE-SPEC-2026-08-18.json",
+    "control_profile_spec": "state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json",
+    "control_selection": "largest-six-nonoverlap-explicit-speaker-documents-by-canonical-word-count",
+    "joel_selection": "all-six-frozen-legacy-profile-sources",
+    "document_weighting": "one-document-one-training-example; equal document count per author",
+    "no_segmentation": true
+  },
+  "held_out_test": {
+    "queue": "state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json",
+    "include_rule": "source_group must contain held-out samples from at least two authors",
+    "expected_source_groups": 4,
+    "expected_documents": 10,
+    "source_group_leakage_forbidden": true
+  },
+  "models": [
+    {
+      "model_id": "paper-described-char2-4-word1-2-linear-svm",
+      "features": "TF-IDF character 2-4 grams plus TF-IDF word 1-2 grams",
+      "classifier": "LinearSVC",
+      "C": 1.0,
+      "status": "paper-described-surface-approximation",
+      "caveat": "The paper describes this feature/classifier recipe, but released helper-code discrepancies mean exact implementation equivalence is not asserted. Scikit-learn vectorizer defaults are recorded in the receipt."
+    },
+    {
+      "model_id": "char2-4-only-sensitivity",
+      "features": "TF-IDF character 2-4 grams",
+      "classifier": "LinearSVC",
+      "C": 1.0,
+      "status": "sensitivity-control"
+    },
+    {
+      "model_id": "word1-2-only-sensitivity",
+      "features": "TF-IDF word 1-2 grams",
+      "classifier": "LinearSVC",
+      "C": 1.0,
+      "status": "topic-lexical-sensitivity-control"
+    }
+  ],
+  "evaluation": {
+    "metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_f1",
+      "per_author_accuracy",
+      "confusion_matrix"
+    ],
+    "group_bootstrap_accuracy": {
+      "unit": "held-out source_group",
+      "iterations": 10000,
+      "seed": 260800926,
+      "percentiles": [2.5, 97.5]
+    }
+  },
+  "interpretation": {
+    "chance_accuracy": 0.3333333333,
+    "no_threshold_claim": true,
+    "do_not_call_ier": true,
+    "reason": "This is a single closed-set original-authorship pilot, not an original-vs-rewrite IER experiment."
+  }
+}
