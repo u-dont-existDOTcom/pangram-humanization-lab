@@ -1,0 +1,120 @@
+name: Idiolect transformation sensitivity
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-transformation-sensitivity.yml
+      - src/pangram_lab/idiolect_transformation_sensitivity.py
+      - tests/test_idiolect_transformation_sensitivity.py
+      - state/IDIOLECT-TRANSFORMATION-SENSITIVITY-SPEC-2026-08-18.json
+      - state/ROMANCE-OXYTOCIN-MINIMAL-PAIR-BATCH-2026-08-12.md
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
+      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  HF_HUB_DISABLE_TELEMETRY: "1"
+  TOKENIZERS_PARALLELISM: "false"
+
+jobs:
+  transformation-sensitivity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and isolated LUAR environment
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pip install -q --index-url https://download.pytorch.org/whl/cpu 'torch>=2.2,<3'
+          python -m pip install -q \
+            'transformers>=4.40,<5' \
+            'einops>=0.7,<1' \
+            'safetensors>=0.4,<1' \
+            'scikit-learn>=1.3,<2'
+
+      - name: Run focused tests
+        run: python -m pytest -q tests/test_idiolect_transformation_sensitivity.py tests/test_dharma_speaker_acquire.py tests/test_idiolect_snapshot_fingerprint.py
+
+      - name: Acquire Joel profile rows
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json \
+            --sample-id dc-2013-06-lucid-dreaming \
+            --sample-id dc-2013-06-sound-bahiya \
+            --out-dir .local/idiolect-corpus/transformation-supplement-text \
+            --manifest-out .local/idiolect-corpus/transformation-supplement-manifest.json
+
+      - name: Acquire control profile rows
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/transformation-control-text \
+            --manifest-out .local/idiolect-corpus/transformation-control-manifest.json
+
+      - name: Space public-source acquisition bursts
+        run: sleep 65
+
+      - name: Acquire matched Joel rows
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/transformation-matched-text \
+            --manifest-out .local/idiolect-corpus/transformation-matched-manifest.json
+
+      - name: Fingerprint exact runtime source snapshot
+        run: |
+          python -m pangram_lab.idiolect_snapshot_fingerprint \
+            --supplement-manifest .local/idiolect-corpus/transformation-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/transformation-control-manifest.json \
+            --matched-manifest .local/idiolect-corpus/transformation-matched-manifest.json \
+            --out .local/idiolect-corpus/transformation-source-snapshot.json
+
+      - name: Run pinned transformation-sensitivity pilot
+        run: |
+          python -m pangram_lab.idiolect_transformation_sensitivity \
+            state/IDIOLECT-TRANSFORMATION-SENSITIVITY-SPEC-2026-08-18.json \
+            --matched-manifest .local/idiolect-corpus/transformation-matched-manifest.json \
+            --supplement-manifest .local/idiolect-corpus/transformation-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/transformation-control-manifest.json \
+            --snapshot .local/idiolect-corpus/transformation-source-snapshot.json \
+            --out .local/idiolect-corpus/transformation-sensitivity-result.json
+
+      - name: Enforce output privacy and diagnostic boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/transformation-sensitivity-result.json')
+          data = json.loads(path.read_text())
+          assert data['status'] == 'transformation-sensitivity-diagnostic-not-IER'
+          assert data['raw_pair_prose_in_output'] is False
+          assert data['embeddings_persisted_in_output'] is False
+          assert data['interpretation_guardrails']['not_ier'] is True
+          assert data['interpretation_guardrails']['no_operational_threshold'] is True
+          assert len(data['pairs']) == 4
+          encoded = json.dumps(data, ensure_ascii=False, sort_keys=True)
+          for forbidden in ('raw_text', 'canonical_text', 'local_text_path'):
+              assert forbidden not in encoded
+          PY
+
+      - name: Upload metadata-only transformation receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: idiolect-transformation-sensitivity
+          path: |
+            .local/idiolect-corpus/transformation-source-snapshot.json
+            .local/idiolect-corpus/transformation-sensitivity-result.json
+          if-no-files-found: error
+          retention-days: 14
