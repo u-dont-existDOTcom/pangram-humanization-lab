@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-08-18",
+  "purpose": "Metadata-only triage derived from the 32-sample structural audit in issue #55. This is not final corpus admission and contains no Joel prose.",
+  "source_receipt_issue": 55,
+  "audited_count": 32,
+  "audit_error_count": 0,
+  "status": "manual-admission-audit-pending",
+  "rules": [
+    "No sample is admitted solely because structural flags are absent.",
+    "Samples with possible-unremoved-dialogue require manual authored-boundary review.",
+    "Samples under 250 words are thin for standalone attribution and should be pooled only within their own source group or excluded from standalone evaluation.",
+    "Zero-word named-speaker results indicate extractor failure or page-format mismatch, not absence of Joel text.",
+    "Blockquote removal is acceptable only after confirming the retained prose is Joel-authored and the removed blockquote is third-party material.",
+    "Final admission requires canonical hash, word count, provenance, modality, register, source_group, duplicate audit, and manual review status."
+  ],
+  "structurally_unflagged_candidates": [
+    {
+      "sample_id": "tafka-2015-02-23-right-view-humility",
+      "next_step": "manual-read-for-authorship-boundary-and-quotation-check"
+    },
+    {
+      "sample_id": "ins-2009-04-17-israel-palestine",
+      "next_step": "manual-read-for-authorship-boundary-and-quotation-check"
+    },
+    {
+      "sample_id": "ins-2012-02-01-police-athletic-league",
+      "next_step": "manual-read-for-authorship-boundary-and-quotation-check"
+    }
+  ],
+  "high_value_manual_review_candidates": [
+    {
+      "sample_id": "ann-2020-10-29-assault-custody",
+      "retained_word_count": 1740,
+      "reason": "long personal/polemical source; no quality flag; minor extraction removal only"
+    },
+    {
+      "sample_id": "tafka-2019-03-08-plant-spirits",
+      "retained_word_count": 554,
+      "reason": "message-by-you extraction retained a focused Joel-only subset; no quality flag"
+    },
+    {
+      "sample_id": "ins-2008-09-09-afghanistan",
+      "retained_word_count": 383,
+      "reason": "political register; no quality flag; small extraction removal"
+    },
+    {
+      "sample_id": "ins-2008-09-01-nader-accuracy",
+      "retained_word_count": 505,
+      "reason": "political/journalistic register; no quality flag after substantial blockquote removal; retained author boundary needs manual confirmation"
+    }
+  ],
+  "dialogue_or_label_review_required": [
+    "tafka-2013-01-05-intro-journey",
+    "tafka-2015-02-02-true-love",
+    "tafka-2015-02-12-no-way-to-know",
+    "tafka-2016-06-08-already-perfect",
+    "tafka-2019-07-22-psychedelic-brain",
+    "gov-2020-06-20-everything-lie",
+    "gov-2020-06-28-life-expectancy",
+    "gov-2020-06-30-stupid-violent-apes",
+    "gov-2020-09-06-civilization-imposed",
+    "gov-2020-09-29-buddha-civilization",
+    "ins-2008-09-04-protest-or-die",
+    "ins-2008-09-14-obama-supporters",
+    "ins-2009-01-08-free-market"
+  ],
+  "thin_or_pool_only": [
+    {
+      "sample_id": "tafka-2015-01-17-sam-harris-review",
+      "retained_word_count": 77
+    },
+    {
+      "sample_id": "nanou-2020-09-15-disney-tale",
+      "retained_word_count": 111
+    },
+    {
+      "sample_id": "nanou-2020-09-15-too-good-to-be-true",
+      "retained_word_count": 129
+    },
+    {
+      "sample_id": "nanou-2020-09-15-blind-spots",
+      "retained_word_count": 156
+    },
+    {
+      "sample_id": "nanou-2020-09-15-love-reverse-war",
+      "retained_word_count": 47
+    },
+    {
+      "sample_id": "nanou-2020-09-15-easy-love",
+      "retained_word_count": 177
+    }
+  ],
+  "named_speaker_extractor_failures": [
+    {
+      "sample_id": "dc-2013-07-11-rebirth-anatta",
+      "retained_word_count": 0
+    },
+    {
+      "sample_id": "dc-2014-02-03-consciousness-self",
+      "retained_word_count": 0
+    },
+    {
+      "sample_id": "dc-2014-02-03-metta-methods",
+      "retained_word_count": 0
+    },
+    {
+      "sample_id": "dc-2014-02-04-worldly-life",
+      "retained_word_count": 0
+    },
+    {
+      "sample_id": "dc-2014-08-09-alcohol",
+      "retained_word_count": 0
+    },
+    {
+      "sample_id": "dc-2014-08-12-spiritual-diversity",
+      "retained_word_count": 0
+    }
+  ],
+  "parser_hypothesis": "Current speaker-prefix extraction requires the speaker label and authored text to survive HTML parsing on the same line. Blogger discussion markup may separate `Joel Rosenblum:` from the body across nested elements/line breaks. Fix conservatively with a speaker-state parser that starts only on an explicit Joel label and stops at the next explicit speaker/timestamp boundary; add fixtures before rerunning the Dharma tranche.",
+  "recommended_order": [
+    "Fix and regression-test the Dharma named-speaker extractor.",
+    "Manually inspect the three structurally unflagged samples plus the four high-value no-quality-flag samples.",
+    "Resolve possible-unremoved-dialogue candidates by narrowing extraction or excluding third-party turns.",
+    "Pool or exclude thin love4nanou samples without crossing source-group boundaries.",
+    "After manual admission, freeze hashes/counts and only then assign profile/validation/test splits."
+  ]
+}
