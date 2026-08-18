@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/idiolect-dharma-speaker-repair.yml
       - src/pangram_lab/dharma_speaker_acquire.py
+      - src/pangram_lab/dharma_markup_diagnostic.py
       - tests/test_dharma_speaker_acquire.py
       - state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json
   push:
@@ -12,6 +13,7 @@ on:
     paths:
       - .github/workflows/idiolect-dharma-speaker-repair.yml
       - src/pangram_lab/dharma_speaker_acquire.py
+      - src/pangram_lab/dharma_markup_diagnostic.py
       - tests/test_dharma_speaker_acquire.py
       - state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json
   workflow_dispatch:
@@ -36,6 +38,12 @@ jobs:
         run: |
           python -m pip install -q -e '.[test]'
           python -m pytest -q tests/test_dharma_speaker_acquire.py tests/test_corpus_acquire.py
+
+      - name: Diagnose live Dharma markup without prose
+        run: |
+          python -m pangram_lab.dharma_markup_diagnostic \
+            state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json \
+            --out .local/idiolect-corpus/dharma-markup-diagnostic.json
 
       - name: Rerun reviewed Dharma speaker tranche
         run: |
