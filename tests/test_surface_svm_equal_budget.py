@@ -8,7 +8,7 @@ from pangram_lab import surface_svm_equal_budget as eb
 def test_prefix_exact_words_preserves_original_punctuation_and_spacing():
     text = "Hello,   world! This—isn't reconstructed; it stays. Extra words here."
     prefix = eb.prefix_exact_words(text, 5)
-    assert prefix == "Hello,   world! This—isn't reconstructed; it"
+    assert prefix == "Hello,   world! This—isn't reconstructed"
     assert len(eb._WORD_RE.findall(prefix)) == 5
 
 
