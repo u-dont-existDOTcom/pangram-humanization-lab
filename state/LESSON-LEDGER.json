@@ -854,6 +854,17 @@
       "source_path": "state/PANGRAM-LOCAL-PLAYWRIGHT-HANDOFF-2026-08-18.md",
       "source_ref": "agent/pangram-local-playwright-gpt-20260818",
       "source_sha256": "7e5a00853b944d11ccc9b97b5a9120fbfab1c9d74f345946d2391dd3aaadef5d"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The local Playwright current-state checkpoint now records successful owner-machine headed Brave smoke, sandbox hardening, one-time Pangram login in the dedicated profile, and the remaining fresh-process authentication, cache/ambiguity, long-document, and paid-submission gates.",
+      "id": "L-40e5e40f16-01",
+      "promoted_to": [],
+      "reason": "This is an operational live-verification checkpoint. The transferable shell-safety, profile-safety, sandboxing, duplicate-defense, and evidence-durability rules are already implemented or promoted separately; this update adds no distinct detector-science or humanization lesson.",
+      "recorded_at_utc": "2026-08-18T14:04:26.501003+00:00",
+      "source_path": "state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md",
+      "source_ref": "79fa9e4c5597b32a8083a7f13eb04530b2e32ef2",
+      "source_sha256": "40e5e40f16239510ecb05079b11ecd602b3d3bbce2bd969ae27ae57a44f1b1a2"
     }
   ],
   "schema_version": 1
