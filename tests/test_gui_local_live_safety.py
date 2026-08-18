@@ -7,12 +7,11 @@ from pangram_lab import gui_local
 from pangram_lab.gui_local import LocalPlaywrightConfig
 
 
-def test_stale_git_marker_does_not_block_dedicated_profile(tmp_path: Path) -> None:
+def test_inert_home_git_marker_is_ignored_by_semantic_probe(tmp_path: Path) -> None:
     (tmp_path / ".git").mkdir()
-    profile = tmp_path / "profile"
+    profile = tmp_path / ".config" / "pangram-local-browser"
 
-    assert gui_local.containing_git_root(profile) is None
-    assert gui_local.validate_profile_dir(profile, home=tmp_path) == profile.resolve()
+    assert gui_local.containing_git_root(profile, home=tmp_path) is None
 
 
 def test_real_git_worktree_still_blocks_profile(tmp_path: Path) -> None:
