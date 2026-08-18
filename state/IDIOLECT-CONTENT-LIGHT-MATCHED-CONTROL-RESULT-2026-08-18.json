@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "status": "content-light-control-complete-not-calibrated",
+  "raw_or_canonical_prose_in_record": false,
+  "source_pr": 73,
+  "workflow_run_id": 32123136059,
+  "algorithm": {
+    "source": "pangram_lab.idiolect._content_light_features",
+    "source_algorithm_version": "pangram-lab-surface-idiolect-v1",
+    "profile_rule": "mean unit document vector per author; nearest profile by cosine"
+  },
+  "results": {
+    "whole_document": {
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.638889,
+      "macro_f1": 0.6,
+      "group_bootstrap_accuracy_95pct": [0.5, 0.666667],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.25,
+        "David Vardy": 0.666667,
+        "Stian Gudmundsen Høiland": 1.0
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [1, 1, 2],
+        [1, 2, 0],
+        [0, 0, 3]
+      ]
+    },
+    "equal_50_word": {
+      "accuracy": 0.4,
+      "balanced_accuracy": 0.388889,
+      "macro_f1": 0.412698,
+      "group_bootstrap_accuracy_95pct": [0.1, 0.636364],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.5,
+        "David Vardy": 0.666667,
+        "Stian Gudmundsen Høiland": 0.0
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [2, 2, 0],
+        [1, 2, 0],
+        [0, 3, 0]
+      ]
+    }
+  },
+  "comparison_to_luar": {
+    "whole_document": {
+      "content_light_accuracy": 0.6,
+      "luar_accuracy": 0.8,
+      "content_light_joel_accuracy": 0.25,
+      "luar_joel_accuracy": 0.75,
+      "interpretation": "The current interpretable content-light feature family does not account for LUAR's stronger whole-passage author separation, especially for Joel."
+    },
+    "equal_50_word": {
+      "content_light_accuracy": 0.4,
+      "luar_accuracy": 0.6,
+      "content_light_joel_accuracy": 0.5,
+      "luar_joel_accuracy": 0.25,
+      "interpretation": "Short-passage results disagree by author and remain unstable; neither lane supports operational short-text calibration."
+    }
+  },
+  "acquisition_efficiency": {
+    "shared_page_cache_added": true,
+    "matched_author_rows": 11,
+    "matched_unique_network_fetches": 5,
+    "control_author_rows": 12,
+    "control_unique_network_fetches": 11,
+    "supplement_rows": 2,
+    "supplement_unique_network_fetches": 2
+  },
+  "interpretation": {
+    "calibration_advanced": false,
+    "ier_claim": false,
+    "operational_threshold_authorized": false,
+    "primary_observation": "LUAR's whole-document advantage is not reproduced by Pangram's current dependency-free content-light feature family. This supports further deep-representation validation but does not prove that LUAR is topic-independent or causally measuring idiolect.",
+    "next_test": "Run a deterministic word-order perturbation through the pinned LUAR model while preserving lexical token multiset and non-word separator sequence. Measure original-vs-shuffled embedding cosine, attribution retention/change, and author-profile cosine displacement on the same held-out documents."
+  }
+}
