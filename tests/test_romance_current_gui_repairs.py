@@ -148,6 +148,14 @@ def test_20612_repairs_remove_new_integration_aftercare_without_touching_protect
     assert "A therapist, a pastor, or even a stranger can sometimes look at the evidence more clearly" in output
 
 
+def test_romance_card_game_links_are_present_without_new_advice_container() -> None:
+    output = _assemble()
+    url = "https://innerself.love/blog/romance-card-game/"
+    assert output.count(url) == 2
+    assert f"[Conversation-card games]({url}) may seem silly" in output
+    assert f"You can make a [card game]({url}) out of this" in output
+
+
 def test_toft_anami_pass_preserves_primal_native_objects_and_order() -> None:
     output = _assemble()
     start = output.index("# Primal attraction: channeling the Divine Masculine & Feminine")
