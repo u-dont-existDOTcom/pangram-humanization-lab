@@ -1,0 +1,120 @@
+name: Idiolect surface SVM matched-platform CV
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-surface-svm-matched-platform-cv.yml
+      - state/IDIOLECT-SURFACE-SVM-MATCHED-PLATFORM-CV-SPEC-2026-08-18.json
+      - src/pangram_lab/surface_svm_matched_cv.py
+      - tests/test_surface_svm_matched_cv.py
+      - src/pangram_lab/surface_svm_pilot.py
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/idiolect-surface-svm-matched-platform-cv.yml
+      - state/IDIOLECT-SURFACE-SVM-MATCHED-PLATFORM-CV-SPEC-2026-08-18.json
+      - src/pangram_lab/surface_svm_matched_cv.py
+      - tests/test_surface_svm_matched_cv.py
+      - src/pangram_lab/surface_svm_pilot.py
+      - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
+      - state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  matched-cv:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package, tests, and isolated research dependency
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pip install -q 'scikit-learn>=1.3,<2'
+
+      - name: Run matched-CV regression tests
+        run: |
+          python -m pytest -q \
+            tests/test_surface_svm_matched_cv.py \
+            tests/test_surface_svm_pilot.py \
+            tests/test_dharma_speaker_acquire.py \
+            tests/test_dharma_control_profiles.py
+
+      - name: Rebuild non-overlap Dharma control profiles
+        run: |
+          python -m pangram_lab.dharma_control_profiles \
+            state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json \
+            --receipt-out .local/idiolect-corpus/dharma-control-profile-receipt.json
+
+      - name: Rebuild matched Dharma author-thread set
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/dharma-matched-cv-text \
+            --manifest-out .local/idiolect-corpus/dharma-matched-cv-manifest.json
+
+      - name: Rebuild Joel-only Dharma supplement
+        run: |
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/dharma-joel-supplement-text \
+            --manifest-out .local/idiolect-corpus/dharma-joel-supplement-manifest.json
+
+      - name: Run matched-platform leave-one-source-group-out pilot
+        run: |
+          python -m pangram_lab.surface_svm_matched_cv \
+            state/IDIOLECT-SURFACE-SVM-MATCHED-PLATFORM-CV-SPEC-2026-08-18.json \
+            --matched-manifest .local/idiolect-corpus/dharma-matched-cv-manifest.json \
+            --supplement-manifest .local/idiolect-corpus/dharma-joel-supplement-manifest.json \
+            --control-manifest .local/idiolect-corpus/dharma-control-profile-acquisition.json \
+            --out .local/idiolect-corpus/surface-svm-matched-cv-receipt.json
+
+      - name: Enforce matched-platform receipt invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/surface-svm-matched-cv-receipt.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          assert data['raw_or_canonical_prose_in_output'] is False
+          assert data['pilot_status'] == 'matched-platform-leave-one-source-group-out-not-IER'
+          assert data['fold_count'] == 4
+          assert data['documents_per_author_per_fold'] == 6
+          assert data['source_group_leakage'] is False
+          assert len(data['folds']) == 4
+          assert len(data['aggregate_models']) == 3
+          for fold in data['folds']:
+              for author in data['authors']:
+                  assert fold['training'][author]['document_count'] == 6
+          for model in data['aggregate_models'].values():
+              assert len(model['predictions']) == 10
+              assert model['group_bootstrap_accuracy_95pct']['groups'] == 4
+              for key in ('accuracy', 'balanced_accuracy', 'macro_f1'):
+                  assert 0.0 <= float(model[key]) <= 1.0
+          encoded = path.read_text(encoding='utf-8')
+          assert 'local_text_path' not in encoded
+          assert 'raw_text' not in encoded
+          assert 'canonical_text' not in encoded
+          PY
+
+      - name: Upload metadata-only matched-platform receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-surface-svm-matched-platform-cv
+          path: .local/idiolect-corpus/surface-svm-matched-cv-receipt.json
+          if-no-files-found: error
+          retention-days: 30

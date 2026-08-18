@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "purpose": "Second surface-authorship calibration pilot: remove the asymmetric TAFKA-vs-Dharma register/platform mismatch by training Joel on other Dharma Connection speaker-labeled sources in leave-one-shared-source-group-out evaluation.",
+  "raw_text_in_git": false,
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "matched_queue": "state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json",
+  "joel_supplement_queue": "state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json",
+  "joel_supplement_sample_ids": [
+    "dc-2013-06-lucid-dreaming",
+    "dc-2013-06-sound-bahiya"
+  ],
+  "control_profile_spec": "state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json",
+  "held_out_source_groups": [
+    "dc-thread-can-anything-known-2014-08-09",
+    "dc-thread-holographic-2014-02-04",
+    "dc-thread-insights-anatta-2014-08-09",
+    "dc-thread-supramundane-jhanas-2014-08-09"
+  ],
+  "fold_training": {
+    "documents_per_author": 6,
+    "joel_rule": "two non-heldout Joel-only Dharma supplement documents plus all Joel matched-queue documents except the current held-out source group",
+    "control_rule": "six largest explicit-speaker non-overlap Dharma profile documents for each control",
+    "whole_documents": true,
+    "equal_document_count": true,
+    "source_group_leakage_forbidden": true
+  },
+  "models": [
+    {
+      "model_id": "paper-described-char2-4-word1-2-linear-svm",
+      "feature_mode": "char+word",
+      "C": 1.0
+    },
+    {
+      "model_id": "char2-4-only-sensitivity",
+      "feature_mode": "char",
+      "C": 1.0
+    },
+    {
+      "model_id": "word1-2-only-sensitivity",
+      "feature_mode": "word",
+      "C": 1.0
+    }
+  ],
+  "evaluation": {
+    "aggregate_metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_f1",
+      "per_author_accuracy",
+      "confusion_matrix"
+    ],
+    "group_bootstrap_accuracy": {
+      "unit": "held-out source_group",
+      "iterations": 10000,
+      "seed": 260800927
+    }
+  },
+  "interpretation": {
+    "chance_accuracy": 0.3333333333,
+    "do_not_call_ier": true,
+    "no_threshold_claim": true,
+    "comparison_target": "Compare especially Joel per-author accuracy and char-only versus word-only behavior against the cross-register pilot. Improvement in char-only Joel attribution under same-platform training would support register mismatch as a real confound; persistence of word-only dominance would weaken the idiolect interpretation."
+  }
+}
