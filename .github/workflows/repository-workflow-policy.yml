@@ -1,8 +1,6 @@
 name: Repository workflow policy
 
 on:
-  push:
-    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -10,7 +8,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: repository-workflow-policy-${{ github.ref }}
+  group: repository-workflow-policy-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:

@@ -70,7 +70,7 @@ When a direct ledger/index write from chat is blocked or would require resending
 
 The request contains only source identity and semantic disposition metadata: `source_path`, `source_ref`, `source_sha256`, `finding`, `disposition`, `reason`, and `promoted_to`. A promoted request may additionally contain an explicit lesson block, index block, and summary target. It must never contain the source article or detector result body.
 
-The existing trusted `.github/workflows/lesson-integrity.yml` Action processes these requests on eligible same-repository pull-request branches before merge. It verifies the named source ref and SHA-256 before mutating canonical state, invokes the canonical closeout logic, applies explicitly supplied promoted blocks idempotently, records the processed request as a receipt, and commits the resulting ledger/index/summary state. The Action has no Pangram secret.
+The trusted `.github/workflows/lesson-closeout-requests.yml` Action runs only when that request directory changes on an eligible same-repository pull request. It verifies the named source ref and SHA-256 before mutating canonical state, invokes the canonical closeout logic, applies explicitly supplied promoted blocks idempotently, records the processed request as a receipt, and commits the resulting ledger/index/summary state. The Action has no Pangram secret. It is deliberately separate from ordinary read-only PR validation so unrelated pull requests do not pay for a second dependency install and focused test job.
 
 If even the small metadata request is blocked, leave the inbox item pending and report that durable unresolved state. Do not pretend the lesson was saved; do not discard the obligation.
 
@@ -94,9 +94,10 @@ The gate tracks new research artifacts after the configured enforcement timestam
 
 `.github/workflows/lesson-integrity.yml` provides:
 
-1. **Metadata request processor** — on eligible same-repository pull requests, tests and processes unprocessed closeout requests on the originating PR branch using a narrowly scoped contents-write job.
-2. **Push / pull-request gate** — changed tracked research artifacts must be dispositioned. If a finding is promoted, the canonical index and summary target(s) must be updated in the same range.
-3. **Weekly audit** — audits current `main` plus configured long-lived evidence refs. If orphaned research or pending review obligations are found, the workflow opens or updates one `Lesson integrity audit: unresolved findings` GitHub issue automatically.
+1. **Pull-request gate** — changed tracked research artifacts must be dispositioned. If a finding is promoted, the canonical index and summary target(s) must be updated in the same range. The same job runs the complete deterministic test suite and cancels a superseded PR-head run when a newer head arrives.
+2. **Weekly audit** — audits current `main` plus configured long-lived evidence refs. If orphaned research or pending review obligations are found, the workflow opens or updates one `Lesson integrity audit: unresolved findings` GitHub issue automatically.
+
+`.github/workflows/lesson-closeout-requests.yml` separately provides the narrowly scoped metadata-request mutation path described above. Ordinary validation no longer reruns automatically after merge to `main`; the pull-request workflow tests GitHub's PR merge ref, while the weekly audit remains the durable backstop.
 
 The weekly audit is a backstop for interruptions and workers that skipped closeout. It is not a substitute for the completion gate.
 

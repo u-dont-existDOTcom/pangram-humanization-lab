@@ -1,0 +1,51 @@
+name: Lesson closeout request processor
+
+on:
+  pull_request:
+    paths:
+      - 'state/lesson-closeout-requests/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lesson-closeout-requests-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  process-requests:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'github-actions[bot]'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install -q -e '.[test]'
+      - name: Test metadata closeout path
+        run: python -m pytest -q tests/test_review_queue.py tests/test_closeout_request.py tests/test_lesson_closeout.py
+      - name: Configure git identity
+        run: |
+          git config user.name "Lesson Integrity Actions"
+          git config user.email "lesson-integrity-actions@users.noreply.github.com"
+      - name: Process pending metadata requests
+        run: PYTHONPATH=src python -m pangram_lab.request_cli
+      - name: Commit processed requests to the pull-request branch
+        env:
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        shell: bash
+        run: |
+          git add state/LESSON-LEDGER.json state/LESSON-INDEX.md state/WORKING-LESSONS*.md state/lesson-closeout-requests || true
+          if git diff --cached --quiet; then
+            echo "No pending metadata requests"
+            exit 0
+          fi
+          git commit -m "lessons: process metadata request"
+          git push origin "HEAD:$HEAD_REF"
