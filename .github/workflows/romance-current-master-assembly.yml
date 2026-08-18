@@ -127,3 +127,85 @@ jobs:
           fi
           git commit -m "state: materialize current Romance master and visible boundary"
           git push origin HEAD:"${GITHUB_REF_NAME}"
+
+  pangram-browserbase-current:
+    needs: materialize
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      BROWSERBASE_API_KEY: ${{ secrets.BROWSERBASE_API_KEY }}
+      BROWSERBASE_CONTEXT_ID: ${{ secrets.BROWSERBASE_CONTEXT_ID }}
+      EXPECTED_PART1_SHA: ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8
+      EXPECTED_PART2_SHA: 2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0
+    steps:
+      - name: Check out current Romance branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+          path: romance
+
+      - name: Check out Browserbase tooling branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: agent/pangram-browserbase-gui-automation-20260817
+          fetch-depth: 0
+          path: browserbase-tooling
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: "3.12"
+
+      - name: Validate Browserbase secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ -n "$BROWSERBASE_API_KEY" ]] || { echo 'Missing BROWSERBASE_API_KEY secret'; exit 2; }
+          [[ -n "$BROWSERBASE_CONTEXT_ID" ]] || { echo 'Missing BROWSERBASE_CONTEXT_ID secret'; exit 2; }
+
+      - name: Verify exact current detector hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          p1=$(sha256sum romance/work/romance-current-assembly/pangram-part-1.txt | awk '{print $1}')
+          p2=$(sha256sum romance/work/romance-current-assembly/pangram-part-2.txt | awk '{print $1}')
+          echo "Part 1: $p1"
+          echo "Part 2: $p2"
+          [[ "$p1" == "$EXPECTED_PART1_SHA" ]] || { echo 'Part 1 SHA mismatch'; exit 3; }
+          [[ "$p2" == "$EXPECTED_PART2_SHA" ]] || { echo 'Part 2 SHA mismatch'; exit 3; }
+
+      - name: Install Browserbase GUI runner
+        working-directory: browserbase-tooling
+        run: python -m pip install -q -e '.[test,browser]'
+
+      - name: Run Pangram 4 GUI on both exact halves
+        working-directory: browserbase-tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/pangram_gui_browserbase.py run \
+            --input ../romance/work/romance-current-assembly/pangram-part-1.txt \
+            --input ../romance/work/romance-current-assembly/pangram-part-2.txt \
+            --output-root state/gui-runs
+
+      - name: Commit only new Browserbase Pangram evidence
+        working-directory: browserbase-tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Pangram GUI Browserbase Actions'
+          git config user.email 'pangram-gui-browserbase-actions@users.noreply.github.com'
+          git add state/gui-runs/pangram-4 || true
+          if git diff --cached --quiet; then
+            echo 'No new Browserbase evidence to commit; exact hashes were cached.'
+            exit 0
+          fi
+          changed=$(git diff --cached --name-only)
+          if grep -Ev '^state/gui-runs/pangram-4/' <<<"$changed" >/dev/null; then
+            echo 'Refusing to commit paths outside state/gui-runs/pangram-4/'
+            printf '%s\n' "$changed"
+            exit 2
+          fi
+          git commit -m "evidence: Browserbase Pangram current Romance halves"
+          git push origin HEAD:agent/pangram-browserbase-gui-automation-20260817
