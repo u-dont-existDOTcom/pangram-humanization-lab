@@ -2,18 +2,80 @@ from __future__ import annotations
 
 import collections
 import hashlib
+import html as html_lib
 import json
+import re
 import sys
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Iterable
 
 from .blogger_discover import ATOM, _feed_url, _https_url, _root_from_url, fetch_atom
-from .dharma_author_discover import _canonical_post_url, _entry_html, _speaker_labels
+from .dharma_author_discover import _PERSON_LABEL_RE, _canonical_post_url, _entry_html
 
 
 class OrdinaryControlCensusError(ValueError):
     pass
+
+
+class ConfiguredSpeakerLabelScanner(HTMLParser):
+    """Collect explicit person labels without broad one-token heading leakage."""
+
+    _LABEL_TAGS = {"b", "strong", "cite"}
+
+    def __init__(self, *, allowed_single_token_labels: Iterable[str] = ()):
+        super().__init__(convert_charrefs=True)
+        self.depth = 0
+        self.parts: list[str] = []
+        self.labels: list[str] = []
+        self.allowed_single_token_labels = {
+            str(value).strip().rstrip(":").casefold()
+            for value in allowed_single_token_labels
+            if str(value).strip()
+        }
+
+    def handle_starttag(self, tag: str, attrs):
+        if tag.lower() in self._LABEL_TAGS:
+            if self.depth == 0:
+                self.parts = []
+            self.depth += 1
+
+    def handle_endtag(self, tag: str):
+        if tag.lower() not in self._LABEL_TAGS or self.depth <= 0:
+            return
+        self.depth -= 1
+        if self.depth:
+            return
+        value = html_lib.unescape("".join(self.parts))
+        value = re.sub(r"\s+", " ", value).strip()
+        match = _PERSON_LABEL_RE.match(value)
+        candidate = match.group(1).strip() if match else None
+        if candidate is None:
+            one_token = value.rstrip(":").strip()
+            if (
+                one_token
+                and " " not in one_token
+                and one_token.casefold() in self.allowed_single_token_labels
+            ):
+                candidate = one_token
+        if candidate and not candidate.isupper():
+            self.labels.append(candidate)
+        self.parts = []
+
+    def handle_data(self, data: str):
+        if self.depth:
+            self.parts.append(data)
+
+
+def _speaker_labels(
+    content_html: str, *, allowed_single_token_labels: Iterable[str] = ()
+) -> list[str]:
+    scanner = ConfiguredSpeakerLabelScanner(
+        allowed_single_token_labels=allowed_single_token_labels
+    )
+    scanner.feed(content_html)
+    return scanner.labels
 
 
 def _sha256_text(value: str) -> str:
