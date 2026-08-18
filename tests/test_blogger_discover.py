@@ -1,11 +1,13 @@
 import json
-from pathlib import Path
 
 from pangram_lab import blogger_discover as bd
 
 
-def atom(entries):
+def atom(entries, *, next_url=None):
     body = ['<?xml version="1.0" encoding="UTF-8"?>', '<feed xmlns="http://www.w3.org/2005/Atom">']
+    if next_url:
+        escaped = next_url.replace('&', '&amp;')
+        body.append(f'<link rel="next" type="application/atom+xml" href="{escaped}"/>')
     for row in entries:
         body.extend(
             [
@@ -49,34 +51,49 @@ def test_parse_atom_keeps_metadata_not_content():
     assert 'CONTENT' not in repr(posts[0])
 
 
-def test_discover_blog_pages_and_applies_pre_llm_cutoff(monkeypatch):
+def test_parse_atom_page_normalizes_next_link_to_https():
+    body = atom(
+        [],
+        next_url='http://Example.Blogspot.com/feeds/posts/default?start-index=51&max-results=50',
+    )
+    _, next_url = bd.parse_atom_page(body)
+    assert next_url == (
+        'https://example.blogspot.com/feeds/posts/default?start-index=51&max-results=50'
+    )
+
+
+def test_discover_blog_follows_rel_next_even_when_service_caps_below_requested_size(monkeypatch):
+    first_url = 'https://x.blogspot.com/feeds/posts/default?alt=atom&start-index=1&max-results=100'
+    second_url = 'https://x.blogspot.com/feeds/posts/default?start-index=2&max-results=1'
     pages = {
-        1: atom(
+        first_url: atom(
             [
                 {'id': 'old-1', 'published': '2019-01-01T00:00:00Z', 'title': 'Old one', 'url': 'https://x.blogspot.com/2019/01/old-one.html'},
-                {'id': 'new-1', 'published': '2024-01-01T00:00:00Z', 'title': 'New one', 'url': 'https://x.blogspot.com/2024/01/new-one.html'},
-            ]
+            ],
+            next_url=second_url,
         ),
-        3: atom(
+        second_url: atom(
             [
                 {'id': 'old-2', 'published': '2020-01-01T00:00:00Z', 'title': 'Old two', 'url': 'https://x.blogspot.com/2020/01/old-two.html'},
+                {'id': 'new-1', 'published': '2024-01-01T00:00:00Z', 'title': 'New one', 'url': 'https://x.blogspot.com/2024/01/new-one.html'},
             ]
         ),
     }
 
     def fake_fetch(url, timeout=30):
-        start = 1 if 'start-index=1' in url else 3
-        return pages[start], f'sha-{start}'
+        return pages[url], 'sha-' + ('1' if url == first_url else '2')
 
     monkeypatch.setattr(bd, 'fetch_atom', fake_fetch)
     result = bd.discover_blog(
         'https://x.blogspot.com/post/path',
         published_before='2022-11-30T00:00:00Z',
-        page_size=2,
+        page_size=100,
     )
     assert result['post_count'] == 2
     assert [p['entry_id'] for p in result['posts']] == ['old-1', 'old-2']
     assert len(result['pages']) == 2
+    assert result['pages'][0]['entry_count'] == 1
+    assert result['pages'][0]['next_url'] == second_url
 
 
 def test_discovery_queue_contains_metadata_only(tmp_path, monkeypatch):
