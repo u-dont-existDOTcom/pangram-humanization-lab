@@ -37,3 +37,17 @@ def test_metadata_row_never_contains_local_text_path():
         "word_count": 12,
         "canonical_sha256": "abc",
     }
+
+
+def test_only_known_empty_explicit_control_error_is_nonfatal():
+    hard, documented = cv._hard_control_errors(
+        [
+            {
+                "sample_id": "empty",
+                "error": "target-speaker-marker-found-but-no-authored-words",
+            },
+            {"sample_id": "bad", "error": "target-speaker-marker-not-found"},
+        ]
+    )
+    assert [row["sample_id"] for row in documented] == ["empty"]
+    assert [row["sample_id"] for row in hard] == ["bad"]
