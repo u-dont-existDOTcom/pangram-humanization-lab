@@ -11,7 +11,17 @@
     "test_focused": "python -m pytest -q tests/test_review_queue.py tests/test_closeout_request.py tests/test_lesson_closeout.py",
     "audit": "python scripts/audit_codex_github.py --root . --fail-on error",
     "lesson_audit": "PYTHONPATH=src python -m pangram_lab.lesson_closeout audit --ref HEAD",
+    "publication_secret_audit": "bash scripts/audit-publication-secrets.sh",
     "interactive_run": "./INSTALL-AND-RUN.sh"
+  },
+  "publication_transition": {
+    "target_visibility": "public",
+    "status": "pre_publication_audit_pending",
+    "owner_approved_test_corpus_disclosure": true,
+    "approved_at": "2026-08-18",
+    "excluded_repository": "u-dont-existDOTcom/AskRigor-lessons",
+    "audit_workflow": ".github/workflows/publication-secret-audit.yml",
+    "audit_scope": "reachable Git history plus issue/PR bodies and comments, PR reviews, release metadata, ref/commit metadata, and retained Actions logs; credentials/private-key risk only because Pangram test prose is owner-approved for disclosure"
   },
   "current_state": "state/CURRENT-STATE.md",
   "github_controls": {
@@ -23,5 +33,5 @@
     "vulnerability_alerts": "unverified",
     "evidence_branch_rules": "unverified"
   },
-  "audit_note": "Repository-visible controls are enforced in CI. Hosted-setting observations and declared exceptions are recorded in docs/CODEX-GITHUB-COMPLIANCE-2026-08-14.md; unverified means the connected integration could not read the setting and no inference was made."
+  "audit_note": "Repository-visible controls are enforced in CI. Hosted-setting observations and declared exceptions are recorded in docs/CODEX-GITHUB-COMPLIANCE-2026-08-14.md; unverified means the connected integration could not read the setting and no inference was made. Visibility remains private until the pre-publication audit passes and the hosted visibility setting is changed/read back."
 }
