@@ -288,9 +288,10 @@ def extract_blogspot(html: str, *, mode: str) -> str:
 
 def iter_inventory_items(inventory: dict) -> Iterable[dict]:
     for source in inventory.get("sources", []):
+        site_group = source.get("site_group") or source.get("source_group") or source.get("source_id")
         common = {
             "parent_source_id": source.get("source_id"),
-            "source_group": source.get("source_group"),
+            "site_group": site_group,
             "provenance": source.get("provenance"),
             "modality": source.get("modality"),
             "registers": source.get("registers", []),
@@ -298,12 +299,15 @@ def iter_inventory_items(inventory: dict) -> Iterable[dict]:
         nested = source.get("known_posts") or source.get("known_threads")
         if nested:
             for item in nested:
-                yield {**common, **item}
+                row = {**common, **item}
+                row["source_group"] = item.get("source_group") or item.get("sample_id")
+                yield row
             continue
         if source.get("canonical_url") and source.get("capture_status") == "public-captured":
             yield {
                 **common,
                 "sample_id": source["source_id"],
+                "source_group": source.get("source_group") or source["source_id"],
                 "title": source.get("title"),
                 "date": source.get("date"),
                 "url": source["canonical_url"],
@@ -351,6 +355,7 @@ def acquire_inventory(
                 {
                     "sample_id": sample_id,
                     "parent_source_id": item.get("parent_source_id"),
+                    "site_group": item.get("site_group"),
                     "source_group": item.get("source_group"),
                     "title": item.get("title"),
                     "date": item.get("date"),
