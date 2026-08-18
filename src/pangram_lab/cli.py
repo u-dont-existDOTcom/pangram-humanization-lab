@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse, getpass, json, os, shutil, subprocess, sys
 from pathlib import Path
+from .authorial_flow_rsg import add_cli_parsers as add_authorial_flow_rsg_cli_parsers, run_cli as run_authorial_flow_rsg_cli
 from .authorial_flow_trace import add_cli_parsers as add_authorial_flow_cli_parsers, run_cli as run_authorial_flow_cli
 from .blogger_discover import add_cli_parsers as add_blogger_cli_parsers, run_cli as run_blogger_cli
 from .cache import PangramCache
@@ -27,6 +28,7 @@ def parser():
     add_corpus_cli_parsers(sp)
     add_blogger_cli_parsers(sp)
     add_authorial_flow_cli_parsers(sp)
+    add_authorial_flow_rsg_cli_parsers(sp)
     return p
 
 
@@ -61,6 +63,8 @@ def main(argv=None):
             return run_blogger_cli(a)
         if a.cmd=="authorial-flow-trace":
             return run_authorial_flow_cli(a)
+        if a.cmd=="authorial-flow-rsg-ls":
+            return run_authorial_flow_rsg_cli(a, repo_root=rt)
         if a.cmd=="github-ensure":
             # Commit the unpacked source locally first; then create/connect the
             # private GitHub repository and push that exact tree.
