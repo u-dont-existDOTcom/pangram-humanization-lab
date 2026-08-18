@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "status": "synchronized-diagnostic-complete-promising-not-calibrated-not-IER",
+  "source_pr": 75,
+  "workflow_run_id": 32123905439,
+  "artifact": {
+    "name": "idiolect-synchronized-source-snapshot",
+    "artifact_id": 9319686697,
+    "sha256": "d17c212459a52a86d5ad7f3130888a50e55bd63a615e5923ff8b274147b50a81"
+  },
+  "source_snapshot": {
+    "file": "state/IDIOLECT-DHARMA-SYNCHRONIZED-SNAPSHOT-2026-08-18.json",
+    "retrieval_snapshot_sha256": "82630c6d6b205eb02ad07abc85e4d4b845d007e00932215e4ab6c5af054edcee",
+    "canonical_hash_set_sha256": "ffe9cc36f33c38dfc1fa5f5d5324a9283127790f68a296b5492955894d77715e",
+    "rows": 25,
+    "held_out_source_groups": 4,
+    "held_out_author_documents": 10
+  },
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "content_light": {
+    "algorithm_version": "pangram-lab-surface-idiolect-v1",
+    "same_snapshot_repeat_receipts_byte_identical": true,
+    "whole_document": {
+      "accuracy": 0.3,
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.25,
+      "bootstrap_accuracy_95pct": [0.0, 0.6],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.0,
+        "David Vardy": 0.666667,
+        "Stian Gudmundsen Høiland": 0.333333
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [[0,1,3],[0,2,1],[0,2,1]]
+    },
+    "equal_50_word": {
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.583333,
+      "macro_f1": 0.588889,
+      "bootstrap_accuracy_95pct": [0.4, 0.875],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.75,
+        "David Vardy": 0.333333,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [[3,0,1],[2,1,0],[1,0,2]]
+    }
+  },
+  "luar_baseline": {
+    "model_id": "rrivera1849/LUAR-MUD",
+    "revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "upstream_transformer_revision": "48bffbbd27bf028ecdd0cd55abb51236ec12ef1b",
+    "whole_document": {
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.805556,
+      "macro_f1": 0.802381,
+      "bootstrap_accuracy_95pct": [0.5, 1.0],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.75,
+        "David Vardy": 1.0,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [[3,1,0],[0,3,0],[1,0,2]]
+    },
+    "equal_50_word": {
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.638889,
+      "macro_f1": 0.6,
+      "bootstrap_accuracy_95pct": [0.5, 0.666667],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.25,
+        "David Vardy": 0.666667,
+        "Stian Gudmundsen Høiland": 1.0
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [[1,0,3],[1,2,0],[0,0,3]]
+    }
+  },
+  "luar_controls": {
+    "whole_document_block_shuffle": {
+      "accuracy": 0.4,
+      "balanced_accuracy": 0.416667,
+      "macro_f1": 0.416667,
+      "bootstrap_accuracy_95pct": [0.090909, 0.636364],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.25,
+        "David Vardy": 0.666667,
+        "Stian Gudmundsen Høiland": 0.333333
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [[1,3,0],[1,2,0],[2,0,1]]
+    },
+    "equal_50_word_shuffle": {
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.611111,
+      "macro_f1": 0.603175,
+      "bootstrap_accuracy_95pct": [0.5, 0.666667],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.5,
+        "David Vardy": 0.666667,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [[2,0,2],[1,2,0],[0,1,2]]
+    },
+    "whole_document_function_mask": {
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.583333,
+      "macro_f1": 0.577778,
+      "bootstrap_accuracy_95pct": [0.4, 0.875],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.75,
+        "David Vardy": 0.333333,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [[3,1,0],[1,1,1],[1,0,2]]
+    },
+    "equal_50_word_function_mask": {
+      "accuracy": 0.7,
+      "balanced_accuracy": 0.694444,
+      "macro_f1": 0.694444,
+      "bootstrap_accuracy_95pct": [0.5, 0.909091],
+      "per_author_accuracy": {
+        "Joel Rosenblum": 0.75,
+        "David Vardy": 0.666667,
+        "Stian Gudmundsen Høiland": 0.666667
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [[3,0,1],[1,2,0],[0,1,2]]
+    }
+  },
+  "interpretation": {
+    "source_reproducibility": "The content-light control produced byte-identical receipts when repeated on the same runtime bytes. Its earlier cross-run disagreement is therefore attributable to unfrozen live-source snapshot drift rather than observed algorithmic nondeterminism. Cross-run metrics must be source-hash conditioned.",
+    "luar_reproducibility": "The pinned LUAR baseline reproduced PR #71 exactly on the synchronized snapshot, and all four LUAR content controls reproduced PR #74 exactly.",
+    "surface_proxy_disposition": "The current Pangram content-light proxy is not a calibrated substitute for LUAR: Joel is 0/4 on whole documents but 3/4 at exact 50 words.",
+    "luar_signal": "LUAR whole-document attribution is materially stronger than the current hand-engineered content-light proxy, but falls when local word order is destroyed. Simple lexical inventory alone is not sufficient for the whole-document result.",
+    "content_light_signal": "Joel remains 3/4 under LUAR function masking in both whole-document and exact-50 conditions. The exact-50 function-mask result avoids tokenizer-truncation confounding and is positive evidence that non-content form carries author signal in this small matched corpus.",
+    "calibration_decision": "unvalidated",
+    "next_required_work": [
+      "transformation sensitivity on independently frozen original/candidate pairs",
+      "larger independent source-group holdout",
+      "recheck current Tier-A proxy only after Tier-B evidence is stable across register/source strata"
+    ],
+    "forbidden_claims": [
+      "not IER",
+      "no Tier-A operational threshold",
+      "no validated-for-register status",
+      "no averaging of disagreeing instruments",
+      "no silent comparison across different canonical source snapshots"
+    ]
+  },
+  "privacy": {
+    "raw_or_canonical_prose_in_git": false,
+    "embedding_vectors_in_git": false,
+    "result_contains_only_metadata_and_metrics": true
+  }
+}

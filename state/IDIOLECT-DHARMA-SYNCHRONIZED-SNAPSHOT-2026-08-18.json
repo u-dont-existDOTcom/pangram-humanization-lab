@@ -1,0 +1,63 @@
+{
+  "artifact": {
+    "artifact_id": 9319686697,
+    "name": "idiolect-synchronized-source-snapshot",
+    "sha256": "d17c212459a52a86d5ad7f3130888a50e55bd63a615e5923ff8b274147b50a81"
+  },
+  "canonical_hash_set_sha256": "ffe9cc36f33c38dfc1fa5f5d5324a9283127790f68a296b5492955894d77715e",
+  "date": "2026-08-18",
+  "interpretation": {
+    "benchmark_identity": "Use row-wise canonical_sha256 + word_count as the content identity for this pilot. source_html_sha256 is retrieval evidence and may change without changing extracted canonical prose.",
+    "live_source_rule": "Future reruns must report canonical-hash drift explicitly. Do not silently compare metrics across different canonical snapshots."
+  },
+  "network_fetch_counts": {
+    "control": 11,
+    "matched": 5,
+    "supplement": 2
+  },
+  "privacy": {
+    "local_paths_in_snapshot": false,
+    "raw_or_canonical_prose_in_git": false,
+    "urls_in_snapshot": false
+  },
+  "retrieval_snapshot_sha256": "82630c6d6b205eb02ad07abc85e4d4b845d007e00932215e4ab6c5af054edcee",
+  "row_counts": {
+    "control": 12,
+    "matched": 11,
+    "supplement": 2
+  },
+  "rows": [
+    {"canonical_sha256":"179388074a8b8edff36aee498d174eae1f4160842312cbadda1cb9e53f7f399a","role":"control","sample_id":"luar-david-osho","source_group":"dc-thread-2927665278974761460","source_html_sha256":"ddfbfd79c84c16c92cd84c0096ca46649223a85c1b01ad90b52c6043806bab0d","speaker":"David Vardy","word_count":1115},
+    {"canonical_sha256":"484a4af3415012191d610ba36f9026f3ca5f49544fb283475c0a245e5e3083dc","role":"control","sample_id":"luar-stian-did-buddha-teach-atman","source_group":"dc-thread-3079478924172374697","source_html_sha256":"a6b69b5ea41274bd2f3c44f05058f32e3695383f9981cde272f7f73866791e0a","speaker":"Stian Gudmundsen Høiland","word_count":1551},
+    {"canonical_sha256":"702c19b2821766ca83b896b3a8f81799279e099491f5811c33f948528e0bb3d5","role":"control","sample_id":"luar-david-pure-experiencing","source_group":"dc-thread-442182990219876274","source_html_sha256":"6935fd27cb03b2ec92438fd341629ebb5b344a7711a648bbe96fd04212202fa0","speaker":"David Vardy","word_count":1819},
+    {"canonical_sha256":"acbac5bd8b7b8a00d8ee78b1a72c32e1632f4a77fa5512435e998cd2915fdbac","role":"control","sample_id":"luar-david-two-techniques","source_group":"dc-thread-4960827698552253636","source_html_sha256":"1c725c865a94a875a5c5420ef050eb57b27c80c16bb237e8df069fd0b9beef03","speaker":"David Vardy","word_count":1626},
+    {"canonical_sha256":"db459d4aef9c9690621cf6f49c5b38622c24a62501e93baabc4499812cd673e3","role":"control","sample_id":"luar-stian-two-techniques","source_group":"dc-thread-4960827698552253636","source_html_sha256":"1c725c865a94a875a5c5420ef050eb57b27c80c16bb237e8df069fd0b9beef03","speaker":"Stian Gudmundsen Høiland","word_count":1659},
+    {"canonical_sha256":"1cb599286525e6b0634306c2e44e713c73cf07123674c5d62e6f9dc28c4f410e","role":"control","sample_id":"luar-david-when-seeing-expressed","source_group":"dc-thread-5362662832705964938","source_html_sha256":"803aaea1a041e8b13fe29cd3ecd51e7789c6179153c176ac524f678cad0a292e","speaker":"David Vardy","word_count":493},
+    {"canonical_sha256":"1eca5ef542acff6992c7dce62b7ab9627e0c9a1e1805e782d50530ad3b8c793e","role":"control","sample_id":"luar-david-integrating-activities-dreams","source_group":"dc-thread-624998290513123243","source_html_sha256":"975c30c5f3b28e8824e232f06122dd6778d08bf5f4663b906eb0079ba206a02f","speaker":"David Vardy","word_count":1143},
+    {"canonical_sha256":"047ffe7614f8a5b15e5cc1ed6973b65b4341be217844222f5f9b5172271b071a","role":"control","sample_id":"luar-stian-experience-actualization-anatta","source_group":"dc-thread-6266197889093613190","source_html_sha256":"33b1f8098003baa6709e1c5dc8cc0b4644744ae02163de49c0f79199996bf3b2","speaker":"Stian Gudmundsen Høiland","word_count":1085},
+    {"canonical_sha256":"98c3541be0c35bebc857cb7186bcade7ccbf57cc588df392dc9eb025fc174737","role":"control","sample_id":"luar-stian-experience-skandha-ignorance","source_group":"dc-thread-761662024753954182","source_html_sha256":"42c3ae98bde585e6f62c9e26218f65a65083e5d0863e29ef2054e5cab80c09c2","speaker":"Stian Gudmundsen Høiland","word_count":4891},
+    {"canonical_sha256":"8fd96ff397d253bebaf8db3feae5632ff376913765c852417303687c5ad3cebc","role":"control","sample_id":"luar-david-lucid-dreams","source_group":"dc-thread-8864539321750513395","source_html_sha256":"9e96dbbb65112a622758b77a81fd2832592eb64a878bb8042c91b1aa5602c1eb","speaker":"David Vardy","word_count":3329},
+    {"canonical_sha256":"c2affb4753cd750a56cec682c183a812c97faaaeff2767bf65329e178efa52e2","role":"control","sample_id":"luar-stian-fabrications-middle-way","source_group":"dc-thread-955056025704312309","source_html_sha256":"3b8e1e4a4d2d2028d81b6bee8254a4fd163e1d3197099f08b49bd459e5deafcd","speaker":"Stian Gudmundsen Høiland","word_count":1912},
+    {"canonical_sha256":"8886ee9d25d29e4ae943fc11ee48cf085b5ee4c31f225c0b998234db1e531afe","role":"control","sample_id":"luar-stian-causality-self-perfection","source_group":"dc-thread-958058664579671905","source_html_sha256":"e6342088159663e920df89013e1ced7b7a2527f23cfa5b845063212d28d682c6","speaker":"Stian Gudmundsen Høiland","word_count":1021},
+    {"canonical_sha256":"de1dc9d70612d4f385abca1eda4f95149f5faf0e7eeb355b307dc0f1025fc93e","role":"matched","sample_id":"dcp-joel-anatta-email","source_group":"dc-thread-anatta-email-2013-07-11","source_html_sha256":"dbe95afd701bc884c799817f6422f7eb4f574ba7b60921c936cf9f3920e96f5c","speaker":"Joel Rosenblum","word_count":13},
+    {"canonical_sha256":"e6f0ad33fa0216dcf5cd4071703d84286d4a2a9d949c07d53d1a13c96bce11c6","role":"matched","sample_id":"dcp-david-can-anything-known","source_group":"dc-thread-can-anything-known-2014-08-09","source_html_sha256":"b3fe1b1f164f75b3b33ea028d9af2381d16e90fbf7e8b89880f6f580e72c9d0a","speaker":"David Vardy","word_count":52},
+    {"canonical_sha256":"089afaf8451a84c844d0bc5d049ac6245acce068e9ba56f17348c554e09b6719","role":"matched","sample_id":"dcp-joel-can-anything-known","source_group":"dc-thread-can-anything-known-2014-08-09","source_html_sha256":"b3fe1b1f164f75b3b33ea028d9af2381d16e90fbf7e8b89880f6f580e72c9d0a","speaker":"Joel Rosenblum","word_count":162},
+    {"canonical_sha256":"1bfa919e4f14fdd090232f449749ef43d6d687e2a5b59dd7b684e0a11347b962","role":"matched","sample_id":"dcp-stian-can-anything-known","source_group":"dc-thread-can-anything-known-2014-08-09","source_html_sha256":"b3fe1b1f164f75b3b33ea028d9af2381d16e90fbf7e8b89880f6f580e72c9d0a","speaker":"Stian Gudmundsen Høiland","word_count":104},
+    {"canonical_sha256":"bab4c8863bd812916ccd20d353fba9e05c0902309cd0a70e66e53839eb1be650","role":"matched","sample_id":"dcp-joel-holographic","source_group":"dc-thread-holographic-2014-02-04","source_html_sha256":"8f9e92f33737315804daf79bcb800634d7b122a2559fb9809aad5cd17a844d2e","speaker":"Joel Rosenblum","word_count":76},
+    {"canonical_sha256":"e32879a5eebab81caf734004b0623396cde01241b03a65535d5fa4869cb2fafa","role":"matched","sample_id":"dcp-stian-holographic","source_group":"dc-thread-holographic-2014-02-04","source_html_sha256":"8f9e92f33737315804daf79bcb800634d7b122a2559fb9809aad5cd17a844d2e","speaker":"Stian Gudmundsen Høiland","word_count":59},
+    {"canonical_sha256":"0f78669bedce4adcf1ccb2ac225315fc832070b1eaea2c21c2d4b643e846bb45","role":"matched","sample_id":"dcp-david-insights-anatta","source_group":"dc-thread-insights-anatta-2014-08-09","source_html_sha256":"f5904f021bd24d600a3deadc7721545468afbd5521cb2f7c51c1f31987ece902","speaker":"David Vardy","word_count":1916},
+    {"canonical_sha256":"2ee7a77ea1270f6192a44246cbf19b4bcb83e1a250a8fabf0124bafbdc62bc75","role":"matched","sample_id":"dcp-joel-insights-anatta","source_group":"dc-thread-insights-anatta-2014-08-09","source_html_sha256":"f5904f021bd24d600a3deadc7721545468afbd5521cb2f7c51c1f31987ece902","speaker":"Joel Rosenblum","word_count":576},
+    {"canonical_sha256":"f21f65a1ab9b92cecf51550e836bbc3b4e19fff0ed4876ce9c9e2e10e7dbcecf","role":"matched","sample_id":"dcp-stian-insights-anatta","source_group":"dc-thread-insights-anatta-2014-08-09","source_html_sha256":"f5904f021bd24d600a3deadc7721545468afbd5521cb2f7c51c1f31987ece902","speaker":"Stian Gudmundsen Høiland","word_count":653},
+    {"canonical_sha256":"8307226ef91a74526d6016cebd1f600baead8cc313191d450eab1211f7af8cbf","role":"matched","sample_id":"dcp-david-supramundane-jhanas","source_group":"dc-thread-supramundane-jhanas-2014-08-09","source_html_sha256":"6ebf16aa9498ba84b5e51bd2df2c5065496e4b885e579e7800abdc8b2b2c87e2","speaker":"David Vardy","word_count":237},
+    {"canonical_sha256":"890ff99766b488b787b1f0a295f1cb6524e8379006741107ad8ae83f3dee33fd","role":"matched","sample_id":"dcp-joel-supramundane-jhanas","source_group":"dc-thread-supramundane-jhanas-2014-08-09","source_html_sha256":"6ebf16aa9498ba84b5e51bd2df2c5065496e4b885e579e7800abdc8b2b2c87e2","speaker":"Joel Rosenblum","word_count":304},
+    {"canonical_sha256":"1310a96799a2e239da4738557ec041d9634f146bcbfeb9871d69e32ba86e0921","role":"supplement","sample_id":"dc-2013-06-lucid-dreaming","source_group":"dc-2013-06-lucid-dreaming","source_html_sha256":"e6c16d0fab82a293a6214ca3b2e07a8bafc65fc5ae8e7f04364d8299c5e2ea4a","speaker":"Joel Rosenblum","word_count":174},
+    {"canonical_sha256":"3a904ee5ebd10af467ec5f9d982912e3f2167f81cc23daed159201eb703adeeb","role":"supplement","sample_id":"dc-2013-06-sound-bahiya","source_group":"dc-2013-06-sound-bahiya","source_html_sha256":"bee9b93f918050e735c21484a15664c8d4bac0185f10914d6638f05afdfd84a4","speaker":"Joel Rosenblum","word_count":47}
+  ],
+  "same_page_snapshot_consistent_within_role": true,
+  "schema_version": 1,
+  "source_group_overlap": {"control_vs_matched":[],"supplement_vs_matched":[]},
+  "source_html_hash_set_sha256": "c8671285f77fff905cd50945466c6a9a1af92411154859d00e240bcb4b458012",
+  "source_pr": 75,
+  "status": "canonical-metadata-snapshot-for-current-dharma-pilot",
+  "workflow_run_id": 32123905439
+}
