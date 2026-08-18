@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "purpose": "Freeze a register-labeled, source-separated natural-owner Joel corpus candidate that reduces the single-source dominance of the first TAFKA profile before any further attribution or rewrite-degradation claims.",
+  "method_decision": "adapt-and-compose-established-corpus-controls",
+  "method_note": "This reuses the repository's source-level split, provenance, cleanup, exact-hash, and equal-word-budget controls. It does not introduce a new authorship metric or a new calibration threshold.",
+  "source_inventory": "state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json",
+  "raw_or_canonical_prose_in_git": false,
+  "corpus_status": "candidate-frozen-not-benchmark-eligible",
+  "documents": [
+    {
+      "sample_id": "tafka-2015-02-02-true-love",
+      "cleanup_rule": "after-first-label:Answer",
+      "site_group": "tafkajestdr",
+      "primary_register": "philosophical-relationship",
+      "registers": ["philosophical", "relationship", "research-conversational"],
+      "review_status": "conservative-cleanup-frozen-pr65",
+      "role": "profile-candidate"
+    },
+    {
+      "sample_id": "tafka-2015-02-12-no-way-to-know",
+      "cleanup_rule": "before-first-label:And here's a useful snippet I snagged",
+      "site_group": "tafkajestdr",
+      "primary_register": "philosophical",
+      "registers": ["philosophical", "research-conversational", "polemical-irreverent"],
+      "review_status": "conservative-cleanup-frozen-pr65",
+      "role": "profile-candidate"
+    },
+    {
+      "sample_id": "tafka-2015-02-23-right-view-humility",
+      "cleanup_rule": "whole-after-existing-blockquote-drop",
+      "site_group": "tafkajestdr",
+      "primary_register": "philosophical",
+      "registers": ["philosophical", "research-conversational"],
+      "review_status": "conservative-cleanup-frozen-pr65",
+      "role": "profile-candidate"
+    },
+    {
+      "sample_id": "tafka-2016-06-08-already-perfect",
+      "cleanup_rule": "whole-after-existing-blockquote-drop",
+      "site_group": "tafkajestdr",
+      "primary_register": "philosophical",
+      "registers": ["philosophical", "research-conversational", "personal-tender"],
+      "review_status": "conservative-cleanup-frozen-pr65",
+      "role": "profile-candidate"
+    },
+    {
+      "sample_id": "tafka-2019-03-08-plant-spirits",
+      "cleanup_rule": "whole-message-by-you-extraction",
+      "site_group": "tafkajestdr",
+      "primary_register": "research-conversational",
+      "registers": ["research-conversational", "philosophical", "polemical-irreverent"],
+      "review_status": "conservative-cleanup-frozen-pr65",
+      "role": "profile-candidate"
+    },
+    {
+      "sample_id": "ins-2008-09-01-nader-accuracy",
+      "cleanup_rule": "whole-after-existing-blockquote-drop",
+      "site_group": "theinsurgencyisworking",
+      "primary_register": "political-journalistic",
+      "registers": ["political", "journalistic-commentary", "polemical-irreverent"],
+      "review_status": "clean-metadata-manual-boundary-audit-pending",
+      "role": "profile-candidate-pending-audit"
+    },
+    {
+      "sample_id": "ins-2008-09-09-afghanistan",
+      "cleanup_rule": "whole-after-existing-blockquote-drop",
+      "site_group": "theinsurgencyisworking",
+      "primary_register": "political-journalistic",
+      "registers": ["political", "journalistic-commentary", "polemical-irreverent"],
+      "review_status": "clean-metadata-manual-boundary-audit-pending",
+      "role": "profile-candidate-pending-audit"
+    },
+    {
+      "sample_id": "ins-2009-04-17-israel-palestine",
+      "cleanup_rule": "whole-after-existing-blockquote-drop",
+      "site_group": "theinsurgencyisworking",
+      "primary_register": "political-journalistic",
+      "registers": ["political", "journalistic-commentary", "polemical-irreverent"],
+      "review_status": "clean-metadata-manual-boundary-audit-pending",
+      "role": "profile-candidate-pending-audit"
+    },
+    {
+      "sample_id": "ins-2012-02-01-police-athletic-league",
+      "cleanup_rule": "whole-after-existing-blockquote-drop",
+      "site_group": "theinsurgencyisworking",
+      "primary_register": "political-journalistic",
+      "registers": ["political", "journalistic-commentary", "polemical-irreverent"],
+      "review_status": "clean-metadata-manual-boundary-audit-pending",
+      "role": "profile-candidate-pending-audit"
+    }
+  ],
+  "views": [
+    {
+      "view_id": "conservative-philosophical-full",
+      "sample_ids": [
+        "tafka-2015-02-02-true-love",
+        "tafka-2015-02-12-no-way-to-know",
+        "tafka-2015-02-23-right-view-humility",
+        "tafka-2016-06-08-already-perfect",
+        "tafka-2019-03-08-plant-spirits"
+      ],
+      "word_budget_per_source": null,
+      "status": "profile-candidate-single-site-not-calibrated"
+    },
+    {
+      "view_id": "post-audit-pooled-full",
+      "sample_ids": [
+        "tafka-2015-02-02-true-love",
+        "tafka-2015-02-12-no-way-to-know",
+        "tafka-2015-02-23-right-view-humility",
+        "tafka-2016-06-08-already-perfect",
+        "tafka-2019-03-08-plant-spirits",
+        "ins-2008-09-01-nader-accuracy",
+        "ins-2008-09-09-afghanistan",
+        "ins-2009-04-17-israel-palestine",
+        "ins-2012-02-01-police-athletic-league"
+      ],
+      "word_budget_per_source": null,
+      "status": "candidate-blocked-on-four-manual-audits"
+    },
+    {
+      "view_id": "post-audit-pooled-max-500",
+      "sample_ids": [
+        "tafka-2015-02-02-true-love",
+        "tafka-2015-02-12-no-way-to-know",
+        "tafka-2015-02-23-right-view-humility",
+        "tafka-2016-06-08-already-perfect",
+        "tafka-2019-03-08-plant-spirits",
+        "ins-2008-09-01-nader-accuracy",
+        "ins-2008-09-09-afghanistan",
+        "ins-2009-04-17-israel-palestine",
+        "ins-2012-02-01-police-athletic-league"
+      ],
+      "word_budget_per_source": 500,
+      "status": "balanced-length-candidate-blocked-on-four-manual-audits"
+    },
+    {
+      "view_id": "post-audit-pooled-equal-180",
+      "sample_ids": [
+        "tafka-2015-02-02-true-love",
+        "tafka-2015-02-12-no-way-to-know",
+        "tafka-2015-02-23-right-view-humility",
+        "tafka-2016-06-08-already-perfect",
+        "tafka-2019-03-08-plant-spirits",
+        "ins-2008-09-01-nader-accuracy",
+        "ins-2008-09-09-afghanistan",
+        "ins-2009-04-17-israel-palestine",
+        "ins-2012-02-01-police-athletic-league"
+      ],
+      "word_budget_per_source": 180,
+      "require_exact_budget": true,
+      "status": "equal-budget-diagnostic-blocked-on-four-manual-audits"
+    },
+    {
+      "view_id": "political-journalistic-full",
+      "sample_ids": [
+        "ins-2008-09-01-nader-accuracy",
+        "ins-2008-09-09-afghanistan",
+        "ins-2009-04-17-israel-palestine",
+        "ins-2012-02-01-police-athletic-league"
+      ],
+      "word_budget_per_source": null,
+      "status": "single-site-underpowered-manual-audit-pending"
+    }
+  ],
+  "excluded_or_deferred": [
+    {
+      "sample_id": "tafka-2013-01-05-intro-journey",
+      "reason": "Preserve as provenance-clean overflow reference, but exclude from balanced profile views because its prior 8090-word extraction dominated 72.55% of the six-source TAFKA profile."
+    },
+    {
+      "group": "love4nanou-2020-09-15",
+      "reason": "Five owner-confirmed relationship posts are each under 250 words and share one site/day; retain as one support cluster, not five independent held-out documents."
+    },
+    {
+      "group": "government-scam",
+      "reason": "Five substantial sources remain blocked on dialogue/quote-label audit before profile admission."
+    },
+    {
+      "sample_id": "ann-2020-10-29-assault-custody",
+      "reason": "Long personal/conflict source remains blocked on sensitive quote and boundary audit."
+    },
+    {
+      "group": "current-zero-ai-articles",
+      "reason": "DYOR, DMSO, and Autism are owner-confirmed natural writing but live in the separate Joel Articles source repository; do not duplicate raw prose into this repository. Add by hash-bound local cross-repository ingestion later."
+    }
+  ],
+  "blocking_reasons": [
+    "four political/journalistic candidates still require manual authorship/quotation boundary audit",
+    "the philosophical and political register views each come from one site/platform",
+    "no register-relevant multi-author held-out baseline has yet been established",
+    "current owner-written research/practical articles are not yet ingested through a hash-bound cross-repository path"
+  ],
+  "interpretation_rule": "This freeze establishes source identity, cleanup, register labels, and balanced candidate views only. It is not authorship attribution, IER, Tier-A calibration, or validated-for-register evidence."
+}
