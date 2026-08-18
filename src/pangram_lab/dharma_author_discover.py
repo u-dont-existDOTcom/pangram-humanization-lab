@@ -46,7 +46,9 @@ class BoldSpeakerLabelScanner(HTMLParser):
             value = re.sub(r"\s+", " ", value).strip()
             m = _PERSON_LABEL_RE.match(value)
             if m:
-                self.labels.append(m.group(1).strip())
+                candidate = m.group(1).strip()
+                if not candidate.isupper():
+                    self.labels.append(candidate)
             self.parts = []
 
     def handle_data(self, data: str):
