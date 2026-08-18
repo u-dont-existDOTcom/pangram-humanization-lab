@@ -83,8 +83,11 @@ jobs:
             --out-dir .local/idiolect-corpus/controls-control-text \
             --manifest-out .local/idiolect-corpus/controls-control-manifest.json
 
-      - name: Briefly space Blogger acquisition bursts
-        run: sleep 10
+      # The first live control run hit Blogger's rolling limiter on request 25
+      # even after the acquire helper's bounded retry. The research design is
+      # unchanged; wait past that rolling window before the final matched batch.
+      - name: Space Blogger acquisition batches past rolling limit
+        run: sleep 65
 
       - name: Rebuild matched Dharma author-thread set
         run: |
