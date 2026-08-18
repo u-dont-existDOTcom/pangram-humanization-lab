@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "instrument_id": "pangram-dharma-logo-surface-svm-v0.1.0",
+  "purpose": "Reduce the cross-register/platform confound in the first surface-SVM pilot by evaluating only pre-LLM Dharma Connection speaker blocks and leaving one complete discussion source_group out at a time.",
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "source_manifest": "runtime output from state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json",
+  "selection": {
+    "min_authors_per_group": 2,
+    "expected_documents": 10,
+    "expected_source_groups": 4,
+    "partition_unit": "source_group/thread",
+    "fold_rule": "Hold out each eligible source_group exactly once; train on all other eligible Dharma source_groups. Every candidate author must remain represented in training."
+  },
+  "models": {
+    "primary": "paper-described-char2-4-word1-2-linear-svm",
+    "sensitivities": [
+      "char2-4-only-sensitivity",
+      "word1-2-only-sensitivity"
+    ],
+    "classifier": "LinearSVC",
+    "C": 1.0,
+    "class_weight": null
+  },
+  "evaluation": {
+    "group_bootstrap_accuracy": {
+      "iterations": 10000,
+      "seed": 2608180912
+    },
+    "primary_metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_f1",
+      "per_author_accuracy",
+      "source_group_bootstrap_accuracy_95pct"
+    ]
+  },
+  "interpretation": {
+    "chance_accuracy": 0.333333,
+    "calibration_status": "unvalidated",
+    "guardrails": [
+      "This is original-text closed-set attribution, not rewrite IER.",
+      "Four discussion source_groups and ten author-thread documents are a small pilot, so even a strong point estimate is not validated-for-register evidence.",
+      "All train/test folds are platform- and broad-register-matched, reducing but not eliminating topic, interlocutor, length, and thread-structure confounds.",
+      "If word-only reproduces the primary result again, treat lexical/topic signal as a material confound rather than claiming style calibration.",
+      "If character-only materially improves relative to word-only while primary remains above chance, that is stronger evidence that surface style contributes independently of topic vocabulary.",
+      "No numeric Tier-A threshold becomes operational from this pilot."
+    ]
+  },
+  "privacy": {
+    "raw_or_canonical_prose_in_git": false,
+    "receipt_contains_prose": false,
+    "allowed_receipt_fields": "source/sample identities, hashes, word counts, fold identities, predictions, decision-free aggregate metrics"
+  }
+}
