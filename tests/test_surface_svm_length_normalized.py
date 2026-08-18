@@ -69,9 +69,10 @@ def test_short_training_exclusion_requires_named_non_test_row_under_window(tmp_p
     ]
     kept, audit = ln._apply_short_training_exclusions(
         rows,
-        [{"sample_id": "short", "reason": "preflight"}],
+        [{"source_set": "matched", "sample_id": "short", "reason": "preflight"}],
         held_out_groups={"held-out"},
         required_words=50,
+        source_set="matched",
     )
     assert [row["sample_id"] for row in kept] == ["long"]
     assert audit == [
@@ -79,6 +80,7 @@ def test_short_training_exclusion_requires_named_non_test_row_under_window(tmp_p
             "sample_id": "short",
             "source_group": "train-only",
             "speaker": "Joel Rosenblum",
+            "source_set": "matched",
             "source_word_count_reported": 13,
             "source_whitespace_token_count": 13,
             "required_window_words": 50,
@@ -86,6 +88,27 @@ def test_short_training_exclusion_requires_named_non_test_row_under_window(tmp_p
             "model_outcome_used_for_exclusion": False,
         }
     ]
+
+
+def test_short_training_exclusion_ignores_other_source_set(tmp_path: Path):
+    path = tmp_path / "short.txt"
+    path.write_text(" ".join(["x"] * 13), encoding="utf-8")
+    row = {
+        "sample_id": "short",
+        "source_group": "train-only",
+        "speaker": "A",
+        "word_count": 13,
+        "local_text_path": str(path),
+    }
+    kept, audit = ln._apply_short_training_exclusions(
+        [row],
+        [{"source_set": "supplement", "sample_id": "short"}],
+        held_out_groups=set(),
+        required_words=50,
+        source_set="matched",
+    )
+    assert kept == [row]
+    assert audit == []
 
 
 def test_short_training_exclusion_cannot_remove_held_out_test_row(tmp_path: Path):
@@ -101,9 +124,10 @@ def test_short_training_exclusion_cannot_remove_held_out_test_row(tmp_path: Path
     with pytest.raises(ValueError, match="is a held-out test row"):
         ln._apply_short_training_exclusions(
             [row],
-            [{"sample_id": "short"}],
+            [{"source_set": "matched", "sample_id": "short"}],
             held_out_groups={"held-out"},
             required_words=50,
+            source_set="matched",
         )
 
 
@@ -120,9 +144,10 @@ def test_short_training_exclusion_cannot_drop_feasible_row(tmp_path: Path):
     with pytest.raises(ValueError, match="it is not shorter than required window 50"):
         ln._apply_short_training_exclusions(
             [row],
-            [{"sample_id": "long"}],
+            [{"source_set": "matched", "sample_id": "long"}],
             held_out_groups=set(),
             required_words=50,
+            source_set="matched",
         )
 
 
