@@ -1,0 +1,27 @@
+{
+  "audit_id": "romance-current-20496-pangram-gui-20260818",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "romance-current-part-1\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.55,
+      "estimated_credits": 11,
+      "events": [
+        {
+          "estimated_credits": 11,
+          "measurement_key": "gui:ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8",
+          "recorded_at_utc": "2026-08-18T17:43:00.595741+00:00",
+          "text_sha256": "ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8",
+          "type": "paid_post_reserved",
+          "word_count": 10236
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "romance-current-part-1",
+      "version": "4.0"
+    }
+  }
+}
