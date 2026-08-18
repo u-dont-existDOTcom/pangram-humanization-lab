@@ -7,7 +7,6 @@ on:
       - .github/workflows/idiolect-corpus-acquisition.yml
       - state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json
       - src/pangram_lab/corpus_acquire.py
-      - src/pangram_lab/cli.py
   workflow_dispatch:
 
 permissions:
@@ -15,8 +14,8 @@ permissions:
   issues: write
 
 concurrency:
-  group: idiolect-corpus-acquisition-${{ github.ref }}
-  cancel-in-progress: true
+  group: idiolect-source-network-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   acquire-metadata:

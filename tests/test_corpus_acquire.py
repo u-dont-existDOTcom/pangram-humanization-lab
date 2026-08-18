@@ -1,4 +1,5 @@
 import json
+from urllib.error import HTTPError
 
 from pangram_lab import corpus_acquire as ca
 
@@ -57,6 +58,42 @@ def test_canonical_hash_is_stable_and_paragraph_sensitive():
     assert a.sha256 == b.sha256
     assert a.sha256 != c.sha256
     assert a.word_count == 4
+
+
+def test_fetch_html_retries_429_and_honors_zero_retry_after(monkeypatch):
+    calls = []
+    sleeps = []
+
+    class Headers(dict):
+        def get_content_charset(self):
+            return "utf-8"
+
+    class Response:
+        headers = Headers()
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, tb):
+            return False
+
+        def read(self):
+            return b"<html>ok</html>"
+
+    def fake_urlopen(req, timeout=30):
+        calls.append(req.full_url)
+        if len(calls) == 1:
+            raise HTTPError(req.full_url, 429, "Too Many Requests", {"Retry-After": "0"}, None)
+        return Response()
+
+    monkeypatch.setattr(ca, "urlopen", fake_urlopen)
+    monkeypatch.setattr(ca.time, "sleep", lambda seconds: sleeps.append(seconds))
+
+    text, digest = ca.fetch_html("https://example.blogspot.com/post.html", max_attempts=3)
+    assert text == "<html>ok</html>"
+    assert digest
+    assert len(calls) == 2
+    assert sleeps == [0.0]
 
 
 def test_acquire_inventory_writes_only_canonical_text_and_metadata(tmp_path, monkeypatch):
