@@ -1,0 +1,461 @@
+{
+  "manifest_version": "0.1.0-source-inventory",
+  "frozen_at_utc": "2026-08-18T01:50:00Z",
+  "target_author": "Joel Rosenblum",
+  "purpose": "Source-level inventory for Tier-B idiolect calibration. Raw prose is intentionally excluded from Git.",
+  "status": "source-acquisition-frozen; extraction-and-hashing-incomplete",
+  "governing_protocol": "docs/IDIOLECT-VALIDATION-PROTOCOL.md",
+  "issue": 39,
+  "privacy": {
+    "raw_prose_in_git": false,
+    "public_source_urls_allowed": true,
+    "private_text_storage": "local only",
+    "contact_details_as_features": false
+  },
+  "provenance_labels": [
+    "natural-owner-confirmed",
+    "natural-owner-pending",
+    "mixed-owner-ai-segmentable",
+    "current-hybrid",
+    "detector-targeted-owner",
+    "synthetic",
+    "excluded-duplicate",
+    "excluded-uncertain-provenance"
+  ],
+  "modalities": [
+    "written",
+    "spoken"
+  ],
+  "primary_written_corpus_rule": "Only natural-owner-confirmed written samples are eligible for the primary Joel written profile. Spoken material is modeled separately.",
+  "normalization_rules": [
+    "Preserve authored wording, punctuation, casing, paragraph boundaries, contractions, misspellings, and ordinary author-created headings unless a separate experiment explicitly tests normalization.",
+    "Remove Blogger/Substack/editor chrome, share controls, timestamps repeated by the platform, navigation labels, embed debris, and raw URLs while preserving author-written anchor text where recoverable.",
+    "Remove email addresses, phone numbers, access tokens, tracking parameters, and other contact/credential-like strings from modeling text.",
+    "Remove or separately mark substantial quotations from other authors; quoted text must not become Joel-style training data.",
+    "For discussion/Q&A pages, retain only Joel-authored turns. Interlocutor text may be retained outside the model corpus as context metadata, never as Joel prose.",
+    "Mirrors, reposts, duplicated exports, and near-duplicate versions belong to one near_duplicate_group and may never cross profile/validation/test boundaries.",
+    "Split by independent source/post/thread, never by random paragraphs from the same source.",
+    "For mixed-provenance documents, segment by known authorship provenance; never infer human authorship solely from an AI detector."
+  ],
+  "sources": [
+    {
+      "source_id": "jr-current-dyor",
+      "title": "Do Your Own Research",
+      "canonical_url": "https://ibogaqueen.substack.com/p/how-to-do-your-own-health-research",
+      "era": "current",
+      "date": null,
+      "modality": "written",
+      "registers": [
+        "research-conversational",
+        "practical-guide",
+        "polemical-irreverent"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: zero AI help",
+      "source_group": "substack-dyor",
+      "capture_status": "available-in-existing-calibration-library",
+      "split_eligible": true,
+      "hash_status": "pending-canonical-extraction",
+      "notes": "Primary current written exemplar."
+    },
+    {
+      "source_id": "jr-current-dmso",
+      "title": "DMSO article",
+      "canonical_url": "https://ibogaqueen.substack.com/p/dimethylsulfoxide-dmso-comprehensive-afa",
+      "era": "current",
+      "date": null,
+      "modality": "written",
+      "registers": [
+        "practical-guide",
+        "research-conversational",
+        "polemical-irreverent"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: zero AI help",
+      "source_group": "substack-dmso",
+      "capture_status": "available-in-existing-calibration-library",
+      "split_eligible": true,
+      "hash_status": "pending-canonical-extraction",
+      "notes": "Primary/secondary current practical exemplar."
+    },
+    {
+      "source_id": "jr-current-autism",
+      "title": "Autism article",
+      "canonical_url": "https://ibogaqueen.substack.com/p/autism-trends-causes-and-remedies",
+      "era": "current",
+      "date": null,
+      "modality": "written",
+      "registers": [
+        "practical-guide",
+        "research-conversational"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: zero AI help",
+      "source_group": "substack-autism",
+      "capture_status": "available-in-existing-calibration-library",
+      "split_eligible": true,
+      "hash_status": "pending-canonical-extraction",
+      "notes": "Current practical/research exemplar."
+    },
+    {
+      "source_id": "jr-current-cancer",
+      "title": "Cancer article",
+      "canonical_url": "https://ibogaqueen.substack.com/p/beyond-the-standard-of-care-for-cancer",
+      "era": "current",
+      "date": "2025-12-09-or-later-revision",
+      "modality": "written",
+      "registers": [
+        "research-conversational",
+        "practical-guide",
+        "personal-tender",
+        "polemical-irreverent"
+      ],
+      "provenance": "mixed-owner-ai-segmentable",
+      "owner_confirmation": "2026-08-18: article contains discrete AI-written sections; Joel did not rewrite the AI prose, so spans are either owner-written or AI-written.",
+      "source_group": "substack-cancer",
+      "capture_status": "text-export-available; Pangram report supplied as segment locator",
+      "split_eligible": true,
+      "hash_status": "pending-canonical-segmentation",
+      "notes": "Use owner provenance as ground truth. Pangram report is a locator aid, not authorship authority.",
+      "known_segments": [
+        {
+          "segment_id": "cancer-human-1",
+          "label": "natural-owner-confirmed",
+          "pangram_locator": "pages 1-4, first two green blocks",
+          "reported_block_words": [
+            1594,
+            1583
+          ]
+        },
+        {
+          "segment_id": "cancer-ai-1",
+          "label": "synthetic",
+          "pangram_locator": "page 5 red block",
+          "reported_block_words": 284
+        },
+        {
+          "segment_id": "cancer-human-2",
+          "label": "natural-owner-confirmed",
+          "pangram_locator": "pages 5-6 green block",
+          "reported_block_words": 309
+        },
+        {
+          "segment_id": "cancer-ai-2",
+          "label": "synthetic",
+          "pangram_locator": "page 6 red block",
+          "reported_block_words": 73
+        },
+        {
+          "segment_id": "cancer-human-3",
+          "label": "natural-owner-confirmed",
+          "pangram_locator": "pages 6-8 green block",
+          "reported_block_words": 1405
+        },
+        {
+          "segment_id": "cancer-ai-3",
+          "label": "synthetic",
+          "pangram_locator": "page 8 red block",
+          "reported_block_words": 43
+        },
+        {
+          "segment_id": "cancer-human-4",
+          "label": "natural-owner-confirmed",
+          "pangram_locator": "pages 8-9 green block",
+          "reported_block_words": 534
+        }
+      ]
+    },
+    {
+      "source_id": "jr-spoken-inner-child-video",
+      "title": "Inner-child video transcript",
+      "canonical_url": null,
+      "era": "current",
+      "date": null,
+      "modality": "spoken",
+      "registers": [
+        "personal-tender",
+        "polemical-irreverent",
+        "spontaneous-speech"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: confirmed as Joel's voice/spoken material, not Joel's writing",
+      "source_group": "spoken-inner-child-video",
+      "capture_status": "available-in-existing-calibration-library",
+      "split_eligible": false,
+      "hash_status": "pending-canonical-extraction",
+      "notes": "Exclude from primary written SVM/LUAR profile. Retain as separate spoken-modality corpus / process evidence."
+    },
+    {
+      "source_id": "jr-legacy-tafka-archive",
+      "title": "TAFKA JESTDR — A journey from self-view to realizing Dependent Origination & Anatta",
+      "canonical_url": "https://tafkajestdr.blogspot.com/",
+      "era": "pre-LLM",
+      "date_range": "2013-2020",
+      "modality": "written",
+      "registers": [
+        "research-conversational",
+        "polemical-irreverent",
+        "personal-tender",
+        "dialogue-QA"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "source_group": "tafkajestdr",
+      "capture_status": "partially-captured-public",
+      "split_eligible": true,
+      "hash_status": "pending-per-post-extraction",
+      "notes": "Public archive exposes 32 posts from 2013-2020 (2026 update excluded). Treat each independent post as a source group; isolate Joel-authored turns in pasted conversations.",
+      "known_posts": [
+        {
+          "sample_id": "tafka-2020-04-19-consciousness-conditions",
+          "date": "2020-04-19",
+          "title": "Could it be that consciousness creates the conditions instead of vice versa?",
+          "url": "https://tafkajestdr.blogspot.com/2020/04/could-it-be-that-consciousness-creates.html",
+          "registers": [
+            "research-conversational",
+            "dialogue-QA"
+          ]
+        },
+        {
+          "sample_id": "tafka-2019-08-02-buddhism-sect",
+          "date": "2019-08-02",
+          "title": "Which sect of Buddhism has the true teachings of Buddha?",
+          "url": "https://tafkajestdr.blogspot.com/2019/08/which-sect-of-buddhism-has-true.html",
+          "registers": [
+            "polemical-irreverent",
+            "research-conversational"
+          ]
+        },
+        {
+          "sample_id": "tafka-2019-07-22-psychedelic-brain",
+          "date": "2019-07-22",
+          "title": "How does the brain construct the psychedelic experience?",
+          "url": "https://tafkajestdr.blogspot.com/2019/07/how-does-brain-construct-psychedelic.html",
+          "registers": [
+            "research-conversational",
+            "dialogue-QA",
+            "polemical-irreverent"
+          ]
+        },
+        {
+          "sample_id": "tafka-2019-07-16-awakening-family",
+          "date": "2019-07-16",
+          "title": "Is awakening a proper goal for a family man/woman?",
+          "url": "https://tafkajestdr.blogspot.com/2019/07/is-awakening-proper-goal-for-family.html",
+          "registers": [
+            "dialogue-QA",
+            "personal-tender",
+            "research-conversational"
+          ]
+        },
+        {
+          "sample_id": "tafka-2019-03-08-plant-spirits",
+          "date": "2019-03-08",
+          "title": "Are plant spirits real or are they all in my mind when I eat psychedelic plants?",
+          "url": "https://tafkajestdr.blogspot.com/2019/03/are-plant-spirits-real-or-are-they-all.html",
+          "registers": [
+            "dialogue-QA",
+            "research-conversational",
+            "polemical-irreverent"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "jr-legacy-dharma-connection",
+      "title": "Dharma Connection comments",
+      "canonical_url": "https://dharmaconnectiongroup.blogspot.com/",
+      "era": "pre-LLM",
+      "date_range": "2013-2014 confirmed; further archive acquisition pending",
+      "modality": "written",
+      "registers": [
+        "dialogue-QA",
+        "research-conversational",
+        "polemical-irreverent"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: Joel confirmed the Dharma Connection comments under Joel Rosenblum are his; no other Joel Rosenblum there",
+      "source_group": "dharma-connection",
+      "capture_status": "partially-captured-public",
+      "split_eligible": true,
+      "hash_status": "pending-thread-extraction",
+      "notes": "Multi-author threads: keep only `Joel Rosenblum` comments in modeling text. Mirrored copies on other sites are duplicates, not independent samples.",
+      "known_threads": [
+        {
+          "sample_id": "dc-2014-02-04-holographic-universe",
+          "date": "2014-02-04",
+          "title": "Holographic Universe So What?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/holographic-universe-so-what_68.html"
+        },
+        {
+          "sample_id": "dc-2013-06-lucid-dreaming",
+          "date": "2013-06",
+          "title": "Lucid Dreaming, Dreams Of Clarity & More",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/lucid-dreaming-dreams-of-clarity-more_22.html"
+        },
+        {
+          "sample_id": "dc-2013-06-sound-bahiya",
+          "date": "2013-06",
+          "title": "Sound And The Bahiya Sutta",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/sound-and-bahiya-sutta.html"
+        },
+        {
+          "sample_id": "dc-2013-06-working-memory-thread",
+          "date": "2013-06",
+          "title": "Working-memory / one-thought discussion",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/",
+          "exact_post_url_status": "pending"
+        },
+        {
+          "sample_id": "dc-2013-07-anatta-email",
+          "date": "2013-07",
+          "title": "Excerpts From An Email Discussing Anattā",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/07/excerpts-from-email-discussing-anatta_82.html"
+        }
+      ]
+    },
+    {
+      "source_id": "jr-legacy-buddhism-stackexchange-2021",
+      "title": "Which is the easiest of the four paths for a novice lay practitioner? — answer by Joel Rosenblum",
+      "canonical_url": "https://buddhism.stackexchange.com/questions/23142/which-is-the-easiest-of-the-four-paths-for-a-novice-lay-practitioner",
+      "era": "pre-LLM",
+      "date": "2021-04-28",
+      "modality": "written",
+      "registers": [
+        "research-conversational",
+        "dialogue-QA"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "account name Joel Rosenblum; included in prior owner corpus acquisition; current source inventory treats it as confirmed legacy writing",
+      "source_group": "buddhism-stackexchange-23142",
+      "capture_status": "public-captured",
+      "split_eligible": true,
+      "hash_status": "pending-canonical-extraction",
+      "notes": "Use only Joel's answer body, not question/other answers/comments."
+    },
+    {
+      "source_id": "jr-legacy-government-scam-blog",
+      "title": "government-scam.blogspot.com",
+      "canonical_url": "https://government-scam.blogspot.com/",
+      "era": "pre-LLM",
+      "date_range": null,
+      "modality": "written",
+      "registers": [
+        "polemical-irreverent",
+        "political"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "source_group": "government-scam",
+      "capture_status": "fetch-pending",
+      "split_eligible": true,
+      "hash_status": "pending",
+      "notes": "Do not infer post count/content until acquired."
+    },
+    {
+      "source_id": "jr-legacy-insurgency-blog",
+      "title": "theinsurgencyisworking.blogspot.com",
+      "canonical_url": "https://theinsurgencyisworking.blogspot.com/",
+      "era": "pre-LLM",
+      "date_range": null,
+      "modality": "written",
+      "registers": [
+        "polemical-irreverent",
+        "political"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "source_group": "theinsurgencyisworking",
+      "capture_status": "fetch-pending",
+      "split_eligible": true,
+      "hash_status": "pending",
+      "notes": "Do not infer post count/content until acquired."
+    },
+    {
+      "source_id": "jr-legacy-love4nanou-blog",
+      "title": "love4nanou.blogspot.com",
+      "canonical_url": "https://love4nanou.blogspot.com/",
+      "era": "pre-LLM",
+      "date_range": null,
+      "modality": "written",
+      "registers": [
+        "unknown-until-acquired"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "source_group": "love4nanou",
+      "capture_status": "fetch-pending",
+      "split_eligible": true,
+      "hash_status": "pending",
+      "notes": "Register must be assigned from text, not blog name."
+    },
+    {
+      "source_id": "jr-legacy-ann-gayma-talkpa-truth",
+      "title": "Ann Gayma Talkpa Rosenblum's Assault on ...",
+      "canonical_url": "https://ann-gayma-rosenblum-talkpa-truth.blogspot.com/2020/10/ann-gayma-talkpa-rosenblums-assault-on.html",
+      "era": "pre-LLM",
+      "date": "2020-10",
+      "modality": "written",
+      "registers": [
+        "personal",
+        "polemical-irreverent"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: supplied by Joel as one of his old blogs",
+      "source_group": "ann-gayma-talkpa-truth-2020",
+      "capture_status": "fetch-pending",
+      "split_eligible": true,
+      "hash_status": "pending",
+      "notes": "Personal names and quoted third-party text need separate masking/quotation handling if used."
+    },
+    {
+      "source_id": "jr-legacy-jews-love-antisemites-owner-paste",
+      "title": "JEWS LOVE ANTISEMITES",
+      "canonical_url": null,
+      "era": "pre-LLM-likely; exact publication date/url pending",
+      "date": null,
+      "modality": "written",
+      "registers": [
+        "polemical-irreverent",
+        "political",
+        "personal"
+      ],
+      "provenance": "natural-owner-confirmed",
+      "owner_confirmation": "2026-08-18: Joel supplied the prose directly as his old writing",
+      "source_group": "jews-love-antisemites",
+      "capture_status": "owner-paste-in-conversation; canonical-public-source-pending",
+      "split_eligible": true,
+      "hash_status": "pending-canonical-source",
+      "notes": "Strip Blogger editor URLs and contact details. Exclude the block quotation from Orwell/1984 and any other third-party quotations from Joel style text."
+    }
+  ],
+  "explicit_exclusions": [
+    {
+      "source_id": "community-article-earlier-ai-shaped",
+      "reason": "Known partly AI-written / anti-sample; not natural-owner training data.",
+      "allowed_use": "current-hybrid or adverse-control only when exact provenance is known"
+    },
+    {
+      "source_id": "romance-detector-targeted-revisions",
+      "reason": "Detector-targeted owner edits are a distinct provenance class and must not silently seed the natural-owner profile.",
+      "allowed_use": "detector-targeted-owner calibration condition"
+    },
+    {
+      "source_id": "duplicate-library-exports",
+      "reason": "Multiple copies of cancer/DYOR/DMSO/autism/tender transcript exist in the file library.",
+      "allowed_use": "none until exact duplicate/near-duplicate reconciliation"
+    }
+  ],
+  "next_gate": {
+    "name": "canonical extraction and deduplication",
+    "requirements": [
+      "Extract each eligible written source into local canonical text with normalization log.",
+      "Compute SHA-256 on canonical normalized text and word count.",
+      "Assign near_duplicate_group and source_group.",
+      "For TAFKA and Dharma Connection, isolate Joel-authored turns from quoted/interlocutor text.",
+      "Segment Cancer by owner-confirmed human/AI provenance using the supplied detector report only as a boundary locator.",
+      "Do not assign train/validation/test until duplicate and source-group audit is complete.",
+      "After Joel-side corpus is clean, acquire multiple human control authors including topic-matched negatives."
+    ]
+  }
+}
