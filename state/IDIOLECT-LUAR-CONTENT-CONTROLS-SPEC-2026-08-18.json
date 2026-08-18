@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "purpose": "Diagnose what carries the matched Dharma LUAR signal after PR #71: preserve lexical inventory while destroying local word order, and remove content lexicon while preserving function words, punctuation, whitespace and token positions. These are diagnostic controls, not calibration thresholds.",
+  "raw_text_in_git": false,
+  "baseline_result_file": "state/IDIOLECT-LUAR-MATCHED-PILOT-RESULT-2026-08-18.json",
+  "model": {
+    "model_id": "rrivera1849/LUAR-MUD",
+    "revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "upstream_backbone_revision_from_model_config": "48bffbbd27bf028ecdd0cd55abb51236ec12ef1b",
+    "embedding_size": 512,
+    "max_token_length": 512,
+    "batch_size": 8,
+    "episode_length_for_document_embedding": 1
+  },
+  "authors": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
+  "matched_queue": "state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json",
+  "joel_supplement_queue": "state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json",
+  "control_training_queue": "state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json",
+  "baseline_spec": {
+    "authors": [
+      "Joel Rosenblum",
+      "David Vardy",
+      "Stian Gudmundsen Høiland"
+    ],
+    "held_out_source_groups": [
+      "dc-thread-can-anything-known-2014-08-09",
+      "dc-thread-holographic-2014-02-04",
+      "dc-thread-insights-anatta-2014-08-09",
+      "dc-thread-supramundane-jhanas-2014-08-09"
+    ],
+    "conditions": {
+      "whole_document": {
+        "documents_per_author_per_fold": 6,
+        "joel_supplement_sample_ids": [
+          "dc-2013-06-lucid-dreaming",
+          "dc-2013-06-sound-bahiya"
+        ]
+      },
+      "equal_50_word": {
+        "documents_per_author_per_fold": 4,
+        "word_budget_per_document": 50,
+        "joel_supplement_sample_ids": [
+          "dc-2013-06-lucid-dreaming"
+        ]
+      }
+    }
+  },
+  "transforms": {
+    "shuffle": {
+      "seed": 260800931,
+      "block_words": 50,
+      "rule": "Within each contiguous 50-whitespace-token block, deterministically permute the complete token strings into the original whitespace slots. Preserve exact token multiset, case, attached punctuation and whitespace pattern. Keep block order fixed so distant lexical material does not migrate across whole-document truncation regions.",
+      "interpretation": "If whole-document attribution survives this control, local syntax/order is not necessary for much of the observed signal; lexical inventory, topic, length or other bag-like cues remain plausible. If it falls, sequence/order matters, but the result alone cannot distinguish semantic composition from idiolect."
+    },
+    "function_mask": {
+      "rule": "Retain a frozen broad English function-word/closed-class list exactly as written. Replace other alphabetic/numeric runs with X while preserving punctuation, whitespace and token positions.",
+      "interpretation": "Survival is strong evidence that non-content form contributes. Collapse is not proof that style is absent because repeated-X text is out-of-distribution for LUAR and whole-document tokenizer reach changes when content words are shortened. The equal-50-word condition is therefore the cleaner content-light diagnostic."
+    }
+  },
+  "conditions": [
+    "whole_document_block_shuffle",
+    "equal_50_word_shuffle",
+    "whole_document_function_mask",
+    "equal_50_word_function_mask"
+  ],
+  "evaluation": {
+    "metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_f1",
+      "per_author_accuracy",
+      "confusion_matrix"
+    ],
+    "group_bootstrap_accuracy": {
+      "unit": "held-out source_group",
+      "iterations": 10000,
+      "seed": 260800932
+    }
+  },
+  "interpretation": {
+    "chance_accuracy": 0.3333333333,
+    "do_not_call_ier": true,
+    "no_threshold_claim": true,
+    "no_retuning_rule": "Do not adjust shuffle block size, shuffle seed, function-word list, held-out documents, candidate authors or training-source selection in response to these results.",
+    "baseline_anchor": "PR #71 whole-document LUAR: accuracy 0.80, Joel 3/4. Exact 50-word LUAR: accuracy 0.60, Joel 1/4.",
+    "primary_questions": [
+      "Does the strong whole-document result survive destruction of local word order when exact lexical tokens and whitespace are preserved?",
+      "Does any author signal survive removal of content lexicon in the exact 50-word condition where tokenizer truncation is irrelevant?",
+      "Is Joel-specific performance distinguishable from aggregate performance driven by the two comparison authors?"
+    ],
+    "calibration_gate": "These controls may explain or weaken the PR #71 signal, but they cannot by themselves establish validated-for-register status. Transformation sensitivity and a larger source-group evaluation remain required before any operational idiolect threshold."
+  }
+}
