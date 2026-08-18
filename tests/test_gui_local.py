@@ -98,7 +98,7 @@ def test_persistent_launch_uses_dedicated_profile_headed_and_closes(
 
     context = FakeContext()
     playwright = FakePlaywright()
-    monkeypatch.setattr(gui_local.gui_core, "_load_playwright", lambda: FakeStarter())
+    monkeypatch.setattr(gui_local.gui_core, "_load_playwright", lambda: FakeStarter)
 
     active_playwright, active_context, page = gui_local._launch_persistent_context(
         _config(tmp_path)
