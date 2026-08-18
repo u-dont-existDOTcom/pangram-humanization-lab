@@ -1,33 +1,7 @@
 name: Idiolect Joel register corpus freeze
+# actions-cost-class: manual-heavy-research
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/idiolect-joel-register-corpus-freeze.yml
-      - state/IDIOLECT-JOEL-REGISTER-CORPUS-SPEC-2026-08-18.json
-      - state/IDIOLECT-JOEL-REGISTER-CORPUS-RESULT-2026-08-18.json
-      - state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json
-      - state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json
-      - src/pangram_lab/joel_register_corpus.py
-      - src/pangram_lab/joel_register_corpus_network.py
-      - src/pangram_lab/joel_legacy_profile.py
-      - src/pangram_lab/corpus_acquire.py
-      - tests/test_joel_register_corpus.py
-      - tests/test_joel_register_corpus_network.py
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/idiolect-joel-register-corpus-freeze.yml
-      - state/IDIOLECT-JOEL-REGISTER-CORPUS-SPEC-2026-08-18.json
-      - state/IDIOLECT-JOEL-REGISTER-CORPUS-RESULT-2026-08-18.json
-      - state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json
-      - state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json
-      - src/pangram_lab/joel_register_corpus.py
-      - src/pangram_lab/joel_register_corpus_network.py
-      - src/pangram_lab/joel_legacy_profile.py
-      - src/pangram_lab/corpus_acquire.py
-      - tests/test_joel_register_corpus.py
-      - tests/test_joel_register_corpus_network.py
   workflow_dispatch:
 
 permissions:
