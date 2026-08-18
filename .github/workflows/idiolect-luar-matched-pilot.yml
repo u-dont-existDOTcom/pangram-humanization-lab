@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/idiolect-luar-matched-pilot.yml
       - state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json
+      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
       - src/pangram_lab/luar_matched_pilot.py
       - tests/test_luar_matched_pilot.py
       - src/pangram_lab/surface_svm_pilot.py
@@ -12,14 +13,13 @@ on:
       - src/pangram_lab/surface_svm_equal_budget.py
       - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
       - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
-      - state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json
       - src/pangram_lab/dharma_speaker_acquire.py
-      - src/pangram_lab/dharma_control_profiles.py
   push:
     branches: [main]
     paths:
       - .github/workflows/idiolect-luar-matched-pilot.yml
       - state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json
+      - state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json
       - src/pangram_lab/luar_matched_pilot.py
       - tests/test_luar_matched_pilot.py
       - src/pangram_lab/surface_svm_pilot.py
@@ -27,9 +27,7 @@ on:
       - src/pangram_lab/surface_svm_equal_budget.py
       - state/IDIOLECT-DHARMA-CLOSED-SET-PILOT-QUEUE-2026-08-18.json
       - state/IDIOLECT-DHARMA-OWNER-CONFIRMED-QUEUE-2026-08-18.json
-      - state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json
       - src/pangram_lab/dharma_speaker_acquire.py
-      - src/pangram_lab/dharma_control_profiles.py
   workflow_dispatch:
 
 permissions:
@@ -68,14 +66,11 @@ jobs:
             tests/test_luar_matched_pilot.py \
             tests/test_surface_svm_equal_budget.py \
             tests/test_surface_svm_matched_cv.py \
-            tests/test_dharma_speaker_acquire.py \
-            tests/test_dharma_control_profiles.py
+            tests/test_dharma_speaker_acquire.py
 
-      # Fetch the two critical Joel-only sources before the bulk Dharma census.
-      # A prior live run acquired all controls/matched pages first and the final
-      # Sound/Bahiya request exhausted Blogger's temporary request budget even
-      # after bounded retry. Restricting this step to the two inputs actually
-      # used by the LUAR spec also avoids two irrelevant page requests.
+      # Fetch the two critical Joel-only sources first. A prior live run fetched
+      # the full control corpus before this step and Blogger returned 429 on the
+      # final Sound/Bahiya request even after bounded retry.
       - name: Rebuild required Joel-only Dharma supplements first
         run: |
           python -m pangram_lab.dharma_speaker_acquire \
@@ -85,11 +80,15 @@ jobs:
             --out-dir .local/idiolect-corpus/luar-joel-supplement-text \
             --manifest-out .local/idiolect-corpus/luar-joel-supplement-manifest.json
 
-      - name: Rebuild non-overlap Dharma control profiles
+      - name: Acquire frozen six-source control profiles only
         run: |
-          python -m pangram_lab.dharma_control_profiles \
-            state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json \
-            --receipt-out .local/idiolect-corpus/dharma-control-profile-receipt.json
+          python -m pangram_lab.dharma_speaker_acquire \
+            state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/luar-control-text \
+            --manifest-out .local/idiolect-corpus/luar-control-manifest.json
+
+      - name: Briefly space Blogger acquisition bursts
+        run: sleep 10
 
       - name: Rebuild matched Dharma author-thread set
         run: |
@@ -104,7 +103,7 @@ jobs:
             state/IDIOLECT-LUAR-MATCHED-PILOT-SPEC-2026-08-18.json \
             --matched-manifest .local/idiolect-corpus/luar-matched-manifest.json \
             --supplement-manifest .local/idiolect-corpus/luar-joel-supplement-manifest.json \
-            --control-manifest .local/idiolect-corpus/dharma-control-profile-acquisition.json \
+            --control-manifest .local/idiolect-corpus/luar-control-manifest.json \
             --working-dir .local/idiolect-corpus/luar-normalized \
             --out .local/idiolect-corpus/luar-matched-pilot-receipt.json
 
