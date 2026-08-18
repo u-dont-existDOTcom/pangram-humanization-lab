@@ -26,6 +26,8 @@
 - `../state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json`: metadata-only Joel source/provenance inventory; raw prose is excluded from Git
 - `../state/IDIOLECT-BLOGGER-DISCOVERY-QUEUE-2026-08-18.json`: confirmed-owner Blogger roots and pre-ChatGPT metadata discovery boundary
 - `../state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json`: reviewed public-source acquisition queue with explicit extraction modes
+- `../state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json`: diverse 32-document pre-ChatGPT acquisition tranche; triage only, not final admission
+- `../state/IDIOLECT-LEGACY-TRIAGE-RESULT-2026-08-18.json`: metadata-only 32-document acquisition result, candidate dispositions, hashes/counts/flags, and corrected site/source grouping
 - `../state/WORKING-LESSONS-SUPPLEMENT-2026-08-17-IDIOLECT-RETENTION.md`: promoted operational lesson after metadata closeout processing
 
 ## Evidence
