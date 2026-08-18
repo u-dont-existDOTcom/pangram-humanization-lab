@@ -39,8 +39,8 @@ def test_content_light_nearest_profile_separates_strong_synthetic_styles(tmp_pat
         _row(tmp_path, "a2", "A", "a2", "I am here, but I am also there, and I am here."),
         _row(tmp_path, "b1", "B", "b1", "You'd go?! You'd go?! You'd go?!"),
         _row(tmp_path, "b2", "B", "b2", "You'd stay?! You'd stay?! You'd stay?!"),
-        _row(tmp_path, "c1", "C", "THESE WORDS ARE LOUD. THESE WORDS ARE LOUD."),
-        _row(tmp_path, "c2", "C", "THOSE WORDS ARE LOUD. THOSE WORDS ARE LOUD."),
+        _row(tmp_path, "c1", "C", "c1", "THESE WORDS ARE LOUD. THESE WORDS ARE LOUD."),
+        _row(tmp_path, "c2", "C", "c2", "THOSE WORDS ARE LOUD. THOSE WORDS ARE LOUD."),
     ]
     test = [
         _row(tmp_path, "ta", "A", "held", "I am here, and I am there, and I am here."),
