@@ -59,7 +59,13 @@ if command -v gh >/dev/null 2>&1 && [[ -n "${GH_TOKEN:-}" ]]; then
   mapfile -t run_ids < <(gh run list --repo "$repository" --limit 1000 --json databaseId --jq '.[].databaseId')
   fetched_logs=0
   unavailable_logs=0
+  current_run_id="${GITHUB_RUN_ID:-}"
   for run_id in "${run_ids[@]}"; do
+    # Never request the current workflow's own nonterminal log from inside that workflow.
+    # Doing so can self-deadlock until timeout.
+    if [[ -n "$current_run_id" && "$run_id" == "$current_run_id" ]]; then
+      continue
+    fi
     if gh run view "$run_id" --repo "$repository" --log > "$work/hosted/actions/run-$run_id.log" 2>/dev/null; then
       fetched_logs=$((fetched_logs + 1))
     else
