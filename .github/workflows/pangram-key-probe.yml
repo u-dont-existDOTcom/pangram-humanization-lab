@@ -15,13 +15,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
+      - name: Check secret normalization safely
+        shell: bash
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os
+          key = os.environ['PANGRAM_API_KEY']
+          print('KEY_NONEMPTY=', bool(key))
+          print('HAS_EDGE_WHITESPACE=', key != key.strip())
+          print('KEY_LENGTH=', len(key))
+          print('TRIMMED_LENGTH=', len(key.strip()))
+          PY
+
       - name: Probe documented V3 auth without detection
         shell: bash
         env:
           PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
         run: |
           set -euo pipefail
-          test -n "$PANGRAM_API_KEY"
           code="$(curl --silent --show-error --connect-timeout 10 --max-time 20 \
             --output /tmp/pangram-v3-probe.json --write-out '%{http_code}' \
             --request POST 'https://text.api.pangram.com/v3' \
