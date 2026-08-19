@@ -1,6 +1,6 @@
 name: Idiolect Greg control candidate extraction
 # execution-class: public-one-shot-source-research
-# execution-generation: 4
+# execution-generation: 5
 
 on:
   pull_request:
@@ -82,9 +82,12 @@ jobs:
               '    parser.feed(body.decode("utf-8", errors="replace"))\n'
               '    return parser.text()\n',
               'def _visible_text(body: str | bytes) -> str:\n'
-              '    parser = SpeakerPostBodyParser(drop_blockquotes=True)\n'
               '    html = body if isinstance(body, str) else body.decode("utf-8", errors="replace")\n'
+              '    parser = SpeakerPostBodyParser(drop_blockquotes=True)\n'
               '    parser.feed(html)\n'
+              '    if not parser.found_body:\n'
+              '        parser = SpeakerPostBodyParser(drop_blockquotes=True)\n'
+              '        parser.feed("<div class=\\"post-body entry-content\\">" + html + "</div>")\n'
               '    if not parser.found_body:\n'
               '        raise ValueError("no recognized authored post-body container found")\n'
               '    return parser.text()\n',
