@@ -33,7 +33,8 @@ The local Zorin path has verified:
 - exact current Romance source materialization and SHA/word-count checks;
 - before the paid run, both exact halves were uncached and unambiguous;
 - owner-machine deterministic suite passed 167/167 immediately before the first paid attempt;
-- after the tab/report repair, the owner-machine deterministic suite passed 171/171 before the first no-repeat recovery attempt.
+- after the tab/report repair, the owner-machine deterministic suite passed 171/171 before the first no-repeat recovery attempt;
+- after dedicated-profile History URL recovery code was fetched, the owner-machine deterministic suite passed **175/175**.
 
 ## Paid-call state
 
@@ -92,7 +93,7 @@ The exact matching page is then used for body and PDF evidence. This covers same
 
 The local paid runner reuses the canonical `PangramCallLedger` and six-call section cap. Each paid call reservation is committed/pushed before detector activation. A reserved but incomplete call is never silently repeated.
 
-## Recovery status after first no-repeat attempt
+## Recovery status: restored-tab/UI route exhausted
 
 The first post-incident recovery attempt ran on the owner machine on 2026-08-19:
 
@@ -105,21 +106,27 @@ The first post-incident recovery attempt ran on the owner machine on 2026-08-19:
 
 Therefore the restored-tab route is exhausted, but Part 1 remains ambiguous and blocked from repeat.
 
-## New read-only recovery route: dedicated profile URL history
+## Read-only recovery route: dedicated profile URL history
 
-Pangram's current official documentation confirms that completed dashboard results use URLs shaped like `https://www.pangram.com/history/<UUID>` and that submitted content remains available in the dashboard History while the account is active.
+Pangram's current official documentation confirms that completed dashboard results use URLs shaped like `https://www.pangram.com/history/<UUID>` and that submitted content remains available in dashboard History while the account is active.
 
-The recovery lane now adds `src/pangram_lab/browser_history_recovery.py`, which:
+The recovery lane adds `src/pangram_lab/browser_history_recovery.py`, which:
 
 - inspects only the dedicated automation profile `~/.config/pangram-local-browser`;
 - never reads Joel's ordinary Brave profile;
 - queries only Pangram `/history/<UUID>` URLs from Chromium's local History SQLite database;
-- strips query strings/fragments and discards all unrelated browsing history;
+- strips query strings/fragments and discards unrelated browsing history;
 - returns bounded recent candidates without printing the URLs in the normal operator log.
 
-`scripts/pangram_local_romance_recover_part1_history.py` tries those existing result URLs read-only, then Pangram's `/history` route, then the earlier bounded recovery surfaces. Every candidate must still exact-bind to the Part 1 text anchors and 10,236-word boundary. It contains no detector-action path.
+`scripts/pangram_local_romance_recover_part1_history.py` tries those existing result URLs read-only, then Pangram's `/history` route, then the earlier bounded recovery surfaces. Every candidate must exact-bind to the Part 1 text anchors and 10,236-word boundary. It contains no detector-action path.
 
-The new history-discovery code has deterministic unit coverage, but the enhanced owner-machine recovery has not yet been run. Its validation is intentionally local to conserve private-repository hosted Actions minutes.
+The owner-machine run on 2026-08-19 fetched this code and its tests, and **175/175 tests passed**, but that run did **not execute the new History URL recovery**. The command had started the previous version of `pangram_local_romance_recover_resume_safe.sh`; that already-running shell then pulled a newer copy of itself. Updating a shell script on disk does not replace the control flow of the process already executing it, so the process continued the old wrapper body and stopped after the earlier recovery stage. This is not evidence that dedicated-profile URL-history recovery failed.
+
+## Self-updating wrapper repair
+
+`scripts/pangram_local_romance_recover_resume_safe.sh` now records its own Git blob identity before and after `git pull --ff-only`. If the pull changed the wrapper itself, it preserves the same log and `exec`s the fetched wrapper exactly once before tests/recovery/consequential work. An environment marker prevents a re-exec loop.
+
+A regression in `tests/test_recover_wrapper_self_update.py` preserves that contract. The transferable lesson is being promoted to `u-dont-existDOTcom/universal-dev-architecture` as `patterns/self-updating-launcher-reexec.md`.
 
 ## Next safe action
 
@@ -127,9 +134,9 @@ Use the same operator entry point:
 
 `scripts/pangram_local_romance_recover_resume_safe.sh`
 
-It now must:
+The current on-disk owner-machine copy already contains the History URL recovery wrapper fetched in the 175-test run. On the next invocation it must:
 
-1. update the branch and run the complete local deterministic suite, including the new dedicated-profile history tests;
+1. update the branch and run the complete local deterministic suite;
 2. discover recent Pangram result URLs from only the dedicated profile;
 3. recover the already-paid Part 1 result from a matching existing `/history/<UUID>` URL, the `/history` route, or bounded UI navigation **without submitting Part 1 again**;
 4. exact-bind and cache the recovered Part 1 report;
@@ -154,4 +161,5 @@ Stop before:
 - committing profile/cookie/auth material;
 - accepting a generic report marker without exact text + word-count binding;
 - leaving persistent browser tab clutter as normal automation state;
+- continuing consequential work in a stale self-updating wrapper after the pull changed that wrapper;
 - rewriting Romance prose solely to facilitate transport/detector behavior.
