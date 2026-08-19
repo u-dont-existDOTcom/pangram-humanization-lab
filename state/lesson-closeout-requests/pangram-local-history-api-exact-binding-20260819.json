@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "request_id": "pangram-local-history-api-exact-binding-20260819",
+  "source_path": "state/PANGRAM-LOCAL-HISTORY-API-EXACT-BINDING-2026-08-19.md",
+  "source_ref": "ceb66260733097714915d08d4f3d38823e6125a6",
+  "source_sha256": "99cde1729c57b79931b4eb33ef2364e4025a1888d68e24e283835bc1956dc2ec",
+  "finding": "Current Pangram long-document GUI results must be exact-bound through the stored history API record because the rendered report no longer exposes the legacy per-segment word-count layout; rendered Human/AI overview percentages remain the score surface, and unverified prediction_prob semantics must not be guessed.",
+  "disposition": "no-new-lesson",
+  "reason": "This is Pangram-specific transport/layout and recovery evidence. The transferable recovery-before-repeat, persistent-browser, SPA-history, exact-artifact, and fail-closed principles are already promoted in universal development guidance; this incident adds no distinct humanization or detector-behavior lesson.",
+  "promoted_to": [],
+  "status": "pending"
+}
