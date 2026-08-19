@@ -6,15 +6,19 @@ from pathlib import Path
 ROOT = Path(__file__).parents[1]
 
 
-def _source(relative: str) -> str:
+def _source(relative: str, *, compile_python: bool = True) -> str:
     path = ROOT / relative
     value = path.read_text(encoding="utf-8")
-    compile(value, str(path), "exec")
+    if compile_python:
+        compile(value, str(path), "exec")
     return value
 
 
 def test_recover_resume_wrapper_uses_exact_api_recovery_and_paid_runner() -> None:
-    source = _source("scripts/pangram_local_romance_recover_resume_safe.sh")
+    source = _source(
+        "scripts/pangram_local_romance_recover_resume_safe.sh",
+        compile_python=False,
+    )
     assert "pangram_local_romance_recover_part1_api.py" in source
     assert "pangram_local_romance_paid_api.py --execute" in source
     assert "pangram_local_romance_recover_part1_history.py 2>&1 | tee" not in source
