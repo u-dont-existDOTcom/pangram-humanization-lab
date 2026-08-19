@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "status": "clean-source-split-frozen-exact-50-only-not-benchmark-run",
+  "author": "Greg Goode",
+  "role": "ordinary-matched-control",
+  "source_result": "state/IDIOLECT-GREG-GOODE-CONTROL-EXTRACTION-RESULT-2026-08-19.json",
+  "purpose": "Freeze a conservative Greg source split that can enter the next exact-50-word authorship benchmark without relying on any possible-unremoved-dialogue source or the 4,894-word concentration outlier.",
+  "selection_rule": "Use the three longest unflagged sources as profile material and three independent non-dialogue sources of at least 50 words as reserved exact-50 holdouts. Thin flags alone are allowed for holdouts because the benchmark truncates all held-out documents to exactly 50 words; dialogue/ambiguous-speaker flags are not allowed.",
+  "profile": [
+    {
+      "sample_id": "dcp-greg-goode-realizing-non-arising-from-dependent-70",
+      "source_group": "dc-thread-1156495982737412035",
+      "canonical_sha256": "19d19f1907061ac623b71b911eb4e2066e9fa054e14df716c757b97ad1322d83",
+      "word_count": 578,
+      "quality_flags": []
+    },
+    {
+      "sample_id": "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+      "source_group": "dc-thread-6428699248388781187",
+      "canonical_sha256": "6b11bad5957728c4ffc5edcd2f318441892315e58ad57ec3465f91255a6df353",
+      "word_count": 524,
+      "quality_flags": []
+    },
+    {
+      "sample_id": "dcp-greg-goode-faith-pure-land-and-karma-99",
+      "source_group": "dc-thread-373114560681330350",
+      "canonical_sha256": "4a18e19362c3f52b1a4b3be89574c758413cda7e5fb165c55a53071ceaf816d6",
+      "word_count": 482,
+      "quality_flags": []
+    }
+  ],
+  "reserved_holdout_exact_50": [
+    {
+      "sample_id": "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52",
+      "source_group": "dc-thread-3962345161445562437",
+      "canonical_sha256": "272775e445c956b07115cc555864cfaa6238f9ef0fc9c53470f64be8aaab3f54",
+      "word_count": 190,
+      "quality_flags": ["thin-for-authorship-attribution"]
+    },
+    {
+      "sample_id": "dcp-greg-goode-shentong-yogacara-and-dzogchen-59",
+      "source_group": "dc-thread-2525098934802507092",
+      "canonical_sha256": "2a8bcfcc202baa08c68976f1a59d0e302147de9fe3fea0d52b3412ab938999b6",
+      "word_count": 156,
+      "quality_flags": ["thin-for-authorship-attribution"]
+    },
+    {
+      "sample_id": "dcp-greg-goode-nagasena-chariot-and-emptiness-97",
+      "source_group": "dc-thread-5098886803584800770",
+      "canonical_sha256": "8f1fbdd02a81a7f898e8063bad6a5b0bfc09d449b026ab90ed1b1f93cb2d9f81",
+      "word_count": 55,
+      "quality_flags": ["short-under-100-words", "thin-for-authorship-attribution"]
+    }
+  ],
+  "summary": {
+    "profile_source_count": 3,
+    "profile_total_words": 1584,
+    "holdout_source_count": 3,
+    "holdout_total_source_words": 401,
+    "exact_50_holdout_word_mass": 150,
+    "profile_holdout_source_group_overlap": false,
+    "all_holdouts_at_least_50_words": true,
+    "whole_document_condition_ready": false,
+    "exact_50_condition_ready_for_next_batched_benchmark": true
+  },
+  "excluded_from_this_split": [
+    "all sources with possible-unremoved-dialogue",
+    "all sources with ambiguous-single-word-lines-inside-speaker-block unless independently cleared",
+    "all sources under 50 words",
+    "the 4,894-word Consciousness, Advaita, Emptiness source regardless of length until exact dialogue/quotation audit"
+  ],
+  "interpretation_rule": "This source split is an input definition only. It does not make Greg active in historical score receipts and does not establish attribution accuracy, IER, a threshold, or validated-for-register status."
+}
