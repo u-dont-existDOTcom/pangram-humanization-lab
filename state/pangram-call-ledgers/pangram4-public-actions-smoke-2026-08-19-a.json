@@ -5,8 +5,8 @@
   "sections": {
     "smoke\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "estimated_credits": 1,
@@ -15,10 +15,18 @@
           "text_sha256": "48509360f0b2f5e20db79ff0c78a356f1329ff2c80820638862e116535ba47cc",
           "type": "paid_post_reserved",
           "word_count": 60
+        },
+        {
+          "estimated_credits": 1,
+          "measurement_key": "pangram4-public-actions-smoke-2026-08-19-a_SMOKE",
+          "recorded_at_utc": "2026-08-19T05:29:03.877809+00:00",
+          "text_sha256": "48509360f0b2f5e20db79ff0c78a356f1329ff2c80820638862e116535ba47cc",
+          "type": "paid_post_reserved",
+          "word_count": 60
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "smoke",
       "version": "4.0"
