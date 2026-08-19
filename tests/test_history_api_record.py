@@ -86,14 +86,17 @@ def test_accepts_only_bounded_transport_normalization() -> None:
 
 
 def test_privacy_safe_comparison_summary_flags_but_does_not_accept_collapsed_whitespace() -> None:
-    text = "alpha\n\nbeta gamma"
+    text = (
+        "alpha beta gamma delta epsilon\n\n"
+        "zeta eta theta iota kappa lambda mu"
+    )
     payload = {
         "uuid": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
-        "prompt": "alpha beta gamma",
+        "prompt": "alpha beta gamma delta epsilon zeta eta theta iota kappa lambda mu",
         "short": "do not include me",
     }
     summary = history_record_comparison_summary(payload, text)
-    assert summary["authorized_word_count"] == 3
+    assert summary["authorized_word_count"] == 12
     rows = {
         tuple(row["field_path"]): row
         for row in summary["candidate_fields"]
