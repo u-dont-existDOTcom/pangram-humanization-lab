@@ -23,7 +23,29 @@ _HISTORY_URL_SEARCH_RE = re.compile(
     r"[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
     re.IGNORECASE,
 )
-_RESULT_CONTEXT_MARKERS = ("history", "result", "scan", "detection", "request")
+_RESULT_CONTEXT_MARKERS = (
+    "history",
+    "result",
+    "scan",
+    "detection",
+    "request",
+    "check",
+    "document",
+    "submission",
+    "analysis",
+)
+_HISTORY_NAV_MARKERS = (
+    "history",
+    "all checks",
+    "past checks",
+    "recent checks",
+    "checks",
+    "past scans",
+    "recent scans",
+    "my scans",
+    "reports",
+    "records",
+)
 
 
 def _absolute_pangram_url(raw_url: str) -> str | None:
@@ -115,9 +137,9 @@ def discover_pangram_history_urls(
 ) -> tuple[str, ...]:
     """Return recent Pangram result URLs from only the dedicated profile history.
 
-    The function never returns unrelated browsing history. Query strings and
-    fragments are discarded, and only UUID-shaped ``/history/<id>`` Pangram
-    URLs survive validation.
+    Browser-global history is only a recovery hint. A dashboard SPA may keep
+    application records without writing its result route into Chromium history.
+    The function never returns unrelated browsing history.
     """
     if limit < 1:
         raise ValueError("limit must be positive")
@@ -167,16 +189,33 @@ def discover_pangram_history_urls_from_page(
     return tuple(result)
 
 
+def _anchor_label(anchor: Any) -> str:
+    pieces: list[str] = []
+    try:
+        pieces.append(str(anchor.inner_text()))
+    except Exception:
+        pass
+    for attr in ("aria-label", "title"):
+        try:
+            pieces.append(str(anchor.get_attribute(attr) or ""))
+        except Exception:
+            pass
+    return " ".join(piece.strip() for piece in pieces if piece.strip()).casefold()
+
+
 def discover_pangram_history_navigation_urls_from_page(
     page: Any,
     *,
     limit: int = 20,
 ) -> tuple[str, ...]:
-    """Return same-origin rendered links that appear to navigate to History UI.
+    """Return current same-origin links that lead toward prior Pangram checks.
 
-    Result URLs themselves are excluded. Query strings/fragments are retained in
-    memory because a dashboard SPA may encode its selected tab there; callers
-    must not print these URLs as operator diagnostics.
+    Current Pangram documentation calls the past-record surface ``All Checks``.
+    Older builds and privacy text call it History. Selection therefore uses the
+    rendered label as well as the URL, rather than assuming the literal word
+    ``history`` must appear in the route. Result URLs themselves are excluded.
+    Query strings/fragments remain in memory for SPA routing and must not be
+    printed by callers.
     """
     if limit < 1:
         raise ValueError("limit must be positive")
@@ -189,16 +228,21 @@ def discover_pangram_history_navigation_urls_from_page(
     result: list[str] = []
     seen: set[str] = set()
     for index in range(count):
+        anchor = locator.nth(index)
         try:
-            raw = str(locator.nth(index).get_attribute("href") or "")
+            raw = str(anchor.get_attribute("href") or "")
         except Exception:
             continue
         absolute = _absolute_pangram_url(raw)
         if absolute is None or _canonical_pangram_history_url(absolute) is not None:
             continue
         parsed = urlsplit(absolute)
-        marker = f"{parsed.path}?{parsed.query}#{parsed.fragment}".casefold()
-        if "history" not in marker or absolute in seen:
+        route_text = f"{parsed.path}?{parsed.query}#{parsed.fragment}".casefold()
+        label = _anchor_label(anchor)
+        marker_text = f"{route_text} {label}"
+        if not any(marker in marker_text for marker in _HISTORY_NAV_MARKERS):
+            continue
+        if absolute in seen:
             continue
         seen.add(absolute)
         result.append(absolute)
@@ -216,8 +260,9 @@ def extract_pangram_history_urls_from_payload(
 
     The payload itself is never returned or persisted. Bare UUID values are
     accepted only when their key ancestry places them under a result/history/
-    scan/detection/request object, then converted to the documented
-    ``/history/<UUID>`` read-only result route.
+    scan/check/document/submission context, then converted to the documented
+    ``/history/<UUID>`` read-only result route. Every such candidate must still
+    be exact-verified by the caller before it can clear ambiguity.
     """
     if limit < 1:
         raise ValueError("limit must be positive")
