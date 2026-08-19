@@ -84,6 +84,10 @@ jobs:
 
       - name: Verify prose remains ignored and local
         run: |
+          # `pip install -e` legitimately refreshes tracked egg-info metadata.
+          # Restore that generated build metadata before checking whether the
+          # extraction itself touched repository-visible files.
+          git restore --worktree -- src/pangram_humanization_lab.egg-info || true
           if git status --short --untracked-files=all | grep -v '^?? .local/' | grep -q .; then
             echo 'Candidate extraction unexpectedly modified repository-visible files.' >&2
             git status --short --untracked-files=all >&2
