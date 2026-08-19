@@ -1,6 +1,6 @@
 name: Idiolect Greg control candidate extraction
 # execution-class: public-one-shot-source-research
-# execution-generation: 3
+# execution-generation: 4
 
 on:
   pull_request:
@@ -45,19 +45,56 @@ jobs:
 
           path = Path('src/pangram_lab/dharma_control_candidate.py')
           text = path.read_text(encoding='utf-8')
-          old_import = 'from .corpus_acquire import fetch_bytes'
-          new_import = 'from .corpus_acquire import fetch_html'
-          if old_import not in text:
-              raise SystemExit('Expected temporary fetch_bytes import is absent')
-          text = text.replace(old_import, new_import, 1)
+          expected = [
+              'from .corpus_acquire import fetch_bytes',
+              '    BloggerVisibleTextParser,',
+              '    extract_speaker_prefix,',
+              'def _visible_text(body: bytes) -> str:',
+              'extraction = extract_speaker_prefix(visible, target_speaker)',
+              'target_words = int(extraction.get("word_count", 0))',
+              'page_fetch_fn: Callable[..., tuple[bytes, str]] = fetch_bytes,',
+          ]
+          missing = [value for value in expected if value not in text]
+          if missing:
+              raise SystemExit(f'Expected temporary compatibility strings are absent: {missing}')
+
+          text = text.replace(
+              'from .corpus_acquire import fetch_bytes',
+              'from .corpus_acquire import canonicalize, fetch_html',
+              1,
+          )
+          text = text.replace(
+              'from .dharma_speaker_acquire import (\n'
+              '    BloggerVisibleTextParser,\n'
+              '    acquire_speaker_inventory,\n'
+              '    extract_speaker_prefix,\n'
+              ')',
+              'from .dharma_speaker_acquire import (\n'
+              '    SpeakerPostBodyParser,\n'
+              '    acquire_speaker_inventory,\n'
+              '    extract_named_speaker_blocks,\n'
+              ')',
+              1,
+          )
           text = text.replace(
               'def _visible_text(body: bytes) -> str:\n'
               '    parser = BloggerVisibleTextParser()\n'
-              '    parser.feed(body.decode("utf-8", errors="replace"))\n',
+              '    parser.feed(body.decode("utf-8", errors="replace"))\n'
+              '    return parser.text()\n',
               'def _visible_text(body: str | bytes) -> str:\n'
-              '    parser = BloggerVisibleTextParser()\n'
+              '    parser = SpeakerPostBodyParser(drop_blockquotes=True)\n'
               '    html = body if isinstance(body, str) else body.decode("utf-8", errors="replace")\n'
-              '    parser.feed(html)\n',
+              '    parser.feed(html)\n'
+              '    if not parser.found_body:\n'
+              '        raise ValueError("no recognized authored post-body container found")\n'
+              '    return parser.text()\n',
+              1,
+          )
+          text = text.replace(
+              'extraction = extract_speaker_prefix(visible, target_speaker)\n'
+              '            target_words = int(extraction.get("word_count", 0))',
+              'extraction = extract_named_speaker_blocks(visible, target_speaker)\n'
+              '            target_words = canonicalize(extraction.text).word_count',
               1,
           )
           text = text.replace(
