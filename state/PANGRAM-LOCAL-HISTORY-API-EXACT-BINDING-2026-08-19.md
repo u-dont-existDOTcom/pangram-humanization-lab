@@ -35,8 +35,9 @@ The response body is processed only in memory. The raw record is not committed.
 The current rendered long-document overview exposes document-level Human/AI percentages but not the old analyzable per-segment word-count headings. Therefore:
 
 - exact document identity comes from the stored history API record;
-- Human/AI fractions come from the exact record's rendered overview when available;
-- `prediction`/`prediction_prob` are a bounded fallback only when the rendered summary cannot be parsed and the label determines probability orientation;
+- Human/AI fractions come from the exact record's rendered overview;
+- the observed existence of `prediction` and `prediction_prob` fields does **not** establish the semantic orientation of `prediction_prob`; the runner must not infer detector fractions from it;
+- if the rendered overview percentages cannot be parsed, fail closed rather than guessing from API probability metadata;
 - no synthetic segment list or invented segment word counts may be created merely to satisfy the legacy parser.
 
 This is a transport/layout correction, not a new detector-science claim.
