@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "status": "preliminary-public-source-triage-not-profile-admission",
+  "purpose": "Select the next author for deterministic explicit-speaker extraction so the Joel benchmark can add a second ordinary matched control without another LUAR run or automatic network workflow.",
+  "method_decision": {
+    "choice": "reuse-and-adapt-existing-discovery-and-extraction",
+    "reused": [
+      "src/pangram_lab/dharma_author_discover.py",
+      "src/pangram_lab/dharma_control_profiles.py",
+      "src/pangram_lab/dharma_ordinary_control_census.py",
+      "state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json",
+      "state/IDIOLECT-CONTROL-AUTHOR-ROLE-SPEC-2026-08-18.json"
+    ],
+    "novel_remainder": "A conservative ranking of candidate speaker labels using already-frozen metadata plus a bounded current public-source screen. No new authorship metric or threshold is introduced."
+  },
+  "frozen_inputs": {
+    "target_thread_author_census": {
+      "workflow_run_id": 32146541265,
+      "artifact_id": 9327989332,
+      "artifact_zip_sha256": "55ff61269757458489cee5ee6aa708ddccee645f6fb39362b5fdc55b108e7290",
+      "member": "dharma-author-census-receipt.json",
+      "member_sha256": "8cbe976f9faeb2e6d7c2104776553797a7a957b8befd3a4639cf570e11ce598a",
+      "snapshot_limit": "This older census is useful for candidate discovery but is not a complete current overlap authority; public pages may have changed and its target-post set omitted at least one currently visible Joel/Greg shared thread."
+    },
+    "known_author_profile_census": {
+      "workflow_run_id": 32146541203,
+      "artifact_id": 9327996305,
+      "artifact_zip_sha256": "b67a00fcd3e556e2c10e02f8033342e7bb837683d97953bd8350682e8cbfdbe3",
+      "member": "dharma-profile-census.json",
+      "member_sha256": "030a86a7ba23f486e3ba2c32e226ff7802bc6ca4b6e93cb8ec0348741e865224"
+    },
+    "known_control_profile_extraction": {
+      "workflow_run_id": 32146541159,
+      "artifact_id": 9327996910,
+      "artifact_zip_sha256": "37d70661c2c90e62eb874298ddae7c41de9451ddaa260842bd5a185f15159ea4",
+      "member": "dharma-control-profile-receipt.json",
+      "member_sha256": "40caa3734bf1dfe3b61c068cd6e76d4c4a2e0c55d99c4f2bb8d50252bad9f296",
+      "reference_profiles": {
+        "David Vardy": {
+          "explicit_nonoverlap_posts": 18,
+          "total_words": 12144,
+          "largest_source_fraction": 0.274127
+        },
+        "Stian Gudmundsen Høiland": {
+          "explicit_nonoverlap_posts_with_nonzero_text": 13,
+          "total_words": 13743,
+          "largest_source_fraction": 0.35589
+        }
+      }
+    }
+  },
+  "selection_rules": [
+    "Candidate ranking is for acquisition priority only; it does not activate an author role or prove benchmark suitability.",
+    "Prefer a stable explicit speaker label with multiple independent same-platform/topic threads and substantial apparently original prose.",
+    "Penalize quote-dominated blocks, transcript/import ambiguity, opaque identity labels, thin turns, and uncertain Joel-overlap exclusions.",
+    "A fresh complete archive census must replace the older overlap estimate before extraction is admitted.",
+    "Admission must use exact source hashes, explicit-speaker extraction, source-group separation, duplicate checks, quotation review, and the existing feasibility gates."
+  ],
+  "candidates": [
+    {
+      "speaker": "Greg Goode",
+      "priority": 1,
+      "disposition": "advance-to-deterministic-census-and-extraction",
+      "role_if_admitted": "ordinary-matched-control",
+      "why": [
+        "stable named speaker label on the same pre-LLM Dharma platform and subject domain",
+        "bounded current public-source review found substantial apparently original prose across multiple independent threads",
+        "manual source screen already exceeds the four-post acquisition target before exact extraction",
+        "quotation contamination appears lower than for Albert Hong on the screened pages",
+        "the existing role spec already identified Greg as a pending ordinary-control candidate"
+      ],
+      "manual_nonoverlap_source_screen": [
+        {
+          "title": "I-AM, I-I And Anatta",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/i-am-i-i-and-anatta_49.html",
+          "url_sha256": "386438c4189919b2427748009cd9c5994336528eeac63850b49e737970eae74e",
+          "screen": "multiple substantial explicit Greg turns; apparently original discussion with some embedded quotations"
+        },
+        {
+          "title": "Being/Non-Being And a Freedom From Extremes",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/beingnon-being-and-freedom-from-extremes_0.html",
+          "url_sha256": "09953956a70cc4a095731d8bdafad15b717a7111b94751405b42beeaf4f1122d",
+          "screen": "explicit Greg turns; individually thin but independent"
+        },
+        {
+          "title": "Madhyamaka and Advaita Vedanta: A Comparison",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/madhyamaka-and-advaita-vedanta_64.html",
+          "url_sha256": "431548bd24267b84801eee69a0ad2467c9c00b0280f8b6f5d04cd2bcf9274277",
+          "screen": "many substantial explicit Greg turns with extended original explanation"
+        },
+        {
+          "title": "Shentong, Yogācāra and Dzogchen",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/07/shentong-yogacara-and-dzogchen_59.html",
+          "url_sha256": "0667fc1658be26f72e996e0681266113836ca867821e17836eae650c4c9c9901",
+          "screen": "substantial explicit Greg turn; apparently original explanation"
+        },
+        {
+          "title": "Faith, Pure Land and Karma",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/faith-pure-land-and-karma_99.html",
+          "url_sha256": "c0b98b27c76092c4efa13561c02ed34498beffb0c5817493bfea39c462703542",
+          "screen": "multiple substantial explicit Greg turns; apparently original explanation"
+        },
+        {
+          "title": "Dzogchen, Empowerment, Definition of Liberation",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/dzogchen-empowerment-definition-of_62.html",
+          "url_sha256": "848c799c86fc58f6bad3d7a4baba0b868237debf4817e9d069a4985a67a4217f",
+          "screen": "multiple explicit Greg turns, including substantial original argument"
+        }
+      ],
+      "known_or_possible_overlap_pages_to_exclude_pending_fresh_census": [
+        {
+          "title": "Insights, Anatta, +A, -A",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/insights-anatta-a_8.html",
+          "url_sha256": "fbd77841b417330e9393d63265ef00890d93cf2a2834db7bf022f00d1c793662",
+          "reason": "Joel and Greg both appear in the older target-thread census"
+        },
+        {
+          "title": "Sound And The Bahiya Sutta",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/sound-and-bahiya-sutta.html",
+          "url_sha256": "6ef119fcd6748ee2fd0144a9a5bcd20fd069177ea3969eafc7ad67ad1432972f",
+          "reason": "current public page visibly contains both Joel Rosenblum and Greg Goode, although the older target-thread artifact omitted it"
+        }
+      ],
+      "remaining_checks": [
+        "fresh complete explicit-label census and overlap set",
+        "exact identity/label consistency review",
+        "exact extracted post and word totals",
+        "largest-source concentration",
+        "quotation and copied-source contamination",
+        "duplicate and near-duplicate detection",
+        "reserve independent held-out originals rather than consuming all material in the profile"
+      ]
+    },
+    {
+      "speaker": "Robert Dominik",
+      "priority": 2,
+      "disposition": "backup-candidate-after-greg",
+      "why": [
+        "stable named speaker with multiple current public same-platform discussions",
+        "at least some screened turns are long and apparently original",
+        "older Joel-thread census found two shared threads"
+      ],
+      "risks": [
+        "some visible blocks are primarily quotations",
+        "current independent nonoverlap count and concentration are not frozen",
+        "fresh overlap census required"
+      ]
+    },
+    {
+      "speaker": "Albert Hong",
+      "priority": 3,
+      "disposition": "defer-until-dequotation-feasibility-audit",
+      "why": [
+        "same-platform recurring speaker and at least two older Joel-overlap threads"
+      ],
+      "risks": [
+        "several prominent visible blocks reproduce long book or third-party quotations",
+        "apparently original turns are often very short",
+        "explicit-speaker extraction without dequotation could profile quoted authors rather than Albert"
+      ]
+    },
+    {
+      "speaker": "John Ahn",
+      "priority": 4,
+      "disposition": "defer-imported-dialogue-and-identity-boundary",
+      "risks": [
+        "many posts contain imported chats or transcripts",
+        "John and John Ahn labels may require exact identity resolution",
+        "topic/source contamination risk is high"
+      ]
+    },
+    {
+      "speaker": "Mr. J.C.",
+      "priority": 5,
+      "disposition": "defer-opaque-identity",
+      "risks": [
+        "opaque label makes cross-thread identity continuity difficult to verify",
+        "older census found only two Joel-overlap threads and no frozen nonoverlap supply"
+      ]
+    },
+    {
+      "speaker": "Stuffs RedTurtle",
+      "priority": 6,
+      "disposition": "defer-thin-and-opaque",
+      "risks": [
+        "opaque label",
+        "older census found only two target-thread markers total",
+        "no frozen evidence of sufficient independent prose"
+      ]
+    }
+  ],
+  "selected_next_candidate": "Greg Goode",
+  "admission_gates": {
+    "source": "state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json",
+    "preferred_min_explicit_nonoverlap_posts": 4,
+    "preferred_min_total_words": 1000,
+    "preferred_max_largest_source_fraction": 0.7,
+    "additional_required_checks": [
+      "fresh Joel-overlap exclusion set",
+      "exact speaker-label identity",
+      "quotation contamination review",
+      "canonical duplicate and near-duplicate review",
+      "independent profile-versus-holdout split"
+    ],
+    "note": "These are acquisition feasibility gates, not attribution thresholds or validated-for-register criteria."
+  },
+  "cost_and_execution_boundary": {
+    "new_luar_run": false,
+    "new_pangram_run": false,
+    "new_github_network_workflow_run": false,
+    "next_execution": "Run one deterministic Greg-only census/extraction using the existing local extractor when a network-capable trusted runtime is available; keep prose local and commit only the metadata receipt."
+  },
+  "validation": {
+    "repository_visible_files": "both JSON files were fetched back from the branch and parsed as complete UTF-8 JSON",
+    "hosted_checks": "GitHub created the expected workflow runs, but both jobs terminated before their first step and supplied no step logs under the current Actions usage/budget boundary; no hosted validation is claimed",
+    "code_or_workflow_changes": false
+  },
+  "forbidden_claims": [
+    "Greg Goode is already an admitted ordinary control",
+    "the manual page screen is a complete archive census",
+    "the visible pages establish exact word sufficiency or contamination-free authorship",
+    "candidate priority predicts attribution distance from Joel",
+    "adding Greg alone validates the register or author neighborhood"
+  ]
+}
