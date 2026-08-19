@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "status": "target-centric-four-author-exact50-complete-matched-dharma-disconfirmed-not-IER",
+  "purpose": "Freeze the completed four-author LUAR target-verification result after adding Greg Goode, while keeping the hard matched-Dharma and independent-TAFKA strata separate and preserving the owner correction that Stian confusion alone is not idiolect erasure.",
+  "source_pr": 100,
+  "workflow": {
+    "successful_run_id": 32254557246,
+    "successful_job_id": 96073130989,
+    "successful_head_sha": "30d0a52f0572fcfc9487a6a0e7eb13e0339f673a",
+    "artifact": {
+      "name": "idiolect-four-author-target-verification-v3-metadata",
+      "artifact_id": 9365904291,
+      "artifact_zip_sha256": "fc7383a57dbce364a535dad1649c2d406aaa427f58d7a5ef516f59c340e94d49",
+      "preflight_member_sha256": "4bb841b181e541cf2e7afd664fde81e7c21f2536eef33fa389207a75c1afc490",
+      "result_member_sha256": "eafc2da34ff12372f9dfc3163b3a709f36441a68245f1cdb088d7d7799da1d01"
+    },
+    "validation": {
+      "non_ml_regressions": "20 passed",
+      "source_preflight": "passed",
+      "pinned_luar_and_inherited_regressions": "passed",
+      "result_identity_privacy_stratum_gates": "passed",
+      "repository_visible_prose_check": "passed"
+    }
+  },
+  "model": {
+    "model_id": "rrivera1849/LUAR-MUD",
+    "requested_revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "resolved_revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "upstream_transformer_revision": "48bffbbd27bf028ecdd0cd55abb51236ec12ef1b",
+    "embedding_size": 512,
+    "max_token_length": 512,
+    "profile_rule": "arithmetic mean of raw one-document LUAR embeddings; nearest mean profile by cosine",
+    "torch_version": "2.13.0+cpu",
+    "transformers_version": "4.57.6",
+    "embeddings_persisted": false
+  },
+  "candidate_set": [
+    {
+      "author": "Joel Rosenblum",
+      "role": "target-author"
+    },
+    {
+      "author": "Stian Gudmundsen Høiland",
+      "role": "owner-identified-hard-negative"
+    },
+    {
+      "author": "David Vardy",
+      "role": "ordinary-matched-control"
+    },
+    {
+      "author": "Greg Goode",
+      "role": "ordinary-matched-control"
+    }
+  ],
+  "condition": {
+    "word_budget_per_document": 50,
+    "profile_documents_per_author": 3,
+    "target_prefix_admission_version": "historical-hash-bound-exact50-dialogue-heuristic-exception-v1",
+    "independent_joel_selection_version": "predeclared-clean-exact50-fallback-selection-v1"
+  },
+  "control_profiles": {
+    "Stian Gudmundsen Høiland": [
+      {
+        "sample_id": "dcp-stian-hoiland-causality-and-self-perfection-54",
+        "source_group": "dc-thread-958058664579671905",
+        "source_canonical_sha256": "8886ee9d25d29e4ae943fc11ee48cf085b5ee4c31f225c0b998234db1e531afe",
+        "exact50_sha256": "03db286262c07da11f75dbd28c093acb70b0e841fb9dd720e505341092e1b33d"
+      },
+      {
+        "sample_id": "dcp-stian-hoiland-did-buddha-teach-atman-7",
+        "source_group": "dc-thread-3079478924172374697",
+        "source_canonical_sha256": "484a4af3415012191d610ba36f9026f3ca5f49544fb283475c0a245e5e3083dc",
+        "exact50_sha256": "7a80877d33d2a1252dcfa55fec9590c040ef0fe15a468d95383a85cfea422160"
+      },
+      {
+        "sample_id": "dcp-stian-hoiland-experience-and-actualization-of-anatta-72",
+        "source_group": "dc-thread-6266197889093613190",
+        "source_canonical_sha256": "047ffe7614f8a5b15e5cc1ed6973b65b4341be217844222f5f9b5172271b071a",
+        "exact50_sha256": "2d2bd90c4b451afc15b5411d424f7fd7c15a50103aff7eb4f5672acd09d078e1"
+      }
+    ],
+    "David Vardy": [
+      {
+        "sample_id": "dcp-david-vardy-alcohol-54",
+        "source_group": "dc-thread-4978144203916527435",
+        "source_canonical_sha256": "80432a47db62c41c62aaf8c594edbbf5ee88bd1b1dba4234b0dcb940f6f26e85",
+        "exact50_sha256": "5b4f05613929a9c2ad79682e0cb572753fbde0d4a2f7fc5b08e0e700aab1dd73"
+      },
+      {
+        "sample_id": "dcp-david-vardy-stream-41",
+        "source_group": "dc-thread-2006108526964070309",
+        "source_canonical_sha256": "9dc22cac033a592a5fec985c69d68a914dca366296a23ad5ce37c07577b07263",
+        "exact50_sha256": "f25191db800f02fb470ac65fadba67b0192aa4d9aff009821926c167c86d3e81"
+      },
+      {
+        "sample_id": "dcp-david-vardy-dzogchen-appearing-emptiness-39",
+        "source_group": "dc-thread-58818792567942365",
+        "source_canonical_sha256": "ee255b0a33a3a2c276084574eeef99eae95d06206356a9ef1c000c90af359bd4",
+        "exact50_sha256": "ee255b0a33a3a2c276084574eeef99eae95d06206356a9ef1c000c90af359bd4"
+      }
+    ],
+    "Greg Goode": [
+      {
+        "sample_id": "dcp-greg-goode-realizing-non-arising-from-dependent-70",
+        "source_group": "dc-thread-1156495982737412035",
+        "source_canonical_sha256": "19d19f1907061ac623b71b911eb4e2066e9fa054e14df716c757b97ad1322d83",
+        "exact50_sha256": "c41d2f650ace341fb420401a60c2d321d43ef1f19ceb5d5da5cf8dad534f21b8"
+      },
+      {
+        "sample_id": "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+        "source_group": "dc-thread-6428699248388781187",
+        "source_canonical_sha256": "6b11bad5957728c4ffc5edcd2f318441892315e58ad57ec3465f91255a6df353",
+        "exact50_sha256": "9ba8b15c0281cc0fe5b2dbf84cf3be59ad3ba843fc0867be3e2198730f023167"
+      },
+      {
+        "sample_id": "dcp-greg-goode-faith-pure-land-and-karma-99",
+        "source_group": "dc-thread-373114560681330350",
+        "source_canonical_sha256": "4a18e19362c3f52b1a4b3be89574c758413cda7e5fb165c55a53071ceaf816d6",
+        "exact50_sha256": "9daba5378c8a6952c39c948f7ffd03c7bd7d7e32efedb59ba63fb64923e17ed2"
+      }
+    ]
+  },
+  "matched_dharma": {
+    "role": "primary hard same-platform/topic target-verification diagnostic",
+    "target_top1_correct": 2,
+    "target_document_count": 4,
+    "target_top1_accuracy": 0.5,
+    "winner_counts": {
+      "Joel Rosenblum": 2,
+      "Stian Gudmundsen Høiland": 1,
+      "Greg Goode": 1,
+      "David Vardy": 0
+    },
+    "documents": [
+      {
+        "sample_id": "dcp-joel-holographic",
+        "predicted": "Stian Gudmundsen Høiland",
+        "target_rank": 4,
+        "cosine_scores": {
+          "Joel Rosenblum": 0.547328,
+          "Stian Gudmundsen Høiland": 0.750731,
+          "David Vardy": 0.623845,
+          "Greg Goode": 0.592693
+        },
+        "target_minus_competitor_margin": {
+          "Stian Gudmundsen Høiland": -0.203403,
+          "David Vardy": -0.076517,
+          "Greg Goode": -0.045365
+        }
+      },
+      {
+        "sample_id": "dcp-joel-can-anything-known",
+        "predicted": "Joel Rosenblum",
+        "target_rank": 1,
+        "cosine_scores": {
+          "Joel Rosenblum": 0.658367,
+          "Stian Gudmundsen Høiland": 0.508276,
+          "David Vardy": 0.521773,
+          "Greg Goode": 0.529143
+        },
+        "target_minus_competitor_margin": {
+          "Stian Gudmundsen Høiland": 0.150091,
+          "David Vardy": 0.136594,
+          "Greg Goode": 0.129224
+        }
+      },
+      {
+        "sample_id": "dcp-joel-supramundane-jhanas",
+        "predicted": "Greg Goode",
+        "target_rank": 2,
+        "cosine_scores": {
+          "Joel Rosenblum": 0.659321,
+          "Stian Gudmundsen Høiland": 0.533368,
+          "David Vardy": 0.520788,
+          "Greg Goode": 0.700897
+        },
+        "target_minus_competitor_margin": {
+          "Stian Gudmundsen Høiland": 0.125953,
+          "David Vardy": 0.138533,
+          "Greg Goode": -0.041575
+        },
+        "historical_source_hash_unchanged": true,
+        "historical_exact50_prefix_exception": "generic possible-unremoved-dialogue heuristic only; no additional prefix issue"
+      },
+      {
+        "sample_id": "dcp-joel-insights-anatta",
+        "predicted": "Joel Rosenblum",
+        "target_rank": 1,
+        "cosine_scores": {
+          "Joel Rosenblum": 0.635176,
+          "Stian Gudmundsen Høiland": 0.524796,
+          "David Vardy": 0.473466,
+          "Greg Goode": 0.410141
+        },
+        "target_minus_competitor_margin": {
+          "Stian Gudmundsen Høiland": 0.11038,
+          "David Vardy": 0.161711,
+          "Greg Goode": 0.225035
+        }
+      }
+    ],
+    "margin_summaries": {
+      "Stian Gudmundsen Høiland": {
+        "positive_count": 3,
+        "negative_count": 1,
+        "minimum": -0.203403,
+        "median": 0.118167,
+        "mean": 0.045755,
+        "maximum": 0.150091
+      },
+      "David Vardy": {
+        "positive_count": 3,
+        "negative_count": 1,
+        "minimum": -0.076517,
+        "median": 0.137564,
+        "mean": 0.09008,
+        "maximum": 0.161711
+      },
+      "Greg Goode": {
+        "positive_count": 2,
+        "negative_count": 2,
+        "minimum": -0.045365,
+        "median": 0.043825,
+        "mean": 0.06683,
+        "maximum": 0.225035
+      }
+    },
+    "disposition": "unique-Joel-exact50-attribution-disconfirmed-for-named-condition"
+  },
+  "independent_tafka": {
+    "role": "secondary source-independent Joel sensitivity diagnostic",
+    "target_profile_documents": [
+      "tafka-2015-02-23-right-view-humility",
+      "tafka-2019-03-08-plant-spirits",
+      "tafka-2015-01-17-sam-harris-review"
+    ],
+    "heldout_documents": [
+      {
+        "sample_id": "tafka-2019-08-02-buddhism-sect",
+        "predicted": "Joel Rosenblum",
+        "target_rank": 1,
+        "cosine_scores": {
+          "Joel Rosenblum": 0.6306,
+          "Stian Gudmundsen Høiland": 0.454691,
+          "David Vardy": 0.528136,
+          "Greg Goode": 0.480353
+        },
+        "target_minus_competitor_margin": {
+          "Stian Gudmundsen Høiland": 0.175909,
+          "David Vardy": 0.102464,
+          "Greg Goode": 0.150247
+        }
+      },
+      {
+        "sample_id": "tafka-2020-04-19-consciousness-conditions",
+        "predicted": "Joel Rosenblum",
+        "target_rank": 1,
+        "cosine_scores": {
+          "Joel Rosenblum": 0.626341,
+          "Stian Gudmundsen Høiland": 0.515866,
+          "David Vardy": 0.457538,
+          "Greg Goode": 0.441387
+        },
+        "target_minus_competitor_margin": {
+          "Stian Gudmundsen Høiland": 0.110475,
+          "David Vardy": 0.168803,
+          "Greg Goode": 0.184954
+        }
+      }
+    ],
+    "target_top1_correct": 2,
+    "target_document_count": 2,
+    "target_top1_accuracy": 1.0,
+    "profile_cosine_matrix": {
+      "Joel Rosenblum": {
+        "Joel Rosenblum": 1.0,
+        "Stian Gudmundsen Høiland": 0.718191,
+        "David Vardy": 0.661275,
+        "Greg Goode": 0.622038
+      },
+      "Stian Gudmundsen Høiland": {
+        "Joel Rosenblum": 0.718191,
+        "Stian Gudmundsen Høiland": 1.0,
+        "David Vardy": 0.801877,
+        "Greg Goode": 0.671303
+      },
+      "David Vardy": {
+        "Joel Rosenblum": 0.661275,
+        "Stian Gudmundsen Høiland": 0.801877,
+        "David Vardy": 1.0,
+        "Greg Goode": 0.58722
+      },
+      "Greg Goode": {
+        "Joel Rosenblum": 0.622038,
+        "Stian Gudmundsen Høiland": 0.671303,
+        "David Vardy": 0.58722,
+        "Greg Goode": 1.0
+      }
+    },
+    "disposition": "positive-small-cross-platform-sensitivity-only-not-calibrated"
+  },
+  "interpretation": {
+    "primary_conclusion": "Under the named four-author exact-50 matched-Dharma condition, short natural Joel originals are not reliably unique-Joel attributable: Joel is top-ranked on 2 of 4. Exact-50 LUAR therefore must not be used as an operational unique-Joel retention gate for this matched condition.",
+    "hard_negative_conclusion": "Stian remains a genuine hard negative but is not the sole confound. One matched Joel original is won by Stian and one by Greg; David produces no top-1 error but outranks Joel on the Holographic original.",
+    "owner_correction_conclusion": "The data continue to support the methodological correction that a Joel-to-Stian flip alone is not idiolect-erasure evidence. Ambiguity in the named condition is broader than Stian alone.",
+    "independent_sensitivity_conclusion": "Both independent TAFKA holdouts rank Joel first, but there are only two and the target profile changes platform/register relative to the controls. This is positive sensitivity evidence, not validation and not a basis for averaging away the matched-Dharma failure.",
+    "profile_geometry_limit": "The selected independent-profile cosine matrix is instrument- and corpus-specific. Stian-David cosine (0.801877) is higher than Joel-Stian (0.718191), so this matrix does not establish a unique general Joel-Stian stylistic neighborhood.",
+    "historical_comparison_limit": "The earlier three-author exact-50 result used a different candidate set/profile design. Do not interpret the new 2/4 versus old 1/4 as a causal improvement from adding Greg.",
+    "operational_rule": "Close the exact-50 unique-author gate as disconfirmed for this condition. Continue to treat the routine Joel-only proxy as directional evidence and prefer longer coherent section boundaries when authorship-retention evidence is needed, until a specific longer/register-matched condition is separately validated.",
+    "next_research_priority": "Do not launch more short-text or Romance transformation experiments merely to rescue exact-50 attribution. Any future calibration should test meaningful longer coherent boundaries and a register/source design that supports them."
+  },
+  "privacy": {
+    "raw_or_canonical_prose_in_git": false,
+    "embeddings_in_git": false,
+    "metadata_only": true
+  },
+  "forbidden_claims": [
+    "this result is IER",
+    "exact-50 LUAR is validated for Joel",
+    "the independent TAFKA 2/2 result overrides or can be averaged with the matched-Dharma 2/4 result",
+    "Stian confusion by itself proves erasure",
+    "Greg caused the matched accuracy change relative to the historical three-author pilot",
+    "the profile cosine matrix proves a stable real-world Joel-Stian neighborhood",
+    "any universal numeric retention threshold is established"
+  ]
+}
