@@ -156,52 +156,25 @@ def _percent_from_body(body: str, kind: str) -> float | None:
     return None
 
 
-def _probability(value: Any) -> float | None:
-    if isinstance(value, bool):
-        return None
-    try:
-        number = float(value)
-    except (TypeError, ValueError):
-        return None
-    if 0.0 <= number <= 1.0:
-        return number
-    if 1.0 < number <= 100.0:
-        return number / 100.0
-    return None
-
-
-def _summary_from_prediction(payload: dict[str, Any]) -> tuple[float | None, float | None]:
-    label = str(payload.get("prediction", "")).casefold()
-    probability = _probability(payload.get("prediction_prob"))
-    if probability is None:
-        return None, None
-    if "human" in label:
-        return 1.0 - probability, probability
-    if label == "ai" or "generated" in label or label.startswith("ai_"):
-        return probability, 1.0 - probability
-    return None, None
-
-
 def parse_history_record_result(
     record: ExactHistoryRecord,
     rendered_body: str,
 ) -> dict[str, object]:
     ai = _percent_from_body(rendered_body, "ai")
     human = _percent_from_body(rendered_body, "human")
-    source = "rendered_history_report"
 
+    # The live diagnostic proves that prediction/prediction_prob fields exist,
+    # but not whether prediction_prob is confidence in the label, AI probability,
+    # or another quantity. Do not infer score semantics from those fields.
     if ai is None or human is None or abs((ai + human) - 1.0) > 0.02:
-        ai, human = _summary_from_prediction(record.payload)
-        source = "history_api_prediction"
-
-    if ai is None or human is None:
         raise RuntimeError(
-            "exact Pangram history record was identified, but its Human/AI summary could not be parsed"
+            "exact Pangram history record was identified, but its rendered Human/AI summary "
+            "could not be parsed without guessing prediction_prob semantics"
         )
 
     return {
         "report_layout": "history_api_bound_overview_v1",
-        "summary_source": source,
+        "summary_source": "rendered_history_report",
         "summary": {
             "fraction_ai": round(float(ai), 10),
             "fraction_moderately_ai_assisted": 0.0,
