@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import pytest
+
 from pangram_lab.history_api_record import (
     history_api_uuid,
     match_exact_history_record,
@@ -70,11 +72,12 @@ def test_parses_current_rendered_long_document_summary() -> None:
     )
     assert parsed["summary"]["fraction_ai"] == 0.08
     assert parsed["summary"]["fraction_human"] == 0.92
+    assert parsed["summary_source"] == "rendered_history_report"
     assert parsed["segments"] == []
     assert parsed["history_record_identity"]["record_model_id"] == "pangram-4"
 
 
-def test_prediction_probability_is_bounded_fallback() -> None:
+def test_does_not_guess_prediction_probability_semantics() -> None:
     text = "one two"
     url = "https://web.pangram.com/api/history/aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb/"
     payload = {
@@ -85,7 +88,5 @@ def test_prediction_probability_is_bounded_fallback() -> None:
     }
     match = match_exact_history_record(url, payload, text)
     assert match is not None
-    parsed = parse_history_record_result(match, "no summary here")
-    assert parsed["summary_source"] == "history_api_prediction"
-    assert parsed["summary"]["fraction_human"] == 0.92
-    assert parsed["summary"]["fraction_ai"] == 0.08
+    with pytest.raises(RuntimeError, match="prediction_prob semantics"):
+        parse_history_record_result(match, "no summary here")
