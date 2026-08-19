@@ -211,6 +211,11 @@
     "new_github_network_workflow_run": false,
     "next_execution": "Run one deterministic Greg-only census/extraction using the existing local extractor when a network-capable trusted runtime is available; keep prose local and commit only the metadata receipt."
   },
+  "validation": {
+    "repository_visible_files": "both JSON files were fetched back from the branch and parsed as complete UTF-8 JSON",
+    "hosted_checks": "GitHub created the expected workflow runs, but both jobs terminated before their first step and supplied no step logs under the current Actions usage/budget boundary; no hosted validation is claimed",
+    "code_or_workflow_changes": false
+  },
   "forbidden_claims": [
     "Greg Goode is already an admitted ordinary control",
     "the manual page screen is a complete archive census",
