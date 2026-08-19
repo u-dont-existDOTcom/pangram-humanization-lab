@@ -23,10 +23,12 @@ mkdir -p "$work/hosted/actions" "$work/hosted/reviews"
 chmod 700 "$work" "$work/hosted" "$work/hosted/actions" "$work/hosted/reviews"
 
 # Make every currently reachable branch, tag, and PR head visible to git rev-list/log.
+# Keep PR heads in their own remote namespace because actions/checkout may already
+# create refs/remotes/pull/<number>/merge for a pull_request run.
 git fetch --force --no-tags origin \
   '+refs/heads/*:refs/remotes/origin/*' \
   '+refs/tags/*:refs/tags/*' \
-  '+refs/pull/*/head:refs/remotes/pull/*'
+  '+refs/pull/*/head:refs/remotes/pull-heads/*'
 
 git for-each-ref --format='%(refname)' > "$work/hosted/ref-names.txt"
 git log --all --format='%H%n%B%n---END-COMMIT---' > "$work/hosted/commit-messages.txt"
