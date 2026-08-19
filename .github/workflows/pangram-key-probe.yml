@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - codex/pangram-key-probe-20260819
+  pull_request:
+    branches:
+      - codex/pangram-key-probe-20260819
 
 permissions: {}
 
