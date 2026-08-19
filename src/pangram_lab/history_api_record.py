@@ -36,6 +36,10 @@ class ExactHistoryRecord:
         return {
             "api_path": "/api/history/<uuid>/",
             "exact_text_field_path": list(self.field_path),
+            # Preserve the original proof keys for downstream consumers while
+            # exposing the authorized-vs-stored representation distinction.
+            "exact_text_sha256": self.input_sha256,
+            "exact_word_count": self.word_count,
             "authorized_text_sha256": self.input_sha256,
             "authorized_word_count": self.word_count,
             "stored_text_sha256": self.stored_text_sha256,
