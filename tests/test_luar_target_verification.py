@@ -1,5 +1,7 @@
 from pathlib import Path
 
+import pytest
+
 from pangram_lab import luar_target_verification as tv
 from pangram_lab.luar_matched_pilot import _row_key
 
@@ -69,7 +71,10 @@ def test_control_selection_skips_dirty_prefix_and_keeps_three_clean(tmp_path):
 
 
 def test_score_target_reports_hard_and_ordinary_margins(tmp_path):
-    import numpy as np
+    np = pytest.importorskip(
+        "numpy",
+        reason="LUAR/numpy is an optional isolated research dependency",
+    )
 
     authors = ["Joel Rosenblum", "Stian", "David", "Greg"]
     row = _write_row(tmp_path, "target", "Joel Rosenblum", _words("j", 50))
