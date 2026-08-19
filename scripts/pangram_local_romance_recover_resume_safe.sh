@@ -2,6 +2,9 @@
 
 # Recover the already-paid ambiguous Romance Part 1 result without resubmitting
 # it, normalize persistent tabs, then resume the paid runner for uncached Part 2.
+# Recovery checks the dedicated automation profile's Pangram-only URL history,
+# Pangram's History route, and existing bounded UI surfaces. It never inspects
+# Joel's ordinary Brave profile and never clicks a detector action for Part 1.
 # This wrapper never leaves strict shell state in the operator's terminal.
 set +e
 
@@ -43,8 +46,8 @@ if [ "$test_rc" -ne 0 ]; then
 fi
 
 printf '%s\n' "=== Recover already-paid Part 1 without resubmission ===" | tee -a "$log_path"
-printf '%s\n' "Part 1 will NOT be submitted again. Restored tabs and bounded History navigation are recovery-only." | tee -a "$log_path"
-"$python_bin" scripts/pangram_local_romance_recover_part1.py 2>&1 | tee -a "$log_path"
+printf '%s\n' "Part 1 will NOT be submitted again. Dedicated-profile Pangram URL history and bounded History navigation are recovery-only." | tee -a "$log_path"
+"$python_bin" scripts/pangram_local_romance_recover_part1_history.py 2>&1 | tee -a "$log_path"
 recover_rc=${PIPESTATUS[0]}
 printf '\nRECOVERY_EXIT=%s\n\n' "$recover_rc" | tee -a "$log_path"
 if [ "$recover_rc" -ne 0 ]; then
