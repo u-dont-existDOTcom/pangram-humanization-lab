@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "status": "source-freeze-complete-fully-nonoverlap-four-author-design-infeasible",
+  "purpose": "Freeze the current Dharma Connection source-supply result after dynamically excluding every thread shared with another author in the intended Joel/Stian/David/Greg benchmark, and prevent an impossible fully nonoverlap design from consuming more acquisition work.",
+  "source_pr": 99,
+  "workflow": {
+    "run_id": 32250848304,
+    "job_id": 96061229392,
+    "head_sha": "5619bd3718c837cd7d7da2f33f27e23a3694603f",
+    "focused_tests": "18 passed",
+    "artifact": {
+      "name": "idiolect-four-author-nonoverlap-source-freeze-metadata",
+      "artifact_id": 9364417772,
+      "sha256": "d74b909014e50100aae22630d623d77646364dd1e30ed54f5a50584b439e3027",
+      "members": {
+        "joel-receipt.json": "64c8cf9139479ad6a86cec3ce27d9f3165c5a83585050783f8c133f6d228f3db",
+        "stian-receipt.json": "49f93cc4251adb25cb164c818ba12800788ee5adc5e2269aa77d5b2a9a131c63",
+        "david-receipt.json": "cd0d3d6b4037dbba21297365bbc8e027f8c72457cc1bc457aeb1cf85720b3244"
+      }
+    }
+  },
+  "authors": {
+    "Joel Rosenblum": {
+      "role": "target-author",
+      "explicit_posts_current_feed": 5,
+      "dynamic_overlap_posts_rejected": 4,
+      "nonoverlap_posts_selected": 1,
+      "extracted_nonoverlap_words": 13,
+      "automated_feasibility_pass": false,
+      "feed_snapshot_sha256": "dd87969664faf34cba56ce91704c1a64864f29b6e6c4b2f7b5a153cb61ec3231",
+      "target_post_set_sha256": "b0523922140615c70565d5f798b04e0d594ff01e0f6972f47858e9be582be1b1",
+      "selected_source_set_sha256": "e74adb757f0ee140456241e60d9debf7355b64a6c4d7309bc6ad7e8f40ed7fdd",
+      "disposition": "insufficient-for-fully-nonoverlap-exact-50-profile-or-holdout",
+      "key_finding": "After excluding every current thread shared with Stian, David, or Greg, only one 13-word explicit Joel source remains. A fully nonoverlap same-platform four-author Joel benchmark cannot be built from the current explicit-speaker Dharma archive."
+    },
+    "Stian Gudmundsen Høiland": {
+      "role": "owner-identified-hard-negative",
+      "explicit_posts_current_feed": 17,
+      "dynamic_overlap_posts_rejected": 10,
+      "nonoverlap_posts_selected": 7,
+      "automated_feasibility_pass": false,
+      "feed_snapshot_sha256": "c49f40d6646b77ab6fd486471a719c0086dec70fc94d92d189d62dab6836412c",
+      "target_post_set_sha256": "592ccba5e37e7bb9a4a3f9091161461b2ece16685552df69fa5f7ba7431aad78",
+      "selected_source_set_sha256": "926f63e9222250101f4665d4866df29aed98b4cb65c78d94046d1b07fdbf9e56",
+      "one_shot_profile": {
+        "source_count": 4,
+        "total_words": 2776,
+        "largest_source_fraction": 0.558718
+      },
+      "one_shot_holdout": {
+        "source_count": 3,
+        "total_words": 1463,
+        "largest_source_fraction": 0.741627
+      },
+      "reason_automated_gate_failed": "Only four profile sources remained versus the predeclared six-source acquisition preference; multiple sources also carry dialogue or ambiguous-speaker quality flags requiring conservative selection."
+    },
+    "David Vardy": {
+      "role": "ordinary-matched-control",
+      "explicit_posts_current_feed": 21,
+      "dynamic_overlap_posts_rejected": 9,
+      "nonoverlap_posts_selected": 12,
+      "automated_feasibility_pass": true,
+      "feed_snapshot_sha256": "c2a3f28d3d53186e2064a25c6aba28bfee52dc97baecf667803ceba168f15c73",
+      "target_post_set_sha256": "aafe384893eba174d1a4b2320cbf041a20cef17966592450f00faeccfed6483b",
+      "selected_source_set_sha256": "21101b05f3142751281dcf70b7f4336f990e46fa13b329e0c6589ffb36fa4edd",
+      "one_shot_profile": {
+        "source_count": 9,
+        "total_words": 3637,
+        "largest_source_fraction": 0.31427
+      },
+      "one_shot_holdout": {
+        "source_count": 3,
+        "total_words": 916,
+        "largest_source_fraction": 0.45524
+      }
+    }
+  },
+  "design_decision": {
+    "fully_nonoverlap_same_platform_four_author_closed_set": "infeasible-with-current-archive",
+    "reason": "Joel lacks enough nonoverlap Dharma material after excluding the other three benchmark authors. Further blind archive acquisition cannot fix this source-supply fact without changing provenance or overlap rules.",
+    "next_design": "target-centric-stratified-verification",
+    "matched_dharma_stratum": "Use Joel's already frozen shared-thread Dharma originals as the target holdouts while control-author profiles come from independent nonoverlap threads. Report this as a deliberately hard same-platform/topic stratum rather than pretending the target holdouts are nonoverlap.",
+    "independent_joel_stratum": "Use separately frozen natural-owner Joel originals from an independent source/platform as a second stratum, reported separately because platform/register transfer is a confound.",
+    "aggregation_rule": "Do not average matched-Dharma and independent-Joel strata into one score."
+  },
+  "privacy": {
+    "raw_or_canonical_prose_in_git": false,
+    "embeddings_in_git": false,
+    "metadata_only": true
+  },
+  "forbidden_claims": [
+    "Joel has enough fully nonoverlap Dharma material for the intended four-author design",
+    "Stian's automated acquisition failure means he is unusable as a hard negative",
+    "the current source freeze proves a stable Joel-Stian neighborhood",
+    "a target-centric design is numerically equivalent to closed-set IER",
+    "this result is validated-for-register"
+  ]
+}
