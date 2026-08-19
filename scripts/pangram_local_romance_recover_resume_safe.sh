@@ -15,10 +15,20 @@ if [ -z "$repo_root" ]; then
 fi
 cd "$repo_root" || exit 0
 
+self_path="$repo_root/scripts/pangram_local_romance_recover_resume_safe.sh"
 log_dir="${HOME}/Téléchargements"
 mkdir -p "$log_dir"
 log_path="$log_dir/pangram-local-recover-resume.log"
-: > "$log_path"
+
+# A running shell does not reload its source file after `git pull`. Preserve the
+# first process's log, but when the pull changes this wrapper, exec the new file
+# exactly once so the rest of the run uses the newly fetched control flow.
+if [ "${PANGRAM_RECOVER_WRAPPER_REEXEC:-0}" = "1" ]; then
+  touch "$log_path"
+else
+  : > "$log_path"
+fi
+self_hash_before="$(git hash-object "$self_path" 2>/dev/null)"
 
 printf '%s\n' "=== Update local runner ===" | tee -a "$log_path"
 git pull --ff-only 2>&1 | tee -a "$log_path"
@@ -27,6 +37,15 @@ printf 'GIT_PULL_EXIT=%s\n\n' "$pull_rc" | tee -a "$log_path"
 if [ "$pull_rc" -ne 0 ]; then
   printf '%s\n' "RECOVER_RESUME_RESULT=blocked_git_pull" | tee -a "$log_path"
   exit 0
+fi
+
+self_hash_after="$(git hash-object "$self_path" 2>/dev/null)"
+if [ "${PANGRAM_RECOVER_WRAPPER_REEXEC:-0}" != "1" ] \
+   && [ -n "$self_hash_before" ] \
+   && [ -n "$self_hash_after" ] \
+   && [ "$self_hash_before" != "$self_hash_after" ]; then
+  printf '%s\n' "WRAPPER_UPDATED=yes; restarting into fetched wrapper before continuing." | tee -a "$log_path"
+  PANGRAM_RECOVER_WRAPPER_REEXEC=1 exec bash "$self_path"
 fi
 
 python_bin="$repo_root/.venv/bin/python"
