@@ -1,4 +1,4 @@
-# Pangram local Playwright current state — 2026-08-18
+# Pangram local Playwright current state — 2026-08-19
 
 ## Goal
 
@@ -32,7 +32,8 @@ The local Zorin path has verified:
 - authenticated detector input editable without filling/submitting;
 - exact current Romance source materialization and SHA/word-count checks;
 - before the paid run, both exact halves were uncached and unambiguous;
-- owner-machine deterministic suite passed 167/167 immediately before the first paid attempt.
+- owner-machine deterministic suite passed 167/167 immediately before the first paid attempt;
+- after the tab/report repair, the owner-machine deterministic suite passed 171/171 before the first no-repeat recovery attempt.
 
 ## Paid-call state
 
@@ -91,22 +92,52 @@ The exact matching page is then used for body and PDF evidence. This covers same
 
 The local paid runner reuses the canonical `PangramCallLedger` and six-call section cap. Each paid call reservation is committed/pushed before detector activation. A reserved but incomplete call is never silently repeated.
 
+## Recovery status after first no-repeat attempt
+
+The first post-incident recovery attempt ran on the owner machine on 2026-08-19:
+
+- deterministic suite: **171/171 passed**;
+- no Part 1 detector submission was made;
+- no Part 2 detector submission was made;
+- restored-tab recovery found exactly one open page, `https://www.pangram.com/dashboard`;
+- that page contained none of the expected report markers (`Analyzed Text`, `Authorship Breakdown`, Human/AI segment labels, or words-scanned marker);
+- bounded dashboard History-control navigation did not recover the exact Part 1 report.
+
+Therefore the restored-tab route is exhausted, but Part 1 remains ambiguous and blocked from repeat.
+
+## New read-only recovery route: dedicated profile URL history
+
+Pangram's current official documentation confirms that completed dashboard results use URLs shaped like `https://www.pangram.com/history/<UUID>` and that submitted content remains available in the dashboard History while the account is active.
+
+The recovery lane now adds `src/pangram_lab/browser_history_recovery.py`, which:
+
+- inspects only the dedicated automation profile `~/.config/pangram-local-browser`;
+- never reads Joel's ordinary Brave profile;
+- queries only Pangram `/history/<UUID>` URLs from Chromium's local History SQLite database;
+- strips query strings/fragments and discards all unrelated browsing history;
+- returns bounded recent candidates without printing the URLs in the normal operator log.
+
+`scripts/pangram_local_romance_recover_part1_history.py` tries those existing result URLs read-only, then Pangram's `/history` route, then the earlier bounded recovery surfaces. Every candidate must still exact-bind to the Part 1 text anchors and 10,236-word boundary. It contains no detector-action path.
+
+The new history-discovery code has deterministic unit coverage, but the enhanced owner-machine recovery has not yet been run. Its validation is intentionally local to conserve private-repository hosted Actions minutes.
+
 ## Next safe action
 
-Use:
+Use the same operator entry point:
 
 `scripts/pangram_local_romance_recover_resume_safe.sh`
 
-It must:
+It now must:
 
-1. update the branch and run the complete local deterministic suite;
-2. recover the already-paid Part 1 result from restored tabs or bounded History navigation **without submitting Part 1 again**;
-3. exact-bind and cache the recovered Part 1 report;
-4. normalize/close extra tabs;
-5. only after successful recovery, resume the paid runner, where Part 1 is a cache hit and only uncached/unambiguous Part 2 may be submitted;
-6. use exact multi-tab report binding for Part 2 and preserve evidence/call accounting before completion.
+1. update the branch and run the complete local deterministic suite, including the new dedicated-profile history tests;
+2. discover recent Pangram result URLs from only the dedicated profile;
+3. recover the already-paid Part 1 result from a matching existing `/history/<UUID>` URL, the `/history` route, or bounded UI navigation **without submitting Part 1 again**;
+4. exact-bind and cache the recovered Part 1 report;
+5. normalize/close extra tabs;
+6. only after successful recovery, resume the paid runner, where Part 1 is a cache hit and only uncached/unambiguous Part 2 may be submitted;
+7. use exact multi-tab report binding for Part 2 and preserve evidence/call accounting before completion.
 
-If Part 1 cannot be recovered automatically, stop. Do not repeat it. If Part 2 becomes ambiguous after detector activation, stop and recover it before any repeat.
+If Part 1 still cannot be recovered automatically, stop. Do not repeat it. If Part 2 becomes ambiguous after detector activation, stop and recover it before any repeat.
 
 ## Hosted CI / cost boundary
 
