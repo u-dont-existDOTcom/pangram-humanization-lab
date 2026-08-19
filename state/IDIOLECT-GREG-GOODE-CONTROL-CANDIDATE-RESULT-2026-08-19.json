@@ -1,0 +1,189 @@
+{
+  "artifact": {
+    "artifact_id": 9353402707,
+    "member": "greg-goode-control-profile-candidate-receipt.json",
+    "member_sha256": "561799e34e03d94d2667ff3ef7426b65d49e06a794000a05ff734600f9ff7cb0",
+    "name": "idiolect-greg-goode-control-candidate-metadata",
+    "workflow_run_id": 32219325045,
+    "zip_sha256": "8b65335c346d8c00e2854ec181cb3e0c17d7c77a723dd5f0101733c6aa7afde3"
+  },
+  "candidate": {
+    "author_id": "greg-goode",
+    "extracted_post_count": 9,
+    "feasibility_flags": [
+      "one-or-more-samples-require-manual-quality-review"
+    ],
+    "largest_source_fraction": 0.468861,
+    "largest_source_words": 1709,
+    "manual_quality_review_required": true,
+    "quantitative_feasibility_pass": true,
+    "role": "ordinary-matched-control-candidate",
+    "samples": [
+      {
+        "canonical_sha256": "3c166646fcf86e90219501166bc2a034dc8122960447eaba47df7da4481fb246",
+        "quality_flags": [
+          "short-under-100-words",
+          "thin-for-authorship-attribution"
+        ],
+        "sample_id": "dcp-greg-goode-beingnon-being-and-freedom-from-extremes-0",
+        "source_group": "dc-thread-09953956a70cc4a095731d8b",
+        "target_marker_count": 2,
+        "word_count": 32
+      },
+      {
+        "canonical_sha256": "2a8bcfcc202baa08c68976f1a59d0e302147de9fe3fea0d52b3412ab938999b6",
+        "quality_flags": [
+          "thin-for-authorship-attribution"
+        ],
+        "sample_id": "dcp-greg-goode-shentong-yogacara-and-dzogchen-59",
+        "source_group": "dc-thread-2525098934802507092",
+        "target_marker_count": 1,
+        "word_count": 156
+      },
+      {
+        "canonical_sha256": "7d9a946ad54312d35bec4124eff9cce869645b74e81bd184653f62251afc21a6",
+        "quality_flags": [
+          "short-under-100-words",
+          "thin-for-authorship-attribution"
+        ],
+        "sample_id": "dcp-greg-goode-an-experience-with-tonglen-42",
+        "source_group": "dc-thread-2826751715891005791",
+        "target_marker_count": 1,
+        "word_count": 35
+      },
+      {
+        "canonical_sha256": "4a18e19362c3f52b1a4b3be89574c758413cda7e5fb165c55a53071ceaf816d6",
+        "quality_flags": [],
+        "sample_id": "dcp-greg-goode-faith-pure-land-and-karma-99",
+        "source_group": "dc-thread-373114560681330350",
+        "target_marker_count": 4,
+        "word_count": 482
+      },
+      {
+        "canonical_sha256": "272775e445c956b07115cc555864cfaa6238f9ef0fc9c53470f64be8aaab3f54",
+        "quality_flags": [
+          "thin-for-authorship-attribution"
+        ],
+        "sample_id": "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52",
+        "source_group": "dc-thread-3962345161445562437",
+        "target_marker_count": 3,
+        "word_count": 190
+      },
+      {
+        "canonical_sha256": "f9e9adb9bc3b40c18531716ddc67bef6f1357d7eeb397c7957e7b614e8f8467c",
+        "quality_flags": [],
+        "sample_id": "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64",
+        "source_group": "dc-thread-431548bd24267b84801eee69",
+        "target_marker_count": 13,
+        "word_count": 1709
+      },
+      {
+        "canonical_sha256": "8f1fbdd02a81a7f898e8063bad6a5b0bfc09d449b026ab90ed1b1f93cb2d9f81",
+        "quality_flags": [
+          "short-under-100-words",
+          "thin-for-authorship-attribution"
+        ],
+        "sample_id": "dcp-greg-goode-nagasena-chariot-and-emptiness-97",
+        "source_group": "dc-thread-5098886803584800770",
+        "target_marker_count": 1,
+        "word_count": 55
+      },
+      {
+        "canonical_sha256": "6b11bad5957728c4ffc5edcd2f318441892315e58ad57ec3465f91255a6df353",
+        "quality_flags": [],
+        "sample_id": "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+        "source_group": "dc-thread-6428699248388781187",
+        "target_marker_count": 8,
+        "word_count": 524
+      },
+      {
+        "canonical_sha256": "1428f3b56ea5ce10cb401acef0d202438b1978452fe3f160572607acdf8809fa",
+        "quality_flags": [
+          "possible-unremoved-dialogue",
+          "ambiguous-single-word-lines-inside-speaker-block"
+        ],
+        "sample_id": "dcp-greg-goode-spiritual-diversity-20",
+        "source_group": "dc-thread-8956300362338800568",
+        "target_marker_count": 5,
+        "word_count": 462
+      }
+    ],
+    "speaker": "Greg Goode",
+    "total_words": 3645
+  },
+  "date": "2026-08-19",
+  "dominant_source_exclusion": {
+    "canonical_sha256": "9a84d7a0e38fed666364821c930213b514975f2d1467b018e6c7558adc58842e",
+    "quality_flags": [
+      "possible-unremoved-dialogue",
+      "ambiguous-single-word-lines-inside-speaker-block"
+    ],
+    "reason": "The fresh active-author-overlap run showed this 4,894-word flagged source supplied 71.99% of the remaining Greg corpus. Exclude it conservatively rather than letting one dialogue-flagged thread define the profile.",
+    "sample_id": "dcp-greg-goode-consciousness-advaita-emptiness-94",
+    "word_count": 4894
+  },
+  "fixed_split_candidate": {
+    "profile_sample_ids": [
+      "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64",
+      "dcp-greg-goode-faith-pure-land-and-karma-99",
+      "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+      "dcp-greg-goode-spiritual-diversity-20"
+    ],
+    "reserved_holdout_sample_ids": [
+      "dcp-greg-goode-shentong-yogacara-and-dzogchen-59",
+      "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52"
+    ],
+    "selection_rationale": "Reserve the two independent 150–190 word originals as heldouts; use the three clean longer sources plus one flagged 462-word source for the profile. Exact 150-word normalization limits source concentration but does not erase the flagged-source review requirement.",
+    "status": "provisional-split-for-one-shot-calibration-not-final-admission",
+    "word_budget": 150
+  },
+  "forbidden_claims": [
+    "Greg is already a fully validated ordinary control",
+    "quantitative feasibility proves quotation-free authorship",
+    "the fixed split is IER or validated-for-register",
+    "a single four-author run authorizes an operational threshold"
+  ],
+  "interpretation": {
+    "candidate_supply": "The candidate meets the existing quantitative acquisition gates and has exactly six independent sources at 150 words.",
+    "next_step": "Run a four-author, source-group-disjoint, exact-150 LUAR fixed-split benchmark with Greg as the second ordinary matched control; preserve full score vectors and abstain from operational thresholds.",
+    "quality_limit": "Only three of the six 150-word sources are flag-free under whole-document heuristics. The fixed split is suitable for a bounded provisional benchmark, not a validated-for-register claim."
+  },
+  "method_decision": "reuse-existing-Dharma-Atom-discovery-and-explicit-speaker-extraction",
+  "overlap_exclusion": {
+    "configured_exclusion_count": 2,
+    "effective_exclusion_count": 8,
+    "effective_exclusion_set_identity_sha256": "92f620a06b062c0ffbeca1c9534857c60466b73a699e398febc157df52ba451e",
+    "fresh_overlap_count": 7,
+    "fresh_overlap_set_identity_sha256": "633d7ba25fc95bdb629db2f87185885e79aec63729c73c0c3331bf4bf47f56bb",
+    "speakers": [
+      "Joel Rosenblum",
+      "David Vardy",
+      "Stian Gudmundsen Høiland"
+    ]
+  },
+  "privacy": {
+    "embeddings_in_result": false,
+    "local_paths_or_urls_in_result": false,
+    "raw_or_canonical_prose_in_git": false
+  },
+  "schema_version": 1,
+  "source_pr": 93,
+  "split_supply": {
+    "clean_eligible_document_count": 3,
+    "clean_only_supply_pass": false,
+    "eligible_document_count": 6,
+    "eligible_hash_set_sha256": "5a67247bc00a08359509ee36f4def51c940f94f45f2f59e91fb6694dfb047d74",
+    "eligible_sample_ids": [
+      "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+      "dcp-greg-goode-faith-pure-land-and-karma-99",
+      "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64",
+      "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52",
+      "dcp-greg-goode-shentong-yogacara-and-dzogchen-59",
+      "dcp-greg-goode-spiritual-diversity-20"
+    ],
+    "required_document_count": 6,
+    "supply_pass": true,
+    "word_budget": 150
+  },
+  "status": "greg-control-candidate-extraction-complete-manual-review-pending"
+}
