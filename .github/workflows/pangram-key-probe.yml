@@ -1,0 +1,34 @@
+name: Pangram API key probe
+
+on:
+  push:
+    branches:
+      - codex/pangram-key-probe-20260819
+
+permissions: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Authenticate Pangram key without submitting text
+        shell: bash
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$PANGRAM_API_KEY" || { echo "PANGRAM_API_KEY secret is missing"; exit 10; }
+          code="$(curl --silent --show-error --connect-timeout 10 --max-time 20 \
+            --output /tmp/pangram-models.json --write-out '%{http_code}' \
+            --header "x-api-key: $PANGRAM_API_KEY" \
+            --header 'Accept: application/json' \
+            'https://text.external-api.pangram.com/models')"
+          echo "Pangram /models HTTP $code"
+          case "$code" in
+            200) echo "PANGRAM_KEY_PROBE=accepted" ;;
+            401) echo "PANGRAM_KEY_PROBE=rejected"; exit 11 ;;
+            402) echo "PANGRAM_KEY_PROBE=insufficient_credits"; exit 12 ;;
+            403) echo "PANGRAM_KEY_PROBE=forbidden"; exit 13 ;;
+            *)   echo "PANGRAM_KEY_PROBE=unexpected_http_$code"; exit 14 ;;
+          esac
