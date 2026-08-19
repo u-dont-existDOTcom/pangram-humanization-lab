@@ -1,0 +1,95 @@
+name: Execute Pangram 4 fixed batch
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'requests/*.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pangram-private-executor
+  cancel-in-progress: false
+
+jobs:
+  execute:
+    if: github.actor == 'u-dont-existDOTcom'
+    runs-on: [self-hosted, linux, x64, pangram]
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out private trigger repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Validate one immutable paid trigger
+        id: request
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: >-
+          python3 scripts/validate_request_push.py
+          --base "$BASE_SHA"
+          --head "$HEAD_SHA"
+          --github-output "$GITHUB_OUTPUT"
+
+      - name: Check out canonical public Pangram lab
+        shell: bash
+        env:
+          LAB_REPO: u-dont-existDOTcom/pangram-humanization-lab
+          LAB_BRANCH: automation/pangram-fixed-batch
+        run: |
+          set -euo pipefail
+          STATE_DIR="$HOME/.local/share/pangram-private-executor"
+          DEPLOY_KEY="$STATE_DIR/public-lab-deploy-key"
+          KNOWN_HOSTS="$STATE_DIR/github_known_hosts"
+          LAB_DIR="$RUNNER_TEMP/pangram-humanization-lab"
+
+          test -r "$DEPLOY_KEY" || { echo "missing local public-lab deploy key: $DEPLOY_KEY"; exit 20; }
+          test -r "$KNOWN_HOSTS" || { echo "missing pinned GitHub known_hosts: $KNOWN_HOSTS"; exit 21; }
+          rm -rf "$LAB_DIR"
+
+          export GIT_SSH_COMMAND="ssh -i $DEPLOY_KEY -o IdentitiesOnly=yes -o UserKnownHostsFile=$KNOWN_HOSTS -o StrictHostKeyChecking=yes"
+          git clone --single-branch --branch "$LAB_BRANCH" "git@github.com:${LAB_REPO}.git" "$LAB_DIR"
+          git -C "$LAB_DIR" config user.name "Pangram Private Executor"
+          git -C "$LAB_DIR" config user.email "pangram-private-executor@users.noreply.github.com"
+          git -C "$LAB_DIR" config core.sshCommand "$GIT_SSH_COMMAND"
+
+      - name: Verify exact public spec and canonical paid contract
+        shell: bash
+        env:
+          SPEC_PATH: ${{ steps.request.outputs.spec_path }}
+          SPEC_SHA256: ${{ steps.request.outputs.spec_sha256 }}
+        run: |
+          set -euo pipefail
+          LAB_DIR="$RUNNER_TEMP/pangram-humanization-lab"
+          cd "$LAB_DIR"
+          test -f "$SPEC_PATH" || { echo "spec missing from canonical branch: $SPEC_PATH"; exit 30; }
+          ACTUAL_SHA256="$(sha256sum "$SPEC_PATH" | awk '{print $1}')"
+          test "$ACTUAL_SHA256" = "$SPEC_SHA256" || {
+            echo "spec SHA-256 mismatch; refusing paid execution"
+            exit 31
+          }
+          PYTHONPATH="$LAB_DIR/src" python3 scripts/validate_paid_dispatch.py \
+            --spec "$SPEC_PATH" \
+            --out '' \
+            --confirmation RUN_PAID_PANGRAM_FIXED_BATCH
+
+      - name: Execute existing resumable Pangram 4 runner
+        shell: bash
+        env:
+          PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
+          SPEC_PATH: ${{ steps.request.outputs.spec_path }}
+        run: |
+          set -euo pipefail
+          test -n "$PANGRAM_API_KEY" || { echo "PANGRAM_API_KEY secret is missing"; exit 40; }
+          LAB_DIR="$RUNNER_TEMP/pangram-humanization-lab"
+          cd "$LAB_DIR"
+          export PYTHONPATH="$LAB_DIR/src"
+          python3 scripts/run_fixed_batch.py "$SPEC_PATH"
