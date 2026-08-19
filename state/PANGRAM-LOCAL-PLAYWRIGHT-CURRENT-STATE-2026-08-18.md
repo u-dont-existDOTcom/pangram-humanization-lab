@@ -2,13 +2,14 @@
 
 ## Goal
 
-Use a dedicated headed persistent local Playwright profile on Joel's Zorin machine as the primary Pangram GUI transport while preserving exact-hash identity, ambiguity/duplicate protection, exact report evidence, paid-call accounting, recovery-before-repeat, bounded browser tabs, and GitHub durability.
+Use a dedicated headed persistent local Playwright profile on Joel's Zorin machine as the primary Pangram GUI transport while preserving exact-hash identity, ambiguity/duplicate protection, paid-call accounting, recovery-before-repeat, bounded browser tabs, and GitHub durability.
 
 ## Authority / branch
 
 - Repository: `u-dont-existDOTcom/pangram-humanization-lab`.
 - Implementation branch: `agent/pangram-local-playwright-gpt-20260818` / draft PR #78.
 - Romance source remains incubator branch `agent/romance-primal-crucible-gui-repair-20260817`; this tooling work does not establish article authority or edit prose.
+- Repository visibility is now public; normal code-only CI may be used. Detector execution remains intentional and separately gated.
 
 ## Exact current Romance boundary
 
@@ -24,7 +25,6 @@ Use a dedicated headed persistent local Playwright profile on Joel's Zorin machi
 - Manual login completed and fresh-process authentication persistence verified.
 - Exact source materialization/hash/word-count gates verified.
 - Persistent tab accumulation repaired: normal runs are bounded to one working tab and leave an inert tab on shutdown.
-- Exact report completion now scans all pages and accepts only a page bound to the exact input with a supported parsed layout and exact analyzed word count.
 - Self-updating operator wrapper re-execs exactly once if `git pull` changes the wrapper itself.
 
 ## Paid-call state — blocking
@@ -38,53 +38,65 @@ Audit: `romance-current-20496-pangram-gui-20260818`.
 - estimated credits/cost: 11 / USD 0.55;
 - exact SHA `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`.
 
-The call reached Pangram. The original capture remained on the initiating dashboard and failed to parse a bound report. `failure.json` records `detector_submission_attempted: true`; the durable call reservation remains. No automatic Part-1 resubmission is permitted.
+The call reached Pangram. The original runner captured the initiating dashboard instead of a result bound to the exact submitted document. `failure.json` records `detector_submission_attempted: true`; the durable call reservation remains. No automatic Part-1 resubmission is permitted.
 
 ### Part 2 — never submitted
 
 Part 2 remains uncached with no paid reservation. It must not run until Part 1 is recovered exactly.
 
-## Recovery evidence already exhausted
+## Recovery evidence
 
-1. Restored-tab recovery: only `/dashboard`, no report markers.
-2. Older labelled History/scans/reports navigation: no exact report.
-3. Dedicated-profile Chromium History SQLite: 0 `/history/<UUID>` candidates. This is not authoritative for SPA application history.
-4. First authenticated dashboard DOM/JSON recovery: owner-machine suite **179/179 passed**; no Part-1 repeat and no Part-2 call; still no exact result located. Final page remained `/dashboard` with no report markers.
+Prior no-repeat recovery routes established:
 
-The exact latest live receipt is the 2026-08-19 `pangram-local-recover-resume.log` supplied by Joel.
+1. restored-tab recovery did not find the exact report;
+2. older History/scans/reports UI selectors did not find it;
+3. Chromium global History is not authoritative for Pangram's SPA record history;
+4. All Checks/View Results navigation reached real stored records but the legacy DOM parser still rejected current long-document reports.
 
-## Current UI correction after the 179/179 run
+The latest owner-machine run passed **181/181** deterministic tests, made **no repeat Part-1 detector submission**, and made **no Part-2 detector submission**.
 
-Fresh official Pangram product material shows that stored detector records are currently surfaced under **All Checks**, with rows exposing **View Results**. The prior recovery code was biased toward older labels/routes containing `History`, scans, or reports.
+Its privacy-bounded structural diagnostic exposed the current long-document contract:
 
-The branch now includes a new read-only recovery patch that has **not yet been validated on Joel's machine**:
+- report page: `https://www.pangram.com/history/<uuid>`;
+- report data: `https://web.pangram.com/api/history/<uuid>/`;
+- list data: `https://web.pangram.com/api/history-list/`;
+- stored record fields include `prompt`, `response`, `response_payload`, `prediction`, `prediction_prob`, `model_id`, and `uuid`;
+- current long-document report overview exposes document-level controls such as `AI 8%`, `Human 92%`, and paginated highlight navigation, rather than the historical per-segment word-count headings.
 
-- recognizes `All Checks`, checks, records, and prior History/scans/reports vocabulary;
-- selects past-record navigation using rendered control labels as well as routes, so the href need not literally contain `history`;
-- follows explicit same-origin `View Results` links even if their current route differs from `/history/<UUID>`;
-- accepts in-memory JSON result identity ancestry under check/document/submission/analysis as well as history/result/scan/detection/request;
-- may inspect JSON responses from a backend host different from `pangram.com`, but retains only candidate identities and discards bodies;
-- may open one explicitly-labelled menu/sidebar control before retrying All Checks/History controls;
-- every candidate must still exact-bind to Part 1 and 10,236 analyzed words before ambiguity clears.
+The 92/8 report observed in the diagnostic is only a historical candidate until the stored API record itself exact-matches Part 1. Do not assign that score to Part 1 by inference.
 
-Project-specific checkpoint: `state/PANGRAM-LOCAL-ALL-CHECKS-RECOVERY-2026-08-19.md`.
+## Current exact-record repair
 
-## Privacy-bounded fallback diagnostic
+Detailed checkpoint: `state/PANGRAM-LOCAL-HISTORY-API-EXACT-BINDING-2026-08-19.md`.
 
-If the current All Checks recovery still fails, it writes:
+The branch now uses exact stored-record identity:
 
-`~/Téléchargements/pangram-local-history-structure-diagnostic.json`
+- `src/pangram_lab/history_api_record.py` accepts only `web.pangram.com/api/history/<uuid>/` records whose in-memory JSON contains the literal submitted text;
+- exact proof records the authorized UTF-8 SHA-256, word count, and JSON field path without committing the raw API record;
+- `scripts/pangram_local_romance_recover_part1_api.py` revisits existing stored reports read-only and can clear Part-1 ambiguity only after exact stored-text identity; it contains no detector-action path;
+- `scripts/pangram_local_romance_paid_api.py` attaches the exact-history listener before a paid detector click, preserving the durable call reservation before the click and accepting completion only after the newly stored record exact-matches the submitted text;
+- current Human/AI fractions are parsed from the exact report's rendered overview; the runner does not infer `prediction_prob` semantics or invent segment word counts.
 
-The file contains only structural information: redacted page metadata, visible interactive labels, candidate counts, response host/redacted path/status/content-type/method, and JSON key shapes. It excludes submitted text, response bodies, private result URLs, query strings, cookies, storage values, credential/header values, and secrets.
+The operator wrapper routes Part 1 through the no-submit API recovery, and only after a complete cached Part-1 receipt routes Part 2 through the API-bound paid runner.
 
-## Next safe action
+## Validation status
 
-Run:
+The public repository's workflow-policy check is green on the exact-record work. The first full-suite CI attempt reached **189 passing tests** and failed only because a new test helper mistakenly tried to Python-compile the Bash wrapper. That test-harness defect has been corrected. Final exact-head public CI must be green before the next owner-machine run is authorized.
 
-`scripts/pangram_local_romance_recover_resume_safe.sh`
+## Next safe action after green CI
 
-The wrapper must self-update/re-exec, run the complete local deterministic suite, then attempt exact no-repeat recovery through the current All Checks/View Results surface. If Part 1 is recovered, cache/persist it and only then allow uncached Part 2 to run. If recovery fails, stop with ambiguity intact and inspect the structural diagnostic; do not guess another selector and do not repeat Part 1.
+Run `scripts/pangram_local_romance_recover_resume_safe.sh`.
+
+The wrapper must:
+
+1. self-update/re-exec if needed;
+2. run the complete local deterministic suite;
+3. recover the already-paid Part 1 through exact stored history-API identity without submitting it again;
+4. persist/cache the exact recovered Part-1 result;
+5. only then permit the uncached/unambiguous Part 2 call;
+6. bind Part 2 to its own exact stored history record before accepting completion;
+7. stop as ambiguous after any paid click whose exact stored record cannot be bound.
 
 ## Stop conditions
 
-Stop before resubmitting Part 1, bypassing its reservation/ambiguity block, submitting Part 2 before exact Part-1 recovery, using Joel's ordinary browser profile/history, committing browser/session/auth material, accepting a generic report marker, or rewriting Romance prose merely to simplify detector transport.
+Stop before resubmitting Part 1, bypassing its reservation/ambiguity block, submitting Part 2 before exact Part-1 recovery, using Joel's ordinary browser profile/history, committing browser/session/auth/API-record content, guessing score semantics from `prediction_prob`, inventing legacy segment counts, accepting a generic report marker, or rewriting Romance prose merely to simplify detector transport.
