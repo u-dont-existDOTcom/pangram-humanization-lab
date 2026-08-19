@@ -59,20 +59,30 @@
       "dcp-greg-goode-faith-pure-land-and-karma-99"
     ]
   },
-  "independent_joel_profile_sample_ids": [
+  "independent_joel_profile_candidate_order": [
     "tafka-2015-02-23-right-view-humility",
+    "tafka-2019-03-08-plant-spirits",
+    "tafka-2015-01-17-sam-harris-review",
     "tafka-2016-06-08-already-perfect",
-    "tafka-2019-03-08-plant-spirits"
-  ],
-  "independent_joel_holdout_sample_ids": [
     "tafka-2019-08-02-buddhism-sect",
     "tafka-2020-04-19-consciousness-conditions"
   ],
+  "independent_joel_holdout_candidate_order": [
+    "tafka-2019-08-02-buddhism-sect",
+    "tafka-2020-04-19-consciousness-conditions",
+    "tafka-2015-01-17-sam-harris-review",
+    "tafka-2016-06-08-already-perfect",
+    "tafka-2015-02-23-right-view-humility",
+    "tafka-2019-03-08-plant-spirits"
+  ],
+  "independent_joel_holdout_count": 2,
   "prefix_cleanliness": {
     "reject_possible_unremoved_dialogue_in_exact_50_prefix": true,
     "reject_possible_platform_chrome_in_exact_50_prefix": true,
     "reject_standalone_single_capitalized_word_line_in_exact_50_prefix": true,
     "reject_leading_quote_marker_line_in_exact_50_prefix": true,
+    "historical_matched_target_exception": "A current matched-Dharma Joel source may bypass only the generic possible-unremoved-dialogue exact-prefix heuristic when its full canonical source hash is identical to the frozen source already used in the synchronized exact-50 LUAR pilot and no other prefix issue is present.",
+    "independent_joel_fallback_rule": "TAFKA profile and holdout candidates remain under the strict prefix gate. Predeclared fallback order selects the first clean exact-50 sources without reusing a source across profile and holdout.",
     "note": "Full-source heuristic flags do not automatically disqualify a source when the exact evaluated 50-word prefix is clean. The benchmark evaluates only the exact prefix and records both source-level and prefix-level flags."
   },
   "strata": {
@@ -83,7 +93,7 @@
     },
     "independent_tafka": {
       "role": "secondary source-independent Joel sensitivity diagnostic",
-      "profile_rule": "Use three fixed TAFKA exact-50 Joel profile documents and two independent TAFKA exact-50 Joel holdouts against the same Dharma control profiles.",
+      "profile_rule": "Select three strict-clean TAFKA exact-50 Joel profile documents and two strict-clean independent TAFKA exact-50 Joel holdouts from predeclared candidate orders, against the same Dharma control profiles.",
       "source_limit": "Platform/register transfer confounds this stratum; report separately and never average with matched Dharma."
     }
   },
