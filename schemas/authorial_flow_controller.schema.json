@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "action": {"type": "string", "enum": ["REVEAL", "STOP"]},
+    "source_id": {"type": ["string", "null"]},
+    "selection_function": {
+      "type": ["string", "null"],
+      "enum": ["CONCRETIZE", "COMPLICATE", "TEST", "QUALIFY", "COUNTEREXAMPLE", "REFRAME", "ANALOGIZE", "RECALL", "SELF_IMPLICATE", "APPLY", "RESOLVE", "REOPEN", "OTHER", "UNKNOWN", null]
+    }
+  },
+  "required": ["action", "source_id", "selection_function"]
+}

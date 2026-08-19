@@ -16,6 +16,15 @@ def walk(obj):
 def test_all_output_schemas_are_strict_recursively():
     root=Path(__file__).parents[1]/"schemas"
     files=sorted(root.glob("*.schema.json"))
-    assert {p.name for p in files} == {"plan.schema.json","review.schema.json","analysis.schema.json"}
+    expected={
+        "plan.schema.json",
+        "review.schema.json",
+        "analysis.schema.json",
+        "authorial_flow_controller.schema.json",
+        "authorial_flow_writer.schema.json",
+        "authorial_flow_fidelity.schema.json",
+        "authorial_flow_flow.schema.json",
+    }
+    assert {p.name for p in files} == expected
     for p in files:
         walk(json.loads(p.read_text()))
