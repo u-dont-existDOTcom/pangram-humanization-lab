@@ -39,7 +39,7 @@ def test_publication_secret_scanner_is_pinned_and_redacted():
 def test_generic_api_key_false_positive_handling_is_narrow_and_source_verified():
     text = SCRIPT.read_text(encoding="utf-8")
     assert 'finding.get("RuleID") != "generic-api-key"' in text
-    assert '"measurement_key"' in text
+    assert "measurement_key|first_human_measurement_key" in text
     assert 'FIXTURE_LITERAL = "PANGRAM-SECRET-FIXTURE-4927"' in text
     assert '["git", "show", f"{commit}:{file_name}"]' in text
     assert "--exclude-rule=generic-api-key" not in text
@@ -48,13 +48,14 @@ def test_generic_api_key_false_positive_handling_is_narrow_and_source_verified()
     assert '"git_secret_findings"' in text
 
 
-def test_profile_stays_truthfully_private_until_hosted_toggle():
+def test_profile_records_confirmed_public_visibility():
     import json
 
     data = json.loads(PROFILE.read_text(encoding="utf-8"))
-    assert data["visibility"] == "private"
+    assert data["visibility"] == "public"
     transition = data["publication_transition"]
     assert transition["target_visibility"] == "public"
-    assert transition["status"] == "pre_publication_audit_pending"
+    assert transition["status"] == "public_readback_confirmed"
+    assert transition["hosted_readback_visibility"] == "public"
     assert transition["owner_approved_test_corpus_disclosure"] is True
     assert transition["excluded_repository"] == "u-dont-existDOTcom/AskRigor-lessons"
