@@ -1,6 +1,6 @@
 name: Idiolect Greg control candidate extraction
 # execution-class: public-one-shot-source-research
-# execution-generation: 2
+# execution-generation: 3
 
 on:
   pull_request:
@@ -37,6 +37,36 @@ jobs:
         uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
+
+      - name: Apply one-shot fetch compatibility hotfix
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('src/pangram_lab/dharma_control_candidate.py')
+          text = path.read_text(encoding='utf-8')
+          old_import = 'from .corpus_acquire import fetch_bytes'
+          new_import = 'from .corpus_acquire import fetch_html'
+          if old_import not in text:
+              raise SystemExit('Expected temporary fetch_bytes import is absent')
+          text = text.replace(old_import, new_import, 1)
+          text = text.replace(
+              'def _visible_text(body: bytes) -> str:\n'
+              '    parser = BloggerVisibleTextParser()\n'
+              '    parser.feed(body.decode("utf-8", errors="replace"))\n',
+              'def _visible_text(body: str | bytes) -> str:\n'
+              '    parser = BloggerVisibleTextParser()\n'
+              '    html = body if isinstance(body, str) else body.decode("utf-8", errors="replace")\n'
+              '    parser.feed(html)\n',
+              1,
+          )
+          text = text.replace(
+              'page_fetch_fn: Callable[..., tuple[bytes, str]] = fetch_bytes,',
+              'page_fetch_fn: Callable[..., tuple[str | bytes, str]] = fetch_html,',
+              1,
+          )
+          path.write_text(text, encoding='utf-8')
+          PY
 
       - name: Install package and run deterministic extraction tests
         run: |
@@ -138,6 +168,7 @@ jobs:
       - name: Verify source prose stayed local and ignored
         run: |
           git checkout -- \
+            src/pangram_lab/dharma_control_candidate.py \
             src/pangram_humanization_lab.egg-info/SOURCES.txt \
             src/pangram_humanization_lab.egg-info/entry_points.txt
           if git status --short --untracked-files=all | grep -v '^?? .local/' | grep -q .; then
