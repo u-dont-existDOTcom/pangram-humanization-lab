@@ -128,6 +128,86 @@ def normalize_matched_targets(
     return normalized_rows, drift_rows
 
 
+def normalize_independent_joel(
+    spec: dict[str, Any],
+    tafka_rows: list[dict[str, Any]],
+    *,
+    working_dir: Path,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Select clean exact-50 TAFKA sources without weakening prefix gates.
+
+    The independent stratum is a sensitivity analysis, so it should not be
+    forced through a source whose exact evaluated prefix is structurally
+    ambiguous. Candidate-order fallbacks are predeclared in the spec, and a
+    source selected into the Joel profile cannot also become a held-out
+    original.
+    """
+
+    budget = int(spec["word_budget_per_document"])
+    target = str(spec["target_author"])
+    row_by_id = base._row_map(tafka_rows)
+    profile_count = int(spec["profile_documents_per_author"])
+    holdout_count = int(spec.get("independent_joel_holdout_count", 2))
+
+    def choose(candidate_ids, count, label, excluded_ids):
+        selected = []
+        for index, sample_id in enumerate(candidate_ids, start=1):
+            sample_id = str(sample_id)
+            if sample_id in excluded_ids:
+                continue
+            source = row_by_id.get(sample_id)
+            if source is None or int(source.get("word_count", 0)) < budget:
+                continue
+            source = dict(source)
+            source["speaker"] = target
+            normalized, audit = base._normalize_row(
+                source,
+                words=budget,
+                out_dir=working_dir / label,
+                prefix=f"j{index}",
+            )
+            if not audit["clean"]:
+                continue
+            normalized["speaker"] = target
+            normalized["source_quality_flags"] = list(
+                source.get("quality_flags", [])
+            )
+            normalized["source_canonical_sha256"] = source.get(
+                "canonical_sha256"
+            )
+            selected.append(normalized)
+            excluded_ids.add(sample_id)
+            if len(selected) == count:
+                break
+        if len(selected) != count:
+            raise base.TargetVerificationError(
+                f"independent Joel {label}: only {len(selected)} clean "
+                f"exact-{budget} documents; requires {count}"
+            )
+        return selected
+
+    used: set[str] = set()
+    profile = choose(
+        spec.get(
+            "independent_joel_profile_candidate_order",
+            spec.get("independent_joel_profile_sample_ids", []),
+        ),
+        profile_count,
+        "independent-profile",
+        used,
+    )
+    holdout = choose(
+        spec.get(
+            "independent_joel_holdout_candidate_order",
+            spec.get("independent_joel_holdout_sample_ids", []),
+        ),
+        holdout_count,
+        "independent-holdout",
+        used,
+    )
+    return profile, holdout
+
+
 def run_target_verification(
     spec_path: Path,
     *,
@@ -136,10 +216,12 @@ def run_target_verification(
     working_dir: Path,
     out_path: Path,
 ) -> dict[str, Any]:
-    """Run v1 with the narrow historical-target admission hook installed."""
+    """Run v1 with narrow source-admission hooks installed."""
 
-    original = base.normalize_matched_targets
+    original_matched = base.normalize_matched_targets
+    original_independent = base.normalize_independent_joel
     base.normalize_matched_targets = normalize_matched_targets
+    base.normalize_independent_joel = normalize_independent_joel
     try:
         result = base.run_target_verification(
             spec_path,
@@ -149,10 +231,14 @@ def run_target_verification(
             out_path=out_path,
         )
     finally:
-        base.normalize_matched_targets = original
+        base.normalize_matched_targets = original_matched
+        base.normalize_independent_joel = original_independent
 
     result["target_prefix_admission_version"] = (
         "historical-hash-bound-exact50-dialogue-heuristic-exception-v1"
+    )
+    result["independent_joel_selection_version"] = (
+        "predeclared-clean-exact50-fallback-selection-v1"
     )
     out_path.write_text(
         json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
