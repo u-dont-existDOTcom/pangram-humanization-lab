@@ -35,6 +35,8 @@ def test_publication_secret_scanner_is_pinned_and_redacted():
     assert "issues/comments" in text
     assert "pulls/comments" in text
     assert "gh run view" in text
+    assert 'current_run_id="${GITHUB_RUN_ID:-}"' in text
+    assert '"$run_id" == "$current_run_id"' in text
 
 
 def test_generic_api_key_false_positive_handling_is_narrow_and_source_verified():
