@@ -2,9 +2,9 @@
 
 # Recover the already-paid ambiguous Romance Part 1 result without resubmitting
 # it, normalize persistent tabs, then resume the paid runner for uncached Part 2.
-# Recovery checks the dedicated automation profile's Pangram-only URL history,
-# Pangram's History route, and existing bounded UI surfaces. It never inspects
-# Joel's ordinary Brave profile and never clicks a detector action for Part 1.
+# Recovery uses only the dedicated automation profile and Pangram's read-only
+# All Checks/History/result surfaces. It never inspects Joel's ordinary Brave
+# profile and never clicks a detector action for Part 1.
 # This wrapper never leaves strict shell state in the operator's terminal.
 set +e
 
@@ -19,6 +19,7 @@ self_path="$repo_root/scripts/pangram_local_romance_recover_resume_safe.sh"
 log_dir="${HOME}/Téléchargements"
 mkdir -p "$log_dir"
 log_path="$log_dir/pangram-local-recover-resume.log"
+diagnostic_path="$log_dir/pangram-local-history-structure-diagnostic.json"
 
 # A running shell does not reload its source file after `git pull`. Preserve the
 # first process's log, but when the pull changes this wrapper, exec the new file
@@ -64,12 +65,21 @@ if [ "$test_rc" -ne 0 ]; then
   exit 0
 fi
 
+# Remove only the previous privacy-bounded diagnostic so a failed new attempt
+# cannot accidentally append stale structure from an earlier UI version.
+rm -f -- "$diagnostic_path"
+
 printf '%s\n' "=== Recover already-paid Part 1 without resubmission ===" | tee -a "$log_path"
-printf '%s\n' "Part 1 will NOT be submitted again. Dedicated-profile Pangram URL history and bounded History navigation are recovery-only." | tee -a "$log_path"
+printf '%s\n' "Part 1 will NOT be submitted again. Pangram All Checks/History navigation is recovery-only." | tee -a "$log_path"
 "$python_bin" scripts/pangram_local_romance_recover_part1_history.py 2>&1 | tee -a "$log_path"
 recover_rc=${PIPESTATUS[0]}
 printf '\nRECOVERY_EXIT=%s\n\n' "$recover_rc" | tee -a "$log_path"
 if [ "$recover_rc" -ne 0 ]; then
+  if [ -f "$diagnostic_path" ]; then
+    printf '%s\n' "=== Safe structural recovery diagnostic ===" | tee -a "$log_path"
+    cat "$diagnostic_path" | tee -a "$log_path"
+    printf '\n%s\n' "=== End structural diagnostic ===" | tee -a "$log_path"
+  fi
   printf '%s\n' "RECOVER_RESUME_RESULT=stopped_part1_not_recovered" | tee -a "$log_path"
   printf '%s\n' "No repeat detector submission was made." | tee -a "$log_path"
   exit 0
