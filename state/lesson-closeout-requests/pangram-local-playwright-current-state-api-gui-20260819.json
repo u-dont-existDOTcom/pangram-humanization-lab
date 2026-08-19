@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "The current checkpoint records a live independent Pangram API transport plus continued fail-closed GUI development, including the 190-test no-repeat recovery boundary and bounded stored-record normalization work.",
+  "ledger_entry_ids": [
+    "L-f6c8bec7c3-01"
+  ],
+  "processed_at_utc": "2026-08-19T06:48:46.721685+00:00",
+  "promoted_to": [],
+  "reason": "This is a resumability/current-state update rather than a new detector or humanization lesson. Existing universal browser-automation and paid-workflow patterns already cover the transferable safety rules.",
   "request_id": "pangram-local-playwright-current-state-api-gui-20260819",
+  "schema_version": 1,
   "source_path": "state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md",
   "source_ref": "agent/pangram-local-playwright-gpt-20260818",
   "source_sha256": "f6c8bec7c369f92c28c254c0e311c2865ecfadcba3e724ddf1c78ce859963b61",
-  "finding": "The current checkpoint records a live independent Pangram API transport plus continued fail-closed GUI development, including the 190-test no-repeat recovery boundary and bounded stored-record normalization work.",
-  "disposition": "no-new-lesson",
-  "reason": "This is a resumability/current-state update rather than a new detector or humanization lesson. Existing universal browser-automation and paid-workflow patterns already cover the transferable safety rules.",
-  "promoted_to": []
+  "status": "processed"
 }
