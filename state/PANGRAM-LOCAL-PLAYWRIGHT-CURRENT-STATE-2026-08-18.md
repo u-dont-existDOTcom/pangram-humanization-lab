@@ -2,156 +2,89 @@
 
 ## Goal
 
-Use a dedicated, headed, persistent local Playwright profile on Joel's Zorin machine as the primary Pangram GUI transport while preserving exact-hash identity, no-duplicate/ambiguity guards, report evidence, History recovery, paid-call accounting, and GitHub durability. Browserbase remains fallback.
+Use a dedicated headed persistent local Playwright profile on Joel's Zorin machine as the primary Pangram GUI transport while preserving exact-hash identity, ambiguity/duplicate protection, exact report evidence, paid-call accounting, recovery-before-repeat, bounded browser tabs, and GitHub durability.
 
-## Authority and branch
+## Authority / branch
 
 - Repository: `u-dont-existDOTcom/pangram-humanization-lab`.
-- Implementation branch: `agent/pangram-local-playwright-gpt-20260818`.
+- Implementation branch: `agent/pangram-local-playwright-gpt-20260818` / draft PR #78.
 - Romance source remains incubator branch `agent/romance-primal-crucible-gui-repair-20260817`; this tooling work does not establish article authority or edit prose.
-- PR: #78, still draft/open.
 
 ## Exact current Romance boundary
 
-- Reader-visible total: 20,496 words.
-- Reader-visible SHA-256: `10359ab2119ffbe9a8a7a4a52cd0c3216bb1a6a2c0bffbd7e66fca01287f17ce`.
+- Reader-visible total: 20,496 words; SHA-256 `10359ab2119ffbe9a8a7a4a52cd0c3216bb1a6a2c0bffbd7e66fca01287f17ce`.
 - Part 1: 10,236 words; SHA-256 `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`.
 - Part 2: 10,260 words; SHA-256 `2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0`.
 - Source commit last verified on owner machine: `8e0d70d0ea51fbcb12e307ed0629ed75ee35ce8c`.
 
-## Verified owner-machine gates
+## Live local transport already verified
 
-The local Zorin path has verified:
+- Brave `/opt/brave.com/brave/brave`, Playwright 1.62.0, Chromium sandbox enabled.
+- Dedicated persistent profile `~/.config/pangram-local-browser/`; ordinary Brave profile is never used.
+- Manual login completed and fresh-process authentication persistence verified.
+- Exact source materialization/hash/word-count gates verified.
+- Persistent tab accumulation repaired: normal runs are bounded to one working tab and leave an inert tab on shutdown.
+- Exact report completion now scans all pages and accepts only a page bound to the exact input with a supported parsed layout and exact analyzed word count.
+- Self-updating operator wrapper re-execs exactly once if `git pull` changes the wrapper itself.
 
-- headed Brave launch using `/opt/brave.com/brave/brave`;
-- Playwright 1.62.0 inside the repository virtual environment;
-- Chromium sandboxing enabled;
-- dedicated persistent profile `~/.config/pangram-local-browser/`;
-- one-time manual Pangram login and fresh-process authentication persistence;
-- authenticated detector input editable without filling/submitting;
-- exact current Romance source materialization and SHA/word-count checks;
-- persistent-tab cleanup after owner-reported tab accumulation;
-- owner-machine deterministic suite progression: 167/167, then 171/171, then 175/175, and most recently **176/176 passed** on 2026-08-19 before the latest dashboard-History recovery patch.
-
-## Paid-call state
+## Paid-call state — blocking
 
 Audit: `romance-current-20496-pangram-gui-20260818`.
 
-### Part 1 — ambiguous, do not repeat
+### Part 1 — one paid call, ambiguous, DO NOT REPEAT
 
-One paid Part 1 detector action was durably reserved and submitted:
-
-- section: `romance-current-part-1`;
+- section `romance-current-part-1`;
 - paid calls: 1;
-- estimated credits: 11;
-- estimated cost: USD 0.55;
-- exact SHA: `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`.
+- estimated credits/cost: 11 / USD 0.55;
+- exact SHA `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`.
 
-The call reached Pangram. The original runner then captured the initiating dashboard rather than a bound result page and failed because no analyzed segments could be parsed. `failure.json` records `detector_submission_attempted: true`; the paid-call ledger remains durable. Part 1 is therefore **ambiguous and blocked from automatic repeat**.
+The call reached Pangram. The original capture remained on the initiating dashboard and failed to parse a bound report. `failure.json` records `detector_submission_attempted: true`; the durable call reservation remains. No automatic Part-1 resubmission is permitted.
 
-### Part 2 — not submitted
+### Part 2 — never submitted
 
-Part 2 remains uncached and has no paid reservation. It must not be submitted until Part 1 is recovered successfully.
+Part 2 remains uncached with no paid reservation. It must not run until Part 1 is recovered exactly.
 
-## Owner correction: browser tab accumulation
+## Recovery evidence already exhausted
 
-Joel reported that the automation was opening too many tabs and not closing them. This was a real persistent-profile lifecycle defect. The transport now normally starts/ends with one bounded working tab, closes extras explicitly, and leaves an inert `about:blank` tab on shutdown. The incident is preserved in `state/PANGRAM-LOCAL-TAB-REPORT-INCIDENT-2026-08-18.md`.
+1. Restored-tab recovery: only `/dashboard`, no report markers.
+2. Older labelled History/scans/reports navigation: no exact report.
+3. Dedicated-profile Chromium History SQLite: 0 `/history/<UUID>` candidates. This is not authoritative for SPA application history.
+4. First authenticated dashboard DOM/JSON recovery: owner-machine suite **179/179 passed**; no Part-1 repeat and no Part-2 call; still no exact result located. Final page remained `/dashboard` with no report markers.
 
-## Exact report binding repair
+The exact latest live receipt is the 2026-08-19 `pangram-local-recover-resume.log` supplied by Joel.
 
-Paid-result completion no longer accepts a generic UI marker on the initiating page. It scans all current pages/tabs and accepts a report only when:
+## Current UI correction after the 179/179 run
 
-1. stable anchors bind it to the exact submitted text;
-2. the parser yields a supported analyzed layout;
-3. parsed analyzed word count equals the exact submitted boundary.
+Fresh official Pangram product material shows that stored detector records are currently surfaced under **All Checks**, with rows exposing **View Results**. The prior recovery code was biased toward older labels/routes containing `History`, scans, or reports.
 
-The matching page becomes the body/PDF evidence page.
+The branch now includes a new read-only recovery patch that has **not yet been validated on Joel's machine**:
 
-## Recovery evidence so far
+- recognizes `All Checks`, checks, records, and prior History/scans/reports vocabulary;
+- selects past-record navigation using rendered control labels as well as routes, so the href need not literally contain `history`;
+- follows explicit same-origin `View Results` links even if their current route differs from `/history/<UUID>`;
+- accepts in-memory JSON result identity ancestry under check/document/submission/analysis as well as history/result/scan/detection/request;
+- may inspect JSON responses from a backend host different from `pangram.com`, but retains only candidate identities and discards bodies;
+- may open one explicitly-labelled menu/sidebar control before retrying All Checks/History controls;
+- every candidate must still exact-bind to Part 1 and 10,236 analyzed words before ambiguity clears.
 
-### Restored-tab / bounded UI route
+Project-specific checkpoint: `state/PANGRAM-LOCAL-ALL-CHECKS-RECOVERY-2026-08-19.md`.
 
-The first no-repeat recovery found only one restored page, `https://www.pangram.com/dashboard`, with no report markers. Bounded History-control navigation did not recover the exact report. No Part 1 repeat and no Part 2 call occurred.
+## Privacy-bounded fallback diagnostic
 
-### Self-updating wrapper incident
+If the current All Checks recovery still fails, it writes:
 
-A later run fetched new recovery code while an older wrapper process was already running. The process continued its old in-memory control flow. The wrapper now detects when `git pull` changes itself and `exec`s the fetched version exactly once before consequential work; the transferable lesson was promoted to `u-dont-existDOTcom/universal-dev-architecture`.
+`~/Téléchargements/pangram-local-history-structure-diagnostic.json`
 
-### Dedicated Chromium History route — live falsification
-
-On the latest owner-machine run:
-
-- deterministic suite: **176/176 passed**;
-- Part 1 was not submitted again;
-- Part 2 was not submitted;
-- the dedicated profile's Chromium `History` SQLite databases yielded **0** Pangram `/history/<UUID>` result URLs;
-- the only final page was the authenticated dashboard with no report markers.
-
-This falsifies the assumption that a dashboard SPA result must appear in Chromium's global browsing-history database. It does **not** establish that Pangram lost the result. Pangram's current public data-privacy documentation states that dashboard submissions remain available in account History while the account is active, and documented dashboard-result links use `/history/<UUID>`.
-
-## New recovery route — hydrated authenticated dashboard History
-
-After the 176/176 live run, the branch added a stricter read-only recovery layer. This code has not yet been validated on Joel's machine.
-
-`src/pangram_lab/browser_history_recovery.py` now supports three in-memory result-identity sources:
-
-1. existing dedicated-profile Chromium history (still tried first, but no longer assumed authoritative);
-2. `/history/<UUID>` links already rendered in authenticated Pangram DOM;
-3. Pangram result UUIDs/links contained in authenticated Pangram JSON responses while navigating the dashboard History surface.
-
-Privacy/safety boundaries:
-
-- only the dedicated automation profile is used;
-- ordinary Brave history is never inspected;
-- only Pangram same-origin/same-domain result identities survive filtering;
-- JSON bodies are inspected only in memory and discarded; submitted text, cookies, storage, headers, and private URLs are not printed or committed;
-- bare UUIDs are accepted only when their JSON key ancestry places them under history/result/scan/detection/request context;
-- every candidate is read-only and must exact-bind to Part 1 plus the 10,236-word count before it can clear ambiguity;
-- the recovery script contains no Part 1 detector-action path.
-
-`scripts/pangram_local_romance_recover_part1_history.py` now:
-
-- discovers result links already rendered on the dashboard;
-- follows current dashboard-rendered History navigation URLs rather than assuming a remembered route;
-- may click only visible interactive controls explicitly labeled History / past scans / recent scans / my scans / reports;
-- listens to authenticated Pangram JSON responses during that navigation and extracts only result identities;
-- tries all bounded candidate result URLs in one working tab;
-- falls back to the older bounded recovery route only after those sources fail.
-
-Deterministic tests were added/expanded for DOM result-link filtering, History-navigation filtering, payload UUID ancestry, unrelated-account UUID rejection, URL canonicalization, and existing SQLite behavior. The complete owner-machine suite must run before this new path is trusted.
+The file contains only structural information: redacted page metadata, visible interactive labels, candidate counts, response host/redacted path/status/content-type/method, and JSON key shapes. It excludes submitted text, response bodies, private result URLs, query strings, cookies, storage values, credential/header values, and secrets.
 
 ## Next safe action
 
-Run the same terminal-safe entry point:
+Run:
 
 `scripts/pangram_local_romance_recover_resume_safe.sh`
 
-It must:
-
-1. self-update/re-exec safely if its wrapper changes;
-2. run the complete local deterministic suite including the new dashboard-History tests;
-3. recover the already-paid Part 1 result through the authenticated Pangram History surface **without submitting Part 1 again**;
-4. exact-bind and cache Part 1 if found;
-5. normalize/close extra tabs;
-6. only after successful Part 1 recovery, resume the paid runner where Part 1 is a cache hit and only Part 2 may be submitted;
-7. if Part 2 becomes ambiguous, stop and recover it before any repeat.
-
-If Part 1 still cannot be recovered, stop with the paid ambiguity intact. Do not repeat it.
-
-## Hosted CI / cost boundary
-
-Private-repository hosted Actions are being conserved. Recovery/tooling commits use `[skip ci]`; validation for this lane is the owner-machine deterministic suite plus the exact live recovery gate.
+The wrapper must self-update/re-exec, run the complete local deterministic suite, then attempt exact no-repeat recovery through the current All Checks/View Results surface. If Part 1 is recovered, cache/persist it and only then allow uncached Part 2 to run. If recovery fails, stop with ambiguity intact and inspect the structural diagnostic; do not guess another selector and do not repeat Part 1.
 
 ## Stop conditions
 
-Stop before:
-
-- resubmitting Part 1;
-- bypassing any ambiguity block or paid-call reservation;
-- submitting Part 2 before Part 1 recovery succeeds;
-- using Joel's ordinary browser profile/history;
-- committing profile/cookie/auth/session material;
-- accepting a generic report marker without exact text + word-count binding;
-- leaving persistent browser tab clutter as normal automation state;
-- treating Chromium global history as authoritative for SPA application history;
-- rewriting Romance prose solely to facilitate transport/detector behavior.
+Stop before resubmitting Part 1, bypassing its reservation/ambiguity block, submitting Part 2 before exact Part-1 recovery, using Joel's ordinary browser profile/history, committing browser/session/auth material, accepting a generic report marker, or rewriting Romance prose merely to simplify detector transport.
