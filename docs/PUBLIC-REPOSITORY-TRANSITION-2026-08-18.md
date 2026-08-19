@@ -1,52 +1,52 @@
 # Pangram public repository transition
 
-Date: 2026-08-18
-Status: pre-publication audit pending
-Target repository: `u-dont-existDOTcom/pangram-humanization-lab`
-Target visibility: public
+Date opened: 2026-08-18
+Completed: 2026-08-19
+Status: **complete — public readback confirmed**
+Repository: `u-dont-existDOTcom/pangram-humanization-lab`
+Visibility: **public**
 
 ## Owner disclosure decision
 
-The owner explicitly approved public disclosure of the Pangram test corpus and test evidence currently in this repository, including relationship/health/personal prose used as detector or authorship test material. These tracked materials are not treated as publication blockers for this transition.
+The owner explicitly approved public disclosure of the Pangram test corpus and test evidence in this repository, including relationship/health/personal prose used as detector or authorship test material. Those tracked materials were not publication blockers.
 
-This approval is specific to Pangram's repository/test evidence. It does **not** authorize changing `u-dont-existDOTcom/AskRigor-lessons` from private; that repository remains excluded from this transition.
+This approval was specific to the repositories selected for publication. It did **not** authorize changing `u-dont-existDOTcom/AskRigor-lessons`; hosted readback after the transition confirms that repository remains private.
 
-## Remaining blocker
+## Credential-disclosure audit
 
-The remaining pre-disclosure blocker is credential/private-key exposure, not personal-test-content exposure. Before changing visibility, the repository must pass `.github/workflows/publication-secret-audit.yml` on the exact preparation head and again from `main` immediately before the hosted visibility toggle.
+Before the visibility change, the publication audit scanned reachable Git history and hosted issue/PR/comment/review/release/Actions-log surfaces with pinned Gitleaks 8.29.1 and full value redaction.
 
-The audit reuses the established Inner Signal publication-audit baseline rather than inventing a new secret detector:
+The Pangram Git scan initially reported 86 `generic-api-key` heuristic matches. Exact historical-source review accounted for all 86 as non-secret Pangram metadata or synthetic test material:
 
-- Gitleaks `8.29.1`;
-- Linux x64 archive SHA-256 `e4eb209d04e20339d77122a3bdf9cd41351255cfb27ebcb75e85325e04f88924`;
-- full redaction of detected secret values;
-- all currently reachable branches, tags, and pull-request heads;
-- commit messages and ref names;
-- issue and pull-request bodies;
-- issue comments and inline review comments;
-- pull-request review bodies;
-- release metadata;
-- retained GitHub Actions logs that the authenticated repository owner can still retrieve.
+- JSON `measurement_key` fields;
+- JSON `first_human_measurement_key` fields;
+- the exact synthetic security fixture `PANGRAM-SECRET-FIXTURE-4927` in its known regression/plan files.
 
-The audit reports only counts/status, never matching secret values. Temporary scanner output is mode-restricted and deleted at process exit.
+A representative `first_human_measurement_key` value was `romance-r1-decomposition-r4-2026-08-13_STI_L57`, i.e. a detector measurement identifier, not a credential.
 
-## Explicit limits
+The final private hosted scan evidence reported zero hosted secret findings across 943 retrievable Actions logs; 57 older logs were unavailable/expired. `joel-articles` separately passed its publication-secret audit before the visibility mutation.
 
-The scan is a disclosure-risk control, not a mathematical proof that no secret can exist. Expired/unavailable Actions logs cannot be disclosed through GitHub and are counted separately. Historical workflow artifacts are not downloaded by this audit; existing Pangram research workflows intentionally store metadata-only result artifacts, and the owner has approved disclosure of the test material itself. GitHub-hosted controls must be re-read after the visibility transition because plan-dependent settings can change when a repository becomes public.
+## Visibility mutation and readback
 
-Changing a repository back to private later cannot retrieve public clones, forks, caches, or other copies. The visibility change is therefore treated as an irreversible disclosure boundary.
+The installed GitHub CLI did not support the newer `gh repo edit --accept-visibility-change-consequences` flag. The owner therefore used the supported GitHub REST repository update through `gh api`, setting `visibility=public` for the three approved repositories.
 
-## Execution order
+Independent hosted readback on 2026-08-19 confirms:
 
-1. Keep repository visibility private.
-2. Merge this preparation only after deterministic CI and the publication secret audit are reviewed.
-3. From private `main`, manually run **Publication secret audit** one final time.
-4. Change repository visibility to public in GitHub settings.
-5. Read back `visibility=public` from GitHub.
-6. Update repository profile/README/current state from transitional-private to actual public state.
-7. Recheck branch protections, secret scanning/push protection, code scanning, Actions policy, and any other plan-dependent hosted controls.
-8. Record final public-transition evidence in Git.
+- `u-dont-existDOTcom/pangram-humanization-lab` — **public**
+- `u-dont-existDOTcom/joel-articles` — **public**
+- `u-dont-existDOTcom/innerSignalArtifact` — **public**
+- `u-dont-existDOTcom/AskRigor-lessons` — **private**
 
-## Tool boundary
+## Post-transition hosted controls
 
-The connected ChatGPT GitHub integration can prepare code, workflows, commits, pull requests, merges, and readback, but currently exposes no repository-visibility mutation action. The hosted visibility toggle therefore remains the single required owner UI action after all preconditions are green.
+A fresh GitHub branch readback confirms Pangram `main` remains **unprotected** after the visibility transition. Public visibility removes the private GitHub-hosted Actions minute billing boundary for standard runners, but it does not itself establish branch rules or other security controls.
+
+Secret scanning, push protection, Actions default permissions, vulnerability alerts, code-scanning posture, and evidence-branch protection must remain recorded as their actually verified states. Do not infer that public visibility enabled a control unless GitHub supplies a direct readback.
+
+## Irreversibility
+
+The public transition is an irreversible disclosure boundary in practice. Returning a repository to private later cannot retrieve public clones, forks, caches, or other copies.
+
+## Follow-up
+
+Repository-local metadata must describe the repository as public. Future cost work should treat public standard-runner Actions as free and should not reintroduce private-repository workarounds merely to save minutes. Paid provider calls and privileged/mutating workflows retain their existing explicit execution boundaries regardless of GitHub Actions minute cost.
