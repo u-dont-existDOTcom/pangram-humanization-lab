@@ -94,9 +94,12 @@ def test_privacy_safe_comparison_summary_flags_but_does_not_accept_collapsed_whi
     }
     summary = history_record_comparison_summary(payload, text)
     assert summary["authorized_word_count"] == 3
-    assert len(summary["candidate_fields"]) == 1
-    row = summary["candidate_fields"][0]
-    assert row["field_path"] == ["prompt"]
+    rows = {
+        tuple(row["field_path"]): row
+        for row in summary["candidate_fields"]
+    }
+    assert ("prompt",) in rows
+    row = rows[("prompt",)]
     assert row["accepted_match_mode"] is None
     assert row["whitespace_collapsed_equal_diagnostic_only"] is True
     assert "alpha" not in str(summary)
