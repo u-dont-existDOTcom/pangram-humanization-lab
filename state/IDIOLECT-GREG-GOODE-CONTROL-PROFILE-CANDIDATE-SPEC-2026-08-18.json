@@ -20,91 +20,58 @@
       "fresh_complete_overlap_census_required_before_admission": true
     }
   ],
-  "manual_seed_pages_for_retrieval_crosscheck": [
-    {
-      "title": "I-AM, I-I And Anatta",
-      "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/i-am-i-i-and-anatta_49.html",
-      "url_sha256": "386438c4189919b2427748009cd9c5994336528eeac63850b49e737970eae74e"
-    },
-    {
-      "title": "Being/Non-Being And a Freedom From Extremes",
-      "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/beingnon-being-and-freedom-from-extremes_0.html",
-      "url_sha256": "09953956a70cc4a095731d8bdafad15b717a7111b94751405b42beeaf4f1122d"
-    },
-    {
-      "title": "Madhyamaka and Advaita Vedanta: A Comparison",
-      "url": "https://dharmaconnectiongroup.blogspot.com/2013/06/madhyamaka-and-advaita-vedanta_64.html",
-      "url_sha256": "431548bd24267b84801eee69a0ad2467c9c00b0280f8b6f5d04cd2bcf9274277"
-    },
-    {
-      "title": "Shentong, Yogācāra and Dzogchen",
-      "url": "https://dharmaconnectiongroup.blogspot.com/2013/07/shentong-yogacara-and-dzogchen_59.html",
-      "url_sha256": "0667fc1658be26f72e996e0681266113836ca867821e17836eae650c4c9c9901"
-    },
-    {
-      "title": "Faith, Pure Land and Karma",
-      "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/faith-pure-land-and-karma_99.html",
-      "url_sha256": "c0b98b27c76092c4efa13561c02ed34498beffb0c5817493bfea39c462703542"
-    },
-    {
-      "title": "Dzogchen, Empowerment, Definition of Liberation",
-      "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/dzogchen-empowerment-definition-of_62.html",
-      "url_sha256": "848c799c86fc58f6bad3d7a4baba0b868237debf4817e9d069a4985a67a4217f"
-    }
-  ],
-  "feasibility_guidance": {
-    "source": "state/IDIOLECT-DHARMA-CONTROL-PROFILE-SPEC-2026-08-18.json",
-    "preferred_min_explicit_nonoverlap_posts": 4,
-    "preferred_min_total_words": 1000,
-    "preferred_max_largest_source_fraction": 0.7,
-    "note": "These are acquisition sufficiency checks, not validated attribution thresholds."
+  "census_requirements": {
+    "complete_archive_pagination": true,
+    "explicit_exact_speaker_label_only": true,
+    "casefold_identity_grouping_only": true,
+    "alias_merging_without_review": false,
+    "record_each_thread_at_most_once": true,
+    "record_target_overlap_threads_separately": true,
+    "record_nonoverlap_threads_separately": true,
+    "post_identity_hashes_only_in_git": true
   },
-  "required_post_extraction_checks": [
-    "target speaker appears as an explicit speaker marker rather than only a mention, like, title, or quoted attribution",
-    "extracted block has nonzero authored words",
-    "post is outside the fresh Joel-overlap set",
-    "source group is independent of all other admitted profile and reserved-holdout samples",
-    "canonical text is not an exact or near duplicate of another sample",
-    "long embedded quotations and copied source passages are removed or the sample is rejected",
-    "speaker-label boundaries are manually reviewed when the extractor raises possible dialogue or ambiguous-line flags",
-    "at least one independently source-separated original remains reserved as a holdout"
-  ],
-  "required_receipt_fields": [
-    "speaker",
-    "discovered_name_or_label_posts",
-    "selected_explicit_nonoverlap_posts",
-    "extracted_post_count",
-    "rejected_name_only_posts",
-    "rejected_overlap_posts",
-    "rejected_empty_explicit_post_count",
-    "total_words",
-    "largest_source_words",
-    "largest_source_fraction",
-    "sample_id",
-    "source_group",
-    "canonical_sha256",
-    "word_count",
-    "target_marker_count",
-    "quality_flags",
-    "fresh_overlap_set_identity_sha256"
-  ],
-  "execution": {
-    "command": "python -m pangram_lab.dharma_control_profiles state/IDIOLECT-GREG-GOODE-CONTROL-PROFILE-CANDIDATE-SPEC-2026-08-18.json --receipt-out .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json",
-    "runtime": "trusted network-capable local or explicitly manual research runtime",
-    "automatic_pull_request_or_push_execution": false,
-    "new_luar_or_pangram_call": false,
-    "prose_destination": ".local/idiolect-corpus only",
-    "receipt_destination": "metadata-only local artifact, then reviewed Git result if gates pass"
+  "extraction_requirements": {
+    "minimum_explicit_nonoverlap_posts": 4,
+    "minimum_total_words": 1000,
+    "maximum_largest_source_fraction": 0.7,
+    "source_group_is_thread": true,
+    "profile_and_holdout_source_groups_disjoint": true,
+    "remove_platform_chrome": true,
+    "remove_raw_urls_and_contact_details": true,
+    "substantial_third_party_quotes_excluded": true,
+    "mirror_and_repost_deduplication_required": true,
+    "exact_canonical_hashes_required": true,
+    "raw_or_canonical_prose_in_git": false
   },
-  "post_run_decision": {
-    "if_all_feasibility_and_quality_gates_pass": "create a separate reviewed role-admission PR; do not activate Greg from the extraction run itself",
-    "if_word_supply_or_dequotation_fails": "retain the failed feasibility receipt and advance Robert Dominik as the next candidate",
-    "if_fresh_overlap_set_is larger_than_the_provisional_exclusions": "exclude all overlap groups and recompute concentration before any admission"
+  "admission_gate": {
+    "automatic_admission": false,
+    "separate_role_admission_pull_request_required": true,
+    "required_receipt_fields": [
+      "speaker",
+      "exact_label_identity",
+      "archive_snapshot_sha256",
+      "independent_explicit_thread_count",
+      "target_overlap_thread_count",
+      "nonoverlap_thread_count",
+      "extracted_nonoverlap_post_count",
+      "total_words",
+      "largest_source_fraction",
+      "source_group_hashes",
+      "canonical_hash_set_sha256",
+      "quotation_audit_status",
+      "duplicate_audit_status",
+      "identity_review_status",
+      "profile_holdout_partition_status",
+      "errors"
+    ],
+    "failure_behavior": "If any required gate fails, preserve the metadata receipt and move to Robert Dominik rather than weakening the gate."
   },
-  "forbidden_claims": [
-    "this spec admits Greg Goode",
-    "the seed-page list is complete",
-    "the provisional exclusion list is a fresh overlap census",
-    "passing acquisition gates validates attribution, IER, or an abstention threshold"
-  ]
+  "next_execution": {
+    "operation": "fresh-complete-census-plus-explicit-nonoverlap-extraction",
+    "network_runs": 1,
+    "model_runs": 0,
+    "pangram_calls": 0,
+    "result_scope": "metadata-only-candidate-sufficiency-receipt"
+  },
+  "interpretation_rule": "A successful receipt establishes only candidate corpus sufficiency and clean extraction boundaries. Greg becomes an active ordinary control only through a separate reviewed role-admission change; no authorship distance, IER, threshold, or validated-for-register conclusion follows."
 }
