@@ -102,7 +102,9 @@ FIXTURE_FILES = {
     "docs/superpowers/plans/2026-08-12-interactive-supervisor-pause.md",
 }
 FIXTURE_LITERAL = "PANGRAM-SECRET-FIXTURE-4927"
-MEASUREMENT_KEY_LINE = re.compile(r'^\s*"measurement_key"\s*:\s*"[^"]+"\s*,?\s*$')
+MEASUREMENT_KEY_LINE = re.compile(
+    r'^\s*"(?:measurement_key|first_human_measurement_key)"\s*:\s*"[^"]+"\s*,?\s*$'
+)
 
 
 def historical_line(finding):
