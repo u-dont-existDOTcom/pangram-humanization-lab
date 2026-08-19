@@ -10,6 +10,7 @@ from pangram_lab.browser_history_recovery import discover_pangram_history_urls
 from pangram_lab.history_api_record import (
     ExactHistoryRecord,
     history_api_uuid,
+    history_record_comparison_summary,
     match_exact_history_record,
     parse_history_record_result,
 )
@@ -40,24 +41,41 @@ def main() -> int:
 
     original_find = base._find_or_open_report
     last_exact_record: ExactHistoryRecord | None = None
+    observed_history_records = 0
+    comparison_diagnostics: list[dict[str, object]] = []
 
     def enhanced_find(
         context: Any,
         page: Any,
         exact_text: str,
     ) -> tuple[Any, str, dict[str, object]]:
-        nonlocal last_exact_record
+        nonlocal last_exact_record, observed_history_records
         exact_records: list[ExactHistoryRecord] = []
+        observed_uuids: set[str] = set()
 
         def collect(response: Any) -> None:
+            nonlocal observed_history_records
             try:
-                if history_api_uuid(str(getattr(response, "url", ""))) is None:
+                response_url = str(getattr(response, "url", ""))
+                uuid = history_api_uuid(response_url)
+                if uuid is None:
                     return
                 headers = getattr(response, "headers", {}) or {}
                 if "json" not in str(headers.get("content-type", "")).casefold():
                     return
                 payload = response.json()
-                match = match_exact_history_record(response.url, payload, exact_text)
+                if uuid not in observed_uuids:
+                    observed_uuids.add(uuid)
+                    observed_history_records += 1
+                    summary = history_record_comparison_summary(payload, exact_text)
+                    if summary.get("candidate_fields") and len(comparison_diagnostics) < 12:
+                        comparison_diagnostics.append(
+                            {
+                                "record_index": observed_history_records,
+                                **summary,
+                            }
+                        )
+                match = match_exact_history_record(response_url, payload, exact_text)
                 if match is None:
                     return
                 if not any(existing.uuid == match.uuid for existing in exact_records):
@@ -76,9 +94,8 @@ def main() -> int:
 
         working = base.local_transport.normalize_context_tabs(context, keep=page)
         try:
-            # The previous diagnostic proved that visiting a report route issues
-            # GET /api/history/<uuid>/ with stored scan content. Revisit only
-            # existing result candidates; this is read-only and cannot submit.
+            # Visiting a stored report route issues GET /api/history/<uuid>/.
+            # Revisit only existing candidates; this is read-only and cannot submit.
             for candidate in chromium_candidates:
                 try:
                     working.goto(candidate, wait_until="domcontentloaded")
@@ -134,7 +151,13 @@ def main() -> int:
                     "status": "not_recovered",
                     "detector_submission_attempted_during_recovery": False,
                     "browser_candidate_count": len(chromium_candidates),
+                    "history_api_records_observed": observed_history_records,
                     "exact_history_api_record_found": last_exact_record is not None,
+                    "record_comparisons": comparison_diagnostics,
+                    "comparison_privacy_note": (
+                        "No Pangram record text, private result UUID, cookie, storage value, or private URL is logged. "
+                        "Whitespace-collapsed equality is diagnostic only and cannot clear ambiguity."
+                    ),
                     "error_type": type(exc).__name__,
                     "error": str(exc),
                 },
