@@ -23,6 +23,7 @@ _HISTORY_URL_SEARCH_RE = re.compile(
     r"[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
     re.IGNORECASE,
 )
+_RESULT_CONTEXT_MARKERS = ("history", "result", "scan", "detection", "request")
 
 
 def _absolute_pangram_url(raw_url: str) -> str | None:
@@ -214,7 +215,8 @@ def extract_pangram_history_urls_from_payload(
     """Extract only Pangram result identities from an in-memory JSON payload.
 
     The payload itself is never returned or persisted. Bare UUID values are
-    accepted only under result-like keys and are converted to the documented
+    accepted only when their key ancestry places them under a result/history/
+    scan/detection/request object, then converted to the documented
     ``/history/<UUID>`` read-only result route.
     """
     if limit < 1:
@@ -228,16 +230,16 @@ def extract_pangram_history_urls_from_payload(
             seen.add(canonical)
             result.append(canonical)
 
-    def walk(value: Any, key_hint: str = "") -> None:
+    def walk(value: Any, ancestry: tuple[str, ...] = ()) -> None:
         if len(result) >= limit:
             return
         if isinstance(value, dict):
             for key, child in value.items():
-                walk(child, str(key).casefold())
+                walk(child, (*ancestry, str(key).casefold()))
             return
         if isinstance(value, (list, tuple)):
             for child in value:
-                walk(child, key_hint)
+                walk(child, ancestry)
             return
         if not isinstance(value, str):
             return
@@ -248,8 +250,9 @@ def extract_pangram_history_urls_from_payload(
             if len(result) >= limit:
                 return
 
+        ancestry_text = " ".join(ancestry)
         if _UUID_RE.fullmatch(text) and any(
-            token in key_hint for token in ("history", "result", "scan", "detection", "request")
+            marker in ancestry_text for marker in _RESULT_CONTEXT_MARKERS
         ):
             add(f"https://www.pangram.com/history/{text}")
 
