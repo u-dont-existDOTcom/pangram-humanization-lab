@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "status": "candidate-extraction-complete-clean-subset-feasible-calibration-split-pending",
+  "purpose": "Freeze the successful Greg Goode explicit-speaker extraction as metadata-only evidence, separate clean candidate material from deferred-risk material, and prevent the one-shot partition from being mistaken for a calibrated benchmark split.",
+  "source_pr": 98,
+  "workflow": {
+    "run_id": 32249552972,
+    "job_id": 96057303410,
+    "head_sha": "cc756c998582f4d694a628d41b78dbdc448f89a3",
+    "focused_tests": "18 passed",
+    "repository_workflow_policy": "passed",
+    "lesson_integrity": "changed-range and full test suite passed; repository-wide audit remains red on pre-existing baseline orphans",
+    "artifact": {
+      "name": "idiolect-greg-goode-control-candidate-metadata",
+      "artifact_id": 9363921834,
+      "sha256": "d6897673d8356fcf7ce3a07d6edb203000dafa9924825ce0db914705866ccbda",
+      "member": "greg-goode-control-candidate-receipt.json",
+      "member_sha256": "f11496df4b1ca2dd6113dc8e2ee91a2088261f0013f3bfe3c2ac58abd91bbace"
+    }
+  },
+  "discovery": {
+    "feed_page_count": 2,
+    "target_explicit_post_count": 14,
+    "selected_nonoverlap_posts": 13,
+    "rejected_dynamic_overlap_posts": 1,
+    "dynamic_overlap_page_title": "Insights, Anatta, +A, -A",
+    "feed_snapshot_sha256": "ad5155b9dff4246bc92addd8615b642122f1d9bafa7b2febe5e523013ec38f03",
+    "target_post_set_sha256": "de3fedd95b7e80ae8325a66806441aae913f5cdaa1faa68a2e37be9d9983d88a",
+    "selected_source_set_sha256": "9290e436a08fd6ecc20c572e239189a50ecb8fdd9c3a9909c289263969064823",
+    "static_safety_exclusion_not_seen_in_snapshot": "Sound And The Bahiya Sutta"
+  },
+  "acquisition": {
+    "request_count": 13,
+    "network_fetch_count": 13,
+    "sleep_count": 12,
+    "spacing_seconds": 8.0,
+    "hard_error_count": 0,
+    "empty_explicit_rejection_count": 0,
+    "exact_duplicate_groups": [],
+    "automated_feasibility_pass": true
+  },
+  "one_shot_partition": {
+    "partition_identity_sha256": "a7d48d8a88a663fc5da8e03406daa2aa1f4b25665da40d6b2d57253f31655f6a",
+    "profile": {
+      "source_count": 10,
+      "total_words": 2952,
+      "largest_source_words": 907,
+      "largest_source_fraction": 0.307249,
+      "thin_under_250_count": 6
+    },
+    "reserved_holdout": {
+      "source_count": 3,
+      "total_words": 5566,
+      "largest_source_words": 4894,
+      "largest_source_fraction": 0.879267,
+      "thin_under_250_count": 1
+    },
+    "disposition": "diagnostic-only-not-calibration-partition",
+    "reason": "The automated split proved source-group separation and holdout reservation, but the holdout word mass is 87.93% concentrated in one flagged 4,894-word source. Do not use this split for attribution calibration."
+  },
+  "identity_review": {
+    "status": "pass-for-archive-speaker-continuity-not-forensic-identity-proof",
+    "basis": [
+      "stable exact Greg Goode speaker label across independent Dharma Connection threads",
+      "consistent Advaita, Madhyamaka, emptiness, and nonduality subject matter across screened turns",
+      "public biographical material for Greg Goode independently matches the Advaita-to-emptiness teaching trajectory visible in the archive"
+    ],
+    "limit": "This establishes sufficient continuity for a research control corpus, not legal or forensic identity."
+  },
+  "source_dispositions": {
+    "clean_substantive_candidate_pool": [
+      {
+        "sample_id": "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+        "word_count": 524,
+        "canonical_sha256": "6b11bad5957728c4ffc5edcd2f318441892315e58ad57ec3465f91255a6df353",
+        "reason": "no extractor quality flags; multiple explicit Greg turns"
+      },
+      {
+        "sample_id": "dcp-greg-goode-realizing-non-arising-from-dependent-70",
+        "word_count": 578,
+        "canonical_sha256": "19d19f1907061ac623b71b911eb4e2066e9fa054e14df716c757b97ad1322d83",
+        "reason": "no extractor quality flags; multiple explicit Greg turns"
+      },
+      {
+        "sample_id": "dcp-greg-goode-faith-pure-land-and-karma-99",
+        "word_count": 482,
+        "canonical_sha256": "4a18e19362c3f52b1a4b3be89574c758413cda7e5fb165c55a53071ceaf816d6",
+        "reason": "no extractor quality flags; independent explicit-speaker source"
+      },
+      {
+        "sample_id": "dcp-greg-goode-shentong-yogacara-and-dzogchen-59",
+        "word_count": 156,
+        "canonical_sha256": "2a8bcfcc202baa08c68976f1a59d0e302147de9fe3fea0d52b3412ab938999b6",
+        "reason": "thin but independently screened as original Greg explanation; suitable as supporting source, not a sole holdout"
+      }
+    ],
+    "thin_support_only": [
+      "dcp-greg-goode-an-experience-with-tonglen-42",
+      "dcp-greg-goode-experience-skandha-and-ignorance",
+      "dcp-greg-goode-fabrications-and-middle-way-26",
+      "dcp-greg-goode-nagasena-chariot-and-emptiness-97",
+      "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52"
+    ],
+    "deferred_pending_exact_quote_dialogue_review": [
+      {
+        "sample_id": "dcp-greg-goode-literal-rebirth-and-necessity-of-faith-94",
+        "word_count": 907,
+        "flags": ["possible-unremoved-dialogue"]
+      },
+      {
+        "sample_id": "dcp-greg-goode-spiritual-diversity-20",
+        "word_count": 462,
+        "flags": ["possible-unremoved-dialogue", "ambiguous-single-word-lines-inside-speaker-block"]
+      },
+      {
+        "sample_id": "dcp-greg-goode-two-techniques-for-dealing-with-painful",
+        "word_count": 193,
+        "flags": ["thin-for-authorship-attribution", "possible-unremoved-dialogue"]
+      },
+      {
+        "sample_id": "dcp-greg-goode-consciousness-advaita-emptiness-94",
+        "word_count": 4894,
+        "flags": ["possible-unremoved-dialogue", "ambiguous-single-word-lines-inside-speaker-block"],
+        "additional_reason": "would dominate the current automated holdout; exclude from calibration until exact manual dequotation/dialogue audit"
+      }
+    ]
+  },
+  "feasibility_decision": {
+    "greg_control_author_feasible": true,
+    "reason": "Four independent clean/substantive explicit-speaker sources provide 1,740 words before using any deferred-risk material. This exceeds the existing acquisition-feasibility floor without relying on the flagged 4,894-word source.",
+    "role_activation_now": false,
+    "next_role_status": "admitted-pending-next-benchmark",
+    "reason_not_active": "Historical three-author score receipts do not contain Greg scores. Marking Greg active now would invalidate reanalysis of frozen three-author predictions."
+  },
+  "next_required_work": [
+    "freeze a clean Greg profile/holdout split from admitted sources without the 4,894-word flagged source",
+    "freeze nonoverlap Joel and Stian original holdouts under the same register/source rules",
+    "then run one batched LUAR evaluation with Joel, Stian, David, and Greg, emitting direct profile cosines plus complete per-document scores",
+    "calibrate an abstention region from natural-original margins before any aligned rewrite interpretation"
+  ],
+  "privacy": {
+    "raw_or_canonical_prose_in_git": false,
+    "embeddings_in_git": false,
+    "metadata_only": true
+  },
+  "forbidden_claims": [
+    "the current one-shot holdout is calibration-ready",
+    "Greg is already an active author in historical three-author diagnostics",
+    "flagged dialogue or quotation-heavy material is clean merely because automated gates passed",
+    "Greg's inclusion validates the register or proves a Joel-Stian neighborhood",
+    "this result is IER or validated-for-register"
+  ]
+}
