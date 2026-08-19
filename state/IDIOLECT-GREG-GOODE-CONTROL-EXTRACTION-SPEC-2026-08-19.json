@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "status": "one-shot-candidate-extraction-not-role-admission",
+  "purpose": "Run one bounded, source-separated extraction of Greg Goode's explicit pre-LLM Dharma Connection writing as the leading second ordinary matched-control candidate. Keep raw/canonical prose local and reserve independent originals before any role admission or LUAR rerun.",
+  "method_decision": "reuse-and-adapt-existing-dharma-explicit-speaker-extraction",
+  "blog": "https://dharmaconnectiongroup.blogspot.com/",
+  "target": {
+    "speaker": "Greg Goode",
+    "author_id": "greg-goode",
+    "role": "ordinary-control-candidate"
+  },
+  "overlap_speakers": [
+    "Joel Rosenblum"
+  ],
+  "static_exclude_urls": [
+    "https://dharmaconnectiongroup.blogspot.com/2013/06/sound-and-bahiya-sutta.html",
+    "https://dharmaconnectiongroup.blogspot.com/2014/08/insights-anatta-a_8.html"
+  ],
+  "network": {
+    "feed_page_size": 100,
+    "max_feed_pages": 10,
+    "source_request_spacing_seconds": 8,
+    "timeout_seconds": 30
+  },
+  "partition": {
+    "reserved_holdout_count": 3,
+    "minimum_holdout_words_per_source": 100,
+    "selection_salt": "greg-goode-dharma-explicit-speaker-v1"
+  },
+  "feasibility_guidance": {
+    "preferred_min_explicit_nonoverlap_posts": 4,
+    "preferred_min_total_words": 1000,
+    "preferred_max_largest_source_fraction": 0.7,
+    "preferred_min_reserved_holdout_posts": 3
+  },
+  "manual_review": {
+    "identity_continuity_required": true,
+    "quotation_and_copied_source_review_required": true,
+    "exact_and_near_duplicate_review_required": true,
+    "profile_and_holdout_source_group_separation_required": true,
+    "successful_automated_gates_do_not_activate_role": true
+  },
+  "forbidden_claims": [
+    "Greg Goode is admitted before manual identity and quotation review",
+    "the extraction establishes stylistic distance from Joel",
+    "the automated feasibility gates validate the register",
+    "the candidate corpus is IER-ready",
+    "a role admission authorizes a new LUAR run without the remaining nonoverlap and calibration gates"
+  ]
+}
