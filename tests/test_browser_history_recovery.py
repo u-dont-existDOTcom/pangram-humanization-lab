@@ -132,7 +132,7 @@ def test_extracts_only_result_identifiers_from_in_memory_json_payload() -> None:
         "account_id": "99999999-1111-2222-3333-444444444444",
         "recent_scans": [
             {
-                "result_id": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
+                "id": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
                 "private_text": "must not be returned",
             },
             {
