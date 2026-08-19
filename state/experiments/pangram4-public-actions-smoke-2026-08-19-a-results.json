@@ -1,0 +1,63 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "pangram4-public-actions-smoke-2026-08-19-a",
+  "spec_sha256": "b2447faecbf73dd41d8a44eab6c39e58211687ea6bb369b193db585db503b467",
+  "results": [
+    {
+      "id": "SMOKE",
+      "measurement_key": "pangram4-public-actions-smoke-2026-08-19-a_SMOKE",
+      "text": "Artificial intelligence systems can generate fluent prose very quickly.\nTheir output often sounds polished and organized, but those surface qualities do\nnot necessarily indicate whether the underlying ideas are accurate, original, or\nuseful. Reliable evaluation therefore requires examining both the writing and the\nclaims it makes, considering evidence carefully, and distinguishing stylistic\nfluency from genuine reasoning and trustworthy factual support.",
+      "text_sha256": "48509360f0b2f5e20db79ff0c78a356f1329ff2c80820638862e116535ba47cc",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Artificial intelligence systems can generate fluent prose very quickly.\nTheir output often sounds polished and organized, but those surface qualities do\nnot necessarily indicate whether the underlying ideas are accurate, original, or\nuseful. Reliable evaluation therefore requires examining both the writing and the\nclaims it makes, considering evidence carefully, and distinguishing stylistic\nfluency from genuine reasoning and trustworthy factual support.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Artificial intelligence systems can generate fluent prose very quickly.\nTheir output often sounds polished and organized, but those surface qualities do\nnot necessarily indicate whether the underlying ideas are accurate, original, or\nuseful. Reliable evaluation therefore requires examining both the writing and the\nclaims it makes, considering evidence carefully, and distinguishing stylistic\nfluency from genuine reasoning and trustworthy factual support.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999641180038452,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 457,
+            "word_count": 60,
+            "token_length": 73,
+            "is_humanized": false,
+            "humanizer_score": 0.0040611461736261845
+          }
+        ]
+      },
+      "section_id": "smoke"
+    }
+  ],
+  "audit_id": "pangram4-public-actions-smoke-2026-08-19-a",
+  "call_accounting": {
+    "audit_id": "pangram4-public-actions-smoke-2026-08-19-a",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 2,
+        "pending_resumes": 0,
+        "section_id": "smoke",
+        "version": "4.0",
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
