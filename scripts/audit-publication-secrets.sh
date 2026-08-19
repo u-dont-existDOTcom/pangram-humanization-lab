@@ -23,10 +23,12 @@ mkdir -p "$work/hosted/actions" "$work/hosted/reviews"
 chmod 700 "$work" "$work/hosted" "$work/hosted/actions" "$work/hosted/reviews"
 
 # Make every currently reachable branch, tag, and PR head visible to git rev-list/log.
+# Keep PR heads in their own remote namespace because actions/checkout may already
+# create refs/remotes/pull/<number>/merge for a pull_request run.
 git fetch --force --no-tags origin \
   '+refs/heads/*:refs/remotes/origin/*' \
   '+refs/tags/*:refs/tags/*' \
-  '+refs/pull/*/head:refs/remotes/pull/*'
+  '+refs/pull/*/head:refs/remotes/pull-heads/*'
 
 git for-each-ref --format='%(refname)' > "$work/hosted/ref-names.txt"
 git log --all --format='%H%n%B%n---END-COMMIT---' > "$work/hosted/commit-messages.txt"
@@ -57,7 +59,13 @@ if command -v gh >/dev/null 2>&1 && [[ -n "${GH_TOKEN:-}" ]]; then
   mapfile -t run_ids < <(gh run list --repo "$repository" --limit 1000 --json databaseId --jq '.[].databaseId')
   fetched_logs=0
   unavailable_logs=0
+  current_run_id="${GITHUB_RUN_ID:-}"
   for run_id in "${run_ids[@]}"; do
+    # Never request the current workflow's own nonterminal log from inside that workflow.
+    # Doing so can self-deadlock until timeout.
+    if [[ -n "$current_run_id" && "$run_id" == "$current_run_id" ]]; then
+      continue
+    fi
     if gh run view "$run_id" --repo "$repository" --log > "$work/hosted/actions/run-$run_id.log" 2>/dev/null; then
       fetched_logs=$((fetched_logs + 1))
     else
@@ -102,7 +110,9 @@ FIXTURE_FILES = {
     "docs/superpowers/plans/2026-08-12-interactive-supervisor-pause.md",
 }
 FIXTURE_LITERAL = "PANGRAM-SECRET-FIXTURE-4927"
-MEASUREMENT_KEY_LINE = re.compile(r'^\s*"measurement_key"\s*:\s*"[^"]+"\s*,?\s*$')
+MEASUREMENT_KEY_LINE = re.compile(
+    r'^\s*"(?:measurement_key|first_human_measurement_key)"\s*:\s*"[^"]+"\s*,?\s*$'
+)
 
 
 def historical_line(finding):

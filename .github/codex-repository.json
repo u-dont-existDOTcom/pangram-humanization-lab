@@ -3,7 +3,7 @@
   "repository_kind": "software",
   "active": true,
   "long_running": true,
-  "visibility": "private",
+  "visibility": "public",
   "risk": "high",
   "commands": {
     "bootstrap": "python -m pip install -e '.[test]'",
@@ -16,12 +16,15 @@
   },
   "publication_transition": {
     "target_visibility": "public",
-    "status": "pre_publication_audit_pending",
+    "status": "public_readback_confirmed",
     "owner_approved_test_corpus_disclosure": true,
     "approved_at": "2026-08-18",
+    "completed_at": "2026-08-19",
+    "hosted_readback_visibility": "public",
     "excluded_repository": "u-dont-existDOTcom/AskRigor-lessons",
     "audit_workflow": ".github/workflows/publication-secret-audit.yml",
-    "audit_scope": "reachable Git history plus issue/PR bodies and comments, PR reviews, release metadata, ref/commit metadata, and retained Actions logs; credentials/private-key risk only because Pangram test prose is owner-approved for disclosure"
+    "audit_scope": "reachable Git history plus issue/PR bodies and comments, PR reviews, release metadata, ref/commit metadata, and retained Actions logs; credentials/private-key risk only because Pangram test prose is owner-approved for disclosure",
+    "audit_disposition": "86 historical generic-api-key matches were reviewed as non-secret Pangram measurement metadata or the exact synthetic security fixture; hosted secret findings were zero in the final private audit evidence"
   },
   "current_state": "state/CURRENT-STATE.md",
   "github_controls": {
@@ -33,5 +36,5 @@
     "vulnerability_alerts": "unverified",
     "evidence_branch_rules": "unverified"
   },
-  "audit_note": "Repository-visible controls are enforced in CI. Hosted-setting observations and declared exceptions are recorded in docs/CODEX-GITHUB-COMPLIANCE-2026-08-14.md; unverified means the connected integration could not read the setting and no inference was made. Visibility remains private until the pre-publication audit passes and the hosted visibility setting is changed/read back."
+  "audit_note": "GitHub hosted readback on 2026-08-19 confirms visibility=public. A fresh public branch readback confirms main is unprotected. Other hosted security controls remain unverified unless explicitly read back; do not infer that public visibility enabled them. AskRigor-lessons remains excluded/private."
 }

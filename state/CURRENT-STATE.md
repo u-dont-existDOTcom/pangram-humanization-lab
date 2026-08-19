@@ -1,6 +1,14 @@
 # Pangram Humanization Lab current state
 
-Updated: 2026-08-14
+Updated: 2026-08-19
+
+## Public-visibility update — 2026-08-19
+
+GitHub hosted readback confirms this repository is now **public**. `u-dont-existDOTcom/AskRigor-lessons` remains **private**. The owner-approved publication transition and credential-disclosure audit are recorded in `docs/PUBLIC-REPOSITORY-TRANSITION-2026-08-18.md`.
+
+A fresh hosted branch readback confirms `main` is still **unprotected**. Any older statement below that describes the repository as private or attributes unavailable branch rules specifically to the private-repository plan is historical evidence, not current hosted state. Secret scanning, push protection, Actions defaults, vulnerability alerts, code scanning, and evidence-branch protection remain at their separately verified/unverified states; do not infer enablement from public visibility.
+
+Public standard GitHub-hosted Actions no longer consume the private-repository Actions minute allowance. This changes compute cost placement only; paid Pangram calls, write-capable workflows, and other privileged execution boundaries remain unchanged.
 
 ## Goal
 
@@ -45,14 +53,15 @@ Preserve the lab's exact detector evidence, editorial authority, and lesson-clos
 
 ## Blockers / unresolved
 
-- GitHub rulesets for this private repository returned a plan-limit error; `main` is verified unprotected.
-- The connected integration could not read Actions default permissions, vulnerability alerts, secret scanning, push protection, or evidence-branch protection. These remain `unverified`.
-- Code scanning is disabled.
+- Historical private-plan note: GitHub rulesets for the then-private repository returned a plan-limit error; `main` was verified unprotected. Current public hosted readback still confirms `main` is unprotected, but the old private-plan explanation is no longer current.
+- The connected integration could not read Actions default permissions, vulnerability alerts, secret scanning, push protection, or evidence-branch protection. These remain `unverified` until a newer direct readback supersedes them.
+- Code scanning was recorded disabled in the existing governance baseline; reverify before claiming current enablement.
 - Until hosted protections are verified, write-capable collaborators remain part of the trust boundary for repository secrets and workflow changes.
 
 ## Evidence / artifacts
 
 - Repository profile: `.github/codex-repository.json`
+- Public transition record: `docs/PUBLIC-REPOSITORY-TRANSITION-2026-08-18.md`
 - Main compliance record: `docs/CODEX-GITHUB-COMPLIANCE-2026-08-14.md`
 - Evidence compliance record in PR #19: `docs/EVIDENCE-WORKFLOW-COMPLIANCE-2026-08-14.md`
 - Hosted-control follow-up: https://github.com/u-dont-existDOTcom/pangram-humanization-lab/issues/17
@@ -62,7 +71,9 @@ Preserve the lab's exact detector evidence, editorial authority, and lesson-clos
 
 ## Next safe action
 
-If PR #22 is open, confirm its exact head has green lesson-integrity and repository-policy runs, obtain independent review, and merge it. Then refresh and re-review PR #19 before merging it. If both are merged, confirm the `main` and evidence-branch push runs are green and the evidence detector is skipped; then promote the universal lessons and continue the requested repository sequence.
+For repository visibility/cost work, no further private-to-public transition is required: hosted readback is public. Continue normal Pangram work from the freshest branch/PR evidence, and treat current public Actions billing separately from paid-provider execution controls.
+
+For the older paid-route checkpoint below, re-read current PR/ref state before acting; do not assume the 2026-08-14 PR ordering remains live solely because it is preserved here as history.
 
 ## Recovery rule
 
