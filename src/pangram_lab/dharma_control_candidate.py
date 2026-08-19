@@ -8,14 +8,18 @@ from pathlib import Path
 from typing import Any, Callable
 from urllib.parse import urlsplit, urlunsplit
 
-from .corpus_acquire import BloggerVisibleTextParser, fetch_bytes
+from .corpus_acquire import fetch_bytes
 from .dharma_author_discover import discover_dharma_authors
 from .dharma_control_profiles import (
     _EMPTY_EXPLICIT_BLOCK_ERROR,
     build_profile_inventory,
     summarize_profiles,
 )
-from .dharma_speaker_acquire import acquire_speaker_inventory, extract_speaker_prefix
+from .dharma_speaker_acquire import (
+    BloggerVisibleTextParser,
+    acquire_speaker_inventory,
+    extract_speaker_prefix,
+)
 
 
 class ControlCandidateError(ValueError):
