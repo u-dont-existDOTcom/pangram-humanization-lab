@@ -151,3 +151,7 @@ def test_bootstrap_pins_official_runner_installer_and_github_host_key():
     assert "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" in bootstrap
     assert "ssh-keyscan" not in bootstrap
     assert "set -x" not in bootstrap
+
+
+def test_bootstrap_has_valid_bash_syntax():
+    subprocess.run(["bash", "-n", str(BOOTSTRAP_PATH)], check=True)
