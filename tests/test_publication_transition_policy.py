@@ -28,7 +28,8 @@ def test_publication_secret_scanner_is_pinned_and_redacted():
     assert "--redact=100" in text
     assert "--log-opts='--all'" in text
     assert "+refs/heads/*:refs/remotes/origin/*" in text
-    assert "+refs/pull/*/head:refs/remotes/pull/*" in text
+    assert "+refs/pull/*/head:refs/remotes/pull-heads/*" in text
+    assert "+refs/pull/*/head:refs/remotes/pull/*" not in text
     assert "gh issue list" in text
     assert "gh pr list" in text
     assert "issues/comments" in text
