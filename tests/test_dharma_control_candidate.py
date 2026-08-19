@@ -18,6 +18,43 @@ def _post(url: str, entry: str, *, labels: int = 1):
     }
 
 
+def _fake_acquirer(text_repetitions: int = 120):
+    def acquire(inventory_path, *, out_dir, manifest_out, timeout=30):
+        inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
+        out_dir.mkdir(parents=True, exist_ok=True)
+        rows = []
+        for item in iter_inventory_items(inventory):
+            text = (
+                f"Original prose for {item['sample_id']}. " * text_repetitions
+            ).strip()
+            canon = canonicalize(text)
+            local = out_dir / f"{item['sample_id']}.txt"
+            local.write_text(canon.text + "\n", encoding="utf-8")
+            rows.append(
+                {
+                    "sample_id": item["sample_id"],
+                    "source_group": item["source_group"],
+                    "speaker": "Greg Goode",
+                    "canonical_sha256": canon.sha256,
+                    "word_count": canon.word_count,
+                    "target_marker_count": 1,
+                    "quality_flags": [],
+                    "local_text_path": str(local),
+                    "url": item["url"],
+                }
+            )
+        runtime = {
+            "results": rows,
+            "errors": [],
+            "network_fetch_count": len(rows),
+        }
+        manifest_out.parent.mkdir(parents=True, exist_ok=True)
+        manifest_out.write_text(json.dumps(runtime), encoding="utf-8")
+        return runtime
+
+    return acquire
+
+
 def test_candidate_extraction_replaces_provisional_overlap_and_stays_metadata_only(
     tmp_path: Path,
 ):
@@ -47,43 +84,14 @@ def test_candidate_extraction_replaces_provisional_overlap_and_stays_metadata_on
             "feed_pages": [
                 {
                     "page_number": 1,
-                    "feed_sha256": hashlib.sha256(target_speaker.encode()).hexdigest(),
+                    "feed_sha256": hashlib.sha256(
+                        target_speaker.encode()
+                    ).hexdigest(),
                     "target_post_count": len(posts),
                     "next_present": False,
                 }
             ],
         }
-
-    def acquire(inventory_path, *, out_dir, manifest_out, timeout=30):
-        inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
-        out_dir.mkdir(parents=True, exist_ok=True)
-        rows = []
-        for item in iter_inventory_items(inventory):
-            text = (f"Original prose for {item['sample_id']}. " * 120).strip()
-            canon = canonicalize(text)
-            local = out_dir / f"{item['sample_id']}.txt"
-            local.write_text(canon.text + "\n", encoding="utf-8")
-            rows.append(
-                {
-                    "sample_id": item["sample_id"],
-                    "source_group": item["source_group"],
-                    "speaker": "Greg Goode",
-                    "canonical_sha256": canon.sha256,
-                    "word_count": canon.word_count,
-                    "target_marker_count": 1,
-                    "quality_flags": [],
-                    "local_text_path": str(local),
-                    "url": item["url"],
-                }
-            )
-        runtime = {
-            "results": rows,
-            "errors": [],
-            "network_fetch_count": len(rows),
-        }
-        manifest_out.parent.mkdir(parents=True, exist_ok=True)
-        manifest_out.write_text(json.dumps(runtime), encoding="utf-8")
-        return runtime
 
     spec = {
         "schema_version": 1,
@@ -108,6 +116,11 @@ def test_candidate_extraction_replaces_provisional_overlap_and_stays_metadata_on
             "preferred_min_total_words": 1000,
             "preferred_max_largest_source_fraction": 0.7,
         },
+        "split_readiness": {
+            "profile_documents": 2,
+            "holdout_documents": 2,
+            "word_budgets": [150],
+        },
         "required_post_extraction_checks": ["manual quotation review"],
         "forbidden_claims": ["not admitted"],
     }
@@ -120,7 +133,7 @@ def test_candidate_extraction_replaces_provisional_overlap_and_stays_metadata_on
         out_dir=tmp_path / "text",
         receipt_out=receipt_path,
         discover_fn=discover,
-        acquire_fn=acquire,
+        acquire_fn=_fake_acquirer(),
     )
 
     assert result["status"] == "candidate-extraction-complete-manual-review-pending"
@@ -135,8 +148,12 @@ def test_candidate_extraction_replaces_provisional_overlap_and_stays_metadata_on
     assert result["candidate_ready_for_manual_quality_review"] is True
     assert result["profile_admission_authorized"] is False
     assert result["profile_holdout_split_authorized"] is False
-    assert result["manual_seed_coverage"][0]["discovered_as_explicit_target_post"] is True
+    assert result["manual_seed_coverage"][0][
+        "discovered_as_explicit_target_post"
+    ] is True
     assert result["manual_seed_coverage"][1]["excluded_as_fresh_overlap"] is True
+    assert result["manual_seed_direct_page_fetch_count"] == 0
+    assert result["split_readiness"]["budgets"][0]["supply_pass"] is True
 
     encoded = receipt_path.read_text(encoding="utf-8")
     for forbidden in (
@@ -148,6 +165,187 @@ def test_candidate_extraction_replaces_provisional_overlap_and_stays_metadata_on
         joel_overlap,
     ):
         assert forbidden not in encoded
+
+
+def test_feed_omitted_seed_is_directly_verified_and_active_overlap_is_excluded(
+    tmp_path: Path,
+):
+    base_urls = [
+        "https://example.blogspot.com/a.html",
+        "https://example.blogspot.com/b.html",
+        "https://example.blogspot.com/c.html",
+        "https://example.blogspot.com/d.html",
+    ]
+    clean_seed = "https://example.blogspot.com/manual-clean.html"
+    overlap_seed = "https://example.blogspot.com/manual-overlap.html"
+
+    def discover(blog, *, target_speaker, timeout=30):
+        posts = (
+            [_post(url, str(index)) for index, url in enumerate(base_urls)]
+            if target_speaker == "Greg Goode"
+            else []
+        )
+        return {
+            "target_post_count": len(posts),
+            "target_posts": posts,
+            "feed_pages": [],
+        }
+
+    seed_pages = {
+        clean_seed: (
+            "<html><body><b>Greg Goode:</b>"
+            + " Independent original discussion." * 80
+            + "</body></html>"
+        ).encode(),
+        overlap_seed: (
+            "<html><body><b>Greg Goode:</b>"
+            + " Candidate prose." * 80
+            + "<b>Stian Gudmundsen Høiland:</b>Reply.</body></html>"
+        ).encode(),
+    }
+
+    def page_fetch(url, *, timeout=30):
+        body = seed_pages[url]
+        return body, hashlib.sha256(body).hexdigest()
+
+    spec = {
+        "schema_version": 1,
+        "blog": "https://example.blogspot.com/",
+        "overlap_exclusion_speakers": [
+            "Joel Rosenblum",
+            "Stian Gudmundsen Høiland",
+        ],
+        "targets": [
+            {
+                "speaker": "Greg Goode",
+                "author_id": "greg-goode",
+                "role": "ordinary-control-candidate",
+            }
+        ],
+        "manual_seed_pages_for_retrieval_crosscheck": [
+            {"title": "Clean", "url": clean_seed},
+            {"title": "Overlap", "url": overlap_seed},
+        ],
+        "feasibility_guidance": {
+            "preferred_min_explicit_nonoverlap_posts": 5,
+            "preferred_min_total_words": 1000,
+            "preferred_max_largest_source_fraction": 0.7,
+        },
+        "split_readiness": {
+            "profile_documents": 3,
+            "holdout_documents": 2,
+            "word_budgets": [150],
+        },
+    }
+    spec_path = tmp_path / "spec.json"
+    receipt_path = tmp_path / "receipt.json"
+    spec_path.write_text(json.dumps(spec), encoding="utf-8")
+
+    result = candidate.extract_control_candidate(
+        spec_path,
+        out_dir=tmp_path / "text",
+        receipt_out=receipt_path,
+        discover_fn=discover,
+        acquire_fn=_fake_acquirer(),
+        page_fetch_fn=page_fetch,
+    )
+
+    assert result["manual_seed_direct_page_fetch_count"] == 2
+    by_hash = {row["url_sha256"]: row for row in result["manual_seed_coverage"]}
+    clean = by_hash[hashlib.sha256(clean_seed.encode()).hexdigest()]
+    overlap = by_hash[hashlib.sha256(overlap_seed.encode()).hexdigest()]
+    assert clean["direct_page_preflight_used"] is True
+    assert clean["direct_page_target_marker_count"] == 1
+    assert clean["selected_as_explicit_target_post"] is True
+    assert clean["excluded_as_fresh_overlap"] is False
+    assert overlap["direct_page_overlap_speakers_present"] == [
+        "Stian Gudmundsen Høiland"
+    ]
+    assert overlap["excluded_as_fresh_overlap"] is True
+    assert result["candidate"]["extracted_post_count"] == 5
+    assert result["fresh_overlap"]["fresh_overlap_count"] == 1
+    assert result["split_readiness"]["budgets"][0]["supply_pass"] is True
+    assert "https://" not in receipt_path.read_text(encoding="utf-8")
+
+
+def test_post_extraction_exclusion_is_hash_bound_and_updates_split_supply():
+    rows = [
+        {
+            "sample_id": "keep-a",
+            "canonical_sha256": "a" * 64,
+            "word_count": 200,
+            "quality_flags": [],
+        },
+        {
+            "sample_id": "drop",
+            "canonical_sha256": "b" * 64,
+            "word_count": 5000,
+            "quality_flags": ["possible-unremoved-dialogue"],
+        },
+        {
+            "sample_id": "keep-b",
+            "canonical_sha256": "c" * 64,
+            "word_count": 180,
+            "quality_flags": ["thin-for-authorship-attribution"],
+        },
+    ]
+    kept, applied, errors = candidate._apply_post_extraction_exclusions(
+        rows,
+        [
+            {
+                "sample_id": "drop",
+                "expected_canonical_sha256": "b" * 64,
+                "reason": "dominant flagged source",
+            }
+        ],
+    )
+    assert [row["sample_id"] for row in kept] == ["keep-a", "keep-b"]
+    assert applied == [
+        {
+            "sample_id": "drop",
+            "canonical_sha256": "b" * 64,
+            "word_count": 5000,
+            "quality_flags": ["possible-unremoved-dialogue"],
+            "reason": "dominant flagged source",
+        }
+    ]
+    assert errors == []
+
+    readiness = candidate._split_readiness(
+        kept,
+        {
+            "profile_documents": 1,
+            "holdout_documents": 1,
+            "word_budgets": [180, 200],
+        },
+    )
+    by_budget = {row["word_budget"]: row for row in readiness["budgets"]}
+    assert by_budget[180]["supply_pass"] is True
+    assert by_budget[200]["supply_pass"] is False
+    assert by_budget[180]["clean_only_supply_pass"] is False
+
+
+def test_exclusion_hash_drift_fails_closed():
+    kept, applied, errors = candidate._apply_post_extraction_exclusions(
+        [
+            {
+                "sample_id": "drop",
+                "canonical_sha256": "c" * 64,
+                "word_count": 100,
+                "quality_flags": [],
+            }
+        ],
+        [
+            {
+                "sample_id": "drop",
+                "expected_canonical_sha256": "b" * 64,
+                "reason": "expected source",
+            }
+        ],
+    )
+    assert [row["sample_id"] for row in kept] == ["drop"]
+    assert applied == []
+    assert errors[0]["error"] == "post-extraction exclusion canonical hash drift"
 
 
 def test_candidate_extraction_reports_hard_errors_without_urls(tmp_path: Path):
