@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "date": "2026-08-18",
-  "purpose": "Encode owner-informed control-author roles and stratified evaluation requirements for Joel idiolect calibration without changing any historical prediction or inventing a new authorship metric.",
+  "date": "2026-08-19",
+  "purpose": "Encode owner-informed control-author roles and stratified evaluation requirements for Joel idiolect calibration without changing any historical prediction or inventing a new authorship metric. Preserve the frozen three-author active set for historical receipts while recording newly admitted authors separately until a benchmark actually contains their scores.",
   "status": "design-frozen-diagnostic-only",
   "method_decision": "adapt-and-compose-established-hard-negative-authorship-evaluation",
   "owner_correction": {
@@ -13,25 +13,34 @@
     {
       "author": "Joel Rosenblum",
       "role": "target-author",
-      "status": "active"
+      "status": "active",
+      "active_for": "historical frozen three-author score receipts and any benchmark explicitly naming this candidate set"
     },
     {
       "author": "Stian Gudmundsen Høiland",
       "role": "owner-identified-hard-negative",
       "status": "active",
-      "do_not_remove_to_improve_accuracy": true
+      "do_not_remove_to_improve_accuracy": true,
+      "active_for": "historical frozen three-author score receipts and any benchmark explicitly naming this candidate set"
     },
     {
       "author": "David Vardy",
       "role": "ordinary-matched-control",
-      "status": "active"
+      "status": "active",
+      "active_for": "historical frozen three-author score receipts and any benchmark explicitly naming this candidate set"
+    }
+  ],
+  "admitted_pending_next_benchmark": [
+    {
+      "author": "Greg Goode",
+      "role": "ordinary-matched-control",
+      "status": "admitted-pending-next-benchmark",
+      "admission_evidence": "state/IDIOLECT-GREG-GOODE-CONTROL-EXTRACTION-RESULT-2026-08-19.json",
+      "activation_rule": "Become active only in a new benchmark whose source manifest explicitly includes a frozen Greg profile and held-out originals and whose score receipt contains Greg scores. Do not retroactively add Greg to historical three-author prediction bundles.",
+      "corpus_limit": "Clean explicit-speaker source pool is feasible; final calibration profile/holdout split remains pending and the flagged 4,894-word source is excluded unless separately audited."
     }
   ],
   "pending_ordinary_control_candidates": [
-    {
-      "author": "Greg Goode",
-      "status": "explicit-speaker-census-and-sufficiency-pending"
-    },
     {
       "author": "John Ahn",
       "status": "explicit-speaker-census-and-sufficiency-pending"
@@ -52,7 +61,7 @@
   "required_reporting_strata": [
     {
       "stratum_id": "full-active-candidate-set",
-      "members": "all active authors",
+      "members": "all authors explicitly active in the named benchmark receipt",
       "role": "primary closed-set diagnostic"
     },
     {
@@ -65,7 +74,7 @@
     },
     {
       "stratum_id": "target-vs-ordinary-controls",
-      "members": "target plus all active ordinary matched controls",
+      "members": "target plus all ordinary matched controls explicitly active in the named benchmark receipt",
       "role": "ordinary same-topic/platform discrimination diagnostic"
     },
     {
@@ -92,13 +101,15 @@
     "Removing Stian may be reported only as a candidate-set ablation, never as a way to improve the primary accuracy.",
     "Hard-negative discrimination and ordinary-control discrimination must remain separate; do not average them into one voice-preservation verdict.",
     "No abstention or pass threshold is authorized until original same-author and cross-author margin distributions are frozen for the register.",
-    "Historical aggregate metrics remain historically correct, but their interpretation must reflect the owner-identified near-neighbor relationship."
+    "Historical aggregate metrics remain historically correct, but their interpretation must reflect the owner-identified near-neighbor relationship.",
+    "An admitted-pending-next-benchmark author must not be injected into an older score bundle that lacks that author's scores. Candidate-set identity is part of benchmark identity."
   ],
   "forbidden_claims": [
     "Stian confusion proves erasure",
     "Stian should be removed because he is too similar",
     "target-versus-ordinary accuracy substitutes for target-versus-hard-negative discrimination",
     "candidate-set ablation is a calibrated operational threshold",
+    "Greg is active in historical three-author diagnostics",
     "this design is IER"
   ]
 }
