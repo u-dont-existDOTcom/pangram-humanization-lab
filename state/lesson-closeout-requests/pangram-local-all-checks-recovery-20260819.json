@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "request_id": "pangram-local-all-checks-recovery-20260819",
+  "source_path": "state/PANGRAM-LOCAL-ALL-CHECKS-RECOVERY-2026-08-19.md",
+  "source_ref": "4e816143aaa086015989a03cd1e1ba1b38a28ef2",
+  "source_sha256": "dfb62d9064089b149dc8c9935727647f7c945bc8a6bae79f3a5e9c3f906540c9",
+  "finding": "The current Pangram stored-results UI uses All Checks/View Results and the local recovery lane was updated to discover current rendered and response identities without repeating an ambiguous paid call.",
+  "disposition": "no-new-lesson",
+  "reason": "This is Pangram-specific UI/recovery state. Transferable persistent-browser, SPA-history, exact-artifact, and recovery-before-repeat lessons are already promoted in universal development guidance.",
+  "promoted_to": [],
+  "status": "pending"
+}
