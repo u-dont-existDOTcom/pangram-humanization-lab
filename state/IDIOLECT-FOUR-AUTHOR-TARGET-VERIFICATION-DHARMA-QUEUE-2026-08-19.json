@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "purpose": "Compact source queue for one target-centric exact-50 LUAR verification run. Joel rows are the four already-frozen matched Dharma target originals; Stian, David, and Greg rows are current-source profile candidates. Raw/canonical prose remains local only.",
+  "raw_text_in_git": false,
+  "sources": [
+    {
+      "source_id": "target-joel-matched-dharma",
+      "site_group": "dharma-connection",
+      "provenance": "natural-owner-confirmed",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "philosophical"],
+      "known_threads": [
+        {
+          "sample_id": "dcp-joel-holographic",
+          "source_group": "dc-thread-holographic-2014-02-04",
+          "title": "Holographic Universe So What?",
+          "date": "2014-02-04",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/holographic-universe-so-what_68.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dcp-joel-can-anything-known",
+          "source_group": "dc-thread-can-anything-known-2014-08-09",
+          "title": "Can Anything be Known?",
+          "date": "2014-08-09",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/can-anything-be-known.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dcp-joel-supramundane-jhanas",
+          "source_group": "dc-thread-supramundane-jhanas-2014-08-09",
+          "title": "Supramundane Jhanas",
+          "date": "2014-08-09",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/supramundane-jhanas.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        },
+        {
+          "sample_id": "dcp-joel-insights-anatta",
+          "source_group": "dc-thread-insights-anatta-2014-08-09",
+          "title": "Insights, Anatta, +A, -A",
+          "date": "2014-08-09",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/insights-anatta-a_8.html",
+          "extraction_mode": "speaker-prefix:Joel Rosenblum"
+        }
+      ]
+    },
+    {
+      "source_id": "profile-stian-nonoverlap-candidates",
+      "site_group": "dharma-connection",
+      "provenance": "public-human-control-explicit-speaker",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "philosophical"],
+      "known_threads": [
+        {
+          "sample_id": "dcp-stian-hoiland-recognition-integration-and-90",
+          "source_group": "dc-thread-8583212720596374853",
+          "title": "Recognition, Integration and ...",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2013/07/recognition-integration-and_90.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "dcp-stian-hoiland-causality-and-self-perfection-54",
+          "source_group": "dc-thread-958058664579671905",
+          "title": "Causality and Self-Perfection",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/causality-and-self-perfection_54.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "dcp-stian-hoiland-did-buddha-teach-atman-7",
+          "source_group": "dc-thread-3079478924172374697",
+          "title": "Did the Buddha Teach an Atman?",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/did-buddha-teach-atman_7.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "dcp-stian-hoiland-difference-between-i-and-mine-making-66",
+          "source_group": "dc-thread-2893876560704696216",
+          "title": "Difference Between I and Mine-Making",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/difference-between-i-and-mine-making_66.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "dcp-stian-hoiland-experience-and-actualization-of-anatta-72",
+          "source_group": "dc-thread-6266197889093613190",
+          "title": "Experience and Actualization of Anatta",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/experience-and-actualization-of-anatta_72.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        },
+        {
+          "sample_id": "dcp-stian-hoiland-the-destruction-of-taints-53",
+          "source_group": "dc-thread-8386826174204924169",
+          "title": "The Destruction of Taints",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/the-destruction-of-taints_53.html",
+          "extraction_mode": "speaker-prefix:Stian Gudmundsen Høiland"
+        }
+      ]
+    },
+    {
+      "source_id": "profile-david-nonoverlap-candidates",
+      "site_group": "dharma-connection",
+      "provenance": "public-human-control-explicit-speaker",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "philosophical"],
+      "known_threads": [
+        {
+          "sample_id": "dcp-david-vardy-alcohol-54",
+          "source_group": "dc-thread-4978144203916527435",
+          "title": "Alcohol",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/alcohol_54.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "dcp-david-vardy-stream-41",
+          "source_group": "dc-thread-2006108526964070309",
+          "title": "Stream",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/stream_41.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "dcp-david-vardy-dzogchen-appearing-emptiness-39",
+          "source_group": "dc-thread-58818792567942365",
+          "title": "Dzogchen: Appearing Emptiness",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/dzogchen-appearing-emptiness_39.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "dcp-david-vardy-self-as-karmic-tendencies-1",
+          "source_group": "dc-thread-4621877563223217535",
+          "title": "Self as Karmic Tendencies",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/self-as-karmic-tendencies_1.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "dcp-david-vardy-integrating-with-activities-dreams-81",
+          "source_group": "dc-thread-624998290513123243",
+          "title": "Integrating with Activities, Dreams",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/integrating-with-activities-dreams_81.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        },
+        {
+          "sample_id": "dcp-david-vardy-osho-30",
+          "source_group": "dc-thread-2927665278974761460",
+          "title": "Osho",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/osho_30.html",
+          "extraction_mode": "speaker-prefix:David Vardy"
+        }
+      ]
+    },
+    {
+      "source_id": "profile-greg-current-clean",
+      "site_group": "dharma-connection",
+      "provenance": "public-human-control-explicit-speaker",
+      "modality": "written",
+      "registers": ["dialogue-QA", "research-conversational", "philosophical"],
+      "known_threads": [
+        {
+          "sample_id": "dcp-greg-goode-realizing-non-arising-from-dependent-70",
+          "source_group": "dc-thread-1156495982737412035",
+          "title": "Realizing Non-Arising from Dependent ...",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/08/realizing-non-arising-from-dependent_70.html",
+          "extraction_mode": "speaker-prefix:Greg Goode"
+        },
+        {
+          "sample_id": "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+          "source_group": "dc-thread-6428699248388781187",
+          "title": "Dzogchen, Empowerment, Definition of Liberation",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/dzogchen-empowerment-definition-of_62.html",
+          "extraction_mode": "speaker-prefix:Greg Goode"
+        },
+        {
+          "sample_id": "dcp-greg-goode-faith-pure-land-and-karma-99",
+          "source_group": "dc-thread-373114560681330350",
+          "title": "Faith, Pure Land and Karma",
+          "url": "https://dharmaconnectiongroup.blogspot.com/2014/02/faith-pure-land-and-karma_99.html",
+          "extraction_mode": "speaker-prefix:Greg Goode"
+        }
+      ]
+    }
+  ]
+}

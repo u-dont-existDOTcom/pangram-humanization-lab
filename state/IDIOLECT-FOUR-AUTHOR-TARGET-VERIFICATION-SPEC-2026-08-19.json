@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "status": "target-centric-exact-50-verification-design-not-IER",
+  "purpose": "Determine whether short natural Joel originals can be distinguished from the owner-identified Stian hard negative and two ordinary controls after Greg admission, while separating shared-thread matched-Dharma evidence from an independent TAFKA sensitivity stratum.",
+  "method_decision": "adapt-existing-pinned-luar-mean-profile-nearest-cosine",
+  "authors": [
+    "Joel Rosenblum",
+    "Stian Gudmundsen Høiland",
+    "David Vardy",
+    "Greg Goode"
+  ],
+  "target_author": "Joel Rosenblum",
+  "hard_negative": "Stian Gudmundsen Høiland",
+  "ordinary_controls": ["David Vardy", "Greg Goode"],
+  "word_budget_per_document": 50,
+  "profile_documents_per_author": 3,
+  "model": {
+    "model_id": "rrivera1849/LUAR-MUD",
+    "revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "upstream_backbone_revision_from_model_config": "48bffbbd27bf028ecdd0cd55abb51236ec12ef1b",
+    "embedding_size": 512,
+    "max_token_length": 512
+  },
+  "dharma_queue": "state/IDIOLECT-FOUR-AUTHOR-TARGET-VERIFICATION-DHARMA-QUEUE-2026-08-19.json",
+  "tafka_queue": "state/IDIOLECT-FOUR-AUTHOR-TARGET-VERIFICATION-TAFKA-QUEUE-2026-08-19.json",
+  "matched_dharma_target_sample_ids": [
+    "dcp-joel-holographic",
+    "dcp-joel-can-anything-known",
+    "dcp-joel-supramundane-jhanas",
+    "dcp-joel-insights-anatta"
+  ],
+  "historical_matched_target_hashes": {
+    "dcp-joel-holographic": "bab4c8863bd812916ccd20d353fba9e05c0902309cd0a70e66e53839eb1be650",
+    "dcp-joel-can-anything-known": "089afaf8451a84c844d0bc5d049ac6245acce068e9ba56f17348c554e09b6719",
+    "dcp-joel-supramundane-jhanas": "890ff99766b488b787b1f0a295f1cb6524e8379006741107ad8ae83f3dee33fd",
+    "dcp-joel-insights-anatta": "2ee7a77ea1270f6192a44246cbf19b4bcb83e1a250a8fabf0124bafbdc62bc75"
+  },
+  "control_profile_candidate_order": {
+    "Stian Gudmundsen Høiland": [
+      "dcp-stian-hoiland-recognition-integration-and-90",
+      "dcp-stian-hoiland-causality-and-self-perfection-54",
+      "dcp-stian-hoiland-did-buddha-teach-atman-7",
+      "dcp-stian-hoiland-difference-between-i-and-mine-making-66",
+      "dcp-stian-hoiland-experience-and-actualization-of-anatta-72",
+      "dcp-stian-hoiland-the-destruction-of-taints-53"
+    ],
+    "David Vardy": [
+      "dcp-david-vardy-alcohol-54",
+      "dcp-david-vardy-stream-41",
+      "dcp-david-vardy-dzogchen-appearing-emptiness-39",
+      "dcp-david-vardy-self-as-karmic-tendencies-1",
+      "dcp-david-vardy-integrating-with-activities-dreams-81",
+      "dcp-david-vardy-osho-30"
+    ],
+    "Greg Goode": [
+      "dcp-greg-goode-realizing-non-arising-from-dependent-70",
+      "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+      "dcp-greg-goode-faith-pure-land-and-karma-99"
+    ]
+  },
+  "independent_joel_profile_candidate_order": [
+    "tafka-2015-02-23-right-view-humility",
+    "tafka-2019-03-08-plant-spirits",
+    "tafka-2015-01-17-sam-harris-review",
+    "tafka-2016-06-08-already-perfect",
+    "tafka-2019-08-02-buddhism-sect",
+    "tafka-2020-04-19-consciousness-conditions"
+  ],
+  "independent_joel_holdout_candidate_order": [
+    "tafka-2019-08-02-buddhism-sect",
+    "tafka-2020-04-19-consciousness-conditions",
+    "tafka-2015-01-17-sam-harris-review",
+    "tafka-2016-06-08-already-perfect",
+    "tafka-2015-02-23-right-view-humility",
+    "tafka-2019-03-08-plant-spirits"
+  ],
+  "independent_joel_holdout_count": 2,
+  "prefix_cleanliness": {
+    "reject_possible_unremoved_dialogue_in_exact_50_prefix": true,
+    "reject_possible_platform_chrome_in_exact_50_prefix": true,
+    "reject_standalone_single_capitalized_word_line_in_exact_50_prefix": true,
+    "reject_leading_quote_marker_line_in_exact_50_prefix": true,
+    "historical_matched_target_exception": "A current matched-Dharma Joel source may bypass only the generic possible-unremoved-dialogue exact-prefix heuristic when its full canonical source hash is identical to the frozen source already used in the synchronized exact-50 LUAR pilot and no other prefix issue is present.",
+    "independent_joel_fallback_rule": "TAFKA profile and holdout candidates remain under the strict prefix gate. Predeclared fallback order selects the first clean exact-50 sources without reusing a source across profile and holdout.",
+    "note": "Full-source heuristic flags do not automatically disqualify a source when the exact evaluated 50-word prefix is clean. The benchmark evaluates only the exact prefix and records both source-level and prefix-level flags."
+  },
+  "strata": {
+    "matched_dharma": {
+      "role": "primary hard same-platform/topic target-verification diagnostic",
+      "profile_rule": "For each Joel held-out document, Joel's profile is the other three exact-50 matched Joel originals. Control profiles are fixed three-document exact-50 profiles selected from current candidate queues.",
+      "source_limit": "Target holdouts are shared-thread by design because the current archive has insufficient fully nonoverlap Joel material."
+    },
+    "independent_tafka": {
+      "role": "secondary source-independent Joel sensitivity diagnostic",
+      "profile_rule": "Select three strict-clean TAFKA exact-50 Joel profile documents and two strict-clean independent TAFKA exact-50 Joel holdouts from predeclared candidate orders, against the same Dharma control profiles.",
+      "source_limit": "Platform/register transfer confounds this stratum; report separately and never average with matched Dharma."
+    }
+  },
+  "interpretation": {
+    "do_not_call_ier": true,
+    "no_threshold_claim": true,
+    "do_not_average_strata": true,
+    "candidate_set_identity_is_part_of_result": true,
+    "primary_question": "Does Stian remain the dominant short-text confound after adding Greg, and is Joel uniquely top-ranked on enough natural originals to support any target-specific retention interpretation?",
+    "completion_rule": "Whether separability is good or poor, freeze the result. Strong separation supports only provisional target-verification use for this named condition; poor separation disconfirms exact-50 unique-Joel attribution for this condition. Neither result authorizes a universal threshold."
+  }
+}
