@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "status": "one-shot-four-author-nonoverlap-source-freeze",
+  "purpose": "Freeze current explicit-speaker Stian Gudmundsen Høiland Dharma Connection sources that do not share a thread with Joel Rosenblum, David Vardy, or Greg Goode, for source selection before the next four-author exact-50 LUAR benchmark.",
+  "method_decision": "reuse-existing-dharma-control-candidate-extractor",
+  "blog": "https://dharmaconnectiongroup.blogspot.com/",
+  "target": {
+    "speaker": "Stian Gudmundsen Høiland",
+    "author_id": "stian-hoiland",
+    "role": "owner-identified-hard-negative"
+  },
+  "overlap_speakers": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Greg Goode"
+  ],
+  "static_exclude_urls": [],
+  "network": {
+    "feed_page_size": 100,
+    "max_feed_pages": 10,
+    "source_request_spacing_seconds": 8,
+    "timeout_seconds": 30
+  },
+  "partition": {
+    "reserved_holdout_count": 3,
+    "minimum_holdout_words_per_source": 50,
+    "selection_salt": "four-author-nonoverlap-stian-v1"
+  },
+  "feasibility_guidance": {
+    "preferred_min_explicit_nonoverlap_posts": 6,
+    "preferred_min_total_words": 1000,
+    "preferred_max_largest_source_fraction": 0.8,
+    "preferred_min_reserved_holdout_posts": 3
+  },
+  "forbidden_claims": [
+    "the automated split is a calibrated benchmark split",
+    "a source with dialogue or ambiguous-speaker flags is clean without review",
+    "this extraction proves or disproves Joel and Stian are natural stylistic neighbors",
+    "this extraction is IER or validated-for-register"
+  ]
+}
