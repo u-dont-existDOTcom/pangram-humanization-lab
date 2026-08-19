@@ -1,6 +1,6 @@
 name: Idiolect Greg control candidate extraction
 # execution-class: public-one-shot-source-research
-# execution-generation: 5
+# execution-generation: 6
 
 on:
   pull_request:
@@ -205,6 +205,204 @@ jobs:
                   raise SystemExit(f'Forbidden receipt content: {forbidden}')
           PY
 
+      - name: Freeze deterministic four-profile plus two-holdout selection
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import re
+          from pathlib import Path
+
+          from pangram_lab.corpus_acquire import canonicalize
+
+          candidate_path = Path('.local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json')
+          candidate = json.loads(candidate_path.read_text(encoding='utf-8'))
+          source_dir = Path('.local/idiolect-corpus/greg-goode-control-profile-candidate-text')
+          selected_dir = Path('.local/idiolect-corpus/greg-goode-control-selected-text')
+          selected_dir.mkdir(parents=True, exist_ok=True)
+
+          plan = [
+              {
+                  'sample_id': 'dcp-greg-goode-shentong-yogacara-and-dzogchen-59',
+                  'partition': 'profile',
+                  'manual_review': 'accepted-prefix; thin flag is length-only',
+                  'known_risks': [],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-faith-pure-land-and-karma-99',
+                  'partition': 'profile',
+                  'manual_review': 'accepted-prefix; explicit Greg turns and no material quotation contamination in selected prefix',
+                  'known_risks': [],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-madhyamaka-and-advaita-vedanta-64',
+                  'partition': 'profile',
+                  'manual_review': 'accepted-prefix-only; later full-source quoted/discussion material is outside selected boundary',
+                  'known_risks': [],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-dzogchen-empowerment-definition-of-62',
+                  'partition': 'profile',
+                  'manual_review': 'accepted-prefix; explicit Greg turns and source extractor reports no quality flag',
+                  'known_risks': ['same-author repetition remains a sensitivity check, not another-author contamination'],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52',
+                  'partition': 'reserved_holdout',
+                  'manual_review': 'accepted-provisional-prefix; explicit Greg turns',
+                  'known_risks': ['selected boundary may contain a brief embedded third-party quotation; dequotation sensitivity is required before a final threshold'],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-spiritual-diversity-20',
+                  'partition': 'reserved_holdout',
+                  'manual_review': 'accepted-provisional-prefix; public-page review supports the selected opening Greg boundary',
+                  'known_risks': ['full source raised possible-dialogue and ambiguous-single-word flags; selected-prefix interpretation remains provisional'],
+              },
+          ]
+
+          source_rows = {
+              row['sample_id']: row
+              for row in candidate['candidate']['samples']
+          }
+          word_re = re.compile(r"\b[\w’'-]+\b", flags=re.UNICODE)
+
+          def prefix_exact(text: str, budget: int) -> str:
+              text = text.strip()
+              matches = list(word_re.finditer(text))
+              if len(matches) < budget:
+                  raise SystemExit(f'source has only {len(matches)} words; requires {budget}')
+              if len(matches) == budget:
+                  return text
+              return text[:matches[budget].start()].rstrip()
+
+          output_rows = []
+          seen_hashes = set()
+          for item in plan:
+              sample_id = item['sample_id']
+              source_meta = source_rows.get(sample_id)
+              if source_meta is None:
+                  raise SystemExit(f'planned source absent from candidate receipt: {sample_id}')
+              source_path = source_dir / f'{sample_id}.txt'
+              source_text = source_path.read_text(encoding='utf-8').strip()
+              source_canon = canonicalize(source_text)
+              if source_canon.sha256 != source_meta['canonical_sha256']:
+                  raise SystemExit(f'full-source hash drift for {sample_id}')
+              if source_canon.word_count != int(source_meta['word_count']):
+                  raise SystemExit(f'full-source word-count drift for {sample_id}')
+
+              selected_canon = canonicalize(prefix_exact(source_canon.text, 150))
+              if selected_canon.word_count != 150:
+                  raise SystemExit(f'expected 150 selected words for {sample_id}, got {selected_canon.word_count}')
+              if selected_canon.sha256 in seen_hashes:
+                  raise SystemExit(f'duplicate selected canonical hash: {sample_id}')
+              seen_hashes.add(selected_canon.sha256)
+              selected_path = selected_dir / f'{sample_id}.txt'
+              selected_path.write_text(selected_canon.text + '\n', encoding='utf-8')
+              output_rows.append({
+                  'sample_id': sample_id,
+                  'source_group': source_meta['source_group'],
+                  'partition': item['partition'],
+                  'selection_rule': 'canonical-prefix-exact-150-words',
+                  'source_canonical_sha256': source_canon.sha256,
+                  'source_word_count': source_canon.word_count,
+                  'source_quality_flags': source_meta.get('quality_flags', []),
+                  'selected_canonical_sha256': selected_canon.sha256,
+                  'selected_word_count': selected_canon.word_count,
+                  'manual_review': item['manual_review'],
+                  'known_risks': item['known_risks'],
+              })
+
+          profile_rows = [row for row in output_rows if row['partition'] == 'profile']
+          holdout_rows = [row for row in output_rows if row['partition'] == 'reserved_holdout']
+          if len(profile_rows) != 4 or len(holdout_rows) != 2:
+              raise SystemExit('selection must contain exactly four profile and two holdout documents')
+          profile_groups = {row['source_group'] for row in profile_rows}
+          holdout_groups = {row['source_group'] for row in holdout_rows}
+          if profile_groups & holdout_groups:
+              raise SystemExit('profile/holdout source-group leakage')
+
+          def identity(rows):
+              payload = '\n'.join(
+                  f"{row['sample_id']}\t{row['source_group']}\t{row['selected_canonical_sha256']}\t{row['selected_word_count']}"
+                  for row in sorted(rows, key=lambda value: value['sample_id'])
+              )
+              return hashlib.sha256(payload.encode('utf-8')).hexdigest()
+
+          receipt = {
+              'schema_version': 1,
+              'date': '2026-08-19',
+              'status': 'four-profile-two-holdout-source-selection-frozen-provisional-not-calibrated',
+              'raw_or_canonical_prose_in_output': False,
+              'target_author': 'Greg Goode',
+              'role': 'ordinary-matched-control-candidate',
+              'register_scope': 'pre-LLM Dharma philosophical-dialogue shared-platform pilot',
+              'selection_budget_words': 150,
+              'profile_document_count': len(profile_rows),
+              'holdout_document_count': len(holdout_rows),
+              'profile_total_words': sum(row['selected_word_count'] for row in profile_rows),
+              'holdout_total_words': sum(row['selected_word_count'] for row in holdout_rows),
+              'profile_identity_sha256': identity(profile_rows),
+              'holdout_identity_sha256': identity(holdout_rows),
+              'complete_selection_identity_sha256': identity(output_rows),
+              'source_group_leakage': sorted(profile_groups & holdout_groups),
+              'exact_duplicate_selected_hashes': [],
+              'documents': output_rows,
+              'provisional_role_admission_ready': True,
+              'rewrite_degradation_or_threshold_ready': False,
+              'remaining_limits': [
+                  'two held-out documents remain a small evaluation set',
+                  'one holdout has brief-quotation risk',
+                  'one holdout comes from a full source with dialogue-boundary flags',
+                  'no four-author LUAR original-text run has yet tested this selection',
+                  'no operational abstention threshold is authorized',
+              ],
+          }
+          out = Path('.local/idiolect-corpus/greg-goode-control-selection-receipt.json')
+          out.write_text(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          print(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True))
+          PY
+
+      - name: Enforce selected-corpus identity and privacy gates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/greg-goode-control-selection-receipt.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          if data.get('status') != 'four-profile-two-holdout-source-selection-frozen-provisional-not-calibrated':
+              raise SystemExit(f"Unexpected selection status: {data.get('status')}")
+          if data.get('raw_or_canonical_prose_in_output') is not False:
+              raise SystemExit('Selection privacy flag is not false')
+          if data.get('profile_document_count') != 4 or data.get('holdout_document_count') != 2:
+              raise SystemExit('Selection is not 4+2')
+          if data.get('profile_total_words') != 600 or data.get('holdout_total_words') != 300:
+              raise SystemExit('Unexpected selected word budgets')
+          if data.get('source_group_leakage') != []:
+              raise SystemExit(f"Source-group leakage: {data.get('source_group_leakage')}")
+          if data.get('exact_duplicate_selected_hashes') != []:
+              raise SystemExit('Selected corpus contains duplicate hashes')
+          if data.get('provisional_role_admission_ready') is not True:
+              raise SystemExit('Selection did not reach provisional role-admission readiness')
+          if data.get('rewrite_degradation_or_threshold_ready') is not False:
+              raise SystemExit('Selection must not authorize rewrite degradation or thresholds')
+          for field in ('profile_identity_sha256', 'holdout_identity_sha256', 'complete_selection_identity_sha256'):
+              if len(str(data.get(field, ''))) != 64:
+                  raise SystemExit(f'Missing identity: {field}')
+          encoded = path.read_text(encoding='utf-8')
+          for forbidden in ('local_text_path', 'raw_text', 'canonical_text', 'http://', 'https://'):
+              if forbidden in encoded:
+                  raise SystemExit(f'Forbidden selection receipt content: {forbidden}')
+          PY
+
+      - name: Upload metadata-only selected-corpus receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-greg-goode-control-selection-metadata
+          path: .local/idiolect-corpus/greg-goode-control-selection-receipt.json
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Verify source prose stayed local and ignored
         run: |
           git checkout -- \
@@ -218,3 +416,5 @@ jobs:
           fi
           git check-ignore -q .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json
           git check-ignore -q .local/idiolect-corpus/greg-goode-control-profile-candidate-text
+          git check-ignore -q .local/idiolect-corpus/greg-goode-control-selection-receipt.json
+          git check-ignore -q .local/idiolect-corpus/greg-goode-control-selected-text
