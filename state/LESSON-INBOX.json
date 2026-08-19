@@ -2199,6 +2199,29 @@
           "section_id": "FULL_ARTICLE"
         }
       ]
+    },
+    {
+      "audit_id": "pangram4-public-actions-smoke-2026-08-19-a",
+      "created_at_utc": "2026-08-19T05:29:16.847498+00:00",
+      "experiment_id": "pangram4-public-actions-smoke-2026-08-19-a",
+      "id": "Q-475ffdc991eef2d6",
+      "sections": [
+        "smoke"
+      ],
+      "source_path": "state/experiments/pangram4-public-actions-smoke-2026-08-19-a-results.json",
+      "source_ref": "6541629c79c7f9e125b653b461166809ef140142",
+      "source_sha256": "b992850b39a7efa2a8894958e363ed4f9c4e4f0d592a4d9448d107eeebcd4431",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "SMOKE",
+          "prediction_short": "AI",
+          "section_id": "smoke"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
