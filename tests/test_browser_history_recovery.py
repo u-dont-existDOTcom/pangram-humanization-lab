@@ -68,41 +68,52 @@ def test_limit_must_be_positive(tmp_path: Path) -> None:
 
 
 class _Anchor:
-    def __init__(self, href: str) -> None:
+    def __init__(self, href: str, label: str = "", aria_label: str = "", title: str = "") -> None:
         self.href = href
+        self.label = label
+        self.aria_label = aria_label
+        self.title = title
 
     def get_attribute(self, name: str) -> str | None:
-        assert name == "href"
-        return self.href
+        if name == "href":
+            return self.href
+        if name == "aria-label":
+            return self.aria_label
+        if name == "title":
+            return self.title
+        return None
+
+    def inner_text(self) -> str:
+        return self.label
 
 
 class _Anchors:
-    def __init__(self, hrefs: list[str]) -> None:
-        self.hrefs = hrefs
+    def __init__(self, anchors: list[_Anchor]) -> None:
+        self.anchors = anchors
 
     def count(self) -> int:
-        return len(self.hrefs)
+        return len(self.anchors)
 
     def nth(self, index: int) -> _Anchor:
-        return _Anchor(self.hrefs[index])
+        return self.anchors[index]
 
 
 class _Page:
-    def __init__(self, hrefs: list[str]) -> None:
-        self.hrefs = hrefs
+    def __init__(self, anchors: list[_Anchor]) -> None:
+        self.anchors = anchors
 
     def locator(self, selector: str) -> _Anchors:
         assert selector == "a[href]"
-        return _Anchors(self.hrefs)
+        return _Anchors(self.anchors)
 
 
 def test_discovers_rendered_result_links_without_leaking_unrelated_links() -> None:
     page = _Page(
         [
-            "/dashboard",
-            "/history/aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb?private=1",
-            "https://example.com/history/bbbbbbbb-1111-2222-3333-cccccccccccc",
-            "https://pangram.com/history/cccccccc-4444-5555-6666-dddddddddddd/",
+            _Anchor("/dashboard"),
+            _Anchor("/history/aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb?private=1", "View Results"),
+            _Anchor("https://example.com/history/bbbbbbbb-1111-2222-3333-cccccccccccc"),
+            _Anchor("https://pangram.com/history/cccccccc-4444-5555-6666-dddddddddddd/", "View Results"),
         ]
     )
 
@@ -115,15 +126,29 @@ def test_discovers_rendered_result_links_without_leaking_unrelated_links() -> No
 def test_discovers_rendered_history_navigation_without_result_links() -> None:
     page = _Page(
         [
-            "/dashboard",
-            "/dashboard?tab=history",
-            "/history/aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
-            "https://example.com/history",
+            _Anchor("/dashboard"),
+            _Anchor("/dashboard?tab=history", "History"),
+            _Anchor("/history/aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb", "View Results"),
+            _Anchor("https://example.com/history", "History"),
         ]
     )
 
     assert discover_pangram_history_navigation_urls_from_page(page) == (
         "https://www.pangram.com/dashboard?tab=history",
+    )
+
+
+def test_discovers_current_all_checks_navigation_by_label_even_without_history_in_url() -> None:
+    page = _Page(
+        [
+            _Anchor("/dashboard", "Detector"),
+            _Anchor("/dashboard/checks", "All Checks"),
+            _Anchor("/dashboard/groups", "Groups"),
+        ]
+    )
+
+    assert discover_pangram_history_navigation_urls_from_page(page) == (
+        "https://www.pangram.com/dashboard/checks",
     )
 
 
@@ -138,6 +163,23 @@ def test_extracts_only_result_identifiers_from_in_memory_json_payload() -> None:
             {
                 "dashboard_link": "https://www.pangram.com/history/cccccccc-4444-5555-6666-dddddddddddd?x=1",
             },
+        ],
+    }
+
+    assert extract_pangram_history_urls_from_payload(payload) == (
+        "https://www.pangram.com/history/aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
+        "https://www.pangram.com/history/cccccccc-4444-5555-6666-dddddddddddd",
+    )
+
+
+def test_extracts_current_check_document_uuid_context_but_not_account_uuid() -> None:
+    payload = {
+        "account": {"id": "99999999-1111-2222-3333-444444444444"},
+        "all_checks": [
+            {"document_id": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb"},
+        ],
+        "submissions": [
+            {"result_id": "cccccccc-4444-5555-6666-dddddddddddd"},
         ],
     }
 
