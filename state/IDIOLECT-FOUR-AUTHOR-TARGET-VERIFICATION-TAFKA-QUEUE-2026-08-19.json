@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "purpose": "Independent natural-owner Joel source stratum for sensitivity analysis in the target-centric exact-50 LUAR verification. Profile and holdout material come from TAFKA Jestdr and are reported separately from matched Dharma target originals because platform/register transfer is a confound.",
+  "purpose": "Independent natural-owner Joel source stratum for sensitivity analysis in the target-centric exact-50 LUAR verification. Candidate material comes from TAFKA Jestdr and is reported separately from matched Dharma target originals because platform/register transfer is a confound. Thin sources may serve as exact-50 candidates when they contain at least 50 words and their exact measured prefix passes the strict cleanliness audit.",
   "raw_text_in_git": false,
   "sources": [
     {
@@ -13,31 +13,39 @@
         {
           "sample_id": "tafka-2015-02-23-right-view-humility",
           "source_group": "tafka-2015-02-23-right-view-humility",
-          "partition_role": "profile",
+          "candidate_role": "profile-first",
           "title": "Right View and Humility: The Middle Path Mind",
           "url": "https://tafkajestdr.blogspot.com/2015/02/right-view-and-humility.html",
           "extraction_mode": "post-body-drop-blockquotes"
         },
         {
-          "sample_id": "tafka-2016-06-08-already-perfect",
-          "source_group": "tafka-2016-06-08-already-perfect",
-          "partition_role": "profile",
-          "title": "What if everything is already perfect?",
-          "url": "https://tafkajestdr.blogspot.com/2016/06/what-if-everything-is-already-perfect.html",
-          "extraction_mode": "post-body-drop-blockquotes"
-        },
-        {
           "sample_id": "tafka-2019-03-08-plant-spirits",
           "source_group": "tafka-2019-03-08-plant-spirits",
-          "partition_role": "profile",
+          "candidate_role": "profile-first",
           "title": "Are plant spirits real or are they all in my mind when I eat psychedelic plants?",
           "url": "https://tafkajestdr.blogspot.com/2019/03/are-plant-spirits-real-or-are-they-all.html",
           "extraction_mode": "message-by-you"
         },
         {
+          "sample_id": "tafka-2015-01-17-sam-harris-review",
+          "source_group": "tafka-2015-01-17-sam-harris-review",
+          "candidate_role": "exact-50-fallback",
+          "title": "Review of Sam Harris Waking Up",
+          "url": "https://tafkajestdr.blogspot.com/2015/01/review-of-sam-harris-waking-up.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
+          "sample_id": "tafka-2016-06-08-already-perfect",
+          "source_group": "tafka-2016-06-08-already-perfect",
+          "candidate_role": "exact-50-fallback",
+          "title": "What if everything is already perfect?",
+          "url": "https://tafkajestdr.blogspot.com/2016/06/what-if-everything-is-already-perfect.html",
+          "extraction_mode": "post-body-drop-blockquotes"
+        },
+        {
           "sample_id": "tafka-2019-08-02-buddhism-sect",
           "source_group": "tafka-2019-08-02-buddhism-sect",
-          "partition_role": "reserved_holdout",
+          "candidate_role": "holdout-first",
           "title": "Which sect of Buddhism has the true teachings of Buddha?",
           "url": "https://tafkajestdr.blogspot.com/2019/08/which-sect-of-buddhism-has-true.html",
           "extraction_mode": "post-body"
@@ -45,7 +53,7 @@
         {
           "sample_id": "tafka-2020-04-19-consciousness-conditions",
           "source_group": "tafka-2020-04-19-consciousness-conditions",
-          "partition_role": "reserved_holdout",
+          "candidate_role": "holdout-first",
           "title": "Could it be that consciousness creates the conditions instead of vice versa?",
           "url": "https://tafkajestdr.blogspot.com/2020/04/could-it-be-that-consciousness-creates.html",
           "extraction_mode": "post-body-drop-blockquotes"
