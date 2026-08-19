@@ -46,7 +46,7 @@ jobs:
             tests/test_dharma_author_discover.py \
             tests/test_dharma_speaker_acquire.py
 
-      - name: Run fresh Joel-overlap census and Greg extraction
+      - name: Run fresh active-author overlap census and Greg extraction
         run: |
           python -m pangram_lab.dharma_control_candidate \
             state/IDIOLECT-GREG-GOODE-CONTROL-PROFILE-CANDIDATE-SPEC-2026-08-18.json \
@@ -85,6 +85,12 @@ jobs:
               raise SystemExit(f"Hard acquisition errors: {data.get('hard_errors')}")
 
           overlap = data.get('fresh_overlap', {})
+          if set(overlap.get('exclusion_speakers', [])) != {
+              'Joel Rosenblum',
+              'David Vardy',
+              'Stian Gudmundsen Høiland',
+          }:
+              raise SystemExit(f"Wrong overlap speakers: {overlap}")
           if len(str(overlap.get('fresh_overlap_set_identity_sha256', ''))) != 64:
               raise SystemExit('Missing fresh overlap-set identity')
           if len(str(overlap.get('effective_exclusion_set_identity_sha256', ''))) != 64:
@@ -117,6 +123,9 @@ jobs:
 
       - name: Verify source prose stayed local and ignored
         run: |
+          git checkout -- \
+            src/pangram_humanization_lab.egg-info/SOURCES.txt \
+            src/pangram_humanization_lab.egg-info/entry_points.txt
           if git status --short --untracked-files=all | grep -v '^?? .local/' | grep -q .; then
             echo 'Candidate extraction unexpectedly modified repository-visible files.' >&2
             git status --short --untracked-files=all >&2
