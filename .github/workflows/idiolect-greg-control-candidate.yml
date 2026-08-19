@@ -1,0 +1,126 @@
+name: Idiolect Greg control candidate extraction
+# execution-class: public-one-shot-source-research
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-greg-control-candidate.yml
+      - state/IDIOLECT-GREG-GOODE-CONTROL-PROFILE-CANDIDATE-SPEC-2026-08-18.json
+      - src/pangram_lab/dharma_control_candidate.py
+      - src/pangram_lab/dharma_control_profiles.py
+      - src/pangram_lab/dharma_author_discover.py
+      - src/pangram_lab/dharma_speaker_acquire.py
+      - src/pangram_lab/corpus_acquire.py
+      - tests/test_dharma_control_candidate.py
+      - tests/test_dharma_control_profiles.py
+      - tests/test_dharma_author_discover.py
+      - tests/test_dharma_speaker_acquire.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: idiolect-source-network-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and run deterministic extraction tests
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q \
+            tests/test_dharma_control_candidate.py \
+            tests/test_dharma_control_profiles.py \
+            tests/test_dharma_author_discover.py \
+            tests/test_dharma_speaker_acquire.py
+
+      - name: Run fresh Joel-overlap census and Greg extraction
+        run: |
+          python -m pangram_lab.dharma_control_candidate \
+            state/IDIOLECT-GREG-GOODE-CONTROL-PROFILE-CANDIDATE-SPEC-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/greg-goode-control-profile-candidate-text \
+            --receipt-out .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json \
+            --timeout 45
+
+      - name: Upload metadata-only candidate receipt before gate evaluation
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-greg-goode-control-candidate-metadata
+          path: .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Enforce quantitative, overlap, and privacy gates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          if data.get('status') != 'candidate-extraction-complete-manual-review-pending':
+              raise SystemExit(f"Unexpected candidate status: {data.get('status')}")
+          if data.get('raw_or_canonical_prose_in_output') is not False:
+              raise SystemExit('Receipt privacy flag is not false')
+          if data.get('profile_admission_authorized') is not False:
+              raise SystemExit('Extraction must not auto-admit Greg')
+          if data.get('profile_holdout_split_authorized') is not False:
+              raise SystemExit('Extraction must not auto-authorize a split')
+          if data.get('target_speaker') != 'Greg Goode':
+              raise SystemExit(f"Unexpected speaker: {data.get('target_speaker')}")
+          if int(data.get('hard_error_count', -1)) != 0:
+              raise SystemExit(f"Hard acquisition errors: {data.get('hard_errors')}")
+
+          overlap = data.get('fresh_overlap', {})
+          if len(str(overlap.get('fresh_overlap_set_identity_sha256', ''))) != 64:
+              raise SystemExit('Missing fresh overlap-set identity')
+          if len(str(overlap.get('effective_exclusion_set_identity_sha256', ''))) != 64:
+              raise SystemExit('Missing effective exclusion-set identity')
+
+          candidate = data.get('candidate', {})
+          if int(candidate.get('extracted_post_count', 0)) < 4:
+              raise SystemExit(f"Too few extracted posts: {candidate}")
+          if int(candidate.get('total_words', 0)) < 1000:
+              raise SystemExit(f"Insufficient Greg word mass: {candidate}")
+          largest = candidate.get('largest_source_fraction')
+          if largest is None or float(largest) > 0.7:
+              raise SystemExit(f"Greg source concentration too high: {candidate}")
+          if candidate.get('quantitative_feasibility_pass') is not True:
+              raise SystemExit(f"Quantitative candidate gate failed: {candidate}")
+          if data.get('candidate_ready_for_manual_quality_review') is not True:
+              raise SystemExit(f"Candidate not ready for review: {data}")
+
+          encoded = path.read_text(encoding='utf-8')
+          for forbidden in (
+              'local_text_path',
+              'raw_text',
+              'canonical_text',
+              'http://',
+              'https://',
+          ):
+              if forbidden in encoded:
+                  raise SystemExit(f'Forbidden receipt content: {forbidden}')
+          PY
+
+      - name: Verify source prose stayed local and ignored
+        run: |
+          if git status --short --untracked-files=all | grep -v '^?? .local/' | grep -q .; then
+            echo 'Candidate extraction unexpectedly modified repository-visible files.' >&2
+            git status --short --untracked-files=all >&2
+            exit 1
+          fi
+          git check-ignore -q .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json
+          git check-ignore -q .local/idiolect-corpus/greg-goode-control-profile-candidate-text
