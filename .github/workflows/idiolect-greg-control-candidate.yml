@@ -1,0 +1,420 @@
+name: Idiolect Greg control candidate extraction
+# execution-class: public-one-shot-source-research
+# execution-generation: 6
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-greg-control-candidate.yml
+      - state/IDIOLECT-GREG-GOODE-CONTROL-PROFILE-CANDIDATE-SPEC-2026-08-18.json
+      - src/pangram_lab/dharma_control_candidate.py
+      - src/pangram_lab/dharma_control_profiles.py
+      - src/pangram_lab/dharma_author_discover.py
+      - src/pangram_lab/dharma_speaker_acquire.py
+      - src/pangram_lab/corpus_acquire.py
+      - tests/test_dharma_control_candidate.py
+      - tests/test_dharma_control_profiles.py
+      - tests/test_dharma_author_discover.py
+      - tests/test_dharma_speaker_acquire.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: idiolect-source-network-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Apply one-shot fetch compatibility hotfix
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('src/pangram_lab/dharma_control_candidate.py')
+          text = path.read_text(encoding='utf-8')
+          expected = [
+              'from .corpus_acquire import fetch_bytes',
+              '    BloggerVisibleTextParser,',
+              '    extract_speaker_prefix,',
+              'def _visible_text(body: bytes) -> str:',
+              'extraction = extract_speaker_prefix(visible, target_speaker)',
+              'target_words = int(extraction.get("word_count", 0))',
+              'page_fetch_fn: Callable[..., tuple[bytes, str]] = fetch_bytes,',
+          ]
+          missing = [value for value in expected if value not in text]
+          if missing:
+              raise SystemExit(f'Expected temporary compatibility strings are absent: {missing}')
+
+          text = text.replace(
+              'from .corpus_acquire import fetch_bytes',
+              'from .corpus_acquire import canonicalize, fetch_html',
+              1,
+          )
+          text = text.replace(
+              'from .dharma_speaker_acquire import (\n'
+              '    BloggerVisibleTextParser,\n'
+              '    acquire_speaker_inventory,\n'
+              '    extract_speaker_prefix,\n'
+              ')',
+              'from .dharma_speaker_acquire import (\n'
+              '    SpeakerPostBodyParser,\n'
+              '    acquire_speaker_inventory,\n'
+              '    extract_named_speaker_blocks,\n'
+              ')',
+              1,
+          )
+          text = text.replace(
+              'def _visible_text(body: bytes) -> str:\n'
+              '    parser = BloggerVisibleTextParser()\n'
+              '    parser.feed(body.decode("utf-8", errors="replace"))\n'
+              '    return parser.text()\n',
+              'def _visible_text(body: str | bytes) -> str:\n'
+              '    html = body if isinstance(body, str) else body.decode("utf-8", errors="replace")\n'
+              '    parser = SpeakerPostBodyParser(drop_blockquotes=True)\n'
+              '    parser.feed(html)\n'
+              '    if not parser.found_body:\n'
+              '        parser = SpeakerPostBodyParser(drop_blockquotes=True)\n'
+              '        parser.feed("<div class=\\"post-body entry-content\\">" + html + "</div>")\n'
+              '    if not parser.found_body:\n'
+              '        raise ValueError("no recognized authored post-body container found")\n'
+              '    return parser.text()\n',
+              1,
+          )
+          text = text.replace(
+              'extraction = extract_speaker_prefix(visible, target_speaker)\n'
+              '            target_words = int(extraction.get("word_count", 0))',
+              'extraction = extract_named_speaker_blocks(visible, target_speaker)\n'
+              '            target_words = canonicalize(extraction.text).word_count',
+              1,
+          )
+          text = text.replace(
+              'page_fetch_fn: Callable[..., tuple[bytes, str]] = fetch_bytes,',
+              'page_fetch_fn: Callable[..., tuple[str | bytes, str]] = fetch_html,',
+              1,
+          )
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Install package and run deterministic extraction tests
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q \
+            tests/test_dharma_control_candidate.py \
+            tests/test_dharma_control_profiles.py \
+            tests/test_dharma_author_discover.py \
+            tests/test_dharma_speaker_acquire.py
+
+      - name: Run fresh active-author overlap census and Greg extraction
+        run: |
+          python -m pangram_lab.dharma_control_candidate \
+            state/IDIOLECT-GREG-GOODE-CONTROL-PROFILE-CANDIDATE-SPEC-2026-08-18.json \
+            --out-dir .local/idiolect-corpus/greg-goode-control-profile-candidate-text \
+            --receipt-out .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json \
+            --timeout 45
+
+      - name: Upload metadata-only candidate receipt before gate evaluation
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-greg-goode-control-candidate-metadata
+          path: .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Enforce quantitative, overlap, split-supply, and privacy gates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          if data.get('status') != 'candidate-extraction-complete-manual-review-pending':
+              raise SystemExit(f"Unexpected candidate status: {data.get('status')}")
+          if data.get('raw_or_canonical_prose_in_output') is not False:
+              raise SystemExit('Receipt privacy flag is not false')
+          if data.get('profile_admission_authorized') is not False:
+              raise SystemExit('Extraction must not auto-admit Greg')
+          if data.get('profile_holdout_split_authorized') is not False:
+              raise SystemExit('Extraction must not auto-authorize a split')
+          if data.get('target_speaker') != 'Greg Goode':
+              raise SystemExit(f"Unexpected speaker: {data.get('target_speaker')}")
+          if int(data.get('hard_error_count', -1)) != 0:
+              raise SystemExit(f"Hard acquisition errors: {data.get('hard_errors')}")
+
+          overlap = data.get('fresh_overlap', {})
+          if set(overlap.get('exclusion_speakers', [])) != {
+              'Joel Rosenblum',
+              'David Vardy',
+              'Stian Gudmundsen Høiland',
+          }:
+              raise SystemExit(f"Wrong overlap speakers: {overlap}")
+          if len(str(overlap.get('fresh_overlap_set_identity_sha256', ''))) != 64:
+              raise SystemExit('Missing fresh overlap-set identity')
+          if len(str(overlap.get('effective_exclusion_set_identity_sha256', ''))) != 64:
+              raise SystemExit('Missing effective exclusion-set identity')
+
+          exclusions = data.get('post_extraction_exclusions_applied', [])
+          if len(exclusions) != 1:
+              raise SystemExit(f'Expected one hash-bound dominant-source exclusion: {exclusions}')
+          if exclusions[0].get('sample_id') != 'dcp-greg-goode-consciousness-advaita-emptiness-94':
+              raise SystemExit(f'Unexpected excluded source: {exclusions}')
+
+          candidate = data.get('candidate', {})
+          if int(candidate.get('extracted_post_count', 0)) < 6:
+              raise SystemExit(f"Too few extracted posts for a 4+2 split: {candidate}")
+          if int(candidate.get('total_words', 0)) < 1000:
+              raise SystemExit(f"Insufficient Greg word mass: {candidate}")
+          largest = candidate.get('largest_source_fraction')
+          if largest is None or float(largest) > 0.7:
+              raise SystemExit(f"Greg source concentration too high: {candidate}")
+          if candidate.get('quantitative_feasibility_pass') is not True:
+              raise SystemExit(f"Quantitative candidate gate failed: {candidate}")
+          if data.get('candidate_ready_for_manual_quality_review') is not True:
+              raise SystemExit(f"Candidate not ready for review: {data}")
+
+          budgets = {
+              int(row['word_budget']): row
+              for row in data.get('split_readiness', {}).get('budgets', [])
+          }
+          if 150 not in budgets or budgets[150].get('supply_pass') is not True:
+              raise SystemExit(f"No six-document supply at 150 words: {budgets}")
+
+          encoded = path.read_text(encoding='utf-8')
+          for forbidden in (
+              'local_text_path',
+              'raw_text',
+              'canonical_text',
+              'http://',
+              'https://',
+          ):
+              if forbidden in encoded:
+                  raise SystemExit(f'Forbidden receipt content: {forbidden}')
+          PY
+
+      - name: Freeze deterministic four-profile plus two-holdout selection
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import re
+          from pathlib import Path
+
+          from pangram_lab.corpus_acquire import canonicalize
+
+          candidate_path = Path('.local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json')
+          candidate = json.loads(candidate_path.read_text(encoding='utf-8'))
+          source_dir = Path('.local/idiolect-corpus/greg-goode-control-profile-candidate-text')
+          selected_dir = Path('.local/idiolect-corpus/greg-goode-control-selected-text')
+          selected_dir.mkdir(parents=True, exist_ok=True)
+
+          plan = [
+              {
+                  'sample_id': 'dcp-greg-goode-shentong-yogacara-and-dzogchen-59',
+                  'partition': 'profile',
+                  'manual_review': 'accepted-prefix; thin flag is length-only',
+                  'known_risks': [],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-faith-pure-land-and-karma-99',
+                  'partition': 'profile',
+                  'manual_review': 'accepted-prefix; explicit Greg turns and no material quotation contamination in selected prefix',
+                  'known_risks': [],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-madhyamaka-and-advaita-vedanta-64',
+                  'partition': 'profile',
+                  'manual_review': 'accepted-prefix-only; later full-source quoted/discussion material is outside selected boundary',
+                  'known_risks': [],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-dzogchen-empowerment-definition-of-62',
+                  'partition': 'profile',
+                  'manual_review': 'accepted-prefix; explicit Greg turns and source extractor reports no quality flag',
+                  'known_risks': ['same-author repetition remains a sensitivity check, not another-author contamination'],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52',
+                  'partition': 'reserved_holdout',
+                  'manual_review': 'accepted-provisional-prefix; explicit Greg turns',
+                  'known_risks': ['selected boundary may contain a brief embedded third-party quotation; dequotation sensitivity is required before a final threshold'],
+              },
+              {
+                  'sample_id': 'dcp-greg-goode-spiritual-diversity-20',
+                  'partition': 'reserved_holdout',
+                  'manual_review': 'accepted-provisional-prefix; public-page review supports the selected opening Greg boundary',
+                  'known_risks': ['full source raised possible-dialogue and ambiguous-single-word flags; selected-prefix interpretation remains provisional'],
+              },
+          ]
+
+          source_rows = {
+              row['sample_id']: row
+              for row in candidate['candidate']['samples']
+          }
+          word_re = re.compile(r"\b[\w’'-]+\b", flags=re.UNICODE)
+
+          def prefix_exact(text: str, budget: int) -> str:
+              text = text.strip()
+              matches = list(word_re.finditer(text))
+              if len(matches) < budget:
+                  raise SystemExit(f'source has only {len(matches)} words; requires {budget}')
+              if len(matches) == budget:
+                  return text
+              return text[:matches[budget].start()].rstrip()
+
+          output_rows = []
+          seen_hashes = set()
+          for item in plan:
+              sample_id = item['sample_id']
+              source_meta = source_rows.get(sample_id)
+              if source_meta is None:
+                  raise SystemExit(f'planned source absent from candidate receipt: {sample_id}')
+              source_path = source_dir / f'{sample_id}.txt'
+              source_text = source_path.read_text(encoding='utf-8').strip()
+              source_canon = canonicalize(source_text)
+              if source_canon.sha256 != source_meta['canonical_sha256']:
+                  raise SystemExit(f'full-source hash drift for {sample_id}')
+              if source_canon.word_count != int(source_meta['word_count']):
+                  raise SystemExit(f'full-source word-count drift for {sample_id}')
+
+              selected_canon = canonicalize(prefix_exact(source_canon.text, 150))
+              if selected_canon.word_count != 150:
+                  raise SystemExit(f'expected 150 selected words for {sample_id}, got {selected_canon.word_count}')
+              if selected_canon.sha256 in seen_hashes:
+                  raise SystemExit(f'duplicate selected canonical hash: {sample_id}')
+              seen_hashes.add(selected_canon.sha256)
+              selected_path = selected_dir / f'{sample_id}.txt'
+              selected_path.write_text(selected_canon.text + '\n', encoding='utf-8')
+              output_rows.append({
+                  'sample_id': sample_id,
+                  'source_group': source_meta['source_group'],
+                  'partition': item['partition'],
+                  'selection_rule': 'canonical-prefix-exact-150-words',
+                  'source_canonical_sha256': source_canon.sha256,
+                  'source_word_count': source_canon.word_count,
+                  'source_quality_flags': source_meta.get('quality_flags', []),
+                  'selected_canonical_sha256': selected_canon.sha256,
+                  'selected_word_count': selected_canon.word_count,
+                  'manual_review': item['manual_review'],
+                  'known_risks': item['known_risks'],
+              })
+
+          profile_rows = [row for row in output_rows if row['partition'] == 'profile']
+          holdout_rows = [row for row in output_rows if row['partition'] == 'reserved_holdout']
+          if len(profile_rows) != 4 or len(holdout_rows) != 2:
+              raise SystemExit('selection must contain exactly four profile and two holdout documents')
+          profile_groups = {row['source_group'] for row in profile_rows}
+          holdout_groups = {row['source_group'] for row in holdout_rows}
+          if profile_groups & holdout_groups:
+              raise SystemExit('profile/holdout source-group leakage')
+
+          def identity(rows):
+              payload = '\n'.join(
+                  f"{row['sample_id']}\t{row['source_group']}\t{row['selected_canonical_sha256']}\t{row['selected_word_count']}"
+                  for row in sorted(rows, key=lambda value: value['sample_id'])
+              )
+              return hashlib.sha256(payload.encode('utf-8')).hexdigest()
+
+          receipt = {
+              'schema_version': 1,
+              'date': '2026-08-19',
+              'status': 'four-profile-two-holdout-source-selection-frozen-provisional-not-calibrated',
+              'raw_or_canonical_prose_in_output': False,
+              'target_author': 'Greg Goode',
+              'role': 'ordinary-matched-control-candidate',
+              'register_scope': 'pre-LLM Dharma philosophical-dialogue shared-platform pilot',
+              'selection_budget_words': 150,
+              'profile_document_count': len(profile_rows),
+              'holdout_document_count': len(holdout_rows),
+              'profile_total_words': sum(row['selected_word_count'] for row in profile_rows),
+              'holdout_total_words': sum(row['selected_word_count'] for row in holdout_rows),
+              'profile_identity_sha256': identity(profile_rows),
+              'holdout_identity_sha256': identity(holdout_rows),
+              'complete_selection_identity_sha256': identity(output_rows),
+              'source_group_leakage': sorted(profile_groups & holdout_groups),
+              'exact_duplicate_selected_hashes': [],
+              'documents': output_rows,
+              'provisional_role_admission_ready': True,
+              'rewrite_degradation_or_threshold_ready': False,
+              'remaining_limits': [
+                  'two held-out documents remain a small evaluation set',
+                  'one holdout has brief-quotation risk',
+                  'one holdout comes from a full source with dialogue-boundary flags',
+                  'no four-author LUAR original-text run has yet tested this selection',
+                  'no operational abstention threshold is authorized',
+              ],
+          }
+          out = Path('.local/idiolect-corpus/greg-goode-control-selection-receipt.json')
+          out.write_text(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          print(json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True))
+          PY
+
+      - name: Enforce selected-corpus identity and privacy gates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/greg-goode-control-selection-receipt.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          if data.get('status') != 'four-profile-two-holdout-source-selection-frozen-provisional-not-calibrated':
+              raise SystemExit(f"Unexpected selection status: {data.get('status')}")
+          if data.get('raw_or_canonical_prose_in_output') is not False:
+              raise SystemExit('Selection privacy flag is not false')
+          if data.get('profile_document_count') != 4 or data.get('holdout_document_count') != 2:
+              raise SystemExit('Selection is not 4+2')
+          if data.get('profile_total_words') != 600 or data.get('holdout_total_words') != 300:
+              raise SystemExit('Unexpected selected word budgets')
+          if data.get('source_group_leakage') != []:
+              raise SystemExit(f"Source-group leakage: {data.get('source_group_leakage')}")
+          if data.get('exact_duplicate_selected_hashes') != []:
+              raise SystemExit('Selected corpus contains duplicate hashes')
+          if data.get('provisional_role_admission_ready') is not True:
+              raise SystemExit('Selection did not reach provisional role-admission readiness')
+          if data.get('rewrite_degradation_or_threshold_ready') is not False:
+              raise SystemExit('Selection must not authorize rewrite degradation or thresholds')
+          for field in ('profile_identity_sha256', 'holdout_identity_sha256', 'complete_selection_identity_sha256'):
+              if len(str(data.get(field, ''))) != 64:
+                  raise SystemExit(f'Missing identity: {field}')
+          encoded = path.read_text(encoding='utf-8')
+          for forbidden in ('local_text_path', 'raw_text', 'canonical_text', 'http://', 'https://'):
+              if forbidden in encoded:
+                  raise SystemExit(f'Forbidden selection receipt content: {forbidden}')
+          PY
+
+      - name: Upload metadata-only selected-corpus receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-greg-goode-control-selection-metadata
+          path: .local/idiolect-corpus/greg-goode-control-selection-receipt.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Verify source prose stayed local and ignored
+        run: |
+          git checkout -- \
+            src/pangram_lab/dharma_control_candidate.py \
+            src/pangram_humanization_lab.egg-info/SOURCES.txt \
+            src/pangram_humanization_lab.egg-info/entry_points.txt
+          if git status --short --untracked-files=all | grep -v '^?? .local/' | grep -q .; then
+            echo 'Candidate extraction unexpectedly modified repository-visible files.' >&2
+            git status --short --untracked-files=all >&2
+            exit 1
+          fi
+          git check-ignore -q .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json
+          git check-ignore -q .local/idiolect-corpus/greg-goode-control-profile-candidate-text
+          git check-ignore -q .local/idiolect-corpus/greg-goode-control-selection-receipt.json
+          git check-ignore -q .local/idiolect-corpus/greg-goode-control-selected-text

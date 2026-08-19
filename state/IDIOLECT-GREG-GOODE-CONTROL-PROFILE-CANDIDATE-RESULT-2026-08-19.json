@@ -1,0 +1,436 @@
+{
+  "artifact": {
+    "artifact_id": 9353402707,
+    "digest": "sha256:8b65335c346d8c00e2854ec181cb3e0c17d7c77a723dd5f0101733c6aa7afde3",
+    "downloaded_zip_sha256": "8b65335c346d8c00e2854ec181cb3e0c17d7c77a723dd5f0101733c6aa7afde3",
+    "member": "greg-goode-control-profile-candidate-receipt.json",
+    "member_sha256": "561799e34e03d94d2667ff3ef7426b65d49e06a794000a05ff734600f9ff7cb0",
+    "name": "idiolect-greg-goode-control-candidate-metadata"
+  },
+  "date": "2026-08-19",
+  "execution": {
+    "deterministic_tests_and_live_extraction": "passed",
+    "hard_error_count": 0,
+    "network_fetch_count": 10,
+    "profile_admission_authorized": false,
+    "profile_holdout_split_authorized": false,
+    "raw_or_canonical_prose_in_result": false
+  },
+  "forbidden_claims": [
+    "Greg Goode is already admitted",
+    "quantitative sufficiency is authorship calibration",
+    "the six-source 150-word supply is clean without manual review",
+    "this result authorizes IER, a threshold, or validated-for-register status"
+  ],
+  "interpretation": {
+    "current_supply": "six independent retained samples meet a 150-word budget; only three are currently flag-free",
+    "manual_review_boundary": "quotation, speaker-boundary, source independence, duplicate/near-duplicate, and final 4+2 profile/holdout split review remain blocking",
+    "next_action": "freeze reviewed 150-word prefix identities for six independent sources, admit only reviewed sources, then activate Greg through a separate role-admission change",
+    "quantitative_feasibility": "passed after excluding one hash-bound 4,894-word dominant flagged source",
+    "role_status": "Greg Goode remains an ordinary-control candidate and is not yet active"
+  },
+  "receipt": {
+    "candidate": {
+      "author_id": "greg-goode",
+      "discovered_name_or_label_posts": 25,
+      "extracted_post_count": 9,
+      "feasibility_flags": [
+        "one-or-more-samples-require-manual-quality-review"
+      ],
+      "largest_source_fraction": 0.468861,
+      "largest_source_words": 1709,
+      "manual_quality_review_required": true,
+      "quality_review_flags": [
+        "one-or-more-samples-require-manual-quality-review"
+      ],
+      "quantitative_blockers": [],
+      "quantitative_feasibility_pass": true,
+      "rejected_empty_explicit_post_count": 0,
+      "rejected_empty_explicit_samples": [],
+      "rejected_name_only_posts": 8,
+      "rejected_overlap_posts": 7,
+      "samples": [
+        {
+          "canonical_sha256": "3c166646fcf86e90219501166bc2a034dc8122960447eaba47df7da4481fb246",
+          "quality_flags": [
+            "short-under-100-words",
+            "thin-for-authorship-attribution"
+          ],
+          "sample_id": "dcp-greg-goode-beingnon-being-and-freedom-from-extremes-0",
+          "source_group": "dc-thread-09953956a70cc4a095731d8b",
+          "target_marker_count": 2,
+          "word_count": 32
+        },
+        {
+          "canonical_sha256": "2a8bcfcc202baa08c68976f1a59d0e302147de9fe3fea0d52b3412ab938999b6",
+          "quality_flags": [
+            "thin-for-authorship-attribution"
+          ],
+          "sample_id": "dcp-greg-goode-shentong-yogacara-and-dzogchen-59",
+          "source_group": "dc-thread-2525098934802507092",
+          "target_marker_count": 1,
+          "word_count": 156
+        },
+        {
+          "canonical_sha256": "7d9a946ad54312d35bec4124eff9cce869645b74e81bd184653f62251afc21a6",
+          "quality_flags": [
+            "short-under-100-words",
+            "thin-for-authorship-attribution"
+          ],
+          "sample_id": "dcp-greg-goode-an-experience-with-tonglen-42",
+          "source_group": "dc-thread-2826751715891005791",
+          "target_marker_count": 1,
+          "word_count": 35
+        },
+        {
+          "canonical_sha256": "4a18e19362c3f52b1a4b3be89574c758413cda7e5fb165c55a53071ceaf816d6",
+          "quality_flags": [],
+          "sample_id": "dcp-greg-goode-faith-pure-land-and-karma-99",
+          "source_group": "dc-thread-373114560681330350",
+          "target_marker_count": 4,
+          "word_count": 482
+        },
+        {
+          "canonical_sha256": "272775e445c956b07115cc555864cfaa6238f9ef0fc9c53470f64be8aaab3f54",
+          "quality_flags": [
+            "thin-for-authorship-attribution"
+          ],
+          "sample_id": "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52",
+          "source_group": "dc-thread-3962345161445562437",
+          "target_marker_count": 3,
+          "word_count": 190
+        },
+        {
+          "canonical_sha256": "f9e9adb9bc3b40c18531716ddc67bef6f1357d7eeb397c7957e7b614e8f8467c",
+          "quality_flags": [],
+          "sample_id": "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64",
+          "source_group": "dc-thread-431548bd24267b84801eee69",
+          "target_marker_count": 13,
+          "word_count": 1709
+        },
+        {
+          "canonical_sha256": "8f1fbdd02a81a7f898e8063bad6a5b0bfc09d449b026ab90ed1b1f93cb2d9f81",
+          "quality_flags": [
+            "short-under-100-words",
+            "thin-for-authorship-attribution"
+          ],
+          "sample_id": "dcp-greg-goode-nagasena-chariot-and-emptiness-97",
+          "source_group": "dc-thread-5098886803584800770",
+          "target_marker_count": 1,
+          "word_count": 55
+        },
+        {
+          "canonical_sha256": "6b11bad5957728c4ffc5edcd2f318441892315e58ad57ec3465f91255a6df353",
+          "quality_flags": [],
+          "sample_id": "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+          "source_group": "dc-thread-6428699248388781187",
+          "target_marker_count": 8,
+          "word_count": 524
+        },
+        {
+          "canonical_sha256": "1428f3b56ea5ce10cb401acef0d202438b1978452fe3f160572607acdf8809fa",
+          "quality_flags": [
+            "possible-unremoved-dialogue",
+            "ambiguous-single-word-lines-inside-speaker-block"
+          ],
+          "sample_id": "dcp-greg-goode-spiritual-diversity-20",
+          "source_group": "dc-thread-8956300362338800568",
+          "target_marker_count": 5,
+          "word_count": 462
+        }
+      ],
+      "selected_explicit_nonoverlap_posts": 10,
+      "speaker": "Greg Goode",
+      "total_words": 3645
+    },
+    "candidate_ready_for_manual_quality_review": true,
+    "date": "2026-08-18",
+    "discovery": {
+      "David Vardy": {
+        "explicit_post_count": 21,
+        "feed_pages": [
+          {
+            "feed_sha256": "9c23a42585e6c36f7900aeaebd3ca3056071d97a6324df37874761facde805eb",
+            "next_present": true,
+            "page_number": 1,
+            "target_post_count": 23
+          },
+          {
+            "feed_sha256": "2000ec299e8a6bd8616345430738ee0c0f86ea0406ac24167eba3df665b129c0",
+            "next_present": false,
+            "page_number": 2,
+            "target_post_count": 0
+          }
+        ],
+        "target_post_count": 23
+      },
+      "Greg Goode": {
+        "explicit_post_count": 17,
+        "feed_pages": [
+          {
+            "feed_sha256": "9c23a42585e6c36f7900aeaebd3ca3056071d97a6324df37874761facde805eb",
+            "next_present": true,
+            "page_number": 1,
+            "target_post_count": 13
+          },
+          {
+            "feed_sha256": "2000ec299e8a6bd8616345430738ee0c0f86ea0406ac24167eba3df665b129c0",
+            "next_present": false,
+            "page_number": 2,
+            "target_post_count": 9
+          }
+        ],
+        "target_post_count": 25
+      },
+      "Joel Rosenblum": {
+        "explicit_post_count": 5,
+        "feed_pages": [
+          {
+            "feed_sha256": "9c23a42585e6c36f7900aeaebd3ca3056071d97a6324df37874761facde805eb",
+            "next_present": true,
+            "page_number": 1,
+            "target_post_count": 3
+          },
+          {
+            "feed_sha256": "2000ec299e8a6bd8616345430738ee0c0f86ea0406ac24167eba3df665b129c0",
+            "next_present": false,
+            "page_number": 2,
+            "target_post_count": 2
+          }
+        ],
+        "target_post_count": 5
+      },
+      "Stian Gudmundsen Høiland": {
+        "explicit_post_count": 18,
+        "feed_pages": [
+          {
+            "feed_sha256": "9c23a42585e6c36f7900aeaebd3ca3056071d97a6324df37874761facde805eb",
+            "next_present": true,
+            "page_number": 1,
+            "target_post_count": 13
+          },
+          {
+            "feed_sha256": "2000ec299e8a6bd8616345430738ee0c0f86ea0406ac24167eba3df665b129c0",
+            "next_present": false,
+            "page_number": 2,
+            "target_post_count": 8
+          }
+        ],
+        "target_post_count": 22
+      }
+    },
+    "empty_explicit_rejection_count": 0,
+    "forbidden_claims": [
+      "this spec admits Greg Goode",
+      "the seed-page list is complete",
+      "the provisional exclusion list is a fresh active-author overlap census",
+      "passing acquisition gates validates attribution, IER, or an abstention threshold"
+    ],
+    "fresh_overlap": {
+      "configured_exclusion_count": 2,
+      "configured_only_count": 1,
+      "effective_exclusion_count": 8,
+      "effective_exclusion_set_identity_sha256": "92f620a06b062c0ffbeca1c9534857c60466b73a699e398febc157df52ba451e",
+      "exclusion_speakers": [
+        "Joel Rosenblum",
+        "David Vardy",
+        "Stian Gudmundsen Høiland"
+      ],
+      "fresh_only_count": 6,
+      "fresh_overlap_count": 7,
+      "fresh_overlap_set_identity_sha256": "633d7ba25fc95bdb629db2f87185885e79aec63729c73c0c3331bf4bf47f56bb"
+    },
+    "hard_error_count": 0,
+    "hard_errors": [],
+    "manual_seed_coverage": [
+      {
+        "direct_page_overlap_speakers_present": [
+          "Stian Gudmundsen Høiland"
+        ],
+        "direct_page_preflight_used": true,
+        "direct_page_target_marker_count": 11,
+        "direct_page_target_word_count": 1543,
+        "discovered_as_explicit_target_post": false,
+        "excluded_as_fresh_overlap": true,
+        "selected_as_explicit_target_post": true,
+        "source_html_sha256": "81fb485e070d50afd6cc7ed515223d67587322462131fe8ce9df4ad3622616b2",
+        "target_label_count": 11,
+        "title_sha256": "4adf223bfe0c8c405b051cb4cbc30b08a625afa0a7bed46232c43b558e91bed7",
+        "url_sha256": "386438c4189919b2427748009cd9c5994336528eeac63850b49e737970eae74e"
+      },
+      {
+        "direct_page_overlap_speakers_present": [],
+        "direct_page_preflight_used": true,
+        "direct_page_target_marker_count": 2,
+        "direct_page_target_word_count": 32,
+        "discovered_as_explicit_target_post": false,
+        "excluded_as_fresh_overlap": false,
+        "selected_as_explicit_target_post": true,
+        "source_html_sha256": "b9ae59eb87edc2df3dc7a2e9011bfe32b2b3ef45158861697a664dd423794af3",
+        "target_label_count": 2,
+        "title_sha256": "9219e1b68e54d18ee9ebc986e2d8c486480f0aab12536f0d33bb35d7b5c826f0",
+        "url_sha256": "09953956a70cc4a095731d8bdafad15b717a7111b94751405b42beeaf4f1122d"
+      },
+      {
+        "direct_page_overlap_speakers_present": [],
+        "direct_page_preflight_used": true,
+        "direct_page_target_marker_count": 13,
+        "direct_page_target_word_count": 1709,
+        "discovered_as_explicit_target_post": false,
+        "excluded_as_fresh_overlap": false,
+        "selected_as_explicit_target_post": true,
+        "source_html_sha256": "2a6e7da134c03277b62c5320273b73cfa61450840e10621fe9e0e27c947be57a",
+        "target_label_count": 13,
+        "title_sha256": "141a4f5816dd991a750489edc50c0186de9d534f130fd298be4cd0b819132620",
+        "url_sha256": "431548bd24267b84801eee69a0ad2467c9c00b0280f8b6f5d04cd2bcf9274277"
+      },
+      {
+        "direct_page_overlap_speakers_present": [],
+        "direct_page_preflight_used": false,
+        "direct_page_target_marker_count": null,
+        "direct_page_target_word_count": null,
+        "discovered_as_explicit_target_post": true,
+        "excluded_as_fresh_overlap": false,
+        "selected_as_explicit_target_post": true,
+        "source_html_sha256": null,
+        "target_label_count": 1,
+        "title_sha256": "1e04acaaf40ba4e1a4a4ae0632985939cd63d9b956b541ddd8407f20b258f7e6",
+        "url_sha256": "0667fc1658be26f72e996e0681266113836ca867821e17836eae650c4c9c9901"
+      },
+      {
+        "direct_page_overlap_speakers_present": [],
+        "direct_page_preflight_used": false,
+        "direct_page_target_marker_count": null,
+        "direct_page_target_word_count": null,
+        "discovered_as_explicit_target_post": true,
+        "excluded_as_fresh_overlap": false,
+        "selected_as_explicit_target_post": true,
+        "source_html_sha256": null,
+        "target_label_count": 4,
+        "title_sha256": "99a663ae4369eee0be8a6d33564bb86ebb90a4afde1c1353b87c5eec429c328d",
+        "url_sha256": "c0b98b27c76092c4efa13561c02ed34498beffb0c5817493bfea39c462703542"
+      },
+      {
+        "direct_page_overlap_speakers_present": [],
+        "direct_page_preflight_used": false,
+        "direct_page_target_marker_count": null,
+        "direct_page_target_word_count": null,
+        "discovered_as_explicit_target_post": true,
+        "excluded_as_fresh_overlap": false,
+        "selected_as_explicit_target_post": true,
+        "source_html_sha256": null,
+        "target_label_count": 6,
+        "title_sha256": "840fdaa4a5b0165be6081cee761ddcf1e53c926d31796a2816d29ce49b974f3e",
+        "url_sha256": "848c799c86fc58f6bad3d7a4baba0b868237debf4817e9d069a4985a67a4217f"
+      }
+    ],
+    "manual_seed_direct_page_fetch_count": 3,
+    "method_decision": "reuse-existing-dharma-control-profile-extractor",
+    "network_fetch_count": 10,
+    "post_extraction_exclusions_applied": [
+      {
+        "canonical_sha256": "9a84d7a0e38fed666364821c930213b514975f2d1467b018e6c7558adc58842e",
+        "quality_flags": [
+          "possible-unremoved-dialogue",
+          "ambiguous-single-word-lines-inside-speaker-block"
+        ],
+        "reason": "The fresh active-author-overlap run showed this 4,894-word flagged source supplied 71.99% of the remaining Greg corpus. Exclude it conservatively rather than letting one dialogue-flagged thread define the profile.",
+        "sample_id": "dcp-greg-goode-consciousness-advaita-emptiness-94",
+        "word_count": 4894
+      }
+    ],
+    "profile_admission_authorized": false,
+    "profile_holdout_split_authorized": false,
+    "raw_or_canonical_prose_in_output": false,
+    "required_post_extraction_checks": [
+      "target speaker appears as an explicit speaker marker rather than only a mention, like, title, or quoted attribution",
+      "extracted block has nonzero authored words",
+      "post is outside the fresh overlap set for Joel Rosenblum, David Vardy, and Stian Gudmundsen Høiland",
+      "source group is independent of all other admitted profile and reserved-holdout samples",
+      "canonical text is not an exact or near duplicate of another sample",
+      "long embedded quotations and copied source passages are removed or the sample is rejected",
+      "speaker-label boundaries are manually reviewed when the extractor raises possible dialogue or ambiguous-line flags",
+      "at least one independently source-separated original remains reserved as a holdout"
+    ],
+    "schema_version": 1,
+    "split_readiness": {
+      "budgets": [
+        {
+          "clean_eligible_document_count": 3,
+          "clean_only_supply_pass": false,
+          "eligible_document_count": 6,
+          "eligible_hash_set_sha256": "5a67247bc00a08359509ee36f4def51c940f94f45f2f59e91fb6694dfb047d74",
+          "eligible_sample_ids": [
+            "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+            "dcp-greg-goode-faith-pure-land-and-karma-99",
+            "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64",
+            "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52",
+            "dcp-greg-goode-shentong-yogacara-and-dzogchen-59",
+            "dcp-greg-goode-spiritual-diversity-20"
+          ],
+          "required_document_count": 6,
+          "supply_pass": true,
+          "word_budget": 150
+        },
+        {
+          "clean_eligible_document_count": 3,
+          "clean_only_supply_pass": false,
+          "eligible_document_count": 5,
+          "eligible_hash_set_sha256": "b6c62cafb95529f5c7195f594ae7e4745fc36ecad4b801dd92a437dffbbfd74c",
+          "eligible_sample_ids": [
+            "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+            "dcp-greg-goode-faith-pure-land-and-karma-99",
+            "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64",
+            "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52",
+            "dcp-greg-goode-spiritual-diversity-20"
+          ],
+          "required_document_count": 6,
+          "supply_pass": false,
+          "word_budget": 180
+        },
+        {
+          "clean_eligible_document_count": 3,
+          "clean_only_supply_pass": false,
+          "eligible_document_count": 4,
+          "eligible_hash_set_sha256": "167b53b8ea8bcf67b8c694ae5f5369bacf05f95ab7245c865b0dddba14d07850",
+          "eligible_sample_ids": [
+            "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+            "dcp-greg-goode-faith-pure-land-and-karma-99",
+            "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64",
+            "dcp-greg-goode-spiritual-diversity-20"
+          ],
+          "required_document_count": 6,
+          "supply_pass": false,
+          "word_budget": 200
+        },
+        {
+          "clean_eligible_document_count": 3,
+          "clean_only_supply_pass": false,
+          "eligible_document_count": 4,
+          "eligible_hash_set_sha256": "167b53b8ea8bcf67b8c694ae5f5369bacf05f95ab7245c865b0dddba14d07850",
+          "eligible_sample_ids": [
+            "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+            "dcp-greg-goode-faith-pure-land-and-karma-99",
+            "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64",
+            "dcp-greg-goode-spiritual-diversity-20"
+          ],
+          "required_document_count": 6,
+          "supply_pass": false,
+          "word_budget": 250
+        }
+      ],
+      "holdout_documents": 2,
+      "profile_documents": 4,
+      "required_document_count": 6
+    },
+    "status": "candidate-extraction-complete-manual-review-pending",
+    "target_author_id": "greg-goode",
+    "target_role": "ordinary-control-candidate",
+    "target_speaker": "Greg Goode"
+  },
+  "schema_version": 1,
+  "source_pr": 93,
+  "status": "candidate-extraction-complete-manual-quality-review-pending-not-admitted",
+  "workflow_head_sha": "629369973c922089336935167d745090f96e5a14",
+  "workflow_run_id": 32219325045
+}

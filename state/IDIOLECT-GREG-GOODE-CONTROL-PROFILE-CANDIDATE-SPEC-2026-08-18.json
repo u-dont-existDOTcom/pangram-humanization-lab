@@ -5,6 +5,11 @@
   "status": "candidate-extraction-spec-not-profile-admission",
   "method_decision": "reuse-existing-dharma-control-profile-extractor",
   "blog": "https://dharmaconnectiongroup.blogspot.com/",
+  "overlap_exclusion_speakers": [
+    "Joel Rosenblum",
+    "David Vardy",
+    "Stian Gudmundsen Høiland"
+  ],
   "raw_text_in_git": false,
   "profile_admission_authorized": false,
   "targets": [
@@ -20,6 +25,24 @@
       "fresh_complete_overlap_census_required_before_admission": true
     }
   ],
+  "post_extraction_exclusions": [
+    {
+      "sample_id": "dcp-greg-goode-consciousness-advaita-emptiness-94",
+      "expected_canonical_sha256": "9a84d7a0e38fed666364821c930213b514975f2d1467b018e6c7558adc58842e",
+      "reason": "The fresh active-author-overlap run showed this 4,894-word flagged source supplied 71.99% of the remaining Greg corpus. Exclude it conservatively rather than letting one dialogue-flagged thread define the profile."
+    }
+  ],
+  "split_readiness": {
+    "profile_documents": 4,
+    "holdout_documents": 2,
+    "word_budgets": [
+      150,
+      180,
+      200,
+      250
+    ],
+    "note": "Supply accounting only. A passing count does not admit a source or choose the final split; quotation/boundary review and source-group audit remain blocking."
+  },
   "manual_seed_pages_for_retrieval_crosscheck": [
     {
       "title": "I-AM, I-I And Anatta",
@@ -62,7 +85,7 @@
   "required_post_extraction_checks": [
     "target speaker appears as an explicit speaker marker rather than only a mention, like, title, or quoted attribution",
     "extracted block has nonzero authored words",
-    "post is outside the fresh Joel-overlap set",
+    "post is outside the fresh overlap set for Joel Rosenblum, David Vardy, and Stian Gudmundsen Høiland",
     "source group is independent of all other admitted profile and reserved-holdout samples",
     "canonical text is not an exact or near duplicate of another sample",
     "long embedded quotations and copied source passages are removed or the sample is rejected",
@@ -86,25 +109,28 @@
     "word_count",
     "target_marker_count",
     "quality_flags",
-    "fresh_overlap_set_identity_sha256"
+    "fresh_overlap_set_identity_sha256",
+    "post_extraction_exclusions_applied",
+    "split_readiness"
   ],
   "execution": {
-    "command": "python -m pangram_lab.dharma_control_profiles state/IDIOLECT-GREG-GOODE-CONTROL-PROFILE-CANDIDATE-SPEC-2026-08-18.json --receipt-out .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json",
-    "runtime": "trusted network-capable local or explicitly manual research runtime",
-    "automatic_pull_request_or_push_execution": false,
+    "command": "python -m pangram_lab.dharma_control_candidate state/IDIOLECT-GREG-GOODE-CONTROL-PROFILE-CANDIDATE-SPEC-2026-08-18.json --receipt-out .local/idiolect-corpus/greg-goode-control-profile-candidate-receipt.json",
+    "runtime": "trusted network-capable local or explicitly bounded research runtime",
+    "automatic_pull_request_or_push_execution": "one public-repository extraction run for current admission evidence; manual-only thereafter",
     "new_luar_or_pangram_call": false,
     "prose_destination": ".local/idiolect-corpus only",
-    "receipt_destination": "metadata-only local artifact, then reviewed Git result if gates pass"
+    "receipt_destination": "metadata-only artifact, then reviewed Git result if gates pass",
+    "feed_omission_recovery": "configured manual seed pages absent from Atom explicit-label discovery are fetched once, scanned for Greg plus all active authors, and injected only as verified explicit-speaker pages; active-author overlap remains excluded"
   },
   "post_run_decision": {
     "if_all_feasibility_and_quality_gates_pass": "create a separate reviewed role-admission PR; do not activate Greg from the extraction run itself",
     "if_word_supply_or_dequotation_fails": "retain the failed feasibility receipt and advance Robert Dominik as the next candidate",
-    "if_fresh_overlap_set_is larger_than_the_provisional_exclusions": "exclude all overlap groups and recompute concentration before any admission"
+    "if_fresh_overlap_set_is_larger_than_the_provisional_exclusions": "exclude all overlap groups and recompute concentration before any admission"
   },
   "forbidden_claims": [
     "this spec admits Greg Goode",
     "the seed-page list is complete",
-    "the provisional exclusion list is a fresh overlap census",
+    "the provisional exclusion list is a fresh active-author overlap census",
     "passing acquisition gates validates attribution, IER, or an abstention threshold"
   ]
 }
