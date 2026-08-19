@@ -24,6 +24,9 @@ class ExactHistoryRecord:
     field_path: tuple[str, ...]
     input_sha256: str
     word_count: int
+    stored_text_sha256: str
+    stored_word_count: int
+    match_mode: str
 
     @property
     def report_url(self) -> str:
@@ -33,8 +36,11 @@ class ExactHistoryRecord:
         return {
             "api_path": "/api/history/<uuid>/",
             "exact_text_field_path": list(self.field_path),
-            "exact_text_sha256": self.input_sha256,
-            "exact_word_count": self.word_count,
+            "authorized_text_sha256": self.input_sha256,
+            "authorized_word_count": self.word_count,
+            "stored_text_sha256": self.stored_text_sha256,
+            "stored_word_count": self.stored_word_count,
+            "transport_match_mode": self.match_mode,
             "record_model_id": self.payload.get("model_id"),
             "record_prediction": self.payload.get("prediction"),
             "record_prediction_prob": self.payload.get("prediction_prob"),
@@ -101,17 +107,116 @@ def _iter_strings(
     )
 
 
+def _line_endings(text: str) -> str:
+    return text.replace("\r\n", "\n").replace("\r", "\n")
+
+
+def _match_mode(candidate: str, exact_text: str) -> str | None:
+    if candidate == exact_text:
+        return "exact_utf8"
+
+    candidate_lf = _line_endings(candidate)
+    exact_lf = _line_endings(exact_text)
+    if candidate_lf == exact_lf:
+        return "line_endings_normalized"
+
+    # Terminal newline normalization is safe for the reader-visible article
+    # boundary and common in textarea/server serialization. Do not remove
+    # interior whitespace or spaces from line ends.
+    if candidate_lf.rstrip("\n") == exact_lf.rstrip("\n"):
+        return "terminal_newlines_normalized"
+
+    # A browser/server may trim the outer boundary. This mode remains bounded:
+    # the complete interior string must be byte-identical after line-ending
+    # normalization, and callers additionally require identical word count.
+    if candidate_lf.strip() == exact_lf.strip():
+        return "outer_whitespace_normalized"
+
+    return None
+
+
 def exact_text_proof(payload: Any, exact_text: str) -> dict[str, object] | None:
     target_sha = _sha256(exact_text)
+    target_words = len(exact_text.split())
     for field_path, candidate in _iter_strings(payload):
-        if candidate != exact_text:
+        mode = _match_mode(candidate, exact_text)
+        if mode is None:
+            continue
+        stored_words = len(candidate.split())
+        if stored_words != target_words:
             continue
         return {
             "field_path": field_path,
             "input_sha256": target_sha,
-            "word_count": len(exact_text.split()),
+            "word_count": target_words,
+            "stored_text_sha256": _sha256(candidate),
+            "stored_word_count": stored_words,
+            "match_mode": mode,
         }
     return None
+
+
+def history_record_comparison_summary(
+    payload: Any,
+    exact_text: str,
+    *,
+    limit: int = 16,
+) -> dict[str, object]:
+    """Return content-free structural comparison data for recovery debugging.
+
+    No candidate text is returned. Whitespace-collapsed equality is diagnostic
+    only and is never accepted by ``match_exact_history_record``.
+    """
+    if limit < 1:
+        raise ValueError("limit must be positive")
+
+    target_words = len(exact_text.split())
+    target_chars = len(exact_text)
+    target_collapsed = " ".join(exact_text.split())
+    rows: list[dict[str, object]] = []
+    for field_path, candidate in _iter_strings(payload):
+        if len(candidate) < 32:
+            continue
+        candidate_words = len(candidate.split())
+        candidate_chars = len(candidate)
+        mode = _match_mode(candidate, exact_text)
+        collapsed_equal = " ".join(candidate.split()) == target_collapsed
+        contains_exact = bool(exact_text) and exact_text in candidate
+        contained_by_exact = bool(candidate) and candidate in exact_text
+
+        # Keep only plausibly document-sized strings or actual/near matches.
+        if (
+            mode is None
+            and not collapsed_equal
+            and not contains_exact
+            and not contained_by_exact
+            and abs(candidate_words - target_words) > max(8, target_words // 20)
+            and abs(candidate_chars - target_chars) > max(64, target_chars // 20)
+        ):
+            continue
+
+        rows.append(
+            {
+                "field_path": [str(value) for value in field_path],
+                "character_count": candidate_chars,
+                "word_count": candidate_words,
+                "character_delta": candidate_chars - target_chars,
+                "word_delta": candidate_words - target_words,
+                "accepted_match_mode": mode,
+                "whitespace_collapsed_equal_diagnostic_only": collapsed_equal,
+                "candidate_contains_exact": contains_exact,
+                "candidate_is_substring_of_exact": contained_by_exact,
+            }
+        )
+        if len(rows) >= limit:
+            break
+
+    return {
+        "authorized_character_count": target_chars,
+        "authorized_word_count": target_words,
+        "candidate_fields": rows,
+        "privacy_note": "No Pangram history-record text or private result URL is included.",
+    }
 
 
 def match_exact_history_record(
@@ -134,6 +239,9 @@ def match_exact_history_record(
         field_path=tuple(str(value) for value in proof["field_path"]),
         input_sha256=str(proof["input_sha256"]),
         word_count=int(proof["word_count"]),
+        stored_text_sha256=str(proof["stored_text_sha256"]),
+        stored_word_count=int(proof["stored_word_count"]),
+        match_mode=str(proof["match_mode"]),
     )
 
 
