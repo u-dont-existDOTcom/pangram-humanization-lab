@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - codex/pangram-key-probe-20260819
-  pull_request:
-    branches:
-      - codex/pangram-key-probe-20260819
 
 permissions: {}
 
@@ -15,39 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - name: Authenticate Pangram key without submitting text
-        id: probe
+      - name: Probe documented V3 auth without detection
         shell: bash
         env:
           PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}
         run: |
-          set -u
-          result=unknown
-          code=none
-          if [ -z "${PANGRAM_API_KEY:-}" ]; then
-            result=missing_secret
-          else
-            code="$(curl --silent --show-error --connect-timeout 10 --max-time 20 \
-              --output /tmp/pangram-models.json --write-out '%{http_code}' \
-              --header "x-api-key: $PANGRAM_API_KEY" \
-              --header 'Accept: application/json' \
-              'https://text.external-api.pangram.com/models' || printf '000')"
-            case "$code" in
-              200) result=accepted ;;
-              401) result=rejected ;;
-              402) result=insufficient_credits ;;
-              403) result=forbidden ;;
-              *)   result="unexpected_http_${code}" ;;
-            esac
-          fi
-          printf 'result=%s\n' "$result" >> "$GITHUB_OUTPUT"
-          printf 'http_code=%s\n' "$code" >> "$GITHUB_OUTPUT"
-          printf 'result=%s\nhttp_code=%s\n' "$result" "$code" > pangram-key-probe-result.txt
-          echo "PANGRAM_KEY_PROBE=$result HTTP=$code"
-
-      - name: Publish probe receipt
-        uses: actions/upload-artifact@v4
-        with:
-          name: pangram-key-probe-${{ steps.probe.outputs.result }}-http-${{ steps.probe.outputs.http_code }}
-          path: pangram-key-probe-result.txt
-          if-no-files-found: error
+          set -euo pipefail
+          test -n "$PANGRAM_API_KEY"
+          code="$(curl --silent --show-error --connect-timeout 10 --max-time 20 \
+            --output /tmp/pangram-v3-probe.json --write-out '%{http_code}' \
+            --request POST 'https://text.api.pangram.com/v3' \
+            --header 'Content-Type: application/json' \
+            --header "x-api-key: $PANGRAM_API_KEY" \
+            --data '{}')"
+          echo "PANGRAM_V3_PROBE_HTTP=$code"
+          cat /tmp/pangram-v3-probe.json
+          test "$code" = "400"
