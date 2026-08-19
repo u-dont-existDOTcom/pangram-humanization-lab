@@ -31,7 +31,7 @@ for cmd in git gh curl ssh-keygen python3; do
 done
 
 if ! command -v jq >/dev/null 2>&1; then
-  printf 'jq is required by GitHub\'s official runner installer; installing it.\n'
+  printf "jq is required by GitHub's official runner installer; installing it.\n"
   sudo apt-get update
   sudo apt-get install -y jq
 fi
@@ -92,7 +92,7 @@ if ! gh api "repos/$PUBLIC_REPO/keys" --paginate --jq '.[].key' | grep -Fxq "$PU
     -F read_only=false >/dev/null
 fi
 
-# GitHub's currently published Ed25519 host key; pin it rather than trusting ssh-keyscan.
+# Pin GitHub's published Ed25519 host key rather than discovering an unverified key at job time.
 cat > "$KNOWN_HOSTS" <<'EOF'
 github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl
 EOF
