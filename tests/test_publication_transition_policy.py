@@ -7,10 +7,10 @@ SCRIPT = ROOT / "scripts" / "audit-publication-secrets.sh"
 PROFILE = ROOT / ".github" / "codex-repository.json"
 
 
-def test_publication_audit_is_bounded_and_read_only():
+def test_publication_audit_is_manual_bounded_and_read_only_after_transition():
     text = WORKFLOW.read_text(encoding="utf-8")
-    assert "pull_request:" in text
     assert "workflow_dispatch:" in text
+    assert "pull_request:" not in text
     assert "push:" not in text
     assert "schedule:" not in text
     assert "contents: read" in text
