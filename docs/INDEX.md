@@ -5,17 +5,18 @@
 1. `../state/CURRENT-STATE.md`: canonical recovery checkpoint and current detector-transport routing
 2. `../state/LESSON-INDEX.md`: current lesson authority, read order, and evidence branches
 3. `CHATGPT-OPERATING-GUIDE.md`: end-to-end operating rules
-4. `PANGRAM-LOCAL-PLAYWRIGHT.md`: supported local Brave/Chromium GUI fallback, exact stored-History binding, recovery-before-repeat, and operator commands
-5. `IDIOLECT-RETENTION-PROTOCOL.md`: edit-dose policy, private author profiles, single-author retention proxy, and closed-set IER
-6. `IDIOLECT-VALIDATION-PROTOCOL.md`: required second-tier calibration of the fast proxy against paper-faithful surface attribution, LUAR, topic controls, and held-out register-specific validation
-7. `IDIOLECT-BLOGGER-DISCOVERY.md`: metadata-only enumeration of confirmed-owner legacy Blogger posts before corpus selection
-8. `IDIOLECT-CORPUS-ACQUISITION.md`: provenance-audited source acquisition, normalization, local-only corpus storage, and duplicate/source-split boundaries before Tier B
-9. `LESSON-CLOSEOUT.md`: finding dispositions and completion gate
-10. `PANGRAM-ACTIONS-RUNBOOK.md`: legacy/optional GitHub-hosted detector route; not the current access authority and subject to the hosted-runner compatibility issue tracked in #95
+4. `PANGRAM-API-DETECT-FILE.md`: hash-gated single-file Pangram-4 API measurement with cache/checkpoint durability and public-cache safety
+5. `PANGRAM-LOCAL-PLAYWRIGHT.md`: supported local Brave/Chromium GUI fallback, exact stored-History binding, recovery-before-repeat, and operator commands
+6. `IDIOLECT-RETENTION-PROTOCOL.md`: edit-dose policy, private author profiles, single-author retention proxy, and closed-set IER
+7. `IDIOLECT-VALIDATION-PROTOCOL.md`: required second-tier calibration of the fast proxy against paper-faithful surface attribution, LUAR, topic controls, and held-out register-specific validation
+8. `IDIOLECT-BLOGGER-DISCOVERY.md`: metadata-only enumeration of confirmed-owner legacy Blogger posts before corpus selection
+9. `IDIOLECT-CORPUS-ACQUISITION.md`: provenance-audited source acquisition, normalization, local-only corpus storage, and duplicate/source-split boundaries before Tier B
+10. `LESSON-CLOSEOUT.md`: finding dispositions and completion gate
+11. `PANGRAM-ACTIONS-RUNBOOK.md`: legacy/optional GitHub-hosted detector route; not the current access authority and subject to the hosted-runner compatibility issue tracked in #95
 
 ## Current transport routing
 
-- The owner's **self-hosted Pangram API** is the normal programmatic route.
+- The owner's **self-hosted Pangram API** is the normal programmatic route. For one frozen public-safe text boundary, use `pangram-lab detect-file` under `PANGRAM-API-DETECT-FILE.md`.
 - `PANGRAM-LOCAL-PLAYWRIGHT.md` documents the supported authenticated GUI/History fallback.
 - `PANGRAM-ACTIONS-RUNBOOK.md` is retained for fixed-batch evidence/accounting machinery and intentional future hosted execution, but GitHub-hosted Actions is no longer a required fallback for declaring Pangram access.
 - The old remote Browserbase proposal is compatibility/history, not the primary local GUI path.
@@ -25,6 +26,7 @@ Always check `../state/CURRENT-STATE.md` before choosing a detector transport or
 ## Project use
 
 - `../README.md`: current detector routing, installation/harness use, cache/checkpoint behavior, and experimental contract
+- `PANGRAM-API-DETECT-FILE.md`: current single-file programmatic API route
 - `PANGRAM-LOCAL-PLAYWRIGHT.md`: supported local GUI transport and History recovery
 - `PANGRAM-ACTIONS-RUNBOOK.md`: optional/legacy hosted transport details and paid-work safety if Actions is deliberately selected
 - `HUMANIZATION-ARCHITECTURE-REGRESSION.md`: article-wide regression gate after detector-driven edits
