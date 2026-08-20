@@ -942,6 +942,17 @@
       "source_path": "state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md",
       "source_ref": "agent/pangram-local-playwright-gpt-20260818",
       "source_sha256": "f3e9672fa985797a7a5035699007975fe6d32d92d6eeb2f2c6f33188c3694d66"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The timestamp-bound GUI recovery identified the already-paid exact Romance Part-1 history record 12.974 seconds after the reservation and exact-matched its text; remaining work is structured score extraction without resubmission.",
+      "id": "L-6a63c48995-01",
+      "promoted_to": [],
+      "reason": "This is project-specific detector transport/recovery state. The reusable recovery-before-repeat and exact-artifact-binding principles are already promoted; the structured score parser is an implementation repair rather than a new humanization lesson.",
+      "recorded_at_utc": "2026-08-20T16:22:08.132771+00:00",
+      "source_path": "state/PANGRAM-LOCAL-PART1-EXACT-RECOVERY-2026-08-20.md",
+      "source_ref": "agent/pangram-local-playwright-gpt-20260818",
+      "source_sha256": "6a63c4899578acdadc60869ae6524968a6e328554e0ee5f9654728c64f8c424e"
     }
   ],
   "schema_version": 1
