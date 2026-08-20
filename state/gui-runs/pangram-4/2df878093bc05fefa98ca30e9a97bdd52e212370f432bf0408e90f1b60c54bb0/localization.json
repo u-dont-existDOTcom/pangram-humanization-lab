@@ -1,0 +1,1651 @@
+{
+  "authorized_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+  "authorized_word_count": 10260,
+  "detector_submission_attempted": false,
+  "direct_report_used": true,
+  "evidence_source": "stored_history_read_only_localization",
+  "history_list_candidate_count": 0,
+  "history_record_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+    "authorized_word_count": 10260,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+    "exact_word_count": 10260,
+    "record_model_id": null,
+    "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+    "record_prediction_prob": 0.14895853400230408,
+    "stored_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+    "stored_word_count": 10260,
+    "transport_match_mode": "exact_utf8"
+  },
+  "input_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+  "localized_span_count": 19,
+  "model": "pangram-4",
+  "objects_scanned": 77,
+  "privacy_note": "No submitted text, localized span text, UUID, private report URL, cookies, browser storage, headers, or credentials are persisted. Offsets are 0-based and end-exclusive.",
+  "purpose": "stored_history_localization_only_not_document_score_authority",
+  "schema_version": 2,
+  "source_roots_scanned": [
+    "response.overall",
+    "response.in_page"
+  ],
+  "spans": [
+    {
+      "char_end_0_exclusive": 100,
+      "char_start_0": 0,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[0]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.07067080587148666,
+            "confidence": "High",
+            "end_index": 7857,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 0,
+            "window_index": 0,
+            "word_count": 1342
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "c820bc213afdd8ae2fb1b62faa15747bb40576a891c8a0251e3b61575cc50b3f",
+      "word_count": 21,
+      "word_end_0_exclusive": 21,
+      "word_start_0": 0
+    },
+    {
+      "char_end_0_exclusive": 7995,
+      "char_start_0": 7895,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[1]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.6618351936340332,
+            "confidence": "High",
+            "end_index": 8176,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "prediction": null,
+            "start_index": 7857,
+            "window_index": 1,
+            "word_count": 55
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "db4a25cff94730c98c067f01b1b7e4eabf1a8edbcd7847a23db06f1a80eccee0",
+      "word_count": 18,
+      "word_end_0_exclusive": 1360,
+      "word_start_0": 1342
+    },
+    {
+      "char_end_0_exclusive": 8316,
+      "char_start_0": 8216,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[2]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.14873890578746796,
+            "confidence": "High",
+            "end_index": 9627,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 8176,
+            "window_index": 2,
+            "word_count": 256
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "aff8dedea70d61c4be6687fec548e7545f61d589b3301681fee3deb20e4f307e",
+      "word_count": 18,
+      "word_end_0_exclusive": 1415,
+      "word_start_0": 1397
+    },
+    {
+      "char_end_0_exclusive": 9775,
+      "char_start_0": 9675,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[3]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.6665617823600769,
+            "confidence": "High",
+            "end_index": 10720,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "prediction": null,
+            "start_index": 9627,
+            "window_index": 3,
+            "word_count": 196
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "255134551146300792f1f06774a4fdc2a9308c0da462da43bd9a5bc3d284b5e5",
+      "word_count": 18,
+      "word_end_0_exclusive": 1671,
+      "word_start_0": 1653
+    },
+    {
+      "char_end_0_exclusive": 10872,
+      "char_start_0": 10772,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[4]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.28510230779647827,
+            "confidence": "High",
+            "end_index": 11129,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 10720,
+            "window_index": 4,
+            "word_count": 70
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "604c92709cd3e3de6668430c42321ded8e1f0b95d2c6f1c622ab29d1e67ee502",
+      "word_count": 16,
+      "word_end_0_exclusive": 1865,
+      "word_start_0": 1849
+    },
+    {
+      "char_end_0_exclusive": 11284,
+      "char_start_0": 11184,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[5]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.7039768695831299,
+            "confidence": "High",
+            "end_index": 11549,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "prediction": null,
+            "start_index": 11129,
+            "window_index": 5,
+            "word_count": 80
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "c91d94c500227ed4a7c03a14ff60c46ae7a3195a9b457cf8b958cd32eff3d00b",
+      "word_count": 20,
+      "word_end_0_exclusive": 1939,
+      "word_start_0": 1919
+    },
+    {
+      "char_end_0_exclusive": 11705,
+      "char_start_0": 11605,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[6]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.187603160738945,
+            "confidence": "High",
+            "end_index": 11951,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 11549,
+            "window_index": 6,
+            "word_count": 72
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "f737ae3c6acf7d5d9681809a4a84173694393d91f4122390e8dadbe278bbd628",
+      "word_count": 19,
+      "word_end_0_exclusive": 2018,
+      "word_start_0": 1999
+    },
+    {
+      "char_end_0_exclusive": 12109,
+      "char_start_0": 12009,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[7]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.5638889074325562,
+            "confidence": "Medium",
+            "end_index": 12165,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "prediction": null,
+            "start_index": 11951,
+            "window_index": 7,
+            "word_count": 37
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "3184650af6633115cb42147c697315b7d44c3255910484d74e8f549823f276ad",
+      "word_count": 19,
+      "word_end_0_exclusive": 2090,
+      "word_start_0": 2071
+    },
+    {
+      "char_end_0_exclusive": 12829,
+      "char_start_0": 12729,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[10]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.2992492616176605,
+            "confidence": "High",
+            "end_index": 13026,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 12666,
+            "window_index": 10,
+            "word_count": 63
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "fd3fb8a92dd13e6b9849ffb9700289aece1b8933af47a805be4d7f193d7bc0be",
+      "word_count": 20,
+      "word_end_0_exclusive": 2216,
+      "word_start_0": 2196
+    },
+    {
+      "char_end_0_exclusive": 24512,
+      "char_start_0": 24412,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[13]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.10597290098667145,
+            "confidence": "High",
+            "end_index": 31338,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 24308,
+            "window_index": 13,
+            "word_count": 1212
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "bdd7d3af00454f0cd49d2466564535990087036fd44f3e688f0762e4f4ad5249",
+      "word_count": 18,
+      "word_end_0_exclusive": 4306,
+      "word_start_0": 4288
+    },
+    {
+      "char_end_0_exclusive": 31565,
+      "char_start_0": 31465,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[14]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.8184841871261597,
+            "confidence": "High",
+            "end_index": 31889,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "prediction": null,
+            "start_index": 31338,
+            "window_index": 14,
+            "word_count": 80
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "82bda9f3b5416c687c6859fc5bece0b1222fa60d6ff1890392439a7345325faa",
+      "word_count": 13,
+      "word_end_0_exclusive": 5515,
+      "word_start_0": 5502
+    },
+    {
+      "char_end_0_exclusive": 32118,
+      "char_start_0": 32018,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[15]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.054395224899053574,
+            "confidence": "High",
+            "end_index": 41452,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 31889,
+            "window_index": 15,
+            "word_count": 1650
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "a39f350dd22632df3cb193a6b9a2443ad50be4ea2f68a90799a5c33823ae4f29",
+      "word_count": 18,
+      "word_end_0_exclusive": 5600,
+      "word_start_0": 5582
+    },
+    {
+      "char_end_0_exclusive": 41713,
+      "char_start_0": 41613,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[16]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.054395224899053574,
+            "confidence": "High",
+            "end_index": 50565,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 41452,
+            "window_index": 16,
+            "word_count": 1568
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "6a9dc8ccf801759dd3ea0aa8e90d7926064023621736b0201894cc8353651494",
+      "word_count": 17,
+      "word_end_0_exclusive": 7251,
+      "word_start_0": 7234
+    },
+    {
+      "char_end_0_exclusive": 50866,
+      "char_start_0": 50766,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[17]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.6467457413673401,
+            "confidence": "High",
+            "end_index": 50785,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "prediction": null,
+            "start_index": 50565,
+            "window_index": 17,
+            "word_count": 35
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "3484a6daa281ea0b13c03fcd0ab245b60d3ce8d0b13729c46100f8de6764df1a",
+      "word_count": 19,
+      "word_end_0_exclusive": 8821,
+      "word_start_0": 8802
+    },
+    {
+      "char_end_0_exclusive": 51087,
+      "char_start_0": 50987,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[18]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.38835930824279785,
+            "confidence": "High",
+            "end_index": 51375,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 50785,
+            "window_index": 18,
+            "word_count": 102
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "54a8511fc22b4e47aa33667650125c54a4377497ba95bfd9b41da05c53bd88a0",
+      "word_count": 19,
+      "word_end_0_exclusive": 8856,
+      "word_start_0": 8837
+    },
+    {
+      "char_end_0_exclusive": 51678,
+      "char_start_0": 51578,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[19]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.7005791664123535,
+            "confidence": "High",
+            "end_index": 51676,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "prediction": null,
+            "start_index": 51375,
+            "window_index": 19,
+            "word_count": 54
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "be76af2d28447d587c7d0ae445ada9abbecedacb7e3b80cb2966048952add6e5",
+      "word_count": 18,
+      "word_end_0_exclusive": 8957,
+      "word_start_0": 8939
+    },
+    {
+      "char_end_0_exclusive": 51980,
+      "char_start_0": 51880,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[20]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.3113498389720917,
+            "confidence": "High",
+            "end_index": 51953,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 51676,
+            "window_index": 20,
+            "word_count": 49
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "29e991233e9f3d7e275afb7b4b88f2708f790dd8d99cad2bf2a0210bc2175ddd",
+      "word_count": 20,
+      "word_end_0_exclusive": 9013,
+      "word_start_0": 8993
+    },
+    {
+      "char_end_0_exclusive": 52258,
+      "char_start_0": 52158,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[21]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.7289666533470154,
+            "confidence": "High",
+            "end_index": 52859,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "prediction": null,
+            "start_index": 51953,
+            "window_index": 21,
+            "word_count": 154
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "011a8e594b48328e600ba033d26e5616e0d4f6a89f0ac15901cf5eda2991928c",
+      "word_count": 17,
+      "word_end_0_exclusive": 9059,
+      "word_start_0": 9042
+    },
+    {
+      "char_end_0_exclusive": 53165,
+      "char_start_0": 53065,
+      "evidence": [
+        {
+          "binding_mode": "unique_exact_substring",
+          "field_path": [
+            "response",
+            "overall",
+            "windows",
+            "[22]"
+          ],
+          "root": "response.overall",
+          "scalar_metadata": {
+            "ai_graph_visualization": null,
+            "ai_likelihood": 0.06212889775633812,
+            "confidence": "High",
+            "end_index": 59058,
+            "is_humanized": false,
+            "label": "Human",
+            "prediction": null,
+            "start_index": 52859,
+            "window_index": 22,
+            "word_count": 1064
+          },
+          "text_field": "text"
+        }
+      ],
+      "span_sha256": "d2df188d1e8dcb62b2d4dfa4b67ab79a74c688f8927ec80c05adf209a0d425be",
+      "word_count": 16,
+      "word_end_0_exclusive": 9212,
+      "word_start_0": 9196
+    }
+  ],
+  "status": "localized",
+  "transport": "local_playwright",
+  "transport_index_note": "Current Pangram long-document start_index/end_index values are accepted only when a linebreak-removed index map reproduces the stored preview at the exact raw start and the complete raw slice reproduces the stored window word_count.",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "unresolved_candidate_shapes": [
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[0]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[1]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[2]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[3]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[4]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[5]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[6]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[7]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[8]"
+      ],
+      "keys": [
+        "ai_graph_visualization",
+        "ai_likelihood",
+        "confidence",
+        "edit_level",
+        "editlens",
+        "end_index",
+        "is_humanized",
+        "label",
+        "prediction",
+        "start_index",
+        "text",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_graph_visualization": null,
+        "ai_likelihood": 0.15569014847278595,
+        "confidence": "High",
+        "end_index": 12401,
+        "is_humanized": false,
+        "label": "Human",
+        "prediction": null,
+        "start_index": 12165,
+        "window_index": 8,
+        "word_count": 46
+      },
+      "text_field_lengths": {
+        "text": 100
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[8]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[9]"
+      ],
+      "keys": [
+        "ai_graph_visualization",
+        "ai_likelihood",
+        "confidence",
+        "edit_level",
+        "editlens",
+        "end_index",
+        "is_humanized",
+        "label",
+        "prediction",
+        "start_index",
+        "text",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_graph_visualization": null,
+        "ai_likelihood": 0.6427614092826843,
+        "confidence": "High",
+        "end_index": 12666,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "prediction": null,
+        "start_index": 12401,
+        "window_index": 9,
+        "word_count": 42
+      },
+      "text_field_lengths": {
+        "text": 100
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[9]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[10]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[11]"
+      ],
+      "keys": [
+        "ai_graph_visualization",
+        "ai_likelihood",
+        "confidence",
+        "edit_level",
+        "editlens",
+        "end_index",
+        "is_humanized",
+        "label",
+        "prediction",
+        "start_index",
+        "text",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_graph_visualization": null,
+        "ai_likelihood": 0.712673008441925,
+        "confidence": "High",
+        "end_index": 14743,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "prediction": null,
+        "start_index": 13026,
+        "window_index": 11,
+        "word_count": 306
+      },
+      "text_field_lengths": {
+        "text": 100
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[11]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[12]"
+      ],
+      "keys": [
+        "ai_graph_visualization",
+        "ai_likelihood",
+        "confidence",
+        "edit_level",
+        "editlens",
+        "end_index",
+        "is_humanized",
+        "label",
+        "prediction",
+        "start_index",
+        "text",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_graph_visualization": null,
+        "ai_likelihood": 0.10597290098667145,
+        "confidence": "High",
+        "end_index": 24308,
+        "is_humanized": false,
+        "label": "Human",
+        "prediction": null,
+        "start_index": 14743,
+        "window_index": 12,
+        "word_count": 1719
+      },
+      "text_field_lengths": {
+        "text": 100
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[12]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[13]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[14]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[15]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[16]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[17]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[18]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[19]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[20]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[21]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[22]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[0]"
+      ],
+      "keys": [
+        "end_index",
+        "page_index",
+        "start_index",
+        "window_indices"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "end_index": 9627,
+        "page_index": 0,
+        "start_index": 0
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[0]",
+        "window_indices"
+      ],
+      "keys": [
+        "end",
+        "start"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {},
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[1]"
+      ],
+      "keys": [
+        "end_index",
+        "page_index",
+        "start_index",
+        "window_indices"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "end_index": 14743,
+        "page_index": 1,
+        "start_index": 9627
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[1]",
+        "window_indices"
+      ],
+      "keys": [
+        "end",
+        "start"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {},
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[2]"
+      ],
+      "keys": [
+        "end_index",
+        "page_index",
+        "start_index",
+        "window_indices"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "end_index": 24308,
+        "page_index": 2,
+        "start_index": 14743
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[2]",
+        "window_indices"
+      ],
+      "keys": [
+        "end",
+        "start"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {},
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[3]"
+      ],
+      "keys": [
+        "end_index",
+        "page_index",
+        "start_index",
+        "window_indices"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "end_index": 31889,
+        "page_index": 3,
+        "start_index": 24308
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[3]",
+        "window_indices"
+      ],
+      "keys": [
+        "end",
+        "start"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {},
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[4]"
+      ],
+      "keys": [
+        "end_index",
+        "page_index",
+        "start_index",
+        "window_indices"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "end_index": 41452,
+        "page_index": 4,
+        "start_index": 31889
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[4]",
+        "window_indices"
+      ],
+      "keys": [
+        "end",
+        "start"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {},
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[5]"
+      ],
+      "keys": [
+        "end_index",
+        "page_index",
+        "start_index",
+        "window_indices"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "end_index": 51375,
+        "page_index": 5,
+        "start_index": 41452
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[5]",
+        "window_indices"
+      ],
+      "keys": [
+        "end",
+        "start"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {},
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[6]"
+      ],
+      "keys": [
+        "end_index",
+        "page_index",
+        "start_index",
+        "window_indices"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "end_index": 59058,
+        "page_index": 6,
+        "start_index": 51375
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[6]",
+        "window_indices"
+      ],
+      "keys": [
+        "end",
+        "start"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {},
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[0]"
+      ],
+      "keys": [
+        "ai_likelihood",
+        "confidence",
+        "editlens",
+        "end_index",
+        "humanizer_score",
+        "is_humanized",
+        "label",
+        "llm_prediction",
+        "start_index",
+        "text",
+        "token_length",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_likelihood": 0.07067080587148666,
+        "confidence": "High",
+        "end_index": 7857,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human",
+        "start_index": 0,
+        "token_length": 1691,
+        "window_index": 0,
+        "word_count": 1342
+      },
+      "text_field_lengths": {
+        "text": 7857
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[0]",
+        "editlens"
+      ],
+      "keys": [
+        "is_humanized",
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "is_humanized": false,
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[1]"
+      ],
+      "keys": [
+        "ai_likelihood",
+        "confidence",
+        "editlens",
+        "end_index",
+        "humanizer_score",
+        "is_humanized",
+        "label",
+        "llm_prediction",
+        "start_index",
+        "text",
+        "token_length",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_likelihood": 0.6618351936340332,
+        "confidence": "High",
+        "end_index": 8176,
+        "humanizer_score": 0.0002907428424805403,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 7857,
+        "token_length": 70,
+        "window_index": 1,
+        "word_count": 55
+      },
+      "text_field_lengths": {
+        "text": 319
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[1]",
+        "editlens"
+      ],
+      "keys": [
+        "is_humanized",
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "is_humanized": false,
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[2]"
+      ],
+      "keys": [
+        "ai_likelihood",
+        "confidence",
+        "editlens",
+        "end_index",
+        "humanizer_score",
+        "is_humanized",
+        "label",
+        "llm_prediction",
+        "start_index",
+        "text",
+        "token_length",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_likelihood": 0.14873890578746796,
+        "confidence": "High",
+        "end_index": 9627,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human",
+        "start_index": 8176,
+        "token_length": 313,
+        "window_index": 2,
+        "word_count": 256
+      },
+      "text_field_lengths": {
+        "text": 1451
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[2]",
+        "editlens"
+      ],
+      "keys": [
+        "is_humanized",
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "is_humanized": false,
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    }
+  ],
+  "word_count": 10260
+}
