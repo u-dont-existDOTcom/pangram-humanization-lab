@@ -20,6 +20,7 @@ from pangram_lab.gui_local_structured import (
     run_inputs,
     verify_login_persistence,
 )
+from pangram_lab.history_localization_runner import localize_existing_report
 from pangram_lab import gui_local as local
 
 
@@ -85,6 +86,15 @@ def _parser() -> argparse.ArgumentParser:
     _add_inputs(recover, multiple=False)
     recover.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     recover.add_argument("--max-candidates", type=int, default=100)
+
+    localize = sub.add_parser(
+        "localize",
+        help="Localize exact stored Pangram History windows without detector submission.",
+    )
+    _add_browser_options(localize)
+    _add_inputs(localize, multiple=True)
+    localize.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
+    localize.add_argument("--max-candidates", type=int, default=100)
     return parser
 
 
@@ -275,6 +285,28 @@ def main(argv: list[str] | None = None) -> int:
             max_candidates=args.max_candidates,
         )
         _json({"result": result})
+        return 0
+
+    if args.command == "localize":
+        paths = _validate_inputs(args.inputs)
+        expected_map = _parse_expected_sha(args.expect_sha, paths)
+        digests = _input_digests(paths, expected_map)
+        durability = GitEvidenceDurability(repo_root, output_root)
+        durability.preflight(digests)
+        results = []
+        for path in paths:
+            expected = None if expected_map is None else expected_map[str(path)]
+            results.append(
+                localize_existing_report(
+                    config,
+                    path,
+                    output_root=output_root,
+                    expected_sha256=expected,
+                    evidence_callback=durability,
+                    max_candidates=args.max_candidates,
+                )
+            )
+        _json({"results": results})
         return 0
 
     raise AssertionError(f"unhandled command: {args.command}")
