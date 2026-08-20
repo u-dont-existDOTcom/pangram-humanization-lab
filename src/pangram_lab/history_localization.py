@@ -42,6 +42,7 @@ class BoundSpan:
     end: int
     text_key: str
     text: str
+    binding_mode: str
 
 
 def _sha256(text: str) -> str:
@@ -103,6 +104,73 @@ def _is_span_candidate(path: tuple[str, ...], mapping: Mapping[str, Any]) -> boo
     return _has_offset_fields(mapping) or any(_COLLECTION_PATH_RE.search(part) for part in path)
 
 
+def _selected_text(mapping: Mapping[str, Any], exact_text: str) -> tuple[str, str] | None:
+    for key in _TEXT_KEYS:
+        value = mapping.get(key)
+        if isinstance(value, str) and value and value != exact_text:
+            return key, value
+    return None
+
+
+def _linebreak_removed_starts(exact_text: str) -> list[int]:
+    """Map each index in Pangram's observed linebreak-stripped representation to raw text.
+
+    Live long-document History evidence on 2026-08-20 showed `start_index` drift
+    equal to the cumulative CR/LF characters in the exact submitted boundary.
+    This mapping is never trusted by itself: callers must also prove the stored
+    window preview at the resulting raw start and, when supplied, the window word
+    count across the complete raw slice.
+    """
+    return [index for index, char in enumerate(exact_text) if char not in "\r\n"]
+
+
+def _raw_boundary_from_linebreak_removed(starts: list[int], exact_text: str, index: int) -> int | None:
+    if index < 0 or index > len(starts):
+        return None
+    if index == len(starts):
+        return len(exact_text)
+    return starts[index]
+
+
+def _bind_indexed_window(mapping: Mapping[str, Any], exact_text: str) -> BoundSpan | None:
+    """Bind a Pangram window's complete raw span through its validated indices.
+
+    Pangram's current long-document `overall.windows[].text` may be a short
+    preview even when start/end and word_count describe a much larger window.
+    We therefore bind the complete window through start/end only when the live
+    transport normalization is independently proved by the preview and word
+    count. No approximate coordinate conversion is accepted.
+    """
+    selected = _selected_text(mapping, exact_text)
+    start = _safe_int(mapping.get("start_index"))
+    end = _safe_int(mapping.get("end_index"))
+    if selected is None or start is None or end is None or start < 0 or end <= start:
+        return None
+
+    text_key, preview = selected
+    starts = _linebreak_removed_starts(exact_text)
+    raw_start = _raw_boundary_from_linebreak_removed(starts, exact_text, start)
+    raw_end = _raw_boundary_from_linebreak_removed(starts, exact_text, end)
+    if raw_start is None or raw_end is None or raw_end <= raw_start:
+        return None
+
+    raw_window = exact_text[raw_start:raw_end]
+    if not raw_window.startswith(preview):
+        return None
+
+    expected_words = _safe_int(mapping.get("word_count"))
+    if expected_words is not None and len(raw_window.split()) != expected_words:
+        return None
+
+    return BoundSpan(
+        start=raw_start,
+        end=raw_end,
+        text_key=text_key,
+        text=raw_window,
+        binding_mode="pangram_linebreak_removed_indices+preview+word_count",
+    )
+
+
 def _unique_substring_span(exact_text: str, candidate: str) -> tuple[int, int] | None:
     if not candidate or candidate == exact_text:
         return None
@@ -115,32 +183,44 @@ def _unique_substring_span(exact_text: str, candidate: str) -> tuple[int, int] |
 
 
 def _bound_span(mapping: Mapping[str, Any], exact_text: str) -> BoundSpan | None:
-    selected_key = ""
-    selected_text = ""
-    for key in _TEXT_KEYS:
-        value = mapping.get(key)
-        if isinstance(value, str) and value and value != exact_text:
-            selected_key = key
-            selected_text = value
-            break
-    if not selected_text:
-        return None
+    # Current long-document windows get the stronger complete-window binding
+    # first. This handles short stored previews without pretending the preview is
+    # the whole detector window.
+    indexed = _bind_indexed_window(mapping, exact_text)
+    if indexed is not None:
+        return indexed
 
-    # Prefer explicit character offsets only when the associated text proves
-    # exactly what those offsets mean. Unknown token/word offsets are never
-    # guessed into character coordinates.
+    selected = _selected_text(mapping, exact_text)
+    if selected is None:
+        return None
+    selected_key, selected_text = selected
+
+    # For other layouts, prefer explicit raw character offsets only when the
+    # associated text proves exactly what those offsets mean.
     for start_key, end_key in _OFFSET_PAIRS:
         start = _safe_int(mapping.get(start_key))
         end = _safe_int(mapping.get(end_key))
         if start is None or end is None or start < 0 or end <= start or end > len(exact_text):
             continue
         if exact_text[start:end] == selected_text:
-            return BoundSpan(start=start, end=end, text_key=selected_key, text=selected_text)
+            return BoundSpan(
+                start=start,
+                end=end,
+                text_key=selected_key,
+                text=selected_text,
+                binding_mode=f"explicit_raw_offsets:{start_key}/{end_key}",
+            )
 
     unique = _unique_substring_span(exact_text, selected_text)
     if unique is None:
         return None
-    return BoundSpan(start=unique[0], end=unique[1], text_key=selected_key, text=selected_text)
+    return BoundSpan(
+        start=unique[0],
+        end=unique[1],
+        text_key=selected_key,
+        text=selected_text,
+        binding_mode="unique_exact_substring",
+    )
 
 
 def _word_bounds(exact_text: str, start: int, end: int) -> tuple[int, int]:
@@ -209,7 +289,7 @@ def localize_history_record(
                     len(unresolved) < max_unresolved_shapes
                     and any(_LOCALIZATION_KEY_RE.search(str(key)) for key in mapping.keys())
                 ):
-                    unresolved.append(_shape(mapping, full_path, "no_unique_exact_text_binding"))
+                    unresolved.append(_shape(mapping, full_path, "no_exact_transport_binding"))
                 continue
 
             word_start, word_end = _word_bounds(exact_text, span.start, span.end)
@@ -219,6 +299,7 @@ def localize_history_record(
                 "field_path": list(full_path),
                 "root": ".".join(root_path),
                 "text_field": span.text_key,
+                "binding_mode": span.binding_mode,
                 "scalar_metadata": _scalar_metadata(mapping),
             }
             existing = dedup.get(identity)
@@ -242,7 +323,7 @@ def localize_history_record(
         key=lambda item: (int(item["char_start_0"]), int(item["char_end_0_exclusive"])),
     )
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "status": "localized" if spans else "no_bound_spans",
         "purpose": "stored_history_localization_only_not_document_score_authority",
         "authorized_text_sha256": record.input_sha256,
@@ -253,6 +334,11 @@ def localize_history_record(
         "localized_span_count": len(spans),
         "spans": spans,
         "unresolved_candidate_shapes": unresolved,
+        "transport_index_note": (
+            "Current Pangram long-document start_index/end_index values are accepted only when a linebreak-removed "
+            "index map reproduces the stored preview at the exact raw start and the complete raw slice reproduces "
+            "the stored window word_count."
+        ),
         "privacy_note": (
             "No submitted text, localized span text, UUID, private report URL, cookies, browser storage, "
             "headers, or credentials are persisted. Offsets are 0-based and end-exclusive."

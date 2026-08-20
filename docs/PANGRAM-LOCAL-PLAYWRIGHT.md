@@ -88,11 +88,43 @@ pangram-local localize \
   --expect-sha part2.txt=<sha256>
 ```
 
-`localize` has **no detector-submission path**. It opens authenticated Pangram History, exact-binds the stored record to each authorized input, then inspects structured result objects such as `response.overall` and `response.in_page`. Candidate window/span text is used only in memory to prove exact character positions in the authorized input.
+`localize` has **no detector-submission path**. It opens authenticated Pangram History, exact-binds the stored record to each authorized input, then inspects structured result objects such as `response.overall` and `response.in_page`.
 
-The persisted `localization.json` contains 0-based/end-exclusive character and word offsets, a SHA-256 for each bound span, source field paths, and Pangram scalar metadata such as classification/confidence/score fields when present. It does **not** persist the submitted text, localized span text, History UUID, private report URL, cookies, storage, headers, or credentials.
+### Long-document window coordinates
 
-A page/window result is localization evidence only. `response.overall` remains the whole-document score authority; `response.in_page` must never be promoted into a document-level fraction merely because it contains stronger local scores. If Pangram's live schema contains no exact-bindable windows/spans, `localize` returns `no_bound_spans` plus privacy-safe key/length shapes so the schema can be adapted without guessing or spending another detector call.
+Live Romance History evidence on 2026-08-20 exposed an important transport detail: `response.overall.windows[].text` can be only a short preview even when `start_index`, `end_index`, and `word_count` describe a much larger detector window. The first localizer therefore localized some previews correctly but could not yet claim the complete windows.
+
+The repaired localizer accepts complete Pangram window coordinates only when **all** of these checks pass:
+
+1. the stored History record exact-binds to the authorized full input;
+2. mapping Pangram's start/end indices through the exact input with CR/LF characters removed yields a raw source slice;
+3. that raw slice begins with Pangram's stored window preview;
+4. the raw slice's whitespace-delimited word count equals Pangram's stored `word_count`.
+
+This validation is what converts Pangram's linebreak-stripped transport coordinates back into exact raw reader-visible character offsets. Merely observing growing offset drift is not enough. If any check fails, the complete window is not claimed; the parser falls back only to a separately provable exact preview/span or records a privacy-safe unresolved shape.
+
+The persisted schema-v2 `localization.json` contains 0-based/end-exclusive character and word offsets, a SHA-256 for each exact bound span/window, source field paths, binding mode, and Pangram scalar metadata such as label/confidence/score fields. It does **not** persist the submitted text, localized span text, History UUID, private report URL, cookies, storage, headers, or credentials.
+
+A page/window result is localization evidence only. `response.overall` remains the whole-document score authority; `response.in_page` must never be promoted into a document-level fraction merely because it contains stronger local scores.
+
+### Direct lookup of an already-known stored report
+
+If a durable prior receipt already contains the exact stored Pangram History route, a single-input localization may skip History-list ordering and inspect that report directly:
+
+```bash
+pangram-local localize \
+  --input path/to/text.txt \
+  --expect-sha text.txt=<sha256> \
+  --report-url 'https://www.pangram.com/history/<uuid>'
+```
+
+`--report-url` is accepted only for one input, is validated as a Pangram History route, is used read-only, and is never persisted in localization or failure evidence. The exact stored-document identity gate still applies; knowing a route never authorizes a mismatched result.
+
+### Failure durability
+
+A localization failure writes and Git-syncs `localization-failure.json` containing only the exact input hash/word count, failure stage/type, candidate counts, and whether an exact stored record had been observed. It excludes raw exception text and private report identifiers. Multi-input localization attempts continue to the remaining inputs after one failure and return a non-zero process status only after durable failure evidence has been written.
+
+If Pangram's live schema contains no exact-bindable windows/spans, `localize` returns `no_bound_spans` plus privacy-safe key/length shapes so the schema can be adapted without guessing or spending another detector call.
 
 ## Status and smoke checks
 
