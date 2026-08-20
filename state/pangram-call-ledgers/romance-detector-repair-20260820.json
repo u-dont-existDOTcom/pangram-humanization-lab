@@ -1,0 +1,47 @@
+{
+  "audit_id": "romance-detector-repair-20260820",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "part2\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 1.65,
+      "estimated_credits": 33,
+      "events": [
+        {
+          "estimated_credits": 11,
+          "measurement_key": "romance-detector-repair-20260820.part2.pass1",
+          "recorded_at_utc": "2026-08-20T00:00:00+00:00",
+          "text_sha256": "30f61fb0c490ec1275f3c39c834a38a956041865b63e5592c270d51cc22d5498",
+          "type": "external_paid_measurement_imported",
+          "transport": "local_playwright",
+          "word_count": 10260
+        },
+        {
+          "estimated_credits": 11,
+          "measurement_key": "romance-detector-repair-20260820.part2.pass2",
+          "recorded_at_utc": "2026-08-20T00:00:00+00:00",
+          "text_sha256": "679daa77fb92ea71bb85716e6ece671e093b49412b149e2f5129079a204d24d2",
+          "type": "external_paid_measurement_imported",
+          "transport": "direct_api",
+          "word_count": 10149
+        },
+        {
+          "estimated_credits": 11,
+          "measurement_key": "romance-detector-repair-20260820.part2.pass3",
+          "recorded_at_utc": "2026-08-20T00:00:00+00:00",
+          "text_sha256": "c6ef42419a3db2e82b1ff4f9370fc85bca4fa8c061c61dd6a1b5d28171d9908c",
+          "type": "external_paid_measurement_imported",
+          "transport": "local_playwright",
+          "word_count": 10043
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 3,
+      "pending_resumes": 0,
+      "section_id": "part2",
+      "version": "4.0",
+      "provenance_note": "The fixed-batch paid_api_calls counter is intentionally seeded with all three already-paid Part-2 measurements across transports so changing transport cannot reset the six-call repair cap. Credit/cost values are estimates using the repository's ceil(words/1000) convention."
+    }
+  }
+}
