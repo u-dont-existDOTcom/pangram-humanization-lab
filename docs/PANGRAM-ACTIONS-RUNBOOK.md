@@ -124,6 +124,20 @@ A green workflow is necessary but not sufficient. Verify the committed detector 
 
 A result from another detector version does not certify Pangram 4 work.
 
+## Shared Pangram completion invariant
+
+Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies.
+
+The exact intended delivery boundary must satisfy the requested editorial/fidelity gates and the required detector gate. Under Joel's standing 100% Pangram-4 gate, require `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `fraction_human == 1.0`, `fraction_ai == 0.0`, and `fraction_ai_assisted == 0.0`.
+
+A partial result such as 93% Human is progress only; it is not a pass. Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
+
+The normal editorial terminal states are either a fully passing exact boundary or an **unresolved authorial handoff** when no further faithful coherent repair is known. Hitting the paid-call limit is an **operational suspension**, not completion: stop before a seventh paid POST and obtain the narrow owner input needed.
+
+Any unresolved authorial handoff or operational suspension must record `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempted faithful approaches; protected claims/functions; and paid-call state.
+
+A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
+
 ## Acceptance and authorial handoff
 
 Detector output is evidence, not editorial authority. Coherence, meaning, source/owner fidelity, article function, and protected rhetorical functions remain blocking even when a detector says Human.

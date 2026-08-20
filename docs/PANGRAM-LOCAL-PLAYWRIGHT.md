@@ -76,6 +76,24 @@ Recovery opens Pangram's authenticated application History, reads the SPA's `his
 
 The accepted transport-only text normalizations are deliberately narrow: exact UTF-8, line-ending normalization, terminal-newline normalization, and outer-whitespace normalization with identical word count. Fuzzy similarity, interior-whitespace collapse, and near word counts do not clear ambiguity.
 
+## Read-only localization of existing results
+
+When an existing long-document result has only aggregate Human/AI fractions, use the stored History record before buying diagnostic detector calls:
+
+```bash
+pangram-local localize \
+  --input path/to/part1.txt \
+  --expect-sha part1.txt=<sha256> \
+  --input path/to/part2.txt \
+  --expect-sha part2.txt=<sha256>
+```
+
+`localize` has **no detector-submission path**. It opens authenticated Pangram History, exact-binds the stored record to each authorized input, then inspects structured result objects such as `response.overall` and `response.in_page`. Candidate window/span text is used only in memory to prove exact character positions in the authorized input.
+
+The persisted `localization.json` contains 0-based/end-exclusive character and word offsets, a SHA-256 for each bound span, source field paths, and Pangram scalar metadata such as classification/confidence/score fields when present. It does **not** persist the submitted text, localized span text, History UUID, private report URL, cookies, storage, headers, or credentials.
+
+A page/window result is localization evidence only. `response.overall` remains the whole-document score authority; `response.in_page` must never be promoted into a document-level fraction merely because it contains stronger local scores. If Pangram's live schema contains no exact-bindable windows/spans, `localize` returns `no_bound_spans` plus privacy-safe key/length shapes so the schema can be adapted without guessing or spending another detector call.
+
 ## Status and smoke checks
 
 ```bash
@@ -101,4 +119,4 @@ The first clean-main integration run exposed only two obsolete Browserbase tests
 - Never use the owner's ordinary Brave/Chrome profile by default.
 - Never place the persistent auth profile inside a Git repository.
 - Diagnostics omit cookies, browser storage values, auth headers, submitted text, and private response bodies.
-- History recovery may inspect stored records in memory to prove exact identity; private record text and UUID lists are not committed as diagnostics.
+- History recovery/localization may inspect stored records in memory to prove exact identity and exact span offsets; private record text and UUID lists are not committed as diagnostics.
