@@ -30,7 +30,7 @@ Do not send Joel through manual chains of one-off detector variants when the lab
 
 ## Humanization execution and completion gate
 
-Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, detector validation is part of the task definition rather than an optional postscript.
+Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies. Detector validation is part of the task definition rather than an optional postscript.
 
 Before rewriting, identify protected rhetorical functions in the source: reader agency and permission, trauma-informed invitation, non-coercive choice, pacing around sensitive material, exact claim/certainty, severe-claim agency, lived memories, humor/idiolect, links/media, chronology, causality, and other owner-intended functions. Do not classify a function as expendable merely because its current wording resembles a known AI pattern.
 
@@ -55,7 +55,7 @@ Section/window measurements are diagnostic unless that unit is the complete requ
 
 ### Reader-visible representation gate
 
-Certification must use the reader-visible text surface Pangram will actually evaluate. Raw Markdown is diagnostic only when the published reader sees a different surface. Preserve the source representation separately, but hash and certify the exact visible boundary actually being measured.
+Certification must use the reader-visible text surface Pangram will actually evaluate. For Markdown article work, **raw Markdown is diagnostic only** when the reader sees a different surface: strip source-only Markdown syntax and link destinations as appropriate and certify the resulting **visible plaintext**. Preserve the source representation separately, but hash and certify the exact visible boundary actually being measured.
 
 A Human headline or partial score such as 93% or 99% Human is progress only when the task requires 100%; it is not a passing result under that gate.
 
