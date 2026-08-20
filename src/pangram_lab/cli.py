@@ -28,6 +28,7 @@ def parser():
     d.add_argument("--expect-sha",required=True,help="Required exact SHA-256 gate for the UTF-8 detector input.")
     d.add_argument("--measurement-key",default="base",help="Stable cache/checkpoint identity for this exact measurement.")
     d.add_argument("--base-url",default=os.environ.get("PANGRAM_BASE_URL",DEFAULT_PANGRAM_BASE_URL),help="Pangram API base URL; defaults to PANGRAM_BASE_URL or the standard async endpoint.")
+    d.add_argument("--allow-public-cache",action="store_true",help="Required acknowledgement that the current cache stores the exact input text and may be pushed to this public repository.")
     d.add_argument("--no-github",action="store_true")
     i=sp.add_parser("import-legacy"); i.add_argument("paths",nargs="*")
     g=sp.add_parser("github-ensure"); g.add_argument("--repo-name",default="pangram-humanization-lab")
@@ -73,6 +74,11 @@ def detect_file(args, rt: Path) -> dict:
     measurement_key=str(args.measurement_key or "").strip()
     if not measurement_key:
         raise RuntimeError("--measurement-key must not be empty")
+    if not bool(getattr(args,"allow_public_cache",False)):
+        raise RuntimeError(
+            "detect-file uses the repository PangramCache, which stores the exact input text. "
+            "This repository is public; pass --allow-public-cache only when the detector input is already public-safe."
+        )
 
     git=GitSync(rt,require_remote=not args.no_github)
     if not args.no_github:
