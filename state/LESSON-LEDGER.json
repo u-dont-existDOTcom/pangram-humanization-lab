@@ -637,6 +637,17 @@
       "source_path": "state/IDIOLECT-LEGACY-TRIAGE-RESULT-2026-08-18.json",
       "source_ref": "task/idiolect-triage-result-grouping-20260818",
       "source_sha256": "7133dc471766b898ba23ed43b69834017c0c8b28386811d12ee35e2b19183bd9"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The owner-final `If you're already in it` sequence preserves exact article-specific detector evidence showing that red-span migration followed semantically motivated repairs and that wording inside a prior AI-localized window could survive unchanged in an owner-reported fully Human final boundary.",
+      "id": "L-855146deeb-01",
+      "promoted_to": [],
+      "reason": "The exact owner-final prose and detector sequence are Romance-specific evidence. The transferable anti-phrase-superstition, realization/boundary, owner-authority, and semantic-repair principles are already represented in the current working lessons and lesson index, so this source should remain article-specific rather than create a duplicate promoted rule.",
+      "recorded_at_utc": "2026-08-20T17:23:20.952628+00:00",
+      "source_path": "state/ROMANCE-IF-ALREADY-IN-IT-DETECTOR-REPAIR-2026-08-16.md",
+      "source_ref": "d9a18b82b241963e7dc13d03956d4cd5b32b4208",
+      "source_sha256": "855146deeb70e2cf4ec0eb2ecb54b20f77fbd6579576b083e191ea41523b9fc3"
     }
   ],
   "schema_version": 1
