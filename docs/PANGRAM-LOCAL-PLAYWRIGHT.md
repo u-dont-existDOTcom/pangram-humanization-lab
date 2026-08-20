@@ -94,16 +94,18 @@ pangram-local localize \
 
 Live Romance History evidence on 2026-08-20 exposed an important transport detail: `response.overall.windows[].text` can be only a short preview even when `start_index`, `end_index`, and `word_count` describe a much larger detector window. The first localizer therefore localized some previews correctly but could not yet claim the complete windows.
 
-The repaired localizer accepts complete Pangram window coordinates only when **all** of these checks pass:
+The current full-window proof is **collection-wide**, not a one-window heuristic. Complete `response.overall.windows` coordinates are accepted only when all of these checks pass together:
 
 1. the stored History record exact-binds to the authorized full input;
-2. mapping Pangram's start/end indices through the exact input with CR/LF characters removed yields a raw source slice;
-3. that raw slice begins with Pangram's stored window preview;
-4. the raw slice's whitespace-delimited word count equals Pangram's stored `word_count`.
+2. the window collection begins at Pangram index `0`, ends at the complete linebreak-stripped input length, and each window's `end_index` equals the next window's `start_index`;
+3. mapping every window start/end through the exact input with CR/LF characters removed yields monotonic raw source boundaries;
+4. **every** stored window preview begins exactly at its mapped raw start.
 
-This validation is what converts Pangram's linebreak-stripped transport coordinates back into exact raw reader-visible character offsets. Merely observing growing offset drift is not enough. If any check fails, the complete window is not claimed; the parser falls back only to a separately provable exact preview/span or records a privacy-safe unresolved shape.
+When all previews validate the same coordinate transform across the complete contiguous collection, the localizer can recover full raw window spans even when a preview is non-unique elsewhere in the article. Pangram's stored `word_count` is preserved as detector metadata but is **not** used as a Python-whitespace-tokenization equality gate; live evidence showed those two word-count conventions are not identical.
 
-The persisted schema-v2 `localization.json` contains 0-based/end-exclusive character and word offsets, a SHA-256 for each exact bound span/window, source field paths, binding mode, and Pangram scalar metadata such as label/confidence/score fields. It does **not** persist the submitted text, localized span text, History UUID, private report URL, cookies, storage, headers, or credentials.
+If the collection-wide proof fails, the complete-window claim fails closed. The parser falls back only to separately provable exact raw offsets or unique exact preview/span matches and records privacy-safe unresolved shapes for anything else.
+
+The persisted schema-v3 `localization.json` contains 0-based/end-exclusive character and word offsets, a SHA-256 for each exact bound span/window, source field paths, binding mode, the count of collection-validated full overall windows, and Pangram scalar metadata such as label/confidence/score fields. It does **not** persist the submitted text, localized span text, History UUID, private report URL, cookies, storage, headers, or credentials.
 
 A page/window result is localization evidence only. `response.overall` remains the whole-document score authority; `response.in_page` must never be promoted into a document-level fraction merely because it contains stronger local scores.
 
