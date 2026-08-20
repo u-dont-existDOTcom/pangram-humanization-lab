@@ -1,68 +1,81 @@
-# Pangram access through GitHub Actions
+# Pangram access through GitHub Actions — legacy/optional transport
 
-This is the operational authority for deciding whether Pangram access exists in this repository.
+## Current status
 
-The repository secret `PANGRAM_API_KEY` is not a value a worker should retrieve. It is a credential that trusted GitHub Actions code may receive through a step-level environment variable. A missing local environment variable, a rejected local key, or a signed-out Pangram dashboard does **not** establish that detector access is unavailable.
+This document no longer decides whether Pangram access exists. Current transport authority is `../state/CURRENT-STATE.md`.
 
-The currently proven repository-secret route lives on the `automation/pangram-fixed-batch` branch. Its fixed-batch workflow has successfully verified the secret and run Pangram 4 batches. Until an equivalent route is promoted to `main` and tested, use that branch as the implementation base.
+As of 2026-08-20 the supported routing order is:
 
-## Blocking access-resolution gate
+1. use the owner's self-hosted Pangram API path for normal programmatic detector work;
+2. use the local headed Brave/Chromium + Playwright transport (`pangram-local`) when authenticated History recovery, visual evidence, or GUI resilience is useful;
+3. use GitHub-hosted Actions only when a task specifically requires hosted detector execution and the current endpoint/origin policy has been verified.
 
-Before calling any candidate a `pre-Pangram candidate`:
+A 2026-08-19 live compatibility test showed that a valid `PANGRAM_API_KEY` could succeed locally and authenticate against another documented Pangram endpoint while `POST https://text.external-api.pangram.com/task` returned HTTP 401 from GitHub-hosted runners before any task ID was issued. That issue is tracked in GitHub issue #95.
 
-1. Freeze the exact candidate and exact boundary to be measured. For a paid humanization audit, assign a stable `audit_id` and `section_id` before the first submission.
-2. Record the artifact revision, boundary label, and UTF-8 SHA-256 of the literal submitted text. Do not trim, rewrap, normalize whitespace, or change newline style before hashing.
-3. Check the direct/local API route. If `PANGRAM_API_KEY` is missing or rejected, continue to the repository-secret Actions route. A dashboard login is irrelevant to this API route.
-4. Inspect current repository state, call ledger, cache/pending state, and active Actions runs. Do not launch a duplicate paid batch or reset a section budget by changing workflow/batch names.
-5. Use the repository-secret Actions route described below.
-6. Only if both routes are unusable may the candidate be labeled `pre-Pangram candidate`. Record the exact blocker: repository permission, Actions disabled, secret check or authentication failure, exhausted credits, transport ambiguity, workflow failure, or another concrete cause.
+Therefore:
+
+- a failed or unavailable GitHub-hosted Actions call does **not** establish that Pangram is unavailable;
+- do not route automatically from a working self-hosted API or local GUI path into Actions;
+- do not retry paid work merely to test whether the hosted-runner origin problem still exists;
+- keep this runbook for the fixed-batch evidence/accounting machinery and for future tasks that intentionally choose the Actions transport.
+
+The repository secret `PANGRAM_API_KEY` is never a value a worker should retrieve, reveal, print, download, or commit. Trusted GitHub Actions code may receive it only through a narrowly scoped environment variable.
+
+## Current access-resolution gate
+
+Before calling a candidate unmeasured or detector-blocked:
+
+1. Freeze the exact candidate and exact reader-visible boundary to be measured. Record its UTF-8 SHA-256 before any paid action.
+2. Check current content-addressed cache, task/checkpoint state, GUI submission reservations, authenticated History recovery state, and the relevant call ledger. Never repeat already-paid or ambiguous work automatically.
+3. Use the current self-hosted API route when a programmatic result is sufficient.
+4. If authenticated GUI/History inspection or visual evidence is needed, use `pangram-local` and `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`.
+5. Only when a task specifically calls for GitHub-hosted execution should this Actions route be considered. Before doing so, verify that issue #95's hosted-origin/API compatibility problem has been resolved or that the chosen endpoint is known to work from the hosted runner.
+6. If all currently supported routes are genuinely unusable, record the exact blocker. Do not collapse distinct states such as credentials unavailable, exhausted credits, transport ambiguity, origin-specific 401, workflow permission failure, or missing GUI authentication into a generic “Pangram unavailable.”
 
 An unmeasured candidate is not detector-complete.
 
 ## Reader-visible representation gate
 
-Before freezing the certification boundary, derive the **reader-visible** text Pangram will actually evaluate. For Markdown article work, **raw Markdown is diagnostic only**: strip Markdown syntax, link destinations, and other source-only markup and certify the resulting **visible plaintext**. For Substack, use the rendered reader-visible text, including any embed/card text Pangram actually surfaces. Preserve the source representation separately when useful for debugging, but a pass on raw source markup cannot certify a different rendered boundary.
+Before freezing a certification boundary, derive the **reader-visible** text Pangram will actually evaluate. For Markdown article work, raw Markdown is diagnostic only: strip source-only markup and link destinations and certify the resulting visible plaintext. For Substack, use the rendered reader-visible text, including any embed/card text Pangram actually surfaces.
 
-Hash and record the exact reader-visible certification text after this representation step. If a GUI/extension result is being reproduced, first match its visible word count/text extraction as closely as possible, then compare API results. Do not interpret a raw-Markdown/API pass versus rendered-GUI failure as detector disagreement until the submitted representations have been made equivalent.
+Hash and record the exact reader-visible certification text after this representation step. A result applies only to the exact text hash, representation, boundary, model, and detector version that were tested.
 
-## Prepare a task-specific fixed batch
+## When the Actions route is deliberately used
 
-Start from the current head of `automation/pangram-fixed-batch`. Before changing anything, check current branches, workflow runs, result state, cache state, and the section's persisted call ledger for overlapping Pangram work.
+The historical fixed-batch implementation lives on `automation/pangram-fixed-batch`. Before changing or dispatching it:
 
-For new audited work use:
+- inspect current branch/workflow/result/cache/call-ledger state;
+- verify that the current hosted endpoint can actually authenticate from GitHub's runner origin;
+- use a unique `experiment_id`;
+- use one stable `audit_id` for the audit session;
+- use a stable `section_id` for each independently measured boundary;
+- use stable variant IDs and unique spec/result paths;
+- reuse the shared audited fixed-batch runner rather than creating another paid workflow;
+- ensure no overlapping workflow can race on the same paid budget or evidence state.
 
-- a unique `experiment_id`;
-- one stable `audit_id` for the audit session;
-- a stable `section_id` for each independently tested boundary;
-- stable variant IDs;
-- a unique spec path and result path; and
-- the shared audited fixed-batch runner rather than a new paid workflow whenever possible.
+The paid budget identity is `audit_id + section_id + detector model + expected version`. Changing batch, branch, workflow, chat, or retry labels does not reset the count.
 
-The budget key is `audit_id + section_id + detector model + expected version`. Moving the same section into a different batch, branch, workflow, chat, or retry does not reset its count. A full-article acceptance test is a separate boundary with its own `section_id`.
+Historical task-specific workflows must not wake up on shared code changes. Code-only CI is non-billable; paid detector execution requires an intentional experiment input or explicit dispatch. Never include cache, ledger, inbox, handoff, or result paths as triggers for paid work.
 
-Historical task-specific workflows must not be allowed to wake up on shared code changes. Code-only CI is non-billable; paid detector execution must require an intentional experiment input or explicit dispatch. Never include cache, call-ledger, inbox, handoff, or result paths as paid-workflow triggers.
+Do not run secret-bearing workflow code from a fork pull request or unreviewed third-party code.
 
-Do not run secret-bearing workflow code from a fork pull request or from unreviewed third-party code.
+## Fixed-batch workflow contract
 
-## Workflow contract
+The proven fixed-batch design separates non-billable verification from paid execution:
 
-The proven `.github/workflows/pangram-fixed-batch.yml` separates regression verification from paid execution:
+- a read-only test job runs fixed-batch/Pangram/cache/GitSync/call-accounting regressions;
+- the detector job receives `contents: write` only when intentional detector execution is required;
+- checkout uses full history when evidence commits require it;
+- `PANGRAM_API_KEY` is supplied only through a step-level secret environment variable for the narrow auth/detector steps;
+- no workflow/job-level secret environment, shell tracing, environment dumps, or artifact upload may expose the credential;
+- audited work runs through the shared fixed-batch runner;
+- evidence/checkpoint commits cannot recursively trigger paid detector work.
 
-- a read-only **test** job runs the fixed-batch/Pangram/cache/GitSync/call-accounting regression suite;
-- the **detector** job has `contents: write` only when intentional detector execution is required;
-- checkout uses `fetch-depth: 0`;
-- Python 3.11 and `.[test]` are installed;
-- a checkpoint Git identity is configured before detector execution;
-- `PANGRAM_API_KEY: ${{ secrets.PANGRAM_API_KEY }}` is supplied only through step-level `env` blocks for the non-billable secret/authentication check and detector run—never at workflow or job scope, and never in a command, file, output, or artifact;
-- a separate non-empty-secret check such as `test -n "$PANGRAM_API_KEY"` never echoes the value;
-- audited work runs through `python scripts/run_fixed_batch.py SPEC --out RESULT`; and
-- evidence/checkpoint commits cannot recursively trigger paid detector calls.
-
-Keep the workflow narrow. Do not add debugging that enumerates the environment or shell tracing around the secret-bearing step. A code-only push must not spend Pangram.
+The existence of this workflow is not evidence that the current Pangram async endpoint accepts GitHub-hosted runner traffic.
 
 ## Spec contract
 
-The spec file is JSON. New paid humanization audits use fixed-batch v1 plus audit/section identity:
+Historical/new fixed-batch specs use stable experiment/audit/section identity. Example:
 
 ```json
 {
@@ -79,9 +92,7 @@ The spec file is JSON. New paid humanization audits use fixed-batch v1 plus audi
 }
 ```
 
-If `audit_id` is supplied, every variant must have a non-empty `section_id`. Legacy historical specs without audit identity remain readable, but new humanization audits must use the accounted path.
-
-The runner accepts at most eight variants unless that batch-size limit is consciously changed and reviewed. The paid section cap is stricter: **at most six new paid Pangram POSTs per section per audit**, accumulated across batches. The `text` field is the literal detector input. Do not silently substitute a paragraph for a document, merge boundaries, remove a heading, normalize whitespace, or change link/native-marker text after the reader-visible certification representation has been frozen.
+The `text` field is the literal detector input. Do not silently substitute another boundary, normalize whitespace, remove a heading, or change visible link/native-object text after the certification representation has been frozen.
 
 ## Credential, billing, and call-budget safety
 
@@ -89,76 +100,46 @@ Never:
 
 - retrieve, reveal, print, paste, download, or commit the repository secret;
 - ask Joel or another worker to paste the secret into chat or a file;
-- use `set -x`, `printenv`, secret-bearing debug dumps, or artifact uploads that could expose the environment;
+- use `set -x`, `printenv`, secret-bearing debug dumps, or artifact uploads around the credential;
 - execute the secret-bearing workflow from a fork or untrusted branch code;
 - automatically retry an ambiguous POST;
-- start overlapping fixed-batch workflows that can race on results, cache, call ledgers, or Git pushes;
-- raise the six-call section cap; or
-- invent a new `audit_id` solely to buy more attempts.
+- start overlapping paid workflows that can race on results, cache, call ledgers, or Git pushes;
+- invent a new audit identity merely to buy more detector attempts.
 
-Count toward the six paid calls:
+A paid-call reservation/checkpoint must become durable **before** the irreversible POST/click whenever the selected transport supports that model. If a transport failure occurs after the action may have reached Pangram, treat it as potentially paid and recover before repeat.
 
-- every new detector POST;
-- an ambiguous POST that may have reached Pangram;
-- a corrective paid POST after a preserved wrong-version task.
-
-Do not count:
-
-- exact content-addressed cache hits;
-- authentication probes;
-- polling GETs;
-- resuming an already-paid pending task.
-
-The tracked client reserves and Git-syncs the paid call **before** the POST. This makes the section budget interruption-safe. Before a seventh paid POST for the same budget key, the runner fails closed and writes `state/handoffs/pangram/<audit_id>-<section_id>.json`; the worker then asks Joel for narrow help.
-
-The runner records exact `paid_api_calls`, cache hits, pending resumes, submitted word counts, estimated credits/cost, and calls/estimated credits to the first Human result. When Pangram does not provide authoritative billing usage, credit figures must remain explicitly labeled estimates.
-
-The fixed-batch runner performs a non-billable authentication probe first. It uses content-addressed caching and recorded task IDs to resume safely. Let that logic control reuse and recovery; do not improvise retries that could spend credits twice.
+Exact cache hits and resumption/recovery of an already-paid task are not new paid submissions.
 
 ## Validate the measurement, not merely the workflow
 
-A green workflow is necessary but not sufficient. Inspect the committed result JSON and verify:
+A green workflow is necessary but not sufficient. Verify the committed detector result against the intended boundary:
 
-- its `experiment_id` and `audit_id` match the intended audit;
-- every measured row has the intended `section_id`;
-- the stored `text` is the exact submitted **reader-visible** text intended for certification;
-- `text_sha256` matches the independently recorded UTF-8 SHA-256;
-- `detector.stage` is `STAGE_SUCCESS`;
-- `detector.version` is `4.0`;
-- for a requested Joel humanization completion, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`;
-- `call_accounting` reports the section's exact paid-call count and estimated credit/cost fields;
-- the result belongs to the intended document/paragraph boundary and representation; and
-- the result path, result commit, workflow run, workflow head SHA, paid-call count, and available credit/cost accounting are recorded in the editorial report or experiment note.
+- exact audit/section/variant identity;
+- exact stored reader-visible text and SHA-256;
+- Pangram terminal stage and detector version;
+- explicit structured result fractions rather than guessed probability semantics;
+- exact paid-call accounting;
+- result path/commit and transport provenance;
+- correct document/section boundary and representation.
 
-The current runner also registers completed result metadata for semantic lesson review in `state/LESSON-INBOX.json` without copying the tested passage into that queue.
-
-Pangram 4 is requested explicitly by the repository client. A result from another detector version does not satisfy this gate.
+A result from another detector version does not certify Pangram 4 work.
 
 ## Acceptance and authorial handoff
 
-Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies. A successful detector request or `Human` classification is not enough. The exact intended delivery boundary must satisfy `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`. A partial result such as 93% or 99% Human is progress only; it is not a pass.
+Detector output is evidence, not editorial authority. Coherence, meaning, source/owner fidelity, article function, and protected rhetorical functions remain blocking even when a detector says Human.
 
-Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
+When a task explicitly requires a Pangram threshold, apply that threshold only to the exact intended delivery boundary and exact tested representation. Section/window measurements do not aggregate automatically into a whole-article pass.
 
-The normal editorial terminal states are: (1) the exact intended delivery boundary satisfies the 100% detector gate and all editorial/fidelity gates; or (2) the worker genuinely knows no further faithful and coherent repair and makes an unresolved authorial handoff. The six-paid-call section limit adds a mandatory operational suspension: even if another faithful repair may exist, stop before the seventh paid POST and request narrow help from Joel. This suspension is not completion or a detector pass.
+If the paid-call cap or another operational safety gate stops further testing, record the exact failing boundary/hash, detector result, attempts, call count, preserved editorial constraints, and the narrow authorial input needed. Do not call an unresolved state complete.
 
-Any unresolved handoff or paid-cap suspension must record:
+## Staleness rule
 
-- the exact failing span and measured boundary;
-- exact `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; and result commit;
-- the faithful approaches already attempted and their measured results;
-- paid API calls used for that section and available estimated/reported credit usage;
-- the claims, memories, tone, rhetorical functions, links, and native objects that cannot be sacrificed; and
-- the narrow question, lived detail, natural wording, or other raw author input needed from Joel.
+Any later change to reader-visible wording, whitespace, newlines, order, paragraph boundaries, headings, link anchors, visible card/embed text, or other certified content invalidates the old result for the changed boundary.
 
-Do not call an unresolved state complete or passing. After materially new authorial guidance, a genuinely new audit may begin with a fresh section budget. Never manufacture a fresh audit merely to bypass the cap. A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
+If the exact text hash, representation, boundary, model, and detector version are unchanged, reuse a valid content-addressed result; age alone does not make it stale.
 
-## Exact-text and staleness rule
+## Reporting route failures
 
-A result applies only to the exact text hash, representation, and boundary that were tested. Any later change to wording, whitespace, newlines, order, paragraph boundaries, headings, link anchors, visible card/embed text, or other reader-visible content makes that result inapplicable to the changed boundary.
+Do not write “Pangram was unavailable” merely because GitHub-hosted Actions failed. Report the route attempted and exact blocker. In particular, preserve `GitHub-hosted async endpoint returned 401 before task creation` as a distinct compatibility state while issue #95 remains unresolved.
 
-If the exact reader-visible text hash, boundary, model, and detector version are unchanged, a valid content-addressed cache hit should be reused; age alone does not make it stale. A successful older workflow run is not evidence for a different candidate or source/render representation.
-
-## How to report unavailable access
-
-Do not write “Pangram was unavailable” without completing the access-resolution gate. Report which route was tried and the exact blocker. If the local route failed but the Actions route succeeded, record the Actions result normally; do not describe the candidate as pre-Pangram.
+For ordinary new detector work, return to `../state/CURRENT-STATE.md`: self-hosted API first, local Playwright GUI when GUI/History evidence is useful.
