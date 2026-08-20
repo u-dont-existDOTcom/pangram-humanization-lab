@@ -1,2 +1,4 @@
 [console_scripts]
 pangram-lab = pangram_lab.cli:main
+pangram-lesson-closeout = pangram_lab.lesson_closeout:main
+pangram-local = pangram_lab.local_cli:main
