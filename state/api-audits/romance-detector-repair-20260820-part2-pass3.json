@@ -15,8 +15,18 @@
   "next_measurement": {
     "measurement_key": "romance-detector-repair-20260820.part2.pass3",
     "text_sha256": "c6ef42419a3db2e82b1ff4f9370fc85bca4fa8c061c61dd6a1b5d28171d9908c",
-    "status": "authorized_pending",
-    "authorized_new_paid_post_number": 3
+    "status": "api_rejected_before_task_creation",
+    "authorized_new_paid_post_number": 3,
+    "api_http_status": 402,
+    "api_error": "Insufficient credits",
+    "task_id": "",
+    "result": null,
+    "ambiguous": false,
+    "billable_task_created": false,
+    "paid_measurement_count_effect": "not_counted_no_task_created",
+    "fallback": "local_playwright_gui_same_exact_text_hash"
   },
-  "part1": "no_new_call_exact_registered_hash_unchanged"
+  "part1": "no_new_call_exact_registered_hash_unchanged",
+  "observed_new_paid_measurements_in_this_audit_section": 2,
+  "note": "The API POST returned HTTP 402 before a task_id was issued. This is a clean pre-task rejection, not an ambiguous detector action and not a completed paid measurement. The exact same pass-3 Part-2 hash may be measured once through the supported local GUI fallback as paid measurement #3."
 }
