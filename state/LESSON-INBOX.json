@@ -2222,6 +2222,29 @@
           "section_id": "smoke"
         }
       ]
+    },
+    {
+      "audit_id": "pangram4-selfhost-route-retest-2026-08-20-a",
+      "created_at_utc": "2026-08-20T23:33:45.051394+00:00",
+      "experiment_id": "pangram4-selfhost-route-retest-2026-08-20-a",
+      "id": "Q-d0c1cd235e8b611b",
+      "sections": [
+        "smoke"
+      ],
+      "source_path": "state/experiments/pangram4-selfhost-route-retest-2026-08-20-a-results.json",
+      "source_ref": "d9adefa9a2f6d91064f2153e46e60ca14b345ef3",
+      "source_sha256": "ed055db95f3822158203162a7cdb9e8556cf1e1ef94d47556ee393e5b4529701",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "SMOKE",
+          "prediction_short": "AI",
+          "section_id": "smoke"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
