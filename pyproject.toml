@@ -11,10 +11,12 @@ dependencies = []
 
 [project.optional-dependencies]
 test = ["pytest>=8"]
+browser = ["playwright>=1.50"]
 
 [project.scripts]
 pangram-lab = "pangram_lab.cli:main"
 pangram-lesson-closeout = "pangram_lab.lesson_closeout:main"
+pangram-local = "pangram_lab.local_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
