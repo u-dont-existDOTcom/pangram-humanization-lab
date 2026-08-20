@@ -33,6 +33,7 @@ _LOCALIZATION_KEY_RE = re.compile(
     r"(?:window|segment|highlight|span|sentence|chunk|start|end|offset|prediction|class|confidence|prob|score|fraction)",
     re.IGNORECASE,
 )
+_COLLECTION_PATH_RE = re.compile(r"(?:window|segment|highlight|span|sentence|chunk)", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -92,6 +93,14 @@ def _safe_int(value: Any) -> int | None:
     if isinstance(value, bool) or not isinstance(value, int):
         return None
     return value
+
+
+def _has_offset_fields(mapping: Mapping[str, Any]) -> bool:
+    return any(start_key in mapping and end_key in mapping for start_key, end_key in _OFFSET_PAIRS)
+
+
+def _is_span_candidate(path: tuple[str, ...], mapping: Mapping[str, Any]) -> bool:
+    return _has_offset_fields(mapping) or any(_COLLECTION_PATH_RE.search(part) for part in path)
 
 
 def _unique_substring_span(exact_text: str, candidate: str) -> tuple[int, int] | None:
@@ -192,6 +201,8 @@ def localize_history_record(
         for relative_path, mapping in _walk(root):
             scanned_objects += 1
             full_path = (*root_path, *relative_path)
+            if not _is_span_candidate(relative_path, mapping):
+                continue
             span = _bound_span(mapping, exact_text)
             if span is None:
                 if (
