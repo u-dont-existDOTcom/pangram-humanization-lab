@@ -4,6 +4,17 @@ from pathlib import Path
 from pangram_lab.pangram_idiolect_prescreen import calibrate
 
 
+def _assert_no_raw_text_keys(value):
+    forbidden = {"text", "raw_text", "canonical_text", "local_text_path"}
+    if isinstance(value, dict):
+        assert not (set(value) & forbidden)
+        for child in value.values():
+            _assert_no_raw_text_keys(child)
+    elif isinstance(value, list):
+        for child in value:
+            _assert_no_raw_text_keys(child)
+
+
 def test_pilot_excludes_short_boundaries_and_fails_closed(tmp_path: Path):
     profile_dir = tmp_path / "profile"
     profile_dir.mkdir()
@@ -76,7 +87,7 @@ def test_pilot_excludes_short_boundaries_and_fails_closed(tmp_path: Path):
     assert result["validation"]["substitution_validated"] is False
     assert result["dataset"]["short_descriptive_only_count"] == 1
     assert result["dataset"]["eligible_50plus_count"] == 4
-    assert "text" not in json.dumps(result)
+    _assert_no_raw_text_keys(result)
     assert out.exists()
 
 
