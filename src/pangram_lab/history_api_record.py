@@ -249,6 +249,171 @@ def match_exact_history_record(
     )
 
 
+def _decoded_object(value: Any) -> dict[str, Any] | None:
+    if isinstance(value, dict):
+        return value
+    if not isinstance(value, str):
+        return None
+    stripped = value.strip()
+    if len(stripped) > 5_000_000 or not stripped.startswith("{"):
+        return None
+    try:
+        decoded = json.loads(stripped)
+    except (json.JSONDecodeError, TypeError, ValueError):
+        return None
+    return decoded if isinstance(decoded, dict) else None
+
+
+def _structured_result_sources(record: ExactHistoryRecord) -> list[tuple[tuple[str, ...], dict[str, Any]]]:
+    """Return document-level structured-result candidates in authority order.
+
+    `response.overall` is preferred because live Pangram history records expose a
+    separate `response.in_page` branch. The latter is deliberately excluded: it
+    can describe only the currently displayed highlight/page rather than the
+    complete submitted document.
+    """
+    result: list[tuple[tuple[str, ...], dict[str, Any]]] = []
+    response = _decoded_object(record.payload.get("response"))
+    if response is not None:
+        overall = _decoded_object(response.get("overall"))
+        if overall is not None:
+            result.append((("response", "overall"), overall))
+
+    response_payload = _decoded_object(record.payload.get("response_payload"))
+    if response_payload is not None:
+        overall = _decoded_object(response_payload.get("overall"))
+        if overall is not None:
+            result.append((("response_payload", "overall"), overall))
+        result.append((("response_payload",), response_payload))
+
+    if response is not None:
+        result.append((("response",), response))
+    result.append(((), record.payload))
+    return result
+
+
+def _fraction(value: Any) -> float | None:
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    parsed = float(value)
+    if parsed < 0.0 or parsed > 1.0:
+        return None
+    return parsed
+
+
+def _structured_fraction_bundle(
+    record: ExactHistoryRecord,
+    candidate: dict[str, Any],
+) -> dict[str, object] | None:
+    ai = _fraction(candidate.get("fraction_ai"))
+    human = _fraction(candidate.get("fraction_human"))
+    if ai is None or human is None:
+        return None
+
+    aggregate_assisted = _fraction(candidate.get("fraction_ai_assisted"))
+    moderate = _fraction(candidate.get("fraction_moderately_ai_assisted"))
+    light = _fraction(candidate.get("fraction_lightly_ai_assisted"))
+    if aggregate_assisted is None:
+        if moderate is None or light is None:
+            return None
+        aggregate_assisted = moderate + light
+        if aggregate_assisted > 1.0:
+            return None
+
+    stage = str(candidate.get("stage") or "").strip()
+    if stage and stage != "STAGE_SUCCESS":
+        return None
+
+    version = str(candidate.get("version") or "").strip()
+    record_model = str(record.payload.get("model_id") or "").strip().casefold()
+    candidate_model = str(candidate.get("model_id") or "").strip().casefold()
+    model_proves_pangram4 = any(
+        marker in value
+        for value in (record_model, candidate_model)
+        for marker in ("pangram-4", "pangram4")
+    )
+    if version:
+        if version != "4.0":
+            return None
+    elif not model_proves_pangram4:
+        return None
+
+    if abs((ai + aggregate_assisted + human) - 1.0) > 0.02:
+        return None
+
+    return {
+        "fraction_ai": round(ai, 10),
+        "fraction_ai_assisted": round(aggregate_assisted, 10),
+        "fraction_moderately_ai_assisted": round(moderate, 10) if moderate is not None else None,
+        "fraction_lightly_ai_assisted": round(light, 10) if light is not None else None,
+        "fraction_human": round(human, 10),
+        "stage": stage or None,
+        "version": version or None,
+        "headline": candidate.get("headline"),
+        "prediction_short": candidate.get("prediction_short"),
+    }
+
+
+def structured_history_result_shape(record: ExactHistoryRecord) -> dict[str, object]:
+    """Return privacy-safe result-schema diagnostics without article text."""
+    rows: list[dict[str, object]] = []
+    for field_path, candidate in _structured_result_sources(record):
+        keys = sorted(str(key) for key in candidate.keys())
+        whitelisted: dict[str, object] = {}
+        for key in (
+            "stage",
+            "version",
+            "model_id",
+            "headline",
+            "prediction_short",
+            "fraction_ai",
+            "fraction_ai_assisted",
+            "fraction_moderately_ai_assisted",
+            "fraction_lightly_ai_assisted",
+            "fraction_human",
+        ):
+            value = candidate.get(key)
+            if isinstance(value, (str, int, float, bool)) or value is None:
+                whitelisted[key] = value
+        rows.append(
+            {
+                "field_path": list(field_path),
+                "keys": keys[:80],
+                "whitelisted_scalars": whitelisted,
+            }
+        )
+    return {
+        "candidate_objects": rows,
+        "privacy_note": "No submitted/history text, windows, UUID, private URL, cookie, storage value, or auth data is included.",
+    }
+
+
+def _parse_structured_history_result(record: ExactHistoryRecord) -> dict[str, object] | None:
+    for field_path, candidate in _structured_result_sources(record):
+        bundle = _structured_fraction_bundle(record, candidate)
+        if bundle is None:
+            continue
+        return {
+            "report_layout": "history_api_structured_result_v1",
+            "summary_source": "stored_history_structured_result",
+            "structured_result_field_path": list(field_path),
+            "detector_stage": bundle["stage"],
+            "detector_version": bundle["version"],
+            "headline": bundle["headline"],
+            "prediction_short": bundle["prediction_short"],
+            "summary": {
+                "fraction_ai": bundle["fraction_ai"],
+                "fraction_ai_assisted": bundle["fraction_ai_assisted"],
+                "fraction_moderately_ai_assisted": bundle["fraction_moderately_ai_assisted"],
+                "fraction_lightly_ai_assisted": bundle["fraction_lightly_ai_assisted"],
+                "fraction_human": bundle["fraction_human"],
+            },
+            "segments": [],
+            "history_record_identity": record.public_proof(),
+        }
+    return None
+
+
 def _percent_from_body(body: str, kind: str) -> float | None:
     normalized = " ".join(str(body).split())
     if kind == "ai":
@@ -272,6 +437,10 @@ def parse_history_record_result(
     record: ExactHistoryRecord,
     rendered_body: str,
 ) -> dict[str, object]:
+    structured = _parse_structured_history_result(record)
+    if structured is not None:
+        return structured
+
     ai = _percent_from_body(rendered_body, "ai")
     human = _percent_from_body(rendered_body, "human")
 
@@ -279,9 +448,12 @@ def parse_history_record_result(
     # but not whether prediction_prob is confidence in the label, AI probability,
     # or another quantity. Do not infer score semantics from those fields.
     if ai is None or human is None or abs((ai + human) - 1.0) > 0.02:
+        safe_shape = structured_history_result_shape(record)
         raise RuntimeError(
-            "exact Pangram history record was identified, but its rendered Human/AI summary "
-            "could not be parsed without guessing prediction_prob semantics"
+            "exact Pangram history record was identified, but neither canonical structured fractions "
+            "nor its rendered Human/AI summary could be parsed without guessing prediction_prob semantics; "
+            "structured_result_shape="
+            + json.dumps(safe_shape, ensure_ascii=False, sort_keys=True)
         )
 
     return {
@@ -289,6 +461,7 @@ def parse_history_record_result(
         "summary_source": "rendered_history_report",
         "summary": {
             "fraction_ai": round(float(ai), 10),
+            "fraction_ai_assisted": 0.0,
             "fraction_moderately_ai_assisted": 0.0,
             "fraction_lightly_ai_assisted": 0.0,
             "fraction_human": round(float(human), 10),
