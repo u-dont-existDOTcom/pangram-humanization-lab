@@ -53,6 +53,14 @@ def _history_record_url(candidate: HistoryListCandidate) -> str:
     return f"https://web.pangram.com/api/history/{candidate.uuid}/"
 
 
+def _history_report_url(candidate: HistoryListCandidate) -> str:
+    return f"https://www.pangram.com/history/{candidate.uuid}"
+
+
+def _is_history_list_url(raw_url: str) -> bool:
+    return str(raw_url).split("?", 1)[0].rstrip("/") == HISTORY_LIST_URL.rstrip("/")
+
+
 def _safe_response_json(response: Any) -> Any | None:
     try:
         if int(getattr(response, "status", 0) or 0) != 200:
@@ -77,7 +85,7 @@ def _read_history_list(context: Any) -> tuple[Any | None, str]:
     payload = _safe_response_json(response)
     if payload is None:
         return None, f"non_json_or_non_200:{int(getattr(response, 'status', 0) or 0)}"
-    return payload, "ok"
+    return payload, "direct_context_request_ok"
 
 
 def _read_history_record(context: Any, candidate: HistoryListCandidate) -> tuple[Any | None, str]:
@@ -92,7 +100,7 @@ def _read_history_record(context: Any, candidate: HistoryListCandidate) -> tuple
     payload = _safe_response_json(response)
     if payload is None:
         return None, f"non_json_or_non_200:{int(getattr(response, 'status', 0) or 0)}"
-    return payload, "ok"
+    return payload, "direct_context_request_ok"
 
 
 def main() -> int:
@@ -126,6 +134,8 @@ def main() -> int:
         nonlocal history_list_status, history_list_candidate_count
         exact_records: list[ExactHistoryRecord] = []
         observed_uuids: set[str] = set()
+        captured_history_list_payload: Any | None = None
+        temporal_labels: dict[str, dict[str, object]] = {}
 
         def record_comparison(
             payload: Any,
@@ -145,9 +155,14 @@ def main() -> int:
             )
 
         def collect(response: Any) -> None:
-            nonlocal observed_history_records
+            nonlocal observed_history_records, captured_history_list_payload
             try:
                 response_url = str(getattr(response, "url", ""))
+                if _is_history_list_url(response_url):
+                    payload = _safe_response_json(response)
+                    if payload is not None:
+                        captured_history_list_payload = payload
+                    return
                 uuid = history_api_uuid(response_url)
                 if uuid is None:
                     return
@@ -157,10 +172,11 @@ def main() -> int:
                 if uuid not in observed_uuids:
                     observed_uuids.add(uuid)
                     observed_history_records += 1
-                    record_comparison(
-                        payload,
-                        label={"record_index": observed_history_records, "source": "browser_navigation"},
-                    )
+                    label = temporal_labels.get(uuid) or {
+                        "record_index": observed_history_records,
+                        "source": "browser_navigation",
+                    }
+                    record_comparison(payload, label=label)
                 match = match_exact_history_record(response_url, payload, exact_text)
                 if match is None:
                     return
@@ -179,30 +195,30 @@ def main() -> int:
             listener_attached = False
 
         working = base.local_transport.normalize_context_tabs(context, keep=page)
-        try:
-            # First use the authenticated application's own list endpoint and the
-            # durable paid-call reservation timestamp. This prevents unrelated old
-            # 10k-word reports from driving identity-rule changes.
-            list_payload, history_list_status = _read_history_list(context)
-            if list_payload is not None:
-                ranked = rank_by_target_time(
-                    extract_history_list_candidates(list_payload),
-                    paid_time,
-                )
-                history_list_candidate_count = len(ranked)
+
+        def try_timestamp_bound_payload(list_payload: Any) -> tuple[Any, str, dict[str, object]] | None:
+            nonlocal last_exact_record, history_list_candidate_count
+            ranked = rank_by_target_time(
+                extract_history_list_candidates(list_payload),
+                paid_time,
+            )
+            history_list_candidate_count = max(history_list_candidate_count, len(ranked))
+            if not temporal_diagnostics:
                 temporal_diagnostics.extend(
                     candidate.public_proof(paid_time)
                     for candidate in ranked[:8]
                 )
-                for candidate in ranked[:8]:
-                    distance = candidate.distance_seconds(paid_time)
-                    if distance > MAX_PAID_TIME_DISTANCE_SECONDS:
-                        break
-                    payload, record_status = _read_history_record(context, candidate)
-                    proof = candidate.public_proof(paid_time)
-                    proof["record_read_status"] = record_status
-                    if payload is None:
-                        continue
+            for candidate in ranked[:8]:
+                distance = candidate.distance_seconds(paid_time)
+                if distance > MAX_PAID_TIME_DISTANCE_SECONDS:
+                    break
+                proof = candidate.public_proof(paid_time)
+                proof["source"] = "paid_time_bound_history"
+                temporal_labels[candidate.uuid] = proof
+
+                payload, record_status = _read_history_record(context, candidate)
+                proof["direct_record_read_status"] = record_status
+                if payload is not None:
                     response_url = _history_record_url(candidate)
                     match = match_exact_history_record(response_url, payload, exact_text)
                     if match is not None:
@@ -210,10 +226,54 @@ def main() -> int:
                         proof["bounded_text_identity"] = True
                         return _materialize_record_report(context, working, match)
                     proof["bounded_text_identity"] = False
-                    record_comparison(
-                        payload,
-                        label={"source": "paid_time_bound_history", **proof},
+                    record_comparison(payload, label=proof)
+                    continue
+
+                # Some Pangram sessions authenticate API calls with headers added
+                # by the SPA rather than cookies shared with BrowserContext.request.
+                # In that case navigate the existing report page read-only and let
+                # the normal application issue its authenticated history-record GET.
+                try:
+                    working.goto(_history_report_url(candidate), wait_until="domcontentloaded")
+                    if hasattr(working, "wait_for_timeout"):
+                        working.wait_for_timeout(1_500)
+                except Exception:
+                    continue
+                for exact_record in exact_records:
+                    if exact_record.uuid == candidate.uuid:
+                        last_exact_record = exact_record
+                        proof["bounded_text_identity"] = True
+                        return _materialize_record_report(context, working, exact_record)
+            return None
+
+        try:
+            # First try BrowserContext.request, which shares browser cookies.
+            list_payload, history_list_status = _read_history_list(context)
+            if list_payload is not None:
+                recovered = try_timestamp_bound_payload(list_payload)
+                if recovered is not None:
+                    return recovered
+
+            # If direct request authentication is unavailable, use the actual
+            # hydrated GUI. The response listener above captures the SPA's own
+            # authenticated /api/history-list/ response in memory.
+            if list_payload is None or history_list_candidate_count == 0:
+                try:
+                    gui_recovered = history_ui._try_hydrated_dashboard_history(
+                        context,
+                        working,
+                        exact_text,
+                        set(),
                     )
+                    if gui_recovered is not None:
+                        return gui_recovered
+                except Exception:
+                    pass
+                if captured_history_list_payload is not None:
+                    history_list_status = "captured_from_authenticated_gui"
+                    recovered = try_timestamp_bound_payload(captured_history_list_payload)
+                    if recovered is not None:
+                        return recovered
 
             # Existing browser-history candidates remain a read-only fallback, but
             # only an exact/bounded text match can clear ambiguity.
@@ -228,17 +288,19 @@ def main() -> int:
                     last_exact_record = exact_records[0]
                     return _materialize_record_report(context, working, last_exact_record)
 
-            # Reuse current All Checks / History navigation solely to trigger
-            # stored-record GETs while the exact listener is attached.
-            try:
-                history_ui._try_hydrated_dashboard_history(
-                    context,
-                    working,
-                    exact_text,
-                    set(),
-                )
-            except Exception:
-                pass
+            # If the GUI was not already used above, reuse current All Checks /
+            # History navigation solely to trigger stored-record GETs while the
+            # exact listener is attached.
+            if captured_history_list_payload is None:
+                try:
+                    history_ui._try_hydrated_dashboard_history(
+                        context,
+                        working,
+                        exact_text,
+                        set(),
+                    )
+                except Exception:
+                    pass
             if exact_records:
                 last_exact_record = exact_records[0]
                 return _materialize_record_report(context, working, last_exact_record)
