@@ -1,156 +1,137 @@
 # Pangram local Playwright current state — 2026-08-20
 
-## Goal
+## Status
 
-Use a dedicated headed persistent local Playwright profile on Joel's Zorin machine as a fully functional Pangram GUI transport while preserving exact-hash identity, ambiguity/duplicate protection, paid-call accounting, recovery-before-repeat, bounded browser tabs, and GitHub durability.
+**LIVE VALIDATION COMPLETE for the current Romance two-half boundary.**
 
-The Pangram API is independently available through Joel's private self-hosted executor. Continue GUI development anyway: the API and GUI are separate transports, and GUI capability remains useful for report inspection, recovery, visual evidence, and resilience.
+The dedicated headed local Playwright transport on Joel's Zorin machine has now completed the full long-document workflow end to end with exact stored-history binding, duplicate-call protection, paid-call accounting, durable Git evidence, bounded tabs, and PDF capture.
+
+The Pangram API is independently available through Joel's private self-hosted executor. Keep API and GUI as separate supported transports; GUI remains useful for visual/report inspection, authenticated-history recovery, evidence capture, and resilience.
 
 ## Authority / branch
 
 - Repository: `u-dont-existDOTcom/pangram-humanization-lab`.
 - Implementation branch: `agent/pangram-local-playwright-gpt-20260818` / draft PR #78.
-- Romance source remains incubator branch `agent/romance-primal-crucible-gui-repair-20260817`; this tooling work does not establish article authority or edit prose.
+- PR #78 remains stacked on the Browserbase GUI branch / PR #35. Do not retarget or merge that stack by inference.
+- Romance material remains incubator material in this repository; this tooling state does not establish article authority.
 - Repository visibility is public; normal code-only CI may be used. Detector execution remains intentional and separately gated.
 
-## Independent API transport — live
+## Independent API transport
 
-Owner update: Pangram API execution is available through Joel's own machine/self-hosted execution path. `u-dont-existDOTcom/pangram-private-executor` is the private trusted envelope; it routes approved fixed-batch work to the repository-level self-hosted `pangram` runner and reuses the public lab's canonical cache, pending-task checkpointing, ambiguity guard, call ledger, section cap, result schema, and Git synchronization.
+Pangram API execution is also available through Joel's self-hosted execution path. `u-dont-existDOTcom/pangram-private-executor` is the trusted private envelope around the self-hosted runner and reuses the lab's cache, pending-task checkpointing, ambiguity guard, call ledger, section cap, result schema, and Git synchronization.
 
-A live private-executor smoke produced a durable Pangram 4.0 `STAGE_SUCCESS` result on `automation/pangram-fixed-batch`. This confirms API transport availability. It does **not** clear or replace the separate GUI Part-1 ambiguity record.
+A private-executor smoke has already produced a durable Pangram 4.0 `STAGE_SUCCESS`. This is a separate transport and does not replace the GUI evidence below.
 
-## Exact current Romance boundary
+## Exact validated Romance boundary
 
-- Reader-visible total: 20,496 words; SHA-256 `10359ab2119ffbe9a8a7a4a52cd0c3216bb1a6a2c0bffbd7e66fca01287f17ce`.
-- Part 1: 10,236 words; SHA-256 `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`.
-- Part 2: 10,260 words; SHA-256 `2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0`.
-- Source commit last verified on owner machine: `8e0d70d0ea51fbcb12e307ed0629ed75ee35ce8c`.
+- Reader-visible total: **20,496 words**; SHA-256 `10359ab2119ffbe9a8a7a4a52cd0c3216bb1a6a2c0bffbd7e66fca01287f17ce`.
+- Part 1: **10,236 words**; SHA-256 `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`.
+- Part 2: **10,260 words**; SHA-256 `2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0`.
+- Source commit bound by the run: `8e0d70d0ea51fbcb12e307ed0629ed75ee35ce8c`.
+- Manifest SHA-256: `21808bf6f02355f63093cfe2ebdd79936de360522942c19b51afccc828f021b2`.
 
-## Live local transport already verified
+## Final GUI detector results
 
-- Brave `/opt/brave.com/brave/brave`, Playwright 1.62.0, Chromium sandbox enabled.
-- Dedicated persistent profile `~/.config/pangram-local-browser/`; ordinary Brave profile is never used.
-- Manual login completed and fresh-process authentication persistence verified.
-- Exact source materialization/hash/word-count gates verified.
-- Persistent tab accumulation repaired: normal runs are bounded to one working tab and leave an inert tab on shutdown.
-- Self-updating operator wrapper re-execs exactly once if `git pull` changes the wrapper itself.
+### Part 1 — recovered exactly, no repeat submission
 
-## Paid-call state — blocking
+- Original paid reservation: `2026-08-18T17:43:00.595741+00:00`.
+- Timestamp-bound history record created **12.974 seconds** later.
+- Stored `prompt` exact-matched the authorized Part-1 UTF-8 bytes and 10,236-word boundary.
+- Transport match mode: `exact_utf8`.
+- Detector: Pangram 4.0 / `STAGE_SUCCESS`.
+- Headline: `Mostly Human Written`.
+- Prediction short: `Human`.
+- AI fraction: **0.0794752836**.
+- AI-assisted fraction: **0.0**.
+- Human fraction: **0.9205247164**.
+- Recovery itself made **no detector submission**.
+- Evidence source: `recovered_existing_report`.
+- Durable receipt: `state/gui-runs/pangram-4/ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8/result.json`.
+
+The original ambiguity is therefore resolved. Do not resubmit Part 1 merely because its first live capture failed.
+
+### Part 2 — one new GUI submission, exact completion
+
+- Paid reservation: `2026-08-20T16:27:40.570062+00:00`.
+- One GUI submission was made after the reservation was durably pushed.
+- Stored `prompt` exact-matched the authorized Part-2 UTF-8 bytes and 10,260-word boundary.
+- Transport match mode: `exact_utf8`.
+- Detector: Pangram 4.0 / `STAGE_SUCCESS`.
+- Headline: `AI Detected`.
+- Prediction short: `Mixed`.
+- AI fraction: **0.1016966403**.
+- AI-assisted fraction: **0.0**.
+- Human fraction: **0.8983033895**.
+- PDF provenance: `playwright_print_fallback`.
+- Durable receipt: `state/gui-runs/pangram-4/2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0/result.json`.
+
+## Paid-call accounting
 
 Audit: `romance-current-20496-pangram-gui-20260818`.
 
-### Part 1 — one paid GUI call, ambiguous, DO NOT REPEAT
+- Part 1: **1 paid GUI call** total; estimated 11 credits / USD 0.55.
+- Part 2: **1 paid GUI call** total; estimated 11 credits / USD 0.55.
+- Total GUI paid calls for these two exact halves: **2**.
+- No duplicate Part-1 submission occurred during any recovery attempt.
+- Durable ledger: `state/pangram-call-ledgers/romance-current-20496-pangram-gui-20260818.json`.
 
-- section `romance-current-part-1`;
-- paid GUI calls: 1;
-- estimated credits/cost: 11 / USD 0.55;
-- exact SHA `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`;
-- durable reservation timestamp: `2026-08-18T17:43:00.595741+00:00`.
+## Local transport validation
 
-The call reached Pangram. The original capture remained on the initiating dashboard instead of a result bound to the exact submitted document. `failure.json` records `detector_submission_attempted: true`; the durable GUI call reservation remains. No automatic Part-1 GUI resubmission is permitted.
+Verified on the owner machine:
 
-### Part 2 — never submitted through GUI
+- Zorin / Linux with Brave `/opt/brave.com/brave/brave`;
+- Playwright 1.62.0;
+- dedicated persistent profile `~/.config/pangram-local-browser/`;
+- headed launch with Chromium sandbox enabled;
+- manual login + fresh-process auth persistence;
+- source materialization/hash/word-count gates;
+- one-working-tab normalization and explicit cleanup of extras;
+- self-updating wrapper re-exec when `git pull` changes the running launcher;
+- recovery-before-repeat for ambiguous paid work;
+- authenticated `history-list` + exact `/api/history/<uuid>/` binding;
+- current long-document structured result extraction from `response.overall`;
+- local deterministic suite on the final owner run: **200/200 passed**;
+- final wrapper result: `RECOVER_RESUME_RESULT=complete`.
 
-Part 2 remains uncached on the GUI transport with no GUI paid reservation. It must not run through GUI until Part 1 is recovered exactly.
+Public code-only CI for the structured-result repair also passed its full test suite, lesson closeout, repository audit, and workflow-policy gate before the final owner run.
 
-## Recovery evidence
+## Current long-document contract
 
-Prior no-repeat recovery routes established:
-
-1. restored-tab recovery did not find the exact report;
-2. older History/scans/reports UI selectors did not find it;
-3. Chromium global History is not authoritative for Pangram's SPA record history;
-4. All Checks/View Results navigation reached real stored records but the legacy DOM parser rejected current long-document reports;
-5. exact `web.pangram.com/api/history/<uuid>/` record matching reached stored report candidates but found no byte-identical or bounded-normalization copy of the authorized Part-1 text.
-
-### Latest owner-machine run — 2026-08-19 09:10 UTC
-
-The owner reran the safe recovery wrapper after the bounded-normalization repair.
-
-- deterministic suite: **192/192 passed**;
-- browser history/result candidates: **10**;
-- history API records actually observed: **6**;
-- exact/bounded Part-1 history record found: **false**;
-- Part 1 detector submission during recovery: **false**;
-- Part 2 GUI submission: **not attempted**;
-- recovery stopped fail-closed with the original Part-1 ambiguity intact.
-
-The privacy-safe comparison output showed that the plausible long stored records are materially different article boundaries, not line-ending/terminal-whitespace variants of current Part 1. Examples:
-
-- one stored `prompt`/`response_payload.text` boundary is **10,280 words**, +44 words versus current Part 1;
-- another stored boundary is **10,332 words**, +96 words versus current Part 1;
-- neither candidate contains the current Part-1 text as an exact substring;
-- neither becomes equal after whitespace collapse.
-
-Therefore **do not broaden** the identity matcher to interior-whitespace collapse, fuzzy similarity, word-count tolerance, or “closest long document.” These records may be older Romance scans.
-
-## Current long-document transport evidence
-
-A prior privacy-bounded diagnostic exposed the current long-document contract:
+Observed Pangram web-app surfaces:
 
 - report page: `https://www.pangram.com/history/<uuid>`;
 - report data: `https://web.pangram.com/api/history/<uuid>/`;
 - list data: `https://web.pangram.com/api/history-list/`;
-- stored record fields include `prompt`, `response`, `response_payload`, `prediction`, `prediction_prob`, `model_id`, and `uuid`;
-- current long-document report overview exposes document-level controls such as `AI 8%`, `Human 92%`, and paginated highlight navigation rather than historical per-segment word-count headings.
+- submitted document identity is available in the stored record `prompt`;
+- document-level structured detector output is available under `response.overall` for these validated runs;
+- current long-document reports need not expose the older per-segment word-count layout;
+- `prediction_prob` is retained as raw provenance only and is **not** interpreted as the AI fraction.
 
-The observed 92/8 report remains only a historical candidate until its stored representation is independently bound to the paid Part-1 event. Do not assign that score to Part 1 by inference.
+Accepted stored-text identity modes remain bounded to exact UTF-8, line-ending normalization, terminal-newline normalization, or outer-whitespace normalization with identical word count. Fuzzy similarity and collapsed interior whitespace remain invalid identity proofs.
 
-## Bounded representation contract
+## Known evidence quirks / non-blockers
 
-Detailed checkpoint: `state/PANGRAM-LOCAL-HISTORY-API-EXACT-BINDING-2026-08-19.md`.
+- The inherited generic `runner_version` field still reads `pangram-gui-browserbase-v1`; the receipt separately records `transport: local_playwright` and `transport_runner_version: pangram-gui-local-playwright-v1`. Do not misclassify the transport from the inherited compatibility field alone.
+- Recovered Part 1 has an empty visible report-body artifact and therefore a null top-level detector-version field, while its exact stored structured result records Pangram 4.0 / `STAGE_SUCCESS`. The structured stored result is the score authority for this recovery.
+- Both current long-document PDFs use the Playwright print fallback rather than a Pangram-native download. This is explicitly recorded provenance, not native-PDF equivalence.
+- Part 2's Pangram headline is `AI Detected` even though its structured fractions are ~10.17% AI / ~89.83% Human; preserve both fields rather than normalizing the headline by intuition.
 
-Accepted stored-text identity modes remain strictly bounded:
+## Operational rule going forward
 
-1. exact UTF-8 equality;
-2. CRLF/CR → LF line-ending normalization;
-3. terminal-newline normalization;
-4. outer-whitespace normalization.
+For a new exact document boundary:
 
-Every accepted mode preserves the complete interior text and identical word count. The receipt records both authorized and stored SHA-256 values plus the explicit `transport_match_mode`. Interior whitespace collapse is diagnostic only and cannot clear ambiguity.
+1. check the content-addressed result cache and ambiguity ledger first;
+2. if an ambiguous paid call exists, recover from authenticated stored history before any repeat;
+3. reserve/push paid-call accounting before a new detector click;
+4. attach stored-history capture before submission;
+5. accept completion only after exact/bounded document identity and explicit structured detector result are both bound;
+6. persist the receipt/PDF/Git evidence before another paid input;
+7. keep the persistent browser session bounded to one working tab.
 
-## New timestamp-bound recovery — code green, owner-machine unverified
+The self-hosted API should normally be preferred when visual GUI evidence is unnecessary, but the GUI path is now independently live-certified.
 
-The latest safe comparison establishes that scanning “all plausible 10k-word records” is too broad. The next recovery stage therefore adds an independent temporal key instead of weakening text identity.
+## Next repository action
 
-Implementation head before this state update: `d44be92da32a8b72c919e19d855545ac07f72295`.
-
-New helper: `src/pangram_lab/history_list_recovery.py`.
-
-The recovery now:
-
-- reads the paid reservation timestamp from the durable GUI call ledger rather than chat or a hardcoded guessed report time;
-- reads Pangram's authenticated `history-list` read-only and extracts records with UUID + creation/submission timestamps;
-- ranks records by absolute time distance from the paid reservation;
-- inspects only records within a 15-minute window as timestamp-bound Part-1 candidates;
-- still requires the existing exact/bounded stored-text identity before clearing ambiguity;
-- if direct `BrowserContext.request` authentication is unavailable, captures the real SPA's authenticated `history-list` response in memory while opening All Checks/History and navigates the time-matched report page read-only;
-- does not log UUIDs, private result URLs, record text, cookies, browser storage, or auth headers;
-- reports only privacy-safe timestamp distance, field path, read status, and existing content-free text-comparison measurements.
-
-Public code-only CI on `d44be92da32a8b72c919e19d855545ac07f72295` is green: repository workflow policy passed; the complete test suite, lesson closeout, and repository audit passed in the Lesson integrity change gate. No detector submission is performed by CI.
-
-## GUI completion contract
-
-- `scripts/pangram_local_romance_recover_part1_api.py` remains read-only and has no detector-action path.
-- `scripts/pangram_local_romance_paid_api.py` attaches its stored-record response listener before a GUI paid click, preserves the durable call reservation before that click, and accepts completion only after the newly stored record is bound to the submitted text under the same bounded transport contract.
-- Human/AI fractions come from the exact bound report's rendered overview; `prediction_prob` semantics are not guessed and synthetic legacy segment counts are not invented.
-
-The operator wrapper routes Part 1 through no-submit recovery and only after a complete cached Part-1 receipt routes Part 2 through the API-record-bound GUI paid runner.
-
-## Next safe action
-
-Run `scripts/pangram_local_romance_recover_resume_safe.sh` on the owner machine once more.
-
-The important new output is:
-
-- `history_list_status`;
-- `history_list_candidate_count`;
-- `history_list_nearest_candidates[].seconds_from_paid_reservation`;
-- any `paid_time_bound_history` record comparison.
-
-If the report created around the paid click exact/bounded-matches Part 1, persist/cache it and permit only the uncached Part-2 GUI call. If the closest timestamp-bound report is materially different or no report exists near the click, preserve ambiguity and diagnose the original submission/capture event rather than broadening matching or repeating Part 1.
-
-## Stop conditions
-
-Stop before resubmitting Part 1 through GUI, bypassing its reservation/ambiguity block, submitting Part 2 through GUI before exact/bounded Part-1 recovery, using Joel's ordinary browser profile/history, committing browser/session/auth/API-record content, guessing score semantics from `prediction_prob`, accepting fuzzy/word-count-near/collapsed-interior-whitespace identity, inventing legacy segment counts, accepting a generic report marker, or rewriting Romance prose merely to simplify detector transport.
+- Update PR #78's description to reflect completed live validation.
+- Keep the PR stack intact pending an explicit promotion/merge decision for PR #35 and PR #78.
+- Do not spend another Pangram call merely to prove the same two exact halves again.
