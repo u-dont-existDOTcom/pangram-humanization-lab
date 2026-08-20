@@ -92,6 +92,10 @@ The implementation was live-certified on 2026-08-20 against two approximately 10
 
 This promotion intentionally imports the reusable transport machinery onto current `main` without importing the old Romance article-editing branch history or establishing any article authority.
 
+## Clean-main validation
+
+The first clean-main integration run exposed only two obsolete Browserbase tests that depended on the old Browserbase command script and an article-specific workflow; those branch-topology tests were removed rather than importing obsolete infrastructure. The next clean-main run passed **226 tests with 5 intentional skips**. Its changed-file lesson-closeout gate passed. The only remaining audit failure at that point was five pre-existing Romance lesson artifacts already present on `main` without current-hash dispositions; those inherited records were then explicitly closed as either `article-specific` or `superseded` through the trusted lesson-closeout processor. No Pangram detector submission is performed by these CI gates.
+
 ## Privacy and profile safety
 
 - Never use the owner's ordinary Brave/Chrome profile by default.
