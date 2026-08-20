@@ -1,0 +1,22 @@
+{
+  "format": "pangram-api-audit-v1",
+  "audit_id": "romance-detector-repair-20260820",
+  "section_id": "part2",
+  "model": "pangram-4",
+  "expected_version": "4.0",
+  "max_new_paid_posts": 6,
+  "known_prior_new_paid_posts_in_this_audit_section": 1,
+  "prior_measurement": {
+    "text_sha256": "30f61fb0c490ec1275f3c39c834a38a956041865b63e5592c270d51cc22d5498",
+    "fraction_human": 0.9137498736,
+    "transport": "local_playwright",
+    "evidence_branch": "evidence/romance-pass1-retest-20260820"
+  },
+  "next_measurement": {
+    "measurement_key": "romance-detector-repair-20260820.part2.pass2",
+    "text_sha256": "679daa77fb92ea71bb85716e6ece671e093b49412b149e2f5129079a204d24d2",
+    "status": "authorized_pending",
+    "authorized_new_paid_post_number": 2
+  },
+  "part1": "no_new_call_exact_registered_hash_restored"
+}
