@@ -72,6 +72,7 @@ def args_for(path: Path, digest: str, **overrides):
         "expect_sha": digest,
         "measurement_key": "romance-pass2",
         "base_url": "https://pangram.example.test/",
+        "allow_public_cache": True,
         "no_github": False,
     }
     values.update(overrides)
@@ -124,6 +125,24 @@ def test_detect_file_rejects_hash_mismatch_before_credentials(tmp_path, monkeypa
 
     with pytest.raises(RuntimeError, match="exact SHA-256 changed"):
         cli.detect_file(args_for(path, "0" * 64), tmp_path)
+
+    assert called["key"] is False
+
+
+def test_detect_file_requires_public_cache_ack_before_credentials(tmp_path, monkeypatch):
+    text = "exact text\n"
+    path = tmp_path / "candidate.txt"
+    path.write_text(text, encoding="utf-8")
+    called = {"key": False}
+
+    def unexpected_key():
+        called["key"] = True
+        raise AssertionError("credential access should not happen before public-cache acknowledgement")
+
+    monkeypatch.setattr(cli, "get_key", unexpected_key)
+
+    with pytest.raises(RuntimeError, match="repository is public"):
+        cli.detect_file(args_for(path, text_sha256(text), allow_public_cache=False), tmp_path)
 
     assert called["key"] is False
 
