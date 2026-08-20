@@ -26,7 +26,7 @@ _OFFSET_PAIRS = (
     ("start_idx", "end_idx"),
 )
 _METADATA_KEY_RE = re.compile(
-    r"(?:label|prediction|class|confidence|prob|score|fraction|human|ai|stage|version|page|index|rank|type)",
+    r"(?:label|prediction|class|confidence|prob|score|fraction|human|ai|stage|version|page|index|rank|type|word|token|length)",
     re.IGNORECASE,
 )
 _LOCALIZATION_KEY_RE = re.compile(
