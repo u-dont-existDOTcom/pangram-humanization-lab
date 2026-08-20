@@ -4,10 +4,7 @@ Updated: 2026-08-20
 
 ## Goal
 
-Preserve exact Pangram detector evidence, editorial authority, lesson closeout, and paid-call safety while supporting two independent detector transports:
-
-1. the owner's self-hosted Pangram API path for normal programmatic detector work;
-2. a local headed Brave/Chromium + Playwright GUI fallback for visual evidence, authenticated History recovery, and resilience.
+Preserve exact Pangram detector evidence, editorial authority, lesson closeout, and paid-call safety while routing ordinary programmatic detector work through the owner's trusted self-hosted execution envelope.
 
 Current owner instructions, exact repository evidence, tests, and current `main` outrank historical chat or old task branches.
 
@@ -15,131 +12,160 @@ Current owner instructions, exact repository evidence, tests, and current `main`
 
 - Canonical repository branch: `main`.
 - Long-lived fixed-batch/evidence branch: `automation/pangram-fixed-batch`.
+- Private trusted execution envelope: `u-dont-existDOTcom/pangram-private-executor`.
+- Self-hosted runner labels: `[self-hosted, linux, x64, pangram]`.
 - Start lesson recovery at `state/LESSON-INDEX.md`.
 - Start repository documentation at `docs/INDEX.md`.
-- This file is the single canonical repository recovery checkpoint.
+- Current transport correction/evidence: `state/PANGRAM-SELFHOST-ROUTING-CORRECTION-2026-08-20.md`.
 - The local GUI transport is documented at `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`.
 - Historical Romance GUI/evidence branches remain provenance only and do not establish article authority.
 
 ## Current transport architecture
 
-### Self-hosted Pangram API — normal programmatic route
+### Private self-hosted Pangram executor — normal automated programmatic route
 
-The owner reports that Pangram API execution is now available through his own server/self-hosted execution path. Use the repository's existing content-addressed cache, task checkpoint/resume, exact model/version gates, ambiguity protection, call budget, and durable Git evidence rules around that transport. Never expose or commit API credentials.
+For ordinary automated Pangram measurements, use the private executor repository rather than Browserbase or GitHub-hosted runners.
 
-The API is the normal choice when a programmatic detector result is all that is required.
+The execution contract is:
 
-### Local Playwright GUI — supported fallback
+1. freeze the exact public-safe fixed-batch spec on `automation/pangram-fixed-batch`;
+2. verify its exact SHA-256;
+3. add exactly one immutable `requests/<request-id>.json` to `u-dont-existDOTcom/pangram-private-executor`;
+4. the private workflow validates the request/spec and dispatches the canonical public runner to `[self-hosted, linux, x64, pangram]`;
+5. cache, task checkpointing, explicit Pangram-4/version gates, call ledgers, result persistence, and ambiguity protection remain in the public lab branch.
 
-The reusable local authenticated-browser transport is now on `main`.
+The Pangram API key stays in the private executor's trusted environment and must never be retrieved, printed, committed, or requested from Joel.
+
+A fresh uncached route test on 2026-08-20 (`pangram4-selfhost-route-retest-2026-08-20-a`) completed successfully through this exact path:
+
+- Pangram `4.0` / `STAGE_SUCCESS`;
+- 60-word fresh input;
+- `paid_api_calls: 1`;
+- `cache_hits: 0`;
+- estimated 1 credit / `$0.05`;
+- full detector `windows` metadata returned.
+
+This is current proof that the trusted route, credentials, self-hosted origin, and Pangram-4 API are operational.
+
+### Single-file API contract
+
+`pangram-lab detect-file` remains the canonical hash-gated/cache-safe single-file command where an appropriate trusted runtime already has the working Pangram route. See `docs/PANGRAM-API-DETECT-FILE.md`.
+
+Do not infer global Pangram availability or credit state from a different runtime's endpoint result when the private self-hosted executor has fresher direct evidence.
+
+### Local Playwright GUI — supported History/visual fallback
+
+The reusable local authenticated-browser transport remains supported for Pangram History recovery, localization, and visual evidence. It is not the ordinary route for new programmatic measurements.
 
 It uses:
 
 - a dedicated persistent automation profile, not the owner's ordinary browser profile;
 - headed Brave/Chromium through Playwright;
 - exact input SHA-256 and optional pre-authorized hash gates;
-- a durable `submission-reservation.json` persisted before the detector click;
-- an authenticated History-record listener attached before the paid click;
-- exact/bounded `/api/history/<uuid>/` stored-text binding;
-- explicit Pangram 4 `response.overall` structured fractions rather than guessed `prediction_prob` semantics;
-- recovery-before-repeat after an ambiguous action;
-- bounded tab cleanup and privacy-limited diagnostics;
-- labeled Playwright/CDP PDF fallback evidence when Pangram does not expose a native download.
+- a durable submission reservation before a detector click;
+- authenticated History observation and exact stored-text binding;
+- explicit Pangram 4 `response.overall` structured fractions;
+- recovery-before-repeat after ambiguous action;
+- bounded tab cleanup and privacy-limited diagnostics.
 
-The generic command is `pangram-local`; it accepts explicit input files and no longer embeds a Romance article default.
+The generic command is `pangram-local`. See `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`.
 
-The older remote Browserbase implementation remains only as shared compatibility/evidence code plus an optional remote adapter. The Browserbase service is not required for normal local GUI execution.
+### Browserbase — not an ordinary Pangram route
 
-## Live local-GUI certification — 2026-08-20
+Browserbase is not the normal measurement route. A Browserbase `HTTP 402 Payment Required` means Browserbase browser-minute quota exhaustion and says nothing about Pangram account credits. Do not buy/retry Browserbase minutes as a Pangram-credit workaround.
 
-The historical local-GUI evidence branch completed the exact 20,496-word Romance two-half workflow end to end.
+Older Browserbase code remains compatibility/history only.
 
-### Part 1
+### GitHub-hosted Actions — do not use as the normal Pangram API origin
 
-- exact SHA-256: `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`
-- words: 10,236
-- Pangram: 4.0 / `STAGE_SUCCESS`
-- Human fraction: `0.9205247164`
-- AI fraction: `0.0794752836`
-- AI-assisted fraction: `0.0`
-- stored-text binding: `exact_utf8`
-- paid GUI calls total: exactly 1
-- the original paid call had become capture-ambiguous; final recovery identified its exact stored record and did **not** submit Part 1 again.
+A known origin-specific compatibility issue (#95) causes GitHub-hosted runners calling Pangram's async external endpoint to return HTTP 401 even when the same credentials work elsewhere. Do not re-debug the API key or route ordinary measurements through GitHub-hosted Actions.
 
-### Part 2
+The `automation/pangram-fixed-batch` branch remains the canonical fixed-batch evidence/accounting implementation used by the private self-hosted executor; its historical GitHub-hosted paid workflow must not be confused with the current trusted execution origin.
 
-- exact SHA-256: `2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0`
-- words: 10,260
-- Pangram: 4.0 / `STAGE_SUCCESS`
-- Human fraction: `0.8983033895`
-- AI fraction: `0.1016966403`
-- AI-assisted fraction: `0.0`
-- stored-text binding: `exact_utf8`
-- paid GUI calls total: exactly 1
-- Part 2 was submitted once only after Part 1 had become an exact recovered cache hit.
+## Error-source classification
 
-Total paid GUI calls for that audit: exactly 2, one per half. No duplicate Part-1 submission occurred.
+Classify failures by the transport that actually produced them:
 
-These are two half-document measurements, not a measured whole-article score and not article authority.
+- **Browserbase HTTP 402** → Browserbase minutes exhausted; no Pangram-credit conclusion.
+- **GitHub-hosted async HTTP 401** → known origin-specific compatibility problem; no Pangram-key conclusion.
+- **self-hosted Pangram API HTTP 402** → the Pangram balance available to the trusted self-hosted route is insufficient for that request at that time.
+- **repository section-call cap** → internal safety/cost budget, not Pangram account balance.
 
-## Mainline GUI promotion
+A self-hosted 402 for a large request after a smaller successful request supports `insufficient remaining balance for the larger request`; it does not by itself prove a literal zero-credit balance.
 
-The clean current-main local-GUI promotion was built directly from the then-current `main` rather than merging the old Romance/GUI branch stack.
+## Current Romance detector evidence relevant to routing
 
-Promotion result:
+The historical local-GUI certification on 2026-08-20 remains valid evidence for the registered Romance boundary:
 
-- reusable local browser/auth/profile/history/result modules moved onto current `main`;
-- a generic structured-History completion layer and `pangram-local` CLI were added;
-- old article-specific Browserbase workflow/script topology was intentionally not promoted;
-- clean-main validation passed **226 tests with 5 intentional skips**;
-- changed-file lesson closeout passed;
-- repository audit passed;
-- repository workflow policy passed;
-- no Pangram detector submission occurred in CI.
+### Registered Part 1
 
-The clean promotion merged to `main` as `57db50384933be52bd91f6a078b924bebcd0f7f8`.
+- SHA-256 `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`
+- 10,236 words
+- Pangram 4.0 / `STAGE_SUCCESS`
+- Human `0.9205247164`
+- AI `0.0794752836`
+- AI-assisted `0.0`
+- exact stored-text binding
 
-The older **remote Browserbase Pangram GUI automation proposal** and the older **stacked local Brave/Playwright GUI development/evidence proposal** are closed as superseded. Their branches/history are preserved as provenance; do not delete them merely because the reusable transport was promoted.
+### Registered Part 2
 
-## Lesson-closeout cleanup
+- SHA-256 `2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0`
+- 10,260 words
+- Pangram 4.0 / `STAGE_SUCCESS`
+- Human `0.8983033895`
+- AI `0.1016966403`
+- AI-assisted `0.0`
+- exact stored-text binding
 
-During clean-main integration, the repository audit exposed five pre-existing Romance state artifacts on `main` whose current hashes had no lesson dispositions. They were not caused by the GUI promotion.
+These two historical half measurements are not a measured whole-article score and do not establish article authority.
 
-All five were explicitly dispositioned through the trusted closeout processor:
+The active 2026-08-20 Romance detector-repair audit has subsequently produced stronger candidate evidence on task/evidence branches. Its current best completed Part-2 result is pass 3, SHA `c6ef42419a3db2e82b1ff4f9370fc85bca4fa8c061c61dd6a1b5d28171d9908c`, Human `0.9153165817`.
 
-- two historical assistant integration/restoration records: `superseded`;
-- three exact owner-final/detector evidence records: `article-specific`.
+Pass 4 is frozen at SHA `a21b9670bc0cc61b4fc850761ca57ffa5dc5d1a02bdd5df90b820d6f9d437a0e`, 9,985 words. The trusted private self-hosted executor reserved its fourth Part-2 audit slot and Pangram then returned HTTP 402 `Insufficient credits` before issuing a task ID. The fresh 1-credit smoke had succeeded shortly before, so the supported conclusion is that the route worked but the available Pangram balance was insufficient for the approximately 10-credit full Part-2 request. Do not automatically retry this frozen input.
 
-No duplicate universal humanization rule was created. Existing promoted lessons already cover recovery-before-repeat, exact artifact binding, contextual detector windows, realization-first repair, persistent-browser hygiene, and fail-closed paid work.
+## Paid-call safety
 
-## Older governance state
+The six-new-paid-calls per stable audit/section cap remains binding unless current owner authorization explicitly changes it.
 
-The older fail-closed paid-dispatch registration and evidence-branch workflow hardening are already merged. Do not resume their old “merge next” instructions from stale checkpoints.
+Across transport changes, preserve one stable audit/section identity and import already-paid measurements into the current call ledger rather than resetting the budget. Before any new paid action:
 
-The separate hosted-controls hardening audit remains open and is not a GUI-transport blocker. It owns verification of repository-hosted settings that cannot be inferred from repository files alone.
+- check exact cache/completed results;
+- resume a checkpointed task ID rather than resubmitting;
+- treat ambiguous POSTs as potentially paid;
+- never repeat a completed exact measurement;
+- use explicit `model: pangram-4` and require returned `version: "4.0"`;
+- persist reservation/checkpoint/result/ledger state before another paid request;
+- keep the reader-visible SHA-256 and word count exact.
+
+Code-only preparation/CI must not spend Pangram credits.
+
+## Mainline GUI promotion history
+
+The reusable local browser/auth/profile/history/result modules were previously promoted onto `main` from a clean then-current base. That promotion passed the full deterministic suite, changed-file lesson closeout, repository audit, and workflow policy without detector submission.
+
+The older remote Browserbase proposal and stacked local GUI development/evidence histories remain provenance only.
 
 ## Current blockers / unresolved
 
-There is no known local-GUI transport blocker.
-
-Remaining unrelated repository governance work is tracked separately, especially hosted-control verification. Do not treat that as a reason to disable the now-supported API or local GUI transports.
-
-Browserbase-native execution has not been re-promoted as a primary route; treat it as optional compatibility/fallback code unless a future task specifically needs remote browser execution.
+- The trusted self-hosted Pangram route is operational, but the latest 9,985-word Romance pass-4 request was rejected by Pangram HTTP 402 before task creation because the available balance was insufficient for that request.
+- The pass-3 read-only History localizer still has a recovery reliability bug tracked in issue #110; do not buy detector calls to debug it.
+- Hosted-control hardening remains separate governance work and is not detector/article authority.
 
 ## Next safe action
 
-For ordinary Pangram work:
+For new programmatic Pangram work:
 
-1. use the self-hosted API when a programmatic result is sufficient;
-2. use `pangram-local` when authenticated GUI/history recovery or visual evidence is useful;
-3. before any paid action, check exact cache/result/reservation/history state;
-4. if an action may already have happened, recover first and do not repeat automatically;
-5. persist exact hashes, model/version, result fractions, and evidence before another paid input.
+1. use the private self-hosted executor;
+2. inspect exact cache, pending/ambiguous state, and call ledger first;
+3. freeze one exact public spec and one immutable private request;
+4. verify committed Pangram 4.0 result/windows and call accounting before another request.
 
-No further GUI validation call is required merely to prove the transport. New paid GUI calls should be justified by an actual detector task, not by infrastructure testing.
+For the current Romance pass 4 specifically, keep the exact candidate/spec frozen. Do not route through Browserbase or GitHub-hosted Actions and do not automatically resubmit. Once the trusted self-hosted Pangram balance is sufficient for the approximately 10-credit boundary, deliberately retry the same exact pass-4 identity after reviewing the existing failed cache and 4/6 audit state.
+
+No infrastructure smoke test is needed before that retry; the self-hosted route was freshly proven.
 
 ## Recovery rule
 
-After interruption or a fresh chat, inspect current `main`, this checkpoint, `state/LESSON-INDEX.md`, `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`, the relevant evidence branch/cache/ledger, and any active task-specific branch before acting.
+After interruption or a fresh chat, inspect this checkpoint, `state/PANGRAM-SELFHOST-ROUTING-CORRECTION-2026-08-20.md`, `state/LESSON-INDEX.md`, `docs/PANGRAM-API-DETECT-FILE.md`, the relevant fixed-batch cache/ledger/result state on `automation/pangram-fixed-batch`, the private executor request state when a paid run is involved, and the active article task branch.
 
-Never infer paid-call state from chat. Never repeat an ambiguous or already-paid detector action before exact stored state has been recovered or deliberately resolved.
+Never infer paid-call state from chat. Never repeat ambiguous/already-paid work before exact durable state is recovered or deliberately resolved.
