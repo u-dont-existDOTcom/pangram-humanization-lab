@@ -1,0 +1,63 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "pangram4-selfhost-route-retest-2026-08-20-a",
+  "spec_sha256": "6085834fe71271e9b73e7e7422914437c7946c1dc4c41645e29d34f55c44078f",
+  "results": [
+    {
+      "id": "SMOKE",
+      "measurement_key": "pangram4-selfhost-route-retest-2026-08-20-a_SMOKE",
+      "text": "Machine-generated prose can appear coherent, careful, and stylistically polished even when it has not been independently verified. A reliable detector test should therefore use a fresh passage, preserve the exact submitted bytes, record the model version returned by the service, and distinguish a successful live request from a cached result or a failure in unrelated browser infrastructure during routine operation.",
+      "text_sha256": "1f7df87339b7ba91d2698066f061832dc1f84473bd50ba62561edef4d15a693e",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Machine-generated prose can appear coherent, careful, and stylistically polished even when it has not been independently verified. A reliable detector test should therefore use a fresh passage, preserve the exact submitted bytes, record the model version returned by the service, and distinguish a successful live request from a cached result or a failure in unrelated browser infrastructure during routine operation.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Machine-generated prose can appear coherent, careful, and stylistically polished even when it has not been independently verified. A reliable detector test should therefore use a fresh passage, preserve the exact submitted bytes, record the model version returned by the service, and distinguish a successful live request from a cached result or a failure in unrelated browser infrastructure during routine operation.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999035596847534,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 417,
+            "word_count": 60,
+            "token_length": 69,
+            "is_humanized": false,
+            "humanizer_score": 0.006087682209908962
+          }
+        ]
+      },
+      "section_id": "smoke"
+    }
+  ],
+  "audit_id": "pangram4-selfhost-route-retest-2026-08-20-a",
+  "call_accounting": {
+    "audit_id": "pangram4-selfhost-route-retest-2026-08-20-a",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "section_id": "smoke",
+        "model": "pangram-4",
+        "version": "4.0",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
