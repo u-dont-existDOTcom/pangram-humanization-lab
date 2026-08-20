@@ -122,12 +122,8 @@ def main() -> int:
         page: Any,
         exact_text: str,
     ) -> tuple[Any, str, dict[str, object]]:
-        nonlocal (
-            last_exact_record,
-            observed_history_records,
-            history_list_status,
-            history_list_candidate_count,
-        )
+        nonlocal last_exact_record, observed_history_records
+        nonlocal history_list_status, history_list_candidate_count
         exact_records: list[ExactHistoryRecord] = []
         observed_uuids: set[str] = set()
 
