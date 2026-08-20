@@ -2,21 +2,31 @@
 
 ## Start here
 
-1. `../state/LESSON-INDEX.md`: current lesson authority, read order, and evidence branches
-2. `CHATGPT-OPERATING-GUIDE.md`: end-to-end operating rules
-3. `IDIOLECT-RETENTION-PROTOCOL.md`: edit-dose policy, private author profiles, single-author retention proxy, and closed-set IER
-4. `IDIOLECT-VALIDATION-PROTOCOL.md`: required second-tier calibration of the fast proxy against paper-faithful surface attribution, LUAR, topic controls, and held-out register-specific validation
-5. `IDIOLECT-BLOGGER-DISCOVERY.md`: metadata-only enumeration of confirmed-owner legacy Blogger posts before corpus selection
-6. `IDIOLECT-CORPUS-ACQUISITION.md`: provenance-audited source acquisition, normalization, local-only corpus storage, and duplicate/source-split boundaries before Tier B
-7. `LESSON-CLOSEOUT.md`: finding dispositions and completion gate
-8. `PANGRAM-ACTIONS-RUNBOOK.md`: repository-secret detector route
-9. `PANGRAM-LOCAL-PLAYWRIGHT.md`: local Brave/Chromium GUI fallback, exact stored-History binding, recovery-before-repeat, and operator commands
-10. `../state/CURRENT-STATE.md`: recovery checkpoint
+1. `../state/CURRENT-STATE.md`: canonical recovery checkpoint and current detector-transport routing
+2. `../state/LESSON-INDEX.md`: current lesson authority, read order, and evidence branches
+3. `CHATGPT-OPERATING-GUIDE.md`: end-to-end operating rules
+4. `PANGRAM-LOCAL-PLAYWRIGHT.md`: supported local Brave/Chromium GUI fallback, exact stored-History binding, recovery-before-repeat, and operator commands
+5. `IDIOLECT-RETENTION-PROTOCOL.md`: edit-dose policy, private author profiles, single-author retention proxy, and closed-set IER
+6. `IDIOLECT-VALIDATION-PROTOCOL.md`: required second-tier calibration of the fast proxy against paper-faithful surface attribution, LUAR, topic controls, and held-out register-specific validation
+7. `IDIOLECT-BLOGGER-DISCOVERY.md`: metadata-only enumeration of confirmed-owner legacy Blogger posts before corpus selection
+8. `IDIOLECT-CORPUS-ACQUISITION.md`: provenance-audited source acquisition, normalization, local-only corpus storage, and duplicate/source-split boundaries before Tier B
+9. `LESSON-CLOSEOUT.md`: finding dispositions and completion gate
+10. `PANGRAM-ACTIONS-RUNBOOK.md`: legacy/optional GitHub-hosted detector route; not the current access authority and subject to the hosted-runner compatibility issue tracked in #95
+
+## Current transport routing
+
+- The owner's **self-hosted Pangram API** is the normal programmatic route.
+- `PANGRAM-LOCAL-PLAYWRIGHT.md` documents the supported authenticated GUI/History fallback.
+- `PANGRAM-ACTIONS-RUNBOOK.md` is retained for fixed-batch evidence/accounting machinery and intentional future hosted execution, but GitHub-hosted Actions is no longer a required fallback for declaring Pangram access.
+- The old remote Browserbase proposal is compatibility/history, not the primary local GUI path.
+
+Always check `../state/CURRENT-STATE.md` before choosing a detector transport or interpreting stale branch/runbook instructions.
 
 ## Project use
 
-- `../README.md`: installation, live status, cache/checkpoint behavior, and experimental contract
-- `PANGRAM-LOCAL-PLAYWRIGHT.md`: supported local GUI transport; self-hosted API remains the normal programmatic route when available
+- `../README.md`: current detector routing, installation/harness use, cache/checkpoint behavior, and experimental contract
+- `PANGRAM-LOCAL-PLAYWRIGHT.md`: supported local GUI transport and History recovery
+- `PANGRAM-ACTIONS-RUNBOOK.md`: optional/legacy hosted transport details and paid-work safety if Actions is deliberately selected
 - `HUMANIZATION-ARCHITECTURE-REGRESSION.md`: article-wide regression gate after detector-driven edits
 - `lesson-inbox-plan.md`: lesson-request automation design
 - `superpowers/`: accepted specifications and implementation plans
@@ -34,4 +44,4 @@
 
 ## Evidence
 
-Exact experiment outputs, cases, caches, ledgers, and branch references remain in their established project locations. Current owner requirements and verified evidence outrank stale summaries.
+Exact experiment outputs, cases, caches, ledgers, and branch references remain in their established project locations. Current owner requirements, `../state/CURRENT-STATE.md`, and verified evidence outrank stale summaries or historical transport instructions.
