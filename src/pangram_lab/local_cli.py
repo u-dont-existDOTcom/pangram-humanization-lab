@@ -95,6 +95,13 @@ def _parser() -> argparse.ArgumentParser:
     _add_inputs(localize, multiple=True)
     localize.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     localize.add_argument("--max-candidates", type=int, default=100)
+    localize.add_argument(
+        "--report-url",
+        help=(
+            "Optional already-known https://www.pangram.com/history/<uuid> route for a single input. "
+            "Used read-only and never persisted."
+        ),
+    )
     return parser
 
 
@@ -289,25 +296,38 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "localize":
         paths = _validate_inputs(args.inputs)
+        if args.report_url and len(paths) != 1:
+            raise RuntimeError("--report-url is allowed only when localizing exactly one input")
         expected_map = _parse_expected_sha(args.expect_sha, paths)
         digests = _input_digests(paths, expected_map)
         durability = GitEvidenceDurability(repo_root, output_root)
         durability.preflight(digests)
-        results = []
+        results: list[dict[str, object]] = []
+        failed = False
         for path in paths:
             expected = None if expected_map is None else expected_map[str(path)]
-            results.append(
-                localize_existing_report(
+            try:
+                result = localize_existing_report(
                     config,
                     path,
                     output_root=output_root,
                     expected_sha256=expected,
                     evidence_callback=durability,
                     max_candidates=args.max_candidates,
+                    report_url=args.report_url,
                 )
-            )
+            except Exception as exc:
+                failed = True
+                result = {
+                    "status": "failed",
+                    "input_sha256": digests[path],
+                    "error_type": type(exc).__name__,
+                    "detector_submission_attempted": False,
+                    "failure_evidence_persisted": True,
+                }
+            results.append(result)
         _json({"results": results})
-        return 0
+        return 1 if failed else 0
 
     raise AssertionError(f"unhandled command: {args.command}")
 
