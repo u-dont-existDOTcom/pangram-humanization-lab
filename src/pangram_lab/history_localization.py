@@ -34,6 +34,7 @@ _LOCALIZATION_KEY_RE = re.compile(
     re.IGNORECASE,
 )
 _COLLECTION_PATH_RE = re.compile(r"(?:window|segment|highlight|span|sentence|chunk)", re.IGNORECASE)
+_WINDOW_INDEX_RE = re.compile(r"^\[(\d+)\]$")
 
 
 @dataclass(frozen=True)
@@ -113,14 +114,7 @@ def _selected_text(mapping: Mapping[str, Any], exact_text: str) -> tuple[str, st
 
 
 def _linebreak_removed_starts(exact_text: str) -> list[int]:
-    """Map each index in Pangram's observed linebreak-stripped representation to raw text.
-
-    Live long-document History evidence on 2026-08-20 showed `start_index` drift
-    equal to the cumulative CR/LF characters in the exact submitted boundary.
-    This mapping is never trusted by itself: callers must also prove the stored
-    window preview at the resulting raw start and, when supplied, the window word
-    count across the complete raw slice.
-    """
+    """Map Pangram's observed linebreak-stripped character indices to raw text."""
     return [index for index, char in enumerate(exact_text) if char not in "\r\n"]
 
 
@@ -132,43 +126,68 @@ def _raw_boundary_from_linebreak_removed(starts: list[int], exact_text: str, ind
     return starts[index]
 
 
-def _bind_indexed_window(mapping: Mapping[str, Any], exact_text: str) -> BoundSpan | None:
-    """Bind a Pangram window's complete raw span through its validated indices.
+def _validated_overall_window_bindings(
+    root: Mapping[str, Any], exact_text: str
+) -> dict[int, BoundSpan]:
+    """Bind a complete Pangram `overall.windows` collection as one proven coordinate system.
 
-    Pangram's current long-document `overall.windows[].text` may be a short
-    preview even when start/end and word_count describe a much larger window.
-    We therefore bind the complete window through start/end only when the live
-    transport normalization is independently proved by the preview and word
-    count. No approximate coordinate conversion is accepted.
+    Current long-document History records may store only a short preview in each
+    window's `text` field. The reliable proof is collection-wide: the windows
+    cover the full Pangram coordinate space contiguously, and *every* stored
+    preview must begin exactly at the raw position produced by the observed
+    linebreak-stripped index map. This does not assume Pangram's `word_count`
+    uses Python whitespace tokenization.
     """
-    selected = _selected_text(mapping, exact_text)
-    start = _safe_int(mapping.get("start_index"))
-    end = _safe_int(mapping.get("end_index"))
-    if selected is None or start is None or end is None or start < 0 or end <= start:
-        return None
+    windows = root.get("windows")
+    if not isinstance(windows, list) or not windows:
+        return {}
 
-    text_key, preview = selected
-    starts = _linebreak_removed_starts(exact_text)
-    raw_start = _raw_boundary_from_linebreak_removed(starts, exact_text, start)
-    raw_end = _raw_boundary_from_linebreak_removed(starts, exact_text, end)
-    if raw_start is None or raw_end is None or raw_end <= raw_start:
-        return None
+    index_map = _linebreak_removed_starts(exact_text)
+    bindings: dict[int, BoundSpan] = {}
+    previous_end: int | None = None
 
-    raw_window = exact_text[raw_start:raw_end]
-    if not raw_window.startswith(preview):
-        return None
+    for position, window in enumerate(windows):
+        if not isinstance(window, dict):
+            return {}
+        start = _safe_int(window.get("start_index"))
+        end = _safe_int(window.get("end_index"))
+        selected = _selected_text(window, exact_text)
+        if selected is None or start is None or end is None or start < 0 or end <= start:
+            return {}
+        if position == 0 and start != 0:
+            return {}
+        if previous_end is not None and start != previous_end:
+            return {}
 
-    expected_words = _safe_int(mapping.get("word_count"))
-    if expected_words is not None and len(raw_window.split()) != expected_words:
-        return None
+        raw_start = _raw_boundary_from_linebreak_removed(index_map, exact_text, start)
+        raw_end = _raw_boundary_from_linebreak_removed(index_map, exact_text, end)
+        if raw_start is None or raw_end is None or raw_end <= raw_start:
+            return {}
 
-    return BoundSpan(
-        start=raw_start,
-        end=raw_end,
-        text_key=text_key,
-        text=raw_window,
-        binding_mode="pangram_linebreak_removed_indices+preview+word_count",
-    )
+        text_key, preview = selected
+        if not exact_text.startswith(preview, raw_start):
+            return {}
+
+        raw_window = exact_text[raw_start:raw_end]
+        bindings[position] = BoundSpan(
+            start=raw_start,
+            end=raw_end,
+            text_key=text_key,
+            text=raw_window,
+            binding_mode="pangram_linebreak_removed_contiguous_windows+all_previews",
+        )
+        previous_end = end
+
+    if previous_end != len(index_map):
+        return {}
+    return bindings
+
+
+def _window_index_from_path(path: tuple[str, ...]) -> int | None:
+    if len(path) < 2 or path[-2] != "windows":
+        return None
+    match = _WINDOW_INDEX_RE.fullmatch(path[-1])
+    return None if match is None else int(match.group(1))
 
 
 def _unique_substring_span(exact_text: str, candidate: str) -> tuple[int, int] | None:
@@ -183,21 +202,17 @@ def _unique_substring_span(exact_text: str, candidate: str) -> tuple[int, int] |
 
 
 def _bound_span(mapping: Mapping[str, Any], exact_text: str) -> BoundSpan | None:
-    # Current long-document windows get the stronger complete-window binding
-    # first. This handles short stored previews without pretending the preview is
-    # the whole detector window.
-    indexed = _bind_indexed_window(mapping, exact_text)
-    if indexed is not None:
-        return indexed
-
     selected = _selected_text(mapping, exact_text)
     if selected is None:
         return None
     selected_key, selected_text = selected
 
-    # For other layouts, prefer explicit raw character offsets only when the
-    # associated text proves exactly what those offsets mean.
+    # For layouts that provide genuine raw offsets, accept them only when the
+    # associated text proves the exact slice. Pangram long-document overall
+    # windows are handled separately as a collection above.
     for start_key, end_key in _OFFSET_PAIRS:
+        if (start_key, end_key) == ("start_index", "end_index"):
+            continue
         start = _safe_int(mapping.get(start_key))
         end = _safe_int(mapping.get(end_key))
         if start is None or end is None or start < 0 or end <= start or end > len(exact_text):
@@ -273,17 +288,29 @@ def localize_history_record(
         raise ValueError("max_unresolved_shapes must be positive")
 
     roots = _candidate_roots(record)
+    full_overall_bindings: dict[int, dict[int, BoundSpan]] = {
+        id(root): _validated_overall_window_bindings(root, exact_text)
+        for root_path, root in roots
+        if root_path[-1] == "overall"
+    }
     dedup: dict[tuple[int, int, str], dict[str, object]] = {}
     unresolved: list[dict[str, object]] = []
     scanned_objects = 0
 
     for root_path, root in roots:
+        overall_bindings = full_overall_bindings.get(id(root), {})
         for relative_path, mapping in _walk(root):
             scanned_objects += 1
             full_path = (*root_path, *relative_path)
             if not _is_span_candidate(relative_path, mapping):
                 continue
-            span = _bound_span(mapping, exact_text)
+
+            span: BoundSpan | None = None
+            window_index = _window_index_from_path(relative_path)
+            if root_path[-1] == "overall" and window_index is not None:
+                span = overall_bindings.get(window_index)
+            if span is None:
+                span = _bound_span(mapping, exact_text)
             if span is None:
                 if (
                     len(unresolved) < max_unresolved_shapes
@@ -322,8 +349,18 @@ def localize_history_record(
         dedup.values(),
         key=lambda item: (int(item["char_start_0"]), int(item["char_end_0_exclusive"])),
     )
+    full_window_count = sum(
+        1
+        for item in spans
+        if any(
+            evidence.get("binding_mode")
+            == "pangram_linebreak_removed_contiguous_windows+all_previews"
+            for evidence in item.get("evidence", [])
+            if isinstance(evidence, dict)
+        )
+    )
     return {
-        "schema_version": 2,
+        "schema_version": 3,
         "status": "localized" if spans else "no_bound_spans",
         "purpose": "stored_history_localization_only_not_document_score_authority",
         "authorized_text_sha256": record.input_sha256,
@@ -332,12 +369,14 @@ def localize_history_record(
         "source_roots_scanned": [".".join(path) for path, _ in roots],
         "objects_scanned": scanned_objects,
         "localized_span_count": len(spans),
+        "validated_full_overall_window_count": full_window_count,
         "spans": spans,
         "unresolved_candidate_shapes": unresolved,
         "transport_index_note": (
-            "Current Pangram long-document start_index/end_index values are accepted only when a linebreak-removed "
-            "index map reproduces the stored preview at the exact raw start and the complete raw slice reproduces "
-            "the stored window word_count."
+            "Current long-document response.overall.windows are accepted as full windows only when the entire "
+            "collection covers Pangram's linebreak-stripped coordinate space contiguously and every stored preview "
+            "matches exactly at its mapped raw start. Pangram window word_count is preserved as metadata but is not "
+            "assumed to use Python whitespace tokenization."
         ),
         "privacy_note": (
             "No submitted text, localized span text, UUID, private report URL, cookies, browser storage, "
