@@ -1,0 +1,27 @@
+{
+  "audit_id": "pangram4-selfhost-route-retest-2026-08-20-a",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "smoke\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "estimated_credits": 1,
+          "measurement_key": "pangram4-selfhost-route-retest-2026-08-20-a_SMOKE",
+          "recorded_at_utc": "2026-08-20T23:33:22.932072+00:00",
+          "text_sha256": "1f7df87339b7ba91d2698066f061832dc1f84473bd50ba62561edef4d15a693e",
+          "type": "paid_post_reserved",
+          "word_count": 60
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "smoke",
+      "version": "4.0"
+    }
+  }
+}
