@@ -1,0 +1,44 @@
+name: Hash Romance pass 4 spec
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/hash-romance-pass4-spec.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  hash:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Pangram evidence branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+          fetch-depth: 0
+
+      - name: Verify and write exact spec SHA-256
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, pathlib
+          spec = pathlib.Path('experiments/romance-detector-repair-20260820-part2-pass4.json')
+          if not spec.is_file():
+              raise SystemExit('pass-4 spec missing')
+          digest = hashlib.sha256(spec.read_bytes()).hexdigest()
+          out = pathlib.Path('experiments/romance-detector-repair-20260820-part2-pass4.sha256')
+          out.write_text(digest + '  ' + spec.name + '\n', encoding='utf-8')
+          print(digest)
+          PY
+
+      - name: Commit SHA sidecar
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-part2-pass4.sha256
+          git commit -m 'Record Romance pass 4 Pangram spec SHA-256'
+          git push origin HEAD:automation/pangram-fixed-batch
