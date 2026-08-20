@@ -1,80 +1,145 @@
 # Pangram Humanization Lab current state
 
-Updated: 2026-08-19
-
-## Public-visibility update — 2026-08-19
-
-GitHub hosted readback confirms this repository is now **public**. `u-dont-existDOTcom/AskRigor-lessons` remains **private**. The owner-approved publication transition and credential-disclosure audit are recorded in `docs/PUBLIC-REPOSITORY-TRANSITION-2026-08-18.md`.
-
-A fresh hosted branch readback confirms `main` is still **unprotected**. Any older statement below that describes the repository as private or attributes unavailable branch rules specifically to the private-repository plan is historical evidence, not current hosted state. Secret scanning, push protection, Actions defaults, vulnerability alerts, code scanning, and evidence-branch protection remain at their separately verified/unverified states; do not infer enablement from public visibility.
-
-Public standard GitHub-hosted Actions no longer consume the private-repository Actions minute allowance. This changes compute cost placement only; paid Pangram calls, write-capable workflows, and other privileged execution boundaries remain unchanged.
+Updated: 2026-08-20
 
 ## Goal
 
-Preserve the lab's exact detector evidence, editorial authority, and lesson-closeout architecture while making Codex/GitHub operation recoverable, least-privileged, and safe around paid detector work.
+Preserve exact Pangram detector evidence, editorial authority, lesson closeout, and paid-call safety while supporting two independent detector transports:
 
-## Authority / baseline
+1. the owner's self-hosted Pangram API path for normal programmatic detector work;
+2. a local headed Brave/Chromium + Playwright GUI fallback for visual evidence, authenticated History recovery, and resilience.
 
-- Canonical branch: `main`; paid-route migration branch point `62495d48208136327c5e3da9bb8bc59e5f876d92`.
-- Long-lived evidence branch: `automation/pangram-fixed-batch`; audited idle migration baseline `a413d6d872d31a7f39c2c0ec5b13f270c105cef2`.
-- The main branch point includes the independently authorized Spiritual Bypassing r19-r29 lesson closeout; preserve it.
-- Start lesson recovery at `state/LESSON-INDEX.md`; start repository documentation at `docs/INDEX.md`.
-- Current owner instructions, exact repository evidence, and tests outrank historical chat.
+Current owner instructions, exact repository evidence, tests, and current `main` outrank historical chat or old task branches.
 
-## Completed
+## Authority and recovery
 
-- Main compliance PR #16 merged as `8bf49ac0132c2fa55429d78d4ab79997081413a3`.
-- Its post-merge repository-policy run `31776570388` and lesson-integrity run `31776570359` succeeded.
-- Exact bootstrap, test, focused-test, repository-audit, lesson-audit, and interactive-run commands are recorded in `.github/codex-repository.json`.
-- `state/CURRENT-STATE.md` is the single canonical recovery checkpoint.
-- Workflow permissions are job-scoped where writes are required; remote Actions are pinned to full commit SHAs.
-- Governance closeout receipts `L-6b3333a2c4-01`, `L-e96b341584-01`, and `L-a7e801f48a-01` are processed.
-- Evidence PR #19 preserves all 14 historic workflow blobs byte-for-byte outside `.github/workflows` and replaces them with one evidence-ref-bound paid implementation.
-- Evidence security head `e140e164828cf3128e1d8f6139fd5d1cd393d487` passed run `31778048629`: 78 tests, 0 audit errors, and the detector skipped.
-- Evidence preflight rejects control-character identifiers, emits only validated path outputs, delays push credentials, and exposes the Pangram secret only to the final explicitly confirmed runner step.
-- No manual dispatch or paid Pangram call was authorized or performed by compliance work.
+- Canonical repository branch: `main`.
+- Long-lived fixed-batch/evidence branch: `automation/pangram-fixed-batch`.
+- Start lesson recovery at `state/LESSON-INDEX.md`.
+- Start repository documentation at `docs/INDEX.md`.
+- This file is the single canonical repository recovery checkpoint.
+- The local GUI transport is documented at `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`.
+- Historical Romance GUI/evidence branches remain provenance only and do not establish article authority.
 
-## Current checkpoint
+## Current transport architecture
 
-- Prerequisite PR #22 registers `.github/workflows/pangram-paid-dispatch.yml` on default branch `main`; GitHub otherwise cannot deliver `workflow_dispatch` to a non-default ref.
-- Registration code head `928ea5ccf82360a80a20beac95d731d608ece5d6` passed lesson-integrity run `31778173435` with 62 tests and both lesson gates, plus repository-policy run `31778173455` with 0 errors and 5 warnings.
-- The default-branch file has no secret, checkout, paid runner, push trigger, or pull-request trigger. It fails closed and tells the operator to select `automation/pangram-fixed-batch`.
-- Documentation-binding commit `9060c6df0d3bff6af1c3365ef1d0139ee6361c0f` records the migration evidence.
-- PR #19 remains open until #22 is reviewed and merged; this order avoids registering the historic unconfirmed evidence workflow path.
+### Self-hosted Pangram API — normal programmatic route
 
-## Remaining
+The owner reports that Pangram API execution is now available through his own server/self-hosted execution path. Use the repository's existing content-addressed cache, task checkpoint/resume, exact model/version gates, ambiguity protection, call budget, and durable Git evidence rules around that transport. Never expose or commit API credentials.
 
-- Verify and independently review the exact final PR #22 head, then merge it to `main`.
-- Update PR #19 durable paths/evidence, re-run its exact head, re-review the resolved findings, and merge it to `automation/pangram-fixed-batch`.
-- Verify both post-merge branch runs without dispatching the paid route.
-- Promote the transferable paid-workflow lifecycle, default-registration, output-file injection, and credential-delay lessons to `universal-dev-architecture`.
-- Recheck hosted settings after repository-visible changes and update hardening-audit issue #17.
+The API is the normal choice when a programmatic detector result is all that is required.
 
-## Blockers / unresolved
+### Local Playwright GUI — supported fallback
 
-- Historical private-plan note: GitHub rulesets for the then-private repository returned a plan-limit error; `main` was verified unprotected. Current public hosted readback still confirms `main` is unprotected, but the old private-plan explanation is no longer current.
-- The connected integration could not read Actions default permissions, vulnerability alerts, secret scanning, push protection, or evidence-branch protection. These remain `unverified` until a newer direct readback supersedes them.
-- Code scanning was recorded disabled in the existing governance baseline; reverify before claiming current enablement.
-- Until hosted protections are verified, write-capable collaborators remain part of the trust boundary for repository secrets and workflow changes.
+The reusable local authenticated-browser transport is now on `main`.
 
-## Evidence / artifacts
+It uses:
 
-- Repository profile: `.github/codex-repository.json`
-- Public transition record: `docs/PUBLIC-REPOSITORY-TRANSITION-2026-08-18.md`
-- Main compliance record: `docs/CODEX-GITHUB-COMPLIANCE-2026-08-14.md`
-- Evidence compliance record in PR #19: `docs/EVIDENCE-WORKFLOW-COMPLIANCE-2026-08-14.md`
-- Hosted-control follow-up: https://github.com/u-dont-existDOTcom/pangram-humanization-lab/issues/17
-- Main compliance PR: https://github.com/u-dont-existDOTcom/pangram-humanization-lab/pull/16
-- Dispatcher registration PR: https://github.com/u-dont-existDOTcom/pangram-humanization-lab/pull/22
-- Evidence workflow PR: https://github.com/u-dont-existDOTcom/pangram-humanization-lab/pull/19
+- a dedicated persistent automation profile, not the owner's ordinary browser profile;
+- headed Brave/Chromium through Playwright;
+- exact input SHA-256 and optional pre-authorized hash gates;
+- a durable `submission-reservation.json` persisted before the detector click;
+- an authenticated History-record listener attached before the paid click;
+- exact/bounded `/api/history/<uuid>/` stored-text binding;
+- explicit Pangram 4 `response.overall` structured fractions rather than guessed `prediction_prob` semantics;
+- recovery-before-repeat after an ambiguous action;
+- bounded tab cleanup and privacy-limited diagnostics;
+- labeled Playwright/CDP PDF fallback evidence when Pangram does not expose a native download.
+
+The generic command is `pangram-local`; it accepts explicit input files and no longer embeds a Romance article default.
+
+The older remote Browserbase implementation remains only as shared compatibility/evidence code plus an optional remote adapter. The Browserbase service is not required for normal local GUI execution.
+
+## Live local-GUI certification — 2026-08-20
+
+The historical local-GUI evidence branch completed the exact 20,496-word Romance two-half workflow end to end.
+
+### Part 1
+
+- exact SHA-256: `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`
+- words: 10,236
+- Pangram: 4.0 / `STAGE_SUCCESS`
+- Human fraction: `0.9205247164`
+- AI fraction: `0.0794752836`
+- AI-assisted fraction: `0.0`
+- stored-text binding: `exact_utf8`
+- paid GUI calls total: exactly 1
+- the original paid call had become capture-ambiguous; final recovery identified its exact stored record and did **not** submit Part 1 again.
+
+### Part 2
+
+- exact SHA-256: `2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0`
+- words: 10,260
+- Pangram: 4.0 / `STAGE_SUCCESS`
+- Human fraction: `0.8983033895`
+- AI fraction: `0.1016966403`
+- AI-assisted fraction: `0.0`
+- stored-text binding: `exact_utf8`
+- paid GUI calls total: exactly 1
+- Part 2 was submitted once only after Part 1 had become an exact recovered cache hit.
+
+Total paid GUI calls for that audit: exactly 2, one per half. No duplicate Part-1 submission occurred.
+
+These are two half-document measurements, not a measured whole-article score and not article authority.
+
+## Mainline GUI promotion
+
+The clean current-main local-GUI promotion was built directly from the then-current `main` rather than merging the old Romance/GUI branch stack.
+
+Promotion result:
+
+- reusable local browser/auth/profile/history/result modules moved onto current `main`;
+- a generic structured-History completion layer and `pangram-local` CLI were added;
+- old article-specific Browserbase workflow/script topology was intentionally not promoted;
+- clean-main validation passed **226 tests with 5 intentional skips**;
+- changed-file lesson closeout passed;
+- repository audit passed;
+- repository workflow policy passed;
+- no Pangram detector submission occurred in CI.
+
+The clean promotion merged to `main` as `57db50384933be52bd91f6a078b924bebcd0f7f8`.
+
+The older **remote Browserbase Pangram GUI automation proposal** and the older **stacked local Brave/Playwright GUI development/evidence proposal** are closed as superseded. Their branches/history are preserved as provenance; do not delete them merely because the reusable transport was promoted.
+
+## Lesson-closeout cleanup
+
+During clean-main integration, the repository audit exposed five pre-existing Romance state artifacts on `main` whose current hashes had no lesson dispositions. They were not caused by the GUI promotion.
+
+All five were explicitly dispositioned through the trusted closeout processor:
+
+- two historical assistant integration/restoration records: `superseded`;
+- three exact owner-final/detector evidence records: `article-specific`.
+
+No duplicate universal humanization rule was created. Existing promoted lessons already cover recovery-before-repeat, exact artifact binding, contextual detector windows, realization-first repair, persistent-browser hygiene, and fail-closed paid work.
+
+## Older governance state
+
+The older fail-closed paid-dispatch registration and evidence-branch workflow hardening are already merged. Do not resume their old “merge next” instructions from stale checkpoints.
+
+The separate hosted-controls hardening audit remains open and is not a GUI-transport blocker. It owns verification of repository-hosted settings that cannot be inferred from repository files alone.
+
+## Current blockers / unresolved
+
+There is no known local-GUI transport blocker.
+
+Remaining unrelated repository governance work is tracked separately, especially hosted-control verification. Do not treat that as a reason to disable the now-supported API or local GUI transports.
+
+Browserbase-native execution has not been re-promoted as a primary route; treat it as optional compatibility/fallback code unless a future task specifically needs remote browser execution.
 
 ## Next safe action
 
-For repository visibility/cost work, no further private-to-public transition is required: hosted readback is public. Continue normal Pangram work from the freshest branch/PR evidence, and treat current public Actions billing separately from paid-provider execution controls.
+For ordinary Pangram work:
 
-For the older paid-route checkpoint below, re-read current PR/ref state before acting; do not assume the 2026-08-14 PR ordering remains live solely because it is preserved here as history.
+1. use the self-hosted API when a programmatic result is sufficient;
+2. use `pangram-local` when authenticated GUI/history recovery or visual evidence is useful;
+3. before any paid action, check exact cache/result/reservation/history state;
+4. if an action may already have happened, recover first and do not repeat automatically;
+5. persist exact hashes, model/version, result fractions, and evidence before another paid input.
+
+No further GUI validation call is required merely to prove the transport. New paid GUI calls should be justified by an actual detector task, not by infrastructure testing.
 
 ## Recovery rule
 
-Before any paid dispatch, fetch the current evidence head and active Actions runs. Recover exact task IDs, cache, call ledger, and result state from Git; never infer them from chat and never repeat an ambiguous or already-paid POST.
+After interruption or a fresh chat, inspect current `main`, this checkpoint, `state/LESSON-INDEX.md`, `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`, the relevant evidence branch/cache/ledger, and any active task-specific branch before acting.
+
+Never infer paid-call state from chat. Never repeat an ambiguous or already-paid detector action before exact stored state has been recovered or deliberately resolved.
