@@ -1,10 +1,10 @@
-# Pangram local Playwright current state — 2026-08-19
+# Pangram local Playwright current state — 2026-08-20
 
 ## Goal
 
 Use a dedicated headed persistent local Playwright profile on Joel's Zorin machine as a fully functional Pangram GUI transport while preserving exact-hash identity, ambiguity/duplicate protection, paid-call accounting, recovery-before-repeat, bounded browser tabs, and GitHub durability.
 
-The Pangram API is now independently available through Joel's private self-hosted executor. Continue GUI development anyway: the API and GUI are separate transports, and GUI capability remains useful for report inspection, recovery, visual evidence, and resilience.
+The Pangram API is independently available through Joel's private self-hosted executor. Continue GUI development anyway: the API and GUI are separate transports, and GUI capability remains useful for report inspection, recovery, visual evidence, and resilience.
 
 ## Authority / branch
 
@@ -15,9 +15,9 @@ The Pangram API is now independently available through Joel's private self-hoste
 
 ## Independent API transport — live
 
-Owner update, 2026-08-19: Pangram API execution is now available through Joel's own machine/self-hosted execution path. `u-dont-existDOTcom/pangram-private-executor` is the private trusted envelope; it routes approved fixed-batch work to the repository-level self-hosted `pangram` runner and reuses the public lab's canonical cache, pending-task checkpointing, ambiguity guard, call ledger, section cap, result schema, and Git synchronization.
+Owner update: Pangram API execution is available through Joel's own machine/self-hosted execution path. `u-dont-existDOTcom/pangram-private-executor` is the private trusted envelope; it routes approved fixed-batch work to the repository-level self-hosted `pangram` runner and reuses the public lab's canonical cache, pending-task checkpointing, ambiguity guard, call ledger, section cap, result schema, and Git synchronization.
 
-A live private-executor smoke has produced a durable Pangram 4.0 `STAGE_SUCCESS` result on `automation/pangram-fixed-batch`. This confirms API transport availability. It does **not** clear or replace the separate GUI Part-1 ambiguity record.
+A live private-executor smoke produced a durable Pangram 4.0 `STAGE_SUCCESS` result on `automation/pangram-fixed-batch`. This confirms API transport availability. It does **not** clear or replace the separate GUI Part-1 ambiguity record.
 
 ## Exact current Romance boundary
 
@@ -44,7 +44,8 @@ Audit: `romance-current-20496-pangram-gui-20260818`.
 - section `romance-current-part-1`;
 - paid GUI calls: 1;
 - estimated credits/cost: 11 / USD 0.55;
-- exact SHA `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`.
+- exact SHA `ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8`;
+- durable reservation timestamp: `2026-08-18T17:43:00.595741+00:00`.
 
 The call reached Pangram. The original capture remained on the initiating dashboard instead of a result bound to the exact submitted document. `failure.json` records `detector_submission_attempted: true`; the durable GUI call reservation remains. No automatic Part-1 GUI resubmission is permitted.
 
@@ -60,18 +61,28 @@ Prior no-repeat recovery routes established:
 2. older History/scans/reports UI selectors did not find it;
 3. Chromium global History is not authoritative for Pangram's SPA record history;
 4. All Checks/View Results navigation reached real stored records but the legacy DOM parser rejected current long-document reports;
-5. exact `web.pangram.com/api/history/<uuid>/` record matching reached ten stored report candidates but found no byte-identical copy of the authorized Part-1 text.
+5. exact `web.pangram.com/api/history/<uuid>/` record matching reached stored report candidates but found no byte-identical or bounded-normalization copy of the authorized Part-1 text.
 
-### Latest owner-machine run — 2026-08-19 06:33 UTC
+### Latest owner-machine run — 2026-08-19 09:10 UTC
 
-- deterministic suite: **190/190 passed**;
+The owner reran the safe recovery wrapper after the bounded-normalization repair.
+
+- deterministic suite: **192/192 passed**;
 - browser history/result candidates: **10**;
-- exact history API record found: **false** under the then-current byte-exact matcher;
+- history API records actually observed: **6**;
+- exact/bounded Part-1 history record found: **false**;
 - Part 1 detector submission during recovery: **false**;
 - Part 2 GUI submission: **not attempted**;
 - recovery stopped fail-closed with the original Part-1 ambiguity intact.
 
-This latest run proves the remaining failure is representation binding, not authentication, browser launch, test health, or accidental repeat submission.
+The privacy-safe comparison output showed that the plausible long stored records are materially different article boundaries, not line-ending/terminal-whitespace variants of current Part 1. Examples:
+
+- one stored `prompt`/`response_payload.text` boundary is **10,280 words**, +44 words versus current Part 1;
+- another stored boundary is **10,332 words**, +96 words versus current Part 1;
+- neither candidate contains the current Part-1 text as an exact substring;
+- neither becomes equal after whitespace collapse.
+
+Therefore **do not broaden** the identity matcher to interior-whitespace collapse, fuzzy similarity, word-count tolerance, or “closest long document.” These records may be older Romance scans.
 
 ## Current long-document transport evidence
 
@@ -81,24 +92,43 @@ A prior privacy-bounded diagnostic exposed the current long-document contract:
 - report data: `https://web.pangram.com/api/history/<uuid>/`;
 - list data: `https://web.pangram.com/api/history-list/`;
 - stored record fields include `prompt`, `response`, `response_payload`, `prediction`, `prediction_prob`, `model_id`, and `uuid`;
-- current long-document report overview exposes document-level controls such as `AI 8%`, `Human 92%`, and paginated highlight navigation, rather than historical per-segment word-count headings.
+- current long-document report overview exposes document-level controls such as `AI 8%`, `Human 92%`, and paginated highlight navigation rather than historical per-segment word-count headings.
 
-The observed 92/8 report remains only a historical candidate until its stored representation is cryptographically/structurally bound to Part 1. Do not assign that score to Part 1 by inference.
+The observed 92/8 report remains only a historical candidate until its stored representation is independently bound to the paid Part-1 event. Do not assign that score to Part 1 by inference.
 
-## Current representation-binding repair
+## Bounded representation contract
 
 Detailed checkpoint: `state/PANGRAM-LOCAL-HISTORY-API-EXACT-BINDING-2026-08-19.md`.
 
-The prior exact-record implementation required a literal byte-identical string in the stored JSON. The 190-test live run falsified that as sufficient for recovery. The branch now adds a strictly bounded transport-normalization ladder:
+Accepted stored-text identity modes remain strictly bounded:
 
 1. exact UTF-8 equality;
 2. CRLF/CR → LF line-ending normalization;
 3. terminal-newline normalization;
 4. outer-whitespace normalization.
 
-Every accepted mode must preserve the complete interior text and identical word count. The receipt records both authorized and stored SHA-256 values plus the explicit `transport_match_mode`. Interior whitespace collapse is **not** accepted as identity.
+Every accepted mode preserves the complete interior text and identical word count. The receipt records both authorized and stored SHA-256 values plus the explicit `transport_match_mode`. Interior whitespace collapse is diagnostic only and cannot clear ambiguity.
 
-If none of those modes matches, recovery now emits a privacy-safe comparison diagnostic containing only field paths, character/word counts and deltas, accepted-mode status, substring booleans, and whether whitespace-collapsed equality would hold diagnostically. It never prints stored record text, UUIDs, cookies, storage values, or private result URLs. Whitespace-collapsed equality cannot clear ambiguity.
+## New timestamp-bound recovery — code green, owner-machine unverified
+
+The latest safe comparison establishes that scanning “all plausible 10k-word records” is too broad. The next recovery stage therefore adds an independent temporal key instead of weakening text identity.
+
+Implementation head before this state update: `d44be92da32a8b72c919e19d855545ac07f72295`.
+
+New helper: `src/pangram_lab/history_list_recovery.py`.
+
+The recovery now:
+
+- reads the paid reservation timestamp from the durable GUI call ledger rather than chat or a hardcoded guessed report time;
+- reads Pangram's authenticated `history-list` read-only and extracts records with UUID + creation/submission timestamps;
+- ranks records by absolute time distance from the paid reservation;
+- inspects only records within a 15-minute window as timestamp-bound Part-1 candidates;
+- still requires the existing exact/bounded stored-text identity before clearing ambiguity;
+- if direct `BrowserContext.request` authentication is unavailable, captures the real SPA's authenticated `history-list` response in memory while opening All Checks/History and navigates the time-matched report page read-only;
+- does not log UUIDs, private result URLs, record text, cookies, browser storage, or auth headers;
+- reports only privacy-safe timestamp distance, field path, read status, and existing content-free text-comparison measurements.
+
+Public code-only CI on `d44be92da32a8b72c919e19d855545ac07f72295` is green: repository workflow policy passed; the complete test suite, lesson closeout, and repository audit passed in the Lesson integrity change gate. No detector submission is performed by CI.
 
 ## GUI completion contract
 
@@ -108,13 +138,19 @@ If none of those modes matches, recovery now emits a privacy-safe comparison dia
 
 The operator wrapper routes Part 1 through no-submit recovery and only after a complete cached Part-1 receipt routes Part 2 through the API-record-bound GUI paid runner.
 
-## Next validation/action
+## Next safe action
 
-1. Run exact-head public CI for the bounded representation matcher and privacy-safe diagnostic.
-2. After green CI, run `scripts/pangram_local_romance_recover_resume_safe.sh` on the owner machine.
-3. If Part 1 matches under one of the explicitly recorded transport modes, persist/cache it and permit only the uncached Part 2 GUI call.
-4. If no bounded match exists, stop and use the new comparison diagnostic to characterize the storage transformation before broadening any identity rule.
+Run `scripts/pangram_local_romance_recover_resume_safe.sh` on the owner machine once more.
+
+The important new output is:
+
+- `history_list_status`;
+- `history_list_candidate_count`;
+- `history_list_nearest_candidates[].seconds_from_paid_reservation`;
+- any `paid_time_bound_history` record comparison.
+
+If the report created around the paid click exact/bounded-matches Part 1, persist/cache it and permit only the uncached Part-2 GUI call. If the closest timestamp-bound report is materially different or no report exists near the click, preserve ambiguity and diagnose the original submission/capture event rather than broadening matching or repeating Part 1.
 
 ## Stop conditions
 
-Stop before resubmitting Part 1 through GUI, bypassing its reservation/ambiguity block, submitting Part 2 through GUI before exact/bounded Part-1 recovery, using Joel's ordinary browser profile/history, committing browser/session/auth/API-record content, guessing score semantics from `prediction_prob`, accepting collapsed interior whitespace as identity without a separately proven transport contract, inventing legacy segment counts, accepting a generic report marker, or rewriting Romance prose merely to simplify detector transport.
+Stop before resubmitting Part 1 through GUI, bypassing its reservation/ambiguity block, submitting Part 2 through GUI before exact/bounded Part-1 recovery, using Joel's ordinary browser profile/history, committing browser/session/auth/API-record content, guessing score semantics from `prediction_prob`, accepting fuzzy/word-count-near/collapsed-interior-whitespace identity, inventing legacy segment counts, accepting a generic report marker, or rewriting Romance prose merely to simplify detector transport.
