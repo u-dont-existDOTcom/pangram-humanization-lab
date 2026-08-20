@@ -1,11 +1,15 @@
 {
-  "schema_version": 1,
-  "request_id": "romance-tough-love-closing-integration-mainline-closeout-20260820",
-  "status": "pending",
-  "source_ref": "d9a18b82b241963e7dc13d03956d4cd5b32b4208",
-  "source_path": "state/ROMANCE-TOUGH-LOVE-CLOSING-INTEGRATION-2026-08-16.md",
-  "source_sha256": "5a1f0cc9a73a5ff9241c62cd4229a558bb2b75c58936caa93dfeafe79c75527a",
-  "finding": "This historical Tough Love integration preserved protected section functions that could not be deleted merely because a newer coda existed, but the assistant-integrated prose was later superseded by Joel's direct owner-final Tough Love rewrite.",
   "disposition": "superseded",
-  "reason": "The later direct owner-final rewrite and detector evidence in `state/ROMANCE-TOUGH-LOVE-DETECTOR-REPAIR-2026-08-16.md` control. This file remains historical architecture/source-recovery provenance and must not compete with the newer owner-final prose."
+  "finding": "This historical Tough Love integration preserved protected section functions that could not be deleted merely because a newer coda existed, but the assistant-integrated prose was later superseded by Joel's direct owner-final Tough Love rewrite.",
+  "ledger_entry_ids": [
+    "L-5a1f0cc9a7-01"
+  ],
+  "processed_at_utc": "2026-08-20T17:25:11.822403+00:00",
+  "reason": "The later direct owner-final rewrite and detector evidence in `state/ROMANCE-TOUGH-LOVE-DETECTOR-REPAIR-2026-08-16.md` control. This file remains historical architecture/source-recovery provenance and must not compete with the newer owner-final prose.",
+  "request_id": "romance-tough-love-closing-integration-mainline-closeout-20260820",
+  "schema_version": 1,
+  "source_path": "state/ROMANCE-TOUGH-LOVE-CLOSING-INTEGRATION-2026-08-16.md",
+  "source_ref": "d9a18b82b241963e7dc13d03956d4cd5b32b4208",
+  "source_sha256": "5a1f0cc9a73a5ff9241c62cd4229a558bb2b75c58936caa93dfeafe79c75527a",
+  "status": "processed"
 }
