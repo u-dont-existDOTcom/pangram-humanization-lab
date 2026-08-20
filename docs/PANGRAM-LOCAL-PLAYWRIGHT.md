@@ -1,6 +1,6 @@
 # Pangram local Playwright GUI transport
 
-Status: promotion candidate from the live-certified Zorin/Brave implementation.
+Status: supported on `main`; live-certified on Joel's Zorin/Brave machine.
 
 ## Purpose
 
@@ -90,11 +90,11 @@ The headed browser is the default. Headless mode exists for controlled testing b
 
 The implementation was live-certified on 2026-08-20 against two approximately 10k-word Pangram 4 boundaries. The first result was recovered from the original ambiguous paid submission with no repeat call; the second was submitted exactly once and exact-bound to its stored History record. Both returned Pangram 4.0 `STAGE_SUCCESS`. The detailed evidence remains on the historical local-GUI evidence branch and its content-addressed result directories.
 
-This promotion intentionally imports the reusable transport machinery onto current `main` without importing the old Romance article-editing branch history or establishing any article authority.
+The reusable transport was promoted onto current `main` without importing the old Romance article-editing branch history or establishing any article authority. The old remote Browserbase proposal and old stacked local GUI development/evidence proposal are closed as superseded; their histories remain provenance.
 
 ## Clean-main validation
 
-The first clean-main integration run exposed only two obsolete Browserbase tests that depended on the old Browserbase command script and an article-specific workflow; those branch-topology tests were removed rather than importing obsolete infrastructure. The next clean-main run passed **226 tests with 5 intentional skips**. Its changed-file lesson-closeout gate passed. The only remaining audit failure at that point was five pre-existing Romance lesson artifacts already present on `main` without current-hash dispositions; those inherited records were then explicitly closed as either `article-specific` or `superseded` through the trusted lesson-closeout processor. No Pangram detector submission is performed by these CI gates.
+The first clean-main integration run exposed only two obsolete Browserbase tests that depended on the old Browserbase command script and an article-specific workflow; those branch-topology tests were removed rather than importing obsolete infrastructure. The next clean-main run passed **226 tests with 5 intentional skips**. Its changed-file lesson-closeout gate passed. The repository audit passed after five pre-existing Romance lesson artifacts already present on `main` were explicitly closed as either `article-specific` or `superseded` through the trusted lesson-closeout processor. Repository workflow policy also passed. No Pangram detector submission is performed by these CI gates.
 
 ## Privacy and profile safety
 
