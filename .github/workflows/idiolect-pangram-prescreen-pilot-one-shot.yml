@@ -93,7 +93,7 @@ jobs:
           assert data['validation']['substitution_validated'] is False
           assert data['status'] == 'pilot-not-validated'
           assert data['dataset']['group_count'] >= 3
-          assert data['profile']['sample_count'] == 5
+          assert data['profile']['sample_count'] == 6
           assert data['profile']['word_count'] >= 1000
           forbidden = {'text', 'raw_text', 'canonical_text', 'local_text_path'}
           def walk(value):
