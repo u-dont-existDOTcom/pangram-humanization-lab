@@ -1,0 +1,103 @@
+{
+  "audit_id": "romance-current-20496-pangram-gui-20260818",
+  "browser_executable": "/opt/brave.com/brave/brave",
+  "call_accounting": {
+    "cache_hits": 0,
+    "cap": 6,
+    "estimated_cost_usd": 0.55,
+    "estimated_credits": 11,
+    "model": "pangram-4",
+    "paid_api_calls": 1,
+    "pending_resumes": 0,
+    "section_id": "romance-current-part-2",
+    "version": "4.0"
+  },
+  "captured_at_utc": "2026-08-20T16:28:02.067132Z",
+  "detector_submission_attempted": true,
+  "detector_version": "4.0",
+  "evidence_source": "new_detector_submission",
+  "headed": true,
+  "history_api_exact_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+    "authorized_word_count": 10260,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+    "exact_word_count": 10260,
+    "record_model_id": null,
+    "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+    "record_prediction_prob": 0.14895853400230408,
+    "stored_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+    "stored_word_count": 10260,
+    "transport_match_mode": "exact_utf8"
+  },
+  "input_path": "work/romance-current-assembly/pangram-part-2.txt",
+  "input_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+  "local_profile_path": "~/.config/pangram-local-browser",
+  "measurement_key": "gui:2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+  "model": "pangram-4",
+  "parsed": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "AI Detected",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+      "authorized_word_count": 10260,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+      "exact_word_count": 10260,
+      "record_model_id": null,
+      "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+      "record_prediction_prob": 0.14895853400230408,
+      "stored_text_sha256": "2df878093bc05fefa98ca30e9a97bdd52e212370f432bf0408e90f1b60c54bb0",
+      "stored_word_count": 10260,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "Mixed",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 0.1016966403,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.8983033895,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "pdf_provenance": "playwright_print_fallback",
+  "platform": "Linux-7.0.0-29-generic-x86_64-with-glibc2.39",
+  "playwright_version": "1.62.0",
+  "profile_kind": "dedicated_persistent_automation_profile",
+  "report_body_sha256": "f6c6193eead626d5f007f65b85b6bf3a311a7392202a7280da542a9c9b97b567",
+  "report_layout": "history_api_structured_result_v1",
+  "report_pdf_sha256": "1829e1010c87d0cda646ffdc394a13e9705e2251b3cdecfc4d1b87b99c14f149",
+  "report_url": "https://www.pangram.com/history/58db9b2b-9a3d-43cf-8970-2e2b7410a0e8",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "section_id": "romance-current-part-2",
+  "source": {
+    "last_observed_branch_head": "8e0d70d0ea51fbcb12e307ed0629ed75ee35ce8c",
+    "part_number": 2,
+    "reader_visible_sha256": "10359ab2119ffbe9a8a7a4a52cd0c3216bb1a6a2c0bffbd7e66fca01287f17ce",
+    "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+    "source_branch": "agent/romance-primal-crucible-gui-repair-20260817",
+    "source_commit": "8e0d70d0ea51fbcb12e307ed0629ed75ee35ce8c",
+    "source_manifest_path": "work/romance-current-assembly/pangram-halves-manifest.json",
+    "source_manifest_sha256": "21808bf6f02355f63093cfe2ebdd79936de360522942c19b51afccc828f021b2",
+    "source_path": "work/romance-current-assembly/pangram-part-2.txt"
+  },
+  "status": "complete",
+  "transport": "local_playwright",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "word_count": 10260
+}
