@@ -10,11 +10,13 @@
 6. `IDIOLECT-CORPUS-ACQUISITION.md`: provenance-audited source acquisition, normalization, local-only corpus storage, and duplicate/source-split boundaries before Tier B
 7. `LESSON-CLOSEOUT.md`: finding dispositions and completion gate
 8. `PANGRAM-ACTIONS-RUNBOOK.md`: repository-secret detector route
-9. `../state/CURRENT-STATE.md`: recovery checkpoint
+9. `PANGRAM-LOCAL-PLAYWRIGHT.md`: local Brave/Chromium GUI fallback, exact stored-History binding, recovery-before-repeat, and operator commands
+10. `../state/CURRENT-STATE.md`: recovery checkpoint
 
 ## Project use
 
 - `../README.md`: installation, live status, cache/checkpoint behavior, and experimental contract
+- `PANGRAM-LOCAL-PLAYWRIGHT.md`: supported local GUI transport; self-hosted API remains the normal programmatic route when available
 - `HUMANIZATION-ARCHITECTURE-REGRESSION.md`: article-wide regression gate after detector-driven edits
 - `lesson-inbox-plan.md`: lesson-request automation design
 - `superpowers/`: accepted specifications and implementation plans
