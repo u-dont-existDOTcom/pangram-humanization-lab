@@ -15,8 +15,17 @@
   "next_measurement": {
     "measurement_key": "romance-detector-repair-20260820.part2.pass2",
     "text_sha256": "679daa77fb92ea71bb85716e6ece671e093b49412b149e2f5129079a204d24d2",
-    "status": "authorized_pending",
-    "authorized_new_paid_post_number": 2
+    "status": "success",
+    "authorized_new_paid_post_number": 2,
+    "cache_path": "cache/pangram-4/4.0/679daa77fb92ea71bb85716e6ece671e093b49412b149e2f5129079a204d24d2/romance-detector-repair-20260820.part2.pass2.json",
+    "task_id": "e53ac90c-1b06-462e-96f3-28bc980cbaab",
+    "submitted_model": "pangram-4",
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "fraction_human": 0.9114283323287964,
+    "fraction_ai": 0.08857167512178421,
+    "fraction_ai_assisted": 0.0
   },
-  "part1": "no_new_call_exact_registered_hash_restored"
+  "part1": "no_new_call_exact_registered_hash_restored",
+  "observed_new_paid_posts_in_this_audit_section": 2
 }
