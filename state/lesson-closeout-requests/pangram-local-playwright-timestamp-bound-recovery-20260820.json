@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "request_id": "pangram-local-playwright-timestamp-bound-recovery-20260820",
+  "source_path": "state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md",
+  "source_ref": "agent/pangram-local-playwright-gpt-20260818",
+  "source_sha256": "f3e9672fa985797a7a5035699007975fe6d32d92d6eeb2f2c6f33188c3694d66",
+  "finding": "The GUI recovery checkpoint records the 192-test no-repeat owner run, materially mismatched older long-document records, the live independent API transport, and the new timestamp-bound read-only history recovery keyed to the durable paid-call reservation.",
+  "disposition": "no-new-lesson",
+  "reason": "This is project-specific resumability and transport state. Existing promoted universal lessons already cover recovery-before-repeat, exact artifact binding, SPA application-history authority, and fail-closed paid-workflow handling. The timestamp key is an implementation refinement for this Pangram ambiguity, not a new humanization lesson.",
+  "promoted_to": [],
+  "status": "pending"
+}
