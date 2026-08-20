@@ -47,19 +47,23 @@ A requested humanization pass is not complete until:
 
 1. semantic sanity, coherence, fidelity, and protected-function audits pass;
 2. the exact intended delivery boundary has an actual Pangram result from the required detector/version;
-3. when the standing 100% gate applies, the result has `stage == STAGE_SUCCESS`, Pangram 4.0, Human fraction `1.0`, AI fraction `0.0`, and AI-assisted fraction `0.0`;
+3. when the standing 100% gate applies, the result satisfies `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `fraction_human == 1.0`, `fraction_ai == 0.0`, and `fraction_ai_assisted == 0.0`;
 4. every detector-driven change has been re-audited for semantic/rhetorical loss;
 5. user-facing detector claims come from measured results rather than prediction or intuition.
 
-Section/window measurements are diagnostic unless that unit is the complete requested deliverable. Section results do not aggregate automatically into a whole-article pass.
+Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
+
+A Human headline or a partial result such as 93% Human is progress only; under a 100% requirement it is not a pass.
+
+The normal editorial terminal states are: (1) the exact intended delivery boundary passes every required detector/editorial gate; or (2) the worker genuinely knows no further faithful coherent repair and makes an **unresolved authorial handoff**. Reaching the paid-call limit creates an **operational suspension**, not completion: stop before a seventh paid POST and request narrow help rather than resetting the audit identity.
+
+Any unresolved authorial handoff or operational suspension must record `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempted faithful approaches; protected claims/functions; paid-call state; and the narrow owner input needed.
+
+A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
 
 ### Reader-visible representation gate
 
-Certification must use the reader-visible text surface Pangram will actually evaluate. For Markdown article work, **raw Markdown is diagnostic only** when the reader sees a different surface: strip source-only Markdown syntax and link destinations as appropriate and certify the resulting **visible plaintext**. Preserve the source representation separately, but hash and certify the exact visible boundary actually being measured.
-
-A Human headline or partial score such as 93% or 99% Human is progress only when the task requires 100%; it is not a passing result under that gate.
-
-A 100% Human result with semantic, rhetorical, editorial, fidelity, provenance, or article-function loss also fails.
+Certification must use the reader-visible text surface Pangram will actually evaluate. For Markdown article work, **raw Markdown is diagnostic only** when the reader sees a different surface: strip source-only Markdown syntax and link destinations as appropriate and certify the resulting **visible plaintext**. Preserve the source representation separately, but hash and certify the exact reader-visible boundary actually being measured.
 
 ## Detector access-resolution gate
 
@@ -94,7 +98,7 @@ The review queue stores source identity and detector triage metadata, not tested
 
 For every new humanization audit that may make paid Pangram calls, assign stable audit/boundary identities before the first submission. The historical fixed-batch budget key is `audit_id + section_id + detector model + expected version`; other transports must preserve the same principle of stable identity and durable accounting.
 
-**Standing hard limit: at most 6 new paid Pangram submissions per section per audit** unless Joel explicitly changes that limit. A whole-article acceptance boundary counts as its own section. Splitting the same section across new batches, transports, branches, workflows, chats, or retries does not reset its budget.
+**Hard limit: at most 6 new paid Pangram POSTs per section per audit.** A whole-article acceptance boundary counts as its own section. Splitting the same section across new batches, transports, branches, workflows, chats, or retries does not reset its budget.
 
 Before any new paid submission:
 
@@ -108,7 +112,7 @@ Before any new paid submission:
 
 Count toward the paid cap every new detector submission and every ambiguous action that may have reached Pangram. Do not count exact cache hits, non-billable verification, polling, or read-only recovery of already-paid work.
 
-Before a seventh paid submission under the standing cap, stop and request narrow help from Joel. Do not silently reset the audit identity or raise the cap.
+Before a seventh paid POST, stop and request narrow help from Joel. Do not silently reset the audit identity or raise the cap. The controlled-research stopping rule never overrides the six-paid-call section cap.
 
 Record per measured boundary:
 
@@ -155,7 +159,7 @@ The older adaptive harness may still live on Joel's Zorin machine under a `pangr
 - Test interactions; do not infer magic words from one case.
 - Pangram green does not justify stopping if a real thought thread remains.
 - Pangram red does not justify worse prose or altered meaning.
-- For controlled research probes, stop once the local hypothesis is adequately discriminated; avoid token hunting. This research stopping rule never overrides paid-call safety.
+- For controlled research probes, stop once the local hypothesis is adequately discriminated; avoid token hunting. This research stopping rule never overrides the six-paid-call section cap.
 
 ## Promotion boundary
 
