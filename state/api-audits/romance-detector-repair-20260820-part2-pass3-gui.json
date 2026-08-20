@@ -1,0 +1,45 @@
+{
+  "format": "pangram-cross-transport-audit-v1",
+  "audit_id": "romance-detector-repair-20260820",
+  "section_id": "part2",
+  "model": "pangram-4",
+  "expected_version": "4.0",
+  "max_new_paid_measurements": 6,
+  "completed_paid_measurements": [
+    {
+      "ordinal": 1,
+      "transport": "local_playwright",
+      "text_sha256": "30f61fb0c490ec1275f3c39c834a38a956041865b63e5592c270d51cc22d5498",
+      "fraction_human": 0.9137498736,
+      "evidence_branch": "evidence/romance-pass1-retest-20260820"
+    },
+    {
+      "ordinal": 2,
+      "transport": "api",
+      "text_sha256": "679daa77fb92ea71bb85716e6ece671e093b49412b149e2f5129079a204d24d2",
+      "fraction_human": 0.9114283323287964,
+      "evidence_branch": "evidence/romance-pass2-api-20260820"
+    }
+  ],
+  "rejected_attempts": [
+    {
+      "transport": "api",
+      "text_sha256": "c6ef42419a3db2e82b1ff4f9370fc85bca4fa8c061c61dd6a1b5d28171d9908c",
+      "http_status": 402,
+      "error": "Insufficient credits",
+      "task_id": "",
+      "ambiguous": false,
+      "billable_task_created": false,
+      "paid_measurement_count_effect": "not_counted_no_task_created",
+      "evidence_branch": "evidence/romance-pass3-api-20260820"
+    }
+  ],
+  "next_measurement": {
+    "ordinal": 3,
+    "transport": "local_playwright",
+    "text_sha256": "c6ef42419a3db2e82b1ff4f9370fc85bca4fa8c061c61dd6a1b5d28171d9908c",
+    "status": "authorized_pending",
+    "part1": "no_new_call_exact_registered_hash_unchanged"
+  },
+  "note": "API pass-3 was rejected by HTTP 402 before task creation. The supported local GUI fallback is authorized to measure the exact same pass-3 Part-2 hash once as paid measurement #3. Recovery-before-repeat remains mandatory if the GUI action becomes ambiguous."
+}
