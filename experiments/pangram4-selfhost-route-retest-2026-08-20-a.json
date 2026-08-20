@@ -1,0 +1,12 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "pangram4-selfhost-route-retest-2026-08-20-a",
+  "audit_id": "pangram4-selfhost-route-retest-2026-08-20-a",
+  "variants": [
+    {
+      "id": "SMOKE",
+      "section_id": "smoke",
+      "text": "Machine-generated prose can appear coherent, careful, and stylistically polished even when it has not been independently verified. A reliable detector test should therefore use a fresh passage, preserve the exact submitted bytes, record the model version returned by the service, and distinguish a successful live request from a cached result or a failure in unrelated browser infrastructure during routine operation."
+    }
+  ]
+}
