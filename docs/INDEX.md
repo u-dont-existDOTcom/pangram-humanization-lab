@@ -22,6 +22,7 @@
 - `PANGRAM-LOCAL-PLAYWRIGHT.md` documents the supported authenticated GUI/History fallback.
 - `PANGRAM-ACTIONS-RUNBOOK.md` is retained for fixed-batch evidence/accounting machinery and historical hosted execution, but GitHub-hosted Actions is not the normal Pangram API origin.
 - Browserbase is not the ordinary measurement route; Browserbase quota errors must not be interpreted as Pangram credit errors.
+- A Pangram HTTP 402 returned by the **private self-hosted API route** is different: it means the Pangram balance available to that trusted route is insufficient for the attempted request. A large request can fail this way even after a smaller one succeeds, so do not overstate the result as a literal zero-credit balance.
 - The old remote Browserbase proposal is compatibility/history, not the primary local GUI path.
 
 Always check `../state/CURRENT-STATE.md` plus the self-hosted routing correction before choosing a detector transport or interpreting stale branch/runbook instructions.
