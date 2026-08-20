@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-20",
+  "purpose": "Test whether the cheap Joel idiolect-retention proxy can predict Pangram-4 Human status well enough to justify a future Pangram pre-screen, using only already-recorded detector outcomes and no new Pangram calls.",
+  "profile": {
+    "source_inventory": "state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json",
+    "provenance": "natural-owner-confirmed",
+    "register": "relationship/personal-tender/philosophical-love",
+    "sample_ids": [
+      "nanou-2020-09-15-disney-tale",
+      "nanou-2020-09-15-too-good-to-be-true",
+      "nanou-2020-09-15-blind-spots",
+      "nanou-2020-09-15-love-reverse-war",
+      "nanou-2020-09-15-easy-love",
+      "tafka-2015-02-02-true-love"
+    ]
+  },
+  "cached_case": {
+    "group_id": "romance-love-factorial",
+    "results_path": "cases/bcb6c2d09c4e03b4ab88/r01/results.json",
+    "evidence_class": "pangram4-cache-exact-result"
+  },
+  "recorded_examples": [
+    {
+      "id": "hard-test-inherited-ai",
+      "group_id": "romance-hard-test",
+      "pangram_label": "NonHuman",
+      "evidence_class": "durable-case-study-high-confidence-ai",
+      "source_path": "state/ROMANCE-LOVE-CASE-STUDY-2026-08-12.md",
+      "text": "The hard test is simple: if someone else were genuinely better for her, would I want her to be with them? Selfless love says yes, even while my whole romantic body screams no. When those two loves pull in opposite directions, I get to find out which one has really been running the show.\nI’m not saying you should become a saint before dating. I’m saying it helps to know which kind of love is speaking before you call everything it says love."
+    },
+    {
+      "id": "hard-test-fresh-human",
+      "group_id": "romance-hard-test",
+      "pangram_label": "Human",
+      "evidence_class": "durable-case-study-high-confidence-human",
+      "source_path": "state/ROMANCE-LOVE-CASE-STUDY-2026-08-12.md",
+      "text": "One question I ask myself is what I’d want if she would genuinely be happier with somebody else. I can want that for her and still feel, oh God, please don’t. Both can be true at the same time."
+    },
+    {
+      "id": "hard-test-corrected-human-short",
+      "group_id": "romance-hard-test",
+      "pangram_label": "Human",
+      "evidence_class": "durable-case-study-high-confidence-human-weak-short-boundary",
+      "source_path": "state/ROMANCE-LOVE-CASE-STUDY-2026-08-12.md",
+      "text": "The more I think about it, that question kind of falls apart. If she’d rather be with somebody else, why am I trying to keep her?"
+    },
+    {
+      "id": "oxytocin-assistant-ai",
+      "group_id": "romance-oxytocin",
+      "pangram_label": "NonHuman",
+      "evidence_class": "durable-incident-high-confidence-ai",
+      "source_path": "state/ROMANCE-OXYTOCIN-INCIDENT-2026-08-12.md",
+      "text": "People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or people disappearing on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious, turn hostile, feel worthless, or just want to run."
+    },
+    {
+      "id": "oxytocin-owner-human",
+      "group_id": "romance-oxytocin",
+      "pangram_label": "Human",
+      "evidence_class": "durable-incident-high-confidence-human-owner-rewrite",
+      "source_path": "state/ROMANCE-OXYTOCIN-INCIDENT-2026-08-12.md",
+      "text": "People call oxytocin the “love hormone,” which makes it sound like bonding should always feel nice. If closeness was safe when you were little, maybe it does feel a bit like coming home. But if it came with neglect, abuse, or if people disappeared on you, you can get more attached and more freaked out at the same time. You might get anxious or suspicious. You might feel worthless or fight or flight mode may kick in."
+    }
+  ],
+  "evaluation": {
+    "candidate_rule_family": "safe iff surface_similarity >= threshold_surface AND content_light_similarity >= threshold_content_light",
+    "threshold_selection": "within each leave-one-group-out training set choose the zero-training-false-safe rule with maximum training coverage; ties prefer higher minimum normalized threshold rank",
+    "primary_error": "false-safe: pre-screen says skip Pangram but recorded Pangram result is AI or Mixed",
+    "validation_minimums": {
+      "independent_groups": 5,
+      "examples": 30,
+      "nonhuman_examples": 10,
+      "heldout_false_safe_count": 0,
+      "heldout_safe_coverage_minimum": 0.5
+    },
+    "short_under_50_words": "include for descriptive sensitivity but exclude from threshold fitting and validation counts",
+    "no_new_pangram_calls": true
+  }
+}

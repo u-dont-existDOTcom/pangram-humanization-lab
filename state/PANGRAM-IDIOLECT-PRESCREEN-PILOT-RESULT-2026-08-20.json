@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-20",
+  "status": "cached-prescreen-pilot-complete-no-skip-signal",
+  "purpose": "Test whether the existing cheap Joel idiolect proxy can safely predict Pangram-4 Human status well enough to skip detector calls, using existing detector evidence only.",
+  "source_pr": 103,
+  "no_new_pangram_calls": true,
+  "successful_run": {
+    "run_id": 32353136181,
+    "job_id": 96376491551,
+    "head_sha": "1211b667771c9c2ea47a24f8e55f913c4f0de087",
+    "artifact": {
+      "artifact_id": 9400622746,
+      "name": "idiolect-pangram-prescreen-pilot-metadata",
+      "zip_sha256": "951881f9d1111d8c9d53677e3a69e61ef176f38249eeb97d55bb049d4d0dc5d7",
+      "result_member_sha256": "674ac0ad2b135d8dbf246af52e612ea08b979c0176a53ea0e2d5fda5ff0484fb",
+      "profile_receipt_member_sha256": "3e6b7231702b2fb79dcfd6e8663a555c1b61115c8328f4266763c6922af4ffe1"
+    }
+  },
+  "proxy": {
+    "instrument": "pangram-lab-surface-idiolect-v1",
+    "channels": ["surface", "content_light"],
+    "candidate_rule_family": "safe iff both channel similarities exceed training thresholds",
+    "threshold_selection": "leave-one-experiment-group-out; maximize training coverage subject to zero training false-safe cases"
+  },
+  "profile": {
+    "provenance": "natural-owner-confirmed",
+    "register": "relationship/personal-tender/philosophical-love",
+    "sample_count": 6,
+    "word_count": 1332,
+    "corpus_sha256": "a1cbbffe1338bf10d224c5a9aeda0af5bf8468e516242938d0a5733849220b45",
+    "note": "Five Love4Nanou relationship/personal posts plus the pre-ChatGPT TAFKA true-love post. Individual Love4Nanou sources are thin but combined profile exceeds 1,000 words. The TAFKA source carried the existing generic possible-unremoved-dialogue quality flag, so this remains a pilot rather than a clean profile-validation dataset."
+  },
+  "dataset": {
+    "example_count": 11,
+    "eligible_50plus_count": 9,
+    "eligible_nonhuman_count": 4,
+    "independent_experiment_group_count": 3,
+    "groups": ["romance-hard-test", "romance-love-factorial", "romance-oxytocin"],
+    "short_descriptive_only_count": 2,
+    "detector_evidence": "Six exact Pangram-4 cached results plus durable exact high-confidence Pangram-4 case-study endpoints; no detector remeasurement."
+  },
+  "leave_one_group_out": {
+    "heldout_safe_count": 0,
+    "heldout_false_safe_count": 0,
+    "heldout_safe_coverage": 0.0,
+    "interpretation": "The only way the predeclared zero-training-false-safe threshold family avoided false-safe held-out cases was to abstain on every eligible held-out example. It therefore saved zero Pangram calls."
+  },
+  "key_counterexamples": [
+    {
+      "id": "romance-love-P_A1B1",
+      "pangram": "Mixed",
+      "surface_similarity": 0.77396,
+      "content_light_similarity": 0.979796,
+      "comparison": "More surface-similar to the natural-owner profile than Human P_A0B0 (0.767633) and the Human endpoint (0.753331)."
+    },
+    {
+      "id": "romance-love-AI_ENDPOINT",
+      "pangram": "AI",
+      "surface_similarity": 0.741424,
+      "content_light_similarity": 0.979323,
+      "comparison": "Very close in content-light similarity to the Human endpoint (0.979453); idiolect retention does not separate these detector outcomes."
+    },
+    {
+      "id": "romance-hard-test-inherited-ai",
+      "pangram": "AI",
+      "surface_similarity": 0.705044,
+      "content_light_similarity": 0.985458,
+      "comparison": "Highest content-light similarity in the pilot despite being high-confidence AI in the durable case record."
+    },
+    {
+      "id": "romance-oxytocin-pair",
+      "pangram": "AI versus Human",
+      "ai_surface_similarity": 0.661238,
+      "human_surface_similarity": 0.626448,
+      "ai_content_light_similarity": 0.981318,
+      "human_content_light_similarity": 0.981666,
+      "comparison": "The AI endpoint is more surface-similar to Joel than the owner Human rewrite; content-light is nearly identical."
+    }
+  ],
+  "sensitivity": {
+    "love4nanou_only_profile_run": {
+      "profile_sample_count": 5,
+      "profile_word_count": 620,
+      "status": "underpowered-profile-sensitivity-only",
+      "heldout_safe_count": 0,
+      "heldout_false_safe_count": 0,
+      "heldout_safe_coverage": 0.0,
+      "note": "The prior run completed scoring before correctly failing the >=1000-profile-word post-run quality gate. It independently showed the same zero-coverage direction but is not primary evidence."
+    }
+  },
+  "validation": {
+    "substitution_validated": false,
+    "minimum_sample_structure_met": false,
+    "predeclared_minimums": {
+      "independent_groups": 5,
+      "examples": 30,
+      "nonhuman_examples": 10,
+      "heldout_false_safe_count": 0,
+      "heldout_safe_coverage_minimum": 0.5
+    },
+    "decision": "Do not use the current idiolect-retention proxy to skip Pangram. The pilot provides no usable safe-call coverage and contains direct counterexamples to monotonic idiolect-similarity => Pangram-Human reasoning."
+  },
+  "anti_erasure_interpretation": {
+    "still_useful_for": "Directional evidence about movement toward or away from Joel's reference profile when the boundary and corpus are meaningful.",
+    "not_useful_for": "Certifying detector-Human status or replacing Pangram under the current instrument/evidence.",
+    "production_rule": "Keep idiolect preservation as a process objective and optional drift diagnostic; keep Pangram as a separate detector axis when detector certification is required."
+  },
+  "privacy": {
+    "raw_profile_prose_in_result": false,
+    "raw_candidate_prose_in_result": false,
+    "embeddings_in_result": false
+  }
+}
