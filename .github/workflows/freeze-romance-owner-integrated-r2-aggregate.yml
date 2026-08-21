@@ -25,9 +25,11 @@ jobs:
           curl --fail --silent --show-error --location "$URL" -o /tmp/part2.txt
           echo '20301b1bfb0052de694657411f231f82d9a45ae62ff9c4839015befce5c57dc2  /tmp/part2.txt' | sha256sum -c -
           python - <<'PY'
+          import hashlib
           import json
           from pathlib import Path
           text = Path('/tmp/part2.txt').read_text(encoding='utf-8')
+          spec_path = Path('experiments/romance-detector-repair-20260820-part2-owner-integrated-r2-20260821.json')
           spec = {
               'format': 'pangram-fixed-batch-v1',
               'experiment_id': 'romance-detector-repair-20260820-part2-owner-integrated-r2-20260821',
@@ -39,15 +41,17 @@ jobs:
                   'text': text,
               }],
           }
-          Path('experiments/romance-detector-repair-20260820-part2-owner-integrated-r2-20260821.json').write_text(
-              json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
-          )
+          spec_bytes = (json.dumps(spec, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+          spec_path.write_bytes(spec_bytes)
+          Path(str(spec_path) + '.sha256').write_text(hashlib.sha256(spec_bytes).hexdigest() + '\n', encoding='utf-8')
           PY
       - name: Commit exact spec
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add experiments/romance-detector-repair-20260820-part2-owner-integrated-r2-20260821.json
+          git add \
+            experiments/romance-detector-repair-20260820-part2-owner-integrated-r2-20260821.json \
+            experiments/romance-detector-repair-20260820-part2-owner-integrated-r2-20260821.json.sha256
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Freeze Romance owner-integrated r2 aggregate spec'
           git push origin HEAD:automation/pangram-fixed-batch
