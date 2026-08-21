@@ -1,0 +1,109 @@
+name: Freeze Romance Part 1 residual natural sections r1
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-part1-residual-natural-r1.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Fetch exact Part 1 and build contextual candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/a381d70b07f78fc5d20ec22c3534fa4d8a0e6464/work/romance-detector-repair-20260820/materialized-part1-repair-r6/candidate-part-1.txt'
+          curl --fail --silent --show-error --location "$URL" -o /tmp/part1.txt
+          echo 'ff3c6d77a848d36c51776f76a6643aaae2262b4cffa458b1f54319dfe54971eb  /tmp/part1.txt' | sha256sum -c -
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          source = Path('/tmp/part1.txt').read_text(encoding='utf-8')
+
+          flaws_old = '''Spiritual depth also doesn't tell me how dependable somebody is. She may meditate for two hours and still not show up for boring work, sickness, or something she promised yesterday. I may be seeing the divine archetype while ignoring the adult I would actually have to build a life with.
+
+So hold your horses a bit more than you’d like to. See if your partner still praises you after a cold feud.
+
+Ask what flaws she sees in you from time to time. Notice whether either of you is relating to a real human being or just to the divine archetypal energy the other person temporarily opened.
+
+I’ve been through the wringer so much with idealization that now no matter who praises me I’m basically like, “Okay, thanks.” I try to do my best.'''
+          flaws_new = '''Spiritual depth also doesn't tell me how dependable somebody is. She may meditate for two hours and still not show up for boring work, sickness, or something she promised yesterday. I may be seeing the divine archetype while ignoring the adult I would actually have to build a life with.
+
+I’ve been through the wringer so much with idealization that now no matter who praises me I’m basically like, “Okay, thanks.” I try to do my best.'''
+
+          slow_old = '''Going slowly can show you how somebody’s moods move over time, how they treat you, and how they treat other people. It still can’t tell you how good the sex will be or how either of you will act afterward.
+
+You can know somebody for twenty years and then discover on the first night that the polarity isn’t there, touch feels wrong, smell feels wrong, your desire levels or kinks don’t fit, one person is sexually shut down, or the bodies just don’t connect.
+
+But the first night isn’t necessarily the final ceiling either.'''
+          slow_new = '''I could know a woman for twenty years and still get into bed with her for the first time knowing almost nothing about how our bodies will relate. Polarity, touch, smell, desire levels, kinks, sexual openness—conversation only goes so far.'''
+
+          if source.count(flaws_old) != 1:
+              raise SystemExit(f'flaws source occurrence count={source.count(flaws_old)}')
+          if source.count(slow_old) != 1:
+              raise SystemExit(f'slow source occurrence count={source.count(slow_old)}')
+
+          def context_candidate(old, new, before=3, after=2):
+              paras = source.split('\n\n')
+              # Old may span several paragraphs. Find its paragraph range exactly.
+              old_paras = old.split('\n\n')
+              start = None
+              for i in range(len(paras) - len(old_paras) + 1):
+                  if paras[i:i+len(old_paras)] == old_paras:
+                      start = i
+                      break
+              if start is None:
+                  raise SystemExit('paragraph-range source not found')
+              end = start + len(old_paras)
+              selected = paras[max(0, start-before):start] + new.split('\n\n') + paras[end:end+after]
+              return '\n\n'.join(selected).strip() + '\n'
+
+          flaws_text = context_candidate(flaws_old, flaws_new, before=3, after=2)
+          slow_text = context_candidate(slow_old, slow_new, before=2, after=3)
+
+          for label, text in [('flaws', flaws_text), ('slow', slow_text)]:
+              if len(text.split()) < 200:
+                  raise SystemExit(f'{label} context too short: {len(text.split())} words')
+
+          spec = {
+              'format': 'pangram-fixed-batch-v1',
+              'experiment_id': 'romance-detector-repair-20260820-part1-residual-natural-r1-20260821',
+              'audit_id': 'romance-detector-repair-20260820',
+              'variants': [
+                  {
+                      'id': 'CONVERSATION_FLAWS_R1',
+                      'section_id': 'part1-conversation-flaws',
+                      'budget_scope': 'section',
+                      'text': flaws_text,
+                  },
+                  {
+                      'id': 'SLOW_STEADY_R1',
+                      'section_id': 'part1-slow-steady',
+                      'budget_scope': 'section',
+                      'text': slow_text,
+                  },
+              ],
+          }
+          path = Path('experiments/romance-detector-repair-20260820-part1-residual-natural-r1-20260821.json')
+          data = (json.dumps(spec, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+          path.write_bytes(data)
+          path.with_suffix(path.suffix + '.sha256').write_text(hashlib.sha256(data).hexdigest() + '\n', encoding='utf-8')
+          PY
+      - name: Commit exact spec
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-part1-residual-natural-r1-20260821.json*
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance Part 1 residual natural sections r1'
+          git push origin HEAD:automation/pangram-fixed-batch
