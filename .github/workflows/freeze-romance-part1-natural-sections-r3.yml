@@ -1,0 +1,85 @@
+name: Freeze Romance Part 1 full-section repairs r3
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-part1-natural-sections-r3.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Fetch exact current Part 1
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/5d1b9f6e91af25c555bb0d918bfecded82c0ddac/work/romance-detector-repair-20260820/materialized-owner-integrated-r2/candidate-part-1.txt'
+          curl --fail --silent --show-error --location "$URL" -o /tmp/part1.txt
+          echo 'ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8  /tmp/part1.txt' | sha256sum -c -
+      - name: Build exact full-section variants
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          p1 = Path('/tmp/part1.txt').read_text(encoding='utf-8')
+
+          def section(start, end):
+              a = p1.index(start)
+              b = p1.index(end, a + len(start))
+              return p1[a:b].rstrip() + '\n'
+
+          casual = section('Can Casual Sex or a Situationship Actually Be Honest?\n', 'Should you be in a relationship at all?\n')
+          old = """True commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me. I don’t need to promise that on paper. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag.\n\nThe person getting more of what they want may think the arrangement is fulfilling. Usually they’re just less aware that it isn’t. In college I had a friend with four girlfriends who boasted about it to girls while trying to get a fifth."""
+          new = """True commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me; I don't need a promise on paper to make me want to. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag.\n\nIn college I had a friend with four girlfriends who boasted about it to girls while trying to get a fifth. If anybody was supposed to be winning that arrangement, it was him."""
+          if casual.count(old) != 1:
+              raise SystemExit('casual middle source mismatch')
+          casual = casual.replace(old, new, 1)
+          tail = """\n\nIf you want something closer to “casual love-making” without quite so many ways to damage each other, you probably need to find a free-love community where the people aren’t disposable, the bonds can be acknowledged, and any children have a village."""
+          if casual.count(tail) != 1:
+              raise SystemExit('casual tail source mismatch')
+          casual = casual.replace(tail, '', 1)
+
+          crucible = section('Are you ready for the crucible?\n', 'Don’t make your partner your whole world\n')
+          old = """One warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other. Sometimes one person is terrorizing or controlling the other. If you're scared to say no, scared to tell the truth, or scared of what happens if you leave, don't turn that into a mutual communication exercise. Get other people involved and think about safety first."""
+          new = """One warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other but one person terrorizing or controlling the other. If you're scared to say no or tell the truth, or scared of what happens if you leave, don't treat that as a mutual communication exercise—get other people involved and think about safety first."""
+          if crucible.count(old) != 1:
+              raise SystemExit('crucible safety source mismatch')
+          crucible = crucible.replace(old, new, 1)
+
+          variants = [
+              {'id':'CASUAL_SEX_FULL_R3','section_id':'part1-casual-sex-situationship','budget_scope':'section','text':casual},
+              {'id':'CRUCIBLE_FULL_R3','section_id':'part1-crucible','budget_scope':'section','text':crucible},
+          ]
+          spec = {
+              'format':'pangram-fixed-batch-v1',
+              'experiment_id':'romance-detector-repair-20260820-part1-natural-sections-r3-20260821',
+              'audit_id':'romance-detector-repair-20260820',
+              'variants':variants,
+          }
+          out = Path('experiments/romance-detector-repair-20260820-part1-natural-sections-r3-20260821.json')
+          out.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          sha = hashlib.sha256(out.read_bytes()).hexdigest()
+          out.with_suffix(out.suffix + '.sha256').write_text(sha + '\n', encoding='utf-8')
+          print('spec_sha256=' + sha)
+          for v in variants:
+              print(v['id'], len(v['text'].split()), hashlib.sha256(v['text'].encode()).hexdigest())
+          PY
+      - name: Commit spec
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-part1-natural-sections-r3-20260821.json*
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance Part 1 full-section repairs r3'
+          git push origin HEAD:automation/pangram-fixed-batch
