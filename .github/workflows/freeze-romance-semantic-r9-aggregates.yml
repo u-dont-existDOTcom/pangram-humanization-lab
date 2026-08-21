@@ -1,0 +1,80 @@
+name: Freeze Romance semantic r9 aggregate specs
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-semantic-r9-aggregates.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Fetch exact semantic r9 halves
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/f84e102414f16a1b56a374207098f48b3fd767a6/work/romance-detector-repair-20260820/materialized-semantic-r9'
+          curl --fail --silent --show-error --location "$BASE/candidate-part-1.txt" -o /tmp/part1.txt
+          curl --fail --silent --show-error --location "$BASE/candidate-part-2.txt" -o /tmp/part2.txt
+          echo '35dea0c3fc5e1723a3d8d1f0c8192447525758dfb953910e1e0d353ae3dcf4d9  /tmp/part1.txt' | sha256sum -c -
+          echo '9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85  /tmp/part2.txt' | sha256sum -c -
+      - name: Freeze exact aggregate specs
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          jobs = [
+              (
+                  Path('/tmp/part1.txt'),
+                  Path('experiments/romance-detector-repair-20260820-semantic-r9-part1-aggregate-20260821.json'),
+                  'romance-detector-repair-20260820-semantic-r9-part1-aggregate-20260821',
+                  'SEMANTIC_R9_PART1',
+                  'part1-semantic-r9',
+              ),
+              (
+                  Path('/tmp/part2.txt'),
+                  Path('experiments/romance-detector-repair-20260820-semantic-r9-part2-aggregate-20260821.json'),
+                  'romance-detector-repair-20260820-semantic-r9-part2-aggregate-20260821',
+                  'SEMANTIC_R9_PART2',
+                  'part2-semantic-r9',
+              ),
+          ]
+          for source, out, experiment_id, variant_id, section_id in jobs:
+              text = source.read_text(encoding='utf-8')
+              spec = {
+                  'format': 'pangram-fixed-batch-v1',
+                  'experiment_id': experiment_id,
+                  'audit_id': 'romance-detector-repair-20260820-semantic-r9',
+                  'variants': [{
+                      'id': variant_id,
+                      'section_id': section_id,
+                      'budget_scope': 'aggregate',
+                      'text': text,
+                  }],
+              }
+              out.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              out.with_suffix(out.suffix + '.sha256').write_text(
+                  hashlib.sha256(out.read_bytes()).hexdigest() + '\n',
+                  encoding='utf-8',
+              )
+          PY
+      - name: Commit exact specs
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-semantic-r9-*-aggregate-20260821.json*
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance semantic r9 aggregate specs'
+          git pull --rebase origin automation/pangram-fixed-batch
+          git push origin HEAD:automation/pangram-fixed-batch
