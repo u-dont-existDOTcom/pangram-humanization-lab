@@ -2799,6 +2799,29 @@
           "section_id": "part1"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T17:58:47.923613+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-casual-r5-20260821",
+      "id": "Q-81f5c9e16cdccdd6",
+      "sections": [
+        "part1-casual-sex-situationship"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-casual-r5-20260821-results.json",
+      "source_ref": "17ee3a68417ba9589d275a3d7755e6c3219f8a45",
+      "source_sha256": "0fc8d746667f11f6cfbec5573cdf59a17ca4366b9c0351f08f74ee1ecdeaf0c9",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.21001890301704407,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7899810671806335,
+          "id": "CASUAL_INTERACTION_R5",
+          "prediction_short": "Mixed",
+          "section_id": "part1-casual-sex-situationship"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
