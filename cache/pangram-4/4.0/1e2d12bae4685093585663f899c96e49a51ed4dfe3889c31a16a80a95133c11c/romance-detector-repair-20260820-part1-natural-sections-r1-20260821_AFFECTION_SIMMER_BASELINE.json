@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-part1-natural-sections-r1-20260821_AFFECTION_SIMMER_BASELINE",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\nThe opposite failure is letting the erotic current disappear except when somebody officially initiates sex. Kim Anami calls the current between encounters “the simmer”. Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. It shouldn’t become relationship homework. But if two people who supposedly want each other barely flirt, tease, or show desire through the day, I would take that as a warning light rather than expect great sex to materialize from zero at bedtime.\nYou need both. Affection has to be safe from escalation, and the erotic current has to stay alive.\nSex can also be a barometer for whatever else is happening between you. If the sex changes, ask what else changed: resentment, closeness, stress, health, medication, or how wanted each person feels.\nEach person has some responsibility for staying sexually alive too. My partner matters enormously, but she shouldn’t have to manufacture all my desire for me. And if sex is one of the main things separating this relationship from friendship, it probably deserves more than whatever exhausted time is left after everything else.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.924771249294281,
+        "confidence": "High",
+        "end_index": 1530,
+        "humanizer_score": 0.04474613815546036,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\nThe opposite failure is letting the erotic current disappear except when somebody officially initiates sex. Kim Anami calls the current between encounters “the simmer”. Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. It shouldn’t become relationship homework. But if two people who supposedly want each other barely flirt, tease, or show desire through the day, I would take that as a warning light rather than expect great sex to materialize from zero at bedtime.\nYou need both. Affection has to be safe from escalation, and the erotic current has to stay alive.\nSex can also be a barometer for whatever else is happening between you. If the sex changes, ask what else changed: resentment, closeness, stress, health, medication, or how wanted each person feels.\nEach person has some responsibility for staying sexually alive too. My partner matters enormously, but she shouldn’t have to manufacture all my desire for me. And if sex is one of the main things separating this relationship from friendship, it probably deserves more than whatever exhausted time is left after everything else.",
+        "token_length": 322,
+        "word_count": 259
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "148228b5-0e58-425d-88fb-0404a656bec8",
   "text": "Affection and the simmer\n\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\n\nThe opposite failure is letting the erotic current disappear except when somebody officially initiates sex. Kim Anami calls the current between encounters “the simmer”. Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. It shouldn’t become relationship homework. But if two people who supposedly want each other barely flirt, tease, or show desire through the day, I would take that as a warning light rather than expect great sex to materialize from zero at bedtime.\n\nYou need both. Affection has to be safe from escalation, and the erotic current has to stay alive.\n\nSex can also be a barometer for whatever else is happening between you. If the sex changes, ask what else changed: resentment, closeness, stress, health, medication, or how wanted each person feels.\n\nEach person has some responsibility for staying sexually alive too. My partner matters enormously, but she shouldn’t have to manufacture all my desire for me. And if sex is one of the main things separating this relationship from friendship, it probably deserves more than whatever exhausted time is left after everything else.\n",
   "text_sha256": "1e2d12bae4685093585663f899c96e49a51ed4dfe3889c31a16a80a95133c11c",
-  "updated_utc": "2026-08-21T16:02:28.206356+00:00"
+  "updated_utc": "2026-08-21T16:02:31.705248+00:00"
 }
