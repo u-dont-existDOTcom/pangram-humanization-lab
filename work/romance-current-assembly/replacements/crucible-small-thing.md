@@ -1,0 +1,1 @@
+A tiny thing can end up carrying way more emotional weight than it should.

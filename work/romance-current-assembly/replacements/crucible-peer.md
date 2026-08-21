@@ -1,0 +1,1 @@
+That’s why I recommend [peer counseling](https://ibogaqueen.substack.com/p/hearthwork-an-integrated-peer-counseling) outside the couple. If my partner is the only person I bring all my pain to, she also ends up carrying whatever I do when I still don’t understand it.

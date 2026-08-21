@@ -1,0 +1,93 @@
+name: Register final Romance Pangram boundary
+
+on:
+  push:
+    branches:
+      - agent/romance-current-master-assembly-2026-08-15
+    paths:
+      - .github/workflows/register-romance-current-master-pangram.yml
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out exact private assembly branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: agent/romance-current-master-assembly-2026-08-15
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: "3.12"
+
+      - name: Verify registrar and literal detector bytes
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest tests/test_register_pangram_artifact.py tests/test_reader_visible_romance.py -q
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('work/romance-current-assembly')
+          literal = (root / 'reader-visible.txt').read_bytes()
+          manifest = json.loads((root / 'reader-visible-manifest.json').read_text(encoding='utf-8'))
+          actual = hashlib.sha256(literal).hexdigest()
+          expected = 'b6aafdab0f94339eeca50bab79f24c8d92fe64793f255a169fba401719d38e9b'
+          assert actual == expected, (actual, expected)
+          assert manifest['visible_sha256'] == expected, manifest['visible_sha256']
+          assert manifest['visible_bytes'] == len(literal), (manifest['visible_bytes'], len(literal))
+          assert manifest['source_sha256'] == '5f3ffc93f1a901d9878f9b2be34e24c73a3fbff19046af571e6aa45245af0538'
+          print(f'literal_visible_sha256={actual}')
+          print(f'literal_visible_bytes={len(literal)}')
+          PY
+
+      - name: Create exactly two new paid-registration files
+        env:
+          EXPERIMENT_ID: romance-current-master-visible-final-r1-2026-08-15
+          AUDIT_ID: romance-current-master-final-2026-08-15
+          SECTION_ID: FULL_ARTICLE
+          VARIANT_ID: current-reader-visible
+          TEXT_SHA256: b6aafdab0f94339eeca50bab79f24c8d92fe64793f255a169fba401719d38e9b
+        run: |
+          set -euo pipefail
+          git fetch origin automation/pangram-fixed-batch
+          rm -rf /tmp/pangram-final-registration
+          git worktree add --detach /tmp/pangram-final-registration origin/automation/pangram-fixed-batch
+
+          SPEC_REL="experiments/${EXPERIMENT_ID}.json"
+          REQUEST_REL="requests/pangram/${EXPERIMENT_ID}.json"
+          test ! -e "/tmp/pangram-final-registration/${SPEC_REL}"
+          test ! -e "/tmp/pangram-final-registration/${REQUEST_REL}"
+
+          python scripts/register_pangram_artifact.py \
+            --text work/romance-current-assembly/reader-visible.txt \
+            --expected-text-sha256 "$TEXT_SHA256" \
+            --experiment-id "$EXPERIMENT_ID" \
+            --audit-id "$AUDIT_ID" \
+            --section-id "$SECTION_ID" \
+            --variant-id "$VARIANT_ID" \
+            --spec-path "$SPEC_REL" \
+            --spec-out "/tmp/pangram-final-registration/${SPEC_REL}" \
+            --request-out "/tmp/pangram-final-registration/${REQUEST_REL}"
+
+          cd /tmp/pangram-final-registration
+          git config user.name "Romance Pangram Registration Actions"
+          git config user.email "romance-pangram-registration-actions@users.noreply.github.com"
+          git add "$SPEC_REL" "$REQUEST_REL"
+
+          test "$(git diff --cached --name-only | wc -l)" -eq 2
+          test "$(git diff --cached --diff-filter=A --name-only | wc -l)" -eq 2
+          git diff --cached --name-status
+          git commit -m "experiment: certify current Romance reader-visible master"
+
+          BASE_SHA="$(git rev-parse HEAD^)"
+          HEAD_SHA="$(git rev-parse HEAD)"
+          PYTHONPATH="/tmp/pangram-final-registration/src:/tmp/pangram-final-registration" \
+            python scripts/validate_paid_push.py --base "$BASE_SHA" --head "$HEAD_SHA"
+
+          git push origin HEAD:automation/pangram-fixed-batch

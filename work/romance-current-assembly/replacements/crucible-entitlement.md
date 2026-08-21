@@ -1,0 +1,1 @@
+It can get pretty entitled when you expect your partner to know what you need without being told. You may barely see your own pattern, and then deny it instead of taking responsibility when they point it out.

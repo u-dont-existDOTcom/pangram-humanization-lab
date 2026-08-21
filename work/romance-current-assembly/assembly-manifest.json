@@ -1,0 +1,145 @@
+{
+  "article": "Romance",
+  "baseline": {
+    "git_blob_sha": "b6a6d73b3a7e7e93efc31bc7e755f04b9d57df97",
+    "source_path": "inputs/romance-reconstructed-2026-08-13-sha18ed9fa.md",
+    "source_ref": "task/romance-full-human-2026-08-13-r1"
+  },
+  "baseline_bytes": 109480,
+  "baseline_sha256": "18ed9fa6850e3a20d523b9365519ef43fa4e56398ce4e06d3743022676555edc",
+  "final_bytes": 107246,
+  "final_sha256": "a16969513ef29ca8683fedab0e37c0cdfdb1983308173e7478c2c98dfd23abcb",
+  "operation_count": 16,
+  "operations": [
+    {
+      "id": "owner-opening-2026-08-15",
+      "new_bytes": 1194,
+      "new_sha256": "b4499dd69acaa03e77f8ce712d04d87de135631a151637f2da8697e1f151b1ca",
+      "old_bytes": 678,
+      "old_sha256": "f7a1293988348b5c75e316f719884343b1bc627e6b50a29d12b261665dc1598e",
+      "type": "replace_between"
+    },
+    {
+      "id": "love-stop-after-less-wanted",
+      "new_bytes": 0,
+      "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_bytes": 599,
+      "old_sha256": "07d7d115b6d78aba67cf2e2f8ae162fd41ffce3cad876c8be5e75b2289a96cee",
+      "type": "delete_exact"
+    },
+    {
+      "id": "talk-current-richer-realization",
+      "new_bytes": 2310,
+      "new_sha256": "7b1d417aad045db81180f4d46051a76bff2dd49ac64d6e2b87940f0732fe3ecb",
+      "old_bytes": 2265,
+      "old_sha256": "069c3e9e6a523716adb3ce9a93eaef9a05369580d2a3f5f2f8435aa915401b59",
+      "type": "replace_section"
+    },
+    {
+      "id": "should-owner-style-corrections",
+      "new_bytes": 7362,
+      "new_sha256": "dbd4d60890ca3c41fde504815ff3c9814aac0df4846fe60e364d1fb8621cb631",
+      "old_bytes": 7440,
+      "old_sha256": "74f45978c6f723a616bc3e6dc420458d87f749fecd50fa179e5daec8964457b8",
+      "type": "replace_section"
+    },
+    {
+      "id": "idealization-delete-explanatory-bridge",
+      "new_bytes": 0,
+      "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_bytes": 89,
+      "old_sha256": "6fa6c02819536a97ae5cef8884166e0705dffbb57665ccdd850211a51929599b",
+      "type": "delete_exact"
+    },
+    {
+      "id": "flaws-local-function-repair",
+      "new_bytes": 3063,
+      "new_sha256": "f87bf86d5cac027f39bbbf788fcaa50216ff7e4c91b0fcaeb54d8d8114f09f4f",
+      "old_bytes": 3602,
+      "old_sha256": "82e90da7c80b52077aae816608b0e7a4bf96927d76c7efad051e065e767e8f29",
+      "type": "replace_section"
+    },
+    {
+      "id": "crucible-delete-definition-aftercare",
+      "new_bytes": 0,
+      "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_bytes": 117,
+      "old_sha256": "789514fee040b248f381d2127529d095606d428b47d14e0257555cb1377e8964",
+      "type": "delete_exact"
+    },
+    {
+      "id": "crucible-small-thing-owner-tested-repair",
+      "new_bytes": 74,
+      "new_sha256": "8cb7f7dfcf7713103eb9b495c15bed0c5b55863ccc90823ddb5d7a1438eb70ab",
+      "old_bytes": 49,
+      "old_sha256": "789afb26bbac22741b66d0d19b508023a95d0a98f52140d4ce8dd610542a9c53",
+      "type": "replace_exact"
+    },
+    {
+      "id": "crucible-entitlement-local-repair",
+      "new_bytes": 208,
+      "new_sha256": "d2c420233aad89b10e9b3953b220d436e699bfa1f0b8f463a98faa2a96dadcce",
+      "old_bytes": 218,
+      "old_sha256": "c1845ebe560f7d7e2fd1a9e18e28883eeb3d304f3ed568ef7ba4baa97aa046e6",
+      "type": "replace_exact"
+    },
+    {
+      "id": "crucible-peer-consequence-local-repair",
+      "new_bytes": 271,
+      "new_sha256": "3c00fb15ad518b6861328ed225de213088dd596a9f3099d6ea9300a3bedb4d8c",
+      "old_bytes": 287,
+      "old_sha256": "b04c7132398e0f10b2f5d25c998717a4d0f7b9ab1e231374ae48f76cef5ad6b2",
+      "type": "replace_exact"
+    },
+    {
+      "id": "crucible-body-bridge-local-repair",
+      "new_bytes": 49,
+      "new_sha256": "ca464f660bdff216bf5898f91c7142f9cebae76ff8dd862d47c3688ef9bbe2bc",
+      "old_bytes": 32,
+      "old_sha256": "22ec2c9396aefadfe66777a871fd4cf678c8b6f555518d3ccc2da5de3ded89f1",
+      "type": "replace_exact"
+    },
+    {
+      "id": "crucible-stop-at-meditation",
+      "new_bytes": 0,
+      "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_bytes": 416,
+      "old_sha256": "76bcb0e3ec968d57c8638b5df05118ce7b3a66e79f2c3d5c85a236b0ab7ba5bf",
+      "type": "delete_exact"
+    },
+    {
+      "id": "doing-conscious-delete-preview-aftercare",
+      "new_bytes": 0,
+      "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_bytes": 233,
+      "old_sha256": "3a83c60905eed5fb8108165e0d05164bfa23446a7dd2aff32f593b25b9032fe4",
+      "type": "delete_exact"
+    },
+    {
+      "id": "choosing-r4-a-authority",
+      "new_bytes": 2666,
+      "new_sha256": "3543b57a4458f979d176b4b36bcfd13c52b2d709da4fe837d8f9e1e890ad2ca6",
+      "old_bytes": 3395,
+      "old_sha256": "548c02dfe32f09811286287c3741eea74ed85e1606cc174fe0747169f1e58270",
+      "type": "replace_section"
+    },
+    {
+      "id": "vows-bible-spoken-r3",
+      "new_bytes": 584,
+      "new_sha256": "6ff453ac12522294012d3cd6e1a426fa09519663219bfea3b1837aeffb0afc85",
+      "old_bytes": 565,
+      "old_sha256": "cc748cba936d69cfe979ba5f3294e289352736c050f845a45e01daabc6bdf954",
+      "type": "replace_exact"
+    },
+    {
+      "id": "owner-closing-2026-08-15",
+      "new_bytes": 724,
+      "new_sha256": "a9d39acec00c7ec3752b586c0a0e0054acb14b13712a4584320bc674e1efe42d",
+      "old_bytes": 754,
+      "old_sha256": "d27eec2a91f53c95e7be06fcf158c3de77113d5f494634f427c1527ad04c5098",
+      "type": "replace_exact"
+    }
+  ],
+  "schema_version": 1,
+  "spec_sha256": "b7f5cd091154156de153ac6f834f38a21479f7eadd1679e8924a587eca4b2d32"
+}
