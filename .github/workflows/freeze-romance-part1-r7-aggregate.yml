@@ -1,0 +1,54 @@
+name: Freeze Romance Part 1 r7 aggregate
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-part1-r7-aggregate.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Fetch exact Part 1 and freeze aggregate spec
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/2d176553bb103991af760af516eaa7da2dfad2ce/work/romance-detector-repair-20260820/materialized-part1-repair-r7/candidate-part-1.txt'
+          curl --fail --silent --show-error --location "$URL" -o /tmp/part1.txt
+          echo '08bcfc48ec9cc948641c53aca24abc8dd104cdc14734f3cab83e098f33af8941  /tmp/part1.txt' | sha256sum -c -
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          text = Path('/tmp/part1.txt').read_text(encoding='utf-8')
+          path = Path('experiments/romance-detector-repair-20260820-part1-aggregate-r7-20260821.json')
+          spec = {
+              'format': 'pangram-fixed-batch-v1',
+              'experiment_id': 'romance-detector-repair-20260820-part1-aggregate-r7-20260821',
+              'audit_id': 'romance-detector-repair-20260820',
+              'variants': [{
+                  'id': 'PART1_REPAIR_R7',
+                  'section_id': 'part1',
+                  'budget_scope': 'aggregate',
+                  'text': text,
+              }],
+          }
+          data = (json.dumps(spec, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+          path.write_bytes(data)
+          path.with_suffix(path.suffix + '.sha256').write_text(hashlib.sha256(data).hexdigest() + '\n', encoding='utf-8')
+          PY
+      - name: Commit exact spec
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-part1-aggregate-r7-20260821.json*
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance Part 1 r7 aggregate spec'
+          git push origin HEAD:automation/pangram-fixed-batch
