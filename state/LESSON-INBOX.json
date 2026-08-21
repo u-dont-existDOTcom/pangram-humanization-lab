@@ -2891,6 +2891,38 @@
           "section_id": "part1"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T18:31:58.155090+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-residual-natural-r1b-20260821",
+      "id": "Q-5b05a118147177f9",
+      "sections": [
+        "part1-conversation-flaws",
+        "part1-slow-steady"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-residual-natural-r1b-20260821-results.json",
+      "source_ref": "4eb9c0c4ddcbfffde6cb72009656a0082dfd3485",
+      "source_sha256": "025f7b8fc2260c8dc3081df8223306d0e3003623330b5554a801dee44df13a14",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.22451455891132355,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7754854559898376,
+          "id": "CONVERSATION_FLAWS_R1B",
+          "prediction_short": "Mixed",
+          "section_id": "part1-conversation-flaws"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "SLOW_STEADY_R1B",
+          "prediction_short": "Human",
+          "section_id": "part1-slow-steady"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
