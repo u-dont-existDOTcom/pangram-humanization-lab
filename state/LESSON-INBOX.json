@@ -2245,6 +2245,29 @@
           "section_id": "smoke"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T01:58:27.869646+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part2-pass4",
+      "id": "Q-cd7dbc936547f865",
+      "sections": [
+        "part2"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part2-pass4-results.json",
+      "source_ref": "aa16a92317a10888e1ed2f18ca4aa8c5fa8efd25",
+      "source_sha256": "7d6f20ca8f0853c4acc4fd26cd6444b65707bd71dcf7b9220e7960373e55c1a1",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.07841228693723679,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9215877056121826,
+          "id": "PASS4",
+          "prediction_short": "Human",
+          "section_id": "part2"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
