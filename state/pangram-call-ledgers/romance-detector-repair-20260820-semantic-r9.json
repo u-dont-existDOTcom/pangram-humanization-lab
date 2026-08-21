@@ -1,0 +1,29 @@
+{
+  "audit_id": "romance-detector-repair-20260820-semantic-r9",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "part1-semantic-r9\u001fpangram-4\u001f4.0": {
+      "budget_scope": "aggregate",
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.55,
+      "estimated_credits": 11,
+      "events": [
+        {
+          "budget_scope": "aggregate",
+          "estimated_credits": 11,
+          "measurement_key": "romance-detector-repair-20260820-semantic-r9-part1-aggregate-20260821_SEMANTIC_R9_PART1",
+          "recorded_at_utc": "2026-08-21T18:47:58.252854+00:00",
+          "text_sha256": "35dea0c3fc5e1723a3d8d1f0c8192447525758dfb953910e1e0d353ae3dcf4d9",
+          "type": "paid_post_reserved",
+          "word_count": 10459
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "part1-semantic-r9",
+      "version": "4.0"
+    }
+  }
+}
