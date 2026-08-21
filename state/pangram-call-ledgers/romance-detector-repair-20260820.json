@@ -99,8 +99,8 @@
     "part1-crucible\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "budget_scope": "section",
@@ -110,10 +110,19 @@
           "text_sha256": "949af20be377ad747eecb1999873ea6d800ca36bb34b016ca11ffaf3516cd98c",
           "type": "paid_post_reserved",
           "word_count": 980
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "romance-detector-repair-20260820-part1-natural-sections-r2b-20260821_CRUCIBLE_R2B",
+          "recorded_at_utc": "2026-08-21T16:18:50.751068+00:00",
+          "text_sha256": "ecca0169b51df661f05016d9478db3224c37e6e36eae23640224cff0009b117e",
+          "type": "paid_post_reserved",
+          "word_count": 238
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "part1-crucible",
       "version": "4.0"
