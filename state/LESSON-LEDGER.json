@@ -714,6 +714,28 @@
       "source_path": "state/PANGRAM-SELFHOST-ROUTING-CORRECTION-2026-08-20.md",
       "source_ref": "fix/selfhost-routing-20260820",
       "source_sha256": "f1dc830df52bf4e7b68288d5d87ed3f5b0d66b669cc112a7e8fe974c9aa94d70"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "In one short owner-reported Romance Pangram 4 minimal pair, adding only a genuine reader-facing pragmatic question changed the confidence label from MEDIUM Human to HIGH Human; preserve this as discourse-mode/interlocutor evidence, not a rhetorical-question or phrase rule.",
+      "id": "L-30022fa25d-01",
+      "promoted_to": [],
+      "reason": "The boundary is short, the classifications are owner-reported without exact numeric fractions/repeat/API record, and independent replication is needed before any transferable detector rule.",
+      "recorded_at_utc": "2026-08-21T09:03:12.550754+00:00",
+      "source_path": "state/ROMANCE-EXCLUSIVITY-INTERLOCUTOR-MINIMAL-PAIR-2026-08-21.md",
+      "source_ref": "13d92acf241596be3346370d858c64565e5bc3df",
+      "source_sha256": "30022fa25d54a8c0c76f3f97df222ff5fd4b8b64204c0c456213db53ff58fe53"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "For comparable Romance diagnostics, use roughly 200+ contiguous reader-visible words when practicable and widen context before rewriting editorially sound natural-owner prose merely to raise confidence on a ~100-word Pangram boundary.",
+      "id": "L-084176769b-01",
+      "promoted_to": [],
+      "reason": "This is Joel's operational Romance rule grounded in a 97-word natural-owner low-confidence Human result and the pre-existing short-boundary reliability warning; it is not evidence for a universal Pangram word-count threshold.",
+      "recorded_at_utc": "2026-08-21T09:03:12.558530+00:00",
+      "source_path": "state/ROMANCE-SHORT-BOUNDARY-CONFIDENCE-2026-08-21.md",
+      "source_ref": "c9c33d827dd6bc0d8d7720988b406e0f1dd3dd2c",
+      "source_sha256": "084176769be61cc5c7c1742a0cc6dbc51ffb3f36013bb484f25a36ebdeed5f98"
     }
   ],
   "schema_version": 1
