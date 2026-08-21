@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-part1-residuals-r2b-20260821_MATURITY_PATIENT_R2B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself.\nIt can run the other way too. If I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.\nAll three women told me at some point that they felt like my patient, and I couldn't exactly argue with them. They asked me about almost every medical, mental-health, and practical problem:\n“I’m sick. What should I take?”\n“I’m sad. What should I do?”\nI usually had some idea, so of course I answered.\nKey at first asked me innocently, \"Can you be my guru?\" I told her, “I’m not anyone's guru, but we can learn from each other.” A few months later, she was telling me she was much more spiritually advanced than me. I asked, “Do you recall asking me to be your guru?” She said, \"Wow, I must have been really confused back then!\"\nI also have to admit, I can become condescending when somebody stops taking responsibility for their behavior. I find that intolerable. If someone says, “I feel like your patient,” both people need to look at their roles.\nI know what can happen on my side. Helping feels good. Being needed can feel good too. A lot of the time I really did have the information or perspective they needed, so of course they kept asking me. I also had to look at whether they were trying to take care of themselves without me.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.23099057376384735,
+        "confidence": "High",
+        "end_index": 1484,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself.\nIt can run the other way too. If I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.\nAll three women told me at some point that they felt like my patient, and I couldn't exactly argue with them. They asked me about almost every medical, mental-health, and practical problem:\n“I’m sick. What should I take?”\n“I’m sad. What should I do?”\nI usually had some idea, so of course I answered.\nKey at first asked me innocently, \"Can you be my guru?\" I told her, “I’m not anyone's guru, but we can learn from each other.” A few months later, she was telling me she was much more spiritually advanced than me. I asked, “Do you recall asking me to be your guru?” She said, \"Wow, I must have been really confused back then!\"\nI also have to admit, I can become condescending when somebody stops taking responsibility for their behavior. I find that intolerable. If someone says, “I feel like your patient,” both people need to look at their roles.\nI know what can happen on my side. Helping feels good. Being needed can feel good too. A lot of the time I really did have the information or perspective they needed, so of course they kept asking me. I also had to look at whether they were trying to take care of themselves without me.",
+        "token_length": 341,
+        "word_count": 273
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "be290769-f591-4eba-9f70-66881af3f8e1",
   "text": "The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself.\n\nIt can run the other way too. If I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.\n\nAll three women told me at some point that they felt like my patient, and I couldn't exactly argue with them. They asked me about almost every medical, mental-health, and practical problem:\n\n“I’m sick. What should I take?”\n\n“I’m sad. What should I do?”\n\nI usually had some idea, so of course I answered.\n\nKey at first asked me innocently, \"Can you be my guru?\" I told her, “I’m not anyone's guru, but we can learn from each other.” A few months later, she was telling me she was much more spiritually advanced than me. I asked, “Do you recall asking me to be your guru?” She said, \"Wow, I must have been really confused back then!\"\n\nI also have to admit, I can become condescending when somebody stops taking responsibility for their behavior. I find that intolerable. If someone says, “I feel like your patient,” both people need to look at their roles.\n\nI know what can happen on my side. Helping feels good. Being needed can feel good too. A lot of the time I really did have the information or perspective they needed, so of course they kept asking me. I also had to look at whether they were trying to take care of themselves without me.\n",
   "text_sha256": "b52861615ae49e1059b7b035e70e6f0b624240b70b5486c51523e4a34048695d",
-  "updated_utc": "2026-08-21T17:09:36.735757+00:00"
+  "updated_utc": "2026-08-21T17:09:46.292809+00:00"
 }
