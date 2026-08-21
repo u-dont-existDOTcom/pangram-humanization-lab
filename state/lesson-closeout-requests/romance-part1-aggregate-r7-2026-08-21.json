@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request_id": "romance-part1-aggregate-r7-2026-08-21",
+  "source_path": "state/experiments/romance-detector-repair-20260820-part1-aggregate-r7-20260821-results.json",
+  "source_ref": "e35e3336449d2dd053224962a29a2f8a496703df",
+  "source_sha256": "6737b5f94f5778a74b6e2ea2b2452b44bef754f83eb19f0f648a6987ccb1416f",
+  "finding": "The exact 9,719-word Romance Part 1 repair candidate reached Pangram 4.0 STAGE_SUCCESS at 100% Human, 0% AI, and 0% AI-assisted after natural-section, transition, rollback, and duplicate-argument repairs.",
+  "disposition": "article-specific",
+  "reason": "This is exact-boundary detector evidence for the Romance task candidate. The transferable localization/rollback and architecture lessons are promoted separately in joel-articles; this result does not establish a universal Pangram rule or article authority.",
+  "promoted_to": []
+}
