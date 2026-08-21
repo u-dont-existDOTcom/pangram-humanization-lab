@@ -2456,6 +2456,65 @@
           "section_id": "community-two-pillars"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T16:03:24.942849+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-natural-sections-r1-20260821",
+      "id": "Q-09ad12832ba374d8",
+      "sections": [
+        "part1-talk-before-sex",
+        "part1-affection-simmer",
+        "part1-casual-sex-situationship",
+        "part1-crucible",
+        "part1-maturity-levels-cross-split"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-natural-sections-r1-20260821-results.json",
+      "source_ref": "27ebc7a91977fa675c88a38bcdc13d6910d19008",
+      "source_sha256": "de9e5f39fb5d134741e730ad4fbede822f18df121a84b69ee04b8125e3dc3b6c",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "TALK_BEFORE_SEX_BASELINE",
+          "prediction_short": "AI",
+          "section_id": "part1-talk-before-sex"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "AFFECTION_SIMMER_BASELINE",
+          "prediction_short": "AI",
+          "section_id": "part1-affection-simmer"
+        },
+        {
+          "fraction_ai": 0.11365511268377304,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8863449096679688,
+          "id": "CASUAL_SEX_BASELINE",
+          "prediction_short": "Mixed",
+          "section_id": "part1-casual-sex-situationship"
+        },
+        {
+          "fraction_ai": 0.0379403792321682,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9620596170425415,
+          "id": "CRUCIBLE_BASELINE",
+          "prediction_short": "Human",
+          "section_id": "part1-crucible"
+        },
+        {
+          "fraction_ai": 0.14967897534370422,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8503210544586182,
+          "id": "MATURITY_LEVELS_BASELINE",
+          "prediction_short": "Mixed",
+          "section_id": "part1-maturity-levels-cross-split"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
