@@ -2337,6 +2337,47 @@
           "section_id": "part2"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T10:34:51.549770+00:00",
+      "experiment_id": "romance-detector-repair-20260820-owner-integrated-r1-local-sections",
+      "id": "Q-24f16d3590250737",
+      "sections": [
+        "primal-not-a-performance",
+        "community-two-pillars",
+        "psychedelic-relationship-discernment"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-owner-integrated-r1-local-sections-results.json",
+      "source_ref": "94ca83548e50801a15656e7bb7698b9ce49e0fac",
+      "source_sha256": "ca656d9f00014530d9dc7a002a247832a57ab1d6a44043e4fcbe5d9e3987f685",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.23467491567134857,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7653250694274902,
+          "id": "NOT_A_PERFORMANCE_R1",
+          "prediction_short": "Mixed",
+          "section_id": "primal-not-a-performance"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "TWO_PILLARS_R1",
+          "prediction_short": "Human",
+          "section_id": "community-two-pillars"
+        },
+        {
+          "fraction_ai": 0.05542617663741112,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9445738196372986,
+          "id": "PSYCHEDELIC_DISCERNMENT_R1",
+          "prediction_short": "Human",
+          "section_id": "psychedelic-relationship-discernment"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
