@@ -3038,6 +3038,38 @@
           "section_id": "part2-semantic-r9"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T18:59:36.962735+00:00",
+      "experiment_id": "romance-detector-repair-20260820-semantic-r9-part1-local-r1-20260821",
+      "id": "Q-be94cabab160d52c",
+      "sections": [
+        "part1-talk-before-sex",
+        "part1-maturity-levels-cross-split"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-semantic-r9-part1-local-r1-20260821-results.json",
+      "source_ref": "99f0c73801ee5fb70b89cd477b3e4c3aa1b09de1",
+      "source_sha256": "8a06c4470d5970eec8d407daf42757a25eb237750a6f26234f5c8a7b0698fd4c",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.6785469651222229,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.3214530646800995,
+          "id": "SEMANTIC_R9_TALK_R1",
+          "prediction_short": "Mixed",
+          "section_id": "part1-talk-before-sex"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "SEMANTIC_R9_PATIENT_R1",
+          "prediction_short": "Human",
+          "section_id": "part1-maturity-levels-cross-split"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
