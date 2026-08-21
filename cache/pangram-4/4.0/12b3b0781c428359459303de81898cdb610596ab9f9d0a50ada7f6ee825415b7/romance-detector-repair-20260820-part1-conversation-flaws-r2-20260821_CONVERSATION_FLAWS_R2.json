@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-part1-conversation-flaws-r2-20260821_CONVERSATION_FLAWS_R2",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.7911504507064819,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.20884956419467926,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 2,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "I still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nYou can see something in a person before she fully lives it, but then you have to ask her:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\nIf she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?\nPartners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well. Like the FM Laeti song here says, “Inspire her to see the best in herself, actualize that.” If something severe is happening, sometimes a demand or boundary is necessary too.\nI’ve been through the wringer with idealization enough that praise doesn’t tell me much anymore. No matter who praises me I’m basically like, “Okay, thanks.” I try to do my best. Spiritual depth doesn’t tell me whether I can depend on her either. She may meditate for two hours and still not show up when there’s boring work, sickness, or something she promised yesterday. The divine archetype can be very real to me while I’m still missing the adult I’d have to build a life with.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.6303679347038269,
+        "confidence": "High",
+        "end_index": 1038,
+        "humanizer_score": 0.02107405476272106,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "I still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\nYou can see something in a person before she fully lives it, but then you have to ask her:\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\nIf she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?\nPartners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well.",
+        "token_length": 248,
+        "word_count": 203
+      },
+      {
+        "ai_assistance_score": 0.27431806921958923,
+        "confidence": "High",
+        "end_index": 1392,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 1038,
+        "text": " Like the FM Laeti song here says, “Inspire her to see the best in herself, actualize that.” If something severe is happening, sometimes a demand or boundary is necessary too.\nI’ve been through the wringer with idealization enough that praise doesn’t tell me much anymore. No matter who praises me I’m basically like, “Okay, thanks.” I try to do my best.",
+        "token_length": 83,
+        "word_count": 61
+      },
+      {
+        "ai_assistance_score": 0.9373469352722168,
+        "confidence": "High",
+        "end_index": 1695,
+        "humanizer_score": 0.02107405476272106,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1392,
+        "text": " Spiritual depth doesn’t tell me whether I can depend on her either. She may meditate for two hours and still not show up when there’s boring work, sickness, or something she promised yesterday. The divine archetype can be very real to me while I’m still missing the adult I’d have to build a life with.",
+        "token_length": 66,
+        "word_count": 55
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "3480f905-4056-4319-94cf-e723bc7d67ae",
   "text": "I still love women I’ve loved before. Sometimes I talk about them because I’m thinking about them. I’m not trying to make her jealous. If she can’t handle that I still love them, she isn’t ready for me.\n\nIf she says, “Can you talk less about your exes?” Sure. Maybe I do talk about them too much sometimes. But they still matter to me. If I’m supposed to listen to everything on her mind, I don’t want to have to pretend that isn’t on mine.\n\nYou can see something in a person before she fully lives it, but then you have to ask her:\n\n“I see this in you, and I think it’s special. Do you wanna reach for it together?”\n\nIf she says no, forget it. You’re in la la land. If she says yes, ask what is blocking her. Is the block more than you can handle? Or does she mostly need somebody to join her on the journey and believe in her?\n\nPartners should help each other grow. Who else is going to do it? Your mom and dad? You’re already grown. Everybody else will usually be a smaller influence, so you’d better choose someone who helps you grow well. Like the FM Laeti song here says, “Inspire her to see the best in herself, actualize that.” If something severe is happening, sometimes a demand or boundary is necessary too.\n\nI’ve been through the wringer with idealization enough that praise doesn’t tell me much anymore. No matter who praises me I’m basically like, “Okay, thanks.” I try to do my best. Spiritual depth doesn’t tell me whether I can depend on her either. She may meditate for two hours and still not show up when there’s boring work, sickness, or something she promised yesterday. The divine archetype can be very real to me while I’m still missing the adult I’d have to build a life with.\n",
   "text_sha256": "12b3b0781c428359459303de81898cdb610596ab9f9d0a50ada7f6ee825415b7",
-  "updated_utc": "2026-08-21T18:33:37.778779+00:00"
+  "updated_utc": "2026-08-21T18:33:46.252793+00:00"
 }
