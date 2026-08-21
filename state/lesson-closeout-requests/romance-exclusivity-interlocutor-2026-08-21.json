@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request_id": "romance-exclusivity-interlocutor-2026-08-21",
+  "source_path": "state/ROMANCE-EXCLUSIVITY-INTERLOCUTOR-MINIMAL-PAIR-2026-08-21.md",
+  "source_ref": "main",
+  "source_sha256": "30022fa25d54a8c0c76f3f97df222ff5fd4b8b64204c0c456213db53ff58fe53",
+  "finding": "In one short owner-reported Romance Pangram 4 minimal pair, adding only a genuine reader-facing pragmatic question changed the confidence label from MEDIUM Human to HIGH Human; preserve this as discourse-mode/interlocutor evidence, not a rhetorical-question or phrase rule.",
+  "disposition": "provisional",
+  "reason": "The boundary is short, the classifications are owner-reported without exact numeric fractions/repeat/API record, and independent replication is needed before any transferable detector rule.",
+  "promoted_to": []
+}
