@@ -38,6 +38,54 @@
       },
       "section_id": "part1-talk-before-sex",
       "budget_scope": "section"
+    },
+    {
+      "id": "AFFECTION_SIMMER_R2B",
+      "measurement_key": "romance-detector-repair-20260820-part1-natural-sections-r2b-20260821_AFFECTION_SIMMER_R2B",
+      "text": "Affection and the simmer\n\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\n\nAt the same time, I don't want “no agenda” to turn into no erotic current between encounters. Kim Anami calls that current “the simmer”. Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. It shouldn't become relationship homework; I would just take it as a warning light if two people who supposedly want each other barely flirt, tease, or show desire all day and then expect great sex to materialize from zero at bedtime.\n\nAnd when the sex changes, I want to know what else changed—resentment, closeness, stress, health, medication, how wanted each person feels.\n\nI have some responsibility for staying sexually alive too. My partner matters enormously, but I don't want to make her responsible for manufacturing all my desire. If sex is one of the main things separating this relationship from friendship, it probably deserves more than whatever exhausted time is left after everything else.\n",
+      "text_sha256": "636a4312a9427981f619a3f8793f1fcc980f68ab35299a31487659aa9fe29dd1",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\nAt the same time, I don't want “no agenda” to turn into no erotic current between encounters. Kim Anami calls that current “the simmer”. Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. It shouldn't become relationship homework; I would just take it as a warning light if two people who supposedly want each other barely flirt, tease, or show desire all day and then expect great sex to materialize from zero at bedtime.\nAnd when the sex changes, I want to know what else changed—resentment, closeness, stress, health, medication, how wanted each person feels.\nI have some responsibility for staying sexually alive too. My partner matters enormously, but I don't want to make her responsible for manufacturing all my desire. If sex is one of the main things separating this relationship from friendship, it probably deserves more than whatever exhausted time is left after everything else.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.7861445546150208,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.21385541558265686,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.22017550468444824,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 284,
+            "word_count": 54,
+            "token_length": 72,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": " If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\nAt the same time, I don't want “no agenda” to turn into no erotic current between encounters. Kim Anami calls that current “the simmer”. Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. It shouldn't become relationship homework; I would just take it as a warning light if two people who supposedly want each other barely flirt, tease, or show desire all day and then expect great sex to materialize from zero at bedtime.\nAnd when the sex changes, I want to know what else changed—resentment, closeness, stress, health, medication, how wanted each person feels.\nI have some responsibility for staying sexually alive too. My partner matters enormously, but I don't want to make her responsible for manufacturing all my desire. If sex is one of the main things separating this relationship from friendship, it probably deserves more than whatever exhausted time is left after everything else.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7477483153343201,
+            "confidence": "High",
+            "start_index": 284,
+            "end_index": 1328,
+            "word_count": 175,
+            "token_length": 219,
+            "is_humanized": false,
+            "humanizer_score": 0.0029623692389577627
+          }
+        ]
+      },
+      "section_id": "part1-affection-simmer",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "romance-detector-repair-20260820",
@@ -64,10 +112,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.05,
-        "estimated_credits": 1,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
         "model": "pangram-4",
-        "paid_api_calls": 1,
+        "paid_api_calls": 2,
         "pending_resumes": 0,
         "section_id": "part1-affection-simmer",
         "version": "4.0",
