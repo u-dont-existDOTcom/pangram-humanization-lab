@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-part1-residuals-r2b-20260821_CASUAL_STI_R4B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "That may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\nYou can test for STIs and tell each other what you know. Attachment is less cooperative. Both of you can mean it when you say this is only sex, and then one of you wakes up attached anyway. If you’re both really numb or robotic about sex, maybe not.\nOutside a loving poly community or tribe, I think honest casual sex is almost impossible. You have to care what happens to the person afterward. Otherwise you’re using and abusing them for pleasure. Maybe they’re using you too. Congratulations, now it’s mutual.\nA lot of “I only want fun” really means, “This is the only version of the relationship that gets me laid.” Sometimes I know I’m hoping it turns into love. Sometimes I only find out I was hoping that when it doesn’t.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.23458823561668396,
+        "confidence": "High",
+        "end_index": 1137,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "That may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\nYou can test for STIs and tell each other what you know. Attachment is less cooperative. Both of you can mean it when you say this is only sex, and then one of you wakes up attached anyway. If you’re both really numb or robotic about sex, maybe not.\nOutside a loving poly community or tribe, I think honest casual sex is almost impossible. You have to care what happens to the person afterward. Otherwise you’re using and abusing them for pleasure. Maybe they’re using you too. Congratulations, now it’s mutual.\nA lot of “I only want fun” really means, “This is the only version of the relationship that gets me laid.” Sometimes I know I’m hoping it turns into love. Sometimes I only find out I was hoping that when it doesn’t.",
+        "token_length": 256,
+        "word_count": 208
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "21ef2ad4-191c-4d05-b161-eaccdd088ff5",
   "text": "That may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\n\nYou can test for STIs and tell each other what you know. Attachment is less cooperative. Both of you can mean it when you say this is only sex, and then one of you wakes up attached anyway. If you’re both really numb or robotic about sex, maybe not.\n\nOutside a loving poly community or tribe, I think honest casual sex is almost impossible. You have to care what happens to the person afterward. Otherwise you’re using and abusing them for pleasure. Maybe they’re using you too. Congratulations, now it’s mutual.\n\nA lot of “I only want fun” really means, “This is the only version of the relationship that gets me laid.” Sometimes I know I’m hoping it turns into love. Sometimes I only find out I was hoping that when it doesn’t.\n",
   "text_sha256": "f0be553d9d8c146d7c7c6185691abc379b1e3fa98405b59c38c3f81356678617",
-  "updated_utc": "2026-08-21T17:09:18.889872+00:00"
+  "updated_utc": "2026-08-21T17:09:28.515769+00:00"
 }
