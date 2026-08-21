@@ -1,0 +1,104 @@
+name: Freeze Romance Part 1 natural-section diagnostics r1
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-part1-natural-sections-r1.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Fetch exact current Romance halves
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/5d1b9f6e91af25c555bb0d918bfecded82c0ddac/work/romance-detector-repair-20260820/materialized-owner-integrated-r2'
+          curl --fail --silent --show-error --location "$BASE/candidate-part-1.txt" -o /tmp/part1.txt
+          curl --fail --silent --show-error --location "$BASE/candidate-part-2.txt" -o /tmp/part2.txt
+          echo 'ae88df0f4156537239cb984337196703b88629c3588a5e58ee50c0888d3b39f8  /tmp/part1.txt' | sha256sum -c -
+          echo '20301b1bfb0052de694657411f231f82d9a45ae62ff9c4839015befce5c57dc2  /tmp/part2.txt' | sha256sum -c -
+      - name: Extract natural sections and freeze spec
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          p1 = Path('/tmp/part1.txt').read_text(encoding='utf-8')
+          p2 = Path('/tmp/part2.txt').read_text(encoding='utf-8')
+          whole = p1.rstrip('\n') + '\n\n' + p2.lstrip('\n')
+
+          def section(text, start, end):
+              a = text.index(start)
+              b = text.index(end, a + len(start))
+              return text[a:b].rstrip() + '\n'
+
+          variants = [
+              {
+                  'id': 'TALK_BEFORE_SEX_BASELINE',
+                  'section_id': 'part1-talk-before-sex',
+                  'budget_scope': 'section',
+                  'text': section(p1, 'Talk about making love before you do it\n', 'Affection and the simmer\n'),
+              },
+              {
+                  'id': 'AFFECTION_SIMMER_BASELINE',
+                  'section_id': 'part1-affection-simmer',
+                  'budget_scope': 'section',
+                  'text': section(p1, 'Affection and the simmer\n', 'Can Casual Sex or a Situationship Actually Be Honest?\n'),
+              },
+              {
+                  'id': 'CASUAL_SEX_BASELINE',
+                  'section_id': 'part1-casual-sex-situationship',
+                  'budget_scope': 'section',
+                  'text': section(p1, 'Can Casual Sex or a Situationship Actually Be Honest?\n', 'Should you be in a relationship at all?\n'),
+              },
+              {
+                  'id': 'CRUCIBLE_BASELINE',
+                  'section_id': 'part1-crucible',
+                  'budget_scope': 'section',
+                  'text': section(p1, 'Are you ready for the crucible?\n', 'Don’t make your partner your whole world\n'),
+              },
+              {
+                  'id': 'MATURITY_LEVELS_BASELINE',
+                  'section_id': 'part1-maturity-levels-cross-split',
+                  'budget_scope': 'section',
+                  'text': section(whole, 'When you and your partner are at different levels of maturity\n', 'Different levels in different domains can be complementary\n'),
+              },
+          ]
+          for v in variants:
+              if len(v['text'].split()) < 200:
+                  raise SystemExit(f"section too short for intended diagnostic boundary: {v['id']} {len(v['text'].split())}")
+
+          spec = {
+              'format': 'pangram-fixed-batch-v1',
+              'experiment_id': 'romance-detector-repair-20260820-part1-natural-sections-r1-20260821',
+              'audit_id': 'romance-detector-repair-20260820',
+              'variants': variants,
+          }
+          out = Path('experiments/romance-detector-repair-20260820-part1-natural-sections-r1-20260821.json')
+          out.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          sha = hashlib.sha256(out.read_bytes()).hexdigest()
+          out.with_suffix(out.suffix + '.sha256').write_text(sha + '\n', encoding='utf-8')
+          print('spec_sha256=' + sha)
+          for v in variants:
+              print(v['id'], len(v['text'].split()), hashlib.sha256(v['text'].encode()).hexdigest())
+          PY
+      - name: Commit frozen spec
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-part1-natural-sections-r1-20260821.json*
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance Part 1 natural-section diagnostics r1'
+          git push origin HEAD:automation/pangram-fixed-batch
