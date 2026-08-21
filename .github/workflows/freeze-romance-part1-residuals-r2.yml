@@ -1,0 +1,101 @@
+name: Freeze Romance Part 1 residual repairs r2
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-part1-residuals-r2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Fetch exact current repaired halves
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/49e6ca8e670135c9ff12802ca73925870bc4a45a/work/romance-detector-repair-20260820/materialized-part1-repair-r1'
+          curl --fail --silent --show-error --location "$BASE/candidate-part-1.txt" -o /tmp/part1.txt
+          curl --fail --silent --show-error --location "$BASE/candidate-part-2.txt" -o /tmp/part2.txt
+          echo 'ae48e720cd84eb88da3430a44e240d18bd7731d7ce0a40469e455027c43a7062  /tmp/part1.txt' | sha256sum -c -
+          echo '20301b1bfb0052de694657411f231f82d9a45ae62ff9c4839015befce5c57dc2  /tmp/part2.txt' | sha256sum -c -
+      - name: Build residual variants
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          p1 = Path('/tmp/part1.txt').read_text(encoding='utf-8')
+          p2 = Path('/tmp/part2.txt').read_text(encoding='utf-8')
+          whole = p1.rstrip('\n') + '\n\n' + p2.lstrip('\n')
+
+          def section(text, start, end):
+              a = text.index(start)
+              b = text.index(end, a + len(start))
+              return text[a:b].rstrip() + '\n'
+
+          affection = """Affection and the simmer
+
+Doug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.
+
+Kim Anami calls the sexual charge between encounters “the simmer.” If we stop flirting with each other for months, I’m not going to assume our problem magically begins at bedtime. Sex is a pretty sensitive barometer for resentment, stress, health, medication, and feeling wanted. My partner matters enormously to my desire, but I don’t want to make her manufacture all of it.
+"""
+
+          casual = section(p1, 'Can Casual Sex or a Situationship Actually Be Honest?\n', 'Should you be in a relationship at all?\n')
+          sti_old = """The STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not."""
+          sti_new = """You can test for STIs and tell each other what you know. Attachment is less cooperative. Both of you can mean it when you say this is only sex, and then one of you wakes up attached anyway. If you’re both really numb or robotic about sex, maybe not."""
+          if casual.count(sti_old) != 1:
+              raise SystemExit('STI source mismatch')
+          casual = casual.replace(sti_old, sti_new, 1)
+
+          maturity = section(whole, 'When you and your partner are at different levels of maturity\n', 'Different levels in different domains can be complementary\n')
+          patient_old = """All three women told me at some point that they felt like my patient. Which is true, I really was the one they asked about almost every medical, mental-health, and practical problem:
+
+“I’m sick. What should I take?”
+
+“I’m sad. What should I do?”
+
+Of course I helped. Saying, “I’m not your doctor or therapist,” every time would have been cold. But enough moments become a pattern."""
+          patient_new = """All three women told me at some point that they felt like my patient, and I couldn't exactly argue with them. They asked me about almost every medical, mental-health, and practical problem:
+
+“I’m sick. What should I take?”
+
+“I’m sad. What should I do?”
+
+I usually had some idea, so of course I answered."""
+          if maturity.count(patient_old) != 1:
+              raise SystemExit('patient source mismatch')
+          maturity = maturity.replace(patient_old, patient_new, 1)
+
+          variants = [
+              {'id':'AFFECTION_R4','section_id':'part1-affection-simmer','budget_scope':'section','text':affection},
+              {'id':'CASUAL_R4','section_id':'part1-casual-sex-situationship','budget_scope':'section','text':casual},
+              {'id':'MATURITY_R2','section_id':'part1-maturity-levels-cross-split','budget_scope':'section','text':maturity},
+          ]
+          spec = {
+              'format':'pangram-fixed-batch-v1',
+              'experiment_id':'romance-detector-repair-20260820-part1-residuals-r2-20260821',
+              'audit_id':'romance-detector-repair-20260820',
+              'variants':variants,
+          }
+          out = Path('experiments/romance-detector-repair-20260820-part1-residuals-r2-20260821.json')
+          out.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          out.with_suffix(out.suffix + '.sha256').write_text(hashlib.sha256(out.read_bytes()).hexdigest() + '\n', encoding='utf-8')
+          PY
+      - name: Commit exact residual spec
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-part1-residuals-r2-20260821.json*
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance Part 1 residual repairs r2'
+          git push origin HEAD:automation/pangram-fixed-batch
