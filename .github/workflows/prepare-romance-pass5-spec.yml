@@ -1,0 +1,76 @@
+name: Prepare Romance pass 5 spec
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/prepare-romance-pass5-spec.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Pangram evidence branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+          fetch-depth: 0
+
+      - name: Check out exact Romance task branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          repository: u-dont-existDOTcom/joel-articles
+          ref: task/romance-detector-repair-20260820
+          path: joel-articles
+          persist-credentials: false
+
+      - name: Freeze exact Part-2 candidate into fixed-batch spec
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib
+
+          src = pathlib.Path('joel-articles/work/romance-detector-repair-20260820/materialized-pass5/candidate-part-2.txt')
+          expected = 'a5b1cf38a81537492d08a8eac2e930012fbf10264beadfc252a3efc1bd794c20'
+          raw = src.read_bytes()
+          actual = hashlib.sha256(raw).hexdigest()
+          if actual != expected:
+              raise SystemExit(f'pass-5 Part-2 SHA mismatch: expected={expected} actual={actual}')
+          text = raw.decode('utf-8')
+          spec = {
+              'format': 'pangram-fixed-batch-v1',
+              'experiment_id': 'romance-detector-repair-20260820-part2-pass5',
+              'audit_id': 'romance-detector-repair-20260820',
+              'variants': [
+                  {
+                      'id': 'PASS5',
+                      'section_id': 'part2',
+                      'text': text,
+                  }
+              ],
+          }
+          out = pathlib.Path('experiments/romance-detector-repair-20260820-part2-pass5.json')
+          sidecar = pathlib.Path('experiments/romance-detector-repair-20260820-part2-pass5.sha256')
+          if out.exists() or sidecar.exists():
+              raise SystemExit('refusing to overwrite existing immutable pass-5 spec or sidecar')
+          out.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          digest = hashlib.sha256(out.read_bytes()).hexdigest()
+          sidecar.write_text(f'{digest}  {out.name}\n', encoding='utf-8')
+          print('candidate_sha256', actual)
+          print('spec_sha256', digest)
+          PY
+
+      - name: Commit immutable spec and checksum
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            experiments/romance-detector-repair-20260820-part2-pass5.json \
+            experiments/romance-detector-repair-20260820-part2-pass5.sha256
+          git commit -m 'Freeze Romance detector-repair pass 5 Pangram spec'
+          git push origin HEAD:automation/pangram-fixed-batch
