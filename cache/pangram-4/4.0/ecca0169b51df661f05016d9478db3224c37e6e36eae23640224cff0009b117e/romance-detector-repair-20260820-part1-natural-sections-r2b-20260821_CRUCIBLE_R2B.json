@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-part1-natural-sections-r2b-20260821_CRUCIBLE_R2B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.2622036337852478,
+    "fraction_human": 0.7377963662147522,
+    "headline": "AI Assisted",
+    "num_ai_assisted_segments": 1,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI-assisted and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Are you ready for the crucible?\nI call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in Passionate Marriage. Schnarch saw marriage as a natural “people-growing process.” His idea of differentiation was learning to hold onto yourself while staying close, especially when intimacy brings anxiety and unresolved problems to the surface.\nThat’s definitely what relationship has done to me.\nOne warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other but one person terrorizing or controlling the other. If you're scared to say no or tell the truth, or scared of what happens if you leave, don't treat that as a mutual communication exercise—get other people involved and think about safety first.\nToft says meditation, yoga, prayer, and church are all fine, but after fifty years of marriage his main spiritual practice is being in relationship with his wife. I understand what he means. It’s much easier for me to feel spiritually advanced when nobody is close enough to expose the parts of me that aren’t.\nBeing in a relationship showed me how vulnerable I actually am when I open my heart. It’s really easy to feel invulnerable and strong when you’re alone, or even just with friends. Taking off the masks and showing your inner child is a gamble, but it’s required if you want to go deeper in yourself and deeper with another person.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.249465212225914,
+        "confidence": "Medium",
+        "end_index": 376,
+        "humanizer_score": 0.0005438320804387331,
+        "is_humanized": false,
+        "label": "AI-Assisted",
+        "start_index": 0,
+        "text": "Are you ready for the crucible?\nI call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in Passionate Marriage. Schnarch saw marriage as a natural “people-growing process.” His idea of differentiation was learning to hold onto yourself while staying close, especially when intimacy brings anxiety and unresolved problems to the surface.",
+        "token_length": 71,
+        "word_count": 56
+      },
+      {
+        "ai_assistance_score": 0.29207926988601685,
+        "confidence": "High",
+        "end_index": 1434,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 376,
+        "text": "\nThat’s definitely what relationship has done to me.\nOne warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other but one person terrorizing or controlling the other. If you're scared to say no or tell the truth, or scared of what happens if you leave, don't treat that as a mutual communication exercise—get other people involved and think about safety first.\nToft says meditation, yoga, prayer, and church are all fine, but after fifty years of marriage his main spiritual practice is being in relationship with his wife. I understand what he means. It’s much easier for me to feel spiritually advanced when nobody is close enough to expose the parts of me that aren’t.\nBeing in a relationship showed me how vulnerable I actually am when I open my heart. It’s really easy to feel invulnerable and strong when you’re alone, or even just with friends. Taking off the masks and showing your inner child is a gamble, but it’s required if you want to go deeper in yourself and deeper with another person.",
+        "token_length": 220,
+        "word_count": 182
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "065d4883-5724-4270-9dfa-7bb9e733031d",
   "text": "Are you ready for the crucible?\n\nI call relationship a crucible because I was thinking of Dr. David Schnarch’s Crucible Approach in Passionate Marriage. Schnarch saw marriage as a natural “people-growing process.” His idea of differentiation was learning to hold onto yourself while staying close, especially when intimacy brings anxiety and unresolved problems to the surface.\n\nThat’s definitely what relationship has done to me.\n\nOne warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other but one person terrorizing or controlling the other. If you're scared to say no or tell the truth, or scared of what happens if you leave, don't treat that as a mutual communication exercise—get other people involved and think about safety first.\n\nToft says meditation, yoga, prayer, and church are all fine, but after fifty years of marriage his main spiritual practice is being in relationship with his wife. I understand what he means. It’s much easier for me to feel spiritually advanced when nobody is close enough to expose the parts of me that aren’t.\n\nBeing in a relationship showed me how vulnerable I actually am when I open my heart. It’s really easy to feel invulnerable and strong when you’re alone, or even just with friends. Taking off the masks and showing your inner child is a gamble, but it’s required if you want to go deeper in yourself and deeper with another person.\n",
   "text_sha256": "ecca0169b51df661f05016d9478db3224c37e6e36eae23640224cff0009b117e",
-  "updated_utc": "2026-08-21T16:18:55.073924+00:00"
+  "updated_utc": "2026-08-21T16:19:01.068290+00:00"
 }
