@@ -736,6 +736,17 @@
       "source_path": "state/ROMANCE-SHORT-BOUNDARY-CONFIDENCE-2026-08-21.md",
       "source_ref": "c9c33d827dd6bc0d8d7720988b406e0f1dd3dd2c",
       "source_sha256": "084176769be61cc5c7c1742a0cc6dbc51ffb3f36013bb484f25a36ebdeed5f98"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "A 226-word assistant-produced Romance Primal passage was owner-reported Pangram 4 100% high-confidence Human while Joel still perceived residual model-shaped rhythm; preserve this as an article-specific detector blind-spot case rather than treating detector green as owner-final authority.",
+      "id": "L-f122d240d4-01",
+      "promoted_to": [],
+      "reason": "The detector outcome is owner-reported without an API result record and the passage is Romance-specific. The transferable rule that Pangram green does not close editorial/fidelity review is already established elsewhere.",
+      "recorded_at_utc": "2026-08-21T10:42:11.701460+00:00",
+      "source_path": "state/ROMANCE-PRIMAL-PANGRAM4-GREEN-OWNER-RESIDUAL-2026-08-21.md",
+      "source_ref": "db9295df1d80beaabef5ffe5a1373ce857f1291a",
+      "source_sha256": "f122d240d43254175e54b997535e5dccf9224bf330ecee849c60747fccd2b71e"
     }
   ],
   "schema_version": 1

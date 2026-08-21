@@ -59,8 +59,16 @@ def test_joel_pangram_completion_requires_exact_100_percent_and_handoff():
     assert "when pangram success is an explicit delivery requirement" not in combined.lower()
 
     operating = texts["operating guide"]
-    assert "Hard limit: at most 6 new paid Pangram POSTs per section per audit" in operating
-    assert "never overrides the six-paid-call section cap" in operating
+    assert (
+        "Hard limit: at most 6 new paid Pangram POSTs per genuine local repair section per audit"
+        in operating
+    )
+    assert (
+        "multi-section aggregate certification boundaries remain fully accounted but are not subject to the six-call section cap"
+        in operating
+    )
+    assert "never overrides the six-paid-call local-section cap" in operating
+    assert "A whole-article acceptance boundary counts as its own section" not in operating
 
 
 # Regression for the source-vs-rendered representation failure discovered on Spiritual Bypassing.

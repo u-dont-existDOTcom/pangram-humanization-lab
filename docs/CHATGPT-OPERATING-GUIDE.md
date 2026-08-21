@@ -55,7 +55,7 @@ Section/window measurements are diagnostic unless that unit is the complete requ
 
 A Human headline or a partial result such as 93% Human is progress only; under a 100% requirement it is not a pass.
 
-The normal editorial terminal states are: (1) the exact intended delivery boundary passes every required detector/editorial gate; or (2) the worker genuinely knows no further faithful coherent repair and makes an **unresolved authorial handoff**. Reaching the paid-call limit creates an **operational suspension**, not completion: stop before a seventh paid POST and request narrow help rather than resetting the audit identity.
+The normal editorial terminal states are: (1) the exact intended delivery boundary passes every required detector/editorial gate; or (2) the worker genuinely knows no further faithful coherent repair and makes an **unresolved authorial handoff**. Reaching a local repair section's paid-call limit creates an **operational suspension** for that section, not completion: stop before a seventh section-scoped paid POST and request narrow help rather than resetting the section identity. Aggregate certification calls are governed instead by exact-cache, recovery, version, and decision-value gates.
 
 Any unresolved authorial handoff or operational suspension must record `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempted faithful approaches; protected claims/functions; paid-call state; and the narrow owner input needed.
 
@@ -98,7 +98,7 @@ The review queue stores source identity and detector triage metadata, not tested
 
 For every new humanization audit that may make paid Pangram calls, assign stable audit/boundary identities before the first submission. The historical fixed-batch budget key is `audit_id + section_id + detector model + expected version`; other transports must preserve the same principle of stable identity and durable accounting.
 
-**Hard limit: at most 6 new paid Pangram POSTs per section per audit.** A whole-article acceptance boundary counts as its own section. Splitting the same section across new batches, transports, branches, workflows, chats, or retries does not reset its budget.
+**Hard limit: at most 6 new paid Pangram POSTs per genuine local repair section per audit.** Whole-article, article-half, and other multi-section aggregate certification boundaries remain fully accounted but are not subject to the six-call section cap. Splitting the same local section across new batches, transports, branches, workflows, chats, or retries does not reset its budget.
 
 Before any new paid submission:
 
@@ -110,9 +110,9 @@ Before any new paid submission:
 - make the reservation/checkpoint durable before another paid action whenever the transport supports it;
 - persist the completed exact result before proceeding to another input.
 
-Count toward the paid cap every new detector submission and every ambiguous action that may have reached Pangram. Do not count exact cache hits, non-billable verification, polling, or read-only recovery of already-paid work.
+Count toward a local section's paid cap every new detector submission for that section and every ambiguous action that may have reached Pangram. Do not count exact cache hits, non-billable verification, polling, or read-only recovery of already-paid work. Aggregate certification calls are still durably counted for cost/provenance even though the section cap does not apply.
 
-Before a seventh paid POST, stop and request narrow help from Joel. Do not silently reset the audit identity or raise the cap. The controlled-research stopping rule never overrides the six-paid-call section cap.
+Before a seventh paid POST for the same genuine local repair section, stop and request narrow help from Joel. Do not silently reset the section identity or raise the cap. This six-call guard does not apply to whole-article, half-article, or other multi-section aggregate certification boundaries; those calls still require exact cache/recovery and a decision-changing reason.
 
 Record per measured boundary:
 
@@ -159,7 +159,7 @@ The older adaptive harness may still live on Joel's Zorin machine under a `pangr
 - Test interactions; do not infer magic words from one case.
 - Pangram green does not justify stopping if a real thought thread remains.
 - Pangram red does not justify worse prose or altered meaning.
-- For controlled research probes, stop once the local hypothesis is adequately discriminated; avoid token hunting. This research stopping rule never overrides the six-paid-call section cap.
+- For controlled research probes, stop once the local hypothesis is adequately discriminated; avoid token hunting. This research stopping rule never overrides the six-paid-call local-section cap.
 
 ## Promotion boundary
 
