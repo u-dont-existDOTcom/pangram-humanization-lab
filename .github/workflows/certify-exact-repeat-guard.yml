@@ -1,0 +1,35 @@
+name: Certify Pangram exact-repeat guard
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/certify-exact-repeat-guard.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -q -e '.[test]'
+      - run: python -m pytest -q tests/test_tracked_pangram_repeat_guard.py tests/test_fixed_batch.py tests/test_call_budget.py
+      - name: Commit success receipt
+        shell: bash
+        run: |
+          mkdir -p state/tooling-receipts
+          printf '%s\n' 'exact-repeat-guard tests passed: tracked repeat guard + fixed batch + call budget' > state/tooling-receipts/exact-repeat-guard-20260821.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add state/tooling-receipts/exact-repeat-guard-20260821.txt
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Certify Pangram exact-repeat guard'
+          git push origin HEAD:automation/pangram-fixed-batch
