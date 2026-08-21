@@ -6,8 +6,8 @@
     "community-two-pillars\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "budget_scope": "section",
@@ -17,10 +17,19 @@
           "text_sha256": "fd28d0f7de0bf042e43982e39c94c526d3eb694283340c5a45703fd43caea68f",
           "type": "paid_post_reserved",
           "word_count": 728
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "romance-detector-repair-20260820-owner-integrated-r4-local-sections_TWO_PILLARS_R2",
+          "recorded_at_utc": "2026-08-21T15:17:01.147536+00:00",
+          "text_sha256": "8ead2c7fccc5bc5513921f66d95b3f36dfb069ee774ea2f614367a1853b60b80",
+          "type": "paid_post_reserved",
+          "word_count": 716
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "community-two-pillars",
       "version": "4.0"
