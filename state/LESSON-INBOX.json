@@ -2611,6 +2611,38 @@
           "section_id": "part1-crucible"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T16:39:40.042064+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-natural-sections-r3-20260821",
+      "id": "Q-ec53763b02f245d0",
+      "sections": [
+        "part1-casual-sex-situationship",
+        "part1-crucible"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-natural-sections-r3-20260821-results.json",
+      "source_ref": "0d9f635122f2b5019337d58fd4d7d6156a1db939",
+      "source_sha256": "b9bc6ff85eadde0abcb33c3f1b52bf37a6aa947862756cea14a0703f232dee11",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "CASUAL_SEX_FULL_R3",
+          "prediction_short": "Human",
+          "section_id": "part1-casual-sex-situationship"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "CRUCIBLE_FULL_R3",
+          "prediction_short": "Human",
+          "section_id": "part1-crucible"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
