@@ -2689,6 +2689,47 @@
           "section_id": "part1"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T17:09:52.819546+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-residuals-r2b-20260821",
+      "id": "Q-5dc6b4e1d636b10e",
+      "sections": [
+        "part1-affection-simmer",
+        "part1-casual-sex-situationship",
+        "part1-maturity-levels-cross-split"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-residuals-r2b-20260821-results.json",
+      "source_ref": "b7d133de83ac94706b55d36bc6bb790e2baadb95",
+      "source_sha256": "fc2a7e48c6056f5aa92832f6a46f3844bd1707b31285af3fbc14c84add4dbbff",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.6268068552017212,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.3731931746006012,
+          "id": "AFFECTION_R4B",
+          "prediction_short": "Mixed",
+          "section_id": "part1-affection-simmer"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "CASUAL_STI_R4B",
+          "prediction_short": "Human",
+          "section_id": "part1-casual-sex-situationship"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "MATURITY_PATIENT_R2B",
+          "prediction_short": "Human",
+          "section_id": "part1-maturity-levels-cross-split"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
