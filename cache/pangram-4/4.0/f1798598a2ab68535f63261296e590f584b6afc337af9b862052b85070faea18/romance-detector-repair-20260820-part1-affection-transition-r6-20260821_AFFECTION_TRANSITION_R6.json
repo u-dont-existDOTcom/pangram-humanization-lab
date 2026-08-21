@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-part1-affection-transition-r6-20260821_AFFECTION_TRANSITION_R6",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\nKim Anami calls the sexual current between encounters “the simmer.” If we supposedly want each other but only show it when somebody officially initiates sex, I think something is already going wrong.\nCan Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nThat may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.3637816309928894,
+        "confidence": "High",
+        "end_index": 1549,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\nKim Anami calls the sexual current between encounters “the simmer.” If we supposedly want each other but only show it when somebody officially initiates sex, I think something is already going wrong.\nCan Casual Sex or a Situationship Actually Be Honest?\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\nThat may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.",
+        "token_length": 347,
+        "word_count": 274
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "d1843b15-ec62-4769-8830-c0059d37ce85",
   "text": "Affection and the simmer\n\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\n\nKim Anami calls the sexual current between encounters “the simmer.” If we supposedly want each other but only show it when somebody officially initiates sex, I think something is already going wrong.\n\nCan Casual Sex or a Situationship Actually Be Honest?\n\nYour body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger.\n\n“I don’t know whether I want something serious with you. I’m not pretending I do. I’d still like to have sex.”\n\nThat may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what? You block her? Agree to child support? Try to convince her to abort when she thinks abortion is killing her child? This is what penetrative sex can do. No contraception is perfect.\n",
   "text_sha256": "f1798598a2ab68535f63261296e590f584b6afc337af9b862052b85070faea18",
-  "updated_utc": "2026-08-21T18:19:44.420361+00:00"
+  "updated_utc": "2026-08-21T18:19:51.255079+00:00"
 }
