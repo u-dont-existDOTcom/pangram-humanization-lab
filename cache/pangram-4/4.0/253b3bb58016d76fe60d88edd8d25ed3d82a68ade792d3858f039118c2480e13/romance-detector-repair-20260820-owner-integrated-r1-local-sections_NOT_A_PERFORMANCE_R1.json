@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-owner-integrated-r1-local-sections_NOT_A_PERFORMANCE_R1",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.23467491567134857,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.7653250694274902,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 2,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Not A Performance\nThe moment I have to prove that I’m the man, something has already become fake.\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.\nA woman shouldn’t have to act soft, helpless, or cute every minute either. She can get pushed in the opposite direction too: if she’s spent years worrying that she isn’t beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy, she may overcorrect into needing nobody. Then receiving care or letting a man lead starts to feel like weakness.\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\nUnfortunately, I've seen a lot of the latter.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.24292325973510742,
+        "confidence": "High",
+        "end_index": 379,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Not A Performance\nThe moment I have to prove that I’m the man, something has already become fake.\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.",
+        "token_length": 92,
+        "word_count": 70
+      },
+      {
+        "ai_assistance_score": 0.7106454968452454,
+        "confidence": "High",
+        "end_index": 758,
+        "humanizer_score": 0.0005585551843978465,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 379,
+        "text": "\nA woman shouldn’t have to act soft, helpless, or cute every minute either. She can get pushed in the opposite direction too: if she’s spent years worrying that she isn’t beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy, she may overcorrect into needing nobody. Then receiving care or letting a man lead starts to feel like weakness.",
+        "token_length": 81,
+        "word_count": 64
+      },
+      {
+        "ai_assistance_score": 0.2689543664455414,
+        "confidence": "High",
+        "end_index": 1615,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 758,
+        "text": "\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\nUnfortunately, I've seen a lot of the latter.",
+        "token_length": 187,
+        "word_count": 159
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "db1e48c9-8dc6-4fc2-ac90-9a86e29b7684",
   "text": "Not A Performance\n\nThe moment I have to prove that I’m the man, something has already become fake.\n\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\n\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.\n\nA woman shouldn’t have to act soft, helpless, or cute every minute either. She can get pushed in the opposite direction too: if she’s spent years worrying that she isn’t beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy, she may overcorrect into needing nobody. Then receiving care or letting a man lead starts to feel like weakness.\n\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\n\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\n\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\n\nUnfortunately, I've seen a lot of the latter.\n",
   "text_sha256": "253b3bb58016d76fe60d88edd8d25ed3d82a68ade792d3858f039118c2480e13",
-  "updated_utc": "2026-08-21T10:34:04.040585+00:00"
+  "updated_utc": "2026-08-21T10:34:09.904871+00:00"
 }
