@@ -5,8 +5,8 @@
   "sections": {
     "part2\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 1.65,
-      "estimated_credits": 33,
+      "estimated_cost_usd": 2.15,
+      "estimated_credits": 43,
       "events": [
         {
           "estimated_credits": 11,
@@ -46,10 +46,18 @@
           "transport": "private_self_hosted_executor",
           "type": "pre_task_rejection_not_counted",
           "word_count": 9985
+        },
+        {
+          "estimated_credits": 10,
+          "measurement_key": "romance-detector-repair-20260820-part2-pass4_PASS4",
+          "recorded_at_utc": "2026-08-21T01:58:02.721333+00:00",
+          "text_sha256": "a21b9670bc0cc61b4fc850761ca57ffa5dc5d1a02bdd5df90b820d6f9d437a0e",
+          "type": "paid_post_reserved",
+          "word_count": 9985
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "provenance_note": "The paid_api_calls counter is seeded with the three already-paid Part-2 measurements across transports. The first pass-4 self-hosted attempt was later proven to use a stale executor key, returned HTTP 402 before task creation, and produced no owner-account usage; it is preserved as a non-counting rejection event so transport/credential correction cannot consume an extra section slot.",
       "section_id": "part2",
