@@ -44,16 +44,21 @@ def load_spec(path: Path, max_variants: int = 8) -> dict[str, Any]:
             raise ValueError(f"variant {variant_id} text must be non-empty")
         section_id = variant.get("section_id")
         budget_scope = variant.get("budget_scope", "section")
+        allow_exact_repeat = variant.get("allow_exact_repeat", False)
         if budget_scope not in VALID_BUDGET_SCOPES:
             raise ValueError(
                 f"variant {variant_id} budget_scope must be one of {sorted(VALID_BUDGET_SCOPES)}"
             )
+        if not isinstance(allow_exact_repeat, bool):
+            raise ValueError(f"variant {variant_id} allow_exact_repeat must be boolean")
         if audit_id is not None and (not isinstance(section_id, str) or not section_id.strip()):
             raise ValueError(f"variant {variant_id} section_id must be a non-empty string for audit {audit_id}")
         if audit_id is None and section_id is not None:
             raise ValueError("section_id requires top-level audit_id")
         if audit_id is None and "budget_scope" in variant:
             raise ValueError("budget_scope requires top-level audit_id")
+        if audit_id is None and "allow_exact_repeat" in variant:
+            raise ValueError("allow_exact_repeat requires top-level audit_id")
     return data
 
 
@@ -83,6 +88,7 @@ def run_batch(
         text = variant["text"]
         section_id = variant.get("section_id")
         budget_scope = variant.get("budget_scope", "section")
+        allow_exact_repeat = variant.get("allow_exact_repeat", False)
         measurement_key = f"{experiment_id}_{variant_id}"
         try:
             if call_ledger is None:
@@ -94,6 +100,7 @@ def run_batch(
                     measurement_key=measurement_key,
                     section_id=section_id,
                     budget_scope=budget_scope,
+                    allow_exact_repeat=allow_exact_repeat,
                 )
         except SectionCallCapReached:
             model = getattr(client, "model", "pangram-4")
@@ -119,6 +126,8 @@ def run_batch(
         if section_id is not None:
             row["section_id"] = section_id
             row["budget_scope"] = budget_scope
+        if allow_exact_repeat:
+            row["allow_exact_repeat"] = True
         aggregate["results"].append(row)
         if stats is not None:
             stats.note(
