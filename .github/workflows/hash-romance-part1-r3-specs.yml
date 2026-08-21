@@ -1,0 +1,37 @@
+name: Hash Romance Part 1 r3 specs
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/hash-romance-part1-r3-specs.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  hash:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Write exact SHA-256 sidecars
+        shell: bash
+        run: |
+          set -euo pipefail
+          for f in \
+            experiments/romance-detector-repair-20260820-part1-talk-r3-20260821.json \
+            experiments/romance-detector-repair-20260820-part1-affection-r3-20260821.json; do
+            sha256sum "$f" | awk '{print $1}' > "$f.sha256"
+          done
+      - name: Commit sidecars
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/*part1-talk-r3-20260821.json.sha256 experiments/*part1-affection-r3-20260821.json.sha256
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Hash Romance Part 1 r3 specs'
+          git push origin HEAD:automation/pangram-fixed-batch
