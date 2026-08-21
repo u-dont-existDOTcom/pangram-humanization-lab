@@ -1,0 +1,103 @@
+name: Prepare Romance owner-integrated r2 local-section spec
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/prepare-romance-owner-integrated-r2-local-spec.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Pangram evidence branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+          fetch-depth: 0
+
+      - name: Check out exact Romance task branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          repository: u-dont-existDOTcom/joel-articles
+          ref: task/romance-detector-repair-20260820
+          path: joel-articles
+          persist-credentials: false
+
+      - name: Freeze two natural section boundaries
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib
+
+          src = pathlib.Path('joel-articles/work/romance-detector-repair-20260820/materialized-owner-integrated-r2/candidate-part-2.txt')
+          expected_sha = '1aba86e2706943467418c56fa7b21515a216bcef25dc71c1784138349ad2f841'
+          expected_words = 9759
+          raw = src.read_bytes()
+          text = raw.decode('utf-8')
+          actual_sha = hashlib.sha256(raw).hexdigest()
+          actual_words = len(text.split())
+          if actual_sha != expected_sha:
+              raise SystemExit(f'r2 Part-2 SHA mismatch: expected={expected_sha} actual={actual_sha}')
+          if actual_words != expected_words:
+              raise SystemExit(f'r2 Part-2 word-count mismatch: expected={expected_words} actual={actual_words}')
+
+          def section(start_marker, end_marker):
+              start = text.index(start_marker)
+              end = text.index(end_marker, start)
+              chunk = text[start:end].rstrip() + '\n'
+              if len(chunk.split()) < 200:
+                  raise SystemExit(f'section too short: {len(chunk.split())} words')
+              return chunk
+
+          variants = [
+              {
+                  'id': 'NOT_A_PERFORMANCE_R2',
+                  'section_id': 'primal-not-a-performance',
+                  'budget_scope': 'section',
+                  'text': section('Not A Performance\n\n', 'Desire is expressed differently for men & women\n'),
+              },
+              {
+                  'id': 'PSYCHEDELIC_DISCERNMENT_R2',
+                  'section_id': 'psychedelic-relationship-discernment',
+                  'budget_scope': 'section',
+                  'text': section('Psychedelics in relationship discernment\n\n', 'Why all of this sounds artificial\n'),
+              },
+          ]
+          for v in variants:
+              print(v['section_id'], len(v['text'].split()), hashlib.sha256(v['text'].encode()).hexdigest())
+
+          experiment_id = 'romance-detector-repair-20260820-owner-integrated-r2-local-sections'
+          spec = {
+              'format': 'pangram-fixed-batch-v1',
+              'experiment_id': experiment_id,
+              'audit_id': 'romance-detector-repair-20260820',
+              'variants': variants,
+          }
+          out = pathlib.Path(f'experiments/{experiment_id}.json')
+          sidecar = pathlib.Path(f'experiments/{experiment_id}.sha256')
+          if out.exists() or sidecar.exists():
+              raise SystemExit('refusing to overwrite existing immutable r2 local-section spec or sidecar')
+          out.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          digest = hashlib.sha256(out.read_bytes()).hexdigest()
+          sidecar.write_text(f'{digest}  {out.name}\n', encoding='utf-8')
+          print('spec_sha256', digest)
+          PY
+
+      - name: Run fixed-batch section-budget regressions
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q tests/test_call_budget.py tests/test_call_budget_fixed_batch.py tests/test_call_budget_pangram.py
+
+      - name: Commit immutable local-section spec and checksum
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-owner-integrated-r2-local-sections.json experiments/romance-detector-repair-20260820-owner-integrated-r2-local-sections.sha256
+          git commit -m 'Freeze Romance owner-integrated r2 local-section Pangram spec'
+          git push origin HEAD:automation/pangram-fixed-batch
