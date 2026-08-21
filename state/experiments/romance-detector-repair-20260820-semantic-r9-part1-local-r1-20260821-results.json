@@ -50,6 +50,42 @@
       },
       "section_id": "part1-talk-before-sex",
       "budget_scope": "section"
+    },
+    {
+      "id": "SEMANTIC_R9_PATIENT_R1",
+      "measurement_key": "romance-detector-repair-20260820-semantic-r9-part1-local-r1-20260821_SEMANTIC_R9_PATIENT_R1",
+      "text": "The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself.\n\nIt can run the other way too. If I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.\n\nAll three women eventually told me they felt like my patient, and I could see why. I was the person they brought almost every medical, mental-health, and practical problem to:\n\n“I’m sick. What should I take?”\n\n“I’m sad. What should I do?”\n\nOf course I was going to help. If every time one of them felt sick I answered, “I’m not your doctor or therapist,” that would have been cold. But after enough of those conversations, I understood why they used the word patient.\n\nKey at first asked me innocently, \"Can you be my guru?\" I told her, “I’m not anyone's guru, but we can learn from each other.” A few months later, she was telling me she was much more spiritually advanced than me. I asked, “Do you recall asking me to be your guru?” She said, \"Wow, I must have been really confused back then!\"\n\nI also have to admit, I can become condescending when somebody stops taking responsibility for their behavior. I find that intolerable. If someone says, “I feel like your patient,” both people need to look at their roles.\n",
+      "text_sha256": "7d60bc1c38669848e7e27d313603e4ee8970e34bf3896673160ea6a61c106002",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself.\nIt can run the other way too. If I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.\nAll three women eventually told me they felt like my patient, and I could see why. I was the person they brought almost every medical, mental-health, and practical problem to:\n“I’m sick. What should I take?”\n“I’m sad. What should I do?”\nOf course I was going to help. If every time one of them felt sick I answered, “I’m not your doctor or therapist,” that would have been cold. But after enough of those conversations, I understood why they used the word patient.\nKey at first asked me innocently, \"Can you be my guru?\" I told her, “I’m not anyone's guru, but we can learn from each other.” A few months later, she was telling me she was much more spiritually advanced than me. I asked, “Do you recall asking me to be your guru?” She said, \"Wow, I must have been really confused back then!\"\nI also have to admit, I can become condescending when somebody stops taking responsibility for their behavior. I find that intolerable. If someone says, “I feel like your patient,” both people need to look at their roles.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "The problem is when the role takes over the relationship. She can be my little girl sometimes without becoming my child. She still has to remain responsible for her life and keep reparenting herself.\nIt can run the other way too. If I expect her to regulate me, soothe every wound, organize my life, and keep me functional, then I’ve made her Mom.\nAll three women eventually told me they felt like my patient, and I could see why. I was the person they brought almost every medical, mental-health, and practical problem to:\n“I’m sick. What should I take?”\n“I’m sad. What should I do?”\nOf course I was going to help. If every time one of them felt sick I answered, “I’m not your doctor or therapist,” that would have been cold. But after enough of those conversations, I understood why they used the word patient.\nKey at first asked me innocently, \"Can you be my guru?\" I told her, “I’m not anyone's guru, but we can learn from each other.” A few months later, she was telling me she was much more spiritually advanced than me. I asked, “Do you recall asking me to be your guru?” She said, \"Wow, I must have been really confused back then!\"\nI also have to admit, I can become condescending when somebody stops taking responsibility for their behavior. I find that intolerable. If someone says, “I feel like your patient,” both people need to look at their roles.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.2931085228919983,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1361,
+            "word_count": 247,
+            "token_length": 313,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "part1-maturity-levels-cross-split",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "romance-detector-repair-20260820",
@@ -156,18 +192,18 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.1,
-        "estimated_credits": 2,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
         "model": "pangram-4",
-        "paid_api_calls": 2,
+        "paid_api_calls": 3,
         "pending_resumes": 0,
         "section_id": "part1-maturity-levels-cross-split",
         "version": "4.0",
         "hard_cap_applies": true,
         "cap": 6,
-        "paid_calls_to_human": null,
-        "estimated_credits_to_human": null,
-        "first_human_measurement_key": null
+        "paid_calls_to_human": 3,
+        "estimated_credits_to_human": 3,
+        "first_human_measurement_key": "romance-detector-repair-20260820-semantic-r9-part1-local-r1-20260821_SEMANTIC_R9_PATIENT_R1"
       },
       {
         "budget_scope": "section",
