@@ -77,8 +77,8 @@
     "part1-casual-sex-situationship\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "budget_scope": "section",
@@ -97,10 +97,19 @@
           "text_sha256": "ac35a0dd6160071f540338c577c94ec6f9cbc1b319d8c6e402ab947b994ef96f",
           "type": "paid_post_reserved",
           "word_count": 259
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "romance-detector-repair-20260820-part1-natural-sections-r3-20260821_CASUAL_SEX_FULL_R3",
+          "recorded_at_utc": "2026-08-21T16:39:10.786299+00:00",
+          "text_sha256": "268165f899b11e7e56bffa18d80006d0b322c432a3a409195fe69e407f85061c",
+          "type": "paid_post_reserved",
+          "word_count": 796
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "part1-casual-sex-situationship",
       "version": "4.0"
