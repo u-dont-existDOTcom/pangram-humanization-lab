@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-part1-natural-sections-r2b-20260821_CASUAL_SEX_R2B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.18008185923099518,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.819918155670166,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "But here's the funny thing many people don't understand: labels don't create commitment. They can still expose whether two people think they're in the same relationship, which matters a lot.\nTrue commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me; I don't need a promise on paper to make me want to. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag.\nIn college I had a friend with four girlfriends who boasted about it to girls while trying to get a fifth. If anybody was supposed to be winning that arrangement, it was him. I asked him, “But are you really happy?” He said, “No, I’m miserable, dude. I feel empty inside.”\nThe full conversation is so big that almost nobody would have casual sex if they took it seriously. Which is why almost nobody has the full conversation. I can’t decide what is okay for anybody else. I can say that most people who defend casual sex are not being very honest with themselves about pregnancy, attachment, or what they might owe the person afterward.\nIf you want something closer to “casual love-making” without quite so many ways to damage each other, you’d probably need a free-love community around it. Then the people aren’t disposable, whatever bonds form can be acknowledged, and any children have a village.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.28955334424972534,
+        "confidence": "High",
+        "end_index": 1202,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "But here's the funny thing many people don't understand: labels don't create commitment. They can still expose whether two people think they're in the same relationship, which matters a lot.\nTrue commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me; I don't need a promise on paper to make me want to. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag.\nIn college I had a friend with four girlfriends who boasted about it to girls while trying to get a fifth. If anybody was supposed to be winning that arrangement, it was him. I asked him, “But are you really happy?” He said, “No, I’m miserable, dude. I feel empty inside.”\nThe full conversation is so big that almost nobody would have casual sex if they took it seriously. Which is why almost nobody has the full conversation. I can’t decide what is okay for anybody else. I can say that most people who defend casual sex are not being very honest with themselves about pregnancy, attachment, or what they might owe the person afterward.",
+        "token_length": 266,
+        "word_count": 217
+      },
+      {
+        "ai_assistance_score": 0.6050649881362915,
+        "confidence": "High",
+        "end_index": 1466,
+        "humanizer_score": 0.009941608645021915,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1202,
+        "text": "\nIf you want something closer to “casual love-making” without quite so many ways to damage each other, you’d probably need a free-love community around it. Then the people aren’t disposable, whatever bonds form can be acknowledged, and any children have a village.",
+        "token_length": 55,
+        "word_count": 42
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "a160d6fa-4d66-4ef3-96a3-83fbbeaff949",
   "text": "But here's the funny thing many people don't understand: labels don't create commitment. They can still expose whether two people think they're in the same relationship, which matters a lot.\n\nTrue commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me; I don't need a promise on paper to make me want to. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag.\n\nIn college I had a friend with four girlfriends who boasted about it to girls while trying to get a fifth. If anybody was supposed to be winning that arrangement, it was him. I asked him, “But are you really happy?” He said, “No, I’m miserable, dude. I feel empty inside.”\n\nThe full conversation is so big that almost nobody would have casual sex if they took it seriously. Which is why almost nobody has the full conversation. I can’t decide what is okay for anybody else. I can say that most people who defend casual sex are not being very honest with themselves about pregnancy, attachment, or what they might owe the person afterward.\n\nIf you want something closer to “casual love-making” without quite so many ways to damage each other, you’d probably need a free-love community around it. Then the people aren’t disposable, whatever bonds form can be acknowledged, and any children have a village.\n",
   "text_sha256": "ac35a0dd6160071f540338c577c94ec6f9cbc1b319d8c6e402ab947b994ef96f",
-  "updated_utc": "2026-08-21T16:18:41.051880+00:00"
+  "updated_utc": "2026-08-21T16:18:46.914729+00:00"
 }
