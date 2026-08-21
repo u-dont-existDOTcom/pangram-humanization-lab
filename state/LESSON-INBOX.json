@@ -2410,6 +2410,29 @@
           "section_id": "psychedelic-relationship-discernment"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T15:14:54.209458+00:00",
+      "experiment_id": "romance-detector-repair-20260820-owner-integrated-r3-local-sections",
+      "id": "Q-ab200721074a8d6c",
+      "sections": [
+        "primal-not-a-performance"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-owner-integrated-r3-local-sections-results.json",
+      "source_ref": "122ff2b972ad8713f5cfbddca46522979a2251c9",
+      "source_sha256": "2c5d8d81334bfc201ceb5615563eeb87b89af7089f938d9bf8848034e766955c",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "NOT_A_PERFORMANCE_R3",
+          "prediction_short": "Human",
+          "section_id": "primal-not-a-performance"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
