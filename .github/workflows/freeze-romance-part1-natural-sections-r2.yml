@@ -1,0 +1,112 @@
+name: Freeze Romance Part 1 natural-section diagnostics r2
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-part1-natural-sections-r2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Build exact repaired natural sections from r1
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          src = json.loads(Path('experiments/romance-detector-repair-20260820-part1-natural-sections-r1-20260821.json').read_text(encoding='utf-8'))
+          by_id = {v['id']: v for v in src['variants']}
+
+          talk = """Talk about making love before you do it
+
+From here on, when I say making love, I mean two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced it, explaining it may be like explaining the taste of an orange. If you don’t know what love is, you don’t know; that’s another conversation, and I'd suggest my inner child reparenting guide. Sex is the physical act whether that connection is there or not, although sometimes sex can create the connection too.
+
+Most couples don’t start talking honestly about sex until they’re already having it. Bad timing. Now saying what you actually want might interrupt the whole thing, disappoint somebody, or turn a moment of passion into a negotiation. I’d rather talk before we’re naked. That conversation is already part of making love for me.
+
+I want to know what makes her body relax and open, anything kinky she needs to be able to say out loud, what her past made her want or avoid, and what just doesn't work. She may not know all of that yet, and neither may I. “I don’t know, but I’m willing to find out honestly with you” is a perfectly good answer.
+
+We can also be doing exactly the same physical thing for different reasons. One person may mainly feel bonding while the other feels play; sometimes it feels sacred, and another time it may just be how you come down from a bad day. None of that stays fixed forever. There will be stretches when one of you wants more, less, or something different, and that mismatch can grow into some really sad quiet resentment. Talk about the possibility while neither person is already hurt, so when it happens you're not inventing the conversation in the middle of it.
+
+And can you keep saying all of this once you're naked, even if you think she'll be disappointed? If not, you're both just hoping sex will somehow sort out what neither of you wanted to say. Bodies fitting isn't enough for me. I want to know whether we can stay honest while we're completely exposed, and talking before our clothes come off is already practice in the trust, attention, and willingness to be seen that making love needs.
+"""
+
+          affection = """Affection and the simmer
+
+Doug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.
+
+At the same time, I don't want “no agenda” to turn into no erotic current between encounters. Kim Anami calls that current “the simmer”. Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. It shouldn't become relationship homework; I would just take it as a warning light if two people who supposedly want each other barely flirt, tease, or show desire all day and then expect great sex to materialize from zero at bedtime.
+
+And when the sex changes, I want to know what else changed—resentment, closeness, stress, health, medication, how wanted each person feels.
+
+I have some responsibility for staying sexually alive too. My partner matters enormously, but I don't want to make her responsible for manufacturing all my desire. If sex is one of the main things separating this relationship from friendship, it probably deserves more than whatever exhausted time is left after everything else.
+"""
+
+          casual = by_id['CASUAL_SEX_BASELINE']['text']
+          old = """True commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me. I don’t need to promise that on paper. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag.
+
+The person getting more of what they want may think the arrangement is fulfilling. Usually they’re just less aware that it isn’t.
+
+In college I had a friend with four girlfriends who boasted about it to girls while trying to get a fifth."""
+          new = """True commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me; I don't need a promise on paper to make me want to. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag.
+
+In college I had a friend with four girlfriends who boasted about it to girls while trying to get a fifth. If anybody was supposed to be winning that arrangement, it was him."""
+          if casual.count(old) != 1:
+              raise SystemExit('casual middle source mismatch')
+          casual = casual.replace(old, new, 1)
+          old = """If you want something closer to “casual love-making” without quite so many ways to damage each other, you probably need to find a free-love community where the people aren’t disposable, the bonds can be acknowledged, and any children have a village."""
+          new = """If you want something closer to “casual love-making” without quite so many ways to damage each other, you’d probably need a free-love community around it. Then the people aren’t disposable, whatever bonds form can be acknowledged, and any children have a village."""
+          if casual.count(old) != 1:
+              raise SystemExit('casual tail source mismatch')
+          casual = casual.replace(old, new, 1)
+
+          crucible = by_id['CRUCIBLE_BASELINE']['text']
+          old = """One warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other. Sometimes one person is terrorizing or controlling the other. If you're scared to say no, scared to tell the truth, or scared of what happens if you leave, don't turn that into a mutual communication exercise. Get other people involved and think about safety first."""
+          new = """One warning before I romanticize the crucible too much: sometimes this isn't two wounded people triggering each other but one person terrorizing or controlling the other. If you're scared to say no or tell the truth, or scared of what happens if you leave, don't treat that as a mutual communication exercise—get other people involved and think about safety first."""
+          if crucible.count(old) != 1:
+              raise SystemExit('crucible protected source mismatch')
+          crucible = crucible.replace(old, new, 1)
+
+          variants = [
+              {'id':'TALK_BEFORE_SEX_R2','section_id':'part1-talk-before-sex','budget_scope':'section','text':talk},
+              {'id':'AFFECTION_SIMMER_R2','section_id':'part1-affection-simmer','budget_scope':'section','text':affection},
+              {'id':'CASUAL_SEX_R2','section_id':'part1-casual-sex-situationship','budget_scope':'section','text':casual},
+              {'id':'CRUCIBLE_R2','section_id':'part1-crucible','budget_scope':'section','text':crucible},
+          ]
+          for v in variants:
+              if len(v['text'].split()) < 200:
+                  raise SystemExit(f"section too short: {v['id']} {len(v['text'].split())}")
+
+          spec = {
+              'format':'pangram-fixed-batch-v1',
+              'experiment_id':'romance-detector-repair-20260820-part1-natural-sections-r2-20260821',
+              'audit_id':'romance-detector-repair-20260820',
+              'variants':variants,
+          }
+          out = Path('experiments/romance-detector-repair-20260820-part1-natural-sections-r2-20260821.json')
+          out.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          sha = hashlib.sha256(out.read_bytes()).hexdigest()
+          out.with_suffix(out.suffix + '.sha256').write_text(sha + '\n', encoding='utf-8')
+          print('spec_sha256=' + sha)
+          for v in variants:
+              print(v['id'], len(v['text'].split()), hashlib.sha256(v['text'].encode()).hexdigest())
+          PY
+      - name: Commit frozen r2 spec
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-part1-natural-sections-r2-20260821.json*
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance Part 1 repaired natural sections r2'
+          git push origin HEAD:automation/pangram-fixed-batch
