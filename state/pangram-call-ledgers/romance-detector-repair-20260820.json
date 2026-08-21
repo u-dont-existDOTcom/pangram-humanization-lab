@@ -5,8 +5,8 @@
   "sections": {
     "part2\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 2.15,
-      "estimated_credits": 43,
+      "estimated_cost_usd": 1.65,
+      "estimated_credits": 33,
       "events": [
         {
           "estimated_credits": 11,
@@ -36,18 +36,22 @@
           "word_count": 10043
         },
         {
-          "estimated_credits": 10,
+          "count_effect": "not_counted_no_task_created_no_owner_account_usage",
+          "http_status": 402,
           "measurement_key": "romance-detector-repair-20260820-part2-pass4_PASS4",
-          "recorded_at_utc": "2026-08-20T23:44:54.997209+00:00",
+          "note": "The original self-hosted pass-4 POST used a stale executor key that did not match the owner's funded Pangram key. Pangram returned HTTP 402 before issuing a task_id, and the owner reported zero API usage on the funded account. The prior conservative reservation is retained as provenance but removed from the paid-measurement counter before the deliberate funded-key retry.",
+          "recorded_at_utc": "2026-08-21T01:55:00+00:00",
+          "task_id": "",
           "text_sha256": "a21b9670bc0cc61b4fc850761ca57ffa5dc5d1a02bdd5df90b820d6f9d437a0e",
-          "type": "paid_post_reserved",
+          "transport": "private_self_hosted_executor",
+          "type": "pre_task_rejection_not_counted",
           "word_count": 9985
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 4,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
-      "provenance_note": "The fixed-batch paid_api_calls counter is intentionally seeded with all three already-paid Part-2 measurements across transports so changing transport cannot reset the six-call repair cap. Credit/cost values are estimates using the repository's ceil(words/1000) convention.",
+      "provenance_note": "The paid_api_calls counter is seeded with the three already-paid Part-2 measurements across transports. The first pass-4 self-hosted attempt was later proven to use a stale executor key, returned HTTP 402 before task creation, and produced no owner-account usage; it is preserved as a non-counting rejection event so transport/credential correction cannot consume an extra section slot.",
       "section_id": "part2",
       "version": "4.0"
     }
