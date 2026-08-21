@@ -3015,6 +3015,29 @@
           "section_id": "part1-semantic-r9"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820-semantic-r9",
+      "created_at_utc": "2026-08-21T18:51:07.416393+00:00",
+      "experiment_id": "romance-detector-repair-20260820-semantic-r9-part2-aggregate-20260821",
+      "id": "Q-14b0a6813691a2e7",
+      "sections": [
+        "part2-semantic-r9"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-semantic-r9-part2-aggregate-20260821-results.json",
+      "source_ref": "17c76dfcc07f26f498c27356db74d7e5e07fe19c",
+      "source_sha256": "7b633d9090431ce43f1a532ffeda828ea9b787e7bfe7f9e68890f529cee6b41a",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.00858323834836483,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9914167523384094,
+          "id": "SEMANTIC_R9_PART2",
+          "prediction_short": "Human",
+          "section_id": "part2-semantic-r9"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
