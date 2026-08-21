@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "purpose": "Test whether the existing non-billable Joel single-author idiolect features can safely predict cached Pangram-4 acceptance strongly enough to skip some future Pangram calls. This is a detector-call pre-screen calibration, not IER and not a human-authorship classifier.",
+  "status": "predeclared-cached-evidence-calibration",
+  "pangram_calls_authorized": 0,
+  "pangram_cache_ref": "automation/pangram-fixed-batch",
+  "pangram_cache_root": "cache/pangram-4/4.0",
+  "accepted_measurement_key_prefixes": [
+    "romance-",
+    "spiritual-bypassing-",
+    "historical-whitespace-audit-"
+  ],
+  "minimum_candidate_words": 50,
+  "profile": {
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "commit": "441dde496fa5501d2bf4f6e1717da64933f015eb",
+    "path": "project-sources/cancer-and-research-samples.txt",
+    "sections": [
+      "DO YOUR OWN RESEARCH",
+      "DMSO ARTICLE",
+      "AUTISM ARTICLE"
+    ],
+    "provenance": "natural-owner-confirmed; each source owner-confirmed 2026-08-18 as zero AI help in state/IDIOLECT-CORPUS-SOURCE-INVENTORY-2026-08-18.json",
+    "max_words_per_section": 1200,
+    "register_limit": "Profile is current research/practical/polemical Joel prose and is not register-matched to every cached Romance or Spiritual Bypassing candidate. Treat that mismatch as a limitation, not a reason to tune the profile after seeing labels."
+  },
+  "pangram_targets": {
+    "primary": {
+      "id": "strict_full_human",
+      "definition": "prediction_short == Human and fraction_ai == 0 and fraction_ai_assisted == 0"
+    },
+    "secondary": {
+      "id": "headline_human",
+      "definition": "prediction_short == Human"
+    }
+  },
+  "candidate_features": [
+    "surface_profile_similarity",
+    "content_light_profile_similarity"
+  ],
+  "allowed_rule_forms": [
+    "surface_profile_similarity >= threshold",
+    "content_light_profile_similarity >= threshold",
+    "surface_profile_similarity >= threshold_surface AND content_light_profile_similarity >= threshold_content_light"
+  ],
+  "training_rule": "Within each training partition, consider only monotone high-similarity rules from the allowed forms. A candidate rule must clear at least 3 training texts and produce zero training false-safes. Choose the rule with greatest training coverage, then lower complexity, then stricter thresholds as deterministic tie-breakers. Do not fit a global threshold on all data before held-out evaluation.",
+  "holdout_design": {
+    "unit": "article family",
+    "groups": [
+      "romance",
+      "spiritual-bypassing"
+    ],
+    "method": "leave-one-article-family-out; exact text SHA deduplication before fitting; repeats never count as additional examples",
+    "reason": "Most cache entries within one article are closely related edits. Random text-level splitting would leak near-duplicate article material and materially overstate predictive value."
+  },
+  "primary_error": "false-safe: rule clears a text to skip Pangram but cached Pangram primary target is not strict_full_human",
+  "substitution_acceptance": {
+    "required_independent_article_families": 3,
+    "required_total_heldout_cleared": 60,
+    "required_false_safe_count": 0,
+    "maximum_one_sided_95pct_false_safe_upper_bound": 0.01,
+    "note": "These are deliberately stringent because the proposed use suppresses a detector call. Failure means no substitution authorization; it does not mean the idiolect features are useless for anti-erasure review. With fewer than three independent article families the experiment may establish signal or feasibility but cannot authorize broad Pangram replacement."
+  },
+  "privacy": {
+    "raw_candidate_text_in_output": false,
+    "raw_profile_text_in_output": false,
+    "allowed_output": "hashes, measurement keys, article family, word counts, Pangram labels/fractions, idiolect similarities, fitted rule metadata, held-out predictions, aggregate error/coverage/confidence statistics"
+  }
+}
