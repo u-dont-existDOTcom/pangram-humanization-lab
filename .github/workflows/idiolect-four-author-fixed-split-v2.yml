@@ -1,0 +1,150 @@
+name: Idiolect four-author fixed-split LUAR v2
+# execution-class: public-one-shot-heavy-research
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-four-author-fixed-split-v2.yml
+      - tests/test_fixed_split_luar_smoke.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: idiolect-source-network-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Apply one-shot metadata-check correction
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('src/pangram_lab/fixed_split_luar.py')
+          text = path.read_text(encoding='utf-8')
+          old = '''        "embedding",\n        "embeddings",\n'''
+          if old not in text:
+              raise SystemExit('Expected temporary embedding-key substring check is absent')
+          path.write_text(text.replace(old, '', 1), encoding='utf-8')
+          PY
+
+      - name: Install deterministic and pinned LUAR dependencies
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pip install -q \
+            numpy==1.26.4 \
+            scikit-learn==1.5.2 \
+            torch==2.6.0 \
+            transformers==4.49.0 \
+            safetensors==0.5.3
+
+      - name: Run minimal deterministic smoke tests
+        run: python -m pytest -q tests/test_fixed_split_luar_smoke.py
+
+      - name: Run four-author exact-150 benchmark
+        run: |
+          python -m pangram_lab.fixed_split_luar \
+            state/IDIOLECT-FOUR-AUTHOR-FIXED-SPLIT-SPEC-2026-08-19.json \
+            --working-dir .local/idiolect-corpus/four-author-fixed-split \
+            --out .local/idiolect-corpus/four-author-fixed-split-result.json \
+            --timeout 45
+
+      - name: Upload metadata-only result before gate evaluation
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-four-author-fixed-split-result-v2
+          path: .local/idiolect-corpus/four-author-fixed-split-result.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Enforce model, split, privacy, and non-claim gates
+        run: |
+          python - <<'PY'
+          import collections
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-corpus/four-author-fixed-split-result.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          if data.get('status') != 'four-author-fixed-split-original-diagnostic-not-IER-not-calibrated':
+              raise SystemExit(f"Unexpected status: {data.get('status')}")
+          if data.get('raw_or_canonical_prose_in_output') is not False:
+              raise SystemExit('Result prose/privacy flag is not false')
+          if data.get('embeddings_persisted_in_output') is not False:
+              raise SystemExit('Embedding persistence flag is not false')
+          if data.get('source_group_leakage') != []:
+              raise SystemExit(f"Source-group leakage: {data.get('source_group_leakage')}")
+          if int(data.get('word_budget_per_document', 0)) != 150:
+              raise SystemExit('Benchmark did not use exact 150-word documents')
+
+          model = data.get('model', {})
+          if model.get('model_id') != 'rrivera1849/LUAR-MUD':
+              raise SystemExit(f'Wrong model: {model}')
+          if model.get('requested_revision') != 'e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d':
+              raise SystemExit(f'Wrong requested revision: {model}')
+          if model.get('upstream_transformer_revision') != '48bffbbd27bf028ecdd0cd55abb51236ec12ef1b':
+              raise SystemExit(f'Wrong upstream revision: {model}')
+
+          documents = data.get('documents', [])
+          if len(documents) != 24:
+              raise SystemExit(f'Expected 24 documents, got {len(documents)}')
+          counts = collections.Counter((row.get('speaker'), row.get('partition')) for row in documents)
+          speakers = (
+              'Joel Rosenblum',
+              'Stian Gudmundsen Høiland',
+              'David Vardy',
+              'Greg Goode',
+          )
+          for speaker in speakers:
+              if counts[(speaker, 'profile')] != 4 or counts[(speaker, 'reserved_holdout')] != 2:
+                  raise SystemExit(f'Wrong partition counts for {speaker}: {counts}')
+          if any(int(row.get('word_count', 0)) != 150 for row in documents):
+              raise SystemExit('One or more normalized documents are not exactly 150 words')
+
+          predictions = data.get('predictions', [])
+          if len(predictions) != 8:
+              raise SystemExit(f'Expected 8 predictions, got {len(predictions)}')
+          expected_authors = set(speakers)
+          if any(set(row.get('cosine_scores', {})) != expected_authors for row in predictions):
+              raise SystemExit('One or more holdouts lacks a complete four-author score vector')
+
+          matrix = data.get('profile_cosine_matrix', {})
+          if matrix.get('labels') != list(speakers):
+              raise SystemExit(f'Unexpected matrix labels: {matrix}')
+          if len(matrix.get('rows', [])) != 4 or any(len(row) != 4 for row in matrix.get('rows', [])):
+              raise SystemExit(f'Invalid profile matrix: {matrix}')
+          if data.get('readiness', {}).get('rewrite_degradation_ready') is not False:
+              raise SystemExit('Diagnostic must remain rewrite-degradation-not-ready')
+
+          encoded = path.read_text(encoding='utf-8')
+          for forbidden in ('local_text_path', 'raw_text', 'canonical_text', 'http://', 'https://'):
+              if forbidden in encoded:
+                  raise SystemExit(f'Forbidden result content: {forbidden}')
+          PY
+
+      - name: Verify private text and embeddings stayed local and ignored
+        run: |
+          git checkout -- \
+            src/pangram_lab/fixed_split_luar.py \
+            src/pangram_humanization_lab.egg-info/SOURCES.txt \
+            src/pangram_humanization_lab.egg-info/entry_points.txt
+          if git status --short --untracked-files=all | grep -v '^?? .local/' | grep -q .; then
+            echo 'Benchmark unexpectedly modified repository-visible files.' >&2
+            git status --short --untracked-files=all >&2
+            exit 1
+          fi
+          git check-ignore -q .local/idiolect-corpus/four-author-fixed-split-result.json
+          git check-ignore -q .local/idiolect-corpus/four-author-fixed-split

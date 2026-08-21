@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "status": "four-author-benchmark-source-freeze-not-calibrated",
+  "purpose": "Acquire only the six source-group-disjoint natural-owner Joel documents needed for the exact-150-word four-author LUAR benchmark.",
+  "method_decision": {
+    "choice": "reuse-existing-register-corpus-freezer",
+    "source": "state/IDIOLECT-JOEL-REGISTER-CORPUS-SPEC-2026-08-18.json"
+  },
+  "network_request_spacing_seconds": 35,
+  "inventories": {
+    "legacy-triage": "state/IDIOLECT-LEGACY-TRIAGE-QUEUE-2026-08-18.json",
+    "expansion-queue": "state/IDIOLECT-CORPUS-ACQUISITION-QUEUE-2026-08-18.json"
+  },
+  "registers": [
+    {
+      "register_id": "philosophical-research-dialogue",
+      "status": "fixed-profile-and-holdout-source-freeze-not-calibrated",
+      "target_voice": "natural-owner-confirmed-written",
+      "register_labels": [
+        "philosophical",
+        "research-conversational",
+        "dialogue-QA",
+        "polemical-irreverent"
+      ],
+      "profile": [
+        {
+          "inventory": "legacy-triage",
+          "sample_id": "tafka-2015-02-02-true-love",
+          "cleanup_rules": [
+            "after-first-label:Answer"
+          ],
+          "expected_source_canonical_sha256": "1da3c215f02ecbf793fb5c0defbb6c7000688653f5df3b4607cd9c2d8d447b89",
+          "expected_source_word_count": 701,
+          "expected_source_quality_flags": [
+            "possible-unremoved-dialogue"
+          ],
+          "expected_canonical_sha256": "52465ea2e75ee3b944b9ab57848289aa2aa2e9d32a633d95891f5004032a0e52",
+          "expected_word_count": 667
+        },
+        {
+          "inventory": "legacy-triage",
+          "sample_id": "tafka-2015-02-23-right-view-humility",
+          "cleanup_rules": [
+            "whole-after-existing-blockquote-drop"
+          ],
+          "expected_source_canonical_sha256": "81e67cab315aa4c22d0fdb5cfb05881a8c6699d0da09aded9da1a7f5021ee042",
+          "expected_source_word_count": 303,
+          "expected_source_quality_flags": [],
+          "expected_canonical_sha256": "81e67cab315aa4c22d0fdb5cfb05881a8c6699d0da09aded9da1a7f5021ee042",
+          "expected_word_count": 303
+        },
+        {
+          "inventory": "legacy-triage",
+          "sample_id": "tafka-2016-06-08-already-perfect",
+          "cleanup_rules": [
+            "whole-after-existing-blockquote-drop"
+          ],
+          "expected_source_canonical_sha256": "05cd4ffcea24e471558574f74f85728255641a35190b9e5e815f7548fa0b903d",
+          "expected_source_word_count": 1344,
+          "expected_source_quality_flags": [
+            "possible-unremoved-dialogue"
+          ],
+          "expected_canonical_sha256": "05cd4ffcea24e471558574f74f85728255641a35190b9e5e815f7548fa0b903d",
+          "expected_word_count": 1344,
+          "allowed_quality_flags": [
+            "possible-unremoved-dialogue"
+          ]
+        },
+        {
+          "inventory": "legacy-triage",
+          "sample_id": "tafka-2019-03-08-plant-spirits",
+          "cleanup_rules": [
+            "whole-message-by-you-extraction"
+          ],
+          "expected_source_canonical_sha256": "fdaf86daeee090fe0af36d744abefac423ad527c72792e0caca9b96e902f45fe",
+          "expected_source_word_count": 554,
+          "expected_source_quality_flags": [],
+          "expected_canonical_sha256": "fdaf86daeee090fe0af36d744abefac423ad527c72792e0caca9b96e902f45fe",
+          "expected_word_count": 554
+        }
+      ],
+      "reserved_holdout": [
+        {
+          "inventory": "expansion-queue",
+          "sample_id": "tafka-2019-08-02-buddhism-sect",
+          "cleanup_rules": [
+            "whole"
+          ],
+          "expected_source_word_count": 472,
+          "expected_source_quality_flags": []
+        },
+        {
+          "inventory": "expansion-queue",
+          "sample_id": "tafka-2020-04-19-consciousness-conditions",
+          "cleanup_rules": [
+            "whole"
+          ],
+          "expected_source_word_count": 233,
+          "expected_source_quality_flags": [
+            "thin-for-authorship-attribution"
+          ],
+          "allowed_quality_flags": [
+            "thin-for-authorship-attribution"
+          ]
+        }
+      ],
+      "support": [],
+      "gates": {
+        "minimum_profile_sources": 4,
+        "minimum_profile_words": 2800,
+        "maximum_largest_profile_source_fraction": 0.47,
+        "minimum_reserved_holdout_sources": 2,
+        "minimum_reserved_holdout_words": 650,
+        "maximum_profile_thin_sources": 0,
+        "maximum_reserved_holdout_thin_sources": 1
+      },
+      "known_limitations": [
+        "All six sources are from one owner-controlled Blogger site.",
+        "The exact-150 benchmark is a philosophical/research-dialogue diagnostic only.",
+        "The two heldouts freeze independent natural originals but remain too few for validated-for-register status."
+      ]
+    }
+  ],
+  "nonready_registers": [],
+  "excluded_sources": []
+}
