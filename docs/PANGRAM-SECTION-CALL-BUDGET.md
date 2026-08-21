@@ -2,17 +2,39 @@
 
 This is the cost-control contract for Pangram humanization audits and detector-rule research.
 
-## Repair boundary guard
+## Repair section guard
 
-Each tested repair boundary has a maximum of **6 new paid Pangram API POSTs per audit/section key** unless Joel explicitly authorizes a different design.
+Each **genuine local repair section** has a maximum of **6 new paid Pangram API POSTs per stable audit/section key** unless Joel explicitly authorizes a different single-section design.
 
-Budget key:
+Budget key for section-scoped repair work:
 
 `audit_id + section_id + detector model + expected result version`
 
-A new fixed batch, workflow, or chat does not reset the count if the `audit_id` and `section_id` are unchanged. A whole-article acceptance test is another boundary with its own section ID.
+A new fixed batch, workflow, branch, transport, or chat does not reset the count if the same natural repair section is being tested. Splitting or renaming the same section to evade the guard is prohibited.
 
-The six-call guard is primarily a **repair-work safety/cost limit**. It prevents an apparently stubborn passage from turning into open-ended detector optimization.
+The six-call guard is primarily a **local repair-work safety/cost limit**. It prevents one stubborn passage or section from turning into open-ended detector optimization.
+
+## Aggregate certification boundaries are not sections
+
+Joel corrected the prior rule on 2026-08-21: a whole article, article half, or other aggregate certification boundary is **not** a section merely because it is submitted to Pangram as one request. Capping a long document or arbitrary 10k-word half at six total measurements does not match the purpose of a section-level guard.
+
+Fixed-batch variants therefore distinguish:
+
+- `budget_scope: "section"` — default; six-call hard cap applies;
+- `budget_scope: "aggregate"` — whole-document, half-document, or other multi-section certification/accounting boundary; calls remain fully accounted but the six-call section cap does not apply.
+
+Aggregate scope is **not unlimited permission to waste calls**. Every aggregate call must still satisfy the normal paid-work invariants:
+
+- exact content-addressed cache check first;
+- resume/recover pending or ambiguous work before any new POST;
+- no duplicate completed exact measurement;
+- explicit model/version gate;
+- durable reservation/checkpoint/result accounting;
+- a fresh aggregate call should be decision-changing or required because accepted edits made the prior aggregate result stale.
+
+If the requested deliverable genuinely consists of one natural section only, that natural section is still section-scoped and remains subject to the six-call guard.
+
+Historical ledgers that grouped an article half or whole document under a `section_id` remain valid accounting evidence, but reaching six calls on that aggregate historical key is **not** a current section-cap blocker.
 
 ## Rule-learning research budget
 
@@ -25,9 +47,9 @@ Current owner authorization is recorded in `state/PANGRAM-RULE-LEARNING-BUDGET-2
 - ask Joel before exceeding 20 new calls;
 - stop earlier when the useful rule is already discriminated, a hypothesis fails, or remaining work becomes phrase/token hunting.
 
-The existing six-call key remains a useful local safety guard inside a research program. Multiple section IDs are legitimate only for genuinely distinct boundaries, factor families, replications, or holdouts. Never invent a new section/audit identity merely to reset a cap.
+The six-call key remains a useful local guard for each genuine section inside a research program. Multiple section IDs are legitimate only for genuinely distinct sections, factor families, replications, or holdouts. Never invent a new section/audit identity merely to reset a cap.
 
-If one genuinely single boundary needs more than six calls for a preregistered factorial or replication design, change the governance/harness transparently with owner authorization rather than disguising the continuation as another boundary.
+If one genuinely single section needs more than six calls for a preregistered factorial or replication design, change the governance/harness transparently with owner authorization rather than disguising the continuation as another boundary.
 
 ## What counts
 
@@ -48,12 +70,17 @@ The ledger reservation must be written and Git-synced before the POST.
 
 ## Usage evidence
 
-New audited specs use a top-level `audit_id`, and every variant has a `section_id`. The runner persists section call state in:
+New audited specs use a top-level `audit_id`, and every accounted variant has a `section_id` plus a `budget_scope` (`section` by default).
+
+The runner persists call state in:
 
 `state/pangram-call-ledgers/<audit_id>.json`
 
-Result JSON reports, per section:
+Result JSON reports, per accounting boundary:
 
+- `budget_scope`
+- `hard_cap_applies`
+- `cap` (`6` for section scope; `null` for aggregate scope)
 - `paid_api_calls`
 - `cache_hits`
 - `pending_resumes`
@@ -67,15 +94,17 @@ For rule-learning programs, also maintain a program-level counter in the relevan
 
 Pangram's current public developer pricing is $0.05 for a credit covering up to 1,000 words. The lab therefore estimates each paid submission as `ceil(word_count / 1000)` credits. These values remain explicitly estimated unless the API itself supplies authoritative usage metadata.
 
-## Local cap reached
+## Local section cap reached
 
-Before a seventh paid POST under one unchanged audit/section key, the current runner stops without submitting and writes:
+Before a seventh paid POST under one unchanged **section-scoped** audit/section key, the current runner stops without submitting and writes:
 
 `state/handoffs/pangram/<audit_id>-<section_id>.json`
 
 Reason: `section_call_cap_reached`.
 
-For repair work, report the attempts and ask Joel unless an existing owner authorization clearly covers a different next step. For rule-learning work, do not evade the local guard by relabeling the same boundary; either move to a genuinely distinct replication/holdout boundary or obtain/record authorization for a larger single-boundary design.
+For repair work, report the attempts and ask Joel unless an existing owner authorization clearly covers a different next step. For rule-learning work, do not evade the local guard by relabeling the same section; either move to a genuinely distinct replication/holdout section or obtain/record authorization for a larger single-section design.
+
+Aggregate certification boundaries never use `section_call_cap_reached`; they remain governed by cache, recovery, decision-value, and exact-boundary certification rules.
 
 ## Optimization objective
 
