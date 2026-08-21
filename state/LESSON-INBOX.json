@@ -2946,6 +2946,29 @@
           "section_id": "part1-conversation-flaws"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T18:37:15.779111+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-conversation-flaws-r3-20260821",
+      "id": "Q-24bf12a23e6711cc",
+      "sections": [
+        "part1-conversation-flaws"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-conversation-flaws-r3-20260821-results.json",
+      "source_ref": "e0bc527114bc6a8b31e011a28e019657c8732bec",
+      "source_sha256": "bbc9011ae1491402ed7811a66e231142ec4b97dbabe69770fc28f4b853829a75",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "CONVERSATION_FLAWS_R3",
+          "prediction_short": "Human",
+          "section_id": "part1-conversation-flaws"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
