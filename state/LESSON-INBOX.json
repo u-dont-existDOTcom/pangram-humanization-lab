@@ -2433,6 +2433,29 @@
           "section_id": "primal-not-a-performance"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T15:17:20.321326+00:00",
+      "experiment_id": "romance-detector-repair-20260820-owner-integrated-r4-local-sections",
+      "id": "Q-eb84eef13fc22a51",
+      "sections": [
+        "community-two-pillars"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-owner-integrated-r4-local-sections-results.json",
+      "source_ref": "b67eff6f786bc87c5596697ca78006c3661a2ae6",
+      "source_sha256": "48a237451a8cc88a4f33939506a2e5732ccbcdd90a6e801b867a59cd69692471",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "TWO_PILLARS_R2",
+          "prediction_short": "Human",
+          "section_id": "community-two-pillars"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
