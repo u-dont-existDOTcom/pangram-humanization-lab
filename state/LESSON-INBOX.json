@@ -2730,6 +2730,29 @@
           "section_id": "part1-maturity-levels-cross-split"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T17:13:50.311627+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-aggregate-r2-20260821",
+      "id": "Q-2f9a1ed91809f681",
+      "sections": [
+        "part1"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-aggregate-r2-20260821-results.json",
+      "source_ref": "75c7b84066aa4ac7497563046840729436d068f3",
+      "source_sha256": "850c185cd0e2326548ed89301867fa5d4ef45def6b935b9dee4354385c559c57",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.015202123671770096,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9847978949546814,
+          "id": "PART1_REPAIR_R2",
+          "prediction_short": "Human",
+          "section_id": "part1"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
