@@ -11,6 +11,7 @@ from .result_paths import new_result_envelope
 
 
 FORMAT = "pangram-fixed-batch-v1"
+VALID_BUDGET_SCOPES = {"section", "aggregate"}
 
 
 def load_spec(path: Path, max_variants: int = 8) -> dict[str, Any]:
@@ -42,10 +43,17 @@ def load_spec(path: Path, max_variants: int = 8) -> dict[str, Any]:
         if not isinstance(text, str) or not text:
             raise ValueError(f"variant {variant_id} text must be non-empty")
         section_id = variant.get("section_id")
+        budget_scope = variant.get("budget_scope", "section")
+        if budget_scope not in VALID_BUDGET_SCOPES:
+            raise ValueError(
+                f"variant {variant_id} budget_scope must be one of {sorted(VALID_BUDGET_SCOPES)}"
+            )
         if audit_id is not None and (not isinstance(section_id, str) or not section_id.strip()):
             raise ValueError(f"variant {variant_id} section_id must be a non-empty string for audit {audit_id}")
         if audit_id is None and section_id is not None:
             raise ValueError("section_id requires top-level audit_id")
+        if audit_id is None and "budget_scope" in variant:
+            raise ValueError("budget_scope requires top-level audit_id")
     return data
 
 
@@ -57,7 +65,14 @@ def _write(path: Path, aggregate: dict[str, Any]) -> None:
     path.write_text(json.dumps(aggregate, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Path, call_ledger: Any | None = None) -> dict[str, Any]:
+def run_batch(
+    spec: dict[str, Any],
+    *,
+    client: Any,
+    cache: Any,
+    output_path: Path,
+    call_ledger: Any | None = None,
+) -> dict[str, Any]:
     experiment_id = spec["experiment_id"]
     aggregate = new_result_envelope(spec)
     stats = CallStats(call_ledger) if call_ledger is not None else None
@@ -67,16 +82,28 @@ def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Pat
         variant_id = variant["id"]
         text = variant["text"]
         section_id = variant.get("section_id")
+        budget_scope = variant.get("budget_scope", "section")
         measurement_key = f"{experiment_id}_{variant_id}"
         try:
             if call_ledger is None:
                 detector = client.detect_cached(text, cache, measurement_key=measurement_key)
             else:
-                detector = client.detect_cached(text, cache, measurement_key=measurement_key, section_id=section_id)
+                detector = client.detect_cached(
+                    text,
+                    cache,
+                    measurement_key=measurement_key,
+                    section_id=section_id,
+                    budget_scope=budget_scope,
+                )
         except SectionCallCapReached:
             model = getattr(client, "model", "pangram-4")
             version = getattr(client, "expected_version", "4.0")
-            handoff = call_ledger.write_handoff(section_id, model, version, completed_results=aggregate["results"])
+            handoff = call_ledger.write_handoff(
+                section_id,
+                model,
+                version,
+                completed_results=aggregate["results"],
+            )
             aggregate["status"] = "section_call_cap_reached"
             aggregate["handoff_path"] = str(handoff)
             aggregate["call_accounting"] = stats.summary()
@@ -91,6 +118,7 @@ def run_batch(spec: dict[str, Any], *, client: Any, cache: Any, output_path: Pat
         }
         if section_id is not None:
             row["section_id"] = section_id
+            row["budget_scope"] = budget_scope
         aggregate["results"].append(row)
         if stats is not None:
             stats.note(
