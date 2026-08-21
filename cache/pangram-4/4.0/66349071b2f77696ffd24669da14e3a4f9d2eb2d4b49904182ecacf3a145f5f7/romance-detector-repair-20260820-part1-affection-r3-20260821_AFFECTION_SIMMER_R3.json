@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-part1-affection-r3-20260821_AFFECTION_SIMMER_R3",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.8045423030853271,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.19545766711235046,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every time I touch her it turns into me asking for sex, sooner or later even affection can start feeling like a setup.\nKim Anami has a term for something that happens at a different time: “the simmer,” the sexual current between encounters. I don't mean every hug needs to become sexual. More like, do we still show each other that we want each other when we're not actually having sex? Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. If we barely flirt or show desire for months, I'd start wondering what happened before I assumed bedtime was the whole problem.\nSex is a pretty sensitive barometer for everything else anyway. If it suddenly changes, I want to look around. Are we resentful? Stressed? Is somebody sick or taking a medication that changed things? Do I still feel wanted? Does she?\nAnd I can't put all of that on my partner. She matters enormously to my desire, but keeping some sexual life in me is partly my job too. If sex is one of the main things separating this relationship from friendship, I don't want to give it whatever exhausted scraps of time happen to be left after everything else.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.20578134059906006,
+        "confidence": "High",
+        "end_index": 284,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there.",
+        "token_length": 72,
+        "word_count": 54
+      },
+      {
+        "ai_assistance_score": 0.7379729151725769,
+        "confidence": "High",
+        "end_index": 1453,
+        "humanizer_score": 0.006074151024222374,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 284,
+        "text": " If every time I touch her it turns into me asking for sex, sooner or later even affection can start feeling like a setup.\nKim Anami has a term for something that happens at a different time: “the simmer,” the sexual current between encounters. I don't mean every hug needs to become sexual. More like, do we still show each other that we want each other when we're not actually having sex? Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. If we barely flirt or show desire for months, I'd start wondering what happened before I assumed bedtime was the whole problem.\nSex is a pretty sensitive barometer for everything else anyway. If it suddenly changes, I want to look around. Are we resentful? Stressed? Is somebody sick or taking a medication that changed things? Do I still feel wanted? Does she?\nAnd I can't put all of that on my partner. She matters enormously to my desire, but keeping some sexual life in me is partly my job too. If sex is one of the main things separating this relationship from friendship, I don't want to give it whatever exhausted scraps of time happen to be left after everything else.",
+        "token_length": 256,
+        "word_count": 214
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "481dcda9-08fc-4813-8fef-a29e27d4eb94",
   "text": "Affection and the simmer\n\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every time I touch her it turns into me asking for sex, sooner or later even affection can start feeling like a setup.\n\nKim Anami has a term for something that happens at a different time: “the simmer,” the sexual current between encounters. I don't mean every hug needs to become sexual. More like, do we still show each other that we want each other when we're not actually having sex? Maybe she texts from work, “I can’t wait to touch you.” Maybe he tells her what he wants to do later. If we barely flirt or show desire for months, I'd start wondering what happened before I assumed bedtime was the whole problem.\n\nSex is a pretty sensitive barometer for everything else anyway. If it suddenly changes, I want to look around. Are we resentful? Stressed? Is somebody sick or taking a medication that changed things? Do I still feel wanted? Does she?\n\nAnd I can't put all of that on my partner. She matters enormously to my desire, but keeping some sexual life in me is partly my job too. If sex is one of the main things separating this relationship from friendship, I don't want to give it whatever exhausted scraps of time happen to be left after everything else.\n",
   "text_sha256": "66349071b2f77696ffd24669da14e3a4f9d2eb2d4b49904182ecacf3a145f5f7",
-  "updated_utc": "2026-08-21T16:48:47.024606+00:00"
+  "updated_utc": "2026-08-21T16:48:51.309780+00:00"
 }
