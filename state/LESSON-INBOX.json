@@ -2666,6 +2666,29 @@
           "section_id": "part1-affection-simmer"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T16:56:56.108119+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-aggregate-r1-20260821",
+      "id": "Q-ed602045241ef83d",
+      "sections": [
+        "part1"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-aggregate-r1-20260821-results.json",
+      "source_ref": "2954a5418520d15dd8202b51d01c1d0250cb5d84",
+      "source_sha256": "b99659bc4c4c4624e66329c0e2912a8c59e994b6c6bca8fb12fbf7956291640e",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.033341050148010254,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9666589498519897,
+          "id": "PART1_REPAIR_R1",
+          "prediction_short": "Human",
+          "section_id": "part1"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
