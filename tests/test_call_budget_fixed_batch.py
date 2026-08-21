@@ -18,44 +18,161 @@ class AccountedClient:
         self.ledger = ledger
         self.calls = []
 
-    def detect_cached(self, text, cache, measurement_key="base", *, section_id=None):
-        self.calls.append((text, measurement_key, section_id))
-        self.ledger.reserve_paid_call(section_id=section_id, model=self.model, version=self.expected_version, measurement_key=measurement_key, text_sha256=(measurement_key.encode().hex() + "0" * 64)[:64], word_count=len(text.split()))
+    def detect_cached(self, text, cache, measurement_key="base", *, section_id=None, budget_scope="section"):
+        self.calls.append((text, measurement_key, section_id, budget_scope))
+        self.ledger.reserve_paid_call(
+            section_id=section_id,
+            model=self.model,
+            version=self.expected_version,
+            measurement_key=measurement_key,
+            text_sha256=(measurement_key.encode().hex() + "0" * 64)[:64],
+            word_count=len(text.split()),
+            budget_scope=budget_scope,
+        )
         return dict(HUMAN)
 
 
 class LegacyClient:
-    def __init__(self): self.calls = []
+    def __init__(self):
+        self.calls = []
+
     def detect_cached(self, text, cache, measurement_key="base"):
-        self.calls.append((text, measurement_key)); return dict(HUMAN)
+        self.calls.append((text, measurement_key))
+        return dict(HUMAN)
 
 
 def test_load_spec_accepts_audit_and_requires_section_ids_for_new_audits(tmp_path: Path):
     good = tmp_path / "good.json"
-    good.write_text(json.dumps({"format": "pangram-fixed-batch-v1", "experiment_id": "exp", "audit_id": "audit", "variants": [{"id": "A", "section_id": "opening", "text": "one"}]}), encoding="utf-8")
+    good.write_text(
+        json.dumps(
+            {
+                "format": "pangram-fixed-batch-v1",
+                "experiment_id": "exp",
+                "audit_id": "audit",
+                "variants": [{"id": "A", "section_id": "opening", "text": "one"}],
+            }
+        ),
+        encoding="utf-8",
+    )
     assert load_spec(good)["audit_id"] == "audit"
     bad = tmp_path / "bad.json"
-    bad.write_text(json.dumps({"format": "pangram-fixed-batch-v1", "experiment_id": "exp", "audit_id": "audit", "variants": [{"id": "A", "text": "one"}]}), encoding="utf-8")
+    bad.write_text(
+        json.dumps(
+            {
+                "format": "pangram-fixed-batch-v1",
+                "experiment_id": "exp",
+                "audit_id": "audit",
+                "variants": [{"id": "A", "text": "one"}],
+            }
+        ),
+        encoding="utf-8",
+    )
     with pytest.raises(ValueError, match="section_id"):
+        load_spec(bad)
+
+
+def test_load_spec_accepts_aggregate_scope_and_rejects_unknown_scope(tmp_path: Path):
+    good = tmp_path / "good-aggregate.json"
+    good.write_text(
+        json.dumps(
+            {
+                "format": "pangram-fixed-batch-v1",
+                "experiment_id": "exp",
+                "audit_id": "audit",
+                "variants": [
+                    {
+                        "id": "A",
+                        "section_id": "full-article",
+                        "budget_scope": "aggregate",
+                        "text": "one",
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    assert load_spec(good)["variants"][0]["budget_scope"] == "aggregate"
+
+    bad = tmp_path / "bad-scope.json"
+    bad.write_text(
+        json.dumps(
+            {
+                "format": "pangram-fixed-batch-v1",
+                "experiment_id": "exp",
+                "audit_id": "audit",
+                "variants": [
+                    {"id": "A", "section_id": "x", "budget_scope": "documentish", "text": "one"}
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="budget_scope"):
         load_spec(bad)
 
 
 def test_same_section_accumulates_and_result_contains_call_summary(tmp_path: Path):
     ledger = PangramCallLedger(tmp_path, "audit")
     client = AccountedClient(ledger)
-    spec = {"format": "pangram-fixed-batch-v1", "experiment_id": "exp", "audit_id": "audit", "variants": [{"id": "A", "section_id": "opening", "text": "first"}, {"id": "B", "section_id": "opening", "text": "second"}]}
+    spec = {
+        "format": "pangram-fixed-batch-v1",
+        "experiment_id": "exp",
+        "audit_id": "audit",
+        "variants": [
+            {"id": "A", "section_id": "opening", "text": "first"},
+            {"id": "B", "section_id": "opening", "text": "second"},
+        ],
+    }
     result = run_batch(spec, client=client, cache=object(), output_path=tmp_path / "out.json", call_ledger=ledger)
     assert [c[2] for c in client.calls] == ["opening", "opening"]
+    assert [c[3] for c in client.calls] == ["section", "section"]
     assert result["results"][0]["section_id"] == "opening"
+    assert result["results"][0]["budget_scope"] == "section"
     section = result["call_accounting"]["sections"][0]
     assert section["paid_api_calls"] == 2
+    assert section["hard_cap_applies"] is True
     assert section["paid_calls_to_human"] == 1
     assert section["estimated_credits_to_human"] == 1
 
 
+def test_aggregate_boundary_can_exceed_six_while_remaining_accounted(tmp_path: Path):
+    ledger = PangramCallLedger(tmp_path, "audit")
+    client = AccountedClient(ledger)
+    variants = [
+        {
+            "id": f"A{i}",
+            "section_id": "whole-article-certification",
+            "budget_scope": "aggregate",
+            "text": f"version {i}",
+        }
+        for i in range(7)
+    ]
+    spec = {
+        "format": "pangram-fixed-batch-v1",
+        "experiment_id": "exp",
+        "audit_id": "audit",
+        "variants": variants,
+    }
+    result = run_batch(spec, client=client, cache=object(), output_path=tmp_path / "out.json", call_ledger=ledger)
+    section = result["call_accounting"]["sections"][0]
+    assert section["paid_api_calls"] == 7
+    assert section["budget_scope"] == "aggregate"
+    assert section["hard_cap_applies"] is False
+    assert section["cap"] is None
+
+
 def test_different_sections_have_independent_counts(tmp_path: Path):
-    ledger = PangramCallLedger(tmp_path, "audit"); client = AccountedClient(ledger)
-    spec = {"format": "pangram-fixed-batch-v1", "experiment_id": "exp", "audit_id": "audit", "variants": [{"id": "A", "section_id": "a", "text": "first"}, {"id": "B", "section_id": "b", "text": "second"}]}
+    ledger = PangramCallLedger(tmp_path, "audit")
+    client = AccountedClient(ledger)
+    spec = {
+        "format": "pangram-fixed-batch-v1",
+        "experiment_id": "exp",
+        "audit_id": "audit",
+        "variants": [
+            {"id": "A", "section_id": "a", "text": "first"},
+            {"id": "B", "section_id": "b", "text": "second"},
+        ],
+    }
     result = run_batch(spec, client=client, cache=object(), output_path=tmp_path / "out.json", call_ledger=ledger)
     by_id = {x["section_id"]: x for x in result["call_accounting"]["sections"]}
     assert by_id["a"]["paid_api_calls"] == 1
@@ -74,9 +191,21 @@ def test_legacy_spec_and_client_keep_old_call_signature(tmp_path: Path):
 def test_cap_failure_writes_handoff_before_propagating(tmp_path: Path):
     ledger = PangramCallLedger(tmp_path, "audit")
     for i in range(6):
-        ledger.reserve_paid_call(section_id="opening", model="pangram-4", version="4.0", measurement_key=f"old{i}", text_sha256=str(i) * 64, word_count=10)
+        ledger.reserve_paid_call(
+            section_id="opening",
+            model="pangram-4",
+            version="4.0",
+            measurement_key=f"old{i}",
+            text_sha256=str(i) * 64,
+            word_count=10,
+        )
     client = AccountedClient(ledger)
-    spec = {"format": "pangram-fixed-batch-v1", "experiment_id": "exp", "audit_id": "audit", "variants": [{"id": "A", "section_id": "opening", "text": "next"}]}
+    spec = {
+        "format": "pangram-fixed-batch-v1",
+        "experiment_id": "exp",
+        "audit_id": "audit",
+        "variants": [{"id": "A", "section_id": "opening", "text": "next"}],
+    }
     out = tmp_path / "out.json"
     with pytest.raises(SectionCallCapReached):
         run_batch(spec, client=client, cache=object(), output_path=out, call_ledger=ledger)
