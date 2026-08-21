@@ -327,8 +327,8 @@
     "part1-maturity-levels-cross-split\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "budget_scope": "section",
@@ -347,10 +347,19 @@
           "text_sha256": "b52861615ae49e1059b7b035e70e6f0b624240b70b5486c51523e4a34048695d",
           "type": "paid_post_reserved",
           "word_count": 273
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "romance-detector-repair-20260820-semantic-r9-part1-local-r1-20260821_SEMANTIC_R9_PATIENT_R1",
+          "recorded_at_utc": "2026-08-21T18:59:12.684289+00:00",
+          "text_sha256": "7d60bc1c38669848e7e27d313603e4ee8970e34bf3896673160ea6a61c106002",
+          "type": "paid_post_reserved",
+          "word_count": 247
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "part1-maturity-levels-cross-split",
       "version": "4.0"
