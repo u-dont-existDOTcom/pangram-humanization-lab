@@ -1,0 +1,68 @@
+name: Freeze Romance Part 1 Casual interaction repair r5
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-part1-casual-r5.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Fetch exact r4 Part 1 and build Casual interaction boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/0afcff1f127e6a270516ea5b2747b580c0b3c5cc/work/romance-detector-repair-20260820/materialized-part1-repair-r4/candidate-part-1.txt'
+          curl --fail --silent --show-error --location "$URL" -o /tmp/part1.txt
+          echo '7f0f9a526506f1cc57b2a20c30f3c7ecaf6d7345fceb9ea8839effdba4c049b6  /tmp/part1.txt' | sha256sum -c -
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          p1 = Path('/tmp/part1.txt').read_text(encoding='utf-8')
+          a = p1.index('Affection and the simmer\n')
+          b = p1.index('Should you be in a relationship at all?\n', a)
+          text = p1[a:b]
+          old = """Your body doesn’t know that you picked someone up at a bar and agreed it was only for fun. Oxytocin, vasopressin, and the rest can start attaching you anyway. Then the next morning, you’re wondering why they didn’t call. Well, not getting pulled in any further is the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger."""
+          new = """This is where I don't trust the agreement very much. Two people can pick each other up at a bar and sincerely agree it's only for fun, but then one of them wakes up wondering why the other didn't call. Oxytocin, vasopressin, and whatever else was happening in the body didn't agree to anything. Not getting pulled in any further is probably the best outcome still available, actually, since you just played Russian Roulette with a potential life bond to a stranger."""
+          if text.count(old) != 1:
+              raise SystemExit('casual opening source mismatch')
+          text = text.replace(old, new, 1)
+          old = """That may be candid about what you expect now. It doesn’t settle what either of you will owe if the act creates something neither of you expected. Sex can make a child. If this girl gets pregnant, she’s gonna call you. Then what?"""
+          new = """I respect that more than pretending it means commitment. But if this girl gets pregnant, she’s gonna call you. Then what?"""
+          if text.count(old) != 1:
+              raise SystemExit('casual bridge source mismatch')
+          text = text.replace(old, new, 1)
+          spec = {
+              'format':'pangram-fixed-batch-v1',
+              'experiment_id':'romance-detector-repair-20260820-part1-casual-r5-20260821',
+              'audit_id':'romance-detector-repair-20260820',
+              'variants':[{
+                  'id':'CASUAL_INTERACTION_R5',
+                  'section_id':'part1-casual-sex-situationship',
+                  'budget_scope':'section',
+                  'text':text,
+              }],
+          }
+          out = Path('experiments/romance-detector-repair-20260820-part1-casual-r5-20260821.json')
+          out.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          out.with_suffix(out.suffix + '.sha256').write_text(hashlib.sha256(out.read_bytes()).hexdigest() + '\n', encoding='utf-8')
+          print('words', len(text.split()))
+          PY
+      - name: Commit exact spec
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/romance-detector-repair-20260820-part1-casual-r5-20260821.json*
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance Part 1 Casual interaction repair r5'
+          git push origin HEAD:automation/pangram-fixed-batch
