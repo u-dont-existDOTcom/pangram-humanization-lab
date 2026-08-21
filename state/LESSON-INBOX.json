@@ -2515,6 +2515,56 @@
           "section_id": "part1-maturity-levels-cross-split"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T16:19:06.588119+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-natural-sections-r2b-20260821",
+      "id": "Q-bcb41e55131219c7",
+      "sections": [
+        "part1-talk-before-sex",
+        "part1-affection-simmer",
+        "part1-casual-sex-situationship",
+        "part1-crucible"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-natural-sections-r2b-20260821-results.json",
+      "source_ref": "8448e74314403041fd746ff06bea85f7e2c116c7",
+      "source_sha256": "40f71a7a247b9952dbba123eeb1d0aeeb9772a2cf077d4ad4d470c1460c971ec",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "TALK_BEFORE_SEX_R2B",
+          "prediction_short": "AI",
+          "section_id": "part1-talk-before-sex"
+        },
+        {
+          "fraction_ai": 0.7861445546150208,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.21385541558265686,
+          "id": "AFFECTION_SIMMER_R2B",
+          "prediction_short": "Mixed",
+          "section_id": "part1-affection-simmer"
+        },
+        {
+          "fraction_ai": 0.18008185923099518,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.819918155670166,
+          "id": "CASUAL_SEX_R2B",
+          "prediction_short": "Mixed",
+          "section_id": "part1-casual-sex-situationship"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.2622036337852478,
+          "fraction_human": 0.7377963662147522,
+          "id": "CRUCIBLE_R2B",
+          "prediction_short": "Mixed",
+          "section_id": "part1-crucible"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
