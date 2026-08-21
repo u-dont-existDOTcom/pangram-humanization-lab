@@ -122,8 +122,8 @@
     "primal-not-a-performance\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "budget_scope": "section",
@@ -142,10 +142,19 @@
           "text_sha256": "7a43ece95e5278a4541671992c2d3d8efb8fc5b88b269509a5013e1270bd0fd9",
           "type": "paid_post_reserved",
           "word_count": 273
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "romance-detector-repair-20260820-owner-integrated-r3-local-sections_NOT_A_PERFORMANCE_R3",
+          "recorded_at_utc": "2026-08-21T15:14:31.190687+00:00",
+          "text_sha256": "69c22a715ed18084d1f1d3c2da49adb9208eea832baf21f2ed5ae9cc96215cb1",
+          "type": "paid_post_reserved",
+          "word_count": 229
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "primal-not-a-performance",
       "version": "4.0"
