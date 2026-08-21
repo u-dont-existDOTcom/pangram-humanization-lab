@@ -331,8 +331,8 @@
     "part2\u001fpangram-4\u001f4.0": {
       "budget_scope": "aggregate",
       "cache_hits": 0,
-      "estimated_cost_usd": 3.65,
-      "estimated_credits": 73,
+      "estimated_cost_usd": 4.15,
+      "estimated_credits": 83,
       "events": [
         {
           "estimated_credits": 11,
@@ -413,10 +413,19 @@
           "text_sha256": "9dc539ca99f8c747ecd5a551f2c72ad476c87671919863d2ad469acf6c6e696f",
           "type": "paid_post_reserved",
           "word_count": 9804
+        },
+        {
+          "budget_scope": "aggregate",
+          "estimated_credits": 10,
+          "measurement_key": "romance-detector-repair-20260820-part2-owner-integrated-r2-20260821_OWNER_INTEGRATED_R2",
+          "recorded_at_utc": "2026-08-21T18:11:59.187175+00:00",
+          "text_sha256": "20301b1bfb0052de694657411f231f82d9a45ae62ff9c4839015befce5c57dc2",
+          "type": "paid_post_reserved",
+          "word_count": 9703
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 7,
+      "paid_api_calls": 8,
       "pending_resumes": 0,
       "provenance_note": "The paid_api_calls counter preserves the six historical Part-2 aggregate measurements across transports. Joel clarified on 2026-08-21 that Part 2 is an aggregate multi-section article half, not one natural repair section; its historical 6/6 count therefore remains accounting evidence but is not a section-cap blocker. The first pass-4 self-hosted attempt was proven to use a stale executor key, returned HTTP 402 before task creation, and produced no owner-account usage; it remains a non-counting rejection event.",
       "section_id": "part2",
