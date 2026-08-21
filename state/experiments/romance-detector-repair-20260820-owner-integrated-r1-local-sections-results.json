@@ -1,0 +1,107 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "romance-detector-repair-20260820-owner-integrated-r1-local-sections",
+  "spec_sha256": "1b4798d7a330141a60b2c314933301765c23a210228d99a0fdfa975fc86aebd4",
+  "results": [
+    {
+      "id": "NOT_A_PERFORMANCE_R1",
+      "measurement_key": "romance-detector-repair-20260820-owner-integrated-r1-local-sections_NOT_A_PERFORMANCE_R1",
+      "text": "Not A Performance\n\nThe moment I have to prove that I’m the man, something has already become fake.\n\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\n\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.\n\nA woman shouldn’t have to act soft, helpless, or cute every minute either. She can get pushed in the opposite direction too: if she’s spent years worrying that she isn’t beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy, she may overcorrect into needing nobody. Then receiving care or letting a man lead starts to feel like weakness.\n\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\n\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\n\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\n\nUnfortunately, I've seen a lot of the latter.\n",
+      "text_sha256": "253b3bb58016d76fe60d88edd8d25ed3d82a68ade792d3858f039118c2480e13",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Not A Performance\nThe moment I have to prove that I’m the man, something has already become fake.\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.\nA woman shouldn’t have to act soft, helpless, or cute every minute either. She can get pushed in the opposite direction too: if she’s spent years worrying that she isn’t beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy, she may overcorrect into needing nobody. Then receiving care or letting a man lead starts to feel like weakness.\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\nUnfortunately, I've seen a lot of the latter.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.23467491567134857,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.7653250694274902,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 2,
+        "windows": [
+          {
+            "text": "Not A Performance\nThe moment I have to prove that I’m the man, something has already become fake.\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.24292325973510742,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 379,
+            "word_count": 70,
+            "token_length": 92,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": "\nA woman shouldn’t have to act soft, helpless, or cute every minute either. She can get pushed in the opposite direction too: if she’s spent years worrying that she isn’t beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy, she may overcorrect into needing nobody. Then receiving care or letting a man lead starts to feel like weakness.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7106454968452454,
+            "confidence": "High",
+            "start_index": 379,
+            "end_index": 758,
+            "word_count": 64,
+            "token_length": 81,
+            "is_humanized": false,
+            "humanizer_score": 0.0005585551843978465
+          },
+          {
+            "text": "\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\nUnfortunately, I've seen a lot of the latter.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.2689543664455414,
+            "confidence": "High",
+            "start_index": 758,
+            "end_index": 1615,
+            "word_count": 159,
+            "token_length": 187,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "primal-not-a-performance",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "romance-detector-repair-20260820",
+  "call_accounting": {
+    "audit_id": "romance-detector-repair-20260820",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "aggregate",
+        "cache_hits": 0,
+        "estimated_cost_usd": 3.65,
+        "estimated_credits": 73,
+        "model": "pangram-4",
+        "paid_api_calls": 7,
+        "pending_resumes": 0,
+        "provenance_note": "The paid_api_calls counter preserves the six historical Part-2 aggregate measurements across transports. Joel clarified on 2026-08-21 that Part 2 is an aggregate multi-section article half, not one natural repair section; its historical 6/6 count therefore remains accounting evidence but is not a section-cap blocker. The first pass-4 self-hosted attempt was proven to use a stale executor key, returned HTTP 402 before task creation, and produced no owner-account usage; it remains a non-counting rejection event.",
+        "section_id": "part2",
+        "version": "4.0",
+        "hard_cap_applies": false,
+        "cap": null,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "primal-not-a-performance",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
