@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-part1-residuals-r2b-20260821_AFFECTION_R4B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.6268068552017212,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.3731931746006012,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\nKim Anami calls the sexual charge between encounters “the simmer.” If we stop flirting with each other for months, I’m not going to assume our problem magically begins at bedtime. Sex is a pretty sensitive barometer for resentment, stress, health, medication, and feeling wanted. My partner matters enormously to my desire, but I don’t want to make her manufacture all of it.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.2715478837490082,
+        "confidence": "High",
+        "end_index": 284,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Affection and the simmer\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there.",
+        "token_length": 72,
+        "word_count": 54
+      },
+      {
+        "ai_assistance_score": 0.6103389859199524,
+        "confidence": "High",
+        "end_index": 761,
+        "humanizer_score": 0.006984155159443617,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 284,
+        "text": " If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\nKim Anami calls the sexual charge between encounters “the simmer.” If we stop flirting with each other for months, I’m not going to assume our problem magically begins at bedtime. Sex is a pretty sensitive barometer for resentment, stress, health, medication, and feeling wanted. My partner matters enormously to my desire, but I don’t want to make her manufacture all of it.",
+        "token_length": 102,
+        "word_count": 78
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "3a74fadd-db2c-4d49-8ddf-ff8e87500305",
   "text": "Affection and the simmer\n\nDoug Toft, who has been married for fifty years, has a useful list called 50 Things I Learned from 50 Years of Marriage. One of his points is to touch his wife without an agenda. A hug, cuddle, kiss, or back rub should sometimes be allowed to end right there. If every affectionate touch becomes a bid for sex, affection itself can start feeling like pressure.\n\nKim Anami calls the sexual charge between encounters “the simmer.” If we stop flirting with each other for months, I’m not going to assume our problem magically begins at bedtime. Sex is a pretty sensitive barometer for resentment, stress, health, medication, and feeling wanted. My partner matters enormously to my desire, but I don’t want to make her manufacture all of it.\n",
   "text_sha256": "28bc7c5eb0d12a508d67dbab64855bfdf46b1e11db1528c9a4c50ec96f2036a2",
-  "updated_utc": "2026-08-21T17:09:02.715856+00:00"
+  "updated_utc": "2026-08-21T17:09:11.242985+00:00"
 }
