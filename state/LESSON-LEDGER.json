@@ -747,6 +747,50 @@
       "source_path": "state/ROMANCE-PRIMAL-PANGRAM4-GREEN-OWNER-RESIDUAL-2026-08-21.md",
       "source_ref": "db9295df1d80beaabef5ffe5a1373ce857f1291a",
       "source_sha256": "f122d240d43254175e54b997535e5dccf9224bf330ecee849c60747fccd2b71e"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "A 274-word Romance Part 1 boundary spanning the end of Affection into the unchanged Casual Sex opening reached 100% Human only after Affection stopped after its two live source-derived observations rather than adding a generalized barometer/responsibility wrap-up.",
+      "id": "L-34fbea81fd-01",
+      "promoted_to": [],
+      "reason": "This is direct evidence that the remaining classification problem lived in the cross-section discourse transition rather than the Casual opening alone. The reusable transition/localization rule is promoted separately in joel-articles.",
+      "recorded_at_utc": "2026-08-21T18:46:55.584042+00:00",
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-affection-transition-r6-20260821-results.json",
+      "source_ref": "6a95a3a923704e69fe84ce8e5ebe4378dbdf81fc",
+      "source_sha256": "34fbea81fdd3bbc5c31c1824fc42d1e53daabe5b90b557280c7b1e99054c5b04"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The exact 9,719-word Romance Part 1 repair candidate reached Pangram 4.0 STAGE_SUCCESS at 100% Human, 0% AI, and 0% AI-assisted after natural-section, transition, rollback, and duplicate-argument repairs.",
+      "id": "L-6737b5f94f-01",
+      "promoted_to": [],
+      "reason": "This is exact-boundary detector evidence for the Romance task candidate. The transferable localization/rollback and architecture lessons are promoted separately in joel-articles; this result does not establish a universal Pangram rule or article authority.",
+      "recorded_at_utc": "2026-08-21T18:46:55.592279+00:00",
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-aggregate-r7-20260821-results.json",
+      "source_ref": "e35e3336449d2dd053224962a29a2f8a496703df",
+      "source_sha256": "6737b5f94f5778a74b6e2ea2b2452b44bef754f83eb19f0f648a6987ccb1416f"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The Romance Part 1 flaws context reached 100% Human only after removing a duplicate spiritual-depth/dependability mini-argument and the generalized instructional wrap-up, leaving the personal idealization line as the stopping point.",
+      "id": "L-bbc9011ae1-01",
+      "promoted_to": [],
+      "reason": "This is strong Romance-specific evidence for functional de-duplication and stopping-point repair. The reusable editorial rule is already promoted in joel-articles, so no separate universal Pangram detector rule is warranted here.",
+      "recorded_at_utc": "2026-08-21T18:46:55.600321+00:00",
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-conversation-flaws-r3-20260821-results.json",
+      "source_ref": "e0bc527114bc6a8b31e011a28e019657c8732bec",
+      "source_sha256": "bbc9011ae1491402ed7811a66e231142ec4b97dbabe69770fc28f4b853829a75"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "In Romance Part 1, replacing a balanced slow-courtship mini-essay with the live uncertainty about what years of conversation still cannot reveal before sex produced a 224-word 100% Human boundary; the adjacent Bee story then performed the omitted 'first night is not final ceiling' conclusion.",
+      "id": "L-025f7b8fc2-01",
+      "promoted_to": [],
+      "reason": "The result supports the already-promoted Joel-byline rules on live thought, avoiding nested closure, and letting lived evidence perform the conclusion. The same result file also contains an intermediate flaws candidate that did not pass, so no universal detector rule should be inferred.",
+      "recorded_at_utc": "2026-08-21T18:46:55.608543+00:00",
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-residual-natural-r1b-20260821-results.json",
+      "source_ref": "4eb9c0c4ddcbfffde6cb72009656a0082dfd3485",
+      "source_sha256": "025f7b8fc2260c8dc3081df8223306d0e3003623330b5554a801dee44df13a14"
     }
   ],
   "schema_version": 1
