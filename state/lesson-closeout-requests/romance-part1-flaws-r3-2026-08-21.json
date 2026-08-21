@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request_id": "romance-part1-flaws-r3-2026-08-21",
+  "source_path": "state/experiments/romance-detector-repair-20260820-part1-conversation-flaws-r3-20260821-results.json",
+  "source_ref": "e0bc527114bc6a8b31e011a28e019657c8732bec",
+  "source_sha256": "bbc9011ae1491402ed7811a66e231142ec4b97dbabe69770fc28f4b853829a75",
+  "finding": "The Romance Part 1 flaws context reached 100% Human only after removing a duplicate spiritual-depth/dependability mini-argument and the generalized instructional wrap-up, leaving the personal idealization line as the stopping point.",
+  "disposition": "article-specific",
+  "reason": "This is strong Romance-specific evidence for functional de-duplication and stopping-point repair. The reusable editorial rule is already promoted in joel-articles, so no separate universal Pangram detector rule is warranted here.",
+  "promoted_to": []
+}
