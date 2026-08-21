@@ -2923,6 +2923,29 @@
           "section_id": "part1-slow-steady"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-21T18:33:51.740895+00:00",
+      "experiment_id": "romance-detector-repair-20260820-part1-conversation-flaws-r2-20260821",
+      "id": "Q-a31c6e03a6f21aa6",
+      "sections": [
+        "part1-conversation-flaws"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-part1-conversation-flaws-r2-20260821-results.json",
+      "source_ref": "9953378c368d0f133ce4482a45b669aa81d0ee04",
+      "source_sha256": "82344effe36092ea34eccbb8bcd25e358f1fbd947217912f4761f68bc9359e4e",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.7911504507064819,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.20884956419467926,
+          "id": "CONVERSATION_FLAWS_R2",
+          "prediction_short": "Mixed",
+          "section_id": "part1-conversation-flaws"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
