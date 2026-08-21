@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-owner-integrated-r2-local-sections_NOT_A_PERFORMANCE_R2",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.3974272310733795,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.6025727987289429,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 2,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Not A Performance\nThe moment I have to prove that I’m the man, something has already become fake.\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.\nI don't want a woman pretending to be helpless so I can feel masculine, but if she's spent years being told she's too needy or too emotional, she may decide that needing anyone is embarrassing and start refusing help even when she wants it.\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\nUnfortunately, I've seen a lot of the latter.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.08754444122314453,
+        "confidence": "High",
+        "end_index": 379,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Not A Performance\nThe moment I have to prove that I’m the man, something has already become fake.\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.",
+        "token_length": 92,
+        "word_count": 70
+      },
+      {
+        "ai_assistance_score": 0.40665239095687866,
+        "confidence": "Medium",
+        "end_index": 966,
+        "humanizer_score": 0.0009021075675264001,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 379,
+        "text": "\nI don't want a woman pretending to be helpless so I can feel masculine, but if she's spent years being told she's too needy or too emotional, she may decide that needing anyone is embarrassing and start refusing help even when she wants it.\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience.",
+        "token_length": 123,
+        "word_count": 106
+      },
+      {
+        "ai_assistance_score": 0.23353147506713867,
+        "confidence": "High",
+        "end_index": 1477,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 966,
+        "text": " I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\nUnfortunately, I've seen a lot of the latter.",
+        "token_length": 115,
+        "word_count": 97
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "cf4ad079-44e3-4893-ac86-f1c6da64c3de",
   "text": "Not A Performance\n\nThe moment I have to prove that I’m the man, something has already become fake.\n\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\n\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.\n\nI don't want a woman pretending to be helpless so I can feel masculine, but if she's spent years being told she's too needy or too emotional, she may decide that needing anyone is embarrassing and start refusing help even when she wants it.\n\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\n\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\n\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\n\nUnfortunately, I've seen a lot of the latter.\n",
   "text_sha256": "7a43ece95e5278a4541671992c2d3d8efb8fc5b88b269509a5013e1270bd0fd9",
-  "updated_utc": "2026-08-21T10:42:36.563244+00:00"
+  "updated_utc": "2026-08-21T10:42:50.880585+00:00"
 }
