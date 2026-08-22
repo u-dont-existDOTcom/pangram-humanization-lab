@@ -3185,6 +3185,29 @@
           "section_id": "introduction"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-genre-calibration-20260822",
+      "created_at_utc": "2026-08-22T01:01:31.376381+00:00",
+      "experiment_id": "somatic-genre-calibration-owner-cancer-20260822-a",
+      "id": "Q-2681b656ef4af26d",
+      "sections": [
+        "owner-cancer-research-calibration"
+      ],
+      "source_path": "state/experiments/somatic-genre-calibration-owner-cancer-20260822-a-results.json",
+      "source_ref": "131809d26dffd10326c1fd465d7c5e28e38a4971",
+      "source_sha256": "ec77f0b40e1c0d61b928ec389f20dd1fd7507194d6372ea3cfff260bd4067f06",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "OWNER_CANCER_RESEARCH",
+          "prediction_short": "Human",
+          "section_id": "owner-cancer-research-calibration"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
