@@ -1,0 +1,18 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "romance-detector-repair-20260820-preservation-r16-canonical-casual-part1-aggregate-20260822",
+  "audit_id": "romance-detector-repair-20260820",
+  "variants": [
+    {
+      "id": "PRESERVATION_R16_CANONICAL_CASUAL_PART1",
+      "section_id": "part1-preservation-r16-canonical-casual",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "583a22db5c8720f9a881b535f03d56b3105ee8ee",
+        "text_sha256": "055cf2f8bde035da3f97db5c7753391446b77c7159655c1431210a0233815dc0"
+      }
+    }
+  ]
+}
