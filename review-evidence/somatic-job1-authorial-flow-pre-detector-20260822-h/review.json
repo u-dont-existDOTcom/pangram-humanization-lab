@@ -1,0 +1,40 @@
+{
+  "candidate_available": false,
+  "candidate_hard_pass": false,
+  "candidate_material_route": "",
+  "candidate_ref": "",
+  "candidate_role": "",
+  "candidate_sha256": "",
+  "detector_submission_attempted": false,
+  "failure": {
+    "accepted_move_count": 0,
+    "decision_trace": {},
+    "failure_class": "",
+    "failure_evidence_ref": "",
+    "failure_origin_node": "",
+    "final_local_gates": {
+      "regressions_hard_pass": true
+    },
+    "generation_rejection_class": "",
+    "move_index": 0,
+    "repair_attempt": 0,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "source_provenance": "OWNER_DRAFT",
+    "task_mode": "P2",
+    "uncovered_required_count": 0
+  },
+  "format": "authorial-flow-pre-detector-review-v1",
+  "interrupt_kind": "AUTHORIAL_AMBIGUITY",
+  "interrupt_question": "None. Owner context resolves the potentially material meanings, identities, certainty, and sequencing boundaries; remaining repairs are machine-resolvable representation work.",
+  "phase": "representation",
+  "repair_rounds": 0,
+  "request_id": "somatic-job1-authorial-flow-pre-detector-20260822-h",
+  "research_discovery_attempted": false,
+  "source_commit": "ccc0cd3545b8ad3480b19a702bf390ba1030a478",
+  "source_path": "articles/somatic-therapies/experiments/JOB1-AUTHORIAL-FLOW-INPUT-V5-20260822.md",
+  "source_sha256": "85caf10bb4f973cf9130a05bf20f0fe74297a5ab467e566e327a9556ecec51f2",
+  "status": "owner_ambiguity_required",
+  "thread_id": "826493981a56a38a5e3460b138b061db7e61d90e5105e876e67f2977e2721d2d",
+  "tool_ref": "267a5ea5faf2a116cda374177109a350f8da789d"
+}
