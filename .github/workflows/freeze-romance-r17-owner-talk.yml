@@ -1,0 +1,126 @@
+name: Freeze Romance r17 owner Talk
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-r17-owner-talk.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+          fetch-depth: 0
+
+      - name: Materialize exact owner Talk replacement
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC='state/candidates/romance-detector-repair-20260820-preservation-r16-canonical-casual-part1.txt'
+          echo '055cf2f8bde035da3f97db5c7753391446b77c7159655c1431210a0233815dc0  '"$SRC" | sha256sum -c -
+
+          OWNER_URL='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/1f5669ec61f5453f91f844c4d86ac966cb73e8ec/work/romance-detector-repair-20260820/recovery-20260822/OWNER-TALK-SEXUAL-COMPATIBILITY-20260822.md'
+          curl --fail --silent --show-error --location "$OWNER_URL" -o /tmp/owner-talk.md
+
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          src_path = Path('state/candidates/romance-detector-repair-20260820-preservation-r16-canonical-casual-part1.txt')
+          source = src_path.read_text(encoding='utf-8')
+          owner_md = Path('/tmp/owner-talk.md').read_text(encoding='utf-8')
+
+          marker1 = '## Verbatim owner wording\n\n'
+          marker2 = '\n\n## Provenance / interpretation guard'
+          if owner_md.count(marker1) != 1 or owner_md.count(marker2) != 1:
+              raise SystemExit('owner-source markers not unique')
+          owner_text = owner_md.split(marker1, 1)[1].split(marker2, 1)[0]
+          if '\n\n' in owner_text:
+              raise SystemExit('owner wording unexpectedly contains multiple paragraphs')
+
+          old = ("Sex drives are independently alive and always changing. For some stretch, one of you will want more, less, or something different. "
+                 "When the discordance comes, it's one of the saddest sources of quiet resentment. Talk about what you’ll do when that happens before either person is already hurt. "
+                 "It won’t solve it in advance, but at least you’ll have somewhere to begin.")
+          if source.count(old) != 1:
+              raise SystemExit(f'expected exactly one old mismatch paragraph, found {source.count(old)}')
+
+          text = source.replace(old, owner_text, 1)
+
+          must_survive = [
+              "And can you actually say all that once you're naked? Even if you think she'll be disappointed?",
+              "Bodies fitting is not enough. Can you stay honest while you’re completely exposed?",
+              "Talking before your clothes come off already practices some of the trust, attention, and willingness to be seen that making love needs.",
+              "This will naturally prevent sex from happening too soon if we can talk about it with each other.",
+              "If we can't, that's a red flag for the relationship's chances of success.",
+              "What I eventually took from my dad's advice was a bigger question: would we like to raise children together? Are we ready?",
+          ]
+          missing = [x for x in must_survive if x not in text]
+          if missing:
+              raise SystemExit(f'protected Talk functions missing: {missing}')
+          if old in text:
+              raise SystemExit('old mismatch paragraph survived replacement')
+          if owner_text not in text:
+              raise SystemExit('verbatim owner paragraph missing')
+
+          out = Path('state/candidates/romance-detector-repair-20260820-preservation-r17-owner-talk-part1.txt')
+          out.write_text(text, encoding='utf-8')
+
+          freeze = {
+              'schema_version': 1,
+              'candidate_id': 'romance-detector-repair-20260820-preservation-r17-owner-talk',
+              'source': {
+                  'path': str(src_path),
+                  'sha256': hashlib.sha256(source.encode()).hexdigest(),
+                  'word_count_whitespace': len(source.split()),
+              },
+              'owner_source': {
+                  'repository': 'u-dont-existDOTcom/joel-articles',
+                  'commit': '1f5669ec61f5453f91f844c4d86ac966cb73e8ec',
+                  'path': 'work/romance-detector-repair-20260820/recovery-20260822/OWNER-TALK-SEXUAL-COMPATIBILITY-20260822.md',
+                  'verbatim_paragraph_sha256': hashlib.sha256(owner_text.encode()).hexdigest(),
+                  'word_count_whitespace': len(owner_text.split()),
+              },
+              'candidate': {
+                  'path': str(out),
+                  'sha256': hashlib.sha256(text.encode()).hexdigest(),
+                  'word_count_whitespace': len(text.split()),
+                  'part2_sha256': '9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85',
+                  'part2_exact_prior_human': 1.0,
+              },
+              'operation': {
+                  'type': 'replace_exact',
+                  'scope': 'Talk libido-mismatch paragraph only',
+                  'old_sha256': hashlib.sha256(old.encode()).hexdigest(),
+                  'new_sha256': hashlib.sha256(owner_text.encode()).hexdigest(),
+                  'old_word_count': len(old.split()),
+                  'new_word_count': len(owner_text.split()),
+                  'authority': 'direct owner wording 2026-08-22',
+              },
+              'protected_neighbor_functions_preserved': True,
+              'unexplained_deltas': 0,
+              'detector_plan': 'After joel-articles preservation proof binds this exact candidate and passes, measure only aggregate Part 1. Reuse exact prior 100%-Human Part 2; no local Talk call.',
+          }
+          Path('state/experiments/romance-detector-repair-20260820-preservation-r17-owner-talk-freeze.json').write_text(
+              json.dumps(freeze, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+          )
+          print(json.dumps(freeze, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Commit frozen r17 candidate
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            state/candidates/romance-detector-repair-20260820-preservation-r17-owner-talk-part1.txt \
+            state/experiments/romance-detector-repair-20260820-preservation-r17-owner-talk-freeze.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance r17 owner Talk candidate'
+          git push origin HEAD:automation/pangram-fixed-batch
