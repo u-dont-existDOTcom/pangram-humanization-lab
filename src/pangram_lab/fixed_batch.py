@@ -8,6 +8,7 @@ from typing import Any
 from .call_budget import SectionCallCapReached
 from .call_stats import CallStats
 from .result_paths import new_result_envelope
+from .text_sources import TextSourceError, validate_text_source
 
 
 FORMAT = "pangram-fixed-batch-v1"
@@ -35,13 +36,25 @@ def load_spec(path: Path, max_variants: int = 8) -> dict[str, Any]:
             raise ValueError("each variant must be an object")
         variant_id = variant.get("id")
         text = variant.get("text")
+        text_source = variant.get("text_source")
         if not isinstance(variant_id, str) or not variant_id.strip():
             raise ValueError("variant id must be a non-empty string")
         if variant_id in seen:
             raise ValueError(f"duplicate variant id: {variant_id}")
         seen.add(variant_id)
-        if not isinstance(text, str) or not text:
-            raise ValueError(f"variant {variant_id} text must be non-empty")
+        has_inline_text = isinstance(text, str) and bool(text)
+        has_text_source = text_source is not None
+        if has_inline_text == has_text_source:
+            raise ValueError(
+                f"variant {variant_id} must provide exactly one of non-empty text or text_source"
+            )
+        if text is not None and not has_inline_text:
+            raise ValueError(f"variant {variant_id} text must be non-empty when supplied")
+        if has_text_source:
+            try:
+                validate_text_source(text_source)
+            except TextSourceError as exc:
+                raise ValueError(f"variant {variant_id} invalid text_source: {exc}") from exc
         section_id = variant.get("section_id")
         budget_scope = variant.get("budget_scope", "section")
         allow_exact_repeat = variant.get("allow_exact_repeat", False)
@@ -85,7 +98,9 @@ def run_batch(
     output_path.parent.mkdir(parents=True, exist_ok=True)
     for variant in spec["variants"]:
         variant_id = variant["id"]
-        text = variant["text"]
+        text = variant.get("text")
+        if not isinstance(text, str) or not text:
+            raise ValueError(f"variant {variant_id} text source was not resolved before run_batch")
         section_id = variant.get("section_id")
         budget_scope = variant.get("budget_scope", "section")
         allow_exact_repeat = variant.get("allow_exact_repeat", False)
@@ -123,6 +138,8 @@ def run_batch(
             "text_sha256": text_sha256(text),
             "detector": detector,
         }
+        if variant.get("text_source") is not None:
+            row["text_source"] = variant["text_source"]
         if section_id is not None:
             row["section_id"] = section_id
             row["budget_scope"] = budget_scope
