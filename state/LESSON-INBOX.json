@@ -3231,6 +3231,38 @@
           "section_id": "introduction"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T01:14:59.785456+00:00",
+      "experiment_id": "romance-detector-repair-20260820-preservation-proofed-local-r1-20260822",
+      "id": "Q-9346b1dbabb0ffa1",
+      "sections": [
+        "part1-talk-before-sex",
+        "primal-not-a-performance"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-proofed-local-r1-20260822-results.json",
+      "source_ref": "b3c5720f365c22f1449da7a698a5686e4c968d8f",
+      "source_sha256": "262d1c78d344953b7f20c84fc536c3748472ff1f0a7ccfc15095ed9d71afb97b",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.6359363794326782,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.3640636205673218,
+          "id": "TALK_FAITHFUL_NEXT",
+          "prediction_short": "Mixed",
+          "section_id": "part1-talk-before-sex"
+        },
+        {
+          "fraction_ai": 0.881322979927063,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.1186770424246788,
+          "id": "NOT_A_PERFORMANCE_R9_EXACT",
+          "prediction_short": "AI",
+          "section_id": "primal-not-a-performance"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
