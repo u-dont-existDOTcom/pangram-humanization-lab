@@ -389,8 +389,8 @@
     "part1-talk-before-sex\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.2,
-      "estimated_credits": 4,
+      "estimated_cost_usd": 0.25,
+      "estimated_credits": 5,
       "events": [
         {
           "budget_scope": "section",
@@ -427,10 +427,19 @@
           "text_sha256": "c561419484b34780a345a172d3ab5e1ec2064e1eb7a40f355f87507084fa187d",
           "type": "paid_post_reserved",
           "word_count": 538
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "romance-detector-repair-20260820-preservation-proofed-local-r1-20260822_TALK_FAITHFUL_NEXT",
+          "recorded_at_utc": "2026-08-22T01:14:17.751371+00:00",
+          "text_sha256": "f2ca3824f83c7085a912336f48ff9c985af12cefe5a8d5f477df18b1785264ed",
+          "type": "paid_post_reserved",
+          "word_count": 504
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 4,
+      "paid_api_calls": 5,
       "pending_resumes": 0,
       "section_id": "part1-talk-before-sex",
       "version": "4.0"
