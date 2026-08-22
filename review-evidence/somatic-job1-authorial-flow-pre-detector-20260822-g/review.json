@@ -1,0 +1,40 @@
+{
+  "candidate_available": false,
+  "candidate_hard_pass": false,
+  "candidate_material_route": "",
+  "candidate_ref": "",
+  "candidate_role": "",
+  "candidate_sha256": "",
+  "detector_submission_attempted": false,
+  "failure": {
+    "accepted_move_count": 0,
+    "decision_trace": {},
+    "failure_class": "",
+    "failure_evidence_ref": "",
+    "failure_origin_node": "",
+    "final_local_gates": {
+      "regressions_hard_pass": true
+    },
+    "generation_rejection_class": "",
+    "move_index": 0,
+    "repair_attempt": 0,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "source_provenance": "OWNER_DRAFT",
+    "task_mode": "P2",
+    "uncovered_required_count": 0
+  },
+  "format": "authorial-flow-pre-detector-review-v1",
+  "interrupt_kind": "AUTHORIAL_AMBIGUITY",
+  "interrupt_question": "Does the visible label “Job 1” denote only this section’s location in an author-developed map, or should its numbering be removed or renamed to prevent readers from interpreting it as a mandatory first stage? Repository evidence cannot settle that editorial identity choice; no research is needed.",
+  "phase": "representation",
+  "repair_rounds": 0,
+  "request_id": "somatic-job1-authorial-flow-pre-detector-20260822-g",
+  "research_discovery_attempted": false,
+  "source_commit": "ccc0cd3545b8ad3480b19a702bf390ba1030a478",
+  "source_path": "articles/somatic-therapies/experiments/JOB1-AUTHORIAL-FLOW-INPUT-V5-20260822.md",
+  "source_sha256": "85caf10bb4f973cf9130a05bf20f0fe74297a5ab467e566e327a9556ecec51f2",
+  "status": "owner_ambiguity_required",
+  "thread_id": "62b92380d4777d616e7857cdfda5efec08e1e6491c0f0ba72775dc30e36c43fd",
+  "tool_ref": "c87eec03540ef0ac5bbdcbf35b85286759252e67"
+}
