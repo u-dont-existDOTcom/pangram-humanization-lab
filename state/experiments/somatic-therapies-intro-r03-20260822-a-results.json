@@ -1,0 +1,66 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-therapies-intro-r03-20260822-a",
+  "spec_sha256": "33ec65215e8cca128826a086288755bc3d0e18ed473049de52c88ebfe37028c2",
+  "results": [
+    {
+      "id": "INTRO_R03",
+      "measurement_key": "somatic-therapies-intro-r03-20260822-a_INTRO_R03",
+      "text": "Introduction\n\nTrauma healing isn't only about going back into painful memories. The body was involved in surviving whatever happened too, and it can still be bracing, collapsing, freezing, disconnecting, scanning for danger, flooding, etc., long after the danger is gone.\n\nThat changes what I want from trauma work. If I go into something painful and afterward I cannot settle again, the fact that the session was “deep” does not impress me very much. Before I go deeper, I want to be able to stay there enough to do something useful, stop when I need to, and come back to ordinary life afterward.\n\nThis is also why I don't think it makes much sense to ask whether Somatic Experiencing, trauma-sensitive yoga, EFT, shaking, Brainspotting, EMDR, or cognitive work is “best.” They can be doing completely different jobs. Gentle shaking might just help somebody stay present; a longer shaking practice might be used to discharge activation. Brainspotting can be resource-oriented or it can go straight into very charged material. EMDR might make sense quite early for one discrete traumatic event and much later for somebody whose trauma is mostly diffuse and developmental.\n\nSo the modality name does not tell me where somebody is on the map. Roughly, I am looking at whether the person needs enough safety to stay present, regular regulation or discharge, help with material that is more body than story, work on a particular memory or trigger, or help making sense of what changed afterward. Several of those can be happening at the same time.\n\nInner-child work can run through this too. Sometimes making the body a little easier to inhabit is what lets you approach the younger part without simply getting swallowed by it.\n",
+      "text_sha256": "eb5941a868b9b5540db3e2af1c148110f1a7b4d902802cbd1ec0b2917c3f25c0",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Introduction\nTrauma healing isn't only about going back into painful memories. The body was involved in surviving whatever happened too, and it can still be bracing, collapsing, freezing, disconnecting, scanning for danger, flooding, etc., long after the danger is gone.\nThat changes what I want from trauma work. If I go into something painful and afterward I cannot settle again, the fact that the session was “deep” does not impress me very much. Before I go deeper, I want to be able to stay there enough to do something useful, stop when I need to, and come back to ordinary life afterward.\nThis is also why I don't think it makes much sense to ask whether Somatic Experiencing, trauma-sensitive yoga, EFT, shaking, Brainspotting, EMDR, or cognitive work is “best.” They can be doing completely different jobs. Gentle shaking might just help somebody stay present; a longer shaking practice might be used to discharge activation. Brainspotting can be resource-oriented or it can go straight into very charged material. EMDR might make sense quite early for one discrete traumatic event and much later for somebody whose trauma is mostly diffuse and developmental.\nSo the modality name does not tell me where somebody is on the map. Roughly, I am looking at whether the person needs enough safety to stay present, regular regulation or discharge, help with material that is more body than story, work on a particular memory or trigger, or help making sense of what changed afterward. Several of those can be happening at the same time.\nInner-child work can run through this too. Sometimes making the body a little easier to inhabit is what lets you approach the younger part without simply getting swallowed by it.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Introduction\nTrauma healing isn't only about going back into painful memories. The body was involved in surviving whatever happened too, and it can still be bracing, collapsing, freezing, disconnecting, scanning for danger, flooding, etc., long after the danger is gone.\nThat changes what I want from trauma work. If I go into something painful and afterward I cannot settle again, the fact that the session was “deep” does not impress me very much. Before I go deeper, I want to be able to stay there enough to do something useful, stop when I need to, and come back to ordinary life afterward.\nThis is also why I don't think it makes much sense to ask whether Somatic Experiencing, trauma-sensitive yoga, EFT, shaking, Brainspotting, EMDR, or cognitive work is “best.” They can be doing completely different jobs. Gentle shaking might just help somebody stay present; a longer shaking practice might be used to discharge activation. Brainspotting can be resource-oriented or it can go straight into very charged material. EMDR might make sense quite early for one discrete traumatic event and much later for somebody whose trauma is mostly diffuse and developmental.\nSo the modality name does not tell me where somebody is on the map. Roughly, I am looking at whether the person needs enough safety to stay present, regular regulation or discharge, help with material that is more body than story, work on a particular memory or trigger, or help making sense of what changed afterward. Several of those can be happening at the same time.\nInner-child work can run through this too. Sometimes making the body a little easier to inhabit is what lets you approach the younger part without simply getting swallowed by it.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999904632568359,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1718,
+            "word_count": 286,
+            "token_length": 349,
+            "is_humanized": false,
+            "humanizer_score": 0.11268020421266556
+          }
+        ]
+      },
+      "section_id": "introduction",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-therapies-intro-20260822",
+  "call_accounting": {
+    "audit_id": "somatic-therapies-intro-20260822",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 2,
+        "pending_resumes": 0,
+        "section_id": "introduction",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
