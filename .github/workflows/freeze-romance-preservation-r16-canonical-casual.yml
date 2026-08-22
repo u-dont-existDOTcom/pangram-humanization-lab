@@ -1,0 +1,109 @@
+name: Freeze Romance preservation r16 canonical Casual
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-preservation-r16-canonical-casual.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+          fetch-depth: 0
+      - name: Materialize exact canonical-Casual rollback
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC='https://raw.githubusercontent.com/u-dont-existDOTcom/pangram-humanization-lab/automation/pangram-fixed-batch/state/candidates/romance-detector-repair-20260820-preservation-r15-old-split-part1.txt'
+          curl --fail --silent --show-error --location "$SRC" -o /tmp/r15-part1.txt
+          echo 'ba2bb4d66c541732e03a181f31eb5419c8301c870330bd4bcd946626c8161fcf  /tmp/r15-part1.txt' | sha256sum -c -
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          source = Path('/tmp/r15-part1.txt').read_text(encoding='utf-8')
+          old_commit = "True commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me; I don't need a promise on paper to make me want to. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag."
+          new_commit = "True commitment grows out of relational depth, not a label. If we spend hours telling each other our deepest longings, fears, and problems, I’ll naturally be ready to help when you need me. I don’t need to promise that on paper. If someone says “I love you, I feel you, I’m here for you,” yet they hardly ever talk to you about what matters, that's a red flag."
+          old_friend = "The person getting more of what they want may think the arrangement is fulfilling. Usually they’re just less aware that it isn’t. In college I had a friend with four girlfriends who boasted about it to girls while trying to get a fifth. If anybody was supposed to be winning that arrangement, it was him. I asked him, “But are you really happy?” He said, “No, I’m miserable, dude. I feel empty inside.”"
+          new_friend = "The person getting more of what they want may think the arrangement is fulfilling. Usually they’re just less aware that it isn’t. In college I had a friend with four girlfriends who boasted about it to girls while trying to get a fifth. I asked him, “But are you really happy?” He said, “No, I’m miserable, dude. I feel empty inside.”"
+
+          text = source
+          operations = []
+          for label, old, new in [
+              ('canonical-casual-paper-promise', old_commit, new_commit),
+              ('canonical-casual-four-girlfriends', old_friend, new_friend),
+          ]:
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'{label}: expected exactly one source occurrence, found {count}')
+              text = text.replace(old, new, 1)
+              operations.append({
+                  'label': label,
+                  'old_sha256': hashlib.sha256(old.encode()).hexdigest(),
+                  'new_sha256': hashlib.sha256(new.encode()).hexdigest(),
+                  'old_word_count': len(old.split()),
+                  'new_word_count': len(new.split()),
+              })
+
+          if old_commit in text or old_friend in text:
+              raise SystemExit('old Casual span survived')
+          if new_commit not in text or new_friend not in text:
+              raise SystemExit('canonical Casual replacement missing')
+          if text.count('Can Casual Sex or a Situationship Actually Be Honest?') != 1:
+              raise SystemExit('Casual heading identity changed')
+          required = [
+              'This will naturally prevent sex from happening too soon',
+              "If we can't, that's a red flag for the relationship's chances of success.",
+              'If you want something closer to “casual love-making”',
+              'All three women told me at some point that they felt like my patient.',
+          ]
+          missing = [x for x in required if x not in text]
+          if missing:
+              raise SystemExit(f'protected anchors missing: {missing}')
+
+          candidate_sha = hashlib.sha256(text.encode()).hexdigest()
+          out = Path('state/candidates/romance-detector-repair-20260820-preservation-r16-canonical-casual-part1.txt')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(text, encoding='utf-8')
+          freeze = {
+              'schema_version': 1,
+              'candidate_id': 'romance-detector-repair-20260820-preservation-r16-canonical-casual',
+              'source': {
+                  'path': 'state/candidates/romance-detector-repair-20260820-preservation-r15-old-split-part1.txt',
+                  'sha256': 'ba2bb4d66c541732e03a181f31eb5419c8301c870330bd4bcd946626c8161fcf',
+                  'word_count_whitespace': len(source.split()),
+              },
+              'candidate': {
+                  'path': str(out),
+                  'sha256': candidate_sha,
+                  'word_count_whitespace': len(text.split()),
+                  'part2_sha256': '9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85',
+                  'part2_exact_prior_human': 1.0,
+              },
+              'operations': operations,
+              'article_change_scope': 'Casual section only; exact registered-main rollback of the only two canonical-to-r9 Casual wording deltas',
+              'unexplained_deltas': 0,
+              'detector_plan': 'After joel-articles preservation proof is updated to exact candidate identity and eligible, measure only this Part 1 aggregate. Reuse exact 100%-Human Part 2; no local section call.',
+          }
+          Path('state/experiments/romance-detector-repair-20260820-preservation-r16-canonical-casual-freeze.json').write_text(json.dumps(freeze, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(freeze, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit frozen r16 candidate
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            state/candidates/romance-detector-repair-20260820-preservation-r16-canonical-casual-part1.txt \
+            state/experiments/romance-detector-repair-20260820-preservation-r16-canonical-casual-freeze.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance preservation r16 canonical Casual'
+          git push origin HEAD:automation/pangram-fixed-batch
