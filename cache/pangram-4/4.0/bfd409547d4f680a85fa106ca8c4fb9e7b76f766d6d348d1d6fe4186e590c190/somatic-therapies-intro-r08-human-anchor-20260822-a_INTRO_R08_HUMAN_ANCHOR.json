@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-therapies-intro-r08-human-anchor-20260822-a_INTRO_R08_HUMAN_ANCHOR",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Introduction\nTrauma isn't only a story about what happened. The body can still be bracing, freezing, disconnecting, scanning for danger, or flooding long after the danger itself is over. Before going deeper, I want to know whether you can stay present, stop when you need to, and get back to ordinary life afterward. That is the safety rule underneath the rest of this article.\nDon’t be so serious, you silly willy!\nRemember, therapy is not just work. It’s also play! We often make the most incredible discoveries when we approach things with playful curiosity. For example, here’s a bridge between somatic therapy and inner-child therapy which I recently learned from Professor Baby Sheep:\nAnd in my personal experience, what actually works better for me than all of these therapies is shaving my head and massaging it, especially while on loveyhuasca!\nThis Is a Map, but You Are the Explorer\nAnyway, here’s the map. I’m sorting by the job instead of giving each therapy one permanent place. Gentle shaking may just be helping you stay present, while a longer shaking practice may be discharge. Brainspotting can be used for resourcing or it can take you right into charged material. EMDR may fit quite early when there is one traumatic event you can point to, and later when the trauma is mostly diffuse and developmental.\nI made the five-job version myself; nobody has validated the whole sequence as a protocol. You can also need several jobs at once. The rough movement is regulation → discharge → processing → integration → meaning, but I care more about what actually happens to your sleep, relationships, symptoms, and ordinary functioning than whether you followed the map in order.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.8705458641052246,
+        "confidence": "High",
+        "end_index": 1691,
+        "humanizer_score": 0.9969930648803711,
+        "is_humanized": true,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Introduction\nTrauma isn't only a story about what happened. The body can still be bracing, freezing, disconnecting, scanning for danger, or flooding long after the danger itself is over. Before going deeper, I want to know whether you can stay present, stop when you need to, and get back to ordinary life afterward. That is the safety rule underneath the rest of this article.\nDon’t be so serious, you silly willy!\nRemember, therapy is not just work. It’s also play! We often make the most incredible discoveries when we approach things with playful curiosity. For example, here’s a bridge between somatic therapy and inner-child therapy which I recently learned from Professor Baby Sheep:\nAnd in my personal experience, what actually works better for me than all of these therapies is shaving my head and massaging it, especially while on loveyhuasca!\nThis Is a Map, but You Are the Explorer\nAnyway, here’s the map. I’m sorting by the job instead of giving each therapy one permanent place. Gentle shaking may just be helping you stay present, while a longer shaking practice may be discharge. Brainspotting can be used for resourcing or it can take you right into charged material. EMDR may fit quite early when there is one traumatic event you can point to, and later when the trauma is mostly diffuse and developmental.\nI made the five-job version myself; nobody has validated the whole sequence as a protocol. You can also need several jobs at once. The rough movement is regulation → discharge → processing → integration → meaning, but I care more about what actually happens to your sleep, relationships, symptoms, and ordinary functioning than whether you followed the map in order.",
+        "token_length": 347,
+        "word_count": 283
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "b9622f3a-9174-4721-855d-6d63529702e3",
   "text": "Introduction\n\nTrauma isn't only a story about what happened. The body can still be bracing, freezing, disconnecting, scanning for danger, or flooding long after the danger itself is over. Before going deeper, I want to know whether you can stay present, stop when you need to, and get back to ordinary life afterward. That is the safety rule underneath the rest of this article.\n\nDon’t be so serious, you silly willy!\n\nRemember, therapy is not just work. It’s also play! We often make the most incredible discoveries when we approach things with playful curiosity. For example, here’s a bridge between somatic therapy and inner-child therapy which I recently learned from Professor Baby Sheep:\n\nAnd in my personal experience, what actually works better for me than all of these therapies is shaving my head and massaging it, especially while on loveyhuasca!\n\nThis Is a Map, but You Are the Explorer\n\nAnyway, here’s the map. I’m sorting by the job instead of giving each therapy one permanent place. Gentle shaking may just be helping you stay present, while a longer shaking practice may be discharge. Brainspotting can be used for resourcing or it can take you right into charged material. EMDR may fit quite early when there is one traumatic event you can point to, and later when the trauma is mostly diffuse and developmental.\n\nI made the five-job version myself; nobody has validated the whole sequence as a protocol. You can also need several jobs at once. The rough movement is regulation → discharge → processing → integration → meaning, but I care more about what actually happens to your sleep, relationships, symptoms, and ordinary functioning than whether you followed the map in order.\n",
   "text_sha256": "bfd409547d4f680a85fa106ca8c4fb9e7b76f766d6d348d1d6fe4186e590c190",
-  "updated_utc": "2026-08-22T07:27:29.167445+00:00"
+  "updated_utc": "2026-08-22T07:27:43.015835+00:00"
 }
