@@ -1,0 +1,66 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-therapies-inner-child-r04-direct-20260822-a",
+  "spec_sha256": "528a75c663e8fc34070373437d1adb0dab67a6cd103fc1f9e13b21b02da8435a",
+  "results": [
+    {
+      "id": "INNER_CHILD_R04_DIRECT",
+      "measurement_key": "somatic-therapies-inner-child-r04-direct-20260822-a_INNER_CHILD_R04_DIRECT",
+      "text": "Somatic Work and Inner-Child Reparenting\n\nThe thing I notice around the solar plexus or abdomen is that when I can get it to relax a little, heart-chakra love gets easier to feel. EFT can help me do that; so can Somatic Experiencing, trauma-sensitive yoga, gentle shaking or qigong, non-forced longer exhales, and gentle Buteyko-style breathing.\n\nAnd then: you don't have to immediately go looking for the trauma. Think of somebody you already love. A pet is fine. A baby, a friend, a partner, whoever. Feel that love first. Then see if a little of it can move down from the heart toward the younger part around the solar plexus, and back up again. That is the loop. This can happen long before Job 5.\n\nIf you're so flooded or identified with the child-state that you can't find a Nurturer or Protector at all, start smaller. Look around the room. Get help from outside. Borrow an adult perspective, find a neutral witness, or do one ordinary Protector action. Gentle self-hypnosis can fit here too if it stays in the present.\n\nI would leave deep hypnosis, immersive child dialogue, suggestive exploration, and the rest of the deep memory work until you can stay present, stop when you want to, and come back to ordinary life afterward.\n",
+      "text_sha256": "de4b9b337c2d68efb807016ba458ed86ffd9e76eefb28f987cc500608cc4df1f",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Somatic Work and Inner-Child Reparenting\nThe thing I notice around the solar plexus or abdomen is that when I can get it to relax a little, heart-chakra love gets easier to feel. EFT can help me do that; so can Somatic Experiencing, trauma-sensitive yoga, gentle shaking or qigong, non-forced longer exhales, and gentle Buteyko-style breathing.\nAnd then: you don't have to immediately go looking for the trauma. Think of somebody you already love. A pet is fine. A baby, a friend, a partner, whoever. Feel that love first. Then see if a little of it can move down from the heart toward the younger part around the solar plexus, and back up again. That is the loop. This can happen long before Job 5.\nIf you're so flooded or identified with the child-state that you can't find a Nurturer or Protector at all, start smaller. Look around the room. Get help from outside. Borrow an adult perspective, find a neutral witness, or do one ordinary Protector action. Gentle self-hypnosis can fit here too if it stays in the present.\nI would leave deep hypnosis, immersive child dialogue, suggestive exploration, and the rest of the deep memory work until you can stay present, stop when you want to, and come back to ordinary life afterward.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Somatic Work and Inner-Child Reparenting\nThe thing I notice around the solar plexus or abdomen is that when I can get it to relax a little, heart-chakra love gets easier to feel. EFT can help me do that; so can Somatic Experiencing, trauma-sensitive yoga, gentle shaking or qigong, non-forced longer exhales, and gentle Buteyko-style breathing.\nAnd then: you don't have to immediately go looking for the trauma. Think of somebody you already love. A pet is fine. A baby, a friend, a partner, whoever. Feel that love first. Then see if a little of it can move down from the heart toward the younger part around the solar plexus, and back up again. That is the loop. This can happen long before Job 5.\nIf you're so flooded or identified with the child-state that you can't find a Nurturer or Protector at all, start smaller. Look around the room. Get help from outside. Borrow an adult perspective, find a neutral witness, or do one ordinary Protector action. Gentle self-hypnosis can fit here too if it stays in the present.\nI would leave deep hypnosis, immersive child dialogue, suggestive exploration, and the rest of the deep memory work until you can stay present, stop when you want to, and come back to ordinary life afterward.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9906484484672546,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1232,
+            "word_count": 214,
+            "token_length": 287,
+            "is_humanized": false,
+            "humanizer_score": 0.30152085423469543
+          }
+        ]
+      },
+      "section_id": "inner-child-overlap",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-therapies-inner-child-20260822",
+  "call_accounting": {
+    "audit_id": "somatic-therapies-inner-child-20260822",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
+        "model": "pangram-4",
+        "paid_api_calls": 4,
+        "pending_resumes": 0,
+        "section_id": "inner-child-overlap",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
