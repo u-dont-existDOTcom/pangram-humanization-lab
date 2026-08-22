@@ -6,4 +6,6 @@ For preservation-oriented work, an explicit owner-supplied or higher-authority s
 
 Mark an authorial question unresolved only when two materially different meanings or identity choices remain genuinely compatible with the available owner/source evidence and choosing between them would change what the passage says or does. Optional stylistic improvements, hypothetical alternatives, and model curiosity about changing an existing source choice are not authorial ambiguity.
 
+When no genuine unresolved owner question exists, set `semantic_sanity.owner_question` to the exact empty string. Do not write `None`, `No owner question`, or an explanation in that field.
+
 Return: section job, authority units, exact-lock reasons, and genuinely unresolved authorial questions. Do not make source order mandatory merely because it exists, but do not manufacture uncertainty about a source choice merely because editing it would be possible.

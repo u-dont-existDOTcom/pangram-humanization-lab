@@ -4,7 +4,7 @@ import json
 import os
 from pathlib import Path
 import shutil
-from typing import Mapping
+from typing import Any, Mapping
 
 from ..artifacts import ArtifactStore
 from ..pause import OperationContext
@@ -16,6 +16,51 @@ from .common import (
     stops_provider_fallback, unique_model_profiles, validate_json_schema,
     validate_schema_contract,
 )
+
+
+_NO_OWNER_QUESTION_EXACT = {
+    "none",
+    "none.",
+    "no owner question",
+    "no owner question.",
+    "no owner questions",
+    "no owner questions.",
+    "no unresolved owner question",
+    "no unresolved owner question.",
+    "no unresolved owner questions",
+    "no unresolved owner questions.",
+}
+
+
+def _normalize_representation_output(parsed: Any, role: str) -> Any:
+    """Normalize only explicit no-question sentinels from representation output.
+
+    This is deliberately conservative. A nonempty owner question remains untouched unless
+    the model has explicitly said there is no question. In particular, generic strings
+    beginning with "no" are never erased merely because of their prefix.
+    """
+    if role != "representation" or not isinstance(parsed, dict):
+        return parsed
+    sanity = parsed.get("semantic_sanity")
+    if not isinstance(sanity, dict):
+        return parsed
+    raw = str(sanity.get("owner_question") or "").strip()
+    if not raw:
+        return parsed
+    folded = " ".join(raw.casefold().split())
+    explicit_none = folded in _NO_OWNER_QUESTION_EXACT
+    observed_machine_resolvable_none = (
+        folded.startswith("none.")
+        and "owner context resolves" in folded
+        and "machine-resolvable" in folded
+    )
+    if not (explicit_none or observed_machine_resolvable_none):
+        return parsed
+    normalized = dict(parsed)
+    normalized_sanity = dict(sanity)
+    normalized_sanity["owner_question"] = ""
+    normalized["semantic_sanity"] = normalized_sanity
+    return normalized
 
 
 class CodexCLI:
@@ -104,6 +149,7 @@ class CodexCLI:
                 try:
                     parsed = json.loads(output_path.read_text(encoding="utf-8"))
                     validate_json_schema(parsed, call.schema)
+                    parsed = _normalize_representation_output(parsed, call.role)
                 except Exception as exc:
                     attempts.append(ModelAttempt(
                         resolved, result.returncode, out_ref, err_ref,
