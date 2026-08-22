@@ -3790,6 +3790,29 @@
           "section_id": "part1-preservation-r17-owner-talk"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T21:10:31.632885+00:00",
+      "experiment_id": "romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-part1-aggregate-20260822",
+      "id": "Q-962453dd8ef00f0b",
+      "sections": [
+        "part1-preservation-r18-owner-talk-dedup"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-part1-aggregate-20260822-results.json",
+      "source_ref": "767d707aba7d6d7b5b819dadc8cf4f2fce9c34c4",
+      "source_sha256": "31ecbb69ac4c4cb3a9906e6ee68bdb5e4d754c836fe83533a96f2eb1ff5301a9",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.06550218164920807,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9344978332519531,
+          "id": "PRESERVATION_R18_OWNER_TALK_DEDUP_PART1",
+          "prediction_short": "Human",
+          "section_id": "part1-preservation-r18-owner-talk-dedup"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
