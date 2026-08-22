@@ -1,0 +1,127 @@
+name: Freeze Somatic Therapies r01 aggregate
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-somatic-therapies-r01-aggregate.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Fetch canonical Somatic Therapies r01 and freeze aggregate spec
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/0ff49c99fdfe275b596bda72c1338f80fec14941/articles/somatic-therapies/master.html'
+          curl --fail --silent --show-error --location "$URL" -o /tmp/master.html
+          echo '1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202  /tmp/master.html' | sha256sum -c -
+          python - <<'PY'
+          import hashlib
+          import json
+          import re
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          VOID = {'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
+          SKIP_CLASSES = {'captioned-image-container','digest-post-embed','youtube-wrap','button-wrapper'}
+
+          class ReaderTextParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.in_root = False
+                  self.root_depth = 0
+                  self.top_active = False
+                  self.top_skip = False
+                  self.buf = []
+                  self.lines = []
+
+              def handle_starttag(self, tag, attrs):
+                  data = dict(attrs)
+                  if not self.in_root:
+                      if data.get('data-testid') == 'editor':
+                          self.in_root = True
+                          self.root_depth = 1
+                      return
+                  new_depth = self.root_depth + 1
+                  if new_depth == 2:
+                      classes = set((data.get('class') or '').split())
+                      self.top_skip = tag == 'hr' or bool(classes & SKIP_CLASSES)
+                      self.buf = []
+                      self.top_active = True
+                  if tag not in VOID:
+                      self.root_depth = new_depth
+                  elif new_depth == 2 and self.top_active:
+                      self._finish_top()
+
+              def handle_startendtag(self, tag, attrs):
+                  self.handle_starttag(tag, attrs)
+
+              def handle_endtag(self, tag):
+                  if not self.in_root:
+                      return
+                  if self.root_depth == 2 and self.top_active:
+                      self._finish_top()
+                  self.root_depth -= 1
+                  if self.root_depth == 0:
+                      self.in_root = False
+
+              def handle_data(self, data):
+                  if self.in_root and self.top_active and not self.top_skip and data.strip():
+                      self.buf.append(data)
+
+              def _finish_top(self):
+                  if not self.top_skip:
+                      text = re.sub(r'\s+', ' ', ' '.join(self.buf)).strip()
+                      if text:
+                          self.lines.append(text)
+                  self.buf = []
+                  self.top_active = False
+                  self.top_skip = False
+
+          raw = Path('/tmp/master.html').read_text(encoding='utf-8')
+          parser = ReaderTextParser()
+          parser.feed(raw)
+          text = '\n'.join(parser.lines) + '\n'
+          text_bytes = text.encode('utf-8')
+          text_sha = hashlib.sha256(text_bytes).hexdigest()
+          expected_text_sha = '613c3514844097ee4bd31e227a4624bde37cca280e8a3a15b566c92a51b25c1e'
+          if text_sha != expected_text_sha:
+              raise SystemExit(f'reader-visible hash mismatch: {text_sha} != {expected_text_sha}')
+
+          spec_path = Path('experiments/somatic-therapies-r01-full-20260822-a.json')
+          spec = {
+              'format': 'pangram-fixed-batch-v1',
+              'experiment_id': 'somatic-therapies-r01-full-20260822-a',
+              'audit_id': 'somatic-therapies-r01-humanization-20260822',
+              'variants': [{
+                  'id': 'R01_FULL',
+                  'section_id': 'somatic-therapies-r01-full',
+                  'budget_scope': 'aggregate',
+                  'text': text,
+              }],
+          }
+          spec_bytes = (json.dumps(spec, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+          spec_path.write_bytes(spec_bytes)
+          Path(str(spec_path) + '.sha256').write_text(hashlib.sha256(spec_bytes).hexdigest() + '\n', encoding='utf-8')
+          print(f'reader_visible_sha256={text_sha}')
+          print(f'spec_sha256={hashlib.sha256(spec_bytes).hexdigest()}')
+          PY
+      - name: Commit exact spec
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            experiments/somatic-therapies-r01-full-20260822-a.json \
+            experiments/somatic-therapies-r01-full-20260822-a.json.sha256
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Somatic Therapies r01 aggregate spec'
+          git push origin HEAD:automation/pangram-fixed-batch
