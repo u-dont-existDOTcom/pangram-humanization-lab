@@ -389,8 +389,8 @@
     "part1-slow-steady\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "budget_scope": "section",
@@ -400,10 +400,19 @@
           "text_sha256": "114de8d6f9e9b5fa708ac53f715a1a311f9a085434083e93763ae607bad7da0f",
           "type": "paid_post_reserved",
           "word_count": 224
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "romance-detector-repair-20260820-slow-steady-r11-20260822_SLOW_STEADY_R11",
+          "recorded_at_utc": "2026-08-22T07:43:55.453630+00:00",
+          "text_sha256": "2def6737f8763f6e3a92405166dd27f9d0e30ec043a57a216ffbc05bf6bb72f4",
+          "type": "paid_post_reserved",
+          "word_count": 540
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "part1-slow-steady",
       "version": "4.0"
