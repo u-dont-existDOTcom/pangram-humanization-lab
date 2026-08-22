@@ -804,8 +804,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/prompts/represent.md",
-      "sha256": "0ef97ded0d7c8a06493efa549e33d91f24dc662c0d7e5707e83d9c3a1bcb5c16",
-      "size_bytes": 605
+      "sha256": "59ffbc67118adf4e3729726ff25fdac0e9c02c8b4ce0569efc72894b079deb86",
+      "size_bytes": 1641
     },
     {
       "executable": false,
@@ -816,8 +816,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/prompts/semantic_sanity.md",
-      "sha256": "5a480e879a672de172d7c15d36e851cbb1bb3307a372e23bb282bc10e0e23482",
-      "size_bytes": 493
+      "sha256": "e6eab57a4786b2becdfc89dc38b5c41b18de0ed023e606020a0528a232d01eaa",
+      "size_bytes": 1203
     },
     {
       "executable": false,
@@ -1283,6 +1283,12 @@
     },
     {
       "executable": false,
+      "path": "tests/unit/test_representation_preservation_default.py",
+      "sha256": "032594c706cf66a6c3c14664d17a80c373049c5129b6ef9b9e6f57226188b707",
+      "size_bytes": 994
+    },
+    {
+      "executable": false,
       "path": "tests/unit/test_research_provenance.py",
       "sha256": "61d44281913e301f1e7178172abe1197a62be957d59cc00c1f22fe89c4265f34",
       "size_bytes": 1037
@@ -1313,5 +1319,5 @@
     }
   ],
   "policy_version": "joel-articles-4.12.0-candidate",
-  "source_commit_sha": "1ed53d4c736902e1f6ce0f8d28a274788b2b9cd1"
+  "source_commit_sha": "267a5ea5faf2a116cda374177109a350f8da789d"
 }
