@@ -1,0 +1,66 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-therapies-intro-r06-owner-language-20260822-a",
+  "spec_sha256": "291269bd43d2da47518d361d89db2bcbc5e282cefb908a281020b8e64130f045",
+  "results": [
+    {
+      "id": "INTRO_R06_OWNER_LANGUAGE",
+      "measurement_key": "somatic-therapies-intro-r06-owner-language-20260822-a_INTRO_R06_OWNER_LANGUAGE",
+      "text": "Introduction\n\nI originally had this as a five-step sequence:\n\n1. Somatic Experiencing\n2. Shaking Qigong / TRE\n3. Brainspotting\n4. EMDR (only if needed)\n5. Light CBT for meaning-making\n\nRegulation → discharge → processing → integration → narrative.\n\nI still think that is a useful way to see the general movement. I just don't want to prescribe a rigid formula. The same modality can do very different jobs depending on function, dose, target, and capacity.\n\nFor example, gentle shaking can help somebody settle enough to stay present, while a longer shaking practice can be used for discharge. Brainspotting can be used for resourcing or for going into diffuse, pre-verbal, bodily, hard-to-narrate trauma. EMDR makes more sense to me when there is a discrete traumatic memory or specific trigger to work on. Somebody with one clear target may be ready for it long before somebody with a giant mess of developmental trauma.\n\nAnd some of this can happen at the same time. EFT, qi gong/shaking, breathing, yoga, Somatic Experiencing, Brainspotting, and gentle present-focused self-hypnosis can all prepare for inner-child work or run alongside it. Deep hypnosis or deep memory work is a different story.\n\nMore processing is not always better. Often the missing piece is integration. And intensity is not the same thing as healing.\n\nSo the map below is about jobs more than modalities: staying present and keeping choice, keeping activation from piling up, working with material that is more body than story, working with a specific memory or trigger, and making sense of what changed afterward. You can need several of those at once.\n",
+      "text_sha256": "e12d0506d2e13c1dfbbdcb9c30a89c61e40c67b47734d9a78bb4e29c9b72a199",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Introduction\nI originally had this as a five-step sequence:\n1. Somatic Experiencing\n2. Shaking Qigong / TRE\n3. Brainspotting\n4. EMDR (only if needed)\n5. Light CBT for meaning-making\nRegulation → discharge → processing → integration → narrative.\nI still think that is a useful way to see the general movement. I just don't want to prescribe a rigid formula. The same modality can do very different jobs depending on function, dose, target, and capacity.\nFor example, gentle shaking can help somebody settle enough to stay present, while a longer shaking practice can be used for discharge. Brainspotting can be used for resourcing or for going into diffuse, pre-verbal, bodily, hard-to-narrate trauma. EMDR makes more sense to me when there is a discrete traumatic memory or specific trigger to work on. Somebody with one clear target may be ready for it long before somebody with a giant mess of developmental trauma.\nAnd some of this can happen at the same time. EFT, qi gong/shaking, breathing, yoga, Somatic Experiencing, Brainspotting, and gentle present-focused self-hypnosis can all prepare for inner-child work or run alongside it. Deep hypnosis or deep memory work is a different story.\nMore processing is not always better. Often the missing piece is integration. And intensity is not the same thing as healing.\nSo the map below is about jobs more than modalities: staying present and keeping choice, keeping activation from piling up, working with material that is more body than story, working with a specific memory or trigger, and making sense of what changed afterward. You can need several of those at once.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Introduction\nI originally had this as a five-step sequence:\n1. Somatic Experiencing\n2. Shaking Qigong / TRE\n3. Brainspotting\n4. EMDR (only if needed)\n5. Light CBT for meaning-making\nRegulation → discharge → processing → integration → narrative.\nI still think that is a useful way to see the general movement. I just don't want to prescribe a rigid formula. The same modality can do very different jobs depending on function, dose, target, and capacity.\nFor example, gentle shaking can help somebody settle enough to stay present, while a longer shaking practice can be used for discharge. Brainspotting can be used for resourcing or for going into diffuse, pre-verbal, bodily, hard-to-narrate trauma. EMDR makes more sense to me when there is a discrete traumatic memory or specific trigger to work on. Somebody with one clear target may be ready for it long before somebody with a giant mess of developmental trauma.\nAnd some of this can happen at the same time. EFT, qi gong/shaking, breathing, yoga, Somatic Experiencing, Brainspotting, and gentle present-focused self-hypnosis can all prepare for inner-child work or run alongside it. Deep hypnosis or deep memory work is a different story.\nMore processing is not always better. Often the missing piece is integration. And intensity is not the same thing as healing.\nSo the map below is about jobs more than modalities: staying present and keeping choice, keeping activation from piling up, working with material that is more body than story, working with a specific memory or trigger, and making sense of what changed afterward. You can need several of those at once.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9998627305030823,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1622,
+            "word_count": 265,
+            "token_length": 360,
+            "is_humanized": false,
+            "humanizer_score": 0.38140469789505005
+          }
+        ]
+      },
+      "section_id": "introduction",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-therapies-intro-20260822",
+  "call_accounting": {
+    "audit_id": "somatic-therapies-intro-20260822",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
+        "model": "pangram-4",
+        "paid_api_calls": 4,
+        "pending_resumes": 0,
+        "section_id": "introduction",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
