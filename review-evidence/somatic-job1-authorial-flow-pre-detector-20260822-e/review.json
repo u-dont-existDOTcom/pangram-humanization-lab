@@ -1,0 +1,40 @@
+{
+  "candidate_available": false,
+  "candidate_hard_pass": false,
+  "candidate_material_route": "",
+  "candidate_ref": "",
+  "candidate_role": "",
+  "candidate_sha256": "",
+  "detector_submission_attempted": false,
+  "failure": {
+    "accepted_move_count": 0,
+    "decision_trace": {},
+    "failure_class": "",
+    "failure_evidence_ref": "",
+    "failure_origin_node": "",
+    "final_local_gates": {
+      "regressions_hard_pass": true
+    },
+    "generation_rejection_class": "",
+    "move_index": 0,
+    "repair_attempt": 0,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "source_provenance": "OWNER_DRAFT",
+    "task_mode": "P2",
+    "uncovered_required_count": 0
+  },
+  "format": "authorial-flow-pre-detector-review-v1",
+  "interrupt_kind": "AUTHORIAL_AMBIGUITY",
+  "interrupt_question": "Authorial questions: (1) Does “3–6 months” describe time in Somatic Experiencing, time spent building capacity, or the whole Job 1 boundary—and is it an owner belief or a source-backed estimate? (2) Is “first” meant to survive only as a conditional possibility for some readers, or should all first-stage framing be removed? (3) Does “flexibility” mean physical flexibility, nervous-system/response flexibility, or both? (4) Should the reader-facing section explicitly name the high-dissociation, instability, active-danger, and insufficient-support boundary, or is that handled elsewhere? (5) Who is intended to judge presence, stopping ability, stability, and sufficient support: the reader, a practitioner, or both? Machine reasoning can resolve the sequence contradiction, missing actors, heading mismatch, quote attribution, and yin/long-hold distinction. Bounded research can assess the empirical modality, causality, outcome, safety, and duration claims, but cannot decide the owner’s intended meaning or acceptable framing.",
+  "phase": "representation",
+  "repair_rounds": 0,
+  "request_id": "somatic-job1-authorial-flow-pre-detector-20260822-e",
+  "research_discovery_attempted": false,
+  "source_commit": "819d78750e576c9ad131d75008ed6b7b8f94cff1",
+  "source_path": "articles/somatic-therapies/experiments/JOB1-AUTHORIAL-FLOW-INPUT-V3-20260822.md",
+  "source_sha256": "52a63183d11f9aad144bf0f3a9d30366b890d48cba04e818424f9692edae349e",
+  "status": "owner_ambiguity_required",
+  "thread_id": "895e45542aa2ad36b50c150fbde0eb4f0221633c58a4a18a3158923a2e1083e3",
+  "tool_ref": "c87eec03540ef0ac5bbdcbf35b85286759252e67"
+}
