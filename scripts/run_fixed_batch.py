@@ -18,6 +18,7 @@ from pangram_lab.result_paths import (
     result_is_complete,
 )
 from pangram_lab.review_registration import register_result
+from pangram_lab.text_sources import resolve_text_sources
 from pangram_lab.tracked_pangram import TrackedPangramClient
 
 
@@ -44,7 +45,11 @@ def main() -> int:
     args = parser.parse_args()
 
     root = Path(__file__).resolve().parents[1]
-    spec = load_spec(args.spec, max_variants=args.max_variants)
+    registered_spec = load_spec(args.spec, max_variants=args.max_variants)
+    # Resolve only immutable, hash-bound sources. result_paths.spec_sha256 strips
+    # the derived runtime text when text_source is present, so experiment
+    # identity remains exactly the registered source metadata.
+    spec = resolve_text_sources(registered_spec)
     output_path = resolve_result_path(root, spec, args.out)
     existing = load_compatible_existing_result(spec, output_path)
     if existing is not None and result_is_complete(spec, existing):
