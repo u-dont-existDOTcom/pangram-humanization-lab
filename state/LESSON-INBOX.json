@@ -3580,6 +3580,38 @@
           "section_id": "part1-preservation-r12"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T08:09:13.795459+00:00",
+      "experiment_id": "romance-detector-repair-20260820-preservation-r13-natural-split-aggregates-20260822",
+      "id": "Q-13ed36c3185bb626",
+      "sections": [
+        "part1-preservation-r13-natural-split",
+        "part2-preservation-r13-natural-split"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r13-natural-split-aggregates-20260822-results.json",
+      "source_ref": "e01c4122a549b2ea0fdfb11a550e7531d690b100",
+      "source_sha256": "a0a9a42ebe08d5abc0c0a15524224bbb2f2268fa929a89a79a202e7c1ba0fc0d",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.038111623376607895,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9618883728981018,
+          "id": "PRESERVATION_R13_PART1",
+          "prediction_short": "Human",
+          "section_id": "part1-preservation-r13-natural-split"
+        },
+        {
+          "fraction_ai": 0.038443028926849365,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9615569710731506,
+          "id": "PRESERVATION_R13_PART2",
+          "prediction_short": "Human",
+          "section_id": "part2-preservation-r13-natural-split"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
