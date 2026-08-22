@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "candidate_id": "romance-detector-repair-20260820-preservation-r15-old-split",
+  "article_prose": {
+    "source": "joel-articles task/romance-detector-repair-20260820 r14 canonical-Affection candidate",
+    "master_sha256": "fafdc70e9f9a3554e1fb46bd7d4e011db77379f1993629f7885e90ac9c9c1cf2",
+    "full_reader_visible_sha256": "6db337289008c2d150a312f17794ef6c19469a74a773c767a452b5c0460132e1",
+    "unchanged_from_r14": true
+  },
+  "source_halves": {
+    "r14_part1_sha256": "d2374e29f0c08b979ffa78bfe6ce8949fa867abe41cc35d68feb9d2461a10d64",
+    "r14_part2_sha256": "c20e97cd3b168b4c9c7f5688a8e5c8f0a6d7fc558b875bc0ce02538c3579c515"
+  },
+  "operation": {
+    "type": "aggregate_boundary_relocation_only",
+    "from": "immediately before complete Maturity section",
+    "to": "previous preservation-r12 split immediately before Key/guru continuation",
+    "article_prose_changed": false,
+    "reason": "r14 boundary-only move caused formerly 100%-Human old Part-2 prose to regress to 95.6538856% Human with four AI windows; restore the exact known-successful Part-2 boundary while retaining r14 canonical Affection prose."
+  },
+  "candidate": {
+    "part1_path": "state/candidates/romance-detector-repair-20260820-preservation-r15-old-split-part1.txt",
+    "part1_sha256": "ba2bb4d66c541732e03a181f31eb5419c8301c870330bd4bcd946626c8161fcf",
+    "part1_word_count_whitespace": 10340,
+    "part2_sha256": "9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85",
+    "part2_word_count_whitespace": 9892,
+    "part2_exact_prior_human": 1.0,
+    "full_reassembles_exact_r14_reader_visible": true
+  },
+  "detector_plan": "After a preservation-proof receipt is committed in joel-articles, measure only exact r15 Part 1. Reuse prior exact Part-2 Pangram 4.0 100% Human evidence; do not rerun Part 2."
+}
