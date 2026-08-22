@@ -1,0 +1,99 @@
+name: Freeze Romance r18 owner Talk dedup
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-r18-owner-talk-dedup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+          fetch-depth: 0
+      - name: Materialize exact r18 Part 1
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          src = Path('state/candidates/romance-detector-repair-20260820-preservation-r17-owner-talk-part1.txt')
+          text = src.read_text(encoding='utf-8')
+          if hashlib.sha256(text.encode()).hexdigest() != '0e32a7c1482f5a1e6c4fe5aaba492743bc5cc0d96e860518fb8c4a62c379ca08':
+              raise SystemExit('r17 source SHA mismatch')
+
+          old = "Most couples don’t talk honestly about sex until they’re already having it. Bad timing. Now saying what you actually want might interrupt the whole thing, disappoint somebody, or turn a moment of passion into a negotiation. Talk before you’re naked. That conversation is already part of making love."
+          new = "That conversation is already part of making love."
+          owner = "It's important to talk about sexual compatibility before getting undressed, even if that kills the vibe. I remember reading a Christian magazine's letter from a newlywed Christian woman who found out that her husband didn't have much interest in sex after she saved herself for marriage. He trapped her, because he knew she would not feel good about divorce due to the religion. Of course, it didn't have to be nefarious. I had a relationship with E. that was a bit like that about 15yrs ago. She wanted sex once a week and it was driving me nuts because my libido was thru the roof. She also had no interest in trying to take any herb to increase her desire. Of course everyone does change over time as well, so communication should remain open beyond a simple interview."
+          if text.count(old) != 1:
+              raise SystemExit(f'old timing paragraph count={text.count(old)}')
+          if hashlib.sha256(owner.encode()).hexdigest() != '68716bc63f5a0b84945cb33cf12595ee9fcacbd48cad05e607e862e62d925ff0':
+              raise SystemExit('owner paragraph constant SHA mismatch')
+          if text.count(owner) != 1:
+              raise SystemExit('owner paragraph not unique')
+
+          candidate = text.replace(old, new, 1)
+          protected = [
+              owner,
+              "What I eventually took from my dad's advice was a bigger question: would we like to raise children together? Are we ready?",
+              "And can you actually say all that once you're naked? Even if you think she'll be disappointed?",
+              "Bodies fitting is not enough. Can you stay honest while you’re completely exposed?",
+              "This will naturally prevent sex from happening too soon if we can talk about it with each other.",
+              "If we can't, that's a red flag for the relationship's chances of success.",
+          ]
+          missing = [p for p in protected if p not in candidate]
+          if missing:
+              raise SystemExit(f'protected Talk anchors missing: {missing}')
+
+          out = Path('state/candidates/romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-part1.txt')
+          out.write_text(candidate, encoding='utf-8')
+          freeze = {
+              'schema_version': 1,
+              'candidate_id': 'romance-detector-repair-20260820-preservation-r18-owner-talk-dedup',
+              'source': {
+                  'path': str(src),
+                  'sha256': hashlib.sha256(text.encode()).hexdigest(),
+                  'word_count_whitespace': len(text.split()),
+              },
+              'candidate': {
+                  'path': str(out),
+                  'sha256': hashlib.sha256(candidate.encode()).hexdigest(),
+                  'word_count_whitespace': len(candidate.split()),
+                  'part2_sha256': '9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85',
+                  'part2_exact_prior_human': 1.0,
+              },
+              'operation': {
+                  'type': 'duplicate-function-consolidation',
+                  'old_sha256': hashlib.sha256(old.encode()).hexdigest(),
+                  'new_sha256': hashlib.sha256(new.encode()).hexdigest(),
+                  'old_word_count': len(old.split()),
+                  'new_word_count': len(new.split()),
+                  'owner_paragraph_sha256_unchanged': hashlib.sha256(owner.encode()).hexdigest(),
+              },
+              'protected_neighbor_functions_preserved': True,
+              'unexplained_deltas': 0,
+              'detector_plan': 'After joel-articles preservation proof is updated to exact candidate identity and eligible, measure only aggregate Part 1. Reuse exact prior 100%-Human Part 2; no local Talk call.',
+          }
+          Path('state/experiments/romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-freeze.json').write_text(json.dumps(freeze, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(freeze, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit frozen r18 candidate
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            state/candidates/romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-part1.txt \
+            state/experiments/romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-freeze.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance r18 owner Talk dedup candidate'
+          git push origin HEAD:automation/pangram-fixed-batch
