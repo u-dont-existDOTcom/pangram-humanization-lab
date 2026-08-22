@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "pangram-async-api-history-boundary-2026-08-22",
+  "source_path": "state/PANGRAM-ASYNC-API-HISTORY-BOUNDARY-2026-08-22.md",
+  "source_ref": "agent/async-api-history-boundary-20260822",
+  "source_sha256": "e4fc772dfce47c22970508639e82951cec1778ae6bb8683646c9e7e2e7bf0470",
+  "finding": "Authenticated Pangram web-History absence is not valid negative evidence for the current async API route: a known-success async API measurement was absent from the same History surface, so ambiguous API reservations must remain blocked unless transport-appropriate durable task/cache/ledger evidence resolves them.",
+  "disposition": "promoted",
+  "reason": "This is a reusable paid-call safety rule across detector tasks, not Somatic-specific prose behavior.",
+  "promoted_to": [
+    "state/LESSON-INDEX.md",
+    "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
+  ],
+  "index_block": "<!-- closeout-request:pangram-async-api-history-boundary-2026-08-22 -->\n- **Async API History boundary:** do not clear an ambiguous async Pangram API reservation from web-History absence. First prove a known-success control from the same transport/configuration is recoverable there; the current async route failed that control, so resolve repeats from task-id/cache/ledger or other transport-appropriate exact evidence. See `state/PANGRAM-ASYNC-API-HISTORY-BOUNDARY-2026-08-22.md`.\n",
+  "lesson_block": "<!-- closeout-request:pangram-async-api-history-boundary-2026-08-22 -->\n### Async API reservations cannot be cleared by web-History absence\nFor the current self-hosted Pangram async API route, authenticated web History is not an adjudicator of whether a paid API submission occurred. A known-success async API control was absent from the same History surface that also failed to find the ambiguous Shaking scan. Therefore absence is non-evidence for repeat authorization: keep the reservation counted and blocked unless durable task-id/cache/ledger evidence or another transport-appropriate exact record resolves it. Before using History absence for any transport, validate the surface with a known-success positive control from that same transport/configuration. Read-only recovery must remain mechanically unable to POST.\n",
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
+}
