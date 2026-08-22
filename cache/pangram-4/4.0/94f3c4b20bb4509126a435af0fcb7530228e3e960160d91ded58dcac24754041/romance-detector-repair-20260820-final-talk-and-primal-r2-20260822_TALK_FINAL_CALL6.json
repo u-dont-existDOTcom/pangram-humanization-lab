@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-final-talk-and-primal-r2-20260822_TALK_FINAL_CALL6",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.6363279819488525,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.36367201805114746,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Talk about making love before you do it\nFrom here on, when I say making love, I'm talking about two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced this, it may be like trying to explain the taste of an orange. If you don’t know what love is, you don’t know. That’s another conversation, and I'd suggest reading my inner child reparenting guide.\nHaving sex is just the physical act, whether that connection is there or not. But sometimes it can create the connection also.\nWhat I eventually took from my dad's advice was a bigger question: would we like to raise children together? Are we ready? If we can really talk about raising children together, most of the other important questions come up on their own. What kind of life do I want? What kind of life do you want? What would we want for a child? What would sex mean between us?\nMost couples don't talk honestly about any of this until they're already having sex. Bad timing. Once we're naked, saying what we really want may interrupt the whole thing, disappoint somebody, or turn a moment of passion into a negotiation. I'd rather find out before then.\nWhat do you actually want? What makes your body relax and open? Is there anything kinky you need to be able to say out loud? What has your past made you want or avoid? What just doesn't work? Neither of us has to know every answer yet. “I don't know, but I'm willing to find out honestly with you” is a perfectly good answer.\nSex doesn't even have to mean the same thing every time. One person may be looking for bonding while the other wants play. Sometimes it feels sacred; another time it may just be how you come down from a bad day. Our sex drives will change too. Sooner or later one of us will want more, less, or something different. I'd rather talk about that before anybody is hurt than discover, after months of quiet resentment, that we can't talk about it at all.\nAnd once we're naked, can we still say the uncomfortable thing if one of us thinks the other will be disappointed? Bodies fitting isn't enough. The honesty has to survive being completely exposed.\nTalking about this before our clothes come off already practices some of the trust, attention, and willingness to be seen that making love needs. It also naturally slows sex down. If we can't talk about whether we'd want to raise a child together, what sex means to us, or what we actually want from each other, that's a red flag for the relationship's chances of success.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.12698803842067719,
+        "confidence": "High",
+        "end_index": 927,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Talk about making love before you do it\nFrom here on, when I say making love, I'm talking about two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced this, it may be like trying to explain the taste of an orange. If you don’t know what love is, you don’t know. That’s another conversation, and I'd suggest reading my inner child reparenting guide.\nHaving sex is just the physical act, whether that connection is there or not. But sometimes it can create the connection also.\nWhat I eventually took from my dad's advice was a bigger question: would we like to raise children together? Are we ready? If we can really talk about raising children together, most of the other important questions come up on their own. What kind of life do I want? What kind of life do you want? What would we want for a child? What would sex mean between us?",
+        "token_length": 200,
+        "word_count": 169
+      },
+      {
+        "ai_assistance_score": 0.8146212100982666,
+        "confidence": "High",
+        "end_index": 2549,
+        "humanizer_score": 0.02638133428990841,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 927,
+        "text": "\nMost couples don't talk honestly about any of this until they're already having sex. Bad timing. Once we're naked, saying what we really want may interrupt the whole thing, disappoint somebody, or turn a moment of passion into a negotiation. I'd rather find out before then.\nWhat do you actually want? What makes your body relax and open? Is there anything kinky you need to be able to say out loud? What has your past made you want or avoid? What just doesn't work? Neither of us has to know every answer yet. “I don't know, but I'm willing to find out honestly with you” is a perfectly good answer.\nSex doesn't even have to mean the same thing every time. One person may be looking for bonding while the other wants play. Sometimes it feels sacred; another time it may just be how you come down from a bad day. Our sex drives will change too. Sooner or later one of us will want more, less, or something different. I'd rather talk about that before anybody is hurt than discover, after months of quiet resentment, that we can't talk about it at all.\nAnd once we're naked, can we still say the uncomfortable thing if one of us thinks the other will be disappointed? Bodies fitting isn't enough. The honesty has to survive being completely exposed.\nTalking about this before our clothes come off already practices some of the trust, attention, and willingness to be seen that making love needs. It also naturally slows sex down. If we can't talk about whether we'd want to raise a child together, what sex means to us, or what we actually want from each other, that's a red flag for the relationship's chances of success.",
+        "token_length": 354,
+        "word_count": 293
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "e9b54e9b-6e92-4481-8a19-62fbcefe1a70",
   "text": "Talk about making love before you do it\n\nFrom here on, when I say making love, I'm talking about two people who care about each other deeply and feel super connected, using their bodies as part of that connection. If you’ve never experienced this, it may be like trying to explain the taste of an orange. If you don’t know what love is, you don’t know. That’s another conversation, and I'd suggest reading my inner child reparenting guide.\n\nHaving sex is just the physical act, whether that connection is there or not. But sometimes it can create the connection also.\n\nWhat I eventually took from my dad's advice was a bigger question: would we like to raise children together? Are we ready? If we can really talk about raising children together, most of the other important questions come up on their own. What kind of life do I want? What kind of life do you want? What would we want for a child? What would sex mean between us?\n\nMost couples don't talk honestly about any of this until they're already having sex. Bad timing. Once we're naked, saying what we really want may interrupt the whole thing, disappoint somebody, or turn a moment of passion into a negotiation. I'd rather find out before then.\n\nWhat do you actually want? What makes your body relax and open? Is there anything kinky you need to be able to say out loud? What has your past made you want or avoid? What just doesn't work? Neither of us has to know every answer yet. “I don't know, but I'm willing to find out honestly with you” is a perfectly good answer.\n\nSex doesn't even have to mean the same thing every time. One person may be looking for bonding while the other wants play. Sometimes it feels sacred; another time it may just be how you come down from a bad day. Our sex drives will change too. Sooner or later one of us will want more, less, or something different. I'd rather talk about that before anybody is hurt than discover, after months of quiet resentment, that we can't talk about it at all.\n\nAnd once we're naked, can we still say the uncomfortable thing if one of us thinks the other will be disappointed? Bodies fitting isn't enough. The honesty has to survive being completely exposed.\n\nTalking about this before our clothes come off already practices some of the trust, attention, and willingness to be seen that making love needs. It also naturally slows sex down. If we can't talk about whether we'd want to raise a child together, what sex means to us, or what we actually want from each other, that's a red flag for the relationship's chances of success.\n",
   "text_sha256": "94f3c4b20bb4509126a435af0fcb7530228e3e960160d91ded58dcac24754041",
-  "updated_utc": "2026-08-22T01:21:30.775338+00:00"
+  "updated_utc": "2026-08-22T01:21:42.435312+00:00"
 }
