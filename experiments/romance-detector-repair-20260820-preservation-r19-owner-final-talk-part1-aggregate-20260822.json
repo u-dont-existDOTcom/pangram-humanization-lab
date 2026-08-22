@@ -1,0 +1,18 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "romance-detector-repair-20260820-preservation-r19-owner-final-talk-part1-aggregate-20260822",
+  "audit_id": "romance-detector-repair-20260820",
+  "variants": [
+    {
+      "id": "PRESERVATION_R19_OWNER_FINAL_TALK_PART1",
+      "section_id": "part1-preservation-r19-owner-final-talk",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "85b6057fb5cc8ced6a5e38bd7a78df82e7d78cbc",
+        "text_sha256": "ca42804f9774e66423caba07be4db4123a80ecb0b61e7a75d1ae2db271a8b9f5"
+      }
+    }
+  ]
+}
