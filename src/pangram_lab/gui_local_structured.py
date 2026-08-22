@@ -404,25 +404,38 @@ def recover_existing_report(
         except Exception:
             pass
 
+    directory.mkdir(parents=True, exist_ok=True)
     exact_text = str(item["text"])
     exact_records: list[ExactHistoryRecord] = []
     history_candidates: list[HistoryListCandidate] = []
     record_listener = _record_listener(exact_text, exact_records)
     list_listener = _history_list_listener(history_candidates)
 
-    playwright, context, page = local._launch_persistent_context(config)
-    record_attached = _attach(context, record_listener)
-    list_attached = _attach(context, list_listener)
-    report_page = page
+    stage = "launch_browser"
+    playwright = None
+    context = None
+    page = None
+    report_page = None
+    record_attached = False
+    list_attached = False
     try:
+        playwright, context, page = local._launch_persistent_context(config)
+        report_page = page
+        record_attached = _attach(context, record_listener)
+        list_attached = _attach(context, list_listener)
+
+        stage = "navigate_detector"
         page.goto(config.pangram_url, wait_until="domcontentloaded")
+        stage = "verify_authentication"
         local.wait_for_authenticated_detector_input(page)
 
         # Pangram's own application history is authoritative for stored scans.
         # Opening it is read-only and normally emits /api/history-list/.
+        stage = "load_history"
         page.goto("https://www.pangram.com/history", wait_until="domcontentloaded")
         _wait(page, 1_800)
 
+        stage = "scan_history_candidates"
         report_urls = [
             f"https://www.pangram.com/history/{candidate.uuid}"
             for candidate in history_candidates[:max_candidates]
@@ -451,9 +464,10 @@ def recover_existing_report(
         ):
             raise RuntimeError("recovered Pangram history record failed exact source identity gate")
 
+        stage = "materialize_history_record"
         report_page, body, parsed = _materialize_record_report(context, page, record)
-        directory.mkdir(parents=True, exist_ok=True)
         paths["body"].write_text(body, encoding="utf-8")
+        stage = "capture_pdf"
         pdf_provenance = local.capture_report_pdf(report_page, paths["pdf"])
         receipt = local.build_complete_receipt(
             config,
@@ -471,20 +485,53 @@ def recover_existing_report(
         receipt["history_list_candidate_count"] = len(history_candidates)
         local._write_json(paths["result"], receipt)
         local._remove_stale_failures(directory, paths)
+        stage = "persist_evidence"
         local._persist_evidence(evidence_callback, directory, receipt)
         print_fn(
             f"[pangram-local] recovered sha={item['input_sha256']} "
             f"words={item['word_count']} without detector submission"
         )
         return receipt
-    finally:
-        _detach(context, record_listener, record_attached)
-        _detach(context, list_listener, list_attached)
+    except Exception as exc:
+        if stage == "persist_evidence":
+            raise
+        failure = local.build_failure_receipt(
+            config,
+            item=item,
+            stage=stage,
+            detector_submission_attempted=False,
+            error=exc,
+            source=source_metadata,
+        )
+        failure["evidence_source"] = "recovered_existing_report"
+        failure["read_only_recovery"] = True
+        failure["exact_history_api_record_found"] = bool(exact_records)
+        failure["history_list_candidate_count"] = len(history_candidates)
+        local._write_json(paths["failure"], failure)
+        if report_page is not None:
+            try:
+                report_page.screenshot(path=str(paths["failure_screenshot"]), full_page=True)
+            except Exception:
+                pass
         try:
-            local.normalize_context_tabs(context, keep=report_page)
-        except Exception:
-            pass
-        local._close_local_session(playwright, context)
+            local._persist_evidence(evidence_callback, directory, failure)
+        except Exception as durability_error:
+            raise RuntimeError(
+                "Pangram read-only History recovery failed and failure evidence could not be made durable: "
+                f"recovery_error={exc}; durability_error={durability_error}"
+            ) from durability_error
+        raise
+    finally:
+        if context is not None:
+            _detach(context, record_listener, record_attached)
+            _detach(context, list_listener, list_attached)
+            try:
+                if report_page is not None:
+                    local.normalize_context_tabs(context, keep=report_page)
+            except Exception:
+                pass
+        if playwright is not None and context is not None:
+            local._close_local_session(playwright, context)
 
 
 # Re-export the validated low-level local-browser operations for callers.
