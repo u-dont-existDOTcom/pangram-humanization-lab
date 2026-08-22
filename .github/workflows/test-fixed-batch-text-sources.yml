@@ -1,0 +1,32 @@
+name: Test immutable fixed-batch text sources
+
+on:
+  pull_request:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - 'src/pangram_lab/text_sources.py'
+      - 'src/pangram_lab/fixed_batch.py'
+      - 'src/pangram_lab/result_paths.py'
+      - 'scripts/run_fixed_batch.py'
+      - 'scripts/validate_paid_dispatch.py'
+      - 'tests/test_fixed_batch_text_sources.py'
+      - '.github/workflows/test-fixed-batch-text-sources.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install test dependencies
+        run: python -m pip install -e '.[test]'
+      - name: Focused immutable-source regressions
+        run: python -m pytest -q tests/test_fixed_batch_text_sources.py
+      - name: Complete deterministic suite
+        run: python -m pytest -q
+      - name: Repository audit
+        run: python scripts/audit_codex_github.py --root . --fail-on error
