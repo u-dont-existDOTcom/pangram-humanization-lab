@@ -8,8 +8,40 @@ _REPAIR_RESUME_NODES={
 }
 
 
+def _semantic_contract_failure_state(state:dict[str,Any])->tuple[dict[str,Any],dict[str,Any]]:
+    """Convert invalid semantic-routing output into machine state before repair.
+
+    Representation historically attached an AUTHORIAL_AMBIGUITY payload when its
+    semantic-sanity contract was internally contradictory. That payload is not owner
+    evidence. Keep the diagnostic code, clear the synthetic interrupt, and mark the
+    failure as machine-resolvable unless a later valid graph pass independently proves
+    missing authorial information.
+    """
+    error=str(state.get('semantic_escalation_error') or '').strip()
+    if not error:
+        return state,{}
+    failure_code=str(state.get('failure_code') or f'SEMANTIC_ESCALATION_CONTRACT_{error}')
+    origin=str(state.get('failure_origin_node') or 'semantic_sanity')
+    failure_class=str(state.get('failure_class') or 'SEMANTIC_DEVELOPMENTAL')
+    fields={
+        'semantic_escalation_error':error,
+        'failure_code':failure_code,
+        'failure_origin_node':origin,
+        'failure_class':failure_class,
+        'authorial_information_missing':False,
+        'interrupt_payload':{},
+        'active_interrupt_kind':'',
+    }
+    return {
+        **state,
+        **fields,
+        'status':'machine_failure',
+    },fields
+
+
 def repair_node(state:dict[str,Any],repair_cycle:Callable[[dict[str,Any]],dict[str,Any]])->dict[str,Any]:
     """Graph-facing repair boundary. The supplied cycle owns worktree isolation and verification."""
+    state,contract_fields=_semantic_contract_failure_state(state)
     try:
         result=repair_cycle(state)
     except Exception as exc:
@@ -27,6 +59,7 @@ def repair_node(state:dict[str,Any],repair_cycle:Callable[[dict[str,Any]],dict[s
             'repair_outcome':'REJECTED_WITH_REASON',
             'repair_plan_signature':'',
             'repair_history':history,
+            **contract_fields,
         }
     inferred_outcome=(
         'APPLIED_VERIFIED' if result.get('pass')
@@ -71,8 +104,21 @@ def repair_node(state:dict[str,Any],repair_cycle:Callable[[dict[str,Any]],dict[s
             'failure_record_ref':str(state.get('failure_record_ref') or ''),
             'last_error_ref':str(state.get('last_error_ref') or state.get('failure_record_ref') or ''),
             **outcome_fields,
+            **contract_fields,
         }
     if result.get('owner_judgment_required'):
+        # An invalid semantic-routing contract cannot itself establish missing owner
+        # information. Refuse to turn a machine contradiction into another owner prompt.
+        if contract_fields:
+            return {
+                'status':'bounded_machine_stop',
+                'repair_attempt':int(state.get('repair_attempt',0))+1,
+                'last_error_ref':str(result.get('error_ref') or state.get('failure_record_ref') or ''),
+                'failure_evidence_ref':str(result.get('error_ref') or state.get('failure_record_ref') or ''),
+                'repair_error':'UNJUSTIFIED_OWNER_ESCALATION_FROM_SEMANTIC_CONTRACT_FAILURE',
+                **outcome_fields,
+                **contract_fields,
+            }
         return {
             'status':'owner_ambiguity_required',
             'repair_attempt':int(state.get('repair_attempt',0))+1,
@@ -93,6 +139,7 @@ def repair_node(state:dict[str,Any],repair_cycle:Callable[[dict[str,Any]],dict[s
         'failure_class':str(state.get('failure_class') or ''),
         'authorial_information_missing':False if exhausted else bool(state.get('authorial_information_missing')),
         **outcome_fields,
+        **contract_fields,
     }
 
 
