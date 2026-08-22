@@ -1,0 +1,66 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-therapies-job1-authorial-state-ab-20260822-a",
+  "spec_sha256": "00b60ff2286c429271f6c989746a43dc4a3091df3351e0e4d951ea6cb31227ae",
+  "results": [
+    {
+      "id": "JOB1_SE_YOGA_CONTROL_C",
+      "measurement_key": "somatic-therapies-job1-authorial-state-ab-20260822-a_JOB1_SE_YOGA_CONTROL_C",
+      "text": "Job 1: Stay Present and Keep Choice\n\nSomatic Experiencing\n\nSomatic Experiencing makes sense to me as an early option when the main problem is that activation runs away with you. Instead of forcing a detailed trauma narrative, it pays attention to sensation, orientation, impulse, defensive response, and pacing. The basic skill is noticing activation without immediately drowning in it.\n\nThis is where the usual language about expanding your “window of tolerance” becomes practical. Titration, pendulation, and orientation are all ways of asking: can you touch something difficult in a small enough dose, notice what happens, and come back? Some people may spend three to six months mainly building those capacities, and severe developmental trauma can take longer. I would treat that as orientation, not a countdown. If you are stable and have one clear target, you may be ready for focused trauma work much sooner.\n\nTrauma-Sensitive / Restorative Yoga\n\nYoga can fit early too, but I mean a very particular kind of yoga. No power yoga. No hot yoga. Nobody announcing, “Open your hips and release your trauma.” The useful version is slow, choice-based, and non-invasive, with body awareness, flexibility, enjoyment, and agency as the point.\n\nGood options include trauma-sensitive yoga, restorative yoga, gentle somatic yoga, and very gentle yin when it is propped, short, and easy to leave. The language matters too. “You might try…” is very different from “stay there.” “You can keep your eyes open.” “You can come out whenever you want.” “Notice whether this feels useful, neutral, or too much.” A posture can have several valid versions; choose one that actually fits your body.\n\nI would avoid intense stretching, long passive holds, forced breathwork, breath retention, hands-on adjustments without clear consent, aggressive hip openers, or anybody telling you to push through sensation. If the point is to rebuild choice, the practice should contain actual choices.\n",
+      "text_sha256": "b6d0963993017a2aa647cb03ec073a0567ba549e4e0cc3f7cc8348a97f7cc6ee",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Job 1: Stay Present and Keep Choice\nSomatic Experiencing\nSomatic Experiencing makes sense to me as an early option when the main problem is that activation runs away with you. Instead of forcing a detailed trauma narrative, it pays attention to sensation, orientation, impulse, defensive response, and pacing. The basic skill is noticing activation without immediately drowning in it.\nThis is where the usual language about expanding your “window of tolerance” becomes practical. Titration, pendulation, and orientation are all ways of asking: can you touch something difficult in a small enough dose, notice what happens, and come back? Some people may spend three to six months mainly building those capacities, and severe developmental trauma can take longer. I would treat that as orientation, not a countdown. If you are stable and have one clear target, you may be ready for focused trauma work much sooner.\nTrauma-Sensitive / Restorative Yoga\nYoga can fit early too, but I mean a very particular kind of yoga. No power yoga. No hot yoga. Nobody announcing, “Open your hips and release your trauma.” The useful version is slow, choice-based, and non-invasive, with body awareness, flexibility, enjoyment, and agency as the point.\nGood options include trauma-sensitive yoga, restorative yoga, gentle somatic yoga, and very gentle yin when it is propped, short, and easy to leave. The language matters too. “You might try…” is very different from “stay there.” “You can keep your eyes open.” “You can come out whenever you want.” “Notice whether this feels useful, neutral, or too much.” A posture can have several valid versions; choose one that actually fits your body.\nI would avoid intense stretching, long passive holds, forced breathwork, breath retention, hands-on adjustments without clear consent, aggressive hip openers, or anybody telling you to push through sensation. If the point is to rebuild choice, the practice should contain actual choices.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Job 1: Stay Present and Keep Choice\nSomatic Experiencing\nSomatic Experiencing makes sense to me as an early option when the main problem is that activation runs away with you. Instead of forcing a detailed trauma narrative, it pays attention to sensation, orientation, impulse, defensive response, and pacing. The basic skill is noticing activation without immediately drowning in it.\nThis is where the usual language about expanding your “window of tolerance” becomes practical. Titration, pendulation, and orientation are all ways of asking: can you touch something difficult in a small enough dose, notice what happens, and come back? Some people may spend three to six months mainly building those capacities, and severe developmental trauma can take longer. I would treat that as orientation, not a countdown. If you are stable and have one clear target, you may be ready for focused trauma work much sooner.\nTrauma-Sensitive / Restorative Yoga\nYoga can fit early too, but I mean a very particular kind of yoga. No power yoga. No hot yoga. Nobody announcing, “Open your hips and release your trauma.” The useful version is slow, choice-based, and non-invasive, with body awareness, flexibility, enjoyment, and agency as the point.\nGood options include trauma-sensitive yoga, restorative yoga, gentle somatic yoga, and very gentle yin when it is propped, short, and easy to leave. The language matters too. “You might try…” is very different from “stay there.” “You can keep your eyes open.” “You can come out whenever you want.” “Notice whether this feels useful, neutral, or too much.” A posture can have several valid versions; choose one that actually fits your body.\nI would avoid intense stretching, long passive holds, forced breathwork, breath retention, hands-on adjustments without clear consent, aggressive hip openers, or anybody telling you to push through sensation. If the point is to rebuild choice, the practice should contain actual choices.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999749064445496,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1963,
+            "word_count": 309,
+            "token_length": 402,
+            "is_humanized": false,
+            "humanizer_score": 0.5540069937705994
+          }
+        ]
+      },
+      "section_id": "job1-se-yoga",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-therapies-job1-authorial-state-20260822",
+  "call_accounting": {
+    "audit_id": "somatic-therapies-job1-authorial-state-20260822",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "section_id": "job1-se-yoga",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
