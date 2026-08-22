@@ -1,0 +1,66 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-therapies-intro-r07-personal-friction-20260822-a",
+  "spec_sha256": "d7476dfb28a207d4663d8db33234ff5e5adacd5ec971cc582c2d3251f3e83bf4",
+  "results": [
+    {
+      "id": "INTRO_R07_PERSONAL_FRICTION",
+      "measurement_key": "somatic-therapies-intro-r07-personal-friction-20260822-a_INTRO_R07_PERSONAL_FRICTION",
+      "text": "Introduction\n\nI started this article with what seemed like a pretty sensible sequence: Somatic Experiencing, Shaking Qigong / TRE, Brainspotting, EMDR if needed, then some light CBT. Regulation → discharge → processing → integration → narrative.\n\nThen I tried to fit inner-child work into it and immediately started finding problems.\n\nFor me, relaxation hasn’t really affected that awkward difficult time with the inner child. It’s not that I can’t access the love, but the love seems unsafe. What happens with me is I find myself at war with the younger version who didn’t do what they were supposed to do. So just saying “regulate first, then do the deeper work” doesn’t really describe what is happening there.\n\nIt also breaks down with the therapies themselves. Gentle shaking can help somebody stay present, while a longer shaking practice can be used to discharge a lot more activation. Brainspotting can be used for resourcing or it can take you straight into highly charged material. Gentle present-focused self-hypnosis may be useful early even when deep hypnosis or memory work would be a terrible idea. And somebody with one discrete traumatic memory may be ready for EMDR much earlier than somebody whose whole childhood is showing up as a giant bodily/relational mess.\n\nSo I still like the original sequence as a rough picture, but I stopped thinking of the modalities as stages. The same modality can do very different jobs depending on function, dose, target, and capacity.\n\nThat is what the five jobs below are trying to capture. You might need one of them, or three of them at the same time. And more processing is not always better. Often the missing piece is integration.\n",
+      "text_sha256": "a85c2c032bd97ef96c6b0fc935709c145a69fc775d24989791f7af2b98b396e4",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Introduction\nI started this article with what seemed like a pretty sensible sequence: Somatic Experiencing, Shaking Qigong / TRE, Brainspotting, EMDR if needed, then some light CBT. Regulation → discharge → processing → integration → narrative.\nThen I tried to fit inner-child work into it and immediately started finding problems.\nFor me, relaxation hasn’t really affected that awkward difficult time with the inner child. It’s not that I can’t access the love, but the love seems unsafe. What happens with me is I find myself at war with the younger version who didn’t do what they were supposed to do. So just saying “regulate first, then do the deeper work” doesn’t really describe what is happening there.\nIt also breaks down with the therapies themselves. Gentle shaking can help somebody stay present, while a longer shaking practice can be used to discharge a lot more activation. Brainspotting can be used for resourcing or it can take you straight into highly charged material. Gentle present-focused self-hypnosis may be useful early even when deep hypnosis or memory work would be a terrible idea. And somebody with one discrete traumatic memory may be ready for EMDR much earlier than somebody whose whole childhood is showing up as a giant bodily/relational mess.\nSo I still like the original sequence as a rough picture, but I stopped thinking of the modalities as stages. The same modality can do very different jobs depending on function, dose, target, and capacity.\nThat is what the five jobs below are trying to capture. You might need one of them, or three of them at the same time. And more processing is not always better. Often the missing piece is integration.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Introduction\nI started this article with what seemed like a pretty sensible sequence: Somatic Experiencing, Shaking Qigong / TRE, Brainspotting, EMDR if needed, then some light CBT. Regulation → discharge → processing → integration → narrative.\nThen I tried to fit inner-child work into it and immediately started finding problems.\nFor me, relaxation hasn’t really affected that awkward difficult time with the inner child. It’s not that I can’t access the love, but the love seems unsafe. What happens with me is I find myself at war with the younger version who didn’t do what they were supposed to do. So just saying “regulate first, then do the deeper work” doesn’t really describe what is happening there.\nIt also breaks down with the therapies themselves. Gentle shaking can help somebody stay present, while a longer shaking practice can be used to discharge a lot more activation. Brainspotting can be used for resourcing or it can take you straight into highly charged material. Gentle present-focused self-hypnosis may be useful early even when deep hypnosis or memory work would be a terrible idea. And somebody with one discrete traumatic memory may be ready for EMDR much earlier than somebody whose whole childhood is showing up as a giant bodily/relational mess.\nSo I still like the original sequence as a rough picture, but I stopped thinking of the modalities as stages. The same modality can do very different jobs depending on function, dose, target, and capacity.\nThat is what the five jobs below are trying to capture. You might need one of them, or three of them at the same time. And more processing is not always better. Often the missing piece is integration.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999579191207886,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1684,
+            "word_count": 281,
+            "token_length": 349,
+            "is_humanized": true,
+            "humanizer_score": 0.9244279861450195
+          }
+        ]
+      },
+      "section_id": "introduction",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-therapies-intro-20260822",
+  "call_accounting": {
+    "audit_id": "somatic-therapies-intro-20260822",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.25,
+        "estimated_credits": 5,
+        "model": "pangram-4",
+        "paid_api_calls": 5,
+        "pending_resumes": 0,
+        "section_id": "introduction",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
