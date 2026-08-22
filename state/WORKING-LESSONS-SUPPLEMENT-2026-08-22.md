@@ -21,3 +21,7 @@ Durable rules:
 - Section and half-document measurements remain diagnostic unless that exact unit is the requested delivery boundary.
 
 Exact incident/evidence routing: `state/ROMANCE-HALF-SPLIT-REMOTE-SENSITIVITY-2026-08-22.md` plus the r14/r15 result JSON on `automation/pangram-fixed-batch`.
+<!-- closeout-request:romance-half-split-sensitivity-20260822 -->
+## Promotion record
+
+The r12/r14/r15 Romance control establishes a reusable detector rule: long-document segmentation is part of the detector input and can flip far-downstream byte-identical prose. Hold segmentation stable for controlled prose comparisons. After a split change, treat newly red remote windows as boundary/composition evidence until exact prior-boundary comparison supports a prose-level cause. Detector score never chooses article architecture.

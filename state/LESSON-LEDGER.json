@@ -791,6 +791,20 @@
       "source_path": "state/experiments/romance-detector-repair-20260820-part1-residual-natural-r1b-20260821-results.json",
       "source_ref": "4eb9c0c4ddcbfffde6cb72009656a0082dfd3485",
       "source_sha256": "025f7b8fc2260c8dc3081df8223306d0e3003623330b5554a801dee44df13a14"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Changing only a long-document detector split can create far-downstream AI windows in byte-identical prose that previously measured 100% Human; compare exact prior-boundary evidence before rewriting newly red remote passages.",
+      "id": "L-7b3253364c-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-22.md"
+      ],
+      "reason": "Exact Romance r12/r14/r15 controls isolate aggregate segmentation as the changed detector input and show remote classification flips in unchanged previously-green prose. The finding is reusable for detector localization and protects article fidelity from boundary-induced rewrites.",
+      "recorded_at_utc": "2026-08-22T10:14:07.607281+00:00",
+      "source_path": "state/ROMANCE-HALF-SPLIT-REMOTE-SENSITIVITY-2026-08-22.md",
+      "source_ref": "3386e95e647db4a0bc15ccc81a95f0b30d6ad84c",
+      "source_sha256": "7b3253364c319f3b71e031672ea30ba699fda4ab4151d3969fbb8c68955b119d"
     }
   ],
   "schema_version": 1
