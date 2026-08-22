@@ -492,8 +492,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/models/codex_cli.py",
-      "sha256": "cceb2ae135f4773b610244fe3a1ddd143b2a5032936b43375aa70e85853730e4",
-      "size_bytes": 6307
+      "sha256": "315f4b8c52834e0d1ce91d1fe96614e878d281053c4a07692daaf60293eabd6b",
+      "size_bytes": 7946
     },
     {
       "executable": false,
@@ -804,8 +804,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/prompts/represent.md",
-      "sha256": "59ffbc67118adf4e3729726ff25fdac0e9c02c8b4ce0569efc72894b079deb86",
-      "size_bytes": 1641
+      "sha256": "a8a4ad97c58fa13b646dc8f52081d3c63580edbee30a2a3eb5830fae2177ed00",
+      "size_bytes": 1831
     },
     {
       "executable": false,
@@ -1283,6 +1283,12 @@
     },
     {
       "executable": false,
+      "path": "tests/unit/test_representation_owner_question_normalization.py",
+      "sha256": "a7d099ba9e07a9eb4f235a50279c440ccf3182d8f4fbc57f8e3335d3ed0862bc",
+      "size_bytes": 1854
+    },
+    {
+      "executable": false,
       "path": "tests/unit/test_representation_preservation_default.py",
       "sha256": "032594c706cf66a6c3c14664d17a80c373049c5129b6ef9b9e6f57226188b707",
       "size_bytes": 994
@@ -1319,5 +1325,5 @@
     }
   ],
   "policy_version": "joel-articles-4.12.0-candidate",
-  "source_commit_sha": "267a5ea5faf2a116cda374177109a350f8da789d"
+  "source_commit_sha": "18bb2354636698c863ab2b65775f74e21a884a47"
 }
