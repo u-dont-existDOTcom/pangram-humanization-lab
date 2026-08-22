@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request_id": "somatic-intro-r07-20260822",
+  "source_path": "state/experiments/somatic-therapies-intro-r07-personal-friction-20260822-a-results.json",
+  "source_ref": "a6d1c8cd7d3f5970f11188ef3e44b9d0fd885493",
+  "source_sha256": "0af205ef01b2cc37bab5e598a2785fd5aa85430d5626a78c7d2a47043478cd81",
+  "finding": "Somatic intro r07 remained 100% AI and its added first-person claims lacked owner provenance.",
+  "disposition": "no-new-lesson",
+  "reason": "The provenance failure is already covered by the standing no-invented-persona rule; retain the exact negative result without creating a redundant lesson.",
+  "promoted_to": []
+}
