@@ -1,0 +1,29 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "romance-detector-repair-20260820-preservation-r13-natural-split-aggregates-20260822",
+  "audit_id": "romance-detector-repair-20260820",
+  "variants": [
+    {
+      "id": "PRESERVATION_R13_PART1",
+      "section_id": "part1-preservation-r13-natural-split",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "blob_sha": "9677dc779f7687839b5b6deb5a4ac5893634d4b0",
+        "text_sha256": "6e1768106aaf3edb4ebe074c6a290649aab846fdb2845ad79b4c1e5d70fe2790"
+      }
+    },
+    {
+      "id": "PRESERVATION_R13_PART2",
+      "section_id": "part2-preservation-r13-natural-split",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "blob_sha": "d40ea531399c50dd2f598ebb48f7634de4442666",
+        "text_sha256": "d8545870944e11353011a256c6df1b2034b0183f67a6d0841386fef919fe49c9"
+      }
+    }
+  ]
+}
