@@ -32,6 +32,12 @@ def route_after_regressions(state:dict[str,Any])->str:
 def route_after_representation(state:dict[str,Any])->str:
     if pause := _pause_route(state):
         return pause
+    # A semantic-sanity contract error is machine state, not authorial ambiguity.
+    # This guard is deliberately checked before the historical status field because
+    # older representation code may have labelled the same invalid contract as an
+    # owner interrupt. Never surface that synthetic question to the owner.
+    if str(state.get("semantic_escalation_error") or "").strip():
+        return "repair"
     status=str(state.get("status") or "")
     if status == "machine_failure": return "repair"
     if status == "owner_ambiguity_required": return "owner_ambiguity"
@@ -143,6 +149,7 @@ def route_after_supervisor(state: dict[str, Any]) -> str:
         "repair",
         "repair_restart",
         "finalize",
+        "supervisor_pause",
     }
     target = str(state.get("supervisor_resume_node") or "")
     return target if target in allowed else "supervisor_pause"
