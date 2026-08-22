@@ -1,0 +1,29 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "romance-detector-repair-20260820-preservation-r10-aggregates-20260822",
+  "audit_id": "romance-detector-repair-20260820",
+  "variants": [
+    {
+      "id": "PRESERVATION_R10_PART1",
+      "section_id": "part1-preservation-r10",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "blob_sha": "0f91552882854b9f39e35dc6dbc5e9c80c7b48fc",
+        "text_sha256": "4ab1ad34f171bb75d2f93e261757cca469a655b629508eb3b91ab05ebc83c0ef"
+      }
+    },
+    {
+      "id": "PRESERVATION_R10_PART2",
+      "section_id": "part2-preservation-r10",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "blob_sha": "4ef02a768d721b7aae3de924ce340e92a86ed665",
+        "text_sha256": "7a9c95f7c4ce6600a4918455e3164f5bcb9720b4f9fd5c63e304670bca981bc2"
+      }
+    }
+  ]
+}
