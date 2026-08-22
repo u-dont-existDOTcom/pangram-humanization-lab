@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "candidate_id": "romance-detector-repair-20260820-preservation-r19-owner-final-talk-tail",
+  "source": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-part1.txt",
+    "sha256": "093289ce0cb3bdd216ae8e1fd584d4a0b426984a4c2edca97ba3ed75fed36ac9",
+    "word_count_whitespace": 10360
+  },
+  "owner_source": {
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "commit": "27440f8f6641c31a4333b6646aa66d806514844a",
+    "path": "work/romance-detector-repair-20260820/recovery-20260822/OWNER-TALK-FINAL-TAIL-20260822.md",
+    "markdown_sha256": "fe24cbb37ae2e460e616e737a2d78a751ae11b29d950c96d5c6527eaf169b1b8",
+    "visible_sha256": "e8399f2098bc830ffe98e1caadf53480931f0d85c20d42e90e967e73987d8023",
+    "visible_word_count": 219
+  },
+  "candidate": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r19-owner-final-talk-part1.txt",
+    "sha256": "ca42804f9774e66423caba07be4db4123a80ecb0b61e7a75d1ae2db271a8b9f5",
+    "word_count_whitespace": 10331,
+    "part2_sha256": "9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85",
+    "part2_exact_prior_human": 1.0
+  },
+  "operations": [
+    {
+      "type": "duplicate-function-consolidation",
+      "old_sha256": "12659ada56663f08676ef91b916833063331b3d4cd9cd0102be16535d3266a51",
+      "old_word_count": 8,
+      "surviving_owner_function": "psychological trust & intimacy builds the bridge between having sex and making love"
+    },
+    {
+      "type": "owner-supersession",
+      "old_tail_sha256": "d4d2b0903140172aa945deb2bc5ce820114480d5bda9d58c23fb10f3cfb511fa",
+      "old_tail_word_count": 240,
+      "new_visible_sha256": "e8399f2098bc830ffe98e1caadf53480931f0d85c20d42e90e967e73987d8023",
+      "new_visible_word_count": 219
+    }
+  ],
+  "protected_neighbor_functions_preserved": true,
+  "unexplained_deltas": 0,
+  "detector_plan": "After joel-articles preservation proof binds this exact candidate and passes, measure only aggregate Part 1. Reuse exact prior 100%-Human Part 2; no local Talk call."
+}
