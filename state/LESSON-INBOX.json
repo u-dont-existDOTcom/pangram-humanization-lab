@@ -3093,6 +3093,29 @@
           "section_id": "somatic-therapies-r01-full"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-therapies-intro-20260822",
+      "created_at_utc": "2026-08-22T00:45:15.821187+00:00",
+      "experiment_id": "somatic-therapies-intro-r02-20260822-a",
+      "id": "Q-14cd9d4b46dd0a94",
+      "sections": [
+        "introduction"
+      ],
+      "source_path": "state/experiments/somatic-therapies-intro-r02-20260822-a-results.json",
+      "source_ref": "10bb7eb947b7e2ed603ec729891388d711a0bcd3",
+      "source_sha256": "f2106f358564796154b5824192f61c88a8206d7f2b313dac54eb74bebdd69f62",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "INTRO_R02",
+          "prediction_short": "AI",
+          "section_id": "introduction"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
