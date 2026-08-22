@@ -23,8 +23,26 @@ def canonical_result_path(root: Path | str, experiment_id: str) -> Path:
     return Path(root) / "state" / "experiments" / f"{experiment_id}-results.json"
 
 
+def _spec_identity(spec: dict[str, Any]) -> dict[str, Any]:
+    # A text_source spec is fingerprinted by its immutable source identity and
+    # expected UTF-8 SHA-256. Runtime resolution adds variant["text"], but that
+    # derived copy must not change the registered experiment identity.
+    identity = json.loads(json.dumps(spec, ensure_ascii=False))
+    variants = identity.get("variants")
+    if isinstance(variants, list):
+        for variant in variants:
+            if isinstance(variant, dict) and variant.get("text_source") is not None:
+                variant.pop("text", None)
+    return identity
+
+
 def spec_sha256(spec: dict[str, Any]) -> str:
-    payload = json.dumps(spec, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    payload = json.dumps(
+        _spec_identity(spec),
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
     return hashlib.sha256(payload).hexdigest()
 
 
