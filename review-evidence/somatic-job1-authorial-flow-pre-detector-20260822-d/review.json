@@ -1,0 +1,40 @@
+{
+  "candidate_available": false,
+  "candidate_hard_pass": false,
+  "candidate_material_route": "",
+  "candidate_ref": "",
+  "candidate_role": "",
+  "candidate_sha256": "",
+  "detector_submission_attempted": false,
+  "failure": {
+    "accepted_move_count": 0,
+    "decision_trace": {},
+    "failure_class": "",
+    "failure_evidence_ref": "",
+    "failure_origin_node": "",
+    "final_local_gates": {
+      "regressions_hard_pass": true
+    },
+    "generation_rejection_class": "",
+    "move_index": 0,
+    "repair_attempt": 0,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "source_provenance": "OWNER_DRAFT",
+    "task_mode": "P2",
+    "uncovered_required_count": 0
+  },
+  "format": "authorial-flow-pre-detector-review-v1",
+  "interrupt_kind": "AUTHORIAL_AMBIGUITY",
+  "interrupt_question": "Authorial decisions required: Is this personal guidance, general education, or a prescriptive treatment sequence? Is “Job 1” a mandatory first stage for everyone in scope? Are Somatic Experiencing and yoga alternatives, concurrent practices, or successive steps? Are “No power yoga” and “No hot yoga” categorical exclusions or deliberately blunt preferences for this specific phase? Who is expected to supervise or make safety decisions? Research can separately test the efficacy, sequencing, duration, contraindication, and terminology claims, but it cannot decide those authorial intentions.",
+  "phase": "representation",
+  "repair_rounds": 0,
+  "request_id": "somatic-job1-authorial-flow-pre-detector-20260822-d",
+  "research_discovery_attempted": false,
+  "source_commit": "b5f8f8ab83574d35d69d02c1ea8be330d741922c",
+  "source_path": "articles/somatic-therapies/experiments/JOB1-AUTHORIAL-FLOW-INPUT-V2-20260822.md",
+  "source_sha256": "b1487d7c257dcebc11570808df3b85ad72ad2da389fbb97f5d148f3d95d65947",
+  "status": "owner_ambiguity_required",
+  "thread_id": "5238fa009a6b170ff8b9f8ba6a4c15989ecb28c23fdb6af097bea4fb0c5b4852",
+  "tool_ref": "c87eec03540ef0ac5bbdcbf35b85286759252e67"
+}
