@@ -3318,6 +3318,38 @@
           "section_id": "primal-not-a-performance"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T01:56:53.351320+00:00",
+      "experiment_id": "romance-detector-repair-20260820-preservation-r10-aggregates-20260822",
+      "id": "Q-24ed52ef8e9ad312",
+      "sections": [
+        "part1-preservation-r10",
+        "part2-preservation-r10"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r10-aggregates-20260822-results.json",
+      "source_ref": "d6bcb87ff01fc5b38c6c93324d2fa5db036bc467",
+      "source_sha256": "42f6c7d744bdad884563a19e86e390e52036f633ff22d92ee4dcfa55e748db1a",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.05432389676570892,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9456760883331299,
+          "id": "PRESERVATION_R10_PART1",
+          "prediction_short": "Human",
+          "section_id": "part1-preservation-r10"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "PRESERVATION_R10_PART2",
+          "prediction_short": "Human",
+          "section_id": "part2-preservation-r10"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
