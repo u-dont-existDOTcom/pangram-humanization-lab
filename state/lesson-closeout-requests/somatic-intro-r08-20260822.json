@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request_id": "somatic-intro-r08-20260822",
+  "source_path": "state/experiments/somatic-therapies-intro-r08-human-anchor-20260822-a-results.json",
+  "source_ref": "ab43810ac17e94327832839b656bb6da6c6043fb",
+  "source_sha256": "ed7e8c90e4c7f1e29e03dcebda2d95ae345afd813c9f8f58e8ade10a2131b862",
+  "finding": "A boundary containing the exact owner-specific material from r01's local Human segment still measured 100% AI when surrounded by a different model-built realization.",
+  "disposition": "no-new-lesson",
+  "reason": "Confirms the existing boundary/context non-composability rule; do not create a new detector charm or lexical rule.",
+  "promoted_to": []
+}
