@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "candidate_id": "romance-detector-repair-20260820-preservation-r17-owner-talk",
+  "source": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r16-canonical-casual-part1.txt",
+    "sha256": "055cf2f8bde035da3f97db5c7753391446b77c7159655c1431210a0233815dc0",
+    "word_count_whitespace": 10324
+  },
+  "owner_source": {
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "commit": "1f5669ec61f5453f91f844c4d86ac966cb73e8ec",
+    "path": "work/romance-detector-repair-20260820/recovery-20260822/OWNER-TALK-SEXUAL-COMPATIBILITY-20260822.md",
+    "verbatim_paragraph_sha256": "68716bc63f5a0b84945cb33cf12595ee9fcacbd48cad05e607e862e62d925ff0",
+    "word_count_whitespace": 138
+  },
+  "candidate": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r17-owner-talk-part1.txt",
+    "sha256": "0e32a7c1482f5a1e6c4fe5aaba492743bc5cc0d96e860518fb8c4a62c379ca08",
+    "word_count_whitespace": 10400,
+    "part2_sha256": "9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85",
+    "part2_exact_prior_human": 1.0
+  },
+  "operation": {
+    "type": "replace_exact",
+    "scope": "Talk libido-mismatch paragraph only",
+    "old_sha256": "ba20e94a4d2b384943b95a93edde267ec295026636e9680be2d8dcbe7d5a1fe8",
+    "new_sha256": "68716bc63f5a0b84945cb33cf12595ee9fcacbd48cad05e607e862e62d925ff0",
+    "old_word_count": 62,
+    "new_word_count": 138,
+    "authority": "direct owner wording 2026-08-22"
+  },
+  "protected_neighbor_functions_preserved": true,
+  "unexplained_deltas": 0,
+  "detector_plan": "After joel-articles preservation proof binds this exact candidate and passes, measure only aggregate Part 1. Reuse exact prior 100%-Human Part 2; no local Talk call."
+}
