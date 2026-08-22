@@ -3442,6 +3442,29 @@
           "section_id": "inner-child-overlap"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-therapies-inner-child-20260822",
+      "created_at_utc": "2026-08-22T07:35:13.773180+00:00",
+      "experiment_id": "somatic-therapies-inner-child-r04-direct-20260822-a",
+      "id": "Q-471eabfc7762f248",
+      "sections": [
+        "inner-child-overlap"
+      ],
+      "source_path": "state/experiments/somatic-therapies-inner-child-r04-direct-20260822-a-results.json",
+      "source_ref": "2b849b8ff9e4af34f2f5933dd22f66915520a44b",
+      "source_sha256": "cf86eb255efb1bec07e054a2bf77baf00207d735c90e76468d9b77d04f4c5783",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "INNER_CHILD_R04_DIRECT",
+          "prediction_short": "AI",
+          "section_id": "inner-child-overlap"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
