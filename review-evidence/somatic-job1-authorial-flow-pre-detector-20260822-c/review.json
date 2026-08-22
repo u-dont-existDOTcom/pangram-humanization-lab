@@ -1,0 +1,40 @@
+{
+  "candidate_available": false,
+  "candidate_hard_pass": false,
+  "candidate_material_route": "",
+  "candidate_ref": "",
+  "candidate_role": "",
+  "candidate_sha256": "",
+  "detector_submission_attempted": false,
+  "failure": {
+    "accepted_move_count": 0,
+    "decision_trace": {},
+    "failure_class": "",
+    "failure_evidence_ref": "",
+    "failure_origin_node": "",
+    "final_local_gates": {
+      "regressions_hard_pass": true
+    },
+    "generation_rejection_class": "",
+    "move_index": 0,
+    "repair_attempt": 0,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "source_provenance": "OWNER_DRAFT",
+    "task_mode": "P2",
+    "uncovered_required_count": 0
+  },
+  "format": "authorial-flow-pre-detector-review-v1",
+  "interrupt_kind": "AUTHORIAL_AMBIGUITY",
+  "interrupt_question": "[AUTHORIAL] Is this a personal account of what makes sense for you, general guidance to readers, or both? What does “early” mean: before trauma processing, at the start of therapy, or something else? Are “stable,” “one clear target,” and “focused trauma work” intentionally clinician-defined criteria, or should the text define them? Is “severe developmental trauma” deliberate terminology? Are the yoga cue quotations exact words from a source or illustrative examples? Are the yoga prohibitions meant for every reader or specifically for people whose activation tends to escalate?",
+  "phase": "representation",
+  "repair_rounds": 0,
+  "request_id": "somatic-job1-authorial-flow-pre-detector-20260822-c",
+  "research_discovery_attempted": false,
+  "source_commit": "95b00766de2e0283548b1f0897752d3ab69413c3",
+  "source_path": "articles/somatic-therapies/experiments/JOB1-AUTHORIAL-FLOW-INPUT-20260822.md",
+  "source_sha256": "b6c9d2f77e620c087f89bacd19706855b62e8ebd72d6cb8d741c05c1adcf3228",
+  "status": "owner_ambiguity_required",
+  "thread_id": "70b00ee02be1ece8883bc410beacfce4a4b1632794c5e612dcb776123de1c994",
+  "tool_ref": "c87eec03540ef0ac5bbdcbf35b85286759252e67"
+}
