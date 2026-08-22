@@ -25,3 +25,7 @@ Exact incident/evidence routing: `state/ROMANCE-HALF-SPLIT-REMOTE-SENSITIVITY-20
 ## Promotion record
 
 The r12/r14/r15 Romance control establishes a reusable detector rule: long-document segmentation is part of the detector input and can flip far-downstream byte-identical prose. Hold segmentation stable for controlled prose comparisons. After a split change, treat newly red remote windows as boundary/composition evidence until exact prior-boundary comparison supports a prose-level cause. Detector score never chooses article architecture.
+<!-- closeout-request:owner-language-handoff-context-20260822 -->
+## Owner-language requests need reader-visible placement context
+
+A narrow owner-language request is usable only when the owner can locate the thought in the article without reconstructing detector state. Name the exact article and heading, where inside the section the passage sits, what the preceding and following paragraphs do, the specific thought/job being supplied or replaced, and which neighboring functions remain untouched. Internal labels such as window numbers, word counts, preservation-unit IDs, or shorthand section names are not sufficient writing context. Richer placement context does not authorize broader editing; it makes the bounded authorial request intelligible.

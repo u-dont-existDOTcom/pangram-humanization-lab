@@ -103,3 +103,5 @@ Do not load every historical experiment indiscriminately. Start with the current
 <!-- closeout-request:pangram-async-api-history-boundary-2026-08-22 -->
 <!-- closeout-request:pangram-async-api-history-boundary-2026-08-22 -->
 - **Async API History boundary:** do not clear an ambiguous async Pangram API reservation from web-History absence. First prove a known-success control from the same transport/configuration is recoverable there; the current async route failed that control, so resolve repeats from task-id/cache/ledger or other transport-appropriate exact evidence. See `state/PANGRAM-ASYNC-API-HISTORY-BOUNDARY-2026-08-22.md`.
+<!-- closeout-request:owner-language-handoff-context-20260822 -->
+- **Owner-language handoff context:** when asking for fresh owner prose, translate internal detector/preservation state back into the reader-visible article sequence: exact heading, placement, immediate before/after paragraph jobs, requested thought, and untouched neighboring functions. Do not hand the owner an internal label like `Talk — 112 words` and expect them to reconstruct the section. See `state/OWNER-LANGUAGE-HANDOFF-CONTEXT-2026-08-22.md`.

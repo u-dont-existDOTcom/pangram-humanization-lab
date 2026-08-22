@@ -819,6 +819,20 @@
       "source_path": "state/PANGRAM-ASYNC-API-HISTORY-BOUNDARY-2026-08-22.md",
       "source_ref": "agent/async-api-history-boundary-20260822",
       "source_sha256": "e4fc772dfce47c22970508639e82951cec1778ae6bb8683646c9e7e2e7bf0470"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "When requesting fresh owner language, internal detector labels and abstract function lists are insufficient; give the exact article/section heading, reader-visible placement, immediate before/after paragraph jobs, the thought being supplied, and neighboring functions that are not being replaced so the owner can write naturally without reconstructing the worker's internal state.",
+      "id": "L-35dbc065ee-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-22.md"
+      ],
+      "reason": "Direct owner correction immediately demonstrated that a vague residual label was unusable and that reader-visible placement context elicited the needed natural owner mechanism. The rule transfers to article editing, reconstruction, and detector repair.",
+      "recorded_at_utc": "2026-08-22T21:04:48.935907+00:00",
+      "source_path": "state/OWNER-LANGUAGE-HANDOFF-CONTEXT-2026-08-22.md",
+      "source_ref": "main",
+      "source_sha256": "35dbc065ee95b9f4b0767417ea0b1a4b9cab9bc4333d650b4e4f8dbdcac68a40"
     }
   ],
   "schema_version": 1
