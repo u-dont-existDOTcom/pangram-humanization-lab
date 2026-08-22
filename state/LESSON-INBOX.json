@@ -3350,6 +3350,29 @@
           "section_id": "part2-preservation-r10"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-therapies-intro-20260822",
+      "created_at_utc": "2026-08-22T07:27:48.968611+00:00",
+      "experiment_id": "somatic-therapies-intro-r08-human-anchor-20260822-a",
+      "id": "Q-9d1b13950ab19498",
+      "sections": [
+        "introduction"
+      ],
+      "source_path": "state/experiments/somatic-therapies-intro-r08-human-anchor-20260822-a-results.json",
+      "source_ref": "ab43810ac17e94327832839b656bb6da6c6043fb",
+      "source_sha256": "ed7e8c90e4c7f1e29e03dcebda2d95ae345afd813c9f8f58e8ade10a2131b862",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "INTRO_R08_HUMAN_ANCHOR",
+          "prediction_short": "AI",
+          "section_id": "introduction"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
