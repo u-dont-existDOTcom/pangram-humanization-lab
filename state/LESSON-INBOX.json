@@ -3612,6 +3612,29 @@
           "section_id": "part2-preservation-r13-natural-split"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T08:53:18.106323+00:00",
+      "experiment_id": "romance-detector-repair-20260820-casual-final-call6-20260822",
+      "id": "Q-bafed5c9a8dc55fb",
+      "sections": [
+        "part1-casual-sex-situationship"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-casual-final-call6-20260822-results.json",
+      "source_ref": "af28d2db2cd39cf51bdc677aae9888266ac9cfd2",
+      "source_sha256": "3216978c71cd55afa12c25e3371e204c123dad0ee159172a718900ee86d7a97a",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.05036260932683945,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9496374130249023,
+          "id": "CASUAL_FINAL_CALL6",
+          "prediction_short": "Human",
+          "section_id": "part1-casual-sex-situationship"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
