@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "experiment_id": "romance-detector-repair-20260820-preservation-r11-part1-aggregate-20260822",
+  "source": {
+    "repo": "u-dont-existDOTcom/joel-articles",
+    "commit": "0cbfe3c70f5c5088681f46b5f57a176f83a45a69",
+    "path": "work/romance-detector-repair-20260820/materialized-preservation-r10-part1/candidate-part-1.txt",
+    "sha256": "4ab1ad34f171bb75d2f93e261757cca469a655b629508eb3b91ab05ebc83c0ef"
+  },
+  "candidate": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r11-part1.txt",
+    "sha256": "e9ba7ecd5085a1c03b874747008dfb5c5c250d7741bc22ab3a4b960568e65d3c",
+    "word_count_whitespace": 10330
+  },
+  "operations": [
+    {
+      "label": "slow-steady-known-human-consolidation",
+      "old_sha256": "5f92dee6ed40c9d426831e37fc5cf39b4fa07e8e54c90e67a3035716edf336ed",
+      "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_word_count": 10,
+      "new_word_count": 0
+    },
+    {
+      "label": "casual-final-call6-sti-attachment",
+      "old_sha256": "1370e37f293370da1a8d37d0a90dc0bb2b932a698569a912ceb24bfff2f6986b",
+      "new_sha256": "43fb317374aaacc847cbf4d09bcd94e4e6aff237a99f36e9dc2031d3a60a9906",
+      "old_word_count": 48,
+      "new_word_count": 55
+    },
+    {
+      "label": "maturity-patient-known-green-rollback",
+      "old_sha256": "2fbaf32943d9d8277df93ac08741f5afe65f9b3227975297850faa2c02d97685",
+      "new_sha256": "69092f713e4ee39acbe0e913d356f0ea3660b7455b02abf9583913fb094a276a",
+      "old_word_count": 67,
+      "new_word_count": 84
+    }
+  ],
+  "preservation_receipts": [
+    "joel-articles:work/romance-detector-repair-20260820/recovery-20260822/preservation-proof-slow-steady-r11.json",
+    "joel-articles:work/romance-detector-repair-20260820/recovery-20260822/preservation-proof-casual-final-call6.json",
+    "joel-articles:work/romance-detector-repair-20260820/recovery-20260822/preservation-proof-maturity-patient-known-green.json"
+  ],
+  "local_detector_evidence": {
+    "slow_steady": {
+      "sha256": "2def6737f8763f6e3a92405166dd27f9d0e30ec043a57a216ffbc05bf6bb72f4",
+      "human": 1.0
+    },
+    "casual_call6": {
+      "sha256": "e59a9cf974a6252930f774d8246512d68d1137b64481194571488e3814897d04",
+      "human": 0.9496374130249023,
+      "local_cap": "6/6"
+    },
+    "maturity_patient": {
+      "sha256": "7d60bc1c38669848e7e27d313603e4ee8970e34bf3896673160ea6a61c106002",
+      "human": 1.0,
+      "reused": true
+    }
+  },
+  "part2": {
+    "sha256": "9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85",
+    "human": 1.0,
+    "unchanged": true
+  },
+  "spec_path": "experiments/romance-detector-repair-20260820-preservation-r11-part1-aggregate-20260822.json",
+  "spec_sha256": "37e092a3643cb2d522fb9b596c26e00300dd5f05ce0be39ed18212713a1401db",
+  "unexplained_deltas": 0
+}
