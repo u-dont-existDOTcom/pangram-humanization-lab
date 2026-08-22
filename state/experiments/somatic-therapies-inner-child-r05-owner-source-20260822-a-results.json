@@ -1,0 +1,66 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-therapies-inner-child-r05-owner-source-20260822-a",
+  "spec_sha256": "61d1e73c48495801f5b9d1fe50d5a765fd2e32f856dff4dcc31baba1219e7438",
+  "results": [
+    {
+      "id": "INNER_CHILD_R05_OWNER_SOURCE",
+      "measurement_key": "somatic-therapies-inner-child-r05-owner-source-20260822-a_INNER_CHILD_R05_OWNER_SOURCE",
+      "text": "How Somatic Work and Inner-Child Reparenting Fit Together\n\nIn my experience, EFT, Somatic Experiencing, trauma-sensitive yoga, gentle shaking or qigong, non-forced longer exhales, and gentle Buteyko-style breathing can help the body relax and soften tension around the solar plexus or abdomen so heart chakra love becomes easier to access.\n\nThink of a pet, a baby, a friend, your own child, a partner, or anyone you naturally love. You are borrowing a familiar pathway rather than manufacturing a feeling on command. Feel the real love that is already there and see whether a little of it can move from the heart toward the younger part around the solar plexus and then back up in a loop.\n\nInner-child reparenting does not only belong at the end of the map. If somebody is flooded, almost completely identified with the child-state, or unable to access a Nurturer or Protector, the first task may be orientation, outside safety, a neutral witness, borrowed adulthood, or one ordinary Protector action. The borrowed adult should stand beside you rather than replace you. Gentle self-hypnosis can help here when it stays present-focused rather than going deeply into memories or child dialogue.\n\nDeep memory work, immersive child dialogue, deep hypnosis, and suggestive exploration should wait until the person can remain present, stop voluntarily, and return to ordinary life afterward.\n",
+      "text_sha256": "ebe3cc76b03fc0ad791dd66b5c9fa1541ec1b6d4d39430e3013fc2e7d9a3576f",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "How Somatic Work and Inner-Child Reparenting Fit Together\nIn my experience, EFT, Somatic Experiencing, trauma-sensitive yoga, gentle shaking or qigong, non-forced longer exhales, and gentle Buteyko-style breathing can help the body relax and soften tension around the solar plexus or abdomen so heart chakra love becomes easier to access.\nThink of a pet, a baby, a friend, your own child, a partner, or anyone you naturally love. You are borrowing a familiar pathway rather than manufacturing a feeling on command. Feel the real love that is already there and see whether a little of it can move from the heart toward the younger part around the solar plexus and then back up in a loop.\nInner-child reparenting does not only belong at the end of the map. If somebody is flooded, almost completely identified with the child-state, or unable to access a Nurturer or Protector, the first task may be orientation, outside safety, a neutral witness, borrowed adulthood, or one ordinary Protector action. The borrowed adult should stand beside you rather than replace you. Gentle self-hypnosis can help here when it stays present-focused rather than going deeply into memories or child dialogue.\nDeep memory work, immersive child dialogue, deep hypnosis, and suggestive exploration should wait until the person can remain present, stop voluntarily, and return to ordinary life afterward.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "How Somatic Work and Inner-Child Reparenting Fit Together\nIn my experience, EFT, Somatic Experiencing, trauma-sensitive yoga, gentle shaking or qigong, non-forced longer exhales, and gentle Buteyko-style breathing can help the body relax and soften tension around the solar plexus or abdomen so heart chakra love becomes easier to access.\nThink of a pet, a baby, a friend, your own child, a partner, or anyone you naturally love. You are borrowing a familiar pathway rather than manufacturing a feeling on command. Feel the real love that is already there and see whether a little of it can move from the heart toward the younger part around the solar plexus and then back up in a loop.\nInner-child reparenting does not only belong at the end of the map. If somebody is flooded, almost completely identified with the child-state, or unable to access a Nurturer or Protector, the first task may be orientation, outside safety, a neutral witness, borrowed adulthood, or one ordinary Protector action. The borrowed adult should stand beside you rather than replace you. Gentle self-hypnosis can help here when it stays present-focused rather than going deeply into memories or child dialogue.\nDeep memory work, immersive child dialogue, deep hypnosis, and suggestive exploration should wait until the person can remain present, stop voluntarily, and return to ordinary life afterward.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999291300773621,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1381,
+            "word_count": 219,
+            "token_length": 288,
+            "is_humanized": false,
+            "humanizer_score": 0.46469947695732117
+          }
+        ]
+      },
+      "section_id": "inner-child-overlap",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-therapies-inner-child-20260822",
+  "call_accounting": {
+    "audit_id": "somatic-therapies-inner-child-20260822",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.25,
+        "estimated_credits": 5,
+        "model": "pangram-4",
+        "paid_api_calls": 5,
+        "pending_resumes": 0,
+        "section_id": "inner-child-overlap",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
