@@ -3689,6 +3689,38 @@
           "section_id": "part1-preservation-r13"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T09:31:01.438564+00:00",
+      "experiment_id": "romance-detector-repair-20260820-preservation-r14-affection-maturity-split-aggregates-20260822",
+      "id": "Q-d4c850fe2042544f",
+      "sections": [
+        "part1-preservation-r14-affection-maturity-split",
+        "part2-preservation-r14-affection-maturity-split"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r14-affection-maturity-split-aggregates-20260822-results.json",
+      "source_ref": "00f08b7054dd1f8066dac6de1f29c3af243b8bb5",
+      "source_sha256": "eeaed14ae02f0a508e9944a437c31f615ac8aa0e98764d0e8c15053fdc314d72",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.04542138800024986,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9545786380767822,
+          "id": "PRESERVATION_R14_PART1",
+          "prediction_short": "Human",
+          "section_id": "part1-preservation-r14-affection-maturity-split"
+        },
+        {
+          "fraction_ai": 0.04346117004752159,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9565388560295105,
+          "id": "PRESERVATION_R14_PART2",
+          "prediction_short": "Human",
+          "section_id": "part2-preservation-r14-affection-maturity-split"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
