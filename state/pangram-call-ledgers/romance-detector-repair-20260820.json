@@ -439,6 +439,28 @@
       "section_id": "part1-preservation-r12",
       "version": "4.0"
     },
+    "part1-preservation-r13\u001fpangram-4\u001f4.0": {
+      "budget_scope": "aggregate",
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.55,
+      "estimated_credits": 11,
+      "events": [
+        {
+          "budget_scope": "aggregate",
+          "estimated_credits": 11,
+          "measurement_key": "romance-detector-repair-20260820-preservation-r13-part1-aggregate-20260822_PRESERVATION_R13_PART1",
+          "recorded_at_utc": "2026-08-22T09:17:03.612855+00:00",
+          "text_sha256": "e9ba7ecd5085a1c03b874747008dfb5c5c250d7741bc22ab3a4b960568e65d3c",
+          "type": "paid_post_reserved",
+          "word_count": 10330
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "part1-preservation-r13",
+      "version": "4.0"
+    },
     "part1-preservation-r13-natural-split\u001fpangram-4\u001f4.0": {
       "budget_scope": "aggregate",
       "cache_hits": 0,
