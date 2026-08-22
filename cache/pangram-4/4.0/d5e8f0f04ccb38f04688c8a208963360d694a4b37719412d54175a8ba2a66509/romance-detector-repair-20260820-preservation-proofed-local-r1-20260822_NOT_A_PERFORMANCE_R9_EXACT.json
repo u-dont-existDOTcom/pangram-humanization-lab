@@ -5,12 +5,63 @@
   "last_error": "",
   "measurement_key": "romance-detector-repair-20260820-preservation-proofed-local-r1-20260822_NOT_A_PERFORMANCE_R9_EXACT",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.881322979927063,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.1186770424246788,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 2,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Not A Performance\nThe moment I have to prove that I’m the man, something has already become fake. Then I have to defend the identity every time I hesitate, cry, need help, or get something wrong.\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.\nThe same is true for a woman. She should not have to perform softness, helplessness, or cuteness every minute to prove she is feminine. Surrender means so much more when she could take control but prefers not to at that moment. When a strong woman surrenders, she is choosing to, which is sexy.\nWomen can get pulled in two directions here. She may worry that I don’t find her beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy. Then she can overcorrect into needing nobody and make receiving care or letting a man lead feel like weakness.\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Letting a man help, lead, or give her pleasure doesn’t make a strong woman helpless. A man receiving care doesn’t make him a child either. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\nUnfortunately, I've seen a lot of the latter.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.5266046524047852,
+        "confidence": "Medium",
+        "end_index": 263,
+        "humanizer_score": 0.035058166831731796,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Not A Performance\nThe moment I have to prove that I’m the man, something has already become fake. Then I have to defend the identity every time I hesitate, cry, need help, or get something wrong.\nI don’t actually walk around thinking I’m some super-masculine guy.",
+        "token_length": 60,
+        "word_count": 46
+      },
+      {
+        "ai_assistance_score": 0.25017955899238586,
+        "confidence": "High",
+        "end_index": 507,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 263,
+        "text": " I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.\nThe same is true for a woman.",
+        "token_length": 62,
+        "word_count": 49
+      },
+      {
+        "ai_assistance_score": 0.5344489812850952,
+        "confidence": "Medium",
+        "end_index": 2056,
+        "humanizer_score": 0.035058166831731796,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 507,
+        "text": " She should not have to perform softness, helplessness, or cuteness every minute to prove she is feminine. Surrender means so much more when she could take control but prefers not to at that moment. When a strong woman surrenders, she is choosing to, which is sexy.\nWomen can get pulled in two directions here. She may worry that I don’t find her beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy. Then she can overcorrect into needing nobody and make receiving care or letting a man lead feel like weakness.\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Letting a man help, lead, or give her pleasure doesn’t make a strong woman helpless. A man receiving care doesn’t make him a child either. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\nUnfortunately, I've seen a lot of the latter.",
+        "token_length": 340,
+        "word_count": 280
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "3fe197ea-ac4d-467f-bb48-44e1a511fe7a",
   "text": "Not A Performance\n\nThe moment I have to prove that I’m the man, something has already become fake. Then I have to defend the identity every time I hesitate, cry, need help, or get something wrong.\n\nI don’t actually walk around thinking I’m some super-masculine guy. I cry, I need help, I get things wrong. Bee once called me her “wife.” I don’t recommend that as a polarity exercise, by the way.\n\nWhen a woman appreciates that masculine side of me, it tends to come out by itself.\n\nThe same is true for a woman. She should not have to perform softness, helplessness, or cuteness every minute to prove she is feminine. Surrender means so much more when she could take control but prefers not to at that moment. When a strong woman surrenders, she is choosing to, which is sexy.\n\nWomen can get pulled in two directions here. She may worry that I don’t find her beautiful enough, or that she’s too emotional, too difficult, not logical enough, or too needy. Then she can overcorrect into needing nobody and make receiving care or letting a man lead feel like weakness.\n\nToft says that after fifty years he still tells his wife she’s beautiful, including finding new kinds of beauty as she ages. Anami talks a lot about women learning to receive. Letting a man help, lead, or give her pleasure doesn’t make a strong woman helpless. A man receiving care doesn’t make him a child either. Sometimes that’s as ordinary as a woman who knows perfectly well how to drive asking me to drive because she likes how it feels when I do; she’s choosing the experience. I might ask, “Honey, how do you see this intuitively?” because I actually want her to go there, and she might ask me to help think through the practical side because she wants that from me.\n\nThat's called invitational: Would you rather go to a party where you were invited or a war you got drafted into?\n\nWhen a woman doesn't know how to gently invite a man to lead, she may manufacture a crisis until the man is forced to take charge to get the same outward result.\n\nUnfortunately, I've seen a lot of the latter.\n",
   "text_sha256": "d5e8f0f04ccb38f04688c8a208963360d694a4b37719412d54175a8ba2a66509",
-  "updated_utc": "2026-08-22T01:14:38.396586+00:00"
+  "updated_utc": "2026-08-22T01:14:53.253738+00:00"
 }
