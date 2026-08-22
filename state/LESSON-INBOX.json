@@ -3666,6 +3666,29 @@
           "section_id": "job1-se-yoga"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T09:17:28.181793+00:00",
+      "experiment_id": "romance-detector-repair-20260820-preservation-r13-part1-aggregate-20260822",
+      "id": "Q-32afdd1181672148",
+      "sections": [
+        "part1-preservation-r13"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r13-part1-aggregate-20260822-results.json",
+      "source_ref": "99ae088f08d019a231677020e20e65ac37ef172a",
+      "source_sha256": "8f96f74f91786b22a8ee5f110596dfef80194bdcc96e393f177b8692200062a6",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.04626920074224472,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9537308216094971,
+          "id": "PRESERVATION_R13_PART1",
+          "prediction_short": "Human",
+          "section_id": "part1-preservation-r13"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
