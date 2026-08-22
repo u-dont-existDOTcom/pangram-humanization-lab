@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "candidate_id": "romance-detector-repair-20260820-preservation-r16-canonical-casual",
+  "source": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r15-old-split-part1.txt",
+    "sha256": "ba2bb4d66c541732e03a181f31eb5419c8301c870330bd4bcd946626c8161fcf",
+    "word_count_whitespace": 10340
+  },
+  "candidate": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r16-canonical-casual-part1.txt",
+    "sha256": "055cf2f8bde035da3f97db5c7753391446b77c7159655c1431210a0233815dc0",
+    "word_count_whitespace": 10324,
+    "part2_sha256": "9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85",
+    "part2_exact_prior_human": 1.0
+  },
+  "operations": [
+    {
+      "label": "canonical-casual-paper-promise",
+      "old_sha256": "3cb2da0a1db89a4e04443b5bec33fd7a14031a586f7fc22387c7c2a15d923566",
+      "new_sha256": "d03f18fbe297e6436040100197cee4b50f1c2955830356f88b161edc4e2e2d9e",
+      "old_word_count": 72,
+      "new_word_count": 68
+    },
+    {
+      "label": "canonical-casual-four-girlfriends",
+      "old_sha256": "8f0ec5a832046c70f17f2203b9360353b9e80e8edd73df226ed89e55089b7cc9",
+      "new_sha256": "9f7b5685541aa8ff1c97068aa3d9c9f2edd90d39d3702417e0e1a613ae9463ae",
+      "old_word_count": 73,
+      "new_word_count": 61
+    }
+  ],
+  "article_change_scope": "Casual section only; exact registered-main rollback of the only two canonical-to-r9 Casual wording deltas",
+  "unexplained_deltas": 0,
+  "detector_plan": "After joel-articles preservation proof is updated to exact candidate identity and eligible, measure only this Part 1 aggregate. Reuse exact 100%-Human Part 2; no local section call."
+}
