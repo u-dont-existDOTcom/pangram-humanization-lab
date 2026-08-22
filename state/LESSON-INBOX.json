@@ -3465,6 +3465,29 @@
           "section_id": "inner-child-overlap"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T07:44:13.312814+00:00",
+      "experiment_id": "romance-detector-repair-20260820-slow-steady-r11-20260822",
+      "id": "Q-85d4f329169f9a4d",
+      "sections": [
+        "part1-slow-steady"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-slow-steady-r11-20260822-results.json",
+      "source_ref": "17188796348666891ac5405b4d346610ac77f2c5",
+      "source_sha256": "ee26df9b73071f6ed77dee0930f71c7c13563bdef41f3c98c5f8a6d536735112",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "SLOW_STEADY_R11",
+          "prediction_short": "Human",
+          "section_id": "part1-slow-steady"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
