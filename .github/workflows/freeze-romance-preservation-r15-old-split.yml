@@ -98,3 +98,5 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Freeze Romance preservation r15 old-split Part 1'
           git push origin HEAD:automation/pangram-fixed-batch
+
+# registered workflow retrigger for exact r15 freeze
