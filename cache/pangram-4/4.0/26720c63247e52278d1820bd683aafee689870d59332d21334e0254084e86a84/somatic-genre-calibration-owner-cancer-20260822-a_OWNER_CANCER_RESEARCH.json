@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-genre-calibration-owner-cancer-20260822-a_OWNER_CANCER_RESEARCH",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Anyway, treating cancer has been a topic that I’ve been researching for over a decade now, thanks to my mom, and so I thought I should write this article since people sometimes do ask what I would recommend. In writing the article, I really underestimated the amount of time it would take — there are people who dedicate their whole lives to writing on this subject— but I’ve done extensive additional research, which taught me that some treatments are not as effective as I thought (like GcMAF), and exposed me to a vast array that I never heard of before. If you have any treatment you’d like me to research, leave a comment and I will do my best.\nEven better, you can use my instructions here to do your own research in the way I do. You will find some ideas and prompts in that article that you won’t find elsewhere, and I hope that you get a better picture of your options. You really do need to Do Your Own Research though. I started doing research on anecdotes at this cancer Facebook group a month ago, but it seems I can no longer access it. There were some genuine folks sharing stories of their own cures, and a few folks in that group trying to scam people. The only person in that group that I’ve seen highly recommended for helping folks cure stage IV cancers is Fruitful Purpose on FB, but now I can’t find them either, and I am not convinced about them since they never responded to my message, and their posts are written with ChatGPT.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 4.6805002057226375e-05,
+        "confidence": "High",
+        "end_index": 1452,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Anyway, treating cancer has been a topic that I’ve been researching for over a decade now, thanks to my mom, and so I thought I should write this article since people sometimes do ask what I would recommend. In writing the article, I really underestimated the amount of time it would take — there are people who dedicate their whole lives to writing on this subject— but I’ve done extensive additional research, which taught me that some treatments are not as effective as I thought (like GcMAF), and exposed me to a vast array that I never heard of before. If you have any treatment you’d like me to research, leave a comment and I will do my best.\nEven better, you can use my instructions here to do your own research in the way I do. You will find some ideas and prompts in that article that you won’t find elsewhere, and I hope that you get a better picture of your options. You really do need to Do Your Own Research though. I started doing research on anecdotes at this cancer Facebook group a month ago, but it seems I can no longer access it. There were some genuine folks sharing stories of their own cures, and a few folks in that group trying to scam people. The only person in that group that I’ve seen highly recommended for helping folks cure stage IV cancers is Fruitful Purpose on FB, but now I can’t find them either, and I am not convinced about them since they never responded to my message, and their posts are written with ChatGPT.",
+        "token_length": 311,
+        "word_count": 270
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "494b606c-58bf-463f-ab70-a0e505b2103d",
   "text": "Anyway, treating cancer has been a topic that I’ve been researching for over a decade now, thanks to my mom, and so I thought I should write this article since people sometimes do ask what I would recommend. In writing the article, I really underestimated the amount of time it would take — there are people who dedicate their whole lives to writing on this subject— but I’ve done extensive additional research, which taught me that some treatments are not as effective as I thought (like GcMAF), and exposed me to a vast array that I never heard of before. If you have any treatment you’d like me to research, leave a comment and I will do my best.\n\nEven better, you can use my instructions here to do your own research in the way I do. You will find some ideas and prompts in that article that you won’t find elsewhere, and I hope that you get a better picture of your options. You really do need to Do Your Own Research though. I started doing research on anecdotes at this cancer Facebook group a month ago, but it seems I can no longer access it. There were some genuine folks sharing stories of their own cures, and a few folks in that group trying to scam people. The only person in that group that I’ve seen highly recommended for helping folks cure stage IV cancers is Fruitful Purpose on FB, but now I can’t find them either, and I am not convinced about them since they never responded to my message, and their posts are written with ChatGPT.\n",
   "text_sha256": "26720c63247e52278d1820bd683aafee689870d59332d21334e0254084e86a84",
-  "updated_utc": "2026-08-22T01:01:13.956597+00:00"
+  "updated_utc": "2026-08-22T01:01:23.804757+00:00"
 }
