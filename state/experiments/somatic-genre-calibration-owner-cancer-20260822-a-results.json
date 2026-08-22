@@ -1,0 +1,66 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-genre-calibration-owner-cancer-20260822-a",
+  "spec_sha256": "0bf6b4265e2f6c1049c3de3b24e1e0ab22c06b1cf9f15d60e88351b855eaaebb",
+  "results": [
+    {
+      "id": "OWNER_CANCER_RESEARCH",
+      "measurement_key": "somatic-genre-calibration-owner-cancer-20260822-a_OWNER_CANCER_RESEARCH",
+      "text": "Anyway, treating cancer has been a topic that I’ve been researching for over a decade now, thanks to my mom, and so I thought I should write this article since people sometimes do ask what I would recommend. In writing the article, I really underestimated the amount of time it would take — there are people who dedicate their whole lives to writing on this subject— but I’ve done extensive additional research, which taught me that some treatments are not as effective as I thought (like GcMAF), and exposed me to a vast array that I never heard of before. If you have any treatment you’d like me to research, leave a comment and I will do my best.\n\nEven better, you can use my instructions here to do your own research in the way I do. You will find some ideas and prompts in that article that you won’t find elsewhere, and I hope that you get a better picture of your options. You really do need to Do Your Own Research though. I started doing research on anecdotes at this cancer Facebook group a month ago, but it seems I can no longer access it. There were some genuine folks sharing stories of their own cures, and a few folks in that group trying to scam people. The only person in that group that I’ve seen highly recommended for helping folks cure stage IV cancers is Fruitful Purpose on FB, but now I can’t find them either, and I am not convinced about them since they never responded to my message, and their posts are written with ChatGPT.\n",
+      "text_sha256": "26720c63247e52278d1820bd683aafee689870d59332d21334e0254084e86a84",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Anyway, treating cancer has been a topic that I’ve been researching for over a decade now, thanks to my mom, and so I thought I should write this article since people sometimes do ask what I would recommend. In writing the article, I really underestimated the amount of time it would take — there are people who dedicate their whole lives to writing on this subject— but I’ve done extensive additional research, which taught me that some treatments are not as effective as I thought (like GcMAF), and exposed me to a vast array that I never heard of before. If you have any treatment you’d like me to research, leave a comment and I will do my best.\nEven better, you can use my instructions here to do your own research in the way I do. You will find some ideas and prompts in that article that you won’t find elsewhere, and I hope that you get a better picture of your options. You really do need to Do Your Own Research though. I started doing research on anecdotes at this cancer Facebook group a month ago, but it seems I can no longer access it. There were some genuine folks sharing stories of their own cures, and a few folks in that group trying to scam people. The only person in that group that I’ve seen highly recommended for helping folks cure stage IV cancers is Fruitful Purpose on FB, but now I can’t find them either, and I am not convinced about them since they never responded to my message, and their posts are written with ChatGPT.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Anyway, treating cancer has been a topic that I’ve been researching for over a decade now, thanks to my mom, and so I thought I should write this article since people sometimes do ask what I would recommend. In writing the article, I really underestimated the amount of time it would take — there are people who dedicate their whole lives to writing on this subject— but I’ve done extensive additional research, which taught me that some treatments are not as effective as I thought (like GcMAF), and exposed me to a vast array that I never heard of before. If you have any treatment you’d like me to research, leave a comment and I will do my best.\nEven better, you can use my instructions here to do your own research in the way I do. You will find some ideas and prompts in that article that you won’t find elsewhere, and I hope that you get a better picture of your options. You really do need to Do Your Own Research though. I started doing research on anecdotes at this cancer Facebook group a month ago, but it seems I can no longer access it. There were some genuine folks sharing stories of their own cures, and a few folks in that group trying to scam people. The only person in that group that I’ve seen highly recommended for helping folks cure stage IV cancers is Fruitful Purpose on FB, but now I can’t find them either, and I am not convinced about them since they never responded to my message, and their posts are written with ChatGPT.",
+            "label": "Human Written",
+            "ai_assistance_score": 4.6805002057226375e-05,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1452,
+            "word_count": 270,
+            "token_length": 311,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "owner-cancer-research-calibration",
+      "budget_scope": "aggregate"
+    }
+  ],
+  "audit_id": "somatic-genre-calibration-20260822",
+  "call_accounting": {
+    "audit_id": "somatic-genre-calibration-20260822",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "section_id": "owner-cancer-research-calibration",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "aggregate",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": false,
+        "cap": null,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "somatic-genre-calibration-owner-cancer-20260822-a_OWNER_CANCER_RESEARCH"
+      }
+    ]
+  }
+}
