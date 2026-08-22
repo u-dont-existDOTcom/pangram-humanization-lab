@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request_id": "somatic-inner-r03-20260822",
+  "source_path": "state/experiments/somatic-therapies-inner-child-r03-dedupe-20260822-a-results.json",
+  "source_ref": "775be134db17eeffcd154e47fe7becfce30126c6",
+  "source_sha256": "daeaa32ff24ba8a1fb330046fffe2e91bdffebd8c1754fad431ccf8d3af6851d",
+  "finding": "The deduplicated inner-child reconstruction remained 100% AI.",
+  "disposition": "no-new-lesson",
+  "reason": "Removing duplicate mini-arguments did not isolate a detector cause; retain as local negative evidence.",
+  "promoted_to": []
+}
