@@ -3208,6 +3208,29 @@
           "section_id": "owner-cancer-research-calibration"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-therapies-intro-20260822",
+      "created_at_utc": "2026-08-22T01:10:18.473617+00:00",
+      "experiment_id": "somatic-therapies-intro-r07-personal-friction-20260822-a",
+      "id": "Q-34bcbde9693fd7d7",
+      "sections": [
+        "introduction"
+      ],
+      "source_path": "state/experiments/somatic-therapies-intro-r07-personal-friction-20260822-a-results.json",
+      "source_ref": "a6d1c8cd7d3f5970f11188ef3e44b9d0fd885493",
+      "source_sha256": "0af205ef01b2cc37bab5e598a2785fd5aa85430d5626a78c7d2a47043478cd81",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "INTRO_R07_PERSONAL_FRICTION",
+          "prediction_short": "AI",
+          "section_id": "introduction"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
