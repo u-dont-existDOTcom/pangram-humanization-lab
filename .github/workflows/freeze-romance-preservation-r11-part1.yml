@@ -117,7 +117,7 @@ jobs:
                   'joel-articles:work/romance-detector-repair-20260820/recovery-20260822/preservation-proof-maturity-patient-known-green.json',
               ],
               'local_detector_evidence': {
-                  'slow_steady': {'sha256': '2def6737f8763f6e3a92405166dd27f9d0e30ec043a57a216ffbc05bf6bb72f4', 'human': 1.0},
+                  'slow_steady': {'sha256': '2def6737f8763f6e3a92405166dd27f9d0e30ec043a57a216ffbc05ebc83c0ef', 'human': 1.0},
                   'casual_call6': {'sha256': 'e59a9cf974a6252930f774d8246512d68d1137b64481194571488e3814897d04', 'human': 0.9496374130249023, 'local_cap': '6/6'},
                   'maturity_patient': {'sha256': '7d60bc1c38669848e7e27d313603e4ee8970e34bf3896673160ea6a61c106002', 'human': 1.0, 'reused': True},
               },
@@ -147,3 +147,5 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Freeze Romance preservation r11 Part 1 aggregate'
           git push origin HEAD:automation/pangram-fixed-batch
+
+# retrigger after workflow registration on this branch
