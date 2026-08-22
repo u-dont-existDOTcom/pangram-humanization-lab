@@ -1,0 +1,16 @@
+{
+  "disposition": "no-new-lesson",
+  "finding": "In Romance r18, removing an immediate duplicate timing/mood-cost paragraph while preserving its unique making-love sentence and Joel's owner paragraph verbatim improved the aggregate from 93.07% to 93.45% Human and reduced AI windows from eight to six; Joel's owner paragraph remained outside AI windows, while byte-identical remote windows continued to move with composition.",
+  "ledger_entry_ids": [
+    "L-31ecbb69ac-01"
+  ],
+  "processed_at_utc": "2026-08-22T21:14:46.495273+00:00",
+  "promoted_to": [],
+  "reason": "The editorial dedup is article-specific and the detector behavior reinforces existing promoted rules on necessary sequencing, duplicate-function consolidation, non-compositional aggregate behavior, and remote long-context window sensitivity. No additional universal rule is justified.",
+  "request_id": "romance-r18-owner-talk-dedup-aggregate-20260822",
+  "schema_version": 1,
+  "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-part1-aggregate-20260822-results.json",
+  "source_ref": "767d707aba7d6d7b5b819dadc8cf4f2fce9c34c4",
+  "source_sha256": "31ecbb69ac4c4cb3a9906e6ee68bdb5e4d754c836fe83533a96f2eb1ff5301a9",
+  "status": "processed"
+}

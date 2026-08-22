@@ -833,6 +833,28 @@
       "source_path": "state/OWNER-LANGUAGE-HANDOFF-CONTEXT-2026-08-22.md",
       "source_ref": "main",
       "source_sha256": "35dbc065ee95b9f4b0767417ea0b1a4b9cab9bc4333d650b4e4f8dbdcac68a40"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "In Romance r17, Joel's newly supplied 138-word owner sexual-compatibility paragraph remained outside Pangram AI windows, while inserting it changed several surrounding and remote long-context windows; the aggregate fell to 93.07% Human despite the owner paragraph itself not being flagged.",
+      "id": "L-e2f3ba5083-01",
+      "promoted_to": [],
+      "reason": "This is important article-specific detector evidence but is already covered by promoted lessons that local/owner prose does not compose predictably into aggregate detector behavior, red windows are localization rather than causal authority, and long-context composition changes can create remote flips. Preserve the result for Romance routing without creating another generalized prose rule.",
+      "recorded_at_utc": "2026-08-22T21:14:46.483418+00:00",
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r17-owner-talk-part1-aggregate-20260822-results.json",
+      "source_ref": "11ab6df17c0ea272f3e3b92788b9fa0ec169d61c",
+      "source_sha256": "e2f3ba50833b43b39c596970eb15dba412173f166d8483c994173ad3a6fa5750"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "In Romance r18, removing an immediate duplicate timing/mood-cost paragraph while preserving its unique making-love sentence and Joel's owner paragraph verbatim improved the aggregate from 93.07% to 93.45% Human and reduced AI windows from eight to six; Joel's owner paragraph remained outside AI windows, while byte-identical remote windows continued to move with composition.",
+      "id": "L-31ecbb69ac-01",
+      "promoted_to": [],
+      "reason": "The editorial dedup is article-specific and the detector behavior reinforces existing promoted rules on necessary sequencing, duplicate-function consolidation, non-compositional aggregate behavior, and remote long-context window sensitivity. No additional universal rule is justified.",
+      "recorded_at_utc": "2026-08-22T21:14:46.493655+00:00",
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-part1-aggregate-20260822-results.json",
+      "source_ref": "767d707aba7d6d7b5b819dadc8cf4f2fce9c34c4",
+      "source_sha256": "31ecbb69ac4c4cb3a9906e6ee68bdb5e4d754c836fe83533a96f2eb1ff5301a9"
     }
   ],
   "schema_version": 1

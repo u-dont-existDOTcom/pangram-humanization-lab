@@ -1,0 +1,16 @@
+{
+  "disposition": "no-new-lesson",
+  "finding": "In Romance r17, Joel's newly supplied 138-word owner sexual-compatibility paragraph remained outside Pangram AI windows, while inserting it changed several surrounding and remote long-context windows; the aggregate fell to 93.07% Human despite the owner paragraph itself not being flagged.",
+  "ledger_entry_ids": [
+    "L-e2f3ba5083-01"
+  ],
+  "processed_at_utc": "2026-08-22T21:14:46.485191+00:00",
+  "promoted_to": [],
+  "reason": "This is important article-specific detector evidence but is already covered by promoted lessons that local/owner prose does not compose predictably into aggregate detector behavior, red windows are localization rather than causal authority, and long-context composition changes can create remote flips. Preserve the result for Romance routing without creating another generalized prose rule.",
+  "request_id": "romance-r17-owner-talk-aggregate-20260822",
+  "schema_version": 1,
+  "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r17-owner-talk-part1-aggregate-20260822-results.json",
+  "source_ref": "11ab6df17c0ea272f3e3b92788b9fa0ec169d61c",
+  "source_sha256": "e2f3ba50833b43b39c596970eb15dba412173f166d8483c994173ad3a6fa5750",
+  "status": "processed"
+}
