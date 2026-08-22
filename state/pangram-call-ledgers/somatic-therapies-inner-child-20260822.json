@@ -6,8 +6,8 @@
     "inner-child-overlap\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.25,
-      "estimated_credits": 5,
+      "estimated_cost_usd": 0.3,
+      "estimated_credits": 6,
       "events": [
         {
           "budget_scope": "section",
@@ -53,10 +53,19 @@
           "text_sha256": "ebe3cc76b03fc0ad791dd66b5c9fa1541ec1b6d4d39430e3013fc2e7d9a3576f",
           "type": "paid_post_reserved",
           "word_count": 219
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-therapies-inner-child-r06-original-source-20260822-a_INNER_CHILD_R06_ORIGINAL_SOURCE",
+          "recorded_at_utc": "2026-08-22T07:51:08.279540+00:00",
+          "text_sha256": "8d6012871bc78eb9df01c427a86eee7955c03d858ea6b95384e53cb9d9d37155",
+          "type": "paid_post_reserved",
+          "word_count": 358
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 5,
+      "paid_api_calls": 6,
       "pending_resumes": 0,
       "section_id": "inner-child-overlap",
       "version": "4.0"
