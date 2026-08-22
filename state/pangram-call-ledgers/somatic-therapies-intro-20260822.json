@@ -6,8 +6,8 @@
     "introduction\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "budget_scope": "section",
@@ -26,10 +26,19 @@
           "text_sha256": "eb5941a868b9b5540db3e2af1c148110f1a7b4d902802cbd1ec0b2917c3f25c0",
           "type": "paid_post_reserved",
           "word_count": 286
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-therapies-intro-r05-authorial-route-20260822-a_INTRO_R05_AUTHORIAL",
+          "recorded_at_utc": "2026-08-22T00:54:10.524680+00:00",
+          "text_sha256": "ecaec09a71c9a4978357dc6ae66fc96d6b62ec632ad56795b29261de83164c2b",
+          "type": "paid_post_reserved",
+          "word_count": 360
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "introduction",
       "version": "4.0"
