@@ -675,6 +675,28 @@
       "section_id": "part2-preservation-r10",
       "version": "4.0"
     },
+    "part2-preservation-r13-natural-split\u001fpangram-4\u001f4.0": {
+      "budget_scope": "aggregate",
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.5,
+      "estimated_credits": 10,
+      "events": [
+        {
+          "budget_scope": "aggregate",
+          "estimated_credits": 10,
+          "measurement_key": "romance-detector-repair-20260820-preservation-r13-natural-split-aggregates-20260822_PRESERVATION_R13_PART2",
+          "recorded_at_utc": "2026-08-22T08:08:47.335062+00:00",
+          "text_sha256": "d8545870944e11353011a256c6df1b2034b0183f67a6d0841386fef919fe49c9",
+          "type": "paid_post_reserved",
+          "word_count": 9394
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "part2-preservation-r13-natural-split",
+      "version": "4.0"
+    },
     "primal-not-a-performance\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
