@@ -1,0 +1,149 @@
+name: Freeze Romance preservation r11 Part 1
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-preservation-r11-part1.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+      - name: Fetch exact r10 Part 1 and materialize preservation r11
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/0cbfe3c70f5c5088681f46b5f57a176f83a45a69/work/romance-detector-repair-20260820/materialized-preservation-r10-part1/candidate-part-1.txt'
+          curl --fail --silent --show-error --location "$URL" -o /tmp/part1-r10.txt
+          echo '4ab1ad34f171bb75d2f93e261757cca469a655b629508eb3b91ab05ebc83c0ef  /tmp/part1-r10.txt' | sha256sum -c -
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          source = Path('/tmp/part1-r10.txt').read_text(encoding='utf-8')
+
+          slow_old = 'But the first night isn’t necessarily the final ceiling either.'
+          slow_new = ''
+          casual_old = 'The STI part is easy: say what you know, or say you don’t know. Feelings aren’t. You can both mean it when you say this is only sex and still have one of you get attached afterward. If you’re both really numb or robotic about sex, maybe not.'
+          casual_new = "You can test for STIs and tell each other what you know. If you don't know, say so. Attachment is less cooperative. Both of you can mean it when you say this is only sex, and then one of you wakes up attached anyway. If you’re both really numb or robotic about sex, maybe not."
+          patient_old = '''All three women told me at some point that they felt like my patient. Which is true, I really was the one they asked about almost every medical, mental-health, and practical problem:\n\n“I’m sick. What should I take?”\n\n“I’m sad. What should I do?”\n\nOf course I helped. Saying, “I’m not your doctor or therapist,” every time would have been cold. But enough moments become a pattern.'''
+          patient_new = '''All three women eventually told me they felt like my patient, and I could see why. I was the person they brought almost every medical, mental-health, and practical problem to:\n\n“I’m sick. What should I take?”\n\n“I’m sad. What should I do?”\n\nOf course I was going to help. If every time one of them felt sick I answered, “I’m not your doctor or therapist,” that would have been cold. But after enough of those conversations, I understood why they used the word patient.'''
+
+          operations = [
+              ('slow-steady-known-human-consolidation', slow_old, slow_new),
+              ('casual-final-call6-sti-attachment', casual_old, casual_new),
+              ('maturity-patient-known-green-rollback', patient_old, patient_new),
+          ]
+
+          text = source
+          op_manifest = []
+          for label, old, new in operations:
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'{label}: expected exactly one source occurrence, found {count}')
+              text = text.replace(old, new, 1)
+              op_manifest.append({
+                  'label': label,
+                  'old_sha256': hashlib.sha256(old.encode()).hexdigest(),
+                  'new_sha256': hashlib.sha256(new.encode()).hexdigest(),
+                  'old_word_count': len(old.split()),
+                  'new_word_count': len(new.split()),
+              })
+
+          required = [
+              'Sex is what you do when you are older and you find a friend you want to have children with.',
+              'would we like to raise children together? Are we ready?',
+              'This will naturally prevent sex from happening too soon',
+              "If we can't, that's a red flag for the relationship's chances of success.",
+              'Gandarussa',
+          ]
+          missing = [x for x in required if x not in text]
+          if missing:
+              raise SystemExit(f'protected anchors missing: {missing}')
+          if slow_old in text or casual_old in text or patient_old in text:
+              raise SystemExit('one or more old spans survived unexpectedly')
+          if casual_new not in text or patient_new not in text:
+              raise SystemExit('one or more replacement spans missing')
+
+          candidate_sha = hashlib.sha256(text.encode('utf-8')).hexdigest()
+          candidate_words = len(text.split())
+          candidate_path = Path('state/candidates/romance-detector-repair-20260820-preservation-r11-part1.txt')
+          candidate_path.parent.mkdir(parents=True, exist_ok=True)
+          candidate_path.write_text(text, encoding='utf-8')
+
+          experiment_id = 'romance-detector-repair-20260820-preservation-r11-part1-aggregate-20260822'
+          spec = {
+              'format': 'pangram-fixed-batch-v1',
+              'experiment_id': experiment_id,
+              'audit_id': 'romance-detector-repair-20260820',
+              'variants': [{
+                  'id': 'PRESERVATION_R11_PART1',
+                  'section_id': 'part1-preservation-r11',
+                  'budget_scope': 'aggregate',
+                  'text': text,
+              }],
+          }
+          spec_path = Path(f'experiments/{experiment_id}.json')
+          spec_path.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          spec_sha = hashlib.sha256(spec_path.read_bytes()).hexdigest()
+          spec_path.with_suffix(spec_path.suffix + '.sha256').write_text(spec_sha + '\n', encoding='utf-8')
+
+          freeze = {
+              'schema_version': 1,
+              'experiment_id': experiment_id,
+              'source': {
+                  'repo': 'u-dont-existDOTcom/joel-articles',
+                  'commit': '0cbfe3c70f5c5088681f46b5f57a176f83a45a69',
+                  'path': 'work/romance-detector-repair-20260820/materialized-preservation-r10-part1/candidate-part-1.txt',
+                  'sha256': '4ab1ad34f171bb75d2f93e261757cca469a655b629508eb3b91ab05ebc83c0ef',
+              },
+              'candidate': {
+                  'path': str(candidate_path),
+                  'sha256': candidate_sha,
+                  'word_count_whitespace': candidate_words,
+              },
+              'operations': op_manifest,
+              'preservation_receipts': [
+                  'joel-articles:work/romance-detector-repair-20260820/recovery-20260822/preservation-proof-slow-steady-r11.json',
+                  'joel-articles:work/romance-detector-repair-20260820/recovery-20260822/preservation-proof-casual-final-call6.json',
+                  'joel-articles:work/romance-detector-repair-20260820/recovery-20260822/preservation-proof-maturity-patient-known-green.json',
+              ],
+              'local_detector_evidence': {
+                  'slow_steady': {'sha256': '2def6737f8763f6e3a92405166dd27f9d0e30ec043a57a216ffbc05bf6bb72f4', 'human': 1.0},
+                  'casual_call6': {'sha256': 'e59a9cf974a6252930f774d8246512d68d1137b64481194571488e3814897d04', 'human': 0.9496374130249023, 'local_cap': '6/6'},
+                  'maturity_patient': {'sha256': '7d60bc1c38669848e7e27d313603e4ee8970e34bf3896673160ea6a61c106002', 'human': 1.0, 'reused': True},
+              },
+              'part2': {
+                  'sha256': '9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85',
+                  'human': 1.0,
+                  'unchanged': True,
+              },
+              'spec_path': str(spec_path),
+              'spec_sha256': spec_sha,
+              'unexplained_deltas': 0,
+          }
+          freeze_path = Path(f'state/experiments/{experiment_id}-freeze.json')
+          freeze_path.write_text(json.dumps(freeze, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(freeze, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit exact candidate and aggregate spec
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            state/candidates/romance-detector-repair-20260820-preservation-r11-part1.txt \
+            state/experiments/romance-detector-repair-20260820-preservation-r11-part1-aggregate-20260822-freeze.json \
+            experiments/romance-detector-repair-20260820-preservation-r11-part1-aggregate-20260822.json \
+            experiments/romance-detector-repair-20260820-preservation-r11-part1-aggregate-20260822.json.sha256
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance preservation r11 Part 1 aggregate'
+          git push origin HEAD:automation/pangram-fixed-batch
