@@ -109,14 +109,17 @@ def run_batch(
             if call_ledger is None:
                 detector = client.detect_cached(text, cache, measurement_key=measurement_key)
             else:
-                detector = client.detect_cached(
-                    text,
-                    cache,
-                    measurement_key=measurement_key,
-                    section_id=section_id,
-                    budget_scope=budget_scope,
-                    allow_exact_repeat=allow_exact_repeat,
-                )
+                kwargs = {
+                    "measurement_key": measurement_key,
+                    "section_id": section_id,
+                    "budget_scope": budget_scope,
+                }
+                # Preserve the established ordinary-client interface. The
+                # repeat override is exceptional and is passed only when a
+                # variant explicitly opts into it.
+                if allow_exact_repeat:
+                    kwargs["allow_exact_repeat"] = True
+                detector = client.detect_cached(text, cache, **kwargs)
         except SectionCallCapReached:
             model = getattr(client, "model", "pangram-4")
             version = getattr(client, "expected_version", "4.0")
