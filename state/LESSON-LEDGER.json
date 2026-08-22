@@ -805,6 +805,20 @@
       "source_path": "state/ROMANCE-HALF-SPLIT-REMOTE-SENSITIVITY-2026-08-22.md",
       "source_ref": "3386e95e647db4a0bc15ccc81a95f0b30d6ad84c",
       "source_sha256": "7b3253364c319f3b71e031672ea30ba699fda4ab4151d3969fbb8c68955b119d"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Authenticated Pangram web-History absence is not valid negative evidence for the current async API route: a known-success async API measurement was absent from the same History surface, so ambiguous API reservations must remain blocked unless transport-appropriate durable task/cache/ledger evidence resolves them.",
+      "id": "L-e4fc772dfc-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-13-HUMANIZATION-GATE.md"
+      ],
+      "reason": "This is a reusable paid-call safety rule across detector tasks, not Somatic-specific prose behavior.",
+      "recorded_at_utc": "2026-08-22T19:33:11.976893+00:00",
+      "source_path": "state/PANGRAM-ASYNC-API-HISTORY-BOUNDARY-2026-08-22.md",
+      "source_ref": "agent/async-api-history-boundary-20260822",
+      "source_sha256": "e4fc772dfce47c22970508639e82951cec1778ae6bb8683646c9e7e2e7bf0470"
     }
   ],
   "schema_version": 1
