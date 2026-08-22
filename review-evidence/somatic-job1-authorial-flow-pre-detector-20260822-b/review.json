@@ -1,0 +1,77 @@
+{
+  "candidate_available": false,
+  "candidate_hard_pass": false,
+  "candidate_material_route": "",
+  "candidate_ref": "",
+  "candidate_role": "",
+  "candidate_sha256": "",
+  "detector_submission_attempted": false,
+  "failure": {
+    "accepted_move_count": 0,
+    "authorial_information_missing": false,
+    "decision_trace": {
+      "accepted_move_count": 0,
+      "boundary_id": "",
+      "budgets": {
+        "active_budget": "",
+        "budget_limit": 0,
+        "retry_count": 0,
+        "rollback_count": 0
+      },
+      "candidate_sha256": "",
+      "committed_pressure": {
+        "boundary_id": "",
+        "confidence": 0.0,
+        "state": ""
+      },
+      "decision_boundary_id": "",
+      "edge": {},
+      "pressure_votes": [],
+      "rejection_class": "",
+      "schema_version": 1,
+      "uncovered_required_count": 0
+    },
+    "exception_type": "FileNotFoundError",
+    "failure_class": "DETERMINISTIC_RUNTIME",
+    "failure_code": "[Errno 2] No such file or directory: 'codex'",
+    "failure_evidence_ref": "dcb4d504c2d3b955ef3fd6007bb9821b093afb1dcd14348407305af7ef12487a",
+    "failure_origin_node": "representation",
+    "final_local_gates": {
+      "regressions_hard_pass": true
+    },
+    "generation_rejection_class": "",
+    "local_gate_state": {
+      "regressions_hard_pass": true
+    },
+    "move_index": 0,
+    "provider": "",
+    "provider_attempts": [],
+    "provider_role": "",
+    "repair_attempt": 1,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "source_provenance": "",
+    "state_context": {
+      "accepted_move_count": 0,
+      "move_index": 0,
+      "retry_count": 0,
+      "rollback_count": 0,
+      "status": "regressions_passed"
+    },
+    "task_mode": "",
+    "uncovered_required_count": 0
+  },
+  "format": "authorial-flow-pre-detector-review-v1",
+  "interrupt_kind": "",
+  "interrupt_question": "",
+  "phase": "finalized",
+  "repair_rounds": 0,
+  "request_id": "somatic-job1-authorial-flow-pre-detector-20260822-b",
+  "research_discovery_attempted": false,
+  "source_commit": "95b00766de2e0283548b1f0897752d3ab69413c3",
+  "source_path": "articles/somatic-therapies/experiments/JOB1-AUTHORIAL-FLOW-INPUT-20260822.md",
+  "source_sha256": "b6c9d2f77e620c087f89bacd19706855b62e8ebd72d6cb8d741c05c1adcf3228",
+  "status": "bounded_machine_stop",
+  "thread_id": "70b00ee02be1ece8883bc410beacfce4a4b1632794c5e612dcb776123de1c994",
+  "tool_ref": "c87eec03540ef0ac5bbdcbf35b85286759252e67"
+}
