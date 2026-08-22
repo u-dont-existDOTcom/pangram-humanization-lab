@@ -3557,6 +3557,29 @@
           "section_id": "part1-preservation-r11"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T08:00:25.281922+00:00",
+      "experiment_id": "romance-detector-repair-20260820-preservation-r12-part1-aggregate-20260822",
+      "id": "Q-bdb5c97601c218e1",
+      "sections": [
+        "part1-preservation-r12"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r12-part1-aggregate-20260822-results.json",
+      "source_ref": "0045cb8c4504d55d341c5eb919c0d2c3bc2bff97",
+      "source_sha256": "d2128c4385bb7a946634a849ae507238d36fd7a542145efaef9905c43dfe42f3",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.045325975865125656,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9546740055084229,
+          "id": "PRESERVATION_R12_PART1",
+          "prediction_short": "Human",
+          "section_id": "part1-preservation-r12"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
