@@ -612,8 +612,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/nodes/repair.py",
-      "sha256": "37f582cccf9f51c0700817e7f1e580a6f89c1b021d0626024089a6930b9d568d",
-      "size_bytes": 5631
+      "sha256": "07d62e21150b09f0ef4c4e11d5f7a6e1135b40a164484e667191fe50884dec74",
+      "size_bytes": 7816
     },
     {
       "executable": false,
@@ -816,8 +816,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/prompts/semantic_sanity.md",
-      "sha256": "e6eab57a4786b2becdfc89dc38b5c41b18de0ed023e606020a0528a232d01eaa",
-      "size_bytes": 1203
+      "sha256": "d18eba6749ec475039fae61d613b74a0d9b0c9c24b35d63121d4570967536274",
+      "size_bytes": 1989
     },
     {
       "executable": false,
@@ -924,8 +924,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/routing.py",
-      "sha256": "2713669c3055533856fb68af469d6e873b9d6d4640bc007a5f6b178fea7abd63",
-      "size_bytes": 5170
+      "sha256": "82c196cedc44418fcc34e2c585ea9e33d2d7bbcaf23ad6176518fb2fe43986ba",
+      "size_bytes": 5611
     },
     {
       "executable": false,
@@ -1301,6 +1301,12 @@
     },
     {
       "executable": false,
+      "path": "tests/unit/test_semantic_escalation_contract_boundary.py",
+      "sha256": "da89da272001921750bc9d5c79a511593707eba51eabeeb91aca9ec70d6ad994",
+      "size_bytes": 3467
+    },
+    {
+      "executable": false,
       "path": "tests/unit/test_semantic_sanity_routing.py",
       "sha256": "543333c78f8746e6c3a6e1baa2b4c612dbbd5144f13c6b8e18a8f7ba3ec062ac",
       "size_bytes": 1414
@@ -1325,5 +1331,5 @@
     }
   ],
   "policy_version": "joel-articles-4.12.0-candidate",
-  "source_commit_sha": "18bb2354636698c863ab2b65775f74e21a884a47"
+  "source_commit_sha": "e981ee03b64dcabb9070d24f5b06394800314aea"
 }
