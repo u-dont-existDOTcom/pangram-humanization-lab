@@ -1,0 +1,100 @@
+name: Freeze Romance preservation r15 old split
+
+on:
+  push:
+    branches:
+      - automation/pangram-fixed-batch
+    paths:
+      - '.github/workflows/freeze-romance-preservation-r15-old-split.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: automation/pangram-fixed-batch
+          fetch-depth: 0
+      - name: Reconstruct exact r14 article with old successful Part-2 boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://raw.githubusercontent.com/u-dont-existDOTcom/joel-articles/665863b17e9ca92c3fe8ae752fb827e185d5c6eb'
+          curl --fail --silent --show-error --location "$BASE/work/romance-detector-repair-20260820/materialized-preservation-r14-affection-maturity-split/candidate-part-1.txt" -o /tmp/r14-p1.txt
+          curl --fail --silent --show-error --location "$BASE/work/romance-detector-repair-20260820/materialized-preservation-r14-affection-maturity-split/candidate-part-2.txt" -o /tmp/r14-p2.txt
+          curl --fail --silent --show-error --location "$BASE/work/romance-detector-repair-20260820/materialized-preservation-r12-part1/candidate-part-2.txt" -o /tmp/old-p2.txt
+          echo 'd2374e29f0c08b979ffa78bfe6ce8949fa867abe41cc35d68feb9d2461a10d64  /tmp/r14-p1.txt' | sha256sum -c -
+          echo 'c20e97cd3b168b4c9c7f5688a8e5c8f0a6d7fc558b875bc0ce02538c3579c515  /tmp/r14-p2.txt' | sha256sum -c -
+          echo '9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85  /tmp/old-p2.txt' | sha256sum -c -
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          p1 = Path('/tmp/r14-p1.txt').read_text(encoding='utf-8')
+          p2 = Path('/tmp/r14-p2.txt').read_text(encoding='utf-8')
+          old2 = Path('/tmp/old-p2.txt').read_text(encoding='utf-8')
+          full = p1 + p2
+          full_sha = hashlib.sha256(full.encode()).hexdigest()
+          if full_sha != '6db337289008c2d150a312f17794ef6c19469a74a773c767a452b5c0460132e1':
+              raise SystemExit(f'r14 full reader-visible reassembly mismatch: {full_sha}')
+          if p2.count(old2) != 1:
+              raise SystemExit(f'expected old Part 2 exactly once inside r14 Part 2; got {p2.count(old2)}')
+          split_index = p2.index(old2)
+          prefix = p2[:split_index]
+          new1 = p1 + prefix
+          if new1 + old2 != full:
+              raise SystemExit('r15 split does not reassemble exact r14 reader-visible article')
+
+          out = Path('state/candidates/romance-detector-repair-20260820-preservation-r15-old-split-part1.txt')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(new1, encoding='utf-8')
+          new1_sha = hashlib.sha256(new1.encode()).hexdigest()
+          freeze = {
+              'schema_version': 1,
+              'candidate_id': 'romance-detector-repair-20260820-preservation-r15-old-split',
+              'article_prose': {
+                  'source': 'joel-articles task/romance-detector-repair-20260820 r14 canonical-Affection candidate',
+                  'master_sha256': 'fafdc70e9f9a3554e1fb46bd7d4e011db77379f1993629f7885e90ac9c9c1cf2',
+                  'full_reader_visible_sha256': full_sha,
+                  'unchanged_from_r14': True,
+              },
+              'source_halves': {
+                  'r14_part1_sha256': 'd2374e29f0c08b979ffa78bfe6ce8949fa867abe41cc35d68feb9d2461a10d64',
+                  'r14_part2_sha256': 'c20e97cd3b168b4c9c7f5688a8e5c8f0a6d7fc558b875bc0ce02538c3579c515',
+              },
+              'operation': {
+                  'type': 'aggregate_boundary_relocation_only',
+                  'from': 'immediately before complete Maturity section',
+                  'to': 'previous preservation-r12 split immediately before Key/guru continuation',
+                  'article_prose_changed': False,
+                  'reason': 'r14 boundary-only move caused formerly 100%-Human old Part-2 prose to regress to 95.6538856% Human with four AI windows; restore the exact known-successful Part-2 boundary while retaining r14 canonical Affection prose.',
+              },
+              'candidate': {
+                  'part1_path': str(out),
+                  'part1_sha256': new1_sha,
+                  'part1_word_count_whitespace': len(new1.split()),
+                  'part2_sha256': '9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85',
+                  'part2_word_count_whitespace': len(old2.split()),
+                  'part2_exact_prior_human': 1.0,
+                  'full_reassembles_exact_r14_reader_visible': True,
+              },
+              'detector_plan': 'After a preservation-proof receipt is committed in joel-articles, measure only exact r15 Part 1. Reuse prior exact Part-2 Pangram 4.0 100% Human evidence; do not rerun Part 2.',
+          }
+          fp = Path('state/experiments/romance-detector-repair-20260820-preservation-r15-old-split-freeze.json')
+          fp.write_text(json.dumps(freeze, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(freeze, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit frozen split candidate
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            state/candidates/romance-detector-repair-20260820-preservation-r15-old-split-part1.txt \
+            state/experiments/romance-detector-repair-20260820-preservation-r15-old-split-freeze.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze Romance preservation r15 old-split Part 1'
+          git push origin HEAD:automation/pangram-fixed-batch
