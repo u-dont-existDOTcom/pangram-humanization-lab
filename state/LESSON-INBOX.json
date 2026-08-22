@@ -3635,6 +3635,37 @@
           "section_id": "part1-casual-sex-situationship"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-therapies-job1-authorial-state-20260822",
+      "created_at_utc": "2026-08-22T09:15:27.967857+00:00",
+      "experiment_id": "somatic-therapies-job1-authorial-state-ab-20260822-a",
+      "id": "Q-8f13352a8a2c825c",
+      "sections": [
+        "job1-se-yoga"
+      ],
+      "source_path": "state/experiments/somatic-therapies-job1-authorial-state-ab-20260822-a-results.json",
+      "source_ref": "c659ae00416e388b8a00e9f1beff110a45cb6e85",
+      "source_sha256": "171a11a0abba4e78891bf99d518e631a9ec274778343d7bc1471f5e908691b78",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "JOB1_SE_YOGA_CONTROL_C",
+          "prediction_short": "AI",
+          "section_id": "job1-se-yoga"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "JOB1_SE_YOGA_AUTHORIAL_D",
+          "prediction_short": "AI",
+          "section_id": "job1-se-yoga"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
