@@ -3295,6 +3295,29 @@
           "section_id": "primal-not-a-performance"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-22T01:33:31.236877+00:00",
+      "experiment_id": "romance-detector-repair-20260820-primal-final-call6-20260822",
+      "id": "Q-0da69109ce81569f",
+      "sections": [
+        "primal-not-a-performance"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-primal-final-call6-20260822-results.json",
+      "source_ref": "770d12ecdeb97021e48d3c8dc9dce998669a7a67",
+      "source_sha256": "aa7d3e8018db4795f0c59d1fa68ca2573932b0e8d0cc3fbdf626280bedc539ce",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.11516709625720978,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8848329186439514,
+          "id": "NOT_A_PERFORMANCE_FINAL_CALL6",
+          "prediction_short": "Mixed",
+          "section_id": "primal-not-a-performance"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
