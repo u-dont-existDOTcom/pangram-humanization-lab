@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+# Temporary PR touch: trigger the base branch's code-only immutable-source CI.
 import hashlib
 import json
 from pathlib import Path
