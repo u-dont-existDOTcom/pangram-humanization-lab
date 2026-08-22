@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "candidate_id": "romance-detector-repair-20260820-preservation-r18-owner-talk-dedup",
+  "source": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r17-owner-talk-part1.txt",
+    "sha256": "0e32a7c1482f5a1e6c4fe5aaba492743bc5cc0d96e860518fb8c4a62c379ca08",
+    "word_count_whitespace": 10400
+  },
+  "candidate": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r18-owner-talk-dedup-part1.txt",
+    "sha256": "093289ce0cb3bdd216ae8e1fd584d4a0b426984a4c2edca97ba3ed75fed36ac9",
+    "word_count_whitespace": 10360,
+    "part2_sha256": "9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85",
+    "part2_exact_prior_human": 1.0
+  },
+  "operation": {
+    "type": "duplicate-function-consolidation",
+    "old_sha256": "b667f26fd482cbc1359fa8bf2afcc31c1b6e981dfa89ffb184d62a0bea73ab56",
+    "new_sha256": "12659ada56663f08676ef91b916833063331b3d4cd9cd0102be16535d3266a51",
+    "old_word_count": 48,
+    "new_word_count": 8,
+    "owner_paragraph_sha256_unchanged": "68716bc63f5a0b84945cb33cf12595ee9fcacbd48cad05e607e862e62d925ff0"
+  },
+  "protected_neighbor_functions_preserved": true,
+  "unexplained_deltas": 0,
+  "detector_plan": "After joel-articles preservation proof is updated to exact candidate identity and eligible, measure only aggregate Part 1. Reuse exact prior 100%-Human Part 2; no local Talk call."
+}
