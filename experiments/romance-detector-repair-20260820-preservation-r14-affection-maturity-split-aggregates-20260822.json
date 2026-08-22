@@ -1,0 +1,29 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "romance-detector-repair-20260820-preservation-r14-affection-maturity-split-aggregates-20260822",
+  "audit_id": "romance-detector-repair-20260820",
+  "variants": [
+    {
+      "id": "PRESERVATION_R14_PART1",
+      "section_id": "part1-preservation-r14-affection-maturity-split",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "blob_sha": "99024f1be1853e2eceb0a055a7c1bec281583275",
+        "text_sha256": "d2374e29f0c08b979ffa78bfe6ce8949fa867abe41cc35d68feb9d2461a10d64"
+      }
+    },
+    {
+      "id": "PRESERVATION_R14_PART2",
+      "section_id": "part2-preservation-r14-affection-maturity-split",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "blob_sha": "aefd6f6051f0444851baebcc5f4ca46b4effadff",
+        "text_sha256": "c20e97cd3b168b4c9c7f5688a8e5c8f0a6d7fc558b875bc0ce02538c3579c515"
+      }
+    }
+  ]
+}
