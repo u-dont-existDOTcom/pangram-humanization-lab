@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "romance-half-split-sensitivity-20260822",
+  "source_path": "state/ROMANCE-HALF-SPLIT-REMOTE-SENSITIVITY-2026-08-22.md",
+  "source_ref": "3386e95e647db4a0bc15ccc81a95f0b30d6ad84c",
+  "source_sha256": "7b3253364c319f3b71e031672ea30ba699fda4ab4151d3969fbb8c68955b119d",
+  "finding": "Changing only a long-document detector split can create far-downstream AI windows in byte-identical prose that previously measured 100% Human; compare exact prior-boundary evidence before rewriting newly red remote passages.",
+  "disposition": "promoted",
+  "reason": "Exact Romance r12/r14/r15 controls isolate aggregate segmentation as the changed detector input and show remote classification flips in unchanged previously-green prose. The finding is reusable for detector localization and protects article fidelity from boundary-induced rewrites.",
+  "promoted_to": [
+    "state/LESSON-INDEX.md",
+    "state/WORKING-LESSONS-SUPPLEMENT-2026-08-22.md"
+  ],
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-22.md",
+  "lesson_block": "## Promotion record\n\nThe r12/r14/r15 Romance control establishes a reusable detector rule: long-document segmentation is part of the detector input and can flip far-downstream byte-identical prose. Hold segmentation stable for controlled prose comparisons. After a split change, treat newly red remote windows as boundary/composition evidence until exact prior-boundary comparison supports a prose-level cause. Detector score never chooses article architecture.",
+  "index_block": "- **Long-document split sensitivity:** changing only a detector half/document boundary can create far-downstream AI windows in byte-identical prose that previously measured Human. Compare exact prior-boundary evidence before rewriting newly red remote passages and keep segmentation stable for controlled prose comparisons. See `state/WORKING-LESSONS-SUPPLEMENT-2026-08-22.md` and `state/ROMANCE-HALF-SPLIT-REMOTE-SENSITIVITY-2026-08-22.md`."
+}
