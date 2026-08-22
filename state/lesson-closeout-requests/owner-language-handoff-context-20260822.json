@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "owner-language-handoff-context-20260822",
+  "source_path": "state/OWNER-LANGUAGE-HANDOFF-CONTEXT-2026-08-22.md",
+  "source_ref": "main",
+  "source_sha256": "35dbc065ee95b9f4b0767417ea0b1a4b9cab9bc4333d650b4e4f8dbdcac68a40",
+  "finding": "When requesting fresh owner language, internal detector labels and abstract function lists are insufficient; give the exact article/section heading, reader-visible placement, immediate before/after paragraph jobs, the thought being supplied, and neighboring functions that are not being replaced so the owner can write naturally without reconstructing the worker's internal state.",
+  "disposition": "promoted",
+  "reason": "Direct owner correction immediately demonstrated that a vague residual label was unusable and that reader-visible placement context elicited the needed natural owner mechanism. The rule transfers to article editing, reconstruction, and detector repair.",
+  "promoted_to": [
+    "state/LESSON-INDEX.md",
+    "state/WORKING-LESSONS-SUPPLEMENT-2026-08-22.md"
+  ],
+  "summary_target": "state/WORKING-LESSONS-SUPPLEMENT-2026-08-22.md",
+  "lesson_block": "## Owner-language requests need reader-visible placement context\n\nA narrow owner-language request is usable only when the owner can locate the thought in the article without reconstructing detector state. Name the exact article and heading, where inside the section the passage sits, what the preceding and following paragraphs do, the specific thought/job being supplied or replaced, and which neighboring functions remain untouched. Internal labels such as window numbers, word counts, preservation-unit IDs, or shorthand section names are not sufficient writing context. Richer placement context does not authorize broader editing; it makes the bounded authorial request intelligible.",
+  "index_block": "- **Owner-language handoff context:** when asking for fresh owner prose, translate internal detector/preservation state back into the reader-visible article sequence: exact heading, placement, immediate before/after paragraph jobs, requested thought, and untouched neighboring functions. Do not hand the owner an internal label like `Talk — 112 words` and expect them to reconstruct the section. See `state/OWNER-LANGUAGE-HANDOFF-CONTEXT-2026-08-22.md`."
+}
