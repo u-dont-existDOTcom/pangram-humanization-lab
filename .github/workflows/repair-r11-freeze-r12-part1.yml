@@ -23,7 +23,7 @@ jobs:
         run: |
           set -euo pipefail
           python - <<'PY'
-          import hashlib, json, subprocess
+          import hashlib, json
           from pathlib import Path
           from urllib.request import urlopen
 
@@ -178,3 +178,5 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Restore Romance r11 spec and freeze preservation r12'
           git push origin HEAD:automation/pangram-fixed-batch
+
+# retrigger after workflow registration on the evidence branch
