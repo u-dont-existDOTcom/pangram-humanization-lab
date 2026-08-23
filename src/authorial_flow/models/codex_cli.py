@@ -63,6 +63,38 @@ def _normalize_representation_output(parsed: Any, role: str) -> Any:
     return normalized
 
 
+def _codex_output_schema(schema: dict[str, Any] | None) -> dict[str, Any]:
+    """Translate the local semantic schema into Codex's strict output-schema subset.
+
+    The runtime's Pydantic-derived schemas can contain Python-default metadata and optional
+    object properties. Codex/OpenAI structured output requires closed objects with every
+    property named in ``required``.  This provider-only projection therefore strips default
+    metadata and requires every declared property while leaving the original schema untouched
+    for local validation of the returned value.
+    """
+    projected: dict[str, Any] = json.loads(json.dumps(schema or {"type": "object"}))
+
+    def walk(node: Any) -> None:
+        if isinstance(node, dict):
+            node.pop("default", None)
+            node.pop("title", None)
+            if node.get("type") == "object":
+                properties = node.get("properties")
+                if isinstance(properties, dict):
+                    node["additionalProperties"] = False
+                    node["required"] = list(properties)
+            for key, value in list(node.items()):
+                if key in {"required", "enum"}:
+                    continue
+                walk(value)
+        elif isinstance(node, list):
+            for value in node:
+                walk(value)
+
+    walk(projected)
+    return projected
+
+
 class CodexCLI:
     def __init__(
         self,
@@ -86,6 +118,8 @@ class CodexCLI:
         profiles = unique_model_profiles(self.models)
         try:
             validate_schema_contract(call.schema)
+            provider_schema = _codex_output_schema(call.schema)
+            validate_schema_contract(provider_schema)
         except ValueError as exc:
             model = profiles[0] if profiles else None
             resolved = model or "CLI-default"
@@ -101,7 +135,7 @@ class CodexCLI:
         tmp_root.mkdir(parents=True, exist_ok=True)
         try:
             schema_path = tmp_root / "schema.json"
-            schema_path.write_text(json.dumps(call.schema or {"type": "object"}, sort_keys=True, indent=2), encoding="utf-8")
+            schema_path.write_text(json.dumps(provider_schema, sort_keys=True, indent=2), encoding="utf-8")
             for model in profiles:
                 resolved = model or "CLI-default"
                 signature = capability_signature("codex", resolved, call.schema)
