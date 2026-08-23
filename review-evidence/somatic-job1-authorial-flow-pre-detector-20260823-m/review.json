@@ -1,0 +1,95 @@
+{
+  "candidate_available": false,
+  "candidate_hard_pass": false,
+  "candidate_material_route": "",
+  "candidate_ref": "",
+  "candidate_role": "",
+  "candidate_sha256": "",
+  "detector_submission_attempted": false,
+  "failure": {
+    "accepted_move_count": 0,
+    "authorial_information_missing": false,
+    "decision_trace": {
+      "accepted_move_count": 0,
+      "boundary_id": "",
+      "budgets": {
+        "active_budget": "",
+        "budget_limit": 0,
+        "retry_count": 0,
+        "rollback_count": 0
+      },
+      "candidate_sha256": "",
+      "committed_pressure": {
+        "boundary_id": "",
+        "confidence": 0.0,
+        "state": ""
+      },
+      "decision_boundary_id": "",
+      "edge": {},
+      "pressure_votes": [],
+      "rejection_class": "",
+      "schema_version": 1,
+      "uncovered_required_count": 0
+    },
+    "exception_type": "ProviderFailure",
+    "failure_class": "PROVIDER_PLUMBING",
+    "failure_code": "codex provider failed for role=representation after 2 attempt(s); request_id=3e9be85debbe",
+    "failure_evidence_ref": "6251669166132df69b23adbfd6b609311e1666a82f8da9d1e27bc1dbf8378285",
+    "failure_origin_node": "representation",
+    "final_local_gates": {
+      "regressions_hard_pass": true
+    },
+    "generation_rejection_class": "",
+    "local_gate_state": {
+      "regressions_hard_pass": true
+    },
+    "move_index": 0,
+    "provider": "codex",
+    "provider_attempts": [
+      {
+        "capability_signature": "7d4b016392ccff0d52092cb6c194f6fa923a646d94027f7a3df7a92b8742b248",
+        "failure_kind": "UNKNOWN",
+        "model": "gpt-5.6-sol",
+        "provider": "codex",
+        "returncode": 1,
+        "role": "representation"
+      },
+      {
+        "capability_signature": "d28cd164f26b21279866695d0da7292097bddf57cb8b597380f0066b81f83ba8",
+        "failure_kind": "UNKNOWN",
+        "model": "CLI-default",
+        "provider": "codex",
+        "returncode": 1,
+        "role": "representation"
+      }
+    ],
+    "provider_role": "representation",
+    "repair_attempt": 1,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "source_provenance": "",
+    "state_context": {
+      "accepted_move_count": 0,
+      "move_index": 0,
+      "retry_count": 0,
+      "rollback_count": 0,
+      "status": "regressions_passed"
+    },
+    "task_mode": "",
+    "uncovered_required_count": 0
+  },
+  "format": "authorial-flow-pre-detector-review-v1",
+  "interrupt_kind": "",
+  "interrupt_question": "",
+  "phase": "finalized",
+  "repair_rounds": 0,
+  "request_id": "somatic-job1-authorial-flow-pre-detector-20260823-m",
+  "research_discovery_attempted": false,
+  "source_commit": "ccc0cd3545b8ad3480b19a702bf390ba1030a478",
+  "source_path": "articles/somatic-therapies/experiments/JOB1-AUTHORIAL-FLOW-INPUT-V5-20260822.md",
+  "source_provenance_requested": "AI_FROM_OWNER_INPUTS",
+  "source_sha256": "85caf10bb4f973cf9130a05bf20f0fe74297a5ab467e566e327a9556ecec51f2",
+  "status": "bounded_machine_stop",
+  "thread_id": "ff266aa620b90c48e9e672c675471f9587be955330d49649ec88e9f58d97eecc",
+  "tool_ref": "08f3570028ea86c4699bdc90a5dc9a5ea7349797"
+}
