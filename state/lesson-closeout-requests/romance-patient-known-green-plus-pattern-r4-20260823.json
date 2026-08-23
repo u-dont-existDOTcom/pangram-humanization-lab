@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "request_id": "romance-patient-known-green-plus-pattern-r4-20260823",
+  "source_path": "state/experiments/romance-detector-repair-20260820-patient-known-green-plus-pattern-r4-20260823-results.json",
+  "source_ref": "7ce540b23e16a0087ac329d2c008c821a24a7aa3",
+  "source_sha256": "dc705274f9633074ea9dd807d90f5298a425b043d22310d43e5e2af9bcf5fc8c",
+  "finding": "On the exact prior 273-word 100%-Human MATURITY_PATIENT_R2B backbone, restoring only the current six-word function `But enough moments become a pattern.` produced Human 0.8113083243 overall. Crucially, the first 223 words through the patient wording, restored pattern sentence, Key guru anecdote, and Joel accountability paragraph remained High-confidence Human; the only AI window moved downstream into the unchanged 56-word `I know what can happen on my side...` self-reflection paragraph. This shows the current pattern function is compatible with the known-green patient realization and again demonstrates local context redistribution rather than a simple causal highlight map.",
+  "disposition": "article-specific",
+  "reason": "The reusable detector lesson (contextual/window redistribution and noncausal highlights) is already promoted. The exact patient realization remains assistant/known-green diagnostic prose and must not be promoted into article authority without Joel's acceptance or stronger owner source."
+}
