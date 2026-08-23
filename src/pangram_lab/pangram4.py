@@ -129,7 +129,82 @@ class PangramClient:
                 raise PangramError(f"Pangram task {task_id} did not finish within {self.poll_timeout:g}s; task_id is checkpointed and will be resumed")
             self.sleep(self.poll_interval)
 
-    def detect_cached(self, text: str, cache: PangramCache, measurement_key: str = "base") -> dict:
+    def _cross_key_guard(self, text: str, cache: PangramCache, measurement_key: str) -> dict | None:
+        """Reuse or block same-content work recorded under another key.
+
+        Measurement keys describe experimental identity; they are not permission to
+        buy the same model/version/text bytes again. Intentional detector-research
+        repeats bypass this guard only via allow_paid_repeat=True on detect_cached.
+        """
+        equivalents = [
+            rec for rec in cache.records_for_text(self.model, self.expected_version, text)
+            if rec.get("measurement_key") != measurement_key
+        ]
+        successes = [rec for rec in equivalents if rec.get("status") == "success" and isinstance(rec.get("result"), dict)]
+        if successes:
+            # Prefer a non-alias record when both the original and prior aliases exist.
+            successes.sort(key=lambda rec: (str(rec.get("source") or "").startswith("cross-key-cache:"), str(rec.get("created_utc") or ""), str(rec.get("measurement_key") or "")))
+            source = successes[0]
+            source_key = str(source.get("measurement_key") or "")
+            result = source["result"]
+            cache.save_success(
+                self.model,
+                self.expected_version,
+                text,
+                measurement_key,
+                str(source.get("task_id") or ""),
+                result,
+                source=f"cross-key-cache:{source_key}",
+                submitted_model=str(source.get("submitted_model") or ""),
+            )
+            self.sync(f"pangram cross-key cache alias {measurement_key}")
+            print(
+                f"[pangram] CROSS-KEY CACHE HIT {measurement_key} ← {source_key} "
+                f"{source['text_sha256'][:12]}; NO new POST",
+                flush=True,
+            )
+            return result
+
+        pending = [rec for rec in equivalents if rec.get("status") == "pending" and rec.get("task_id")]
+        if pending:
+            source = pending[0]
+            raise PangramError(
+                f"Equivalent Pangram text is already pending under measurement key {source.get('measurement_key')!r} "
+                f"with task_id {source.get('task_id')!r}. Resume that existing key/task; refusing a new paid POST "
+                f"for {measurement_key!r}."
+            )
+
+        ambiguous = [rec for rec in equivalents if rec.get("status") == "submit_ambiguous"]
+        if ambiguous:
+            source = ambiguous[0]
+            raise PangramError(
+                f"Equivalent Pangram text has an ambiguous prior submit under measurement key "
+                f"{source.get('measurement_key')!r}. Resolve/recover that record before any repeat; refusing a new "
+                f"paid POST for {measurement_key!r}."
+            )
+
+        explicit_wrong = [
+            rec for rec in equivalents
+            if rec.get("status") == "terminal_wrong_version" and str(rec.get("submitted_model") or "") == self.model
+        ]
+        if explicit_wrong:
+            source = explicit_wrong[0]
+            actual = str((source.get("result") or {}).get("version") or "")
+            raise PangramError(
+                f"Equivalent Pangram text already has an explicit {self.model!r} terminal version mismatch under "
+                f"measurement key {source.get('measurement_key')!r}: expected {self.expected_version!r}, got "
+                f"{actual!r}; refusing another paid POST under {measurement_key!r}."
+            )
+        return None
+
+    def detect_cached(
+        self,
+        text: str,
+        cache: PangramCache,
+        measurement_key: str = "base",
+        *,
+        allow_paid_repeat: bool = False,
+    ) -> dict:
         rec = cache.lookup(self.model, self.expected_version, text, measurement_key)
         if rec and rec.get("status") == "success" and isinstance(rec.get("result"), dict):
             print(f"[pangram] CACHE HIT {measurement_key} {rec['text_sha256'][:12]} → {rec['result'].get('headline') or rec['result'].get('prediction_short')}", flush=True)
@@ -155,12 +230,23 @@ class PangramClient:
             )
             rec = None
 
+        if not rec and not allow_paid_repeat:
+            cross_key = self._cross_key_guard(text, cache, measurement_key)
+            if cross_key is not None:
+                return cross_key
+        elif rec and rec.get("status") == "failed" and not allow_paid_repeat:
+            cross_key = self._cross_key_guard(text, cache, measurement_key)
+            if cross_key is not None:
+                return cross_key
+
         submitted_model = ""
         if rec and rec.get("status") == "pending" and rec.get("task_id"):
             task_id = str(rec["task_id"])
             submitted_model = str(rec.get("submitted_model") or "")
             print(f"[pangram] RESUME pending task {task_id} for {measurement_key}; NO new POST", flush=True)
         else:
+            if allow_paid_repeat:
+                print(f"[pangram] EXPLICIT RESEARCH REPEAT authorized for {measurement_key}", flush=True)
             print(f"[pangram] SUBMIT new task for {measurement_key}; no cached equivalent exists", flush=True)
             try:
                 task_id = self.submit_once(text)
