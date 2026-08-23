@@ -136,7 +136,16 @@ DEVELOPMENTAL_SCHEMA = {
             "required": ["id", "text", "disposition", "reason", "origin"],
         }},
         "owner_position_diverges": {"type": "boolean"},
-        "unresolved_authorial": {"type": "array", "items": {"type": "string"}},
+        "unresolved_authorial": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False,
+            "properties": {
+                "unit_id": {"type": "string"},
+                "question": {"type": "string"},
+                "interpretations": {"type": "array", "items": {"type": "string"}},
+                "material_consequence": {"type": "string"},
+            },
+            "required": ["unit_id", "question", "interpretations", "material_consequence"],
+        }},
     },
     "required": ["architecture_card", "corrected_units", "owner_position_diverges", "unresolved_authorial"],
 }
@@ -556,11 +565,34 @@ def _run_regressions(state: dict[str, Any], services: RuntimeServices) -> dict[s
     }
 
 
+def _actionable_developmental_ambiguity(raw: dict[str, Any]) -> tuple[str, str]:
+    """Return a stable unit id and a complete owner-facing question.
+
+    A nonempty model marker is not enough to interrupt the owner. The handoff must retain
+    the competing meanings and explain why the choice matters. Invalid payloads are
+    machine-contract failures; they must never degrade into a generic owner question.
+    """
+    unit_id = str(raw.get("unit_id") or "").strip()
+    question = str(raw.get("question") or "").strip()
+    interpretations = [
+        str(value).strip()
+        for value in raw.get("interpretations") or []
+        if str(value).strip()
+    ]
+    material_consequence = str(raw.get("material_consequence") or "").strip()
+    if not unit_id or not question or len(interpretations) < 2 or not material_consequence:
+        raise ValueError("developmental ambiguity contract is not actionable")
+    options = " ".join(
+        f"Option {index}: {value}" for index, value in enumerate(interpretations, 1)
+    )
+    return unit_id, f"{question} {options} Why it matters: {material_consequence}"
+
+
 def _developmental_apply(
     *, state: dict[str, Any], services: RuntimeServices, project_root: Path,
     source: str, requirements: str, context: str, units: list[AuthorityUnit],
     role: str = "developmental", research_context: dict[str, Any] | None = None,
-) -> tuple[list[AuthorityUnit], str, bool, tuple[str, ...]]:
+) -> tuple[list[AuthorityUnit], str, bool, tuple[dict[str, Any], ...]]:
     prompt = _read_prompt(project_root, "developmental_architecture.md")
     if str(state.get("task_mode") or "") == "P4":
         prompt += "\n\n" + _read_prompt(project_root, "p4_reconstruction.md")
@@ -613,7 +645,8 @@ def _developmental_apply(
         "owner_position_diverges": bool(parsed.get("owner_position_diverges")),
         "unresolved_authorial": list(parsed.get("unresolved_authorial") or []),
     }, "developmental-result", role=role)
-    return active, dev_ref, bool(parsed.get("owner_position_diverges")), tuple(parsed.get("unresolved_authorial") or [])
+    unresolved = tuple(dict(row) for row in parsed.get("unresolved_authorial") or [])
+    return active, dev_ref, bool(parsed.get("owner_position_diverges")), unresolved
 
 
 def _research_escalation(
@@ -922,14 +955,15 @@ def _representation_node(state: dict[str, Any], services: RuntimeServices, proje
             requirements=requirements, context=context, units=units,
         )
         if unresolved:
+            unit_id, owner_question = _actionable_developmental_ambiguity(unresolved[0])
             return {
                 "phase":"representation", "status":"owner_ambiguity_required",
                 "source_provenance":provenance.value, "task_mode":escalation,
-                "semantic_sanity_ref":sanity_ref, "open_authorial_unit_id":unresolved[0],
+                "semantic_sanity_ref":sanity_ref, "open_authorial_unit_id":unit_id,
                 "interrupt_payload":{
                     "kind":"AUTHORIAL_AMBIGUITY",
-                    "question":str(sanity.get("owner_question") or "Which meaning is actually yours?"),
-                    "unit_id":unresolved[0],
+                    "question":str(sanity.get("owner_question") or owner_question),
+                    "unit_id":unit_id,
                 },
             }
         if diverges:
