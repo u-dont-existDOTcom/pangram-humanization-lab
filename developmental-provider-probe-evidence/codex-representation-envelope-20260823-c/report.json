@@ -1,0 +1,77 @@
+{
+  "contains_article_text": false,
+  "format": "authorial-flow-codex-developmental-probe-v1",
+  "model": "gpt-5.6-sol",
+  "probes": [
+    {
+      "attempts": [
+        {
+          "capability_signature": "16794d773626a25ad81256b558dbf2d778b7c4f126dcc6c0f1c943cdeb587a5d",
+          "failure_kind": "",
+          "model": "gpt-5.6-sol",
+          "returncode": 0,
+          "safe_reason": ""
+        }
+      ],
+      "duration_seconds": 12.318727870995644,
+      "label": "developmental_schema_small",
+      "prompt_bytes": 486,
+      "resolved_model": "gpt-5.6-sol",
+      "schema_sha256": "9a26ca4a6a3d21876a28c93a21595bd4a24d28792eae11afe95996a4e7055397",
+      "status": "pass"
+    },
+    {
+      "attempts": [
+        {
+          "capability_signature": "7d4b016392ccff0d52092cb6c194f6fa923a646d94027f7a3df7a92b8742b248",
+          "failure_kind": "",
+          "model": "gpt-5.6-sol",
+          "returncode": 0,
+          "safe_reason": ""
+        }
+      ],
+      "duration_seconds": 35.626889769977424,
+      "label": "representation_runtime_envelope_profile",
+      "prompt_bytes": 10500,
+      "resolved_model": "gpt-5.6-sol",
+      "schema_sha256": "8ab4338f135b90bdcf63f8ab4b56e00466276011abc71b3bcd7f5d5ed327f6f8",
+      "status": "pass"
+    },
+    {
+      "attempts": [
+        {
+          "capability_signature": "7d4b016392ccff0d52092cb6c194f6fa923a646d94027f7a3df7a92b8742b248",
+          "failure_kind": "",
+          "model": "gpt-5.6-sol",
+          "returncode": 0,
+          "safe_reason": ""
+        }
+      ],
+      "duration_seconds": 8.46524618397234,
+      "label": "representation_large",
+      "prompt_bytes": 16313,
+      "resolved_model": "gpt-5.6-sol",
+      "schema_sha256": "8ab4338f135b90bdcf63f8ab4b56e00466276011abc71b3bcd7f5d5ed327f6f8",
+      "status": "pass"
+    },
+    {
+      "attempts": [
+        {
+          "capability_signature": "16794d773626a25ad81256b558dbf2d778b7c4f126dcc6c0f1c943cdeb587a5d",
+          "failure_kind": "",
+          "model": "gpt-5.6-sol",
+          "returncode": 0,
+          "safe_reason": ""
+        }
+      ],
+      "duration_seconds": 22.113923327997327,
+      "label": "developmental_after_representation_large",
+      "prompt_bytes": 16486,
+      "resolved_model": "gpt-5.6-sol",
+      "schema_sha256": "9a26ca4a6a3d21876a28c93a21595bd4a24d28792eae11afe95996a4e7055397",
+      "status": "pass"
+    }
+  ],
+  "provider": "codex",
+  "status": "pass"
+}
