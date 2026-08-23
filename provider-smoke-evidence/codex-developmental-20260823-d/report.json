@@ -1,0 +1,65 @@
+{
+  "finished_at": 1787519140.3716574,
+  "format": "authorial-flow-live-smoke-v1",
+  "provider_heartbeats": [
+    {
+      "alive": true,
+      "elapsed_seconds": 10.00105657801032,
+      "model": "gpt-5.6-sol",
+      "node": "",
+      "operation": "model_call",
+      "pid": 571277,
+      "provider": "codex",
+      "role": "live_smoke"
+    }
+  ],
+  "results": {
+    "codex": {
+      "cli_version": "codex-cli 0.149.0",
+      "duration_seconds": 27.684092962997966,
+      "profiles": [
+        {
+          "attempts": [
+            {
+              "capability_signature": "5cbf1eaffe572a2ab0ed055e70d74e4b2b59f074cda82720cf737c69eb5f4421",
+              "failure_kind": "",
+              "model": "gpt-5.6-sol",
+              "returncode": 0
+            }
+          ],
+          "configured_model": "gpt-5.6-sol",
+          "request_id": "02c64fdb5814dae53efbdebf55d9f881c17aa0fa328f859da5d67864b91159dd",
+          "resolved_model": "gpt-5.6-sol",
+          "status": "pass"
+        },
+        {
+          "attempts": [
+            {
+              "capability_signature": "8c707307d9161308752bcaf1190426e82a4b745a86ce895f891db18f81992cab",
+              "failure_kind": "",
+              "model": "CLI-default",
+              "returncode": 0
+            }
+          ],
+          "configured_model": "CLI-default",
+          "request_id": "02c64fdb5814dae53efbdebf55d9f881c17aa0fa328f859da5d67864b91159dd",
+          "resolved_model": "CLI-default",
+          "status": "pass"
+        }
+      ],
+      "provider": "codex",
+      "schema_preflight": {
+        "invalid": [],
+        "schema_count": 10,
+        "status": "pass"
+      },
+      "status": "pass"
+    }
+  },
+  "schema_preflight": {
+    "invalid": [],
+    "schema_count": 10,
+    "status": "pass"
+  },
+  "started_at": 1787519112.68714
+}
