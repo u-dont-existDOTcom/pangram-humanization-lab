@@ -175,10 +175,15 @@ def classify_attempt_failure(*, returncode: int, stdout: str, stderr: str, error
         "expected exactly one json", "missing required field", "schema requires",
     )):
         return FailureKind.STRUCTURED_CONTRACT
-    if any(token in text for token in (
+    transient_tokens = (
         "timed out", "timeout", "rate limit", "429", "overloaded", "capacity",
-        "temporarily unavailable", "connection reset", "connection refused",
-    )):
+        "temporarily unavailable", "service unavailable", "internal server error",
+        "bad gateway", "connection reset", "connection refused", "connection error",
+        "stream disconnected", "error sending request", "network is unreachable",
+        "name or service not known", "temporary failure in name resolution",
+        "dns error", "tls handshake",
+    )
+    if any(token in text for token in transient_tokens) or re.search(r"\b(500|502|503|504)\b", text):
         return FailureKind.TRANSIENT
     return FailureKind.UNKNOWN
 

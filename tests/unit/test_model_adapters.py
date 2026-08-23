@@ -153,6 +153,9 @@ def test_all_pydantic_structured_output_schemas_are_recursively_codex_strict():
     ('invalid JSON schema: required property missing',FailureKind.INVALID_SCHEMA),
     ('parse/schema: ValueError',FailureKind.STRUCTURED_CONTRACT),
     ('request timed out while provider was overloaded',FailureKind.TRANSIENT),
+    ('stream disconnected before completion: error sending request for url',FailureKind.TRANSIENT),
+    ('temporary failure in name resolution',FailureKind.TRANSIENT),
+    ('provider returned 503 service unavailable',FailureKind.TRANSIENT),
     ('unexpected failure',FailureKind.UNKNOWN),
 ])
 def test_provider_failure_classification_is_deterministic(text,expected):
