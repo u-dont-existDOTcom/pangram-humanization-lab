@@ -1,0 +1,41 @@
+{
+  "candidate_available": false,
+  "candidate_hard_pass": false,
+  "candidate_material_route": "",
+  "candidate_ref": "",
+  "candidate_role": "",
+  "candidate_sha256": "",
+  "detector_submission_attempted": false,
+  "failure": {
+    "accepted_move_count": 0,
+    "decision_trace": {},
+    "failure_class": "",
+    "failure_evidence_ref": "",
+    "failure_origin_node": "",
+    "final_local_gates": {
+      "regressions_hard_pass": true
+    },
+    "generation_rejection_class": "",
+    "move_index": 0,
+    "repair_attempt": 0,
+    "retry_count": 0,
+    "rollback_count": 0,
+    "source_provenance": "AI_FROM_OWNER_INPUTS",
+    "task_mode": "P3",
+    "uncovered_required_count": 0
+  },
+  "format": "authorial-flow-pre-detector-review-v1",
+  "interrupt_kind": "AUTHORIAL_AMBIGUITY",
+  "interrupt_question": "Which meaning is actually yours?",
+  "phase": "representation",
+  "repair_rounds": 0,
+  "request_id": "somatic-job1-authorial-flow-pre-detector-20260823-n",
+  "research_discovery_attempted": false,
+  "source_commit": "ccc0cd3545b8ad3480b19a702bf390ba1030a478",
+  "source_path": "articles/somatic-therapies/experiments/JOB1-AUTHORIAL-FLOW-INPUT-V5-20260822.md",
+  "source_provenance_requested": "AI_FROM_OWNER_INPUTS",
+  "source_sha256": "85caf10bb4f973cf9130a05bf20f0fe74297a5ab467e566e327a9556ecec51f2",
+  "status": "owner_ambiguity_required",
+  "thread_id": "1c44c3e6227d6be773407ed80d029e8125df4ac9053cb05e817c361f73d9739b",
+  "tool_ref": "4b0c4bcb3da7bd99ed3e200fb396c2cf4f1b11a0"
+}
