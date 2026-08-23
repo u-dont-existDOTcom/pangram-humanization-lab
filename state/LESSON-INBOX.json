@@ -3859,6 +3859,29 @@
           "section_id": "part1-preservation-r20-casual-two-deletions"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-23T14:59:51.769436+00:00",
+      "experiment_id": "romance-detector-repair-20260820-patient-known-green-plus-pattern-r4-20260823",
+      "id": "Q-09e56358ab5203a4",
+      "sections": [
+        "part1-maturity-levels-cross-split"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-patient-known-green-plus-pattern-r4-20260823-results.json",
+      "source_ref": "7ce540b23e16a0087ac329d2c008c821a24a7aa3",
+      "source_sha256": "dc705274f9633074ea9dd807d90f5298a425b043d22310d43e5e2af9bcf5fc8c",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.188691645860672,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8113083243370056,
+          "id": "MATURITY_PATIENT_KNOWN_GREEN_PLUS_PATTERN_R4",
+          "prediction_short": "Mixed",
+          "section_id": "part1-maturity-levels-cross-split"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
