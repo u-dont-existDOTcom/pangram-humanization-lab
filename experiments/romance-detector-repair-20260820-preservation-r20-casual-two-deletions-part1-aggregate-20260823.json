@@ -1,0 +1,18 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "romance-detector-repair-20260820-preservation-r20-casual-two-deletions-part1-aggregate-20260823",
+  "audit_id": "romance-detector-repair-20260820",
+  "variants": [
+    {
+      "id": "PRESERVATION_R20_CASUAL_TWO_DELETIONS_PART1",
+      "section_id": "part1-preservation-r20-casual-two-deletions",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "7982862512ad6dae2b3573af23b410442eb047b5",
+        "text_sha256": "04ea13442d4044ee56733b75771cb62c5cd44ba1b5da1bbb57d637c4f2ec4316"
+      }
+    }
+  ]
+}
