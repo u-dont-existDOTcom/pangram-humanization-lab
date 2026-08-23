@@ -1,0 +1,25 @@
+{
+  "contains_article_text": false,
+  "format": "authorial-flow-codex-developmental-probe-v1",
+  "model": "gpt-5.6-sol",
+  "probes": [
+    {
+      "attempts": [
+        {
+          "capability_signature": "16794d773626a25ad81256b558dbf2d778b7c4f126dcc6c0f1c943cdeb587a5d",
+          "failure_kind": "UNKNOWN",
+          "model": "gpt-5.6-sol",
+          "returncode": 1,
+          "safe_reason": "UNKNOWN"
+        }
+      ],
+      "duration_seconds": 8.414355356013402,
+      "label": "developmental_schema_small",
+      "prompt_bytes": 486,
+      "schema_sha256": "9a26ca4a6a3d21876a28c93a21595bd4a24d28792eae11afe95996a4e7055397",
+      "status": "fail"
+    }
+  ],
+  "provider": "codex",
+  "status": "fail"
+}
