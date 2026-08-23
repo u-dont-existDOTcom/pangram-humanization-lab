@@ -3836,6 +3836,29 @@
           "section_id": "part1-preservation-r19-owner-final-talk"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-23T14:48:47.517541+00:00",
+      "experiment_id": "romance-detector-repair-20260820-preservation-r20-casual-two-deletions-part1-aggregate-20260823",
+      "id": "Q-10a27dc037d0a5a2",
+      "sections": [
+        "part1-preservation-r20-casual-two-deletions"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r20-casual-two-deletions-part1-aggregate-20260823-results.json",
+      "source_ref": "7f51a27979b33d31b267e4c4758889bdd60945c6",
+      "source_sha256": "3f1dbade5196f315c6af9f7d4e4ea095e01487e556cc3f72610b5027ac87bb9a",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.03601117804646492,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9639888405799866,
+          "id": "PRESERVATION_R20_CASUAL_TWO_DELETIONS_PART1",
+          "prediction_short": "Human",
+          "section_id": "part1-preservation-r20-casual-two-deletions"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
