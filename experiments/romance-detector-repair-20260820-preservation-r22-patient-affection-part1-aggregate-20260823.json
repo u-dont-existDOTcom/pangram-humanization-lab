@@ -1,0 +1,18 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "romance-detector-repair-20260820-preservation-r22-patient-affection-part1-aggregate-20260823",
+  "audit_id": "romance-detector-repair-20260820",
+  "variants": [
+    {
+      "id": "PRESERVATION_R22_PATIENT_AFFECTION_PART1",
+      "section_id": "part1-preservation-r22-patient-affection",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "blob_sha": "70d8fa0bca4bfe52e00f5721f55cf5b7819cf899",
+        "text_sha256": "5ed333800b9ae7b402f26aa03e751ef8296c7e27ab70e39bc39bb9896b23e62d"
+      }
+    }
+  ]
+}
