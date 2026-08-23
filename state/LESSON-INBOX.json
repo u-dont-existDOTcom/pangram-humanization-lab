@@ -3882,6 +3882,29 @@
           "section_id": "part1-maturity-levels-cross-split"
         }
       ]
+    },
+    {
+      "audit_id": "romance-detector-repair-20260820",
+      "created_at_utc": "2026-08-23T21:42:26.259221+00:00",
+      "experiment_id": "romance-detector-repair-20260820-preservation-r22-patient-affection-part1-aggregate-20260823",
+      "id": "Q-417c3e502e9d980f",
+      "sections": [
+        "part1-preservation-r22-patient-affection"
+      ],
+      "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r22-patient-affection-part1-aggregate-20260823-results.json",
+      "source_ref": "1c54a9824964cead8069532900215fcc97c9478f",
+      "source_sha256": "d7b7d6a4c5a70bf5786211439f5f834d67ed1e32fa7990efb04a9223838ef14a",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "PRESERVATION_R22_PATIENT_AFFECTION_PART1",
+          "prediction_short": "Human",
+          "section_id": "part1-preservation-r22-patient-affection"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
