@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "candidate_id": "romance-detector-repair-20260820-r20-casual-two-deletions",
+  "source": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r19-owner-final-talk-part1.txt",
+    "sha256": "ca42804f9774e66423caba07be4db4123a80ecb0b61e7a75d1ae2db271a8b9f5",
+    "word_count_whitespace": 10331
+  },
+  "candidate": {
+    "path": "state/candidates/romance-detector-repair-20260820-preservation-r20-casual-two-deletions-part1.txt",
+    "sha256": "04ea13442d4044ee56733b75771cb62c5cd44ba1b5da1bbb57d637c4f2ec4316",
+    "word_count_whitespace": 10300,
+    "part2_sha256": "9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85",
+    "part2_exact_prior_human": 1.0
+  },
+  "operations": [
+    {
+      "type": "owner-deleted",
+      "text_sha256": "d4d87ecd9b99f878c18c9770f951da72c3d576ce3ef119fca5292dac29d4deb7",
+      "word_count": 10
+    },
+    {
+      "type": "duplicate-function-consolidation",
+      "text_sha256": "db141dc2e3bccd2c3f72b7068f901adb86ee6bf9f521b6b8f3b05fd7523ab8d0",
+      "word_count": 21
+    }
+  ],
+  "unexplained_deltas": 0,
+  "detector_plan": "After joel-articles final preservation receipt binds this exact candidate, measure aggregate Part 1 only. Reuse exact prior 100%-Human Part 2; no local Casual call."
+}
