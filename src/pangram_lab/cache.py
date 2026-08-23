@@ -38,9 +38,10 @@ def _atomic_write_json(path: Path, value: dict) -> None:
 class PangramCache:
     """Content-addressed durable Pangram cache.
 
-    The base measurement is reusable by model/version/text hash. Exact repeats use
-    deterministic measurement keys so an interrupted repeat resumes instead of
-    silently becoming another paid call.
+    Measurements live under model/version/text-hash. A measurement key labels one
+    observation inside that content identity; it must not silently turn identical
+    text into a new paid request. Callers that deliberately need an independent
+    repeat must opt in explicitly at the PangramClient layer.
     """
 
     def __init__(self, root: Path):
@@ -55,6 +56,32 @@ class PangramCache:
         if not path.is_file():
             return None
         return json.loads(path.read_text(encoding="utf-8"))
+
+    def records_for_text(self, model: str, version: str, text: str) -> list[dict]:
+        """Return every valid cache record for the same model/version/text bytes.
+
+        This is deliberately independent of measurement_key. It is the safety
+        primitive that prevents a renamed experiment variant from buying the same
+        exact Pangram measurement again by accident.
+        """
+        directory = self.path_for(model, version, text, "base").parent
+        if not directory.is_dir():
+            return []
+        expected_hash = text_sha256(text)
+        records: list[dict] = []
+        for path in sorted(directory.glob("*.json")):
+            try:
+                obj = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            if not isinstance(obj, dict):
+                continue
+            if obj.get("model") != model or obj.get("expected_version") != version:
+                continue
+            if obj.get("text_sha256") != expected_hash:
+                continue
+            records.append(obj)
+        return records
 
     def save_pending(self, model: str, version: str, text: str, measurement_key: str, task_id: str, *, source: str = "live", submitted_model: str = "") -> Path:
         path = self.path_for(model, version, text, measurement_key)
@@ -127,7 +154,6 @@ class PangramCache:
         _atomic_write_json(archive_path, archive_value)
         _atomic_write_json(self.path_for(model, version, text, measurement_key), value)
         return archive_path
-
 
     def save_submit_ambiguous(self, model: str, version: str, text: str, measurement_key: str, *, error: str, source: str = "live") -> Path:
         path = self.path_for(model, version, text, measurement_key)
