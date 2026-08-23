@@ -492,8 +492,8 @@
     {
       "executable": false,
       "path": "src/authorial_flow/models/codex_cli.py",
-      "sha256": "315f4b8c52834e0d1ce91d1fe96614e878d281053c4a07692daaf60293eabd6b",
-      "size_bytes": 7946
+      "sha256": "f2566048096525710885b25a3dde0ec94e8e7de00f2cb552b9b08d211c0a0119",
+      "size_bytes": 9412
     },
     {
       "executable": false,
@@ -1205,6 +1205,12 @@
     },
     {
       "executable": false,
+      "path": "tests/unit/test_codex_strict_output_schema.py",
+      "sha256": "ef306e87f3aafa39f257d424eae9e47b68888a3b4b74ddb193987db1999b19d0",
+      "size_bytes": 3030
+    },
+    {
+      "executable": false,
       "path": "tests/unit/test_developmental_authority.py",
       "sha256": "fc66131aca199a9104dd1ccf5f6f87ca2e4e077fb0c0bd91ac6ee6748c98c967",
       "size_bytes": 2682
@@ -1331,5 +1337,5 @@
     }
   ],
   "policy_version": "joel-articles-4.12.0-candidate",
-  "source_commit_sha": "e981ee03b64dcabb9070d24f5b06394800314aea"
+  "source_commit_sha": "08f3570028ea86c4699bdc90a5dc9a5ea7349797"
 }
