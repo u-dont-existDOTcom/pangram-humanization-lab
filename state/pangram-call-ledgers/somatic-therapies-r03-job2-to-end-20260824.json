@@ -1,0 +1,29 @@
+{
+  "audit_id": "somatic-therapies-r03-job2-to-end-20260824",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "job2-to-end\u001fpangram-4\u001f4.0": {
+      "budget_scope": "section",
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
+      "events": [
+        {
+          "budget_scope": "section",
+          "estimated_credits": 2,
+          "measurement_key": "somatic-therapies-r03-job2-to-end-20260824-a_R03_JOB2_TO_END",
+          "recorded_at_utc": "2026-08-24T11:02:07.495479+00:00",
+          "text_sha256": "890fba2633fcbadebae7e71e035e80f8823c1e06378ba0c87236e3cb353bb20e",
+          "type": "paid_post_reserved",
+          "word_count": 1627
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "job2-to-end",
+      "version": "4.0"
+    }
+  }
+}
