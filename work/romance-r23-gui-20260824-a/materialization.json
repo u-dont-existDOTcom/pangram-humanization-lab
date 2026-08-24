@@ -1,0 +1,77 @@
+{
+  "format": "romance-r23-gui-materialization-v1",
+  "request_id": "romance-r23-gui-20260824-a",
+  "article_ref": "eddeb5bd6546892bdf2a40bb0da087cf28b59b7b",
+  "contract_path": "work/romance-r22-reconciliation-20260823/R23-GUI-FALLBACK-CONTRACT.json",
+  "contract_blob_sha": "8669d4db9e22153fdab14566b6e29f8922097aea",
+  "source": {
+    "master_sha256": "f0f9a47eba2ac9ab1a56bdd6793316d41e7c23072b0b0c030285caf5e12f83c9",
+    "master_words": 20282,
+    "part1_sha256": "5ed333800b9ae7b402f26aa03e751ef8296c7e27ab70e39bc39bb9896b23e62d",
+    "part1_words": 10239,
+    "part2_sha256": "9e4c6a522c95741c7dfc9e040b2dcc40773427cbc0aef8f45211de77208b0c85",
+    "part2_words": 9892
+  },
+  "candidate": {
+    "master": {
+      "sha256": "322953b5d6f6ad49f7a3b41e5c6795b36404508f7768669cdcc72223f2f21a0d",
+      "words": 20364,
+      "operations": [
+        "R23-01",
+        "R23-02A",
+        "R23-02B",
+        "R23-03",
+        "R23-04",
+        "R23-05"
+      ]
+    },
+    "part1": {
+      "sha256": "620972febec1957403d261c4426c8fbba58763df2c0b78eb87a79da368f1f50b",
+      "words": 10296,
+      "operations": [
+        "R23-01",
+        "R23-02A",
+        "R23-02B"
+      ]
+    },
+    "part2": {
+      "sha256": "a0dce58d2958e8467c1ba66cbed20b7c7ae075b8eddc7e1365eb8728485ff7f3",
+      "words": 9917,
+      "operations": [
+        "R23-03",
+        "R23-04",
+        "R23-05"
+      ]
+    }
+  },
+  "boundaries": {
+    "talk-affection": {
+      "sha256": "a1c88e60e068101c268b8e0dc45558ec796fe6d8224de86c8b5ec64c5238e564",
+      "words": 777
+    },
+    "spiritual-practice": {
+      "sha256": "9722c938f9258316cef1efbe67768abee063f64923976711498bbaff57d106fb",
+      "words": 290
+    },
+    "two-pillars": {
+      "sha256": "e89362da826bd77d747733512a935cf19c1ddf6d492175755931826968360113",
+      "words": 734
+    },
+    "choosing-together": {
+      "sha256": "a1bd65fc862a879170d6651f52f4d0da50150bf56de1f4f9e26437d30dd6cb8f",
+      "words": 1437
+    }
+  },
+  "headings_exactly_unchanged": true,
+  "native_objects": {
+    "source": 11,
+    "candidate": 11
+  },
+  "markdown_links": {
+    "source": 22,
+    "candidate": 22
+  },
+  "protected_anchors_missing": [],
+  "unexplained_substantive_deltas": 0,
+  "detector_status": "unmeasured; exact inputs frozen before GUI submission"
+}
