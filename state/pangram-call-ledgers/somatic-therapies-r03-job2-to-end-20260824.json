@@ -6,8 +6,8 @@
     "job2-to-end\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.2,
-      "estimated_credits": 4,
+      "estimated_cost_usd": 0.3,
+      "estimated_credits": 6,
       "events": [
         {
           "budget_scope": "section",
@@ -26,10 +26,19 @@
           "text_sha256": "ae7f905029150e112f2f54b2c4663cdedea0b89f50b9022148d9688af115d621",
           "type": "paid_post_reserved",
           "word_count": 1736
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 2,
+          "measurement_key": "somatic-therapies-r05-job2-to-end-20260824-a_R05_JOB2_TO_END",
+          "recorded_at_utc": "2026-08-24T11:54:27.645533+00:00",
+          "text_sha256": "b1642642b74264b596d19b7841f96b7451c3368f322c461838a6e2ef6ac60337",
+          "type": "paid_post_reserved",
+          "word_count": 1956
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "job2-to-end",
       "version": "4.0"
