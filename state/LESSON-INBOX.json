@@ -3997,6 +3997,29 @@
           "section_id": "job2-to-end"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-therapies-r03-job2-to-end-20260824",
+      "created_at_utc": "2026-08-24T17:48:48.493099+00:00",
+      "experiment_id": "somatic-therapies-r07b-job2-to-end-20260824-a",
+      "id": "Q-86639db06f7df07a",
+      "sections": [
+        "job2-to-end"
+      ],
+      "source_path": "state/experiments/somatic-therapies-r07b-job2-to-end-20260824-a-results.json",
+      "source_ref": "af6233843caeedc8ad71bfb2960e5f829e6991db",
+      "source_sha256": "b143c6efc48df2d11fb9430d0530623cc152e7d95aa7e27ffe262a4cac9e17df",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.8373768329620361,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.16262315213680267,
+          "id": "R07B_JOB2_TO_END",
+          "prediction_short": "AI",
+          "section_id": "job2-to-end"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
