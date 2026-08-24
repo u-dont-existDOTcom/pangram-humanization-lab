@@ -960,6 +960,20 @@
       "source_path": "state/experiments/somatic-therapies-r06-job2-to-end-20260824-a-results.json",
       "source_ref": "492df37bf175115c7bf92be2b572de172763a3e2",
       "source_sha256": "71d9874ebde4d0bfb887bc4279d5e139a81577bf8dc299f9cb7ca30e24327ca0"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "A long Pangram AI window can contain near-direct current owner prose even when adjacent owner passages in the same boundary are High-confidence Human. In Somatic r07b, restoring much more of Joel's actual wording raised the whole Job2-to-end Human fraction from r06's 0.08345 to 0.16262, yet the long AI window began mid-owner Shaking explanation and swallowed direct owner qigong, Brainspotting, EMDR, and neurological-dearmoring material. Therefore a red contextual window is localization evidence for the whole composition, not sentence-level authority to rewrite the owner prose inside it.",
+      "id": "L-b143c6efc4-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-22.md"
+      ],
+      "reason": "This extends the existing window/localization and source-provenance lessons with a production counterexample: current owner wording itself can be classified inside a larger AI window while other owner wording in the same exact boundary is Human. The rule prevents detector-driven erasure of higher-authority prose and gives a clear stop condition for the final section call.",
+      "recorded_at_utc": "2026-08-24T17:52:13.866078+00:00",
+      "source_path": "state/experiments/somatic-therapies-r07b-job2-to-end-20260824-a-results.json",
+      "source_ref": "af6233843caeedc8ad71bfb2960e5f829e6991db",
+      "source_sha256": "b143c6efc48df2d11fb9430d0530623cc152e7d95aa7e27ffe262a4cac9e17df"
     }
   ],
   "schema_version": 1
