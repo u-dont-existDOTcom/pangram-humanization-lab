@@ -1,6 +1,8 @@
 # Pangram single-file API measurement
 
-Use `pangram-lab detect-file` when one exact reader-visible text boundary needs a programmatic Pangram-4 measurement. This is the normal API route for a single frozen candidate; use `pangram-local` only when GUI/History recovery or visual evidence is specifically useful.
+Use `pangram-lab detect-file` when one exact **short/local reader-visible section** needs a programmatic Pangram-4 measurement. Large production boundaries—full articles, half-article certification inputs, and other aggregate long-document scans—default to the authenticated GUI under `docs/PANGRAM-COST-ROUTING.md`.
+
+Do not use the API for an aggregate/full-boundary production measurement merely because it is easier to automate. A large/aggregate API submission requires an explicit owner override for that specific run.
 
 ## Safety contract
 
@@ -16,7 +18,7 @@ The command reuses the repository's existing `PangramClient`, `PangramCache`, an
 
 The current `PangramCache` stores the exact detector text. Because this repository is public, `detect-file` refuses to proceed unless `--allow-public-cache` is supplied. Use that flag only when the exact detector boundary is already public-safe. Private/unpublished inputs need a different cache/durability design; do not bypass this guard merely to get a detector result.
 
-The command does not replace the six-paid-call section budget, stable audit/section identity, reader-visible representation gate, or article-wide semantic/fidelity checks in `CHATGPT-OPERATING-GUIDE.md`.
+The command does not replace the six-paid-call section budget, stable audit/section identity, reader-visible representation gate, article-wide semantic/fidelity checks in `CHATGPT-OPERATING-GUIDE.md`, or the GUI-large/API-short cost-routing rule.
 
 ## Command
 
