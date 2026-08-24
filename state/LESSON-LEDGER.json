@@ -913,6 +913,31 @@
       "source_path": "state/experiments/romance-detector-repair-20260820-preservation-r22-patient-affection-part1-aggregate-20260823-results.json",
       "source_ref": "1c54a9824964cead8069532900215fcc97c9478f",
       "source_sha256": "d7b7d6a4c5a70bf5786211439f5f834d67ed1e32fa7990efb04a9223838ef14a"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "A preservation-clean minimum-dose structural repair of Somatic Therapies Job 2 through the final high-intensity section remained Pangram-4 AI 1.0 at High confidence across one full-boundary AI window.",
+      "id": "L-954c628d0f-01",
+      "promoted_to": [],
+      "reason": "This first negative result is important Somatic provenance but becomes transferable only in combination with the materially different r04 negative replication; the promoted cross-case rule is recorded from r04.",
+      "recorded_at_utc": "2026-08-24T11:17:39.178257+00:00",
+      "source_path": "state/experiments/somatic-therapies-r03-job2-to-end-20260824-a-results.json",
+      "source_ref": "669f4e1c0ca427996bfccd61abda27dab6e7bc02",
+      "source_sha256": "954c628d0fa5c6ae242ddd3b276d8976f601490055e908f6dd4e880a0d9a23e4"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "When a large natural section has already failed after two materially different preservation-clean production rewrites—one structural/minimum-dose and one holistic authorial-register reconstruction—with both Pangram-4 results at AI 1.0 High confidence across the full boundary, broad model-only style regeneration is not an evidence-based gradient. Stop that lane and require genuinely fresh owner language or another independently human same-content realization before more detector-driven rewriting.",
+      "id": "L-949d8bc06a-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS-SUPPLEMENT-2026-08-22.md"
+      ],
+      "reason": "Somatic Therapies r03 and r04 provide a negative replication across materially different faithful production strategies on the same stable Job2-to-end boundary. The rule prevents wasting paid calls and, more importantly, prevents pseudo-owner prose after model-only realization has shown no detector movement.",
+      "recorded_at_utc": "2026-08-24T11:17:39.187180+00:00",
+      "source_path": "state/experiments/somatic-therapies-r04-job2-to-end-20260824-a-results.json",
+      "source_ref": "5472a5f4d4b878902b19a287ac4fdd66324e8f09",
+      "source_sha256": "949d8bc06a61862cb3d17c03b463c3b064ff6269ea3bcad5e047dfb13245539a"
     }
   ],
   "schema_version": 1
