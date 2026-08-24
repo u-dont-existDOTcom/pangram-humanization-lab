@@ -3905,6 +3905,29 @@
           "section_id": "part1-preservation-r22-patient-affection"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-therapies-r03-job2-to-end-20260824",
+      "created_at_utc": "2026-08-24T11:02:28.255530+00:00",
+      "experiment_id": "somatic-therapies-r03-job2-to-end-20260824-a",
+      "id": "Q-1e596dfdeaab827f",
+      "sections": [
+        "job2-to-end"
+      ],
+      "source_path": "state/experiments/somatic-therapies-r03-job2-to-end-20260824-a-results.json",
+      "source_ref": "669f4e1c0ca427996bfccd61abda27dab6e7bc02",
+      "source_sha256": "954c628d0fa5c6ae242ddd3b276d8976f601490055e908f6dd4e880a0d9a23e4",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R03_JOB2_TO_END",
+          "prediction_short": "AI",
+          "section_id": "job2-to-end"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
