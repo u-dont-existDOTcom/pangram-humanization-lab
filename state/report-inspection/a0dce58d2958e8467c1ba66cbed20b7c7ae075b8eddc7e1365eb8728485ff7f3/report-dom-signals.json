@@ -1,0 +1,102 @@
+{
+  "format": "pangram-read-only-report-dom-inspection-v1",
+  "status": "complete",
+  "input_sha256": "a0dce58d2958e8467c1ba66cbed20b7c7ae075b8eddc7e1365eb8728485ff7f3",
+  "word_count": 9917,
+  "detector_version": "4.0",
+  "detector_submission_attempted": false,
+  "report_source": "already_paid_stored_report",
+  "privacy_note": "Only DOM elements with highlight/segment metadata or red-ish visual styling are retained; cookies, storage, headers, credentials, and full HTML are omitted.",
+  "snapshots": {
+    "initial": {
+      "page_path": "/history/a18ba6f7-d6f7-4ff2-9a36-67b84a488ac0",
+      "title": "Your AI Report | Pangram",
+      "candidate_count": 1,
+      "redish_candidate_count": 1,
+      "mark_candidate_count": 0,
+      "metadata_candidate_count": 0,
+      "candidates": [
+        {
+          "tag": "button",
+          "id": "radix-_r_18_-trigger-overview",
+          "class_name": "text-pangram-secondary hover:bg-pangram-secondary/5 relative inline-flex flex-shrink-0 whitespace-nowrap rounded-t-lg py-3 text-sm font-semibold transition-all disabled:pointer-events-none disabled:opacity-50 lg:rounded-b-none lg:data-[state=active]:text-pangram-primary lg:data-[state=active]:shadow-[0_-2px_0_0_#FF6106",
+          "text": "Overview",
+          "context_text": "Overview Details Notes",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 97, 6)",
+          "border_color": "rgb(226, 232, 240)",
+          "text_decoration_color": "rgb(255, 97, 6)",
+          "redish_style": true,
+          "metadata_signal": false,
+          "mark_tag": false,
+          "rect": {
+            "x": 861,
+            "y": 85,
+            "width": 113,
+            "height": 48
+          }
+        }
+      ]
+    },
+    "details": {
+      "page_path": "/history/a18ba6f7-d6f7-4ff2-9a36-67b84a488ac0",
+      "title": "Your AI Report | Pangram",
+      "candidate_count": 1,
+      "redish_candidate_count": 1,
+      "mark_candidate_count": 0,
+      "metadata_candidate_count": 0,
+      "candidates": [
+        {
+          "tag": "button",
+          "id": "radix-_r_18_-trigger-detail",
+          "class_name": "text-pangram-secondary hover:bg-pangram-secondary/5 relative inline-flex flex-shrink-0 whitespace-nowrap rounded-t-lg py-3 text-sm font-semibold transition-all disabled:pointer-events-none disabled:opacity-50 lg:rounded-b-none lg:data-[state=active]:text-pangram-primary lg:data-[state=active]:shadow-[0_-2px_0_0_#FF6106",
+          "text": "Details",
+          "context_text": "Overview Details Notes",
+          "background_color": "rgba(99, 115, 129, 0.05)",
+          "color": "rgb(255, 97, 6)",
+          "border_color": "rgb(226, 232, 240)",
+          "text_decoration_color": "rgb(255, 97, 6)",
+          "redish_style": true,
+          "metadata_signal": false,
+          "mark_tag": false,
+          "rect": {
+            "x": 998,
+            "y": 85,
+            "width": 112,
+            "height": 48
+          }
+        }
+      ]
+    },
+    "overview": {
+      "page_path": "/history/a18ba6f7-d6f7-4ff2-9a36-67b84a488ac0",
+      "title": "Your AI Report | Pangram",
+      "candidate_count": 1,
+      "redish_candidate_count": 1,
+      "mark_candidate_count": 0,
+      "metadata_candidate_count": 0,
+      "candidates": [
+        {
+          "tag": "button",
+          "id": "radix-_r_18_-trigger-overview",
+          "class_name": "text-pangram-secondary hover:bg-pangram-secondary/5 relative inline-flex flex-shrink-0 whitespace-nowrap rounded-t-lg py-3 text-sm font-semibold transition-all disabled:pointer-events-none disabled:opacity-50 lg:rounded-b-none lg:data-[state=active]:text-pangram-primary lg:data-[state=active]:shadow-[0_-2px_0_0_#FF6106",
+          "text": "Overview",
+          "context_text": "Overview Details Notes",
+          "background_color": "rgba(99, 115, 129, 0.05)",
+          "color": "rgb(255, 97, 6)",
+          "border_color": "rgb(226, 232, 240)",
+          "text_decoration_color": "rgb(255, 97, 6)",
+          "redish_style": true,
+          "metadata_signal": false,
+          "mark_tag": false,
+          "rect": {
+            "x": 861,
+            "y": 85,
+            "width": 113,
+            "height": 48
+          }
+        }
+      ]
+    }
+  }
+}
