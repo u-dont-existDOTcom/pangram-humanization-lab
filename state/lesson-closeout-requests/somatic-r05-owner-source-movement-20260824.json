@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "request_id": "somatic-r05-owner-source-movement-20260824",
+  "source_path": "state/experiments/somatic-therapies-r05-job2-to-end-20260824-a-results.json",
+  "source_ref": "b30e2e32a45d4c20f58cc7379b5ed5e88005e464",
+  "source_sha256": "f8dfcccb57fe6e61f9665cb2e25e066d1a8d5f0ff201d80a1eb0b9543143d582",
+  "finding": "After two preservation-clean model-only Job2-to-end variants measured Pangram Human 0.0, the first candidate built from genuinely fresh owner semantic evidence measured Human 0.0570 and produced two High-confidence Human islands aligned with directly retained owner-derived material, while one High-confidence AI window still covered most of the downstream boundary.",
+  "disposition": "provisional",
+  "reason": "This supports the existing owner-realization/source-provenance lessons and changes the Somatic next action, but one long-context article boundary cannot establish sentence-level causality or a general detector rule. Replication across other fresh-owner reconstructions would be needed before promotion."
+}
