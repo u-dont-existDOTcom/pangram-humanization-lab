@@ -1,0 +1,18 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-therapies-r07-job2-to-end-20260824-a",
+  "audit_id": "somatic-therapies-r03-job2-to-end-20260824",
+  "variants": [
+    {
+      "id": "R07_JOB2_TO_END",
+      "section_id": "job2-to-end",
+      "budget_scope": "section",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "blob_sha": "01825fbd46497c17eac14aa709e29429f5caf05b",
+        "text_sha256": "6091db45d7ddf80f027cc591396abd75ab7b144c206e28befee86b2f5d3589ec"
+      }
+    }
+  ]
+}
