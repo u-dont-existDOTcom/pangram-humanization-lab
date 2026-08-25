@@ -4,6 +4,12 @@
 
 **LIVE VALIDATION COMPLETE for the current Romance two-half boundary.**
 
+### 2026-08-25 Somatic r15 addendum
+
+The generic local GUI path is also now live-validated on the exact Somatic r15 reader-visible whole-article boundary. The completed Pangram 4.0 result is AI `0.8451970816`, AI-assisted `0.0`, Human `0.1548029035`, exact plaintext SHA-256 `d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e`, at result commit `d9462f2e93a808c2da4195352e0a7b9a016c94b7`.
+
+The 2026-08-25 recovery also repaired remote-only state advancement before a paid boundary, added automatic no-submit exact-History recovery, and made generic GUI runs reserve durably before the click and prefer exact structured History results. Full incident, provenance, call accounting, test evidence, and rollback details: `state/PANGRAM-LOCAL-SOMATIC-R15-GUI-RECOVERY-2026-08-25.md`.
+
 The dedicated headed local Playwright transport on Joel's Zorin machine has now completed the full long-document workflow end to end with exact stored-history binding, duplicate-call protection, paid-call accounting, durable Git evidence, bounded tabs, and PDF capture.
 
 The Pangram API is independently available through Joel's private self-hosted executor. Keep API and GUI as separate supported transports; GUI remains useful for visual/report inspection, authenticated-history recovery, evidence capture, and resilience.

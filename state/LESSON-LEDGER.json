@@ -964,6 +964,61 @@
       "source_path": "state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md",
       "source_ref": "agent/pangram-local-playwright-gpt-20260818",
       "source_sha256": "2d96ee1ae91f0d87ffe0f310f4f0f86dcf84cbb86bd207153cf397f7abc23ec0"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "A local GUI durability preflight can safely auto-fast-forward a strict remote descendant containing only state evidence while runtime-path changes and true two-sided divergence must remain fail-closed.",
+      "id": "L-c36a9a70f8-01",
+      "promoted_to": [],
+      "reason": "The behavior has one live branch-divergence validation plus deterministic dirty-byte, runtime-change, and true-divergence regressions; retain it as project tooling evidence until repeated across ordinary remote-advance cases.",
+      "recorded_at_utc": "2026-08-25T15:01:03.065050+00:00",
+      "source_path": "state/PANGRAM-LOCAL-SOMATIC-R15-GUI-RECOVERY-2026-08-25.md",
+      "source_ref": "working-tree",
+      "source_sha256": "c36a9a70f899caf011cdfc9120dadb28df35f80313abb07fb2b6eaea6f55854e"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The current recovery checkpoint now routes future workers to the completed Somatic r15 exact GUI result and the 2026-08-25 tooling incident.",
+      "id": "L-2d8fbdd62d-01",
+      "promoted_to": [],
+      "reason": "This is continuity metadata; the reusable browser-recovery principles were already promoted and the new remote-advance implementation is dispositioned separately as provisional.",
+      "recorded_at_utc": "2026-08-25T15:01:06.986974+00:00",
+      "source_path": "state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md",
+      "source_ref": "working-tree",
+      "source_sha256": "2d8fbdd62d64fbc03ceaaa5894cf67220b25a589a98aefb2210095d1da7a53c7"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The raw-Markdown r15 diagnostic measured 15.36949277% Human but cannot certify the reader-visible article boundary because source markup and native-object placeholders were included.",
+      "id": "L-b2e1c1e706-01",
+      "promoted_to": [],
+      "reason": "This directly reaffirms the already-promoted reader-visible representation gate and creates no new transferable detector rule.",
+      "recorded_at_utc": "2026-08-25T15:01:10.273720+00:00",
+      "source_path": "state/gui-runs/pangram-4/6b9c090a2faf10e472f73b747a916cec1169b60d27564de2558628c04a0cb48d/result.json",
+      "source_ref": "working-tree",
+      "source_sha256": "b2e1c1e7068c903d509e6013ecd379efa642faf0966b9eec26c7ee312a2e7387"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "The exact 3,548-word Somatic r15 reader-visible boundary measured 15.48029035% Human, 84.51970816% AI, and 0% AI-assisted on Pangram 4.0.",
+      "id": "L-dc9fbef2fb-01",
+      "promoted_to": [],
+      "reason": "The score is exact-bound localization evidence for this Somatic candidate only; it does not support a transferable lexical or editorial rule.",
+      "recorded_at_utc": "2026-08-25T15:01:14.606440+00:00",
+      "source_path": "state/gui-runs/pangram-4/d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e/result.json",
+      "source_ref": "working-tree",
+      "source_sha256": "dc9fbef2fb7047eded12422241a06afd6a27da52afdea2f841f737f71aa53fac"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The Somatic r15 whole-article GUI audit used two paid calls, including one preserved raw-Markdown diagnostic and one corrected reader-visible measurement, with no repeat of an ambiguous accepted scan.",
+      "id": "L-f8bdb5f998-01",
+      "promoted_to": [],
+      "reason": "This is required project-specific spend and ambiguity accounting, not a new humanization lesson.",
+      "recorded_at_utc": "2026-08-25T15:01:18.257032+00:00",
+      "source_path": "state/pangram-call-ledgers/somatic-r15-whole-article-gui-20260825.json",
+      "source_ref": "working-tree",
+      "source_sha256": "f8bdb5f998c36a23f50a3f741fb740cc9a476160f86e04f8e03fb8645517c810"
     }
   ],
   "schema_version": 1
