@@ -1,12 +1,32 @@
 # Pangram Humanization Lab current state
 
-Updated: 2026-08-20
+Updated: 2026-08-25
 
 ## Goal
 
-Preserve exact Pangram detector evidence, editorial authority, lesson closeout, and paid-call safety while routing ordinary programmatic detector work through the owner's trusted self-hosted execution envelope.
+Preserve exact Pangram detector evidence, editorial authority, lesson closeout, and paid-call safety while keeping the owner's transport choice explicit. **When Joel asks for a Pangram GUI check, use the local headed Playwright/Brave transport on his Zorin machine as the primary route. Do not silently substitute the private API/executor route.**
 
 Current owner instructions, exact repository evidence, tests, and current `main` outrank historical chat or old task branches.
+
+## Owner transport correction — 2026-08-25
+
+Joel directly corrected the routing drift that had made later workers treat GitHub/private-executor Pangram as the only practical path. The earlier working GUI workflow remains the intended workflow for explicit GUI checks:
+
+`local execution / Codex supervision -> deterministic pangram-local runner -> headed local Brave via Playwright -> pangram.com`
+
+Operational consequences:
+
+- `GUI check`, `check it in Pangram GUI`, or equivalent language means **local Playwright GUI**, not Pangram API.
+- Use the dedicated persistent browser profile `~/.config/pangram-local-browser/`; do not use Joel's ordinary Brave profile.
+- The validated browser executable is `/opt/brave.com/brave/brave`.
+- The local transport is headed by default so Joel can see the browser work.
+- The persistent Pangram login is local browser state. Never commit cookies, storage, credentials, or profile contents.
+- GitHub may be used for code/versioning and durable receipts after or around a run, but **GitHub is not the GUI transport and must not be treated as a prerequisite for the browser interaction itself**.
+- Do not claim that the GUI route is unavailable merely because a particular Chat context lacks a local command/computer-use bridge. Recover the local runner state first. If execution cannot be launched from that context, say exactly that rather than rerouting to the API by inference.
+- Do not make Codex or another agent free-form click around when deterministic Playwright can perform the bounded browser actions.
+- Preserve cache/ambiguity/no-repeat protections across transports.
+
+The local GUI route was live-certified end-to-end on Joel's Zorin machine on 2026-08-20 for long Pangram documents, with headed Brave, persistent authentication, exact stored-text binding, History recovery, result parsing, duplicate-call defense, and PDF capture.
 
 ## Authority and recovery
 
@@ -16,15 +36,43 @@ Current owner instructions, exact repository evidence, tests, and current `main`
 - Self-hosted runner labels: `[self-hosted, linux, x64, pangram]`.
 - Start lesson recovery at `state/LESSON-INDEX.md`.
 - Start repository documentation at `docs/INDEX.md`.
-- Current transport correction/evidence: `state/PANGRAM-SELFHOST-ROUTING-CORRECTION-2026-08-20.md`.
-- The local GUI transport is documented at `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`.
+- Self-host/API correction evidence: `state/PANGRAM-SELFHOST-ROUTING-CORRECTION-2026-08-20.md`.
+- Local GUI documentation: `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`.
+- Historical local GUI validation/evidence: `agent/pangram-local-playwright-gpt-20260818` and its durable state.
 - Historical Romance GUI/evidence branches remain provenance only and do not establish article authority.
 
 ## Current transport architecture
 
-### Private self-hosted Pangram executor — normal automated programmatic route
+### Local Playwright GUI — primary route when Joel asks for GUI
 
-For ordinary automated Pangram measurements, use the private executor repository rather than Browserbase or GitHub-hosted runners.
+The reusable local authenticated-browser transport is the owner-preferred route for an explicit Pangram GUI check, visual report inspection, History recovery/localization, and browser evidence.
+
+It uses:
+
+- a dedicated persistent automation profile, not the owner's ordinary browser profile;
+- headed Brave/Chromium through Playwright;
+- exact input SHA-256 and optional pre-authorized hash gates;
+- a durable submission reservation before a detector click when the guarded runner is used;
+- authenticated History observation and exact stored-text binding;
+- explicit Pangram 4 `response.overall` structured fractions;
+- recovery-before-repeat after ambiguous action;
+- bounded tab cleanup and privacy-limited diagnostics.
+
+The generic command is `pangram-local`. The historical validated command surface is:
+
+```text
+pangram-local bootstrap
+pangram-local verify
+pangram-local run --input FILE [--input FILE ...]
+pangram-local recover --input FILE
+pangram-local status
+```
+
+The previously validated local installation was under `/mnt/hdd/home/joel/Téléchargements/pangram-local-runner-20260818/` with its own `.venv`. See `docs/PANGRAM-LOCAL-PLAYWRIGHT.md` and `state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md` on the historical implementation branch for exact recovery details.
+
+### Private self-hosted Pangram executor — programmatic API route when API is intended
+
+For ordinary **API/programmatic** Pangram measurements where Joel has not asked for GUI evidence, the private executor remains a supported trusted route.
 
 The execution contract is:
 
@@ -45,30 +93,13 @@ A fresh uncached route test on 2026-08-20 (`pangram4-selfhost-route-retest-2026-
 - estimated 1 credit / `$0.05`;
 - full detector `windows` metadata returned.
 
-This is current proof that the trusted route, credentials, self-hosted origin, and Pangram-4 API are operational.
+This proves the API route is operational; it does **not** supersede an explicit owner request for the GUI route.
 
 ### Single-file API contract
 
-`pangram-lab detect-file` remains the canonical hash-gated/cache-safe single-file command where an appropriate trusted runtime already has the working Pangram route. See `docs/PANGRAM-API-DETECT-FILE.md`.
+`pangram-lab detect-file` remains the canonical hash-gated/cache-safe single-file API command where an appropriate trusted runtime already has the working Pangram route. See `docs/PANGRAM-API-DETECT-FILE.md`.
 
-Do not infer global Pangram availability or credit state from a different runtime's endpoint result when the private self-hosted executor has fresher direct evidence.
-
-### Local Playwright GUI — supported History/visual fallback
-
-The reusable local authenticated-browser transport remains supported for Pangram History recovery, localization, and visual evidence. It is not the ordinary route for new programmatic measurements.
-
-It uses:
-
-- a dedicated persistent automation profile, not the owner's ordinary browser profile;
-- headed Brave/Chromium through Playwright;
-- exact input SHA-256 and optional pre-authorized hash gates;
-- a durable submission reservation before a detector click;
-- authenticated History observation and exact stored-text binding;
-- explicit Pangram 4 `response.overall` structured fractions;
-- recovery-before-repeat after ambiguous action;
-- bounded tab cleanup and privacy-limited diagnostics.
-
-The generic command is `pangram-local`. See `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`.
+Do not infer global Pangram availability or credit state from a different runtime's endpoint result when another transport has fresher direct evidence.
 
 ### Browserbase — not an ordinary Pangram route
 
@@ -86,12 +117,13 @@ The `automation/pangram-fixed-batch` branch remains the canonical fixed-batch ev
 
 Classify failures by the transport that actually produced them:
 
-- **Browserbase HTTP 402** → Browserbase minutes exhausted; no Pangram-credit conclusion.
-- **GitHub-hosted async HTTP 401** → known origin-specific compatibility problem; no Pangram-key conclusion.
-- **self-hosted Pangram API HTTP 402** → the Pangram balance available to the trusted self-hosted route is insufficient for that request at that time.
-- **repository section-call cap** → internal safety/cost budget, not Pangram account balance.
+- **local Playwright launch/auth/UI failure** -> local GUI/browser issue; do not infer Pangram API/key failure.
+- **Browserbase HTTP 402** -> Browserbase minutes exhausted; no Pangram-credit conclusion.
+- **GitHub-hosted async HTTP 401** -> known origin-specific compatibility problem; no Pangram-key conclusion.
+- **self-hosted Pangram API HTTP 402** -> the Pangram balance available to the trusted self-hosted route is insufficient for that request at that time.
+- **repository section-call cap** -> internal safety/cost budget, not Pangram account balance.
 
-A self-hosted 402 for a large request after a smaller successful request supports `insufficient remaining balance for the larger request`; it does not by itself prove a literal zero-credit balance.
+A self-hosted 402 for a large request after a smaller successful request supports `insufficient remaining balance for the larger request`; it does not by itself prove a literal zero-credit balance and says nothing about whether the logged-in GUI route can be inspected.
 
 ## Current Romance detector evidence relevant to routing
 
@@ -119,9 +151,9 @@ The historical local-GUI certification on 2026-08-20 remains valid evidence for 
 
 These two historical half measurements are not a measured whole-article score and do not establish article authority.
 
-The active 2026-08-20 Romance detector-repair audit has subsequently produced stronger candidate evidence on task/evidence branches. Its current best completed Part-2 result is pass 3, SHA `c6ef42419a3db2e82b1ff4f9370fc85bca4fa8c061c61dd6a1b5d28171d9908c`, Human `0.9153165817`.
+The active 2026-08-20 Romance detector-repair audit subsequently produced stronger candidate evidence on task/evidence branches. Its best completed Part-2 result at that checkpoint was pass 3, SHA `c6ef42419a3db2e82b1ff4f9370fc85bca4fa8c061c61dd6a1b5d28171d9908c`, Human `0.9153165817`.
 
-Pass 4 is frozen at SHA `a21b9670bc0cc61b4fc850761ca57ffa5dc5d1a02bdd5df90b820d6f9d437a0e`, 9,985 words. The trusted private self-hosted executor reserved its fourth Part-2 audit slot and Pangram then returned HTTP 402 `Insufficient credits` before issuing a task ID. The fresh 1-credit smoke had succeeded shortly before, so the supported conclusion is that the route worked but the available Pangram balance was insufficient for the approximately 10-credit full Part-2 request. Do not automatically retry this frozen input.
+Pass 4 was frozen at SHA `a21b9670bc0cc61b4fc850761ca57ffa5dc5d1a02bdd5df90b820d6f9d437a0e`, 9,985 words. The trusted private self-hosted executor reserved its fourth Part-2 audit slot and Pangram returned HTTP 402 `Insufficient credits` before issuing a task ID. That API event must not be generalized into `Pangram GUI unavailable`.
 
 ## Paid-call safety
 
@@ -130,11 +162,12 @@ The six-new-paid-calls per stable audit/section cap remains binding unless curre
 Across transport changes, preserve one stable audit/section identity and import already-paid measurements into the current call ledger rather than resetting the budget. Before any new paid action:
 
 - check exact cache/completed results;
-- resume a checkpointed task ID rather than resubmitting;
-- treat ambiguous POSTs as potentially paid;
+- resume a checkpointed task/report rather than resubmitting;
+- treat ambiguous POSTs or GUI clicks as potentially paid;
 - never repeat a completed exact measurement;
-- use explicit `model: pangram-4` and require returned `version: "4.0"`;
-- persist reservation/checkpoint/result/ledger state before another paid request;
+- for API calls use explicit `model: pangram-4` and require returned `version: "4.0"`;
+- for GUI calls bind completion to the exact stored History prompt/result where available;
+- persist reservation/checkpoint/result/ledger state before another paid request when using the guarded runner;
 - keep the reader-visible SHA-256 and word count exact.
 
 Code-only preparation/CI must not spend Pangram credits.
@@ -143,29 +176,32 @@ Code-only preparation/CI must not spend Pangram credits.
 
 The reusable local browser/auth/profile/history/result modules were previously promoted onto `main` from a clean then-current base. That promotion passed the full deterministic suite, changed-file lesson closeout, repository audit, and workflow policy without detector submission.
 
-The older remote Browserbase proposal and stacked local GUI development/evidence histories remain provenance only.
+The dedicated local Playwright workflow was then live-certified on Joel's machine with long documents. Do not demote that evidence merely because later API routing was added.
 
 ## Current blockers / unresolved
 
-- The trusted self-hosted Pangram route is operational, but the latest 9,985-word Romance pass-4 request was rejected by Pangram HTTP 402 before task creation because the available balance was insufficient for that request.
-- The pass-3 read-only History localizer still has a recovery reliability bug tracked in issue #110; do not buy detector calls to debug it.
+- A given Chat context may or may not expose the local command/computer-use bridge needed to launch Joel's headed Brave session. This is a context capability issue, **not** evidence that the Pangram GUI route itself stopped working.
+- The trusted self-hosted Pangram API route was operational at the last direct route test, though a large Romance request later hit an API-side balance 402.
+- The pass-3 read-only History localizer had a recovery reliability bug tracked in issue #110; do not buy detector calls solely to debug it.
 - Hosted-control hardening remains separate governance work and is not detector/article authority.
 
 ## Next safe action
 
-For new programmatic Pangram work:
+For an explicit **GUI check**:
 
-1. use the private self-hosted executor;
-2. inspect exact cache, pending/ambiguous state, and call ledger first;
-3. freeze one exact public spec and one immutable private request;
-4. verify committed Pangram 4.0 result/windows and call accounting before another request.
+1. recover/verify the local `pangram-local` installation and dedicated profile first;
+2. use headed local Brave/Playwright;
+3. verify authentication read-only before filling/submitting;
+4. check exact cache/ambiguous state before any new click;
+5. capture the exact report/History identity and result;
+6. persist evidence afterward as useful, without treating GitHub as the browser transport.
 
-For the current Romance pass 4 specifically, keep the exact candidate/spec frozen. Do not route through Browserbase or GitHub-hosted Actions and do not automatically resubmit. Once the trusted self-hosted Pangram balance is sufficient for the approximately 10-credit boundary, deliberately retry the same exact pass-4 identity after reviewing the existing failed cache and 4/6 audit state.
+For an explicit **API/programmatic check**, the private self-hosted executor remains available under its existing safety contract.
 
-No infrastructure smoke test is needed before that retry; the self-hosted route was freshly proven.
+Never silently substitute one transport for the other when Joel has specified GUI vs API.
 
 ## Recovery rule
 
-After interruption or a fresh chat, inspect this checkpoint, `state/PANGRAM-SELFHOST-ROUTING-CORRECTION-2026-08-20.md`, `state/LESSON-INDEX.md`, `docs/PANGRAM-API-DETECT-FILE.md`, the relevant fixed-batch cache/ledger/result state on `automation/pangram-fixed-batch`, the private executor request state when a paid run is involved, and the active article task branch.
+After interruption or a fresh chat, inspect this checkpoint, `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`, the historical live-validation state `state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md` on `agent/pangram-local-playwright-gpt-20260818`, `state/LESSON-INDEX.md`, and the active article task state. Inspect API/private-executor state only when the requested transport is API or when cross-transport paid-call ambiguity makes it relevant.
 
 Never infer paid-call state from chat. Never repeat ambiguous/already-paid work before exact durable state is recovered or deliberately resolved.
