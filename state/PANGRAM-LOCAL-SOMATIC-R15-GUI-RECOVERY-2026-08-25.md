@@ -74,8 +74,9 @@ The final deterministic gate after all repairs was **208 passed**.
 
 ## Paid-call accounting
 
-Audit: `somatic-r15-whole-article-gui-20260825`  
-Section: `whole-article-reader-visible`  
+Audit: `somatic-r15-whole-article-gui-20260825`
+
+Section: `whole-article-reader-visible`
 Ledger: `state/pangram-call-ledgers/somatic-r15-whole-article-gui-20260825.json`
 
 - paid GUI calls: 2 / cap 6;

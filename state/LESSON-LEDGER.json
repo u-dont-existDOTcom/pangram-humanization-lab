@@ -1019,6 +1019,17 @@
       "source_path": "state/pangram-call-ledgers/somatic-r15-whole-article-gui-20260825.json",
       "source_ref": "working-tree",
       "source_sha256": "f8bdb5f998c36a23f50a3f741fb740cc9a476160f86e04f8e03fb8645517c810"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "A local GUI durability preflight can safely auto-fast-forward a strict remote descendant containing only state evidence while runtime-path changes and true two-sided divergence must remain fail-closed.",
+      "id": "L-4bf918d2e7-01",
+      "promoted_to": [],
+      "reason": "The behavior has one live branch-divergence validation plus deterministic dirty-byte, runtime-change, and true-divergence regressions; retain it as project tooling evidence until repeated across ordinary remote-advance cases.",
+      "recorded_at_utc": "2026-08-25T15:04:50.493157+00:00",
+      "source_path": "state/PANGRAM-LOCAL-SOMATIC-R15-GUI-RECOVERY-2026-08-25.md",
+      "source_ref": "working-tree",
+      "source_sha256": "4bf918d2e784a4563a5a72a460c2d17ae7160866cac64318ffdcd93995b30e6c"
     }
   ],
   "schema_version": 1
