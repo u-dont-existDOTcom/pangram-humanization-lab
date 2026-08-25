@@ -1,10 +1,12 @@
 # Pangram local Playwright GUI transport
 
-Status: supported on `main`; live-certified on Joel's Zorin/Brave machine.
+Status: supported on `main`; live-certified on Joel's Zorin/Brave machine; **owner-preferred transport whenever Joel explicitly asks for a Pangram GUI check**.
 
 ## Purpose
 
-This is the local authenticated-browser fallback for Pangram. The self-hosted Pangram API is the normal programmatic transport when available; this GUI path remains useful for visual evidence, authenticated History recovery, and resilience when API access or report inspection is insufficient.
+This is the local authenticated-browser transport for Pangram GUI work. When Joel asks for a `GUI check`, `Pangram GUI check`, visual report inspection, or equivalent browser-based detector work, use this route by default. **Do not silently substitute the self-hosted API/private-executor route.** The API remains a separate supported transport when Joel asks for API/programmatic measurement or when GUI evidence is unnecessary and no GUI preference has been stated.
+
+The browser interaction itself is local: headed Brave/Chromium via Playwright -> pangram.com. GitHub can be used for code/versioning and durable receipts, but it is not the browser transport. A worker must not infer `GUI unavailable` merely because a particular Chat context lacks the local command/computer-use bridge.
 
 It uses a dedicated persistent browser profile rather than the owner's ordinary browser profile. The normal local transport does **not** require Browserbase. The shared `gui_browserbase.py` module is retained because it contains the older GUI parsing/evidence primitives and the optional remote Browserbase adapter; local execution launches Brave/Chromium directly through Playwright.
 
@@ -18,6 +20,14 @@ playwright install chromium
 ```
 
 On Joel's Zorin machine, the validated browser is Brave at `/opt/brave.com/brave/brave`; the runner also discovers common Chromium/Chrome executables.
+
+The historically validated local installation was under:
+
+```text
+/mnt/hdd/home/joel/Téléchargements/pangram-local-runner-20260818/
+```
+
+with a dedicated `.venv` and persistent Pangram profile at `~/.config/pangram-local-browser/`.
 
 ## One-time authentication
 
@@ -53,16 +63,18 @@ Multiple `--input` values are allowed. If `--expect-sha` is used, every input mu
 
 ## Completion and duplicate safety
 
-The current long-document Pangram dashboard is a SPA. A rendered report page is not sufficient evidence that the report belongs to the submitted text. The runner therefore:
+The current long-document Pangram dashboard is a SPA. A rendered report page is not sufficient evidence that the report belongs to the submitted text. The guarded runner therefore:
 
 1. verifies the authenticated detector surface;
 2. prepares and hashes the exact input;
-3. writes and Git-pushes a `submission-reservation.json` before the detector click;
+3. writes a durable `submission-reservation.json` before the detector click and may Git-sync that evidence when the configured runner uses repository persistence;
 4. attaches the authenticated History API response listener before the click;
 5. submits once;
 6. accepts completion only when `/api/history/<uuid>/` contains the same document under the bounded exact-text contract;
 7. reads Pangram 4's explicit structured `response.overall` result rather than guessing score semantics from `prediction_prob`;
 8. captures a labeled report PDF and persists the result before another input may proceed.
+
+The Git/evidence layer in step 3 is a safety/persistence layer, not the Pangram GUI transport. Do not route a GUI request through the private executor merely because evidence is also stored in Git.
 
 A reservation without a complete result blocks automatic repeat submission. A failure after the click is therefore recover-first, not retry-first. `--force` is an explicit dangerous override and should be used only after evidence review establishes that another paid submission is actually intended.
 
