@@ -120,16 +120,101 @@ class GitSync:
             raise GitSyncError("at least one repository path is required for scoped evidence sync")
         return tuple(normalized)
 
-    def ensure_remote_durable(self, reason: str) -> None:
-        self.ensure_repo()
-        if not self.require_remote:
-            return
-        if not self.has_remote():
-            raise GitSyncError(
-                "origin is not configured; refusing to continue to paid detector calls"
-            )
-        branch = self.current_branch()
+    def _remote_tracking_ref(self, branch: str) -> str:
+        return f"refs/remotes/origin/{branch}"
+
+    def _fetch_current_branch(self, branch: str) -> str | None:
+        """Refresh the matching origin ref without changing the checked-out tree.
+
+        A missing remote branch is normal for the first durability push, so a
+        failed fetch is left for the subsequent push to diagnose.  Successful
+        fetches let us distinguish an ordinary remote-only advance from a true
+        two-sided divergence before a paid browser boundary.
+        """
+        remote_ref = self._remote_tracking_ref(branch)
         completed = _run(
+            [
+                "git",
+                "fetch",
+                "--no-tags",
+                "origin",
+                f"refs/heads/{branch}:{remote_ref}",
+            ],
+            self.root,
+            check=False,
+        )
+        if completed.returncode:
+            return None
+        return remote_ref
+
+    def _is_ancestor(self, older: str, newer: str) -> bool:
+        completed = _run(
+            ["git", "merge-base", "--is-ancestor", older, newer],
+            self.root,
+            check=False,
+        )
+        if completed.returncode not in (0, 1):
+            detail = completed.stderr.strip() or completed.stdout.strip()
+            raise GitSyncError(f"cannot compare local and remote durability history: {detail}")
+        return completed.returncode == 0
+
+    def _changed_paths(self, older: str, newer: str) -> tuple[str, ...]:
+        completed = _run(
+            ["git", "diff", "--name-only", "-z", older, newer],
+            self.root,
+        )
+        return tuple(path for path in completed.stdout.split("\0") if path)
+
+    def _incorporate_safe_remote_advance(self, branch: str) -> bool:
+        """Fast-forward remote-only evidence commits without reloading code.
+
+        Only changes below ``state/`` are safe to absorb inside a running CLI
+        process.  Source, scripts, configuration, documentation, and tests may
+        affect the current execution contract and therefore require a clean
+        operator update/restart instead of being changed underneath imports.
+        """
+        remote_ref = self._fetch_current_branch(branch)
+        if remote_ref is None:
+            return False
+
+        local_head = _run(["git", "rev-parse", "HEAD"], self.root).stdout.strip()
+        remote_head = _run(["git", "rev-parse", remote_ref], self.root).stdout.strip()
+        if local_head == remote_head or self._is_ancestor(remote_head, local_head):
+            return False
+        if not self._is_ancestor(local_head, remote_head):
+            raise GitSyncError(
+                "local and GitHub durability histories have diverged; local state is preserved. "
+                "Inspect both histories and reconcile them without force-pushing before another "
+                "paid Pangram action."
+            )
+
+        changed_paths = self._changed_paths(local_head, remote_head)
+        runtime_paths = tuple(path for path in changed_paths if not path.startswith("state/"))
+        if runtime_paths:
+            preview = ", ".join(runtime_paths[:5])
+            suffix = "" if len(runtime_paths) <= 5 else ", ..."
+            raise GitSyncError(
+                "GitHub contains a fast-forward update that changes runtime-affecting paths "
+                f"({preview}{suffix}); local state is preserved. Run `git pull --ff-only`, "
+                "restart pangram-local so the updated code is loaded, then retry."
+            )
+
+        completed = _run(
+            ["git", "merge", "--ff-only", remote_ref],
+            self.root,
+            check=False,
+        )
+        if completed.returncode:
+            detail = completed.stderr.strip() or completed.stdout.strip()
+            raise GitSyncError(
+                "GitHub has a state-only fast-forward, but it could not be incorporated without "
+                f"touching local bytes; local state is preserved: {detail}"
+            )
+        print("[github] incorporated state-only remote advance", flush=True)
+        return True
+
+    def _push_current_branch(self, branch: str) -> subprocess.CompletedProcess[str]:
+        return _run(
             [
                 "git",
                 "push",
@@ -140,6 +225,24 @@ class GitSync:
             self.root,
             check=False,
         )
+
+    def ensure_remote_durable(self, reason: str) -> None:
+        self.ensure_repo()
+        if not self.require_remote:
+            return
+        if not self.has_remote():
+            raise GitSyncError(
+                "origin is not configured; refusing to continue to paid detector calls"
+            )
+        branch = self.current_branch()
+        self._incorporate_safe_remote_advance(branch)
+        completed = self._push_current_branch(branch)
+        if completed.returncode:
+            # Close the race where another state-only durability commit lands
+            # after the first fetch but before our push.
+            incorporated = self._incorporate_safe_remote_advance(branch)
+            if incorporated:
+                completed = self._push_current_branch(branch)
         if completed.returncode:
             detail = completed.stderr.strip() or completed.stdout.strip()
             raise GitSyncError(
