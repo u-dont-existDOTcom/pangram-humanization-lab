@@ -379,6 +379,7 @@ def _remove_stale_failures(directory: Path, paths: Mapping[str, Path]) -> None:
     for stale in (
         paths["failure"],
         paths["failure_screenshot"],
+        directory / "reservation.json",
         directory / "recovery-failure.json",
         directory / "recovery-failure.png",
     ):

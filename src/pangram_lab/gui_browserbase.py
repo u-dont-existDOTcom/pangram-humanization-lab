@@ -133,6 +133,32 @@ def ambiguous_submission_exists(root: Path, input_sha256: str) -> bool:
     )
 
 
+def unresolved_paid_reservation_exists(root: Path, input_sha256: str) -> bool:
+    directory = measurement_dir(root, input_sha256)
+    if (directory / "result.json").is_file():
+        return False
+    failure = directory / "failure.json"
+    if failure.is_file():
+        try:
+            failure_value = json.loads(failure.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError, json.JSONDecodeError):
+            failure_value = None
+        if (
+            isinstance(failure_value, dict)
+            and failure_value.get("status") == "failed"
+            and failure_value.get("detector_submission_attempted") is False
+        ):
+            return False
+    reservation = directory / "reservation.json"
+    if not reservation.is_file():
+        return False
+    try:
+        value = json.loads(reservation.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return True
+    return isinstance(value, dict) and value.get("status") == "reserved"
+
+
 def artifact_paths(directory: Path) -> dict[str, Path]:
     return {
         "result": directory / "result.json",
@@ -159,7 +185,11 @@ def prepare_measurement(input_path: Path, *, output_root: Path, force: bool) -> 
         "word_count": len(text.split()),
         "directory": str(directory),
         "skip": completed_result_exists(output_root, digest) and not force,
-        "blocked_by_ambiguous_submission": ambiguous_submission_exists(output_root, digest) and not force,
+        "blocked_by_ambiguous_submission": (
+            ambiguous_submission_exists(output_root, digest)
+            or unresolved_paid_reservation_exists(output_root, digest)
+        )
+        and not force,
     }
 
 

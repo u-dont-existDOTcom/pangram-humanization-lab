@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import time
 from datetime import datetime
 from typing import Any
 
@@ -117,3 +118,49 @@ def find_exact_history_record(
         "read_status_counts": statuses,
         "target_time_binding_used": target_time is not None,
     }
+
+
+def wait_for_exact_history_record(
+    context: Any,
+    exact_text: str,
+    *,
+    target_time: datetime,
+    timeout_ms: int = 30_000,
+    poll_ms: int = 500,
+) -> tuple[ExactHistoryRecord | None, dict[str, object]]:
+    if timeout_ms < 1 or poll_ms < 1:
+        raise ValueError("timeout_ms and poll_ms must be positive")
+    deadline = time.monotonic() + timeout_ms / 1000.0
+    attempts = 0
+    last_proof: dict[str, object] = {
+        "history_candidate_count": 0,
+        "history_records_inspected": 0,
+        "read_status_counts": {},
+        "target_time_binding_used": True,
+    }
+    history_status_counts: dict[str, int] = {}
+    while True:
+        attempts += 1
+        history_list, status = context_get_json(context, HISTORY_LIST_URL)
+        history_status_counts[status] = history_status_counts.get(status, 0) + 1
+        if history_list is not None:
+            record, last_proof = find_exact_history_record(
+                context,
+                history_list,
+                exact_text,
+                target_time=target_time,
+            )
+            if record is not None:
+                return record, {
+                    **last_proof,
+                    "history_list_attempts": attempts,
+                    "history_list_status_counts": history_status_counts,
+                }
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            return None, {
+                **last_proof,
+                "history_list_attempts": attempts,
+                "history_list_status_counts": history_status_counts,
+            }
+        time.sleep(min(poll_ms / 1000.0, remaining))

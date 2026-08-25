@@ -3,12 +3,15 @@ from __future__ import annotations
 import json
 import subprocess
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 from urllib.parse import urlsplit
 
 from pangram_lab.gui_local_legacy import *  # noqa: F401,F403
 from pangram_lab import gui_local_legacy as _legacy
+from pangram_lab.exact_history_recovery import wait_for_exact_history_record
+from pangram_lab.history_api_record import ExactHistoryRecord, parse_history_record_result
 
 
 AuthProbe = Callable[[Any], Any]
@@ -508,8 +511,224 @@ def launch_smoke_test(*args: Any, **kwargs: Any) -> dict[str, object]:
     return _legacy.launch_smoke_test(*args, **kwargs)
 
 
-def run_inputs(*args: Any, **kwargs: Any) -> list[dict[str, object]]:
-    return _delegate_with_waiting_auth(_legacy.run_inputs, *args, **kwargs)
+def _reservation_receipt(
+    config: Any,
+    item: dict[str, object],
+    source: dict[str, object] | None,
+) -> dict[str, object]:
+    receipt: dict[str, object] = {
+        "schema_version": 1,
+        "status": "reserved",
+        **_legacy._transport_fields(config),
+        "model": _legacy.gui_core.MODEL_ID,
+        "reserved_at_utc": _legacy.utc_now_iso(),
+        "input_path": _legacy._receipt_input_path(item, source),
+        "input_sha256": str(item["input_sha256"]),
+        "word_count": int(item["word_count"]),
+        "detector_submission_attempted": False,
+        "evidence_source": "pre_click_paid_reservation",
+    }
+    if source is not None:
+        receipt["source"] = dict(source)
+    return receipt
+
+
+def _materialize_exact_record(
+    context: Any,
+    page: Any,
+    record: ExactHistoryRecord,
+) -> tuple[Any, str, dict[str, object]]:
+    report_page = normalize_context_tabs(context, keep=page)
+    report_page.goto(record.report_url, wait_until="domcontentloaded")
+    if hasattr(report_page, "wait_for_timeout"):
+        report_page.wait_for_timeout(1_800)
+    body = _legacy.gui_core.clean_report_body_artifact(
+        report_page.locator("body").inner_text()
+    )
+    parsed = parse_history_record_result(record, body)
+    return report_page, body, parsed
+
+
+def run_inputs(
+    config: Any,
+    input_paths: Any,
+    *,
+    output_root: Path = Path("state/gui-runs"),
+    force: bool = False,
+    report_timeout_ms: int = 180_000,
+    expected_sha256: dict[str, str] | None = None,
+    source_metadata: dict[str, dict[str, object]] | None = None,
+    evidence_callback: Any | None = None,
+    print_fn: Any = print,
+) -> list[dict[str, object]]:
+    _sync_core_seams()
+    prepared = _legacy._prepare_inputs(
+        input_paths,
+        output_root=output_root,
+        force=force,
+        expected_sha256=expected_sha256,
+    )
+    blocked = [item for item in prepared if item["blocked_by_ambiguous_submission"]]
+    if blocked:
+        identities = ", ".join(str(item["input_sha256"]) for item in blocked)
+        raise RuntimeError(
+            "refusing to repeat Pangram GUI input after an ambiguous prior submission or "
+            f"unresolved paid reservation: {identities}. Recover the existing History record first."
+        )
+
+    pending = [item for item in prepared if not item["skip"]]
+    results: list[dict[str, object]] = [
+        {
+            "status": "cached",
+            "transport": _legacy.TRANSPORT_ID,
+            "input_path": item["input_path"],
+            "input_sha256": item["input_sha256"],
+            "word_count": item["word_count"],
+            "directory": item["directory"],
+        }
+        for item in prepared
+        if item["skip"]
+    ]
+    if not pending:
+        return results
+
+    immediate_probe = _legacy.gui_core.authenticated_detector_input
+    playwright, context, page = _launch_persistent_context(config)
+    try:
+        for item in pending:
+            directory = Path(str(item["directory"]))
+            paths = _legacy.gui_core.artifact_paths(directory)
+            reservation_path = directory / "reservation.json"
+            directory.mkdir(parents=True, exist_ok=True)
+            source = _legacy._source_for_item(item, source_metadata)
+            stage = "navigate"
+            detector_submission_attempted = False
+            try:
+                page.goto(config.pangram_url, wait_until="domcontentloaded")
+                stage = "verify_authentication"
+                field = wait_for_authenticated_detector_input(page, probe=immediate_probe)
+                stage = "fill_input"
+                field.fill(str(item["text"]))
+                stage = "locate_detector_action"
+                button = _legacy.gui_core.detection_button(page)
+
+                stage = "reserve_paid_call"
+                reservation = _reservation_receipt(config, item, source)
+                _legacy._write_json(reservation_path, reservation)
+                _legacy._persist_evidence(evidence_callback, directory, reservation)
+                reserved_at = datetime.fromisoformat(
+                    str(reservation["reserved_at_utc"]).replace("Z", "+00:00")
+                ).astimezone(timezone.utc)
+
+                stage = "submit"
+                detector_submission_attempted = True
+                button.click()
+                print_fn(
+                    f"[pangram-local] submitted sha={item['input_sha256']}; waiting for exact report"
+                )
+                stage = "wait_report"
+                _legacy.gui_core.wait_for_report(page, timeout_ms=report_timeout_ms)
+
+                stage = "bind_exact_history_record"
+                request_getter = getattr(getattr(context, "request", None), "get", None)
+                if callable(request_getter):
+                    record, history_proof = wait_for_exact_history_record(
+                        context,
+                        str(item["text"]),
+                        target_time=reserved_at,
+                        timeout_ms=min(30_000, report_timeout_ms),
+                    )
+                else:
+                    record = None
+                    history_proof = {
+                        "history_list_attempts": 0,
+                        "history_list_status_counts": {
+                            "context_request_unavailable": 1
+                        },
+                    }
+                if record is not None:
+                    page, body, parsed = _materialize_exact_record(context, page, record)
+                    report_url = "https://www.pangram.com/history/<uuid>"
+                else:
+                    stage = "capture_legacy_report"
+                    body = _legacy.gui_core.clean_report_body_artifact(
+                        page.locator("body").inner_text()
+                    )
+                    parsed = _legacy.gui_core.parse_report_for_exact_input(
+                        body,
+                        str(item["text"]),
+                        expected_word_count=int(item["word_count"]),
+                    )
+                    segments = list(parsed["segments"])
+                    if not segments:
+                        raise RuntimeError(
+                            "Pangram report was visible, but neither an exact stored History record "
+                            "nor legacy analyzed segments could be parsed; history_proof="
+                            + json.dumps(history_proof, sort_keys=True)
+                        )
+                    parsed_word_count = sum(int(segment["word_count"]) for segment in segments)
+                    if parsed_word_count != int(item["word_count"]):
+                        raise RuntimeError(
+                            "legacy Pangram report word count does not match exact input: "
+                            f"report={parsed_word_count} input={item['word_count']}"
+                        )
+                    report_url = page.url
+
+                paths["body"].write_text(body, encoding="utf-8")
+                stage = "capture_pdf"
+                pdf_provenance = capture_report_pdf(page, paths["pdf"])
+                receipt = _legacy.build_complete_receipt(
+                    config,
+                    item=item,
+                    report_url=report_url,
+                    pdf_provenance=pdf_provenance,
+                    parsed=parsed,
+                    body=body,
+                    pdf_path=paths["pdf"],
+                    source=source,
+                )
+                receipt["paid_reservation"] = reservation
+                if record is not None:
+                    receipt["history_api_exact_identity"] = record.public_proof()
+                    receipt["history_binding_proof"] = history_proof
+                    if parsed.get("detector_version"):
+                        receipt["detector_version"] = parsed["detector_version"]
+                _legacy._write_json(paths["result"], receipt)
+                _legacy._remove_stale_failures(directory, paths)
+                stage = "persist_evidence"
+                _legacy._persist_evidence(evidence_callback, directory, receipt)
+                results.append(receipt)
+                print_fn(
+                    f"[pangram-local] complete sha={item['input_sha256']} "
+                    f"words={item['word_count']} pdf={pdf_provenance}"
+                )
+            except Exception as exc:
+                if stage == "persist_evidence":
+                    raise
+                failure = _legacy.build_failure_receipt(
+                    config,
+                    item=item,
+                    stage=stage,
+                    detector_submission_attempted=detector_submission_attempted,
+                    error=exc,
+                    source=source,
+                )
+                _legacy._write_json(paths["failure"], failure)
+                try:
+                    page.screenshot(path=str(paths["failure_screenshot"]), full_page=True)
+                except Exception:
+                    pass
+                try:
+                    _legacy._persist_evidence(evidence_callback, directory, failure)
+                except Exception as durability_error:
+                    raise RuntimeError(
+                        "Pangram run failed and saved failure evidence could not be pushed durably: "
+                        f"run_error={exc}; durability_error={durability_error}"
+                    ) from durability_error
+                raise
+    finally:
+        _close_local_session(playwright, context)
+    return results
 
 
 def recover_existing_report(*args: Any, **kwargs: Any) -> dict[str, object]:

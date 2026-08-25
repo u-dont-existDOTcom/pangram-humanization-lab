@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pytest
@@ -328,7 +329,7 @@ def test_local_run_writes_transport_provenance_and_reuses_shared_cache(
     assert button.clicks == 1
     assert context.closed is True
     assert playwright.stopped is True
-    assert len(persisted) == 1
+    assert [receipt[1]["status"] for receipt in persisted] == ["reserved", "complete"]
 
     digest = gui_core.sha256_text("one two three")
     result_path = gui_core.measurement_dir(output_root, digest) / "result.json"
@@ -352,6 +353,102 @@ def test_local_run_writes_transport_provenance_and_reuses_shared_cache(
         }
     ]
     assert launches == [1]
+
+
+def test_local_run_prefers_exact_structured_history_record_over_legacy_segments(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    input_path = tmp_path / "part.txt"
+    input_path.write_text("one two three", encoding="utf-8")
+    output_root = tmp_path / "runs"
+    uuid = "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb"
+    page = _Page("Overview without legacy analyzed segments")
+    field = _Field()
+    button = _Button()
+    playwright = _Playwright()
+
+    class Response:
+        status = 200
+        headers = {"content-type": "application/json"}
+
+        def __init__(self, value: object) -> None:
+            self.value = value
+
+        def json(self) -> object:
+            return self.value
+
+    class Request:
+        def get(self, url: str, *, timeout: int) -> Response:
+            if url.endswith("/api/history-list/"):
+                return Response(
+                    {
+                        "results": [
+                            {
+                                "uuid": uuid,
+                                "timestamp": datetime.now(timezone.utc).isoformat(),
+                            }
+                        ]
+                    }
+                )
+            return Response(
+                {
+                    "uuid": uuid,
+                    "prompt": "one two three",
+                    "response": {
+                        "overall": {
+                            "stage": "STAGE_SUCCESS",
+                            "version": "4.0",
+                            "fraction_ai": 0.8,
+                            "fraction_ai_assisted": 0.0,
+                            "fraction_human": 0.2,
+                        }
+                    },
+                }
+            )
+
+    class Context:
+        request = Request()
+
+        def __init__(self) -> None:
+            self.pages = [page]
+            self.closed = False
+
+        def close(self) -> None:
+            self.closed = True
+
+    context = Context()
+    monkeypatch.setattr(
+        gui_local,
+        "_launch_persistent_context",
+        lambda config: (playwright, context, page),
+    )
+    monkeypatch.setattr(gui_local.gui_core, "authenticated_detector_input", lambda candidate: field)
+    monkeypatch.setattr(gui_local.gui_core, "detection_button", lambda candidate: button)
+    monkeypatch.setattr(gui_local.gui_core, "wait_for_report", lambda candidate, timeout_ms: None)
+
+    def capture(candidate: object, path: Path) -> str:
+        path.write_bytes(b"%PDF-exact-history")
+        return "local_cdp_print_fallback"
+
+    monkeypatch.setattr(gui_local, "capture_report_pdf", capture)
+    persisted: list[dict[str, object]] = []
+    result = gui_local.run_inputs(
+        _config(tmp_path),
+        [input_path],
+        output_root=output_root,
+        evidence_callback=lambda directory, receipt: persisted.append(dict(receipt)),
+        print_fn=lambda message: None,
+    )[0]
+
+    assert button.clicks == 1
+    assert [receipt["status"] for receipt in persisted] == ["reserved", "complete"]
+    assert result["parsed"]["summary"]["fraction_ai"] == 0.8
+    assert result["parsed"]["summary_source"] == "stored_history_structured_result"
+    assert result["history_api_exact_identity"]["exact_text_sha256"] == gui_core.sha256_text(
+        "one two three"
+    )
+    assert result["report_url"] == "https://www.pangram.com/history/<uuid>"
 
 
 def test_exact_sha_gate_fails_before_browser_launch(
@@ -419,6 +516,35 @@ def test_post_click_failure_is_ambiguous_and_blocks_automatic_repeat(
             print_fn=lambda message: None,
         )
     assert launches == [1]
+
+
+def test_unresolved_paid_reservation_blocks_restart_before_browser_launch(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    input_path = tmp_path / "part.txt"
+    input_path.write_text("one two three", encoding="utf-8")
+    output_root = tmp_path / "runs"
+    digest = gui_core.sha256_text("one two three")
+    directory = gui_core.measurement_dir(output_root, digest)
+    directory.mkdir(parents=True)
+    (directory / "reservation.json").write_text(
+        json.dumps({"status": "reserved", "input_sha256": digest}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(
+        gui_local,
+        "_launch_persistent_context",
+        lambda config: (_ for _ in ()).throw(AssertionError("browser must not launch")),
+    )
+
+    with pytest.raises(RuntimeError, match="unresolved paid reservation"):
+        gui_local.run_inputs(
+            _config(tmp_path),
+            [input_path],
+            output_root=output_root,
+            print_fn=lambda message: None,
+        )
 
 
 def test_recover_captures_existing_report_without_submission(
