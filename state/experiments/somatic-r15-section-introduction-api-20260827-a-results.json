@@ -1,0 +1,66 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-r15-section-introduction-api-20260827-a",
+  "spec_sha256": "be08e4c899986651558481e3b0c434e3cf89b8a08176c4848941e058c6213d55",
+  "results": [
+    {
+      "id": "R15_INTRODUCTION",
+      "measurement_key": "somatic-r15-section-introduction-api-20260827-a_R15_INTRODUCTION",
+      "text": "Introduction\n\nTrauma can be over and the body can still be doing it. You know you are safe, but you are bracing, scanning, going numb, collapsing, freezing, or suddenly flooding anyway. That is the part of trauma I am interested in here.\n\nWith complex or developmental trauma I usually do not begin by asking for the deepest memory. I want to know whether I can stay with what comes up without disappearing, whether I can stop, and whether I can be basically myself again afterward. If not, I would rather work on that than call overwhelm “deep processing.”\n\nSometimes that means regulation. Sometimes it means giving accumulated survival activation some way to move instead of trying to think your way out of a body that is still acting as if the danger is present. And sometimes there is enough stability to go straight to EMDR or another trauma-focused method. These are not steps in a program; they solve different problems at different times.\n\nThe inner-child connection is one reason I care about the body so much. Sometimes you can understand exactly what a younger part needs and still be unable to reach it because your whole system is clenched around the trauma. The body may need to become a little easier to inhabit before inner-child therapy stops feeling like being swallowed by the child-state.",
+      "text_sha256": "5ce0a921f730b7379bad00d45901488ec94ddc987cfff44f192ad6b187422686",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Introduction\nTrauma can be over and the body can still be doing it. You know you are safe, but you are bracing, scanning, going numb, collapsing, freezing, or suddenly flooding anyway. That is the part of trauma I am interested in here.\nWith complex or developmental trauma I usually do not begin by asking for the deepest memory. I want to know whether I can stay with what comes up without disappearing, whether I can stop, and whether I can be basically myself again afterward. If not, I would rather work on that than call overwhelm “deep processing.”\nSometimes that means regulation. Sometimes it means giving accumulated survival activation some way to move instead of trying to think your way out of a body that is still acting as if the danger is present. And sometimes there is enough stability to go straight to EMDR or another trauma-focused method. These are not steps in a program; they solve different problems at different times.\nThe inner-child connection is one reason I care about the body so much. Sometimes you can understand exactly what a younger part needs and still be unable to reach it because your whole system is clenched around the trauma. The body may need to become a little easier to inhabit before inner-child therapy stops feeling like being swallowed by the child-state.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Introduction\nTrauma can be over and the body can still be doing it. You know you are safe, but you are bracing, scanning, going numb, collapsing, freezing, or suddenly flooding anyway. That is the part of trauma I am interested in here.\nWith complex or developmental trauma I usually do not begin by asking for the deepest memory. I want to know whether I can stay with what comes up without disappearing, whether I can stop, and whether I can be basically myself again afterward. If not, I would rather work on that than call overwhelm “deep processing.”\nSometimes that means regulation. Sometimes it means giving accumulated survival activation some way to move instead of trying to think your way out of a body that is still acting as if the danger is present. And sometimes there is enough stability to go straight to EMDR or another trauma-focused method. These are not steps in a program; they solve different problems at different times.\nThe inner-child connection is one reason I care about the body so much. Sometimes you can understand exactly what a younger part needs and still be unable to reach it because your whole system is clenched around the trauma. The body may need to become a little easier to inhabit before inner-child therapy stops feeling like being swallowed by the child-state.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999009370803833,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1305,
+            "word_count": 228,
+            "token_length": 256,
+            "is_humanized": false,
+            "humanizer_score": 0.20261557400226593
+          }
+        ]
+      },
+      "section_id": "introduction",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-r15-section-localization-20260827",
+  "call_accounting": {
+    "audit_id": "somatic-r15-section-localization-20260827",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "section_id": "introduction",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
