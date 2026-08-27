@@ -80,3 +80,85 @@ This is not permission to imitate typos, spacing, quirks, or owner phrases mecha
 ## Production consequence
 
 For the Somatic Introduction, do not spend further Pangram calls on theory-driven assistant variants until there is a candidate Joel judges editorially natural enough that an AI result would genuinely surprise him. The two owner-supplied Human examples are the current calibration anchors. If Joel selects or revises one for publication, treat that owner realization as higher authority than assistant reconstruction and preserve its exact thought route unless he requests editing.
+
+## Extended held-out generation sequence — 2026-08-27
+
+The initial theory failure was followed by progressively stronger held-out tests. Joel supplied the Pangram labels manually; these are owner-reported detector outcomes, not API receipts.
+
+### Fresh-start variants after the first failure
+
+Three additional trauma-introduction variants were generated from the stronger `local contingency vs optimization` hypothesis. Joel reported **all three AI / low confidence**. This showed that merely trying to make the realization less symmetrical, less polished, or less complete did not remove the model signal.
+
+### Fresh-topic zero-shot tests
+
+The assistant then generated unrelated short passages about recognition/attention, grounding, and error-finding from fresh AstroHD-derived topics. Joel reported **all three AI / low confidence**.
+
+Joel independently rewrote the grounding passage as:
+
+> People talk about grounding as though it has to be a spiritual practice. Sometimes a foot massage is grounding for me. So is good food or music that relaxes your body. I suspect we make this stuff unnecessarily mystical because “my nervous system likes pleasant physical things” sounds too simple. That's kind of ironic, considering that simplicity is a huge part of grounding.
+
+Joel reported this exact passage as **Human / low confidence**.
+
+He then changed only `relaxes your body` to `makes your body unclench`; the passage flipped back to **AI / low confidence**.
+
+This is a useful complete-boundary minimal pair, but it does **not** establish `unclench` as a banned word. It supports the narrower observation that a model-favored vivid/somatic realization can alter the detector label even when it appears editorially more concrete. The Human wording is plainer and less optimized.
+
+### Deliberate under-writing tests
+
+The assistant next tried to suppress vividness, rhetorical payoff, and coverage-completion. One passage over the detector floor was reported **AI / low confidence**; two others were under 50 words and therefore were not graded.
+
+A corrected batch of three passages, each safely over 50 words and deliberately plain/under-written, was then tested. Joel reported **all three AI / low confidence**.
+
+This falsifies `under-write / use the first ordinary adequate phrase / avoid decorative concreteness` as a sufficient generation recipe.
+
+### Labeled-corpus-conditioned generation
+
+Joel correctly pointed out that the Joel Articles project already contains a labeled natural-owner corpus specifically for voice calibration. The earlier fresh-generation experiments had mostly used rules distilled from that corpus rather than actively loading the relevant labeled prose before generation. This was recorded as a process error.
+
+The assistant then loaded the actual research-conversational calibration corpus (`cancer-and-research-samples.txt`, including the cancer article and `Do Your Own Research`) and generated three fresh held-out passages while conditioning on those natural-owner samples.
+
+Joel reported **all three AI / low confidence**.
+
+This is important negative evidence: loading the labeled owner corpus improved stylistic calibration but did not, by itself, make fresh model-originated prose detector-Human.
+
+### Owner-cognition + corpus test
+
+The next hypothesis was that the remaining signal came from the model inventing not only wording but also the observation, example, emphasis, and conclusion. The test therefore moved to an actual Somatic article thought supplied/confirmed by Joel:
+
+- section thought: sometimes the therapy is not the problem; the body may not be in a state where it can respond well;
+- Joel confirmed that this is the intended idea;
+- when asked for a concrete example, he said any of sleep deprivation, pain, inflammation, gut/toxin issues, overstimulation, etc. could work and no one example specifically came to mind.
+
+Using that owner-confirmed cognition plus the loaded labeled corpus, the assistant generated this 54-word lead:
+
+> The same therapy can work one day and do almost nothing another day, depending on what else is going on physically. If you're underslept, in pain, inflamed, dissociated, or reacting badly to a medication or substance, you're not in the same state. Sometimes fixing that first matters more than pushing harder on the therapy.
+
+Joel reported it **AI / low confidence**.
+
+## Revised conclusion after extended sequence
+
+The extended sequence now falsifies all of the following as sufficient by themselves for fresh generation:
+
+1. a theory of Human macro-architecture;
+2. deliberate anti-overcompletion and anti-optimization prompting;
+3. fresh unrelated topics that avoid contamination from prior failed prose;
+4. active conditioning on the actual labeled natural-owner corpus;
+5. owner-confirmed cognition plus the labeled corpus.
+
+The remaining model signal is therefore likely to be **distributed through the realization process itself**, not reducible to a small list of stylistic properties. Pangram may be responding to interactions among lexical probability, syntax, connective choice, sentence-level semantic packaging, rhythm, and other model-generation regularities. This remains a hypothesis, not proof of detector mechanism.
+
+The observed `relaxes your body` → `makes your body unclench` flip also shows that even one model-favored realization can matter on a short boundary. Do not infer that every model edit contaminates a passage or that Pangram proves authorship; treat this only as exact-boundary evidence.
+
+## Next experimental strategy: transformation-dose ladder
+
+Do not continue free-generation variants on this boundary. The next useful experiment should begin from **owner-originated text of sufficient length** and measure increasingly larger model transformations:
+
+1. test the exact owner-originated passage before any model edit;
+2. apply D1 mechanical cleanup only;
+3. apply one necessary D2 local sentence repair while preserving owner syntax and thought order;
+4. only if that remains Human, increase edit dose one controlled step at a time;
+5. stop at the first detector regression and compare the exact changed boundary.
+
+This tests a materially different question: not `Can the model generate Human prose from Joel's thought?`, which has repeatedly failed here, but `How much model editing can owner-originated Human prose tolerate before the model signal becomes detectable?`
+
+For production Joel-byline work, this aligns with the existing minimum-dose/idiolet-preservation rule: elicit or restore owner realization first, then edit only as much as necessary. It is not a claim that all model-generated prose is detectable or that all owner prose is detector-Human.
