@@ -149,16 +149,29 @@ The remaining model signal is therefore likely to be **distributed through the r
 
 The observed `relaxes your body` → `makes your body unclench` flip also shows that even one model-favored realization can matter on a short boundary. Do not infer that every model edit contaminates a passage or that Pangram proves authorship; treat this only as exact-boundary evidence.
 
-## Next experimental strategy: transformation-dose ladder
+## Transformation-dose ladder — research use only
 
-Do not continue free-generation variants on this boundary. The next useful experiment should begin from **owner-originated text of sufficient length** and measure increasingly larger model transformations:
+A transformation-dose ladder can still answer a detector-research question: how much model editing can a known-Human owner passage tolerate before the boundary changes? If run, begin from owner-originated text of sufficient length, test exact owner text, then D1 mechanical cleanup, then one D2 repair, increasing one controlled step at a time.
 
-1. test the exact owner-originated passage before any model edit;
-2. apply D1 mechanical cleanup only;
-3. apply one necessary D2 local sentence repair while preserving owner syntax and thought order;
-4. only if that remains Human, increase edit dose one controlled step at a time;
-5. stop at the first detector regression and compare the exact changed boundary.
+**Do not confuse that research design with the production workflow.** Joel explicitly corrected the assistant after it proposed that he draft 60–100 rough words for a section: if Joel has to originate the prose for every difficult passage, he could simply write the article himself. The purpose of the Joel Articles system is for the assistant to perform the writing/editing work using the labeled owner corpus and owner decisions as calibration, not to shift composition labor back onto Joel.
 
-This tests a materially different question: not `Can the model generate Human prose from Joel's thought?`, which has repeatedly failed here, but `How much model editing can owner-originated Human prose tolerate before the model signal becomes detectable?`
+### Owner-burden rule
 
-For production Joel-byline work, this aligns with the existing minimum-dose/idiolet-preservation rule: elicit or restore owner realization first, then edit only as much as necessary. It is not a claim that all model-generated prose is detectable or that all owner prose is detector-Human.
+For production humanization:
+
+- Joel should ordinarily supply **decisions, corrections, memories, claims, or brief answers**, not be required to draft publication-length prose so the model can edit it;
+- owner-originated prose should be reused when it already exists naturally, but absence of such prose does not authorize offloading the writing task back to Joel;
+- if fresh generation remains detector-AI, change the assistant's generation method or use more constrained corpus-derived realization methods before asking Joel to write the section;
+- asking Joel to write a passage is appropriate only when he independently wants to supply wording, when an irreducibly personal memory/voice choice cannot be inferred, or when he explicitly chooses owner drafting as the efficient route.
+
+## Next production-generation strategy
+
+The next materially different assistant-side experiment should be **corpus-skeleton-constrained realization**, not free generation and not owner drafting:
+
+1. retrieve several verified natural-owner sentences/paragraphs that perform the same rhetorical functions as the target passage;
+2. preserve their grammatical/syntactic skeletons and connective behavior rather than merely extracting abstract style rules;
+3. substitute only the target article's authorized claims/objects, avoiding fake autobiography or copied irrelevant content;
+4. recombine minimally and audit for semantic fidelity and accidental phrase transplantation;
+5. test the resulting natural boundary.
+
+This is intentionally more constrained than `read corpus, then write in Joel's style`: it reduces the amount of fresh model realization where the previous experiments suggest the detectable signal may be entering. It must still produce coherent article prose and must not become a mechanical catchphrase/template collage.
