@@ -1,6 +1,6 @@
 # Tender raw owner control — 2026-08-27 A
 
-Status: **UNMEASURED / owner-source detector calibration control**
+Status: **OWNER-REPORTED PANGRAM HUMAN / MEDIUM CONFIDENCE / owner-source detector calibration control**
 
 Purpose: determine whether Pangram accepts the actual natural-owner tender/inner-child register before further detector-oriented use of `tender-video-transcript.txt` for Somatic reparenting humanization.
 
@@ -10,7 +10,9 @@ Whitespace word count: 142.
 
 Exact UTF-8 text SHA-256: `35ff5c7374b02e7525d1dddb32d4c21c1f8eb7ee06432a11dede98d5faf65a9c`.
 
-Owner-reported Pangram result: **PENDING**.
+Owner-reported Pangram result: **Human / medium confidence**.
+
+Interpretation: Pangram accepts this exact natural-owner tender/inner-child register. Therefore the failed reparenting corpus-skeleton candidate cannot be explained by Pangram simply rejecting Joel's tender register. The failure entered through model realization/recombination. Use this owner-source material as a positive calibration backbone where semantically applicable, rather than asking the model to synthesize a tender register from structural features alone.
 
 ---
 
