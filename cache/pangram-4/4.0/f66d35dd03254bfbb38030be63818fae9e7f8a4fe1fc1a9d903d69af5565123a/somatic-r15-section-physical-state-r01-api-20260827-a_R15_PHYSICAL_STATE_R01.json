@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "somatic-r15-section-physical-state-r01-api-20260827-a_R15_PHYSICAL_STATE_R01",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.369140625,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.630859375,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Your Physical State Can Change What Therapy Does\nI have a hard time separating the therapy from whatever else is happening physically at the time. If I'm underslept or in pain, that obviously changes things. So can a substance or medication, inflammation, dissociation, nutrition, fear learning, glutamate/GABA balance, autonomic tone, or just general physiological instability.\nI have seen friends get very little from these therapies until they addressed physical neuroinflammation with things like low-dose naltrexone, phosphatidylserine, DMSO, and so on. In my own experience, I cannot do real healing work when I feel like I have toxins in my gut. Ozonated zeolite helps that a lot. Ozonated charcoal water also helps me when I am surrounded by chaotic energy fields, whether EMF or auric.\nI think of that as neurological de-armoring: not another trauma technique, but part of the physical ground the techniques are working on. I have separate guides on sleep and neurological de-armoring if that seems relevant to you.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.6928119659423828,
+        "confidence": "High",
+        "end_index": 378,
+        "humanizer_score": 0.055856939405202866,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Your Physical State Can Change What Therapy Does\nI have a hard time separating the therapy from whatever else is happening physically at the time. If I'm underslept or in pain, that obviously changes things. So can a substance or medication, inflammation, dissociation, nutrition, fear learning, glutamate/GABA balance, autonomic tone, or just general physiological instability.",
+        "token_length": 71,
+        "word_count": 57
+      },
+      {
+        "ai_assistance_score": 0.3699982464313507,
+        "confidence": "High",
+        "end_index": 1024,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 378,
+        "text": "\nI have seen friends get very little from these therapies until they addressed physical neuroinflammation with things like low-dose naltrexone, phosphatidylserine, DMSO, and so on. In my own experience, I cannot do real healing work when I feel like I have toxins in my gut. Ozonated zeolite helps that a lot. Ozonated charcoal water also helps me when I am surrounded by chaotic energy fields, whether EMF or auric.\nI think of that as neurological de-armoring: not another trauma technique, but part of the physical ground the techniques are working on. I have separate guides on sleep and neurological de-armoring if that seems relevant to you.",
+        "token_length": 138,
+        "word_count": 109
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "d4e1e350-7e38-460b-bf45-5f74a41cc834",
   "text": "Your Physical State Can Change What Therapy Does\n\nI have a hard time separating the therapy from whatever else is happening physically at the time. If I'm underslept or in pain, that obviously changes things. So can a substance or medication, inflammation, dissociation, nutrition, fear learning, glutamate/GABA balance, autonomic tone, or just general physiological instability.\n\nI have seen friends get very little from these therapies until they addressed physical neuroinflammation with things like low-dose naltrexone, phosphatidylserine, DMSO, and so on. In my own experience, I cannot do real healing work when I feel like I have toxins in my gut. Ozonated zeolite helps that a lot. Ozonated charcoal water also helps me when I am surrounded by chaotic energy fields, whether EMF or auric.\n\nI think of that as neurological de-armoring: not another trauma technique, but part of the physical ground the techniques are working on. I have separate guides on sleep and neurological de-armoring if that seems relevant to you.\n",
   "text_sha256": "f66d35dd03254bfbb38030be63818fae9e7f8a4fe1fc1a9d903d69af5565123a",
-  "updated_utc": "2026-08-27T12:45:16.168615+00:00"
+  "updated_utc": "2026-08-27T12:45:20.453946+00:00"
 }
