@@ -1,0 +1,82 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-r15-section-physical-state-api-20260827-a",
+  "spec_sha256": "7f96185c1f59944271a9c2441afc30e5732dcc7e7aa58a9bf29b215887261349",
+  "results": [
+    {
+      "id": "R15_PHYSICAL_STATE",
+      "measurement_key": "somatic-r15-section-physical-state-api-20260827-a_R15_PHYSICAL_STATE",
+      "text": "Your Physical State Can Change What Therapy Does\n\nI also do not draw a hard line between “therapy” and the physical state of the nervous system doing the therapy. Sleep, substances or medication, pain, nutrition, fear learning, inflammation, dissociation, glutamate/GABA balance, autonomic tone, and just general physiological stability can all change what the same session does to you.\n\nI have seen friends get very little from these therapies until they addressed physical neuroinflammation with things like low-dose naltrexone, phosphatidylserine, DMSO, and so on. In my own experience, I cannot do real healing work when I feel like I have toxins in my gut. Ozonated zeolite helps that a lot. Ozonated charcoal water also helps me when I am surrounded by chaotic energy fields, whether EMF or auric.\n\nI think of that as neurological de-armoring: not another trauma technique, but part of the physical ground the techniques are working on. I have separate guides on sleep and neurological de-armoring if that seems relevant to you.",
+      "text_sha256": "8f68c187a3c3ccb1ec5b63dfff946643d38a2d5111d0b1d6ee182026d9b56688",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Your Physical State Can Change What Therapy Does\nI also do not draw a hard line between “therapy” and the physical state of the nervous system doing the therapy. Sleep, substances or medication, pain, nutrition, fear learning, inflammation, dissociation, glutamate/GABA balance, autonomic tone, and just general physiological stability can all change what the same session does to you.\nI have seen friends get very little from these therapies until they addressed physical neuroinflammation with things like low-dose naltrexone, phosphatidylserine, DMSO, and so on. In my own experience, I cannot do real healing work when I feel like I have toxins in my gut. Ozonated zeolite helps that a lot. Ozonated charcoal water also helps me when I am surrounded by chaotic energy fields, whether EMF or auric.\nI think of that as neurological de-armoring: not another trauma technique, but part of the physical ground the techniques are working on. I have separate guides on sleep and neurological de-armoring if that seems relevant to you.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Your Physical State Can Change What Therapy Does\nI also do not draw a hard line between “therapy” and the physical state of the nervous system doing the therapy. Sleep, substances or medication, pain, nutrition, fear learning, inflammation, dissociation, glutamate/GABA balance, autonomic tone, and just general physiological stability can all change what the same session does to you.\nI have seen friends get very little from these therapies until they addressed physical neuroinflammation with things like low-dose naltrexone, phosphatidylserine, DMSO, and so on. In my own experience, I cannot do real healing work when I feel like I have toxins in my gut. Ozonated zeolite helps that a lot. Ozonated charcoal water also helps me when I am surrounded by chaotic energy fields, whether EMF or auric.\nI think of that as neurological de-armoring: not another trauma technique, but part of the physical ground the techniques are working on. I have separate guides on sleep and neurological de-armoring if that seems relevant to you.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.7948509454727173,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1031,
+            "word_count": 168,
+            "token_length": 212,
+            "is_humanized": false,
+            "humanizer_score": 0.2798236310482025
+          }
+        ]
+      },
+      "section_id": "physical-state",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-r15-section-localization-20260827",
+  "call_accounting": {
+    "audit_id": "somatic-r15-section-localization-20260827",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.05,
+        "estimated_credits": 1,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "introduction",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "physical-state",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
