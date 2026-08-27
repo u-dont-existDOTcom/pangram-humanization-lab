@@ -13,6 +13,20 @@ Updated: 2026-08-27
 - Queue requests and result commits use separate branches to remove the ordinary two-writer race. Result durability retains the repaired rule: remote-only `state/` descendants may fast-forward; runtime changes and true divergence fail closed.
 - Live acceptance evidence is recorded under `state/pangram-gui-bridge/results/` after installation. No new paid measurement is part of the installation gate.
 
+### Live acceptance completed
+
+- Bridge implementation PR #140 merged to the fixed tooling/result branch as `77ba6023cd7ddcb0526b8e90910b7d9128195d6e`.
+- `pangram-gui-bridge.service` is installed, enabled under `graphical-session.target`, and active in Joel's user manager with fixed Brave `/opt/brave.com/brave/brave`, profile `~/.config/pangram-local-browser`, and dashboard `https://www.pangram.com/dashboard`.
+- No-paid Somatic r15 request `5f57b5e8-4da5-4a4d-8a12-7df4a0c4f4b1` returned `outcome: cache_hit`, exact reader-visible SHA `d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e`, 3,548 words, AI `0.8451970816`, AI-assisted `0.0`, Human `0.1548029035`, exact stored-History binding, report body/PDF, and report-PDF-only localization evidence. It records `request_submission_attempted: false`.
+- Read-only headed authentication request `9c2ef2a4-75ad-4d85-9dc2-86b3f685e3f0` returned `outcome: verified`, `headed: true`, `transport: local_playwright`, the fixed Brave/profile, an editable authenticated detector input, and `submitted: false`.
+- The first verify launch hit Playwright's pre-authentication control-pipe timeout. The daemon durably published `failed`, left the cursor behind the immutable request, cleaned up its browser children, retried, and completed. This live-tested nonterminal restart/resume without a detector submission.
+- The same enabled service PID remained active across fresh shell contexts with `DISPLAY=:0`, `WAYLAND_DISPLAY=wayland-0`, the user D-Bus, and the runtime directory present.
+- Final installed deterministic gate: **245 passed**. Repository operating audit: **0 errors** (five pre-existing hosted-control/lockfile warnings). Lesson audit: clean.
+- Stable live results:
+  - `state/pangram-gui-bridge/results/5f57b5e8-4da5-4a4d-8a12-7df4a0c4f4b1.json`
+  - `state/pangram-gui-bridge/results/9c2ef2a4-75ad-4d85-9dc2-86b3f685e3f0.json`
+- No new paid Pangram measurement was submitted during bridge installation or acceptance.
+
 ## Goal
 
 Preserve the lab's exact detector evidence, editorial authority, and lesson-closeout architecture while making Codex/GitHub operation recoverable, least-privileged, and safe around paid detector work.
