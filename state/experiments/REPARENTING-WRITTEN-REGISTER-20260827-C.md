@@ -1,6 +1,6 @@
 # Reparenting written-register conversion — 2026-08-27 C
 
-Status: **UNMEASURED / editorial-quality-first detector experiment**
+Status: **OWNER-REPORTED PANGRAM HUMAN / MEDIUM CONFIDENCE / editorial-quality-first detector experiment**
 
 Purpose: test whether the detector-positive tender owner-source backbone can be converted into publication-quality written Joel prose without reintroducing the strong model signal.
 
@@ -11,7 +11,11 @@ Inputs:
 
 This test intentionally optimizes editorial quality before detector performance. It does not yet add somatic-modality, heart-loop, Brainspotting, or EMDR material.
 
-Owner-reported Pangram result: **PENDING**.
+Owner-reported Pangram result, 2026-08-27: **Human / medium confidence**.
+
+Interpretation: the written-register conversion retained a Human result after replacing the transcript-like backbone with prose intended to function as article writing. This is stronger production evidence than the detector-positive raw/compressed tender controls because it shows the owner-source thought route can survive a moderate editorial realization without requiring transcript texture. It is still a bounded result, not owner-final publication approval and not evidence that larger additions will remain Human.
+
+Next controlled step: preserve this exact passing boundary and add only the somatic-preparation cluster. Do not add the heart-loop practice, Brainspotting, or EMDR in the same step; if the boundary changes, the cause should remain localizable.
 
 ---
 
