@@ -11,6 +11,7 @@ Research state only. These are contextual findings and process constraints, not 
 - Accept cache evidence only after strong binding: source coordinates and hashes, exact reader-visible SHA/word count, local GUI transport, Pangram 4.0 success, exact UTF-8 stored-History identity, `response.overall`, and intact report-body/PDF hashes.
 - Named reader-visible extraction profiles belong to fixed audited code. Requests may select a trusted name but may never carry selectors, transforms, shell fragments, code, browser settings, or arbitrary runner arguments.
 - A user service with `PartOf=graphical-session.target` is the correct lifecycle on a linger-enabled Linux desktop: it inherits the live Wayland/X11, D-Bus, keyring, and SSH-agent environment and stops outside the graphical session.
+- Treat browser launch/control-pipe timeouts as retryable pre-submission failures, not terminal request results. Keep the queue cursor behind the immutable request, durably publish the failure, verify browser-child cleanup, and let the same request resume. The live acceptance path recovered this way and then verified the authenticated headed detector without filling or submitting text.
 
 ## Blocking execution order
 
