@@ -28,8 +28,8 @@
     "physical-state\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "budget_scope": "section",
@@ -39,10 +39,19 @@
           "text_sha256": "8f68c187a3c3ccb1ec5b63dfff946643d38a2d5111d0b1d6ee182026d9b56688",
           "type": "paid_post_reserved",
           "word_count": 164
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r15-section-physical-state-r01-api-20260827-a_R15_PHYSICAL_STATE_R01",
+          "recorded_at_utc": "2026-08-27T12:45:11.584983+00:00",
+          "text_sha256": "f66d35dd03254bfbb38030be63818fae9e7f8a4fe1fc1a9d903d69af5565123a",
+          "type": "paid_post_reserved",
+          "word_count": 161
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "physical-state",
       "version": "4.0"
