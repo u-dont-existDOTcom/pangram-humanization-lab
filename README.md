@@ -2,6 +2,8 @@
 
 Adaptive detector-research harness for Joel Rosenblum's humanization work.
 
+For Chat-triggered exact headed GUI measurements on Joel's desktop, see `docs/PANGRAM-GUI-BRIDGE.md`. The persistent bridge reuses `pangram-local`; it automates only validated request → local GUI recovery/measurement/localization → durable result, never editorial rewriting.
+
 This release deliberately reuses the **persistence/evidence model of the earlier working Pangram autopilot** instead of treating detector calls as disposable. It adds a Pangram-4 content-addressed cache, task-id checkpoint/resume, live Codex status streaming, strict structured-output contracts compatible with current Codex CLI, adaptive controlled experiments, and automatic private GitHub backup.
 
 ## One-command use on Joel's Zorin machine

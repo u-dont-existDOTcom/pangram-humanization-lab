@@ -69,6 +69,20 @@ class PangramCallLedger:
 
     def reserve_paid_call(self, *, section_id: str, model: str, version: str, measurement_key: str, text_sha256: str, word_count: int) -> dict[str, Any]:
         section = self._section(section_id, model, version)
+        matching = [
+            event
+            for event in section.get("events", [])
+            if event.get("type") == "paid_post_reserved"
+            and event.get("measurement_key") == measurement_key
+        ]
+        if matching:
+            if any(event.get("text_sha256") != text_sha256 for event in matching):
+                raise ValueError(
+                    "measurement_key is already reserved for a different text SHA-256"
+                )
+            return self.section_summary(section_id, model, version) | {
+                "reservation_created": False
+            }
         if int(section["paid_api_calls"]) >= self.cap:
             raise SectionCallCapReached(self.audit_id, section_id, self.cap)
         words = max(0, int(word_count))
@@ -78,12 +92,22 @@ class PangramCallLedger:
         section["estimated_cost_usd"] = round(section["estimated_credits"] * CREDIT_COST_USD, 10)
         section["events"].append({"type": "paid_post_reserved", "measurement_key": measurement_key, "text_sha256": text_sha256, "word_count": words, "estimated_credits": credits, "recorded_at_utc": self._now()})
         self._persist()
-        return self.section_summary(section_id, model, version)
+        return self.section_summary(section_id, model, version) | {
+            "reservation_created": True
+        }
 
-    def record_cache_hit(self, section_id: str, model: str, version: str, measurement_key: str, text_sha256: str) -> None:
+    def record_cache_hit(self, section_id: str, model: str, version: str, measurement_key: str, text_sha256: str, *, event_key: str | None = None) -> None:
         section = self._section(section_id, model, version)
+        if event_key is not None and any(
+            event.get("type") == "cache_hit" and event.get("event_key") == event_key
+            for event in section.get("events", [])
+        ):
+            return
         section["cache_hits"] += 1
-        section["events"].append({"type": "cache_hit", "measurement_key": measurement_key, "text_sha256": text_sha256, "recorded_at_utc": self._now()})
+        event = {"type": "cache_hit", "measurement_key": measurement_key, "text_sha256": text_sha256, "recorded_at_utc": self._now()}
+        if event_key is not None:
+            event["event_key"] = event_key
+        section["events"].append(event)
         self._persist()
 
     def record_pending_resume(self, section_id: str, model: str, version: str, measurement_key: str, text_sha256: str) -> None:

@@ -202,6 +202,12 @@ A complete result or ambiguous failure remains locally blocking even if the push
 
 Browserbase remains an optional fallback documented in `PANGRAM-GUI-BROWSERBASE-RUNBOOK.md`. Do not move an ambiguous exact SHA to another transport merely to bypass the ambiguity guard.
 
+## 12. Persistent Chat-triggered bridge
+
+Explicit GUI checks no longer require Joel to open a Work task or type local commands once `pangram-gui-bridge.service` is installed. Chat appends a schema-valid immutable data request on `automation/pangram-gui-bridge-queue`; the graphical-session daemon invokes this same headed local Playwright/Brave transport and publishes durable evidence on `agent/pangram-local-playwright-gpt-20260818`.
+
+The bridge does not add a detector stack, API substitution, or autonomous rewriting. It composes the existing exact cache, paid reservation, read-only History recovery, ambiguity protection, evidence capture, and `GitSync` behavior. Its fixed schema, trusted source/extraction registry, branch topology, service runbook, result shape, and enqueue instructions are in `PANGRAM-GUI-BRIDGE.md`.
+
 ## Current certification boundary
 
-Repository tests certify deterministic code behavior without a Pangram charge. Owner-machine live verification is still required for actual authenticated recovery/submission and current report rendering. The current next live gate is exact stored-record recovery of the already-paid Part 1; only successful recovery permits the first Part-2 submission.
+Repository tests certify deterministic code behavior without a Pangram charge. Owner-machine live verification is still required for actual authenticated recovery/submission and current report rendering. A bridge `verify` request is the read-only headed authentication gate. Paid work remains separately authorized and preservation-gated.
