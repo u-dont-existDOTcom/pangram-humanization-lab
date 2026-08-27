@@ -2,6 +2,16 @@
 
 Research state only. These are contextual findings and process constraints, not phrase blacklists. Human editorial quality, semantic sanity, and fidelity outrank Pangram.
 
+## Operational GUI bridge lesson — 2026-08-27
+
+- Keep Chat as the editorial/reasoning authority and automate only fixed-data request → existing local headed GUI runner → durable evidence. Never put autonomous rewriting or request-provided execution inside the desktop daemon.
+- A GitHub mailbox is coordination and storage, not the detector transport. The actual measurement remains authenticated headed Playwright/Brave on the owner machine.
+- Separate the append-only request branch from the daemon-owned code/result branch. This eliminates the normal two-writer push race without weakening result-branch durability checks.
+- Write a global content-addressed paid intent as well as the audit ledger event. Treat either reservation across all audits as ambiguity even if a crash occurred before the GUI runner wrote its own reservation file. Exact, reservation-time-bound, unique History recovery must precede any repeat.
+- Accept cache evidence only after strong binding: source coordinates and hashes, exact reader-visible SHA/word count, local GUI transport, Pangram 4.0 success, exact UTF-8 stored-History identity, `response.overall`, and intact report-body/PDF hashes.
+- Named reader-visible extraction profiles belong to fixed audited code. Requests may select a trusted name but may never carry selectors, transforms, shell fragments, code, browser settings, or arbitrary runner arguments.
+- A user service with `PartOf=graphical-session.target` is the correct lifecycle on a linger-enabled Linux desktop: it inherits the live Wayland/X11, D-Bus, keyring, and SSH-agent environment and stops outside the graphical session.
+
 ## Blocking execution order
 
 - **Semantic sanity comes before humanization.** Before rewriting, inspect the thought itself: premise, actor/action/object, causality, chronology, certainty, ordinary human dynamics, and whether the supposed contradiction survives contact with reality. Rewriting a bad thought wastes effort and often produces polished nonsense.

@@ -1,6 +1,17 @@
 # Pangram Humanization Lab current state
 
-Updated: 2026-08-14
+Updated: 2026-08-27
+
+## Active local GUI bridge checkpoint
+
+- Fixed tooling/result branch: `agent/pangram-local-playwright-gpt-20260818`.
+- Append-only request branch: `automation/pangram-gui-bridge-queue`.
+- Persistent graphical-session service: `pangram-gui-bridge.service`.
+- Queue/result contract and recovery runbook: `docs/PANGRAM-GUI-BRIDGE.md`.
+- Chat may trigger `verify`, `recover`, `localize`, or preservation-gated `measure` by creating one immutable fixed-schema request. The desktop continues to use headed Playwright/Brave with the dedicated profile; there is no API substitution or daemon-side model rewriting.
+- Cache and recovery precede any possible paid repeat. GUI reservations, ambiguous failures, and matching durable call-ledger reservations all require exact History recovery first.
+- Queue requests and result commits use separate branches to remove the ordinary two-writer race. Result durability retains the repaired rule: remote-only `state/` descendants may fast-forward; runtime changes and true divergence fail closed.
+- Live acceptance evidence is recorded under `state/pangram-gui-bridge/results/` after installation. No new paid measurement is part of the installation gate.
 
 ## Goal
 

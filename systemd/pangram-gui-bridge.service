@@ -1,0 +1,22 @@
+[Unit]
+Description=Pangram headed GUI request bridge
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+WorkingDirectory=/mnt/hdd/home/joel/Téléchargements/pangram-local-runner-20260818
+ExecStart=/mnt/hdd/home/joel/Téléchargements/pangram-local-runner-20260818/.venv/bin/python -m pangram_lab.gui_bridge daemon
+Restart=on-failure
+RestartSec=15s
+TimeoutStopSec=30s
+UMask=0077
+Environment=PYTHONUNBUFFERED=1
+Environment=PANGRAM_LOCAL_PROFILE=/home/joel/.config/pangram-local-browser
+Environment=PANGRAM_LOCAL_BROWSER=/opt/brave.com/brave/brave
+Environment=PANGRAM_GUI_URL=https://www.pangram.com/dashboard
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical-session.target

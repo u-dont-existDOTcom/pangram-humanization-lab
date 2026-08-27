@@ -51,7 +51,12 @@ def _source(args: argparse.Namespace) -> dict[str, object] | None:
     return result
 
 
-def _target_time(directory: Path) -> Any | None:
+def _target_time(directory: Path, explicit: str | None = None) -> Any | None:
+    if explicit is not None:
+        parsed = parse_timestamp(explicit)
+        if parsed is None:
+            raise RuntimeError("--target-time-utc is not a valid timestamp")
+        return parsed
     failure_path = directory / "failure.json"
     if not failure_path.is_file():
         return None
@@ -84,7 +89,9 @@ def recover(args: argparse.Namespace) -> dict[str, object]:
     directory = Path(str(prepared["directory"]))
     paths = gui_core.artifact_paths(directory)
     source = _source(args)
-    target_time = _target_time(directory)
+    target_time = _target_time(directory, args.target_time_utc)
+    if args.require_unique_target_match and target_time is None:
+        raise RuntimeError("unique target recovery requires --target-time-utc")
     durability = GitEvidenceDurability(repo_root, output_root)
     durability.preflight({input_path: digest})
 
@@ -111,6 +118,7 @@ def recover(args: argparse.Namespace) -> dict[str, object]:
             history_list,
             str(prepared["text"]),
             target_time=target_time,
+            require_unique_match=args.require_unique_target_match,
         )
         if record is None:
             raise RuntimeError(
@@ -187,6 +195,8 @@ def main() -> int:
     parser.add_argument("--source-commit")
     parser.add_argument("--source-path")
     parser.add_argument("--source-file-sha256")
+    parser.add_argument("--target-time-utc")
+    parser.add_argument("--require-unique-target-match", action="store_true")
     args = parser.parse_args()
     if len(args.expect_sha) != 64 or any(ch not in "0123456789abcdefABCDEF" for ch in args.expect_sha):
         parser.error("--expect-sha must be a 64-character hexadecimal SHA-256")

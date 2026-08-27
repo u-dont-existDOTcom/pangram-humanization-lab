@@ -95,3 +95,113 @@ def test_exact_recovery_does_not_accept_a_nearby_wrong_text_record() -> None:
     )
     assert record is None
     assert proof["history_records_inspected"] == 1
+
+
+def test_unique_target_recovery_rejects_multiple_exact_records() -> None:
+    exact_text = "one two three"
+    history = {
+        "results": [
+            {
+                "uuid": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
+                "created_at": "2026-08-25T14:34:18Z",
+            },
+            {
+                "uuid": "cccccccc-4444-5555-6666-dddddddddddd",
+                "created_at": "2026-08-25T14:34:20Z",
+            },
+        ]
+    }
+
+    class Response:
+        status = 200
+        headers = {"content-type": "application/json"}
+
+        def __init__(self, uuid: str) -> None:
+            self.uuid = uuid
+
+        def json(self) -> object:
+            return {"uuid": self.uuid, "prompt": exact_text}
+
+    class Request:
+        def get(self, url: str, *, timeout: int) -> Response:
+            return Response(url.rstrip("/").rsplit("/", 1)[-1])
+
+    class Context:
+        request = Request()
+
+    record, proof = find_exact_history_record(
+        Context(),
+        history,
+        exact_text,
+        target_time=TARGET,
+        require_unique_match=True,
+    )
+    assert record is None
+    assert proof["ambiguous_exact_matches"] is True
+    assert proof["exact_match_count"] == 2
+
+
+def test_unique_target_recovery_rejects_incomplete_candidate_reads() -> None:
+    exact_text = "one two three"
+    history = {
+        "results": [
+            {
+                "uuid": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
+                "created_at": "2026-08-25T14:34:18Z",
+            },
+            {
+                "uuid": "cccccccc-4444-5555-6666-dddddddddddd",
+                "created_at": "2026-08-25T14:34:20Z",
+            },
+        ]
+    }
+
+    class Response:
+        headers = {"content-type": "application/json"}
+
+        def __init__(self, uuid: str) -> None:
+            self.uuid = uuid
+            self.status = 503 if uuid.startswith("a") else 200
+
+        def json(self) -> object:
+            return {"uuid": self.uuid, "prompt": exact_text}
+
+    class Request:
+        def get(self, url: str, *, timeout: int) -> Response:
+            return Response(url.rstrip("/").rsplit("/", 1)[-1])
+
+    class Context:
+        request = Request()
+
+    record, proof = find_exact_history_record(
+        Context(), history, exact_text, target_time=TARGET, require_unique_match=True
+    )
+    assert record is None
+    assert proof["incomplete_candidate_reads"] is True
+    assert proof["exact_match_count"] == 1
+
+
+def test_unique_target_recovery_rejects_candidate_window_over_limit() -> None:
+    history = {
+        "results": [
+            {
+                "uuid": f"{index:08x}-1111-4222-8333-bbbbbbbbbbbb",
+                "created_at": f"2026-08-25T14:34:{17 + index:02d}Z",
+            }
+            for index in range(4)
+        ]
+    }
+
+    class Context:
+        request = None
+
+    record, proof = find_exact_history_record(
+        Context(),
+        history,
+        "one two three",
+        target_time=TARGET,
+        require_unique_match=True,
+        limit=3,
+    )
+    assert record is None
+    assert proof["candidate_window_truncated"] is True
