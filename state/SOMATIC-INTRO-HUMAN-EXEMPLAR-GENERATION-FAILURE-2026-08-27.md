@@ -164,14 +164,33 @@ For production humanization:
 - if fresh generation remains detector-AI, change the assistant's generation method or use more constrained corpus-derived realization methods before asking Joel to write the section;
 - asking Joel to write a passage is appropriate only when he independently wants to supply wording, when an irreducibly personal memory/voice choice cannot be inferred, or when he explicitly chooses owner drafting as the efficient route.
 
-## Next production-generation strategy
+## Corpus-skeleton-constrained realization — first positive fresh-generation result
 
-The next materially different assistant-side experiment should be **corpus-skeleton-constrained realization**, not free generation and not owner drafting:
+Joel then clarified that he had expected the Joel Articles project to be using the labeled corpus this tightly all along. That exposed the operative distinction:
 
-1. retrieve several verified natural-owner sentences/paragraphs that perform the same rhetorical functions as the target passage;
-2. preserve their grammatical/syntactic skeletons and connective behavior rather than merely extracting abstract style rules;
-3. substitute only the target article's authorized claims/objects, avoiding fake autobiography or copied irrelevant content;
-4. recombine minimally and audit for semantic fidelity and accidental phrase transplantation;
-5. test the resulting natural boundary.
+- earlier `corpus-conditioned` attempts read natural-owner samples, inferred their style/rhythm/thought tendencies, and then still let the model generate new sentence architecture freely;
+- `corpus-skeleton-constrained realization` retrieves natural-owner sentences performing matching rhetorical functions and transfers their **grammatical route, connective behavior, explanation dose, and stopping pattern** into the target content with minimal recombination.
 
-This is intentionally more constrained than `read corpus, then write in Joel's style`: it reduces the amount of fresh model realization where the previous experiments suggest the detectable signal may be entering. It must still produce coherent article prose and must not become a mechanical catchphrase/template collage.
+This is structural retrieval/transfer, not merely `write in Joel's style` prompting.
+
+The first Somatic physical-state lead generated under this tighter method was:
+
+> Whether a somatic therapy works well can depend a lot on what else is going on in your body. Keep in mind that poor sleep, pain, inflammation, dissociation, medications, and so forth can all change how you respond. If the therapy suddenly stops doing much, that doesn't necessarily mean you need a different therapy. Sometimes the physical problem is the thing you need to deal with first.
+
+Joel reported this exact passage **Human / low confidence**.
+
+A salient retrieved natural-owner structural analogue in the research-conversational corpus is `Whether meditation will cure your cancer greatly depends on what the cause of your cancer is.` The corpus also contains recurrent natural `Keep in mind...` continuations. The target passage does not copy the source claim or irrelevant autobiography; it transfers sentence architecture/connective behavior into the authorized Somatic thought.
+
+### Interpretation boundary
+
+This is the **first positive owner-reported Pangram result for fresh assistant-written prose in this extended sequence**. It is important evidence that structural corpus transfer may outperform abstract style conditioning for Joel-byline generation.
+
+Do **not** infer from one low-confidence result that:
+
+- sentence-skeleton transfer is universally sufficient;
+- Pangram has identified authorship;
+- these exact sentence forms should become templates or catchphrases;
+- every target should reuse the same `Whether...` or `Keep in mind...` structures;
+- the passage is automatically publication-ready or article-authoritative.
+
+The next useful test is **transfer across new sections/functions**: retrieve different matching Human skeletons from the labeled corpus for each target and generate without over-reusing the successful forms. If the method repeatedly produces editorially sound Human boundaries, promote it from promising method to production default. Preserve fidelity/provenance and detector status as separate axes.
