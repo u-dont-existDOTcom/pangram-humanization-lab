@@ -1,0 +1,27 @@
+{
+  "evidence": {
+    "report_body": {
+      "path": "state/gui-runs/pangram-4/d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e/report-body.txt",
+      "sha256": "579e5e2035d2f75ab872853f160eb591f093471ceafef3f0675f795e67b8df49"
+    },
+    "report_pdf": {
+      "path": "state/gui-runs/pangram-4/d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e/report.pdf",
+      "sha256": "afe507cd71376736b2d24feaa7e956054db953e536f41695970cbf88802b9fbd"
+    }
+  },
+  "input_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+  "privacy": "No History UUID, private URL, cookie, storage value, or browser-profile data.",
+  "schema_version": 1,
+  "score": {
+    "fraction_ai": 0.8451970816,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.1548029035,
+    "headline": "AI Detected",
+    "prediction_short": "AI",
+    "source": "response.overall",
+    "stage": "STAGE_SUCCESS",
+    "version": "4.0"
+  },
+  "window_status": "report_pdf_only",
+  "windows": []
+}
