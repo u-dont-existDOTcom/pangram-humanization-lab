@@ -181,16 +181,35 @@ Joel reported this exact passage **Human / low confidence**.
 
 A salient retrieved natural-owner structural analogue in the research-conversational corpus is `Whether meditation will cure your cancer greatly depends on what the cause of your cancer is.` The corpus also contains recurrent natural `Keep in mind...` continuations. The target passage does not copy the source claim or irrelevant autobiography; it transfers sentence architecture/connective behavior into the authorized Somatic thought.
 
+The lead was then assembled in front of the already-frozen 109-word Human/high-confidence physical-state core. Joel reported the **complete natural section Human / medium confidence**. This strengthens the local repair result because the transferred lead survived the actual section context rather than only a short isolated boundary.
+
+### Cross-register full-section test — failed
+
+To test generalization rather than reusing the same research-conversational structures, the assistant generated a complete reparenting section using grammatical/thought-route structures from the natural-owner tender transcript. The candidate preserved all 30 required reparenting units and used structures such as the owner's `The inner child is you in a sense, but it's not you` distinction plus direct `feel... / see...` instruction movement.
+
+Joel tested that **complete natural section** and reported **AI / high confidence**.
+
+This changes the interpretation of the physical-state success. It does **not** support the broad claim that skeleton transfer can safely generate whole sections. The physical-state operation was a **localized patch**: roughly one short transferred lead attached to 109 words that already measured Human/high confidence. The reparenting operation used transferred skeletons as scaffolding for essentially an entire model-realized section. The model signal returned strongly.
+
+### Revised scope of the promising method
+
+Current evidence supports a narrower hypothesis:
+
+> **Corpus-skeleton transfer may be useful as a small local repair method, especially when the surrounding natural boundary already contains substantial known-Human owner material. It is not yet evidence for whole-section generation.**
+
+The failure could reflect edit dose, register, particular skeleton choice, technical-density interactions, or some combination. Do not infer from one tender failure that tender skeletons are inherently bad. Localize first.
+
+Next useful diagnostic: test natural sub-boundaries from the failed reparenting section before generating another replacement. Specifically determine whether the tender-style opening already scores AI or whether the stronger residual appears mainly in the technical Brainspotting/EMDR/modality material. This distinguishes `skeleton-transfer failure at the sentence level` from `too much free recombination across a long section`.
+
 ### Interpretation boundary
 
-This is the **first positive owner-reported Pangram result for fresh assistant-written prose in this extended sequence**. It is important evidence that structural corpus transfer may outperform abstract style conditioning for Joel-byline generation.
+Do **not** infer from these results that:
 
-Do **not** infer from one low-confidence result that:
+- Pangram proves authorship;
+- one Human/medium section establishes a universal method;
+- full-section skeleton transfer should become the production default;
+- tender corpus structures are detector-bad;
+- every target should reuse the successful physical-state forms;
+- detector repair may override fidelity, provenance, or article function.
 
-- sentence-skeleton transfer is universally sufficient;
-- Pangram has identified authorship;
-- these exact sentence forms should become templates or catchphrases;
-- every target should reuse the same `Whether...` or `Keep in mind...` structures;
-- the passage is automatically publication-ready or article-authoritative.
-
-The next useful test is **transfer across new sections/functions**: retrieve different matching Human skeletons from the labeled corpus for each target and generate without over-reusing the successful forms. If the method repeatedly produces editorially sound Human boundaries, promote it from promising method to production default. Preserve fidelity/provenance and detector status as separate axes.
+Promote corpus-skeleton transfer only at the dose and register for which repeated exact-boundary evidence supports it.
