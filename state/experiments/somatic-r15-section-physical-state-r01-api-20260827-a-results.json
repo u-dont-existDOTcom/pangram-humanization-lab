@@ -1,0 +1,94 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-r15-section-physical-state-r01-api-20260827-a",
+  "spec_sha256": "6d0313383649642933c8acb4eded1af88512b1edf268f360e1b4799b7ef55269",
+  "results": [
+    {
+      "id": "R15_PHYSICAL_STATE_R01",
+      "measurement_key": "somatic-r15-section-physical-state-r01-api-20260827-a_R15_PHYSICAL_STATE_R01",
+      "text": "Your Physical State Can Change What Therapy Does\n\nI have a hard time separating the therapy from whatever else is happening physically at the time. If I'm underslept or in pain, that obviously changes things. So can a substance or medication, inflammation, dissociation, nutrition, fear learning, glutamate/GABA balance, autonomic tone, or just general physiological instability.\n\nI have seen friends get very little from these therapies until they addressed physical neuroinflammation with things like low-dose naltrexone, phosphatidylserine, DMSO, and so on. In my own experience, I cannot do real healing work when I feel like I have toxins in my gut. Ozonated zeolite helps that a lot. Ozonated charcoal water also helps me when I am surrounded by chaotic energy fields, whether EMF or auric.\n\nI think of that as neurological de-armoring: not another trauma technique, but part of the physical ground the techniques are working on. I have separate guides on sleep and neurological de-armoring if that seems relevant to you.\n",
+      "text_sha256": "f66d35dd03254bfbb38030be63818fae9e7f8a4fe1fc1a9d903d69af5565123a",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Your Physical State Can Change What Therapy Does\nI have a hard time separating the therapy from whatever else is happening physically at the time. If I'm underslept or in pain, that obviously changes things. So can a substance or medication, inflammation, dissociation, nutrition, fear learning, glutamate/GABA balance, autonomic tone, or just general physiological instability.\nI have seen friends get very little from these therapies until they addressed physical neuroinflammation with things like low-dose naltrexone, phosphatidylserine, DMSO, and so on. In my own experience, I cannot do real healing work when I feel like I have toxins in my gut. Ozonated zeolite helps that a lot. Ozonated charcoal water also helps me when I am surrounded by chaotic energy fields, whether EMF or auric.\nI think of that as neurological de-armoring: not another trauma technique, but part of the physical ground the techniques are working on. I have separate guides on sleep and neurological de-armoring if that seems relevant to you.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.369140625,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.630859375,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Your Physical State Can Change What Therapy Does\nI have a hard time separating the therapy from whatever else is happening physically at the time. If I'm underslept or in pain, that obviously changes things. So can a substance or medication, inflammation, dissociation, nutrition, fear learning, glutamate/GABA balance, autonomic tone, or just general physiological instability.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6928119659423828,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 378,
+            "word_count": 57,
+            "token_length": 71,
+            "is_humanized": false,
+            "humanizer_score": 0.055856939405202866
+          },
+          {
+            "text": "\nI have seen friends get very little from these therapies until they addressed physical neuroinflammation with things like low-dose naltrexone, phosphatidylserine, DMSO, and so on. In my own experience, I cannot do real healing work when I feel like I have toxins in my gut. Ozonated zeolite helps that a lot. Ozonated charcoal water also helps me when I am surrounded by chaotic energy fields, whether EMF or auric.\nI think of that as neurological de-armoring: not another trauma technique, but part of the physical ground the techniques are working on. I have separate guides on sleep and neurological de-armoring if that seems relevant to you.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.3699982464313507,
+            "confidence": "High",
+            "start_index": 378,
+            "end_index": 1024,
+            "word_count": 109,
+            "token_length": 138,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "physical-state",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-r15-section-localization-20260827",
+  "call_accounting": {
+    "audit_id": "somatic-r15-section-localization-20260827",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.05,
+        "estimated_credits": 1,
+        "model": "pangram-4",
+        "paid_api_calls": 1,
+        "pending_resumes": 0,
+        "section_id": "introduction",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
+        "model": "pangram-4",
+        "paid_api_calls": 2,
+        "pending_resumes": 0,
+        "section_id": "physical-state",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
