@@ -974,6 +974,20 @@
       "source_path": "state/experiments/somatic-therapies-r07b-job2-to-end-20260824-a-results.json",
       "source_ref": "af6233843caeedc8ad71bfb2960e5f829e6991db",
       "source_sha256": "b143c6efc48df2d11fb9430d0530623cc152e7d95aa7e27ffe262a4cac9e17df"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Structural-operation approval does not imply wording approval: after Joel approves a move, consolidation, deletion, compression, or routing change, later humanization should target only surviving assistant realization, preserve untouched owner prose, and prefer minimum-dose rollback to actual owner language over fresh model imitation when the approved function can still be performed.",
+      "id": "L-66d2eb97e0-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-08-27T16:58:04.442384+00:00",
+      "source_path": "state/ROMANCE-R7-MINIMUM-DOSE-OWNER-ROLLBACK-2026-08-27.md",
+      "source_ref": "agent/romance-r7-minimum-dose-lesson-20260827",
+      "source_sha256": "66d2eb97e0a2eba32bc1d642e80deaac8a13029a781f5f1e142fad9cc4f69769"
     }
   ],
   "schema_version": 1
