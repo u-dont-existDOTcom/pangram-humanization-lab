@@ -189,6 +189,15 @@ To test generalization rather than reusing the same research-conversational stru
 
 Joel tested that **complete natural section** and reported **AI / high confidence**.
 
+The failed section was then split without changing wording:
+
+- **A — opening / tender-style boundary:** first two paragraphs, including `The child-state is me in a sense...`, Nurturer/Protector, neutral witness, borrowed adulthood, ordinary protective action, and present-focused self-hypnosis. Joel reported **AI / medium confidence**.
+- **B — technical/practice remainder:** somatic modalities and solar-plexus preparation, Brainspotting/EMDR timing, deep-work readiness, and the heart → younger-part → heart love loop. Joel reported **AI / high confidence**.
+
+This narrows the result. The tender-style skeleton modestly reduced detector confidence relative to the full-section/high-confidence result, but it did **not** produce a Human boundary even in the less technical opening. The technical/practice material remains the stronger residual.
+
+No Pangram calibration for the exact `tender-video-transcript.txt` source was found in the durable lab at this checkpoint. Therefore do not assume that `natural owner corpus` and `Pangram-Human corpus` are interchangeable labels. A raw natural-owner tender control is now the cleanest next test before further detector-oriented use of this register.
+
 This changes the interpretation of the physical-state success. It does **not** support the broad claim that skeleton transfer can safely generate whole sections. The physical-state operation was a **localized patch**: roughly one short transferred lead attached to 109 words that already measured Human/high confidence. The reparenting operation used transferred skeletons as scaffolding for essentially an entire model-realized section. The model signal returned strongly.
 
 ### Revised scope of the promising method
@@ -197,9 +206,7 @@ Current evidence supports a narrower hypothesis:
 
 > **Corpus-skeleton transfer may be useful as a small local repair method, especially when the surrounding natural boundary already contains substantial known-Human owner material. It is not yet evidence for whole-section generation.**
 
-The failure could reflect edit dose, register, particular skeleton choice, technical-density interactions, or some combination. Do not infer from one tender failure that tender skeletons are inherently bad. Localize first.
-
-Next useful diagnostic: test natural sub-boundaries from the failed reparenting section before generating another replacement. Specifically determine whether the tender-style opening already scores AI or whether the stronger residual appears mainly in the technical Brainspotting/EMDR/modality material. This distinguishes `skeleton-transfer failure at the sentence level` from `too much free recombination across a long section`.
+The failure could reflect edit dose, register, particular skeleton choice, technical-density interactions, or some combination. Do not infer from one tender failure that tender skeletons are inherently bad. Calibrate the raw tender source first.
 
 ### Interpretation boundary
 
@@ -208,7 +215,7 @@ Do **not** infer from these results that:
 - Pangram proves authorship;
 - one Human/medium section establishes a universal method;
 - full-section skeleton transfer should become the production default;
-- tender corpus structures are detector-bad;
+- tender corpus structures are detector-bad before testing the raw source;
 - every target should reuse the successful physical-state forms;
 - detector repair may override fidelity, provenance, or article function.
 
