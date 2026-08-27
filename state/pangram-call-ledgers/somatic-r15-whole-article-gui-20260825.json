@@ -4,7 +4,7 @@
   "section_call_cap": 6,
   "sections": {
     "whole-article-reader-visible\u001fpangram-4\u001f4.0": {
-      "cache_hits": 0,
+      "cache_hits": 1,
       "estimated_cost_usd": 0.4,
       "estimated_credits": 8,
       "events": [
@@ -26,6 +26,13 @@
           "text_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
           "type": "paid_post_reserved",
           "word_count": 3548
+        },
+        {
+          "event_key": "bridge-request:5f57b5e8-4da5-4a4d-8a12-7df4a0c4f4b1",
+          "measurement_key": "gui:d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+          "recorded_at_utc": "2026-08-27T10:31:46.031555+00:00",
+          "text_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+          "type": "cache_hit"
         }
       ],
       "model": "pangram-4",
