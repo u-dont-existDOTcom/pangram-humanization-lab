@@ -1,0 +1,88 @@
+{
+  "ambiguity": null,
+  "artifacts": {
+    "localization": {
+      "path": "state/gui-runs/pangram-4/d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e/localization.json",
+      "sha256": "2563fd4093f01b29a050f9915d84ce0665bf4cc0572dc159f16699e0d95e3b80",
+      "window_count": 0,
+      "window_status": "report_pdf_only"
+    },
+    "report_body": {
+      "path": "state/gui-runs/pangram-4/d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e/report-body.txt",
+      "sha256": "579e5e2035d2f75ab872853f160eb591f093471ceafef3f0675f795e67b8df49"
+    },
+    "report_pdf": {
+      "path": "state/gui-runs/pangram-4/d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e/report.pdf",
+      "sha256": "afe507cd71376736b2d24feaa7e956054db953e536f41695970cbf88802b9fbd"
+    },
+    "result": {
+      "path": "state/gui-runs/pangram-4/d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e/result.json",
+      "sha256": "dc9fbef2fb7047eded12422241a06afd6a27da52afdea2f841f737f71aa53fac"
+    }
+  },
+  "blocked": null,
+  "exact_history_binding": {
+    "api_path": "/api/history/<uuid>/",
+    "bound": true,
+    "private_record_identifier_stored": false,
+    "transport_match_mode": "exact_utf8"
+  },
+  "historical_artifact_submission_attempted": true,
+  "historical_submission_state": "attempted",
+  "input": {
+    "commit": "debe32a6fa4f2be1be0435538184a2b7c98af003",
+    "extraction_counts": {
+      "excluded_link_destinations": 16,
+      "excluded_native_editor_placeholders": 7,
+      "excluded_non_prose_thematic_breaks": 8,
+      "retained_heading_text_lines": 21,
+      "retained_list_text_lines": 8
+    },
+    "extraction_profile": "joel_articles_markdown_from_unique_introduction_v1",
+    "path": "articles/somatic-therapies/experiments/R15-PANGRAM-LOCALIZED-REWRITE-CANDIDATE-20260825.md",
+    "ref": "refs/heads/agent/somatic-humanization-r02-preservation-20260824",
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "source_file_sha256": "e7a541e75cf06878c206bcd7d78440bb73593a0a5a2169df1446ce42ad7186ee",
+    "text_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+    "text_word_count": 3548
+  },
+  "operation": "recover",
+  "outcome": "cache_hit",
+  "processed_at_utc": "2026-08-27T10:32:06.461841+00:00",
+  "queue": {
+    "commit": "7669c081a14fdb177e7bb87fa768b7d7df95b2b9",
+    "path": "state/pangram-gui-bridge/requests/5f57b5e8-4da5-4a4d-8a12-7df4a0c4f4b1.json"
+  },
+  "recovery": {
+    "prior_ambiguity": {
+      "bridge_reservation_path": null,
+      "call_ledger_paths": [
+        "state/pangram-call-ledgers/somatic-r15-whole-article-gui-20260825.json"
+      ],
+      "failure_path": null,
+      "last_failure_stage": null,
+      "recover_before_repeat_required": true,
+      "recovery_target_source": "paid_call_ledger",
+      "recovery_target_time_utc": "2026-08-25T14:56:36.027853Z",
+      "reservation_path": null,
+      "state": "action_may_have_happened"
+    },
+    "resolved_by_exact_history_binding": true
+  },
+  "request_id": "5f57b5e8-4da5-4a4d-8a12-7df4a0c4f4b1",
+  "request_sha256": "fdf1158ac31b1776e10119fbe544a7aae813bbbb32dd01f22b489ab4ff370f4a",
+  "request_submission_attempted": false,
+  "schema_version": 1,
+  "score": {
+    "fraction_ai": 0.8451970816,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.1548029035,
+    "headline": "AI Detected",
+    "prediction_short": "AI",
+    "source": "response.overall",
+    "stage": "STAGE_SUCCESS",
+    "version": "4.0"
+  },
+  "service_version": "pangram-gui-bridge-v1",
+  "status": "complete"
+}
