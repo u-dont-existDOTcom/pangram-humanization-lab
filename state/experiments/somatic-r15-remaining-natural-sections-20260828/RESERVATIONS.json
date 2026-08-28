@@ -7,18 +7,18 @@
   "spec_sha256": "7098b8d4047299b1e350b9b35a5cb3d6d0a72f2609a66653c56f90a059ea6e4f",
   "budget": {
     "maximum_new_paid_calls": 8,
-    "completed": 0,
+    "completed": 8,
     "duplicate_calls": 0
   },
   "cells": [
-    {"id": "R15_SE_R01", "section_id": "somatic-experiencing", "sha256": "98feb44a2caf72aed740e1ea5bd00423eda0a2b5fa01a52eb46e4be4d34d4426", "status": "frozen_pending_private_executor"},
-    {"id": "R15_YOGA_R01", "section_id": "trauma-sensitive-yoga", "sha256": "a9d23a0b9dd9873b54b57dc01dfcaf7420ed942f848b5bf76aca75e3a0d57bf5", "status": "frozen_pending_private_executor"},
-    {"id": "R15_GENTLE_SHAKING_R01", "section_id": "gentle-shaking-tre", "sha256": "47aac9bcc50eaecc16dced6f1761d21f4d0c306dc3f2d9e23c46dac24ef2737b", "status": "frozen_pending_private_executor"},
-    {"id": "R15_BRAINSPOTTING_R01", "section_id": "brainspotting", "sha256": "c56a69962b6948a5dbc417ea038ca7e78307d532d453eef5ca9f28c63e96ede1", "status": "frozen_pending_private_executor"},
-    {"id": "R15_EMDR_R01", "section_id": "emdr", "sha256": "fcca0b74d933aa5a0272e74ec3feb9b9b8ef6936e019bb591db237b6b2c5c3a5", "status": "frozen_pending_private_executor"},
-    {"id": "R15_LIGHT_CBT_R01", "section_id": "light-cbt-narrative-integration", "sha256": "144dab2fc78f6ff3128c20fdd2503cff8212cb4f799b7f9a5280eb22a0c447a0", "status": "frozen_pending_private_executor"},
-    {"id": "R15_OUTCOME_R01", "section_id": "outcome-checking", "sha256": "15671184858926e261b24ef3ff38f35ecef07d939e00eda595e729699ba68b99", "status": "frozen_pending_private_executor"},
-    {"id": "R15_SKY_VAGAL_R01", "section_id": "sky-hypnosis-vagal-blitz", "sha256": "6709b565113070f6c8e0a4d4a2ef60b1c12160fb8b5a9025fc2377ed8f78e48a", "status": "frozen_pending_private_executor"}
+    {"id": "R15_SE_R01", "section_id": "somatic-experiencing", "sha256": "98feb44a2caf72aed740e1ea5bd00423eda0a2b5fa01a52eb46e4be4d34d4426", "status": "complete_ai_high"},
+    {"id": "R15_YOGA_R01", "section_id": "trauma-sensitive-yoga", "sha256": "a9d23a0b9dd9873b54b57dc01dfcaf7420ed942f848b5bf76aca75e3a0d57bf5", "status": "complete_ai_high"},
+    {"id": "R15_GENTLE_SHAKING_R01", "section_id": "gentle-shaking-tre", "sha256": "47aac9bcc50eaecc16dced6f1761d21f4d0c306dc3f2d9e23c46dac24ef2737b", "status": "complete_ai_high"},
+    {"id": "R15_BRAINSPOTTING_R01", "section_id": "brainspotting", "sha256": "c56a69962b6948a5dbc417ea038ca7e78307d532d453eef5ca9f28c63e96ede1", "status": "complete_ai_high"},
+    {"id": "R15_EMDR_R01", "section_id": "emdr", "sha256": "fcca0b74d933aa5a0272e74ec3feb9b9b8ef6936e019bb591db237b6b2c5c3a5", "status": "complete_ai_high"},
+    {"id": "R15_LIGHT_CBT_R01", "section_id": "light-cbt-narrative-integration", "sha256": "144dab2fc78f6ff3128c20fdd2503cff8212cb4f799b7f9a5280eb22a0c447a0", "status": "complete_ai_high"},
+    {"id": "R15_OUTCOME_R01", "section_id": "outcome-checking", "sha256": "15671184858926e261b24ef3ff38f35ecef07d939e00eda595e729699ba68b99", "status": "complete_mixed_human_first_window"},
+    {"id": "R15_SKY_VAGAL_R01", "section_id": "sky-hypnosis-vagal-blitz", "sha256": "6709b565113070f6c8e0a4d4a2ef60b1c12160fb8b5a9025fc2377ed8f78e48a", "status": "complete_ai_high"}
   ],
   "blocked_repeats": [
     {"id": "R15_WHERE_START_R01", "sha256": "7d7b6143be3acbacbf3adec8d9b93283ee86d74aea813b0180cd47d480f84fa7", "reason": "completed AI/high exact section; routing decision already made"},

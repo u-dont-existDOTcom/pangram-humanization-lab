@@ -2,6 +2,13 @@
 
 Research state only. These are contextual findings and process constraints, not phrase blacklists. Human editorial quality, semantic sanity, and fidelity outrank Pangram.
 
+## Somatic section localization — 2026-08-28
+
+- On the exact Human R08/M01 reparenting backbone, neutral witnessing alone became Mixed at AI `0.3653846085`, and borrowed adulthood alone became Mixed at AI `0.3947598338`. The earlier combined endpoint was also Mixed. Either compact explanatory realization was sufficient in that exact boundary, so preserve both functions by routing them to natural destinations rather than stacking them beside the already-complete adult-trust/Nurturer/Protector/hypnosis passage. This is a boundary/placement result, not a phrase blacklist.
+- A fixed eight-section production batch returned seven complete AI/high boundaries. The outcome-checking section was Mixed: its first 215 words—including the housemate/moldy-clothes/Brainspotting anecdote—were Human/high, while the 236-word explanatory tail was AI/high. Freeze the exact Human span; do not reopen it merely because the surrounding article remains red.
+- These complete-section AI results are consistent with the earlier whole-source boundary: model-shaped Somatic prose can remain AI/high even when it is accurate, safety-conscious, and lightly owner-voiced. When no independently Human owner source exists, another model-only paraphrase has low information value. Prefer source recovery, movement of protected functions to their natural owners, and deletion of demonstrably duplicative editorial closure.
+- Exact result packet: `state/experiments/somatic-r15-remaining-natural-sections-20260828/PACKET.md`; machine result: `state/experiments/somatic-r15-remaining-natural-sections-api-20260828-a-results.json`. The batch used eight paid calls, zero cache hits, and zero duplicates.
+
 ## Blocking execution order
 
 - **Semantic sanity comes before humanization.** Before rewriting, inspect the thought itself: premise, actor/action/object, causality, chronology, certainty, ordinary human dynamics, and whether the supposed contradiction survives contact with reality. Rewriting a bad thought wastes effort and often produces polished nonsense.

@@ -1,6 +1,6 @@
 # Somatic r15 remaining natural sections — 2026-08-28
 
-Status: **FROZEN / PRESERVATION-PASSED / EIGHT PAID API CALLS AUTHORIZED / NOT YET DISPATCHED**
+Status: **COMPLETE / EIGHT PAID API CALLS / ZERO DUPLICATES / RESULTS BOUND**
 
 Authority: detector evidence for non-authoritative production candidates only. The registered Somatic master remains `articles/somatic-therapies/master.html` at SHA-256 `1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202` and is not changed.
 
@@ -47,3 +47,28 @@ Known-Human EFT/head-massage and Louka/Shaking Qigong anchors are excluded. The 
 6. A Human result freezes the exact section. AI/Mixed localizes a repair boundary but never authorizes changing protected owner prose merely because it lies in a red window.
 
 Maximum new paid calls: **8**. Untouched-Human controls: **0**. Repeats: **0**.
+
+## Bound result
+
+The immutable request completed on its original identity. Public result commit: `d95fc2b14893521fd790509ea8c8d63299929a8b`; lesson-review checkpoint: `1fba40f3`. The result envelope is `state/experiments/somatic-r15-remaining-natural-sections-api-20260828-a-results.json`.
+
+The request bound the byte-level spec SHA-256 above. The fixed-batch result also records its internal normalized-spec digest `cb98529deb15f8ca42ca146a30946490953ada5d3af9e67a5f83b9077f187635`; these are different identity layers, not conflicting submitted texts. Every returned `text_sha256` matches the frozen input table.
+
+| Variant | Result | Human | AI | Window disposition |
+|---|---|---:|---:|---|
+| `R15_SE_R01` | AI/high | 0 | 1 | complete 124-word boundary AI |
+| `R15_YOGA_R01` | AI/high | 0 | 1 | complete 153-word boundary AI |
+| `R15_GENTLE_SHAKING_R01` | AI/high | 0 | 1 | complete 113-word boundary AI |
+| `R15_BRAINSPOTTING_R01` | AI/high | 0 | 1 | complete 400-word boundary AI |
+| `R15_EMDR_R01` | AI/high | 0 | 1 | complete 235-word boundary AI |
+| `R15_LIGHT_CBT_R01` | AI/high | 0 | 1 | complete 141-word boundary AI |
+| `R15_OUTCOME_R01` | Mixed | 0.4844771326 | 0.5155228972 | first 215 words Human/high; remaining 236 words AI/high |
+| `R15_SKY_VAGAL_R01` | AI/high | 0 | 1 | complete 216-word boundary AI |
+
+Call accounting: eight new paid calls, zero cache hits, zero pending resumes, one call in each newly measured section, and zero duplicate calls.
+
+## Editorial disposition
+
+- Freeze the exact first 215 words of `R15_OUTCOME_R01`, ending with `less blocking energy, in my mind.` Do not rewrite that span for detector reasons.
+- The seven complete AI/high boundaries and the Outcome tail lie in historically model-shaped Somatic territory for which no independently Human exact Somatic source has been recovered. Their results localize source-recovery/architecture boundaries; they do not justify iterative model paraphrase.
+- Preserve safety, owner-specific material, and required functions. Remove or relocate only demonstrably duplicative editorial closure. The next eligible measurement is one final headed whole-article GUI check after article-wide assembly and preservation gates settle.
