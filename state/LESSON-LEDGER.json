@@ -1027,6 +1027,53 @@
       "source_path": "state/experiments/somatic-reparenting-a-split-20260828/RESERVATIONS.json",
       "source_ref": "experiment/somatic-reparenting-a-split-20260828",
       "source_sha256": "37f98206ece5c0c1b819b0db204c5f56551ac4ff7e67954871ad4b27d9645965"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The split preservation receipt proves exact M01 prefix retention and diagnostic-only companion-function withholding.",
+      "id": "L-470858c123-01",
+      "promoted_to": [],
+      "reason": "This supports the split result's preservation claim but adds no detector lesson beyond the promoted result disposition.",
+      "recorded_at_utc": "2026-08-28T21:34:10.602624Z",
+      "source_path": "state/experiments/somatic-reparenting-a-split-20260828/PRESERVATION.json",
+      "source_ref": "experiment/somatic-reparenting-a-split-20260828",
+      "source_sha256": "470858c12345080507bb9b40515abbcfa1ff87a382c425aa2274f1f94ed8d0df"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "With Human R08 and concrete Nurturer/Protector/action wording held constant, the hypnosis cluster remained Human without witness/borrowed adulthood, while the combined witness/borrowed cluster made the boundary Mixed and hypnosis amplified it when present.",
+      "id": "L-623185b2dd-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "This article-specific conditional-cluster evidence changed the next production experiment and was already promoted into the current summaries; it remains explicitly scoped against phrase-level generalization.",
+      "recorded_at_utc": "2026-08-28T17:30:07Z",
+      "source_path": "state/experiments/somatic-reparenting-production-matrix-20260828/RESULTS.json",
+      "source_ref": "experiment/somatic-reparenting-production-matrix-20260828",
+      "source_sha256": "623185b2dd370a63aff43ca5d0c0f2f1a8d6dd4d5cd68763c2b30f3683d40c7b"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The production-matrix preservation receipt records zero unexplained substantive deltas across the authorized factorial cells.",
+      "id": "L-1fe16b1fc4-01",
+      "promoted_to": [],
+      "reason": "This is supporting preservation evidence for the already promoted matrix result, not a separate lesson.",
+      "recorded_at_utc": "2026-08-28T17:30:07Z",
+      "source_path": "state/experiments/somatic-reparenting-production-matrix-20260828/PRESERVATION.json",
+      "source_ref": "experiment/somatic-reparenting-production-matrix-20260828",
+      "source_sha256": "1fe16b1fc42f10b86268b977f74e666da91479ebfefe87c341043e8277664013"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The production-matrix reservation ledger records exact call accounting and duplicate prevention already interpreted in the matrix results.",
+      "id": "L-f2b3344a00-01",
+      "promoted_to": [],
+      "reason": "This is supporting safety bookkeeping for the already promoted matrix result, not a separate lesson.",
+      "recorded_at_utc": "2026-08-28T17:30:07Z",
+      "source_path": "state/experiments/somatic-reparenting-production-matrix-20260828/RESERVATIONS.json",
+      "source_ref": "experiment/somatic-reparenting-production-matrix-20260828",
+      "source_sha256": "f2b3344a004ed9b8294e36e237f935fd27df33d874f53d3297b2b09ba28583fb"
     }
   ],
   "schema_version": 1
