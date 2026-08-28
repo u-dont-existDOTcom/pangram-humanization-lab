@@ -4319,6 +4319,47 @@
           "section_id": "somatic-experiencing"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-r15-section-localization-20260827",
+      "created_at_utc": "2026-08-28T23:28:33.800001+00:00",
+      "experiment_id": "somatic-r17-corpus-skeleton-r01-api-20260828-a",
+      "id": "Q-ddab00fbd4b741c0",
+      "sections": [
+        "trauma-sensitive-yoga",
+        "emdr",
+        "sky-hypnosis-vagal-blitz"
+      ],
+      "source_path": "state/experiments/somatic-r17-corpus-skeleton-r01-api-20260828-a-results.json",
+      "source_ref": "dd8001ff0cbf0f78b114610874f67d93faa21e7a",
+      "source_sha256": "b80773496fc4726ab48fda2091af6e84902510b702e2dd73f9a1d031e9e1e722",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R17_YOGA_R02",
+          "prediction_short": "AI",
+          "section_id": "trauma-sensitive-yoga"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R17_EMDR_R02",
+          "prediction_short": "AI",
+          "section_id": "emdr"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R17_SKY_VAGAL_R02",
+          "prediction_short": "AI",
+          "section_id": "sky-hypnosis-vagal-blitz"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
