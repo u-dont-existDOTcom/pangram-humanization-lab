@@ -1,14 +1,16 @@
 # Reparenting written-register + localized somatic preparation — 2026-08-28 F
 
-Status: **UNMEASURED / localized fourth-paragraph repair**
+Status: **OWNER-REPORTED PANGRAM AI / HIGH CONFIDENCE — residual localized to fourth paragraph / non-authoritative**
 
 Frozen backbone: exact first three paragraphs from `REPARENTING-WRITTEN-REGISTER-20260827-C.md`, owner-reported Pangram **Human / medium confidence**.
 
-Localization authority: in E, Joel reported the complete boundary **AI / high confidence** and clarified that Pangram localized the AI residual specifically to the added **fourth paragraph**. Therefore the first three paragraphs are not reopened.
+Localization authority: Joel clarified that Pangram localized the AI residual specifically to the added **fourth paragraph**. Therefore the first three paragraphs remain the known-Human working backbone and are not reopened for detector reasons.
 
-Repair method: use Joel's written research/practical cadence from `joel-articles/project-sources/cancer-and-research-samples.txt` rather than tender transcript cadence. Preserve all authorized somatic-preparation units while distributing the concrete options across ordinary sentences instead of a closed catalogue -> mechanism -> placement mini-essay.
+Repair method tested: use Joel's written research/practical cadence from `joel-articles/project-sources/cancer-and-research-samples.txt` rather than tender transcript cadence while preserving the full modality inventory and somatic-preparation relationship.
 
-Owner-reported Pangram result: **PENDING**.
+Owner-reported Pangram result, 2026-08-28: **fourth paragraph AI / high confidence**.
+
+Interpretation: this is the third materially different realization of the same dense somatic-preparation inventory to return a High-confidence AI residual. Stop synonym/cadence rewrites of the same paragraph. The next repair should change the paragraph's **article function and placement**, not merely its wording: keep the Human reparenting backbone; preserve the specific modalities in their dedicated modality sections; preserve here only the somatic-preparation -> easier access to heart love -> before/while reparenting relationship, plus any genuinely unique breathing detail that has no equivalent destination.
 
 ---
 
