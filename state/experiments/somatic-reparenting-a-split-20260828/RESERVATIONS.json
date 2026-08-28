@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-reparenting-a-split-20260828",
+  "created_at_utc": "2026-08-28",
+  "transport": "authenticated local pangram-local / Brave / Pangram GUI",
+  "pangram_model": "4.0",
+  "budget": {
+    "maximum_new_paid_calls": 2,
+    "completed": 0,
+    "duplicate_calls": 0
+  },
+  "cells": [
+    {
+      "id": "SW",
+      "sha256": "1d5c0d92aad66a0e53487136ff83435c4b78b47dd5698726ac55996c024c8a50",
+      "status": "frozen_pending_guarded_runner_reservation"
+    },
+    {
+      "id": "SB",
+      "sha256": "bd212388dd4fa7a7d3b06ef558299d48caa1702e99a37291c8631390a18df880",
+      "status": "frozen_pending_guarded_runner_reservation"
+    }
+  ],
+  "blocked_repeats": [
+    {
+      "id": "M01",
+      "reader_visible_sha256": "1aa888df956a77c3bb27a5924c1c9d4aab4d02eeab53b1fd18634f2fc724aed9",
+      "reason": "completed current known-Human baseline; reuse without resubmission"
+    },
+    {
+      "id": "M11",
+      "reader_visible_sha256": "2b4cb6590347e60abe748bb3efcad92666b38d7167fc9fa33a1beeba208b835b",
+      "reason": "completed combined endpoint; reuse without resubmission"
+    }
+  ]
+}

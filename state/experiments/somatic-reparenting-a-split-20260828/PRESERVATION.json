@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-reparenting-a-split-20260828",
+  "status": "PASS",
+  "authority_impact": "none",
+  "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202",
+  "source_lab_commit": "635c05c13fa382ab5245d156ec62c40763f3d697",
+  "base": {
+    "id": "M01",
+    "path": "state/experiments/somatic-reparenting-production-matrix-20260828/inputs/M01-r08-plus-concrete-protector-plus-hypnosis.txt",
+    "git_blob": "399de5b8bdb767e285a7d385c93f6308d9677940",
+    "reader_visible_sha256": "1aa888df956a77c3bb27a5924c1c9d4aab4d02eeab53b1fd18634f2fc724aed9",
+    "completed_result": "Human / displayed 100% Human / medium confidence",
+    "reuse_only": true
+  },
+  "authorized_delta": "Append exactly one owner-controlled A subfunction paragraph after exact M01; SW carries neutral witness only and SB carries borrowed adulthood only.",
+  "forbidden_deltas": [
+    "edit any M01 byte",
+    "add or delete any R08, Nurturer/Protector, concrete-action, hypnosis, present-safety, or no-forced-memory function",
+    "change actors, blame direction, chronology, certainty, or adult-child conflict",
+    "change the registered article master, locks, architecture, links, native objects, or owner-final prose",
+    "treat diagnostic withholding as deletion authority"
+  ],
+  "candidate_prefix_proof": {
+    "SW": "PASS: complete M01 file is exact byte prefix",
+    "SB": "PASS: complete M01 file is exact byte prefix"
+  },
+  "units": [
+    {
+      "id": "PU-M01",
+      "meaning": "all exact M01 functions and wording",
+      "mapping": "exact byte prefix in SW and SB",
+      "status": "preserved"
+    },
+    {
+      "id": "PU-WITNESS",
+      "meaning": "begin as the noticing witness when adult voices are unavailable; neutral witness counts when no parent image feels safe",
+      "source": "owner-controlled Inner Signal guide, minimum-normalized wording already frozen in R10",
+      "mapping": "exact two-sentence paragraph in SW",
+      "status": "preserved in SW; explicitly factor-withheld in SB and routed to the production-complete boundary"
+    },
+    {
+      "id": "PU-BORROWED",
+      "meaning": "borrow a safe sentence, boundary, or direction while retaining choice and carrying one small part; call it borrowed adulthood",
+      "source": "owner-controlled Inner Signal guide plus direct owner-required term; exact wording already frozen in R10",
+      "mapping": "exact three-sentence paragraph in SB",
+      "status": "preserved in SB; explicitly factor-withheld in SW and routed to the production-complete boundary"
+    }
+  ],
+  "per_cell": {
+    "SW": {
+      "file_sha256": "1d5c0d92aad66a0e53487136ff83435c4b78b47dd5698726ac55996c024c8a50",
+      "git_blob": "1044dfe31739472f2e2bc035e5360ff88a012b86",
+      "words": 194,
+      "forward_traceability": "PASS for authorized diagnostic scope",
+      "reverse_traceability": "PASS",
+      "unexplained_substantive_deltas": 0,
+      "production_eligible": false
+    },
+    "SB": {
+      "file_sha256": "bd212388dd4fa7a7d3b06ef558299d48caa1702e99a37291c8631390a18df880",
+      "git_blob": "3301e94a3c495eaf19ba58063e1ed8f78fab07d6",
+      "words": 201,
+      "forward_traceability": "PASS for authorized diagnostic scope",
+      "reverse_traceability": "PASS",
+      "unexplained_substantive_deltas": 0,
+      "production_eligible": false
+    }
+  },
+  "architecture_and_cold_audit": {
+    "placement": "after exact M01 inside the reparenting overlap diagnostic boundary; before separately protected body-tension/heart-access and heart-loop material",
+    "paragraph_jobs": "SW isolates the available witnessing stance; SB isolates borrowed adult support while retaining personal choice/action",
+    "companion_functions": "withheld only for diagnosis and remain mandatory for production",
+    "detector_eligibility": "PASS for the two exact, bounded diagnostic cells"
+  },
+  "forward_traceability": "PASS",
+  "reverse_traceability": "PASS",
+  "unexplained_substantive_deltas": 0
+}
+
