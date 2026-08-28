@@ -37,8 +37,8 @@
     "emdr\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.1,
-      "estimated_credits": 2,
+      "estimated_cost_usd": 0.15,
+      "estimated_credits": 3,
       "events": [
         {
           "budget_scope": "section",
@@ -57,10 +57,19 @@
           "text_sha256": "54420c1b8a9b9ea543c5706019d494a07818f17cc7ca4730c75e9caa58d480ba",
           "type": "paid_post_reserved",
           "word_count": 293
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r17-corpus-skeleton-r01-api-20260828-a_R17_EMDR_R02",
+          "recorded_at_utc": "2026-08-28T23:28:08.245198+00:00",
+          "text_sha256": "5c987c73159adef4fe14d36e36fe0d368cd248f987ef71176b1a3d24a84a5f54",
+          "type": "paid_post_reserved",
+          "word_count": 153
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "emdr",
       "version": "4.0"
