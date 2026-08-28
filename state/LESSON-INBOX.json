@@ -4428,6 +4428,71 @@
           "section_id": "sky-hypnosis-vagal-blitz"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-r15-section-localization-20260827",
+      "created_at_utc": "2026-08-28T23:57:42.646564+00:00",
+      "experiment_id": "somatic-r19-controlled-function-splits-r01-api-20260828-a",
+      "id": "Q-607aae34f11cec13",
+      "sections": [
+        "trauma-sensitive-yoga",
+        "gentle-shaking-tre",
+        "sky-hypnosis-vagal-blitz"
+      ],
+      "source_path": "state/experiments/somatic-r19-controlled-function-splits-r01-api-20260828-a-results.json",
+      "source_ref": "e34b1e7df371af6ad90f4fba9270d33d358d3f6f",
+      "source_sha256": "8c94e59b04a4a11017336fa1240a74a7ab159f3b18a725999e936eac40216763",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R19_YOGA_DEFINITION",
+          "prediction_short": "AI",
+          "section_id": "trauma-sensitive-yoga"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R19_YOGA_SAFETY",
+          "prediction_short": "AI",
+          "section_id": "trauma-sensitive-yoga"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R19_GENTLE_SHAKING_PRACTICE",
+          "prediction_short": "AI",
+          "section_id": "gentle-shaking-tre"
+        },
+        {
+          "fraction_ai": 0.2623400390148163,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.7376599907875061,
+          "id": "R19_GENTLE_SHAKING_NECK",
+          "prediction_short": "Mixed",
+          "section_id": "gentle-shaking-tre"
+        },
+        {
+          "fraction_ai": 0.6635160446166992,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.3364839255809784,
+          "id": "R19_SKY_SAFETY",
+          "prediction_short": "Mixed",
+          "section_id": "sky-hypnosis-vagal-blitz"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R19_SKY_OUTCOME",
+          "prediction_short": "AI",
+          "section_id": "sky-hypnosis-vagal-blitz"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
