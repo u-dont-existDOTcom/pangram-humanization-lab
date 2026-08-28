@@ -4089,6 +4089,29 @@
           "section_id": "physical-state"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-r15-section-localization-20260827",
+      "created_at_utc": "2026-08-28T21:48:40.981974+00:00",
+      "experiment_id": "somatic-r15-section-where-start-r01-api-20260827-a",
+      "id": "Q-93d0e16fc9abe490",
+      "sections": [
+        "where-i-would-start"
+      ],
+      "source_path": "state/experiments/somatic-r15-section-where-start-r01-api-20260827-a-results.json",
+      "source_ref": "1fcd11abd26b49dd22c36426399b40ed283113b0",
+      "source_sha256": "0aaf0a17110652e8c814fc9ff496376354e2b1feb91ded360cc277b3dbaffd13",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R15_WHERE_START_R01",
+          "prediction_short": "AI",
+          "section_id": "where-i-would-start"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
