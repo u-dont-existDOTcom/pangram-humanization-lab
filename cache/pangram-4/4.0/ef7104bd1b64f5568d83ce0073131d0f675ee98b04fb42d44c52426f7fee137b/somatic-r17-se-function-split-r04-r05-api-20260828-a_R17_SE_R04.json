@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r17-se-function-split-r04-r05-api-20260828-a_R17_SE_R04",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nYou do not have to tell the whole story. You can begin with one sensation, look around the room, notice any impulse or defensive response, and use only a tolerable amount at a time. Somatic Experiencing calls the small-dose part titration and the movement between activation and something steadier pendulation.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.899795413017273,
+        "confidence": "High",
+        "end_index": 1132,
+        "humanizer_score": 0.973884105682373,
+        "is_humanized": true,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nYou do not have to tell the whole story. You can begin with one sensation, look around the room, notice any impulse or defensive response, and use only a tolerable amount at a time. Somatic Experiencing calls the small-dose part titration and the movement between activation and something steadier pendulation.",
+        "token_length": 239,
+        "word_count": 192
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "16a3a331-d3ed-4db3-99f3-1b21dd702c94",
   "text": "Introduction\n\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\n\nSomatic Experiencing\n\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\n\nYou do not have to tell the whole story. You can begin with one sensation, look around the room, notice any impulse or defensive response, and use only a tolerable amount at a time. Somatic Experiencing calls the small-dose part titration and the movement between activation and something steadier pendulation.\n",
   "text_sha256": "ef7104bd1b64f5568d83ce0073131d0f675ee98b04fb42d44c52426f7fee137b",
-  "updated_utc": "2026-08-28T23:24:05.462368+00:00"
+  "updated_utc": "2026-08-28T23:24:08.905930+00:00"
 }
