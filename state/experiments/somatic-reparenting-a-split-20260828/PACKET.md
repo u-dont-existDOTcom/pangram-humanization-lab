@@ -1,6 +1,6 @@
 # Somatic reparenting A-cluster split — 2026-08-28
 
-Status: **FROZEN / TWO NEW PAID GUI CALLS AUTHORIZED / NO SUBMISSION YET**
+Status: **COMPLETE / TWO PAID GUI CALLS / ZERO DUPLICATES**
 
 Authority: detector research and non-authoritative production-candidate evidence only. The registered Somatic master remains `articles/somatic-therapies/master.html` at SHA-256 `1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202` and is not changed.
 
@@ -33,7 +33,22 @@ The SHA-256 values include the files' terminal newline and are the exact hashes 
 
 All functions remain protected. Each cell withholds the companion function only for factorial diagnosis and routes it to the production-complete boundary.
 
-## Submission gate
+## Results
+
+Both single-function cells crossed the exact M01 boundary from Human to Mixed:
+
+| Cell | Pangram 4 result | Human fraction | AI fraction | AI-assisted fraction |
+|---|---|---:|---:|---:|
+| SW | Mixed | `0.6346153617` | `0.3653846085` | `0.0` |
+| SB | Mixed | `0.6052401662` | `0.3947598338` | `0.0` |
+
+Each result is bound to the exact authorized UTF-8 text in authenticated Pangram History. The guarded runner persisted a pre-click reservation, then the complete result, before proceeding to the next cell. Paid calls: 2. Duplicate calls: 0.
+
+The decisive interpretation is the preregistered `both flip` branch: either compact neutral-witness realization or compact borrowed-adulthood realization is sufficient to trigger Mixed when appended to M01 in this exact boundary. The R10 combined result was not caused only by witness/borrowed adjacency. This is boundary-and-realization evidence, not a phrase ban and not a reason to remove either protected function.
+
+Production consequence: keep R08 byte-identical and preserve M01 only as a known-Human partial building block. Do not append either compact explanatory paragraph to it. Recover higher-authority owner realization or distribute witness and borrowed-adulthood into different natural article jobs/boundaries before any further production Pangram call.
+
+## Submission record
 
 Before each paid click:
 
@@ -44,5 +59,4 @@ Before each paid click:
 5. bind completion to exact stored History text and Pangram 4.0;
 6. persist the result before proceeding to the next input.
 
-`--force` is prohibited. Any ambiguous click blocks repetition until read-only recovery resolves it.
-
+The initial read-only recovery attempt for SW used a legacy prompt-based recovery seam that cannot complete in headless mode. It failed before any submission, wrote a non-paid failure receipt, and left `ambiguous_submission_block: false`. Status then confirmed neither exact SHA had a cached result or unresolved reservation. The two-call guarded batch completed without `--force`.

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-reparenting-a-split-20260828",
+  "status": "complete",
+  "completed_at_utc": "2026-08-28T21:31:57.317223Z",
+  "authority": "detector research and non-authoritative production-candidate evidence only",
+  "pangram_version": "4.0",
+  "transport": {
+    "route": "authenticated local Pangram GUI through a dedicated Brave profile",
+    "mode": "headless background batch with one persistent context and reused tab",
+    "identity_binding": "exact authorized UTF-8 SHA-256 plus authenticated History exact-text binding",
+    "reservation_policy": "durable GitHub pre-click reservation and result persistence before the next cell"
+  },
+  "call_accounting": {
+    "maximum_new_paid_calls": 2,
+    "paid_calls": 2,
+    "duplicate_paid_calls": 0,
+    "repeated_m01_calls": 0,
+    "repeated_m11_calls": 0,
+    "read_only_recovery_failures_before_submission": 1
+  },
+  "frozen_controls": {
+    "M01": {
+      "reader_visible_sha256": "1aa888df956a77c3bb27a5924c1c9d4aab4d02eeab53b1fd18634f2fc724aed9",
+      "classification": "Human",
+      "display_percent_human": 100,
+      "confidence": "medium",
+      "reuse_only": true
+    },
+    "M11": {
+      "reader_visible_sha256": "2b4cb6590347e60abe748bb3efcad92666b38d7167fc9fa33a1beeba208b835b",
+      "classification": "Mixed",
+      "display_percent_ai": 46,
+      "reuse_only": true
+    }
+  },
+  "candidates": [
+    {
+      "id": "SW",
+      "base": "exact M01",
+      "added_function": "neutral witness only",
+      "sha256": "1d5c0d92aad66a0e53487136ff83435c4b78b47dd5698726ac55996c024c8a50",
+      "word_count": 194,
+      "classification": "Mixed",
+      "fraction_human": 0.6346153617,
+      "fraction_ai": 0.3653846085,
+      "fraction_ai_assisted": 0.0,
+      "history_record_prediction_prob": 0.3695908486843109,
+      "captured_at_utc": "2026-08-28T21:31:31.101773Z",
+      "result_path": "state/gui-runs/pangram-4/1d5c0d92aad66a0e53487136ff83435c4b78b47dd5698726ac55996c024c8a50/result.json"
+    },
+    {
+      "id": "SB",
+      "base": "exact M01",
+      "added_function": "borrowed adulthood only",
+      "sha256": "bd212388dd4fa7a7d3b06ef558299d48caa1702e99a37291c8631390a18df880",
+      "word_count": 201,
+      "classification": "Mixed",
+      "fraction_human": 0.6052401662,
+      "fraction_ai": 0.3947598338,
+      "fraction_ai_assisted": 0.0,
+      "history_record_prediction_prob": 0.4017544984817505,
+      "captured_at_utc": "2026-08-28T21:31:57.317223Z",
+      "result_path": "state/gui-runs/pangram-4/bd212388dd4fa7a7d3b06ef558299d48caa1702e99a37291c8631390a18df880/result.json"
+    }
+  ],
+  "interpretation": {
+    "preregistered_branch": "both flip",
+    "witness_only": "sufficient to cross the M01 exact boundary from Human to Mixed in this compact realization",
+    "borrowed_adulthood_only": "sufficient to cross the M01 exact boundary from Human to Mixed in this compact realization",
+    "adjacency_only_hypothesis": "rejected for this boundary because each function flipped independently",
+    "causal_scope": "exact-boundary and realization evidence only; no phrase ban and no claim that the protected concepts are intrinsically AI-like"
+  },
+  "production_disposition": {
+    "production_complete_human_candidate": null,
+    "r08": "remain frozen byte-for-byte",
+    "M01": "retain only as a known-Human partial building block",
+    "neutral_witness": "preserve the function but route to a separate natural article job or recover higher-authority owner realization",
+    "borrowed_adulthood": "preserve the function but route to a separate natural article job or recover higher-authority owner realization",
+    "next_detector_action": "none until a preservation-clean, architecture-clean production candidate changes the editorial decision",
+    "article_authority_impact": "none"
+  },
+  "preservation": {
+    "forward_traceability": "PASS",
+    "reverse_traceability": "PASS",
+    "unexplained_substantive_deltas": 0,
+    "companion_function_withholding": "diagnostic only; all omitted companion functions remain protected"
+  }
+}

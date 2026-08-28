@@ -221,3 +221,12 @@ The exact packet is on branch `experiment/somatic-reparenting-production-matrix-
 Results: M00 Human/100%/medium; M01 Human/100%/medium; M10 Mixed/displayed 35% AI with a later AI/high A-cluster segment; M11 Mixed/displayed 46% AI with exact R08 Human/high and the complete extension AI/high. The direct UI exposed rounded percentages, so no unavailable unrounded fraction is inferred.
 
 Disposition: the constant concrete Nurturer/Protector/action cluster is Human and the light-hypnosis cluster is Human without A. The neutral-witness/borrowed-adulthood cluster is the decision-relevant conditional trigger in this exact boundary, with hypnosis amplification when A is present. This does not isolate individual phrases. No production-complete Human cell emerged. M01 is frozen only as a detector-Human partial building block; R08 remains frozen; article authority is unchanged.
+
+## Completed Somatic reparenting A-cluster split — 2026-08-28
+
+The exact packet and results are on branch `experiment/somatic-reparenting-a-split-20260828` under `state/experiments/somatic-reparenting-a-split-20260828/`. Two new authenticated local Brave/Pangram calls completed in one background session with exact SHA gates, durable pre-click reservations, and exact authenticated History binding. Paid calls: 2. Duplicate calls: 0. M01 and M11 were reused, not resubmitted.
+
+- SW, exact M01 + neutral witness only: Mixed; Human `0.6346153617`; AI `0.3653846085`; AI-assisted `0.0`.
+- SB, exact M01 + borrowed adulthood only: Mixed; Human `0.6052401662`; AI `0.3947598338`; AI-assisted `0.0`.
+
+Disposition: either compact single-function realization is sufficient to cross the exact M01 boundary. The adjacency-only hypothesis is rejected for this boundary. Keep R08 frozen and preserve all required functions, but do not append either compact paragraph to M01. Route witness and borrowed adulthood into separate natural article jobs/boundaries or recover higher-authority owner wording. Do not spend more calls token-hunting in these two paragraphs. Article authority remains unchanged.

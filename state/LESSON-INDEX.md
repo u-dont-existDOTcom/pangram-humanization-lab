@@ -122,3 +122,6 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:somatic-reparenting-production-matrix-20260828 -->
 - **Reparenting conditional cluster result:** with byte-identical Human R08 and concrete owner-published Nurturer/Protector/action wording held constant, the light self-hypnosis/no-forced-memory cluster remained Human, while the combined neutral-witness/borrowed-adulthood cluster made the boundary Mixed; adding hypnosis on top increased the displayed AI share. Treat this as exact-boundary cluster evidence, not a phrase rule. No production-complete Human cell emerged. See `state/experiments/somatic-reparenting-production-matrix-20260828/LESSONS.md` and `RESULTS.json`.
+
+<!-- closeout-request:somatic-reparenting-a-split-20260828 -->
+- **Reparenting single-function split:** when separately appended to exact Human M01, compact neutral-witness-only and borrowed-adulthood-only paragraphs each made the boundary Mixed. The R10 regression is therefore not adjacency-only in this boundary. Preserve both functions, but route them into separate natural jobs/boundaries or recover higher-authority owner realization instead of token-hunting or stacking compact closure. See `state/experiments/somatic-reparenting-a-split-20260828/LESSONS.md` and `RESULTS.json`.

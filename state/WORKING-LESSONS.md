@@ -127,3 +127,12 @@ The four-call 2026-08-28 packet `state/experiments/somatic-reparenting-productio
 - M11 (constant + A + B): Mixed, displayed 46% AI; exact R08 Human/high and the complete extension AI/high.
 
 The owner-published Nurturer/Protector/action cluster is not sufficient, and the light-hypnosis cluster is null without A. The neutral-witness/borrowed-adulthood cluster is sufficient in this exact realization/boundary to cross Pangram's threshold; hypnosis amplifies the A-present result. This is a cluster-level conditional effect, not a phrase blacklist and not evidence that witness or borrowed adulthood is individually causal. No Human cell preserved every required function, so M01 is only a known-Human partial building block and no production-complete candidate is frozen. R08 remains byte-identical and all protected functions remain mandatory.
+
+## Somatic reparenting A-cluster split — each compact function is sufficient in M01
+
+The two-call 2026-08-28 split packet `state/experiments/somatic-reparenting-a-split-20260828/` reused completed M01 as the Human baseline and M11 as the combined Mixed endpoint. It did not resubmit either. Each exact new input kept M01 byte-identical and added only one paragraph.
+
+- Neutral witness only became Mixed at AI `0.3653846085`.
+- Borrowed adulthood only became Mixed at AI `0.3947598338`.
+
+This falsifies the narrow hypothesis that only witness/borrowed adjacency creates the R10 boundary regression. Either compact explanatory realization is sufficient when appended to exact M01. Do not convert this into phrase bans or delete either function. The production response is architectural: keep R08 and the Human partial package, stop subdividing the compact paragraphs, and route witness and borrowed adulthood into separate natural jobs/boundaries or recover higher-authority owner realization before another paid call.
