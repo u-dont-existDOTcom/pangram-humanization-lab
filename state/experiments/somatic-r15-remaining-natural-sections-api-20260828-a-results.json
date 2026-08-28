@@ -182,6 +182,42 @@
       },
       "section_id": "emdr",
       "budget_scope": "section"
+    },
+    {
+      "id": "R15_LIGHT_CBT_R01",
+      "measurement_key": "somatic-r15-remaining-natural-sections-api-20260828-a_R15_LIGHT_CBT_R01",
+      "text": "Light CBT / Narrative Integration\n\nOnce my body is no longer insisting “this is happening now,” talking to the belief starts to make more sense. Before that I can win the argument intellectually and still lose it physiologically.\n\nThen I can revisit old beliefs, build a more coherent life story, separate past danger from present reality, clarify values and boundaries, and reclaim agency. That can feed straight back into inner-child reparenting: the adult is more available, the child-state is easier to differentiate from, and questions like forgiveness—when forgiveness is actually relevant—and life direction become less abstract.\n\nIf those adult voices do not feel available yet, I may borrow one sentence, boundary, or direction from somebody safe. The borrowed figure stays beside me while I choose the words and carry one small part myself. I call that borrowed adulthood.\n",
+      "text_sha256": "144dab2fc78f6ff3128c20fdd2503cff8212cb4f799b7f9a5280eb22a0c447a0",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Light CBT / Narrative Integration\nOnce my body is no longer insisting “this is happening now,” talking to the belief starts to make more sense. Before that I can win the argument intellectually and still lose it physiologically.\nThen I can revisit old beliefs, build a more coherent life story, separate past danger from present reality, clarify values and boundaries, and reclaim agency. That can feed straight back into inner-child reparenting: the adult is more available, the child-state is easier to differentiate from, and questions like forgiveness—when forgiveness is actually relevant—and life direction become less abstract.\nIf those adult voices do not feel available yet, I may borrow one sentence, boundary, or direction from somebody safe. The borrowed figure stays beside me while I choose the words and carry one small part myself. I call that borrowed adulthood.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Light CBT / Narrative Integration\nOnce my body is no longer insisting “this is happening now,” talking to the belief starts to make more sense. Before that I can win the argument intellectually and still lose it physiologically.\nThen I can revisit old beliefs, build a more coherent life story, separate past danger from present reality, clarify values and boundaries, and reclaim agency. That can feed straight back into inner-child reparenting: the adult is more available, the child-state is easier to differentiate from, and questions like forgiveness—when forgiveness is actually relevant—and life direction become less abstract.\nIf those adult voices do not feel available yet, I may borrow one sentence, boundary, or direction from somebody safe. The borrowed figure stays beside me while I choose the words and carry one small part myself. I call that borrowed adulthood.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9998385906219482,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 879,
+            "word_count": 141,
+            "token_length": 169,
+            "is_humanized": false,
+            "humanizer_score": 0.09129436314105988
+          }
+        ]
+      },
+      "section_id": "light-cbt-narrative-integration",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -303,6 +339,22 @@
       },
       {
         "section_id": "emdr",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "light-cbt-narrative-integration",
         "model": "pangram-4",
         "version": "4.0",
         "budget_scope": "section",
