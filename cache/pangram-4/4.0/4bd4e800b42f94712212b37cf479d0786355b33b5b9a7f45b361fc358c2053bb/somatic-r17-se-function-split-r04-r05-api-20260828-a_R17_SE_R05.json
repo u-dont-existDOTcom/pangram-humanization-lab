@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "somatic-r17-se-function-split-r04-r05-api-20260828-a_R17_SE_R05",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.24121996760368347,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.7587800621986389,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nSome people spend three to six months building enough capacity for this, and severe developmental trauma can take longer. That is only a rough orientation; if you are already stable and have one clear target, you may be ready to add trauma-focused work sooner.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.3205469846725464,
+        "confidence": "High",
+        "end_index": 821,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.",
+        "token_length": 176,
+        "word_count": 141
+      },
+      {
+        "ai_assistance_score": 0.8960801959037781,
+        "confidence": "High",
+        "end_index": 1082,
+        "humanizer_score": 0.07401850074529648,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 821,
+        "text": "\nSome people spend three to six months building enough capacity for this, and severe developmental trauma can take longer. That is only a rough orientation; if you are already stable and have one clear target, you may be ready to add trauma-focused work sooner.",
+        "token_length": 50,
+        "word_count": 45
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "61a94e7c-0509-4d2b-91d7-ca7ec74c138c",
   "text": "Introduction\n\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\n\nSomatic Experiencing\n\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\n\nSome people spend three to six months building enough capacity for this, and severe developmental trauma can take longer. That is only a rough orientation; if you are already stable and have one clear target, you may be ready to add trauma-focused work sooner.\n",
   "text_sha256": "4bd4e800b42f94712212b37cf479d0786355b33b5b9a7f45b361fc358c2053bb",
-  "updated_utc": "2026-08-28T23:24:16.294648+00:00"
+  "updated_utc": "2026-08-28T23:24:19.915752+00:00"
 }
