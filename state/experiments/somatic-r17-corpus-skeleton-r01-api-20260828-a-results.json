@@ -38,6 +38,42 @@
       },
       "section_id": "trauma-sensitive-yoga",
       "budget_scope": "section"
+    },
+    {
+      "id": "R17_EMDR_R02",
+      "measurement_key": "somatic-r17-corpus-skeleton-r01-api-20260828-a_R17_EMDR_R02",
+      "text": "EMDR\n\nWhether EMDR is the right place to start can depend a lot on whether you can point to the memory. Keep in mind that an accident, an assault memory, military trauma, one distinct flashback, or a specific network of triggers all give you a fairly clear target. If somebody is stable and has one clear event, that does not necessarily mean they need months of body work first. Sometimes EMDR is the obvious early choice.\n\nBrainspotting is easier to feel your way into when you do not know exactly what you are looking for; with EMDR, the target and recall procedure are clearer. I become more cautious when the trauma is diffuse or developmental, mostly bodily or pre-verbal, relational, or the person's nervous system is still unstable. In those cases I would want at least some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit earlier.\n",
+      "text_sha256": "5c987c73159adef4fe14d36e36fe0d368cd248f987ef71176b1a3d24a84a5f54",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "EMDR\nWhether EMDR is the right place to start can depend a lot on whether you can point to the memory. Keep in mind that an accident, an assault memory, military trauma, one distinct flashback, or a specific network of triggers all give you a fairly clear target. If somebody is stable and has one clear event, that does not necessarily mean they need months of body work first. Sometimes EMDR is the obvious early choice.\nBrainspotting is easier to feel your way into when you do not know exactly what you are looking for; with EMDR, the target and recall procedure are clearer. I become more cautious when the trauma is diffuse or developmental, mostly bodily or pre-verbal, relational, or the person's nervous system is still unstable. In those cases I would want at least some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit earlier.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "EMDR\nWhether EMDR is the right place to start can depend a lot on whether you can point to the memory. Keep in mind that an accident, an assault memory, military trauma, one distinct flashback, or a specific network of triggers all give you a fairly clear target. If somebody is stable and has one clear event, that does not necessarily mean they need months of body work first. Sometimes EMDR is the obvious early choice.\nBrainspotting is easier to feel your way into when you do not know exactly what you are looking for; with EMDR, the target and recall procedure are clearer. I become more cautious when the trauma is diffuse or developmental, mostly bodily or pre-verbal, relational, or the person's nervous system is still unstable. In those cases I would want at least some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit earlier.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999816417694092,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 888,
+            "word_count": 155,
+            "token_length": 188,
+            "is_humanized": false,
+            "humanizer_score": 0.729144275188446
+          }
+        ]
+      },
+      "section_id": "emdr",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -64,10 +100,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.1,
-        "estimated_credits": 2,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
         "model": "pangram-4",
-        "paid_api_calls": 2,
+        "paid_api_calls": 3,
         "pending_resumes": 0,
         "section_id": "emdr",
         "version": "4.0",
