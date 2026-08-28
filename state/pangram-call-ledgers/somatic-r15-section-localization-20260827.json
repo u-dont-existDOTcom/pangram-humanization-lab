@@ -218,8 +218,8 @@
     "somatic-experiencing\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.25,
-      "estimated_credits": 5,
+      "estimated_cost_usd": 0.3,
+      "estimated_credits": 6,
       "events": [
         {
           "budget_scope": "section",
@@ -265,10 +265,19 @@
           "text_sha256": "ef7104bd1b64f5568d83ce0073131d0f675ee98b04fb42d44c52426f7fee137b",
           "type": "paid_post_reserved",
           "word_count": 187
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r17-se-function-split-r04-r05-api-20260828-a_R17_SE_R05",
+          "recorded_at_utc": "2026-08-28T23:24:11.815689+00:00",
+          "text_sha256": "4bd4e800b42f94712212b37cf479d0786355b33b5b9a7f45b361fc358c2053bb",
+          "type": "paid_post_reserved",
+          "word_count": 181
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 5,
+      "paid_api_calls": 6,
       "pending_resumes": 0,
       "section_id": "somatic-experiencing",
       "version": "4.0"
