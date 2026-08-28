@@ -77,8 +77,8 @@
     "gentle-shaking-tre\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "budget_scope": "section",
@@ -88,10 +88,19 @@
           "text_sha256": "47aac9bcc50eaecc16dced6f1761d21f4d0c306dc3f2d9e23c46dac24ef2737b",
           "type": "paid_post_reserved",
           "word_count": 110
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r18-human-spine-local-sections-r01-api-20260828-a_R18_GENTLE_SHAKING_R01",
+          "recorded_at_utc": "2026-08-28T23:46:05.733894+00:00",
+          "text_sha256": "167da8f9fc7d3bcb6f13660592b8073e0592d48ed45d7a189693da2f8eb27734",
+          "type": "paid_post_reserved",
+          "word_count": 86
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "gentle-shaking-tre",
       "version": "4.0"
