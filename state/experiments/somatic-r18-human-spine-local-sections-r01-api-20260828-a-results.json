@@ -146,6 +146,42 @@
       },
       "section_id": "emdr",
       "budget_scope": "section"
+    },
+    {
+      "id": "R18_LIGHT_CBT_R01",
+      "measurement_key": "somatic-r18-human-spine-local-sections-r01-api-20260828-a_R18_LIGHT_CBT_R01",
+      "text": "Light CBT / Narrative Integration\n\nOnce my body is no longer insisting “this is happening now,” talking to the belief makes more sense. Then I can revisit old beliefs, build a more coherent life story, separate past danger from present reality, clarify boundaries, and return to inner-child reparenting.\n\nIf the adult voices still do not feel available, I may borrow one sentence, boundary, or direction from somebody safe. The borrowed figure stays beside me while I choose the words and carry one small part myself. I call that borrowed adulthood.\n",
+      "text_sha256": "f9200932fcfd62364872fcce7a9439dfd6fa6400b8e1cdc3340c9e94a8acac80",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Light CBT / Narrative Integration\nOnce my body is no longer insisting “this is happening now,” talking to the belief makes more sense. Then I can revisit old beliefs, build a more coherent life story, separate past danger from present reality, clarify boundaries, and return to inner-child reparenting.\nIf the adult voices still do not feel available, I may borrow one sentence, boundary, or direction from somebody safe. The borrowed figure stays beside me while I choose the words and carry one small part myself. I call that borrowed adulthood.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Light CBT / Narrative Integration\nOnce my body is no longer insisting “this is happening now,” talking to the belief makes more sense. Then I can revisit old beliefs, build a more coherent life story, separate past danger from present reality, clarify boundaries, and return to inner-child reparenting.\nIf the adult voices still do not feel available, I may borrow one sentence, boundary, or direction from somebody safe. The borrowed figure stays beside me while I choose the words and carry one small part myself. I call that borrowed adulthood.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9997149109840393,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 547,
+            "word_count": 90,
+            "token_length": 110,
+            "is_humanized": false,
+            "humanizer_score": 0.2785133421421051
+          }
+        ]
+      },
+      "section_id": "light-cbt-narrative-integration",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -220,10 +256,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.05,
-        "estimated_credits": 1,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
         "model": "pangram-4",
-        "paid_api_calls": 1,
+        "paid_api_calls": 2,
         "pending_resumes": 0,
         "section_id": "light-cbt-narrative-integration",
         "version": "4.0",
