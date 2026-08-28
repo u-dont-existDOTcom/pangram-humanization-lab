@@ -1,6 +1,6 @@
 # Reparenting raw-owner positive control — 2026-08-28
 
-Status: **durable detector/humanization lesson; owner-reported Pangram evidence**
+Status: **durable detector/humanization lesson; redundant confirmation under owner-corrected workflow**
 
 ## Result
 
@@ -8,20 +8,27 @@ The exact natural Joel-authored adult/child trust paragraph in `state/experiment
 
 The immediately preceding publication reconstruction, R06, preserved the same governing trust/credibility thought and all required adult-access functions but scored **AI / high confidence**.
 
+## Owner correction to the value of this control
+
+Joel clarified on 2026-08-28 that this raw-owner check was unnecessary. In his observed Pangram history, untouched human prose has not been called AI unless it had somehow been touched by the model, with the known exception of technical/academic papers.
+
+Therefore R07 should be retained as evidence because it was already run, but **must not become a production pattern**. For ordinary/nontechnical Joel prose with secure human provenance, do not ask Joel to reconfirm untouched source text in Pangram. The informative test is the first materially model-touched version.
+
+Raw-owner controls are reserved for:
+- the known technical/academic-paper false-positive class;
+- genuinely uncertain provenance/authorship;
+- concrete conflicting evidence that makes a raw control necessary.
+
 ## Interpretation
 
-This is a strong local provenance/control result:
-- the underlying adult/child trust thought is not inherently rejected by Pangram;
-- the exact natural owner surface is accepted at its raw boundary;
-- model realization of that thought can introduce a strong AI signal even when semantic preservation is clean;
-- therefore the correct next production operation is **deletion/minimum normalization of the Human owner surface**, not another fresh rewrite.
+The useful local comparison remains:
+- natural owner source: Human / medium;
+- model-realized R06: AI / high.
 
-Do not infer that lowercase, typos, run-ons, profanity, or transcript roughness are causal. The raw source remains a source pool, not automatically publication copy. Reader-facing coherence still requires the minimum justified editorial normalization.
+But the raw Human result was expected under the owner-corrected corpus rule, not a surprising discovery. The production lesson is to focus detector effort on **what changed after model intervention**.
 
-## Stop rule
+Do not infer that lowercase, typos, run-ons, profanity, or transcript roughness are causal. Reader-facing coherence still requires justified editorial normalization.
 
-The fresh model-rewrite lane for adult-access is closed. R08 may test only the predeclared minimum-normalization operation on the raw owner source. If heavier normalization becomes necessary after that, make editorial decisions from owner authority rather than resuming free detector-chasing variants.
+## Next operation
 
-## Relationship to other reparenting controls
-
-This result matches the earlier heart-loop paired finding in direction: model realization of an owner thought scored AI/high while recovered owner realization scored Human. It does not establish a universal authorship detector law. Exact detector status remains boundary-specific, and editorial quality/fidelity outrank Pangram.
+The fresh model-rewrite lane for adult-access remains closed. R08 tests the first materially model-touched operation that matters: deletion/minimum normalization of the natural owner source. That is informative because it can reveal whether the editorial/model touch reintroduces AI signal.
