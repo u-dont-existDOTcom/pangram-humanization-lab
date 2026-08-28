@@ -182,6 +182,42 @@
       },
       "section_id": "light-cbt-narrative-integration",
       "budget_scope": "section"
+    },
+    {
+      "id": "R18_SKY_VAGAL_R01",
+      "measurement_key": "somatic-r18-human-spine-local-sections-r01-api-20260828-a_R18_SKY_VAGAL_R01",
+      "text": "Sky Hypnosis and Vagal Blitz\n\nDeep memory work, immersive child dialogue, deep hypnosis, and suggestive exploration are things I save for when I can stay present, stop voluntarily, and come back afterward.\n\nSky Hypnosis and Vagal Blitz are intense state-shifters rather than ordinary regulation practices. They are not prerequisites for healing, although a stable person may still find one useful before doing the therapies above.\n\nSky Hypnosis can make you lightheaded. Vagal Blitz is a lying-down-only practice with cardiovascular and mental-health cautions. Read the complete guide, begin with the least intense version that gives a useful shift, and stop if balance, orientation, or recovery becomes unreliable. Fainting and loss of consciousness are not the goal.\n\nI do not count “wow” as an outcome. A huge release, bliss, or an altered state can feel profound while the actual problem stays basically untouched. When I remember the event later, am I less restimulated? Am I doing any better with pain, boundaries, conflict, and ordinary life? If the practice has become a way to avoid grief, conflict, practical problems, or deeper relational healing, the extraordinary state does not rescue it.\n",
+      "text_sha256": "9e89dc7da058ecd8deef7e4986166186cda7de752040f3faa6ea4b1ff0143e76",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Sky Hypnosis and Vagal Blitz\nDeep memory work, immersive child dialogue, deep hypnosis, and suggestive exploration are things I save for when I can stay present, stop voluntarily, and come back afterward.\nSky Hypnosis and Vagal Blitz are intense state-shifters rather than ordinary regulation practices. They are not prerequisites for healing, although a stable person may still find one useful before doing the therapies above.\nSky Hypnosis can make you lightheaded. Vagal Blitz is a lying-down-only practice with cardiovascular and mental-health cautions. Read the complete guide, begin with the least intense version that gives a useful shift, and stop if balance, orientation, or recovery becomes unreliable. Fainting and loss of consciousness are not the goal.\nI do not count “wow” as an outcome. A huge release, bliss, or an altered state can feel profound while the actual problem stays basically untouched. When I remember the event later, am I less restimulated? Am I doing any better with pain, boundaries, conflict, and ordinary life? If the practice has become a way to avoid grief, conflict, practical problems, or deeper relational healing, the extraordinary state does not rescue it.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Sky Hypnosis and Vagal Blitz\nDeep memory work, immersive child dialogue, deep hypnosis, and suggestive exploration are things I save for when I can stay present, stop voluntarily, and come back afterward.\nSky Hypnosis and Vagal Blitz are intense state-shifters rather than ordinary regulation practices. They are not prerequisites for healing, although a stable person may still find one useful before doing the therapies above.\nSky Hypnosis can make you lightheaded. Vagal Blitz is a lying-down-only practice with cardiovascular and mental-health cautions. Read the complete guide, begin with the least intense version that gives a useful shift, and stop if balance, orientation, or recovery becomes unreliable. Fainting and loss of consciousness are not the goal.\nI do not count “wow” as an outcome. A huge release, bliss, or an altered state can feel profound while the actual problem stays basically untouched. When I remember the event later, am I less restimulated? Am I doing any better with pain, boundaries, conflict, and ordinary life? If the practice has become a way to avoid grief, conflict, practical problems, or deeper relational healing, the extraordinary state does not rescue it.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9507153034210205,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1198,
+            "word_count": 191,
+            "token_length": 250,
+            "is_humanized": false,
+            "humanizer_score": 0.32665005326271057
+          }
+        ]
+      },
+      "section_id": "sky-hypnosis-vagal-blitz",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -304,10 +340,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.15,
-        "estimated_credits": 3,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
         "model": "pangram-4",
-        "paid_api_calls": 3,
+        "paid_api_calls": 4,
         "pending_resumes": 0,
         "section_id": "sky-hypnosis-vagal-blitz",
         "version": "4.0",
