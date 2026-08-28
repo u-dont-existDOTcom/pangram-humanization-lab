@@ -38,6 +38,42 @@
       },
       "section_id": "somatic-experiencing",
       "budget_scope": "section"
+    },
+    {
+      "id": "R15_YOGA_R01",
+      "measurement_key": "somatic-r15-remaining-natural-sections-api-20260828-a_R15_YOGA_R01",
+      "text": "Trauma-Sensitive / Restorative Yoga\n\nWhen I say yoga here, I do not mean power yoga, hot yoga, or somebody announcing, “Open your hips and release your trauma.” I mean slow, choice-based work: trauma-sensitive yoga, restorative yoga, gentle somatic yoga, or very gentle yin. With yin I would keep it propped, short, and easy to leave.\n\nGood trauma-sensitive instructions sound like:\n\n“You might try…”\n“You can keep your eyes open.”\n“You can come out of the shape at any time.”\n“Notice whether this feels useful, neutral, or too much.”\n“A posture can have several correct versions; choose one that fits your body.”\n\nWhat I do not want is intense stretching, forced breathwork, breath retention, aggressive hip openers, long passive holds, hands-on adjustments without clear consent, or the idea that you should push through sensation because suffering through it is somehow therapeutic. The whole point here is that choice stays available.\n",
+      "text_sha256": "a9d23a0b9dd9873b54b57dc01dfcaf7420ed942f848b5bf76aca75e3a0d57bf5",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Trauma-Sensitive / Restorative Yoga\nWhen I say yoga here, I do not mean power yoga, hot yoga, or somebody announcing, “Open your hips and release your trauma.” I mean slow, choice-based work: trauma-sensitive yoga, restorative yoga, gentle somatic yoga, or very gentle yin. With yin I would keep it propped, short, and easy to leave.\nGood trauma-sensitive instructions sound like:\n“You might try…”\n“You can keep your eyes open.”\n“You can come out of the shape at any time.”\n“Notice whether this feels useful, neutral, or too much.”\n“A posture can have several correct versions; choose one that fits your body.”\nWhat I do not want is intense stretching, forced breathwork, breath retention, aggressive hip openers, long passive holds, hands-on adjustments without clear consent, or the idea that you should push through sensation because suffering through it is somehow therapeutic. The whole point here is that choice stays available.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Trauma-Sensitive / Restorative Yoga\nWhen I say yoga here, I do not mean power yoga, hot yoga, or somebody announcing, “Open your hips and release your trauma.” I mean slow, choice-based work: trauma-sensitive yoga, restorative yoga, gentle somatic yoga, or very gentle yin. With yin I would keep it propped, short, and easy to leave.\nGood trauma-sensitive instructions sound like:\n“You might try…”\n“You can keep your eyes open.”\n“You can come out of the shape at any time.”\n“Notice whether this feels useful, neutral, or too much.”\n“A posture can have several correct versions; choose one that fits your body.”\nWhat I do not want is intense stretching, forced breathwork, breath retention, aggressive hip openers, long passive holds, hands-on adjustments without clear consent, or the idea that you should push through sensation because suffering through it is somehow therapeutic. The whole point here is that choice stays available.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999767541885376,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 934,
+            "word_count": 153,
+            "token_length": 201,
+            "is_humanized": false,
+            "humanizer_score": 0.13598771393299103
+          }
+        ]
+      },
+      "section_id": "trauma-sensitive-yoga",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -95,6 +131,22 @@
       },
       {
         "section_id": "somatic-experiencing",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "trauma-sensitive-yoga",
         "model": "pangram-4",
         "version": "4.0",
         "budget_scope": "section",
