@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r18-human-spine-local-sections-r01-api-20260828-a_R18_EMDR_R01",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "EMDR\nEMDR is more targeted toward specific memories or traumas, with recall procedures and a clearer thing you are working on. Brainspotting you can feel out, and it does not require knowing exactly what you are targeting. That is the main difference in my mind.\nAn accident, assault memory, military trauma, distinct flashback, or specific trigger network gives EMDR a fairly clear target. Somebody who floods every time they get near the material may spend three to six months building capacity first, and severe developmental trauma can take longer. A stable person with one clear event does not need months of body work first just because a sequence looks tidy on paper.\nI become more cautious when the trauma is diffuse or developmental, mainly bodily or pre-verbal, relational, or the nervous system is still unstable. I would want some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit earlier.\nAfter EMDR I want the rest of the day to be almost boring. Walk. Eat. Hydrate. Sleep early if I am tired. Maybe do restorative yoga or a little EFT. I would not casually stack Brainspotting, EMDR, intense shaking, and deep yin on the same day unless I already knew my system could handle that much and I had skilled support.\nI check the wake too: sleep that night, irritability the next day, dissociation, pain, compulsive processing, and whether I am treating people better or worse. Sometimes the useful thing after processing is to stop processing.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9990996718406677,
+        "confidence": "High",
+        "end_index": 1502,
+        "humanizer_score": 0.31474146246910095,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "EMDR\nEMDR is more targeted toward specific memories or traumas, with recall procedures and a clearer thing you are working on. Brainspotting you can feel out, and it does not require knowing exactly what you are targeting. That is the main difference in my mind.\nAn accident, assault memory, military trauma, distinct flashback, or specific trigger network gives EMDR a fairly clear target. Somebody who floods every time they get near the material may spend three to six months building capacity first, and severe developmental trauma can take longer. A stable person with one clear event does not need months of body work first just because a sequence looks tidy on paper.\nI become more cautious when the trauma is diffuse or developmental, mainly bodily or pre-verbal, relational, or the nervous system is still unstable. I would want some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit earlier.\nAfter EMDR I want the rest of the day to be almost boring. Walk. Eat. Hydrate. Sleep early if I am tired. Maybe do restorative yoga or a little EFT. I would not casually stack Brainspotting, EMDR, intense shaking, and deep yin on the same day unless I already knew my system could handle that much and I had skilled support.\nI check the wake too: sleep that night, irritability the next day, dissociation, pain, compulsive processing, and whether I am treating people better or worse. Sometimes the useful thing after processing is to stop processing.",
+        "token_length": 317,
+        "word_count": 252
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "9d588f98-56f5-43d3-ae11-eb4f19950fa1",
   "text": "EMDR\n\nEMDR is more targeted toward specific memories or traumas, with recall procedures and a clearer thing you are working on. Brainspotting you can feel out, and it does not require knowing exactly what you are targeting. That is the main difference in my mind.\n\nAn accident, assault memory, military trauma, distinct flashback, or specific trigger network gives EMDR a fairly clear target. Somebody who floods every time they get near the material may spend three to six months building capacity first, and severe developmental trauma can take longer. A stable person with one clear event does not need months of body work first just because a sequence looks tidy on paper.\n\nI become more cautious when the trauma is diffuse or developmental, mainly bodily or pre-verbal, relational, or the nervous system is still unstable. I would want some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit earlier.\n\nAfter EMDR I want the rest of the day to be almost boring. Walk. Eat. Hydrate. Sleep early if I am tired. Maybe do restorative yoga or a little EFT. I would not casually stack Brainspotting, EMDR, intense shaking, and deep yin on the same day unless I already knew my system could handle that much and I had skilled support.\n\nI check the wake too: sleep that night, irritability the next day, dissociation, pain, compulsive processing, and whether I am treating people better or worse. Sometimes the useful thing after processing is to stop processing.\n",
   "text_sha256": "24291c4c1162117cd4859a47ffba4254edcb47ae689d6b159524c1e653a5dad6",
-  "updated_utc": "2026-08-28T23:46:32.542508+00:00"
+  "updated_utc": "2026-08-28T23:46:36.108317+00:00"
 }
