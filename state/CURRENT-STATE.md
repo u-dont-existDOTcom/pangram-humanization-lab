@@ -213,3 +213,11 @@ Never silently substitute one transport for the other when Joel has specified GU
 After interruption or a fresh chat, inspect this checkpoint, `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`, the historical live-validation state `state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md` on `agent/pangram-local-playwright-gpt-20260818`, `state/LESSON-INDEX.md`, and the active article task state. Inspect API/private-executor state only when the requested transport is API or when cross-transport paid-call ambiguity makes it relevant.
 
 Never infer paid-call state from chat. Never repeat ambiguous/already-paid work before exact durable state is recovered or deliberately resolved.
+
+## Completed Somatic reparenting production matrix — 2026-08-28
+
+The exact packet is on branch `experiment/somatic-reparenting-production-matrix-20260828` under `state/experiments/somatic-reparenting-production-matrix-20260828/`. Four authenticated Brave/Pangram UI calls completed with exact staged SHA verification, pre-click GitHub reservations, result-text binding, and four matching History rows. No completed input was repeated; untouched R08 and known R09 were not submitted.
+
+Results: M00 Human/100%/medium; M01 Human/100%/medium; M10 Mixed/displayed 35% AI with a later AI/high A-cluster segment; M11 Mixed/displayed 46% AI with exact R08 Human/high and the complete extension AI/high. The direct UI exposed rounded percentages, so no unavailable unrounded fraction is inferred.
+
+Disposition: the constant concrete Nurturer/Protector/action cluster is Human and the light-hypnosis cluster is Human without A. The neutral-witness/borrowed-adulthood cluster is the decision-relevant conditional trigger in this exact boundary, with hypnosis amplification when A is present. This does not isolate individual phrases. No production-complete Human cell emerged. M01 is frozen only as a detector-Human partial building block; R08 remains frozen; article authority is unchanged.
