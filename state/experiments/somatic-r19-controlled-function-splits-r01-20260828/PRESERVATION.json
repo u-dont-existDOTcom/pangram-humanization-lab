@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r19-controlled-function-splits-r01-api-20260828-a",
+  "status": "PASS",
+  "authority_impact": "none",
+  "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202",
+  "source_article": {"repository":"u-dont-existDOTcom/joel-articles","branch":"experiment/somatic-r17-100-human-gate-20260828","commit":"52b9195","preservation_path":"articles/somatic-therapies/experiments/R19-CONTROLLED-FUNCTION-SPLIT-PRESERVATION-20260828.md","preservation_sha256":"fb3dc18396b3bda4c96541017e662a1a7f3dbb4a777cb7d94d23bf46644fe066"},
+  "fixed_spec": {"path":"experiments/somatic-r19-controlled-function-splits-r01-api-20260828-a.json","sha256":"53cb8dcedd44da6e5ddbb66e483472d46234e66f63a49e7beb337cecfec69423","audit_id":"somatic-r15-section-localization-20260827"},
+  "baseline": {"description":"exact measured-Human 141-word R17-SE prefix through the trauma is too much","submitted_alone":false,"reason":"known Human/high; untouched controls are not rerun"},
+  "variants": [
+    {"id":"R19_YOGA_DEFINITION","section_id":"trauma-sensitive-yoga","sha256":"9b5de38c5bcc32e753b7570ce674002277199dc94ca876ebeb450ef3cf8cc7b1","words":177,"added_cluster":"yoga definition and scope only","unexplained_substantive_deltas":0},
+    {"id":"R19_YOGA_SAFETY","section_id":"trauma-sensitive-yoga","sha256":"f9f480d7900f83afb70f51f31dba63e7a83cd0c195c0b10d9ede6c2155f0f06e","words":220,"added_cluster":"choice questions and non-coercive safety only","unexplained_substantive_deltas":0},
+    {"id":"R19_GENTLE_SHAKING_PRACTICE","section_id":"gentle-shaking-tre","sha256":"4ccf651158c37ebe0ea5fa542bc02891d5f6c0da716ef4c5304db9eef8eef6c3","words":183,"added_cluster":"gentle-practice definition and stop rule only","unexplained_substantive_deltas":0},
+    {"id":"R19_GENTLE_SHAKING_NECK","section_id":"gentle-shaking-tre","sha256":"d5aedc91469ff2414d5b6bff992fe0dafd904900604485d4bf641f8b46bb0db5","words":181,"added_cluster":"neck-support warning only","unexplained_substantive_deltas":0},
+    {"id":"R19_SKY_SAFETY","section_id":"sky-hypnosis-vagal-blitz","sha256":"174a669e550a6dd72049bcbf6532953d318835c8fe4552ae8a6ef182b46d960d","words":252,"added_cluster":"readiness classification and physical safety only","unexplained_substantive_deltas":0},
+    {"id":"R19_SKY_OUTCOME","section_id":"sky-hypnosis-vagal-blitz","sha256":"db3a69e10c8841e8187f47d523a2a9dee272566b409dca502f4fb9f707c54be8","words":214,"added_cluster":"later-restimulation and ordinary-life outcome test only","unexplained_substantive_deltas":0}
+  ],
+  "forward_traceability": "PASS",
+  "reverse_traceability": "PASS",
+  "unexplained_substantive_deltas": 0,
+  "known_human_controls_resubmitted": 0,
+  "blocked_or_ambiguous_hashes_resubmitted": 0
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r19-controlled-function-splits-r01-api-20260828-a",
+  "created_at_utc": "2026-08-28",
+  "transport": "private fixed-batch executor / Pangram API",
+  "pangram_model": "4.0",
+  "spec_sha256": "53cb8dcedd44da6e5ddbb66e483472d46234e66f63a49e7beb337cecfec69423",
+  "budget": {"maximum_new_paid_calls":6,"completed":0,"duplicate_calls":0},
+  "cells": [
+    {"id":"R19_YOGA_DEFINITION","section_id":"trauma-sensitive-yoga","sha256":"9b5de38c5bcc32e753b7570ce674002277199dc94ca876ebeb450ef3cf8cc7b1","status":"frozen_pending_dispatch","post_call_section_count":5},
+    {"id":"R19_YOGA_SAFETY","section_id":"trauma-sensitive-yoga","sha256":"f9f480d7900f83afb70f51f31dba63e7a83cd0c195c0b10d9ede6c2155f0f06e","status":"frozen_pending_dispatch","post_call_section_count":6},
+    {"id":"R19_GENTLE_SHAKING_PRACTICE","section_id":"gentle-shaking-tre","sha256":"4ccf651158c37ebe0ea5fa542bc02891d5f6c0da716ef4c5304db9eef8eef6c3","status":"frozen_pending_dispatch","post_call_section_count":3},
+    {"id":"R19_GENTLE_SHAKING_NECK","section_id":"gentle-shaking-tre","sha256":"d5aedc91469ff2414d5b6bff992fe0dafd904900604485d4bf641f8b46bb0db5","status":"frozen_pending_dispatch","post_call_section_count":4},
+    {"id":"R19_SKY_SAFETY","section_id":"sky-hypnosis-vagal-blitz","sha256":"174a669e550a6dd72049bcbf6532953d318835c8fe4552ae8a6ef182b46d960d","status":"frozen_pending_dispatch","post_call_section_count":5},
+    {"id":"R19_SKY_OUTCOME","section_id":"sky-hypnosis-vagal-blitz","sha256":"db3a69e10c8841e8187f47d523a2a9dee272566b409dca502f4fb9f707c54be8","status":"frozen_pending_dispatch","post_call_section_count":6}
+  ],
+  "blocked_repeats": [
+    {"section_id":"trauma-sensitive-yoga","sha256":"af6c954e78f17073535c02679dd0e5ebaa022728fc098fbe8fb8a4d2efc134fe","reason":"completed AI"},
+    {"section_id":"gentle-shaking-tre","sha256":"167da8f9fc7d3bcb6f13660592b8073e0592d48ed45d7a189693da2f8eb27734","reason":"completed AI"},
+    {"section_id":"sky-hypnosis-vagal-blitz","sha256":"9e89dc7da058ecd8deef7e4986166186cda7de752040f3faa6ea4b1ff0143e76","reason":"completed AI"}
+  ]
+}
