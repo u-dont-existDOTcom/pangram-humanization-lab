@@ -1,6 +1,6 @@
 # Reparenting R07 exact raw owner adult-trust control — 2026-08-28
 
-Status: **PENDING OWNER-REPORTED PANGRAM RESULT / provenance control / no model realization**
+Status: **OWNER-REPORTED PANGRAM HUMAN / MEDIUM CONFIDENCE / provenance control / no model realization**
 
 Purpose: R06, the final model-realized adult-access candidate, returned owner-reported Pangram AI / high confidence and closed the model-rewrite lane. R07 is not another stylistic variant. It submits the exact recovered natural owner paragraph for the adult/child trust conflict with **zero rewriting or normalization**.
 
@@ -8,11 +8,13 @@ Exact owner source: `u-dont-existDOTcom/joel-articles@agent/somatic-humanization
 
 No heading is part of the tested text. No Nurturer/Protector terminology, witness/borrowed-adulthood language, self-hypnosis language, punctuation repair, capitalization repair, typo repair, or connective prose is added. The text below is the exact owner wording recorded in the source file.
 
-Interpretation rule:
-- If Human: the adult/child trust thought itself has a natural owner surface Pangram accepts; editorial work can then use deletion/minimum normalization of that source without reopening free model generation.
-- If AI: close detector work on adult-access entirely unless an independently Human owner realization later appears. Resolve the article function editorially; Pangram does not override owner authority or preservation.
+Owner-reported Pangram result, 2026-08-28: **Human / medium confidence**.
 
-Owner-reported Pangram result: **PENDING**.
+Interpretation:
+- The natural owner realization of the adult/child trust conflict is Pangram-Human at this exact raw boundary.
+- R06's AI/high result therefore does not establish that the underlying thought/topic is detector-red; the model/publication reconstruction acquired the stronger AI signal.
+- The adult-access model-rewrite lane remains closed. The authorized next operation is deletion/minimum normalization of this exact owner source, with preservation proof and reader-facing coherence, not another fresh realization.
+- Do not infer that typos, lowercase, profanity, or raw-transcript texture caused the Human result. Publication prose must still pass the reader-facing realization gate.
 
 ---
 
