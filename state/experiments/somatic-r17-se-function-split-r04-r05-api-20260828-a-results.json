@@ -38,6 +38,54 @@
       },
       "section_id": "somatic-experiencing",
       "budget_scope": "section"
+    },
+    {
+      "id": "R17_SE_R05",
+      "measurement_key": "somatic-r17-se-function-split-r04-r05-api-20260828-a_R17_SE_R05",
+      "text": "Introduction\n\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\n\nSomatic Experiencing\n\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\n\nSome people spend three to six months building enough capacity for this, and severe developmental trauma can take longer. That is only a rough orientation; if you are already stable and have one clear target, you may be ready to add trauma-focused work sooner.\n",
+      "text_sha256": "4bd4e800b42f94712212b37cf479d0786355b33b5b9a7f45b361fc358c2053bb",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nSome people spend three to six months building enough capacity for this, and severe developmental trauma can take longer. That is only a rough orientation; if you are already stable and have one clear target, you may be ready to add trauma-focused work sooner.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.24121996760368347,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.7587800621986389,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.3205469846725464,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 821,
+            "word_count": 141,
+            "token_length": 176,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": "\nSome people spend three to six months building enough capacity for this, and severe developmental trauma can take longer. That is only a rough orientation; if you are already stable and have one clear target, you may be ready to add trauma-focused work sooner.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.8960801959037781,
+            "confidence": "High",
+            "start_index": 821,
+            "end_index": 1082,
+            "word_count": 45,
+            "token_length": 50,
+            "is_humanized": false,
+            "humanizer_score": 0.07401850074529648
+          }
+        ]
+      },
+      "section_id": "somatic-experiencing",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -176,10 +224,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.25,
-        "estimated_credits": 5,
+        "estimated_cost_usd": 0.3,
+        "estimated_credits": 6,
         "model": "pangram-4",
-        "paid_api_calls": 5,
+        "paid_api_calls": 6,
         "pending_resumes": 0,
         "section_id": "somatic-experiencing",
         "version": "4.0",
