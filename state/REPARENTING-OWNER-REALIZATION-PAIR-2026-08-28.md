@@ -14,17 +14,7 @@ The backbone was then held fixed while additional protected functions were added
 
 D–G tested materially different assistant realizations of the protected somatic-preparation relationship. Joel reported the added fourth paragraph **AI / high confidence** each time.
 
-The sequence varied:
-- dense modality inventory;
-- more conversational practical wording;
-- research/practical-register wording;
-- structural compression removing the repeated modality inventory.
-
-The repeated result did not justify a phrase blacklist or a claim that `heart chakra`, `solar plexus`, `Buteyko`, or any other token was causal.
-
 H removed the somatic-preparation explanation entirely and appended only an assistant realization of the protected heart↔solar-plexus love-loop practice. Joel again reported the added fourth paragraph **AI / high confidence**.
-
-H therefore falsified the narrower theory that only the explanatory somatic-preparation paragraph function was causing the residual.
 
 ## Exact-owner heart-loop positive control
 
@@ -32,84 +22,68 @@ After H, source recovery found Joel's prior exact owner-authored realization of 
 
 I owner-reported Pangram result: **Human / medium confidence**.
 
-The key controlled contrast is therefore:
+Key local contrast:
 - same preceding Human backbone;
-- same protected heart↔solar-plexus practice/function;
-- assistant realization in H → **AI / high confidence** localized to the added paragraph;
+- same protected heart↔solar-plexus function;
+- assistant realization in H → **AI / high confidence**;
 - exact owner realization in I → **Human / medium confidence**.
 
 ## Owner-anchored somatic-preparation extension
 
-Additional source recovery found direct Joel wording for the separate somatic-preparation relationship: when the body feels tight or emotional tension blocks access to the heart chakra, use unforced slower exhales; Joel also corrected that in the Buteyko relation the slow exhale should be passive, relaxed, and unforced.
-
-J kept the complete Human/medium I boundary unchanged and inserted only a two-sentence minimum-normalization paragraph from that owner cognition:
-
-`When the body feels tight or there’s too much emotional tension to access the heart chakra, use an unforced slower exhale. With Buteyko-style breathing, the slow exhale should be passive, relaxed, and unforced.`
+J inserted only a two-sentence minimum-normalization paragraph from direct owner cognition about bodily tightness, heart access, slower exhalation, and Buteyko's passive/relaxed/unforced distinction.
 
 Joel reported the complete J boundary **Human / high confidence**.
 
-## Expanded-boundary failure — R03
+## Expanded-boundary failure — R03 / R04
 
-R03 kept the J text but expanded the natural section with additional material for neutral witnessing, Protector action, light self-hypnosis, a named-modality bridge, and a real-love-source cue.
+R03 expanded J with neutral witnessing, Protector action, light self-hypnosis, a named-modality bridge, and a real-love cue. Joel reported R03 **AI / high confidence except the final exact owner heart-loop paragraph Human / high confidence**.
 
-Joel reported R03 **High-confidence AI except for the final paragraph, which was Human / high confidence**.
+R04 rolled back the modality bridge and used more owner-controlled/published surface. Joel reported:
+- paragraphs 1–6 through the Buteyko paragraph: **AI / high confidence**;
+- bottom two paragraphs beginning `If I can't feel the love...`: **Human / high confidence**.
 
-This changed the production lesson:
-- J's Human/high result remains valid only for the exact J boundary; it is not immunity for each component paragraph under expansion;
-- R03's red field does **not** prove each J paragraph independently caused the regression, because displayed red location is not causal proof and the composition changed;
-- the exact owner-authored heart-loop paragraph became the strongest robust anchor because it remained Human/high inside the larger failing boundary;
-- first rollback target was the material newly added in R03, not automatic rewriting of the previously passing J base.
+The two-paragraph love-source + heart-loop ending is the strongest robust green anchor.
 
-Durable exact R03 record: `state/experiments/REPARENTING-R03-EXPANDED-BOUNDARY-20260828.md`.
+## Architecture split — R05
 
-## Rollback diagnostic — R04
+R05 isolated the adult-access functions into 112 words. Joel reported **AI / medium confidence**. Splitting reduced confidence relative to the larger R04 red block but did not solve the adult-access realization.
 
-R04 removed the named-modality bridge and used higher-authority owner-controlled/published wording for neutral witness/Protector and self-hypnosis. It retained the J opening/breathing material and ended with the real-love cue plus the exact owner heart-loop paragraph.
+## Natural-thought-route reconstruction — R06
 
-Exact reader-visible SHA-256: `455118656ceb6e7cf1b8e59e35c1f3f05d1caa854895f0625e341f13546f009e`.
+R06 rebuilt adult-access around Joel's recovered lived trust conflict: the child doubts the grown-up's record, the adult can resent the child, and protection/nurturing vows can sound empty without evidence. It retained PU2–PU8 with zero unexplained substantive deltas.
 
-Joel reported:
-- paragraphs 1–6, ending with the Buteyko paragraph: **AI / high confidence**;
-- bottom two paragraphs, beginning `If I can't feel the love...` and ending with the exact owner heart-loop paragraph: **Human / high confidence**.
+Joel reported R06 **AI / high confidence**. This closed the fresh model-realization lane.
 
-This is the strongest current localization. The robust green unit is now **two paragraphs**, not merely the final heart-loop paragraph.
+## Raw owner control — R07, now classified as redundant in ordinary production
 
-## Architecture-split adult-access diagnostic — R05
+R07 tested the exact natural owner paragraph and returned **Human / medium confidence**. The result is retained as evidence, but Joel corrected the workflow: in his observed Pangram history, securely provenanced untouched human prose has not been called AI outside the known technical/academic-paper failure class. Therefore ordinary nontechnical production should not spend detector work reconfirming untouched owner prose.
 
-R05 isolated only the adult-access functions into a 112-word subsection: child-state/adult-perspective problem; Nurturer/Protector; witness/borrowed adulthood; Protector action; light self-hypnosis.
+Useful question: **did model/editorial intervention introduce AI signal?**
 
-Joel reported R05 **AI / medium confidence**.
+## Minimum-normalization success — R08
 
-The split reduced detector confidence relative to R04's larger red pre-loop block (AI/high), so architecture mattered, but the subsection still did not pass. Do not keep polishing the same mini-model.
+R08 applied only publication-level normalization to the exact natural owner paragraph:
+- capitalization/punctuation/quote presentation;
+- typo repair;
+- sentence boundaries;
+- deletion of speech filler/duplicated framing;
+- minimum grammar after deletion.
 
-## Natural-thought-route realization — R06
+No framework, Nurturer/Protector terminology, witness, borrowed adulthood, hypnosis, mechanism, aftercare, anecdote, or conclusion was added. Preservation PASS 7/7; unexplained substantive deltas 0.
 
-Source recovery after R05 found genuinely natural Joel-authored cognition about the adult/child conflict. Its governing thought is not an abstract `adult access` ladder: the child looks at the grown-up self and thinks `yeah, that doesn't look like things went well for us`; the grown-up can become resentful toward the younger self; then an older part makes vows of protection/nurturing and the child answers `big fuckity whoopty doo, what are you gonna do for me`. Joel also says relaxation has not solved that conflict for him.
+Joel reported R08 **Human / medium confidence**.
 
-R06 rebuilt the subsection around that lived credibility fight and subordinated Nurturer/Protector, witness/borrowed adulthood, and light self-hypnosis to it. Preservation PU2–PU8 remained 7/7 with zero unexplained substantive deltas.
-
-Joel reported R06 **AI / high confidence**.
-
-This closes the adult-access **model-realization lane**. Do not generate more stylistic/synonym variants of the subsection to chase Pangram.
-
-One exact provenance control remains informative and does not violate that stop rule: submit the **raw natural owner paragraph itself** with no model rewriting, normalization, heading, or added concepts. That control is `state/experiments/REPARENTING-R07-RAW-OWNER-ADULT-TRUST-20260828.md`.
-
-- If R07 is Human, the natural owner surface itself is acceptable to Pangram and editorial work can use deletion/minimum normalization rather than free reconstruction.
-- If R07 is AI, stop detector work on this function completely unless an independently Human owner realization later appears.
+This is the production-relevant comparison: the minimum editorial touch did **not** introduce the AI signal. Freeze R08 as the adult-trust paragraph. Do not reopen it merely to increase detector confidence.
 
 ## Revised interpretation
 
-1. **Exact-boundary Human status is local.** J Human/high remains valid for J, but cannot be projected into R03/R04.
-2. **The two-paragraph love/heart-loop ending is now the robust green anchor.** It stayed Human/high in R04; the heart-loop paragraph alone also stayed Human/high in R03.
-3. **Owner wording alone is not sufficient to make a mixed larger boundary green.** R04 used owner-controlled/published surface in several red paragraphs.
-4. **Architecture helps but is not sufficient.** R05's adult-access split reduced confidence from high to medium while remaining AI.
-5. **A recovered natural thought route can still fail after model realization.** R06 followed the lived trust/credibility conflict yet returned AI/high.
-6. **Stop rules matter.** Repeated reconstruction after R06 would be detector chasing rather than production editing.
-7. Brainspotting/EMDR-specific reparenting relationships remain best preserved in their later modality sections.
-8. Do not infer token bans or a universal detector mechanism from these results.
-
-## Production rule retained but narrowed
-
-Source recovery remains preferable to free reconstruction when a natural owner realization exists. Retrieval-first must be combined with correct paragraph jobs, natural boundary size, architecture, thought route, stopping point, and a willingness to stop when model realization remains detector-red. A source-derived paragraph can still sit inside a detector-red composition, while a polished conceptual arrangement can distort the author's actual lived problem even when every individual proposition is preserved.
+1. Exact-boundary Human status is local; do not project it across larger compositions.
+2. Untouched ordinary owner prose does not need a detector control merely to prove it is Human; technical/academic prose is the known exception class.
+3. Model reconstruction can introduce a strong AI signal even when meaning is preserved and the underlying owner thought is natural.
+4. Deletion/minimum normalization of a strong owner source can preserve Human status where fresh reconstruction fails.
+5. Architecture matters but does not substitute for natural thought route and source surface.
+6. The robust Human/high love-source + heart-loop ending remains closed.
+7. R08 is now the frozen adult-trust source-compression anchor. Remaining protected adult-function terminology should be added separately rather than used to rewrite R08.
+8. Brainspotting/EMDR-specific reparenting relationships remain best preserved in their later modality sections.
 
 Editorial quality, fidelity, placement, and article function remain independent gates; Pangram is secondary evidence.
