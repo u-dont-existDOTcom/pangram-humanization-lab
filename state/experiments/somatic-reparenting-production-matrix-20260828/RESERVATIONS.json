@@ -2,18 +2,25 @@
   "schema_version": 1,
   "experiment_id": "somatic-reparenting-production-matrix-20260828",
   "created_at_utc": "2026-08-28T16:21:20Z",
+  "completed_at_utc": "2026-08-28T17:27:48Z",
   "transport": "authenticated Brave/Pangram UI",
   "pangram_model": "4.0",
   "history_binding": "exact stored prompt text",
-  "budget": {"maximum_new_paid_calls": 4, "reserved": 4, "completed": 0, "duplicate_calls": 0},
+  "budget": {"maximum_new_paid_calls": 4, "reserved": 4, "completed": 4, "duplicate_calls": 0},
   "reservations": [
-    {"id":"M00","sha256":"2274a6a7b5b48cd2fde510d78dacc7a29c9f4d2d1164fd2fcde86fcf46a983ba","status":"reserved_pre_click"},
-    {"id":"M10","sha256":"cb2620a3463eae0ce3be17f0cecc6119fb7b5c8ed784e9e330ff11ad9e12334a","status":"reserved_pre_click"},
-    {"id":"M01","sha256":"1aa888df956a77c3bb27a5924c1c9d4aab4d02eeab53b1fd18634f2fc724aed9","status":"reserved_pre_click"},
-    {"id":"M11","sha256":"2b4cb6590347e60abe748bb3efcad92666b38d7167fc9fa33a1beeba208b835b","status":"reserved_pre_click"}
+    {"id":"M00","sha256":"2274a6a7b5b48cd2fde510d78dacc7a29c9f4d2d1164fd2fcde86fcf46a983ba","status":"complete_history_bound","clicked_at_utc":"2026-08-28T17:23:59.134Z","classification":"Human"},
+    {"id":"M10","sha256":"cb2620a3463eae0ce3be17f0cecc6119fb7b5c8ed784e9e330ff11ad9e12334a","status":"complete_history_bound","clicked_at_utc":"2026-08-28T17:24:41.250Z","classification":"Mixed"},
+    {"id":"M01","sha256":"1aa888df956a77c3bb27a5924c1c9d4aab4d02eeab53b1fd18634f2fc724aed9","status":"complete_history_bound","clicked_at_utc":"2026-08-28T17:25:20.515Z","classification":"Human"},
+    {"id":"M11","sha256":"2b4cb6590347e60abe748bb3efcad92666b38d7167fc9fa33a1beeba208b835b","status":"complete_history_bound","clicked_at_utc":"2026-08-28T17:25:52.191Z","classification":"Mixed"}
   ],
   "blocked_repeats": [
     {"id":"R08","sha256":"6ceaa3becafb78bb75df043e5ff88cd41d46496ef93d9a0500b6759856c5811a","reason":"known Human baseline; no untouched resubmission"},
     {"id":"R09","sha256":"639ff62f42ebc9f8f25571e2471de57a1f4cc982160d7e7b5717ee9c290be35b","reason":"known split result; reuse without payment"}
-  ]
+  ],
+  "history_recovery": {
+    "query": "The Protector cleans the room",
+    "matching_rows": 4,
+    "classifications": ["Mixed", "Human", "Mixed", "Human"],
+    "status": "PASS"
+  }
 }
