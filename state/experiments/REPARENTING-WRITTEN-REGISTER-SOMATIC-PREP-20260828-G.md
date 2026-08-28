@@ -1,6 +1,6 @@
 # Reparenting written-register + structural somatic-preparation repair — 2026-08-28 G
 
-Status: **UNMEASURED / localized structural repair**
+Status: **OWNER-REPORTED PANGRAM AI / HIGH CONFIDENCE — residual localized to fourth paragraph / non-authoritative**
 
 Frozen backbone: exact first three paragraphs from `REPARENTING-WRITTEN-REGISTER-20260827-C.md`, owner-reported Pangram **Human / medium confidence**.
 
@@ -15,7 +15,9 @@ Structural repair rather than wording repair:
 - non-forced longer exhales and gentle Buteyko-style breathing remain here because no equivalent dedicated gentle-breathing destination was found in the current r15 candidate;
 - preserve here the unique function: somatic settling/solar-plexus or abdominal softening can make heart-chakra love easier to access, and body work may occur before or during reparenting.
 
-Owner-reported Pangram result: **PENDING**.
+Owner-reported Pangram result, 2026-08-28: **fourth paragraph AI / high confidence**.
+
+Interpretation: this is now the fourth materially different realization of the same somatic-preparation function to return a High-confidence AI residual while the exact first three paragraphs remain the known-Human backbone. Stop generating another paraphrase from the same abstract preservation units. Before any further realization, search for actual owner-written source language carrying the heart/solar-plexus/breathing relationship. If none exists, separate the protected *function* from the current paragraph packaging and reconsider placement/amount of explicit restatement rather than treating detector performance as a synonym problem.
 
 ---
 
