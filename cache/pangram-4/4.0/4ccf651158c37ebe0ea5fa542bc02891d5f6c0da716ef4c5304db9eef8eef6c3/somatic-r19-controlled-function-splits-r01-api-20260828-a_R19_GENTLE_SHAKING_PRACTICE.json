@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r19-controlled-function-splits-r01-api-20260828-a_R19_GENTLE_SHAKING_PRACTICE",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nGentle Shaking / TRE\nHere I mean a little shaking, not trying to blast trauma out of the body. Basic TRE, very light neurogenic tremoring, gentle standing shaking, or short playful movement can be enough. If it becomes frightening, dissociative, compulsive, or hard to stop, stop.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.8131957054138184,
+        "confidence": "High",
+        "end_index": 1102,
+        "humanizer_score": 0.9338214993476868,
+        "is_humanized": true,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nGentle Shaking / TRE\nHere I mean a little shaking, not trying to blast trauma out of the body. Basic TRE, very light neurogenic tremoring, gentle standing shaking, or short playful movement can be enough. If it becomes frightening, dissociative, compulsive, or hard to stop, stop.",
+        "token_length": 241,
+        "word_count": 186
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "5c0466ff-cc77-48df-b995-aba75df5fc26",
   "text": "Introduction\n\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\n\nSomatic Experiencing\n\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\n\nGentle Shaking / TRE\n\nHere I mean a little shaking, not trying to blast trauma out of the body. Basic TRE, very light neurogenic tremoring, gentle standing shaking, or short playful movement can be enough. If it becomes frightening, dissociative, compulsive, or hard to stop, stop.\n",
   "text_sha256": "4ccf651158c37ebe0ea5fa542bc02891d5f6c0da716ef4c5304db9eef8eef6c3",
-  "updated_utc": "2026-08-28T23:57:01.159740+00:00"
+  "updated_utc": "2026-08-28T23:57:05.409343+00:00"
 }
