@@ -102,3 +102,17 @@ These are authorial claims/working architecture, not generic psychological doctr
 When Joel approves an assistant-proposed move, consolidation, deletion, compression, or routing change, that approval controls the operation and protected function; it does not automatically lock the assistant sentence realization. A later humanization pass should identify only the surviving assistant-written surface, leave untouched owner prose alone, and prefer restoring actual owner language wherever it can still perform the approved operation. Generate fresh syntax only for relations the approved operation genuinely requires.
 
 Romance R7 is supporting exact-candidate evidence for this production strategy: it changed only surviving assistant realization inside already approved operations, passed bounded preservation/architecture checks with zero unexplained substantive deltas, and Joel reported the exact R7 candidate as 100% Human / high confidence. This owner-reported detector result supports the edit-dose strategy at that boundary; it does not establish phrase-level detector causality.
+
+## Human→AI intervention experiments: model-shapedness is often interactional
+
+The completed 2026-08-28 packet `state/experiments/human-to-ai-minimal-pairs-20260828/` used three genuinely Human Joel baselines and 15 exact, preservation-gated model/editorial candidates. Untouched baselines were not resubmitted. All paid GUI calls used Pangram 4.0, exact UTF-8 History binding, durable pre-click reservations, one headless Brave context per batch, and a reused tab; no completed exact input was repeated.
+
+Durable findings:
+
+- On compact Somatic explanation, paragraph packing, colloquial relationship language, compression without explicit synthesis, and middle-paragraph compression all remained Human. A polished cross-domain transition alone became Mixed at AI `0.3076923192`. Compression + polished abstract cross-domain synthesis became AI `1.0` in two alternate transition realizations.
+- On long research-conversational prose, a closed taxonomy and a polished bridge each remained Human alone. Together they became Mixed at AI `0.132098034`. Colloquializing either the bridge or the taxonomy while preserving meaning restored Human.
+- On confessional adult/child-trust prose, explanatory completion, sentence equalization, and their combination all remained Human.
+
+Therefore do not blacklist `same principle`, colons, three-item lists, transitions, compression, or any other isolated surface. The operative risk is often **stacked editorial closure**: several locally tidy operations compress, label, connect, and finish a thought in the same boundary. Preserve natural owner source, prefer the next necessary concrete move, and test interactions only when single-feature cells are null and the combination is decision-relevant.
+
+R09 supplies the production anchor: its byte-identical R08 paragraph was owner-localized Human/high, while its appended 66-word model/editorial required-functions paragraph was AI/high. Keep R08 frozen; retain the protected functions but redistribute or re-realize them rather than defending the compact package.

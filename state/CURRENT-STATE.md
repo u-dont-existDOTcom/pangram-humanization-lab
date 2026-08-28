@@ -1,12 +1,20 @@
 # Pangram Humanization Lab current state
 
-Updated: 2026-08-25
+Updated: 2026-08-28
 
 ## Goal
 
 Preserve exact Pangram detector evidence, editorial authority, lesson closeout, and paid-call safety while keeping the owner's transport choice explicit. **When Joel asks for a Pangram GUI check, use the local headed Playwright/Brave transport on his Zorin machine as the primary route. Do not silently substitute the private API/executor route.**
 
 Current owner instructions, exact repository evidence, tests, and current `main` outrank historical chat or old task branches.
+
+## Current browser-interaction preference — 2026-08-28
+
+For multi-candidate Pangram work, Joel asked that Brave remain in the background and that the automation reuse its existing session/tab instead of repeatedly foregrounding, closing, and reopening tabs. The completed Human→AI packet used headless Brave with one persistent context and one reused result tab per batch. Treat this as the current interaction preference unless Joel asks to watch a headed run. It does not relax authentication, exact-identity, reservation, cache, or History recovery safeguards.
+
+## Current completed Human→AI packet — 2026-08-28
+
+`state/experiments/human-to-ai-minimal-pairs-20260828/` contains the frozen design, exact candidates, 15 Pangram-4 results, preservation receipts, call accounting, and durable lessons. Untouched Human baselines were not resubmitted and no completed exact candidate was repeated. The production-level lesson is stacked editorial closure and feature interaction, not phrase banning. R09's owner result is now recorded as paragraph 1 Human/high and paragraph 2 AI/high. This research does not change article authority.
 
 ## Owner transport correction — 2026-08-25
 

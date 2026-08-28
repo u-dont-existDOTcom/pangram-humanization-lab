@@ -1,6 +1,6 @@
 # Human→AI minimal-pair packet — 2026-08-28
 
-Status: **FROZEN STAGES 1–3 / fifteen model-touched candidates / baselines not resubmitted**
+Status: **COMPLETE / fifteen model-touched candidates / baselines not resubmitted**
 
 Purpose: start from genuinely human Joel prose and change one primary editorial/model feature at a time to learn which interventions can introduce Pangram-AI signal. This is detector research, not proposed article prose and not article authority.
 
@@ -75,6 +75,18 @@ Stage 2 therefore supports an interaction account: C1 crossed the boundary only 
 - B5 retains B3's exact bridge and both owner-source paragraphs; its two closure sentences preserve lower-trust treatments, newly discovered treatments, and possible reader requests without the closed taxonomy form. Unexplained substantive deltas: 0.
 
 Forward traceability: **PASS**. Reverse traceability: **PASS**. Article authority impact: **none**. Detector eligibility: **PASS**. Stage 3 is the stopping packet; no further paid calls are authorized or needed for this experiment.
+
+## Stage-3 results and conclusion
+
+| ID | Result | Structured score | Interpretation |
+|---|---|---:|---|
+| C7 | AI | AI `1.0`, Human `0.0` | Compression × polished cross-domain synthesis reproduced with alternate transition wording. |
+| B4 | Human | AI `0.0`, Human `1.0` | Colloquializing only the bridge removed B3's Mixed signal. |
+| B5 | Human | AI `0.0`, Human `1.0` | Breaking only the neat taxonomy closure removed B3's Mixed signal. |
+
+The durable finding is interactional. On compact Somatic explanation, abstract compression and polished cross-domain synthesis were each insufficient in the relevant counterexamples but together produced AI `1.0` twice. On long research-conversational prose, a polished bridge and a closed parallel taxonomy were each insufficient alone but adjacent use produced a Mixed result; replacing either realization with a colloquial, uneven equivalent restored Human.
+
+Do not turn these results into phrase bans. Preserve natural owner thought routes, minimize model-generated relationship announcements, and test complete boundaries when multiple editorial closures accumulate. Exact structured results and call accounting are in `RESULTS.json`; durable interpretation is in `LESSONS.md`.
 
 ## Duplicate and transport gate
 

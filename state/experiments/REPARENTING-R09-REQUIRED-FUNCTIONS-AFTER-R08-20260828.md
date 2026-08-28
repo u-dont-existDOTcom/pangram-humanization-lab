@@ -1,6 +1,6 @@
 # Reparenting R09 required-functions after Human R08 — 2026-08-28
 
-Status: **PENDING OWNER-REPORTED PANGRAM RESULT / controlled source-compression extension**
+Status: **COMPLETE OWNER-REPORTED LOCALIZED RESULT / controlled source-compression extension**
 
 Purpose: R08, a minimum-normalization edit of natural owner adult/child-trust prose, returned owner-reported Pangram **Human / medium confidence**. R09 leaves R08 byte-identical and appends one 66-word paragraph carrying the protected adult-function terminology/practices that R08 deliberately omitted.
 
@@ -25,7 +25,12 @@ The new paragraph carries only:
 
 No R08 wording changes. No modality catalogue, Brainspotting/EMDR material, mechanism, anecdote, or conclusion.
 
-Owner-reported Pangram result: **PENDING**.
+Owner-reported Pangram result, 2026-08-28:
+
+- paragraph 1, byte-identical R08: **Human / high confidence**;
+- paragraph 2, 66-word required-functions extension: **AI / high confidence**.
+
+This is localized owner evidence, not a whole-boundary structured fraction. The protected functions remain required; the result rejects this compact model/editorial realization, not the functions themselves. Follow-up controlled evidence: `state/experiments/human-to-ai-minimal-pairs-20260828/`.
 
 ---
 

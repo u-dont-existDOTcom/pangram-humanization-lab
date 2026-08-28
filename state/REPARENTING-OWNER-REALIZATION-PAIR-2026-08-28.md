@@ -75,6 +75,29 @@ Joel reported R08 **Human / medium confidence**.
 
 This is the production-relevant comparison: the minimum editorial touch did **not** introduce the AI signal. Freeze R08 as the adult-trust paragraph. Do not reopen it merely to increase detector confidence.
 
+## Required-functions extension split — R09
+
+R09 kept R08 byte-identical and added one 66-word paragraph carrying Nurturer/Protector terminology, witness fallback, borrowed adulthood, one real-world action, and gentle self-hypnosis without forced trauma-memory work.
+
+Joel localized the result:
+
+- paragraph 1: **Human / high confidence**;
+- paragraph 2: **AI / high confidence**.
+
+The result protects R08 and rejects only the compact assistant realization of the required functions. It does not authorize dropping those functions.
+
+## Human→AI controlled follow-up
+
+The 15-call packet in `state/experiments/human-to-ai-minimal-pairs-20260828/` tested model/editorial interventions against three genuinely Human Joel baselines without resubmitting the baselines.
+
+The strongest result was interactional:
+
+- compact Somatic explanation: compression without explicit synthesis was Human; colloquial explicit relation was Human; compression + polished abstract cross-domain synthesis was AI `1.0` in two alternate realizations;
+- long research-conversational prose: taxonomy closure alone was Human and an abstract bridge alone was Human; together they became Mixed at AI `0.132098034`; colloquializing either component restored Human;
+- confessional adult/child-trust prose: explanatory completion, sentence equalization, and their combination all remained Human.
+
+This supports minimum normalization and necessary concrete sequencing. It does not support phrase blacklists or the claim that any one feature is universally AI-shaped.
+
 ## Revised interpretation
 
 1. Exact-boundary Human status is local; do not project it across larger compositions.
@@ -84,6 +107,8 @@ This is the production-relevant comparison: the minimum editorial touch did **no
 5. Architecture matters but does not substitute for natural thought route and source surface.
 6. The robust Human/high love-source + heart-loop ending remains closed.
 7. R08 is now the frozen adult-trust source-compression anchor. Remaining protected adult-function terminology should be added separately rather than used to rewrite R08.
-8. Brainspotting/EMDR-specific reparenting relationships remain best preserved in their later modality sections.
+8. R09's required functions must be redistributed or re-realized; do not rewrite the frozen R08 paragraph to absorb them.
+9. Abstract compression, explanatory closure, taxonomy closure, and polished transitions can be null alone yet detector-sensitive in combination. Diagnose the operation package and full boundary, not isolated tokens.
+10. Brainspotting/EMDR-specific reparenting relationships remain best preserved in their later modality sections.
 
 Editorial quality, fidelity, placement, and article function remain independent gates; Pangram is secondary evidence.
