@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r17-se-tail-r02-r03-api-20260828-a",
+  "created_at_utc": "2026-08-28",
+  "transport": "private fixed-batch executor / Pangram API",
+  "pangram_model": "4.0",
+  "spec_sha256": "87d39bb733e406d265c53112e59173625a7a752de68826614b925554cb6c2fdd",
+  "budget": {"maximum_new_paid_calls":2,"completed":0,"duplicate_calls":0},
+  "cells": [
+    {"id":"R17_SE_R02","section_id":"somatic-experiencing","sha256":"7e230bfbc2ecc1443dec9c754cbdab826807188d73b86501dede4ded5fac647f","status":"frozen_pending_dispatch"},
+    {"id":"R17_SE_R03","section_id":"somatic-experiencing","sha256":"bc35123050ffe8dca26f247fd0738fa2ea9db7c700a19970c9fe9961dfeab856","status":"frozen_pending_dispatch"}
+  ],
+  "blocked_repeats": [
+    {"id":"R17_SE_R01","sha256":"c0877d56f3dbed5315bbdfcee0d8eb06db8623d2977922d8b405babf74f83f24","reason":"completed Mixed; exact repeat prohibited"},
+    {"id":"R08","sha256":"6ceaa3becafb78bb75df043e5ff88cd41d46496ef93d9a0500b6759856c5811a","reason":"frozen Human boundary; no redundant control"}
+  ]
+}
