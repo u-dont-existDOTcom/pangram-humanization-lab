@@ -1,24 +1,27 @@
 # Reparenting written-register + heart-loop-only diagnostic — 2026-08-28 H
 
-Status: **UNMEASURED / localized function-separation diagnostic / non-authoritative**
+Status: **OWNER-REPORTED PANGRAM AI / HIGH CONFIDENCE — residual localized to fourth paragraph / non-authoritative**
 
 Purpose: determine whether the protected concrete heart↔solar-plexus reparenting practice can compose with the known-Human written-register backbone when the repeatedly failing somatic-preparation explanation is removed from the tested boundary.
 
-Frozen backbone: exact first three paragraphs from `REPARENTING-WRITTEN-REGISTER-20260827-C.md`, owner-reported Pangram **Human / medium confidence**. These paragraphs are unchanged.
+Frozen backbone: exact first three paragraphs from `REPARENTING-WRITTEN-REGISTER-20260827-C.md`, owner-reported Pangram **Human / medium confidence**. These paragraphs are unchanged and remain the known-Human working backbone.
 
 Durable prior evidence:
 - D: added full somatic-preparation inventory → fourth paragraph **AI / high confidence**;
 - E: conversational/practical realization of the same function → fourth paragraph **AI / high confidence**;
 - F: research/practical-register realization → fourth paragraph **AI / high confidence**;
-- G: structurally compressed realization with repeated modalities removed → fourth paragraph **AI / high confidence**.
+- G: structurally compressed realization with repeated modalities removed → fourth paragraph **AI / high confidence**;
+- H: removed the somatic-preparation explanation and added only an assistant realization of the concrete heart-loop practice → fourth paragraph **AI / high confidence**.
 
-Interpretation boundary: D–G show a repeated failure of the *somatic-preparation explanatory function as realized by the assistant*, not evidence that any individual term (`solar plexus`, `heart chakra`, `Buteyko`, etc.) is causal or detector-banned.
+Interpretation: H falsifies the narrower hypothesis that only the explanatory somatic-preparation function was responsible for the repeated residual. An assistant realization of the concrete heart-loop practice itself also produced a High-confidence AI residual when appended to the same Human backbone. This still does **not** establish that `solar plexus`, `heart chakra`, the loop concept, or any individual term is inherently detector-causal. The common factor across D–H is model realization of protected material for which no natural owner surface had yet been loaded into the experiment.
 
-Preservation basis: the current Somatic r15 reparenting ledger requires (27) once the body softens, the opening need not be used to seek pain; (28) pet/baby/friend/partner/anyone naturally loved as love source; (29) feel existing real love; and (30) move love heart → younger part around solar plexus → heart loop. H tests only these concrete practice units.
+New provenance recovery after H found direct owner-authored wording for the Heart–Solar Plexus Loop in Joel's earlier work. That wording is being preserved in `u-dont-existDOTcom/joel-articles` as owner source evidence and should be tested substantially/verbatim before any further assistant reconstruction of the loop.
 
-Diagnostic-only disposition of other protected units: EFT, Somatic Experiencing, trauma-sensitive yoga, shaking/qigong, non-forced longer exhales, gentle Buteyko-style breathing, the general somatic-preparation relationship, Brainspotting/EMDR timing, and deep-work safety are **not deleted or superseded by H**. They remain required article functions/placement work and are intentionally outside this detector diagnostic so the heart-loop function can be measured independently.
+Preservation basis: the current Somatic r15 reparenting ledger requires (27) once the body softens, the opening need not be used to seek pain; (28) pet/baby/friend/partner/anyone naturally loved as love source; (29) feel existing real love; and (30) move love heart → younger part around solar plexus → heart loop.
 
-Owner-reported Pangram result: **PENDING**.
+Diagnostic-only disposition of other protected units: EFT, Somatic Experiencing, trauma-sensitive yoga, shaking/qigong, non-forced longer exhales, gentle Buteyko-style breathing, the general somatic-preparation relationship, Brainspotting/EMDR timing, and deep-work safety are **not deleted or superseded by H**. They remain required article functions/placement work.
+
+Owner-reported Pangram result, 2026-08-28: **fourth paragraph AI / high confidence**.
 
 ---
 
