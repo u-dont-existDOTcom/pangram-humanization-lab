@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r15-remaining-natural-sections-api-20260828-a",
+  "status": "PASS",
+  "authority_impact": "none",
+  "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202",
+  "source_article": {
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "branch": "agent/somatic-humanization-r02-preservation-20260824",
+    "commit": "5b6eccc4cea11c7367f5372710026b0ad2ee59a9",
+    "preflight_path": "articles/somatic-therapies/experiments/R15-SECTIONS-R01-PRESERVATION-AND-PREFLIGHT-20260828.md"
+  },
+  "fixed_spec": {
+    "path": "experiments/somatic-r15-remaining-natural-sections-api-20260828-a.json",
+    "sha256": "7098b8d4047299b1e350b9b35a5cb3d6d0a72f2609a66653c56f90a059ea6e4f",
+    "audit_id": "somatic-r15-section-localization-20260827"
+  },
+  "authorized_delta": "No rewrite inside six exact r15 natural sections; append only the already routed borrowed-adulthood paragraph to Light CBT and the already routed deep-work readiness sentence to Sky/Vagal.",
+  "forbidden_deltas": [
+    "change any claim, actor, chronology, recommendation, evidence limit, safety rule, example, or owner-specific distinction inside the frozen inputs",
+    "add a five-Job or stage taxonomy",
+    "rewrite known-Human EFT/head-massage or Louka/Shaking Qigong anchors",
+    "repeat the ambiguous exact Shaking Qigong r01 reservation",
+    "change the registered article master, owner locks, links, native objects, or owner-final prose",
+    "treat a contextual detector window as permission to change protected owner prose"
+  ],
+  "variants": [
+    {
+      "id": "R15_SE_R01",
+      "section_id": "somatic-experiencing",
+      "path": "state/experiments/somatic-r15-remaining-natural-sections-20260828/inputs/R15-SECTIONS-R01-SOMATIC-EXPERIENCING-20260828.txt",
+      "sha256": "98feb44a2caf72aed740e1ea5bd00423eda0a2b5fa01a52eb46e4be4d34d4426",
+      "words": 123,
+      "source_realization": "exact r15 reader-visible prose after link-label normalization and native-object exclusion",
+      "unexplained_substantive_deltas": 0
+    },
+    {
+      "id": "R15_YOGA_R01",
+      "section_id": "trauma-sensitive-yoga",
+      "path": "state/experiments/somatic-r15-remaining-natural-sections-20260828/inputs/R15-SECTIONS-R01-YOGA-20260828.txt",
+      "sha256": "a9d23a0b9dd9873b54b57dc01dfcaf7420ed942f848b5bf76aca75e3a0d57bf5",
+      "words": 149,
+      "source_realization": "exact r15 reader-visible prose after link-label normalization and native-object exclusion",
+      "unexplained_substantive_deltas": 0
+    },
+    {
+      "id": "R15_GENTLE_SHAKING_R01",
+      "section_id": "gentle-shaking-tre",
+      "path": "state/experiments/somatic-r15-remaining-natural-sections-20260828/inputs/R15-SECTIONS-R01-GENTLE-SHAKING-20260828.txt",
+      "sha256": "47aac9bcc50eaecc16dced6f1761d21f4d0c306dc3f2d9e23c46dac24ef2737b",
+      "words": 110,
+      "source_realization": "exact r15 reader-visible prose after link-label normalization and native-object exclusion",
+      "unexplained_substantive_deltas": 0
+    },
+    {
+      "id": "R15_BRAINSPOTTING_R01",
+      "section_id": "brainspotting",
+      "path": "state/experiments/somatic-r15-remaining-natural-sections-20260828/inputs/R15-SECTIONS-R01-BRAINSPOTTING-20260828.txt",
+      "sha256": "c56a69962b6948a5dbc417ea038ca7e78307d532d453eef5ca9f28c63e96ede1",
+      "words": 392,
+      "source_realization": "exact r15 reader-visible prose after link-label normalization and native-object exclusion",
+      "unexplained_substantive_deltas": 0
+    },
+    {
+      "id": "R15_EMDR_R01",
+      "section_id": "emdr",
+      "path": "state/experiments/somatic-r15-remaining-natural-sections-20260828/inputs/R15-SECTIONS-R01-EMDR-20260828.txt",
+      "sha256": "fcca0b74d933aa5a0272e74ec3feb9b9b8ef6936e019bb591db237b6b2c5c3a5",
+      "words": 234,
+      "source_realization": "exact r15 reader-visible prose after link-label normalization and native-object exclusion",
+      "unexplained_substantive_deltas": 0
+    },
+    {
+      "id": "R15_LIGHT_CBT_R01",
+      "section_id": "light-cbt-narrative-integration",
+      "path": "state/experiments/somatic-r15-remaining-natural-sections-20260828/inputs/R15-SECTIONS-R01-LIGHT-CBT-20260828.txt",
+      "sha256": "144dab2fc78f6ff3128c20fdd2503cff8212cb4f799b7f9a5280eb22a0c447a0",
+      "words": 138,
+      "source_realization": "exact r15 prose plus the routed owner-controlled borrowed-adulthood paragraph",
+      "unexplained_substantive_deltas": 0
+    },
+    {
+      "id": "R15_OUTCOME_R01",
+      "section_id": "outcome-checking",
+      "path": "state/experiments/somatic-r15-remaining-natural-sections-20260828/inputs/R15-SECTIONS-R01-OUTCOME-20260828.txt",
+      "sha256": "15671184858926e261b24ef3ff38f35ecef07d939e00eda595e729699ba68b99",
+      "words": 448,
+      "source_realization": "exact r15 reader-visible prose after link-label normalization and native-object exclusion",
+      "unexplained_substantive_deltas": 0
+    },
+    {
+      "id": "R15_SKY_VAGAL_R01",
+      "section_id": "sky-hypnosis-vagal-blitz",
+      "path": "state/experiments/somatic-r15-remaining-natural-sections-20260828/inputs/R15-SECTIONS-R01-SKY-VAGAL-20260828.txt",
+      "sha256": "6709b565113070f6c8e0a4d4a2ef60b1c12160fb8b5a9025fc2377ed8f78e48a",
+      "words": 210,
+      "source_realization": "exact r15 prose plus the routed deep-work stay/stop/return readiness sentence",
+      "unexplained_substantive_deltas": 0
+    }
+  ],
+  "forward_traceability": "PASS",
+  "reverse_traceability": "PASS",
+  "unexplained_substantive_deltas": 0,
+  "known_human_controls_resubmitted": 0,
+  "blocked_or_ambiguous_hashes_resubmitted": 0
+}
