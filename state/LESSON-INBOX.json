@@ -4198,6 +4198,65 @@
           "section_id": "sky-hypnosis-vagal-blitz"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-r15-section-localization-20260827",
+      "created_at_utc": "2026-08-28T23:04:16.268727+00:00",
+      "experiment_id": "somatic-r17-rule-learning-r01-api-20260828-a",
+      "id": "Q-5e8329b7eebcec3e",
+      "sections": [
+        "somatic-experiencing",
+        "trauma-sensitive-yoga",
+        "brainspotting",
+        "emdr",
+        "sky-hypnosis-vagal-blitz"
+      ],
+      "source_path": "state/experiments/somatic-r17-rule-learning-r01-api-20260828-a-results.json",
+      "source_ref": "cb076d861998fc7359a240a343e207df3272d76a",
+      "source_sha256": "6132ec68ac7f81b4380cc32c9960936e964acab0f17c1223a653a0d386b23708",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.4504685401916504,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.5495314598083496,
+          "id": "R17_SE_R01",
+          "prediction_short": "Mixed",
+          "section_id": "somatic-experiencing"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R17_YOGA_R01",
+          "prediction_short": "AI",
+          "section_id": "trauma-sensitive-yoga"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R17_BRAINSPOTTING_R01",
+          "prediction_short": "AI",
+          "section_id": "brainspotting"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R17_EMDR_R01",
+          "prediction_short": "AI",
+          "section_id": "emdr"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R17_SKY_VAGAL_R01",
+          "prediction_short": "AI",
+          "section_id": "sky-hypnosis-vagal-blitz"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
