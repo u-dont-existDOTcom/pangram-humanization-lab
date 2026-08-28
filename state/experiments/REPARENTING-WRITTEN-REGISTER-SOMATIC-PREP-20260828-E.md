@@ -1,6 +1,6 @@
 # Reparenting written-register + revised somatic preparation — 2026-08-28 E
 
-Status: **UNMEASURED / production-oriented local realization experiment**
+Status: **OWNER-REPORTED PANGRAM AI / HIGH CONFIDENCE; residual localized to added fourth paragraph / non-authoritative**
 
 Purpose: replace only the AI/high somatic-preparation paragraph from D while preserving the exact Human/medium written-register C backbone byte-for-byte.
 
@@ -19,9 +19,9 @@ Authorized content preserved in the replacement paragraph:
 - heart-chakra love becoming easier to access;
 - use before or during reparenting.
 
-Editorial repair: remove the closed catalogue -> mechanism -> placement cadence. Use a more natural distinction between several possible body practices and the actual thing Joel is trying to change physically. No new anecdote, claim, Brainspotting/EMDR material, or heart-loop step is added.
+Editorial repair attempted: remove the closed catalogue -> mechanism -> placement cadence. Use a more natural distinction between several possible body practices and the actual thing Joel is trying to change physically. No new anecdote, claim, Brainspotting/EMDR material, or heart-loop step was added.
 
-Owner-reported Pangram result: **PENDING**.
+Owner-reported Pangram result, 2026-08-28: **AI / high confidence** on the complete boundary. Joel further reported that Pangram localized the AI residual specifically to the **last / fourth paragraph**. Therefore the exact first three paragraphs remain the frozen Human/medium C backbone; do not reopen them for detector reasons. Future repair scope is the fourth paragraph only.
 
 ---
 
