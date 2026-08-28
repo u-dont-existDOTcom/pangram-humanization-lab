@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r15-remaining-natural-sections-api-20260828-a_R15_EMDR_R01",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "EMDR\nEMDR feels more like: there it is, that is the memory. The recall procedure is clearer and the target is clearer. Brainspotting is easier to feel your way into without knowing exactly what you are looking for. That is the main difference in my mind.\nAn accident, assault memory, military trauma, distinct flashback, or specific trigger network is the kind of thing I naturally think of for EMDR. It can be highly effective. If somebody is stable and there is one clear event, I would not make them complete months of preliminary body work just because a sequence looks tidy on paper.\nI am more cautious when the trauma is diffuse, developmental, mainly bodily or pre-verbal, relational, or the nervous system is still unstable. There I want at least some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit better earlier.\nAfter EMDR I want the rest of the day to be almost boring. Walk. Eat. Hydrate. Sleep early if you are tired. Do restorative yoga if that feels good. Journal only if it grounds you. Maybe use a little EFT if there is still activation. I would not casually stack Brainspotting, EMDR, intense shaking, and deep yin on the same day unless I already knew my system handled that much and I had skilled support.\nSometimes the useful thing after processing is simply to stop processing.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9999834299087524,
+        "confidence": "High",
+        "end_index": 1353,
+        "humanizer_score": 0.44152897596359253,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "EMDR\nEMDR feels more like: there it is, that is the memory. The recall procedure is clearer and the target is clearer. Brainspotting is easier to feel your way into without knowing exactly what you are looking for. That is the main difference in my mind.\nAn accident, assault memory, military trauma, distinct flashback, or specific trigger network is the kind of thing I naturally think of for EMDR. It can be highly effective. If somebody is stable and there is one clear event, I would not make them complete months of preliminary body work just because a sequence looks tidy on paper.\nI am more cautious when the trauma is diffuse, developmental, mainly bodily or pre-verbal, relational, or the nervous system is still unstable. There I want at least some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit better earlier.\nAfter EMDR I want the rest of the day to be almost boring. Walk. Eat. Hydrate. Sleep early if you are tired. Do restorative yoga if that feels good. Journal only if it grounds you. Maybe use a little EFT if there is still activation. I would not casually stack Brainspotting, EMDR, intense shaking, and deep yin on the same day unless I already knew my system handled that much and I had skilled support.\nSometimes the useful thing after processing is simply to stop processing.",
+        "token_length": 293,
+        "word_count": 235
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "d49b2a8b-4e88-4e9b-98d7-24e95f78d32f",
   "text": "EMDR\n\nEMDR feels more like: there it is, that is the memory. The recall procedure is clearer and the target is clearer. Brainspotting is easier to feel your way into without knowing exactly what you are looking for. That is the main difference in my mind.\n\nAn accident, assault memory, military trauma, distinct flashback, or specific trigger network is the kind of thing I naturally think of for EMDR. It can be highly effective. If somebody is stable and there is one clear event, I would not make them complete months of preliminary body work just because a sequence looks tidy on paper.\n\nI am more cautious when the trauma is diffuse, developmental, mainly bodily or pre-verbal, relational, or the nervous system is still unstable. There I want at least some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit better earlier.\n\nAfter EMDR I want the rest of the day to be almost boring. Walk. Eat. Hydrate. Sleep early if you are tired. Do restorative yoga if that feels good. Journal only if it grounds you. Maybe use a little EFT if there is still activation. I would not casually stack Brainspotting, EMDR, intense shaking, and deep yin on the same day unless I already knew my system handled that much and I had skilled support.\n\nSometimes the useful thing after processing is simply to stop processing.\n",
   "text_sha256": "fcca0b74d933aa5a0272e74ec3feb9b9b8ef6936e019bb591db237b6b2c5c3a5",
-  "updated_utc": "2026-08-28T22:12:17.495136+00:00"
+  "updated_utc": "2026-08-28T22:12:24.548101+00:00"
 }
