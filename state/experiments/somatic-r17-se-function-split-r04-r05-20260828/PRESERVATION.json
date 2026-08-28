@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r17-se-function-split-r04-r05-api-20260828-a",
+  "status": "PASS",
+  "authority_impact": "none",
+  "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202",
+  "source_article": {"repository":"u-dont-existDOTcom/joel-articles","branch":"experiment/somatic-r17-100-human-gate-20260828","commit":"b0736ac","preservation_path":"articles/somatic-therapies/experiments/R17-SE-R04-R05-PRESERVATION-20260828.md"},
+  "fixed_spec": {"path":"experiments/somatic-r17-se-function-split-r04-r05-api-20260828-a.json","sha256":"87124e644dd3f402215d0ab7e80c6d22851744de5a4264bca93ca03c357843f6","audit_id":"somatic-r15-section-localization-20260827"},
+  "variants": [
+    {"id":"R17_SE_R04","section_id":"somatic-experiencing","sha256":"ef7104bd1b64f5568d83ce0073131d0f675ee98b04fb42d44c52426f7fee137b","words":187,"cluster":"method-only","unexplained_substantive_deltas":0},
+    {"id":"R17_SE_R05","section_id":"somatic-experiencing","sha256":"4bd4e800b42f94712212b37cf479d0786355b33b5b9a7f45b361fc358c2053bb","words":181,"cluster":"timing-only","unexplained_substantive_deltas":0}
+  ],
+  "forward_traceability": "PASS",
+  "reverse_traceability": "PASS",
+  "unexplained_substantive_deltas": 0,
+  "known_human_controls_resubmitted": 0,
+  "blocked_or_ambiguous_hashes_resubmitted": 0
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r17-se-function-split-r04-r05-api-20260828-a",
+  "created_at_utc": "2026-08-28",
+  "transport": "private fixed-batch executor / Pangram API",
+  "pangram_model": "4.0",
+  "spec_sha256": "87124e644dd3f402215d0ab7e80c6d22851744de5a4264bca93ca03c357843f6",
+  "budget": {"maximum_new_paid_calls":2,"completed":0,"duplicate_calls":0},
+  "cells": [
+    {"id":"R17_SE_R04","section_id":"somatic-experiencing","sha256":"ef7104bd1b64f5568d83ce0073131d0f675ee98b04fb42d44c52426f7fee137b","status":"frozen_pending_dispatch"},
+    {"id":"R17_SE_R05","section_id":"somatic-experiencing","sha256":"4bd4e800b42f94712212b37cf479d0786355b33b5b9a7f45b361fc358c2053bb","status":"frozen_pending_dispatch"}
+  ],
+  "blocked_repeats": [
+    {"id":"R17_SE_R01","sha256":"c0877d56f3dbed5315bbdfcee0d8eb06db8623d2977922d8b405babf74f83f24","reason":"completed Mixed"},
+    {"id":"R17_SE_R02","sha256":"7e230bfbc2ecc1443dec9c754cbdab826807188d73b86501dede4ded5fac647f","reason":"completed Mixed"},
+    {"id":"R17_SE_R03","sha256":"bc35123050ffe8dca26f247fd0738fa2ea9db7c700a19970c9fe9961dfeab856","reason":"completed AI"}
+  ]
+}
