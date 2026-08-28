@@ -16,6 +16,19 @@ Research state only. These are contextual findings and process constraints, not 
 - For training/research that is meant to test model generation ability, first recover the thought and generate a **fresh realization without borrowing Joel’s syntax**. Then compare against owner prose. Copying the human realization can solve the article while teaching almost nothing about generation capability.
 - Socratic correction can be valuable when it exposes a systematic blind spot. The durable value comes from extracting afterward: what the model guessed, why it was wrong, what reality check would have caught it, and the correct distinction.
 
+## Do not spend detector work reconfirming untouched human prose
+
+Owner correction, 2026-08-28: in Joel's observed Pangram history, untouched human prose has not been mislabeled AI except in the known technical/academic-paper failure class. Do **not** ask Joel to test, or spend a paid call on, untouched natural owner prose merely to reconfirm that Pangram recognizes it as Human.
+
+The useful production question is whether **model/editorial intervention introduced detector-AI signal**. Therefore:
+- treat securely provenanced natural owner prose as the Human source baseline for ordinary/nontechnical Joel-byline work without buying a redundant raw-owner control;
+- test the first materially model-touched candidate when the result will change the edit;
+- raw-owner detector controls are justified only when the text is in the known technical/academic-paper exception class, provenance/authorship is genuinely uncertain, or there is concrete conflicting detector evidence that cannot be resolved otherwise;
+- do not generalize the technical/academic exception to ordinary essays, memoir, relationship writing, spiritual writing, therapy writing, or conversational owner source without evidence;
+- a raw-owner control already run may be retained as evidence, but do not turn it into a recurring production gate.
+
+This rule does not mean Pangram proves authorship. It is an empirical workflow rule for Joel's corpus: avoid tests that have no expected information value.
+
 ## Pangram findings from this section
 
 - The pronoun instruction `however they fit your life` was detector-sensitive in one opening; `around as you please` and omission did not reproduce the same Pangram regression. Treat this as realization/boundary evidence, not a banned phrase.
