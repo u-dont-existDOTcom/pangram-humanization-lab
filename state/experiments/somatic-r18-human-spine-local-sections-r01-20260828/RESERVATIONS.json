@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r18-human-spine-local-sections-r01-api-20260828-a",
+  "created_at_utc": "2026-08-28",
+  "transport": "private fixed-batch executor / Pangram API",
+  "pangram_model": "4.0",
+  "spec_sha256": "d944ef9bf469279e315d340eb8db45f5772c5fdcb1cbb8e35bbc8dacd148bfc2",
+  "budget": {"maximum_new_paid_calls":6,"completed":0,"duplicate_calls":0},
+  "cells": [
+    {"id":"R18_YOGA_R01","section_id":"trauma-sensitive-yoga","sha256":"af6c954e78f17073535c02679dd0e5ebaa022728fc098fbe8fb8a4d2efc134fe","status":"frozen_pending_dispatch"},
+    {"id":"R18_GENTLE_SHAKING_R01","section_id":"gentle-shaking-tre","sha256":"167da8f9fc7d3bcb6f13660592b8073e0592d48ed45d7a189693da2f8eb27734","status":"frozen_pending_dispatch"},
+    {"id":"R18_BRAINSPOTTING_R01","section_id":"brainspotting","sha256":"d60b7d610a55a542ab63bc58167c50beff3d3667d5695e32108c7d77aa2a3062","status":"frozen_pending_dispatch"},
+    {"id":"R18_EMDR_R01","section_id":"emdr","sha256":"24291c4c1162117cd4859a47ffba4254edcb47ae689d6b159524c1e653a5dad6","status":"frozen_pending_dispatch"},
+    {"id":"R18_LIGHT_CBT_R01","section_id":"light-cbt-narrative-integration","sha256":"f9200932fcfd62364872fcce7a9439dfd6fa6400b8e1cdc3340c9e94a8acac80","status":"frozen_pending_dispatch"},
+    {"id":"R18_SKY_VAGAL_R01","section_id":"sky-hypnosis-vagal-blitz","sha256":"9e89dc7da058ecd8deef7e4986166186cda7de752040f3faa6ea4b1ff0143e76","status":"frozen_pending_dispatch"}
+  ],
+  "blocked_repeats": [
+    {"section_id":"trauma-sensitive-yoga","sha256":"a9d23a0b9dd9873b54b57dc01dfcaf7420ed942f848b5bf76aca75e3a0d57bf5","reason":"completed AI"},
+    {"section_id":"trauma-sensitive-yoga","sha256":"e4b1cbe28bc700b06514a2088166e663eb3f9baa6aa5e2f927b710fcf3038787","reason":"completed AI"},
+    {"section_id":"trauma-sensitive-yoga","sha256":"2143b7ee964a282a9c3690665d4797d74056552181691d10b5e133947107338a","reason":"completed AI"},
+    {"section_id":"gentle-shaking-tre","sha256":"47aac9bcc50eaecc16dced6f1761d21f4d0c306dc3f2d9e23c46dac24ef2737b","reason":"completed AI"},
+    {"section_id":"brainspotting","sha256":"c56a69962b6948a5dbc417ea038ca7e78307d532d453eef5ca9f28c63e96ede1","reason":"completed AI"},
+    {"section_id":"brainspotting","sha256":"60843bb5c71f0eaa1dabc3dff502dc2b2e11c952bf3c11f8cfd86d00abeb038b","reason":"completed AI"},
+    {"section_id":"emdr","sha256":"fcca0b74d933aa5a0272e74ec3feb9b9b8ef6936e019bb591db237b6b2c5c3a5","reason":"completed AI"},
+    {"section_id":"emdr","sha256":"54420c1b8a9b9ea543c5706019d494a07818f17cc7ca4730c75e9caa58d480ba","reason":"completed AI"},
+    {"section_id":"emdr","sha256":"5c987c73159adef4fe14d36e36fe0d368cd248f987ef71176b1a3d24a84a5f54","reason":"completed AI"},
+    {"section_id":"light-cbt-narrative-integration","sha256":"144dab2fc78f6ff3128c20fdd2503cff8212cb4f799b7f9a5280eb22a0c447a0","reason":"completed AI"},
+    {"section_id":"sky-hypnosis-vagal-blitz","sha256":"6709b565113070f6c8e0a4d4a2ef60b1c12160fb8b5a9025fc2377ed8f78e48a","reason":"completed AI"},
+    {"section_id":"sky-hypnosis-vagal-blitz","sha256":"815e7332e4f609f5689e0e8a6214515c326ed7fb90465060519a92fef0335500","reason":"completed AI"},
+    {"section_id":"sky-hypnosis-vagal-blitz","sha256":"28799f7fc15746abeadbe40b476f4b96bbd366730b3952878de5f90b802f8f42","reason":"completed AI"}
+  ]
+}

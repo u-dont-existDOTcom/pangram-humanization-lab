@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r18-human-spine-local-sections-r01-api-20260828-a",
+  "status": "PASS",
+  "authority_impact": "none",
+  "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202",
+  "source_article": {"repository":"u-dont-existDOTcom/joel-articles","branch":"experiment/somatic-r17-100-human-gate-20260828","commit":"d781fc9","whole_boundary_path":"articles/somatic-therapies/experiments/R18-WHOLE-ARTICLE-PANGRAM-BOUNDARY-20260828.txt","whole_boundary_sha256":"0a84d27ef16d5812649c717124de5ebde6412f1bfd26170229bcf3b2404b0c0a"},
+  "fixed_spec": {"path":"experiments/somatic-r18-human-spine-local-sections-r01-api-20260828-a.json","sha256":"d944ef9bf469279e315d340eb8db45f5772c5fdcb1cbb8e35bbc8dacd148bfc2","audit_id":"somatic-r15-section-localization-20260827"},
+  "variants": [
+    {"id":"R18_YOGA_R01","section_id":"trauma-sensitive-yoga","sha256":"af6c954e78f17073535c02679dd0e5ebaa022728fc098fbe8fb8a4d2efc134fe","words":119,"exact_whole_substring":true,"unexplained_substantive_deltas":0},
+    {"id":"R18_GENTLE_SHAKING_R01","section_id":"gentle-shaking-tre","sha256":"167da8f9fc7d3bcb6f13660592b8073e0592d48ed45d7a189693da2f8eb27734","words":86,"exact_whole_substring":true,"unexplained_substantive_deltas":0},
+    {"id":"R18_BRAINSPOTTING_R01","section_id":"brainspotting","sha256":"d60b7d610a55a542ab63bc58167c50beff3d3667d5695e32108c7d77aa2a3062","words":301,"exact_whole_substring":true,"unexplained_substantive_deltas":0},
+    {"id":"R18_EMDR_R01","section_id":"emdr","sha256":"24291c4c1162117cd4859a47ffba4254edcb47ae689d6b159524c1e653a5dad6","words":251,"exact_whole_substring":true,"unexplained_substantive_deltas":0},
+    {"id":"R18_LIGHT_CBT_R01","section_id":"light-cbt-narrative-integration","sha256":"f9200932fcfd62364872fcce7a9439dfd6fa6400b8e1cdc3340c9e94a8acac80","words":90,"exact_whole_substring":true,"unexplained_substantive_deltas":0},
+    {"id":"R18_SKY_VAGAL_R01","section_id":"sky-hypnosis-vagal-blitz","sha256":"9e89dc7da058ecd8deef7e4986166186cda7de752040f3faa6ea4b1ff0143e76","words":187,"exact_whole_substring":true,"unexplained_substantive_deltas":0}
+  ],
+  "forward_traceability": "PASS",
+  "reverse_traceability": "PASS",
+  "unexplained_substantive_deltas": 0,
+  "known_human_controls_resubmitted": 0,
+  "blocked_or_ambiguous_hashes_resubmitted": 0
+}
