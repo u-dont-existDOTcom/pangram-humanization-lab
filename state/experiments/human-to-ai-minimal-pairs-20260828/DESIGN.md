@@ -1,6 +1,6 @@
 # Human→AI minimal-pair packet — 2026-08-28
 
-Status: **FROZEN STAGE 1 / six model-touched candidates / baselines not resubmitted**
+Status: **FROZEN STAGES 1–2 / twelve model-touched candidates / baselines not resubmitted**
 
 Purpose: start from genuinely human Joel prose and change one primary editorial/model feature at a time to learn which interventions can introduce Pangram-AI signal. This is detector research, not proposed article prose and not article authority.
 
@@ -69,3 +69,40 @@ Stage 2 may use up to nine further calls, but only as follows:
 5. Stop when the effect is distributed/interactive enough that another call would only create phrase folklore.
 
 Exact inputs live under `state/experiments/human-to-ai-minimal-pairs-20260828/inputs/`.
+
+## Stage-1 results
+
+All six results were submitted through the authenticated Pangram GUI in one headless Brave session with tab reuse, durable pre-click reservations, exact SHA gates, and exact UTF-8 History transport binding. Pangram version: 4.0.
+
+| ID | Result | Structured score | Interpretation |
+|---|---|---:|---|
+| A1 | Human | AI `0.0`, Human `1.0` | Explanatory completion alone was insufficient on the confessional baseline. |
+| A2 | Human | AI `0.0`, Human `1.0` | Sentence equalization alone was insufficient on the confessional baseline. |
+| B1 | Human | AI `0.0`, Human `1.0` | Taxonomy/list closure alone was insufficient on the research-conversational baseline. |
+| B2 | Human | AI `0.0`, Human `1.0` | One abstract bridge alone was insufficient on the long research-conversational baseline. |
+| C1 | AI | AI `1.0`, Human `0.0` | The abstraction/compression package crossed the detector boundary. Confidence was limited by short text. |
+| C2 | Mixed | AI `0.3076923192`, Human `0.6923077106` | Replacing only the final paragraph lead-in with a polished cross-domain transition introduced later-part AI signal. Confidence was limited by short text. |
+
+Read-only localization could not re-bind Pangram's History rows after the completed receipts had already been stored. No repeat was attempted: the result-page capture itself reports that C2's AI-generated content appears in the later part, while C1 was classified as entirely AI.
+
+## Stage-2 decomposition and interaction cells
+
+| ID | Comparison | Primary question | Exact SHA-256 / words | Exact delta |
+|---|---|---|---|---|
+| C3 | C0 → C3 | Is one-paragraph packing sufficient? | `b3f7120403408aa7d9db8f0d8f7fc92f8d449df63da827332e5ff80f2e8dbbfa` / 108 | Remove the two paragraph breaks; all words and punctuation otherwise identical. |
+| C4 | C0 → C4, counterexample to C2 | Does explicit cross-domain relation generalize beyond C2's polished wording? | `707e14ba5942801cf985240ad64df1dc5c01967a0395b5800363f0845b09d009` / 111 | Replace only `In inner-child therapy,` with the more colloquial `This also happens in inner-child therapy:`. |
+| C5 | C1 → C5 | Is C1's compression package sufficient without explicit cross-domain synthesis? | `5a00ed0537636acac1cd3c13b5e0e32eb398b9844006456c13458b8d8612697d` / 87 | Replace only `The same limit appears in inner-child therapy:` with baseline lead-in `In inner-child therapy,`. |
+| C6 | C0 → C6 | Is compression of the explanatory middle paragraph sufficient while boundary paragraphs stay Human-baseline exact? | `d3453f1a84f937ec6eae2cedc00448e65acc527b66e42b4fe2569467b6204d74` / 92 | Replace only paragraph 2 with its C1 compressed counterpart; retain paragraph breaks and baseline paragraphs 1 and 3. |
+| A3 | A2 + A1 sentence | Do two individually null interventions interact? | `d4cbb9c52499af0c05ac639a6c58aae38ef2c44351a896f277948e7ff34b8c31` / 144 | Append A1's exact explanatory-completion sentence to A2; no other change. |
+| B3 | B2 + B1 sentence | Do two individually null interventions interact? | `82a3b66f9cf4f2f4162fbffa7c8ffaaa89a78dc61c9f8a4600c0f2c19b1e1311` / 305 | Add B1's exact taxonomy sentence to B2; no other change. |
+
+### Stage-2 preservation receipt
+
+- C3 changes layout only. Claims, wording, punctuation, and attributions are unchanged. Unexplained substantive deltas: 0.
+- C4 makes the cross-domain relationship explicit in a less polished realization; all source claims and attributions are otherwise byte-identical. Unexplained substantive deltas: 0.
+- C5 keeps every C1 claim and attribution and removes only its explicit synthesis phrase. Unexplained substantive deltas: 0.
+- C6 retains C0 paragraphs 1 and 3 exactly; paragraph 2 preserves overwhelm, gradual approach, Pema Chodron/Buddhist-nun attribution and feather touch, Peter Levine/founder attribution, Somatic Experiencing, edge work, and pendulation. Unexplained substantive deltas: 0.
+- A3 is the exact union of the already-receipted A1 and A2 deltas. Unexplained substantive deltas: 0.
+- B3 is the exact union of the already-receipted B1 and B2 deltas. Unexplained substantive deltas: 0.
+
+Forward traceability: **PASS**. Reverse traceability: **PASS**. Article authority impact: **none**. Detector eligibility: **PASS**.
