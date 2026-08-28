@@ -1,6 +1,6 @@
 # Reparenting written-register + exact owner heart-loop diagnostic — 2026-08-28 I
 
-Status: **DETECTOR-ELIGIBLE / exact-owner-realization diagnostic / non-authoritative**
+Status: **OWNER-REPORTED PANGRAM HUMAN / MEDIUM CONFIDENCE — exact-owner-realization positive control / non-authoritative**
 
 Purpose: test whether the known-Human written-register reparenting backbone remains Human when the added heart↔solar-plexus practice is not model-realized at all, but instead uses Joel Rosenblum's recovered exact owner-authored wording.
 
@@ -42,15 +42,16 @@ Those remain required article functions/placement work outside this diagnostic.
 Forward traceability for the tested owner-loop scope: **PASS**.
 Reverse traceability: **PASS**; every added substantive statement is owner-authored source language.
 Unexplained substantive deltas: **0**.
-Detector eligibility: **PASS** for this controlled exact-owner diagnostic.
 
-## Prior comparison
+## Paired detector result
 
-D–G: assistant realizations of somatic-preparation function → added fourth paragraph High-confidence AI.
-H: assistant realization of concrete heart-loop function only → added fourth paragraph High-confidence AI.
-I changes the realization provenance itself: the added practice paragraph is exact owner-authored language.
+Prior H used the same exact Human C backbone but an assistant realization of the concrete heart-loop function. Joel reported the H fourth paragraph **AI / high confidence**.
 
-Owner-reported Pangram result: **PENDING**.
+I changes the realization provenance itself: the added practice paragraph is exact owner-authored language. Joel reported I **Human / medium confidence**.
+
+This is strong local paired evidence that the protected heart-loop concept/topic was not sufficient to cause the residual in this composition. The assistant realization carried the High-confidence AI signal while the exact owner realization did not. Do not promote this to a universal detector rule or claim Pangram proves authorship; use it as production evidence to restore actual owner realizations before reconstructing them.
+
+Owner-reported Pangram result, 2026-08-28: **Human / medium confidence**.
 
 ---
 
