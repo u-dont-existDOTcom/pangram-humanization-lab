@@ -74,6 +74,42 @@
       },
       "section_id": "emdr",
       "budget_scope": "section"
+    },
+    {
+      "id": "R17_SKY_VAGAL_R02",
+      "measurement_key": "somatic-r17-corpus-skeleton-r01-api-20260828-a_R17_SKY_VAGAL_R02",
+      "text": "Sky Hypnosis and Vagal Blitz\n\nWhether Sky Hypnosis or Vagal Blitz is useful can depend a lot on how well you can stay present and come back afterward. Keep in mind that these are deliberately intense state-shifters, not ordinary regulation practices, and they are not prerequisites for healing. If somebody is stable they may still find one useful before doing the therapies above. Sometimes the unusual practice really is the thing that helps, but I still need to be able to stop voluntarily.\n\nSky Hypnosis can make you lightheaded. Vagal Blitz has to be done lying down and has cardiovascular and mental-health cautions. I would read the complete guide, begin with the least intense version that gives a useful shift, and stop if balance, orientation, or recovery becomes unreliable. Fainting and loss of consciousness are not the goal.\n\nOne obvious question is what happens later. When I remember the event, am I actually less restimulated, and am I any better at pain, boundaries, conflict, and ordinary life? A huge release, bliss, or an altered state does not answer that. If I am mainly using the practice to avoid grief, conflict, practical problems, or deeper relational healing, the extraordinary state is not doing what I needed it to do.\n",
+      "text_sha256": "28799f7fc15746abeadbe40b476f4b96bbd366730b3952878de5f90b802f8f42",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Sky Hypnosis and Vagal Blitz\nWhether Sky Hypnosis or Vagal Blitz is useful can depend a lot on how well you can stay present and come back afterward. Keep in mind that these are deliberately intense state-shifters, not ordinary regulation practices, and they are not prerequisites for healing. If somebody is stable they may still find one useful before doing the therapies above. Sometimes the unusual practice really is the thing that helps, but I still need to be able to stop voluntarily.\nSky Hypnosis can make you lightheaded. Vagal Blitz has to be done lying down and has cardiovascular and mental-health cautions. I would read the complete guide, begin with the least intense version that gives a useful shift, and stop if balance, orientation, or recovery becomes unreliable. Fainting and loss of consciousness are not the goal.\nOne obvious question is what happens later. When I remember the event, am I actually less restimulated, and am I any better at pain, boundaries, conflict, and ordinary life? A huge release, bliss, or an altered state does not answer that. If I am mainly using the practice to avoid grief, conflict, practical problems, or deeper relational healing, the extraordinary state is not doing what I needed it to do.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Sky Hypnosis and Vagal Blitz\nWhether Sky Hypnosis or Vagal Blitz is useful can depend a lot on how well you can stay present and come back afterward. Keep in mind that these are deliberately intense state-shifters, not ordinary regulation practices, and they are not prerequisites for healing. If somebody is stable they may still find one useful before doing the therapies above. Sometimes the unusual practice really is the thing that helps, but I still need to be able to stop voluntarily.\nSky Hypnosis can make you lightheaded. Vagal Blitz has to be done lying down and has cardiovascular and mental-health cautions. I would read the complete guide, begin with the least intense version that gives a useful shift, and stop if balance, orientation, or recovery becomes unreliable. Fainting and loss of consciousness are not the goal.\nOne obvious question is what happens later. When I remember the event, am I actually less restimulated, and am I any better at pain, boundaries, conflict, and ordinary life? A huge release, bliss, or an altered state does not answer that. If I am mainly using the practice to avoid grief, conflict, practical problems, or deeper relational healing, the extraordinary state is not doing what I needed it to do.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9343002438545227,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1246,
+            "word_count": 210,
+            "token_length": 260,
+            "is_humanized": false,
+            "humanizer_score": 0.6697744727134705
+          }
+        ]
+      },
+      "section_id": "sky-hypnosis-vagal-blitz",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -196,10 +232,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.1,
-        "estimated_credits": 2,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
         "model": "pangram-4",
-        "paid_api_calls": 2,
+        "paid_api_calls": 3,
         "pending_resumes": 0,
         "section_id": "sky-hypnosis-vagal-blitz",
         "version": "4.0",
