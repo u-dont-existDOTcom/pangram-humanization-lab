@@ -158,6 +158,66 @@
       },
       "section_id": "gentle-shaking-tre",
       "budget_scope": "section"
+    },
+    {
+      "id": "R19_SKY_SAFETY",
+      "measurement_key": "somatic-r19-controlled-function-splits-r01-api-20260828-a_R19_SKY_SAFETY",
+      "text": "Introduction\n\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\n\nSomatic Experiencing\n\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\n\nSky Hypnosis and Vagal Blitz\n\nDeep memory work, immersive child dialogue, deep hypnosis, and suggestive exploration are things I save for when I can stay present, stop voluntarily, and come back afterward.\n\nSky Hypnosis and Vagal Blitz are intense state-shifters rather than ordinary regulation practices. They are not prerequisites for healing, although a stable person may still find one useful before doing the therapies above.\n\nSky Hypnosis can make you lightheaded. Vagal Blitz is a lying-down-only practice with cardiovascular and mental-health cautions. Read the complete guide, begin with the least intense version that gives a useful shift, and stop if balance, orientation, or recovery becomes unreliable. Fainting and loss of consciousness are not the goal.\n",
+      "text_sha256": "174a669e550a6dd72049bcbf6532953d318835c8fe4552ae8a6ef182b46d960d",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nSky Hypnosis and Vagal Blitz\nDeep memory work, immersive child dialogue, deep hypnosis, and suggestive exploration are things I save for when I can stay present, stop voluntarily, and come back afterward.\nSky Hypnosis and Vagal Blitz are intense state-shifters rather than ordinary regulation practices. They are not prerequisites for healing, although a stable person may still find one useful before doing the therapies above.\nSky Hypnosis can make you lightheaded. Vagal Blitz is a lying-down-only practice with cardiovascular and mental-health cautions. Read the complete guide, begin with the least intense version that gives a useful shift, and stop if balance, orientation, or recovery becomes unreliable. Fainting and loss of consciousness are not the goal.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.6635160446166992,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.3364839255809784,
+        "headline": "AI Detected",
+        "num_ai_segments": 2,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6760270595550537,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 287,
+            "word_count": 48,
+            "token_length": 56,
+            "is_humanized": false,
+            "humanizer_score": 0.8344582915306091
+          },
+          {
+            "text": " As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.4085860252380371,
+            "confidence": "High",
+            "start_index": 287,
+            "end_index": 821,
+            "word_count": 93,
+            "token_length": 120,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          },
+          {
+            "text": "\nSky Hypnosis and Vagal Blitz\nDeep memory work, immersive child dialogue, deep hypnosis, and suggestive exploration are things I save for when I can stay present, stop voluntarily, and come back afterward.\nSky Hypnosis and Vagal Blitz are intense state-shifters rather than ordinary regulation practices. They are not prerequisites for healing, although a stable person may still find one useful before doing the therapies above.\nSky Hypnosis can make you lightheaded. Vagal Blitz is a lying-down-only practice with cardiovascular and mental-health cautions. Read the complete guide, begin with the least intense version that gives a useful shift, and stop if balance, orientation, or recovery becomes unreliable. Fainting and loss of consciousness are not the goal.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.8958752155303955,
+            "confidence": "High",
+            "start_index": 821,
+            "end_index": 1587,
+            "word_count": 119,
+            "token_length": 156,
+            "is_humanized": false,
+            "humanizer_score": 0.8344582915306091
+          }
+        ]
+      },
+      "section_id": "sky-hypnosis-vagal-blitz",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -280,10 +340,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.2,
-        "estimated_credits": 4,
+        "estimated_cost_usd": 0.25,
+        "estimated_credits": 5,
         "model": "pangram-4",
-        "paid_api_calls": 4,
+        "paid_api_calls": 5,
         "pending_resumes": 0,
         "section_id": "sky-hypnosis-vagal-blitz",
         "version": "4.0",

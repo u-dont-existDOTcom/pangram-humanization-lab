@@ -250,8 +250,8 @@
     "sky-hypnosis-vagal-blitz\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.25,
-      "estimated_credits": 5,
+      "estimated_cost_usd": 0.3,
+      "estimated_credits": 6,
       "events": [
         {
           "budget_scope": "section",
@@ -297,10 +297,19 @@
           "text_sha256": "174a669e550a6dd72049bcbf6532953d318835c8fe4552ae8a6ef182b46d960d",
           "type": "paid_post_reserved",
           "word_count": 252
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r19-controlled-function-splits-r01-api-20260828-a_R19_SKY_OUTCOME",
+          "recorded_at_utc": "2026-08-28T23:57:29.875579+00:00",
+          "text_sha256": "db3a69e10c8841e8187f47d523a2a9dee272566b409dca502f4fb9f707c54be8",
+          "type": "paid_post_reserved",
+          "word_count": 214
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 5,
+      "paid_api_calls": 6,
       "pending_resumes": 0,
       "section_id": "sky-hypnosis-vagal-blitz",
       "version": "4.0"
