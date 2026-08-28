@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r18-human-spine-local-sections-r01-api-20260828-a_R18_GENTLE_SHAKING_R01",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Gentle Shaking / TRE\nHere I mean a little shaking, not trying to blast trauma out of the body. Basic TRE, very light neurogenic tremoring, gentle standing shaking, or short playful movement can be enough. If it becomes frightening, dissociative, compulsive, or hard to stop, stop.\nIf tremoring reaches your neck while you are lying down, do not let your head whip around unsupported. Reduce or stop the movement, support the head, and get guidance before continuing. Forceful, rapid back-and-forth neck movement can injure the neck.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9845708012580872,
+        "confidence": "High",
+        "end_index": 532,
+        "humanizer_score": 0.2612595856189728,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Gentle Shaking / TRE\nHere I mean a little shaking, not trying to blast trauma out of the body. Basic TRE, very light neurogenic tremoring, gentle standing shaking, or short playful movement can be enough. If it becomes frightening, dissociative, compulsive, or hard to stop, stop.\nIf tremoring reaches your neck while you are lying down, do not let your head whip around unsupported. Reduce or stop the movement, support the head, and get guidance before continuing. Forceful, rapid back-and-forth neck movement can injure the neck.",
+        "token_length": 122,
+        "word_count": 87
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "f823776c-c6e2-4b3a-95ec-f7a9ab854c1c",
   "text": "Gentle Shaking / TRE\n\nHere I mean a little shaking, not trying to blast trauma out of the body. Basic TRE, very light neurogenic tremoring, gentle standing shaking, or short playful movement can be enough. If it becomes frightening, dissociative, compulsive, or hard to stop, stop.\n\nIf tremoring reaches your neck while you are lying down, do not let your head whip around unsupported. Reduce or stop the movement, support the head, and get guidance before continuing. Forceful, rapid back-and-forth neck movement can injure the neck.\n",
   "text_sha256": "167da8f9fc7d3bcb6f13660592b8073e0592d48ed45d7a189693da2f8eb27734",
-  "updated_utc": "2026-08-28T23:46:10.036144+00:00"
+  "updated_utc": "2026-08-28T23:46:13.597762+00:00"
 }
