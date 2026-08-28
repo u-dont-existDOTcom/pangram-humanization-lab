@@ -55,6 +55,28 @@
       "pending_resumes": 0,
       "section_id": "physical-state",
       "version": "4.0"
+    },
+    "where-i-would-start\u001fpangram-4\u001f4.0": {
+      "budget_scope": "section",
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r15-section-where-start-r01-api-20260827-a_R15_WHERE_START_R01",
+          "recorded_at_utc": "2026-08-28T21:48:24.506942+00:00",
+          "text_sha256": "7d7b6143be3acbacbf3adec8d9b93283ee86d74aea813b0180cd47d480f84fa7",
+          "type": "paid_post_reserved",
+          "word_count": 158
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "where-i-would-start",
+      "version": "4.0"
     }
   }
 }
