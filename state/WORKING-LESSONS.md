@@ -2,6 +2,12 @@
 
 Research state only. These are contextual findings and process constraints, not phrase blacklists. Human editorial quality, semantic sanity, and fidelity outrank Pangram.
 
+## Somatic R16 final whole boundary — 2026-08-28
+
+- The preservation-clean R16 whole assembly measured Mixed at AI `0.7285796404` / Human `0.2714203596`, improving materially over exact R15 at AI `0.8451970816` / Human `0.1548029035` without deleting protected functions. Architecture/source routing can change the whole-document boundary even when many short model-shaped modality sections remain individually AI/high.
+- This whole comparison bundles several operations and does not prove a phrase-level cause. The completed section batch and exhausted Introduction lane show why another model-only paraphrase loop has low information value. Once protected Human spans, routing, safety, and exact source recovery are settled, a remaining red whole boundary is an owner-language/acceptance boundary, not permission to amputate content.
+- Exact final evidence: `state/PANGRAM-LOCAL-SOMATIC-R16-FINAL-GUI-2026-08-28.md` and `state/gui-runs/pangram-4/52468eabb61aa437f7216d0f6bcef295605b016465e00f5e7a4f63c53fbbaace/result.json`.
+
 ## Operational GUI bridge lesson — 2026-08-27
 
 - Keep Chat as the editorial/reasoning authority and automate only fixed-data request → existing local headed GUI runner → durable evidence. Never put autonomous rewriting or request-provided execution inside the desktop daemon.
