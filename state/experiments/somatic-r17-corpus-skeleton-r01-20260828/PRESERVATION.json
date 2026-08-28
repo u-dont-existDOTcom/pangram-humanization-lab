@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r17-corpus-skeleton-r01-api-20260828-a",
+  "status": "PASS",
+  "authority_impact": "none",
+  "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202",
+  "source_article": {"repository":"u-dont-existDOTcom/joel-articles","branch":"experiment/somatic-r17-100-human-gate-20260828","commit":"55111d2","design_path":"articles/somatic-therapies/experiments/R17-CORPUS-SKELETON-R01-CANDIDATES-20260828.md"},
+  "fixed_spec": {"path":"experiments/somatic-r17-corpus-skeleton-r01-api-20260828-a.json","sha256":"e34ff7caca0f4d476e034447f2ad2410af32b0f2a2531de2146191c59e6d3143","audit_id":"somatic-r15-section-localization-20260827"},
+  "variants": [
+    {"id":"R17_YOGA_R02","section_id":"trauma-sensitive-yoga","sha256":"2143b7ee964a282a9c3690665d4797d74056552181691d10b5e133947107338a","words":197,"unexplained_substantive_deltas":0},
+    {"id":"R17_EMDR_R02","section_id":"emdr","sha256":"5c987c73159adef4fe14d36e36fe0d368cd248f987ef71176b1a3d24a84a5f54","words":153,"unexplained_substantive_deltas":0},
+    {"id":"R17_SKY_VAGAL_R02","section_id":"sky-hypnosis-vagal-blitz","sha256":"28799f7fc15746abeadbe40b476f4b96bbd366730b3952878de5f90b802f8f42","words":208,"unexplained_substantive_deltas":0}
+  ],
+  "forward_traceability": "PASS",
+  "reverse_traceability": "PASS",
+  "unexplained_substantive_deltas": 0,
+  "known_human_controls_resubmitted": 0,
+  "blocked_or_ambiguous_hashes_resubmitted": 0
+}

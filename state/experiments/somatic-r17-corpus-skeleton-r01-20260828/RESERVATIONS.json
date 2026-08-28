@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r17-corpus-skeleton-r01-api-20260828-a",
+  "created_at_utc": "2026-08-28",
+  "transport": "private fixed-batch executor / Pangram API",
+  "pangram_model": "4.0",
+  "spec_sha256": "e34ff7caca0f4d476e034447f2ad2410af32b0f2a2531de2146191c59e6d3143",
+  "budget": {"maximum_new_paid_calls":3,"completed":0,"duplicate_calls":0},
+  "cells": [
+    {"id":"R17_YOGA_R02","section_id":"trauma-sensitive-yoga","sha256":"2143b7ee964a282a9c3690665d4797d74056552181691d10b5e133947107338a","status":"frozen_pending_dispatch"},
+    {"id":"R17_EMDR_R02","section_id":"emdr","sha256":"5c987c73159adef4fe14d36e36fe0d368cd248f987ef71176b1a3d24a84a5f54","status":"frozen_pending_dispatch"},
+    {"id":"R17_SKY_VAGAL_R02","section_id":"sky-hypnosis-vagal-blitz","sha256":"28799f7fc15746abeadbe40b476f4b96bbd366730b3952878de5f90b802f8f42","status":"frozen_pending_dispatch"}
+  ],
+  "blocked_repeats": [
+    {"id":"R17_YOGA_R01","sha256":"e4b1cbe28bc700b06514a2088166e663eb3f9baa6aa5e2f927b710fcf3038787","reason":"completed AI"},
+    {"id":"R17_EMDR_R01","sha256":"54420c1b8a9b9ea543c5706019d494a07818f17cc7ca4730c75e9caa58d480ba","reason":"completed AI"},
+    {"id":"R17_SKY_VAGAL_R01","sha256":"815e7332e4f609f5689e0e8a6214515c326ed7fb90465060519a92fef0335500","reason":"completed AI"}
+  ]
+}
