@@ -1,6 +1,6 @@
 # Reparenting R05 adult-access subsection diagnostic — 2026-08-28
 
-Status: **PENDING OWNER-REPORTED PANGRAM RESULT / architecture-split diagnostic**
+Status: **OWNER-REPORTED PANGRAM AI / MEDIUM CONFIDENCE / architecture-split diagnostic**
 
 Purpose: after R04 localized its first six paragraphs AI/high and its final two paragraphs Human/high, stop treating the entire overlap exposition as one detector boundary. Test only the editorially coherent adult-access subsection as a natural unit.
 
@@ -11,9 +11,13 @@ Whitespace words including visible subsection heading: **112**.
 
 Preservation scope: PU2–PU8 only; forward traceability PASS 7/7, reverse traceability PASS, unexplained substantive deltas 0. Complete receipt lives in the Joel Articles R05 architecture-split preservation file.
 
-Do not use this short subsection result as a universal authorship judgment. It is an exact-boundary production diagnostic that decides whether the adult-access material can remain as its own natural subsection or needs further source recovery/routing.
+Owner-reported Pangram result, 2026-08-28: **AI / medium confidence**.
 
-Owner-reported Pangram result: **PENDING**.
+Interpretation:
+- The architecture split reduced confidence relative to R04's larger pre-loop block (AI/high), but did not make the adult-access subsection Human.
+- Do not infer that any individual term (`Nurturer`, `Protector`, `borrowed adulthood`, `self-hypnosis`) is causal.
+- The next step is source recovery for genuinely natural owner-authored cognition about the adult/child conflict, not another stylistic paraphrase of this 112-word subsection.
+- Keep the robust Human/high love-source + exact heart-loop ending closed.
 
 ---
 
