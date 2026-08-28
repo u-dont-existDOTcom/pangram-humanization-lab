@@ -348,8 +348,8 @@
     "trauma-sensitive-yoga\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.2,
-      "estimated_credits": 4,
+      "estimated_cost_usd": 0.25,
+      "estimated_credits": 5,
       "events": [
         {
           "budget_scope": "section",
@@ -386,10 +386,19 @@
           "text_sha256": "af6c954e78f17073535c02679dd0e5ebaa022728fc098fbe8fb8a4d2efc134fe",
           "type": "paid_post_reserved",
           "word_count": 119
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r19-controlled-function-splits-r01-api-20260828-a_R19_YOGA_DEFINITION",
+          "recorded_at_utc": "2026-08-28T23:56:34.844971+00:00",
+          "text_sha256": "9b5de38c5bcc32e753b7570ce674002277199dc94ca876ebeb450ef3cf8cc7b1",
+          "type": "paid_post_reserved",
+          "word_count": 177
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 4,
+      "paid_api_calls": 5,
       "pending_resumes": 0,
       "section_id": "trauma-sensitive-yoga",
       "version": "4.0"
