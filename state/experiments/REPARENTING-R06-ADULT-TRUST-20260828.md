@@ -1,8 +1,8 @@
 # Reparenting R06 adult-trust source-recovery diagnostic — 2026-08-28
 
-Status: **PENDING OWNER-REPORTED PANGRAM RESULT / final adult-access realization diagnostic before stop rule**
+Status: **OWNER-REPORTED PANGRAM AI / HIGH CONFIDENCE / MODEL-REALIZATION LANE CLOSED**
 
-Purpose: R05's architecture-split adult-access subsection returned owner-reported Pangram AI / medium confidence. Rather than paraphrasing the same conceptual mini-model again, R06 uses newly recovered genuinely natural Joel-authored cognition as the governing thought route: the child distrusts the grown-up's track record and does not believe protection/nurturing vows without evidence.
+Purpose: R05's architecture-split adult-access subsection returned owner-reported Pangram AI / medium confidence. Rather than paraphrasing the same conceptual mini-model again, R06 used newly recovered genuinely natural Joel-authored cognition as the governing thought route: the child distrusts the grown-up's track record and does not believe protection/nurturing vows without evidence.
 
 Source candidate: `u-dont-existDOTcom/joel-articles@agent/somatic-humanization-r02-preservation-20260824/articles/somatic-therapies/experiments/R15-REPARENTING-R06-ADULT-TRUST-CANDIDATE-20260828.md`.
 
@@ -15,11 +15,17 @@ Experimental distinction from R05:
 - R05: abstract problem → roles/fallbacks/actions/hypnosis as a compact conceptual stack;
 - R06: lived trust conflict → adult/child resentment → empty-vow credibility problem → Nurturer/Protector action → fallback witness/borrowed adulthood → light hypnosis only if still blocked.
 
-Natural owner phrases including `yeah, that doesn't look like things went well for us` and `big fuckity whoopty doo, what are you gonna do for me` are preserved because they carry the actual thought, not as detector decoration.
+Natural owner phrases including `yeah, that doesn't look like things went well for us` and `big fuckity whoopty doo, what are you gonna do for me` were preserved because they carry the actual thought, not as detector decoration.
 
-Stop rule: if R06 remains AI, do not generate further stylistic variants of adult-access material. Preserve the result, retain the robust Human/high love-source + heart-loop anchor, and resolve the adult-access function by editorial placement/owner authority rather than continued detector chasing unless independently Human source material later appears.
+Owner-reported Pangram result, 2026-08-28: **AI / high confidence**.
 
-Owner-reported Pangram result: **PENDING**.
+## Stop-rule consequence
+
+The adult-access **model-realization lane is closed**. Do not generate further stylistic/synonym variants of this subsection merely to chase Pangram.
+
+One provenance control remains legitimate and materially informative: test the **exact raw owner paragraph itself**, with no model rewriting, normalization, heading, connective prose, or added concepts. This is not another realization variant; it determines whether Pangram accepts the natural owner source for this thought at all. If that raw owner control is also AI, stop detector work on this function completely unless a separate independently Human owner realization later appears.
+
+Keep the robust Human/high love-source + heart-loop ending closed.
 
 ---
 
