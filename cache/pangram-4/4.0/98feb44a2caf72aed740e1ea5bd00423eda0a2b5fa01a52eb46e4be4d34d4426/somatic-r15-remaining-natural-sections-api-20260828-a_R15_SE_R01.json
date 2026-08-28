@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r15-remaining-natural-sections-api-20260828-a_R15_SE_R01",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Somatic Experiencing\nSomatic Experiencing is one of the things I would reach for when even getting near the material sends the body over the edge. It works with sensation, orientation, impulse, defensive response, and pacing without requiring the whole story first.\nTitration and pendulation are useful because you are not trying to win a contest with the trauma. You touch a tolerable amount of activation, notice what happens, then come back toward something steadier. Some people spend three to six months building that capacity, and severe developmental trauma can take longer. I would treat that as orientation, not a countdown. If you are already stable and have a clear target, there may be no reason to wait that long before adding trauma-focused work.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9999598264694214,
+        "confidence": "High",
+        "end_index": 760,
+        "humanizer_score": 0.04899635165929794,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Somatic Experiencing\nSomatic Experiencing is one of the things I would reach for when even getting near the material sends the body over the edge. It works with sensation, orientation, impulse, defensive response, and pacing without requiring the whole story first.\nTitration and pendulation are useful because you are not trying to win a contest with the trauma. You touch a tolerable amount of activation, notice what happens, then come back toward something steadier. Some people spend three to six months building that capacity, and severe developmental trauma can take longer. I would treat that as orientation, not a countdown. If you are already stable and have a clear target, there may be no reason to wait that long before adding trauma-focused work.",
+        "token_length": 151,
+        "word_count": 124
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "965e6e7d-114e-48d0-8999-6eaa767505a2",
   "text": "Somatic Experiencing\n\nSomatic Experiencing is one of the things I would reach for when even getting near the material sends the body over the edge. It works with sensation, orientation, impulse, defensive response, and pacing without requiring the whole story first.\n\nTitration and pendulation are useful because you are not trying to win a contest with the trauma. You touch a tolerable amount of activation, notice what happens, then come back toward something steadier. Some people spend three to six months building that capacity, and severe developmental trauma can take longer. I would treat that as orientation, not a countdown. If you are already stable and have a clear target, there may be no reason to wait that long before adding trauma-focused work.\n",
   "text_sha256": "98feb44a2caf72aed740e1ea5bd00423eda0a2b5fa01a52eb46e4be4d34d4426",
-  "updated_utc": "2026-08-28T22:11:31.306962+00:00"
+  "updated_utc": "2026-08-28T22:11:35.797547+00:00"
 }
