@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r15-section-where-start-r01-api-20260827-a_R15_WHERE_START_R01",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Where I Would Start\nI wouldn't make everybody start in the same place. If one event is clearly the problem and you can stay present while touching it, I may go straight to EMDR. If touching trauma makes you disappear, flood, or stay wrecked for the rest of the day, I would rather use something gentler first.\nThe gentler work can become avoidance too. I do not want someone spending forever “building capacity” because nobody is willing to treat the thing that is actually hurting them. I care about what happens in ordinary life: are you sleeping better, functioning better, relating better, getting freer? If sleep itself is the bottleneck, I have a separate sleep guide.\nI also wouldn't call a whole method gentle or intense. Present-focused self-hypnosis is not immersive memory work. A little shaking is not forced catharsis. With Brainspotting I can use it to resource and orient, or I can go into much hotter material.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9987324476242065,
+        "confidence": "High",
+        "end_index": 926,
+        "humanizer_score": 0.36190393567085266,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Where I Would Start\nI wouldn't make everybody start in the same place. If one event is clearly the problem and you can stay present while touching it, I may go straight to EMDR. If touching trauma makes you disappear, flood, or stay wrecked for the rest of the day, I would rather use something gentler first.\nThe gentler work can become avoidance too. I do not want someone spending forever “building capacity” because nobody is willing to treat the thing that is actually hurting them. I care about what happens in ordinary life: are you sleeping better, functioning better, relating better, getting freer? If sleep itself is the bottleneck, I have a separate sleep guide.\nI also wouldn't call a whole method gentle or intense. Present-focused self-hypnosis is not immersive memory work. A little shaking is not forced catharsis. With Brainspotting I can use it to resource and orient, or I can go into much hotter material.",
+        "token_length": 200,
+        "word_count": 162
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "9fded7bd-5b87-4ee6-8fa7-b5f47d552f44",
   "text": "Where I Would Start\n\nI wouldn't make everybody start in the same place. If one event is clearly the problem and you can stay present while touching it, I may go straight to EMDR. If touching trauma makes you disappear, flood, or stay wrecked for the rest of the day, I would rather use something gentler first.\n\nThe gentler work can become avoidance too. I do not want someone spending forever “building capacity” because nobody is willing to treat the thing that is actually hurting them. I care about what happens in ordinary life: are you sleeping better, functioning better, relating better, getting freer? If sleep itself is the bottleneck, I have a separate sleep guide.\n\nI also wouldn't call a whole method gentle or intense. Present-focused self-hypnosis is not immersive memory work. A little shaking is not forced catharsis. With Brainspotting I can use it to resource and orient, or I can go into much hotter material.\n",
   "text_sha256": "7d7b6143be3acbacbf3adec8d9b93283ee86d74aea813b0180cd47d480f84fa7",
-  "updated_utc": "2026-08-28T21:48:28.288735+00:00"
+  "updated_utc": "2026-08-28T21:48:34.293744+00:00"
 }
