@@ -1,6 +1,6 @@
 # Human→AI minimal-pair packet — 2026-08-28
 
-Status: **FROZEN STAGES 1–2 / twelve model-touched candidates / baselines not resubmitted**
+Status: **FROZEN STAGES 1–3 / fifteen model-touched candidates / baselines not resubmitted**
 
 Purpose: start from genuinely human Joel prose and change one primary editorial/model feature at a time to learn which interventions can introduce Pangram-AI signal. This is detector research, not proposed article prose and not article authority.
 
@@ -48,6 +48,33 @@ All six candidates are diagnostic-only and barred from article authority.
 - C2 changes only the explicit transition relation. All source claims and attributions are byte-identical. Unexplained substantive deltas: 0.
 
 Forward traceability: **PASS**. Reverse traceability: **PASS**. Article authority impact: **none**. Detector eligibility: **PASS**.
+
+## Stage-2 results and Stage-3 stopping packet
+
+| ID | Result | Structured score | Interpretation |
+|---|---|---:|---|
+| C3 | Human | AI `0.0`, Human `1.0` | One-paragraph packing alone was insufficient. |
+| C4 | Human | AI `0.0`, Human `1.0` | Explicit cross-domain relation in colloquial wording was insufficient. |
+| C5 | Human | AI `0.0`, Human `1.0` | C1's compression package without explicit synthesis was insufficient. |
+| C6 | Human | AI `0.0`, Human `1.0` | Compression confined to the middle explanatory paragraph was insufficient. |
+| A3 | Human | AI `0.0`, Human `1.0` | Explanatory completion × sentence equalization remained null on the confessional baseline. |
+| B3 | Mixed | AI `0.132098034`, Human `0.8679019809` | Taxonomy closure × polished bridge introduced middle-part AI signal although each edit alone was Human. |
+
+Stage 2 therefore supports an interaction account: C1 crossed the boundary only when abstract compression and model-polished cross-domain synthesis appeared together; B3 crossed when taxonomy closure and polished connective tissue appeared together. Stage 3 uses the owner's remaining three-call allowance only for alternate realizations that test whether those interactions generalize.
+
+| ID | Comparison | Primary question | Exact SHA-256 / words | Exact delta |
+|---|---|---|---|---|
+| C7 | C5 + alternate polished transition | Does compression × polished cross-domain synthesis generalize beyond C1's exact `same limit appears` wording? | `fc023c3f605c1ffedcbf0939133b436cc749cffda9347c48bdfa6d8291c9687a` / 91 | Replace only `In inner-child therapy,` with C2's `The same principle extends to inner-child therapy:`. |
+| B4 | B3 with colloquial bridge | Does the cancer interaction require the polished bridge realization? | `c6896d2182b2f55155422dc36bcb428822df204124da37c62f66112bb9fd941f` / 309 | Replace only `That experience is why the method matters alongside the recommendations.` with a first-person colloquial restatement. |
+| B5 | B3 with colloquial closure | Does the cancer interaction require the polished three-part taxonomy realization? | `9562f1c63483b5fa6658ab435f594f13a53fc25ec4de78b2912b0ff55c458983` / 304 | Replace only the three-category sentence with two uneven, colloquial sentences preserving all three category claims. |
+
+### Stage-3 preservation receipt
+
+- C7 changes only the relationship lead-in; all C5/C1 protected claims and attributions remain. Unexplained substantive deltas: 0.
+- B4 retains B3's exact taxonomy and both owner-source paragraphs; the bridge restates the same method/recommendations relation in first person. Unexplained substantive deltas: 0.
+- B5 retains B3's exact bridge and both owner-source paragraphs; its two closure sentences preserve lower-trust treatments, newly discovered treatments, and possible reader requests without the closed taxonomy form. Unexplained substantive deltas: 0.
+
+Forward traceability: **PASS**. Reverse traceability: **PASS**. Article authority impact: **none**. Detector eligibility: **PASS**. Stage 3 is the stopping packet; no further paid calls are authorized or needed for this experiment.
 
 ## Duplicate and transport gate
 
