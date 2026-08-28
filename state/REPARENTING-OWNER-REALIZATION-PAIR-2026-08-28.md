@@ -48,36 +48,44 @@ J kept the complete Human/medium I boundary unchanged and inserted only a two-se
 
 Joel reported the complete J boundary **Human / high confidence**.
 
-## Expanded-boundary failure — critical caveat
+## Expanded-boundary failure — R03
 
 R03 kept the J text but expanded the natural section with additional material for neutral witnessing, Protector action, light self-hypnosis, a named-modality bridge, and a real-love-source cue.
 
 Joel reported R03 **High-confidence AI except for the final paragraph, which was Human / high confidence**.
 
-This changes the production lesson in an important way:
+This changed the production lesson:
 - J's Human/high result remains valid only for the exact J boundary; it is not immunity for each component paragraph under expansion;
 - R03's red field does **not** prove each J paragraph independently caused the regression, because displayed red location is not causal proof and the composition changed;
-- the exact owner-authored heart-loop paragraph is now the strongest robust anchor because it remained Human/high even in the larger failing boundary;
-- first rollback target is the material newly added in R03, not automatic rewriting of the previously passing J base.
+- the exact owner-authored heart-loop paragraph became the strongest robust anchor because it remained Human/high inside the larger failing boundary;
+- first rollback target was the material newly added in R03, not automatic rewriting of the previously passing J base.
 
 Durable exact R03 record: `state/experiments/REPARENTING-R03-EXPANDED-BOUNDARY-20260828.md`.
 
-## Interpretation
+## Rollback diagnostic — R04
 
-Strong local evidence still supports source-recovery-first, but with stricter boundary discipline. In the smaller compositions, neither the heart-loop topic/function nor the breathing/heart-access relationship was sufficient to produce the repeated AI residual. Realization provenance and edit dose mattered materially. But adding several new functions at once can expose or create a distributed section-level signal even when a smaller boundary was green.
+R04 removed the named-modality bridge and used higher-authority owner-controlled/published wording for neutral witness/Protector and self-hypnosis. It retained the J opening/breathing material and ended with the real-love cue plus the exact owner heart-loop paragraph.
 
-Production rule:
-1. retrieve and restore/compress semantically applicable owner realization before reconstructing the same thought;
-2. preserve exact detector identities and do not treat prior green as universal immunity;
-3. after expansion failure, roll back newly added material first and re-add only functions that genuinely belong there using the highest-authority surface available;
-4. keep robust owner paragraphs unchanged unless there is an independent editorial defect.
+Exact reader-visible SHA-256: `455118656ceb6e7cf1b8e59e35c1f3f05d1caa854895f0625e341f13546f009e`.
 
-This does **not** establish that:
-- Pangram proves authorship;
-- every owner paragraph will score Human;
-- every assistant paragraph will score AI;
-- exact copying is always better editorially;
-- minimum normalization always passes;
-- the detector has identified a universal provenance feature.
+Joel reported:
+- paragraphs 1–6, ending with the Buteyko paragraph: **AI / high confidence**;
+- bottom two paragraphs, beginning `If I can't feel the love...` and ending with the exact owner heart-loop paragraph: **Human / high confidence**.
 
-Editorial quality, fidelity, placement, and article function remain independent gates.
+This is the strongest current localization. The robust green unit is now **two paragraphs**, not merely the final heart-loop paragraph.
+
+## Revised interpretation
+
+1. **Exact-boundary Human status is local.** J Human/high remains valid for J, but cannot be projected into R03/R04.
+2. **The two-paragraph love/heart-loop ending is now the robust green anchor.** It stayed Human/high in R04; the heart-loop paragraph alone also stayed Human/high in R03.
+3. **Owner wording alone is not sufficient to make a mixed larger boundary green.** R04 used owner-controlled/published surface in several red paragraphs.
+4. **Do not keep paraphrasing paragraphs 1–6 as one block.** They perform heterogeneous jobs: adult access/Nurturer-Protector/borrowed adulthood; neutral witness/real-world protection; self-hypnosis; somatic preparation/breath.
+5. The next repair is **architecture/routing**, not synonym substitution. Split those jobs into natural subsection/destination boundaries and preserve the robust green ending intact.
+6. Brainspotting/EMDR-specific reparenting relationships remain best preserved in their later modality sections.
+7. Do not infer token bans or a universal detector mechanism from these results.
+
+## Production rule retained but narrowed
+
+Source recovery remains preferable to free reconstruction when a natural owner realization exists. R04 adds a necessary caveat: retrieval-first must be combined with correct paragraph jobs, natural boundary size, architecture, and stopping point. A source-derived paragraph can still sit inside a detector-red composition.
+
+Editorial quality, fidelity, placement, and article function remain independent gates; Pangram is secondary evidence.
