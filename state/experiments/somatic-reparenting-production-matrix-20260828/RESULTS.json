@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-reparenting-production-matrix-20260828",
+  "status": "complete",
+  "completed_at_utc": "2026-08-28T17:27:48Z",
+  "authority": "detector research and non-authoritative production-candidate evidence only",
+  "pangram_version": "4.0",
+  "transport": {
+    "route": "authenticated Pangram UI through Joel's connected Brave session",
+    "identity_binding": "exact staged UTF-8 SHA-256 plus exact displayed result text plus authenticated History recovery",
+    "history_query": "The Protector cleans the room",
+    "history_matching_rows": 4,
+    "precision_note": "The direct UI exposed rounded displayed percentages for Mixed results; unrounded structured fractions were not available and are not inferred."
+  },
+  "call_accounting": {
+    "maximum_new_paid_calls": 4,
+    "paid_calls": 4,
+    "duplicate_paid_calls": 0,
+    "untouched_r08_submissions": 0,
+    "repeated_r09_submissions": 0
+  },
+  "frozen_controls": {
+    "r08_sha256": "6ceaa3becafb78bb75df043e5ff88cd41d46496ef93d9a0500b6759856c5811a",
+    "r08_owner_localization": "Human / high confidence inside R09",
+    "r09_sha256": "639ff62f42ebc9f8f25571e2471de57a1f4cc982160d7e7b5717ee9c290be35b",
+    "r09_extension_localization": "AI / high confidence",
+    "reuse_only": true
+  },
+  "factors": {
+    "constant": "byte-identical R08 plus owner-controlled/published Nurturer/Protector naming and one concrete Protector action",
+    "A": "neutral witness plus borrowed adulthood cluster",
+    "B": "gentle self-hypnosis plus present safety plus no forced trauma-memory work"
+  },
+  "candidates": [
+    {
+      "id": "M00",
+      "A": 0,
+      "B": 0,
+      "sha256": "2274a6a7b5b48cd2fde510d78dacc7a29c9f4d2d1164fd2fcde86fcf46a983ba",
+      "whitespace_words": 149,
+      "pangram_words": 158,
+      "classification": "Human",
+      "display_percent_ai": 0,
+      "display_percent_human": 100,
+      "confidence": "medium",
+      "short_text_warning": true,
+      "clicked_at_utc": "2026-08-28T17:23:59.134Z"
+    },
+    {
+      "id": "M10",
+      "A": 1,
+      "B": 0,
+      "sha256": "cb2620a3463eae0ce3be17f0cecc6119fb7b5c8ed784e9e330ff11ad9e12334a",
+      "whitespace_words": 208,
+      "pangram_words": 217,
+      "classification": "Mixed",
+      "display_percent_ai": 35,
+      "display_percent_human": 65,
+      "localization": {
+        "human_segment_words": 147,
+        "human_segment_confidence": "high",
+        "ai_segment_words": 70,
+        "ai_segment_confidence": "high",
+        "ai_segment": "The Protector action sentences plus the complete neutral-witness/borrowed-adulthood paragraph"
+      },
+      "clicked_at_utc": "2026-08-28T17:24:41.250Z"
+    },
+    {
+      "id": "M01",
+      "A": 0,
+      "B": 1,
+      "sha256": "1aa888df956a77c3bb27a5924c1c9d4aab4d02eeab53b1fd18634f2fc724aed9",
+      "whitespace_words": 168,
+      "pangram_words": 178,
+      "classification": "Human",
+      "display_percent_ai": 0,
+      "display_percent_human": 100,
+      "confidence": "medium",
+      "short_text_warning": true,
+      "clicked_at_utc": "2026-08-28T17:25:20.515Z"
+    },
+    {
+      "id": "M11",
+      "A": 1,
+      "B": 1,
+      "sha256": "2b4cb6590347e60abe748bb3efcad92666b38d7167fc9fa33a1beeba208b835b",
+      "whitespace_words": 227,
+      "pangram_words": 237,
+      "classification": "Mixed",
+      "display_percent_ai": 46,
+      "display_percent_human": 54,
+      "localization": {
+        "human_segment_words": 133,
+        "human_segment_confidence": "high",
+        "human_segment": "byte-identical R08",
+        "ai_segment_words": 104,
+        "ai_segment_confidence": "high",
+        "ai_segment": "the complete appended extension"
+      },
+      "clicked_at_utc": "2026-08-28T17:25:52.191Z"
+    }
+  ],
+  "interpretation": {
+    "constant_cluster": "not sufficient; M00 remained Human",
+    "B_without_A": "null at this boundary; M01 remained Human",
+    "A_without_B": "sufficient conditional on the constant; M10 became Mixed at displayed 35% AI",
+    "A_plus_B": "Mixed at displayed 46% AI; B amplifies the A-present boundary and expands the AI window across the extension",
+    "causal_scope": "cluster-level, exact-boundary evidence only; it does not isolate neutral witness from borrowed adulthood and creates no phrase blacklist"
+  },
+  "production_disposition": {
+    "production_complete_human_candidate": null,
+    "M01": "freeze as a detector-Human partial building block only; not promotable because A functions are absent",
+    "M11": "detector-rejected as the leading full candidate; functions remain protected",
+    "r08": "remain frozen byte-for-byte",
+    "article_authority_impact": "none"
+  },
+  "preservation": {
+    "forward_traceability": "PASS for each authorized cell scope",
+    "reverse_traceability": "PASS",
+    "unexplained_substantive_deltas": 0
+  }
+}
