@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r15-remaining-natural-sections-api-20260828-a_R15_LIGHT_CBT_R01",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Light CBT / Narrative Integration\nOnce my body is no longer insisting “this is happening now,” talking to the belief starts to make more sense. Before that I can win the argument intellectually and still lose it physiologically.\nThen I can revisit old beliefs, build a more coherent life story, separate past danger from present reality, clarify values and boundaries, and reclaim agency. That can feed straight back into inner-child reparenting: the adult is more available, the child-state is easier to differentiate from, and questions like forgiveness—when forgiveness is actually relevant—and life direction become less abstract.\nIf those adult voices do not feel available yet, I may borrow one sentence, boundary, or direction from somebody safe. The borrowed figure stays beside me while I choose the words and carry one small part myself. I call that borrowed adulthood.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9998385906219482,
+        "confidence": "High",
+        "end_index": 879,
+        "humanizer_score": 0.09129436314105988,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Light CBT / Narrative Integration\nOnce my body is no longer insisting “this is happening now,” talking to the belief starts to make more sense. Before that I can win the argument intellectually and still lose it physiologically.\nThen I can revisit old beliefs, build a more coherent life story, separate past danger from present reality, clarify values and boundaries, and reclaim agency. That can feed straight back into inner-child reparenting: the adult is more available, the child-state is easier to differentiate from, and questions like forgiveness—when forgiveness is actually relevant—and life direction become less abstract.\nIf those adult voices do not feel available yet, I may borrow one sentence, boundary, or direction from somebody safe. The borrowed figure stays beside me while I choose the words and carry one small part myself. I call that borrowed adulthood.",
+        "token_length": 169,
+        "word_count": 141
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "c407bf59-f6af-4384-83f6-363b3b43babf",
   "text": "Light CBT / Narrative Integration\n\nOnce my body is no longer insisting “this is happening now,” talking to the belief starts to make more sense. Before that I can win the argument intellectually and still lose it physiologically.\n\nThen I can revisit old beliefs, build a more coherent life story, separate past danger from present reality, clarify values and boundaries, and reclaim agency. That can feed straight back into inner-child reparenting: the adult is more available, the child-state is easier to differentiate from, and questions like forgiveness—when forgiveness is actually relevant—and life direction become less abstract.\n\nIf those adult voices do not feel available yet, I may borrow one sentence, boundary, or direction from somebody safe. The borrowed figure stays beside me while I choose the words and carry one small part myself. I call that borrowed adulthood.\n",
   "text_sha256": "144dab2fc78f6ff3128c20fdd2503cff8212cb4f799b7f9a5280eb22a0c447a0",
-  "updated_utc": "2026-08-28T22:12:31.087807+00:00"
+  "updated_utc": "2026-08-28T22:12:38.025208+00:00"
 }
