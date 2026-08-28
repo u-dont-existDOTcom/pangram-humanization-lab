@@ -1,6 +1,6 @@
 # Reparenting + owner-anchored somatic preparation — 2026-08-28 J
 
-Status: **DETECTOR-ELIGIBLE / minimum-normalization owner-cognition diagnostic / non-authoritative**
+Status: **OWNER-REPORTED PANGRAM HUMAN / HIGH CONFIDENCE — owner-anchored somatic-prep positive result / non-authoritative**
 
 Purpose: test whether the exact Human/medium I boundary remains Human when the unresolved somatic-preparation relation is realized from recovered direct owner wording rather than from another free assistant paraphrase.
 
@@ -35,9 +35,16 @@ Diagnostic-only exclusions, not deletion/supersession:
 Forward traceability for the tested somatic-prep delta: **PASS**.
 Reverse traceability: **PASS**; substantive content maps to direct owner source.
 Unexplained substantive deltas: **0**.
-Detector eligibility for this controlled diagnostic: **PASS**.
 
-Owner-reported Pangram result: **PENDING**.
+## Detector result
+
+Joel reported the exact J boundary **Human / high confidence** on 2026-08-28.
+
+This strengthens the local production evidence from I. The same reparenting boundary repeatedly failed High-confidence AI when the unresolved somatic-preparation relation was freely reconstructed by the assistant. Once the relation was rebuilt from direct owner cognition with only minimum reader-facing normalization, the complete boundary passed High-confidence Human.
+
+Interpret narrowly: this does not prove that owner provenance itself is what Pangram detects, nor that all owner-anchored normalization will pass. It does support the production strategy of source recovery first, minimal normalization second, and fresh model realization only where no recoverable owner realization exists.
+
+Owner-reported Pangram result: **Human / high confidence**.
 
 ---
 
