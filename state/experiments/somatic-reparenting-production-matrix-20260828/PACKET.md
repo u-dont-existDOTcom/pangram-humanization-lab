@@ -1,6 +1,6 @@
 # Somatic reparenting production matrix — 2026-08-28
 
-Status: **PREFLIGHT PASS / FOUR EXACT PAID CALLS RESERVED / RESULTS PENDING**
+Status: **COMPLETE / FOUR EXACT PAID CALLS / ZERO DUPLICATES / NO PRODUCTION-COMPLETE HUMAN CELL**
 
 Authority: detector research and non-authoritative production-candidate evidence only. The registered Somatic master remains `articles/somatic-therapies/master.html` at SHA-256 `1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202` and is not changed.
 
@@ -48,3 +48,22 @@ Interpret the matrix as cluster-level, exact-boundary evidence:
 - `M00` failure: the constant Nurturer/Protector action realization or the expanded production boundary is already sufficient; do not attribute later failures to A or B.
 
 No result licenses deletion of a protected function or change to registered authority.
+
+## Completed results
+
+| Cell | Pangram 4.0 result | Displayed split | Segment localization |
+|---|---|---|---|
+| M00 | Human / medium confidence | 100% Human | one Human segment; Pangram 158 words; short-text warning |
+| M10 | Mixed | 35% AI / 65% Human | later 70-word AI/high segment; preceding 147-word Human/high segment |
+| M01 | Human / medium confidence | 100% Human | one Human segment; Pangram 178 words; short-text warning |
+| M11 | Mixed | 46% AI / 54% Human | later 104-word AI/high segment covering the complete extension; exact R08 remained a 133-word Human/high segment |
+
+The direct Pangram UI exposed rounded displayed percentages, not unrounded structured fractions; this record does not manufacture unavailable precision.
+
+All four exact texts were recovered in authenticated Pangram History by the shared unique phrase `The Protector cleans the room`: two Human rows and two Mixed rows at 17:24–17:25 UTC. No exact input was repeated. R08 and R09 remained blocked repeats.
+
+## Production disposition
+
+The concrete Nurturer/Protector/action constant is not sufficient to create AI (`M00` Human). The hypnosis cluster is null on that constant (`M01` Human). The combined neutral-witness/borrowed-adulthood cluster is sufficient in this exact realization and boundary to flip the result (`M10` Mixed, 35% displayed AI). Adding hypnosis when that cluster is already present increases the displayed AI share to 46% and expands the AI segment across the entire extension (`M11`). This is evidence of a conditional A-cluster effect with B amplification, not evidence against any individual phrase or protected function.
+
+No Human cell preserves all required functions, so no leading production-complete candidate is frozen. M01 is frozen only as a detector-Human partial building block; it cannot be promoted because neutral witness and borrowed adulthood are absent. R08 remains frozen byte-for-byte, and registered article authority remains untouched.
