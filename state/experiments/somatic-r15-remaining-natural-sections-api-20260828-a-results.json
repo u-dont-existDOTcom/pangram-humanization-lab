@@ -74,6 +74,42 @@
       },
       "section_id": "trauma-sensitive-yoga",
       "budget_scope": "section"
+    },
+    {
+      "id": "R15_GENTLE_SHAKING_R01",
+      "measurement_key": "somatic-r15-remaining-natural-sections-api-20260828-a_R15_GENTLE_SHAKING_R01",
+      "text": "Gentle Shaking / TRE\n\nAt this point I am talking about a little shaking, not trying to blast trauma out of the body. Basic TRE, very light neurogenic tremoring, gentle standing shaking, or short playful movement can be enough. If it becomes compulsive, frightening, dissociative, or hard to stop, it has gone past what I mean by gentle.\n\nOne practical warning matters here. If tremoring reaches your neck while you are lying down, do not let your head whip around unsupported. Stop or reduce the movement, support your head—or have an experienced provider help you support it—and get guidance before continuing. Forceful, rapid back-and-forth neck movement can injure the neck.\n",
+      "text_sha256": "47aac9bcc50eaecc16dced6f1761d21f4d0c306dc3f2d9e23c46dac24ef2737b",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Gentle Shaking / TRE\nAt this point I am talking about a little shaking, not trying to blast trauma out of the body. Basic TRE, very light neurogenic tremoring, gentle standing shaking, or short playful movement can be enough. If it becomes compulsive, frightening, dissociative, or hard to stop, it has gone past what I mean by gentle.\nOne practical warning matters here. If tremoring reaches your neck while you are lying down, do not let your head whip around unsupported. Stop or reduce the movement, support your head—or have an experienced provider help you support it—and get guidance before continuing. Forceful, rapid back-and-forth neck movement can injure the neck.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Gentle Shaking / TRE\nAt this point I am talking about a little shaking, not trying to blast trauma out of the body. Basic TRE, very light neurogenic tremoring, gentle standing shaking, or short playful movement can be enough. If it becomes compulsive, frightening, dissociative, or hard to stop, it has gone past what I mean by gentle.\nOne practical warning matters here. If tremoring reaches your neck while you are lying down, do not let your head whip around unsupported. Stop or reduce the movement, support your head—or have an experienced provider help you support it—and get guidance before continuing. Forceful, rapid back-and-forth neck movement can injure the neck.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9978482723236084,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 675,
+            "word_count": 113,
+            "token_length": 147,
+            "is_humanized": false,
+            "humanizer_score": 0.12245874106884003
+          }
+        ]
+      },
+      "section_id": "gentle-shaking-tre",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -147,6 +183,22 @@
       },
       {
         "section_id": "trauma-sensitive-yoga",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      },
+      {
+        "section_id": "gentle-shaking-tre",
         "model": "pangram-4",
         "version": "4.0",
         "budget_scope": "section",
