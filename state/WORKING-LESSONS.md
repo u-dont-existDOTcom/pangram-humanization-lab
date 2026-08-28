@@ -116,3 +116,14 @@ Durable findings:
 Therefore do not blacklist `same principle`, colons, three-item lists, transitions, compression, or any other isolated surface. The operative risk is often **stacked editorial closure**: several locally tidy operations compress, label, connect, and finish a thought in the same boundary. Preserve natural owner source, prefer the next necessary concrete move, and test interactions only when single-feature cells are null and the combination is decision-relevant.
 
 R09 supplies the production anchor: its byte-identical R08 paragraph was owner-localized Human/high, while its appended 66-word model/editorial required-functions paragraph was AI/high. Keep R08 frozen; retain the protected functions but redistribute or re-realize them rather than defending the compact package.
+
+## Somatic reparenting production matrix — witness/borrowed cluster is conditional trigger
+
+The four-call 2026-08-28 packet `state/experiments/somatic-reparenting-production-matrix-20260828/` held byte-identical Human R08 plus concrete owner-published Nurturer/Protector/action wording constant and independently added (A) neutral witness + borrowed adulthood and (B) gentle self-hypnosis + present safety + no forced trauma-memory work. Untouched R08 and known R09 were not resubmitted. All four new exact inputs were pre-reserved, SHA-verified, and recovered in authenticated Pangram History; paid calls: 4; duplicates: 0.
+
+- M00 (constant only): Human, 100%, medium confidence.
+- M01 (constant + B): Human, 100%, medium confidence.
+- M10 (constant + A): Mixed, displayed 35% AI; later A-containing segment AI/high.
+- M11 (constant + A + B): Mixed, displayed 46% AI; exact R08 Human/high and the complete extension AI/high.
+
+The owner-published Nurturer/Protector/action cluster is not sufficient, and the light-hypnosis cluster is null without A. The neutral-witness/borrowed-adulthood cluster is sufficient in this exact realization/boundary to cross Pangram's threshold; hypnosis amplifies the A-present result. This is a cluster-level conditional effect, not a phrase blacklist and not evidence that witness or borrowed adulthood is individually causal. No Human cell preserved every required function, so M01 is only a known-Human partial building block and no production-complete candidate is frozen. R08 remains byte-identical and all protected functions remain mandatory.
