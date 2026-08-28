@@ -1016,6 +1016,17 @@
       "source_path": "state/experiments/somatic-reparenting-a-split-20260828/RESULTS.json",
       "source_ref": "experiment/somatic-reparenting-a-split-20260828",
       "source_sha256": "68c5ba7de405581b8bb5b779a1f07ed4db4753729624e9945c13d9a5749b1a11"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The split reservation ledger records exact call accounting and evidence paths already interpreted in the experiment results.",
+      "id": "L-37f98206ec-01",
+      "promoted_to": [],
+      "reason": "This is duplicate-call and reservation bookkeeping, not an additional semantic or detector finding beyond the promoted RESULTS.json disposition.",
+      "recorded_at_utc": "2026-08-28T21:34:10.602624Z",
+      "source_path": "state/experiments/somatic-reparenting-a-split-20260828/RESERVATIONS.json",
+      "source_ref": "experiment/somatic-reparenting-a-split-20260828",
+      "source_sha256": "37f98206ece5c0c1b819b0db204c5f56551ac4ff7e67954871ad4b27d9645965"
     }
   ],
   "schema_version": 1
