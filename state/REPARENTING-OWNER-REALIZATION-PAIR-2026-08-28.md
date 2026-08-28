@@ -74,18 +74,30 @@ Joel reported:
 
 This is the strongest current localization. The robust green unit is now **two paragraphs**, not merely the final heart-loop paragraph.
 
+## Architecture-split adult-access diagnostic — R05
+
+R05 isolated only the adult-access functions into a 112-word subsection: child-state/adult-perspective problem; Nurturer/Protector; witness/borrowed adulthood; Protector action; light self-hypnosis.
+
+Joel reported R05 **AI / medium confidence**.
+
+The split reduced detector confidence relative to R04's larger red pre-loop block (AI/high), so architecture mattered, but the subsection still did not pass. Do not keep polishing the same mini-model.
+
+Source recovery after R05 found genuinely natural Joel-authored cognition about the adult/child conflict. Its governing thought is not an abstract `adult access` ladder: the child looks at the grown-up self and thinks `yeah, that doesn't look like things went well for us`; the grown-up can become resentful toward the younger self; then an older part makes vows of protection/nurturing and the child answers `big fuckity whoopty doo, what are you gonna do for me`. Joel also says relaxation has not solved that conflict for him.
+
+This natural source gives the Protector function a lived credibility problem: **the child needs evidence from the adult, not merely another vow or internal role definition.** The next realization should follow that conflict/thought route and subordinate witness, borrowed adulthood, and light hypnosis to it rather than presenting them as equal conceptual boxes.
+
 ## Revised interpretation
 
 1. **Exact-boundary Human status is local.** J Human/high remains valid for J, but cannot be projected into R03/R04.
 2. **The two-paragraph love/heart-loop ending is now the robust green anchor.** It stayed Human/high in R04; the heart-loop paragraph alone also stayed Human/high in R03.
 3. **Owner wording alone is not sufficient to make a mixed larger boundary green.** R04 used owner-controlled/published surface in several red paragraphs.
-4. **Do not keep paraphrasing paragraphs 1–6 as one block.** They perform heterogeneous jobs: adult access/Nurturer-Protector/borrowed adulthood; neutral witness/real-world protection; self-hypnosis; somatic preparation/breath.
-5. The next repair is **architecture/routing**, not synonym substitution. Split those jobs into natural subsection/destination boundaries and preserve the robust green ending intact.
+4. **Architecture helps but is not sufficient.** R05's adult-access split reduced confidence from high to medium while remaining AI.
+5. **Recover the actual human problem before prose.** For adult access, the live issue is trust/credibility between younger and older selves, not a taxonomy of inner-adult capacities.
 6. Brainspotting/EMDR-specific reparenting relationships remain best preserved in their later modality sections.
 7. Do not infer token bans or a universal detector mechanism from these results.
 
 ## Production rule retained but narrowed
 
-Source recovery remains preferable to free reconstruction when a natural owner realization exists. R04 adds a necessary caveat: retrieval-first must be combined with correct paragraph jobs, natural boundary size, architecture, and stopping point. A source-derived paragraph can still sit inside a detector-red composition.
+Source recovery remains preferable to free reconstruction when a natural owner realization exists. Retrieval-first must be combined with correct paragraph jobs, natural boundary size, architecture, thought route, and stopping point. A source-derived paragraph can still sit inside a detector-red composition, while a polished conceptual arrangement can distort the author's actual lived problem even when every individual proposition is preserved.
 
 Editorial quality, fidelity, placement, and article function remain independent gates; Pangram is secondary evidence.
