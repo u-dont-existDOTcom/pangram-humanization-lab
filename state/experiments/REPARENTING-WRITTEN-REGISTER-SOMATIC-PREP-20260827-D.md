@@ -1,6 +1,6 @@
 # Reparenting written-register + somatic preparation — 2026-08-27 D
 
-Status: **UNMEASURED / controlled production-oriented transformation-dose experiment**
+Status: **OWNER-REPORTED PANGRAM AI / HIGH CONFIDENCE / controlled production-oriented transformation-dose experiment**
 
 Purpose: test whether the Human/medium written-register boundary in `REPARENTING-WRITTEN-REGISTER-20260827-C.md` remains Pangram-Human after adding only the owner-required somatic-preparation cluster.
 
@@ -19,7 +19,9 @@ Added cluster is constrained by current Somatic direct owner authority and the e
 
 No heart-loop practice, Brainspotting, EMDR, deep-work readiness, or new anecdote is added in this step.
 
-Owner-reported Pangram result: **PENDING**.
+Owner-reported Pangram result, 2026-08-28: **AI / high confidence**.
+
+Interpretation: the exact C written-register backbone remains frozen as the last passing boundary. Adding this single somatic-preparation paragraph was sufficient to flip the complete boundary from Human/medium to AI/high. The paragraph is also independently editorially suspect: a closed modality catalogue is followed by a tidy mechanism sentence and a tidy placement sentence. Do not respond by rewriting the passing first three paragraphs. Localize or re-realize only the somatic-preparation cluster.
 
 ---
 
