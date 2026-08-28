@@ -46,8 +46,8 @@
     "emdr\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "budget_scope": "section",
@@ -75,10 +75,19 @@
           "text_sha256": "5c987c73159adef4fe14d36e36fe0d368cd248f987ef71176b1a3d24a84a5f54",
           "type": "paid_post_reserved",
           "word_count": 153
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r18-human-spine-local-sections-r01-api-20260828-a_R18_EMDR_R01",
+          "recorded_at_utc": "2026-08-28T23:46:29.096702+00:00",
+          "text_sha256": "24291c4c1162117cd4859a47ffba4254edcb47ae689d6b159524c1e653a5dad6",
+          "type": "paid_post_reserved",
+          "word_count": 251
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "emdr",
       "version": "4.0"
