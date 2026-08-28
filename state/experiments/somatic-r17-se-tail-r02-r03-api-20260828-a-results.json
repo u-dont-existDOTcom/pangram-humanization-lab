@@ -50,6 +50,42 @@
       },
       "section_id": "somatic-experiencing",
       "budget_scope": "section"
+    },
+    {
+      "id": "R17_SE_R03",
+      "measurement_key": "somatic-r17-se-tail-r02-r03-api-20260828-a_R17_SE_R03",
+      "text": "Introduction\n\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\n\nSomatic Experiencing\n\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much. You don't have to explain the whole story first, which is a large part of the appeal. You begin with whatever is already happening — a sensation, where your eyes go when you look around the room, an impulse, perhaps a defensive movement that never quite happened — and work with only as much as you can actually stay present for.\n\nThe words make it sound more complicated than it is. Titration means you do not take the whole thing at once, and pendulation means you can move away from the difficult part and then come back. Some people spend three to six months learning that, especially with severe developmental trauma, but it is not an official waiting period. If you are stable and already know the target, there is no reason to wait for the calendar before adding trauma-focused work.\n",
+      "text_sha256": "bc35123050ffe8dca26f247fd0738fa2ea9db7c700a19970c9fe9961dfeab856",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much. You don't have to explain the whole story first, which is a large part of the appeal. You begin with whatever is already happening — a sensation, where your eyes go when you look around the room, an impulse, perhaps a defensive movement that never quite happened — and work with only as much as you can actually stay present for.\nThe words make it sound more complicated than it is. Titration means you do not take the whole thing at once, and pendulation means you can move away from the difficult part and then come back. Some people spend three to six months learning that, especially with severe developmental trauma, but it is not an official waiting period. If you are stable and already know the target, there is no reason to wait for the calendar before adding trauma-focused work.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much. You don't have to explain the whole story first, which is a large part of the appeal. You begin with whatever is already happening — a sensation, where your eyes go when you look around the room, an impulse, perhaps a defensive movement that never quite happened — and work with only as much as you can actually stay present for.\nThe words make it sound more complicated than it is. Titration means you do not take the whole thing at once, and pendulation means you can move away from the difficult part and then come back. Some people spend three to six months learning that, especially with severe developmental trauma, but it is not an official waiting period. If you are stable and already know the target, there is no reason to wait for the calendar before adding trauma-focused work.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.8970600366592407,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1611,
+            "word_count": 282,
+            "token_length": 335,
+            "is_humanized": false,
+            "humanizer_score": 0.8898799419403076
+          }
+        ]
+      },
+      "section_id": "somatic-experiencing",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -188,10 +224,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.15,
-        "estimated_credits": 3,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
         "model": "pangram-4",
-        "paid_api_calls": 3,
+        "paid_api_calls": 4,
         "pending_resumes": 0,
         "section_id": "somatic-experiencing",
         "version": "4.0",
