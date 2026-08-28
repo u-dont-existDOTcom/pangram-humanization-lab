@@ -4360,6 +4360,74 @@
           "section_id": "sky-hypnosis-vagal-blitz"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-r15-section-localization-20260827",
+      "created_at_utc": "2026-08-28T23:47:02.973551+00:00",
+      "experiment_id": "somatic-r18-human-spine-local-sections-r01-api-20260828-a",
+      "id": "Q-c6273d44ca4ba789",
+      "sections": [
+        "trauma-sensitive-yoga",
+        "gentle-shaking-tre",
+        "brainspotting",
+        "emdr",
+        "light-cbt-narrative-integration",
+        "sky-hypnosis-vagal-blitz"
+      ],
+      "source_path": "state/experiments/somatic-r18-human-spine-local-sections-r01-api-20260828-a-results.json",
+      "source_ref": "c42d958965ad432381747e1f4fd847126946c016",
+      "source_sha256": "7fdbe323ca2d8ddc3d04a25d67f24dbabb513bda75fde04538b1ac41e9628a56",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R18_YOGA_R01",
+          "prediction_short": "AI",
+          "section_id": "trauma-sensitive-yoga"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R18_GENTLE_SHAKING_R01",
+          "prediction_short": "AI",
+          "section_id": "gentle-shaking-tre"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R18_BRAINSPOTTING_R01",
+          "prediction_short": "AI",
+          "section_id": "brainspotting"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R18_EMDR_R01",
+          "prediction_short": "AI",
+          "section_id": "emdr"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R18_LIGHT_CBT_R01",
+          "prediction_short": "AI",
+          "section_id": "light-cbt-narrative-integration"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R18_SKY_VAGAL_R01",
+          "prediction_short": "AI",
+          "section_id": "sky-hypnosis-vagal-blitz"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
