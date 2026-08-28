@@ -2,9 +2,9 @@
 
 Status: **durable detector/humanization lesson; owner-reported Pangram evidence**
 
-## Stable boundary
+## Stable small-boundary sequence
 
-The stable backbone is the first three paragraphs of `state/experiments/REPARENTING-WRITTEN-REGISTER-20260827-C.md`.
+The initial backbone is the first three paragraphs of `state/experiments/REPARENTING-WRITTEN-REGISTER-20260827-C.md`.
 
 Owner-reported Pangram result for that exact written-register backbone: **Human / medium confidence**.
 
@@ -48,13 +48,29 @@ J kept the complete Human/medium I boundary unchanged and inserted only a two-se
 
 Joel reported the complete J boundary **Human / high confidence**.
 
-This is stronger production evidence than the I result alone because the previously troublesome somatic-preparation function became detector-green when rebuilt from direct owner cognition with minimal reader-facing normalization rather than free assistant realization.
+## Expanded-boundary failure — critical caveat
+
+R03 kept the J text but expanded the natural section with additional material for neutral witnessing, Protector action, light self-hypnosis, a named-modality bridge, and a real-love-source cue.
+
+Joel reported R03 **High-confidence AI except for the final paragraph, which was Human / high confidence**.
+
+This changes the production lesson in an important way:
+- J's Human/high result remains valid only for the exact J boundary; it is not immunity for each component paragraph under expansion;
+- R03's red field does **not** prove each J paragraph independently caused the regression, because displayed red location is not causal proof and the composition changed;
+- the exact owner-authored heart-loop paragraph is now the strongest robust anchor because it remained Human/high even in the larger failing boundary;
+- first rollback target is the material newly added in R03, not automatic rewriting of the previously passing J base.
+
+Durable exact R03 record: `state/experiments/REPARENTING-R03-EXPANDED-BOUNDARY-20260828.md`.
 
 ## Interpretation
 
-Strong local evidence: in this boundary, neither the heart-loop topic/function nor the breathing/heart-access relationship was sufficient to produce the repeated AI residual. Realization provenance and edit dose mattered materially. Assistant reconstructions repeatedly acquired a strong AI signal; recovered owner realization or owner-cognition-minimum-normalization did not.
+Strong local evidence still supports source-recovery-first, but with stricter boundary discipline. In the smaller compositions, neither the heart-loop topic/function nor the breathing/heart-access relationship was sufficient to produce the repeated AI residual. Realization provenance and edit dose mattered materially. But adding several new functions at once can expose or create a distributed section-level signal even when a smaller boundary was green.
 
-This supports the production rule already emerging elsewhere: **when semantically applicable natural owner realization exists, retrieve and restore/compress it before reconstructing the same thought.** Do not spend detector iterations trying to imitate an owner realization that can be recovered directly.
+Production rule:
+1. retrieve and restore/compress semantically applicable owner realization before reconstructing the same thought;
+2. preserve exact detector identities and do not treat prior green as universal immunity;
+3. after expansion failure, roll back newly added material first and re-add only functions that genuinely belong there using the highest-authority surface available;
+4. keep robust owner paragraphs unchanged unless there is an independent editorial defect.
 
 This does **not** establish that:
 - Pangram proves authorship;
@@ -65,9 +81,3 @@ This does **not** establish that:
 - the detector has identified a universal provenance feature.
 
 Editorial quality, fidelity, placement, and article function remain independent gates.
-
-## Next production implication
-
-Freeze the exact J boundary as detector-green. Do not reopen its five paragraphs for detector reasons.
-
-For the remaining reparenting functions, source-recovery-first now has a high expected value. Recover owner realization for neutral witnessing, a real Protector action, the light self-hypnosis relationship, the love-source examples, Brainspotting/EMDR cross-links, and deep-work readiness before generating replacement prose. Some of those functions may belong more naturally in their dedicated modality or inner-child sections rather than being repeated in the overlap section; preservation and correct placement remain separate questions.
