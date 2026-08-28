@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r17-corpus-skeleton-r01-api-20260828-a_R17_EMDR_R02",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "EMDR\nWhether EMDR is the right place to start can depend a lot on whether you can point to the memory. Keep in mind that an accident, an assault memory, military trauma, one distinct flashback, or a specific network of triggers all give you a fairly clear target. If somebody is stable and has one clear event, that does not necessarily mean they need months of body work first. Sometimes EMDR is the obvious early choice.\nBrainspotting is easier to feel your way into when you do not know exactly what you are looking for; with EMDR, the target and recall procedure are clearer. I become more cautious when the trauma is diffuse or developmental, mostly bodily or pre-verbal, relational, or the person's nervous system is still unstable. In those cases I would want at least some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit earlier.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9999816417694092,
+        "confidence": "High",
+        "end_index": 888,
+        "humanizer_score": 0.729144275188446,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "EMDR\nWhether EMDR is the right place to start can depend a lot on whether you can point to the memory. Keep in mind that an accident, an assault memory, military trauma, one distinct flashback, or a specific network of triggers all give you a fairly clear target. If somebody is stable and has one clear event, that does not necessarily mean they need months of body work first. Sometimes EMDR is the obvious early choice.\nBrainspotting is easier to feel your way into when you do not know exactly what you are looking for; with EMDR, the target and recall procedure are clearer. I become more cautious when the trauma is diffuse or developmental, mostly bodily or pre-verbal, relational, or the person's nervous system is still unstable. In those cases I would want at least some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit earlier.",
+        "token_length": 188,
+        "word_count": 155
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "26fbc379-5cae-4eee-b95b-b14c2889c7db",
   "text": "EMDR\n\nWhether EMDR is the right place to start can depend a lot on whether you can point to the memory. Keep in mind that an accident, an assault memory, military trauma, one distinct flashback, or a specific network of triggers all give you a fairly clear target. If somebody is stable and has one clear event, that does not necessarily mean they need months of body work first. Sometimes EMDR is the obvious early choice.\n\nBrainspotting is easier to feel your way into when you do not know exactly what you are looking for; with EMDR, the target and recall procedure are clearer. I become more cautious when the trauma is diffuse or developmental, mostly bodily or pre-verbal, relational, or the person's nervous system is still unstable. In those cases I would want at least some access to a Nurturer and Protector before opening very charged material, and Brainspotting may fit earlier.\n",
   "text_sha256": "5c987c73159adef4fe14d36e36fe0d368cd248f987ef71176b1a3d24a84a5f54",
-  "updated_utc": "2026-08-28T23:28:11.617093+00:00"
+  "updated_utc": "2026-08-28T23:28:15.143181+00:00"
 }
