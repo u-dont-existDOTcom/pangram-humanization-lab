@@ -158,6 +158,42 @@
       },
       "section_id": "emdr",
       "budget_scope": "section"
+    },
+    {
+      "id": "R17_SKY_VAGAL_R01",
+      "measurement_key": "somatic-r17-rule-learning-r01-api-20260828-a_R17_SKY_VAGAL_R01",
+      "text": "Sky Hypnosis and Vagal Blitz\n\nSky Hypnosis and Vagal Blitz are a little strange to put in the same article as restorative yoga because they are deliberately intense state-shifters. Somebody stable may find either of them useful even before trying the therapies above, but they are not prerequisites for healing.\n\nThe question for me is whether I can stay present, stop voluntarily, and come back afterward. If I cannot do those three things, I am not going to use deep memory work, an immersive inner-child dialogue, deep hypnosis, or suggestive exploration to find out what happens.\n\nSky Hypnosis can make you lightheaded. Vagal Blitz needs to be done lying down and has cardiovascular and mental-health cautions, so I would read the complete guide and begin with the least intense version that still gives a useful shift. If balance, orientation, or recovery becomes unreliable, stop. Fainting and loss of consciousness are not goals.\n\nNeither practice gets points just for making me say “wow.” A huge release, bliss, or an altered state can feel profound while the actual problem stays basically untouched. What happens when I remember the event later? Am I any better at pain, boundaries, conflict, and ordinary life? And if the practice is mostly helping me dodge grief, conflict, practical problems, or deeper relational healing, then the extraordinary state is not doing the job I needed it to do.\n",
+      "text_sha256": "815e7332e4f609f5689e0e8a6214515c326ed7fb90465060519a92fef0335500",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Sky Hypnosis and Vagal Blitz\nSky Hypnosis and Vagal Blitz are a little strange to put in the same article as restorative yoga because they are deliberately intense state-shifters. Somebody stable may find either of them useful even before trying the therapies above, but they are not prerequisites for healing.\nThe question for me is whether I can stay present, stop voluntarily, and come back afterward. If I cannot do those three things, I am not going to use deep memory work, an immersive inner-child dialogue, deep hypnosis, or suggestive exploration to find out what happens.\nSky Hypnosis can make you lightheaded. Vagal Blitz needs to be done lying down and has cardiovascular and mental-health cautions, so I would read the complete guide and begin with the least intense version that still gives a useful shift. If balance, orientation, or recovery becomes unreliable, stop. Fainting and loss of consciousness are not goals.\nNeither practice gets points just for making me say “wow.” A huge release, bliss, or an altered state can feel profound while the actual problem stays basically untouched. What happens when I remember the event later? Am I any better at pain, boundaries, conflict, and ordinary life? And if the practice is mostly helping me dodge grief, conflict, practical problems, or deeper relational healing, then the extraordinary state is not doing the job I needed it to do.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Sky Hypnosis and Vagal Blitz\nSky Hypnosis and Vagal Blitz are a little strange to put in the same article as restorative yoga because they are deliberately intense state-shifters. Somebody stable may find either of them useful even before trying the therapies above, but they are not prerequisites for healing.\nThe question for me is whether I can stay present, stop voluntarily, and come back afterward. If I cannot do those three things, I am not going to use deep memory work, an immersive inner-child dialogue, deep hypnosis, or suggestive exploration to find out what happens.\nSky Hypnosis can make you lightheaded. Vagal Blitz needs to be done lying down and has cardiovascular and mental-health cautions, so I would read the complete guide and begin with the least intense version that still gives a useful shift. If balance, orientation, or recovery becomes unreliable, stop. Fainting and loss of consciousness are not goals.\nNeither practice gets points just for making me say “wow.” A huge release, bliss, or an altered state can feel profound while the actual problem stays basically untouched. What happens when I remember the event later? Am I any better at pain, boundaries, conflict, and ordinary life? And if the practice is mostly helping me dodge grief, conflict, practical problems, or deeper relational healing, then the extraordinary state is not doing the job I needed it to do.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9853888750076294,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1400,
+            "word_count": 233,
+            "token_length": 293,
+            "is_humanized": false,
+            "humanizer_score": 0.5451804995536804
+          }
+        ]
+      },
+      "section_id": "sky-hypnosis-vagal-blitz",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -280,10 +316,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.05,
-        "estimated_credits": 1,
+        "estimated_cost_usd": 0.1,
+        "estimated_credits": 2,
         "model": "pangram-4",
-        "paid_api_calls": 1,
+        "paid_api_calls": 2,
         "pending_resumes": 0,
         "section_id": "sky-hypnosis-vagal-blitz",
         "version": "4.0",
