@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-reparenting-production-matrix-20260828",
+  "status": "PASS",
+  "authority_impact": "none",
+  "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202",
+  "frozen_r08_sha256": "6ceaa3becafb78bb75df043e5ff88cd41d46496ef93d9a0500b6759856c5811a",
+  "r08_prefix_check": {
+    "M00": "PASS",
+    "M10": "PASS",
+    "M01": "PASS",
+    "M11": "PASS"
+  },
+  "authorized_delta": "Append only the factor-assigned owner-controlled/published clusters after byte-identical R08; paragraph breaks are part of the frozen candidate identities.",
+  "forbidden_deltas": [
+    "edit R08",
+    "change actors, blame direction, chronology, certainty, or adult-child conflict",
+    "add a therapeutic resolution, mechanism, anecdote, modality catalogue, Brainspotting/EMDR detail, or generic aftercare",
+    "delete or de-authorize any protected extension function",
+    "change the registered master, owner locks, architecture, or owner-final prose"
+  ],
+  "units": [
+    {
+      "id": "PU-R08",
+      "meaning": "all seven frozen adult/child trust units",
+      "source": "R15-REPARENTING-R08-ADULT-TRUST-MINIMUM-NORMALIZATION-20260828.md@324ad7f74165684407f752f5496e097664dbed3e",
+      "mapping": "byte-identical first paragraph in every cell",
+      "status": "preserved"
+    },
+    {
+      "id": "PU-NP",
+      "meaning": "name Nurturer and Protector as inner-adult roles",
+      "source": "R09 terminology under owner authority",
+      "mapping": "In my inner-child work I call the adult roles the Nurturer and Protector.",
+      "status": "preserved in every cell"
+    },
+    {
+      "id": "PU-ACTION",
+      "meaning": "Protector performs one real-world action",
+      "source": "owner-published source pool@e54e44702ba2f61b55e83bfcbf3581669bb848e0",
+      "mapping": "The Protector creates real-world safety. The Protector cleans the room.",
+      "status": "preserved in every cell"
+    },
+    {
+      "id": "PU-WITNESS",
+      "meaning": "neutral witness is available when parent/adult imagery is unavailable",
+      "source": "owner-controlled source pool@e54e44702ba2f61b55e83bfcbf3581669bb848e0",
+      "mapping": "exact/minimum-normalized witness sentences in M10 and M11",
+      "status": "preserved in M10/M11; explicitly factor-withheld in M00/M01 and routed to M11"
+    },
+    {
+      "id": "PU-BORROWED",
+      "meaning": "borrow a safe sentence/boundary/direction while carrying a small part oneself; call it borrowed adulthood",
+      "source": "owner-controlled source pool plus direct owner-required term",
+      "mapping": "witness/borrowed paragraph in M10 and M11",
+      "status": "preserved in M10/M11; explicitly factor-withheld in M00/M01 and routed to M11"
+    },
+    {
+      "id": "PU-HYPNOSIS",
+      "meaning": "light self-hypnosis may support reparenting and present safety",
+      "source": "owner-controlled source pool@e54e44702ba2f61b55e83bfcbf3581669bb848e0",
+      "mapping": "hypnosis paragraph in M01 and M11; exact article link routed on self-hypnosis",
+      "status": "preserved in M01/M11; explicitly factor-withheld in M00/M10 and routed to M11"
+    },
+    {
+      "id": "PU-NO-FORCE",
+      "meaning": "self-hypnosis is not used to force trauma memories",
+      "source": "owner-controlled source pool@e54e44702ba2f61b55e83bfcbf3581669bb848e0",
+      "mapping": "I do not use it to force trauma memories. in M01 and M11",
+      "status": "preserved in M01/M11; explicitly factor-withheld in M00/M10 and routed to M11"
+    }
+  ],
+  "per_cell": {
+    "M00": {"forward_traceability": "PASS for authorized diagnostic scope", "reverse_traceability": "PASS", "unexplained_substantive_deltas": 0, "production_eligible": false},
+    "M10": {"forward_traceability": "PASS for authorized diagnostic scope", "reverse_traceability": "PASS", "unexplained_substantive_deltas": 0, "production_eligible": false},
+    "M01": {"forward_traceability": "PASS for authorized diagnostic scope", "reverse_traceability": "PASS", "unexplained_substantive_deltas": 0, "production_eligible": false},
+    "M11": {"forward_traceability": "PASS 7/7 extension obligations plus frozen R08", "reverse_traceability": "PASS", "unexplained_substantive_deltas": 0, "production_eligible": true}
+  },
+  "cold_audit": {
+    "pass_1": "PASS: R08's credibility problem is followed by named adult roles and one concrete external action; witness/borrowing and hypnosis are separate necessary moves rather than one closure stack.",
+    "pass_2": "PASS with residual tracked: M11 deliberately uses plain adjacency before the hypnosis option. Article-wide placement and following heart-loop dependency still require regression before any promotion.",
+    "detector_eligibility": "PASS for four exact, pre-reserved matrix cells"
+  },
+  "unexplained_substantive_deltas": 0
+}
