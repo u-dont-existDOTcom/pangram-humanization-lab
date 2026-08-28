@@ -988,6 +988,20 @@
       "source_path": "state/ROMANCE-R7-MINIMUM-DOSE-OWNER-ROLLBACK-2026-08-27.md",
       "source_ref": "agent/romance-r7-minimum-dose-lesson-20260827",
       "source_sha256": "66d2eb97e0a2eba32bc1d642e80deaac8a13029a781f5f1e142fad9cc4f69769"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Stacked editorial closure can be detector-sensitive through boundary-level feature interactions even when isolated operations are null; preserve owner source and avoid phrase blacklists.",
+      "id": "L-f4d8e633a6-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-08-28T15:21:34.410480+00:00",
+      "source_path": "state/experiments/human-to-ai-minimal-pairs-20260828/RESULTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "f4d8e633a6baebdc8088ddc0dbfdc22215051c81f89a28f20db52a5f876ae456"
     }
   ],
   "schema_version": 1
