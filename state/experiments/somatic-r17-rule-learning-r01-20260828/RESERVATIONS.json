@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r17-rule-learning-r01-api-20260828-a",
+  "created_at_utc": "2026-08-28",
+  "transport": "private fixed-batch executor / Pangram API",
+  "pangram_model": "4.0",
+  "spec_sha256": "d18e5a418020d0724ccc052d9ba44e3e7b8e56ee7588a89bf8d6cb13f2243e60",
+  "budget": {
+    "maximum_new_paid_calls": 5,
+    "completed": 0,
+    "duplicate_calls": 0
+  },
+  "cells": [
+    {"id":"R17_SE_R01","section_id":"somatic-experiencing","sha256":"c0877d56f3dbed5315bbdfcee0d8eb06db8623d2977922d8b405babf74f83f24","status":"frozen_pending_dispatch"},
+    {"id":"R17_YOGA_R01","section_id":"trauma-sensitive-yoga","sha256":"e4b1cbe28bc700b06514a2088166e663eb3f9baa6aa5e2f927b710fcf3038787","status":"frozen_pending_dispatch"},
+    {"id":"R17_BRAINSPOTTING_R01","section_id":"brainspotting","sha256":"60843bb5c71f0eaa1dabc3dff502dc2b2e11c952bf3c11f8cfd86d00abeb038b","status":"frozen_pending_dispatch"},
+    {"id":"R17_EMDR_R01","section_id":"emdr","sha256":"54420c1b8a9b9ea543c5706019d494a07818f17cc7ca4730c75e9caa58d480ba","status":"frozen_pending_dispatch"},
+    {"id":"R17_SKY_VAGAL_R01","section_id":"sky-hypnosis-vagal-blitz","sha256":"815e7332e4f609f5689e0e8a6214515c326ed7fb90465060519a92fef0335500","status":"frozen_pending_dispatch"}
+  ],
+  "blocked_repeats": [
+    {"id":"R08","sha256":"6ceaa3becafb78bb75df043e5ff88cd41d46496ef93d9a0500b6759856c5811a","reason":"frozen Human boundary; no redundant control"},
+    {"id":"R15_SHAKING_QIGONG_R01","sha256":"0f21beb5d6c95c471a13d8b3ff2d373a4541cca61151043203c702286614a181","reason":"historical paid API reservation remains ambiguous"},
+    {"id":"R16_WHOLE","sha256":"52468eabb61aa437f7216d0f6bcef295605b016465e00f5e7a4f63c53fbbaace","reason":"completed exact whole GUI result; superseded as candidate but never repeated"}
+  ]
+}

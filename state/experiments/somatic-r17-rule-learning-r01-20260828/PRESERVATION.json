@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r17-rule-learning-r01-api-20260828-a",
+  "status": "PASS",
+  "authority_impact": "none",
+  "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202",
+  "source_article": {
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "branch": "experiment/somatic-r17-100-human-gate-20260828",
+    "commit": "2e780fb8f0de95209656de165cdc6c6cdf40caec",
+    "design_path": "articles/somatic-therapies/experiments/R17-RULE-LEARNING-R01-CANDIDATES-20260828.md"
+  },
+  "fixed_spec": {
+    "path": "experiments/somatic-r17-rule-learning-r01-api-20260828-a.json",
+    "sha256": "d18e5a418020d0724ccc052d9ba44e3e7b8e56ee7588a89bf8d6cb13f2243e60",
+    "audit_id": "somatic-r15-section-localization-20260827"
+  },
+  "authorized_delta": "D3 sectional reconstruction that preserves every enumerated claim, safety function, modality relationship, owner-specific distinction, link destination outside the submitted plaintext, and architectural role while removing recursive mini-essay closure.",
+  "forbidden_deltas": [
+    "change or soften a claim, actor, chronology, recommendation, evidence limit, safety rule, example, owner-specific distinction, or protected reparenting function",
+    "add an anecdote or transplant unrelated corpus facts",
+    "restore a five-Job or staged-treatment architecture",
+    "alter owner-final or owner-locked prose",
+    "change the registered master, owner locks, native objects, or link multiset",
+    "repeat an exact completed, paid-reserved, or ambiguous input"
+  ],
+  "variants": [
+    {"id":"R17_SE_R01","section_id":"somatic-experiencing","sha256":"c0877d56f3dbed5315bbdfcee0d8eb06db8623d2977922d8b405babf74f83f24","words":253,"unexplained_substantive_deltas":0},
+    {"id":"R17_YOGA_R01","section_id":"trauma-sensitive-yoga","sha256":"e4b1cbe28bc700b06514a2088166e663eb3f9baa6aa5e2f927b710fcf3038787","words":203,"unexplained_substantive_deltas":0},
+    {"id":"R17_BRAINSPOTTING_R01","section_id":"brainspotting","sha256":"60843bb5c71f0eaa1dabc3dff502dc2b2e11c952bf3c11f8cfd86d00abeb038b","words":399,"unexplained_substantive_deltas":0},
+    {"id":"R17_EMDR_R01","section_id":"emdr","sha256":"54420c1b8a9b9ea543c5706019d494a07818f17cc7ca4730c75e9caa58d480ba","words":293,"unexplained_substantive_deltas":0},
+    {"id":"R17_SKY_VAGAL_R01","section_id":"sky-hypnosis-vagal-blitz","sha256":"815e7332e4f609f5689e0e8a6214515c326ed7fb90465060519a92fef0335500","words":230,"unexplained_substantive_deltas":0}
+  ],
+  "forward_traceability": "PASS",
+  "reverse_traceability": "PASS",
+  "unexplained_substantive_deltas": 0,
+  "known_human_controls_resubmitted": 0,
+  "blocked_or_ambiguous_hashes_resubmitted": 0
+}
