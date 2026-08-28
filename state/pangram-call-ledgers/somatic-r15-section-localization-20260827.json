@@ -148,8 +148,8 @@
     "light-cbt-narrative-integration\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.05,
-      "estimated_credits": 1,
+      "estimated_cost_usd": 0.1,
+      "estimated_credits": 2,
       "events": [
         {
           "budget_scope": "section",
@@ -159,10 +159,19 @@
           "text_sha256": "144dab2fc78f6ff3128c20fdd2503cff8212cb4f799b7f9a5280eb22a0c447a0",
           "type": "paid_post_reserved",
           "word_count": 138
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r18-human-spine-local-sections-r01-api-20260828-a_R18_LIGHT_CBT_R01",
+          "recorded_at_utc": "2026-08-28T23:46:39.076487+00:00",
+          "text_sha256": "f9200932fcfd62364872fcce7a9439dfd6fa6400b8e1cdc3340c9e94a8acac80",
+          "type": "paid_post_reserved",
+          "word_count": 90
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 1,
+      "paid_api_calls": 2,
       "pending_resumes": 0,
       "section_id": "light-cbt-narrative-integration",
       "version": "4.0"
