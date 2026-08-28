@@ -4257,6 +4257,37 @@
           "section_id": "sky-hypnosis-vagal-blitz"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-r15-section-localization-20260827",
+      "created_at_utc": "2026-08-28T23:11:55.025992+00:00",
+      "experiment_id": "somatic-r17-se-tail-r02-r03-api-20260828-a",
+      "id": "Q-5db976be724b6fab",
+      "sections": [
+        "somatic-experiencing"
+      ],
+      "source_path": "state/experiments/somatic-r17-se-tail-r02-r03-api-20260828-a-results.json",
+      "source_ref": "ba1932a6c1461b754a570518f25858c97098b683",
+      "source_sha256": "1e1b9a21f3ae584f2f34c863363da35f0800c2a75689acdffb878921fa1289e6",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.6862361431121826,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.3137638568878174,
+          "id": "R17_SE_R02",
+          "prediction_short": "Mixed",
+          "section_id": "somatic-experiencing"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R17_SE_R03",
+          "prediction_short": "AI",
+          "section_id": "somatic-experiencing"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
