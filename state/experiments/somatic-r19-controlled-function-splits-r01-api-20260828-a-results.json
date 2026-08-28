@@ -110,6 +110,54 @@
       },
       "section_id": "gentle-shaking-tre",
       "budget_scope": "section"
+    },
+    {
+      "id": "R19_GENTLE_SHAKING_NECK",
+      "measurement_key": "somatic-r19-controlled-function-splits-r01-api-20260828-a_R19_GENTLE_SHAKING_NECK",
+      "text": "Introduction\n\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\n\nSomatic Experiencing\n\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\n\nGentle Shaking / TRE\n\nIf tremoring reaches your neck while you are lying down, do not let your head whip around unsupported. Reduce or stop the movement, support the head, and get guidance before continuing. Forceful, rapid back-and-forth neck movement can injure the neck.\n",
+      "text_sha256": "d5aedc91469ff2414d5b6bff992fe0dafd904900604485d4bf641f8b46bb0db5",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nGentle Shaking / TRE\nIf tremoring reaches your neck while you are lying down, do not let your head whip around unsupported. Reduce or stop the movement, support the head, and get guidance before continuing. Forceful, rapid back-and-forth neck movement can injure the neck.",
+        "version": "4.0",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.2623400390148163,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.7376599907875061,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6265476942062378,
+            "confidence": "Medium",
+            "start_index": 0,
+            "end_index": 287,
+            "word_count": 48,
+            "token_length": 56,
+            "is_humanized": false,
+            "humanizer_score": 0.564734935760498
+          },
+          {
+            "text": " As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nGentle Shaking / TRE\nIf tremoring reaches your neck while you are lying down, do not let your head whip around unsupported. Reduce or stop the movement, support the head, and get guidance before continuing. Forceful, rapid back-and-forth neck movement can injure the neck.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.31177404522895813,
+            "confidence": "High",
+            "start_index": 287,
+            "end_index": 1094,
+            "word_count": 138,
+            "token_length": 181,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "gentle-shaking-tre",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -152,10 +200,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.15,
-        "estimated_credits": 3,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
         "model": "pangram-4",
-        "paid_api_calls": 3,
+        "paid_api_calls": 4,
         "pending_resumes": 0,
         "section_id": "gentle-shaking-tre",
         "version": "4.0",
