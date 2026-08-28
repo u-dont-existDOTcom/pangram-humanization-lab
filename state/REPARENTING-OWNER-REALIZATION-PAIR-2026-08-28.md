@@ -82,9 +82,20 @@ Joel reported R05 **AI / medium confidence**.
 
 The split reduced detector confidence relative to R04's larger red pre-loop block (AI/high), so architecture mattered, but the subsection still did not pass. Do not keep polishing the same mini-model.
 
+## Natural-thought-route realization — R06
+
 Source recovery after R05 found genuinely natural Joel-authored cognition about the adult/child conflict. Its governing thought is not an abstract `adult access` ladder: the child looks at the grown-up self and thinks `yeah, that doesn't look like things went well for us`; the grown-up can become resentful toward the younger self; then an older part makes vows of protection/nurturing and the child answers `big fuckity whoopty doo, what are you gonna do for me`. Joel also says relaxation has not solved that conflict for him.
 
-This natural source gives the Protector function a lived credibility problem: **the child needs evidence from the adult, not merely another vow or internal role definition.** The next realization should follow that conflict/thought route and subordinate witness, borrowed adulthood, and light hypnosis to it rather than presenting them as equal conceptual boxes.
+R06 rebuilt the subsection around that lived credibility fight and subordinated Nurturer/Protector, witness/borrowed adulthood, and light self-hypnosis to it. Preservation PU2–PU8 remained 7/7 with zero unexplained substantive deltas.
+
+Joel reported R06 **AI / high confidence**.
+
+This closes the adult-access **model-realization lane**. Do not generate more stylistic/synonym variants of the subsection to chase Pangram.
+
+One exact provenance control remains informative and does not violate that stop rule: submit the **raw natural owner paragraph itself** with no model rewriting, normalization, heading, or added concepts. That control is `state/experiments/REPARENTING-R07-RAW-OWNER-ADULT-TRUST-20260828.md`.
+
+- If R07 is Human, the natural owner surface itself is acceptable to Pangram and editorial work can use deletion/minimum normalization rather than free reconstruction.
+- If R07 is AI, stop detector work on this function completely unless an independently Human owner realization later appears.
 
 ## Revised interpretation
 
@@ -92,12 +103,13 @@ This natural source gives the Protector function a lived credibility problem: **
 2. **The two-paragraph love/heart-loop ending is now the robust green anchor.** It stayed Human/high in R04; the heart-loop paragraph alone also stayed Human/high in R03.
 3. **Owner wording alone is not sufficient to make a mixed larger boundary green.** R04 used owner-controlled/published surface in several red paragraphs.
 4. **Architecture helps but is not sufficient.** R05's adult-access split reduced confidence from high to medium while remaining AI.
-5. **Recover the actual human problem before prose.** For adult access, the live issue is trust/credibility between younger and older selves, not a taxonomy of inner-adult capacities.
-6. Brainspotting/EMDR-specific reparenting relationships remain best preserved in their later modality sections.
-7. Do not infer token bans or a universal detector mechanism from these results.
+5. **A recovered natural thought route can still fail after model realization.** R06 followed the lived trust/credibility conflict yet returned AI/high.
+6. **Stop rules matter.** Repeated reconstruction after R06 would be detector chasing rather than production editing.
+7. Brainspotting/EMDR-specific reparenting relationships remain best preserved in their later modality sections.
+8. Do not infer token bans or a universal detector mechanism from these results.
 
 ## Production rule retained but narrowed
 
-Source recovery remains preferable to free reconstruction when a natural owner realization exists. Retrieval-first must be combined with correct paragraph jobs, natural boundary size, architecture, thought route, and stopping point. A source-derived paragraph can still sit inside a detector-red composition, while a polished conceptual arrangement can distort the author's actual lived problem even when every individual proposition is preserved.
+Source recovery remains preferable to free reconstruction when a natural owner realization exists. Retrieval-first must be combined with correct paragraph jobs, natural boundary size, architecture, thought route, stopping point, and a willingness to stop when model realization remains detector-red. A source-derived paragraph can still sit inside a detector-red composition, while a polished conceptual arrangement can distort the author's actual lived problem even when every individual proposition is preserved.
 
 Editorial quality, fidelity, placement, and article function remain independent gates; Pangram is secondary evidence.
