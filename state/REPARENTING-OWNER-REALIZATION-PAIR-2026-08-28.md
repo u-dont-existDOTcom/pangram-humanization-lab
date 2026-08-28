@@ -8,7 +8,7 @@ The stable backbone is the first three paragraphs of `state/experiments/REPARENT
 
 Owner-reported Pangram result for that exact written-register backbone: **Human / medium confidence**.
 
-The backbone was then held fixed while different fourth paragraphs were appended.
+The backbone was then held fixed while additional protected functions were added in controlled doses.
 
 ## Failed assistant-realization sequence
 
@@ -26,7 +26,7 @@ H removed the somatic-preparation explanation entirely and appended only an assi
 
 H therefore falsified the narrower theory that only the explanatory somatic-preparation paragraph function was causing the residual.
 
-## Exact-owner positive control
+## Exact-owner heart-loop positive control
 
 After H, source recovery found Joel's prior exact owner-authored realization of the same heart↔solar-plexus practice. I appended that exact owner paragraph to the same unchanged Human C backbone.
 
@@ -38,9 +38,21 @@ The key controlled contrast is therefore:
 - assistant realization in H → **AI / high confidence** localized to the added paragraph;
 - exact owner realization in I → **Human / medium confidence**.
 
+## Owner-anchored somatic-preparation extension
+
+Additional source recovery found direct Joel wording for the separate somatic-preparation relationship: when the body feels tight or emotional tension blocks access to the heart chakra, use unforced slower exhales; Joel also corrected that in the Buteyko relation the slow exhale should be passive, relaxed, and unforced.
+
+J kept the complete Human/medium I boundary unchanged and inserted only a two-sentence minimum-normalization paragraph from that owner cognition:
+
+`When the body feels tight or there’s too much emotional tension to access the heart chakra, use an unforced slower exhale. With Buteyko-style breathing, the slow exhale should be passive, relaxed, and unforced.`
+
+Joel reported the complete J boundary **Human / high confidence**.
+
+This is stronger production evidence than the I result alone because the previously troublesome somatic-preparation function became detector-green when rebuilt from direct owner cognition with minimal reader-facing normalization rather than free assistant realization.
+
 ## Interpretation
 
-Strong local evidence: in this boundary, the heart-loop topic/function was not sufficient to produce the AI residual. Realization provenance mattered materially. The assistant reconstruction acquired a strong AI signal while the exact owner realization did not.
+Strong local evidence: in this boundary, neither the heart-loop topic/function nor the breathing/heart-access relationship was sufficient to produce the repeated AI residual. Realization provenance and edit dose mattered materially. Assistant reconstructions repeatedly acquired a strong AI signal; recovered owner realization or owner-cognition-minimum-normalization did not.
 
 This supports the production rule already emerging elsewhere: **when semantically applicable natural owner realization exists, retrieve and restore/compress it before reconstructing the same thought.** Do not spend detector iterations trying to imitate an owner realization that can be recovered directly.
 
@@ -49,16 +61,13 @@ This does **not** establish that:
 - every owner paragraph will score Human;
 - every assistant paragraph will score AI;
 - exact copying is always better editorially;
+- minimum normalization always passes;
 - the detector has identified a universal provenance feature.
 
 Editorial quality, fidelity, placement, and article function remain independent gates.
 
-## Additional source recovery after I
+## Next production implication
 
-A prior Joel-authored app-testing transcript also supplies direct owner wording for the unresolved somatic-preparation relationship:
-- when the body feels tight or emotional tension blocks access to the heart chakra, the inner-child guide should suggest unforced slower exhales;
-- Joel explicitly states that in the Buteyko relation the slow exhale should be **passive, relaxed, and unforced**;
-- the heart↔solar-plexus loop is central rather than a background trick;
-- genuinely loved people/pets can be used to evoke real love and redirect it toward the younger self.
+Freeze the exact J boundary as detector-green. Do not reopen its five paragraphs for detector reasons.
 
-The next diagnostic should therefore use minimum-normalization of that actual owner cognition for the breathing/heart-access relation, not another free assistant realization or another repeated modality catalogue.
+For the remaining reparenting functions, source-recovery-first now has a high expected value. Recover owner realization for neutral witnessing, a real Protector action, the light self-hypnosis relationship, the love-source examples, Brainspotting/EMDR cross-links, and deep-work readiness before generating replacement prose. Some of those functions may belong more naturally in their dedicated modality or inner-child sections rather than being repeated in the overlap section; preservation and correct placement remain separate questions.
