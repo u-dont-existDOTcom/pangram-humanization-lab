@@ -218,6 +218,42 @@
       },
       "section_id": "sky-hypnosis-vagal-blitz",
       "budget_scope": "section"
+    },
+    {
+      "id": "R19_SKY_OUTCOME",
+      "measurement_key": "somatic-r19-controlled-function-splits-r01-api-20260828-a_R19_SKY_OUTCOME",
+      "text": "Introduction\n\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\n\nSomatic Experiencing\n\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\n\nSky Hypnosis and Vagal Blitz\n\nI do not count “wow” as an outcome. A huge release, bliss, or an altered state can feel profound while the actual problem stays basically untouched. When I remember the event later, am I less restimulated? Am I doing any better with pain, boundaries, conflict, and ordinary life? If the practice has become a way to avoid grief, conflict, practical problems, or deeper relational healing, the extraordinary state does not rescue it.\n",
+      "text_sha256": "db3a69e10c8841e8187f47d523a2a9dee272566b409dca502f4fb9f707c54be8",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nSky Hypnosis and Vagal Blitz\nI do not count “wow” as an outcome. A huge release, bliss, or an altered state can feel profound while the actual problem stays basically untouched. When I remember the event later, am I less restimulated? Am I doing any better with pain, boundaries, conflict, and ordinary life? If the practice has become a way to avoid grief, conflict, practical problems, or deeper relational healing, the extraordinary state does not rescue it.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Introduction\nPhysical trauma reactions can continue after the danger is over, even when you know you're safe.\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nSomatic Experiencing\nSomatic Experiencing is probably the first thing on this list that I would look at when even brushing the edge of the trauma is too much.\nSky Hypnosis and Vagal Blitz\nI do not count “wow” as an outcome. A huge release, bliss, or an altered state can feel profound while the actual problem stays basically untouched. When I remember the event later, am I less restimulated? Am I doing any better with pain, boundaries, conflict, and ordinary life? If the practice has become a way to avoid grief, conflict, practical problems, or deeper relational healing, the extraordinary state does not rescue it.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.8181482553482056,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1283,
+            "word_count": 218,
+            "token_length": 278,
+            "is_humanized": true,
+            "humanizer_score": 0.9870290756225586
+          }
+        ]
+      },
+      "section_id": "sky-hypnosis-vagal-blitz",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -340,10 +376,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.25,
-        "estimated_credits": 5,
+        "estimated_cost_usd": 0.3,
+        "estimated_credits": 6,
         "model": "pangram-4",
-        "paid_api_calls": 5,
+        "paid_api_calls": 6,
         "pending_resumes": 0,
         "section_id": "sky-hypnosis-vagal-blitz",
         "version": "4.0",
