@@ -2,6 +2,13 @@
 
 Research state only. These are contextual findings and process constraints, not phrase blacklists. Human editorial quality, semantic sanity, and fidelity outrank Pangram.
 
+## Somatic final safety-floor routing — 2026-08-29
+
+- R56 moved the exact compact borrowed-adulthood function from the detector-sensitive post-restimulation adjacency to the article ending, after the complete optional Sky/Vagal section and native embed. It changed no claim, removed no function, and passed authority, preservation, claim-fidelity, coherence, architecture, safety/evidence, link, native-object, and exact-extraction gates.
+- The exact whole headed result improved from R52's 95% Human / 572 displayed AI characters to 96% Human / 473 displayed AI characters. The entire 6,181-character span from between-session work through the complete Sky/Vagal safety ending became Human; the isolated final 181-character Borrowed Adulthood section remained AI alongside the unchanged 292-character Yoga paragraph.
+- A stable Human section can buffer the restimulation/borrowed-adulthood interaction, but merely isolating the compact required function at the ending does not clear it. Retain R56 as the production-complete baseline. Do not delete borrowed adulthood or reopen closed synonym/source/placement microvariants. Change the ending's thought form only when the alternative is coherent, claim-complete, and independently useful to the reader.
+- The 100% Human publication threshold remains subordinate to the full editorial gate stack: detector success cannot compensate for lost owner claims, weakened qualifications, poor coherence, broken architecture, missing links/native objects, extraction mismatch, or HTML reconstruction drift.
+
 ## Somatic section localization — 2026-08-28
 
 - On the exact Human R08/M01 reparenting backbone, neutral witnessing alone became Mixed at AI `0.3653846085`, and borrowed adulthood alone became Mixed at AI `0.3947598338`. The earlier combined endpoint was also Mixed. Either compact explanatory realization was sufficient in that exact boundary, so preserve both functions by routing them to natural destinations rather than stacking them beside the already-complete adult-trust/Nurturer/Protector/hypnosis passage. This is a boundary/placement result, not a phrase blacklist.
