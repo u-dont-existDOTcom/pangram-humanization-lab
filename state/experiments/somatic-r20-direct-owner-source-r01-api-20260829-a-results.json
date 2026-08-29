@@ -74,6 +74,42 @@
       },
       "section_id": "emdr",
       "budget_scope": "section"
+    },
+    {
+      "id": "R20_OWNER_RAW_SHAKING",
+      "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_RAW_SHAKING",
+      "text": "i mean like what energy is stuck in you. i often have the kind of natural shaking that animals have, rather than noticing benefit from intentional therapeutic techniques. especially on psychedelics it's like my body knows exactly which part to shake and how. so it's not just that \"shaking -= meantal healtth\" but more like, when the right thing is shaked the right way, things loosen up as they shoul;d and the energy flows. TRE is a system that they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people, but obviously if you could get more angles at it you'd get more chance of success... and less chance of being called an expert lol... \"just try lots of stuff til it works\" is how my expertise runs on this. i didn't try the shaking qi gong class but i have done qi gong and it was very helpful in moving energy, so i can understand the two would naturally go together, and i can see also how it might be more of a middle ground between fully predictable TRE structure and totally unstructured shaking which probably would suit more people who feel like they need some guidance but aren't able to benefit from the standard TRE. It's also a social thing so that makes it work better than indivbidual practice for many people when they see others getting results.\n",
+      "text_sha256": "18eef9de7e3edea7d6af6c14d878e4809b6747c974358da9ec7af6d5d4a310c8",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "i mean like what energy is stuck in you. i often have the kind of natural shaking that animals have, rather than noticing benefit from intentional therapeutic techniques. especially on psychedelics it's like my body knows exactly which part to shake and how. so it's not just that \"shaking -= meantal healtth\" but more like, when the right thing is shaked the right way, things loosen up as they shoul;d and the energy flows. TRE is a system that they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people, but obviously if you could get more angles at it you'd get more chance of success... and less chance of being called an expert lol... \"just try lots of stuff til it works\" is how my expertise runs on this. i didn't try the shaking qi gong class but i have done qi gong and it was very helpful in moving energy, so i can understand the two would naturally go together, and i can see also how it might be more of a middle ground between fully predictable TRE structure and totally unstructured shaking which probably would suit more people who feel like they need some guidance but aren't able to benefit from the standard TRE. It's also a social thing so that makes it work better than indivbidual practice for many people when they see others getting results.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "i mean like what energy is stuck in you. i often have the kind of natural shaking that animals have, rather than noticing benefit from intentional therapeutic techniques. especially on psychedelics it's like my body knows exactly which part to shake and how. so it's not just that \"shaking -= meantal healtth\" but more like, when the right thing is shaked the right way, things loosen up as they shoul;d and the energy flows. TRE is a system that they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people, but obviously if you could get more angles at it you'd get more chance of success... and less chance of being called an expert lol... \"just try lots of stuff til it works\" is how my expertise runs on this. i didn't try the shaking qi gong class but i have done qi gong and it was very helpful in moving energy, so i can understand the two would naturally go together, and i can see also how it might be more of a middle ground between fully predictable TRE structure and totally unstructured shaking which probably would suit more people who feel like they need some guidance but aren't able to benefit from the standard TRE. It's also a social thing so that makes it work better than indivbidual practice for many people when they see others getting results.",
+            "label": "Human Written",
+            "ai_assistance_score": 7.632907363586128e-05,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1336,
+            "word_count": 252,
+            "token_length": 294,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "gentle-shaking-tre",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -116,18 +152,18 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.2,
-        "estimated_credits": 4,
+        "estimated_cost_usd": 0.25,
+        "estimated_credits": 5,
         "model": "pangram-4",
-        "paid_api_calls": 4,
+        "paid_api_calls": 5,
         "pending_resumes": 0,
         "section_id": "gentle-shaking-tre",
         "version": "4.0",
         "hard_cap_applies": true,
         "cap": 6,
-        "paid_calls_to_human": null,
-        "estimated_credits_to_human": null,
-        "first_human_measurement_key": null
+        "paid_calls_to_human": 5,
+        "estimated_credits_to_human": 5,
+        "first_human_measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_RAW_SHAKING"
       },
       {
         "budget_scope": "section",
