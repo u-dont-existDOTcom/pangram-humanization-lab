@@ -146,6 +146,42 @@
       },
       "section_id": "light-cbt-narrative-integration",
       "budget_scope": "section"
+    },
+    {
+      "id": "R20_OWNER_GUIDE_WITNESS_BORROWED",
+      "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_GUIDE_WITNESS_BORROWED",
+      "text": "If these adult voices do not feel available yet:\nI begin as the witness who notices.\nI may borrow one sentence, boundary, or direction from somebody safe.\nThe borrowed figure stays beside me while I choose the words and carry one small part myself.\n",
+      "text_sha256": "3b3e934a99a2d454e326e13701f684272b911130d7cc82417f02aaa040867165",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "If these adult voices do not feel available yet:\nI begin as the witness who notices.\nI may borrow one sentence, boundary, or direction from somebody safe.\nThe borrowed figure stays beside me while I choose the words and carry one small part myself.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "If these adult voices do not feel available yet:\nI begin as the witness who notices.\nI may borrow one sentence, boundary, or direction from somebody safe.\nThe borrowed figure stays beside me while I choose the words and carry one small part myself.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9998076558113098,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 248,
+            "word_count": 44,
+            "token_length": 50,
+            "is_humanized": false,
+            "humanizer_score": 0.11174003034830093
+          }
+        ]
+      },
+      "section_id": "light-cbt-narrative-integration",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -220,10 +256,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.15,
-        "estimated_credits": 3,
+        "estimated_cost_usd": 0.2,
+        "estimated_credits": 4,
         "model": "pangram-4",
-        "paid_api_calls": 3,
+        "paid_api_calls": 4,
         "pending_resumes": 0,
         "section_id": "light-cbt-narrative-integration",
         "version": "4.0",

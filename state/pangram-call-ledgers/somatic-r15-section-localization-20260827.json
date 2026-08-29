@@ -193,8 +193,8 @@
     "light-cbt-narrative-integration\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.2,
-      "estimated_credits": 4,
+      "estimated_cost_usd": 0.25,
+      "estimated_credits": 5,
       "events": [
         {
           "budget_scope": "section",
@@ -231,10 +231,19 @@
           "text_sha256": "3b3e934a99a2d454e326e13701f684272b911130d7cc82417f02aaa040867165",
           "type": "paid_post_reserved",
           "word_count": 44
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_GUIDE_SELF_HYPNOSIS_SAFETY",
+          "recorded_at_utc": "2026-08-29T00:09:33.159220+00:00",
+          "text_sha256": "050e1c832ae344b98070ff8a796c47b00bd21c38bfa9138b25e3d24854b9ccbb",
+          "type": "paid_post_reserved",
+          "word_count": 37
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 4,
+      "paid_api_calls": 5,
       "pending_resumes": 0,
       "section_id": "light-cbt-narrative-integration",
       "version": "4.0"
