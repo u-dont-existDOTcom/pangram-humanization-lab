@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r21-human-source-minimum-normalization-r01-api-20260829-a_R21_BRAINSPOTTING_MINIMUM_NORMALIZATION",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Brainspotting\nI used my finger to direct my gaze slowly around the field of vision to see how different memories felt, or what memories came up, at different angles. That was basically how I figured out very quickly that I could do a simple version myself.\nI had heard the claim that when you move your eyes to the top left you are remembering and the top right you are thinking or constructing something. That simple map did not hold up when I checked it, so I do not use it to read other people's eyes.\nI like Brainspotting because it makes it easy to do something like edging. I did not know if that was the right word. What I mean is going in and out of the uncomfortable spot and kind of feather-touching the boundary rather than jumping straight into the deep end. It feels more effective to me.\nAnd I give it so many more points because it is democratic like EFT. You do not need an expensive expert just to experiment with a simple version, although you can get one too. I would not take that as an invitation to jump into the deepest trauma alone.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.3200474977493286,
+        "confidence": "High",
+        "end_index": 1056,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Brainspotting\nI used my finger to direct my gaze slowly around the field of vision to see how different memories felt, or what memories came up, at different angles. That was basically how I figured out very quickly that I could do a simple version myself.\nI had heard the claim that when you move your eyes to the top left you are remembering and the top right you are thinking or constructing something. That simple map did not hold up when I checked it, so I do not use it to read other people's eyes.\nI like Brainspotting because it makes it easy to do something like edging. I did not know if that was the right word. What I mean is going in and out of the uncomfortable spot and kind of feather-touching the boundary rather than jumping straight into the deep end. It feels more effective to me.\nAnd I give it so many more points because it is democratic like EFT. You do not need an expensive expert just to experiment with a simple version, although you can get one too. I would not take that as an invitation to jump into the deepest trauma alone.",
+        "token_length": 226,
+        "word_count": 202
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "55904867-ad8f-46ec-8e28-c55e89a119a3",
   "text": "Brainspotting\n\nI used my finger to direct my gaze slowly around the field of vision to see how different memories felt, or what memories came up, at different angles. That was basically how I figured out very quickly that I could do a simple version myself.\n\nI had heard the claim that when you move your eyes to the top left you are remembering and the top right you are thinking or constructing something. That simple map did not hold up when I checked it, so I do not use it to read other people's eyes.\n\nI like Brainspotting because it makes it easy to do something like edging. I did not know if that was the right word. What I mean is going in and out of the uncomfortable spot and kind of feather-touching the boundary rather than jumping straight into the deep end. It feels more effective to me.\n\nAnd I give it so many more points because it is democratic like EFT. You do not need an expensive expert just to experiment with a simple version, although you can get one too. I would not take that as an invitation to jump into the deepest trauma alone.\n",
   "text_sha256": "36bd9579cb55743d5f1f095eba878fa9048d2f68ebf4acf28c8c03182bf75229",
-  "updated_utc": "2026-08-29T00:16:16.733479+00:00"
+  "updated_utc": "2026-08-29T00:16:20.432603+00:00"
 }
