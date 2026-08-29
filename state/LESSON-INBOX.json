@@ -4493,6 +4493,72 @@
           "section_id": "sky-hypnosis-vagal-blitz"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-r15-section-localization-20260827",
+      "created_at_utc": "2026-08-29T00:09:47.089049+00:00",
+      "experiment_id": "somatic-r20-direct-owner-source-r01-api-20260829-a",
+      "id": "Q-9e9e9a787719b1e1",
+      "sections": [
+        "brainspotting",
+        "emdr",
+        "gentle-shaking-tre",
+        "light-cbt-narrative-integration"
+      ],
+      "source_path": "state/experiments/somatic-r20-direct-owner-source-r01-api-20260829-a-results.json",
+      "source_ref": "fca590ce4d93db91f1e765768218080c275910dd",
+      "source_sha256": "4615677219d81acddacd867ffed1abe4e9ff3eba57afa7d5fff30cd2ba3a6f5f",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R20_OWNER_RAW_BRAINSPOTTING",
+          "prediction_short": "Human",
+          "section_id": "brainspotting"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R20_OWNER_RAW_BRAINSPOTTING_EMDR_CONTRAST",
+          "prediction_short": "Human",
+          "section_id": "emdr"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R20_OWNER_RAW_SHAKING",
+          "prediction_short": "Human",
+          "section_id": "gentle-shaking-tre"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R20_OWNER_PUBLISHED_PROTECTOR",
+          "prediction_short": "AI",
+          "section_id": "light-cbt-narrative-integration"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R20_OWNER_GUIDE_WITNESS_BORROWED",
+          "prediction_short": "AI",
+          "section_id": "light-cbt-narrative-integration"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R20_OWNER_GUIDE_SELF_HYPNOSIS_SAFETY",
+          "prediction_short": "AI",
+          "section_id": "light-cbt-narrative-integration"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
