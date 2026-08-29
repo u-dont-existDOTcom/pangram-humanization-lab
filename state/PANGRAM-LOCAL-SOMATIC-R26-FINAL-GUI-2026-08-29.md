@@ -1,6 +1,6 @@
 # Somatic R26 minimum-function headed Pangram GUI call — recovery ledger
 
-Status: **RESERVED / EXACT HASH FROZEN / NOT YET SUBMITTED**
+Status: **COMPLETE / EXACT HISTORY-BOUND MIXED RESULT / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -40,11 +40,38 @@ Article-side preservation, architecture, safety/evidence, link, native-object, a
 - If R26 is Mixed, freeze every newly Human segment and use exact History localization for the next decision-relevant structural repair.
 - If R26 regresses, retain the negative result and return to the protected R25 Human spine without repeating either hash.
 
+## Completed result
+
+The exact frozen field was submitted once at `2026-08-29T12:17:58.401Z`. The live field was byte-for-byte equal to the local boundary before the click, plagiarism was off, and the field reset immediately after the effective submission.
+
+- Pangram version: `4.0`
+- Prediction: `Mixed`
+- AI: `16%`
+- Human: `84%`
+- Summary: `AI-generated content appears in scattered patches`
+- Pangram display count: `2,116 words scanned`
+- History record: `7221f94b-88b9-4054-8a71-4fb23bae2a39`
+- History URL: `https://www.pangram.com/history?history=7221f94b-88b9-4054-8a71-4fb23bae2a39`
+
+History exposed five contiguous segments across two pages. Their concatenated text is exactly equal to the frozen 2,080-word boundary after display-only whitespace collapse. Display-segment hashes include Pangram's segment-leading whitespace:
+
+| Segment | Result | Chars | Whitespace words | Displayed-text SHA-256 | Scope |
+| --- | --- | ---: | ---: | --- | --- |
+| `text-segment-0` | Human | 5,092 | 893 | `ef4adc3b351202d9d762c52fe286199e2c2e1ccc310a8bd811ec8d96bc63be0b` | complete opening through `No power yoga. No hot yoga.` |
+| `text-segment-1` | AI | 409 | 85 | `fb16d4f064bd7e53130a25bbec198713bed8ec10ada40fa7e63d79b14b60e697` | latter Yoga choice/exit and TRE stop/neck safety |
+| `text-segment-2` | Human | 3,084 | 568 | `c54917d5b4d37ba0c5808f42afb755cf603d850f820dc64e0dba9fe2790abb7e` | between-session owner spine through the Brainspotting `democratic like EFT` sentence |
+| `text-segment-3` | AI | 1,442 | 247 | `29cbd854f70e18d2bb35efdb4f770e2be25f25654d0d0192221fe70d3959f452` | Brainspotting caution/research through EMDR and borrowed adulthood |
+| `text-segment-4` | Human | 1,650 | 287 | `a1bd297b0c3209ef1b24fad2538b8c4d129df3d886e68fb8432c26ba31b3bdd4` | complete lived outcome, restimulation, and Sky/Vagal section |
+
+## Durable interpretation
+
+R26 improves the exact whole boundary from R25's Human `69%` to Human `84%`. The minimum-function repair clears the complete witness/Somatic Experiencing opening and the complete restimulation/Sky/Vagal ending. Freeze all three Human segments. Only two contextual interactions remain: the 409-character Yoga/TRE safety tail and the 1,442-character Brainspotting-caution/research/EMDR/borrowed-adulthood run. The next candidate may change only those two AI regions, must retain their protected safety and factual functions, and must not repeat this exact hash.
+
 ## Call accounting
 
 - Paid GUI calls reserved: `1`
-- Paid GUI calls completed: `0`
+- Paid GUI calls completed: `1`
 - Cache hits: `0`
 - Duplicate calls: `0`
 - Pending or ambiguous submissions: `0`
-- Plagiarism check: must remain off
+- Plagiarism check: off
