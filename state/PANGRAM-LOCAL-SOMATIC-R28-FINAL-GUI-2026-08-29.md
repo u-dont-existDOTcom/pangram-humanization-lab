@@ -1,6 +1,6 @@
 # Somatic R28 late structural-unstacking headed Pangram GUI call — recovery ledger
 
-Status: **SUBMISSION AMBIGUOUS / CLICK PROMISE RESOLVED / RESULT NOT YET RECOVERED / DO NOT REPEAT**
+Status: **COMPLETE / EXACT HISTORY-BOUND MIXED RESULT / 100%-HUMAN GATE FAILED / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -49,14 +49,41 @@ Article-side preservation, architecture, safety/evidence, link, native-object, a
 - Plagiarism remained off and the submit control was enabled.
 - The single submit click promise resolved at `2026-08-29T13:02:44.458Z`.
 - The authenticated browser session disconnected before the first post-click field or result read. The call may have completed; it must be treated as submitted unless exact History recovery proves otherwise.
-- The exact disconnected session was unavailable on focused reconnect attempts. A different connected Brave session was inspected but did not expose the R22–R28 whole-article History sequence, so it cannot resolve this submission.
-- No second click occurred. Do not resubmit this SHA. Recovery must reconnect the exact prior authenticated session or otherwise surface its Pangram History, then bind the newest matching result before further detector work.
+- The exact disconnected session was unavailable on focused reconnect attempts. The first connected Brave profile inspected did not expose the R22–R28 whole-article History sequence.
+- The correct second Brave profile later became visible. Its newest 1:02 PM History row was the single R28 submission, and exact History binding succeeded. No second click occurred.
+
+## Recovered result and History binding
+
+- History title: `Introduction Physical trauma`
+- History row time: `2026-08-29 1:02 PM`
+- History record: `d8ca094b-7307-4f5b-8fe8-9fea49f83554`
+- History URL: `https://www.pangram.com/history?history=d8ca094b-7307-4f5b-8fe8-9fea49f83554`
+- Pangram model: `4.0`
+- Prediction: `Mixed`
+- AI: `21%`
+- Human: `79%`
+- Display count: `2111 words scanned`
+- Summary: `AI-generated content appears in scattered patches`
+
+The five stored History segments concatenate to an exact 2,075-word match after display-only whitespace collapse. The unique newest row, click time, exact pre-click equality, History identifier, and normalized stored-text equality bind the result unambiguously to the frozen R28 SHA.
+
+| Segment | result | chars | words | displayed-text SHA-256 | Scope |
+| --- | --- | ---: | ---: | --- | --- |
+| `text-segment-0` | Human | 5,092 | 893 | `ef4adc3b351202d9d762c52fe286199e2c2e1ccc310a8bd811ec8d96bc63be0b` | exact R26 opening through `No power yoga. No hot yoga.` |
+| `text-segment-1` | AI | 409 | 85 | `fb16d4f064bd7e53130a25bbec198713bed8ec10ada40fa7e63d79b14b60e697` | unchanged R26 Yoga/TRE safety tail |
+| `text-segment-2` | Human | 2,619 | 477 | `ac26c46afe9f4e579929fd0a688e75909eeeb9cfbf700043db0408402ae3a793` | between-session owner spine through first fixed-eye-direction sentence |
+| `text-segment-3` | AI | 2,007 | 357 | `d461cde67888558f552481e49fe96a1c0ff8d0a647edad8f408c30177d0bca09` | fixed-eye correction through late technical stack and first lived-story sentence |
+| `text-segment-4` | Human | 1,521 | 263 | `67559c7f9e9e64e91dc007eaf7f8d76b5e027619dfc7f3bb0c18ed332be91e40` | remainder of lived story through complete ending |
+
+## Result interpretation
+
+R28 improves over R27 (`77%` → `79%` Human) but regresses from the protected R26 baseline (`84%` → `79%`). The unchanged R26 opening and Yoga/TRE AI tail reproduce exactly. Moving the D’Antoni sentence beside EMDR and removing the meta-heading does not clear the late interaction; instead, the late AI boundary expands from R26's 1,442 characters to 2,007 characters, pulling backward into the protected Brainspotting core and forward into the first lived-story sentence. Do not iterate on the R28 structural arrangement. Return exactly to R26 and change one region at a time.
 
 ## Call accounting
 
 - Paid GUI calls reserved: `1`
-- Paid GUI calls completed: `unknown; click promise resolved once`
+- Paid GUI calls completed: `1`
 - Cache hits: `0`
 - Duplicate calls: `0`
-- Pending or ambiguous submissions: `1`
+- Pending or ambiguous submissions: `0`
 - Plagiarism check: must remain off
