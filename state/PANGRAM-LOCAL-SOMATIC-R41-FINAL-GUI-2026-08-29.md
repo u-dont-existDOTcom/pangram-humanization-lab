@@ -1,6 +1,6 @@
 # Somatic R41 TCTSY source-recovery headed Pangram GUI call — recovery ledger
 
-Status: **RESERVED / NOT YET TRANSMITTED / DO NOT DUPLICATE**
+Status: **COMPLETE / EXACT HISTORY-BOUND MIXED RESULT / 78% HUMAN / LARGE WHOLE-BOUNDARY REGRESSION / DISCARD / 100%-HUMAN GATE FAILED / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -49,11 +49,52 @@ The call changes the editorial decision: it determines whether the official part
 - If the source-recovered Yoga region remains AI, grows, or destabilizes a known-Human boundary, discard it and return to exact R38.
 - Persist the exact result and reusable source-recovery lesson before another candidate is prepared.
 
+## Submission receipt
+
+- The single reusable Pangram dashboard field exactly equaled the frozen local R41 boundary immediately before transmission.
+- Pre-click live-field SHA-256: `920d58e0e342552c2c6e73ddb0436afb418c4ca214fcd3cc7160bc699a4d473a`.
+- Live field: `2118` whitespace words / `11972` UTF-8 bytes / `11924` Unicode characters.
+- Plagiarism remained off and the submit control was enabled.
+- One submit action began at `2026-08-29T17:15:49.327Z` and completed normally. No retry occurred.
+- The unique newest History row and exact History text binding prove acceptance. There is no pending or ambiguous R41 submission.
+- Browser hygiene after submission: one reusable dashboard tab and one History tab; no additional Pangram tabs were opened.
+
+## Result and History binding
+
+- History title: `Introduction Physical trauma`
+- History row time: `2026-08-29 5:15 PM`
+- History record: `3cb1faf5-6677-4adb-adf0-9ed4e037afc9`
+- History URL: `https://www.pangram.com/history?history=3cb1faf5-6677-4adb-adf0-9ed4e037afc9`
+- Pangram model: `4.0`
+- Prediction: `Mixed`
+- AI: `22%`
+- Human: `78%`
+- Display count: `2155 words scanned`
+- Summary: `AI-generated content appears in scattered patches`
+
+The seven stored History segments concatenate to an exact 2,118-word match after display-only whitespace collapse. The normalized local and History texts share SHA-256 `8e7a38471a111b97abbd7b9389980c1462653554145dd762f252278a9152d8e8`.
+
+| Segment | result | chars | words | displayed-text SHA-256 | Scope |
+| --- | --- | ---: | ---: | --- | --- |
+| `text-segment-0` | Human | 4,678 | 813 | `102123f46ce2dddbebf5cf9959ec10abb31b213e0205a19196e15f7f028c6b91` | opening through heart loop |
+| `text-segment-1` | AI | 775 | 158 | `32c82ec566653754b0a1eeeec6fad686914583be232a79372b3a1f773c754c0d` | Somatic Experiencing/witness/SE plus source-recovered Yoga |
+| `text-segment-2` | Human | 2,682 | 492 | `44a010b87bbc1cdc41a304563d82a544c1d9f3df950833e2ccca3aea1f3cb97f` | between-session material through first Brainspotting owner paragraph |
+| `text-segment-3` | AI | 977 | 181 | `ea6bf89cd2ab3a7bec19a4ff5aa7fb149a8676502153eece0e88e73d782fbd02` | remaining Brainspotting owner core, citation, and opening EMDR contrast |
+| `text-segment-4` | Human | 264 | 46 | `7633d231e57b181c4811248fab21e550148e13d37490bd8cb5dc85cef6b4e74c` | remainder of exact EMDR contrast |
+| `text-segment-5` | AI | 823 | 141 | `5157a6b8f48f5759560ba1414c806040a2c6efd3289bd540799f76e739ca8360` | readiness, aftercare, and Light CBT/borrowed adulthood |
+| `text-segment-6` | Human | 1,650 | 287 | `a1bd297b0c3209ef1b24fad2538b8c4d129df3d886e68fb8432c26ba31b3bdd4` | lived outcome, restimulation, and Sky/Vagal ending |
+
+## Result interpretation and learned rule
+
+R41 is accurate, claim-complete, and coherent, but its official-source recovery is detector-incompatible at the whole boundary. The early AI region expands from R38's `292` characters to `775`, a separate `977`-character AI run appears across otherwise exact Human/high Brainspotting/EMDR material, and the unchanged `823`-character late cluster remains. Total displayed AI surface rises from `1,115` to `2,575`, a net regression of `1,460` characters.
+
+Discard R41 and retain exact R38. Factual authority and detector compatibility are separate gates; citations are not humanization techniques. Do not pack institutional attribution, a compact sourced summary, and owner preferences into one detector repair. The local Yoga paraphrase cap remains closed, and exact R41 must never be repeated.
+
 ## Call accounting
 
 - Paid GUI calls reserved: `1`
-- Paid GUI calls completed: `0`
+- Paid GUI calls completed: `1`
 - Cache hits: `0`
 - Duplicate calls: `0`
 - Pending or ambiguous submissions: `0`
-- Plagiarism check: must remain off
+- Plagiarism check: off
