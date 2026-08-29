@@ -1,6 +1,6 @@
 # Somatic R52 distributed protected-function restoration headed Pangram GUI call — recovery ledger
 
-Status: **DURABLY RESERVED / PRODUCTION COMPLETE / EDITORIAL GATES PASS / AWAITING ONE GUI SUBMISSION**
+Status: **COMPLETE / EXACT HISTORY-BOUND HUMAN RESULT / 95% HUMAN / BEST PRODUCTION-COMPLETE BASELINE / SAFETY AND INTEGRATION ROUTES RETAIN / BORROWED DESTINATION LOCALIZED / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -47,11 +47,50 @@ R48–R51 localized the late interaction without authorizing claim deletion. R52
 - If R52 is 100% Human and exact binding plus editorial gates hold, proceed through final article verification, raw-editor reconstruction, authority promotion, and publication.
 - Persist the exact result and reusable lesson before preparing another candidate.
 
+## Submission receipt
+
+- The reused Pangram dashboard field exactly equaled the frozen local R52 boundary immediately before transmission.
+- Pre-click live-field SHA-256: `5e216229ea6d4d5a7febcd5906c3ca487f0a03a20e4f6bbd74849f8961470840`.
+- Live field: `2076` whitespace words / `11775` UTF-8 bytes / `11727` Unicode characters.
+- Plagiarism remained off and the submit control was enabled.
+- One submit action began at `2026-08-29T19:01:18.342Z` and completed normally. No retry occurred.
+- The unique newest History row and exact two-page stored-text binding prove acceptance. There is no pending or ambiguous R52 submission.
+- Browser hygiene after submission: one reusable dashboard tab and one History tab; no additional Pangram tabs were opened.
+
+## Result and History binding
+
+- History title: `Introduction Physical trauma`
+- History row time: `2026-08-29 7:01 PM`
+- History record: `563dca71-25b1-4a7d-aabd-1deacb9ad069`
+- History URL: `https://www.pangram.com/history?history=563dca71-25b1-4a7d-aabd-1deacb9ad069`
+- Pangram model: `4.0`
+- Prediction: `Human` / `Mostly Human`
+- AI: `5%`
+- Human: `95%`
+- Display count: `2113 words scanned`
+- Summary: `AI-generated content appears in scattered patches`
+
+The five stored History segments concatenate to an exact 2,076-word match after display-only whitespace collapse. The normalized local, dashboard, and History texts share SHA-256 `32d154fea9780fc91866ccc8191dac48c3316b132a6eba65ff6d5c41aa4c43aa`.
+
+| Segment | result | chars | words | displayed-text SHA-256 | Scope |
+| --- | --- | ---: | ---: | --- | --- |
+| `text-segment-0` | Human | 4,997 | 873 | `9555cdad817bc65fcc1076c11b1caf59f178100257372e0d71968de0f329384d` | exact R38 opening through Somatic Experiencing |
+| `text-segment-1` | AI | 292 | 62 | `084d0fa52f4253f53cf3581d5f82d235eeddc32994d06d78db5b7921dcd91c08` | exact R38 Yoga paragraph |
+| `text-segment-2` | Human | 5,515 | 997 | `3cc7181696798e6ce1166eeb6996f47ce4c44a6a88e0973e360e5d438e18087f` | exact remainder through routed no-stacking, modalities, aftercare, lived outcome, and routed cognitive integration |
+| `text-segment-3` | AI | 280 | 52 | `7a7013f5b7d8f1704ba09633db1824b181b8a6284a62075758f9668270cbb43c` | exact restimulation micro-section plus borrowed-adulthood section |
+| `text-segment-4` | Human | 567 | 92 | `36e398fab4de13ad37c9e27a1ea5c743d821760aea3eecd0575646b77d1b92eb` | exact Sky/Vagal ending |
+
+## Result interpretation and learned rule
+
+R52 is the best production-complete boundary so far. It reduces total displayed AI from R38's `1115` to `572` characters, a net improvement of `543`, while preserving every claim.
+
+The no-stacking restoration beside the change-one-thing rule and the cognitive-integration restoration after the lived outcome both remain Human in a continuous 5,515-character span. Retain those exact routes. Borrowed adulthood at the post-restimulation destination forms a 280-character AI segment together with restimulation. Move only that complete function to a different natural owner boundary; do not reopen the successful routes or delete the function. The unchanged 292-character Yoga paragraph remains independently AI.
+
 ## Call accounting
 
 - Paid GUI calls reserved: `1`
-- Paid GUI calls completed: `0`
+- Paid GUI calls completed: `1`
 - Cache hits: `0`
 - Duplicate calls: `0`
 - Pending or ambiguous submissions: `0`
-- Plagiarism check: planned off
+- Plagiarism check: off
