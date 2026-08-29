@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r21-human-source-minimum-normalization-r01-api-20260829-a",
+  "created_at_utc": "2026-08-29",
+  "transport": "private fixed-batch executor / Pangram API",
+  "pangram_model": "4.0",
+  "spec_sha256": "bf749f60db1579bb988757aad80f284dfb336b8d0e9b6947da8dc8986019a309",
+  "budget": {"maximum_new_paid_calls":3,"completed":0,"duplicate_calls":0},
+  "cells": [
+    {"id":"R21_BRAINSPOTTING_MINIMUM_NORMALIZATION","section_id":"brainspotting","sha256":"36bd9579cb55743d5f1f095eba878fa9048d2f68ebf4acf28c8c03182bf75229","status":"frozen_pending_dispatch","post_call_section_count":5},
+    {"id":"R21_EMDR_MINIMUM_NORMALIZATION","section_id":"emdr","sha256":"dcc20d2065d6d42486d3686cb199b2a72d446bcad1e3da419cee4990d76ede51","status":"frozen_pending_dispatch","post_call_section_count":6},
+    {"id":"R21_SHAKING_MINIMUM_NORMALIZATION","section_id":"gentle-shaking-tre","sha256":"2f76511812266c8a6f52b368ad9f2bc35648aa1b65b716f989df7aa6da4af13a","status":"frozen_pending_dispatch","post_call_section_count":6}
+  ],
+  "blocked_repeats": [
+    {"section_id":"brainspotting","sha256":"0e71f51b15f56887ad89d18cf34fa2eff333810052cbd0a20bb2734b44c1ce80","reason":"completed Human; source control not repeated"},
+    {"section_id":"emdr","sha256":"209d95a70f8b5490d5f4d728aec1b0547d0965d3413de6b37995c3eff8594fad","reason":"completed Human; source control not repeated"},
+    {"section_id":"gentle-shaking-tre","sha256":"18eef9de7e3edea7d6af6c14d878e4809b6747c974358da9ec7af6d5d4a310c8","reason":"completed Human; source control not repeated"}
+  ]
+}
