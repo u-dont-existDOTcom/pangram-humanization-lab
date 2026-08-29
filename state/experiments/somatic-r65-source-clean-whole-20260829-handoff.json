@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "detector_complete_handoff_pending",
+  "stop_requested_by_owner": true,
+  "source": {
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "branch": "experiment/somatic-source-clean-recovery-20260829",
+    "commit": "63642da06ff3da50188cae2c497036cc27f1dc81",
+    "path": "articles/somatic-therapies/experiments/R65-SOURCE-CLEAN-WHOLE-CANDIDATE-20260829.md",
+    "git_blob_sha": "c490875f1693fd29ddf7718e74835078b10e11ad",
+    "utf8_sha256": "91266ab1b8c5b293c8d219089f22b3d17e57e2b89fe127abeff5ffe19dd84e45",
+    "word_count": 3838
+  },
+  "pre_click_audit": {
+    "exact_history_matches": 0,
+    "history_records_inspected": 10,
+    "detector_submission_attempted": false,
+    "evidence_commit": "e852bff",
+    "private_executor_api_attempt_33279383451": {
+      "detector_executed": false,
+      "paid_action": false,
+      "ambiguous": false
+    }
+  },
+  "pangram_run": {
+    "detector_version": "4.0",
+    "transport": "local_playwright",
+    "persistent_profile": "~/.config/pangram-local-browser",
+    "headed": false,
+    "new_paid_click": true,
+    "reservation_commit": "c59e79c",
+    "completion_commit": "a14ca02519cb6de94a6707995061843319ce42d4",
+    "raw_result_branch": "agent/pangram-local-playwright-gpt-20260818",
+    "raw_result_path": "state/gui-runs/pangram-4/91266ab1b8c5b293c8d219089f22b3d17e57e2b89fe127abeff5ffe19dd84e45/result.json",
+    "captured_at_utc": "2026-08-29T23:42:48.832310Z",
+    "headline": "AI Detected",
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "confidence": 0.8035467863082886,
+    "fractions": {
+      "human": 0.1933075935,
+      "ai": 0.8066924214,
+      "ai_assisted": 0.0
+    },
+    "history_binding": {
+      "match_mode": "exact_utf8",
+      "exact_match_count": 1,
+      "stored_text_sha256": "91266ab1b8c5b293c8d219089f22b3d17e57e2b89fe127abeff5ffe19dd84e45",
+      "stored_word_count": 3838,
+      "created_at_utc": "2026-08-29T23:42:41.203002Z"
+    },
+    "segments": [],
+    "localization_status": "not_present_in_stored_history_structured_result"
+  },
+  "next_worker": {
+    "must_not_resubmit": true,
+    "remaining_actions": [
+      "Inspect the already-completed raw result and capture any mechanically available windows/localization without another detector submission.",
+      "Promote the completed receipt to the final R65 evidence location if this handoff file is not the desired final location.",
+      "Restart and verify pangram-gui-bridge.service; it was intentionally stopped to prevent profile and Git concurrency during the direct run.",
+      "Verify the Joel Articles worktree remains unchanged and master.html was not touched."
+    ],
+    "service_state_at_handoff": "inactive",
+    "unrelated_installed_runner_changes_preserved": [
+      "src/pangram_humanization_lab.egg-info/SOURCES.txt",
+      "Qwen3.8-27B-Uncensored-MLX/"
+    ]
+  }
+}
