@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r20-direct-owner-source-r01-api-20260829-a",
+  "status": "PASS",
+  "authority_impact": "none",
+  "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202",
+  "source_article": {"repository":"u-dont-existDOTcom/joel-articles","branch":"experiment/somatic-r17-100-human-gate-20260828","commit":"64f0b6c","preservation_path":"articles/somatic-therapies/experiments/R20-DIRECT-OWNER-SOURCE-PRESERVATION-20260829.md","preservation_sha256":"e306f76039faf673673d0b743581b0821f928f19f9cadf8a17d8457884206e37"},
+  "fixed_spec": {"path":"experiments/somatic-r20-direct-owner-source-r01-api-20260829-a.json","sha256":"798d4e4a03a587507e9905f76eb897336761caf1c1ebbae62abc180dd2024d05","audit_id":"somatic-r15-section-localization-20260827"},
+  "variants": [
+    {"id":"R20_OWNER_RAW_BRAINSPOTTING","section_id":"brainspotting","sha256":"0e71f51b15f56887ad89d18cf34fa2eff333810052cbd0a20bb2734b44c1ce80","words":181,"provenance":"direct owner answer R06 section 2","unexplained_substantive_deltas":0},
+    {"id":"R20_OWNER_RAW_BRAINSPOTTING_EMDR_CONTRAST","section_id":"emdr","sha256":"209d95a70f8b5490d5f4d728aec1b0547d0965d3413de6b37995c3eff8594fad","words":57,"provenance":"direct owner answer R05 item 3","unexplained_substantive_deltas":0},
+    {"id":"R20_OWNER_RAW_SHAKING","section_id":"gentle-shaking-tre","sha256":"18eef9de7e3edea7d6af6c14d878e4809b6747c974358da9ec7af6d5d4a310c8","words":246,"provenance":"direct owner answer R06 section 1","unexplained_substantive_deltas":0},
+    {"id":"R20_OWNER_PUBLISHED_PROTECTOR","section_id":"light-cbt-narrative-integration","sha256":"32d142f4eb074022f20c40f839ec4b40e72a4c64ccd3873e8b077b4511bc44d6","words":84,"provenance":"published Three Inner Adults owner article","unexplained_substantive_deltas":0},
+    {"id":"R20_OWNER_GUIDE_WITNESS_BORROWED","section_id":"light-cbt-narrative-integration","sha256":"3b3e934a99a2d454e326e13701f684272b911130d7cc82417f02aaa040867165","words":44,"provenance":"current owner-controlled Inner Signal guide","unexplained_substantive_deltas":0},
+    {"id":"R20_OWNER_GUIDE_SELF_HYPNOSIS_SAFETY","section_id":"light-cbt-narrative-integration","sha256":"050e1c832ae344b98070ff8a796c47b00bd21c38bfa9138b25e3d24854b9ccbb","words":37,"provenance":"current owner-controlled Inner Signal guide","unexplained_substantive_deltas":0}
+  ],
+  "forward_traceability": "PASS",
+  "reverse_traceability": "PASS",
+  "unexplained_substantive_deltas": 0,
+  "known_human_controls_resubmitted": 0,
+  "blocked_or_ambiguous_hashes_resubmitted": 0
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "experiment_id": "somatic-r20-direct-owner-source-r01-api-20260829-a",
+  "created_at_utc": "2026-08-29",
+  "transport": "private fixed-batch executor / Pangram API",
+  "pangram_model": "4.0",
+  "spec_sha256": "798d4e4a03a587507e9905f76eb897336761caf1c1ebbae62abc180dd2024d05",
+  "budget": {"maximum_new_paid_calls":6,"completed":0,"duplicate_calls":0},
+  "cells": [
+    {"id":"R20_OWNER_RAW_BRAINSPOTTING","section_id":"brainspotting","sha256":"0e71f51b15f56887ad89d18cf34fa2eff333810052cbd0a20bb2734b44c1ce80","status":"frozen_pending_dispatch","post_call_section_count":4},
+    {"id":"R20_OWNER_RAW_BRAINSPOTTING_EMDR_CONTRAST","section_id":"emdr","sha256":"209d95a70f8b5490d5f4d728aec1b0547d0965d3413de6b37995c3eff8594fad","status":"frozen_pending_dispatch","post_call_section_count":5},
+    {"id":"R20_OWNER_RAW_SHAKING","section_id":"gentle-shaking-tre","sha256":"18eef9de7e3edea7d6af6c14d878e4809b6747c974358da9ec7af6d5d4a310c8","status":"frozen_pending_dispatch","post_call_section_count":5},
+    {"id":"R20_OWNER_PUBLISHED_PROTECTOR","section_id":"light-cbt-narrative-integration","sha256":"32d142f4eb074022f20c40f839ec4b40e72a4c64ccd3873e8b077b4511bc44d6","status":"frozen_pending_dispatch","post_call_section_count":3},
+    {"id":"R20_OWNER_GUIDE_WITNESS_BORROWED","section_id":"light-cbt-narrative-integration","sha256":"3b3e934a99a2d454e326e13701f684272b911130d7cc82417f02aaa040867165","status":"frozen_pending_dispatch","post_call_section_count":4},
+    {"id":"R20_OWNER_GUIDE_SELF_HYPNOSIS_SAFETY","section_id":"light-cbt-narrative-integration","sha256":"050e1c832ae344b98070ff8a796c47b00bd21c38bfa9138b25e3d24854b9ccbb","status":"frozen_pending_dispatch","post_call_section_count":5}
+  ],
+  "blocked_repeats": [
+    {"section_id":"brainspotting","sha256":"d60b7d610a55a542ab63bc58167c50beff3d3667d5695e32108c7d77aa2a3062","reason":"completed AI"},
+    {"section_id":"emdr","sha256":"24291c4c1162117cd4859a47ffba4254edcb47ae689d6b159524c1e653a5dad6","reason":"completed AI"},
+    {"section_id":"gentle-shaking-tre","sha256":"4ccf651158c37ebe0ea5fa542bc02891d5f6c0da716ef4c5304db9eef8eef6c3","reason":"completed AI"},
+    {"section_id":"gentle-shaking-tre","sha256":"d5aedc91469ff2414d5b6bff992fe0dafd904900604485d4bf641f8b46bb0db5","reason":"completed Mixed"},
+    {"section_id":"light-cbt-narrative-integration","sha256":"f9200932fcfd62364872fcce7a9439dfd6fa6400b8e1cdc3340c9e94a8acac80","reason":"completed AI"}
+  ]
+}
