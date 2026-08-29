@@ -1,6 +1,6 @@
 # Current working detector + humanization lessons — Romance continuation, 2026-08-12
 
-Research state only. These are contextual findings and process constraints, not phrase blacklists. Human editorial quality, semantic sanity, and fidelity outrank Pangram.
+Research state only. These are contextual findings and process constraints, not phrase blacklists. Human editorial quality, semantic sanity, fidelity, and source integrity outrank Pangram.
 
 ## Blocking execution order
 
@@ -12,9 +12,26 @@ Research state only. These are contextual findings and process constraints, not 
 
 ## Owner prose vs training probes
 
-- In actual Joel article work, **reuse good owner prose freely and substantially**. It need not be reused only when it is strictly “better”; good natural owner language is part of the authoritative source pool.
+- In actual Joel article work, **reuse good owner prose freely and substantially only when it is genuinely source-relevant to the exact article claim/function and belongs at that destination independent of Pangram**. Human origin, Pangram-Human status, or stylistic similarity is never insertion authority.
 - For training/research that is meant to test model generation ability, first recover the thought and generate a **fresh realization without borrowing Joel’s syntax**. Then compare against owner prose. Copying the human realization can solve the article while teaching almost nothing about generation capability.
 - Socratic correction can be valuable when it exposes a systematic blind spot. The durable value comes from extracting afterward: what the model guessed, why it was wrong, what reality check would have caught it, and the correct distinction.
+
+## Human source is not detector filler
+
+Owner correction, 2026-08-29: **do not humanize an article by stitching in unrelated Human prose.** A passage does not become valid production material because Joel wrote it elsewhere, another human wrote it, it is Pangram-green, or it lowers the AI fraction.
+
+Production source recovery must recover the same unsuperseded article claim, memory, quotation, evidence function, instruction, example, or rhetorical job—or an owner-directed cross-article callback that independently belongs at the exact destination. Otherwise the source is calibration/context only.
+
+Consequences:
+
+- Do not build a `Human spine` by collecting green passages from other articles, transcripts, research prose, or unrelated owner material and filling model prose around them.
+- Cancer, Romance, community, research, transcript, and other corpus samples may calibrate style or detector behavior; they are not reusable Somatic publication copy unless they independently carry the exact Somatic function being written.
+- External studies, official guides, clinical pages, books, and other sources contribute evidence, attribution, and occasional warranted quotations. Their prose style is not a humanization resource and should not be used as a `factual spine` merely because it is human-written.
+- Detector improvement caused by adding functionally unrelated Human text is **source contamination, not successful humanization**. Preserve the experiment as evidence and reject the candidate.
+- Human→AI minimal-pair research may deliberately start from Human corpus baselines. That experimental use does not authorize importing those baselines into an article.
+- Source recovery remains valuable when it retrieves the owner’s natural realization of the **same thought** or restores higher-authority article/source wording for the same protected function. Relevance, provenance, placement, and fidelity are blocking; detector status comes afterward.
+
+The stopped Somatic R17–R58 branch is historical evidence only. In particular, R17 correctly falsified syntax transplantation; R18’s `Human spine` framing is **retired as a production method**; and no later source-recovery result authorizes unrelated Human-text insertion. Any R17–R58 candidate considered again must first pass a source-integrity audit independent of Pangram.
 
 ## Do not spend detector work reconfirming untouched human prose
 
@@ -113,6 +130,6 @@ Durable findings:
 - On long research-conversational prose, a closed taxonomy and a polished bridge each remained Human alone. Together they became Mixed at AI `0.132098034`. Colloquializing either the bridge or the taxonomy while preserving meaning restored Human.
 - On confessional adult/child-trust prose, explanatory completion, sentence equalization, and their combination all remained Human.
 
-Therefore do not blacklist `same principle`, colons, three-item lists, transitions, compression, or any other isolated surface. The operative risk is often **stacked editorial closure**: several locally tidy operations compress, label, connect, and finish a thought in the same boundary. Preserve natural owner source, prefer the next necessary concrete move, and test interactions only when single-feature cells are null and the combination is decision-relevant.
+Therefore do not blacklist `same principle`, colons, three-item lists, transitions, compression, or any other isolated surface. The operative risk is often **stacked editorial closure**: several locally tidy operations compress, label, connect, and finish a thought in the same boundary. Preserve natural owner source when it is actually source-relevant to the target function, prefer the next necessary concrete move, and test interactions only when single-feature cells are null and the combination is decision-relevant.
 
 R09 supplies the production anchor: its byte-identical R08 paragraph was owner-localized Human/high, while its appended 66-word model/editorial required-functions paragraph was AI/high. Keep R08 frozen; retain the protected functions but redistribute or re-realize them rather than defending the compact package.
