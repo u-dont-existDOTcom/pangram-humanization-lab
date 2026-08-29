@@ -4559,6 +4559,47 @@
           "section_id": "light-cbt-narrative-integration"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-r15-section-localization-20260827",
+      "created_at_utc": "2026-08-29T00:16:53.818163+00:00",
+      "experiment_id": "somatic-r21-human-source-minimum-normalization-r01-api-20260829-a",
+      "id": "Q-df2c31ba08de2078",
+      "sections": [
+        "brainspotting",
+        "emdr",
+        "gentle-shaking-tre"
+      ],
+      "source_path": "state/experiments/somatic-r21-human-source-minimum-normalization-r01-api-20260829-a-results.json",
+      "source_ref": "97447f98dd7a6e580c10a6531e787811f2c18de5",
+      "source_sha256": "d2a0371f2078036c42603fd7a5c7b8e6d862dada1aab09fdee30b128170050b3",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R21_BRAINSPOTTING_MINIMUM_NORMALIZATION",
+          "prediction_short": "Human",
+          "section_id": "brainspotting"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R21_EMDR_MINIMUM_NORMALIZATION",
+          "prediction_short": "Human",
+          "section_id": "emdr"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R21_SHAKING_MINIMUM_NORMALIZATION",
+          "prediction_short": "Human",
+          "section_id": "gentle-shaking-tre"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
