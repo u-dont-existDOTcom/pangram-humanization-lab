@@ -1,6 +1,6 @@
 # Somatic R22 final headed Pangram GUI call — recovery ledger
 
-Status: **PRE-CLICK RESERVED / OWNER TRANSMISSION APPROVED / NOT YET SUBMITTED**
+Status: **COMPLETE / EXACT HISTORY-BOUND MIXED RESULT / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -33,4 +33,44 @@ The exact R22 boundary passed its article-side preservation, architecture, safet
 
 ## Result slot
 
-After the single click, replace the status above and record: click time, report URL/identifier, exact stored-History text binding, detector version, classification, Human/AI fractions, confidence, highlighted-window evidence, paid-call count, cache status, and editorial disposition. Persist the result here and in the article repository before any next paid call or publication step.
+The single reserved click occurred at `2026-08-29T00:37:32.957Z`. Pangram completed the report and created the newest History entry at `2026-08-29T00:37Z`:
+
+- History URL: `https://www.pangram.com/history?history=2a5da025-9c0b-42c3-b59e-e35c40550efc`
+- History title: `Introduction Physical trauma`
+- Pangram version: `4.0`
+- stage: completed GUI result
+- classification: `Mixed`
+- headline: `AI Detected`
+- AI: `40%`
+- Human: `60%`
+- Pangram display count: `2,482 words scanned`
+- exact local boundary count: `2,448` whitespace words
+
+The field value was compared with the frozen local text immediately before the click and was exactly equal (`13,927` Unicode characters). History exposed twelve contiguous text segments across its two document pages. Concatenating all twelve segments and collapsing display-only whitespace produced an exact match to the frozen boundary, with `2,448` words on each side. Together with the unique newest History entry, click timestamp, title, and report identifier, this binds the result to SHA-256 `e481ccca8fd08bb18a53254d3e5f1d4d3f97b6a1f4070d63cb0b884a4e1488c0` without ambiguity.
+
+## Pangram segmentation
+
+Six of twelve contiguous segments were marked AI. Character counts are Pangram's displayed-text counts, including segment-leading whitespace:
+
+| Pangram segment | AI | chars | Frozen boundary location |
+| --- | --- | ---: | --- |
+| `text-segment-1` | yes | 182 | Protector action + bounded self-hypnosis, lines 36–38 |
+| `text-segment-3` | yes | 1,169 | `Starting Gently` through the first sentence of EFT, lines 47–74 |
+| `text-segment-5` | yes | 468 | latter Shaking-Qigong synthesis through the psychedelics/mechanism qualifier, lines 84–88 |
+| `text-segment-7` | yes | 374 | defensive-impulse/research-stance closure, line 92 |
+| `text-segment-9` | yes | 3,048 | Brainspotting continuation through the first outcome-measure paragraph, lines 101–137 |
+| `text-segment-11` | yes | 308 | Sky/Vagal optional/high-intensity safety closure, latter part of line 154 |
+
+The other six segments were Human, including the 3,344-character opening/physical-state/lived-reparenting spine; the 1,119-character heart-access/heart-loop span; the 1,472-character EFT and first Shaking-Qigong owner spine; the Louka paragraph; the first Brainspotting paragraph; the complete lived housemate/self-Brainspotting outcome span plus the first Sky/Vagal paragraphs; and the final outcome paragraph.
+
+This segmentation is contextual evidence, not a phrase blacklist. Several AI-marked whole-article spans contain exact R21 sections that were independently Human/high, proving that whole-article adjacency and compact editorial bridges can flip locally Human prose.
+
+## Call accounting and disposition
+
+- Paid GUI calls: `1`
+- Cache hits: `0`
+- Duplicate calls: `0`
+- Pending or ambiguous submissions: `0`
+- Plagiarism check: off / not run
+
+The exact R22 hash is complete and permanently blocked from resubmission. R22 improved Human from R16's `27.14203596%` to `60%`, but it is below Joel's mandatory 100%-Human publication gate. Do not publish or promote R22. Preserve its six Human segments and repair the six localized contextual/closure regions through source recovery, movement, deletion of duplicated explanation, and architecture changes before any next whole measurement.
