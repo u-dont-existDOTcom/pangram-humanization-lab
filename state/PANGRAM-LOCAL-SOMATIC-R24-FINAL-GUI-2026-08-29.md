@@ -1,6 +1,6 @@
 # Somatic R24 minimum-closure headed Pangram GUI call — recovery ledger
 
-Status: **PRE-CLICK RESERVED / SENSITIVE TRANSMISSION CONFIRMATION REQUIRED / NOT YET SUBMITTED**
+Status: **COMPLETE / EXACT HISTORY-BOUND MIXED RESULT / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -29,11 +29,48 @@ Article-side preservation, architecture, safety/evidence, link, native-object, a
 - Durable reservation recorded at `2026-08-29T11:32:53Z`.
 - Lab search found no completed, pending, reserved, cached, or ambiguous record for the exact R24 SHA before this reservation.
 - Authenticated Pangram History was inspected immediately before reservation. Its newest entry remained the completed R23 Mixed record at `2026-08-29T11:14Z`; no newer Somatic result existed.
-- The unpublished R24 text contains personal medical/trauma material. Browser policy requires a fresh action-time confirmation before typing it into Pangram; do not transmit until that confirmation is present.
+- Joel supplied fresh action-time confirmation for R24 before the exact text was typed into Pangram.
 - No untouched-Human control will be resubmitted. R22, R23, and all completed exact hashes remain blocked.
 - After text entry, compare the live field with the frozen local value before clicking and keep plagiarism off.
 - If the click or navigation becomes ambiguous, inspect the dashboard/report/History and bind the exact stored text before considering any further submission. Never repeat this exact hash merely because the live page is unclear.
 
-## Result slot
+## Exact result and History binding
 
-After the single click, replace the status and record: click time, report URL/identifier, exact stored-History text binding, detector version, classification, Human/AI fractions, highlighted segments, paid-call count, cache status, and editorial disposition. Persist the result here and in the article repository before any next paid call or publication step.
+The single reserved click occurred at `2026-08-29T11:36:43.426Z`. Pangram completed the report and created the unique newest History entry at `2026-08-29T11:36Z`:
+
+- History URL: `https://www.pangram.com/history?history=a9aab5ac-eb3c-4839-a8b1-39b43c889c7c`
+- History title: `Introduction Physical trauma`
+- Pangram version: `4.0`
+- stage: completed GUI result
+- classification: `Mixed`
+- headline: `AI Detected`
+- AI: `28%`
+- Human: `72%`
+- Pangram summary: `AI-generated content appears at the start and end`
+- Pangram display count: `2,200 words scanned`
+- exact local boundary count: `2,164` whitespace words
+
+The live field value was exactly equal to the frozen local boundary immediately before the click (`12,282` Unicode characters). History exposed eight contiguous text segments across two document pages. Concatenating the eight displayed segments and collapsing display-only whitespace produced an exact match to the frozen boundary, with `2,164` whitespace words on each side. Together with the unique newest History row, timestamp, title, and report identifier, this binds the result to SHA-256 `5eabd1e53d190fd754d5051c59e47cb923a007e6eaab1fd3a7c77727bb2ef80b` without ambiguity.
+
+## Pangram segmentation
+
+Four of eight contiguous segments were marked AI. Character counts and hashes bind Pangram's exact displayed segment text, including leading whitespace:
+
+| Pangram segment | chars | exact displayed-text SHA-256 | Frozen boundary scope |
+| --- | ---: | --- | --- |
+| `text-segment-1` | 182 | `4e3ad23a7fa882c678cef84bbe6feedfa8e56966e1e9228f1f0a0494013556f1` | Protector action plus bounded self-hypnosis |
+| `text-segment-3` | 248 | `04a1f06af346307a9aa4f53f7977ea24b3537dd57194ed83e696234e2bee3dbc` | witness heading and witness realization |
+| `text-segment-5` | 425 | `5096aa2f53cdc733b81bc89e1c2088b102818fef16dd72101fa9e68736ce9645` | Yoga choice/exit realization plus TRE stop/neck realization |
+| `text-segment-7` | 2,554 | `0beecab943b368820e156fdc17aaa23c163dd9c6fb0bcfb26f63245dd807d83f` | latter lived outcome sentence through research, EMDR, Light CBT/borrowed adulthood, and Sky/Vagal safety |
+
+R24 reduced the AI fraction from R23's `34%` to `28%`. Deleting the generic Louka closure eliminated that red region, and the Yoga/TRE region shrank from 753 to 425 characters. Paragraph consolidation did not clear the exact Protector/self-hypnosis or witness regions: both remained the same 182/248-character scopes with only their leading-whitespace hashes changing. The late run shrank from 3,053 to 2,554 characters but still absorbed the end of the otherwise Human lived story plus exact Human/high R21 EMDR and the complete Sky/Vagal section. This is now a stable four-boundary problem rather than diffuse phrase-level evidence.
+
+## Call accounting and disposition
+
+- Paid GUI calls: `1`
+- Cache hits: `0`
+- Duplicate calls: `0`
+- Pending or ambiguous submissions: `0`
+- Plagiarism check: off / not run
+
+The exact R24 hash is complete and permanently blocked from resubmission. R24 fails Joel's mandatory 100%-Human publication gate, so it must not be promoted or published. Preserve its four Human segments and repair only the four localized contextual boundaries. The next whole call must be a new exact hash whose changes directly address these stable start/end regions.
