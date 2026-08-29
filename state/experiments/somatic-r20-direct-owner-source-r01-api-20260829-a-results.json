@@ -110,6 +110,42 @@
       },
       "section_id": "gentle-shaking-tre",
       "budget_scope": "section"
+    },
+    {
+      "id": "R20_OWNER_PUBLISHED_PROTECTOR",
+      "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_PUBLISHED_PROTECTOR",
+      "text": "The Protector creates real-world safety.\n\nThis is the part of the inner adult that can act.\n\nThe Protector says no.\n\nThe Protector leaves situations that are eroding the child.\n\nThe Protector finishes the avoided task.\n\nThe Protector stops letting people exploit vulnerability.\n\nThe Protector keeps small promises.\n\nThe Protector cleans the room.\n\nThe Protector handles the bill.\n\nThe Protector gets sleep.\n\nI will not just comfort you internally while abandoning you externally.\n\nThese actions tell the inner child:\n\nThere is someone competent here now.\n",
+      "text_sha256": "32d142f4eb074022f20c40f839ec4b40e72a4c64ccd3873e8b077b4511bc44d6",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "The Protector creates real-world safety.\nThis is the part of the inner adult that can act.\nThe Protector says no.\nThe Protector leaves situations that are eroding the child.\nThe Protector finishes the avoided task.\nThe Protector stops letting people exploit vulnerability.\nThe Protector keeps small promises.\nThe Protector cleans the room.\nThe Protector handles the bill.\nThe Protector gets sleep.\nI will not just comfort you internally while abandoning you externally.\nThese actions tell the inner child:\nThere is someone competent here now.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "The Protector creates real-world safety.\nThis is the part of the inner adult that can act.\nThe Protector says no.\nThe Protector leaves situations that are eroding the child.\nThe Protector finishes the avoided task.\nThe Protector stops letting people exploit vulnerability.\nThe Protector keeps small promises.\nThe Protector cleans the room.\nThe Protector handles the bill.\nThe Protector gets sleep.\nI will not just comfort you internally while abandoning you externally.\nThese actions tell the inner child:\nThere is someone competent here now.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.999910831451416,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 542,
+            "word_count": 85,
+            "token_length": 110,
+            "is_humanized": false,
+            "humanizer_score": 0.17845386266708374
+          }
+        ]
+      },
+      "section_id": "light-cbt-narrative-integration",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -184,10 +220,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.1,
-        "estimated_credits": 2,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
         "model": "pangram-4",
-        "paid_api_calls": 2,
+        "paid_api_calls": 3,
         "pending_resumes": 0,
         "section_id": "light-cbt-narrative-integration",
         "version": "4.0",
