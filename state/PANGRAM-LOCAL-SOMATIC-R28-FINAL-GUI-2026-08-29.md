@@ -1,6 +1,6 @@
 # Somatic R28 late structural-unstacking headed Pangram GUI call — recovery ledger
 
-Status: **RESERVED / EXACT HASH FROZEN / NOT YET SUBMITTED**
+Status: **SUBMISSION AMBIGUOUS / CLICK PROMISE RESOLVED / RESULT NOT YET RECOVERED / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -41,11 +41,22 @@ Article-side preservation, architecture, safety/evidence, link, native-object, a
 - If the late region persists, retain the negative structural result and recover a higher-authority source realization only inside that region.
 - If the result regresses, discard the structural route and return to the protected R26 spine without repeating either hash.
 
+## Interrupted submission checkpoint
+
+- The clean Pangram dashboard field exactly equaled the frozen local R28 boundary immediately before transmission.
+- Pre-click live-field SHA-256: `3c4b65e57795391cc489c23d12abd47743471204a4218b644a0f6db2108fd0d2`.
+- Live field: `2075` whitespace words / `11767` UTF-8 bytes / `11721` Unicode characters.
+- Plagiarism remained off and the submit control was enabled.
+- The single submit click promise resolved at `2026-08-29T13:02:44.458Z`.
+- The authenticated browser session disconnected before the first post-click field or result read. The call may have completed; it must be treated as submitted unless exact History recovery proves otherwise.
+- The exact disconnected session was unavailable on focused reconnect attempts. A different connected Brave session was inspected but did not expose the R22–R28 whole-article History sequence, so it cannot resolve this submission.
+- No second click occurred. Do not resubmit this SHA. Recovery must reconnect the exact prior authenticated session or otherwise surface its Pangram History, then bind the newest matching result before further detector work.
+
 ## Call accounting
 
 - Paid GUI calls reserved: `1`
-- Paid GUI calls completed: `0`
+- Paid GUI calls completed: `unknown; click promise resolved once`
 - Cache hits: `0`
 - Duplicate calls: `0`
-- Pending or ambiguous submissions: `0`
+- Pending or ambiguous submissions: `1`
 - Plagiarism check: must remain off
