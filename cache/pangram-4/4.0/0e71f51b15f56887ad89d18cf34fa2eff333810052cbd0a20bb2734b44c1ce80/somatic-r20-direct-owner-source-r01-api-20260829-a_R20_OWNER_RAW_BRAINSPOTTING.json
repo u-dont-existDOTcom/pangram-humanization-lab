@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_RAW_BRAINSPOTTING",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "yeah i used my finger to direct my gaze slowly around the field of vision to see how different memories felt or what memories came up at different angles. they do say that when you move your eyes to the top left you're remembering and top right you're thinking, or something like that (you can check), so there is some real connection already known between eye angle, memory & processing. i like it because it makes it easy to do something like edging, idk if that's the right word you can check but i mean like when you go in and out of the uncomfortable spot and kind of feather touch the boundary of it rather than jumping straight into the deep end. i've seen some studies showing this is more effective as a general therapeutic approach and it feels that way to me. and i just give it so many more points because it's democratic like EFT, you don't need any expensive expert to do it for you (tho you could get one also), and it's available at any moment",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.00010175118950428441,
+        "confidence": "High",
+        "end_index": 959,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "yeah i used my finger to direct my gaze slowly around the field of vision to see how different memories felt or what memories came up at different angles. they do say that when you move your eyes to the top left you're remembering and top right you're thinking, or something like that (you can check), so there is some real connection already known between eye angle, memory & processing. i like it because it makes it easy to do something like edging, idk if that's the right word you can check but i mean like when you go in and out of the uncomfortable spot and kind of feather touch the boundary of it rather than jumping straight into the deep end. i've seen some studies showing this is more effective as a general therapeutic approach and it feels that way to me. and i just give it so many more points because it's democratic like EFT, you don't need any expensive expert to do it for you (tho you could get one also), and it's available at any moment",
+        "token_length": 205,
+        "word_count": 187
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "a1e63364-f9c6-4bfd-934c-8cdb4b4f909e",
   "text": "yeah i used my finger to direct my gaze slowly around the field of vision to see how different memories felt or what memories came up at different angles. they do say that when you move your eyes to the top left you're remembering and top right you're thinking, or something like that (you can check), so there is some real connection already known between eye angle, memory & processing. i like it because it makes it easy to do something like edging, idk if that's the right word you can check but i mean like when you go in and out of the uncomfortable spot and kind of feather touch the boundary of it rather than jumping straight into the deep end. i've seen some studies showing this is more effective as a general therapeutic approach and it feels that way to me. and i just give it so many more points because it's democratic like EFT, you don't need any expensive expert to do it for you (tho you could get one also), and it's available at any moment\n",
   "text_sha256": "0e71f51b15f56887ad89d18cf34fa2eff333810052cbd0a20bb2734b44c1ce80",
-  "updated_utc": "2026-08-29T00:08:39.002166+00:00"
+  "updated_utc": "2026-08-29T00:08:42.577849+00:00"
 }
