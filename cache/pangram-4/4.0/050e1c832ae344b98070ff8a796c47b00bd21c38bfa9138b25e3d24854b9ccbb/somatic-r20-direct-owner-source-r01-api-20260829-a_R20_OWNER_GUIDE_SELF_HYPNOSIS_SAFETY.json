@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_GUIDE_SELF_HYPNOSIS_SAFETY",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Use self-hypnosis for regulation, dialogue, reparenting, clarity, habit change, present safety, emotional integration, and ordinary-life action.\nDo not use it to force trauma memories, prove what happened, suppress medical symptoms, destabilize yourself, or replace appropriate clinical care.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9984027743339539,
+        "confidence": "High",
+        "end_index": 292,
+        "humanizer_score": 0.027170833200216293,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Use self-hypnosis for regulation, dialogue, reparenting, clarity, habit change, present safety, emotional integration, and ordinary-life action.\nDo not use it to force trauma memories, prove what happened, suppress medical symptoms, destabilize yourself, or replace appropriate clinical care.",
+        "token_length": 58,
+        "word_count": 39
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "681f9f46-7bc8-4954-ac90-73acc318aa9e",
   "text": "Use self-hypnosis for regulation, dialogue, reparenting, clarity, habit change, present safety, emotional integration, and ordinary-life action.\n\nDo not use it to force trauma memories, prove what happened, suppress medical symptoms, destabilize yourself, or replace appropriate clinical care.\n",
   "text_sha256": "050e1c832ae344b98070ff8a796c47b00bd21c38bfa9138b25e3d24854b9ccbb",
-  "updated_utc": "2026-08-29T00:09:36.852697+00:00"
+  "updated_utc": "2026-08-29T00:09:41.275078+00:00"
 }
