@@ -1,0 +1,18 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-r65-source-clean-whole-20260829-a",
+  "audit_id": "somatic-r65-source-clean-whole-20260829",
+  "variants": [
+    {
+      "id": "WHOLE",
+      "section_id": "whole-article-reader-visible",
+      "budget_scope": "aggregate",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "blob_sha": "c490875f1693fd29ddf7718e74835078b10e11ad",
+        "text_sha256": "91266ab1b8c5b293c8d219089f22b3d17e57e2b89fe127abeff5ffe19dd84e45"
+      }
+    }
+  ]
+}
