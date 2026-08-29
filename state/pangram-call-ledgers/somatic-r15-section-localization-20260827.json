@@ -131,8 +131,8 @@
     "gentle-shaking-tre\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.25,
-      "estimated_credits": 5,
+      "estimated_cost_usd": 0.3,
+      "estimated_credits": 6,
       "events": [
         {
           "budget_scope": "section",
@@ -178,10 +178,19 @@
           "text_sha256": "18eef9de7e3edea7d6af6c14d878e4809b6747c974358da9ec7af6d5d4a310c8",
           "type": "paid_post_reserved",
           "word_count": 246
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r21-human-source-minimum-normalization-r01-api-20260829-a_R21_SHAKING_MINIMUM_NORMALIZATION",
+          "recorded_at_utc": "2026-08-29T00:16:34.571264+00:00",
+          "text_sha256": "2f76511812266c8a6f52b368ad9f2bc35648aa1b65b716f989df7aa6da4af13a",
+          "type": "paid_post_reserved",
+          "word_count": 261
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 5,
+      "paid_api_calls": 6,
       "pending_resumes": 0,
       "section_id": "gentle-shaking-tre",
       "version": "4.0"

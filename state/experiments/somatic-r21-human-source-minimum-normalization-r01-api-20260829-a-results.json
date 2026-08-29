@@ -38,6 +38,42 @@
       },
       "section_id": "brainspotting",
       "budget_scope": "section"
+    },
+    {
+      "id": "R21_EMDR_MINIMUM_NORMALIZATION",
+      "measurement_key": "somatic-r21-human-source-minimum-normalization-r01-api-20260829-a_R21_EMDR_MINIMUM_NORMALIZATION",
+      "text": "EMDR\n\nBrainspotting, as I understand it, is something you can do yourself. I have done it myself. It is intuitive, and you can figure it out quickly. EMDR is more targeted toward specific memories or traumas, with recall procedures and so on. Brainspotting you can feel out, and it does not require knowing exactly what you are targeting.\n",
+      "text_sha256": "dcc20d2065d6d42486d3686cb199b2a72d446bcad1e3da419cee4990d76ede51",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "EMDR\nBrainspotting, as I understand it, is something you can do yourself. I have done it myself. It is intuitive, and you can figure it out quickly. EMDR is more targeted toward specific memories or traumas, with recall procedures and so on. Brainspotting you can feel out, and it does not require knowing exactly what you are targeting.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "EMDR\nBrainspotting, as I understand it, is something you can do yourself. I have done it myself. It is intuitive, and you can figure it out quickly. EMDR is more targeted toward specific memories or traumas, with recall procedures and so on. Brainspotting you can feel out, and it does not require knowing exactly what you are targeting.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.05758115276694298,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 337,
+            "word_count": 58,
+            "token_length": 77,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "emdr",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -64,18 +100,18 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.25,
-        "estimated_credits": 5,
+        "estimated_cost_usd": 0.3,
+        "estimated_credits": 6,
         "model": "pangram-4",
-        "paid_api_calls": 5,
+        "paid_api_calls": 6,
         "pending_resumes": 0,
         "section_id": "emdr",
         "version": "4.0",
         "hard_cap_applies": true,
         "cap": 6,
-        "paid_calls_to_human": null,
-        "estimated_credits_to_human": null,
-        "first_human_measurement_key": null
+        "paid_calls_to_human": 6,
+        "estimated_credits_to_human": 6,
+        "first_human_measurement_key": "somatic-r21-human-source-minimum-normalization-r01-api-20260829-a_R21_EMDR_MINIMUM_NORMALIZATION"
       },
       {
         "budget_scope": "section",
