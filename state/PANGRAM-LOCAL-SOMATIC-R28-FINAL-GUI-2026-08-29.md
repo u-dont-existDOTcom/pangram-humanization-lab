@@ -7,12 +7,12 @@ Status: **RESERVED / EXACT HASH FROZEN / NOT YET SUBMITTED**
 - Measurement key: `somatic-r28-late-structural-unstacking-r01-gui-20260829-a`
 - Article repository: `u-dont-existDOTcom/joel-articles`
 - Article branch: `experiment/somatic-r17-100-human-gate-20260828`
-- Article commit: `f2bb981`
+- Article commit: `aa96af0`
 - Exact reader-visible input: `articles/somatic-therapies/experiments/R28-WHOLE-ARTICLE-PANGRAM-BOUNDARY-20260829.txt`
 - Exact SHA-256: `3c4b65e57795391cc489c23d12abd47743471204a4218b644a0f6db2108fd0d2`
 - Whitespace words: `2075`
-- UTF-8 bytes: `11721`
-- Unicode characters: `11767`
+- UTF-8 bytes: `11767`
+- Unicode characters: `11721`
 - Terminal newline: present
 - Pangram transport: authenticated Brave/Pangram GUI
 - Intended model/version: current Pangram GUI / version to be recorded from the result
