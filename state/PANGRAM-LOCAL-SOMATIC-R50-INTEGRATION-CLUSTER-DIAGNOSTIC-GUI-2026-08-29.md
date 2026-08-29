@@ -1,6 +1,6 @@
 # Somatic R50 integration-cluster withholding headed Pangram GUI call — recovery ledger
 
-Status: **DURABLY RESERVED / PROTECTED-FUNCTION DIAGNOSTIC / PRODUCTION INCOMPLETE / NEVER PROMOTABLE / AWAITING ONE GUI SUBMISSION**
+Status: **COMPLETE / EXACT HISTORY-BOUND HUMAN RESULT / 96% HUMAN / AFTERCARE INDEPENDENT SENSITIVITY LOCALIZED / PRODUCTION INCOMPLETE / NEVER PROMOTABLE / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -47,11 +47,50 @@ R48's borrowed-adulthood withholding contracted the late AI run from 823 to 386 
 - A 100%-Human R50 result is diagnostic only and cannot trigger promotion or publication.
 - Persist the exact result and reusable lesson before preparing another candidate.
 
+## Submission receipt
+
+- The reused Pangram dashboard field exactly equaled the frozen local R50 boundary immediately before transmission.
+- Pre-click live-field SHA-256: `5117cd17e260646b7ebceaaf4072396bbf1850c5c03c344a7087176641ef6932`.
+- Live field: `2019` whitespace words / `11438` UTF-8 bytes / `11390` Unicode characters.
+- Plagiarism remained off and the submit control was enabled.
+- One submit action began at `2026-08-29T18:46:38.096Z` and completed normally. No retry occurred.
+- The unique newest History row and exact two-page stored-text binding prove acceptance. There is no pending or ambiguous R50 submission.
+- Browser hygiene after submission: one reusable dashboard tab and one History tab; no additional Pangram tabs were opened.
+
+## Result and History binding
+
+- History title: `Introduction Physical trauma`
+- History row time: `2026-08-29 6:46 PM`
+- History record: `79e676cf-f6a3-457c-ae1a-2d936736e52b`
+- History URL: `https://www.pangram.com/history?history=79e676cf-f6a3-457c-ae1a-2d936736e52b`
+- Pangram model: `4.0`
+- Prediction: `Human` / `Mostly Human`
+- AI: `4%`
+- Human: `96%`
+- Display count: `2055 words scanned`
+- Summary: `AI-generated content appears in scattered patches`
+
+The five stored History segments concatenate to an exact 2,019-word match after display-only whitespace collapse. The normalized local, dashboard, and History texts share SHA-256 `42696139dc2c90f0efe0e2709966dc037f0ab4e7f859667fbc28c914b28b70ef`.
+
+| Segment | result | chars | words | displayed-text SHA-256 | Scope |
+| --- | --- | ---: | ---: | --- | --- |
+| `text-segment-0` | Human | 4,997 | 873 | `9555cdad817bc65fcc1076c11b1caf59f178100257372e0d71968de0f329384d` | exact R38 opening through Somatic Experiencing |
+| `text-segment-1` | AI | 292 | 62 | `084d0fa52f4253f53cf3581d5f82d235eeddc32994d06d78db5b7921dcd91c08` | exact R38 Yoga paragraph |
+| `text-segment-2` | Human | 4,177 | 765 | `d06a974b6c98a849b66d542af91cb84cf3f1a0801a1fac41794dcecb1ba791bd` | exact middle through readiness and the first EMDR aftercare sentence |
+| `text-segment-3` | AI | 203 | 32 | `1cdbfdf234ad1453de99ee25b39407e2a3ddf33c2f1e21c97fdd5f678b859539` | exact no-stacking sentence plus complete next-day checks |
+| `text-segment-4` | Human | 1,650 | 287 | `a1bd297b0c3209ef1b24fad2538b8c4d129df3d886e68fb8432c26ba31b3bdd4` | exact lived outcome, restimulation, and Sky/Vagal ending |
+
+## Result interpretation and learned rule
+
+R50 reduces total displayed AI from R48's `678` to `495` characters. The exact Yoga AI region stays at `292`; the late region contracts from `386` to `203`. The removed integration cluster therefore contributed `183` characters to R48's residual interaction, while the exact no-stacking plus next-day aftercare pair remains independently sensitive.
+
+This is functional decomposition, not deletion authority. The complete integration and borrowed-adulthood functions remain protected and mandatory for production. Freeze the Human immediate-aftercare sentence on this backbone. At most one further protected-function diagnostic should separate the no-stacking function from delayed next-day checks; stop before phrase subdivision.
+
 ## Call accounting
 
 - Paid GUI calls reserved: `1`
-- Paid GUI calls completed: `0`
+- Paid GUI calls completed: `1`
 - Cache hits: `0`
 - Duplicate calls: `0`
 - Pending or ambiguous submissions: `0`
-- Plagiarism check: planned off
+- Plagiarism check: off
