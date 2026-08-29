@@ -64,8 +64,8 @@
     "emdr\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.25,
-      "estimated_credits": 5,
+      "estimated_cost_usd": 0.3,
+      "estimated_credits": 6,
       "events": [
         {
           "budget_scope": "section",
@@ -111,10 +111,19 @@
           "text_sha256": "209d95a70f8b5490d5f4d728aec1b0547d0965d3413de6b37995c3eff8594fad",
           "type": "paid_post_reserved",
           "word_count": 57
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r21-human-source-minimum-normalization-r01-api-20260829-a_R21_EMDR_MINIMUM_NORMALIZATION",
+          "recorded_at_utc": "2026-08-29T00:16:24.322697+00:00",
+          "text_sha256": "dcc20d2065d6d42486d3686cb199b2a72d446bcad1e3da419cee4990d76ede51",
+          "type": "paid_post_reserved",
+          "word_count": 58
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 5,
+      "paid_api_calls": 6,
       "pending_resumes": 0,
       "section_id": "emdr",
       "version": "4.0"
