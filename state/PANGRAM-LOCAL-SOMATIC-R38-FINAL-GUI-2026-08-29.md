@@ -1,6 +1,6 @@
 # Somatic R38 TRE safety-to-owner routing headed Pangram GUI call — recovery ledger
 
-Status: **RESERVED / NOT YET TRANSMITTED / ONE GUI CALL MAXIMUM**
+Status: **COMPLETE / EXACT HISTORY-BOUND MOSTLY-HUMAN RESULT / 90% HUMAN / TRE ROUTING SUCCEEDED / RETAIN AS NEW PRODUCTION BASELINE / 100%-HUMAN GATE FAILED / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -42,12 +42,46 @@ Article-side preservation, architecture, safety/evidence, link, native-object, a
 
 ## Submission receipt
 
-Not yet transmitted. No paid Pangram call has been made for this exact hash.
+- The clean Pangram dashboard field exactly equaled the frozen local R38 boundary immediately before transmission.
+- Pre-click live-field SHA-256: `873baa1399c9b8064dd8964779b39b53108d8b90f16ac603e65443921a4cc86d`.
+- Live field: `2082` whitespace words / `11808` UTF-8 bytes / `11760` Unicode characters.
+- Plagiarism remained off and the submit control was enabled.
+- One submit action began at `2026-08-29T16:44:39.541Z`. Browser control timed out after the accepted click while the control was disabled and the result was visible. No retry occurred.
+- The unique newest History row and exact History text binding prove that the first submit action was accepted. There is no pending or ambiguous R38 submission.
+
+## Result and History binding
+
+- History title: `Introduction Physical trauma`
+- History row time: `2026-08-29 4:44 PM`
+- History record: `f81c1707-eaac-4eed-b2aa-3f5ac8eb50fd`
+- History URL: `https://www.pangram.com/history?history=f81c1707-eaac-4eed-b2aa-3f5ac8eb50fd`
+- Pangram model: `4.0`
+- Prediction: `Mostly Human` (History table classification: `Human`)
+- AI: `10%`
+- Human: `90%`
+- Display count: `2117 words scanned`
+- Summary: `AI-generated content appears in scattered patches`
+
+The five stored History segments concatenate to an exact 2,082-word match after display-only whitespace collapse. The normalized local and History texts share SHA-256 `a5f6bdbad8d4c5029a59223260b14e814ee0969d4463eecb932faf8e5b320bca`.
+
+| Segment | result | chars | words | displayed-text SHA-256 | Scope |
+| --- | --- | ---: | ---: | --- | --- |
+| `text-segment-0` | Human | 4,997 | 873 | `9555cdad817bc65fcc1076c11b1caf59f178100257372e0d71968de0f329384d` | exact opening through Somatic Experiencing |
+| `text-segment-1` | AI | 292 | 62 | `084d0fa52f4253f53cf3581d5f82d235eeddc32994d06d78db5b7921dcd91c08` | exact Yoga paragraph only |
+| `text-segment-2` | Human | 3,923 | 719 | `5c70cba2a73f9455ca1553cf0e6c35670c254a47b475137870f22fe1c3c40b3f` | EFT/Shaking region including the moved TRE safety paragraph, through complete EMDR contrast |
+| `text-segment-3` | AI | 823 | 141 | `5157a6b8f48f5759560ba1414c806040a2c6efd3289bd540799f76e739ca8360` | exact R36 readiness, aftercare, and Light CBT/borrowed adulthood |
+| `text-segment-4` | Human | 1,650 | 287 | `a1bd297b0c3209ef1b24fad2538b8c4d129df3d886e68fb8432c26ba31b3bdd4` | exact R36 lived outcome, restimulation, and Sky/Vagal ending |
+
+## Result interpretation
+
+R38 is the new best completed whole boundary at Human `90%`. Moving the exact TRE safety paragraph into the owner-authored TRE/Shaking discussion works: the entire moved unit is absorbed into a 3,923-character Human region, and the early AI surface shrinks from R36's 409-character Yoga/TRE run to the 292-character Yoga paragraph alone.
+
+Retain R38 as the production baseline and freeze the moved TRE route plus all three Human regions. The remaining independent regions are exact Yoga and the unchanged 823-character late cluster. Continue with one controlled function route at a time; do not rewrite or move the now-Human TRE paragraph.
 
 ## Call accounting
 
 - Paid GUI calls reserved: `1`
-- Paid GUI calls completed: `0`
+- Paid GUI calls completed: `1`
 - Cache hits: `0`
 - Duplicate calls: `0`
 - Pending or ambiguous submissions: `0`
