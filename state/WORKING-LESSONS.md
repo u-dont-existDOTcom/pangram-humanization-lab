@@ -16,6 +16,7 @@ Research state only. These are contextual findings and process constraints, not 
 - Close the tested Light-CBT lead realization after R46. Do not infer a blacklist for its words and do not generate a synonym-level successor. The durable lesson is interactional: section boundaries and adjacent technical/citation material can resegment after a very small downstream change.
 - Exact evidence: `state/PANGRAM-LOCAL-SOMATIC-R46-FINAL-GUI-2026-08-29.md`. One paid call, zero duplicates, zero ambiguity, exact two-page History binding.
 - R47 inserted only a paragraph boundary between exact R38 cognitive-integration and borrowed-adulthood sentences. It reproduced R38's exact segment lengths and Human hashes: 292-character Yoga AI, 823-character late AI, and 1,115 total displayed AI characters. Same-paragraph adjacency is therefore not the remaining cause in this boundary. Close whitespace/paragraph-split variants; the unchanged late functions interact across the paragraph boundary.
+- R48 temporarily withheld the complete borrowed-adulthood function from exact R38. Total displayed AI contracted from 1,115 to 678 characters; the late region shrank from 823 to 386, and readiness plus the first aftercare sentence became Human. Borrowed adulthood is a causal contributor but not sufficient to explain the residual. Restore it for production behind a stronger natural function boundary; never treat the 94%-Human diagnostic as publishable or delete the protected claim.
 
 ## Blocking execution order
 
