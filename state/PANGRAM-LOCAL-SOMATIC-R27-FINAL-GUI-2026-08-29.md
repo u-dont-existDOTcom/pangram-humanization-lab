@@ -1,6 +1,6 @@
 # Somatic R27 two-region owner-sequence headed Pangram GUI call — recovery ledger
 
-Status: **RESERVED / EXACT HASH FROZEN / NOT YET SUBMITTED**
+Status: **COMPLETE / EXACT HISTORY-BOUND MIXED RESULT / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -40,11 +40,38 @@ Article-side preservation, architecture, safety/evidence, link, native-object, a
 - If R27 is Mixed, freeze every newly Human segment and use exact History localization for the next decision-relevant structural repair.
 - If R27 regresses, retain the negative result and return to the protected R26 Human spine without repeating either hash.
 
+## Completed result
+
+The exact frozen field was submitted once at `2026-08-29T12:36:10.640Z`. The live field was byte-for-byte equal to the local boundary before the click, plagiarism was off, and the field reset immediately after the effective submission.
+
+- Pangram version: `4.0`
+- Prediction: `Mixed`
+- AI: `23%`
+- Human: `77%`
+- Summary: `AI-generated content appears in scattered patches`
+- Pangram display count: `2,165 words scanned`
+- History record: `5f94b713-9914-4328-91bf-4ba9a4d02be1`
+- History URL: `https://www.pangram.com/history?history=5f94b713-9914-4328-91bf-4ba9a4d02be1`
+
+History exposed five contiguous segments across two pages. Their concatenated text is exactly equal to the frozen 2,129-word boundary after display-only whitespace collapse. Display-segment hashes include Pangram's segment-leading whitespace:
+
+| Segment | Result | Chars | Whitespace words | Displayed-text SHA-256 | Scope |
+| --- | --- | ---: | ---: | --- | --- |
+| `text-segment-0` | Human | 4,997 | 873 | `9555cdad817bc65fcc1076c11b1caf59f178100257372e0d71968de0f329384d` | opening through the Somatic Experiencing sentence |
+| `text-segment-1` | AI | 503 | 104 | `fc85daf9e1d75354b108e9e40b6a9828160afd1fd2ba56a0a6412ee71ef66e92` | complete R27 Yoga/TRE sequence |
+| `text-segment-2` | Human | 2,619 | 477 | `ac26c46afe9f4e579929fd0a688e75909eeeb9cfbf700043db0408402ae3a793` | exact R25/R26 between-session middle through the first fixed-eye-direction sentence |
+| `text-segment-3` | AI | 2,241 | 412 | `c9169ee34b74310513fe71f8acae4d30fa323796ff4318506513dfd7c8b7dbe2` | fixed-eye-direction correction through the first sentence of the lived housemate story |
+| `text-segment-4` | Human | 1,521 | 263 | `67559c7f9e9e64e91dc007eaf7f8d76b5e027619dfc7f3bb0c18ed332be91e40` | remainder of lived story through the complete restimulation and Sky/Vagal ending |
+
+## Durable interpretation
+
+R27 regresses from R26's Human `84%` to Human `77%`. Its direct first-person rewrite expands the early AI boundary to absorb the formerly Human Yoga setup and expands the late AI boundary backward into the protected Brainspotting core and forward into the first lived-story sentence. The unchanged R25/R26 2,619-character middle remains Human, and the final 1,521 characters remain Human. The next candidate must return to the R26 spine, not iterate on R27 wording. Preserve the exact R26 Human segments and use structural placement or source recovery inside only R26's two AI regions. Do not repeat the R27 hash.
+
 ## Call accounting
 
 - Paid GUI calls reserved: `1`
-- Paid GUI calls completed: `0`
+- Paid GUI calls completed: `1`
 - Cache hits: `0`
 - Duplicate calls: `0`
 - Pending or ambiguous submissions: `0`
-- Plagiarism check: must remain off
+- Plagiarism check: off
