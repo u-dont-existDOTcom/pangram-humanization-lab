@@ -6,8 +6,8 @@
     "brainspotting\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "budget_scope": "section",
@@ -35,10 +35,19 @@
           "text_sha256": "d60b7d610a55a542ab63bc58167c50beff3d3667d5695e32108c7d77aa2a3062",
           "type": "paid_post_reserved",
           "word_count": 301
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_RAW_BRAINSPOTTING",
+          "recorded_at_utc": "2026-08-29T00:08:35.572115+00:00",
+          "text_sha256": "0e71f51b15f56887ad89d18cf34fa2eff333810052cbd0a20bb2734b44c1ce80",
+          "type": "paid_post_reserved",
+          "word_count": 181
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "brainspotting",
       "version": "4.0"
