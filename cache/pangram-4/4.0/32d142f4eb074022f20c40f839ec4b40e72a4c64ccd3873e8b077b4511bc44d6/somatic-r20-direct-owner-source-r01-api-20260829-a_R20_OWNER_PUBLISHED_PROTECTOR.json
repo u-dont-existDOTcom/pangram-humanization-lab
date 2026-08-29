@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_PUBLISHED_PROTECTOR",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "The Protector creates real-world safety.\nThis is the part of the inner adult that can act.\nThe Protector says no.\nThe Protector leaves situations that are eroding the child.\nThe Protector finishes the avoided task.\nThe Protector stops letting people exploit vulnerability.\nThe Protector keeps small promises.\nThe Protector cleans the room.\nThe Protector handles the bill.\nThe Protector gets sleep.\nI will not just comfort you internally while abandoning you externally.\nThese actions tell the inner child:\nThere is someone competent here now.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.999910831451416,
+        "confidence": "High",
+        "end_index": 542,
+        "humanizer_score": 0.17845386266708374,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "The Protector creates real-world safety.\nThis is the part of the inner adult that can act.\nThe Protector says no.\nThe Protector leaves situations that are eroding the child.\nThe Protector finishes the avoided task.\nThe Protector stops letting people exploit vulnerability.\nThe Protector keeps small promises.\nThe Protector cleans the room.\nThe Protector handles the bill.\nThe Protector gets sleep.\nI will not just comfort you internally while abandoning you externally.\nThese actions tell the inner child:\nThere is someone competent here now.",
+        "token_length": 110,
+        "word_count": 85
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "f755b9fa-40e2-410c-bee1-0b0f84564065",
   "text": "The Protector creates real-world safety.\n\nThis is the part of the inner adult that can act.\n\nThe Protector says no.\n\nThe Protector leaves situations that are eroding the child.\n\nThe Protector finishes the avoided task.\n\nThe Protector stops letting people exploit vulnerability.\n\nThe Protector keeps small promises.\n\nThe Protector cleans the room.\n\nThe Protector handles the bill.\n\nThe Protector gets sleep.\n\nI will not just comfort you internally while abandoning you externally.\n\nThese actions tell the inner child:\n\nThere is someone competent here now.\n",
   "text_sha256": "32d142f4eb074022f20c40f839ec4b40e72a4c64ccd3873e8b077b4511bc44d6",
-  "updated_utc": "2026-08-29T00:09:11.513674+00:00"
+  "updated_utc": "2026-08-29T00:09:14.983764+00:00"
 }
