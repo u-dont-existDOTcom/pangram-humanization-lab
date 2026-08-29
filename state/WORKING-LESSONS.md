@@ -9,6 +9,13 @@ Research state only. These are contextual findings and process constraints, not 
 - These complete-section AI results are consistent with the earlier whole-source boundary: model-shaped Somatic prose can remain AI/high even when it is accurate, safety-conscious, and lightly owner-voiced. When no independently Human owner source exists, another model-only paraphrase has low information value. Prefer source recovery, movement of protected functions to their natural owners, and deletion of demonstrably duplicative editorial closure.
 - Exact result packet: `state/experiments/somatic-r15-remaining-natural-sections-20260828/PACKET.md`; machine result: `state/experiments/somatic-r15-remaining-natural-sections-api-20260828-a-results.json`. The batch used eight paid calls, zero cache hits, and zero duplicates.
 
+## Somatic whole-boundary spillover — 2026-08-29
+
+- R38 remains the best headed whole boundary at 90% Human. R46 changed only two Light-CBT lead sentences inside R38's existing late AI region and passed claim, coherence, architecture, link, and native-object gates. Pangram nevertheless fell to 86% Human: the late AI segment expanded from 823 to 1,355 displayed characters and reached backward through the final Brainspotting caution, citation, and complete EMDR section.
+- A rewrite being narrower, coherent, claim-complete, and confined to an already AI-marked span does not make it detector-local. Measure exact whole-boundary spillover and total AI surface; reject a locally plausible change when it destabilizes neighboring frozen Human prose.
+- Close the tested Light-CBT lead realization after R46. Do not infer a blacklist for its words and do not generate a synonym-level successor. The durable lesson is interactional: section boundaries and adjacent technical/citation material can resegment after a very small downstream change.
+- Exact evidence: `state/PANGRAM-LOCAL-SOMATIC-R46-FINAL-GUI-2026-08-29.md`. One paid call, zero duplicates, zero ambiguity, exact two-page History binding.
+
 ## Blocking execution order
 
 - **Semantic sanity comes before humanization.** Before rewriting, inspect the thought itself: premise, actor/action/object, causality, chronology, certainty, ordinary human dynamics, and whether the supposed contradiction survives contact with reality. Rewriting a bad thought wastes effort and often produces polished nonsense.
