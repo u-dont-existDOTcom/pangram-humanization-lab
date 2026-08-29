@@ -15,6 +15,7 @@ Research state only. These are contextual findings and process constraints, not 
 - A rewrite being narrower, coherent, claim-complete, and confined to an already AI-marked span does not make it detector-local. Measure exact whole-boundary spillover and total AI surface; reject a locally plausible change when it destabilizes neighboring frozen Human prose.
 - Close the tested Light-CBT lead realization after R46. Do not infer a blacklist for its words and do not generate a synonym-level successor. The durable lesson is interactional: section boundaries and adjacent technical/citation material can resegment after a very small downstream change.
 - Exact evidence: `state/PANGRAM-LOCAL-SOMATIC-R46-FINAL-GUI-2026-08-29.md`. One paid call, zero duplicates, zero ambiguity, exact two-page History binding.
+- R47 inserted only a paragraph boundary between exact R38 cognitive-integration and borrowed-adulthood sentences. It reproduced R38's exact segment lengths and Human hashes: 292-character Yoga AI, 823-character late AI, and 1,115 total displayed AI characters. Same-paragraph adjacency is therefore not the remaining cause in this boundary. Close whitespace/paragraph-split variants; the unchanged late functions interact across the paragraph boundary.
 
 ## Blocking execution order
 
