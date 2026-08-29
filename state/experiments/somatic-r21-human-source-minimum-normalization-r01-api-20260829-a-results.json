@@ -74,6 +74,42 @@
       },
       "section_id": "emdr",
       "budget_scope": "section"
+    },
+    {
+      "id": "R21_SHAKING_MINIMUM_NORMALIZATION",
+      "measurement_key": "somatic-r21-human-source-minimum-normalization-r01-api-20260829-a_R21_SHAKING_MINIMUM_NORMALIZATION",
+      "text": "Shaking Qigong / Shaking Medicine\n\nI mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” It is more like this: when the right thing is shaken the right way, things loosen up as they should and the energy flows.\n\nTRE is a system people are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. But obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert, lol. “Just try lots of stuff till it works” is how my expertise runs on this.\n\nI did not try the Shaking Qigong class, but I have done qigong and it was very helpful in moving energy. I can understand how the two would naturally go together. I can also see how it might be a middle ground between fully predictable TRE structure and totally unstructured shaking. That would probably suit more people who need some guidance but cannot benefit from standard TRE. It is also social, and that can work better than individual practice for many people when they see others getting results.\n\nI still need to be able to stop, orient, and settle afterward. If not, that is not the right dose.\n",
+      "text_sha256": "2f76511812266c8a6f52b368ad9f2bc35648aa1b65b716f989df7aa6da4af13a",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Shaking Qigong / Shaking Medicine\nI mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” It is more like this: when the right thing is shaken the right way, things loosen up as they should and the energy flows.\nTRE is a system people are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. But obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert, lol. “Just try lots of stuff till it works” is how my expertise runs on this.\nI did not try the Shaking Qigong class, but I have done qigong and it was very helpful in moving energy. I can understand how the two would naturally go together. I can also see how it might be a middle ground between fully predictable TRE structure and totally unstructured shaking. That would probably suit more people who need some guidance but cannot benefit from standard TRE. It is also social, and that can work better than individual practice for many people when they see others getting results.\nI still need to be able to stop, orient, and settle afterward. If not, that is not the right dose.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Shaking Qigong / Shaking Medicine\nI mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” It is more like this: when the right thing is shaken the right way, things loosen up as they should and the energy flows.\nTRE is a system people are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. But obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert, lol. “Just try lots of stuff till it works” is how my expertise runs on this.\nI did not try the Shaking Qigong class, but I have done qigong and it was very helpful in moving energy. I can understand how the two would naturally go together. I can also see how it might be a middle ground between fully predictable TRE structure and totally unstructured shaking. That would probably suit more people who need some guidance but cannot benefit from standard TRE. It is also social, and that can work better than individual practice for many people when they see others getting results.\nI still need to be able to stop, orient, and settle afterward. If not, that is not the right dose.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.06973753869533539,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1422,
+            "word_count": 260,
+            "token_length": 313,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "section_id": "gentle-shaking-tre",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -116,18 +152,18 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.25,
-        "estimated_credits": 5,
+        "estimated_cost_usd": 0.3,
+        "estimated_credits": 6,
         "model": "pangram-4",
-        "paid_api_calls": 5,
+        "paid_api_calls": 6,
         "pending_resumes": 0,
         "section_id": "gentle-shaking-tre",
         "version": "4.0",
         "hard_cap_applies": true,
         "cap": 6,
-        "paid_calls_to_human": null,
-        "estimated_credits_to_human": null,
-        "first_human_measurement_key": null
+        "paid_calls_to_human": 6,
+        "estimated_credits_to_human": 6,
+        "first_human_measurement_key": "somatic-r21-human-source-minimum-normalization-r01-api-20260829-a_R21_SHAKING_MINIMUM_NORMALIZATION"
       },
       {
         "budget_scope": "section",
