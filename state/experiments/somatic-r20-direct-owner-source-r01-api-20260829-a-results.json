@@ -182,6 +182,42 @@
       },
       "section_id": "light-cbt-narrative-integration",
       "budget_scope": "section"
+    },
+    {
+      "id": "R20_OWNER_GUIDE_SELF_HYPNOSIS_SAFETY",
+      "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_GUIDE_SELF_HYPNOSIS_SAFETY",
+      "text": "Use self-hypnosis for regulation, dialogue, reparenting, clarity, habit change, present safety, emotional integration, and ordinary-life action.\n\nDo not use it to force trauma memories, prove what happened, suppress medical symptoms, destabilize yourself, or replace appropriate clinical care.\n",
+      "text_sha256": "050e1c832ae344b98070ff8a796c47b00bd21c38bfa9138b25e3d24854b9ccbb",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Use self-hypnosis for regulation, dialogue, reparenting, clarity, habit change, present safety, emotional integration, and ordinary-life action.\nDo not use it to force trauma memories, prove what happened, suppress medical symptoms, destabilize yourself, or replace appropriate clinical care.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Use self-hypnosis for regulation, dialogue, reparenting, clarity, habit change, present safety, emotional integration, and ordinary-life action.\nDo not use it to force trauma memories, prove what happened, suppress medical symptoms, destabilize yourself, or replace appropriate clinical care.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9984027743339539,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 292,
+            "word_count": 39,
+            "token_length": 58,
+            "is_humanized": false,
+            "humanizer_score": 0.027170833200216293
+          }
+        ]
+      },
+      "section_id": "light-cbt-narrative-integration",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-r15-section-localization-20260827",
@@ -256,10 +292,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.2,
-        "estimated_credits": 4,
+        "estimated_cost_usd": 0.25,
+        "estimated_credits": 5,
         "model": "pangram-4",
-        "paid_api_calls": 4,
+        "paid_api_calls": 5,
         "pending_resumes": 0,
         "section_id": "light-cbt-narrative-integration",
         "version": "4.0",
