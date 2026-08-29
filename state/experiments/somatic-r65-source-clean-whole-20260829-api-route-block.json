@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "record_type": "pre_detector_transport_block",
+  "article": "Somatic Therapies",
+  "candidate": {
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "branch": "experiment/somatic-source-clean-recovery-20260829",
+    "path": "articles/somatic-therapies/experiments/R65-SOURCE-CLEAN-WHOLE-CANDIDATE-20260829.md",
+    "git_blob_sha": "c490875f1693fd29ddf7718e74835078b10e11ad",
+    "text_sha256": "91266ab1b8c5b293c8d219089f22b3d17e57e2b89fe127abeff5ffe19dd84e45",
+    "whitespace_words": 3838
+  },
+  "fixed_batch_spec": {
+    "path": "experiments/somatic-r65-source-clean-whole-20260829-a.json",
+    "sha256": "ea07a98b955a168573a55fd60c56dc2dc78556a492d3c6f5c2a893212bb1dd5c",
+    "experiment_id": "somatic-r65-source-clean-whole-20260829-a",
+    "audit_id": "somatic-r65-source-clean-whole-20260829",
+    "variant_id": "WHOLE",
+    "section_id": "whole-article-reader-visible",
+    "budget_scope": "aggregate"
+  },
+  "private_executor": {
+    "repository": "u-dont-existDOTcom/pangram-private-executor",
+    "request_path": "requests/somatic-r65-source-clean-whole-20260829-a.json",
+    "request_commit": "1907d0a2fb47ee387921d138cdcd30cffdb0e4fd",
+    "workflow_run_id": 33279383451,
+    "job_id": 99171819801,
+    "workflow_status": "completed",
+    "workflow_conclusion": "failure"
+  },
+  "validated_before_block": [
+    "immutable private trigger",
+    "exact public spec SHA-256",
+    "canonical paid fixed-batch contract"
+  ],
+  "blocking_step": "Enforce GUI-large API-short owner policy",
+  "blocking_message": "Owner cost policy blocks aggregate/large Pangram API submissions. Use the authenticated GUI route instead, or obtain a specific owner override. Blocked variants: WHOLE:aggregate",
+  "detector_runner_step": "skipped",
+  "pangram_submission_occurred": false,
+  "paid_detector_action_occurred": false,
+  "paid_api_calls": 0,
+  "ambiguous_paid_state": false,
+  "repeat_or_recovery_required_for_this_api_attempt": false,
+  "next_allowed_transport": "authenticated local Pangram GUI with exact-hash reservation/cache/history safeguards",
+  "note": "This failed workflow is a pre-detector routing refusal, not a failed or ambiguous Pangram measurement. It must never authorize or require a repeat API submission."
+}
