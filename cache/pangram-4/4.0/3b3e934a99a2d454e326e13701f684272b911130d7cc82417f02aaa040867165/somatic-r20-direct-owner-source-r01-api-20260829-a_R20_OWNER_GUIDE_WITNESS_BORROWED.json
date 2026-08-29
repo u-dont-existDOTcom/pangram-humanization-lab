@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r20-direct-owner-source-r01-api-20260829-a_R20_OWNER_GUIDE_WITNESS_BORROWED",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "If these adult voices do not feel available yet:\nI begin as the witness who notices.\nI may borrow one sentence, boundary, or direction from somebody safe.\nThe borrowed figure stays beside me while I choose the words and carry one small part myself.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9998076558113098,
+        "confidence": "High",
+        "end_index": 248,
+        "humanizer_score": 0.11174003034830093,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "If these adult voices do not feel available yet:\nI begin as the witness who notices.\nI may borrow one sentence, boundary, or direction from somebody safe.\nThe borrowed figure stays beside me while I choose the words and carry one small part myself.",
+        "token_length": 50,
+        "word_count": 44
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "751b419a-cdda-49d3-a071-0d71219f2ec1",
   "text": "If these adult voices do not feel available yet:\nI begin as the witness who notices.\nI may borrow one sentence, boundary, or direction from somebody safe.\nThe borrowed figure stays beside me while I choose the words and carry one small part myself.\n",
   "text_sha256": "3b3e934a99a2d454e326e13701f684272b911130d7cc82417f02aaa040867165",
-  "updated_utc": "2026-08-29T00:09:22.311083+00:00"
+  "updated_utc": "2026-08-29T00:09:29.424841+00:00"
 }
