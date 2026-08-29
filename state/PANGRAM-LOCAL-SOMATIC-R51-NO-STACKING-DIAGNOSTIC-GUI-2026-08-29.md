@@ -1,6 +1,6 @@
 # Somatic R51 no-stacking function-withholding headed Pangram GUI call — recovery ledger
 
-Status: **DURABLY RESERVED / PROTECTED-FUNCTION DIAGNOSTIC / PRODUCTION INCOMPLETE / NEVER PROMOTABLE / AWAITING ONE GUI SUBMISSION**
+Status: **COMPLETE / EXACT HISTORY-BOUND HUMAN RESULT / 97% HUMAN / SINGLE YOGA AI SEGMENT / AFTERCARE LOCALIZATION COMPLETE / PRODUCTION INCOMPLETE / NEVER PROMOTABLE / DO NOT REPEAT**
 
 ## Frozen identity
 
@@ -47,11 +47,48 @@ R50's independent 203-character late AI span contains exactly two aftercare func
 - A 100%-Human R51 result is diagnostic only and cannot trigger promotion or publication.
 - Persist the exact result and lesson before preparing a production candidate.
 
+## Submission receipt
+
+- The reused Pangram dashboard field exactly equaled the frozen local R51 boundary immediately before transmission.
+- Pre-click live-field SHA-256: `5d3c2a2295b773fd80d1988cc0fa25eca457dfa00d033b75b79d086d7fd78515`.
+- Live field: `2007` whitespace words / `11370` UTF-8 bytes / `11322` Unicode characters.
+- Plagiarism remained off and the submit control was enabled.
+- One submit action began at `2026-08-29T18:53:30.038Z` and completed normally. No retry occurred.
+- The unique newest History row and exact two-page stored-text binding prove acceptance. There is no pending or ambiguous R51 submission.
+- Browser hygiene after submission: one reusable dashboard tab and one History tab; no additional Pangram tabs were opened.
+
+## Result and History binding
+
+- History title: `Introduction Physical trauma`
+- History row time: `2026-08-29 6:53 PM`
+- History record: `1c8fb2fd-038d-4c37-b926-27d9a41f8900`
+- History URL: `https://www.pangram.com/history?history=1c8fb2fd-038d-4c37-b926-27d9a41f8900`
+- Pangram model: `4.0`
+- Prediction: `Human` / `Mostly Human`
+- AI: `3%`
+- Human: `97%`
+- Display count: `2043 words scanned`
+- Summary: `A single AI-generated segment`
+
+The three stored History segments concatenate to an exact 2,007-word match after display-only whitespace collapse. The normalized local, dashboard, and History texts share SHA-256 `88f4cd5ef6d6f2ff52f67ac58c26b02eadf71ecc26c7c865c0faa01f474b675c`.
+
+| Segment | result | chars | words | displayed-text SHA-256 | Scope |
+| --- | --- | ---: | ---: | --- | --- |
+| `text-segment-0` | Human | 4,997 | 873 | `9555cdad817bc65fcc1076c11b1caf59f178100257372e0d71968de0f329384d` | exact R38 opening through Somatic Experiencing |
+| `text-segment-1` | AI | 292 | 62 | `084d0fa52f4253f53cf3581d5f82d235eeddc32994d06d78db5b7921dcd91c08` | exact R38 Yoga paragraph |
+| `text-segment-2` | Human | 5,962 | 1,072 | `8e37f8023612e5e902493af9a625f17413e3470394f709f64bbaee7428c1d47f` | exact remainder including delayed aftercare, lived outcome, and Sky/Vagal ending |
+
+## Result interpretation and learned rule
+
+R51 clears R50's entire 203-character late AI region. The exact delayed next-day checks join the continuous 5,962-character Human remainder. Delayed checks are therefore not sufficient for the R50 classification, while the withheld no-stacking function is necessary for the combined interaction at this boundary.
+
+This is not deletion authority and does not establish that no-stacking is independently AI. The production decision is sufficient: keep delayed checks exact under EMDR, restore no-stacking through distributed natural safety architecture, and end aftercare decomposition. Restore every protected integration and borrowed-adulthood function before production. The only R51 AI segment is the exact 292-character Yoga paragraph.
+
 ## Call accounting
 
 - Paid GUI calls reserved: `1`
-- Paid GUI calls completed: `0`
+- Paid GUI calls completed: `1`
 - Cache hits: `0`
 - Duplicate calls: `0`
 - Pending or ambiguous submissions: `0`
-- Plagiarism check: planned off
+- Plagiarism check: off
