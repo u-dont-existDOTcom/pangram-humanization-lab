@@ -304,19 +304,28 @@ def main(argv: list[str] | None = None) -> int:
         page.goto(config.pangram_url, wait_until="domcontentloaded")
         local.wait_for_authenticated_detector_input(page)
 
+        direct_requests_available = True
         for index, report_url in enumerate(report_urls, start=1):
             record_id = report_url.rsplit("/", 1)[-1]
             api_url = f"https://web.pangram.com/api/history/{record_id}/"
-            try:
-                response = context.request.get(api_url, timeout=15_000)
-                status = int(getattr(response, "status", 0) or 0)
-                payload = _safe_response_json(response)
-                key = "ok_json" if isinstance(payload, dict) else f"non_json_or_status_{status}"
-                direct_status_counts[key] = direct_status_counts.get(key, 0) + 1
-                inspect_payload(api_url, payload)
-            except Exception as exc:
-                key = f"request_failed_{type(exc).__name__}"
-                direct_status_counts[key] = direct_status_counts.get(key, 0) + 1
+            if direct_requests_available:
+                try:
+                    response = context.request.get(api_url, timeout=3_000)
+                    status = int(getattr(response, "status", 0) or 0)
+                    payload = _safe_response_json(response)
+                    key = (
+                        "ok_json"
+                        if isinstance(payload, dict)
+                        else f"non_json_or_status_{status}"
+                    )
+                    direct_status_counts[key] = direct_status_counts.get(key, 0) + 1
+                    inspect_payload(api_url, payload)
+                    if not isinstance(payload, dict):
+                        direct_requests_available = False
+                except Exception as exc:
+                    key = f"request_failed_{type(exc).__name__}"
+                    direct_status_counts[key] = direct_status_counts.get(key, 0) + 1
+                    direct_requests_available = False
 
             if found_record is None:
                 page.goto(report_url, wait_until="domcontentloaded")
