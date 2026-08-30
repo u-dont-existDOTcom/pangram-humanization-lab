@@ -5,8 +5,8 @@
   "sections": {
     "whole-article-reader-visible\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.4,
-      "estimated_credits": 8,
+      "estimated_cost_usd": 0.6,
+      "estimated_credits": 12,
       "events": [
         {
           "boundary_kind": "raw_markdown_diagnostic_not_reader_visible_certification",
@@ -26,10 +26,21 @@
           "text_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
           "type": "paid_post_reserved",
           "word_count": 3548
+        },
+        {
+          "boundary_kind": "exact_reader_visible_certification",
+          "estimated_credits": 4,
+          "measurement_key": "gui:9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+          "recorded_at_utc": "2026-08-30T01:53:07.631898Z",
+          "reservation_commit": "73d60339",
+          "result_commit": "134f5191a8142cf91427d22098439763ba276597",
+          "text_sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+          "type": "paid_post_reserved",
+          "word_count": 3548
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 2,
+      "paid_api_calls": 3,
       "pending_resumes": 0,
       "section_id": "whole-article-reader-visible",
       "version": "4.0"

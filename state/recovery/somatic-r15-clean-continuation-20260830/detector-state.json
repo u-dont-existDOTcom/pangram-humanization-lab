@@ -1,7 +1,8 @@
 {
   "schema_version": 1,
   "task_id": "somatic-r15-clean-continuation-20260830",
-  "classification": "EXACT_R15_NEVER_SUBMITTED",
+  "classification": "EXACT_R15_RESULT_EXISTS",
+  "pre_submission_classification": "EXACT_R15_NEVER_SUBMITTED",
   "classified_at_date": "2026-08-30",
   "detector_submission_attempted_during_recovery": false,
   "candidate": {
@@ -14,10 +15,10 @@
     "word_count": 3548,
     "character_count": 20989,
     "utf8_bytes": 21087,
-    "result_cached": false,
+    "result_cached": true,
     "ambiguous_submission_block": false,
-    "exact_history_record_found": false,
-    "paid_gui_submission_reservation_found": false
+    "exact_history_record_found": true,
+    "paid_gui_submission_reservation_found": true
   },
   "standard_history_recovery": {
     "status": "no_exact_match",
@@ -67,10 +68,38 @@
     "exact_hash_local_ref_occurrences": "recovery branches only",
     "organization_search_result": "Only joel-articles recovery PR #73; no indexed detector result or reservation."
   },
+  "exact_measurement": {
+    "status": "complete",
+    "transport": "authenticated local Playwright/Brave Pangram GUI",
+    "detector_submission_attempted": true,
+    "submitted_at_utc": "2026-08-30T01:53:07.631898Z",
+    "reservation_commit": "73d60339",
+    "result_commit": "134f5191a8142cf91427d22098439763ba276597",
+    "result_path": "state/gui-runs/pangram-4/9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707/result.json",
+    "localization_path": "state/gui-runs/pangram-4/9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707/localization.json",
+    "window_map_path": "state/recovery/somatic-r15-clean-continuation-20260830/exact-result-window-map.json",
+    "detector": {
+      "model": "pangram-4",
+      "version": "4.0",
+      "stage": "STAGE_SUCCESS",
+      "headline": "AI Detected",
+      "record_prediction_probability": 0.8571645617485046,
+      "fraction_human": 0.1547368467,
+      "fraction_ai": 0.8452631831,
+      "fraction_ai_assisted": 0.0
+    },
+    "history_binding": {
+      "transport_match_mode": "exact_utf8",
+      "stored_text_sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+      "stored_word_count": 3548
+    },
+    "further_paid_measurement_authorized": false
+  },
   "related_paid_history": {
     "audit_id": "somatic-r15-whole-article-gui-20260825",
     "ledger_path": "state/pangram-call-ledgers/somatic-r15-whole-article-gui-20260825.json",
     "historical_paid_gui_calls": 2,
+    "total_related_paid_gui_calls_after_exact_measurement": 3,
     "historical_inputs": [
       "6b9c090a2faf10e472f73b747a916cec1169b60d27564de2558628c04a0cb48d",
       "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e"
@@ -78,10 +107,12 @@
     "accounting_rule": "Preserve both related paid calls; a corrected representation does not reset historical accounting."
   },
   "decision": {
-    "new_exact_gui_measurement_eligible_after_article_preflight": true,
+    "new_exact_gui_measurement_eligible_after_article_preflight": false,
     "maximum_new_exact_measurements_authorized": 1,
+    "authorized_exact_measurements_consumed": 1,
     "required_transport": "authenticated local Playwright/Brave Pangram GUI",
     "api_forbidden_for_this_full_document": true,
+    "next_required_action": "Return exact result and diagnosis to supervisor; do not begin detector-driven rewriting.",
     "required_before_click": [
       "article cold-production preflight PASS",
       "exact SHA-256 reverified",
