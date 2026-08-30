@@ -8,15 +8,15 @@
     "authorized_boundary_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
     "authorized_paid_call_ordinal": 5,
     "authorized_new_gui_measurements": 1,
-    "consumed_new_gui_measurements": 0,
+    "consumed_new_gui_measurements": 1,
     "transport": "authenticated local Playwright/Brave Pangram GUI",
     "api_forbidden_for_this_full_document": true
   },
   "sections": {
     "whole-article-reader-visible\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
-      "estimated_cost_usd": 0.8,
-      "estimated_credits": 16,
+      "estimated_cost_usd": 1.0,
+      "estimated_credits": 20,
       "events": [
         {
           "boundary_kind": "raw_markdown_diagnostic_not_reader_visible_certification",
@@ -58,10 +58,21 @@
           "text_sha256": "129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e",
           "type": "paid_post_reserved",
           "word_count": 3585
+        },
+        {
+          "boundary_kind": "exact_supervisor_authorized_articlewide_humanization_candidate",
+          "estimated_credits": 4,
+          "measurement_key": "gui:fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+          "recorded_at_utc": "2026-08-30T23:02:57.877870Z",
+          "reservation_commit": "5323c33e53199c628786b4a6fe6c3c512ebe09ed",
+          "result_commit": "a8ba76025f4baef77fb90a8a736ecbeef74ad86c",
+          "text_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+          "type": "paid_post_reserved",
+          "word_count": 3585
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 4,
+      "paid_api_calls": 5,
       "pending_resumes": 0,
       "section_id": "whole-article-reader-visible",
       "version": "4.0"

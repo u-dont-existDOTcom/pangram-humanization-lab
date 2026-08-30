@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "purpose": "displayed_pangram_ai_highlight_localization",
+  "document_score_authority": false,
+  "input_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+  "word_count": 3585,
+  "character_count": 20969,
+  "utf8_bytes": 21061,
+  "detector": {
+    "model": "pangram-4",
+    "version": "4.0",
+    "stage": "STAGE_SUCCESS"
+  },
+  "display": {
+    "control_label": "AI Highlight",
+    "displayed_region_count": 3,
+    "summary_text": "AI-generated content appears throughout",
+    "capture_transport": "authenticated dedicated-profile read-only Playwright inspection of the completed History report",
+    "detector_submission_attempted": false
+  },
+  "regions": [
+    {
+      "display_index": 1,
+      "raw_character_start": 0,
+      "raw_character_end": 9305,
+      "raw_word_start": 0,
+      "raw_word_end": 1572,
+      "word_count": 1572,
+      "character_count": 9305,
+      "utf8_bytes": 9355,
+      "raw_span_sha256": "12ee1ef671617c17beb06c9fe0a2d582180ba6791cc97143bab23ca801302ae1",
+      "start_anchor": "Introduction",
+      "end_anchor": "I don't confuse that with finishing the deeper trauma work."
+    },
+    {
+      "display_index": 2,
+      "raw_character_start": 9307,
+      "raw_character_end": 18575,
+      "raw_word_start": 1572,
+      "raw_word_end": 3179,
+      "word_count": 1607,
+      "character_count": 9268,
+      "utf8_bytes": 9302,
+      "raw_span_sha256": "fbd064eaac92a3889818583d032b9c4a935b47c8ae8bc6d27916fd9487d6e4fd",
+      "start_anchor": "Shaking Qigong / Shaking Medicine",
+      "end_anchor": "Afterward it felt as though the event held less negative energy, or less blocking energy, in my mind."
+    },
+    {
+      "display_index": 3,
+      "raw_character_start": 18577,
+      "raw_character_end": 20967,
+      "raw_word_start": 3179,
+      "raw_word_end": 3585,
+      "word_count": 406,
+      "character_count": 2390,
+      "utf8_bytes": 2398,
+      "raw_span_sha256": "0fc52b2e6bda1ade86d24686849c9374ac8eb4e45db62b44e734d97e1c4658ce",
+      "start_anchor": "What I care about is the version of me an hour later, not the one enjoying the last minute of the exercise.",
+      "end_anchor": "If the extraordinary practice is mainly helping me dodge grief, conflict, practical problems, or deeper relational healing, its intensity does not rescue it."
+    }
+  ],
+  "binding_note": "The three report controls displayed these exact unique start/end anchors and continuous highlighted prose. Raw offsets and hashes were deterministically mapped back to the exact authorized boundary. Together the regions cover all 3,585 whitespace words; only the two blank-line separators and the terminal blank line are outside them. The structured History localizer failed closed after the complete result, so this receipt is display-derived localization only and does not replace response.overall as score authority.",
+  "privacy_note": "No report UUID/URL, submitted prose body, cookies, browser storage, credentials, headers, or unrelated History records are persisted."
+}
