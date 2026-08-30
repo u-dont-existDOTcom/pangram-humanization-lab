@@ -1,0 +1,90 @@
+{
+  "browser_executable": "/opt/brave.com/brave/brave",
+  "captured_at_utc": "2026-08-30T23:02:57.877870Z",
+  "detector_submission_attempted": true,
+  "detector_version": "4.0",
+  "evidence_source": "new_detector_submission",
+  "headed": true,
+  "history_api_exact_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+    "authorized_word_count": 3585,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+    "exact_word_count": 3585,
+    "record_model_id": null,
+    "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+    "record_prediction_prob": 0.8717445135116577,
+    "stored_text_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+    "stored_word_count": 3585,
+    "transport_match_mode": "exact_utf8"
+  },
+  "input_path": "/mnt/hdd/home/joel/Téléchargements/joel-articles/canonical/worktrees/somatic-r15-clean-continuation-20260830/articles/somatic-therapies/experiments/R15-ARTICLE-WIDE-HUMANIZATION-WHOLE-ARTICLE-PANGRAM-BOUNDARY-20260830.txt",
+  "input_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+  "local_profile_path": "~/.config/pangram-local-browser",
+  "model": "pangram-4",
+  "parsed": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "AI Detected",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+      "authorized_word_count": 3585,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+      "exact_word_count": 3585,
+      "record_model_id": null,
+      "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+      "record_prediction_prob": 0.8717445135116577,
+      "stored_text_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+      "stored_word_count": 3585,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "AI",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 0.8768678308,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.1231321841,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "pdf_provenance": "playwright_print_fallback",
+  "platform": "Linux-7.0.0-29-generic-x86_64-with-glibc2.39",
+  "playwright_version": "1.62.0",
+  "profile_kind": "dedicated_persistent_automation_profile",
+  "report_body_sha256": "9c8d7071a084633fd88d5d9451997472a9103118aa20f89a591a25cc36b76f04",
+  "report_layout": "history_api_structured_result_v1",
+  "report_pdf_sha256": "4445e4ce4441de2a5c084e57d16cae39a5284adf6cc59af944aca90458aaca52",
+  "report_url": "https://www.pangram.com/history/a524ffe4-20c4-4512-add1-728c68757a51",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "status": "complete",
+  "submission_reservation": {
+    "detector_submission_attempted": false,
+    "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+    "input_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+    "model": "pangram-4",
+    "reserved_at_utc": "2026-08-30T23:02:45.082186Z",
+    "schema_version": 1,
+    "status": "paid_gui_submission_reserved",
+    "transport": "local_playwright",
+    "transport_runner_version": "pangram-gui-local-playwright-v1",
+    "word_count": 3585
+  },
+  "transport": "local_playwright",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "word_count": 3585
+}
