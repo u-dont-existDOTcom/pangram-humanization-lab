@@ -189,15 +189,78 @@
     "api_forbidden_for_this_full_document": true,
     "next_action": "Return the exact result, displayed localization and cold editorial diagnosis to the existing supervisor as WORKER_SUPERVISION_REQUEST SOMATIC-R15-POSTREPAIR-005. Do not begin a detector-led rewrite."
   },
+  "articlewide_candidate_recovery": {
+    "classification": "EXACT_ARTICLEWIDE_NEVER_SUBMITTED",
+    "classified_at_utc": "2026-08-30T23:01:38Z",
+    "candidate": {
+      "repository": "u-dont-existDOTcom/joel-articles",
+      "git_blob": "68d62fd3a613e2f51941da3a640bfaaeba78f0e9",
+      "sha256": "9bf286b53945c22fb57ca0e5b57c7f4c8c411de829be07bcf07d85d6f77eccd0"
+    },
+    "exact_boundary": {
+      "git_blob": "10db8f1d586c5e93fe794e50f6b3e16a1bf721ee",
+      "sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+      "word_count": 3585,
+      "character_count": 20969,
+      "utf8_bytes": 21061,
+      "result_cached": false,
+      "ambiguous_submission_block": false,
+      "exact_history_record_found": false,
+      "paid_gui_submission_reservation_found": false
+    },
+    "authenticated_status": {
+      "verified": true,
+      "detector_input_editable": true,
+      "submitted": false,
+      "profile_kind": "dedicated_persistent_automation_profile"
+    },
+    "standard_history_recovery": {
+      "status": "no_exact_match",
+      "history_list_candidate_count": 0,
+      "evidence_path": "state/gui-runs/pangram-4/fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a/failure.json",
+      "evidence_commit": "7dc746e2",
+      "read_only": true
+    },
+    "browser_history_recovery": {
+      "browser_history_candidate_count": 61,
+      "authenticated_records_inspected": 43,
+      "current_exact_history_record_found": false,
+      "target_history_record_found": false,
+      "evidence_path": "state/recovery/somatic-r15-clean-continuation-20260830/articlewide-history-hash-probe.json",
+      "read_only": true,
+      "privacy": "No report UUID/URL, stored prompt, cookies, browser storage, credentials, unrelated history, or raw response persisted."
+    },
+    "github_recovery": {
+      "organization_code_search_count": 0,
+      "organization_issue_and_pr_search_count": 0,
+      "exact_hash_local_ref_occurrences": "recovery evidence only"
+    },
+    "detector_submission_attempted_during_recovery": false,
+    "authorization": {
+      "decision_id": "SOMATIC-R15-OBJECTIVE-006",
+      "decision_response_sha256": "10147a9654109186e913e134ac86793f421f73f8675e190e47576cb60ba3702f",
+      "maximum_related_paid_gui_call_ordinal": 5,
+      "eligible_new_gui_measurements": 1,
+      "required_transport": "authenticated local Playwright/Brave Pangram GUI",
+      "api_forbidden_for_this_full_document": true
+    },
+    "related_paid_gui_calls_before_measurement": 4,
+    "eligible_new_gui_measurements": 1,
+    "next_action": "Write and push the exact durable reservation, then perform exactly one whole-document Pangram 4.0 GUI submission for the frozen boundary."
+  },
   "decision": {
     "original_r15_exact_measurements_authorized": 1,
     "original_r15_exact_measurements_consumed": 1,
     "final_candidate_exact_measurements_authorized": 1,
     "final_candidate_exact_measurements_consumed": 1,
-    "further_paid_measurement_authorized": false,
+    "articlewide_candidate_exact_measurements_authorized": 1,
+    "articlewide_candidate_exact_measurements_consumed": 0,
+    "further_paid_measurement_authorized": true,
+    "current_authority": "SUPERVISOR_DECISION SOMATIC-R15-OBJECTIVE-006",
+    "current_authority_response_sha256": "10147a9654109186e913e134ac86793f421f73f8675e190e47576cb60ba3702f",
     "required_transport": "authenticated local Playwright/Brave Pangram GUI",
     "api_forbidden_for_this_full_document": true,
-    "next_required_action": "Send WORKER_SUPERVISION_REQUEST SOMATIC-R15-POSTREPAIR-005 with exact result, displayed localization, cold diagnosis and READY_FOR_OWNER_REVIEW recommendation; do not begin detector-driven rewriting.",
+    "next_required_action": "Perform exactly one whole-document Pangram 4.0 GUI measurement of boundary fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a after the durable reservation is pushed.",
     "required_before_click": [
       "article cold-production preflight PASS",
       "exact SHA-256 reverified",

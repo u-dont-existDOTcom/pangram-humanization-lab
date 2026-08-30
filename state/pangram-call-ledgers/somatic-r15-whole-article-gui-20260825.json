@@ -2,6 +2,16 @@
   "audit_id": "somatic-r15-whole-article-gui-20260825",
   "format": "pangram-call-ledger-v1",
   "section_call_cap": 6,
+  "current_authorization": {
+    "decision_id": "SOMATIC-R15-OBJECTIVE-006",
+    "decision_response_sha256": "10147a9654109186e913e134ac86793f421f73f8675e190e47576cb60ba3702f",
+    "authorized_boundary_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+    "authorized_paid_call_ordinal": 5,
+    "authorized_new_gui_measurements": 1,
+    "consumed_new_gui_measurements": 0,
+    "transport": "authenticated local Playwright/Brave Pangram GUI",
+    "api_forbidden_for_this_full_document": true
+  },
   "sections": {
     "whole-article-reader-visible\u001fpangram-4\u001f4.0": {
       "cache_hits": 0,
