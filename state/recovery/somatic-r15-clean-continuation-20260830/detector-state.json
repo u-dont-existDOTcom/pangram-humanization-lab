@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "task_id": "somatic-r15-clean-continuation-20260830",
+  "classification": "EXACT_R15_NEVER_SUBMITTED",
+  "classified_at_date": "2026-08-30",
+  "detector_submission_attempted_during_recovery": false,
+  "candidate": {
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "git_blob": "e6210eb2742de156f0bd7b01fdde269f9b9625c6",
+    "sha256": "e7a541e75cf06878c206bcd7d78440bb73593a0a5a2169df1446ce42ad7186ee"
+  },
+  "exact_current_boundary": {
+    "sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+    "word_count": 3548,
+    "character_count": 20989,
+    "utf8_bytes": 21087,
+    "result_cached": false,
+    "ambiguous_submission_block": false,
+    "exact_history_record_found": false,
+    "paid_gui_submission_reservation_found": false
+  },
+  "standard_history_recovery": {
+    "status": "no_exact_match",
+    "history_list_candidate_count": 10,
+    "evidence_path": "state/gui-runs/pangram-4/9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707/failure.json",
+    "evidence_commit": "159eb202",
+    "read_only": true
+  },
+  "browser_history_recovery": {
+    "pangram_report_route_count": 55,
+    "authenticated_records_inspected_before_historical_target": 36,
+    "current_exact_history_record_found": false,
+    "historical_target_found": true,
+    "evidence_path": "state/recovery/somatic-r15-clean-continuation-20260830/history-hash-probe.json",
+    "read_only": true,
+    "privacy": "No report UUID/URL, stored prompt, cookies, browser storage, credentials, unrelated history, or raw response persisted."
+  },
+  "historical_near_boundary": {
+    "sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+    "word_count": 3548,
+    "character_count": 20992,
+    "utf8_bytes": 21090,
+    "candidate_source_sha256": "e7a541e75cf06878c206bcd7d78440bb73593a0a5a2169df1446ce42ad7186ee",
+    "result_commit": "d9462f2e93a808c2da4195352e0a7b9a016c94b7",
+    "result_path": "state/gui-runs/pangram-4/d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e/result.json",
+    "detector": {
+      "model": "pangram-4",
+      "version": "4.0",
+      "stage": "STAGE_SUCCESS",
+      "fraction_human": 0.1548029035,
+      "fraction_ai": 0.8451970816,
+      "fraction_ai_assisted": 0.0
+    },
+    "difference_from_current": {
+      "exactly_reconstructed": true,
+      "insert_source_only_markdown_italics_markers": 4,
+      "italicized_terms": [
+        "subcortical",
+        "restimulation"
+      ],
+      "remove_one_terminal_newline": true,
+      "accepted_transport_normalization": false,
+      "reason_not_reusable": "The four interior asterisks are non-whitespace source markup and prevent exact or bounded transport-normalized identity."
+    }
+  },
+  "github_recovery": {
+    "exact_hash_local_ref_occurrences": "recovery branches only",
+    "organization_search_result": "Only joel-articles recovery PR #73; no indexed detector result or reservation."
+  },
+  "related_paid_history": {
+    "audit_id": "somatic-r15-whole-article-gui-20260825",
+    "historical_paid_gui_calls": 2,
+    "historical_inputs": [
+      "6b9c090a2faf10e472f73b747a916cec1169b60d27564de2558628c04a0cb48d",
+      "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e"
+    ],
+    "accounting_rule": "Preserve both related paid calls; a corrected representation does not reset historical accounting."
+  },
+  "decision": {
+    "new_exact_gui_measurement_eligible_after_article_preflight": true,
+    "maximum_new_exact_measurements_authorized": 1,
+    "required_transport": "authenticated local Playwright/Brave Pangram GUI",
+    "api_forbidden_for_this_full_document": true,
+    "required_before_click": [
+      "article cold-production preflight PASS",
+      "exact SHA-256 reverified",
+      "authenticated profile reverified read-only",
+      "exact cache and History rechecked",
+      "fresh durable submission reservation pushed"
+    ]
+  }
+}
