@@ -98,16 +98,18 @@
   "related_paid_history": {
     "audit_id": "somatic-r15-whole-article-gui-20260825",
     "ledger_path": "state/pangram-call-ledgers/somatic-r15-whole-article-gui-20260825.json",
-    "historical_paid_gui_calls": 2,
-    "total_related_paid_gui_calls_after_exact_measurement": 3,
+    "historical_paid_gui_calls_before_final_candidate": 3,
+    "total_related_paid_gui_calls": 4,
     "historical_inputs": [
       "6b9c090a2faf10e472f73b747a916cec1169b60d27564de2558628c04a0cb48d",
-      "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e"
+      "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+      "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707"
     ],
     "accounting_rule": "Preserve both related paid calls; a corrected representation does not reset historical accounting."
   },
   "final_candidate_recovery": {
-    "classification": "EXACT_FINAL_NEVER_SUBMITTED",
+    "classification": "EXACT_FINAL_RESULT_EXISTS",
+    "pre_submission_classification": "EXACT_FINAL_NEVER_SUBMITTED",
     "classified_at_utc": "2026-08-30T13:38:37Z",
     "candidate": {
       "git_blob": "082b613f5d5217ebb8b289ee0460a788a66e2639",
@@ -119,10 +121,10 @@
       "word_count": 3585,
       "character_count": 21260,
       "utf8_bytes": 21356,
-      "result_cached": false,
+      "result_cached": true,
       "ambiguous_submission_block": false,
-      "exact_history_record_found": false,
-      "paid_gui_submission_reservation_found": false
+      "exact_history_record_found": true,
+      "paid_gui_submission_reservation_found": true
     },
     "authenticated_status": {
       "verified": true,
@@ -150,18 +152,52 @@
       "organization_issue_and_pr_search_count": 0
     },
     "detector_submission_attempted_during_recovery": false,
-    "eligible_new_gui_measurements": 1,
+    "exact_measurement": {
+      "status": "complete",
+      "transport": "authenticated local Playwright/Brave Pangram GUI",
+      "submitted_at_utc": "2026-08-30T13:40:43.555365Z",
+      "reservation_commit": "0b20ac9dabb14d0b0c6cc12d6d7ffcf47fc99b9f",
+      "result_commit": "ab98314386b6d289a8425aff857b8b15eb663ee5",
+      "result_path": "state/gui-runs/pangram-4/129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e/result.json",
+      "display_highlight_map_path": "state/recovery/somatic-r15-clean-continuation-20260830/final-candidate-display-highlight-map.json",
+      "detector": {
+        "model": "pangram-4",
+        "version": "4.0",
+        "stage": "STAGE_SUCCESS",
+        "headline": "AI Detected",
+        "record_prediction_probability": 0.8541160225868225,
+        "fraction_human": 0.1381948739,
+        "fraction_ai": 0.861805141,
+        "fraction_ai_assisted": 0.0
+      },
+      "history_binding": {
+        "transport_match_mode": "exact_utf8",
+        "stored_text_sha256": "129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e",
+        "stored_word_count": 3585
+      },
+      "structured_localization": {
+        "status": "failed_closed_after_complete_result",
+        "attempts": 2,
+        "detector_submission_attempted": false,
+        "failure_stage": "bind_exact_history_record",
+        "failure_path": "state/gui-runs/pangram-4/129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e/localization-failure.json"
+      },
+      "further_paid_measurement_authorized": false
+    },
+    "eligible_new_gui_measurements": 0,
     "required_transport": "authenticated local Playwright/Brave Pangram GUI",
     "api_forbidden_for_this_full_document": true,
-    "next_action": "Create and push the runner's exact durable pre-click reservation, then submit this boundary once through the GUI. A timeout after possible click enters History recovery and never automatic retry."
+    "next_action": "Return the exact result, displayed localization and cold editorial diagnosis to the existing supervisor as WORKER_SUPERVISION_REQUEST SOMATIC-R15-POSTREPAIR-005. Do not begin a detector-led rewrite."
   },
   "decision": {
-    "new_exact_gui_measurement_eligible_after_article_preflight": false,
-    "maximum_new_exact_measurements_authorized": 1,
-    "authorized_exact_measurements_consumed": 1,
+    "original_r15_exact_measurements_authorized": 1,
+    "original_r15_exact_measurements_consumed": 1,
+    "final_candidate_exact_measurements_authorized": 1,
+    "final_candidate_exact_measurements_consumed": 1,
+    "further_paid_measurement_authorized": false,
     "required_transport": "authenticated local Playwright/Brave Pangram GUI",
     "api_forbidden_for_this_full_document": true,
-    "next_required_action": "Return exact result and diagnosis to supervisor; do not begin detector-driven rewriting.",
+    "next_required_action": "Send WORKER_SUPERVISION_REQUEST SOMATIC-R15-POSTREPAIR-005 with exact result, displayed localization, cold diagnosis and READY_FOR_OWNER_REVIEW recommendation; do not begin detector-driven rewriting.",
     "required_before_click": [
       "article cold-production preflight PASS",
       "exact SHA-256 reverified",

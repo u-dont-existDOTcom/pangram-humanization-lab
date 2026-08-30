@@ -1,6 +1,6 @@
 # Somatic R15 exact Pangram recovery
 
-Status: **ACTIVE / FINAL REPAIR CANDIDATE EXACT GUI MEASUREMENT ELIGIBLE**
+Status: **ACTIVE / FINAL REPAIR CANDIDATE EXACT GUI RESULT COMPLETE / SUPERVISOR DECISION NEXT**
 
 Task: `somatic-r15-clean-continuation-20260830`
 
@@ -91,3 +91,23 @@ Evidence:
 - recovery attempted no detector submission.
 
 The new measurement is decision-relevant because the candidate changed semantically within four supervisor-authorized repair scopes and then passed source, preservation, architecture, cold-audit and independent-reader gates. Related paid history remains three calls before this action, below the six-call ledger cap. The next action is the deterministic runner's durable pushed reservation followed by one GUI click. If the click may occur and later capture fails, recovery—not retry—is mandatory.
+
+## Final repair-candidate exact result
+
+Current classification: **`EXACT_FINAL_RESULT_EXISTS`**.
+
+The deterministic runner pushed reservation commit `0b20ac9dabb14d0b0c6cc12d6d7ffcf47fc99b9f` before its only click. Result commit `ab98314386b6d289a8425aff857b8b15eb663ee5` records exact UTF-8 History binding:
+
+- Pangram 4.0 / `STAGE_SUCCESS`;
+- headline: `AI Detected`;
+- Human: `0.1381948739`;
+- AI: `0.861805141`;
+- AI-assisted: `0.0`;
+- exact stored text SHA-256: `129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e`;
+- exact stored word count: `3585`.
+
+The completed History report displayed three `AI Highlight` regions and the summary `AI-generated content appears throughout`. Read-only DOM inspection exact-mapped them to: boundary start through the end of EFT; the middle of Shaking beginning `I did not try the linked class…` through the end of Light CBT / Narrative Integration; and `I care more about the hour-later version…` through the final coda. Exact offsets and span hashes are in `final-candidate-display-highlight-map.json`.
+
+Two post-result structured-localization attempts failed closed at exact History rebinding and made no detector submission. The exact aggregate result remains authoritative; the display map is localization evidence only. Related paid history now totals four calls under the six-call cap, and no further measurement is authorized.
+
+The score and broad highlight topology do not establish a new writing defect. The supervisor-authorized repair passed independent editorial gates and a detector-blind bounded verification, while Pangram's Human fraction decreased from the exact original R15 result (`0.1547368467`) to `0.1381948739`. This is negative evidence against another detector-led rewrite. The required next action is `WORKER_SUPERVISION_REQUEST SOMATIC-R15-POSTREPAIR-005`, recommending `READY_FOR_OWNER_REVIEW` without changing registered article authority.
