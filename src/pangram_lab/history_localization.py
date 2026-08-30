@@ -170,6 +170,7 @@ def _validated_overall_window_bindings(
         ),
     )
     for binding_mode, index_map in coordinate_maps:
+        coordinate_text = "".join(exact_text[raw_index] for raw_index in index_map)
         bindings: dict[int, BoundSpan] = {}
         previous_end: int | None = None
         for position, window in enumerate(windows):
@@ -196,7 +197,7 @@ def _validated_overall_window_bindings(
                 break
 
             text_key, preview = selected
-            if not exact_text.startswith(preview, raw_start):
+            if not coordinate_text.startswith(preview, start):
                 bindings = {}
                 break
 

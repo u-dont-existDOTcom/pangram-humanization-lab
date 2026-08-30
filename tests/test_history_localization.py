@@ -161,7 +161,7 @@ def test_collection_binding_resolves_repeated_previews_without_uniqueness() -> N
 def test_binds_contiguous_windows_after_collapsing_linebreak_runs_and_terminal_breaks() -> None:
     text = "alpha beta.\n\ngamma delta epsilon.\nzeta eta.\n\n"
     normalized = "alpha beta.\ngamma delta epsilon.\nzeta eta."
-    gamma = normalized.index("gamma")
+    delta = normalized.index("delta")
     zeta = normalized.index("zeta")
     payload = {
         "uuid": UUID,
@@ -171,15 +171,15 @@ def test_binds_contiguous_windows_after_collapsing_linebreak_runs_and_terminal_b
             "overall": {
                 "windows": [
                     {
-                        "text": "alpha beta.",
+                        "text": "alpha beta.\ngamma ",
                         "start_index": 0,
-                        "end_index": gamma,
+                        "end_index": delta,
                         "window_index": 0,
                         "label": "Human",
                     },
                     {
-                        "text": "gamma delta",
-                        "start_index": gamma,
+                        "text": "delta epsilon.",
+                        "start_index": delta,
                         "end_index": zeta,
                         "window_index": 1,
                         "label": "AI-Generated",
