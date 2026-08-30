@@ -250,6 +250,8 @@ def main(argv: list[str] | None = None) -> int:
         "target_stored_sha256": target_sha,
         "browser_history_candidate_count": len(report_urls),
         "browser_history_candidates_inspected": 0,
+        "history_api_records_observed": 0,
+        "direct_request_status_counts": {},
         "current_exact_history_record_found": False,
         "target_history_record_found": False,
         "privacy_note": (
@@ -263,15 +265,17 @@ def main(argv: list[str] | None = None) -> int:
     page = None
     found_record: ExactHistoryRecord | None = None
     found_text: str | None = None
+    observed_record_ids: set[str] = set()
+    direct_status_counts: dict[str, int] = {}
 
-    def collect(response: Any) -> None:
+    def inspect_payload(response_url: str, payload: Any) -> None:
         nonlocal found_record, found_text
-        response_url = str(getattr(response, "url", ""))
-        if history_api_uuid(response_url) is None:
+        record_id = history_api_uuid(response_url)
+        if record_id is None or not isinstance(payload, dict):
             return
-        payload = _safe_response_json(response)
-        if not isinstance(payload, dict):
-            return
+        if record_id not in observed_record_ids:
+            observed_record_ids.add(record_id)
+            receipt["history_api_records_observed"] = len(observed_record_ids)
 
         current_match = match_exact_history_record(response_url, payload, current_text)
         if current_match is not None:
@@ -287,6 +291,13 @@ def main(argv: list[str] | None = None) -> int:
             found_text = candidate
             return
 
+    def collect(response: Any) -> None:
+        response_url = str(getattr(response, "url", ""))
+        if history_api_uuid(response_url) is None:
+            return
+        payload = _safe_response_json(response)
+        inspect_payload(response_url, payload)
+
     try:
         playwright, context, page = local._launch_persistent_context(config)
         context.on("response", collect)
@@ -294,12 +305,28 @@ def main(argv: list[str] | None = None) -> int:
         local.wait_for_authenticated_detector_input(page)
 
         for index, report_url in enumerate(report_urls, start=1):
-            page.goto(report_url, wait_until="domcontentloaded")
-            if hasattr(page, "wait_for_timeout"):
-                page.wait_for_timeout(700)
+            record_id = report_url.rsplit("/", 1)[-1]
+            api_url = f"https://web.pangram.com/api/history/{record_id}/"
+            try:
+                response = context.request.get(api_url, timeout=15_000)
+                status = int(getattr(response, "status", 0) or 0)
+                payload = _safe_response_json(response)
+                key = "ok_json" if isinstance(payload, dict) else f"non_json_or_status_{status}"
+                direct_status_counts[key] = direct_status_counts.get(key, 0) + 1
+                inspect_payload(api_url, payload)
+            except Exception as exc:
+                key = f"request_failed_{type(exc).__name__}"
+                direct_status_counts[key] = direct_status_counts.get(key, 0) + 1
+
+            if found_record is None:
+                page.goto(report_url, wait_until="domcontentloaded")
+                if hasattr(page, "wait_for_timeout"):
+                    page.wait_for_timeout(900)
             receipt["browser_history_candidates_inspected"] = index
             if found_record is not None:
                 break
+
+        receipt["direct_request_status_counts"] = dict(sorted(direct_status_counts.items()))
 
         if found_record is not None and found_text is not None:
             parsed = parse_history_record_result(found_record, "")
