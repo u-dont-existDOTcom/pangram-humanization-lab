@@ -1,6 +1,6 @@
 # Somatic R15 exact Pangram recovery
 
-Status: **ACTIVE / EXACT GUI RESULT COMPLETE / SUPERVISOR DECISION REQUIRED BEFORE EDITING**
+Status: **ACTIVE / FINAL REPAIR CANDIDATE EXACT GUI MEASUREMENT ELIGIBLE**
 
 Task: `somatic-r15-clean-continuation-20260830`
 
@@ -72,3 +72,22 @@ The first read-only History localization recovered all nine contiguous window me
 Before that improved binder could be rerun against the live record, the Pangram History route stopped returning the exact record in a new browser session. Two recovery-only retries failed at `bind_exact_history_record`; both durably record that no detector submission was attempted. The original complete result remains cached and authoritative for the document score. The privacy-safe diagnostic window map at `state/recovery/somatic-r15-clean-continuation-20260830/exact-result-window-map.json` therefore distinguishes durable Pangram window metadata and exact-text offset reconstruction from independent score authority.
 
 Per the task protocol, the next action is a matching result packet to the existing Chat supervisor. A red window is not edit authority, and no detector-driven prose edit begins before that decision.
+
+## Final repair-candidate recovery
+
+Supervisor decision `SOMATIC-R15-REPAIR-004` authorized one later whole-document Pangram 4 GUI measurement only after the bounded micro-repair passed its gates and blind verification and exact recovery proved the final boundary had never been submitted. Those prerequisites now pass.
+
+The final non-authoritative repair candidate is blob `082b613f5d5217ebb8b289ee0460a788a66e2639` / SHA-256 `7600316ff4895f694e430b317a750a80c4ed2848b474bf475757ae3c6f0e26b6`. Its deterministic reader-visible boundary is blob `31cabafedfe2433dd6fa8fd1badc31f31491bc28` / SHA-256 `129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e`, 3,585 whitespace words, 21,260 Unicode characters and 21,356 UTF-8 bytes.
+
+Persisted pre-submission classification: **`EXACT_FINAL_NEVER_SUBMITTED`**.
+
+Evidence:
+
+- read-only authenticated status verified the dedicated Brave profile and exact hash gate; no text was filled or submitted;
+- no exact cache result, ambiguous reservation or completed reservation exists;
+- standard authenticated History recovery inspected the ten server-side list candidates and found no exact match;
+- the task-scoped full-profile probe inspected all 60 retained Pangram report routes and all 60 authenticated History API records, finding no exact match;
+- exact local-ref, organization GitHub code, and organization issue/PR searches found no prior occurrence before this receipt;
+- recovery attempted no detector submission.
+
+The new measurement is decision-relevant because the candidate changed semantically within four supervisor-authorized repair scopes and then passed source, preservation, architecture, cold-audit and independent-reader gates. Related paid history remains three calls before this action, below the six-call ledger cap. The next action is the deterministic runner's durable pushed reservation followed by one GUI click. If the click may occur and later capture fails, recovery—not retry—is mandatory.

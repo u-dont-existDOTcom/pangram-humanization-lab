@@ -106,6 +106,55 @@
     ],
     "accounting_rule": "Preserve both related paid calls; a corrected representation does not reset historical accounting."
   },
+  "final_candidate_recovery": {
+    "classification": "EXACT_FINAL_NEVER_SUBMITTED",
+    "classified_at_utc": "2026-08-30T13:38:37Z",
+    "candidate": {
+      "git_blob": "082b613f5d5217ebb8b289ee0460a788a66e2639",
+      "sha256": "7600316ff4895f694e430b317a750a80c4ed2848b474bf475757ae3c6f0e26b6"
+    },
+    "exact_boundary": {
+      "git_blob": "31cabafedfe2433dd6fa8fd1badc31f31491bc28",
+      "sha256": "129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e",
+      "word_count": 3585,
+      "character_count": 21260,
+      "utf8_bytes": 21356,
+      "result_cached": false,
+      "ambiguous_submission_block": false,
+      "exact_history_record_found": false,
+      "paid_gui_submission_reservation_found": false
+    },
+    "authenticated_status": {
+      "verified": true,
+      "detector_input_editable": true,
+      "submitted": false,
+      "profile_kind": "dedicated_persistent_automation_profile"
+    },
+    "standard_history_recovery": {
+      "status": "no_exact_match",
+      "history_list_candidate_count": 10,
+      "evidence_path": "state/gui-runs/pangram-4/129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e/failure.json",
+      "evidence_commit": "8c9e7e4b2a31dd6820ad0abc7a33d31644774d70",
+      "read_only": true
+    },
+    "browser_history_recovery": {
+      "pangram_report_route_count": 60,
+      "authenticated_records_inspected": 60,
+      "current_exact_history_record_found": false,
+      "evidence_path": "state/recovery/somatic-r15-clean-continuation-20260830/final-candidate-history-hash-probe.json",
+      "read_only": true
+    },
+    "github_recovery": {
+      "exact_hash_local_ref_occurrences": "none before this recovery receipt",
+      "organization_code_search_count": 0,
+      "organization_issue_and_pr_search_count": 0
+    },
+    "detector_submission_attempted_during_recovery": false,
+    "eligible_new_gui_measurements": 1,
+    "required_transport": "authenticated local Playwright/Brave Pangram GUI",
+    "api_forbidden_for_this_full_document": true,
+    "next_action": "Create and push the runner's exact durable pre-click reservation, then submit this boundary once through the GUI. A timeout after possible click enters History recovery and never automatic retry."
+  },
   "decision": {
     "new_exact_gui_measurement_eligible_after_article_preflight": false,
     "maximum_new_exact_measurements_authorized": 1,
