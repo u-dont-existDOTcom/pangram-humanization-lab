@@ -1,0 +1,61 @@
+{
+  "accounting_before_execution": {
+    "ambiguous_calls": 0,
+    "completed_family_calls": 5,
+    "gui_actions": 0,
+    "maximum_authorized_new_calls": 1,
+    "new_paid_api_calls": 0,
+    "stable_family_call_cap": 6,
+    "whole_document_calls": 0
+  },
+  "article": {
+    "article_candidate_mutations": 0,
+    "branch": "task/somatic-r15-clean-continuation-20260830",
+    "candidate_path": "articles/somatic-therapies/experiments/R15-DIRECT-OWNER-VOICE-CANDIDATE-20260830.md",
+    "candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31",
+    "head": "ac1570f3e8945fecf80585d8fbe336c2a19ffbd6",
+    "registered_master_mutations": 0
+  },
+  "candidate_e": {
+    "cache_records": [],
+    "git_blob": "46f7c1f8f735a648ef9808007bd1929cf924d206",
+    "input_path": "state/experiments/somatic-r15-eft-human-anchor-tail-factorial-20260831/inputs/E-current-anchor-direct-tail.txt",
+    "measurement_key": "somatic-r15-eft-human-anchor-tail-factorial-20260831-E",
+    "paragraphs": 2,
+    "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+    "sha256": "e9d2969aadbdd648ccd6b5aa36d6b7712b059a5b24a2acfcf95d29a4d458b7eb",
+    "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-005/E-current-anchor-direct-tail.txt",
+    "terminal_newline": false,
+    "unicode_characters": 570,
+    "utf8_bytes": 574,
+    "whitespace_words": 104
+  },
+  "detector": {
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "model": "pangram-4",
+    "required_version": "4.0",
+    "starting_head": "caf33baebea29856e4f780a70367e969e53e69f4",
+    "transport": "SHORT_DOCUMENT_API"
+  },
+  "directive": {
+    "id": "SOMATIC-R15-SURFACE-006",
+    "packet_git_blob": "417961ccdb042eebbc130a7dea5b00d9f8207584",
+    "packet_path": "tasks/somatic-r15-clean-continuation-20260830/CHAT-SURFACE-EXPERIMENT-006.md"
+  },
+  "format": "somatic-r15-eft-candidate-e-preflight-v1",
+  "mechanical_source_assertions": "PASS",
+  "preflight": "PASS",
+  "preservation": {
+    "before_hard_conversation": "PASS",
+    "brain_relation_is_joel_thought_not_proven_neuroscience": "PASS",
+    "deeper_trauma_not_removed": "PASS",
+    "eft_portability": "PASS",
+    "head_shaving_massage_comparison": "PASS",
+    "immediately_after_trigger": "PASS",
+    "mind_loop_and_body_participation": "PASS",
+    "moves_through_points_and_notices_feeling": "PASS",
+    "overall": "PASS",
+    "pressure_reduction": "PASS",
+    "tapping_as_small_massage": "PASS"
+  }
+}
