@@ -1,0 +1,140 @@
+{
+  "accounting": {
+    "ambiguous_calls": 0,
+    "article_mutations": 0,
+    "cache_hits_for_e": 0,
+    "completed_family_calls_before_e": 5,
+    "detector_reservations_created": 0,
+    "gui_actions": 0,
+    "new_paid_api_calls_for_e": 1,
+    "registered_master_mutations": 0,
+    "stable_family_call_cap": 6,
+    "stable_family_calls_used": 6,
+    "whole_document_calls": 0
+  },
+  "article": {
+    "article_candidate_mutations": 0,
+    "branch": "task/somatic-r15-clean-continuation-20260830",
+    "candidate_path": "articles/somatic-therapies/experiments/R15-DIRECT-OWNER-VOICE-CANDIDATE-20260830.md",
+    "candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31",
+    "head": "ac1570f3e8945fecf80585d8fbe336c2a19ffbd6",
+    "registered_master_mutations": 0
+  },
+  "candidate_e": {
+    "cache_records": [],
+    "git_blob": "46f7c1f8f735a648ef9808007bd1929cf924d206",
+    "input_path": "state/experiments/somatic-r15-eft-human-anchor-tail-factorial-20260831/inputs/E-current-anchor-direct-tail.txt",
+    "measurement_key": "somatic-r15-eft-human-anchor-tail-factorial-20260831-E",
+    "paragraphs": 2,
+    "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+    "sha256": "e9d2969aadbdd648ccd6b5aa36d6b7712b059a5b24a2acfcf95d29a4d458b7eb",
+    "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-005/E-current-anchor-direct-tail.txt",
+    "terminal_newline": false,
+    "unicode_characters": 570,
+    "utf8_bytes": 574,
+    "whitespace_words": 104
+  },
+  "detector": {
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "head_before_result_packet": "731b0d56fc0b0555c9e37592fcfdf3669eb11a55",
+    "model": "pangram-4",
+    "preflight_commit": "93f9200dbea8bbb5fee52c117ca2fc9303ed0b7d",
+    "required_version": "4.0",
+    "result_commit": "731b0d56fc0b0555c9e37592fcfdf3669eb11a55",
+    "starting_head": "caf33baebea29856e4f780a70367e969e53e69f4",
+    "task_checkpoint_commit": "71b043bf7bb06910b26537c6dbd53eb2f320c054",
+    "transport": "SHORT_DOCUMENT_API"
+  },
+  "directive": {
+    "id": "SOMATIC-R15-SURFACE-006",
+    "packet_git_blob": "417961ccdb042eebbc130a7dea5b00d9f8207584",
+    "packet_path": "tasks/somatic-r15-clean-continuation-20260830/CHAT-SURFACE-EXPERIMENT-006.md"
+  },
+  "format": "somatic-r15-eft-candidate-e-result-v1",
+  "mechanical_source_assertions": "PASS",
+  "preservation": {
+    "before_hard_conversation": "PASS",
+    "brain_relation_is_joel_thought_not_proven_neuroscience": "PASS",
+    "deeper_trauma_not_removed": "PASS",
+    "eft_portability": "PASS",
+    "head_shaving_massage_comparison": "PASS",
+    "immediately_after_trigger": "PASS",
+    "mind_loop_and_body_participation": "PASS",
+    "moves_through_points_and_notices_feeling": "PASS",
+    "overall": "PASS",
+    "pressure_reduction": "PASS",
+    "tapping_as_small_massage": "PASS"
+  },
+  "raw_result_deltas": {
+    "E_minus_A": {
+      "fraction_ai": -1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "window_0_ai_assistance_score": -0.6004518568515778,
+      "window_0_humanizer_score": -0.9054202437400818
+    },
+    "E_minus_C": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "window_0_ai_assistance_score": -0.06183911859989166,
+      "window_0_humanizer_score": 0.0
+    },
+    "E_minus_D": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "window_0_ai_assistance_score": -0.048909351229667664,
+      "window_0_humanizer_score": 0.0
+    },
+    "E_minus_H0": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "window_0_ai_assistance_score": 0.17239049779891502,
+      "window_0_humanizer_score": 0.0
+    }
+  },
+  "result_e": {
+    "cache_evidence": {
+      "path": "cache/pangram-4/4.0/e9d2969aadbdd648ccd6b5aa36d6b7712b059a5b24a2acfcf95d29a4d458b7eb/somatic-r15-eft-human-anchor-tail-factorial-20260831-E.json",
+      "sha256": "94b8bb940d8c149c99cd1ae7d2487a7dd2b1a1d7fe9b3b845523e3c926895bc3"
+    },
+    "cache_status": "success",
+    "created_utc": "2026-08-31T03:06:56.702020+00:00",
+    "result": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "headline": "Human Written",
+      "num_ai_assisted_segments": 0,
+      "num_ai_segments": 0,
+      "num_human_segments": 1,
+      "prediction": "We believe that this entire text is human-written.",
+      "prediction_short": "Human",
+      "stage": "STAGE_SUCCESS",
+      "version": "4.0",
+      "windows": [
+        {
+          "ai_assistance_score": 0.17250946164131165,
+          "confidence": "High",
+          "end_index": 569,
+          "exact_text_pointer": "cache/pangram-4/4.0/e9d2969aadbdd648ccd6b5aa36d6b7712b059a5b24a2acfcf95d29a4d458b7eb/somatic-r15-eft-human-anchor-tail-factorial-20260831-E.json#/result/windows/0/text",
+          "humanizer_score": 0.0,
+          "is_humanized": false,
+          "label": "Human Written",
+          "start_index": 0,
+          "text_sha256": "02bb544ccbb3fb5a169a72a0244e1bb66353c87f3f64342b64b1e2b7b544b0c3",
+          "text_unicode_characters": 569,
+          "text_utf8_bytes": 573,
+          "token_length": 125,
+          "word_count": 106
+        }
+      ]
+    },
+    "submitted_model": "pangram-4",
+    "task_id": "00e47527-dfb7-430d-88bb-7ac476148fd6",
+    "updated_utc": "2026-08-31T03:07:00.434748+00:00"
+  },
+  "stable_family_state": "CLOSED_6_OF_6"
+}
