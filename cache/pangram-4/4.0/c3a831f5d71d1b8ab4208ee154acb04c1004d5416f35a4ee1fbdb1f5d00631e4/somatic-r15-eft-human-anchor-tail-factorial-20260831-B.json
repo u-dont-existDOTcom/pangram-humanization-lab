@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r15-eft-human-anchor-tail-factorial-20260831-B",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "You can also literally activate different parts of the brain by tapping different parts, so it is interesting to notice how you feel as you move through the tapping points. And it is a little bit of a massage. Actually, I mentioned earlier that shaving my head and massaging it works really well for me. Sometimes I feel like that works even better than EFT. Where EFT earns its keep is portability. I can use it before a hard conversation, right after somebody triggers me, or when my mind is looping and my body has joined the loop. I think of that as taking the pressure down. I do not mistake it for having finished the deeper trauma work.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.7569658160209656,
+        "confidence": "High",
+        "end_index": 643,
+        "humanizer_score": 0.9033372402191162,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "You can also literally activate different parts of the brain by tapping different parts, so it is interesting to notice how you feel as you move through the tapping points. And it is a little bit of a massage. Actually, I mentioned earlier that shaving my head and massaging it works really well for me. Sometimes I feel like that works even better than EFT. Where EFT earns its keep is portability. I can use it before a hard conversation, right after somebody triggers me, or when my mind is looping and my body has joined the loop. I think of that as taking the pressure down. I do not mistake it for having finished the deeper trauma work.",
+        "token_length": 137,
+        "word_count": 119
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "0dd72785-ab05-44bd-8182-fb4a1ed73241",
   "text": "\n\nYou can also literally activate different parts of the brain by tapping different parts, so it is interesting to notice how you feel as you move through the tapping points. And it is a little bit of a massage. Actually, I mentioned earlier that shaving my head and massaging it works really well for me. Sometimes I feel like that works even better than EFT. Where EFT earns its keep is portability. I can use it before a hard conversation, right after somebody triggers me, or when my mind is looping and my body has joined the loop. I think of that as taking the pressure down. I do not mistake it for having finished the deeper trauma work.",
   "text_sha256": "c3a831f5d71d1b8ab4208ee154acb04c1004d5416f35a4ee1fbdb1f5d00631e4",
-  "updated_utc": "2026-08-31T02:52:34.604825+00:00"
+  "updated_utc": "2026-08-31T02:52:40.953605+00:00"
 }
