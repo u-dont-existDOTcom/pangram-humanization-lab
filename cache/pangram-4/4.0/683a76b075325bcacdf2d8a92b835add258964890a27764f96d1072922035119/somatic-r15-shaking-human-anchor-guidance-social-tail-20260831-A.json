@@ -5,12 +5,51 @@
   "last_error": "",
   "measurement_key": "somatic-r15-shaking-human-anchor-guidance-social-tail-20260831-A",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.1948138326406479,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.8051861524581909,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "Shaking Qigong / Shaking Medicine\nMy friend Louka is why I am linking this particular class. He had tried many different healing and somatic modalities, including basic TRE. TRE itself did nothing for him, and nothing helped him much until he got into this class, which costs $10 per month on Skool.\nThe class is much more than just TRE.\nBy “blockage” I mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” When the right thing is shaken the right way, things loosen up as they should and the energy flows.\nTRE is a system they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. Obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert. “Just try lots of stuff till it works” is how my expertise runs on this.\nI did not try the Shaking Qigong class, but I have done qigong and found it very helpful for moving energy.\nWhat interests me about Louka’s class is that it gives people more ways in than one fixed TRE protocol. It is guided without being completely standardized, and you are doing it around other people instead of alone. That may matter for somebody who gets nowhere with the stripped-down version.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.054254185408353806,
+        "confidence": "High",
+        "end_index": 1211,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Shaking Qigong / Shaking Medicine\nMy friend Louka is why I am linking this particular class. He had tried many different healing and somatic modalities, including basic TRE. TRE itself did nothing for him, and nothing helped him much until he got into this class, which costs $10 per month on Skool.\nThe class is much more than just TRE.\nBy “blockage” I mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” When the right thing is shaken the right way, things loosen up as they should and the energy flows.\nTRE is a system they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. Obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert. “Just try lots of stuff till it works” is how my expertise runs on this.\nI did not try the Shaking Qigong class, but I have done qigong and found it very helpful for moving energy.",
+        "token_length": 278,
+        "word_count": 223
+      },
+      {
+        "ai_assistance_score": 0.9159111380577087,
+        "confidence": "High",
+        "end_index": 1504,
+        "humanizer_score": 0.0044126552529633045,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1211,
+        "text": "\nWhat interests me about Louka’s class is that it gives people more ways in than one fixed TRE protocol. It is guided without being completely standardized, and you are doing it around other people instead of alone. That may matter for somebody who gets nowhere with the stripped-down version.",
+        "token_length": 57,
+        "word_count": 51
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "79dd4f98-f841-47b9-af6e-3941e754cf17",
   "text": "\n\nShaking Qigong / Shaking Medicine\n\nMy friend Louka is why I am linking this particular class. He had tried many different healing and somatic modalities, including basic TRE. TRE itself did nothing for him, and nothing helped him much until he got into this class, which costs $10 per month on Skool.\n\nThe class is much more than just TRE.\n\nBy “blockage” I mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” When the right thing is shaken the right way, things loosen up as they should and the energy flows.\n\nTRE is a system they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. Obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert. “Just try lots of stuff till it works” is how my expertise runs on this.\n\nI did not try the Shaking Qigong class, but I have done qigong and found it very helpful for moving energy.\n\nWhat interests me about Louka’s class is that it gives people more ways in than one fixed TRE protocol. It is guided without being completely standardized, and you are doing it around other people instead of alone. That may matter for somebody who gets nowhere with the stripped-down version.",
   "text_sha256": "683a76b075325bcacdf2d8a92b835add258964890a27764f96d1072922035119",
-  "updated_utc": "2026-08-31T03:43:10.531070+00:00"
+  "updated_utc": "2026-08-31T03:43:14.217395+00:00"
 }
