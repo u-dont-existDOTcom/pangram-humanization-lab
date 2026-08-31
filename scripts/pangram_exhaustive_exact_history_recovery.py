@@ -185,6 +185,9 @@ def parser() -> argparse.ArgumentParser:
     value.add_argument("--scan-id", required=True)
     value.add_argument("--output", type=Path, required=True)
     value.add_argument("--original-run-dir", type=Path, required=True)
+    value.add_argument("--expect-words", type=int, default=293)
+    value.add_argument("--expect-characters", type=int, default=1631)
+    value.add_argument("--expect-bytes", type=int, default=1641)
     return value
 
 
@@ -196,9 +199,14 @@ def main(argv: list[str] | None = None) -> int:
     raw = args.input.read_bytes()
     text = raw.decode("utf-8")
     if sha256(raw) != expected_sha:
-        raise RuntimeError("exact C input hash mismatch")
-    if len(text.split()) != 293 or len(text) != 1631 or len(raw) != 1641 or text.endswith("\n"):
-        raise RuntimeError("exact C input count mismatch")
+        raise RuntimeError("exact input hash mismatch")
+    if (
+        len(text.split()) != args.expect_words
+        or len(text) != args.expect_characters
+        or len(raw) != args.expect_bytes
+        or text.endswith("\n")
+    ):
+        raise RuntimeError("exact input count mismatch")
     reservation_time = parse_time(args.reservation_time)
     failure_time = parse_time(args.failure_time)
     started = utc_now()

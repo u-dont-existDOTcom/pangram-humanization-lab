@@ -1,0 +1,264 @@
+{
+  "accounting": {
+    "a_cache_hits_before_action": 0,
+    "a_clicks": 1,
+    "a_read_only_history_scans": 3,
+    "a_reservations": 1,
+    "article_mutations": 0,
+    "b_cache_hits_before_action": 0,
+    "b_clicks": 0,
+    "b_reservations": 0,
+    "force_overrides": 0,
+    "h0_reused_results": 1,
+    "new_api_calls": 0,
+    "new_short_gui_clicks": 1,
+    "registered_master_mutations": 0,
+    "whole_document_calls": 0
+  },
+  "article_application_performed": false,
+  "article_authority": {
+    "branch": "task/somatic-r15-clean-continuation-20260830",
+    "candidate_sha256": "5a6226ca0056610b4492de7713a43bb152dde1079d81b5c05896c70fcf138679",
+    "packet_head": "011a99d88cc0ebd69d479a8ea03a426d3dc5e793",
+    "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202"
+  },
+  "ci_disposition": {
+    "FULL_HISTORY_FIX": "PASS",
+    "MERGE_BLOCKED_UNTIL_RECONCILED": "YES",
+    "REMAINING_VALIDATOR_FINDINGS": "PRE_EXISTING_UNRELATED_MERGE_DEBT"
+  },
+  "deltas": {
+    "A_to_B": null,
+    "H0_to_A": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0
+    },
+    "H0_to_B": null,
+    "status": "A_COMPLETE_B_CORRECTLY_SKIPPED"
+  },
+  "detector": {
+    "after_measurement_and_localization_before_packet": "a008c3a5004eb5ba88203a5ee47dc79982421acc",
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "model": "pangram-4",
+    "required_version": "4.0",
+    "starting_head": "d809006f58e97b352b4d790e876d06f85cbf4f8e"
+  },
+  "directive_id": "SOMATIC-R15-SURFACE-009",
+  "family": "somatic-r15-shaking-current-anchor-residual-social-tail-20260831",
+  "family_state": "CLOSED_A_HUMAN_1_0_B_NOT_SUBMITTED",
+  "final_whole_document_measurement_performed": false,
+  "format": "somatic-r15-shaking-residual-social-result-v1",
+  "fraction_table": {
+    "A": {
+      "ai": 0.0,
+      "ai_assisted": 0.0,
+      "human": 1.0
+    },
+    "B": null,
+    "H0": {
+      "ai": 0.0,
+      "ai_assisted": 0.0,
+      "human": 1.0
+    }
+  },
+  "privacy": "NO_PRIVATE_HISTORY_URL_UUID_CREDENTIAL_COOKIE_STORAGE_OR_UNRELATED_TEXT_PERSISTED",
+  "variants": {
+    "A": {
+      "captured_at_utc": "2026-08-31T04:55:24.994487Z",
+      "classification": "EXACT_GUI_RESULT_EXISTS",
+      "classification_before_action": "EXACT_GUI_NEVER_SUBMITTED",
+      "confidence": "High",
+      "detector_submission_attempted": true,
+      "headline": "Human Written",
+      "history_api_exact_identity": {
+        "api_path": "/api/history/<uuid>/",
+        "authorized_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+        "authorized_word_count": 315,
+        "exact_text_field_path": [
+          "prompt"
+        ],
+        "exact_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+        "exact_word_count": 315,
+        "record_model_id": null,
+        "record_prediction": "We believe that this entire text is human-written.",
+        "record_prediction_prob": 0.18962115049362183,
+        "stored_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+        "stored_word_count": 315,
+        "transport_match_mode": "exact_utf8"
+      },
+      "input_identity": {
+        "terminal_newline": false,
+        "unicode_characters": 1758,
+        "utf8_bytes": 1768,
+        "whitespace_words": 315
+      },
+      "input_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+      "prediction": "We believe that this entire text is human-written.",
+      "prediction_short": "Human",
+      "read_only_history_recovery": {
+        "exhaustive_scan": {
+          "candidates_scanned": 273,
+          "completed_at": "2026-08-31T05:01:29.397096Z",
+          "detail_records_inspected": 273,
+          "detector_submission_attempted": false,
+          "exact_result_recovered": true,
+          "pages_scanned": 28,
+          "pagination_exhausted": true,
+          "started_at": "2026-08-31T04:57:31.187115Z"
+        },
+        "initial_exact_result_found": false,
+        "initial_history_candidates_inspected": 10,
+        "post_result_list_localization_candidates_inspected": 10,
+        "post_result_list_localization_found": false
+      },
+      "report_body_sha256": "6ecc1247ae6727599addefd59f5ce486b0113408826da7061216aa3a80c4e020",
+      "report_pdf_sha256": "6b9e58fecc9ba6fa50cc499b91d34bb5258d0c1bc68a6871fa5646254a419d3f",
+      "reservation": {
+        "detector_submission_attempted": false,
+        "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+        "input_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+        "model": "pangram-4",
+        "reserved_at_utc": "2026-08-31T04:55:14.797318Z",
+        "schema_version": 1,
+        "status": "paid_gui_submission_reserved",
+        "transport": "local_playwright",
+        "transport_runner_version": "pangram-gui-local-playwright-v1",
+        "word_count": 315
+      },
+      "result": {
+        "detector_stage": "STAGE_SUCCESS",
+        "detector_version": "4.0",
+        "headline": "Human Written",
+        "history_record_identity": {
+          "api_path": "/api/history/<uuid>/",
+          "authorized_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+          "authorized_word_count": 315,
+          "exact_text_field_path": [
+            "prompt"
+          ],
+          "exact_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+          "exact_word_count": 315,
+          "record_model_id": null,
+          "record_prediction": "We believe that this entire text is human-written.",
+          "record_prediction_prob": 0.18962115049362183,
+          "stored_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+          "stored_word_count": 315,
+          "transport_match_mode": "exact_utf8"
+        },
+        "prediction_short": "Human",
+        "report_layout": "history_api_structured_result_v1",
+        "segments": [],
+        "structured_result_field_path": [
+          "response",
+          "overall"
+        ],
+        "summary": {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "fraction_lightly_ai_assisted": null,
+          "fraction_moderately_ai_assisted": null
+        },
+        "summary_source": "stored_history_structured_result"
+      },
+      "windows": [
+        {
+          "confidence": "High",
+          "end_index": 1750,
+          "is_humanized": false,
+          "label": "Human",
+          "start_index": 0,
+          "text": "Shaking Qigong / Shaking Medicine\nMy friend Louka is why I link this class. He had tried many healin",
+          "word_count": 316
+        }
+      ]
+    },
+    "B": {
+      "classification": "CONDITIONALLY_NOT_EXECUTED_AFTER_A_HUMAN_1_0",
+      "detector_submission_attempted": false,
+      "input_identity": {
+        "terminal_newline": false,
+        "unicode_characters": 1731,
+        "utf8_bytes": 1741,
+        "whitespace_words": 310
+      },
+      "input_sha256": "fa8625ab5686641eb2c1e15b7799992a43023fe2814a68737df88f17091542b5",
+      "result": null
+    },
+    "H0": {
+      "classification": "EXACT_GUI_RESULT_EXISTS_REUSE_ONLY",
+      "history_api_exact_identity": {
+        "api_path": "/api/history/<uuid>/",
+        "authorized_text_sha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+        "authorized_word_count": 293,
+        "exact_text_field_path": [
+          "prompt"
+        ],
+        "exact_text_sha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+        "exact_word_count": 293,
+        "record_model_id": null,
+        "record_prediction": "We believe that this entire text is human-written.",
+        "record_prediction_prob": 0.10372807085514069,
+        "stored_text_sha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+        "stored_word_count": 293,
+        "transport_match_mode": "exact_utf8"
+      },
+      "input_identity": {
+        "terminal_newline": false,
+        "unicode_characters": 1631,
+        "utf8_bytes": 1641,
+        "whitespace_words": 293
+      },
+      "input_sha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+      "result": {
+        "detector_stage": "STAGE_SUCCESS",
+        "detector_version": "4.0",
+        "headline": "Human Written",
+        "history_record_identity": {
+          "api_path": "/api/history/<uuid>/",
+          "authorized_text_sha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+          "authorized_word_count": 293,
+          "exact_text_field_path": [
+            "prompt"
+          ],
+          "exact_text_sha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+          "exact_word_count": 293,
+          "record_model_id": null,
+          "record_prediction": "We believe that this entire text is human-written.",
+          "record_prediction_prob": 0.10372807085514069,
+          "stored_text_sha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+          "stored_word_count": 293,
+          "transport_match_mode": "exact_utf8"
+        },
+        "prediction_short": "Human",
+        "report_layout": "history_api_structured_result_v1",
+        "segments": [],
+        "structured_result_field_path": [
+          "response",
+          "overall"
+        ],
+        "summary": {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "fraction_lightly_ai_assisted": null,
+          "fraction_moderately_ai_assisted": null
+        },
+        "summary_source": "stored_history_structured_result"
+      },
+      "result_authority_head": "d809006f58e97b352b4d790e876d06f85cbf4f8e",
+      "windows": [
+        {
+          "confidence": "High",
+          "end_index": 1624,
+          "is_humanized": false,
+          "label": "Human",
+          "start_index": 0,
+          "text": "Shaking Qigong / Shaking Medicine\nMy friend Louka is why I link this class. He had tried many healin",
+          "word_count": 294
+        }
+      ]
+    }
+  }
+}
