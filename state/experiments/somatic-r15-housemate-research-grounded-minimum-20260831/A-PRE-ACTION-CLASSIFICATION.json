@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "directive_id": "SOMATIC-R15-SURFACE-014",
+  "family": "somatic-r15-housemate-research-grounded-minimum-20260831",
+  "cell": "A",
+  "classified_at_utc": "2026-08-31T10:10:54Z",
+  "classification": "EXACT_GUI_NEVER_SUBMITTED",
+  "input_sha256": "b3da7ce000d42f1ac10ae8a6398ea053b08ec99ba09adbc1fe249076d439a07e",
+  "word_count": 422,
+  "local_state": {
+    "result_cached": false,
+    "ambiguous_submission_block": false,
+    "paid_gui_submission_reservation_found": false
+  },
+  "authentication": {
+    "verified": true,
+    "detector_input_editable": true,
+    "submitted": false,
+    "profile_kind": "dedicated_persistent_automation_profile"
+  },
+  "standard_history_recovery": {
+    "status": "no_exact_match",
+    "history_list_candidate_count": 10,
+    "read_only": true,
+    "detector_submission_attempted": false,
+    "failure_path": "state/gui-runs/pangram-4/b3da7ce000d42f1ac10ae8a6398ea053b08ec99ba09adbc1fe249076d439a07e/failure.json",
+    "failure_commit": "3dafa0e131bc1ef1f887698f2e6b4b9f57aa0ad8"
+  },
+  "complete_history_recovery": {
+    "history_candidates": 283,
+    "authenticated_records_inspected": 166,
+    "unavailable_record_endpoints": 117,
+    "exact_matches": 0,
+    "read_only": true,
+    "detector_submission_attempted": false
+  },
+  "repository_recovery": {
+    "local_detector_ref_occurrences": "current read-only failure evidence only",
+    "github_organization_code_search_count": 0,
+    "complete_result_found": false
+  },
+  "detector_submission_attempted_during_recovery": false,
+  "eligible_new_short_gui_clicks": 1,
+  "required_transport": "authenticated local Playwright/Brave Pangram GUI",
+  "api_submission_forbidden": true,
+  "force_forbidden": true,
+  "privacy": "NO_PRIVATE_HISTORY_URL_UUID_PROMPT_CREDENTIAL_COOKIE_STORAGE_OR_UNRELATED_TEXT_PERSISTED"
+}

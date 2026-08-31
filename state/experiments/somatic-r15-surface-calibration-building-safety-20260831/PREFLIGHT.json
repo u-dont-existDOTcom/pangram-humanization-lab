@@ -1,0 +1,34 @@
+{
+  "format": "somatic-r15-chat-surface-experiment-preflight-v1",
+  "experiment_id": "somatic-r15-surface-calibration-building-safety-20260831",
+  "source_candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31",
+  "detector_model": "pangram-4",
+  "expected_version": "4.0",
+  "paid_call_cap": 2,
+  "whole_document_call_authorized": false,
+  "preservation_assertion": "PASS",
+  "variants": [
+    {
+      "id": "A-control",
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-20260831-A-control",
+      "path": "state/experiments/somatic-r15-surface-calibration-building-safety-20260831/inputs/A-control.md",
+      "sha256": "5b2ff52ca758a7845fcfbf8e413d2b4e0e3ea52e7ccb5a3b3e04a066893015ba",
+      "words": 411,
+      "unicode_characters": 2718,
+      "utf8_bytes": 2750,
+      "source_identity": "EXACT_SOURCE_BOUNDARY_PASS",
+      "pre_submit_state": "EXACT_RESULT_ABSENT_TASK_ABSENT_RESERVATION_ABSENT"
+    },
+    {
+      "id": "B-chat-replacement",
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-20260831-B-chat-replacement",
+      "path": "state/experiments/somatic-r15-surface-calibration-building-safety-20260831/inputs/B-chat-replacement.md",
+      "sha256": "57d31304a39582c0e26d0e66458e4da8b8b8fb1c292d10ae1585e78ad1dd679f",
+      "words": 423,
+      "unicode_characters": 2733,
+      "utf8_bytes": 2763,
+      "source_identity": "EXACT_PACKET_TEXT_PASS",
+      "pre_submit_state": "EXACT_RESULT_ABSENT_TASK_ABSENT_RESERVATION_ABSENT"
+    }
+  ]
+}

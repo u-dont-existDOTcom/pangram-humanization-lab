@@ -1,0 +1,711 @@
+{
+  "applicationMetadataInspection": "NOT_EXPORTED_NO_SUPPORTED_PRIVACY_SAFE_METADATA_SURFACE",
+  "completedAt": "2026-08-31T05:52:34.955457Z",
+  "dedicatedBrowserProcessPresentBeforeLaunch": false,
+  "detailReadStatus": "ok",
+  "detectorSubmissionAttempted": false,
+  "exactHistoryResultRecovered": true,
+  "failureTime": "2026-08-31T05:45:31.474992Z",
+  "historyApi": {
+    "candidatesAtOrAfterReservation": 1,
+    "candidatesScanned": 276,
+    "detailReadStatusCounts": {
+      "ok": 276
+    },
+    "detailRecordsInspected": 276,
+    "listRowsWithExactBinding": 0,
+    "pageResultCounts": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      6
+    ],
+    "pagesScanned": 28,
+    "paginationExhausted": true,
+    "reportedTotalCount": 276,
+    "requestAttempts": 304,
+    "requestStatusCounts": {
+      "ok": 28
+    },
+    "uniqueRecordIdentitiesObserved": 276
+  },
+  "historyResultIdentity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "22475e89b5bdedbd5de0dd69d566c8efd04329af2d87834a9b5cc5a0cb87dac1",
+    "authorized_word_count": 418,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "22475e89b5bdedbd5de0dd69d566c8efd04329af2d87834a9b5cc5a0cb87dac1",
+    "exact_word_count": 418,
+    "record_model_id": null,
+    "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+    "record_prediction_prob": 0.4157506823539734,
+    "stored_text_sha256": "22475e89b5bdedbd5de0dd69d566c8efd04329af2d87834a9b5cc5a0cb87dac1",
+    "stored_word_count": 418,
+    "transport_match_mode": "exact_utf8"
+  },
+  "historyUi": {
+    "exhaustionRule": "four_stable_scroll_shapes_without_load_button",
+    "historyLinksObserved": 0,
+    "scrollIterations": 5
+  },
+  "inputSha256": "22475e89b5bdedbd5de0dd69d566c8efd04329af2d87834a9b5cc5a0cb87dac1",
+  "inputWords": 418,
+  "minutesAfterFailure": 7.058,
+  "nearMatchDiagnostics": [
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 300,
+            "character_delta": -2077,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 55,
+            "word_delta": -363
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 0
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 300,
+            "character_delta": -2077,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 55,
+            "word_delta": -363
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 1
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 300,
+            "character_delta": -2077,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 55,
+            "word_delta": -363
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 2
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2434,
+            "character_delta": 57,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 429,
+            "word_delta": 11
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 100,
+            "character_delta": -2277,
+            "field_path": [
+              "response",
+              "overall",
+              "windows",
+              "[1]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 17,
+            "word_delta": -401
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2425,
+            "character_delta": 48,
+            "field_path": [
+              "response",
+              "in_page",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 429,
+            "word_delta": 11
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2425,
+            "character_delta": 48,
+            "field_path": [
+              "response",
+              "in_page",
+              "ngram",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 429,
+            "word_delta": 11
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 1
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 1923,
+            "character_delta": -454,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 344,
+            "word_delta": -74
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 2
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2385,
+            "character_delta": 8,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[6]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 406,
+            "word_delta": -12
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 7
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2337,
+            "character_delta": -40,
+            "field_path": [
+              "response",
+              "in_page",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 388,
+            "word_delta": -30
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2337,
+            "character_delta": -40,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 388,
+            "word_delta": -30
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2409,
+            "character_delta": 32,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[8]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 417,
+            "word_delta": -1
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 9
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2282,
+            "character_delta": -95,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 389,
+            "word_delta": -29
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2274,
+            "character_delta": -103,
+            "field_path": [
+              "response",
+              "in_page",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 389,
+            "word_delta": -29
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2274,
+            "character_delta": -103,
+            "field_path": [
+              "response",
+              "in_page",
+              "ngram",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 389,
+            "word_delta": -29
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2274,
+            "character_delta": -103,
+            "field_path": [
+              "response_payload",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 389,
+            "word_delta": -29
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 4,
+      "row": 8
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2376,
+            "character_delta": -1,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 416,
+            "word_delta": -2
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2367,
+            "character_delta": -10,
+            "field_path": [
+              "response",
+              "in_page",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 416,
+            "word_delta": -2
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2367,
+            "character_delta": -10,
+            "field_path": [
+              "response",
+              "in_page",
+              "ngram",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 416,
+            "word_delta": -2
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2367,
+            "character_delta": -10,
+            "field_path": [
+              "response_payload",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 416,
+            "word_delta": -2
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 4,
+      "row": 9
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2322,
+            "character_delta": -55,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[7]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 394,
+            "word_delta": -24
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 11,
+      "row": 2
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2337,
+            "character_delta": -40,
+            "field_path": [
+              "response",
+              "in_page",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 388,
+            "word_delta": -30
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2337,
+            "character_delta": -40,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 388,
+            "word_delta": -30
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2409,
+            "character_delta": 32,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[8]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 417,
+            "word_delta": -1
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 12,
+      "row": 1
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 2377,
+        "authorized_word_count": 418,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2452,
+            "character_delta": 75,
+            "field_path": [
+              "response",
+              "in_page",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 390,
+            "word_delta": -28
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 2452,
+            "character_delta": 75,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 390,
+            "word_delta": -28
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 12,
+      "row": 2
+    }
+  ],
+  "originalRunArtifacts": [
+    {
+      "name": "localization-failure.json",
+      "sha256": "0d61de97459aedcb6c63662dc7380c191754a4d357d8f86af8d602a24d11c03d",
+      "utf8Bytes": 716
+    },
+    {
+      "name": "report-body.txt",
+      "sha256": "765dae5bddf47603fd8c866099a51158f9e9e0fcc3dc553f2af8104c5c8a4ffe",
+      "utf8Bytes": 2754
+    },
+    {
+      "name": "report.pdf",
+      "sha256": "db77843e261cd28a02015be8b3e9f683faa49bacfca4eca9b629dc665a2ef2ee",
+      "utf8Bytes": 61949
+    },
+    {
+      "name": "result.json",
+      "sha256": "7ba205398704fe3ffbad12c5eb3c304c8031222bcd7acd78d60faa7e19e33985",
+      "utf8Bytes": 4028
+    },
+    {
+      "name": "submission-reservation.json",
+      "sha256": "08202f461c8b1ff27180405f6576245f3765fad47aa5ee577bdae583d3dd48f5",
+      "utf8Bytes": 510
+    }
+  ],
+  "privacyNote": "No UUID, private report URL, cookie, storage value, authorization header, unrelated prompt, or raw response is persisted.",
+  "providerOrTaskIdentityRecovered": true,
+  "reservationTime": "2026-08-31T05:45:21.923217Z",
+  "restoredTabStateBeforeNavigation": [
+    {
+      "detectorButtonState": "NOT_FOUND",
+      "exactInputPresent": false,
+      "title": "",
+      "urlClass": "ABOUT_BLANK_OR_INTERNAL",
+      "visibleStateMarkers": []
+    },
+    {
+      "detectorButtonState": "NOT_FOUND",
+      "exactInputPresent": false,
+      "title": "",
+      "urlClass": "ABOUT_BLANK_OR_INTERNAL",
+      "visibleStateMarkers": []
+    }
+  ],
+  "result": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "AI Detected",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "22475e89b5bdedbd5de0dd69d566c8efd04329af2d87834a9b5cc5a0cb87dac1",
+      "authorized_word_count": 418,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "22475e89b5bdedbd5de0dd69d566c8efd04329af2d87834a9b5cc5a0cb87dac1",
+      "exact_word_count": 418,
+      "record_model_id": null,
+      "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+      "record_prediction_prob": 0.4157506823539734,
+      "stored_text_sha256": "22475e89b5bdedbd5de0dd69d566c8efd04329af2d87834a9b5cc5a0cb87dac1",
+      "stored_word_count": 418,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "Mixed",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 0.2166385204,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.7833614945,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "scanId": "SOMATIC-R15-SURFACE-011-B-READONLY-LOCALIZATION-001",
+  "schemaVersion": 1,
+  "startedAt": "2026-08-31T05:48:35.552561Z",
+  "windows": [
+    {
+      "confidence": "High",
+      "end_index": 1855,
+      "is_humanized": false,
+      "label": "Human",
+      "start_index": 0,
+      "text": "How I Know Whether It Actually Helped\nMy outcome measure is boring. Does it still hit as hard later?",
+      "word_count": 334
+    },
+    {
+      "confidence": "High",
+      "end_index": 2368,
+      "is_humanized": false,
+      "label": "AI-Generated",
+      "start_index": 1855,
+      "text": " A calm final ten minutes does not prove the dose was right.\nResearch matters. I just don't decide w",
+      "word_count": 88
+    }
+  ]
+}

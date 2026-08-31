@@ -1,0 +1,521 @@
+{
+  "accounting": {
+    "ambiguous_calls": 0,
+    "article_mutations": 0,
+    "cache_hits_for_new_variants": 0,
+    "detector_reservations_created": 0,
+    "exact_completed_results_reused": 1,
+    "gui_actions": 0,
+    "new_paid_api_calls": 5,
+    "registered_master_mutations": 0,
+    "stable_family_result_cap": 6,
+    "stable_family_results_complete": 6,
+    "whole_document_calls": 0
+  },
+  "article": {
+    "article_candidate_mutations": 0,
+    "branch": "task/somatic-r15-clean-continuation-20260830",
+    "candidate_git_blob": "6f9251f51d79a6b322b8c6f6cae95a9a5d80f760",
+    "candidate_path": "articles/somatic-therapies/experiments/R15-EFT-REPAIR-CANDIDATE-20260831.md",
+    "candidate_sha256": "5a6226ca0056610b4492de7713a43bb152dde1079d81b5c05896c70fcf138679",
+    "head": "c4544a1c36ac8861a10c0ad44b77575c28f0cfdf",
+    "registered_master_mutations": 0,
+    "source_git_blob": "542012646469032eb836865b0e89b8fa368a1d0b",
+    "source_path": "articles/somatic-therapies/experiments/R15-WHOLE-ARTICLE-PANGRAM-BOUNDARY-20260830.txt",
+    "source_sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707"
+  },
+  "detector": {
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "head_after_exact_results": "e8c431c71855bc4485c02dc43214055cb1a784f8",
+    "head_before_result_packet": "e8c431c71855bc4485c02dc43214055cb1a784f8",
+    "model": "pangram-4",
+    "preflight_commit": "3b5a32b4964350839b20f69cd2997ad6a2edada6",
+    "required_version": "4.0",
+    "starting_head": "ede777c4455d699f64f46e7850e92c707fa31378",
+    "transport": "SHORT_DOCUMENT_API"
+  },
+  "direct_tail": {
+    "preservation": {
+      "emdr_often_more_than_one_session": "PASS",
+      "further_work_may_be_needed": "PASS",
+      "memory_grabs_less_is_meaningful": "PASS",
+      "one_hour_recheck": "PASS",
+      "one_pass_does_not_erase_every_trigger": "PASS",
+      "overall": "PASS",
+      "still_stewing_means_did_not_last": "PASS"
+    },
+    "sha256": "d351ef58bd06ea4f6e2853f697d662d644b59e1e286884f1b10f82f47c608929"
+  },
+  "directive": {
+    "id": "SOMATIC-R15-SURFACE-007",
+    "packet_git_blob": "7a84033ef8b5bec18f27af45932f94b6ab4daab9",
+    "packet_path": "tasks/somatic-r15-clean-continuation-20260830/CHAT-SURFACE-EXPERIMENT-007.md"
+  },
+  "format": "somatic-r15-housemate-factorial-result-v1",
+  "mechanical_source_assertions": "PASS",
+  "raw_result_deltas": {
+    "A_minus_H0": {
+      "fraction_ai": 0.2512626349925995,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": -0.2512626051902771,
+      "last_window_ai_assistance_score": 0.8381823468953371,
+      "last_window_humanizer_score": 0.022730756551027298
+    },
+    "B_minus_A": {
+      "fraction_ai": -0.2512626349925995,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.2512626051902771,
+      "last_window_ai_assistance_score": -0.7507554963231087,
+      "last_window_humanizer_score": -0.022730756551027298
+    },
+    "C_minus_H0": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "last_window_ai_assistance_score": 0.010209774598479271,
+      "last_window_humanizer_score": 0.0
+    },
+    "D_minus_C": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "last_window_ai_assistance_score": 0.0068653784692287445,
+      "last_window_humanizer_score": 0.0
+    },
+    "E_minus_B": {
+      "fraction_ai": 0.2239382266998291,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": -0.2239382266998291,
+      "last_window_ai_assistance_score": 0.4586159661412239,
+      "last_window_humanizer_score": 0.000835781975183636
+    },
+    "E_minus_C": {
+      "fraction_ai": 0.2239382266998291,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": -0.2239382266998291,
+      "last_window_ai_assistance_score": 0.5358330421149731,
+      "last_window_humanizer_score": 0.000835781975183636
+    },
+    "E_minus_D": {
+      "fraction_ai": 0.2239382266998291,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": -0.2239382266998291,
+      "last_window_ai_assistance_score": 0.5289676636457443,
+      "last_window_humanizer_score": 0.000835781975183636
+    }
+  },
+  "stable_family_state": "CLOSED_6_OF_6",
+  "target_fraction_table": [
+    {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "variant": "H0"
+    },
+    {
+      "fraction_ai": 0.2512626349925995,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.7487373948097229,
+      "variant": "A"
+    },
+    {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "variant": "B"
+    },
+    {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "variant": "C"
+    },
+    {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "variant": "D"
+    },
+    {
+      "fraction_ai": 0.2239382266998291,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.7760617733001709,
+      "variant": "E"
+    }
+  ],
+  "variants": {
+    "A": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/574a317204c05ac0e05a0d924db4a5dcb66f6dafcbfd27b1da8f16783e001d94/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-A.json",
+        "sha256": "593fe446c5397e438207f7530207a5ebdb74d233026468d86c8e62fb41665a90"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T03:26:38.966770+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "13f043d23e44d3655437293a8bf8ea0d6f581189",
+        "input_path": "state/experiments/somatic-r15-housemate-human-anchor-hour-later-tail-20260831/inputs/A-r15-anchor-original-tail.txt",
+        "measurement_key": "somatic-r15-housemate-human-anchor-hour-later-tail-20260831-A",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "574a317204c05ac0e05a0d924db4a5dcb66f6dafcbfd27b1da8f16783e001d94",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-007/A-r15-anchor-original-tail.txt",
+        "terminal_newline": false,
+        "unicode_characters": 1591,
+        "utf8_bytes": 1595,
+        "whitespace_words": 291
+      },
+      "result": {
+        "fraction_ai": 0.2512626349925995,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.7487373948097229,
+        "headline": "AI Detected",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 1,
+        "num_human_segments": 1,
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.15873239934444427,
+            "confidence": "High",
+            "end_index": 1186,
+            "exact_text_pointer": "cache/pangram-4/4.0/574a317204c05ac0e05a0d924db4a5dcb66f6dafcbfd27b1da8f16783e001d94/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-A.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "71e6798a94359a72a0b228abcb7d98c179fa340f83d326bd824b14c990ef685a",
+            "text_unicode_characters": 1186,
+            "text_utf8_bytes": 1190,
+            "token_length": 259,
+            "word_count": 215
+          },
+          {
+            "ai_assistance_score": 0.8659685254096985,
+            "confidence": "High",
+            "end_index": 1584,
+            "exact_text_pointer": "cache/pangram-4/4.0/574a317204c05ac0e05a0d924db4a5dcb66f6dafcbfd27b1da8f16783e001d94/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-A.json#/result/windows/1/text",
+            "humanizer_score": 0.022730756551027298,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "start_index": 1186,
+            "text_sha256": "738d8815a816cbdb79cbd06230022b67cb0a2d212fece84a6662e9c7ea348cf4",
+            "text_unicode_characters": 398,
+            "text_utf8_bytes": 398,
+            "token_length": 90,
+            "word_count": 79
+          }
+        ]
+      },
+      "result_commit": "122b618d8bb9cdf9b884f2f8c3c661c137a2765c",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "adc74ea02f2ba459600631b827c752266703224f",
+      "task_id": "75df0773-c2cb-4e9c-b0e2-ee9c8f9018cf",
+      "updated_utc": "2026-08-31T03:26:42.536530+00:00"
+    },
+    "B": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/9796246dad4b35cb761939724a57e6bbb4b3a4d46119968741144401edae1e11/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-B.json",
+        "sha256": "4cdb99834799607ed0960d1dd8327ee0d1c3fc118c4fa3eeec5525ca8fc8357c"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T03:27:02.862375+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "a0202b4a631feb92f03898a2977f5cd5a5e0a9a9",
+        "input_path": "state/experiments/somatic-r15-housemate-human-anchor-hour-later-tail-20260831/inputs/B-r15-anchor-direct-tail.txt",
+        "measurement_key": "somatic-r15-housemate-human-anchor-hour-later-tail-20260831-B",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "9796246dad4b35cb761939724a57e6bbb4b3a4d46119968741144401edae1e11",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-007/B-r15-anchor-direct-tail.txt",
+        "terminal_newline": false,
+        "unicode_characters": 1496,
+        "utf8_bytes": 1500,
+        "whitespace_words": 273
+      },
+      "result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.11521302908658981,
+            "confidence": "High",
+            "end_index": 1489,
+            "exact_text_pointer": "cache/pangram-4/4.0/9796246dad4b35cb761939724a57e6bbb4b3a4d46119968741144401edae1e11/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-B.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "4ac9cfb4720b6c03e541c9aa90ebc70e1bcff0f9056f480c89f5ea6aaeabd7a1",
+            "text_unicode_characters": 1489,
+            "text_utf8_bytes": 1493,
+            "token_length": 333,
+            "word_count": 279
+          }
+        ]
+      },
+      "result_commit": "e06a13fed8df5e374d5f577b372e64aad08048a5",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "ebbeea6c6c8117077f1271cc510e5560cef7b6c6",
+      "task_id": "e0ad8831-03db-4e1b-91f9-5a1af1d0e3a2",
+      "updated_utc": "2026-08-31T03:27:06.451467+00:00"
+    },
+    "C": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/dddae7f8802de8c38cc6df7ba03ab87fc12b9493736160f278f684ae26be2e4d/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-C.json",
+        "sha256": "2b99d1e8838879e66fd500caa37fdae0783f7d277827d824df71a31bb4e8741b"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T03:27:23.870079+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "6850cd60a4a9d6d3a97994292dcfb0c8f1ef53c7",
+        "input_path": "state/experiments/somatic-r15-housemate-human-anchor-hour-later-tail-20260831/inputs/C-current-anchor.txt",
+        "measurement_key": "somatic-r15-housemate-human-anchor-hour-later-tail-20260831-C",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "dddae7f8802de8c38cc6df7ba03ab87fc12b9493736160f278f684ae26be2e4d",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-007/C-current-anchor.txt",
+        "terminal_newline": false,
+        "unicode_characters": 1257,
+        "utf8_bytes": 1257,
+        "whitespace_words": 223
+      },
+      "result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.03799595311284065,
+            "confidence": "High",
+            "end_index": 1251,
+            "exact_text_pointer": "cache/pangram-4/4.0/dddae7f8802de8c38cc6df7ba03ab87fc12b9493736160f278f684ae26be2e4d/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-C.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "09e3ab9341045287e14e53ed60cdbd1582cc2805ef0caec26897c25b46a5dcb3",
+            "text_unicode_characters": 1251,
+            "text_utf8_bytes": 1251,
+            "token_length": 271,
+            "word_count": 224
+          }
+        ]
+      },
+      "result_commit": "5ab0ca80a4eff0979f0ec7e9494cdaa9c2d5633c",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "a08185d31c6205a9be0f43a1ce742a0841f89631",
+      "task_id": "d57911c8-5d7b-43bb-9625-a4a4decc4243",
+      "updated_utc": "2026-08-31T03:27:28.516552+00:00"
+    },
+    "D": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/29d4af12b023c3a71ba2d16583b101e3ffe2f042652b36c4e57dce42e7d16abc/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-D.json",
+        "sha256": "484536bcfd5f74f342ccd168519d8c4bbce1de7c409c119340d51afaf290b2ba"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T03:27:46.415845+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "8c76f61ac91354889c8184d207a15abcb578e2c9",
+        "input_path": "state/experiments/somatic-r15-housemate-human-anchor-hour-later-tail-20260831/inputs/D-current-anchor-current-tail.txt",
+        "measurement_key": "somatic-r15-housemate-human-anchor-hour-later-tail-20260831-D",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "29d4af12b023c3a71ba2d16583b101e3ffe2f042652b36c4e57dce42e7d16abc",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-007/D-current-anchor-current-tail.txt",
+        "terminal_newline": false,
+        "unicode_characters": 1637,
+        "utf8_bytes": 1637,
+        "whitespace_words": 292
+      },
+      "result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.0448613315820694,
+            "confidence": "High",
+            "end_index": 1630,
+            "exact_text_pointer": "cache/pangram-4/4.0/29d4af12b023c3a71ba2d16583b101e3ffe2f042652b36c4e57dce42e7d16abc/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-D.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "05380b14b72316cbb43e762c5f855bb1ec9ca0270c36e6809eba8bb529fc2a79",
+            "text_unicode_characters": 1630,
+            "text_utf8_bytes": 1630,
+            "token_length": 353,
+            "word_count": 294
+          }
+        ]
+      },
+      "result_commit": "e45347c9661bc6d6e72daffff65456db940574b0",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "bab3c62fcf4b06f147bec4021f93fe8c8b15074e",
+      "task_id": "d7af87b9-7221-4bce-9932-e236fef3c833",
+      "updated_utc": "2026-08-31T03:27:50.142083+00:00"
+    },
+    "E": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/13a08874c69e675d432c2e14a59aeab81933b6a2d5c31d9e736c402a71d3ded9/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-E.json",
+        "sha256": "de466d765275ae3e052345db335a6c8f4c7bfd676f042fba5170c472fb97326a"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T03:28:10.928737+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "945b17ef01eceaf1ee8fd3586f703a2bda06279b",
+        "input_path": "state/experiments/somatic-r15-housemate-human-anchor-hour-later-tail-20260831/inputs/E-current-anchor-direct-tail.txt",
+        "measurement_key": "somatic-r15-housemate-human-anchor-hour-later-tail-20260831-E",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "13a08874c69e675d432c2e14a59aeab81933b6a2d5c31d9e736c402a71d3ded9",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-007/E-current-anchor-direct-tail.txt",
+        "terminal_newline": false,
+        "unicode_characters": 1561,
+        "utf8_bytes": 1561,
+        "whitespace_words": 282
+      },
+      "result": {
+        "fraction_ai": 0.2239382266998291,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.7760617733001709,
+        "headline": "AI Detected",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 1,
+        "num_human_segments": 1,
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.03732876107096672,
+            "confidence": "High",
+            "end_index": 1206,
+            "exact_text_pointer": "cache/pangram-4/4.0/13a08874c69e675d432c2e14a59aeab81933b6a2d5c31d9e736c402a71d3ded9/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-E.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "bfc2e2eb12a899abd7142334f9eccac5e1c010455394f65e01bdfcae5ca6f18c",
+            "text_unicode_characters": 1206,
+            "text_utf8_bytes": 1206,
+            "token_length": 262,
+            "word_count": 216
+          },
+          {
+            "ai_assistance_score": 0.5738289952278137,
+            "confidence": "High",
+            "end_index": 1554,
+            "exact_text_pointer": "cache/pangram-4/4.0/13a08874c69e675d432c2e14a59aeab81933b6a2d5c31d9e736c402a71d3ded9/somatic-r15-housemate-human-anchor-hour-later-tail-20260831-E.json#/result/windows/1/text",
+            "humanizer_score": 0.000835781975183636,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "start_index": 1206,
+            "text_sha256": "3c421bd517440298fdb42f768dd48586fd6ddb3af8f9d9943daabc2227d45596",
+            "text_unicode_characters": 348,
+            "text_utf8_bytes": 348,
+            "token_length": 83,
+            "word_count": 72
+          }
+        ]
+      },
+      "result_commit": "e8c431c71855bc4485c02dc43214055cb1a784f8",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "dc155709660bb5b66a44fdfeb2fc382956ea753d",
+      "task_id": "378a7357-7ad6-4a67-aac2-144a41c54f8b",
+      "updated_utc": "2026-08-31T03:28:14.462909+00:00"
+    },
+    "H0": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/1d7bb2473eea7c4c42229726aaeb953fc5fb6f30c1cfc316f2673e90be56f3aa/somatic-r15-api-gui-human-window-calibration-20260831-H2-gui-human-window-7.json",
+        "sha256": "8ce6c0fd451bb6a4f56c865f5666bf36fc28fb2ad1225a39f8b2d8522948ba28"
+      },
+      "input": {
+        "cache_records": [
+          {
+            "measurement_key": "somatic-r15-api-gui-human-window-calibration-20260831-H2-gui-human-window-7",
+            "path": "cache/pangram-4/4.0/1d7bb2473eea7c4c42229726aaeb953fc5fb6f30c1cfc316f2673e90be56f3aa/somatic-r15-api-gui-human-window-calibration-20260831-H2-gui-human-window-7.json",
+            "status": "success",
+            "task_id": "6f8d20fe-4470-48ef-9867-7554f17f384f"
+          }
+        ],
+        "git_blob": "d3846d9c0747f540a66fbe63208d7ecbb984d48c",
+        "input_path": "state/experiments/somatic-r15-housemate-human-anchor-hour-later-tail-20260831/inputs/H0-r15-human-anchor.txt",
+        "measurement_key": "somatic-r15-housemate-human-anchor-hour-later-tail-20260831-H0",
+        "pre_submission_classification": "EXACT_COMPLETED_RESULT_REUSE",
+        "sha256": "1d7bb2473eea7c4c42229726aaeb953fc5fb6f30c1cfc316f2673e90be56f3aa",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-007/H0-r15-human-anchor.txt",
+        "terminal_newline": false,
+        "unicode_characters": 1192,
+        "utf8_bytes": 1196,
+        "whitespace_words": 214
+      },
+      "result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.02778617851436138,
+            "confidence": "High",
+            "end_index": 1186,
+            "exact_text_pointer": "cache/pangram-4/4.0/1d7bb2473eea7c4c42229726aaeb953fc5fb6f30c1cfc316f2673e90be56f3aa/somatic-r15-api-gui-human-window-calibration-20260831-H2-gui-human-window-7.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "71e6798a94359a72a0b228abcb7d98c179fa340f83d326bd824b14c990ef685a",
+            "text_unicode_characters": 1186,
+            "text_utf8_bytes": 1190,
+            "token_length": 259,
+            "word_count": 215
+          }
+        ]
+      },
+      "reuse": "EXACT_COMPLETED_RESULT_REUSED",
+      "task_id": "6f8d20fe-4470-48ef-9867-7554f17f384f"
+    }
+  }
+}

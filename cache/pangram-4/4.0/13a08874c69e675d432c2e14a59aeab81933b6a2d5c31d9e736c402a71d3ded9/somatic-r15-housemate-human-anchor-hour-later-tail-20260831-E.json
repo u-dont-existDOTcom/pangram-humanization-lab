@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-08-31T03:28:10.928737+00:00",
+  "expected_version": "4.0",
+  "format": "pangram-cache-v2",
+  "last_error": "",
+  "measurement_key": "somatic-r15-housemate-human-anchor-hour-later-tail-20260831-E",
+  "model": "pangram-4",
+  "result": {
+    "fraction_ai": 0.2239382266998291,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.7760617733001709,
+    "headline": "AI Detected",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 1,
+    "prediction": "We believe that this text is a mix of AI and human-written content.",
+    "prediction_short": "Mixed",
+    "stage": "STAGE_SUCCESS",
+    "text": "How I Know Whether It Actually Helped\nMy outcome measure is boring. Does it still hit as hard later? By restimulation I mean what happens when I remember the event again: does the same charge come back into my body and mind?\nWhile working on this article I was still affected by something that happened with my housemate the day before. I was washing all her moldy clothes for her, one of the dresses got discolored, and she yelled at me. I was still stewing over how she treated me.\nSo I did a quick bit of self-Brainspotting. I moved my finger and eyes slowly around while thinking about the event. Farther to either side, as I moved into more peripheral vision, I noticed blissful tingles. There is a popular simple claim that peripheral vision activates the parasympathetic nervous system. I do not take my experience as proof of that; the research is more complicated.\nSubjectively I could move my gaze from a position where I felt settled and noticed blissful tingles to a position where I felt distressed, moment by moment, and kind of move the bliss into the distress while I thought about the event. Afterward it felt as if the event held less negative energy, or less blocking energy, in my mind. That only tells me what happened right then.\nI check again an hour later. If I'm still stewing just as hard, it probably didn't last, and I may need to work with it again. If I can remember the event and it doesn't grab me as hard, now that's interesting. I don't expect one pass to erase every trigger; EMDR often takes more than one session too.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.03732876107096672,
+        "confidence": "High",
+        "end_index": 1206,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "How I Know Whether It Actually Helped\nMy outcome measure is boring. Does it still hit as hard later? By restimulation I mean what happens when I remember the event again: does the same charge come back into my body and mind?\nWhile working on this article I was still affected by something that happened with my housemate the day before. I was washing all her moldy clothes for her, one of the dresses got discolored, and she yelled at me. I was still stewing over how she treated me.\nSo I did a quick bit of self-Brainspotting. I moved my finger and eyes slowly around while thinking about the event. Farther to either side, as I moved into more peripheral vision, I noticed blissful tingles. There is a popular simple claim that peripheral vision activates the parasympathetic nervous system. I do not take my experience as proof of that; the research is more complicated.\nSubjectively I could move my gaze from a position where I felt settled and noticed blissful tingles to a position where I felt distressed, moment by moment, and kind of move the bliss into the distress while I thought about the event. Afterward it felt as if the event held less negative energy, or less blocking energy, in my mind.",
+        "token_length": 262,
+        "word_count": 216
+      },
+      {
+        "ai_assistance_score": 0.5738289952278137,
+        "confidence": "High",
+        "end_index": 1554,
+        "humanizer_score": 0.000835781975183636,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1206,
+        "text": " That only tells me what happened right then.\nI check again an hour later. If I'm still stewing just as hard, it probably didn't last, and I may need to work with it again. If I can remember the event and it doesn't grab me as hard, now that's interesting. I don't expect one pass to erase every trigger; EMDR often takes more than one session too.",
+        "token_length": 83,
+        "word_count": 72
+      }
+    ]
+  },
+  "source": "live",
+  "status": "success",
+  "submitted_model": "pangram-4",
+  "task_id": "378a7357-7ad6-4a67-aac2-144a41c54f8b",
+  "text": "\n\nHow I Know Whether It Actually Helped\n\nMy outcome measure is boring. Does it still hit as hard later? By restimulation I mean what happens when I remember the event again: does the same charge come back into my body and mind?\n\nWhile working on this article I was still affected by something that happened with my housemate the day before. I was washing all her moldy clothes for her, one of the dresses got discolored, and she yelled at me. I was still stewing over how she treated me.\n\nSo I did a quick bit of self-Brainspotting. I moved my finger and eyes slowly around while thinking about the event. Farther to either side, as I moved into more peripheral vision, I noticed blissful tingles. There is a popular simple claim that peripheral vision activates the parasympathetic nervous system. I do not take my experience as proof of that; the research is more complicated.\n\nSubjectively I could move my gaze from a position where I felt settled and noticed blissful tingles to a position where I felt distressed, moment by moment, and kind of move the bliss into the distress while I thought about the event. Afterward it felt as if the event held less negative energy, or less blocking energy, in my mind. That only tells me what happened right then.\n\nI check again an hour later. If I'm still stewing just as hard, it probably didn't last, and I may need to work with it again. If I can remember the event and it doesn't grab me as hard, now that's interesting. I don't expect one pass to erase every trigger; EMDR often takes more than one session too.",
+  "text_sha256": "13a08874c69e675d432c2e14a59aeab81933b6a2d5c31d9e736c402a71d3ded9",
+  "updated_utc": "2026-08-31T03:28:14.462909+00:00"
+}

@@ -1,0 +1,234 @@
+{
+  "accounting": {
+    "ambiguous_calls": 0,
+    "article_mutations": 0,
+    "cache_hits": 0,
+    "detector_reservations_created": 0,
+    "exact_completed_results_reused": 0,
+    "gui_actions": 0,
+    "new_paid_api_calls": 2,
+    "registered_master_mutations": 0,
+    "whole_document_calls": 0
+  },
+  "article": {
+    "article_candidate_mutations": 0,
+    "branch": "task/somatic-r15-clean-continuation-20260830",
+    "head": "bd10ea9c8fbec4c081f02461b9f28ca96a27043f",
+    "registered_master_mutations": 0,
+    "source_git_blob": "542012646469032eb836865b0e89b8fa368a1d0b",
+    "source_path": "articles/somatic-therapies/experiments/R15-WHOLE-ARTICLE-PANGRAM-BOUNDARY-20260830.txt",
+    "source_sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+    "source_unicode_characters": 20989,
+    "source_utf8_bytes": 21087
+  },
+  "detector": {
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "head_after_exact_results": "d021f8832cefb46dae3f92d7e1d5a638e3faefe2",
+    "head_before_result_packet": "d021f8832cefb46dae3f92d7e1d5a638e3faefe2",
+    "model": "pangram-4",
+    "preflight_commit": "062bf230d802d1883493b95bad8fb1f523c8ca28",
+    "starting_head": "0588d51d15dc4087c72adc4c35fd78d6be826887",
+    "transport": "SHORT_DOCUMENT_API",
+    "version": "4.0"
+  },
+  "directive": {
+    "id": "SOMATIC-R15-CROSS-TRANSPORT-001",
+    "packet_git_blob": "2de6157d85fa9fe329517c6066f124c9c7281865",
+    "packet_path": "tasks/somatic-r15-clean-continuation-20260830/CHAT-CROSS-TRANSPORT-CALIBRATION-001.md"
+  },
+  "format": "somatic-r15-api-gui-human-window-calibration-result-v1",
+  "route_comparison_classification": "API_RECOGNIZES_BOTH_GUI_HUMAN_WINDOWS",
+  "stable_family_state": "COMPLETE_2_OF_2",
+  "variants": {
+    "H1": {
+      "api_result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.02935638651251793,
+            "confidence": "High",
+            "end_index": 1211,
+            "exact_text_pointer": "cache/pangram-4/4.0/d9a1fcd6ed832117b32e07844300f5b30d9067884481b14a63740dcc5bfe5d3b/somatic-r15-api-gui-human-window-calibration-20260831-H1-gui-human-window-5.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "785e03a0c92e152d81da6732abd142c18a2f7f26119ec97eabb12ad526c297ad",
+            "text_unicode_characters": 1211,
+            "text_utf8_bytes": 1225,
+            "token_length": 278,
+            "word_count": 223
+          }
+        ]
+      },
+      "api_vs_gui_label_agreement": true,
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/d9a1fcd6ed832117b32e07844300f5b30d9067884481b14a63740dcc5bfe5d3b/somatic-r15-api-gui-human-window-calibration-20260831-H1-gui-human-window-5.json",
+        "sha256": "f91cdcb49e7655a15524a86082f765c5bc0a3d13d25b843cd3120254f54d305b"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T02:33:10.742698+00:00",
+      "gui_prior": {
+        "ai_likelihood": 0.14797909557819366,
+        "confidence": "High",
+        "label": "Human",
+        "pangram_end": 10456,
+        "pangram_start": 9244,
+        "pangram_word_count": 223,
+        "raw_end": 10502,
+        "raw_line_end": 97,
+        "raw_line_start": 85,
+        "raw_span_sha256": "d9a1fcd6ed832117b32e07844300f5b30d9067884481b14a63740dcc5bfe5d3b",
+        "raw_start": 9284,
+        "section_route": "Louka, TRE, blockage, natural shaking, and qigong",
+        "window_index": 5
+      },
+      "input": {
+        "cache_records": [],
+        "exact_source_substring_count": 1,
+        "gui_prior": {
+          "ai_likelihood": 0.14797909557819366,
+          "confidence": "High",
+          "label": "Human",
+          "pangram_end": 10456,
+          "pangram_start": 9244,
+          "pangram_word_count": 223,
+          "raw_end": 10502,
+          "raw_line_end": 97,
+          "raw_line_start": 85,
+          "raw_span_sha256": "d9a1fcd6ed832117b32e07844300f5b30d9067884481b14a63740dcc5bfe5d3b",
+          "raw_start": 9284,
+          "section_route": "Louka, TRE, blockage, natural shaking, and qigong",
+          "window_index": 5
+        },
+        "input_path": "state/experiments/somatic-r15-api-gui-human-window-calibration-20260831/inputs/H1-gui-human-window-5.txt",
+        "matching_durable_json_outside_experiment": [
+          "state/recovery/somatic-r15-clean-continuation-20260830/exact-result-window-map.json"
+        ],
+        "measurement_key": "somatic-r15-api-gui-human-window-calibration-20260831-H1-gui-human-window-5",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "d9a1fcd6ed832117b32e07844300f5b30d9067884481b14a63740dcc5bfe5d3b",
+        "source_offsets": {
+          "end": 10502,
+          "start": 9284
+        },
+        "terminal_newline": false,
+        "unicode_characters": 1218,
+        "utf8_bytes": 1232,
+        "whitespace_words": 224
+      },
+      "measurement_key": "somatic-r15-api-gui-human-window-calibration-20260831-H1-gui-human-window-5",
+      "result_commit": "ca563e376c3951ff33da616fb573c3ba1c36c6bb",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "945cd2a59f6ae2a3093eff3a80767e6cfa4fb33b",
+      "task_id": "8ce5a703-e012-40f6-a260-9517a40eeb74",
+      "updated_utc": "2026-08-31T02:33:15.352233+00:00"
+    },
+    "H2": {
+      "api_result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.02778617851436138,
+            "confidence": "High",
+            "end_index": 1186,
+            "exact_text_pointer": "cache/pangram-4/4.0/1d7bb2473eea7c4c42229726aaeb953fc5fb6f30c1cfc316f2673e90be56f3aa/somatic-r15-api-gui-human-window-calibration-20260831-H2-gui-human-window-7.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "71e6798a94359a72a0b228abcb7d98c179fa340f83d326bd824b14c990ef685a",
+            "text_unicode_characters": 1186,
+            "text_utf8_bytes": 1190,
+            "token_length": 259,
+            "word_count": 215
+          }
+        ]
+      },
+      "api_vs_gui_label_agreement": true,
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/1d7bb2473eea7c4c42229726aaeb953fc5fb6f30c1cfc316f2673e90be56f3aa/somatic-r15-api-gui-human-window-calibration-20260831-H2-gui-human-window-7.json",
+        "sha256": "8ce6c0fd451bb6a4f56c865f5666bf36fc28fb2ad1225a39f8b2d8522948ba28"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T02:33:46.972964+00:00",
+      "gui_prior": {
+        "ai_likelihood": 0.219383105635643,
+        "confidence": "High",
+        "label": "Human",
+        "pangram_end": 18491,
+        "pangram_start": 17304,
+        "pangram_word_count": 215,
+        "raw_end": 18571,
+        "raw_line_end": 167,
+        "raw_line_start": 157,
+        "raw_span_sha256": "1d7bb2473eea7c4c42229726aaeb953fc5fb6f30c1cfc316f2673e90be56f3aa",
+        "raw_start": 17379,
+        "section_route": "outcome definition and housemate Brainspotting experiment",
+        "window_index": 7
+      },
+      "input": {
+        "cache_records": [],
+        "exact_source_substring_count": 1,
+        "gui_prior": {
+          "ai_likelihood": 0.219383105635643,
+          "confidence": "High",
+          "label": "Human",
+          "pangram_end": 18491,
+          "pangram_start": 17304,
+          "pangram_word_count": 215,
+          "raw_end": 18571,
+          "raw_line_end": 167,
+          "raw_line_start": 157,
+          "raw_span_sha256": "1d7bb2473eea7c4c42229726aaeb953fc5fb6f30c1cfc316f2673e90be56f3aa",
+          "raw_start": 17379,
+          "section_route": "outcome definition and housemate Brainspotting experiment",
+          "window_index": 7
+        },
+        "input_path": "state/experiments/somatic-r15-api-gui-human-window-calibration-20260831/inputs/H2-gui-human-window-7.txt",
+        "matching_durable_json_outside_experiment": [
+          "state/recovery/somatic-r15-clean-continuation-20260830/exact-result-window-map.json"
+        ],
+        "measurement_key": "somatic-r15-api-gui-human-window-calibration-20260831-H2-gui-human-window-7",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "1d7bb2473eea7c4c42229726aaeb953fc5fb6f30c1cfc316f2673e90be56f3aa",
+        "source_offsets": {
+          "end": 18571,
+          "start": 17379
+        },
+        "terminal_newline": false,
+        "unicode_characters": 1192,
+        "utf8_bytes": 1196,
+        "whitespace_words": 214
+      },
+      "measurement_key": "somatic-r15-api-gui-human-window-calibration-20260831-H2-gui-human-window-7",
+      "result_commit": "d021f8832cefb46dae3f92d7e1d5a638e3faefe2",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "a0ac3ddf44ce5667994aa23bc778a2cafa940d33",
+      "task_id": "6f8d20fe-4470-48ef-9867-7554f17f384f",
+      "updated_utc": "2026-08-31T02:33:53.382694+00:00"
+    }
+  }
+}

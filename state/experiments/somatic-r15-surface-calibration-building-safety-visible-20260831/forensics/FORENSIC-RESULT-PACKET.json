@@ -1,0 +1,87 @@
+{
+  "format": "somatic-r15-detector-forensic-result-packet-v1",
+  "created_utc": "2026-08-31T02:21:17Z",
+  "directive": {
+    "id": "SOMATIC-R15-DETECTOR-FORENSICS-001",
+    "source_path": "tasks/somatic-r15-clean-continuation-20260830/CHAT-DETECTOR-FORENSICS-001.md",
+    "source_git_blob": "342871f99968c062bc25c9c987033827563f8e02"
+  },
+  "article": {
+    "branch": "task/somatic-r15-clean-continuation-20260830",
+    "head_read": "be021d494ffcff90507184deb3fa744a7004e0cd",
+    "candidate_path": "articles/somatic-therapies/experiments/R15-DIRECT-OWNER-VOICE-CANDIDATE-20260830.md",
+    "candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31"
+  },
+  "detector": {
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "head_before": "b77476b5c81029002ccecf5caabb8276728c3fad",
+    "head_after_forensic_outputs": "9b9e4b887d6c76d6bb672a228e7da2f2d9746599",
+    "head_before_result_packet": "9b9e4b887d6c76d6bb672a228e7da2f2d9746599"
+  },
+  "family": {
+    "id": "somatic-r15-surface-calibration-building-safety-visible-20260831",
+    "state": "CLOSED_6_OF_6"
+  },
+  "variants": {
+    "A": {
+      "input_sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control",
+      "task_id": "9b072e51-02d3-4f13-8ad8-d1993f3b1d87",
+      "cache_path": "cache/pangram-4/4.0/11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233/somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control.json",
+      "cache_sha256": "017745f686c91a9f0aa8a08854faedfe4e9d809df8252e4d5c9348869512567f",
+      "result": {"version": "4.0", "stage": "STAGE_SUCCESS", "fraction_human": 0.0, "fraction_ai": 1.0, "fraction_ai_assisted": 0.0, "window_count": 1}
+    },
+    "B": {
+      "input_sha256": "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement",
+      "task_id": "b669eb57-49cb-4015-af76-25b8ffd68441",
+      "cache_path": "cache/pangram-4/4.0/cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97/somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement.json",
+      "cache_sha256": "5494adfe46f0efa6ed3c52be4afaaedff6020117cd0c0aacad9d89ef946a7d85",
+      "result": {"version": "4.0", "stage": "STAGE_SUCCESS", "fraction_human": 0.0, "fraction_ai": 1.0, "fraction_ai_assisted": 0.0, "window_count": 1}
+    },
+    "C": {
+      "input_sha256": "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement",
+      "task_id": "2c7fa6b3-3802-416a-967f-ab9cb51b7620",
+      "cache_path": "cache/pangram-4/4.0/4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1/somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement.json",
+      "cache_sha256": "1b6a26a106c35f8c0f0cb92e1d22ef56e4b565985e079c49b36d3c6ffb7b382e",
+      "result": {"version": "4.0", "stage": "STAGE_SUCCESS", "fraction_human": 0.0, "fraction_ai": 1.0, "fraction_ai_assisted": 0.0, "window_count": 1}
+    },
+    "D": {
+      "input_sha256": "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement",
+      "task_id": "b36e7e23-a987-42e9-8731-f1c1b8c761f5",
+      "cache_path": "cache/pangram-4/4.0/58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02/somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement.json",
+      "cache_sha256": "9d8e43cc789715612940100c56f113921c3273a9432e234761d2bf9c0fd2508b",
+      "result": {"version": "4.0", "stage": "STAGE_SUCCESS", "fraction_human": 0.0, "fraction_ai": 1.0, "fraction_ai_assisted": 0.0, "window_count": 1}
+    }
+  },
+  "completed_result_evidence": [
+    {"path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET.json", "sha256": "f11cdd2287ce1fe6d8048bea8b901b942eee13c54f6e69ef9af7aaa980e1f16f"},
+    {"path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET-C.json", "sha256": "59e9c2c4557a817a15c70a520b0a11bf0105eda72cb3182c7671501ca88355c9"},
+    {"path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET-D.json", "sha256": "fa0556c63774f656c327f60f26eb0cad4570bb3b4960ead8d9fdfb14fbd9d18b"}
+  ],
+  "forensic_findings": {
+    "more_complete_raw_response_than_normalized_cache_existed": false,
+    "finer_grained_detector_signal_existed": false,
+    "localization": "NO_FINER_GRAINED_DETECTOR_SIGNAL_PRESENT"
+  },
+  "output_artifacts": [
+    {"path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/forensics/RAW-SCHEMA.json", "sha256": "4712c2ae0e0ffdc1603c47fab549b8bf4b1d010e68c0377eb9d1fc087fecefee"},
+    {"path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/forensics/SPAN-OFFSET-MAP.json", "sha256": "9051a714b6d6da622a4d3ab60baa89fabe49da840f50597e4354dce863b581e7"},
+    {"path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/forensics/TEXT-STRUCTURE-METRICS.json", "sha256": "a9f7b0c4d748af3fa545e8834aa2ff3e1419154f0b46615a7ec9a095a0bd01ab"},
+    {"path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/forensics/A-B-C-D-DIFF-MAP.json", "sha256": "9f4f9aff3b461f53160b317cb91252b84abde102e9747540edf6bbf8efbff51b"}
+  ],
+  "packet_identity": {
+    "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/forensics/FORENSIC-RESULT-PACKET.json",
+    "sha256_boundary": "recorded after serialization in the external handoff receipt to avoid a self-referential hash"
+  },
+  "accounting": {
+    "new_paid_calls": 0,
+    "detector_reservations_created": 0,
+    "article_mutations": 0,
+    "registered_master_mutations": 0,
+    "whole_document_calls": 0,
+    "stable_family_state": "CLOSED_6_OF_6"
+  }
+}

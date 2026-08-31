@@ -158,6 +158,60 @@ def test_collection_binding_resolves_repeated_previews_without_uniqueness() -> N
     assert final["evidence"][0]["scalar_metadata"]["label"] == "AI-Generated"
 
 
+def test_binds_contiguous_windows_after_collapsing_linebreak_runs_and_terminal_breaks() -> None:
+    text = "alpha beta.\n\ngamma delta epsilon.\nzeta eta.\n\n"
+    normalized = "alpha beta.\ngamma delta epsilon.\nzeta eta."
+    delta = normalized.index("delta")
+    zeta = normalized.index("zeta")
+    payload = {
+        "uuid": UUID,
+        "prompt": text,
+        "model_id": "pangram-4",
+        "response": {
+            "overall": {
+                "windows": [
+                    {
+                        "text": "alpha beta.\ngamma ",
+                        "start_index": 0,
+                        "end_index": delta,
+                        "window_index": 0,
+                        "label": "Human",
+                    },
+                    {
+                        "text": "delta epsilon.",
+                        "start_index": delta,
+                        "end_index": zeta,
+                        "window_index": 1,
+                        "label": "AI-Generated",
+                    },
+                    {
+                        "text": "zeta eta.",
+                        "start_index": zeta,
+                        "end_index": len(normalized),
+                        "window_index": 2,
+                        "label": "Human",
+                    },
+                ]
+            }
+        },
+    }
+    record = match_exact_history_record(URL, payload, text)
+    assert record is not None
+    result = localize_history_record(record, text)
+    assert result["validated_full_overall_window_count"] == 3
+    windows = [
+        span
+        for span in result["spans"]
+        if any(
+            evidence["binding_mode"]
+            == "pangram_linebreak_run_collapsed_terminal_trimmed_contiguous_windows+all_previews"
+            for evidence in span["evidence"]
+        )
+    ]
+    assert len(windows) == 3
+    assert text[windows[-1]["char_start_0"] : windows[-1]["char_end_0_exclusive"]] == "zeta eta.\n\n"
+
+
 def test_collection_binding_fails_closed_if_any_preview_does_not_match_mapped_start() -> None:
     text = "alpha beta.\n\ngamma delta epsilon.\n\nzeta eta."
     normalized = text.replace("\n", "")

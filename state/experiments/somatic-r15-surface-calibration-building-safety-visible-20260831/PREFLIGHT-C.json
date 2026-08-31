@@ -1,0 +1,30 @@
+{
+  "format": "somatic-r15-chat-surface-experiment-preflight-c-v1",
+  "experiment_id": "somatic-r15-surface-calibration-building-safety-visible-20260831",
+  "directive": "SOMATIC-R15-SURFACE-003",
+  "source_article_head": "d8bfc464e677c175b1679d06adb5d0b951f71b2d",
+  "source_candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31",
+  "detector_starting_head": "8bb4b59930bd7cfffa601fd05be68c7ed39ff705",
+  "detector_model": "pangram-4",
+  "expected_version": "4.0",
+  "paid_call_cap": 1,
+  "whole_document_call_authorized": false,
+  "A_control_reuse_only": true,
+  "A_control_sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+  "variant": {
+    "id": "C-visible-chat-replacement",
+    "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement",
+    "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/inputs/C-visible-chat-replacement.txt",
+    "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-003/C-reader-visible-chat-replacement.txt",
+    "git_blob": "387d5c5d80966245bc075ae5ca8b26f3b7e5dd3f",
+    "sha256": "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+    "words": 397,
+    "unicode_characters": 2369,
+    "utf8_bytes": 2399,
+    "terminal_newline": true,
+    "source_identity": "EXACT_CHAT_COMMITTED_BYTES_PASS",
+    "reader_visible_artifact_gate": "PASS",
+    "preservation_assertion": "PASS",
+    "pre_submit_state": "EXACT_RESULT_ABSENT_TASK_ABSENT_RESERVATION_ABSENT"
+  }
+}
