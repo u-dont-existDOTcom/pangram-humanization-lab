@@ -1,0 +1,2280 @@
+{
+  "family": "somatic-r15-surface-calibration-building-safety-visible-20260831",
+  "format": "somatic-r15-detector-raw-schema-v1",
+  "variants": {
+    "A": {
+      "cache_path": "cache/pangram-4/4.0/11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233/somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control.json",
+      "cache_sha256": "017745f686c91a9f0aa8a08854faedfe4e9d809df8252e4d5c9348869512567f",
+      "finer_grained_signal_present": false,
+      "finer_signal_disposition": "NO_FINER_GRAINED_DETECTOR_SIGNAL_PRESENT",
+      "finer_signal_schema_candidates": [
+        {
+          "pointer": "/result/windows/0/ai_assistance_score",
+          "type": "number",
+          "value": 0.9999893307685852
+        },
+        {
+          "pointer": "/result/windows/0/confidence",
+          "sha256": "c4ebc6d4a5832cd9415f906ad03661110c705a72381c8b8b145761d02e2dd23a",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4,
+          "value": "High"
+        },
+        {
+          "pointer": "/result/windows/0/end_index",
+          "type": "number",
+          "value": 2333
+        },
+        {
+          "pointer": "/result/windows/0/humanizer_score",
+          "type": "number",
+          "value": 0.8235310912132263
+        },
+        {
+          "pointer": "/result/windows/0/is_humanized",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "pointer": "/result/windows/0/label",
+          "sha256": "7d176b1331d446ec8ae248aa0da3f670131b53a37e0d6bca4778e2c325bf103a",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI-Generated"
+        },
+        {
+          "pointer": "/result/windows/0/start_index",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/windows/0/text",
+          "sha256": "d20a778c163f98b8c7aa7346bd372a48f97fa69654436fc3524018b94c6aace0",
+          "type": "string",
+          "unicode_characters": 2333,
+          "utf8_bytes": 2361
+        },
+        {
+          "pointer": "/result/windows/0/token_length",
+          "type": "number",
+          "value": 496
+        },
+        {
+          "pointer": "/result/windows/0/word_count",
+          "type": "number",
+          "value": 386
+        }
+      ],
+      "fuller_embedded_detector_responses": [],
+      "historical_cache_versions": [
+        {
+          "commit": "71f388143d88e0e2f9eab216f2f4fb13bc307b06",
+          "has_result": true,
+          "schema_pointer_count": 39,
+          "sha256": "017745f686c91a9f0aa8a08854faedfe4e9d809df8252e4d5c9348869512567f",
+          "status": "success",
+          "top_level_keys": [
+            "created_utc",
+            "expected_version",
+            "format",
+            "last_error",
+            "measurement_key",
+            "model",
+            "result",
+            "source",
+            "status",
+            "submitted_model",
+            "task_id",
+            "text",
+            "text_sha256",
+            "updated_utc"
+          ]
+        },
+        {
+          "commit": "baddd0b2fb82e8fad0df098a8e24b1f522cf9c35",
+          "has_result": false,
+          "schema_pointer_count": 15,
+          "sha256": "3487bb2a04360a96599ce09cd03d658445c53f8039ab77120fef61bc9ee46162",
+          "status": "pending",
+          "top_level_keys": [
+            "created_utc",
+            "expected_version",
+            "format",
+            "last_error",
+            "measurement_key",
+            "model",
+            "result",
+            "source",
+            "status",
+            "submitted_model",
+            "task_id",
+            "text",
+            "text_sha256",
+            "updated_utc"
+          ]
+        }
+      ],
+      "input_sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+      "inventory": [
+        {
+          "key_count": 14,
+          "pointer": "",
+          "type": "object"
+        },
+        {
+          "pointer": "/created_utc",
+          "sha256": "e9292f71e612e222fef2779d96ca07d41497e361ad2050c533ff4e73053b3929",
+          "type": "string",
+          "unicode_characters": 32,
+          "utf8_bytes": 32,
+          "value": "2026-08-31T01:40:10.178563+00:00"
+        },
+        {
+          "pointer": "/expected_version",
+          "sha256": "fbd04e1aae9ce0b11a8946e2c9ac2619f7428a64d32d01eff61d809dcb70ee8e",
+          "type": "string",
+          "unicode_characters": 3,
+          "utf8_bytes": 3,
+          "value": "4.0"
+        },
+        {
+          "pointer": "/format",
+          "sha256": "60a6700d87b92ef27225600e35aeb5521910e776070e09dec6bb5e9c8a29f447",
+          "type": "string",
+          "unicode_characters": 16,
+          "utf8_bytes": 16
+        },
+        {
+          "pointer": "/last_error",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "type": "string",
+          "unicode_characters": 0,
+          "utf8_bytes": 0
+        },
+        {
+          "pointer": "/measurement_key",
+          "sha256": "a606c2eb5483858e1868e1f449528e0f7e1bd24b4642b04a3defd42118bb9ec4",
+          "type": "string",
+          "unicode_characters": 82,
+          "utf8_bytes": 82,
+          "value": "somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control"
+        },
+        {
+          "pointer": "/model",
+          "sha256": "3c0cb311fd2bf532b384601a3c30f71906e3a7990b9aad94c21dfcb46c70a026",
+          "type": "string",
+          "unicode_characters": 9,
+          "utf8_bytes": 9,
+          "value": "pangram-4"
+        },
+        {
+          "key_count": 13,
+          "pointer": "/result",
+          "type": "object"
+        },
+        {
+          "pointer": "/result/fraction_ai",
+          "type": "number",
+          "value": 1.0
+        },
+        {
+          "pointer": "/result/fraction_ai_assisted",
+          "type": "number",
+          "value": 0.0
+        },
+        {
+          "pointer": "/result/fraction_human",
+          "type": "number",
+          "value": 0.0
+        },
+        {
+          "pointer": "/result/headline",
+          "sha256": "3049a7c3c53d9c94bea86e1c07c8a1e2e1c2ddf97290961d939ee431141b1579",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI Generated"
+        },
+        {
+          "pointer": "/result/num_ai_assisted_segments",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/num_ai_segments",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "pointer": "/result/num_human_segments",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/prediction",
+          "sha256": "47f05650f469841c5764804d83b7d11c7ef4f3fb9f9e04af2aaaecd79e33a0bd",
+          "type": "string",
+          "unicode_characters": 39,
+          "utf8_bytes": 39
+        },
+        {
+          "pointer": "/result/prediction_short",
+          "sha256": "11fb682be0a0233d5fb899721ecfc1827d20f0d2ff2e093310efa61efca8af1c",
+          "type": "string",
+          "unicode_characters": 2,
+          "utf8_bytes": 2,
+          "value": "AI"
+        },
+        {
+          "pointer": "/result/stage",
+          "sha256": "7a402fd45f8590500f003fa3d57bbffdcee1b0481ebb1e4403effd5b968a6d56",
+          "type": "string",
+          "unicode_characters": 13,
+          "utf8_bytes": 13,
+          "value": "STAGE_SUCCESS"
+        },
+        {
+          "pointer": "/result/text",
+          "sha256": "d20a778c163f98b8c7aa7346bd372a48f97fa69654436fc3524018b94c6aace0",
+          "type": "string",
+          "unicode_characters": 2333,
+          "utf8_bytes": 2361
+        },
+        {
+          "pointer": "/result/version",
+          "sha256": "fbd04e1aae9ce0b11a8946e2c9ac2619f7428a64d32d01eff61d809dcb70ee8e",
+          "type": "string",
+          "unicode_characters": 3,
+          "utf8_bytes": 3,
+          "value": "4.0"
+        },
+        {
+          "length": 1,
+          "pointer": "/result/windows",
+          "type": "array"
+        },
+        {
+          "key_count": 10,
+          "pointer": "/result/windows/0",
+          "type": "object"
+        },
+        {
+          "pointer": "/result/windows/0/ai_assistance_score",
+          "type": "number",
+          "value": 0.9999893307685852
+        },
+        {
+          "pointer": "/result/windows/0/confidence",
+          "sha256": "c4ebc6d4a5832cd9415f906ad03661110c705a72381c8b8b145761d02e2dd23a",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4,
+          "value": "High"
+        },
+        {
+          "pointer": "/result/windows/0/end_index",
+          "type": "number",
+          "value": 2333
+        },
+        {
+          "pointer": "/result/windows/0/humanizer_score",
+          "type": "number",
+          "value": 0.8235310912132263
+        },
+        {
+          "pointer": "/result/windows/0/is_humanized",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "pointer": "/result/windows/0/label",
+          "sha256": "7d176b1331d446ec8ae248aa0da3f670131b53a37e0d6bca4778e2c325bf103a",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI-Generated"
+        },
+        {
+          "pointer": "/result/windows/0/start_index",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/windows/0/text",
+          "sha256": "d20a778c163f98b8c7aa7346bd372a48f97fa69654436fc3524018b94c6aace0",
+          "type": "string",
+          "unicode_characters": 2333,
+          "utf8_bytes": 2361
+        },
+        {
+          "pointer": "/result/windows/0/token_length",
+          "type": "number",
+          "value": 496
+        },
+        {
+          "pointer": "/result/windows/0/word_count",
+          "type": "number",
+          "value": 386
+        },
+        {
+          "pointer": "/source",
+          "sha256": "247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d407ffae9e4ed",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4
+        },
+        {
+          "pointer": "/status",
+          "sha256": "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27",
+          "type": "string",
+          "unicode_characters": 7,
+          "utf8_bytes": 7,
+          "value": "success"
+        },
+        {
+          "pointer": "/submitted_model",
+          "sha256": "3c0cb311fd2bf532b384601a3c30f71906e3a7990b9aad94c21dfcb46c70a026",
+          "type": "string",
+          "unicode_characters": 9,
+          "utf8_bytes": 9
+        },
+        {
+          "pointer": "/task_id",
+          "sha256": "cbd0510ce1e72621381f84a1d22d888c7493b2eebf0fd084b9043ecd0ac57459",
+          "type": "string",
+          "unicode_characters": 36,
+          "utf8_bytes": 36,
+          "value": "9b072e51-02d3-4f13-8ad8-d1993f3b1d87"
+        },
+        {
+          "pointer": "/text",
+          "sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+          "type": "string",
+          "unicode_characters": 2346,
+          "utf8_bytes": 2374
+        },
+        {
+          "pointer": "/text_sha256",
+          "sha256": "cb985e55d281e232440e534798aa730dc218dba81e7d055a8b8fd181f5060f32",
+          "type": "string",
+          "unicode_characters": 64,
+          "utf8_bytes": 64
+        },
+        {
+          "pointer": "/updated_utc",
+          "sha256": "1ce6df8d04e10b5160ad005be6efd751cf97421e21304fe67543097c326935ce",
+          "type": "string",
+          "unicode_characters": 32,
+          "utf8_bytes": 32,
+          "value": "2026-08-31T01:40:13.562263+00:00"
+        }
+      ],
+      "matching_persisted_json": [
+        {
+          "bytes": 8450,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/text",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "text",
+                "version",
+                "windows"
+              ],
+              "pointer": "/result",
+              "schema_pointer_count": 25,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+            "9b072e51-02d3-4f13-8ad8-d1993f3b1d87",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control"
+          ],
+          "path": "cache/pangram-4/4.0/11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233/somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control.json",
+          "schema_pointer_count": 39,
+          "sha256": "017745f686c91a9f0aa8a08854faedfe4e9d809df8252e4d5c9348869512567f"
+        },
+        {
+          "bytes": 1591,
+          "embedded_detector_responses": [],
+          "matched_identities": [
+            "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/PREFLIGHT-C.json",
+          "schema_pointer_count": 28,
+          "sha256": "7334a18092c26509f4311468a927c41e650b581d231afb874ed437a8b9ebecba"
+        },
+        {
+          "bytes": 1793,
+          "embedded_detector_responses": [],
+          "matched_identities": [
+            "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/PREFLIGHT-D.json",
+          "schema_pointer_count": 32,
+          "sha256": "2bb19bc5c1ca661b29de6ca22d36dc8ae77d29c119a913df2255bd44f9e2c3ab"
+        },
+        {
+          "bytes": 1949,
+          "embedded_detector_responses": [],
+          "matched_identities": [
+            "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/PREFLIGHT.json",
+          "schema_pointer_count": 36,
+          "sha256": "33d17dccaf9831f78d36788f7525557f14372ac94d38ac71ce812000b6ec7ccd"
+        },
+        {
+          "bytes": 4783,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/exact_text_pointer",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text_sha256",
+                "/windows/0/text_unicode_characters",
+                "/windows/0/text_utf8_bytes",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "version",
+                "windows"
+              ],
+              "pointer": "/C_variant/result",
+              "schema_pointer_count": 27,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET-C.json",
+          "schema_pointer_count": 108,
+          "sha256": "59e9c2c4557a817a15c70a520b0a11bf0105eda72cb3182c7671501ca88355c9"
+        },
+        {
+          "bytes": 5230,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/exact_text_pointer",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text_sha256",
+                "/windows/0/text_unicode_characters",
+                "/windows/0/text_utf8_bytes",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "version",
+                "windows"
+              ],
+              "pointer": "/D_variant/result",
+              "schema_pointer_count": 27,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET-D.json",
+          "schema_pointer_count": 118,
+          "sha256": "fa0556c63774f656c327f60f26eb0cad4570bb3b4960ead8d9fdfb14fbd9d18b"
+        },
+        {
+          "bytes": 6593,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/exact_text_pointer",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text_sha256",
+                "/windows/0/text_unicode_characters",
+                "/windows/0/text_utf8_bytes",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "version",
+                "windows"
+              ],
+              "pointer": "/variants/0/result",
+              "schema_pointer_count": 27,
+              "window_count": 1
+            },
+            {
+              "bound_input_sha256": "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/exact_text_pointer",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text_sha256",
+                "/windows/0/text_unicode_characters",
+                "/windows/0/text_utf8_bytes",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "version",
+                "windows"
+              ],
+              "pointer": "/variants/1/result",
+              "schema_pointer_count": 27,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+            "9b072e51-02d3-4f13-8ad8-d1993f3b1d87",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET.json",
+          "schema_pointer_count": 140,
+          "sha256": "f11cdd2287ce1fe6d8048bea8b901b942eee13c54f6e69ef9af7aaa980e1f16f"
+        }
+      ],
+      "more_complete_raw_than_current_cache": false,
+      "normalized_response_schema_pointer_count": 25,
+      "task_id": "9b072e51-02d3-4f13-8ad8-d1993f3b1d87"
+    },
+    "B": {
+      "cache_path": "cache/pangram-4/4.0/cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97/somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement.json",
+      "cache_sha256": "5494adfe46f0efa6ed3c52be4afaaedff6020117cd0c0aacad9d89ef946a7d85",
+      "finer_grained_signal_present": false,
+      "finer_signal_disposition": "NO_FINER_GRAINED_DETECTOR_SIGNAL_PRESENT",
+      "finer_signal_schema_candidates": [
+        {
+          "pointer": "/result/windows/0/ai_assistance_score",
+          "type": "number",
+          "value": 0.9999860525131226
+        },
+        {
+          "pointer": "/result/windows/0/confidence",
+          "sha256": "c4ebc6d4a5832cd9415f906ad03661110c705a72381c8b8b145761d02e2dd23a",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4,
+          "value": "High"
+        },
+        {
+          "pointer": "/result/windows/0/end_index",
+          "type": "number",
+          "value": 2349
+        },
+        {
+          "pointer": "/result/windows/0/humanizer_score",
+          "type": "number",
+          "value": 0.8177533745765686
+        },
+        {
+          "pointer": "/result/windows/0/is_humanized",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "pointer": "/result/windows/0/label",
+          "sha256": "7d176b1331d446ec8ae248aa0da3f670131b53a37e0d6bca4778e2c325bf103a",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI-Generated"
+        },
+        {
+          "pointer": "/result/windows/0/start_index",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/windows/0/text",
+          "sha256": "aa1f6ddfb2019b55feb47da8870ddc3f4defe5227f77a82405a4f6be86b0de97",
+          "type": "string",
+          "unicode_characters": 2349,
+          "utf8_bytes": 2375
+        },
+        {
+          "pointer": "/result/windows/0/token_length",
+          "type": "number",
+          "value": 497
+        },
+        {
+          "pointer": "/result/windows/0/word_count",
+          "type": "number",
+          "value": 393
+        }
+      ],
+      "fuller_embedded_detector_responses": [],
+      "historical_cache_versions": [
+        {
+          "commit": "9e972bbd0eec594d93548eb7a7f4984ec1ececaf",
+          "has_result": true,
+          "schema_pointer_count": 39,
+          "sha256": "5494adfe46f0efa6ed3c52be4afaaedff6020117cd0c0aacad9d89ef946a7d85",
+          "status": "success",
+          "top_level_keys": [
+            "created_utc",
+            "expected_version",
+            "format",
+            "last_error",
+            "measurement_key",
+            "model",
+            "result",
+            "source",
+            "status",
+            "submitted_model",
+            "task_id",
+            "text",
+            "text_sha256",
+            "updated_utc"
+          ]
+        },
+        {
+          "commit": "0c890e8399c21f9fe03f96791c80c9b17aa404a9",
+          "has_result": false,
+          "schema_pointer_count": 15,
+          "sha256": "b1b968a5d9f0e20480ef2bdbda0fbaa7dcc899f281b07847668d89fe4047a4e4",
+          "status": "pending",
+          "top_level_keys": [
+            "created_utc",
+            "expected_version",
+            "format",
+            "last_error",
+            "measurement_key",
+            "model",
+            "result",
+            "source",
+            "status",
+            "submitted_model",
+            "task_id",
+            "text",
+            "text_sha256",
+            "updated_utc"
+          ]
+        }
+      ],
+      "input_sha256": "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+      "inventory": [
+        {
+          "key_count": 14,
+          "pointer": "",
+          "type": "object"
+        },
+        {
+          "pointer": "/created_utc",
+          "sha256": "57a9579f99d0c0b9502968cec69bbc2a83005ad842358d52a9eb552daff428bf",
+          "type": "string",
+          "unicode_characters": 32,
+          "utf8_bytes": 32,
+          "value": "2026-08-31T01:40:31.642351+00:00"
+        },
+        {
+          "pointer": "/expected_version",
+          "sha256": "fbd04e1aae9ce0b11a8946e2c9ac2619f7428a64d32d01eff61d809dcb70ee8e",
+          "type": "string",
+          "unicode_characters": 3,
+          "utf8_bytes": 3,
+          "value": "4.0"
+        },
+        {
+          "pointer": "/format",
+          "sha256": "60a6700d87b92ef27225600e35aeb5521910e776070e09dec6bb5e9c8a29f447",
+          "type": "string",
+          "unicode_characters": 16,
+          "utf8_bytes": 16
+        },
+        {
+          "pointer": "/last_error",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "type": "string",
+          "unicode_characters": 0,
+          "utf8_bytes": 0
+        },
+        {
+          "pointer": "/measurement_key",
+          "sha256": "9380980423b3cbb6c571a02c4857d51dc0c5db15f016ed9d82909b0c659585db",
+          "type": "string",
+          "unicode_characters": 91,
+          "utf8_bytes": 91,
+          "value": "somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement"
+        },
+        {
+          "pointer": "/model",
+          "sha256": "3c0cb311fd2bf532b384601a3c30f71906e3a7990b9aad94c21dfcb46c70a026",
+          "type": "string",
+          "unicode_characters": 9,
+          "utf8_bytes": 9,
+          "value": "pangram-4"
+        },
+        {
+          "key_count": 13,
+          "pointer": "/result",
+          "type": "object"
+        },
+        {
+          "pointer": "/result/fraction_ai",
+          "type": "number",
+          "value": 1.0
+        },
+        {
+          "pointer": "/result/fraction_ai_assisted",
+          "type": "number",
+          "value": 0.0
+        },
+        {
+          "pointer": "/result/fraction_human",
+          "type": "number",
+          "value": 0.0
+        },
+        {
+          "pointer": "/result/headline",
+          "sha256": "3049a7c3c53d9c94bea86e1c07c8a1e2e1c2ddf97290961d939ee431141b1579",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI Generated"
+        },
+        {
+          "pointer": "/result/num_ai_assisted_segments",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/num_ai_segments",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "pointer": "/result/num_human_segments",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/prediction",
+          "sha256": "47f05650f469841c5764804d83b7d11c7ef4f3fb9f9e04af2aaaecd79e33a0bd",
+          "type": "string",
+          "unicode_characters": 39,
+          "utf8_bytes": 39
+        },
+        {
+          "pointer": "/result/prediction_short",
+          "sha256": "11fb682be0a0233d5fb899721ecfc1827d20f0d2ff2e093310efa61efca8af1c",
+          "type": "string",
+          "unicode_characters": 2,
+          "utf8_bytes": 2,
+          "value": "AI"
+        },
+        {
+          "pointer": "/result/stage",
+          "sha256": "7a402fd45f8590500f003fa3d57bbffdcee1b0481ebb1e4403effd5b968a6d56",
+          "type": "string",
+          "unicode_characters": 13,
+          "utf8_bytes": 13,
+          "value": "STAGE_SUCCESS"
+        },
+        {
+          "pointer": "/result/text",
+          "sha256": "aa1f6ddfb2019b55feb47da8870ddc3f4defe5227f77a82405a4f6be86b0de97",
+          "type": "string",
+          "unicode_characters": 2349,
+          "utf8_bytes": 2375
+        },
+        {
+          "pointer": "/result/version",
+          "sha256": "fbd04e1aae9ce0b11a8946e2c9ac2619f7428a64d32d01eff61d809dcb70ee8e",
+          "type": "string",
+          "unicode_characters": 3,
+          "utf8_bytes": 3,
+          "value": "4.0"
+        },
+        {
+          "length": 1,
+          "pointer": "/result/windows",
+          "type": "array"
+        },
+        {
+          "key_count": 10,
+          "pointer": "/result/windows/0",
+          "type": "object"
+        },
+        {
+          "pointer": "/result/windows/0/ai_assistance_score",
+          "type": "number",
+          "value": 0.9999860525131226
+        },
+        {
+          "pointer": "/result/windows/0/confidence",
+          "sha256": "c4ebc6d4a5832cd9415f906ad03661110c705a72381c8b8b145761d02e2dd23a",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4,
+          "value": "High"
+        },
+        {
+          "pointer": "/result/windows/0/end_index",
+          "type": "number",
+          "value": 2349
+        },
+        {
+          "pointer": "/result/windows/0/humanizer_score",
+          "type": "number",
+          "value": 0.8177533745765686
+        },
+        {
+          "pointer": "/result/windows/0/is_humanized",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "pointer": "/result/windows/0/label",
+          "sha256": "7d176b1331d446ec8ae248aa0da3f670131b53a37e0d6bca4778e2c325bf103a",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI-Generated"
+        },
+        {
+          "pointer": "/result/windows/0/start_index",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/windows/0/text",
+          "sha256": "aa1f6ddfb2019b55feb47da8870ddc3f4defe5227f77a82405a4f6be86b0de97",
+          "type": "string",
+          "unicode_characters": 2349,
+          "utf8_bytes": 2375
+        },
+        {
+          "pointer": "/result/windows/0/token_length",
+          "type": "number",
+          "value": 497
+        },
+        {
+          "pointer": "/result/windows/0/word_count",
+          "type": "number",
+          "value": 393
+        },
+        {
+          "pointer": "/source",
+          "sha256": "247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d407ffae9e4ed",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4
+        },
+        {
+          "pointer": "/status",
+          "sha256": "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27",
+          "type": "string",
+          "unicode_characters": 7,
+          "utf8_bytes": 7,
+          "value": "success"
+        },
+        {
+          "pointer": "/submitted_model",
+          "sha256": "3c0cb311fd2bf532b384601a3c30f71906e3a7990b9aad94c21dfcb46c70a026",
+          "type": "string",
+          "unicode_characters": 9,
+          "utf8_bytes": 9
+        },
+        {
+          "pointer": "/task_id",
+          "sha256": "6a977f9e9f2100d31641986aaff3a44aaaa76eba90ea92d5af4e5a9ca0a4d21b",
+          "type": "string",
+          "unicode_characters": 36,
+          "utf8_bytes": 36,
+          "value": "b669eb57-49cb-4015-af76-25b8ffd68441"
+        },
+        {
+          "pointer": "/text",
+          "sha256": "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+          "type": "string",
+          "unicode_characters": 2361,
+          "utf8_bytes": 2387
+        },
+        {
+          "pointer": "/text_sha256",
+          "sha256": "9fd91800cb98f5a7eff1d46339a61083682418732edade482b6ae75d8f10ffb6",
+          "type": "string",
+          "unicode_characters": 64,
+          "utf8_bytes": 64
+        },
+        {
+          "pointer": "/updated_utc",
+          "sha256": "fdc07f4bf27112c06bad67285134a1a9a813217f52eefb40ec929fe5c4bea461",
+          "type": "string",
+          "unicode_characters": 32,
+          "utf8_bytes": 32,
+          "value": "2026-08-31T01:40:35.209574+00:00"
+        }
+      ],
+      "matching_persisted_json": [
+        {
+          "bytes": 8496,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/text",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "text",
+                "version",
+                "windows"
+              ],
+              "pointer": "/result",
+              "schema_pointer_count": 25,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+            "b669eb57-49cb-4015-af76-25b8ffd68441",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement"
+          ],
+          "path": "cache/pangram-4/4.0/cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97/somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement.json",
+          "schema_pointer_count": 39,
+          "sha256": "5494adfe46f0efa6ed3c52be4afaaedff6020117cd0c0aacad9d89ef946a7d85"
+        },
+        {
+          "bytes": 1949,
+          "embedded_detector_responses": [],
+          "matched_identities": [
+            "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/PREFLIGHT.json",
+          "schema_pointer_count": 36,
+          "sha256": "33d17dccaf9831f78d36788f7525557f14372ac94d38ac71ce812000b6ec7ccd"
+        },
+        {
+          "bytes": 6593,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/exact_text_pointer",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text_sha256",
+                "/windows/0/text_unicode_characters",
+                "/windows/0/text_utf8_bytes",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "version",
+                "windows"
+              ],
+              "pointer": "/variants/0/result",
+              "schema_pointer_count": 27,
+              "window_count": 1
+            },
+            {
+              "bound_input_sha256": "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/exact_text_pointer",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text_sha256",
+                "/windows/0/text_unicode_characters",
+                "/windows/0/text_utf8_bytes",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "version",
+                "windows"
+              ],
+              "pointer": "/variants/1/result",
+              "schema_pointer_count": 27,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+            "b669eb57-49cb-4015-af76-25b8ffd68441",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET.json",
+          "schema_pointer_count": 140,
+          "sha256": "f11cdd2287ce1fe6d8048bea8b901b942eee13c54f6e69ef9af7aaa980e1f16f"
+        }
+      ],
+      "more_complete_raw_than_current_cache": false,
+      "normalized_response_schema_pointer_count": 25,
+      "task_id": "b669eb57-49cb-4015-af76-25b8ffd68441"
+    },
+    "C": {
+      "cache_path": "cache/pangram-4/4.0/4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1/somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement.json",
+      "cache_sha256": "1b6a26a106c35f8c0f0cb92e1d22ef56e4b565985e079c49b36d3c6ffb7b382e",
+      "finer_grained_signal_present": false,
+      "finer_signal_disposition": "NO_FINER_GRAINED_DETECTOR_SIGNAL_PRESENT",
+      "finer_signal_schema_candidates": [
+        {
+          "pointer": "/result/windows/0/ai_assistance_score",
+          "type": "number",
+          "value": 0.9999881982803345
+        },
+        {
+          "pointer": "/result/windows/0/confidence",
+          "sha256": "c4ebc6d4a5832cd9415f906ad03661110c705a72381c8b8b145761d02e2dd23a",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4,
+          "value": "High"
+        },
+        {
+          "pointer": "/result/windows/0/end_index",
+          "type": "number",
+          "value": 2357
+        },
+        {
+          "pointer": "/result/windows/0/humanizer_score",
+          "type": "number",
+          "value": 0.60973060131073
+        },
+        {
+          "pointer": "/result/windows/0/is_humanized",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "pointer": "/result/windows/0/label",
+          "sha256": "7d176b1331d446ec8ae248aa0da3f670131b53a37e0d6bca4778e2c325bf103a",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI-Generated"
+        },
+        {
+          "pointer": "/result/windows/0/start_index",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/windows/0/text",
+          "sha256": "a14ca4ec4d529b09cd8e832068b1a2d38d181562520efc053f09c55d52ea0de3",
+          "type": "string",
+          "unicode_characters": 2357,
+          "utf8_bytes": 2387
+        },
+        {
+          "pointer": "/result/windows/0/token_length",
+          "type": "number",
+          "value": 519
+        },
+        {
+          "pointer": "/result/windows/0/word_count",
+          "type": "number",
+          "value": 404
+        }
+      ],
+      "fuller_embedded_detector_responses": [],
+      "historical_cache_versions": [
+        {
+          "commit": "7ba0e830cff88dde95ba4a746f6b9d62ce99b8c7",
+          "has_result": true,
+          "schema_pointer_count": 39,
+          "sha256": "1b6a26a106c35f8c0f0cb92e1d22ef56e4b565985e079c49b36d3c6ffb7b382e",
+          "status": "success",
+          "top_level_keys": [
+            "created_utc",
+            "expected_version",
+            "format",
+            "last_error",
+            "measurement_key",
+            "model",
+            "result",
+            "source",
+            "status",
+            "submitted_model",
+            "task_id",
+            "text",
+            "text_sha256",
+            "updated_utc"
+          ]
+        },
+        {
+          "commit": "7a53d7cd93225d4790b4f2b54f6f90e79bbd4430",
+          "has_result": false,
+          "schema_pointer_count": 15,
+          "sha256": "05e9e468510573a8c2c0272aff9b35118bbbbebe119bcf168a4535c737345790",
+          "status": "pending",
+          "top_level_keys": [
+            "created_utc",
+            "expected_version",
+            "format",
+            "last_error",
+            "measurement_key",
+            "model",
+            "result",
+            "source",
+            "status",
+            "submitted_model",
+            "task_id",
+            "text",
+            "text_sha256",
+            "updated_utc"
+          ]
+        }
+      ],
+      "input_sha256": "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+      "inventory": [
+        {
+          "key_count": 14,
+          "pointer": "",
+          "type": "object"
+        },
+        {
+          "pointer": "/created_utc",
+          "sha256": "5bac6a81c4bb136452340ebfc8b63653ec8ffdef19be5f1b21712a3bdb52b807",
+          "type": "string",
+          "unicode_characters": 32,
+          "utf8_bytes": 32,
+          "value": "2026-08-31T01:49:25.345726+00:00"
+        },
+        {
+          "pointer": "/expected_version",
+          "sha256": "fbd04e1aae9ce0b11a8946e2c9ac2619f7428a64d32d01eff61d809dcb70ee8e",
+          "type": "string",
+          "unicode_characters": 3,
+          "utf8_bytes": 3,
+          "value": "4.0"
+        },
+        {
+          "pointer": "/format",
+          "sha256": "60a6700d87b92ef27225600e35aeb5521910e776070e09dec6bb5e9c8a29f447",
+          "type": "string",
+          "unicode_characters": 16,
+          "utf8_bytes": 16
+        },
+        {
+          "pointer": "/last_error",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "type": "string",
+          "unicode_characters": 0,
+          "utf8_bytes": 0
+        },
+        {
+          "pointer": "/measurement_key",
+          "sha256": "72cebd93238e1b5fa6d80637aebe50f90c19b58edc1d1996e9ba511c5df0218b",
+          "type": "string",
+          "unicode_characters": 91,
+          "utf8_bytes": 91,
+          "value": "somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement"
+        },
+        {
+          "pointer": "/model",
+          "sha256": "3c0cb311fd2bf532b384601a3c30f71906e3a7990b9aad94c21dfcb46c70a026",
+          "type": "string",
+          "unicode_characters": 9,
+          "utf8_bytes": 9,
+          "value": "pangram-4"
+        },
+        {
+          "key_count": 13,
+          "pointer": "/result",
+          "type": "object"
+        },
+        {
+          "pointer": "/result/fraction_ai",
+          "type": "number",
+          "value": 1.0
+        },
+        {
+          "pointer": "/result/fraction_ai_assisted",
+          "type": "number",
+          "value": 0.0
+        },
+        {
+          "pointer": "/result/fraction_human",
+          "type": "number",
+          "value": 0.0
+        },
+        {
+          "pointer": "/result/headline",
+          "sha256": "3049a7c3c53d9c94bea86e1c07c8a1e2e1c2ddf97290961d939ee431141b1579",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI Generated"
+        },
+        {
+          "pointer": "/result/num_ai_assisted_segments",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/num_ai_segments",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "pointer": "/result/num_human_segments",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/prediction",
+          "sha256": "47f05650f469841c5764804d83b7d11c7ef4f3fb9f9e04af2aaaecd79e33a0bd",
+          "type": "string",
+          "unicode_characters": 39,
+          "utf8_bytes": 39
+        },
+        {
+          "pointer": "/result/prediction_short",
+          "sha256": "11fb682be0a0233d5fb899721ecfc1827d20f0d2ff2e093310efa61efca8af1c",
+          "type": "string",
+          "unicode_characters": 2,
+          "utf8_bytes": 2,
+          "value": "AI"
+        },
+        {
+          "pointer": "/result/stage",
+          "sha256": "7a402fd45f8590500f003fa3d57bbffdcee1b0481ebb1e4403effd5b968a6d56",
+          "type": "string",
+          "unicode_characters": 13,
+          "utf8_bytes": 13,
+          "value": "STAGE_SUCCESS"
+        },
+        {
+          "pointer": "/result/text",
+          "sha256": "a14ca4ec4d529b09cd8e832068b1a2d38d181562520efc053f09c55d52ea0de3",
+          "type": "string",
+          "unicode_characters": 2357,
+          "utf8_bytes": 2387
+        },
+        {
+          "pointer": "/result/version",
+          "sha256": "fbd04e1aae9ce0b11a8946e2c9ac2619f7428a64d32d01eff61d809dcb70ee8e",
+          "type": "string",
+          "unicode_characters": 3,
+          "utf8_bytes": 3,
+          "value": "4.0"
+        },
+        {
+          "length": 1,
+          "pointer": "/result/windows",
+          "type": "array"
+        },
+        {
+          "key_count": 10,
+          "pointer": "/result/windows/0",
+          "type": "object"
+        },
+        {
+          "pointer": "/result/windows/0/ai_assistance_score",
+          "type": "number",
+          "value": 0.9999881982803345
+        },
+        {
+          "pointer": "/result/windows/0/confidence",
+          "sha256": "c4ebc6d4a5832cd9415f906ad03661110c705a72381c8b8b145761d02e2dd23a",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4,
+          "value": "High"
+        },
+        {
+          "pointer": "/result/windows/0/end_index",
+          "type": "number",
+          "value": 2357
+        },
+        {
+          "pointer": "/result/windows/0/humanizer_score",
+          "type": "number",
+          "value": 0.60973060131073
+        },
+        {
+          "pointer": "/result/windows/0/is_humanized",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "pointer": "/result/windows/0/label",
+          "sha256": "7d176b1331d446ec8ae248aa0da3f670131b53a37e0d6bca4778e2c325bf103a",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI-Generated"
+        },
+        {
+          "pointer": "/result/windows/0/start_index",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/windows/0/text",
+          "sha256": "a14ca4ec4d529b09cd8e832068b1a2d38d181562520efc053f09c55d52ea0de3",
+          "type": "string",
+          "unicode_characters": 2357,
+          "utf8_bytes": 2387
+        },
+        {
+          "pointer": "/result/windows/0/token_length",
+          "type": "number",
+          "value": 519
+        },
+        {
+          "pointer": "/result/windows/0/word_count",
+          "type": "number",
+          "value": 404
+        },
+        {
+          "pointer": "/source",
+          "sha256": "247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d407ffae9e4ed",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4
+        },
+        {
+          "pointer": "/status",
+          "sha256": "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27",
+          "type": "string",
+          "unicode_characters": 7,
+          "utf8_bytes": 7,
+          "value": "success"
+        },
+        {
+          "pointer": "/submitted_model",
+          "sha256": "3c0cb311fd2bf532b384601a3c30f71906e3a7990b9aad94c21dfcb46c70a026",
+          "type": "string",
+          "unicode_characters": 9,
+          "utf8_bytes": 9
+        },
+        {
+          "pointer": "/task_id",
+          "sha256": "e6a619da9fdc4543a524e7225be7509ec23b49e42317b8eab9cc3100134dd1f9",
+          "type": "string",
+          "unicode_characters": 36,
+          "utf8_bytes": 36,
+          "value": "2c7fa6b3-3802-416a-967f-ab9cb51b7620"
+        },
+        {
+          "pointer": "/text",
+          "sha256": "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+          "type": "string",
+          "unicode_characters": 2369,
+          "utf8_bytes": 2399
+        },
+        {
+          "pointer": "/text_sha256",
+          "sha256": "9dc0db7c148ddbbc3cc5e5aca432d57a268337c2b03b7f4c441a0988dd5569f9",
+          "type": "string",
+          "unicode_characters": 64,
+          "utf8_bytes": 64
+        },
+        {
+          "pointer": "/updated_utc",
+          "sha256": "3ae2d0c35859c78e252c196a1bb95a7156d2f1d009a53e6d845e18264a6bea81",
+          "type": "string",
+          "unicode_characters": 32,
+          "utf8_bytes": 32,
+          "value": "2026-08-31T01:49:28.851186+00:00"
+        }
+      ],
+      "matching_persisted_json": [
+        {
+          "bytes": 8530,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/text",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "text",
+                "version",
+                "windows"
+              ],
+              "pointer": "/result",
+              "schema_pointer_count": 25,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+            "2c7fa6b3-3802-416a-967f-ab9cb51b7620",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement"
+          ],
+          "path": "cache/pangram-4/4.0/4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1/somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement.json",
+          "schema_pointer_count": 39,
+          "sha256": "1b6a26a106c35f8c0f0cb92e1d22ef56e4b565985e079c49b36d3c6ffb7b382e"
+        },
+        {
+          "bytes": 1591,
+          "embedded_detector_responses": [],
+          "matched_identities": [
+            "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/PREFLIGHT-C.json",
+          "schema_pointer_count": 28,
+          "sha256": "7334a18092c26509f4311468a927c41e650b581d231afb874ed437a8b9ebecba"
+        },
+        {
+          "bytes": 4783,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/exact_text_pointer",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text_sha256",
+                "/windows/0/text_unicode_characters",
+                "/windows/0/text_utf8_bytes",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "version",
+                "windows"
+              ],
+              "pointer": "/C_variant/result",
+              "schema_pointer_count": 27,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+            "2c7fa6b3-3802-416a-967f-ab9cb51b7620",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET-C.json",
+          "schema_pointer_count": 108,
+          "sha256": "59e9c2c4557a817a15c70a520b0a11bf0105eda72cb3182c7671501ca88355c9"
+        }
+      ],
+      "more_complete_raw_than_current_cache": false,
+      "normalized_response_schema_pointer_count": 25,
+      "task_id": "2c7fa6b3-3802-416a-967f-ab9cb51b7620"
+    },
+    "D": {
+      "cache_path": "cache/pangram-4/4.0/58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02/somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement.json",
+      "cache_sha256": "9d8e43cc789715612940100c56f113921c3273a9432e234761d2bf9c0fd2508b",
+      "finer_grained_signal_present": false,
+      "finer_signal_disposition": "NO_FINER_GRAINED_DETECTOR_SIGNAL_PRESENT",
+      "finer_signal_schema_candidates": [
+        {
+          "pointer": "/result/windows/0/ai_assistance_score",
+          "type": "number",
+          "value": 0.9994112849235535
+        },
+        {
+          "pointer": "/result/windows/0/confidence",
+          "sha256": "c4ebc6d4a5832cd9415f906ad03661110c705a72381c8b8b145761d02e2dd23a",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4,
+          "value": "High"
+        },
+        {
+          "pointer": "/result/windows/0/end_index",
+          "type": "number",
+          "value": 2207
+        },
+        {
+          "pointer": "/result/windows/0/humanizer_score",
+          "type": "number",
+          "value": 0.26555395126342773
+        },
+        {
+          "pointer": "/result/windows/0/is_humanized",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "pointer": "/result/windows/0/label",
+          "sha256": "7d176b1331d446ec8ae248aa0da3f670131b53a37e0d6bca4778e2c325bf103a",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI-Generated"
+        },
+        {
+          "pointer": "/result/windows/0/start_index",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/windows/0/text",
+          "sha256": "3ec160e96603e689ed2c0a5bebfd945319894b10b47c1431d0a5000c77e3907a",
+          "type": "string",
+          "unicode_characters": 2207,
+          "utf8_bytes": 2235
+        },
+        {
+          "pointer": "/result/windows/0/token_length",
+          "type": "number",
+          "value": 472
+        },
+        {
+          "pointer": "/result/windows/0/word_count",
+          "type": "number",
+          "value": 373
+        }
+      ],
+      "fuller_embedded_detector_responses": [],
+      "historical_cache_versions": [
+        {
+          "commit": "36b35e07f6b869b682713a28fc7c5bfc28d89c93",
+          "has_result": true,
+          "schema_pointer_count": 39,
+          "sha256": "9d8e43cc789715612940100c56f113921c3273a9432e234761d2bf9c0fd2508b",
+          "status": "success",
+          "top_level_keys": [
+            "created_utc",
+            "expected_version",
+            "format",
+            "last_error",
+            "measurement_key",
+            "model",
+            "result",
+            "source",
+            "status",
+            "submitted_model",
+            "task_id",
+            "text",
+            "text_sha256",
+            "updated_utc"
+          ]
+        },
+        {
+          "commit": "c2d0f27f3c7ef0493ca25e2ef786f98deb8a9764",
+          "has_result": false,
+          "schema_pointer_count": 15,
+          "sha256": "d0b36657f9040c8faa8fe7e3a057fff9fa29cb08322c7c8d71949d3b2aca0541",
+          "status": "pending",
+          "top_level_keys": [
+            "created_utc",
+            "expected_version",
+            "format",
+            "last_error",
+            "measurement_key",
+            "model",
+            "result",
+            "source",
+            "status",
+            "submitted_model",
+            "task_id",
+            "text",
+            "text_sha256",
+            "updated_utc"
+          ]
+        }
+      ],
+      "input_sha256": "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+      "inventory": [
+        {
+          "key_count": 14,
+          "pointer": "",
+          "type": "object"
+        },
+        {
+          "pointer": "/created_utc",
+          "sha256": "703fefa6457a3eb87ed9e914bd8d143f75db4c12f9c9c1f95fc25d0120fa1337",
+          "type": "string",
+          "unicode_characters": 32,
+          "utf8_bytes": 32,
+          "value": "2026-08-31T02:06:07.038593+00:00"
+        },
+        {
+          "pointer": "/expected_version",
+          "sha256": "fbd04e1aae9ce0b11a8946e2c9ac2619f7428a64d32d01eff61d809dcb70ee8e",
+          "type": "string",
+          "unicode_characters": 3,
+          "utf8_bytes": 3,
+          "value": "4.0"
+        },
+        {
+          "pointer": "/format",
+          "sha256": "60a6700d87b92ef27225600e35aeb5521910e776070e09dec6bb5e9c8a29f447",
+          "type": "string",
+          "unicode_characters": 16,
+          "utf8_bytes": 16
+        },
+        {
+          "pointer": "/last_error",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "type": "string",
+          "unicode_characters": 0,
+          "utf8_bytes": 0
+        },
+        {
+          "pointer": "/measurement_key",
+          "sha256": "c643c337c661ea23dc21424afd4117e22f36ba712f48129c413e2a5c3418be4e",
+          "type": "string",
+          "unicode_characters": 91,
+          "utf8_bytes": 91,
+          "value": "somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement"
+        },
+        {
+          "pointer": "/model",
+          "sha256": "3c0cb311fd2bf532b384601a3c30f71906e3a7990b9aad94c21dfcb46c70a026",
+          "type": "string",
+          "unicode_characters": 9,
+          "utf8_bytes": 9,
+          "value": "pangram-4"
+        },
+        {
+          "key_count": 13,
+          "pointer": "/result",
+          "type": "object"
+        },
+        {
+          "pointer": "/result/fraction_ai",
+          "type": "number",
+          "value": 1.0
+        },
+        {
+          "pointer": "/result/fraction_ai_assisted",
+          "type": "number",
+          "value": 0.0
+        },
+        {
+          "pointer": "/result/fraction_human",
+          "type": "number",
+          "value": 0.0
+        },
+        {
+          "pointer": "/result/headline",
+          "sha256": "3049a7c3c53d9c94bea86e1c07c8a1e2e1c2ddf97290961d939ee431141b1579",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI Generated"
+        },
+        {
+          "pointer": "/result/num_ai_assisted_segments",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/num_ai_segments",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "pointer": "/result/num_human_segments",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/prediction",
+          "sha256": "47f05650f469841c5764804d83b7d11c7ef4f3fb9f9e04af2aaaecd79e33a0bd",
+          "type": "string",
+          "unicode_characters": 39,
+          "utf8_bytes": 39
+        },
+        {
+          "pointer": "/result/prediction_short",
+          "sha256": "11fb682be0a0233d5fb899721ecfc1827d20f0d2ff2e093310efa61efca8af1c",
+          "type": "string",
+          "unicode_characters": 2,
+          "utf8_bytes": 2,
+          "value": "AI"
+        },
+        {
+          "pointer": "/result/stage",
+          "sha256": "7a402fd45f8590500f003fa3d57bbffdcee1b0481ebb1e4403effd5b968a6d56",
+          "type": "string",
+          "unicode_characters": 13,
+          "utf8_bytes": 13,
+          "value": "STAGE_SUCCESS"
+        },
+        {
+          "pointer": "/result/text",
+          "sha256": "3ec160e96603e689ed2c0a5bebfd945319894b10b47c1431d0a5000c77e3907a",
+          "type": "string",
+          "unicode_characters": 2207,
+          "utf8_bytes": 2235
+        },
+        {
+          "pointer": "/result/version",
+          "sha256": "fbd04e1aae9ce0b11a8946e2c9ac2619f7428a64d32d01eff61d809dcb70ee8e",
+          "type": "string",
+          "unicode_characters": 3,
+          "utf8_bytes": 3,
+          "value": "4.0"
+        },
+        {
+          "length": 1,
+          "pointer": "/result/windows",
+          "type": "array"
+        },
+        {
+          "key_count": 10,
+          "pointer": "/result/windows/0",
+          "type": "object"
+        },
+        {
+          "pointer": "/result/windows/0/ai_assistance_score",
+          "type": "number",
+          "value": 0.9994112849235535
+        },
+        {
+          "pointer": "/result/windows/0/confidence",
+          "sha256": "c4ebc6d4a5832cd9415f906ad03661110c705a72381c8b8b145761d02e2dd23a",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4,
+          "value": "High"
+        },
+        {
+          "pointer": "/result/windows/0/end_index",
+          "type": "number",
+          "value": 2207
+        },
+        {
+          "pointer": "/result/windows/0/humanizer_score",
+          "type": "number",
+          "value": 0.26555395126342773
+        },
+        {
+          "pointer": "/result/windows/0/is_humanized",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "pointer": "/result/windows/0/label",
+          "sha256": "7d176b1331d446ec8ae248aa0da3f670131b53a37e0d6bca4778e2c325bf103a",
+          "type": "string",
+          "unicode_characters": 12,
+          "utf8_bytes": 12,
+          "value": "AI-Generated"
+        },
+        {
+          "pointer": "/result/windows/0/start_index",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "pointer": "/result/windows/0/text",
+          "sha256": "3ec160e96603e689ed2c0a5bebfd945319894b10b47c1431d0a5000c77e3907a",
+          "type": "string",
+          "unicode_characters": 2207,
+          "utf8_bytes": 2235
+        },
+        {
+          "pointer": "/result/windows/0/token_length",
+          "type": "number",
+          "value": 472
+        },
+        {
+          "pointer": "/result/windows/0/word_count",
+          "type": "number",
+          "value": 373
+        },
+        {
+          "pointer": "/source",
+          "sha256": "247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d407ffae9e4ed",
+          "type": "string",
+          "unicode_characters": 4,
+          "utf8_bytes": 4
+        },
+        {
+          "pointer": "/status",
+          "sha256": "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27",
+          "type": "string",
+          "unicode_characters": 7,
+          "utf8_bytes": 7,
+          "value": "success"
+        },
+        {
+          "pointer": "/submitted_model",
+          "sha256": "3c0cb311fd2bf532b384601a3c30f71906e3a7990b9aad94c21dfcb46c70a026",
+          "type": "string",
+          "unicode_characters": 9,
+          "utf8_bytes": 9
+        },
+        {
+          "pointer": "/task_id",
+          "sha256": "40ede0d959cdd087e46fe8861c5adb04ddbbd78ca8fa02a0e3fa6b19e220eef1",
+          "type": "string",
+          "unicode_characters": 36,
+          "utf8_bytes": 36,
+          "value": "b36e7e23-a987-42e9-8731-f1c1b8c761f5"
+        },
+        {
+          "pointer": "/text",
+          "sha256": "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+          "type": "string",
+          "unicode_characters": 2218,
+          "utf8_bytes": 2246
+        },
+        {
+          "pointer": "/text_sha256",
+          "sha256": "14725b1665ab52f12b060644e9049916d71d5961b719270baacf318e72967f1f",
+          "type": "string",
+          "unicode_characters": 64,
+          "utf8_bytes": 64
+        },
+        {
+          "pointer": "/updated_utc",
+          "sha256": "ee7d45ca7fc844a356f2ff744bf6c04018b65773f2c6ac557d8195eff0b1c8a2",
+          "type": "string",
+          "unicode_characters": 32,
+          "utf8_bytes": 32,
+          "value": "2026-08-31T02:06:13.151048+00:00"
+        }
+      ],
+      "matching_persisted_json": [
+        {
+          "bytes": 8060,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/text",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "text",
+                "version",
+                "windows"
+              ],
+              "pointer": "/result",
+              "schema_pointer_count": 25,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+            "b36e7e23-a987-42e9-8731-f1c1b8c761f5",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement"
+          ],
+          "path": "cache/pangram-4/4.0/58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02/somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement.json",
+          "schema_pointer_count": 39,
+          "sha256": "9d8e43cc789715612940100c56f113921c3273a9432e234761d2bf9c0fd2508b"
+        },
+        {
+          "bytes": 1793,
+          "embedded_detector_responses": [],
+          "matched_identities": [
+            "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/PREFLIGHT-D.json",
+          "schema_pointer_count": 32,
+          "sha256": "2bb19bc5c1ca661b29de6ca22d36dc8ae77d29c119a913df2255bd44f9e2c3ab"
+        },
+        {
+          "bytes": 5230,
+          "embedded_detector_responses": [
+            {
+              "bound_input_sha256": "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+              "field_pointers": [
+                "",
+                "/fraction_ai",
+                "/fraction_ai_assisted",
+                "/fraction_human",
+                "/headline",
+                "/num_ai_assisted_segments",
+                "/num_ai_segments",
+                "/num_human_segments",
+                "/prediction",
+                "/prediction_short",
+                "/stage",
+                "/version",
+                "/windows",
+                "/windows/0",
+                "/windows/0/ai_assistance_score",
+                "/windows/0/confidence",
+                "/windows/0/end_index",
+                "/windows/0/exact_text_pointer",
+                "/windows/0/humanizer_score",
+                "/windows/0/is_humanized",
+                "/windows/0/label",
+                "/windows/0/start_index",
+                "/windows/0/text_sha256",
+                "/windows/0/text_unicode_characters",
+                "/windows/0/text_utf8_bytes",
+                "/windows/0/token_length",
+                "/windows/0/word_count"
+              ],
+              "keys": [
+                "fraction_ai",
+                "fraction_ai_assisted",
+                "fraction_human",
+                "headline",
+                "num_ai_assisted_segments",
+                "num_ai_segments",
+                "num_human_segments",
+                "prediction",
+                "prediction_short",
+                "stage",
+                "version",
+                "windows"
+              ],
+              "pointer": "/D_variant/result",
+              "schema_pointer_count": 27,
+              "window_count": 1
+            }
+          ],
+          "matched_identities": [
+            "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+            "b36e7e23-a987-42e9-8731-f1c1b8c761f5",
+            "somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement"
+          ],
+          "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET-D.json",
+          "schema_pointer_count": 118,
+          "sha256": "fa0556c63774f656c327f60f26eb0cad4570bb3b4960ead8d9fdfb14fbd9d18b"
+        }
+      ],
+      "more_complete_raw_than_current_cache": false,
+      "normalized_response_schema_pointer_count": 25,
+      "task_id": "b36e7e23-a987-42e9-8731-f1c1b8c761f5"
+    }
+  }
+}
