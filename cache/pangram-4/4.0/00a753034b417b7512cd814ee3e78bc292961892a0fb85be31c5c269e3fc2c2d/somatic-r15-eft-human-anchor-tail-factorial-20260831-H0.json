@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-r15-eft-human-anchor-tail-factorial-20260831-H0",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "You can also literally activate different parts of the brain by tapping different parts, so it is interesting to notice how you feel as you move through the tapping points. And it is a little bit of a massage. Actually, I mentioned earlier that shaving my head and massaging it works really well for me. Sometimes I feel like that works even better than EFT.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.00011896384239662439,
+        "confidence": "High",
+        "end_index": 358,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "You can also literally activate different parts of the brain by tapping different parts, so it is interesting to notice how you feel as you move through the tapping points. And it is a little bit of a massage. Actually, I mentioned earlier that shaving my head and massaging it works really well for me. Sometimes I feel like that works even better than EFT.",
+        "token_length": 74,
+        "word_count": 65
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "3fe1f45a-3c4d-4efa-967e-d47d8c8ff314",
   "text": "\n\nYou can also literally activate different parts of the brain by tapping different parts, so it is interesting to notice how you feel as you move through the tapping points. And it is a little bit of a massage. Actually, I mentioned earlier that shaving my head and massaging it works really well for me. Sometimes I feel like that works even better than EFT.",
   "text_sha256": "00a753034b417b7512cd814ee3e78bc292961892a0fb85be31c5c269e3fc2c2d",
-  "updated_utc": "2026-08-31T02:51:56.717221+00:00"
+  "updated_utc": "2026-08-31T02:52:00.332083+00:00"
 }
