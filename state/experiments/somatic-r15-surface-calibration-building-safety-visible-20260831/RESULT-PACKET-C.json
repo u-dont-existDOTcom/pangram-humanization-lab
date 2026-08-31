@@ -1,0 +1,122 @@
+{
+  "format": "somatic-r15-chat-surface-experiment-result-c-v1",
+  "experiment_id": "somatic-r15-surface-calibration-building-safety-visible-20260831",
+  "directive": "SOMATIC-R15-SURFACE-003",
+  "article_branch": "task/somatic-r15-clean-continuation-20260830",
+  "article_head_read": "d8bfc464e677c175b1679d06adb5d0b951f71b2d",
+  "detector_branch": "task/somatic-r15-exact-recovery-20260830",
+  "detector_starting_head": "8bb4b59930bd7cfffa601fd05be68c7ed39ff705",
+  "detector_head_before_result_packet": "7ba0e830cff88dde95ba4a746f6b9d62ce99b8c7",
+  "source_candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31",
+  "article_mutations": 0,
+  "registered_master_mutations": 0,
+  "detector": {
+    "model": "pangram-4",
+    "version": "4.0"
+  },
+  "accounting": {
+    "A_control_reused": 1,
+    "A_control_resubmissions": 0,
+    "C_exact_completed_results_reused": 0,
+    "C_cache_hits": 0,
+    "new_paid_api_calls": 1,
+    "ambiguous_calls": 0,
+    "whole_document_calls": 0,
+    "stable_section_family_calls_after_completion": 5,
+    "stable_section_family_call_cap": 6
+  },
+  "A_control": {
+    "input_sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+    "result_evidence_path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET.json",
+    "result": {
+      "stage": "STAGE_SUCCESS",
+      "version": "4.0",
+      "fraction_human": 0.0,
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "window": {
+        "end_index": 2333,
+        "word_count": 386,
+        "token_length": 496,
+        "ai_assistance_score": 0.9999893307685852,
+        "humanizer_score": 0.8235310912132263
+      }
+    }
+  },
+  "C_variant": {
+    "id": "C-visible-chat-replacement",
+    "preflight": "PASS",
+    "preservation_assertion": "PASS",
+    "input": {
+      "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/inputs/C-visible-chat-replacement.txt",
+      "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-003/C-reader-visible-chat-replacement.txt",
+      "git_blob": "387d5c5d80966245bc075ae5ca8b26f3b7e5dd3f",
+      "sha256": "4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1",
+      "words": 397,
+      "unicode_characters": 2369,
+      "utf8_bytes": 2399,
+      "terminal_newline": true,
+      "exact_source_bytes_match": true,
+      "reader_visible_artifact_gate": "PASS"
+    },
+    "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement",
+    "cache_state_before_call": "ABSENT",
+    "cache_status": "success",
+    "task_id": "2c7fa6b3-3802-416a-967f-ab9cb51b7620",
+    "created_utc": "2026-08-31T01:49:25.345726+00:00",
+    "updated_utc": "2026-08-31T01:49:28.851186+00:00",
+    "result": {
+      "stage": "STAGE_SUCCESS",
+      "version": "4.0",
+      "prediction": "We believe that this entire text is AI.",
+      "prediction_short": "AI",
+      "headline": "AI Generated",
+      "fraction_human": 0.0,
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "num_human_segments": 0,
+      "num_ai_segments": 1,
+      "num_ai_assisted_segments": 0,
+      "windows": [
+        {
+          "label": "AI-Generated",
+          "confidence": "High",
+          "start_index": 0,
+          "end_index": 2357,
+          "word_count": 404,
+          "token_length": 519,
+          "is_humanized": false,
+          "ai_assistance_score": 0.9999881982803345,
+          "humanizer_score": 0.60973060131073,
+          "text_sha256": "a14ca4ec4d529b09cd8e832068b1a2d38d181562520efc053f09c55d52ea0de3",
+          "text_unicode_characters": 2357,
+          "text_utf8_bytes": 2387,
+          "exact_text_pointer": "/result/windows/0/text"
+        }
+      ]
+    },
+    "cache_evidence": {
+      "path": "cache/pangram-4/4.0/4717688560a3b08056da9eb77638186d0ae353861f024a4c24a65837a6d8a2a1/somatic-r15-surface-calibration-building-safety-visible-20260831-C-visible-chat-replacement.json",
+      "sha256": "1b6a26a106c35f8c0f0cb92e1d22ef56e4b565985e079c49b36d3c6ffb7b382e"
+    }
+  },
+  "raw_C_minus_A_delta": {
+    "fraction_human": 0.0,
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "num_human_segments": 0,
+    "num_ai_segments": 0,
+    "num_ai_assisted_segments": 0,
+    "window_count": 0,
+    "window_end_index": 24,
+    "window_word_count": 18,
+    "window_token_length": 23,
+    "window_ai_assistance_score": -1.1324882507324219e-06,
+    "window_humanizer_score": -0.21380048990249634
+  },
+  "commits": {
+    "C_inputs_preflight": "373db5d02df316665d7a707ebace3e8ef136b2e3",
+    "C_task_checkpoint": "7a53d7cd93225d4790b4f2b54f6f90e79bbd4430",
+    "C_result": "7ba0e830cff88dde95ba4a746f6b9d62ce99b8c7"
+  }
+}
