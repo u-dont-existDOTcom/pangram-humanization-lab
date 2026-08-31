@@ -323,7 +323,9 @@ def build_complete_receipt(
         "input_path": _receipt_input_path(item, source),
         "input_sha256": str(item["input_sha256"]),
         "word_count": int(item["word_count"]),
-        "report_url": report_url,
+        # The exact History binding is persisted separately as a privacy-safe
+        # public proof. Never persist a private report UUID in durable evidence.
+        "report_url": "https://www.pangram.com/history/<uuid>",
         "report_body_sha256": hashlib.sha256(body.encode("utf-8")).hexdigest(),
         "report_pdf_sha256": hashlib.sha256(pdf_path.read_bytes()).hexdigest(),
         "pdf_provenance": pdf_provenance,
