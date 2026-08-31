@@ -1,0 +1,90 @@
+{
+  "browser_executable": "/opt/brave.com/brave/brave",
+  "captured_at_utc": "2026-08-31T06:04:17.394738Z",
+  "detector_submission_attempted": true,
+  "detector_version": "4.0",
+  "evidence_source": "new_detector_submission",
+  "headed": false,
+  "history_api_exact_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+    "authorized_word_count": 379,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+    "exact_word_count": 379,
+    "record_model_id": null,
+    "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+    "record_prediction_prob": 0.27976223826408386,
+    "stored_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+    "stored_word_count": 379,
+    "transport_match_mode": "exact_utf8"
+  },
+  "input_path": "/mnt/hdd/home/joel/Téléchargements/joel-articles/canonical/worktrees/somatic-r15-clean-continuation-20260830/tasks/somatic-r15-clean-continuation-20260830/surface-experiment-012/D-current-community-claims-evidence-component.txt",
+  "input_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+  "local_profile_path": "~/.config/pangram-local-browser",
+  "model": "pangram-4",
+  "parsed": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "AI Detected",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+      "authorized_word_count": 379,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+      "exact_word_count": 379,
+      "record_model_id": null,
+      "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+      "record_prediction_prob": 0.27976223826408386,
+      "stored_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+      "stored_word_count": 379,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "Mixed",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 0.1376104206,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.8623895645,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "pdf_provenance": "playwright_print_fallback",
+  "platform": "Linux-7.0.0-29-generic-x86_64-with-glibc2.39",
+  "playwright_version": "1.62.0",
+  "profile_kind": "dedicated_persistent_automation_profile",
+  "report_body_sha256": "5cf2010c84468c4bdcd3c93327af5a303db1ad080d2b1ae1c6e7e05f05f3e9b2",
+  "report_layout": "history_api_structured_result_v1",
+  "report_pdf_sha256": "58fa2de81d81a1abb5bfa2987bd15c79a650c1f112bdb63235ec93bbb723bece",
+  "report_url": "https://www.pangram.com/history/<uuid>",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "status": "complete",
+  "submission_reservation": {
+    "detector_submission_attempted": false,
+    "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+    "input_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+    "model": "pangram-4",
+    "reserved_at_utc": "2026-08-31T06:04:07.738931Z",
+    "schema_version": 1,
+    "status": "paid_gui_submission_reserved",
+    "transport": "local_playwright",
+    "transport_runner_version": "pangram-gui-local-playwright-v1",
+    "word_count": 379
+  },
+  "transport": "local_playwright",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "word_count": 379
+}
