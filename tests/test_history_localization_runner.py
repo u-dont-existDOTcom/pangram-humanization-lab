@@ -4,7 +4,11 @@ import json
 
 import pytest
 
-from pangram_lab.history_localization_runner import _failure_receipt, _validated_report_url
+from pangram_lab.history_localization_runner import (
+    _failure_receipt,
+    _request_direct_history_api_record,
+    _validated_report_url,
+)
 
 
 REPORT = "https://www.pangram.com/history/58db9b2b-9a3d-43cf-8970-2e2b7410a0e8"
@@ -34,3 +38,22 @@ def test_failure_receipt_omits_private_url_and_raw_exception_text() -> None:
     assert receipt["error_type"] == "RuntimeError"
     assert REPORT not in rendered
     assert secretish not in rendered
+
+
+def test_direct_history_api_request_is_read_only_and_cache_resistant() -> None:
+    calls = []
+
+    class Page:
+        def evaluate(self, script, argument):
+            calls.append((script, argument))
+
+    _request_direct_history_api_record(Page(), REPORT)
+
+    assert len(calls) == 1
+    script, argument = calls[0]
+    assert 'method: "GET"' in script
+    assert 'cache: "no-store"' in script
+    assert "response.json()" in script
+    assert argument == {
+        "url": "https://web.pangram.com/api/history/58db9b2b-9a3d-43cf-8970-2e2b7410a0e8/"
+    }
