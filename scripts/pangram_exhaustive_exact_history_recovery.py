@@ -384,7 +384,7 @@ def main(argv: list[str] | None = None) -> int:
                 (parse_time(completed) - failure_time).total_seconds() / 60.0, 3
             ),
             "inputSha256": expected_sha,
-            "inputWords": 293,
+            "inputWords": args.expect_words,
             "detectorSubmissionAttempted": False,
             "dedicatedBrowserProcessPresentBeforeLaunch": process_before,
             "restoredTabStateBeforeNavigation": restored,
