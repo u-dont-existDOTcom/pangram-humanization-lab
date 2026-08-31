@@ -1,0 +1,212 @@
+{
+  "accounting": {
+    "ambiguous_short_gui_actions": 1,
+    "article_mutations": 0,
+    "history_recovery_scans_after_click": 1,
+    "new_api_calls": 0,
+    "new_short_gui_clicks": 1,
+    "new_short_gui_completed_results": 0,
+    "registered_master_mutations": 0,
+    "whole_document_calls": 0
+  },
+  "article_application_performed": false,
+  "ci_disposition": {
+    "FULL_HISTORY_FIX": "PASS",
+    "HUMANIZATION_EXECUTION_BLOCKED": "NO",
+    "MERGE_BLOCKED_UNTIL_RECONCILED": "YES",
+    "REMAINING_VALIDATOR_FINDINGS": "PRE_EXISTING_UNRELATED_MERGE_DEBT"
+  },
+  "completed_result_deltas": {
+    "A_minus_H0": {
+      "fraction_ai": 0.1948138326406479,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": -0.19481384754180908
+    },
+    "B_minus_A": {
+      "fraction_ai": -0.1948138326406479,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.19481384754180908
+    }
+  },
+  "detector": {
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "model": "pangram-4",
+    "required_version": "4.0",
+    "starting_head": "8e070e67df06b5a26ce837aa235090966c7448e0"
+  },
+  "directive_id": "SOMATIC-R15-SHAKING-GUI-COMPLETION-001",
+  "family_state": "UNRESOLVED_C_GUI_ACTION_AMBIGUOUS_3_OF_6",
+  "final_whole_document_measurement_performed": false,
+  "format": "somatic-r15-shaking-gui-cde-result-v1",
+  "requested_gui_deltas": {
+    "C_minus_H0": null,
+    "D_minus_C": null,
+    "E_minus_B": null,
+    "E_minus_C": null,
+    "E_minus_D": null,
+    "status": "NOT_MATHEMATICALLY_COMPARABLE_WITHOUT_C_D_E_RESULTS"
+  },
+  "target_fraction_table": {
+    "A": {
+      "ai": 0.1948138326406479,
+      "ai_assisted": 0.0,
+      "human": 0.8051861524581909
+    },
+    "B": {
+      "ai": 0.0,
+      "ai_assisted": 0.0,
+      "human": 1.0
+    },
+    "C": null,
+    "D": null,
+    "E": null,
+    "H0": {
+      "ai": 0.0,
+      "ai_assisted": 0.0,
+      "human": 1.0
+    }
+  },
+  "variants": {
+    "A": {
+      "classification": "EXACT_COMPLETED_RESULT",
+      "input_sha256": "683a76b075325bcacdf2d8a92b835add258964890a27764f96d1072922035119",
+      "result": {
+        "fraction_ai": 0.1948138326406479,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.8051861524581909,
+        "headline": "AI Detected",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 1,
+        "num_human_segments": 1,
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "stage": "STAGE_SUCCESS",
+        "text": "Shaking Qigong / Shaking Medicine\nMy friend Louka is why I am linking this particular class. He had tried many different healing and somatic modalities, including basic TRE. TRE itself did nothing for him, and nothing helped him much until he got into this class, which costs $10 per month on Skool.\nThe class is much more than just TRE.\nBy “blockage” I mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” When the right thing is shaken the right way, things loosen up as they should and the energy flows.\nTRE is a system they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. Obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert. “Just try lots of stuff till it works” is how my expertise runs on this.\nI did not try the Shaking Qigong class, but I have done qigong and found it very helpful for moving energy.\nWhat interests me about Louka’s class is that it gives people more ways in than one fixed TRE protocol. It is guided without being completely standardized, and you are doing it around other people instead of alone. That may matter for somebody who gets nowhere with the stripped-down version.",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.054254185408353806,
+            "confidence": "High",
+            "end_index": 1211,
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text": "Shaking Qigong / Shaking Medicine\nMy friend Louka is why I am linking this particular class. He had tried many different healing and somatic modalities, including basic TRE. TRE itself did nothing for him, and nothing helped him much until he got into this class, which costs $10 per month on Skool.\nThe class is much more than just TRE.\nBy “blockage” I mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” When the right thing is shaken the right way, things loosen up as they should and the energy flows.\nTRE is a system they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. Obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert. “Just try lots of stuff till it works” is how my expertise runs on this.\nI did not try the Shaking Qigong class, but I have done qigong and found it very helpful for moving energy.",
+            "token_length": 278,
+            "word_count": 223
+          },
+          {
+            "ai_assistance_score": 0.9159111380577087,
+            "confidence": "High",
+            "end_index": 1504,
+            "humanizer_score": 0.0044126552529633045,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "start_index": 1211,
+            "text": "\nWhat interests me about Louka’s class is that it gives people more ways in than one fixed TRE protocol. It is guided without being completely standardized, and you are doing it around other people instead of alone. That may matter for somebody who gets nowhere with the stripped-down version.",
+            "token_length": 57,
+            "word_count": 51
+          }
+        ]
+      },
+      "task_id": "79dd4f98-f841-47b9-af6e-3941e754cf17",
+      "transport": "short_api"
+    },
+    "B": {
+      "classification": "EXACT_COMPLETED_RESULT",
+      "input_sha256": "fcdc545d9d14ebe588755e705a5ea185f7508b9d465f5851a1ca3c47523297fd",
+      "result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "text": "Shaking Qigong / Shaking Medicine\nMy friend Louka is why I am linking this particular class. He had tried many different healing and somatic modalities, including basic TRE. TRE itself did nothing for him, and nothing helped him much until he got into this class, which costs $10 per month on Skool.\nThe class is much more than just TRE.\nBy “blockage” I mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” When the right thing is shaken the right way, things loosen up as they should and the energy flows.\nTRE is a system they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. Obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert. “Just try lots of stuff till it works” is how my expertise runs on this.\nI did not try the Shaking Qigong class, but I have done qigong and found it very helpful for moving energy.\nThe class gives people more than one way in. There is guidance, but it isn't one fixed TRE routine, and people are doing it together instead of alone. Somebody who gets nowhere with stripped-down TRE may do better with that.",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.07182061672210693,
+            "confidence": "High",
+            "end_index": 1436,
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text": "Shaking Qigong / Shaking Medicine\nMy friend Louka is why I am linking this particular class. He had tried many different healing and somatic modalities, including basic TRE. TRE itself did nothing for him, and nothing helped him much until he got into this class, which costs $10 per month on Skool.\nThe class is much more than just TRE.\nBy “blockage” I mean what energy is stuck in you. I often have the kind of natural shaking that animals have, rather than noticing much benefit from intentional therapeutic techniques. Especially on psychedelics, it is like my body knows exactly which part to shake and how. So it is not just “shaking = mental health.” When the right thing is shaken the right way, things loosen up as they should and the energy flows.\nTRE is a system they are trying to teach en masse, so they had to distill the method down to what seems to work most of the time for most people. Obviously, if you could get more angles at it, you would get more chance of success—and less chance of being called an expert. “Just try lots of stuff till it works” is how my expertise runs on this.\nI did not try the Shaking Qigong class, but I have done qigong and found it very helpful for moving energy.\nThe class gives people more than one way in. There is guidance, but it isn't one fixed TRE routine, and people are doing it together instead of alone. Somebody who gets nowhere with stripped-down TRE may do better with that.",
+            "token_length": 328,
+            "word_count": 265
+          }
+        ]
+      },
+      "task_id": "65e50abd-01a0-4d2c-a890-cf6f04f48560",
+      "transport": "short_api"
+    },
+    "C": {
+      "classification": "EXACT_GUI_ACTION_AMBIGUOUS_HISTORY_NOT_FOUND",
+      "detector_submission_attempted": true,
+      "exact_history_result_found": false,
+      "failure_captured_at_utc": "2026-08-31T04:07:24.622478Z",
+      "failure_stage": "wait_report",
+      "history_api_records_observed": 51,
+      "history_candidates_inspected": 62,
+      "input_sha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+      "reserved_at_utc": "2026-08-31T04:04:17.182276Z",
+      "result": null,
+      "transport": "local_playwright_gui"
+    },
+    "D": {
+      "classification": "EXACT_GUI_NEVER_SUBMITTED_NOT_ATTEMPTED_AFTER_PRIOR_AMBIGUITY",
+      "input_sha256": "b27446d695044a6749a2780f7629599177160d4a619758784b915b3cdc013900",
+      "result": null,
+      "transport": "local_playwright_gui"
+    },
+    "E": {
+      "classification": "EXACT_GUI_NEVER_SUBMITTED_NOT_ATTEMPTED_AFTER_PRIOR_AMBIGUITY",
+      "input_sha256": "75fb8426a498dcedb99bb7ed84d9f5a6e1653a29b6e2b7d5ff8f61fe5fb8563f",
+      "result": null,
+      "transport": "local_playwright_gui"
+    },
+    "H0": {
+      "classification": "EXACT_COMPLETED_RESULT_REUSE",
+      "input_sha256": "d9a1fcd6ed832117b32e07844300f5b30d9067884481b14a63740dcc5bfe5d3b",
+      "result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.02935638651251793,
+            "confidence": "High",
+            "end_index": 1211,
+            "exact_text_pointer": "cache/pangram-4/4.0/d9a1fcd6ed832117b32e07844300f5b30d9067884481b14a63740dcc5bfe5d3b/somatic-r15-api-gui-human-window-calibration-20260831-H1-gui-human-window-5.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "785e03a0c92e152d81da6732abd142c18a2f7f26119ec97eabb12ad526c297ad",
+            "text_unicode_characters": 1211,
+            "text_utf8_bytes": 1225,
+            "token_length": 278,
+            "word_count": 223
+          }
+        ]
+      },
+      "task_id": "8ce5a703-e012-40f6-a260-9517a40eeb74",
+      "transport": "api_reuse"
+    }
+  }
+}
