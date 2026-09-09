@@ -1,26 +1,17 @@
-# Somatic aquatic bodywork — owner-reported detector split — 2026-09-09
+# Somatic aquatic bodywork — mistaken detector split record — RETRACTED — 2026-09-09
 
-Status: **OWNER-REPORTED / BOUNDARY-SPECIFIC / NO DETECTOR CALL BY CHAT**.
+Status: **RETRACTED / ASSISTANT MISATTRIBUTION / NOT DETECTOR EVIDENCE**.
 
-Exact candidate:
+This file previously attributed a Human/medium prefix and AI/high tail split to an earlier aquatic-bodywork candidate.
 
-```text
-## Aquatic Bodywork / Water Therapy
+Joel directly corrected that attribution:
 
-Hale is trained in aquatic bodywork, and she finds the water especially effective for bringing people back toward their inner child. Sometimes people get so young in the water that they feel as if they're back in the womb. There's also a physical side to it that I find interesting: floating lets somebody stretch and move you through positions that would be difficult or impossible to get into the same way on land.
+`what the heck are you talking about? i'm not talking about the earlier aquatic candidate at all`
 
-Some people are just prone to ear infections, even with clean water and earplugs, and for them this may not be worth doing very often.
+The prior split record is invalid and must not be used as Pangram evidence, localization evidence, or a basis for phrase/topology conclusions.
 
-The bigger problem Hale has noticed is how emotionally open people can become. She doesn't like starting with the water before knowing what somebody is already feeling and what they want to work on, so she'll do some inner-child work with them first. Then the aquatic work can take them further into it. She uses massage afterward to help ground them again, and she stays available in case something is still open and they need more help with it after the session.
+No numerical fractions, Pangram model/version, History identity, or exact window metadata exist for the retracted claim.
 
-That's something I'd ask a water therapist about beforehand: if the session opens up much more than expected, what do you actually do then?
-```
+The valid aquatic detector report is separate: the complete redistributed aquatic candidate was later owner-reported **Human / medium confidence for the full exact candidate**.
 
-Owner report:
-
-- prefix through the ear-infection paragraph: **Human / medium confidence**;
-- tail beginning `The bigger problem Hale has noticed...`: **AI / high confidence**.
-
-No numerical fractions, model/version, History identity, or exact window metadata supplied. Do not infer them.
-
-Interpretation: this is evidence about the exact interaction/boundary, not a phrase-level rule. The tail reintroduces a compact procedural/explanatory topology around Hale's care sequence. Preserve the Human prefix and change the tail architecture rather than token-editing the split phrase.
+The later owner-reported **high-confidence AI** result applied to the separate fully model-originated `why people enjoy walking at night` prose test.
