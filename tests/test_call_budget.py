@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 
 import pytest
 
@@ -24,11 +25,52 @@ def test_six_calls_allowed_and_next_call_blocked_for_section_scope(tmp_path: Pat
         assert row["paid_api_calls"] == i + 1
         assert row["hard_cap_applies"] is True
         assert row["cap"] == 6
+        assert row["review_threshold"] == 6
+        assert row["owner_override_active"] is False
     with pytest.raises(SectionCallCapReached) as exc:
         reserve(ledger, measurement_key="m6")
     assert exc.value.audit_id == "audit-1"
     assert exc.value.section_id == "s1"
     assert ledger.section_summary("s1", "pangram-4", "4.0")["paid_api_calls"] == 6
+
+
+def test_owner_override_reason_required_above_review_threshold(tmp_path: Path):
+    with pytest.raises(ValueError, match="owner override reason"):
+        PangramCallLedger(tmp_path, "audit-1", cap=10)
+
+
+def test_owner_authorized_extension_keeps_same_audit_and_allows_four_more(tmp_path: Path):
+    first = PangramCallLedger(tmp_path, "audit-1")
+    for i in range(6):
+        reserve(first, measurement_key=f"m{i}")
+
+    reason = "Owner authorized four more discriminating R1/R2 calls after reviewing the first six."
+    extended = PangramCallLedger(tmp_path, "audit-1", cap=10, override_reason=reason)
+    for i in range(6, 10):
+        row = reserve(extended, measurement_key=f"m{i}")
+    assert row["paid_api_calls"] == 10
+    assert row["review_threshold"] == 6
+    assert row["cap"] == 10
+    assert row["owner_override_active"] is True
+    assert row["owner_override_reason"] == reason
+    with pytest.raises(SectionCallCapReached):
+        reserve(extended, measurement_key="m10")
+
+    # Reopening the same audit with default arguments must not reset the durable
+    # owner-authorized ceiling back to six.
+    reopened = PangramCallLedger(tmp_path, "audit-1")
+    summary = reopened.section_summary("s1", "pangram-4", "4.0")
+    assert summary["paid_api_calls"] == 10
+    assert summary["cap"] == 10
+    assert summary["owner_override_active"] is True
+    assert summary["owner_override_reason"] == reason
+
+    state = json.loads((tmp_path / "state" / "pangram-call-ledgers" / "audit-1.json").read_text(encoding="utf-8"))
+    assert state["section_call_review_threshold"] == 6
+    assert state["section_call_cap"] == 10
+    assert state["cap_overrides"][-1]["from_cap"] == 6
+    assert state["cap_overrides"][-1]["to_cap"] == 10
+    assert state["cap_overrides"][-1]["reason"] == reason
 
 
 def test_aggregate_scope_is_accounted_but_not_section_capped(tmp_path: Path):
@@ -92,7 +134,6 @@ def test_handoff_records_cap_reason_and_completed_results(tmp_path: Path):
         completed_results=[{"id": "v0", "detector": {"prediction_short": "Mixed"}}],
     )
     assert path == tmp_path / "state" / "handoffs" / "pangram" / "audit-1-s1.json"
-    import json
 
     obj = json.loads(path.read_text(encoding="utf-8"))
     assert obj["reason"] == "section_call_cap_reached"
