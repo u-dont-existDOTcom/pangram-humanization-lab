@@ -1,0 +1,72 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-hidden-human-signal-ab-20260914-stage1",
+  "spec_sha256": "630d693670b317490224ff4a8d38d6195d81e0c38773e859d723df7f18ad7aed",
+  "results": [
+    {
+      "id": "P66-H1",
+      "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage1_P66-H1",
+      "text": "One approach is targeted memory work or “reconsolidation,” which refers to the way we process the charged memory, reconsider its significance, and integrate it in a healthier way, while still being honest about what happened. It works best when you are having flashbacks to a specific event, rather than something more general that brainspotting or other therapies could address less specifically. The goal here is to reduce the persistence of these memories, so that they don’t keep interfering every time they return.\n",
+      "text_sha256": "933899c5fbfe53b642035957debb46326cc6bc451975225b35011ebd30fe21c8",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "One approach is targeted memory work or “reconsolidation,” which refers to the way we process the charged memory, reconsider its significance, and integrate it in a healthier way, while still being honest about what happened. It works best when you are having flashbacks to a specific event, rather than something more general that brainspotting or other therapies could address less specifically. The goal here is to reduce the persistence of these memories, so that they don’t keep interfering every time they return.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "One approach is targeted memory work or “reconsolidation,” which refers to the way we process the charged memory, reconsider its significance, and integrate it in a healthier way, while still being honest about what happened. It works best when you are having flashbacks to a specific event, rather than something more general that brainspotting or other therapies could address less specifically. The goal here is to reduce the persistence of these memories, so that they don’t keep interfering every time they return.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.01272327546030283,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 519,
+            "word_count": 83,
+            "token_length": 99,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "4ce18ab6947773ef3874d53b508f4c8d15bd0541",
+        "text_sha256": "933899c5fbfe53b642035957debb46326cc6bc451975225b35011ebd30fe21c8"
+      },
+      "section_id": "somatic-hidden-human-signal-ab",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-hidden-human-signal-ab-20260914",
+  "call_accounting": {
+    "audit_id": "somatic-hidden-human-signal-ab-20260914",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
+        "model": "pangram-4",
+        "paid_api_calls": 3,
+        "pending_resumes": 0,
+        "section_id": "somatic-hidden-human-signal-ab",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": 3,
+        "estimated_credits_to_human": 3,
+        "first_human_measurement_key": "somatic-hidden-human-signal-ab-20260914-stage1_P66-H1"
+      }
+    ]
+  }
+}
