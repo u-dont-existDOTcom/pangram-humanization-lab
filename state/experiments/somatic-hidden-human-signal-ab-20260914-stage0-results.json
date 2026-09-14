@@ -1,0 +1,72 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-hidden-human-signal-ab-20260914-stage0",
+  "spec_sha256": "271d376a187e9c5fe43c66b2c20b31371e13a920d8e70824d7e046421d15bbc0",
+  "results": [
+    {
+      "id": "P66-S0",
+      "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage0_P66-S0",
+      "text": "This is the part of the map called targeted memory work or “reconsolidation,” which refers to the way we process the charged memory, reconsider its significance, and integrate it in a healthier way, while still being honest about what happened. It works best when you are having flashbacks to a specific event, rather than something more general that brainspotting or other prior therapies could address less specifically. The goal here is to reduce the persistence of these memories, so that they don’t keep interfering every time they return.\n",
+      "text_sha256": "612ca60f516eb1d5ef55ad580ccee3a2ddde7ec88a7bb9873d4c9eb1b4b22a7d",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "This is the part of the map called targeted memory work or “reconsolidation,” which refers to the way we process the charged memory, reconsider its significance, and integrate it in a healthier way, while still being honest about what happened. It works best when you are having flashbacks to a specific event, rather than something more general that brainspotting or other prior therapies could address less specifically. The goal here is to reduce the persistence of these memories, so that they don’t keep interfering every time they return.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "This is the part of the map called targeted memory work or “reconsolidation,” which refers to the way we process the charged memory, reconsider its significance, and integrate it in a healthier way, while still being honest about what happened. It works best when you are having flashbacks to a specific event, rather than something more general that brainspotting or other prior therapies could address less specifically. The goal here is to reduce the persistence of these memories, so that they don’t keep interfering every time they return.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.10891444981098175,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 544,
+            "word_count": 89,
+            "token_length": 105,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "d0b44676f5e6ad5cd5b1fa7492040d40719b62ee",
+        "text_sha256": "612ca60f516eb1d5ef55ad580ccee3a2ddde7ec88a7bb9873d4c9eb1b4b22a7d"
+      },
+      "section_id": "somatic-hidden-human-signal-ab",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-hidden-human-signal-ab-20260914",
+  "call_accounting": {
+    "audit_id": "somatic-hidden-human-signal-ab-20260914",
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "section_id": "somatic-hidden-human-signal-ab",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "paid_calls_to_human": 1,
+        "estimated_credits_to_human": 1,
+        "first_human_measurement_key": "somatic-hidden-human-signal-ab-20260914-stage0_P66-S0"
+      }
+    ]
+  }
+}
