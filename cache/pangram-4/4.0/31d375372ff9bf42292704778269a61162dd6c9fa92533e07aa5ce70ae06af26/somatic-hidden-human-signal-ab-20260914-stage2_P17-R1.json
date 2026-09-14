@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage2_P17-R1",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Those therapies meaningfully reduce hyperarousal for many people, and sometimes dissociation. But Peter Levine et al. identify two problems. On the one hand, exposure desensitization can itself be re-traumatizing, a risk the positive evidence may understate because dropout reasons and adverse events were often poorly or inconsistently reported. On the other hand, even effective trauma-memory approaches can create new cognitive-behavioral patterns that suppress conditioned fear responses without changing the body’s underlying understanding. Symptoms can improve without resolving the root problem.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.34957584738731384,
+        "confidence": "Medium",
+        "end_index": 602,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Those therapies meaningfully reduce hyperarousal for many people, and sometimes dissociation. But Peter Levine et al. identify two problems. On the one hand, exposure desensitization can itself be re-traumatizing, a risk the positive evidence may understate because dropout reasons and adverse events were often poorly or inconsistently reported. On the other hand, even effective trauma-memory approaches can create new cognitive-behavioral patterns that suppress conditioned fear responses without changing the body’s underlying understanding. Symptoms can improve without resolving the root problem.",
+        "token_length": 107,
+        "word_count": 84
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "39d52528-ab3d-4e3d-a089-274d7bfc6a44",
   "text": "Those therapies meaningfully reduce hyperarousal for many people, and sometimes dissociation. But Peter Levine et al. identify two problems. On the one hand, exposure desensitization can itself be re-traumatizing, a risk the positive evidence may understate because dropout reasons and adverse events were often poorly or inconsistently reported. On the other hand, even effective trauma-memory approaches can create new cognitive-behavioral patterns that suppress conditioned fear responses without changing the body’s underlying understanding. Symptoms can improve without resolving the root problem.\n",
   "text_sha256": "31d375372ff9bf42292704778269a61162dd6c9fa92533e07aa5ce70ae06af26",
-  "updated_utc": "2026-09-14T23:43:24.094520+00:00"
+  "updated_utc": "2026-09-14T23:43:27.788849+00:00"
 }
