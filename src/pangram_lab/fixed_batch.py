@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .call_budget import SectionCallCapReached
+from .call_budget import SECTION_CALL_REVIEW_THRESHOLD, SectionCallCapReached
 from .call_stats import CallStats
 from .result_paths import new_result_envelope
 from .text_sources import TextSourceError, validate_text_source
@@ -25,6 +25,26 @@ def load_spec(path: Path, max_variants: int = 8) -> dict[str, Any]:
     audit_id = data.get("audit_id")
     if audit_id is not None and (not isinstance(audit_id, str) or not audit_id.strip()):
         raise ValueError("audit_id must be a non-empty string when supplied")
+
+    section_call_cap = data.get("section_call_cap")
+    owner_override_reason = data.get("owner_override_reason")
+    if section_call_cap is not None:
+        if audit_id is None:
+            raise ValueError("section_call_cap requires top-level audit_id")
+        if isinstance(section_call_cap, bool) or not isinstance(section_call_cap, int) or section_call_cap < 1:
+            raise ValueError("section_call_cap must be a positive integer")
+        if section_call_cap > SECTION_CALL_REVIEW_THRESHOLD:
+            if not isinstance(owner_override_reason, str) or not owner_override_reason.strip():
+                raise ValueError(
+                    "section_call_cap above the six-call review threshold requires a non-empty owner_override_reason"
+                )
+        elif owner_override_reason is not None:
+            raise ValueError(
+                "owner_override_reason is only valid when section_call_cap exceeds the six-call review threshold"
+            )
+    elif owner_override_reason is not None:
+        raise ValueError("owner_override_reason requires section_call_cap")
+
     variants = data.get("variants")
     if not isinstance(variants, list) or not variants:
         raise ValueError("variants must be a non-empty list")
