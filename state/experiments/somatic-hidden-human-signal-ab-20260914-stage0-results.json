@@ -44,6 +44,48 @@
       },
       "section_id": "somatic-hidden-human-signal-ab",
       "budget_scope": "section"
+    },
+    {
+      "id": "P17-S0",
+      "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage0_P17-S0",
+      "text": "Those therapies do show meaningful impact for many people in terms of reducing hyperarousal, and sometimes dissociation. But there are two main problems with them that Peter Levine, et al. have explained. On the one hand, as Levine points out, exposure desensitization therapy can itself be re-traumatizing, which isn’t well-captured in the positive evidence, because reasons for dropout and adverse events were often poorly or inconsistently reported. On the other hand, even when these trauma-memory approaches are effective, they are working against the body’s understanding of things by creating new cognitive-behavioral patterns that suppress the old conditioned fear responses. That can produce a reduction of symptoms without solving the root problem.\n",
+      "text_sha256": "8f0afa27e448f8ed1504a0194b903a6ea1720df6fe17a931afcc6592026ea78b",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Those therapies do show meaningful impact for many people in terms of reducing hyperarousal, and sometimes dissociation. But there are two main problems with them that Peter Levine, et al. have explained. On the one hand, as Levine points out, exposure desensitization therapy can itself be re-traumatizing, which isn’t well-captured in the positive evidence, because reasons for dropout and adverse events were often poorly or inconsistently reported. On the other hand, even when these trauma-memory approaches are effective, they are working against the body’s understanding of things by creating new cognitive-behavioral patterns that suppress the old conditioned fear responses. That can produce a reduction of symptoms without solving the root problem.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Those therapies do show meaningful impact for many people in terms of reducing hyperarousal, and sometimes dissociation. But there are two main problems with them that Peter Levine, et al. have explained. On the one hand, as Levine points out, exposure desensitization therapy can itself be re-traumatizing, which isn’t well-captured in the positive evidence, because reasons for dropout and adverse events were often poorly or inconsistently reported. On the other hand, even when these trauma-memory approaches are effective, they are working against the body’s understanding of things by creating new cognitive-behavioral patterns that suppress the old conditioned fear responses. That can produce a reduction of symptoms without solving the root problem.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.0023145126178860664,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 758,
+            "word_count": 117,
+            "token_length": 143,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "d7ada3f65065f9d5854dae14b3a6a796dccfffd2",
+        "text_sha256": "8f0afa27e448f8ed1504a0194b903a6ea1720df6fe17a931afcc6592026ea78b"
+      },
+      "section_id": "somatic-hidden-human-signal-ab",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-hidden-human-signal-ab-20260914",
@@ -56,11 +98,11 @@
         "model": "pangram-4",
         "version": "4.0",
         "budget_scope": "section",
-        "paid_api_calls": 1,
+        "paid_api_calls": 2,
         "cache_hits": 0,
         "pending_resumes": 0,
-        "estimated_credits": 1,
-        "estimated_cost_usd": 0.05,
+        "estimated_credits": 2,
+        "estimated_cost_usd": 0.1,
         "hard_cap_applies": true,
         "cap": 6,
         "paid_calls_to_human": 1,
