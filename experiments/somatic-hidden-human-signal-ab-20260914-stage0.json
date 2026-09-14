@@ -1,0 +1,27 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-hidden-human-signal-ab-20260914-stage0",
+  "audit_id": "somatic-hidden-human-signal-ab-20260914",
+  "variants": [
+    {
+      "id": "P66-S0",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "d0b44676f5e6ad5cd5b1fa7492040d40719b62ee",
+        "text_sha256": "612ca60f516eb1d5ef55ad580ccee3a2ddde7ec88a7bb9873d4c9eb1b4b22a7d"
+      }
+    },
+    {
+      "id": "P17-S0",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "d7ada3f65065f9d5854dae14b3a6a796dccfffd2",
+        "text_sha256": "8f0afa27e448f8ed1504a0194b903a6ea1720df6fe17a931afcc6592026ea78b"
+      }
+    }
+  ]
+}
