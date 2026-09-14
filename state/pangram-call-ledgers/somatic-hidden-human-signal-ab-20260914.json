@@ -15,8 +15,8 @@
     "somatic-hidden-human-signal-ab\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.4,
-      "estimated_credits": 8,
+      "estimated_cost_usd": 0.45,
+      "estimated_credits": 9,
       "events": [
         {
           "budget_scope": "section",
@@ -89,10 +89,19 @@
           "text_sha256": "bb305ebb34155d64044a27f1e7c7917b1f97fdd70fa3de22cb96484507858654",
           "type": "paid_post_reserved",
           "word_count": 93
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage2_P17-R1",
+          "recorded_at_utc": "2026-09-14T23:43:20.638303+00:00",
+          "text_sha256": "31d375372ff9bf42292704778269a61162dd6c9fa92533e07aa5ce70ae06af26",
+          "type": "paid_post_reserved",
+          "word_count": 80
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 8,
+      "paid_api_calls": 9,
       "pending_resumes": 0,
       "section_id": "somatic-hidden-human-signal-ab",
       "version": "4.0"

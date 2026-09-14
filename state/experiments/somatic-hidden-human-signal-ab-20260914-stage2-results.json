@@ -44,6 +44,48 @@
       },
       "section_id": "somatic-hidden-human-signal-ab",
       "budget_scope": "section"
+    },
+    {
+      "id": "P66-R2",
+      "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage2_P66-R2",
+      "text": "This is the part of the map called targeted memory work or “reconsolidation,” which refers to the process of reprocessing a charged memory, reassessing its significance, and integrating it in a more adaptive form while preserving an accurate account of what occurred. It is most applicable when you are experiencing flashbacks to a specific event, rather than more diffuse material that brainspotting or other preceding therapies could address with less specificity. The objective here is to reduce the persistence of these memories so that they do not continue to interfere whenever they recur.\n",
+      "text_sha256": "bb305ebb34155d64044a27f1e7c7917b1f97fdd70fa3de22cb96484507858654",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "This is the part of the map called targeted memory work or “reconsolidation,” which refers to the process of reprocessing a charged memory, reassessing its significance, and integrating it in a more adaptive form while preserving an accurate account of what occurred. It is most applicable when you are experiencing flashbacks to a specific event, rather than more diffuse material that brainspotting or other preceding therapies could address with less specificity. The objective here is to reduce the persistence of these memories so that they do not continue to interfere whenever they recur.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI-assisted.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 1.0,
+        "fraction_human": 0.0,
+        "headline": "AI Assisted",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 1,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "This is the part of the map called targeted memory work or “reconsolidation,” which refers to the process of reprocessing a charged memory, reassessing its significance, and integrating it in a more adaptive form while preserving an accurate account of what occurred. It is most applicable when you are experiencing flashbacks to a specific event, rather than more diffuse material that brainspotting or other preceding therapies could address with less specificity. The objective here is to reduce the persistence of these memories so that they do not continue to interfere whenever they recur.",
+            "label": "AI-Assisted",
+            "ai_assistance_score": 0.5874951481819153,
+            "confidence": "Medium",
+            "start_index": 0,
+            "end_index": 595,
+            "word_count": 93,
+            "token_length": 111,
+            "is_humanized": false,
+            "humanizer_score": 0.0004037655016873032
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "1b473914ac7e58d607244489fd659a80171a6d59",
+        "text_sha256": "bb305ebb34155d64044a27f1e7c7917b1f97fdd70fa3de22cb96484507858654"
+      },
+      "section_id": "somatic-hidden-human-signal-ab",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-hidden-human-signal-ab-20260914",
@@ -55,10 +97,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.35,
-        "estimated_credits": 7,
+        "estimated_cost_usd": 0.4,
+        "estimated_credits": 8,
         "model": "pangram-4",
-        "paid_api_calls": 7,
+        "paid_api_calls": 8,
         "pending_resumes": 0,
         "section_id": "somatic-hidden-human-signal-ab",
         "version": "4.0",
