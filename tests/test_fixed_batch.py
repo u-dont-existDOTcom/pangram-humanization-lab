@@ -34,6 +34,55 @@ def test_load_spec_rejects_duplicate_ids(tmp_path: Path):
         load_spec(p)
 
 
+def test_load_spec_requires_reason_for_cap_above_review_threshold(tmp_path: Path):
+    p = tmp_path / "batch.json"
+    p.write_text(json.dumps({
+        "format": "pangram-fixed-batch-v1",
+        "experiment_id": "x",
+        "audit_id": "audit-x",
+        "section_call_cap": 10,
+        "variants": [
+            {"id": "A", "section_id": "s1", "text": "one"},
+        ],
+    }), encoding="utf-8")
+    with pytest.raises(ValueError, match="owner_override_reason"):
+        load_spec(p)
+
+
+def test_load_spec_accepts_reasoned_cap_above_review_threshold(tmp_path: Path):
+    p = tmp_path / "batch.json"
+    reason = "Owner authorized four more calls because R1/R2 directly discriminate the surviving hypothesis."
+    p.write_text(json.dumps({
+        "format": "pangram-fixed-batch-v1",
+        "experiment_id": "x",
+        "audit_id": "audit-x",
+        "section_call_cap": 10,
+        "owner_override_reason": reason,
+        "variants": [
+            {"id": "A", "section_id": "s1", "text": "one"},
+        ],
+    }), encoding="utf-8")
+    spec = load_spec(p)
+    assert spec["section_call_cap"] == 10
+    assert spec["owner_override_reason"] == reason
+
+
+def test_load_spec_rejects_override_reason_without_extended_cap(tmp_path: Path):
+    p = tmp_path / "batch.json"
+    p.write_text(json.dumps({
+        "format": "pangram-fixed-batch-v1",
+        "experiment_id": "x",
+        "audit_id": "audit-x",
+        "section_call_cap": 6,
+        "owner_override_reason": "unneeded",
+        "variants": [
+            {"id": "A", "section_id": "s1", "text": "one"},
+        ],
+    }), encoding="utf-8")
+    with pytest.raises(ValueError, match="only valid"):
+        load_spec(p)
+
+
 class FakeClient:
     def __init__(self):
         self.calls = []
