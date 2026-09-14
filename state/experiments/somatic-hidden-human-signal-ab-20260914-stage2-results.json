@@ -86,6 +86,48 @@
       },
       "section_id": "somatic-hidden-human-signal-ab",
       "budget_scope": "section"
+    },
+    {
+      "id": "P17-R1",
+      "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage2_P17-R1",
+      "text": "Those therapies meaningfully reduce hyperarousal for many people, and sometimes dissociation. But Peter Levine et al. identify two problems. On the one hand, exposure desensitization can itself be re-traumatizing, a risk the positive evidence may understate because dropout reasons and adverse events were often poorly or inconsistently reported. On the other hand, even effective trauma-memory approaches can create new cognitive-behavioral patterns that suppress conditioned fear responses without changing the body’s underlying understanding. Symptoms can improve without resolving the root problem.\n",
+      "text_sha256": "31d375372ff9bf42292704778269a61162dd6c9fa92533e07aa5ce70ae06af26",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Those therapies meaningfully reduce hyperarousal for many people, and sometimes dissociation. But Peter Levine et al. identify two problems. On the one hand, exposure desensitization can itself be re-traumatizing, a risk the positive evidence may understate because dropout reasons and adverse events were often poorly or inconsistently reported. On the other hand, even effective trauma-memory approaches can create new cognitive-behavioral patterns that suppress conditioned fear responses without changing the body’s underlying understanding. Symptoms can improve without resolving the root problem.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Those therapies meaningfully reduce hyperarousal for many people, and sometimes dissociation. But Peter Levine et al. identify two problems. On the one hand, exposure desensitization can itself be re-traumatizing, a risk the positive evidence may understate because dropout reasons and adverse events were often poorly or inconsistently reported. On the other hand, even effective trauma-memory approaches can create new cognitive-behavioral patterns that suppress conditioned fear responses without changing the body’s underlying understanding. Symptoms can improve without resolving the root problem.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.34957584738731384,
+            "confidence": "Medium",
+            "start_index": 0,
+            "end_index": 602,
+            "word_count": 84,
+            "token_length": 107,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "58740a9157ebaf9ef771d79cc178781f5e8a979c",
+        "text_sha256": "31d375372ff9bf42292704778269a61162dd6c9fa92533e07aa5ce70ae06af26"
+      },
+      "section_id": "somatic-hidden-human-signal-ab",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-hidden-human-signal-ab-20260914",
@@ -97,10 +139,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.4,
-        "estimated_credits": 8,
+        "estimated_cost_usd": 0.45,
+        "estimated_credits": 9,
         "model": "pangram-4",
-        "paid_api_calls": 8,
+        "paid_api_calls": 9,
         "pending_resumes": 0,
         "section_id": "somatic-hidden-human-signal-ab",
         "version": "4.0",
@@ -109,9 +151,9 @@
         "review_threshold": 6,
         "owner_override_active": true,
         "owner_override_reason": "Owner authorized four additional R1/R2 calls after the first six all remained Human; these four directly test the next discriminating hypotheses: semantic-efficiency normalization and register homogenization.",
-        "paid_calls_to_human": null,
-        "estimated_credits_to_human": null,
-        "first_human_measurement_key": null
+        "paid_calls_to_human": 9,
+        "estimated_credits_to_human": 9,
+        "first_human_measurement_key": "somatic-hidden-human-signal-ab-20260914-stage2_P17-R1"
       }
     ]
   }
