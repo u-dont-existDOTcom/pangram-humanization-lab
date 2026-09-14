@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage1_P66-H2",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "This is the part of the map called targeted memory work or “reconsolidation,” which refers to the reprocessing of a charged memory, reconsideration of its significance, and healthier integration while still being honest about what happened. It works best when you are having flashbacks to a specific event, rather than something more general that brainspotting or other prior therapies could address less specifically. The goal here is to reduce the persistence of these memories, so that they don’t keep interfering every time they return.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.06571836769580841,
+        "confidence": "High",
+        "end_index": 540,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "This is the part of the map called targeted memory work or “reconsolidation,” which refers to the reprocessing of a charged memory, reconsideration of its significance, and healthier integration while still being honest about what happened. It works best when you are having flashbacks to a specific event, rather than something more general that brainspotting or other prior therapies could address less specifically. The goal here is to reduce the persistence of these memories, so that they don’t keep interfering every time they return.",
+        "token_length": 103,
+        "word_count": 85
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "5ab45781-4b39-439d-a842-446e649ce070",
   "text": "This is the part of the map called targeted memory work or “reconsolidation,” which refers to the reprocessing of a charged memory, reconsideration of its significance, and healthier integration while still being honest about what happened. It works best when you are having flashbacks to a specific event, rather than something more general that brainspotting or other prior therapies could address less specifically. The goal here is to reduce the persistence of these memories, so that they don’t keep interfering every time they return.\n",
   "text_sha256": "6f830be5505fdbc150631a41bbe38d68e4bf9d492990604e5bc85612a0b1f6bf",
-  "updated_utc": "2026-09-14T21:36:39.216598+00:00"
+  "updated_utc": "2026-09-14T21:36:42.899753+00:00"
 }
