@@ -1,0 +1,76 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-hidden-human-signal-ab-20260914-stage2",
+  "spec_sha256": "0c463dde89f56e2c1e4259d9cbbe68f5fda1f52e0359d6bb227a0dbe4885a8e8",
+  "results": [
+    {
+      "id": "P66-R1",
+      "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage2_P66-R1",
+      "text": "This part of the map is targeted memory work or “reconsolidation”: processing a charged memory, reconsidering its significance, and integrating it while staying honest about what happened. It works best for flashbacks to a specific event rather than broader material that brainspotting or prior therapies can address less specifically. The goal is to reduce the persistence of these memories and the interference they cause when they return.\n",
+      "text_sha256": "014f89f85a5da26112a3a16545650bf0ab0350127546488a30aeedd6f3765e9b",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "This part of the map is targeted memory work or “reconsolidation”: processing a charged memory, reconsidering its significance, and integrating it while staying honest about what happened. It works best for flashbacks to a specific event rather than broader material that brainspotting or prior therapies can address less specifically. The goal is to reduce the persistence of these memories and the interference they cause when they return.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI-assisted.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 1.0,
+        "fraction_human": 0.0,
+        "headline": "AI Assisted",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 1,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "This part of the map is targeted memory work or “reconsolidation”: processing a charged memory, reconsidering its significance, and integrating it while staying honest about what happened. It works best for flashbacks to a specific event rather than broader material that brainspotting or prior therapies can address less specifically. The goal is to reduce the persistence of these memories and the interference they cause when they return.",
+            "label": "AI-Assisted",
+            "ai_assistance_score": 0.5031172633171082,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 441,
+            "word_count": 67,
+            "token_length": 81,
+            "is_humanized": false,
+            "humanizer_score": 0.0005702836788259447
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "7619ecbb1b66f45123ba2c46b8685e9e8aa4a4da",
+        "text_sha256": "014f89f85a5da26112a3a16545650bf0ab0350127546488a30aeedd6f3765e9b"
+      },
+      "section_id": "somatic-hidden-human-signal-ab",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-hidden-human-signal-ab-20260914",
+  "call_accounting": {
+    "audit_id": "somatic-hidden-human-signal-ab-20260914",
+    "section_call_review_threshold": 6,
+    "section_call_cap": 10,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.35,
+        "estimated_credits": 7,
+        "model": "pangram-4",
+        "paid_api_calls": 7,
+        "pending_resumes": 0,
+        "section_id": "somatic-hidden-human-signal-ab",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 10,
+        "review_threshold": 6,
+        "owner_override_active": true,
+        "owner_override_reason": "Owner authorized four additional R1/R2 calls after the first six all remained Human; these four directly test the next discriminating hypotheses: semantic-efficiency normalization and register homogenization.",
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
