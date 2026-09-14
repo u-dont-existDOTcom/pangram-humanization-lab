@@ -1,0 +1,49 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-hidden-human-signal-ab-20260914-stage2",
+  "audit_id": "somatic-hidden-human-signal-ab-20260914",
+  "section_call_cap": 10,
+  "owner_override_reason": "Owner authorized four additional R1/R2 calls after the first six all remained Human; these four directly test the next discriminating hypotheses: semantic-efficiency normalization and register homogenization.",
+  "variants": [
+    {
+      "id": "P66-R1",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "7619ecbb1b66f45123ba2c46b8685e9e8aa4a4da",
+        "text_sha256": "014f89f85a5da26112a3a16545650bf0ab0350127546488a30aeedd6f3765e9b"
+      }
+    },
+    {
+      "id": "P66-R2",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "1b473914ac7e58d607244489fd659a80171a6d59",
+        "text_sha256": "bb305ebb34155d64044a27f1e7c7917b1f97fdd70fa3de22cb96484507858654"
+      }
+    },
+    {
+      "id": "P17-R1",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "58740a9157ebaf9ef771d79cc178781f5e8a979c",
+        "text_sha256": "31d375372ff9bf42292704778269a61162dd6c9fa92533e07aa5ce70ae06af26"
+      }
+    },
+    {
+      "id": "P17-R2",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "408c71197a9427c6828e2fcff0c5ac080f03b5b7",
+        "text_sha256": "269a343fa93d123b6625f3839e0fa858c63a14a4648faa117f011ae3b6e3fd28"
+      }
+    }
+  ]
+}
