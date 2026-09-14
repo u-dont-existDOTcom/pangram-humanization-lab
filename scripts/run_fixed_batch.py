@@ -8,7 +8,7 @@ import subprocess
 from pathlib import Path
 
 from pangram_lab.cache import PangramCache
-from pangram_lab.call_budget import PangramCallLedger
+from pangram_lab.call_budget import PangramCallLedger, SECTION_CALL_REVIEW_THRESHOLD
 from pangram_lab.fixed_batch import load_spec, run_batch
 from pangram_lab.git_sync import GitSync
 from pangram_lab.pangram4 import PangramClient
@@ -72,7 +72,15 @@ def main() -> int:
         raise SystemExit("PANGRAM_API_KEY is not set")
 
     git = GitSync(root, require_remote=True)
-    call_ledger = PangramCallLedger(root, spec["audit_id"]) if spec.get("audit_id") else None
+    if spec.get("audit_id"):
+        call_ledger = PangramCallLedger(
+            root,
+            spec["audit_id"],
+            cap=spec.get("section_call_cap", SECTION_CALL_REVIEW_THRESHOLD),
+            override_reason=spec.get("owner_override_reason"),
+        )
+    else:
+        call_ledger = None
     if call_ledger is None:
         client = PangramClient(key, sync=git.sync)
     else:
