@@ -1,0 +1,47 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-hidden-human-signal-ab-20260914-stage1",
+  "audit_id": "somatic-hidden-human-signal-ab-20260914",
+  "variants": [
+    {
+      "id": "P66-H1",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "4ce18ab6947773ef3874d53b508f4c8d15bd0541",
+        "text_sha256": "933899c5fbfe53b642035957debb46326cc6bc451975225b35011ebd30fe21c8"
+      }
+    },
+    {
+      "id": "P66-H2",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "445e57099ca2f64be5ad2ba43333fbc1bdde87fc",
+        "text_sha256": "6f830be5505fdbc150631a41bbe38d68e4bf9d492990604e5bc85612a0b1f6bf"
+      }
+    },
+    {
+      "id": "P17-H1",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "b63de98248241181cd2d6a9f3f2a1f2ff1ff7faa",
+        "text_sha256": "fb872fce69aadad3db6cba7d6585090bc560263e2fe41cc787925721b38de726"
+      }
+    },
+    {
+      "id": "P17-H2",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "1a258b25e0a5b54da642304dc0a6ab4d458d69cb",
+        "text_sha256": "2f05b1585ec9563ae54f86e77934374aa2592c3dee6091d54ec9ee8ab5baef32"
+      }
+    }
+  ]
+}
