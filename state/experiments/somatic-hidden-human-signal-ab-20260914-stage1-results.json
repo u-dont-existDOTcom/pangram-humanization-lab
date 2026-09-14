@@ -128,6 +128,48 @@
       },
       "section_id": "somatic-hidden-human-signal-ab",
       "budget_scope": "section"
+    },
+    {
+      "id": "P17-H2",
+      "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage1_P17-H2",
+      "text": "Those therapies do show meaningful impact for many people in terms of reducing hyperarousal, and sometimes dissociation. Peter Levine, et al. have described two main problems with them. First, exposure desensitization therapy can itself be re-traumatizing. As Levine points out, this is not well-captured in the positive evidence because reasons for dropout and adverse events were often poorly or inconsistently reported. Second, even when trauma-memory approaches are effective, they can work against the body’s understanding of things. They do this by creating new cognitive-behavioral patterns that suppress old conditioned fear responses, producing symptom reduction without resolving the root problem.\n",
+      "text_sha256": "2f05b1585ec9563ae54f86e77934374aa2592c3dee6091d54ec9ee8ab5baef32",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Those therapies do show meaningful impact for many people in terms of reducing hyperarousal, and sometimes dissociation. Peter Levine, et al. have described two main problems with them. First, exposure desensitization therapy can itself be re-traumatizing. As Levine points out, this is not well-captured in the positive evidence because reasons for dropout and adverse events were often poorly or inconsistently reported. Second, even when trauma-memory approaches are effective, they can work against the body’s understanding of things. They do this by creating new cognitive-behavioral patterns that suppress old conditioned fear responses, producing symptom reduction without resolving the root problem.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "Those therapies do show meaningful impact for many people in terms of reducing hyperarousal, and sometimes dissociation. Peter Levine, et al. have described two main problems with them. First, exposure desensitization therapy can itself be re-traumatizing. As Levine points out, this is not well-captured in the positive evidence because reasons for dropout and adverse events were often poorly or inconsistently reported. Second, even when trauma-memory approaches are effective, they can work against the body’s understanding of things. They do this by creating new cognitive-behavioral patterns that suppress old conditioned fear responses, producing symptom reduction without resolving the root problem.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.060769759118556976,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 707,
+            "word_count": 104,
+            "token_length": 130,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "1a258b25e0a5b54da642304dc0a6ab4d458d69cb",
+        "text_sha256": "2f05b1585ec9563ae54f86e77934374aa2592c3dee6091d54ec9ee8ab5baef32"
+      },
+      "section_id": "somatic-hidden-human-signal-ab",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-hidden-human-signal-ab-20260914",
@@ -138,10 +180,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.25,
-        "estimated_credits": 5,
+        "estimated_cost_usd": 0.3,
+        "estimated_credits": 6,
         "model": "pangram-4",
-        "paid_api_calls": 5,
+        "paid_api_calls": 6,
         "pending_resumes": 0,
         "section_id": "somatic-hidden-human-signal-ab",
         "version": "4.0",
