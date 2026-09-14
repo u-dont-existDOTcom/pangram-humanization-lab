@@ -1,100 +1,108 @@
 # Somatic hidden-Human-signal A/B — results and next hypotheses
 
 Date: 2026-09-14
-Status: **COMPLETE THROUGH SIX-CALL CAP / DETECTOR RESEARCH ONLY / NO ARTICLE AUTHORITY**
+Status: **COMPLETE THROUGH OWNER-AUTHORIZED 10-CALL CEILING / DETECTOR RESEARCH ONLY / NO ARTICLE AUTHORITY**
 
-## Exact durable detector evidence
+## Durable evidence
 
-API transport: trusted private self-hosted executor -> canonical `automation/pangram-fixed-batch` runner -> Pangram 4.0.
+Programmatic route: trusted private self-hosted executor -> canonical `automation/pangram-fixed-batch` runner -> Pangram 4.0.
 
-Result files:
+Exact result files on `automation/pangram-fixed-batch`:
 
-- Stage 0: `state/experiments/somatic-hidden-human-signal-ab-20260914-stage0-results.json` on `automation/pangram-fixed-batch`.
-- Stage 1: `state/experiments/somatic-hidden-human-signal-ab-20260914-stage1-results.json` on `automation/pangram-fixed-batch`.
-- Call ledger: `state/pangram-call-ledgers/somatic-hidden-human-signal-ab-20260914.json` on `automation/pangram-fixed-batch`.
+- Stage 0: `state/experiments/somatic-hidden-human-signal-ab-20260914-stage0-results.json`
+- Stage 1: `state/experiments/somatic-hidden-human-signal-ab-20260914-stage1-results.json`
+- Stage 2: `state/experiments/somatic-hidden-human-signal-ab-20260914-stage2-results.json`
+- Ledger: `state/pangram-call-ledgers/somatic-hidden-human-signal-ab-20260914.json`
 
-Call accounting at completion:
+Final accounting: 10 paid API calls, 0 cache hits, 0 pending resumes, estimated 10 credits / $0.50.
 
-- new paid API calls: 6
-- cache hits: 0
-- pending resumes: 0
-- estimated credits: 6
-- estimated cost: $0.30
-- hard section cap: 6/6 reached
+## Owner correction to call-budget semantics
 
-No H12 interaction cell was submitted because the audit reached its standing six-call cap.
+Joel clarified on 2026-09-14 that six calls is a **review threshold**, not an absolute universal maximum: effectively, `you better have a good reason to go past 6`.
+
+The first six calls all remained Human. Joel then explicitly authorized four additional R1/R2 calls because they were the next predeclared discriminating experiment. The existing audit was extended from 6 to 10; it was not reset or replaced with a nominally fresh audit. The exact override reason is recorded in the Stage-2 spec and call ledger.
+
+The fixed-batch implementation was updated so a ceiling above six requires an explicit `section_call_cap` plus non-empty `owner_override_reason`, while preserving the same ledger and all previous call accounting.
 
 ## Results
 
-| Cell | Operation | Pangram 4 verdict | AI fraction | Human fraction | Window confidence | Window `ai_assistance_score` |
-|---|---|---|---:|---:|---|---:|
-| P66-S0 | conspicuous Human-looking surface stripped | Human | 0.0 | 1.0 | High | 0.1089144498 |
-| P17-S0 | conspicuous Human-looking surface stripped | Human | 0.0 | 1.0 | High | 0.0023145126 |
-| P66-H1 | detach article-local context/backreferences | Human | 0.0 | 1.0 | High | 0.0127232755 |
-| P66-H2 | nominalize active process realization | Human | 0.0 | 1.0 | High | 0.0657183677 |
-| P17-H1 | detach article-local context/backreference | Human | 0.0 | 1.0 | High | 0.0005668470 |
-| P17-H2 | regularize the two problems into matched First/Second branches | Human | 0.0 | 1.0 | High | 0.0607697591 |
+| Cell | Operation | Verdict | AI | AI-assisted | Human | Confidence | `ai_assistance_score` |
+|---|---|---|---:|---:|---:|---|---:|
+| P66-S0 | conspicuous Human-looking surface stripped | Human | 0.0 | 0.0 | 1.0 | High | 0.1089144498 |
+| P17-S0 | conspicuous Human-looking surface stripped | Human | 0.0 | 0.0 | 1.0 | High | 0.0023145126 |
+| P66-H1 | context detached | Human | 0.0 | 0.0 | 1.0 | High | 0.0127232755 |
+| P66-H2 | active process nominalized | Human | 0.0 | 0.0 | 1.0 | High | 0.0657183677 |
+| P17-H1 | context detached | Human | 0.0 | 0.0 | 1.0 | High | 0.0005668470 |
+| P17-H2 | two problems parallelized as First/Second | Human | 0.0 | 0.0 | 1.0 | High | 0.0607697591 |
+| P66-R1 | semantic-efficiency normalization | Mixed / AI Assisted | 0.0 | 1.0 | 0.0 | High | 0.5031172633 |
+| P66-R2 | register homogenization | Mixed / AI Assisted | 0.0 | 1.0 | 0.0 | Medium | 0.5874951482 |
+| P17-R1 | semantic-efficiency normalization | Human | 0.0 | 0.0 | 1.0 | Medium | 0.3495758474 |
+| P17-R2 | register homogenization | Mixed / AI Assisted | 0.0 | 1.0 | 0.0 | High | 0.4284324348 |
 
-`ai_assistance_score` is preserved as returned metadata only. It is not treated here as a calibrated probability or validated detector-margin measure. Its direction is not coherent enough across these manipulations to rescue either hypothesis.
+`ai_assistance_score` is returned metadata only; it is not treated here as a calibrated probability or validated detector margin.
 
-## What this falsifies or weakens
+## Interpretation
 
-### Context dependence is not sufficient
+The first six calls weakened several intuitive local explanations. Human classification survived removal of conspicuous personal/colloquial texture, article-local context, active-process realization, and simple branch asymmetry.
 
-Both context-detached variants remain Human / High confidence / 0 AI fraction. The Human verdict is not being carried simply by phrases such as `this part of the map`, `prior therapies`, or `those therapies`.
+### R1 — semantic-efficiency normalization: heterogeneous
 
-### P66 active-process realization is not sufficient
+P66-R1 crossed the detector boundary to AI Assisted / High. P17-R1 did not: it remained Human / Medium. Therefore `semantic inefficiency protects Human` is too broad. Semantic compression/cleanup is detector-relevant for P66 but is not a transferable sufficient explanation.
 
-Turning the active process phrase into a more nominalized package still remains Human / High confidence / 0 AI fraction.
+### R2 — register homogenization: replicated across both paragraphs
 
-### P17 branch asymmetry is not sufficient at the tested dose
+P66-R2 crossed to AI Assisted / Medium and P17-R2 independently crossed to AI Assisted / High. This is the strongest cross-paragraph result in the experiment.
 
-Regularizing the paragraph into explicit matched `First` / `Second` branches still remains Human / High confidence / 0 AI fraction.
+The R2 operation shifted mixed ordinary/technical realization toward a uniformly polished explanatory register, for example:
 
-### Obvious Human texture was not the whole explanation
+- `the way we process` -> `the process of reprocessing`
+- `in a healthier way` -> `in a more adaptive form`
+- `being honest about what happened` -> `preserving an accurate account of what occurred`
+- `works best` -> `is most applicable`
+- `goal` -> `objective`
+- `do show meaningful impact` -> `demonstrate meaningful benefits`
+- `But there are two main problems` -> `However ... two principal limitations`
+- `isn’t well-captured` -> `may be insufficiently represented`
+- `creating` -> `establishing`
+- `old conditioned fear responses` -> `prior conditioned fear responses`
 
-Both new stripped controls reproduce Joel's qualitative observation: even after removing conspicuous personal/metaphoric/colloquial signals, the passages remain Human at this exact boundary.
+These examples describe the bundled intervention; they are not phrase-level causal rules or a blacklist.
 
-## Stronger comparison with known AI-1.0 Somatic surfaces
+## Current best hypothesis
 
-The closest existing AI-1.0 controls in `human-to-ai-minimal-pairs-20260828` are C1 and C7. Those passages are highly compressed and realization-efficient: clauses map cleanly onto exposition jobs, diction stays comparatively register-stable, and cross-domain relations are explicitly synthesized.
+The evidence now points away from a single macro thought-topology rule and toward **surface realization distribution**. A stronger candidate is loss of natural register heterogeneity when model/editorial processing normalizes ordinary wording, technical language, attribution, evaluative language, and local phrasing residue into one smooth professional explanatory voice.
 
-The new hard-positive Human cells retain different microstructure even after obvious Human markers are stripped:
+R2 reproduced an intervention effect across two paragraphs, but it changed multiple lexical and syntactic choices together. It does **not** establish a unique Pangram mechanism or prove that `register` alone is causal.
 
-1. **semantic inefficiency / surplus wording** — e.g. overlapping or partially redundant formulations rather than maximum compression;
-2. **mixed register** — technical/abstract language sits next to ordinary evaluative wording instead of being normalized into one polished register;
-3. **clause-to-job misalignment** — one sentence can carry attribution, evidence limitation, causal explanation, and ordinary-language judgment in an uneven way rather than cleanly assigning one rhetorical job per clause;
-4. **local lexical/syntactic residue** from the owner-origin backbone may survive substantial editorial regularization even when macro topology looks model-shaped.
+This is compatible with the previously known AI-1.0 Somatic controls, which are realization-efficient, strongly synthesized, and comparatively register-stable.
 
-These are candidate explanations, not established Pangram mechanisms.
+## Production implication
 
-## Next discriminating experiment if the owner explicitly expands the paid-call cap
+Do not gratuitously normalize Joel-origin prose into one uniformly polished explanatory register. Semantically sound collisions between ordinary language, technical terminology, attribution, and evaluative wording may carry real authorship signal and should not be treated automatically as editorial dirt.
 
-Do not reopen context dependence, active-vs-nominal process realization, or simple First/Second parallelization. They were null at this boundary.
+This does **not** authorize adding mistakes, fake awkwardness, filler, slang, or artificial irregularity. The production lesson is minimum-dose preservation, not deliberate degradation.
 
-The next materially different factors should be:
+Visible model-shaped thought topology remains useful as an editorial diagnostic, but it is not sufficient as a paragraph-level Pangram predictor.
 
-### R1 — semantic-efficiency normalization
+## Next experiment, only if further calls are decision-relevant
 
-Compress redundant/overlapping wording while preserving claims and architecture. The test is not generic shortening; it specifically removes surplus phrases that make the current Human surface less information-efficient.
+Do not run R1×R2 interactions next. R2 alone already flipped both paragraphs, while R1 was heterogeneous.
 
-### R2 — register homogenization
+The next materially different test would decompose R2:
 
-Replace collisions between technical language and ordinary/awkward phrasing with a consistently polished explanatory register, preserving claims and overall sequence.
+1. lexical/register substitutions while sentence/clause architecture is held as constant as practical;
+2. syntactic/editorial smoothing while core lexical register is held as constant as practical.
 
-Preferred adaptive design:
+If those subfactors remain heterogeneous, stop looking for a single magic feature and treat the signal as distributed/interactive at this scale.
 
-- one R1 cell and one R2 cell per paragraph = four new cells;
-- do not automatically add R1×R2 interactions;
-- if either single factor flips Mixed/AI, localize that factor before any combination;
-- if all four remain Human, stop this family rather than token-hunting and treat the surviving Human signal as distributed/idiosyncratic at the tested scale.
+Calls beyond the six-call review threshold still require a concrete reason and explicit owner authorization. Never reset an audit/section identity merely to evade review.
 
-Running those cells requires explicit owner authorization to exceed the existing 6/6 audit cap. Do not create a nominally new audit ID merely to evade the cap.
+## Validation / tooling note
 
-## Production implication now
+Focused regression tests were added for default-six behavior and reasoned same-audit extension. This Chat runtime could not execute local pytest because DNS resolution for `github.com` was unavailable, so do not claim a full deterministic suite ran here.
 
-The experiment strengthens Joel's correction: visible model shape can contribute risk without determining the binary verdict. It also shows that several plausible forms of `compensation` are not individually necessary.
+The trusted self-hosted workflow did validate the new path end to end before and during paid execution: immutable trigger validation, exact spec SHA verification, paid-dispatch validation, short-section routing, durable 6 -> 10 ledger extension with owner reason, all four new reservations, terminal Pangram 4.0 `STAGE_SUCCESS` responses, and successful workflow completion.
 
-For production humanization, do not force prose to preserve contextual dependence, active verbs, branch asymmetry, or obvious colloquial texture merely because they can occur in Human passages. The unresolved signal appears deeper and more distributed.
+## Authority boundary
 
-Pangram remains detector evidence only. No publication prose or article authority changed.
+These are detector-research probes. None of the R1/R2 variants is publication prose or article authority. No Somatic article master, owner-final section, or publication state changed.
