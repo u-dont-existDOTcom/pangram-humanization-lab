@@ -1,0 +1,29 @@
+{
+  "audit_id": "somatic-hidden-human-signal-ab-20260914",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "sections": {
+    "somatic-hidden-human-signal-ab\u001fpangram-4\u001f4.0": {
+      "budget_scope": "section",
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage0_P66-S0",
+          "recorded_at_utc": "2026-09-14T21:33:27.654387+00:00",
+          "text_sha256": "612ca60f516eb1d5ef55ad580ccee3a2ddde7ec88a7bb9873d4c9eb1b4b22a7d",
+          "type": "paid_post_reserved",
+          "word_count": 88
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "somatic-hidden-human-signal-ab",
+      "version": "4.0"
+    }
+  }
+}
