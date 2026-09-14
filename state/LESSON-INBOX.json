@@ -4600,6 +4600,37 @@
           "section_id": "gentle-shaking-tre"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-hidden-human-signal-ab-20260914",
+      "created_at_utc": "2026-09-14T21:33:58.081270+00:00",
+      "experiment_id": "somatic-hidden-human-signal-ab-20260914-stage0",
+      "id": "Q-b928fc59a6d9d8e1",
+      "sections": [
+        "somatic-hidden-human-signal-ab"
+      ],
+      "source_path": "state/experiments/somatic-hidden-human-signal-ab-20260914-stage0-results.json",
+      "source_ref": "be7d6111dd2a660d3dce81962dddacddc365e370",
+      "source_sha256": "fb75496674516183758c750c440693a653c708cd32860ed7f285aaf977cf5728",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "P66-S0",
+          "prediction_short": "Human",
+          "section_id": "somatic-hidden-human-signal-ab"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "P17-S0",
+          "prediction_short": "Human",
+          "section_id": "somatic-hidden-human-signal-ab"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
