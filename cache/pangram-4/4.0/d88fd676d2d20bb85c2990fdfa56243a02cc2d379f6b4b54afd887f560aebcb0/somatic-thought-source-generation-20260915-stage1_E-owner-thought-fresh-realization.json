@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-thought-source-generation-20260915-stage1_E-owner-thought-fresh-realization",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Somatic Experiencing is near the beginning of this map because the body can be asking for something before you have a good story about it. If you don't notice until that signal has turned into a crisis, you're already flooded. SE gives you a way to listen earlier instead of waiting for the whole trauma story to take over.\nThe usual “window of tolerance” language makes more sense to me if I picture water. Titration is wading into something difficult instead of jumping into the deep end. Pendulation is moving toward it and back out again. Orientation is getting back on shore and noticing that you are here now, not back in the event. Since the trauma is being met as a memory, you can approach a little of it and come back.\nThat is also why I would not turn capacity-building into an endless treatment of its own. If you can stay present and there is one clear memory you want to work on, you may already have enough room to begin the focused trauma work.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9998334050178528,
+        "confidence": "High",
+        "end_index": 960,
+        "humanizer_score": 0.05369418486952782,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Somatic Experiencing is near the beginning of this map because the body can be asking for something before you have a good story about it. If you don't notice until that signal has turned into a crisis, you're already flooded. SE gives you a way to listen earlier instead of waiting for the whole trauma story to take over.\nThe usual “window of tolerance” language makes more sense to me if I picture water. Titration is wading into something difficult instead of jumping into the deep end. Pendulation is moving toward it and back out again. Orientation is getting back on shore and noticing that you are here now, not back in the event. Since the trauma is being met as a memory, you can approach a little of it and come back.\nThat is also why I would not turn capacity-building into an endless treatment of its own. If you can stay present and there is one clear memory you want to work on, you may already have enough room to begin the focused trauma work.",
+        "token_length": 202,
+        "word_count": 180
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "84a4297e-f2c2-40ff-8697-ff0ae40f42af",
   "text": "Somatic Experiencing is near the beginning of this map because the body can be asking for something before you have a good story about it. If you don't notice until that signal has turned into a crisis, you're already flooded. SE gives you a way to listen earlier instead of waiting for the whole trauma story to take over.\n\nThe usual “window of tolerance” language makes more sense to me if I picture water. Titration is wading into something difficult instead of jumping into the deep end. Pendulation is moving toward it and back out again. Orientation is getting back on shore and noticing that you are here now, not back in the event. Since the trauma is being met as a memory, you can approach a little of it and come back.\n\nThat is also why I would not turn capacity-building into an endless treatment of its own. If you can stay present and there is one clear memory you want to work on, you may already have enough room to begin the focused trauma work.\n",
   "text_sha256": "d88fd676d2d20bb85c2990fdfa56243a02cc2d379f6b4b54afd887f560aebcb0",
-  "updated_utc": "2026-09-15T00:33:19.561787+00:00"
+  "updated_utc": "2026-09-15T00:33:24.035814+00:00"
 }
