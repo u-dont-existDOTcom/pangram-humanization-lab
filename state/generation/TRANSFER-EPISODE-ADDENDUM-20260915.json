@@ -1,0 +1,15 @@
+{
+  "format": "generation-transfer-episode-addendum-v1",
+  "date": "2026-09-15",
+  "disposition": "project-specific",
+  "episode_id": "prospective-retrieval-transfer-001",
+  "source_repo": "u-dont-existDOTcom/joel-articles",
+  "source_ref": "task/inner-child-therapy-intake-20260915",
+  "source_episode_path": "articles/inner-child-therapy/experiments/INNER-CHILD-OWNER-TEACHING-EPISODE-001-RESULT-20260915.md",
+  "tested_output_sha256_no_terminal_newline": "b88e9544cfaea7b40a9c32bf165badc12aba52cd280f1e0e1a2c2a020c3f91ca",
+  "owner_result": "Pangram Human / low confidence; owner notes short passages are usually low confidence.",
+  "owner_editorial_feedback": "Strong success overall. Owner independently agreed with the pre-delivery cold read that the final sentence remained model-shaped.",
+  "residual_repair_sha256_no_terminal_newline": "48e2c8a7089c2a22975d3f75ec09d041a41f5a3a26584fd76ca1f1fe770b5905",
+  "training_use": "Positive prospective transfer evidence after retrieval-first generation. Read the source episode for literal before/output/repaired text. Preserve the residual-close critique alongside the detector success; detector-Human does not erase an editorial defect.",
+  "nonlesson": "Do not promote the residual wording to a phrase ban. The defect was the tidy recap function in that exact paragraph."
+}
