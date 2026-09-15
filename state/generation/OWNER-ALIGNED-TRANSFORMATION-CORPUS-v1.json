@@ -1,0 +1,114 @@
+{
+  "format": "owner-aligned-transformation-corpus-v1",
+  "version": "1.0.0",
+  "created_utc": "2026-09-15T13:30:00Z",
+  "purpose": "Persist literal paragraph-level teaching episodes so fresh writers can retrieve the transformation itself rather than only abstract humanization rules.",
+  "owner_correction": "Whole-article manual rewrites can confound realization changes with new or removed authorial thought. Paragraph-level rewrites that deliberately preserve the AI paragraph's thought are higher-value training evidence. When a model subsequently transfers the correction successfully, preserve that transfer as part of the same episode.",
+  "alignment_classes": {
+    "ALIGNED_SAME_THOUGHT": "Before and owner-after carry the same substantive thought/function within ordinary preservation tolerance. Eligible as a realization-learning demonstration.",
+    "OWNER_REAUTHORING": "Owner changed, added, removed, or rerouted substantive thought. Valuable authorial cognition, but not a clean style/realization training pair.",
+    "CONTROLLED_REVERSE_ALIGNED_PAIR": "Owner-Human text predates a controlled AI-shaped transformation that preserved the same protected claims. May be read in reverse as an aligned AI-to-Human demonstration, but chronology must remain explicit.",
+    "TRANSFER_SUCCESS_WITH_OWNER_INTERVENTION": "A model-generated candidate successfully transferred prior owner teaching. Preserve it as transfer evidence; do not relabel the model output as owner prose.",
+    "LEGACY_INDEX_ONLY": "Outcome is durably known but exact before/after texts have not yet been recovered into this corpus. Not eligible for literal few-shot retrieval until imported."
+  },
+  "retrieval_policy": {
+    "preferred_demo_classes": ["ALIGNED_SAME_THOUGHT", "CONTROLLED_REVERSE_ALIGNED_PAIR"],
+    "transfer_evidence_class": "TRANSFER_SUCCESS_WITH_OWNER_INTERVENTION",
+    "exclude_from_realization_training": ["OWNER_REAUTHORING", "LEGACY_INDEX_ONLY"],
+    "max_examples_default": 4,
+    "selection_basis": "semantic/rhetorical operation and failure topology, not phrase similarity",
+    "anti_imitation_rule": "Examples teach transformations, not phrases. Never transplant anecdotes, personal facts, jokes, unusual wording, or content-specific details into a new target."
+  },
+  "episodes": [
+    {
+      "id": "eft-portability-transfer-20260831",
+      "alignment_class": "TRANSFER_SUCCESS_WITH_OWNER_INTERVENTION",
+      "topic": "Somatic / EFT portability",
+      "failure_tags": ["polished_editorial_completion", "portable-practical-tail", "tidy_closure"],
+      "failed_model_text": "The big advantage is that EFT travels. I can tap before a difficult conversation, immediately after somebody triggers me, or when a thought loop has recruited my whole body. It can take the pressure down. I don't confuse that with finishing the deeper trauma work.",
+      "failed_model_text_sha256_no_terminal_newline": "4c5589b3f6458efce19bdb09ba0bf3a4ce3d74c2aba38c99efb8b78ea1f386e0",
+      "owner_aligned_after": null,
+      "successful_model_transfer": "I can use EFT almost anywhere—before a hard conversation, right after somebody triggers me, or when my mind is looping and my body has joined in. It takes some pressure off. The deeper trauma can still be sitting there.",
+      "successful_model_transfer_sha256_no_terminal_newline": "d8ec8ac01f177f00e90bad897996bb1236762938c871d4faa0ad22ed8ad1aa81",
+      "provenance": {
+        "failed_model_text": "model/failed realization",
+        "successful_model_transfer": "Chat-authored after owner teaching; explicitly not Joel-authored",
+        "owner_teaching_text": "not yet recovered exactly; do not reconstruct it"
+      },
+      "evidence": {
+        "factorial_summary": "Human anchor alone Human 1.0. Adding the polished portability tail made both separated and merged variants AI 1.0. Replacing that tail with the direct meaning-aligned Chat transfer restored Human 1.0 in both layouts. Paragraph separation/merging was null in that factorial.",
+        "production_disposition": "Owner accepted replacement of exactly the failed portability paragraph with the validated direct tail; preceding attribution paragraph remained unchanged.",
+        "detector_generation_rule": "Do not infer a phrase rule; this episode is evidence that an owner-taught change in realization transferred to a new Chat-authored tail while meaning stayed stable."
+      },
+      "generation_demo_eligible": false,
+      "reason_not_demo_eligible": "The exact intervening Joel rewrite/correction is not yet recovered. Preserve this as transfer-success evidence until the owner-teaching bytes are recovered."
+    },
+    {
+      "id": "somatic-compact-trauma-c0-c1-reverse-pair-20260828",
+      "alignment_class": "CONTROLLED_REVERSE_ALIGNED_PAIR",
+      "topic": "Somatic / gradual trauma work and inner-child state",
+      "failure_tags": ["abstract_compression", "polished_cross_domain_synthesis", "relationship_announcement"],
+      "ai_shaped_before": "Physical trauma reactions can persist after the danger has passed, even when you know you're safe. With complex or developmental trauma, direct work on the deepest memory can be overwhelming, so a gradual approach may be enough: Buddhist nun Pema Chodron calls it a “feather touch,” and Peter Levine, the founder of Somatic Experiencing, calls gentle work around the edges “pendulation.” The same limit appears in inner-child therapy: you can know what the younger part needs yet enter the child-state so fully that too little adult perspective remains to provide it.",
+      "owner_human_after": "Physical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.",
+      "provenance": {
+        "owner_human_after": "Joel owner-supplied Human exemplar",
+        "ai_shaped_before": "controlled model/editorial transformation made later from that Human baseline",
+        "chronology": "Human -> AI experimentally; use only as a reverse aligned demonstration"
+      },
+      "source_identity": {
+        "owner_baseline_record": "cases/somatic-intro-owner-human-vs-model-ai-low-20260827.md",
+        "controlled_ai_record": "state/experiments/human-to-ai-minimal-pairs-20260828/inputs/C1-somatic-intro-abstraction-compression.txt",
+        "controlled_ai_file_sha256_recorded": "b115de4e6f70c09eaa6a35245f5fbc4bdf06fcc2b7fc3dce3de685e3394e7c",
+        "owner_baseline_file_sha256_recorded": "d71d468efb46c3eda21193ef6a5377a742b43007d31930235425fdbac0cc4ee7"
+      },
+      "evidence": {
+        "owner_baseline": "Pangram Human by owner report",
+        "ai_variant": "Pangram 4 AI 1.0",
+        "preservation": "All protected claims and attributions preserved; unexplained substantive deltas 0 in the controlled experiment.",
+        "counterexamples": "Paragraph packing alone, compression without explicit synthesis, and colloquial explicit relation each remained Human; the risky effect was interactional rather than a single phrase."
+      },
+      "generation_demo_eligible": true
+    },
+    {
+      "id": "legacy-r20-inner-child-20260808",
+      "alignment_class": "LEGACY_INDEX_ONLY",
+      "topic": "Inner child",
+      "exact_text_status": "PENDING_RECOVERY",
+      "historical_outcomes": {"pangram_3_historical_ai":0.907,"pangram_3_restrained_complete_thought":0.212,"pangram_3_owner_endpoint":0.196,"pangram_4_historical_ai_fraction":1.0,"pangram_4_restrained_human_fraction":1.0,"pangram_4_owner_endpoint_human_fraction":1.0},
+      "lesson_status": "Strong legacy transfer evidence: semantic restoration alone was sufficient; exact owner cadence added little. Import exact before/restrained/owner text before using as a literal demonstration.",
+      "generation_demo_eligible": false
+    },
+    {
+      "id": "legacy-r19-nibbana-20260808",
+      "alignment_class": "LEGACY_INDEX_ONLY",
+      "topic": "Nibbāna",
+      "exact_text_status": "PENDING_RECOVERY",
+      "historical_outcomes": {"pangram_3_historical_ai":0.957,"pangram_3_restrained_complete_thought":0.297,"pangram_3_owner_endpoint_range":[0.028,0.036]},
+      "lesson_status": "Complete source-memory plus judgment did most of the repair under Pangram 3; exact owner realization added another stage. Pangram-4 endpoint selection later had a known labeling problem, so exact texts/provenance must be recovered before reuse.",
+      "generation_demo_eligible": false
+    },
+    {
+      "id": "legacy-r22-romance-20260808",
+      "alignment_class": "LEGACY_INDEX_ONLY",
+      "topic": "Romance",
+      "exact_text_status": "PENDING_RECOVERY",
+      "historical_outcomes": {"pangram_3_historical_ai":0.993,"pangram_3_restrained_complete_thought":0.569,"pangram_3_owner_endpoint":0.087,"pangram_4_historical_ai_fraction":1.0,"pangram_4_restrained_human_fraction":0.201267,"pangram_4_owner_endpoint_human_fraction":0.276316},
+      "lesson_status": "Distributed later-function interaction mattered; neither isolated sub-block was sufficient. Recover exact pair/training chronology before literal retrieval.",
+      "generation_demo_eligible": false
+    },
+    {
+      "id": "legacy-r25-different-levels-20260808",
+      "alignment_class": "LEGACY_INDEX_ONLY",
+      "topic": "Different Levels",
+      "exact_text_status": "PENDING_RECOVERY",
+      "historical_outcomes": {"pangram_3_historical_ai":0.318,"pangram_3_restrained_complete_thought":0.033,"pangram_3_owner_endpoint":0.005,"pangram_4_historical_ai_fraction":0.312658,"pangram_4_restrained_human_fraction":0.740171,"pangram_4_owner_endpoint_human_fraction":0.835255},
+      "lesson_status": "Complete-thought restoration was sufficient under Pangram 3; further ownerization was below materiality. Recover exact source-exact assistant-r22 / owner-r23 artifacts before literal retrieval.",
+      "generation_demo_eligible": false
+    }
+  ],
+  "capture_requirement": {
+    "trigger": "Any Joel paragraph rewrite/correction that teaches a realization while preserving essentially the same thought, or any subsequent model output that visibly transfers that teaching.",
+    "required_fields": ["exact model-before text + SHA-256","exact Joel-after text + SHA-256","alignment classification before generalizing","provenance and chronology","what substantive units changed, if any","exact next model transfer output when one is attempted","owner/cold-read/detector result only when it adds decision value","whether transfer succeeded without sentence-specific prompting"],
+    "durability_rule": "Do not close the teaching episode by saving only a prose lesson. The literal before/after/transfer artifacts are the durable learning object."
+  }
+}
