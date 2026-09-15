@@ -1,0 +1,76 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-fcra-generation-test-20260915-stage2",
+  "spec_sha256": "395f0470ed827fd8e418f6d0566014af61876b971f4c7bc44054da3845b7f4f7",
+  "results": [
+    {
+      "id": "O-original-model-source",
+      "measurement_key": "somatic-fcra-generation-test-20260915-stage2_O-original-model-source",
+      "text": "Somatic Experiencing makes sense to me as an early option when the main problem is that activation runs away with you. Instead of forcing a detailed trauma narrative, it pays attention to sensation, orientation, impulse, defensive response, and pacing. The basic skill is noticing activation without immediately drowning in it.\n\nThis is where the usual language about expanding your “window of tolerance” becomes practical. Titration, pendulation, and orientation are all ways of asking: can you touch something difficult in a small enough dose, notice what happens, and come back? If you are stable and have one clear target, you may already be ready for focused trauma work. Capacity-building should not become an endless waiting room where the actual trauma is never treated.\n",
+      "text_sha256": "42eca687428bb7c4c03820e8b736c5178d2424efb6a304d430673e47426de04b",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Somatic Experiencing makes sense to me as an early option when the main problem is that activation runs away with you. Instead of forcing a detailed trauma narrative, it pays attention to sensation, orientation, impulse, defensive response, and pacing. The basic skill is noticing activation without immediately drowning in it.\nThis is where the usual language about expanding your “window of tolerance” becomes practical. Titration, pendulation, and orientation are all ways of asking: can you touch something difficult in a small enough dose, notice what happens, and come back? If you are stable and have one clear target, you may already be ready for focused trauma work. Capacity-building should not become an endless waiting room where the actual trauma is never treated.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Somatic Experiencing makes sense to me as an early option when the main problem is that activation runs away with you. Instead of forcing a detailed trauma narrative, it pays attention to sensation, orientation, impulse, defensive response, and pacing. The basic skill is noticing activation without immediately drowning in it.\nThis is where the usual language about expanding your “window of tolerance” becomes practical. Titration, pendulation, and orientation are all ways of asking: can you touch something difficult in a small enough dose, notice what happens, and come back? If you are stable and have one clear target, you may already be ready for focused trauma work. Capacity-building should not become an endless waiting room where the actual trauma is never treated.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999589323997498,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 777,
+            "word_count": 123,
+            "token_length": 148,
+            "is_humanized": false,
+            "humanizer_score": 0.11412451416254044
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "a90f6274829104dea356fbbff75cab1b4c6a8ef4",
+        "text_sha256": "42eca687428bb7c4c03820e8b736c5178d2424efb6a304d430673e47426de04b"
+      },
+      "section_id": "somatic-se-generation-1",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-fcra-generation-test-20260915",
+  "call_accounting": {
+    "audit_id": "somatic-fcra-generation-test-20260915",
+    "section_call_review_threshold": 6,
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "budget_scope": "section",
+        "cache_hits": 0,
+        "estimated_cost_usd": 0.15,
+        "estimated_credits": 3,
+        "model": "pangram-4",
+        "paid_api_calls": 3,
+        "pending_resumes": 0,
+        "section_id": "somatic-se-generation-1",
+        "version": "4.0",
+        "hard_cap_applies": true,
+        "cap": 6,
+        "review_threshold": 6,
+        "owner_override_active": false,
+        "owner_override_reason": null,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}

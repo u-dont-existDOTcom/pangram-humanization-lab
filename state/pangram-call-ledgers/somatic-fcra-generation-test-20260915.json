@@ -7,8 +7,8 @@
     "somatic-se-generation-1\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "budget_scope": "section",
@@ -36,10 +36,19 @@
           "text_sha256": "42eca687428bb7c4c03820e8b736c5178d2424efb6a304d430673e47426de04b",
           "type": "paid_post_reserved",
           "word_count": 122
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-fcra-generation-test-20260915-stage2_C-scope-relaxed",
+          "recorded_at_utc": "2026-09-15T00:28:30.244315+00:00",
+          "text_sha256": "91332f682585b7d72fd25ad3902573920d63d082fd1290a5f61f7329ca403699",
+          "type": "paid_post_reserved",
+          "word_count": 111
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "somatic-se-generation-1",
       "version": "4.0"
