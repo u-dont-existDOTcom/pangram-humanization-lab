@@ -113,6 +113,43 @@
       "section_id": "inner-child-chicken-egg-p3",
       "budget_scope": "section",
       "allow_exact_repeat": true
+    },
+    {
+      "id": "R4",
+      "measurement_key": "inner-child-episode003-repeat-stability-20260915-a_R4",
+      "text": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
+      "text_sha256": "95cd572da40a2588744d7958ec5fb3938880eb42de092fbfc9ed40ad7c7684d4",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.5677530169487,
+            "confidence": "Medium",
+            "start_index": 0,
+            "end_index": 345,
+            "word_count": 68,
+            "token_length": 78,
+            "is_humanized": false,
+            "humanizer_score": 0.2411021888256073
+          }
+        ]
+      },
+      "section_id": "inner-child-chicken-egg-p3",
+      "budget_scope": "section",
+      "allow_exact_repeat": true
     }
   ],
   "audit_id": "inner-child-episode003-stability-20260915",
@@ -126,11 +163,11 @@
         "model": "pangram-4",
         "version": "4.0",
         "budget_scope": "section",
-        "paid_api_calls": 3,
+        "paid_api_calls": 4,
         "cache_hits": 0,
         "pending_resumes": 0,
-        "estimated_credits": 3,
-        "estimated_cost_usd": 0.15,
+        "estimated_credits": 4,
+        "estimated_cost_usd": 0.2,
         "hard_cap_applies": true,
         "cap": 6,
         "review_threshold": 6,
