@@ -1,0 +1,49 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-hidden-human-signal-ab-20260914-stage3",
+  "audit_id": "somatic-hidden-human-signal-ab-20260914",
+  "section_call_cap": 14,
+  "owner_override_reason": "Owner explicitly authorized decomposing the replicated R2 effect because preservation-only lessons do not solve the generation problem; these four calls separate lexical/register normalization from editorial/syntactic restructuring to identify a positive generative variable.",
+  "variants": [
+    {
+      "id": "P66-R2L",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "87b09758a964e83b76eb45056ee113f5dc992eb4",
+        "text_sha256": "f93c5b813798b71eb5166e93475b88dba7d831698480138de30ddb3975c961f9"
+      }
+    },
+    {
+      "id": "P66-R2S",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "e07ab1765546b5579cbf656df0b5aff437c2dee9",
+        "text_sha256": "d535597f6f73ebac94d7f26342accb5a4ce21c60a4c27a9e941946d23b274a13"
+      }
+    },
+    {
+      "id": "P17-R2L",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "ad7b6da67db50da016328c75196b525e4457ec4e",
+        "text_sha256": "4d24753c88e4c7ede0d36e1ac3e506cec680e0d2e9c0a2013080e0415d32254f"
+      }
+    },
+    {
+      "id": "P17-R2S",
+      "section_id": "somatic-hidden-human-signal-ab",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "b2ad4d87846cf0dd30a6ed7b862b93a9d71b6606",
+        "text_sha256": "ed9e9bb6fcf97eb83e47d9abf4427033506c7ffbd646fff01b9b8676962c016d"
+      }
+    }
+  ]
+}
