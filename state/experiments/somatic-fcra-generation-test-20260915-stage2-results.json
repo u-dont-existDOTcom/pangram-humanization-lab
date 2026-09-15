@@ -86,6 +86,48 @@
       },
       "section_id": "somatic-se-generation-1",
       "budget_scope": "section"
+    },
+    {
+      "id": "D-minimum-transform",
+      "measurement_key": "somatic-fcra-generation-test-20260915-stage2_D-minimum-transform",
+      "text": "Somatic Experiencing makes sense as an early option when activation runs away with you. Instead of forcing a detailed trauma narrative, it can stay with sensation, orientation, impulse, defensive response, and pacing. The basic skill is noticing activation without immediately drowning in it.\n\nThe “window of tolerance” becomes practical here: can you touch something difficult in a small enough dose, notice what happens, and come back? Titration, pendulation, and orientation are ways of working with that. If you are stable and have one clear target, you may already be ready for focused trauma work. Building capacity should not become an endless waiting room before the trauma itself is treated.\n",
+      "text_sha256": "0259663bffc0b3ef041e6a9056080ef74838f7c1aecf0828e1a19a639c18bcb4",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Somatic Experiencing makes sense as an early option when activation runs away with you. Instead of forcing a detailed trauma narrative, it can stay with sensation, orientation, impulse, defensive response, and pacing. The basic skill is noticing activation without immediately drowning in it.\nThe “window of tolerance” becomes practical here: can you touch something difficult in a small enough dose, notice what happens, and come back? Titration, pendulation, and orientation are ways of working with that. If you are stable and have one clear target, you may already be ready for focused trauma work. Building capacity should not become an endless waiting room before the trauma itself is treated.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Somatic Experiencing makes sense as an early option when activation runs away with you. Instead of forcing a detailed trauma narrative, it can stay with sensation, orientation, impulse, defensive response, and pacing. The basic skill is noticing activation without immediately drowning in it.\nThe “window of tolerance” becomes practical here: can you touch something difficult in a small enough dose, notice what happens, and come back? Titration, pendulation, and orientation are ways of working with that. If you are stable and have one clear target, you may already be ready for focused trauma work. Building capacity should not become an endless waiting room before the trauma itself is treated.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999668002128601,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 699,
+            "word_count": 109,
+            "token_length": 134,
+            "is_humanized": false,
+            "humanizer_score": 0.0876462385058403
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "afb1cf20f4de9271f40cff1ae10df82969c968fc",
+        "text_sha256": "0259663bffc0b3ef041e6a9056080ef74838f7c1aecf0828e1a19a639c18bcb4"
+      },
+      "section_id": "somatic-se-generation-1",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-fcra-generation-test-20260915",
@@ -97,10 +139,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.2,
-        "estimated_credits": 4,
+        "estimated_cost_usd": 0.25,
+        "estimated_credits": 5,
         "model": "pangram-4",
-        "paid_api_calls": 4,
+        "paid_api_calls": 5,
         "pending_resumes": 0,
         "section_id": "somatic-se-generation-1",
         "version": "4.0",
