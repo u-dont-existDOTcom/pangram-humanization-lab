@@ -1,0 +1,15 @@
+{
+  "format": "generation-transfer-episode-v1",
+  "date": "2026-09-15",
+  "disposition": "project-specific",
+  "episode_id": "prospective-retrieval-transfer-002",
+  "source_repo": "u-dont-existDOTcom/joel-articles",
+  "source_ref": "task/inner-child-therapy-intake-20260915",
+  "source_episode_path": "articles/inner-child-therapy/experiments/INNER-CHILD-OWNER-TEACHING-EPISODE-002-RESULT-20260915.md",
+  "combined_boundary_sha256_no_terminal_newline": "3d847f5e492f6ddad7998caafb06c106c71c9458c758bd75a102196e9077eacd",
+  "new_model_paragraph_sha256_no_terminal_newline": "2c4385e36da5246faee28a0620bfe588ed0603495f5689398d1537c6c120547b",
+  "owner_result": "Human / low confidence on the full two-paragraph continuation",
+  "interpretation": "Second consecutive prospective generation success in the same live article lane. The second paragraph was a different source thought and was generated after the first success plus the owner/editorial correction to remove an unnecessary tidy recap sentence.",
+  "training_use": "Positive transfer evidence. Preserve exact provenance and retrieve the article-side episode for the literal text. Do not treat any wording as a token-level detector rule.",
+  "detector_cost": "No new assistant-initiated call; owner-reported result."
+}
