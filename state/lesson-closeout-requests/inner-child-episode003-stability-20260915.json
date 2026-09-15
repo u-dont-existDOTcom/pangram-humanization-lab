@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "request_id": "inner-child-episode003-stability-20260915",
+  "status": "pending",
+  "source_path": "state/generation/INNER-CHILD-EPISODE003-STABILITY-20260915.md",
+  "source_ref": "task/inner-child-stability-correction-20260915",
+  "source_sha256": "cb049ff156ec6038c9ee7c5bb7368771aba367834e03af4a5c0dd99fea634988",
+  "finding": "Exact Pangram 4 repeats on the Inner Child episode 003 model candidate returned Human, Human, Human, AI. The current owner correction rejects detector instability as a production endpoint when the goal is robust Human classification; contradictory repeats must not be averaged into a pass.",
+  "disposition": "article-specific",
+  "reason": "The repeat distribution and literal teaching pair are bound to Inner Child episode 003. The general workflow consequence is an application and clarification of the existing 100%-Human standing completion gate plus evaluator-reproducibility rules, not a new detector-causality or phrase rule.",
+  "promoted_to": []
+}
