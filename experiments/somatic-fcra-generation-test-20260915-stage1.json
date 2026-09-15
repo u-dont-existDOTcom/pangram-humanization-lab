@@ -1,0 +1,27 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-fcra-generation-test-20260915-stage1",
+  "audit_id": "somatic-fcra-generation-test-20260915",
+  "variants": [
+    {
+      "id": "A-global-polish",
+      "section_id": "somatic-se-generation-1",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "da7c8331ce27c75a09e0926c1fabfb7cfb619b66",
+        "text_sha256": "7f71b90f157dc06818a71a954e996b36d9cbd2c4750f4916d3ce9ef86a43cc19"
+      }
+    },
+    {
+      "id": "B-fcra-v01",
+      "section_id": "somatic-se-generation-1",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "e42765a21e9f0437c6972a58d6fb6458d64316fb",
+        "text_sha256": "a14eb204446b48a17ac8f5492fb1aad40168a67f247c0f8b99bb5e30d6b9820c"
+      }
+    }
+  ]
+}
