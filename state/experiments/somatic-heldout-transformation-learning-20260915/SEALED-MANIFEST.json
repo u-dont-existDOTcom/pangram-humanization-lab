@@ -1,12 +1,12 @@
 {
   "format": "somatic-heldout-transformation-seal-v1",
   "experiment_id": "somatic-heldout-transformation-learning-20260915-h1",
-  "writer_packet_sha256": "ab8c06647c28e5d4e38ba8d07cd92da59e85338f3956ead7a14c7a0f18906656",
+  "writer_packet_sha256": "c19175f3790b9fc12af764b3610431e570472e98e3274f8538397319a9366c46",
   "heldout_human_target_sha256": "f50e30267b306ef4c8d516baa043c1d51981f2f2190bead44c4d69d5c050916f",
   "heldout_source_word_count": 121,
   "heldout_human_target_word_count": 100,
   "heldout_target_storage": "local-only until fresh-writer output is frozen",
   "heldout_target_publication_status": "NOT_COMMITTED",
   "writer_target_access": "MUST_NOT_HAVE_TARGET",
-  "notes": "The seal commits target identity without exposing target text. The writer packet contains three training before/after pairs and the held-out AI Brainspotting source only."
+  "notes": "The seal commits target identity without exposing target text. The writer packet contains three training before/after pairs and the held-out AI Brainspotting source only. The writer is explicitly forbidden from using tools or reading web/GitHub/File Library/memory/connected sources."
 }
