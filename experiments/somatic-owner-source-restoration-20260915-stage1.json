@@ -1,0 +1,17 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-owner-source-restoration-20260915-stage1",
+  "audit_id": "somatic-owner-source-restoration-20260915",
+  "variants": [
+    {
+      "id": "F-owner-source-plus-current-tail",
+      "section_id": "somatic-se-owner-source-restoration",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "f68c5e215f27bc49ea3e1d85b1346134dd213cb5",
+        "text_sha256": "209691a327a0afd4d9dd221358632ef67ad40b37d67a9ee7afed1810cb73bc43"
+      }
+    }
+  ]
+}
