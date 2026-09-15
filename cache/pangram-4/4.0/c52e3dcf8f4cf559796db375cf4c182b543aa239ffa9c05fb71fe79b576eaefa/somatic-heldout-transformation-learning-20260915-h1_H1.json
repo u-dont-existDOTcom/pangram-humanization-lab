@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-heldout-transformation-learning-20260915-h1_H1",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "I’d put Brainspotting in this layer because sometimes there just isn’t a good story yet. You might have a feeling in your body, an image, an impulse, or this sense that something *huge* is happening, but if somebody asks you to explain exactly what it’s about, you can’t. Brainspotting doesn’t necessarily require you to figure all that out first. It uses where you’re looking, focused attention, awareness of what’s happening in your body, and the therapist’s attunement to stay with the material even when words aren’t coming very easily.\nThis is also one of those therapies that can overlap with inner-child work. You could use Brainspotting in a relatively gentle, resource-oriented way first, or carefully approach things bit by bit. That’s quite different from diving straight into some intensely charged developmental material. So where it belongs depends partly on how you’re actually using it.\nI’m especially interested in Brainspotting for the kind of trauma that feels diffuse or very early, where your body seems to know something your conscious mind can’t quite explain. The same goes for trauma that hasn’t shifted much from just thinking and talking about it, or those weird emotional knots where you know *something* is there but can’t put your finger on the story. You don’t necessarily have to explain the whole thing for the session to go somewhere.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9999938011169434,
+        "confidence": "High",
+        "end_index": 1368,
+        "humanizer_score": 0.6220552325248718,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "I’d put Brainspotting in this layer because sometimes there just isn’t a good story yet. You might have a feeling in your body, an image, an impulse, or this sense that something *huge* is happening, but if somebody asks you to explain exactly what it’s about, you can’t. Brainspotting doesn’t necessarily require you to figure all that out first. It uses where you’re looking, focused attention, awareness of what’s happening in your body, and the therapist’s attunement to stay with the material even when words aren’t coming very easily.\nThis is also one of those therapies that can overlap with inner-child work. You could use Brainspotting in a relatively gentle, resource-oriented way first, or carefully approach things bit by bit. That’s quite different from diving straight into some intensely charged developmental material. So where it belongs depends partly on how you’re actually using it.\nI’m especially interested in Brainspotting for the kind of trauma that feels diffuse or very early, where your body seems to know something your conscious mind can’t quite explain. The same goes for trauma that hasn’t shifted much from just thinking and talking about it, or those weird emotional knots where you know *something* is there but can’t put your finger on the story. You don’t necessarily have to explain the whole thing for the session to go somewhere.",
+        "token_length": 283,
+        "word_count": 241
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "c2a46902-b4e6-477d-9e35-48504c90fd4e",
   "text": "I’d put Brainspotting in this layer because sometimes there just isn’t a good story yet. You might have a feeling in your body, an image, an impulse, or this sense that something *huge* is happening, but if somebody asks you to explain exactly what it’s about, you can’t. Brainspotting doesn’t necessarily require you to figure all that out first. It uses where you’re looking, focused attention, awareness of what’s happening in your body, and the therapist’s attunement to stay with the material even when words aren’t coming very easily.\n\nThis is also one of those therapies that can overlap with inner-child work. You could use Brainspotting in a relatively gentle, resource-oriented way first, or carefully approach things bit by bit. That’s quite different from diving straight into some intensely charged developmental material. So where it belongs depends partly on how you’re actually using it.\n\nI’m especially interested in Brainspotting for the kind of trauma that feels diffuse or very early, where your body seems to know something your conscious mind can’t quite explain. The same goes for trauma that hasn’t shifted much from just thinking and talking about it, or those weird emotional knots where you know *something* is there but can’t put your finger on the story. You don’t necessarily have to explain the whole thing for the session to go somewhere.",
   "text_sha256": "c52e3dcf8f4cf559796db375cf4c182b543aa239ffa9c05fb71fe79b576eaefa",
-  "updated_utc": "2026-09-15T02:44:23.966757+00:00"
+  "updated_utc": "2026-09-15T02:44:28.330481+00:00"
 }
