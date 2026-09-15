@@ -6,17 +6,23 @@
       "reason": "Owner authorized four additional R1/R2 calls after the first six all remained Human; these four directly test the next discriminating hypotheses: semantic-efficiency normalization and register homogenization.",
       "recorded_at_utc": "2026-09-14T23:42:58.393451+00:00",
       "to_cap": 10
+    },
+    {
+      "from_cap": 10,
+      "reason": "Owner explicitly authorized decomposing the replicated R2 effect because preservation-only lessons do not solve the generation problem; these four calls separate lexical/register normalization from editorial/syntactic restructuring to identify a positive generative variable.",
+      "recorded_at_utc": "2026-09-15T00:09:39.977304+00:00",
+      "to_cap": 14
     }
   ],
   "format": "pangram-call-ledger-v1",
-  "section_call_cap": 10,
+  "section_call_cap": 14,
   "section_call_review_threshold": 6,
   "sections": {
     "somatic-hidden-human-signal-ab\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.5,
-      "estimated_credits": 10,
+      "estimated_cost_usd": 0.55,
+      "estimated_credits": 11,
       "events": [
         {
           "budget_scope": "section",
@@ -107,10 +113,19 @@
           "text_sha256": "269a343fa93d123b6625f3839e0fa858c63a14a4648faa117f011ae3b6e3fd28",
           "type": "paid_post_reserved",
           "word_count": 102
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage3_P66-R2L",
+          "recorded_at_utc": "2026-09-15T00:09:41.026745+00:00",
+          "text_sha256": "f93c5b813798b71eb5166e93475b88dba7d831698480138de30ddb3975c961f9",
+          "type": "paid_post_reserved",
+          "word_count": 91
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 10,
+      "paid_api_calls": 11,
       "pending_resumes": 0,
       "section_id": "somatic-hidden-human-signal-ab",
       "version": "4.0"
