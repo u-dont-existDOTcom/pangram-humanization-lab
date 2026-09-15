@@ -4842,6 +4842,29 @@
           "section_id": "somatic-se-generation-1"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-thought-source-generation-20260915",
+      "created_at_utc": "2026-09-15T00:33:31.279240+00:00",
+      "experiment_id": "somatic-thought-source-generation-20260915-stage1",
+      "id": "Q-3d1ca106a40a9f6d",
+      "sections": [
+        "somatic-se-thought-source"
+      ],
+      "source_path": "state/experiments/somatic-thought-source-generation-20260915-stage1-results.json",
+      "source_ref": "8ff5ee48c57ac9a9f6188baec6f4bc8474d213a9",
+      "source_sha256": "aa34911cb1c0771577dd8b05dbaf65e5e49463ca6c41e72222db51bf90c831a8",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "E-owner-thought-fresh-realization",
+          "prediction_short": "AI",
+          "section_id": "somatic-se-thought-source"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
