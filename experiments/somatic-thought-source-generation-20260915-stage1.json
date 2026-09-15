@@ -1,0 +1,17 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-thought-source-generation-20260915-stage1",
+  "audit_id": "somatic-thought-source-generation-20260915",
+  "variants": [
+    {
+      "id": "E-owner-thought-fresh-realization",
+      "section_id": "somatic-se-thought-source",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "5bb90325a5a917d1370f54e00cc2a792c484f870",
+        "text_sha256": "d88fd676d2d20bb85c2990fdfa56243a02cc2d379f6b4b54afd887f560aebcb0"
+      }
+    }
+  ]
+}
