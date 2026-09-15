@@ -56,6 +56,48 @@
       },
       "section_id": "somatic-hidden-human-signal-ab",
       "budget_scope": "section"
+    },
+    {
+      "id": "P66-R2S",
+      "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage3_P66-R2S",
+      "text": "This is the part of the map called targeted memory work or “reconsolidation.” The term refers to the way we process the charged memory, reconsider its significance, and integrate it in a healthier way while still being honest about what happened. The approach works best for flashbacks to a specific event rather than something more general that brainspotting or other prior therapies could address less specifically. Its goal is to reduce the persistence of these memories so they don’t keep interfering when they return.\n",
+      "text_sha256": "d535597f6f73ebac94d7f26342accb5a4ce21c60a4c27a9e941946d23b274a13",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "This is the part of the map called targeted memory work or “reconsolidation.” The term refers to the way we process the charged memory, reconsider its significance, and integrate it in a healthier way while still being honest about what happened. The approach works best for flashbacks to a specific event rather than something more general that brainspotting or other prior therapies could address less specifically. Its goal is to reduce the persistence of these memories so they don’t keep interfering when they return.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "This is the part of the map called targeted memory work or “reconsolidation.” The term refers to the way we process the charged memory, reconsider its significance, and integrate it in a healthier way while still being honest about what happened. The approach works best for flashbacks to a specific event rather than something more general that brainspotting or other prior therapies could address less specifically. Its goal is to reduce the persistence of these memories so they don’t keep interfering when they return.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.4275851845741272,
+            "confidence": "Medium",
+            "start_index": 0,
+            "end_index": 522,
+            "word_count": 85,
+            "token_length": 98,
+            "is_humanized": false,
+            "humanizer_score": 0.0
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "e07ab1765546b5579cbf656df0b5aff437c2dee9",
+        "text_sha256": "d535597f6f73ebac94d7f26342accb5a4ce21c60a4c27a9e941946d23b274a13"
+      },
+      "section_id": "somatic-hidden-human-signal-ab",
+      "budget_scope": "section"
     }
   ],
   "audit_id": "somatic-hidden-human-signal-ab-20260914",
@@ -67,10 +109,10 @@
       {
         "budget_scope": "section",
         "cache_hits": 0,
-        "estimated_cost_usd": 0.55,
-        "estimated_credits": 11,
+        "estimated_cost_usd": 0.6,
+        "estimated_credits": 12,
         "model": "pangram-4",
-        "paid_api_calls": 11,
+        "paid_api_calls": 12,
         "pending_resumes": 0,
         "section_id": "somatic-hidden-human-signal-ab",
         "version": "4.0",
@@ -79,9 +121,9 @@
         "review_threshold": 6,
         "owner_override_active": true,
         "owner_override_reason": "Owner explicitly authorized decomposing the replicated R2 effect because preservation-only lessons do not solve the generation problem; these four calls separate lexical/register normalization from editorial/syntactic restructuring to identify a positive generative variable.",
-        "paid_calls_to_human": null,
-        "estimated_credits_to_human": null,
-        "first_human_measurement_key": null
+        "paid_calls_to_human": 12,
+        "estimated_credits_to_human": 12,
+        "first_human_measurement_key": "somatic-hidden-human-signal-ab-20260914-stage3_P66-R2S"
       }
     ]
   }
