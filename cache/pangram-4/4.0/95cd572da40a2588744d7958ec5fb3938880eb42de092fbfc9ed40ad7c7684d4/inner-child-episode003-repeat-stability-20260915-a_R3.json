@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "inner-child-episode003-repeat-stability-20260915-a_R3",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.5706424713134766,
+        "confidence": "Medium",
+        "end_index": 345,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
+        "token_length": 78,
+        "word_count": 68
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "fc47630c-c26a-4232-9229-2ccde9a6e5d5",
   "text": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
   "text_sha256": "95cd572da40a2588744d7958ec5fb3938880eb42de092fbfc9ed40ad7c7684d4",
-  "updated_utc": "2026-09-15T18:58:41.433954+00:00"
+  "updated_utc": "2026-09-15T18:58:45.244986+00:00"
 }
