@@ -7,8 +7,8 @@
     "inner-child-chicken-egg-p3\u001fpangram-4\u001f4.0": {
       "budget_scope": "section",
       "cache_hits": 0,
-      "estimated_cost_usd": 0.15,
-      "estimated_credits": 3,
+      "estimated_cost_usd": 0.2,
+      "estimated_credits": 4,
       "events": [
         {
           "budget_scope": "section",
@@ -36,10 +36,19 @@
           "text_sha256": "95cd572da40a2588744d7958ec5fb3938880eb42de092fbfc9ed40ad7c7684d4",
           "type": "paid_post_reserved",
           "word_count": 62
+        },
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "inner-child-episode003-repeat-stability-20260915-a_R4",
+          "recorded_at_utc": "2026-09-15T18:58:48.208071+00:00",
+          "text_sha256": "95cd572da40a2588744d7958ec5fb3938880eb42de092fbfc9ed40ad7c7684d4",
+          "type": "paid_post_reserved",
+          "word_count": 62
         }
       ],
       "model": "pangram-4",
-      "paid_api_calls": 3,
+      "paid_api_calls": 4,
       "pending_resumes": 0,
       "section_id": "inner-child-chicken-egg-p3",
       "version": "4.0"
