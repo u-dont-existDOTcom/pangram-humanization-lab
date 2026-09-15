@@ -129,6 +129,8 @@ The correct response is:
 
 This does **not** repeal the known-green calibration guard. Exact prose with a reliable current Human baseline should not be reopened merely because a heuristic says it looks model-shaped. The rule here applies when current exact evidence itself is contradictory or when the owner explicitly requires robustness beyond a single result.
 
+Current exact case evidence: `state/generation/INNER-CHILD-EPISODE003-STABILITY-20260915.md`.
+
 ## Current corpus limitations
 
 Version 1 starts conservatively.
