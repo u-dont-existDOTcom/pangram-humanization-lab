@@ -4772,6 +4772,37 @@
           "section_id": "somatic-hidden-human-signal-ab"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-fcra-generation-test-20260915",
+      "created_at_utc": "2026-09-15T00:22:48.339560+00:00",
+      "experiment_id": "somatic-fcra-generation-test-20260915-stage1",
+      "id": "Q-91a4f6ecdf839e16",
+      "sections": [
+        "somatic-se-generation-1"
+      ],
+      "source_path": "state/experiments/somatic-fcra-generation-test-20260915-stage1-results.json",
+      "source_ref": "b382f5f4ba7619c89827777a6c6c065b04ddd9db",
+      "source_sha256": "3b0d24d87cd218f8e91381185795b73daf1c36ee1ce7b3553143899063d61363",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "A-global-polish",
+          "prediction_short": "AI",
+          "section_id": "somatic-se-generation-1"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "B-fcra-v01",
+          "prediction_short": "AI",
+          "section_id": "somatic-se-generation-1"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
