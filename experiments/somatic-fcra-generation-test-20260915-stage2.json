@@ -1,0 +1,37 @@
+{
+  "format": "pangram-fixed-batch-v1",
+  "experiment_id": "somatic-fcra-generation-test-20260915-stage2",
+  "audit_id": "somatic-fcra-generation-test-20260915",
+  "variants": [
+    {
+      "id": "O-original-model-source",
+      "section_id": "somatic-se-generation-1",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "a90f6274829104dea356fbbff75cab1b4c6a8ef4",
+        "text_sha256": "42eca687428bb7c4c03820e8b736c5178d2424efb6a304d430673e47426de04b"
+      }
+    },
+    {
+      "id": "C-scope-relaxed",
+      "section_id": "somatic-se-generation-1",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "6f8d0c321ac04ef620127fdc38d815dcea51cd4a",
+        "text_sha256": "91332f682585b7d72fd25ad3902573920d63d082fd1290a5f61f7329ca403699"
+      }
+    },
+    {
+      "id": "D-minimum-transform",
+      "section_id": "somatic-se-generation-1",
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "afb1cf20f4de9271f40cff1ae10df82969c968fc",
+        "text_sha256": "0259663bffc0b3ef041e6a9056080ef74838f7c1aecf0828e1a19a639c18bcb4"
+      }
+    }
+  ]
+}
