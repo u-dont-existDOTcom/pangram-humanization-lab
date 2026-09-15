@@ -1,0 +1,76 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-fcra-generation-test-20260915-stage1",
+  "spec_sha256": "e8959e41ed4e7f3c1bd7f3a10163dec35587c6082117888153676bd26ff6f89b",
+  "results": [
+    {
+      "id": "A-global-polish",
+      "measurement_key": "somatic-fcra-generation-test-20260915-stage1_A-global-polish",
+      "text": "Somatic Experiencing can be useful early when activation is difficult to regulate. Rather than requiring a detailed trauma narrative, it focuses on sensation, orientation, impulses, defensive responses, and pacing so that activation can be noticed without becoming overwhelming. Titration, pendulation, and orientation are practical ways to expand the window of tolerance by approaching difficult material in manageable doses and then returning to a more regulated state. Capacity-building should not become indefinite, however. If someone is stable and has one clear target, they may already be ready for focused trauma work.\n",
+      "text_sha256": "7f71b90f157dc06818a71a954e996b36d9cbd2c4750f4916d3ce9ef86a43cc19",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "Somatic Experiencing can be useful early when activation is difficult to regulate. Rather than requiring a detailed trauma narrative, it focuses on sensation, orientation, impulses, defensive responses, and pacing so that activation can be noticed without becoming overwhelming. Titration, pendulation, and orientation are practical ways to expand the window of tolerance by approaching difficult material in manageable doses and then returning to a more regulated state. Capacity-building should not become indefinite, however. If someone is stable and has one clear target, they may already be ready for focused trauma work.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "Somatic Experiencing can be useful early when activation is difficult to regulate. Rather than requiring a detailed trauma narrative, it focuses on sensation, orientation, impulses, defensive responses, and pacing so that activation can be noticed without becoming overwhelming. Titration, pendulation, and orientation are practical ways to expand the window of tolerance by approaching difficult material in manageable doses and then returning to a more regulated state. Capacity-building should not become indefinite, however. If someone is stable and has one clear target, they may already be ready for focused trauma work.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9931765198707581,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 626,
+            "word_count": 91,
+            "token_length": 111,
+            "is_humanized": false,
+            "humanizer_score": 0.0044722603633999825
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "da7c8331ce27c75a09e0926c1fabfb7cfb619b66",
+        "text_sha256": "7f71b90f157dc06818a71a954e996b36d9cbd2c4750f4916d3ce9ef86a43cc19"
+      },
+      "section_id": "somatic-se-generation-1",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-fcra-generation-test-20260915",
+  "call_accounting": {
+    "audit_id": "somatic-fcra-generation-test-20260915",
+    "section_call_review_threshold": 6,
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "section_id": "somatic-se-generation-1",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "review_threshold": 6,
+        "owner_override_active": false,
+        "owner_override_reason": null,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
