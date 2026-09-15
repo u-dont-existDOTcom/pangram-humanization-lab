@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-fcra-generation-test-20260915-stage2_C-scope-relaxed",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Somatic Experiencing can start before you go into a detailed trauma story. If activation is already running away with you, the work can stay with sensation, orientation, an impulse, a defensive response, and the pace itself—enough to notice what is happening without getting overwhelmed.\nTitration and pendulation work with that in small doses, and orientation helps with coming back. That's the practical use of the “window of tolerance”: touch something difficult, notice what happens, and return.\nIf you are stable and there is one clear target, though, you may already be ready for focused trauma work. Building capacity should not turn into an endless delay before the trauma itself is treated.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9989145398139954,
+        "confidence": "High",
+        "end_index": 699,
+        "humanizer_score": 0.09394600242376328,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Somatic Experiencing can start before you go into a detailed trauma story. If activation is already running away with you, the work can stay with sensation, orientation, an impulse, a defensive response, and the pace itself—enough to notice what is happening without getting overwhelmed.\nTitration and pendulation work with that in small doses, and orientation helps with coming back. That's the practical use of the “window of tolerance”: touch something difficult, notice what happens, and return.\nIf you are stable and there is one clear target, though, you may already be ready for focused trauma work. Building capacity should not turn into an endless delay before the trauma itself is treated.",
+        "token_length": 138,
+        "word_count": 113
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "1431b1e8-e70c-49d2-abdf-d1e066752361",
   "text": "Somatic Experiencing can start before you go into a detailed trauma story. If activation is already running away with you, the work can stay with sensation, orientation, an impulse, a defensive response, and the pace itself—enough to notice what is happening without getting overwhelmed.\n\nTitration and pendulation work with that in small doses, and orientation helps with coming back. That's the practical use of the “window of tolerance”: touch something difficult, notice what happens, and return.\n\nIf you are stable and there is one clear target, though, you may already be ready for focused trauma work. Building capacity should not turn into an endless delay before the trauma itself is treated.\n",
   "text_sha256": "91332f682585b7d72fd25ad3902573920d63d082fd1290a5f61f7329ca403699",
-  "updated_utc": "2026-09-15T00:28:34.255111+00:00"
+  "updated_utc": "2026-09-15T00:28:38.067831+00:00"
 }
