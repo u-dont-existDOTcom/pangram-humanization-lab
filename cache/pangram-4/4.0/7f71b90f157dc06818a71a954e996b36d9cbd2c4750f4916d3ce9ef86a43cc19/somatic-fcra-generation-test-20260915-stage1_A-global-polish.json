@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-fcra-generation-test-20260915-stage1_A-global-polish",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 0.0,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Somatic Experiencing can be useful early when activation is difficult to regulate. Rather than requiring a detailed trauma narrative, it focuses on sensation, orientation, impulses, defensive responses, and pacing so that activation can be noticed without becoming overwhelming. Titration, pendulation, and orientation are practical ways to expand the window of tolerance by approaching difficult material in manageable doses and then returning to a more regulated state. Capacity-building should not become indefinite, however. If someone is stable and has one clear target, they may already be ready for focused trauma work.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.9931765198707581,
+        "confidence": "High",
+        "end_index": 626,
+        "humanizer_score": 0.0044722603633999825,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Somatic Experiencing can be useful early when activation is difficult to regulate. Rather than requiring a detailed trauma narrative, it focuses on sensation, orientation, impulses, defensive responses, and pacing so that activation can be noticed without becoming overwhelming. Titration, pendulation, and orientation are practical ways to expand the window of tolerance by approaching difficult material in manageable doses and then returning to a more regulated state. Capacity-building should not become indefinite, however. If someone is stable and has one clear target, they may already be ready for focused trauma work.",
+        "token_length": 111,
+        "word_count": 91
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "db94fdf0-5479-4f0d-b842-9b6f30fc2f28",
   "text": "Somatic Experiencing can be useful early when activation is difficult to regulate. Rather than requiring a detailed trauma narrative, it focuses on sensation, orientation, impulses, defensive responses, and pacing so that activation can be noticed without becoming overwhelming. Titration, pendulation, and orientation are practical ways to expand the window of tolerance by approaching difficult material in manageable doses and then returning to a more regulated state. Capacity-building should not become indefinite, however. If someone is stable and has one clear target, they may already be ready for focused trauma work.\n",
   "text_sha256": "7f71b90f157dc06818a71a954e996b36d9cbd2c4750f4916d3ce9ef86a43cc19",
-  "updated_utc": "2026-09-15T00:22:21.821281+00:00"
+  "updated_utc": "2026-09-15T00:22:26.747157+00:00"
 }
