@@ -1,0 +1,30 @@
+{
+  "audit_id": "somatic-heldout-transformation-learning-20260915",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "section_call_review_threshold": 6,
+  "sections": {
+    "somatic-heldout-transformation-learning\u001fpangram-4\u001f4.0": {
+      "budget_scope": "section",
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "somatic-heldout-transformation-learning-20260915-h1_H1",
+          "recorded_at_utc": "2026-09-15T02:44:18.090286+00:00",
+          "text_sha256": "c52e3dcf8f4cf559796db375cf4c182b543aa239ffa9c05fb71fe79b576eaefa",
+          "type": "paid_post_reserved",
+          "word_count": 223
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "somatic-heldout-transformation-learning",
+      "version": "4.0"
+    }
+  }
+}
