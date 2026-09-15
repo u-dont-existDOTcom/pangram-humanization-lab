@@ -4725,6 +4725,53 @@
           "section_id": "somatic-hidden-human-signal-ab"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-hidden-human-signal-ab-20260914",
+      "created_at_utc": "2026-09-15T00:10:31.932995+00:00",
+      "experiment_id": "somatic-hidden-human-signal-ab-20260914-stage3",
+      "id": "Q-291ca0ff0f372d23",
+      "sections": [
+        "somatic-hidden-human-signal-ab"
+      ],
+      "source_path": "state/experiments/somatic-hidden-human-signal-ab-20260914-stage3-results.json",
+      "source_ref": "7835cd5a6d0066b563e396db683d56e360290c1d",
+      "source_sha256": "8a92a42c521e32897861a72d6e5e79e8fee66ca399c409245b0ceb09ef607bf0",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.5456110239028931,
+          "fraction_human": 0.45438897609710693,
+          "id": "P66-R2L",
+          "prediction_short": "Mixed",
+          "section_id": "somatic-hidden-human-signal-ab"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "P66-R2S",
+          "prediction_short": "Human",
+          "section_id": "somatic-hidden-human-signal-ab"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "P17-R2L",
+          "prediction_short": "Human",
+          "section_id": "somatic-hidden-human-signal-ab"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "P17-R2S",
+          "prediction_short": "Human",
+          "section_id": "somatic-hidden-human-signal-ab"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
