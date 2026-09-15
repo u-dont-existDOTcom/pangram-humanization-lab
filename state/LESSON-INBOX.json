@@ -4888,6 +4888,53 @@
           "section_id": "somatic-heldout-transformation-learning"
         }
       ]
+    },
+    {
+      "audit_id": "inner-child-episode003-stability-20260915",
+      "created_at_utc": "2026-09-15T18:59:01.219616+00:00",
+      "experiment_id": "inner-child-episode003-repeat-stability-20260915-a",
+      "id": "Q-2d896d13c2f4063d",
+      "sections": [
+        "inner-child-chicken-egg-p3"
+      ],
+      "source_path": "state/experiments/inner-child-episode003-repeat-stability-20260915-a-results.json",
+      "source_ref": "ece19d5fb027d0f44e03bcd0a9028b08742014c8",
+      "source_sha256": "ff71ff4e8c7e9b58b5771a6ff95d645a731ecb14fff23eb02801bbbf084babcd",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R1",
+          "prediction_short": "Human",
+          "section_id": "inner-child-chicken-egg-p3"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R2",
+          "prediction_short": "Human",
+          "section_id": "inner-child-chicken-egg-p3"
+        },
+        {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "id": "R3",
+          "prediction_short": "Human",
+          "section_id": "inner-child-chicken-egg-p3"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "R4",
+          "prediction_short": "AI",
+          "section_id": "inner-child-chicken-egg-p3"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
