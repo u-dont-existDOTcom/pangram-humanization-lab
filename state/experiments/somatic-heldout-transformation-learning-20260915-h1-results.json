@@ -1,0 +1,76 @@
+{
+  "format": "pangram-fixed-batch-results-v1",
+  "experiment_id": "somatic-heldout-transformation-learning-20260915-h1",
+  "spec_sha256": "57c31ef2fe5951e0944c13befecaa89d51ed453c9330d1938cae990ce4b04e37",
+  "results": [
+    {
+      "id": "H1",
+      "measurement_key": "somatic-heldout-transformation-learning-20260915-h1_H1",
+      "text": "I’d put Brainspotting in this layer because sometimes there just isn’t a good story yet. You might have a feeling in your body, an image, an impulse, or this sense that something *huge* is happening, but if somebody asks you to explain exactly what it’s about, you can’t. Brainspotting doesn’t necessarily require you to figure all that out first. It uses where you’re looking, focused attention, awareness of what’s happening in your body, and the therapist’s attunement to stay with the material even when words aren’t coming very easily.\n\nThis is also one of those therapies that can overlap with inner-child work. You could use Brainspotting in a relatively gentle, resource-oriented way first, or carefully approach things bit by bit. That’s quite different from diving straight into some intensely charged developmental material. So where it belongs depends partly on how you’re actually using it.\n\nI’m especially interested in Brainspotting for the kind of trauma that feels diffuse or very early, where your body seems to know something your conscious mind can’t quite explain. The same goes for trauma that hasn’t shifted much from just thinking and talking about it, or those weird emotional knots where you know *something* is there but can’t put your finger on the story. You don’t necessarily have to explain the whole thing for the session to go somewhere.",
+      "text_sha256": "c52e3dcf8f4cf559796db375cf4c182b543aa239ffa9c05fb71fe79b576eaefa",
+      "detector": {
+        "stage": "STAGE_SUCCESS",
+        "text": "I’d put Brainspotting in this layer because sometimes there just isn’t a good story yet. You might have a feeling in your body, an image, an impulse, or this sense that something *huge* is happening, but if somebody asks you to explain exactly what it’s about, you can’t. Brainspotting doesn’t necessarily require you to figure all that out first. It uses where you’re looking, focused attention, awareness of what’s happening in your body, and the therapist’s attunement to stay with the material even when words aren’t coming very easily.\nThis is also one of those therapies that can overlap with inner-child work. You could use Brainspotting in a relatively gentle, resource-oriented way first, or carefully approach things bit by bit. That’s quite different from diving straight into some intensely charged developmental material. So where it belongs depends partly on how you’re actually using it.\nI’m especially interested in Brainspotting for the kind of trauma that feels diffuse or very early, where your body seems to know something your conscious mind can’t quite explain. The same goes for trauma that hasn’t shifted much from just thinking and talking about it, or those weird emotional knots where you know *something* is there but can’t put your finger on the story. You don’t necessarily have to explain the whole thing for the session to go somewhere.",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 0,
+        "windows": [
+          {
+            "text": "I’d put Brainspotting in this layer because sometimes there just isn’t a good story yet. You might have a feeling in your body, an image, an impulse, or this sense that something *huge* is happening, but if somebody asks you to explain exactly what it’s about, you can’t. Brainspotting doesn’t necessarily require you to figure all that out first. It uses where you’re looking, focused attention, awareness of what’s happening in your body, and the therapist’s attunement to stay with the material even when words aren’t coming very easily.\nThis is also one of those therapies that can overlap with inner-child work. You could use Brainspotting in a relatively gentle, resource-oriented way first, or carefully approach things bit by bit. That’s quite different from diving straight into some intensely charged developmental material. So where it belongs depends partly on how you’re actually using it.\nI’m especially interested in Brainspotting for the kind of trauma that feels diffuse or very early, where your body seems to know something your conscious mind can’t quite explain. The same goes for trauma that hasn’t shifted much from just thinking and talking about it, or those weird emotional knots where you know *something* is there but can’t put your finger on the story. You don’t necessarily have to explain the whole thing for the session to go somewhere.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999938011169434,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 1368,
+            "word_count": 241,
+            "token_length": 283,
+            "is_humanized": false,
+            "humanizer_score": 0.6220552325248718
+          }
+        ]
+      },
+      "text_source": {
+        "kind": "github_blob",
+        "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+        "blob_sha": "8a97164771e4ced3e18b920eba6886ef554ebdb2",
+        "text_sha256": "c52e3dcf8f4cf559796db375cf4c182b543aa239ffa9c05fb71fe79b576eaefa"
+      },
+      "section_id": "somatic-heldout-transformation-learning",
+      "budget_scope": "section"
+    }
+  ],
+  "audit_id": "somatic-heldout-transformation-learning-20260915",
+  "call_accounting": {
+    "audit_id": "somatic-heldout-transformation-learning-20260915",
+    "section_call_review_threshold": 6,
+    "section_call_cap": 6,
+    "sections": [
+      {
+        "section_id": "somatic-heldout-transformation-learning",
+        "model": "pangram-4",
+        "version": "4.0",
+        "budget_scope": "section",
+        "paid_api_calls": 1,
+        "cache_hits": 0,
+        "pending_resumes": 0,
+        "estimated_credits": 1,
+        "estimated_cost_usd": 0.05,
+        "hard_cap_applies": true,
+        "cap": 6,
+        "review_threshold": 6,
+        "owner_override_active": false,
+        "owner_override_reason": null,
+        "paid_calls_to_human": null,
+        "estimated_credits_to_human": null,
+        "first_human_measurement_key": null
+      }
+    ]
+  }
+}
