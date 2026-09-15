@@ -112,6 +112,25 @@ Use it when a competent cold read is genuinely uncertain whether the passage rem
 
 Skip it when the candidate plainly still looks model-generated and the detector cannot change the next decision.
 
+### Detector instability versus production acceptance
+
+A repeated Human/AI flip on the **same exact bytes** is evidence that the detector is unstable near that boundary. Preserve the repeat distribution and do not misstate it as proof of AI authorship.
+
+That evidentiary uncertainty is separate from the production acceptance criterion. When Joel's humanization target requires Pangram to recognize the intended delivery boundary solidly as Human, a candidate already shown to flip AI across fresh exact repeats is **not** an accepted endpoint merely because most repeats were Human. Do not average contradictory labels into a pass.
+
+The correct response is:
+
+1. preserve the exact repeated outcomes and evaluator/version/boundary identity;
+2. keep meaning, fidelity, owner language, and architecture above detector optimization;
+3. if a credible realization-level repair exists, continue faithful humanization rather than preserving the borderline candidate on the theory that the AI result was only noise;
+4. use unpaid cold editorial review before another production detector call;
+5. test the natural reader-visible delivery boundary rather than endlessly optimizing arbitrarily short snippets;
+6. use repeat measurements selectively when instability is already demonstrated or when a repeat will change the acceptance decision.
+
+This does **not** repeal the known-green calibration guard. Exact prose with a reliable current Human baseline should not be reopened merely because a heuristic says it looks model-shaped. The rule here applies when current exact evidence itself is contradictory or when the owner explicitly requires robustness beyond a single result.
+
+Current exact case evidence: `state/generation/INNER-CHILD-EPISODE003-STABILITY-20260915.md`.
+
 ## Current corpus limitations
 
 Version 1 starts conservatively.
