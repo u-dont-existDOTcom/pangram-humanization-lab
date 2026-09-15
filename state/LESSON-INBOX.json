@@ -4865,6 +4865,29 @@
           "section_id": "somatic-se-thought-source"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-heldout-transformation-learning-20260915",
+      "created_at_utc": "2026-09-15T02:44:35.400024+00:00",
+      "experiment_id": "somatic-heldout-transformation-learning-20260915-h1",
+      "id": "Q-d4b0ca8a48d3ad30",
+      "sections": [
+        "somatic-heldout-transformation-learning"
+      ],
+      "source_path": "state/experiments/somatic-heldout-transformation-learning-20260915-h1-results.json",
+      "source_ref": "e3c82041afb533edd8327c6137ccea9edea90b42",
+      "source_sha256": "d02a080b32b97a9fd29f291bafdc4ecb4379b2214a66c3da033ea77088852a11",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "H1",
+          "prediction_short": "AI",
+          "section_id": "somatic-heldout-transformation-learning"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
