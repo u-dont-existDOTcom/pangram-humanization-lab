@@ -5,12 +5,39 @@
   "last_error": "",
   "measurement_key": "somatic-hidden-human-signal-ab-20260914-stage3_P17-R2L",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Those therapies do show meaningful benefits for many people in terms of reducing hyperarousal, and sometimes dissociation. But there are two principal limitations to them that Peter Levine, et al. have identified. On the one hand, as Levine notes, exposure desensitization therapy can itself be re-traumatizing, which may be insufficiently represented in the positive evidence, because reasons for dropout and adverse events were often poorly or inconsistently reported. On the other hand, even when these trauma-memory approaches are effective, they are working against the body’s existing understanding by establishing new cognitive-behavioral patterns that suppress prior conditioned fear responses. That can produce a reduction of symptoms without resolving the root problem.",
+    "version": "4.0",
+    "windows": [
+      {
+        "ai_assistance_score": 0.00804805476218462,
+        "confidence": "High",
+        "end_index": 779,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Those therapies do show meaningful benefits for many people in terms of reducing hyperarousal, and sometimes dissociation. But there are two principal limitations to them that Peter Levine, et al. have identified. On the one hand, as Levine notes, exposure desensitization therapy can itself be re-traumatizing, which may be insufficiently represented in the positive evidence, because reasons for dropout and adverse events were often poorly or inconsistently reported. On the other hand, even when these trauma-memory approaches are effective, they are working against the body’s existing understanding by establishing new cognitive-behavioral patterns that suppress prior conditioned fear responses. That can produce a reduction of symptoms without resolving the root problem.",
+        "token_length": 140,
+        "word_count": 114
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "d8cb9ef8-4d48-4864-80d8-9193666e28f8",
   "text": "Those therapies do show meaningful benefits for many people in terms of reducing hyperarousal, and sometimes dissociation. But there are two principal limitations to them that Peter Levine, et al. have identified. On the one hand, as Levine notes, exposure desensitization therapy can itself be re-traumatizing, which may be insufficiently represented in the positive evidence, because reasons for dropout and adverse events were often poorly or inconsistently reported. On the other hand, even when these trauma-memory approaches are effective, they are working against the body’s existing understanding by establishing new cognitive-behavioral patterns that suppress prior conditioned fear responses. That can produce a reduction of symptoms without resolving the root problem.\n",
   "text_sha256": "4d24753c88e4c7ede0d36e1ac3e506cec680e0d2e9c0a2013080e0415d32254f",
-  "updated_utc": "2026-09-15T00:10:10.727868+00:00"
+  "updated_utc": "2026-09-15T00:10:14.392870+00:00"
 }
