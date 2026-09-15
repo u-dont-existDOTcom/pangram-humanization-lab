@@ -1,7 +1,8 @@
 {
   "format": "owner-aligned-transformation-corpus-v1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "created_utc": "2026-09-15T13:30:00Z",
+  "updated_utc": "2026-09-15T19:30:00Z",
   "purpose": "Persist literal paragraph-level teaching episodes so fresh writers can retrieve the transformation itself rather than only abstract humanization rules.",
   "owner_correction": "Whole-article manual rewrites can confound realization changes with new or removed authorial thought. Paragraph-level rewrites that deliberately preserve the AI paragraph's thought are higher-value training evidence. When a model subsequently transfers the correction successfully, preserve that transfer as part of the same episode.",
   "alignment_classes": {
@@ -66,6 +67,40 @@
         "ai_variant": "Pangram 4 AI 1.0",
         "preservation": "All protected claims and attributions preserved; unexplained substantive deltas 0 in the controlled experiment.",
         "counterexamples": "Paragraph packing alone, compression without explicit synthesis, and colloquial explicit relation each remained Human; the risky effect was interactional rather than a single phrase."
+      },
+      "generation_demo_eligible": true
+    },
+    {
+      "id": "inner-child-chicken-and-egg-owner-aligned-20260915",
+      "alignment_class": "ALIGNED_SAME_THOUGHT",
+      "topic": "Inner child / difficulty accessing the adult role from inside the child-state",
+      "failure_tags": ["tidy_explanatory_skeleton", "model_polished_symptom_list", "detector_boundary_instability"],
+      "failed_model_text": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
+      "failed_model_text_sha256_no_terminal_newline": "95cd572da40a2588744d7958ec5fb3938880eb42de092fbfc9ed40ad7c7684d4",
+      "owner_aligned_after": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. But when you can't, it's like you sit there trying to be loving while your mind is becoming controlled again by the inherited critic voice, or you start going numb, throwing a fit, or panicking.",
+      "owner_aligned_after_sha256_no_terminal_newline": "04378a6a51cc40b8bab131f72480c28e8cc3969d16612f9ba0448cc1083d7ef1",
+      "provenance": {
+        "failed_model_text": "Chat-authored model candidate in Inner Child Therapy paragraph-level humanization loop",
+        "owner_aligned_after": "Joel owner-supplied rewrite explicitly offered as a Human same-thought realization",
+        "chronology": "model candidate -> owner detector judgment -> owner aligned rewrite -> exact-repeat detector stability experiment on model candidate",
+        "source_record": "u-dont-existDOTcom/joel-articles@task/inner-child-therapy-intake-20260915:articles/inner-child-therapy/experiments/EPISODE-003-RESULT-20260915.json"
+      },
+      "semantic_alignment": {
+        "classification": "ALIGNED_SAME_THOUGHT",
+        "note": "The governing thought and paragraph job are preserved. One local manifestation differs: the model/source route includes urge to escape, while the owner rewrite uses throwing a fit. Preserve that distinction rather than claiming byte-level semantic identity."
+      },
+      "evidence": {
+        "initial_model_candidate_owner_result": "AI / low confidence",
+        "owner_aligned_after_result": "Human / low confidence",
+        "model_candidate_repeat_stability": {
+          "detector": "Pangram 4.0",
+          "same_exact_bytes": true,
+          "runs": ["Human / Medium", "Human / Medium", "Human / Medium", "AI / Medium"],
+          "paid_api_calls": 4,
+          "cache_hits": 0,
+          "interpretation": "The candidate is detector-unstable near a decision boundary. This does not prove AI authorship, but it fails Joel's robust-Human production acceptance target. Majority-Human repeats are not an acceptance rule."
+        },
+        "production_disposition": "Reject the model-before as a production baseline because its exact repeat behavior is unstable. Treat the owner-after as the aligned teaching target; it is Human / low confidence but has not been repeat-stability-certified."
       },
       "generation_demo_eligible": true
     },
