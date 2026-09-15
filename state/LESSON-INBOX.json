@@ -4803,6 +4803,45 @@
           "section_id": "somatic-se-generation-1"
         }
       ]
+    },
+    {
+      "audit_id": "somatic-fcra-generation-test-20260915",
+      "created_at_utc": "2026-09-15T00:28:58.558683+00:00",
+      "experiment_id": "somatic-fcra-generation-test-20260915-stage2",
+      "id": "Q-897a064ee9f853c4",
+      "sections": [
+        "somatic-se-generation-1"
+      ],
+      "source_path": "state/experiments/somatic-fcra-generation-test-20260915-stage2-results.json",
+      "source_ref": "faf594762f28eddc803b8c08880e3c61cf28304d",
+      "source_sha256": "d78d5b36821bb26d79af86a86498a4b42614d5ecc02ff4c90a883a3efc99bff6",
+      "status": "pending",
+      "variants": [
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "O-original-model-source",
+          "prediction_short": "AI",
+          "section_id": "somatic-se-generation-1"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "C-scope-relaxed",
+          "prediction_short": "AI",
+          "section_id": "somatic-se-generation-1"
+        },
+        {
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.0,
+          "id": "D-minimum-transform",
+          "prediction_short": "AI",
+          "section_id": "somatic-se-generation-1"
+        }
+      ]
     }
   ],
   "format": "lesson-review-v1"
