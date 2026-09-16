@@ -609,6 +609,31 @@ def run_inputs(
                 field = wait_for_authenticated_detector_input(page, probe=immediate_probe)
                 stage = "fill_input"
                 field.fill(str(item["text"]))
+
+                # Pangram can show a promotional Gmail-integration dialog over the
+                # detector after the dashboard loads. Dismiss this known non-detector
+                # modal before reserving a paid action so it cannot intercept the
+                # detector click and create a false ambiguous-submission state.
+                stage = "dismiss_obstructing_marketing_dialog"
+                wait_for_timeout = getattr(page, "wait_for_timeout", None)
+                if callable(wait_for_timeout):
+                    wait_for_timeout(1000)
+                locate = getattr(page, "locator", None)
+                gmail_dialog = None
+                if callable(locate):
+                    try:
+                        gmail_dialog = locate(
+                            '[role="dialog"][aria-label="AI detection in your Gmail inbox"]'
+                        )
+                    except (AssertionError, AttributeError):
+                        # Minimal deterministic test doubles may only implement the
+                        # body locator used by report capture. Real Playwright pages
+                        # accept arbitrary CSS selectors here.
+                        gmail_dialog = None
+                if gmail_dialog is not None and gmail_dialog.count() and gmail_dialog.first.is_visible():
+                    page.keyboard.press("Escape")
+                    gmail_dialog.first.wait_for(state="hidden", timeout=3000)
+
                 stage = "locate_detector_action"
                 button = _legacy.gui_core.detection_button(page)
 
