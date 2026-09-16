@@ -45,6 +45,35 @@ When this process is intentionally reused or tested, verify all of the following
 8. **Adversarial cold audit** — identify the strongest remaining attacks on the candidate, including plausible stronger alternatives and why they were rejected.
 9. **Detector only after editorial admission** — do not spend Pangram while a concrete model-shaped defect is still believed present.
 
+## Episode 008 R7 result — method fidelity is not sufficient by itself
+
+R7 was the first Episode 008 pass to reproduce this method fingerprint faithfully across a real owner-turn boundary. It remained preservation-clean and froze the prior known-green somatic material. Joel's Pangram screenshot nevertheless showed 1719 UI words split as:
+
+- 334 AI / High from the opening;
+- 32 Human Written / Medium beginning `Sometimes you need more bottom-up...`;
+- 1353 AI / High beginning `If your body is still too clenched for tal...`.
+
+By displayed segment word share, that is approximately 98.14% AI / 1.86% Human. Therefore the method fingerprint is **not a guarantee of detector success on a long practical-guide boundary**. It is an execution discipline that makes failures more interpretable and produces cleaner local teaching evidence.
+
+A text-first prediction frozen before deliberate screenshot inspection correctly anticipated the broad red opening, a tiny somatic Human island—especially the `Sometimes you need more bottom-up...` paragraph—and a broad red tail beginning at the roadmap transition. Because the screenshot was attached in the same turn, this is non-isolated prediction evidence, not a genuinely independent blind test. The useful fact is narrower: the critic can now localize the large-scale guide-shape failure much better than the generator can remove it.
+
+## Minimal aligned owner repair versus broad voice dump
+
+Current owner proposal: if further model-only minimal repair stalls, prefer **small same-thought owner edits** over a broad rough audio/voice dump for the purpose of teaching the humanization transformation.
+
+This is strongly consistent with the existing retrieval-first alignment classes:
+
+- A minimal owner edit that preserves essentially the same thought can be captured as `ALIGNED_SAME_THOUGHT`, giving a clean literal model-before -> owner-after pair.
+- A broad audio/voice dump is likely to add, remove, reprioritize, reroute, or contextualize thought. That can be excellent authorial source material, but it will often classify as `OWNER_REAUTHORING` rather than clean realization evidence.
+
+Therefore the current order for **generation learning** is:
+
+1. try one bounded model minimal-repair pass when the critic has a specific, preservation-safe hypothesis;
+2. if it remains red, ask Joel for minimal same-thought corrections to selected spans and capture each aligned pair prospectively;
+3. use broader audio/voice input for Target #2 ownerization, new authorial cognition, or when the thought itself—not merely its realization—is missing.
+
+This order is provisional until more aligned repairs transfer successfully, but it is methodologically cleaner than treating all fresh owner language as equivalent training evidence.
+
 ## General lesson
 
 **Method identity must be structural, not label-based.**
@@ -60,7 +89,7 @@ This matters especially when several factors can be confused:
 - preservation gating;
 - post-generation adversarial audit.
 
-A failure of one variant does not falsify another unless the relevant factors actually match.
+A failure of one variant does not falsify another unless the relevant factors actually match. Conversely, a faithful method reproduction that still fails Pangram falsifies the claim that the method alone is sufficient for that boundary; do not respond by silently weakening method identity or inventing another label for the same execution.
 
 ## Relationship to retrieval-first owner teaching
 
@@ -73,5 +102,7 @@ The existing episode rule preserves literal before/after/transfer prose. This me
 - `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-007-OWNER-SENTENCE-REWRITE-GUIDE-20260916.md`
 - `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-008-R3-TO-R4-SENTENCE-REPAIR-GUIDE-20260916.md`
 - `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-008-R6-TO-R7-POSITIVE-SENTENCE-REPAIR-GUIDE-20260916.md`
+- `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-008-R7-OWNER-SCREENSHOT-RESULT-20260916.json`
+- `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-008-R7-TO-R8-MINIMAL-REPAIR-GUIDE-20260916.md`
 
-The Episode 008 R7 detector outcome is still pending at the time this lesson is recorded. Therefore the method fingerprint is process evidence, not yet proof that this exact long-boundary application passes Pangram.
+Episode 008 R8 detector outcome remains pending. The current lesson is process evidence plus one negative long-boundary result; it is not yet proof that the proposed minimal-repair pass will succeed.
