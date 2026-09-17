@@ -1,9 +1,9 @@
 # Positive prose calibration — active retrieval entry point
 
 Date: 2026-09-17
-Status: **SOURCE-VERIFIED DEVELOPMENT CALIBRATION / R17 WHOLE-SUBSECTION TRANSFER FAILED / USE DIFFERENT COMPOSITION ARCHITECTURE**
+Status: **SOURCE-VERIFIED DEVELOPMENT CALIBRATION / R17 WHOLE-SUBSECTION TRANSFER FAILED / OWNER-CALIBRATED V2 ACTIVE / USE DIFFERENT COMPOSITION ARCHITECTURE**
 
-Joel requested recovery and study of the actual Human/AI prose comparisons and successful revision sequences, rather than another expanding list of prohibitions. The recovery pass assembled and verified that material. A subsequent fresh R17 writer used the richer calibration plus direct owner cadence guidance and still produced a strongly staircase-shaped subsection. Therefore the bundle remains useful calibration evidence, but the proposition that this whole-subsection writer interface is now portable enough for the current target is not supported.
+Joel requested recovery and study of the actual Human/AI prose comparisons and successful revision sequences, rather than another expanding list of prohibitions. The recovery pass assembled and verified that material. A subsequent fresh R17 writer used the richer calibration plus direct owner cadence guidance and still produced a strongly staircase-shaped subsection. Therefore the bundle remains useful calibration evidence, but the proposition that this whole-subsection writer interface is portable enough for the current target is not supported.
 
 ## Exact bundle
 
@@ -15,13 +15,24 @@ Verified receipt commit: `4b492f07ba85a38c145974c8fc0b241b7c40d3d7`
 
 Directory: `state/generation/positive-calibration-20260917/`
 
-### Writer/calibration input
+## Active writer calibration
 
-Read [the literal writer-calibration packet](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/ef62a22df58565575b3cc25419fe13fa0b5f0509/state/generation/positive-calibration-20260917/WRITER-CALIBRATION.md). It contains substantial before/after demonstrations and the complete owner Catch-the-Hook benchmark.
+Use:
 
-For broad-section calibration, also read [the complete successful My Journey reference](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/ef62a22df58565575b3cc25419fe13fa0b5f0509/state/generation/positive-calibration-20260917/JOURNEY-POSITIVE-REFERENCE.md). This is successful model revision in an externally supervised campaign, not natural-owner prose relabeled because it tested Human.
+`state/generation/OWNER-CALIBRATED-WRITER-REFERENCE-V2-20260917.md`
 
-Activate both current direct owner calibrations:
+This is now the primary practical writer/calibration entry because Joel's direct visual review reclassified several Pangram-Human model passages as still visibly AI-shaped. In particular:
+
+- the historically successful EFT model transfer is detector/transfer evidence but **not** a clean positive style target;
+- `The same principle extends...` and `This also happens...` both still look AI to Joel despite different historical detector outcomes;
+- the explanatory completion sentence `The problem, then...` remained Human in its controlled detector boundary but makes the prose look more AI to Joel;
+- the complete My Journey endpoint remains important successful-campaign evidence, but not every sentence is now treated as pristine style calibration.
+
+Primary positive style references in v2 favor owner-written/owner-final prose such as Catch the Hook, the inner-monologue repair, adult-child distrust, `If you're already in it`, and `Tough Love`.
+
+For broad campaign history, the immutable [complete successful My Journey reference](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/ef62a22df58565575b3cc25419fe13fa0b5f0509/state/generation/positive-calibration-20260917/JOURNEY-POSITIVE-REFERENCE.md) remains available as externally supervised model-revision evidence.
+
+Also activate both direct owner calibrations:
 
 - `state/generation/OWNER-CALIBRATION-MARCHING-EFFICIENCY-20260917.md`
 - `state/generation/OWNER-CALIBRATION-READER-EXAMPLES-AND-CLIPPED-VERDICTS-20260917.md`
@@ -35,9 +46,9 @@ The second adds two production corrections:
 
 Direct owner rule for fresh humanization generation: do not use the clipped standalone interjections `Great.`, `Fine.`, or `Good.` Existing owner-authored/locked prose is not automatically changed because it contains one.
 
-Use the actual task's live source, owner corrections and destination for content. These examples do not authorize transplanting their facts, autobiography, jokes, metaphors, language or conclusions. The compact packet is the default calibration input; the full archive is not a mandatory prompt dump.
+Use the actual task's live source, owner corrections and destination for content. Calibration examples never authorize transplanting their facts, autobiography, jokes, metaphors, language or conclusions.
 
-### Supervisor and recovery input
+## Supervisor and recovery input
 
 - [Study of the actual transformations and counterexamples](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/ef62a22df58565575b3cc25419fe13fa0b5f0509/state/generation/positive-calibration-20260917/STUDY.md).
 - [Twenty classified study cases across fourteen source families](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/ef62a22df58565575b3cc25419fe13fa0b5f0509/state/generation/positive-calibration-20260917/CURRICULUM.json).
@@ -45,6 +56,7 @@ Use the actual task's live source, owner corrections and destination for content
 - [Source-verification receipt](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/4b492f07ba85a38c145974c8fc0b241b7c40d3d7/state/generation/positive-calibration-20260917/RECOVERY-VERIFICATION.json).
 - `state/generation/OWNER-CALIBRATION-MARCHING-EFFICIENCY-20260917.md` — owner visual calibration on sustained maximum efficiency and manual-like cadence.
 - `state/generation/OWNER-CALIBRATION-READER-EXAMPLES-AND-CLIPPED-VERDICTS-20260917.md` — owner correction on reader examples, optional owner-example slots, and the `Great./Fine./Good.` generated-humanization ban.
+- `state/generation/OWNER-CALIBRATED-WRITER-REFERENCE-V2-20260917.md` — corrected positive/negative writer reference after Joel visually reclassified several detector-Human model examples.
 
 These are development cases, **not clean independent style-only pairs**. The curriculum distinguishes aligned transformations, owner reauthoring, successful model revision, Human-to-Human comparisons, correlated controlled cells, and recent failures without detector results.
 
