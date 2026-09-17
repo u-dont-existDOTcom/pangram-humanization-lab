@@ -1,0 +1,102 @@
+name: One-shot idiolect to Pangram cached pre-screen
+# actions-cost-class: one-shot-public-research
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/idiolect-pangram-prescreen-one-shot.yml
+      - state/IDIOLECT-PANGRAM-PRESCREEN-SPEC-2026-08-19.json
+      - src/pangram_lab/idiolect_pangram_prescreen.py
+      - tests/test_idiolect_pangram_prescreen.py
+      - src/pangram_lab/idiolect.py
+
+permissions:
+  contents: read
+
+concurrency:
+  group: idiolect-pangram-prescreen-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out Pangram lab with history
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Install package and run focused regressions
+        run: |
+          python -m pip install -q -e '.[test]'
+          python -m pytest -q \
+            tests/test_idiolect.py \
+            tests/test_idiolect_pangram_prescreen.py
+
+      - name: Fetch frozen evidence branch without detector calls
+        run: |
+          git fetch --no-tags origin \
+            automation/pangram-fixed-batch:refs/remotes/origin/automation/pangram-fixed-batch
+          git rev-parse origin/automation/pangram-fixed-batch
+
+      - name: Fetch pinned natural-owner profile source
+        run: |
+          git clone -q https://github.com/u-dont-existDOTcom/joel-articles.git /tmp/joel-articles
+          git -C /tmp/joel-articles checkout -q 441dde496fa5501d2bf4f6e1717da64933f015eb
+          test "$(git -C /tmp/joel-articles rev-parse HEAD)" = \
+            "441dde496fa5501d2bf4f6e1717da64933f015eb"
+
+      - name: Calibrate idiolect pre-screen on cached Pangram-4 evidence
+        run: |
+          python -m pangram_lab.idiolect_pangram_prescreen \
+            state/IDIOLECT-PANGRAM-PRESCREEN-SPEC-2026-08-19.json \
+            --repo-root . \
+            --profile-source /tmp/joel-articles/project-sources/cancer-and-research-samples.txt \
+            --out .local/idiolect-pangram-prescreen/result.json
+
+      - name: Enforce zero-call and metadata-only result boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.local/idiolect-pangram-prescreen/result.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          assert data['status'] == 'cached-idiolect-to-pangram-prescreen-calibration-complete'
+          assert data['report_type'] == 'detector-call-prescreen-calibration-not-IER'
+          assert data['pangram_calls_made'] == 0
+          assert data['privacy']['raw_candidate_text_in_output'] is False
+          assert data['privacy']['raw_profile_text_in_output'] is False
+          assert data['cache']['unique_eligible_text_count'] > 0
+          assert data['profile']['sample_count'] == 3
+          assert data['profile']['word_count'] >= 3000
+          assert data['interpretation_guardrails']['false_safe_is_primary_error'] is True
+          assert data['interpretation_guardrails']['do_not_replace_pangram_unless_primary_substitution_authorized'] is True
+          encoded = json.dumps(data, ensure_ascii=False, sort_keys=True)
+          for forbidden in ('"text":', '"raw_text":', '"canonical_text":', 'task_id'):
+              if forbidden in encoded:
+                  raise SystemExit(f'Forbidden output content: {forbidden}')
+          PY
+
+      - name: Upload metadata-only calibration result
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: idiolect-pangram-prescreen-cached-calibration
+          path: .local/idiolect-pangram-prescreen/result.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Verify no repository-visible evidence mutation
+        run: |
+          git restore --worktree -- src/pangram_humanization_lab.egg-info || true
+          if git status --short --untracked-files=all | grep -v '^?? .local/' | grep -q .; then
+            echo 'Calibration unexpectedly modified repository-visible files.' >&2
+            git status --short --untracked-files=all >&2
+            exit 1
+          fi
