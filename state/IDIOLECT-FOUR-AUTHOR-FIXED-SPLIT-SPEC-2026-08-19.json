@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "status": "fixed-split-source-design-not-calibrated",
+  "purpose": "Run one source-group-disjoint, exact-150-word LUAR benchmark with Joel as target, Stian as owner-identified hard negative, and David plus Greg as ordinary matched controls.",
+  "method_decision": "adapt-existing-LUAR-mean-profile-nearest-cosine-and-hard-negative-strata",
+  "word_budget_per_document": 150,
+  "profile_documents_per_author": 4,
+  "holdout_documents_per_author": 2,
+  "model": {
+    "model_id": "rrivera1849/LUAR-MUD",
+    "revision": "e95c2b6e5b03e5e47f4a3e041afa9bde0a50b73d",
+    "expected_upstream_transformer_revision": "48bffbbd27bf028ecdd0cd55abb51236ec12ef1b",
+    "max_token_length": 512,
+    "batch_size": 8,
+    "device": "cpu"
+  },
+  "sources": {
+    "joel_register_spec": "state/IDIOLECT-FOUR-AUTHOR-JOEL-SOURCE-SPEC-2026-08-19.json",
+    "control_queue": "state/IDIOLECT-LUAR-CONTROL-TRAIN-QUEUE-2026-08-18.json",
+    "greg_candidate_result": "state/IDIOLECT-GREG-GOODE-CONTROL-CANDIDATE-RESULT-2026-08-19.json",
+    "greg_candidate_source_spec": "state/IDIOLECT-GREG-GOODE-CONTROL-PROFILE-CANDIDATE-SPEC-2026-08-18.json"
+  },
+  "authors": [
+    {
+      "speaker": "Joel Rosenblum",
+      "role": "target-author",
+      "acquisition_route": "joel-register-corpus",
+      "profile_sample_ids": [
+        "tafka-2015-02-02-true-love",
+        "tafka-2015-02-23-right-view-humility",
+        "tafka-2016-06-08-already-perfect",
+        "tafka-2019-03-08-plant-spirits"
+      ],
+      "holdout_sample_ids": [
+        "tafka-2019-08-02-buddhism-sect",
+        "tafka-2020-04-19-consciousness-conditions"
+      ]
+    },
+    {
+      "speaker": "Stian Gudmundsen Høiland",
+      "role": "owner-identified-hard-negative",
+      "acquisition_route": "dharma-control-queue",
+      "profile_sample_ids": [
+        "luar-stian-experience-skandha-ignorance",
+        "luar-stian-fabrications-middle-way",
+        "luar-stian-two-techniques",
+        "luar-stian-did-buddha-teach-atman"
+      ],
+      "holdout_sample_ids": [
+        "luar-stian-experience-actualization-anatta",
+        "luar-stian-causality-self-perfection"
+      ],
+      "expected_canonical_sha256": {
+        "luar-stian-experience-skandha-ignorance": "98c3541be0c35bebc857cb7186bcade7ccbf57cc588df392dc9eb025fc174737",
+        "luar-stian-fabrications-middle-way": "c2affb4753cd750a56cec682c183a812c97faaaeff2767bf65329e178efa52e2",
+        "luar-stian-two-techniques": "db459d4aef9c9690621cf6f49c5b38622c24a62501e93baabc4499812cd673e3",
+        "luar-stian-did-buddha-teach-atman": "484a4af3415012191d610ba36f9026f3ca5f49544fb283475c0a245e5e3083dc",
+        "luar-stian-experience-actualization-anatta": "047ffe7614f8a5b15e5cc1ed6973b65b4341be217844222f5f9b5172271b071a",
+        "luar-stian-causality-self-perfection": "8886ee9d25d29e4ae943fc11ee48cf085b5ee4c31f225c0b998234db1e531afe"
+      }
+    },
+    {
+      "speaker": "David Vardy",
+      "role": "ordinary-matched-control",
+      "acquisition_route": "dharma-control-queue",
+      "profile_sample_ids": [
+        "luar-david-lucid-dreams",
+        "luar-david-pure-experiencing",
+        "luar-david-two-techniques",
+        "luar-david-integrating-activities-dreams"
+      ],
+      "holdout_sample_ids": [
+        "luar-david-osho",
+        "luar-david-when-seeing-expressed"
+      ],
+      "expected_canonical_sha256": {
+        "luar-david-lucid-dreams": "8fd96ff397d253bebaf8db3feae5632ff376913765c852417303687c5ad3cebc",
+        "luar-david-pure-experiencing": "702c19b2821766ca83b896b3a8f81799279e099491f5811c33f948528e0bb3d5",
+        "luar-david-two-techniques": "acbac5bd8b7b8a00d8ee78b1a72c32e1632f4a77fa5512435e998cd2915fdbac",
+        "luar-david-integrating-activities-dreams": "1eca5ef542acff6992c7dce62b7ab9627e0c9a1e1805e782d50530ad3b8c793e",
+        "luar-david-osho": "179388074a8b8edff36aee498d174eae1f4160842312cbadda1cb9e53f7f399a",
+        "luar-david-when-seeing-expressed": "1cb599286525e6b0634306c2e44e713c73cf07123674c5d62e6f9dc28c4f410e"
+      }
+    },
+    {
+      "speaker": "Greg Goode",
+      "role": "ordinary-matched-control-candidate",
+      "acquisition_route": "greg-explicit-source-set",
+      "profile_sample_ids": [
+        "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64",
+        "dcp-greg-goode-faith-pure-land-and-karma-99",
+        "dcp-greg-goode-dzogchen-empowerment-definition-of-62",
+        "dcp-greg-goode-spiritual-diversity-20"
+      ],
+      "holdout_sample_ids": [
+        "dcp-greg-goode-shentong-yogacara-and-dzogchen-59",
+        "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52"
+      ],
+      "expected_canonical_sha256": {
+        "dcp-greg-goode-madhyamaka-and-advaita-vedanta-64": "f9e9adb9bc3b40c18531716ddc67bef6f1357d7eeb397c7957e7b614e8f8467c",
+        "dcp-greg-goode-faith-pure-land-and-karma-99": "4a18e19362c3f52b1a4b3be89574c758413cda7e5fb165c55a53071ceaf816d6",
+        "dcp-greg-goode-dzogchen-empowerment-definition-of-62": "6b11bad5957728c4ffc5edcd2f318441892315e58ad57ec3465f91255a6df353",
+        "dcp-greg-goode-spiritual-diversity-20": "1428f3b56ea5ce10cb401acef0d202438b1978452fe3f160572607acdf8809fa",
+        "dcp-greg-goode-shentong-yogacara-and-dzogchen-59": "2a8bcfcc202baa08c68976f1a59d0e302147de9fe3fea0d52b3412ab938999b6",
+        "dcp-greg-goode-on-ug-krishnamurti-dharma-seals-of-non-52": "272775e445c956b07115cc555864cfaa6238f9ef0fc9c53470f64be8aaab3f54"
+      },
+      "quality_limit": "One profile source has possible-dialogue/ambiguous-line flags and both heldouts are only 156–190 words before exact normalization. Treat all Greg results as provisional."
+    }
+  ],
+  "reporting": {
+    "bootstrap_iterations": 10000,
+    "bootstrap_seed": 20260819,
+    "required_outputs": [
+      "pairwise profile cosine matrix",
+      "complete per-holdout cosine vectors",
+      "full four-author confusion and accuracy",
+      "Joel-vs-Stian hard-negative diagnostic",
+      "Joel-vs-David-and-Greg ordinary-control diagnostic",
+      "without-Stian sensitivity analysis",
+      "per-document Joel target rank and margins",
+      "source-group and canonical-hash identities",
+      "no raw prose or embeddings"
+    ]
+  },
+  "interpretation_rules": [
+    "This is a fixed-split original-text diagnostic, not IER.",
+    "Stian remains the primary hard negative and may not be removed from the headline candidate set.",
+    "Greg is provisional until the source-quality limitations are resolved or replicated.",
+    "No abstention or operational threshold may be defined from eight holdouts alone.",
+    "No result transfers to Romance or another register without separate evidence."
+  ]
+}
