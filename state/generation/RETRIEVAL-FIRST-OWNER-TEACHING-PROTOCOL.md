@@ -18,6 +18,16 @@ The corpus for these episodes is:
 
 `state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json`
 
+## Current positive calibration bundle — 2026-09-17
+
+For current Joel humanization generation, read `state/generation/POSITIVE-CALIBRATION-ENTRYPOINT-20260917.md`. It routes to the source-verified richer bundle, its literal writer packet, complete successful My Journey reference, classified curriculum, and verification receipt at immutable commits.
+
+The old corpus's two `generation_demo_eligible: true` entries are not the entirety of useful positive evidence. The expanded curriculum contains twenty classified study cases across fourteen source families, fifteen correlated controlled cells, and the full thirteen-candidate My Journey campaign. These are not twenty independent same-thought pairs.
+
+Use the compact literal writer packet, plus the complete successful section when broad-section calibration is relevant. Retrieve further examples by rhetorical job rather than loading the entire archive or a longer prohibition list. Keep successful model revision, natural owner prose, owner reauthoring, and controlled reverse experiments correctly labeled. A reauthoring example may calibrate authorial cognition or serve as source authority at its proper destination; it is not proof of style-only transformation.
+
+Counterexamples must constrain the critic: direct advice, reassurance, sources, contrast, and a shared broad outline occur in successful prose too. Diagnose an actual reader-facing defect rather than treating these forms as universal AI rules. The richer bundle repairs evidence retrieval; it has not yet demonstrated prospective generation improvement or a permanent model skill.
+
 ## Alignment gate
 
 Before adding an owner rewrite as a generation demonstration, classify it.
