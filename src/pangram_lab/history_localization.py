@@ -118,6 +118,23 @@ def _linebreak_removed_starts(exact_text: str) -> list[int]:
     return [index for index, char in enumerate(exact_text) if char not in "\r\n"]
 
 
+def _linebreak_run_collapsed_terminal_trimmed_starts(exact_text: str) -> list[int]:
+    """Map indices after collapsing linebreak runs and trimming the final run."""
+    starts: list[int] = []
+    in_linebreak_run = False
+    for index, char in enumerate(exact_text):
+        if char in "\r\n":
+            if not in_linebreak_run:
+                starts.append(index)
+            in_linebreak_run = True
+        else:
+            starts.append(index)
+            in_linebreak_run = False
+    while starts and exact_text[starts[-1]] in "\r\n":
+        starts.pop()
+    return starts
+
+
 def _raw_boundary_from_linebreak_removed(starts: list[int], exact_text: str, index: int) -> int | None:
     if index < 0 or index > len(starts):
         return None
@@ -142,45 +159,61 @@ def _validated_overall_window_bindings(
     if not isinstance(windows, list) or not windows:
         return {}
 
-    index_map = _linebreak_removed_starts(exact_text)
-    bindings: dict[int, BoundSpan] = {}
-    previous_end: int | None = None
+    coordinate_maps = (
+        (
+            "pangram_linebreak_removed_contiguous_windows+all_previews",
+            _linebreak_removed_starts(exact_text),
+        ),
+        (
+            "pangram_linebreak_run_collapsed_terminal_trimmed_contiguous_windows+all_previews",
+            _linebreak_run_collapsed_terminal_trimmed_starts(exact_text),
+        ),
+    )
+    for binding_mode, index_map in coordinate_maps:
+        coordinate_text = "".join(exact_text[raw_index] for raw_index in index_map)
+        bindings: dict[int, BoundSpan] = {}
+        previous_end: int | None = None
+        for position, window in enumerate(windows):
+            if not isinstance(window, dict):
+                bindings = {}
+                break
+            start = _safe_int(window.get("start_index"))
+            end = _safe_int(window.get("end_index"))
+            selected = _selected_text(window, exact_text)
+            if selected is None or start is None or end is None or start < 0 or end <= start:
+                bindings = {}
+                break
+            if position == 0 and start != 0:
+                bindings = {}
+                break
+            if previous_end is not None and start != previous_end:
+                bindings = {}
+                break
 
-    for position, window in enumerate(windows):
-        if not isinstance(window, dict):
-            return {}
-        start = _safe_int(window.get("start_index"))
-        end = _safe_int(window.get("end_index"))
-        selected = _selected_text(window, exact_text)
-        if selected is None or start is None or end is None or start < 0 or end <= start:
-            return {}
-        if position == 0 and start != 0:
-            return {}
-        if previous_end is not None and start != previous_end:
-            return {}
+            raw_start = _raw_boundary_from_linebreak_removed(index_map, exact_text, start)
+            raw_end = _raw_boundary_from_linebreak_removed(index_map, exact_text, end)
+            if raw_start is None or raw_end is None or raw_end <= raw_start:
+                bindings = {}
+                break
 
-        raw_start = _raw_boundary_from_linebreak_removed(index_map, exact_text, start)
-        raw_end = _raw_boundary_from_linebreak_removed(index_map, exact_text, end)
-        if raw_start is None or raw_end is None or raw_end <= raw_start:
-            return {}
+            text_key, preview = selected
+            if not coordinate_text.startswith(preview, start):
+                bindings = {}
+                break
 
-        text_key, preview = selected
-        if not exact_text.startswith(preview, raw_start):
-            return {}
+            raw_window = exact_text[raw_start:raw_end]
+            bindings[position] = BoundSpan(
+                start=raw_start,
+                end=raw_end,
+                text_key=text_key,
+                text=raw_window,
+                binding_mode=binding_mode,
+            )
+            previous_end = end
 
-        raw_window = exact_text[raw_start:raw_end]
-        bindings[position] = BoundSpan(
-            start=raw_start,
-            end=raw_end,
-            text_key=text_key,
-            text=raw_window,
-            binding_mode="pangram_linebreak_removed_contiguous_windows+all_previews",
-        )
-        previous_end = end
-
-    if previous_end != len(index_map):
-        return {}
-    return bindings
+        if bindings and len(bindings) == len(windows) and previous_end == len(index_map):
+            return bindings
+    return {}
 
 
 def _window_index_from_path(path: tuple[str, ...]) -> int | None:
@@ -353,8 +386,10 @@ def localize_history_record(
         1
         for item in spans
         if any(
-            evidence.get("binding_mode")
-            == "pangram_linebreak_removed_contiguous_windows+all_previews"
+            str(evidence.get("binding_mode", "")).startswith("pangram_linebreak_")
+            and str(evidence.get("binding_mode", "")).endswith(
+                "_contiguous_windows+all_previews"
+            )
             for evidence in item.get("evidence", [])
             if isinstance(evidence, dict)
         )
@@ -374,9 +409,10 @@ def localize_history_record(
         "unresolved_candidate_shapes": unresolved,
         "transport_index_note": (
             "Current long-document response.overall.windows are accepted as full windows only when the entire "
-            "collection covers Pangram's linebreak-stripped coordinate space contiguously and every stored preview "
-            "matches exactly at its mapped raw start. Pangram window word_count is preserved as metadata but is not "
-            "assumed to use Python whitespace tokenization."
+            "collection covers one observed Pangram linebreak-normalized coordinate space contiguously and every "
+            "stored preview matches exactly at its mapped raw start. Supported proven transforms remove linebreaks "
+            "or collapse each linebreak run and trim the terminal run. Pangram window word_count is preserved as "
+            "metadata but is not assumed to use Python whitespace tokenization."
         ),
         "privacy_note": (
             "No submitted text, localized span text, UUID, private report URL, cookies, browser storage, "

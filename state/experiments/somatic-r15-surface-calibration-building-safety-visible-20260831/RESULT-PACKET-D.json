@@ -1,0 +1,135 @@
+{
+  "format": "somatic-r15-chat-surface-experiment-result-d-v1",
+  "experiment_id": "somatic-r15-surface-calibration-building-safety-visible-20260831",
+  "directive": "SOMATIC-R15-SURFACE-004",
+  "article_branch": "task/somatic-r15-clean-continuation-20260830",
+  "article_head_read": "0f3aa6fbf8997fd36179fecac5eec27e2b2f84e4",
+  "detector_branch": "task/somatic-r15-exact-recovery-20260830",
+  "detector_starting_head": "9a7b5b539529d6dbffdaa368cbcb6a0b551547f1",
+  "detector_head_before_result_packet": "36b35e07f6b869b682713a28fc7c5bfc28d89c93",
+  "source_candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31",
+  "article_mutations": 0,
+  "registered_master_mutations": 0,
+  "detector": {
+    "model": "pangram-4",
+    "version": "4.0"
+  },
+  "accounting": {
+    "A_control_reused": 1,
+    "A_B_C_resubmissions": 0,
+    "D_exact_completed_results_reused": 0,
+    "D_cache_hits": 0,
+    "new_paid_api_calls": 1,
+    "ambiguous_calls": 0,
+    "whole_document_calls": 0,
+    "stable_section_family_calls_after_completion": 6,
+    "stable_section_family_call_cap": 6,
+    "stable_section_family_state": "CLOSED_6_OF_6"
+  },
+  "comparison_scores": {
+    "A_humanizer_score": 0.8235310912132263,
+    "B_humanizer_score": 0.8177533745765686,
+    "C_humanizer_score": 0.60973060131073
+  },
+  "A_control": {
+    "input_sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+    "result_evidence_path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/RESULT-PACKET.json",
+    "result": {
+      "stage": "STAGE_SUCCESS",
+      "version": "4.0",
+      "fraction_human": 0.0,
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "window": {
+        "end_index": 2333,
+        "word_count": 386,
+        "token_length": 496,
+        "ai_assistance_score": 0.9999893307685852,
+        "humanizer_score": 0.8235310912132263
+      }
+    }
+  },
+  "D_variant": {
+    "id": "D-visible-chat-replacement",
+    "preflight": "PASS",
+    "preservation_assertion": "PASS",
+    "input": {
+      "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/inputs/D-visible-chat-replacement.txt",
+      "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-004/D-reader-visible-chat-replacement.txt",
+      "source_commit": "153541c907aed930c09c8c458fb33812c684295e",
+      "git_blob": "14d2ffc7ba2d5e47d721467a263aac6baed2702a",
+      "sha256": "58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02",
+      "words": 364,
+      "unicode_characters": 2218,
+      "utf8_bytes": 2246,
+      "terminal_newline": true,
+      "exact_source_bytes_match": true,
+      "reader_visible_artifact_gate": "PASS"
+    },
+    "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement",
+    "cache_state_before_call": "ABSENT",
+    "cache_status": "success",
+    "task_id": "b36e7e23-a987-42e9-8731-f1c1b8c761f5",
+    "created_utc": "2026-08-31T02:06:07.038593+00:00",
+    "updated_utc": "2026-08-31T02:06:13.151048+00:00",
+    "result": {
+      "stage": "STAGE_SUCCESS",
+      "version": "4.0",
+      "prediction": "We believe that this entire text is AI.",
+      "prediction_short": "AI",
+      "headline": "AI Generated",
+      "fraction_human": 0.0,
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "num_human_segments": 0,
+      "num_ai_segments": 1,
+      "num_ai_assisted_segments": 0,
+      "windows": [
+        {
+          "label": "AI-Generated",
+          "confidence": "High",
+          "start_index": 0,
+          "end_index": 2207,
+          "word_count": 373,
+          "token_length": 472,
+          "is_humanized": false,
+          "ai_assistance_score": 0.9994112849235535,
+          "humanizer_score": 0.26555395126342773,
+          "text_sha256": "3ec160e96603e689ed2c0a5bebfd945319894b10b47c1431d0a5000c77e3907a",
+          "text_unicode_characters": 2207,
+          "text_utf8_bytes": 2235,
+          "exact_text_pointer": "/result/windows/0/text"
+        }
+      ]
+    },
+    "cache_evidence": {
+      "path": "cache/pangram-4/4.0/58bd3babc5467fb4cba3792defd02624eb65366b69e9f65a6a2b7a8ba2f5db02/somatic-r15-surface-calibration-building-safety-visible-20260831-D-visible-chat-replacement.json",
+      "sha256": "9d8e43cc789715612940100c56f113921c3273a9432e234761d2bf9c0fd2508b"
+    }
+  },
+  "raw_D_minus_A_delta": {
+    "fraction_human": 0.0,
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "num_human_segments": 0,
+    "num_ai_segments": 0,
+    "num_ai_assisted_segments": 0,
+    "window_count": 0,
+    "window_end_index": -126,
+    "window_word_count": -13,
+    "window_token_length": -24,
+    "window_ai_assistance_score": -0.0005780458450317383,
+    "window_humanizer_score": -0.5579771399497986
+  },
+  "raw_D_minus_B_delta": {
+    "window_humanizer_score": -0.5521994233131409
+  },
+  "raw_D_minus_C_delta": {
+    "window_humanizer_score": -0.34417665004730225
+  },
+  "commits": {
+    "D_inputs_preflight": "f28eec8f566093fa46e34431110170f300b8b530",
+    "D_task_checkpoint": "c2d0f27f3c7ef0493ca25e2ef786f98deb8a9764",
+    "D_result": "36b35e07f6b869b682713a28fc7c5bfc28d89c93"
+  }
+}

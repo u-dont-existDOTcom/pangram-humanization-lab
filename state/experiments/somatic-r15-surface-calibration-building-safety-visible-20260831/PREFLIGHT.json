@@ -1,0 +1,40 @@
+{
+  "format": "somatic-r15-chat-surface-experiment-preflight-v2",
+  "experiment_id": "somatic-r15-surface-calibration-building-safety-visible-20260831",
+  "source_article_head": "39033fc6642fdbaff753d58069ef97cf9577a118",
+  "source_candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31",
+  "detector_model": "pangram-4",
+  "expected_version": "4.0",
+  "paid_call_cap": 2,
+  "whole_document_call_authorized": false,
+  "preservation_assertion": "PASS_INHERITED_FROM_EXPERIMENT_001",
+  "transport_gate": "READER_VISIBLE_EXACT_BYTES_PASS",
+  "variants": [
+    {
+      "id": "A-visible-control",
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control",
+      "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/inputs/A-visible-control.txt",
+      "sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+      "words": 378,
+      "unicode_characters": 2346,
+      "utf8_bytes": 2374,
+      "terminal_newline": true,
+      "source_identity": "EXACT_CHAT_COMMITTED_BYTES_PASS",
+      "reader_visible_artifact_gate": "PASS",
+      "pre_submit_state": "EXACT_RESULT_ABSENT_TASK_ABSENT_RESERVATION_ABSENT"
+    },
+    {
+      "id": "B-visible-chat-replacement",
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement",
+      "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/inputs/B-visible-chat-replacement.txt",
+      "sha256": "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+      "words": 390,
+      "unicode_characters": 2361,
+      "utf8_bytes": 2387,
+      "terminal_newline": true,
+      "source_identity": "EXACT_CHAT_COMMITTED_BYTES_PASS",
+      "reader_visible_artifact_gate": "PASS",
+      "pre_submit_state": "EXACT_RESULT_ABSENT_TASK_ABSENT_RESERVATION_ABSENT"
+    }
+  ]
+}

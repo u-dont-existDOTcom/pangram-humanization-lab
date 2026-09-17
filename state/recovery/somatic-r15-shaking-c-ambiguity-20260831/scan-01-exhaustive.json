@@ -1,0 +1,127 @@
+{
+  "applicationMetadataInspection": "NOT_EXPORTED_NO_SUPPORTED_PRIVACY_SAFE_METADATA_SURFACE",
+  "completedAt": "2026-08-31T04:23:46.566495Z",
+  "dedicatedBrowserProcessPresentBeforeLaunch": false,
+  "detailReadStatus": null,
+  "detectorSubmissionAttempted": false,
+  "exactHistoryResultRecovered": false,
+  "failureTime": "2026-08-31T04:07:24.622478Z",
+  "historyApi": {
+    "candidatesAtOrAfterReservation": 1,
+    "candidatesScanned": 270,
+    "listRowsWithExactBinding": 0,
+    "pageResultCounts": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "pagesScanned": 27,
+    "paginationExhausted": true,
+    "reportedTotalCount": 270,
+    "requestAttempts": 27,
+    "requestStatusCounts": {
+      "ok": 27
+    },
+    "uniqueRecordIdentitiesObserved": 270
+  },
+  "historyResultIdentity": null,
+  "historyUi": {
+    "exhaustionRule": "four_stable_scroll_shapes_without_load_button",
+    "historyLinksObserved": 0,
+    "scrollIterations": 5
+  },
+  "inputSha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+  "inputWords": 293,
+  "minutesAfterFailure": 16.366,
+  "nearMatchDiagnostics": [
+    {
+      "comparison": {
+        "authorized_character_count": 1631,
+        "authorized_word_count": 293,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 300,
+            "character_delta": -1331,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 56,
+            "word_delta": -237
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 0
+    }
+  ],
+  "originalRunArtifacts": [
+    {
+      "name": "failure.json",
+      "sha256": "b7520674a9263dac4d03dac06de7ba9533013aadc9c6f34e81273cc1238db3f4",
+      "utf8Bytes": 1103
+    },
+    {
+      "name": "failure.png",
+      "sha256": "192c5257225e853a51e83981c108cc785b6d44d0b3053815af13051d6f0c677d",
+      "utf8Bytes": 223752
+    },
+    {
+      "name": "reservation.json",
+      "sha256": "ab293bad9dbc43b46235cd9a1b77714869440964683b4a9ea2a12bf204d0d713",
+      "utf8Bytes": 984
+    }
+  ],
+  "privacyNote": "No UUID, private report URL, cookie, storage value, authorization header, unrelated prompt, or raw response is persisted.",
+  "providerOrTaskIdentityRecovered": false,
+  "reservationTime": "2026-08-31T04:04:17.182276Z",
+  "restoredTabStateBeforeNavigation": [
+    {
+      "detectorButtonState": "NOT_FOUND",
+      "exactInputPresent": false,
+      "title": "",
+      "urlClass": "ABOUT_BLANK_OR_INTERNAL",
+      "visibleStateMarkers": []
+    },
+    {
+      "detectorButtonState": "NOT_FOUND",
+      "exactInputPresent": false,
+      "title": "",
+      "urlClass": "ABOUT_BLANK_OR_INTERNAL",
+      "visibleStateMarkers": []
+    }
+  ],
+  "result": null,
+  "scanId": "SOMATIC-C-EXHAUSTIVE-01",
+  "schemaVersion": 1,
+  "startedAt": "2026-08-31T04:23:16.175446Z",
+  "windows": []
+}

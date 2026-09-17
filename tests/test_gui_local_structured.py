@@ -153,6 +153,8 @@ def test_run_inputs_reserves_before_click_and_completes_from_exact_history_recor
     assert result["parsed"]["summary_source"] == "stored_history_structured_result"
     assert result["parsed"]["summary"]["fraction_human"] == 0.9
     assert result["history_api_exact_identity"]["transport_match_mode"] == "exact_utf8"
+    assert result["report_url"] == "https://www.pangram.com/history/<uuid>"
+    assert UUID not in json.dumps(result)
 
     directory = local.gui_core.measurement_dir(output_root, result["input_sha256"])
     reservation = json.loads((directory / "submission-reservation.json").read_text(encoding="utf-8"))

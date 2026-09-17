@@ -1,0 +1,309 @@
+{
+  "authorized_text_sha256": "0c7136a1831112a044a3f86e993890346296e3de72154bc0f2332e084e138a7a",
+  "authorized_word_count": 385,
+  "detector_submission_attempted": false,
+  "direct_report_used": true,
+  "evidence_source": "stored_history_read_only_localization",
+  "history_list_candidate_count": 0,
+  "history_record_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "0c7136a1831112a044a3f86e993890346296e3de72154bc0f2332e084e138a7a",
+    "authorized_word_count": 385,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "0c7136a1831112a044a3f86e993890346296e3de72154bc0f2332e084e138a7a",
+    "exact_word_count": 385,
+    "record_model_id": null,
+    "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+    "record_prediction_prob": 0.37931451201438904,
+    "stored_text_sha256": "0c7136a1831112a044a3f86e993890346296e3de72154bc0f2332e084e138a7a",
+    "stored_word_count": 385,
+    "transport_match_mode": "exact_utf8"
+  },
+  "input_sha256": "0c7136a1831112a044a3f86e993890346296e3de72154bc0f2332e084e138a7a",
+  "localized_span_count": 0,
+  "model": "pangram-4",
+  "objects_scanned": 20,
+  "privacy_note": "No submitted text, localized span text, UUID, private report URL, cookies, browser storage, headers, or credentials are persisted. Offsets are 0-based and end-exclusive.",
+  "purpose": "stored_history_localization_only_not_document_score_authority",
+  "schema_version": 3,
+  "source_roots_scanned": [
+    "response.overall",
+    "response.in_page"
+  ],
+  "spans": [],
+  "status": "no_bound_spans",
+  "transport": "local_playwright",
+  "transport_index_note": "Current long-document response.overall.windows are accepted as full windows only when the entire collection covers one observed Pangram linebreak-normalized coordinate space contiguously and every stored preview matches exactly at its mapped raw start. Supported proven transforms remove linebreaks or collapse each linebreak run and trim the terminal run. Pangram window word_count is preserved as metadata but is not assumed to use Python whitespace tokenization.",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "unresolved_candidate_shapes": [
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[0]"
+      ],
+      "keys": [
+        "ai_graph_visualization",
+        "ai_likelihood",
+        "confidence",
+        "edit_level",
+        "editlens",
+        "end_index",
+        "is_humanized",
+        "label",
+        "prediction",
+        "start_index",
+        "text",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_graph_visualization": null,
+        "ai_likelihood": 0.19986213743686676,
+        "confidence": "High",
+        "end_index": 1206,
+        "is_humanized": false,
+        "label": "Human",
+        "prediction": null,
+        "start_index": 0,
+        "window_index": 0,
+        "word_count": 216
+      },
+      "text_field_lengths": {
+        "text": 100
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[0]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[1]"
+      ],
+      "keys": [
+        "ai_graph_visualization",
+        "ai_likelihood",
+        "confidence",
+        "edit_level",
+        "editlens",
+        "end_index",
+        "is_humanized",
+        "label",
+        "prediction",
+        "start_index",
+        "text",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_graph_visualization": null,
+        "ai_likelihood": 0.6127768754959106,
+        "confidence": "High",
+        "end_index": 2133,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "prediction": null,
+        "start_index": 1206,
+        "window_index": 1,
+        "word_count": 173
+      },
+      "text_field_lengths": {
+        "text": 100
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "windows",
+        "[1]",
+        "editlens"
+      ],
+      "keys": [
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[0]"
+      ],
+      "keys": [
+        "end_index",
+        "page_index",
+        "start_index",
+        "window_indices"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "end_index": 2133,
+        "page_index": 0,
+        "start_index": 0
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "overall",
+        "pages",
+        "[0]",
+        "window_indices"
+      ],
+      "keys": [
+        "end",
+        "start"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {},
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[0]"
+      ],
+      "keys": [
+        "ai_likelihood",
+        "confidence",
+        "editlens",
+        "end_index",
+        "humanizer_score",
+        "is_humanized",
+        "label",
+        "llm_prediction",
+        "start_index",
+        "text",
+        "token_length",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_likelihood": 0.19986213743686676,
+        "confidence": "High",
+        "end_index": 1206,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human",
+        "start_index": 0,
+        "token_length": 262,
+        "window_index": 0,
+        "word_count": 216
+      },
+      "text_field_lengths": {
+        "text": 1206
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[0]",
+        "editlens"
+      ],
+      "keys": [
+        "is_humanized",
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "is_humanized": false,
+        "prediction_text": "Human Written"
+      },
+      "text_field_lengths": {}
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[1]"
+      ],
+      "keys": [
+        "ai_likelihood",
+        "confidence",
+        "editlens",
+        "end_index",
+        "humanizer_score",
+        "is_humanized",
+        "label",
+        "llm_prediction",
+        "start_index",
+        "text",
+        "token_length",
+        "window_index",
+        "word_count"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "ai_likelihood": 0.6127768754959106,
+        "confidence": "High",
+        "end_index": 2133,
+        "humanizer_score": 0.05079656094312668,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 1206,
+        "token_length": 201,
+        "window_index": 1,
+        "word_count": 173
+      },
+      "text_field_lengths": {
+        "text": 927
+      }
+    },
+    {
+      "field_path": [
+        "response",
+        "in_page",
+        "windows",
+        "[1]",
+        "editlens"
+      ],
+      "keys": [
+        "is_humanized",
+        "prediction_text"
+      ],
+      "reason": "no_exact_transport_binding",
+      "scalar_metadata": {
+        "is_humanized": false,
+        "prediction_text": "AI-Generated"
+      },
+      "text_field_lengths": {}
+    }
+  ],
+  "validated_full_overall_window_count": 0,
+  "word_count": 385
+}

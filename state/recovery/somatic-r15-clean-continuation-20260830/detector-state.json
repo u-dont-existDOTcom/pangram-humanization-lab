@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "task_id": "somatic-r15-clean-continuation-20260830",
+  "classification": "EXACT_R15_RESULT_EXISTS",
+  "pre_submission_classification": "EXACT_R15_NEVER_SUBMITTED",
+  "classified_at_date": "2026-08-30",
+  "detector_submission_attempted_during_recovery": false,
+  "candidate": {
+    "repository": "u-dont-existDOTcom/joel-articles",
+    "git_blob": "e6210eb2742de156f0bd7b01fdde269f9b9625c6",
+    "sha256": "e7a541e75cf06878c206bcd7d78440bb73593a0a5a2169df1446ce42ad7186ee"
+  },
+  "exact_current_boundary": {
+    "sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+    "word_count": 3548,
+    "character_count": 20989,
+    "utf8_bytes": 21087,
+    "result_cached": true,
+    "ambiguous_submission_block": false,
+    "exact_history_record_found": true,
+    "paid_gui_submission_reservation_found": true
+  },
+  "standard_history_recovery": {
+    "status": "no_exact_match",
+    "history_list_candidate_count": 10,
+    "evidence_path": "state/gui-runs/pangram-4/9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707/failure.json",
+    "evidence_commit": "159eb202",
+    "read_only": true
+  },
+  "browser_history_recovery": {
+    "pangram_report_route_count": 55,
+    "authenticated_records_inspected_before_historical_target": 36,
+    "current_exact_history_record_found": false,
+    "historical_target_found": true,
+    "evidence_path": "state/recovery/somatic-r15-clean-continuation-20260830/history-hash-probe.json",
+    "read_only": true,
+    "privacy": "No report UUID/URL, stored prompt, cookies, browser storage, credentials, unrelated history, or raw response persisted."
+  },
+  "historical_near_boundary": {
+    "sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+    "word_count": 3548,
+    "character_count": 20992,
+    "utf8_bytes": 21090,
+    "candidate_source_sha256": "e7a541e75cf06878c206bcd7d78440bb73593a0a5a2169df1446ce42ad7186ee",
+    "result_commit": "d9462f2e93a808c2da4195352e0a7b9a016c94b7",
+    "result_path": "state/gui-runs/pangram-4/d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e/result.json",
+    "detector": {
+      "model": "pangram-4",
+      "version": "4.0",
+      "stage": "STAGE_SUCCESS",
+      "fraction_human": 0.1548029035,
+      "fraction_ai": 0.8451970816,
+      "fraction_ai_assisted": 0.0
+    },
+    "difference_from_current": {
+      "exactly_reconstructed": true,
+      "insert_source_only_markdown_italics_markers": 4,
+      "italicized_terms": [
+        "subcortical",
+        "restimulation"
+      ],
+      "remove_one_terminal_newline": true,
+      "accepted_transport_normalization": false,
+      "reason_not_reusable": "The four interior asterisks are non-whitespace source markup and prevent exact or bounded transport-normalized identity."
+    }
+  },
+  "github_recovery": {
+    "exact_hash_local_ref_occurrences": "recovery branches only",
+    "organization_search_result": "Only joel-articles recovery PR #73; no indexed detector result or reservation."
+  },
+  "exact_measurement": {
+    "status": "complete",
+    "transport": "authenticated local Playwright/Brave Pangram GUI",
+    "detector_submission_attempted": true,
+    "submitted_at_utc": "2026-08-30T01:53:07.631898Z",
+    "reservation_commit": "73d60339",
+    "result_commit": "134f5191a8142cf91427d22098439763ba276597",
+    "result_path": "state/gui-runs/pangram-4/9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707/result.json",
+    "localization_path": "state/gui-runs/pangram-4/9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707/localization.json",
+    "window_map_path": "state/recovery/somatic-r15-clean-continuation-20260830/exact-result-window-map.json",
+    "detector": {
+      "model": "pangram-4",
+      "version": "4.0",
+      "stage": "STAGE_SUCCESS",
+      "headline": "AI Detected",
+      "record_prediction_probability": 0.8571645617485046,
+      "fraction_human": 0.1547368467,
+      "fraction_ai": 0.8452631831,
+      "fraction_ai_assisted": 0.0
+    },
+    "history_binding": {
+      "transport_match_mode": "exact_utf8",
+      "stored_text_sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+      "stored_word_count": 3548
+    },
+    "further_paid_measurement_authorized": false
+  },
+  "related_paid_history": {
+    "audit_id": "somatic-r15-whole-article-gui-20260825",
+    "ledger_path": "state/pangram-call-ledgers/somatic-r15-whole-article-gui-20260825.json",
+    "historical_paid_gui_calls_before_final_candidate": 3,
+    "total_related_paid_gui_calls": 4,
+    "historical_inputs": [
+      "6b9c090a2faf10e472f73b747a916cec1169b60d27564de2558628c04a0cb48d",
+      "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+      "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707"
+    ],
+    "accounting_rule": "Preserve both related paid calls; a corrected representation does not reset historical accounting."
+  },
+  "final_candidate_recovery": {
+    "classification": "EXACT_FINAL_RESULT_EXISTS",
+    "pre_submission_classification": "EXACT_FINAL_NEVER_SUBMITTED",
+    "classified_at_utc": "2026-08-30T13:38:37Z",
+    "candidate": {
+      "git_blob": "082b613f5d5217ebb8b289ee0460a788a66e2639",
+      "sha256": "7600316ff4895f694e430b317a750a80c4ed2848b474bf475757ae3c6f0e26b6"
+    },
+    "exact_boundary": {
+      "git_blob": "31cabafedfe2433dd6fa8fd1badc31f31491bc28",
+      "sha256": "129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e",
+      "word_count": 3585,
+      "character_count": 21260,
+      "utf8_bytes": 21356,
+      "result_cached": true,
+      "ambiguous_submission_block": false,
+      "exact_history_record_found": true,
+      "paid_gui_submission_reservation_found": true
+    },
+    "authenticated_status": {
+      "verified": true,
+      "detector_input_editable": true,
+      "submitted": false,
+      "profile_kind": "dedicated_persistent_automation_profile"
+    },
+    "standard_history_recovery": {
+      "status": "no_exact_match",
+      "history_list_candidate_count": 10,
+      "evidence_path": "state/gui-runs/pangram-4/129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e/failure.json",
+      "evidence_commit": "8c9e7e4b2a31dd6820ad0abc7a33d31644774d70",
+      "read_only": true
+    },
+    "browser_history_recovery": {
+      "pangram_report_route_count": 60,
+      "authenticated_records_inspected": 60,
+      "current_exact_history_record_found": false,
+      "evidence_path": "state/recovery/somatic-r15-clean-continuation-20260830/final-candidate-history-hash-probe.json",
+      "read_only": true
+    },
+    "github_recovery": {
+      "exact_hash_local_ref_occurrences": "none before this recovery receipt",
+      "organization_code_search_count": 0,
+      "organization_issue_and_pr_search_count": 0
+    },
+    "detector_submission_attempted_during_recovery": false,
+    "exact_measurement": {
+      "status": "complete",
+      "transport": "authenticated local Playwright/Brave Pangram GUI",
+      "submitted_at_utc": "2026-08-30T13:40:43.555365Z",
+      "reservation_commit": "0b20ac9dabb14d0b0c6cc12d6d7ffcf47fc99b9f",
+      "result_commit": "ab98314386b6d289a8425aff857b8b15eb663ee5",
+      "result_path": "state/gui-runs/pangram-4/129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e/result.json",
+      "display_highlight_map_path": "state/recovery/somatic-r15-clean-continuation-20260830/final-candidate-display-highlight-map.json",
+      "detector": {
+        "model": "pangram-4",
+        "version": "4.0",
+        "stage": "STAGE_SUCCESS",
+        "headline": "AI Detected",
+        "record_prediction_probability": 0.8541160225868225,
+        "fraction_human": 0.1381948739,
+        "fraction_ai": 0.861805141,
+        "fraction_ai_assisted": 0.0
+      },
+      "history_binding": {
+        "transport_match_mode": "exact_utf8",
+        "stored_text_sha256": "129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e",
+        "stored_word_count": 3585
+      },
+      "structured_localization": {
+        "status": "failed_closed_after_complete_result",
+        "attempts": 2,
+        "detector_submission_attempted": false,
+        "failure_stage": "bind_exact_history_record",
+        "failure_path": "state/gui-runs/pangram-4/129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e/localization-failure.json"
+      },
+      "further_paid_measurement_authorized": false
+    },
+    "eligible_new_gui_measurements": 0,
+    "required_transport": "authenticated local Playwright/Brave Pangram GUI",
+    "api_forbidden_for_this_full_document": true,
+    "next_action": "Return the exact result, displayed localization and cold editorial diagnosis to the existing supervisor as WORKER_SUPERVISION_REQUEST SOMATIC-R15-POSTREPAIR-005. Do not begin a detector-led rewrite."
+  },
+  "articlewide_candidate_recovery": {
+    "classification": "EXACT_ARTICLEWIDE_NEVER_SUBMITTED",
+    "classified_at_utc": "2026-08-30T23:01:38Z",
+    "candidate": {
+      "repository": "u-dont-existDOTcom/joel-articles",
+      "git_blob": "68d62fd3a613e2f51941da3a640bfaaeba78f0e9",
+      "sha256": "9bf286b53945c22fb57ca0e5b57c7f4c8c411de829be07bcf07d85d6f77eccd0"
+    },
+    "exact_boundary": {
+      "git_blob": "10db8f1d586c5e93fe794e50f6b3e16a1bf721ee",
+      "sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+      "word_count": 3585,
+      "character_count": 20969,
+      "utf8_bytes": 21061,
+      "result_cached": false,
+      "ambiguous_submission_block": false,
+      "exact_history_record_found": false,
+      "paid_gui_submission_reservation_found": false
+    },
+    "authenticated_status": {
+      "verified": true,
+      "detector_input_editable": true,
+      "submitted": false,
+      "profile_kind": "dedicated_persistent_automation_profile"
+    },
+    "standard_history_recovery": {
+      "status": "no_exact_match",
+      "history_list_candidate_count": 0,
+      "evidence_path": "state/gui-runs/pangram-4/fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a/failure.json",
+      "evidence_commit": "7dc746e2",
+      "read_only": true
+    },
+    "browser_history_recovery": {
+      "browser_history_candidate_count": 61,
+      "authenticated_records_inspected": 43,
+      "current_exact_history_record_found": false,
+      "target_history_record_found": false,
+      "evidence_path": "state/recovery/somatic-r15-clean-continuation-20260830/articlewide-history-hash-probe.json",
+      "read_only": true,
+      "privacy": "No report UUID/URL, stored prompt, cookies, browser storage, credentials, unrelated history, or raw response persisted."
+    },
+    "github_recovery": {
+      "organization_code_search_count": 0,
+      "organization_issue_and_pr_search_count": 0,
+      "exact_hash_local_ref_occurrences": "recovery evidence only"
+    },
+    "detector_submission_attempted_during_recovery": false,
+    "authorization": {
+      "decision_id": "SOMATIC-R15-OBJECTIVE-006",
+      "decision_response_sha256": "10147a9654109186e913e134ac86793f421f73f8675e190e47576cb60ba3702f",
+      "maximum_related_paid_gui_call_ordinal": 5,
+      "eligible_new_gui_measurements": 1,
+      "required_transport": "authenticated local Playwright/Brave Pangram GUI",
+      "api_forbidden_for_this_full_document": true
+    },
+    "related_paid_gui_calls_before_measurement": 4,
+    "eligible_new_gui_measurements": 0,
+    "exact_measurement": {
+      "status": "complete",
+      "transport": "authenticated local Playwright/Brave Pangram GUI",
+      "submitted_at_utc": "2026-08-30T23:02:45.082186Z",
+      "captured_at_utc": "2026-08-30T23:02:57.877870Z",
+      "reservation_commit": "5323c33e53199c628786b4a6fe6c3c512ebe09ed",
+      "result_commit": "a8ba76025f4baef77fb90a8a736ecbeef74ad86c",
+      "result_path": "state/gui-runs/pangram-4/fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a/result.json",
+      "display_highlight_map_path": "state/recovery/somatic-r15-clean-continuation-20260830/articlewide-candidate-display-highlight-map.json",
+      "detector": {
+        "model": "pangram-4",
+        "version": "4.0",
+        "stage": "STAGE_SUCCESS",
+        "headline": "AI Detected",
+        "record_prediction_probability": 0.8717445135116577,
+        "fraction_human": 0.1231321841,
+        "fraction_ai": 0.8768678308,
+        "fraction_ai_assisted": 0.0
+      },
+      "history_binding": {
+        "transport_match_mode": "exact_utf8",
+        "stored_text_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+        "stored_word_count": 3585
+      },
+      "structured_localization": {
+        "status": "failed_closed_after_complete_result",
+        "detector_submission_attempted": false,
+        "failure_stage": "bind_exact_history_record",
+        "failure_commit": "425815983f7fb52034918ddb3c18c1ffb18be03d",
+        "failure_path": "state/gui-runs/pangram-4/fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a/localization-failure.json"
+      },
+      "further_paid_measurement_authorized": false
+    },
+    "next_action": "Return the exact result, display localization and cold diagnosis to the existing supervisor. Do not begin another rewrite or detector call without a matching decision."
+  },
+  "decision": {
+    "original_r15_exact_measurements_authorized": 1,
+    "original_r15_exact_measurements_consumed": 1,
+    "final_candidate_exact_measurements_authorized": 1,
+    "final_candidate_exact_measurements_consumed": 1,
+    "articlewide_candidate_exact_measurements_authorized": 1,
+    "articlewide_candidate_exact_measurements_consumed": 1,
+    "further_paid_measurement_authorized": false,
+    "current_authority": "SUPERVISOR_DECISION SOMATIC-R15-OBJECTIVE-006",
+    "current_authority_response_sha256": "10147a9654109186e913e134ac86793f421f73f8675e190e47576cb60ba3702f",
+    "required_transport": "authenticated local Playwright/Brave Pangram GUI",
+    "api_forbidden_for_this_full_document": true,
+    "next_required_action": "Send the exact result, display localization and cold diagnosis to the existing supervisor as a unique matching request; do not begin another rewrite or detector call without its decision.",
+    "required_before_click": [
+      "article cold-production preflight PASS",
+      "exact SHA-256 reverified",
+      "authenticated profile reverified read-only",
+      "exact cache and History rechecked",
+      "fresh durable submission reservation pushed"
+    ]
+  }
+}

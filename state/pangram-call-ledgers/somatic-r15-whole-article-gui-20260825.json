@@ -1,0 +1,81 @@
+{
+  "audit_id": "somatic-r15-whole-article-gui-20260825",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 6,
+  "current_authorization": {
+    "decision_id": "SOMATIC-R15-OBJECTIVE-006",
+    "decision_response_sha256": "10147a9654109186e913e134ac86793f421f73f8675e190e47576cb60ba3702f",
+    "authorized_boundary_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+    "authorized_paid_call_ordinal": 5,
+    "authorized_new_gui_measurements": 1,
+    "consumed_new_gui_measurements": 1,
+    "transport": "authenticated local Playwright/Brave Pangram GUI",
+    "api_forbidden_for_this_full_document": true
+  },
+  "sections": {
+    "whole-article-reader-visible\u001fpangram-4\u001f4.0": {
+      "cache_hits": 0,
+      "estimated_cost_usd": 1.0,
+      "estimated_credits": 20,
+      "events": [
+        {
+          "boundary_kind": "raw_markdown_diagnostic_not_reader_visible_certification",
+          "estimated_credits": 4,
+          "measurement_key": "gui:6b9c090a2faf10e472f73b747a916cec1169b60d27564de2558628c04a0cb48d",
+          "recorded_at_utc": "2026-08-25T14:34:13.154613Z",
+          "reservation_timing": "retrospective_from_exact_history_record_because_legacy_generic_runner_had_no_per_call_ledger",
+          "result_commit": "fd288c05bc0611fd27fe79538884be0ecf7a71af",
+          "text_sha256": "6b9c090a2faf10e472f73b747a916cec1169b60d27564de2558628c04a0cb48d",
+          "type": "paid_post_reserved",
+          "word_count": 3665
+        },
+        {
+          "estimated_credits": 4,
+          "measurement_key": "gui:d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+          "recorded_at_utc": "2026-08-25T14:56:36.027853+00:00",
+          "text_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+          "type": "paid_post_reserved",
+          "word_count": 3548
+        },
+        {
+          "boundary_kind": "exact_reader_visible_certification",
+          "estimated_credits": 4,
+          "measurement_key": "gui:9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+          "recorded_at_utc": "2026-08-30T01:53:07.631898Z",
+          "reservation_commit": "73d60339",
+          "result_commit": "134f5191a8142cf91427d22098439763ba276597",
+          "text_sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+          "type": "paid_post_reserved",
+          "word_count": 3548
+        },
+        {
+          "boundary_kind": "exact_supervisor_authorized_final_repair_candidate",
+          "estimated_credits": 4,
+          "measurement_key": "gui:129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e",
+          "recorded_at_utc": "2026-08-30T13:40:43.555365Z",
+          "reservation_commit": "0b20ac9dabb14d0b0c6cc12d6d7ffcf47fc99b9f",
+          "result_commit": "ab98314386b6d289a8425aff857b8b15eb663ee5",
+          "text_sha256": "129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e",
+          "type": "paid_post_reserved",
+          "word_count": 3585
+        },
+        {
+          "boundary_kind": "exact_supervisor_authorized_articlewide_humanization_candidate",
+          "estimated_credits": 4,
+          "measurement_key": "gui:fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+          "recorded_at_utc": "2026-08-30T23:02:57.877870Z",
+          "reservation_commit": "5323c33e53199c628786b4a6fe6c3c512ebe09ed",
+          "result_commit": "a8ba76025f4baef77fb90a8a736ecbeef74ad86c",
+          "text_sha256": "fc5a8e49c499c4e4165ff3e6aded4f26c88bacdd9475e9e799a482a19c7a504a",
+          "type": "paid_post_reserved",
+          "word_count": 3585
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 5,
+      "pending_resumes": 0,
+      "section_id": "whole-article-reader-visible",
+      "version": "4.0"
+    }
+  }
+}

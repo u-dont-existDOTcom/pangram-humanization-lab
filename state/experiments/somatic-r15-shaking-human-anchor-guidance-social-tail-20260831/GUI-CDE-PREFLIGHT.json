@@ -1,0 +1,92 @@
+{
+  "accounting_before_click": {
+    "exact_gui_ambiguous_actions": 0,
+    "exact_gui_never_submitted": 3,
+    "exact_gui_results_recovered": 0,
+    "maximum_new_short_gui_clicks": 3,
+    "new_api_calls_authorized": 0,
+    "whole_document_calls_authorized": 0
+  },
+  "article": {
+    "article_mutations": 0,
+    "candidate_git_blob": "6f9251f51d79a6b322b8c6f6cae95a9a5d80f760",
+    "candidate_path": "articles/somatic-therapies/experiments/R15-EFT-REPAIR-CANDIDATE-20260831.md",
+    "candidate_sha256": "5a6226ca0056610b4492de7713a43bb152dde1079d81b5c05896c70fcf138679",
+    "registered_master_mutations": 0
+  },
+  "c_api_prior_failure": {
+    "ambiguous": false,
+    "gui_action": false,
+    "retry_authorized": false,
+    "status": "HTTP_402_BEFORE_TASK_CREATION",
+    "task_id": ""
+  },
+  "detector": {
+    "authentication_read_only_check": "PASS",
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "browser": "Brave",
+    "dedicated_profile": true,
+    "model": "pangram-4",
+    "required_version": "4.0",
+    "starting_head": "8a82359db155de4871594d6e6b17d8b898c24893",
+    "transport": "local_playwright"
+  },
+  "directive": {
+    "article_head": "8b46107c5716a9cae7a2526502b2c4044ff6eba4",
+    "id": "SOMATIC-R15-SHAKING-GUI-COMPLETION-001",
+    "packet_git_blob": "c84829af11aed69603bc51bce891d0d963191fd6",
+    "packet_path": "tasks/somatic-r15-clean-continuation-20260830/CHAT-SURFACE-EXPERIMENT-008-GUI-COMPLETION.md"
+  },
+  "format": "somatic-r15-shaking-gui-cde-preflight-v1",
+  "preflight": "PASS",
+  "variants": {
+    "C": {
+      "blob": "2993757f24707297f1c8dd7b3fbf6c4e017e9e0b",
+      "bytes": 1641,
+      "characters": 1631,
+      "classification": "EXACT_GUI_NEVER_SUBMITTED",
+      "filename": "C-current-anchor.txt",
+      "history_api_records_observed": 56,
+      "history_candidates_inspected": 62,
+      "history_probe_path": "state/experiments/somatic-r15-shaking-human-anchor-guidance-social-tail-20260831/gui-preflight/C-history-probe.json",
+      "input_path": "state/experiments/somatic-r15-shaking-human-anchor-guidance-social-tail-20260831/inputs/C-current-anchor.txt",
+      "local_gui_ambiguous_failure_exists": false,
+      "local_gui_reservation_exists": false,
+      "local_gui_result_exists": false,
+      "sha256": "b36e1e46c06d764a080d407dce5412defe76ccb9202deb1a8a14e265acf40370",
+      "words": 293
+    },
+    "D": {
+      "blob": "261e9410bbc89e335a31f10e0e5e7e844788382e",
+      "bytes": 1848,
+      "characters": 1838,
+      "classification": "EXACT_GUI_NEVER_SUBMITTED",
+      "filename": "D-current-anchor-current-tail.txt",
+      "history_api_records_observed": 51,
+      "history_candidates_inspected": 62,
+      "history_probe_path": "state/experiments/somatic-r15-shaking-human-anchor-guidance-social-tail-20260831/gui-preflight/D-history-probe.json",
+      "input_path": "state/experiments/somatic-r15-shaking-human-anchor-guidance-social-tail-20260831/inputs/D-current-anchor-current-tail.txt",
+      "local_gui_ambiguous_failure_exists": false,
+      "local_gui_reservation_exists": false,
+      "local_gui_result_exists": false,
+      "sha256": "b27446d695044a6749a2780f7629599177160d4a619758784b915b3cdc013900",
+      "words": 328
+    },
+    "E": {
+      "blob": "ad9e793d8073f859b555d5e0262c651303e6972b",
+      "bytes": 1867,
+      "characters": 1857,
+      "classification": "EXACT_GUI_NEVER_SUBMITTED",
+      "filename": "E-current-anchor-direct-tail.txt",
+      "history_api_records_observed": 54,
+      "history_candidates_inspected": 62,
+      "history_probe_path": "state/experiments/somatic-r15-shaking-human-anchor-guidance-social-tail-20260831/gui-preflight/E-history-probe.json",
+      "input_path": "state/experiments/somatic-r15-shaking-human-anchor-guidance-social-tail-20260831/inputs/E-current-anchor-direct-tail.txt",
+      "local_gui_ambiguous_failure_exists": false,
+      "local_gui_reservation_exists": false,
+      "local_gui_result_exists": false,
+      "sha256": "75fb8426a498dcedb99bb7ed84d9f5a6e1653a29b6e2b7d5ff8f61fe5fb8563f",
+      "words": 333
+    }
+  }
+}

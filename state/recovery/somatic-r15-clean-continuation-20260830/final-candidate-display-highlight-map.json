@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "purpose": "displayed_pangram_ai_highlight_localization",
+  "document_score_authority": false,
+  "input_sha256": "129fee7e8ab844fcd65db38807841c51db9883d85ed5079c93323a01cf640f9e",
+  "word_count": 3585,
+  "character_count": 21260,
+  "utf8_bytes": 21356,
+  "detector": {
+    "model": "pangram-4",
+    "version": "4.0",
+    "stage": "STAGE_SUCCESS"
+  },
+  "display": {
+    "control_label": "AI Highlight",
+    "displayed_region_count": 3,
+    "summary_text": "AI-generated content appears throughout",
+    "capture_transport": "authenticated dedicated-profile read-only Playwright inspection of the completed History report",
+    "detector_submission_attempted": false
+  },
+  "regions": [
+    {
+      "display_index": 1,
+      "raw_character_start": 0,
+      "raw_character_end": 9429,
+      "raw_word_start": 0,
+      "raw_word_end": 1574,
+      "word_count": 1574,
+      "character_count": 9429,
+      "utf8_bytes": 9477,
+      "raw_span_sha256": "9784c96e1292006571ee215fcd49da57ad3cdef676577d85af582de927ecd662",
+      "start_anchor": "Introduction",
+      "end_anchor": "I do not mistake it for having finished the deeper trauma work."
+    },
+    {
+      "display_index": 2,
+      "raw_character_start": 10517,
+      "raw_character_end": 17442,
+      "raw_word_start": 1765,
+      "raw_word_end": 2919,
+      "word_count": 1154,
+      "character_count": 6925,
+      "utf8_bytes": 6951,
+      "raw_span_sha256": "19434747baea1f2ccfff69092807fabfb979ae9c0df96b6d8098d4b48fa205f2",
+      "start_anchor": "I did not try the linked class; my firsthand part is qigong, which has helped me move energy.",
+      "end_anchor": "and questions like forgiveness—when forgiveness is actually relevant—and life direction become less abstract."
+    },
+    {
+      "display_index": 3,
+      "raw_character_start": 18668,
+      "raw_character_end": 21258,
+      "raw_word_start": 3139,
+      "raw_word_end": 3585,
+      "word_count": 446,
+      "character_count": 2590,
+      "utf8_bytes": 2594,
+      "raw_span_sha256": "89e06bc926c8d4dc119b3ea2a02f2b0688f3abc834e3a22e51936010720a9386",
+      "start_anchor": "I care more about the hour-later version of me than the session-ending version.",
+      "end_anchor": "The extraordinary state does not rescue it."
+    }
+  ],
+  "binding_note": "The three report controls displayed these exact start/end anchors and continuous highlighted prose. Raw offsets and hashes were deterministically mapped back to the exact authorized boundary. The post-result structured History localizer could not rebind the record and failed closed, so this receipt is display-derived localization only and does not replace response.overall as score authority.",
+  "privacy_note": "No report UUID/URL, submitted prose body, cookies, browser storage, credentials, headers, or unrelated History records are persisted."
+}

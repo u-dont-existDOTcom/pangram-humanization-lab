@@ -1,0 +1,158 @@
+{
+  "format": "somatic-r15-chat-surface-experiment-result-v2",
+  "experiment_id": "somatic-r15-surface-calibration-building-safety-visible-20260831",
+  "article_branch": "task/somatic-r15-clean-continuation-20260830",
+  "article_head_read": "39033fc6642fdbaff753d58069ef97cf9577a118",
+  "detector_branch": "task/somatic-r15-exact-recovery-20260830",
+  "detector_starting_head": "c7009e7290546c195f5572ce37716b2721ba746b",
+  "detector_head_before_result_packet": "9e972bbd0eec594d93548eb7a7f4984ec1ececaf",
+  "source_candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31",
+  "preservation_assertion": "PASS_INHERITED_FROM_EXPERIMENT_001",
+  "transport_gate": "READER_VISIBLE_EXACT_BYTES_PASS",
+  "article_mutations": 0,
+  "registered_master_mutations": 0,
+  "detector": {
+    "model": "pangram-4",
+    "version": "4.0"
+  },
+  "accounting": {
+    "exact_completed_results_reused": 0,
+    "cache_hits": 0,
+    "new_paid_api_calls": 2,
+    "ambiguous_calls": 0,
+    "whole_document_calls": 0
+  },
+  "variants": [
+    {
+      "id": "A-visible-control",
+      "preflight": "PASS",
+      "input": {
+        "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/inputs/A-visible-control.txt",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-002/A-reader-visible-control.txt",
+        "sha256": "11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233",
+        "words": 378,
+        "unicode_characters": 2346,
+        "utf8_bytes": 2374,
+        "terminal_newline": true,
+        "exact_source_bytes_match": true,
+        "reader_visible_artifact_gate": "PASS"
+      },
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control",
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "task_id": "9b072e51-02d3-4f13-8ad8-d1993f3b1d87",
+      "created_utc": "2026-08-31T01:40:10.178563+00:00",
+      "updated_utc": "2026-08-31T01:40:13.562263+00:00",
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "headline": "AI Generated",
+        "fraction_human": 0.0,
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "num_human_segments": 0,
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "windows": [
+          {
+            "label": "AI-Generated",
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 2333,
+            "word_count": 386,
+            "token_length": 496,
+            "is_humanized": false,
+            "ai_assistance_score": 0.9999893307685852,
+            "humanizer_score": 0.8235310912132263,
+            "text_sha256": "d20a778c163f98b8c7aa7346bd372a48f97fa69654436fc3524018b94c6aace0",
+            "text_unicode_characters": 2333,
+            "text_utf8_bytes": 2361,
+            "exact_text_pointer": "/result/windows/0/text"
+          }
+        ]
+      },
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/11c553978685e355af6ef89b3de42380e724b4b0bb6eafef4fe6362ca26ef233/somatic-r15-surface-calibration-building-safety-visible-20260831-A-visible-control.json",
+        "sha256": "017745f686c91a9f0aa8a08854faedfe4e9d809df8252e4d5c9348869512567f"
+      }
+    },
+    {
+      "id": "B-visible-chat-replacement",
+      "preflight": "PASS",
+      "input": {
+        "path": "state/experiments/somatic-r15-surface-calibration-building-safety-visible-20260831/inputs/B-visible-chat-replacement.txt",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-002/B-reader-visible-chat-replacement.txt",
+        "sha256": "cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97",
+        "words": 390,
+        "unicode_characters": 2361,
+        "utf8_bytes": 2387,
+        "terminal_newline": true,
+        "exact_source_bytes_match": true,
+        "reader_visible_artifact_gate": "PASS"
+      },
+      "measurement_key": "somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement",
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "task_id": "b669eb57-49cb-4015-af76-25b8ffd68441",
+      "created_utc": "2026-08-31T01:40:31.642351+00:00",
+      "updated_utc": "2026-08-31T01:40:35.209574+00:00",
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "headline": "AI Generated",
+        "fraction_human": 0.0,
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "num_human_segments": 0,
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "windows": [
+          {
+            "label": "AI-Generated",
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 2349,
+            "word_count": 393,
+            "token_length": 497,
+            "is_humanized": false,
+            "ai_assistance_score": 0.9999860525131226,
+            "humanizer_score": 0.8177533745765686,
+            "text_sha256": "aa1f6ddfb2019b55feb47da8870ddc3f4defe5227f77a82405a4f6be86b0de97",
+            "text_unicode_characters": 2349,
+            "text_utf8_bytes": 2375,
+            "exact_text_pointer": "/result/windows/0/text"
+          }
+        ]
+      },
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/cf67cc5760b7282caa4aaa13e06b6ec7d86c0885fb3e9b7eaaa52e1d79f72b97/somatic-r15-surface-calibration-building-safety-visible-20260831-B-visible-chat-replacement.json",
+        "sha256": "5494adfe46f0efa6ed3c52be4afaaedff6020117cd0c0aacad9d89ef946a7d85"
+      }
+    }
+  ],
+  "raw_B_minus_A_delta": {
+    "fraction_human": 0.0,
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.0,
+    "num_human_segments": 0,
+    "num_ai_segments": 0,
+    "num_ai_assisted_segments": 0,
+    "window_count": 0,
+    "window_end_index": 16,
+    "window_word_count": 7,
+    "window_token_length": 1,
+    "window_ai_assistance_score": -3.2782554626464844e-06,
+    "window_humanizer_score": -0.005777716636657715
+  },
+  "commits": {
+    "inputs_preflight": "289fc3d05bd52db8167593e0942c268864cc4230",
+    "A_task_checkpoint": "baddd0b2fb82e8fad0df098a8e24b1f522cf9c35",
+    "A_result": "71f388143d88e0e2f9eab216f2f4fb13bc307b06",
+    "B_task_checkpoint": "0c890e8399c21f9fe03f96791c80c9b17aa404a9",
+    "B_result": "9e972bbd0eec594d93548eb7a7f4984ec1ececaf"
+  }
+}

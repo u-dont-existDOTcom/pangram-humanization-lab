@@ -1,0 +1,150 @@
+{
+  "browser_history_candidate_count": 55,
+  "browser_history_candidates_inspected": 36,
+  "comparison_to_current_input": {
+    "current_character_count": 20989,
+    "current_utf8_bytes": 21087,
+    "current_word_count": 3548,
+    "difference_operation_count": 5,
+    "difference_operations": [
+      {
+        "current_character_range": [
+          12795,
+          12795
+        ],
+        "current_length": 0,
+        "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "current_whitespace_escape": "",
+        "operation": "insert",
+        "stored_character_range": [
+          12795,
+          12796
+        ],
+        "stored_length": 1,
+        "stored_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+        "stored_whitespace_escape": null
+      },
+      {
+        "current_character_range": [
+          12806,
+          12806
+        ],
+        "current_length": 0,
+        "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "current_whitespace_escape": "",
+        "operation": "insert",
+        "stored_character_range": [
+          12807,
+          12808
+        ],
+        "stored_length": 1,
+        "stored_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+        "stored_whitespace_escape": null
+      },
+      {
+        "current_character_range": [
+          17493,
+          17493
+        ],
+        "current_length": 0,
+        "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "current_whitespace_escape": "",
+        "operation": "insert",
+        "stored_character_range": [
+          17495,
+          17496
+        ],
+        "stored_length": 1,
+        "stored_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+        "stored_whitespace_escape": null
+      },
+      {
+        "current_character_range": [
+          17506,
+          17506
+        ],
+        "current_length": 0,
+        "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "current_whitespace_escape": "",
+        "operation": "insert",
+        "stored_character_range": [
+          17509,
+          17510
+        ],
+        "stored_length": 1,
+        "stored_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+        "stored_whitespace_escape": null
+      },
+      {
+        "current_character_range": [
+          20988,
+          20989
+        ],
+        "current_length": 1,
+        "current_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "current_whitespace_escape": "\\n",
+        "operation": "delete",
+        "stored_character_range": [
+          20992,
+          20992
+        ],
+        "stored_length": 0,
+        "stored_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stored_whitespace_escape": ""
+      }
+    ],
+    "non_whitespace_sequence_equal": false,
+    "stored_character_count": 20992,
+    "stored_utf8_bytes": 21090,
+    "stored_word_count": 3548,
+    "whitespace_collapsed_equal": false
+  },
+  "current_exact_history_record_found": false,
+  "current_input_sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707",
+  "detector": {
+    "headline": "AI Detected",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 0.8451970816,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.1548029035,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "version": "4.0"
+  },
+  "detector_submission_attempted": false,
+  "direct_request_status_counts": {
+    "ok_json": 36
+  },
+  "history_api_records_observed": 36,
+  "privacy_note": "No report UUID/URL, stored prompt, cookie, browser storage value, credential, unrelated browsing-history entry, or raw response is persisted.",
+  "purpose": "read_only_exact_history_hash_reconciliation",
+  "schema_version": 1,
+  "status": "target_found",
+  "target_history_record_found": true,
+  "target_public_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+    "authorized_word_count": 3548,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+    "exact_word_count": 3548,
+    "record_model_id": null,
+    "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+    "record_prediction_prob": 0.8596501350402832,
+    "stored_text_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+    "stored_word_count": 3548,
+    "transport_match_mode": "exact_utf8"
+  },
+  "target_stored_sha256": "d5101f998fcd6b04b022b50dab49a616d538de8c69c15f286bc1cdc009ecae7e",
+  "transport": "local_playwright",
+  "transport_runner_version": "pangram-gui-local-playwright-v1"
+}

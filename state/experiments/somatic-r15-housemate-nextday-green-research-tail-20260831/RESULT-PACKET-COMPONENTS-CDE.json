@@ -1,0 +1,472 @@
+{
+  "accounting": {
+    "article_mutations": 0,
+    "c_cache_hits_before_action": 0,
+    "c_clicks": 1,
+    "c_recent_history_candidates_inspected_before_action": 10,
+    "c_reservations": 1,
+    "d_cache_hits_before_action": 0,
+    "d_clicks": 1,
+    "d_recent_history_candidates_inspected_before_action": 10,
+    "d_reservations": 1,
+    "e_cache_hits_before_action": 0,
+    "e_clicks": 1,
+    "e_recent_history_candidates_inspected_before_action": 10,
+    "e_reservations": 1,
+    "existing_results_reused": 3,
+    "force_overrides": 0,
+    "new_api_calls": 0,
+    "new_component_results": 3,
+    "new_short_gui_clicks": 3,
+    "read_only_localizations": 3,
+    "registered_master_mutations": 0,
+    "whole_document_calls": 0
+  },
+  "article_application_performed": false,
+  "article_authority": {
+    "branch": "task/somatic-r15-clean-continuation-20260830",
+    "candidate_sha256": "1e08284ce544b851b516eebdf38f3f8efb2497e477a0104270880f49aab7d81e",
+    "packet_head": "ff5044b9e86afbc29571cbe54b6323963e5d1213",
+    "registered_master_sha256": "1e7e94717f40e7a4de77974a896f600a1bf2769d9c1846cbe84275e136ff5202"
+  },
+  "ci_disposition": {
+    "FULL_HISTORY_FIX": "PASS",
+    "MERGE_BLOCKED_UNTIL_RECONCILED": "YES",
+    "REMAINING_VALIDATOR_FINDINGS": "PRE_EXISTING_UNRELATED_MERGE_DEBT"
+  },
+  "component_result_table": {
+    "A": {
+      "ai": 0.3274226785,
+      "ai_assisted": 0.0,
+      "human": 0.6725773215
+    },
+    "B": {
+      "ai": 0.2166385204,
+      "ai_assisted": 0.0,
+      "human": 0.7833614945
+    },
+    "C": {
+      "ai": 0.0,
+      "ai_assisted": 0.0,
+      "human": 1.0
+    },
+    "D": {
+      "ai": 0.1376104206,
+      "ai_assisted": 0.0,
+      "human": 0.8623895645
+    },
+    "E": {
+      "ai": 0.1068849266,
+      "ai_assisted": 0.0,
+      "human": 0.8931150436
+    },
+    "H0": {
+      "ai": 0.0,
+      "ai_assisted": 0.0,
+      "human": 1.0
+    }
+  },
+  "deltas": {
+    "H0_to_C": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0
+    },
+    "H0_to_D": {
+      "fraction_ai": 0.1376104206,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": -0.13761043549999996
+    },
+    "H0_to_E": {
+      "fraction_ai": 0.1068849266,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": -0.10688495639999995
+    },
+    "status": "C_D_E_COMPLETE"
+  },
+  "detector": {
+    "after_measurements_and_localizations_before_packet": "d4f86559435b8757e5babf93f3b065440771be9e",
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "model": "pangram-4",
+    "required_version": "4.0",
+    "starting_head": "92e0cfcc3e30f85f6f7b7ad962fd40cb9d39b0d8"
+  },
+  "directive_id": "SOMATIC-R15-SURFACE-012",
+  "existing_family_evidence": {
+    "existing_results_reused": 3,
+    "fraction_table": {
+      "A": {
+        "ai": 0.3274226785,
+        "ai_assisted": 0.0,
+        "human": 0.6725773215
+      },
+      "B": {
+        "ai": 0.2166385204,
+        "ai_assisted": 0.0,
+        "human": 0.7833614945
+      },
+      "H0": {
+        "ai": 0.0,
+        "ai_assisted": 0.0,
+        "human": 1.0
+      }
+    },
+    "result_packet": "state/experiments/somatic-r15-housemate-nextday-green-research-tail-20260831/RESULT-PACKET.json",
+    "result_packet_sha256": "53fd27e7f666b8dfbfde7bef7f206357477eb513f03100de7face65528465d2e"
+  },
+  "family": "somatic-r15-housemate-nextday-green-research-tail-20260831",
+  "family_state": "CLOSED_6_OF_6_COMPONENT_MAP_COMPLETE",
+  "final_whole_document_measurement_performed": false,
+  "format": "somatic-r15-housemate-research-components-result-v1",
+  "privacy": "NO_PRIVATE_HISTORY_URL_UUID_CREDENTIAL_COOKIE_STORAGE_OR_UNRELATED_TEXT_PERSISTED",
+  "variants": {
+    "C": {
+      "captured_at_utc": "2026-08-31T06:03:26.083952Z",
+      "classification": "EXACT_GUI_RESULT_EXISTS",
+      "classification_before_action": "EXACT_GUI_NEVER_SUBMITTED",
+      "detector_submission_attempted": true,
+      "headline": "Human Written",
+      "history_api_exact_identity": {
+        "api_path": "/api/history/<uuid>/",
+        "authorized_text_sha256": "209b33a716848584103a87cde0553d4c50e30a164beb3345b5f37b76cfa51419",
+        "authorized_word_count": 365,
+        "exact_text_field_path": [
+          "prompt"
+        ],
+        "exact_text_sha256": "209b33a716848584103a87cde0553d4c50e30a164beb3345b5f37b76cfa51419",
+        "exact_word_count": 365,
+        "record_model_id": null,
+        "record_prediction": "We believe that this entire text is human-written.",
+        "record_prediction_prob": 0.2433922290802002,
+        "stored_text_sha256": "209b33a716848584103a87cde0553d4c50e30a164beb3345b5f37b76cfa51419",
+        "stored_word_count": 365,
+        "transport_match_mode": "exact_utf8"
+      },
+      "input_identity": {
+        "terminal_newline": false,
+        "unicode_characters": 2036,
+        "utf8_bytes": 2036,
+        "whitespace_words": 365
+      },
+      "input_sha256": "209b33a716848584103a87cde0553d4c50e30a164beb3345b5f37b76cfa51419",
+      "localization": {
+        "all_window_offsets_recovered": true,
+        "detector_submission_attempted": false,
+        "full_window_text_persisted": false,
+        "history_list_candidate_count": 10,
+        "status": "no_bound_spans"
+      },
+      "prediction": "We believe that this entire text is human-written.",
+      "prediction_short": "Human",
+      "report_body_sha256": "0e12e5f2fc0981dfbf9660d7cac405f31f49eb8a3de1732d1202686ac338856a",
+      "report_pdf_sha256": "b0773703c3d30e77bc71a34e66f4d1b202bde686c516a4f8ead557866ee8f937",
+      "reservation": {
+        "detector_submission_attempted": false,
+        "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+        "input_sha256": "209b33a716848584103a87cde0553d4c50e30a164beb3345b5f37b76cfa51419",
+        "model": "pangram-4",
+        "reserved_at_utc": "2026-08-31T06:03:16.853792Z",
+        "schema_version": 1,
+        "status": "paid_gui_submission_reserved",
+        "transport": "local_playwright",
+        "transport_runner_version": "pangram-gui-local-playwright-v1",
+        "word_count": 365
+      },
+      "result": {
+        "detector_stage": "STAGE_SUCCESS",
+        "detector_version": "4.0",
+        "headline": "Human Written",
+        "history_record_identity": {
+          "api_path": "/api/history/<uuid>/",
+          "authorized_text_sha256": "209b33a716848584103a87cde0553d4c50e30a164beb3345b5f37b76cfa51419",
+          "authorized_word_count": 365,
+          "exact_text_field_path": [
+            "prompt"
+          ],
+          "exact_text_sha256": "209b33a716848584103a87cde0553d4c50e30a164beb3345b5f37b76cfa51419",
+          "exact_word_count": 365,
+          "record_model_id": null,
+          "record_prediction": "We believe that this entire text is human-written.",
+          "record_prediction_prob": 0.2433922290802002,
+          "stored_text_sha256": "209b33a716848584103a87cde0553d4c50e30a164beb3345b5f37b76cfa51419",
+          "stored_word_count": 365,
+          "transport_match_mode": "exact_utf8"
+        },
+        "prediction_short": "Human",
+        "report_layout": "history_api_structured_result_v1",
+        "segments": [],
+        "structured_result_field_path": [
+          "response",
+          "overall"
+        ],
+        "summary": {
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "fraction_lightly_ai_assisted": null,
+          "fraction_moderately_ai_assisted": null
+        },
+        "summary_source": "stored_history_structured_result"
+      },
+      "window_metadata": [
+        {
+          "ai_likelihood": 0.2433922290802002,
+          "confidence": "High",
+          "end_index": 2027,
+          "humanizer_score": 0.0,
+          "is_humanized": false,
+          "label": "Human",
+          "start_index": 0,
+          "text_field_length": 2027,
+          "text_persisted": false,
+          "token_length": 440,
+          "transport_binding": "no_exact_transport_binding",
+          "window_index": 0,
+          "word_count": 368
+        }
+      ]
+    },
+    "D": {
+      "captured_at_utc": "2026-08-31T06:04:17.394738Z",
+      "classification": "EXACT_GUI_RESULT_EXISTS",
+      "classification_before_action": "EXACT_GUI_NEVER_SUBMITTED",
+      "detector_submission_attempted": true,
+      "headline": "AI Detected",
+      "history_api_exact_identity": {
+        "api_path": "/api/history/<uuid>/",
+        "authorized_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+        "authorized_word_count": 379,
+        "exact_text_field_path": [
+          "prompt"
+        ],
+        "exact_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+        "exact_word_count": 379,
+        "record_model_id": null,
+        "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+        "record_prediction_prob": 0.27976223826408386,
+        "stored_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+        "stored_word_count": 379,
+        "transport_match_mode": "exact_utf8"
+      },
+      "input_identity": {
+        "terminal_newline": false,
+        "unicode_characters": 2160,
+        "utf8_bytes": 2160,
+        "whitespace_words": 379
+      },
+      "input_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+      "localization": {
+        "all_window_offsets_recovered": true,
+        "detector_submission_attempted": false,
+        "full_window_text_persisted": false,
+        "history_list_candidate_count": 10,
+        "status": "no_bound_spans"
+      },
+      "prediction": "We believe that this text is a mix of AI and human-written content.",
+      "prediction_short": "Mixed",
+      "report_body_sha256": "5cf2010c84468c4bdcd3c93327af5a303db1ad080d2b1ae1c6e7e05f05f3e9b2",
+      "report_pdf_sha256": "58fa2de81d81a1abb5bfa2987bd15c79a650c1f112bdb63235ec93bbb723bece",
+      "reservation": {
+        "detector_submission_attempted": false,
+        "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+        "input_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+        "model": "pangram-4",
+        "reserved_at_utc": "2026-08-31T06:04:07.738931Z",
+        "schema_version": 1,
+        "status": "paid_gui_submission_reserved",
+        "transport": "local_playwright",
+        "transport_runner_version": "pangram-gui-local-playwright-v1",
+        "word_count": 379
+      },
+      "result": {
+        "detector_stage": "STAGE_SUCCESS",
+        "detector_version": "4.0",
+        "headline": "AI Detected",
+        "history_record_identity": {
+          "api_path": "/api/history/<uuid>/",
+          "authorized_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+          "authorized_word_count": 379,
+          "exact_text_field_path": [
+            "prompt"
+          ],
+          "exact_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+          "exact_word_count": 379,
+          "record_model_id": null,
+          "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+          "record_prediction_prob": 0.27976223826408386,
+          "stored_text_sha256": "45ee706e0d3d75067d86ab5c5b189589f1c7aa4bd5526a5d38fb1466a39b7d17",
+          "stored_word_count": 379,
+          "transport_match_mode": "exact_utf8"
+        },
+        "prediction_short": "Mixed",
+        "report_layout": "history_api_structured_result_v1",
+        "segments": [],
+        "structured_result_field_path": [
+          "response",
+          "overall"
+        ],
+        "summary": {
+          "fraction_ai": 0.1376104206,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8623895645,
+          "fraction_lightly_ai_assisted": null,
+          "fraction_moderately_ai_assisted": null
+        },
+        "summary_source": "stored_history_structured_result"
+      },
+      "window_metadata": [
+        {
+          "ai_likelihood": 0.20029637217521667,
+          "confidence": "High",
+          "end_index": 1855,
+          "humanizer_score": 0.0,
+          "is_humanized": false,
+          "label": "Human",
+          "start_index": 0,
+          "text_field_length": 1855,
+          "text_persisted": false,
+          "token_length": 403,
+          "transport_binding": "no_exact_transport_binding",
+          "window_index": 0,
+          "word_count": 334
+        },
+        {
+          "ai_likelihood": 0.7777662873268127,
+          "confidence": "High",
+          "end_index": 2151,
+          "humanizer_score": 0.00770101323723793,
+          "is_humanized": false,
+          "label": "AI-Generated",
+          "start_index": 1855,
+          "text_field_length": 296,
+          "text_persisted": false,
+          "token_length": 64,
+          "transport_binding": "no_exact_transport_binding",
+          "window_index": 1,
+          "word_count": 47
+        }
+      ]
+    },
+    "E": {
+      "captured_at_utc": "2026-08-31T06:05:11.159025Z",
+      "classification": "EXACT_GUI_RESULT_EXISTS",
+      "classification_before_action": "EXACT_GUI_NEVER_SUBMITTED",
+      "detector_submission_attempted": true,
+      "headline": "AI Detected",
+      "history_api_exact_identity": {
+        "api_path": "/api/history/<uuid>/",
+        "authorized_text_sha256": "b5548fd2ca42e6cbeb7bd06fb67fd6a19c53e42d4b8af60464a755a3d9621dfd",
+        "authorized_word_count": 373,
+        "exact_text_field_path": [
+          "prompt"
+        ],
+        "exact_text_sha256": "b5548fd2ca42e6cbeb7bd06fb67fd6a19c53e42d4b8af60464a755a3d9621dfd",
+        "exact_word_count": 373,
+        "record_model_id": null,
+        "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+        "record_prediction_prob": 0.24054178595542908,
+        "stored_text_sha256": "b5548fd2ca42e6cbeb7bd06fb67fd6a19c53e42d4b8af60464a755a3d9621dfd",
+        "stored_word_count": 373,
+        "transport_match_mode": "exact_utf8"
+      },
+      "input_identity": {
+        "terminal_newline": false,
+        "unicode_characters": 2086,
+        "utf8_bytes": 2086,
+        "whitespace_words": 373
+      },
+      "input_sha256": "b5548fd2ca42e6cbeb7bd06fb67fd6a19c53e42d4b8af60464a755a3d9621dfd",
+      "localization": {
+        "all_window_offsets_recovered": true,
+        "detector_submission_attempted": false,
+        "full_window_text_persisted": false,
+        "history_list_candidate_count": 10,
+        "status": "no_bound_spans"
+      },
+      "prediction": "We believe that this text is a mix of AI and human-written content.",
+      "prediction_short": "Mixed",
+      "report_body_sha256": "f9c9f2cf4434cb51f2608562076f5dfb6f0e6dd5fbd426c1a23d48aa54772d75",
+      "report_pdf_sha256": "4a02fdf3cbda0ae95b813efc1f8395d0e437cf221bdf59418b714e20767bbc79",
+      "reservation": {
+        "detector_submission_attempted": false,
+        "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+        "input_sha256": "b5548fd2ca42e6cbeb7bd06fb67fd6a19c53e42d4b8af60464a755a3d9621dfd",
+        "model": "pangram-4",
+        "reserved_at_utc": "2026-08-31T06:04:58.580866Z",
+        "schema_version": 1,
+        "status": "paid_gui_submission_reserved",
+        "transport": "local_playwright",
+        "transport_runner_version": "pangram-gui-local-playwright-v1",
+        "word_count": 373
+      },
+      "result": {
+        "detector_stage": "STAGE_SUCCESS",
+        "detector_version": "4.0",
+        "headline": "AI Detected",
+        "history_record_identity": {
+          "api_path": "/api/history/<uuid>/",
+          "authorized_text_sha256": "b5548fd2ca42e6cbeb7bd06fb67fd6a19c53e42d4b8af60464a755a3d9621dfd",
+          "authorized_word_count": 373,
+          "exact_text_field_path": [
+            "prompt"
+          ],
+          "exact_text_sha256": "b5548fd2ca42e6cbeb7bd06fb67fd6a19c53e42d4b8af60464a755a3d9621dfd",
+          "exact_word_count": 373,
+          "record_model_id": null,
+          "record_prediction": "We believe that this text is a mix of AI and human-written content.",
+          "record_prediction_prob": 0.24054178595542908,
+          "stored_text_sha256": "b5548fd2ca42e6cbeb7bd06fb67fd6a19c53e42d4b8af60464a755a3d9621dfd",
+          "stored_word_count": 373,
+          "transport_match_mode": "exact_utf8"
+        },
+        "prediction_short": "Mixed",
+        "report_layout": "history_api_structured_result_v1",
+        "segments": [],
+        "structured_result_field_path": [
+          "response",
+          "overall"
+        ],
+        "summary": {
+          "fraction_ai": 0.1068849266,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.8931150436,
+          "fraction_lightly_ai_assisted": null,
+          "fraction_moderately_ai_assisted": null
+        },
+        "summary_source": "stored_history_structured_result"
+      },
+      "window_metadata": [
+        {
+          "ai_likelihood": 0.18495994806289673,
+          "confidence": "High",
+          "end_index": 1855,
+          "humanizer_score": 0.0,
+          "is_humanized": false,
+          "label": "Human",
+          "start_index": 0,
+          "text_field_length": 1855,
+          "text_persisted": false,
+          "token_length": 403,
+          "transport_binding": "no_exact_transport_binding",
+          "window_index": 0,
+          "word_count": 334
+        },
+        {
+          "ai_likelihood": 0.7049755454063416,
+          "confidence": "High",
+          "end_index": 2077,
+          "humanizer_score": 0.004542760085314512,
+          "is_humanized": false,
+          "label": "AI-Generated",
+          "start_index": 1855,
+          "text_field_length": 222,
+          "text_persisted": false,
+          "token_length": 49,
+          "transport_binding": "no_exact_transport_binding",
+          "window_index": 1,
+          "word_count": 41
+        }
+      ]
+    }
+  }
+}

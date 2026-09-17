@@ -1,0 +1,419 @@
+{
+  "accounting": {
+    "ambiguous_calls": 0,
+    "article_mutations": 0,
+    "cache_hits": 0,
+    "detector_reservations_created": 0,
+    "exact_completed_results_reused": 0,
+    "gui_actions": 0,
+    "new_paid_api_calls": 5,
+    "registered_master_mutations": 0,
+    "reserved_slot_left_unused": 1,
+    "stable_family_call_cap": 6,
+    "stable_family_calls_used": 5,
+    "whole_document_calls": 0
+  },
+  "article": {
+    "article_candidate_mutations": 0,
+    "branch": "task/somatic-r15-clean-continuation-20260830",
+    "candidate_path": "articles/somatic-therapies/experiments/R15-DIRECT-OWNER-VOICE-CANDIDATE-20260830.md",
+    "candidate_sha256": "9c2e8fe57335d51ac925bc9b63cee8125c24e471e2b9b8fda50cc44cf28f5b31",
+    "head": "99f941505996247ae51eb36c92d11c792b571639",
+    "registered_master_mutations": 0,
+    "source_git_blob": "542012646469032eb836865b0e89b8fa368a1d0b",
+    "source_path": "articles/somatic-therapies/experiments/R15-WHOLE-ARTICLE-PANGRAM-BOUNDARY-20260830.txt",
+    "source_sha256": "9a81bd04252a2ee851dd111040c600837bdf0a7bbf71c42c293e3b763c99a707"
+  },
+  "detector": {
+    "branch": "task/somatic-r15-exact-recovery-20260830",
+    "head_after_exact_results": "623a520962cfb5fa9ea01130714e6f30f1fbcec3",
+    "head_before_result_packet": "623a520962cfb5fa9ea01130714e6f30f1fbcec3",
+    "model": "pangram-4",
+    "preflight_commit": "0771c20e8ebc41c904b7b868a5506994c2377099",
+    "starting_head": "57db7a082636ebaca56c5618d7f654b675cdbce1",
+    "transport": "SHORT_DOCUMENT_API",
+    "version": "4.0"
+  },
+  "directive": {
+    "id": "SOMATIC-R15-SURFACE-005",
+    "packet_git_blob": "7b0178bf417f2272c1bb90e5f9e0be7f0549ff2b",
+    "packet_path": "tasks/somatic-r15-clean-continuation-20260830/CHAT-SURFACE-EXPERIMENT-005.md"
+  },
+  "factorial_target_fraction_table": [
+    {
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "paragraph_boundary": "SEPARATE",
+      "tail_realization": "ORIGINAL",
+      "variant": "A"
+    },
+    {
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "paragraph_boundary": "MERGED",
+      "tail_realization": "ORIGINAL",
+      "variant": "B"
+    },
+    {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "paragraph_boundary": "SEPARATE",
+      "tail_realization": "DIRECT",
+      "variant": "C"
+    },
+    {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "paragraph_boundary": "MERGED",
+      "tail_realization": "DIRECT",
+      "variant": "D"
+    }
+  ],
+  "format": "somatic-r15-eft-human-anchor-tail-factorial-result-v1",
+  "raw_result_deltas": {
+    "A_minus_H0": {
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": -1.0,
+      "window_0_ai_assistance_score": 0.7728423546504928,
+      "window_0_humanizer_score": 0.9054202437400818
+    },
+    "B_minus_A": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "window_0_ai_assistance_score": -0.015995502471923828,
+      "window_0_humanizer_score": -0.002083003520965576
+    },
+    "C_minus_A": {
+      "fraction_ai": -1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "window_0_ai_assistance_score": -0.5386127382516861,
+      "window_0_humanizer_score": -0.9054202437400818
+    },
+    "D_minus_A": {
+      "fraction_ai": -1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "window_0_ai_assistance_score": -0.5515425056219101,
+      "window_0_humanizer_score": -0.9054202437400818
+    },
+    "D_minus_B": {
+      "fraction_ai": -1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "window_0_ai_assistance_score": -0.5355470031499863,
+      "window_0_humanizer_score": -0.9033372402191162
+    },
+    "D_minus_C": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "window_0_ai_assistance_score": -0.012929767370223999,
+      "window_0_humanizer_score": 0.0
+    }
+  },
+  "stable_family_state": "COMPLETE_5_OF_6_RESERVED_SLOT_UNUSED",
+  "variants": {
+    "A": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/08b7db6171c196adc4409daec084a240649f1ce3524a360269bfba2e30379046/somatic-r15-eft-human-anchor-tail-factorial-20260831-A.json",
+        "sha256": "b119025c6c5150a49cacf7c76f28920f61d756644c9ee6597a00c113ebd9d101"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T02:52:09.622072+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "3a8501231c0bd5acf61321c6d91977617d0d37a6",
+        "input_path": "state/experiments/somatic-r15-eft-human-anchor-tail-factorial-20260831/inputs/A-separate-original-tail.txt",
+        "measurement_key": "somatic-r15-eft-human-anchor-tail-factorial-20260831-A",
+        "paragraph_boundary": "SEPARATE",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "08b7db6171c196adc4409daec084a240649f1ce3524a360269bfba2e30379046",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-005/A-separate-original-tail.txt",
+        "tail_realization": "ORIGINAL",
+        "terminal_newline": false,
+        "unicode_characters": 646,
+        "utf8_bytes": 646,
+        "whitespace_words": 119
+      },
+      "result": {
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 1,
+        "num_human_segments": 0,
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.7729613184928894,
+            "confidence": "High",
+            "end_index": 643,
+            "exact_text_pointer": "cache/pangram-4/4.0/08b7db6171c196adc4409daec084a240649f1ce3524a360269bfba2e30379046/somatic-r15-eft-human-anchor-tail-factorial-20260831-A.json#/result/windows/0/text",
+            "humanizer_score": 0.9054202437400818,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "start_index": 0,
+            "text_sha256": "57870e8a27adf79b93af30b3375c9116c0ca27dd453bb1aa69ddca47a693ec19",
+            "text_unicode_characters": 643,
+            "text_utf8_bytes": 643,
+            "token_length": 137,
+            "word_count": 119
+          }
+        ]
+      },
+      "result_commit": "fc4aa1ba3789b22751169d115d4151ca6bfe4a2c",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "c062a23ff4dca1f2910f7f387287c5679ebc81a1",
+      "task_id": "514f349e-7f8b-4aec-8b04-29274b80c28e",
+      "updated_utc": "2026-08-31T02:52:13.408877+00:00"
+    },
+    "B": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/c3a831f5d71d1b8ab4208ee154acb04c1004d5416f35a4ee1fbdb1f5d00631e4/somatic-r15-eft-human-anchor-tail-factorial-20260831-B.json",
+        "sha256": "4df449c1fb441a56e9887155e0d55d8519f9866fea50843346661b7f76cd6bd9"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T02:52:34.604805+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "07047a4e53e0886ab55e598d705458fe430c8c10",
+        "input_path": "state/experiments/somatic-r15-eft-human-anchor-tail-factorial-20260831/inputs/B-merged-original-tail.txt",
+        "measurement_key": "somatic-r15-eft-human-anchor-tail-factorial-20260831-B",
+        "paragraph_boundary": "MERGED",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "c3a831f5d71d1b8ab4208ee154acb04c1004d5416f35a4ee1fbdb1f5d00631e4",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-005/B-merged-original-tail.txt",
+        "tail_realization": "ORIGINAL",
+        "terminal_newline": false,
+        "unicode_characters": 645,
+        "utf8_bytes": 645,
+        "whitespace_words": 119
+      },
+      "result": {
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.0,
+        "headline": "AI Generated",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 1,
+        "num_human_segments": 0,
+        "prediction": "We believe that this entire text is AI.",
+        "prediction_short": "AI",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.7569658160209656,
+            "confidence": "High",
+            "end_index": 643,
+            "exact_text_pointer": "cache/pangram-4/4.0/c3a831f5d71d1b8ab4208ee154acb04c1004d5416f35a4ee1fbdb1f5d00631e4/somatic-r15-eft-human-anchor-tail-factorial-20260831-B.json#/result/windows/0/text",
+            "humanizer_score": 0.9033372402191162,
+            "is_humanized": false,
+            "label": "AI-Generated",
+            "start_index": 0,
+            "text_sha256": "59d63624ce6257d38230e7fc6bf98411c20a3af9a7d15bc06577490430b16b5e",
+            "text_unicode_characters": 643,
+            "text_utf8_bytes": 643,
+            "token_length": 137,
+            "word_count": 119
+          }
+        ]
+      },
+      "result_commit": "1c4acf948ebbf7d5e430ede65505a535ab2515bb",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "be420d6c9c0aea88b7e70940ec55f6fd468f728d",
+      "task_id": "0dd72785-ab05-44bd-8182-fb4a1ed73241",
+      "updated_utc": "2026-08-31T02:52:40.953605+00:00"
+    },
+    "C": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/7cdcf4412116d289c73409054e1f7cd4bedd450e0853b690de3d3e2e5767fff6/somatic-r15-eft-human-anchor-tail-factorial-20260831-C.json",
+        "sha256": "ba59b981e8fa2ac936284dde2fbe854ce24fddc0410216d7dda424e4a3902164"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T02:52:52.319869+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "28b491f8e4268e77c46663e304cb6264c9a28f9e",
+        "input_path": "state/experiments/somatic-r15-eft-human-anchor-tail-factorial-20260831/inputs/C-separate-direct-tail.txt",
+        "measurement_key": "somatic-r15-eft-human-anchor-tail-factorial-20260831-C",
+        "paragraph_boundary": "SEPARATE",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "7cdcf4412116d289c73409054e1f7cd4bedd450e0853b690de3d3e2e5767fff6",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-005/C-separate-direct-tail.txt",
+        "tail_realization": "DIRECT",
+        "terminal_newline": false,
+        "unicode_characters": 581,
+        "utf8_bytes": 583,
+        "whitespace_words": 104
+      },
+      "result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.2343485802412033,
+            "confidence": "High",
+            "end_index": 578,
+            "exact_text_pointer": "cache/pangram-4/4.0/7cdcf4412116d289c73409054e1f7cd4bedd450e0853b690de3d3e2e5767fff6/somatic-r15-eft-human-anchor-tail-factorial-20260831-C.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "8cbacda07c0411b15a39e48c99b33add57a380560dc7430e996fd561f5f3ea3f",
+            "text_unicode_characters": 578,
+            "text_utf8_bytes": 580,
+            "token_length": 121,
+            "word_count": 105
+          }
+        ]
+      },
+      "result_commit": "7548e9fa4516ad40e908713e70a2f086e1a2de8b",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "3f7b8e84b1cd945d5330f025a330296379442dab",
+      "task_id": "cf355172-dab6-437a-afcd-b414bec0a2fa",
+      "updated_utc": "2026-08-31T02:52:56.416239+00:00"
+    },
+    "D": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/fd752aa944bfa3abc2eb137765e33dd4f8fd1b742e4d52a97e11430e713a243b/somatic-r15-eft-human-anchor-tail-factorial-20260831-D.json",
+        "sha256": "3f0425c9745fdf2bb08e5b087277085399f8b2af827a8d9d0e0906a4a9357406"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T02:53:22.435468+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "b471cff87b1e68c831081830ee8dcbf36b305f8c",
+        "input_path": "state/experiments/somatic-r15-eft-human-anchor-tail-factorial-20260831/inputs/D-merged-direct-tail.txt",
+        "measurement_key": "somatic-r15-eft-human-anchor-tail-factorial-20260831-D",
+        "paragraph_boundary": "MERGED",
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "fd752aa944bfa3abc2eb137765e33dd4f8fd1b742e4d52a97e11430e713a243b",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-005/D-merged-direct-tail.txt",
+        "tail_realization": "DIRECT",
+        "terminal_newline": false,
+        "unicode_characters": 580,
+        "utf8_bytes": 582,
+        "whitespace_words": 104
+      },
+      "result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.2214188128709793,
+            "confidence": "High",
+            "end_index": 578,
+            "exact_text_pointer": "cache/pangram-4/4.0/fd752aa944bfa3abc2eb137765e33dd4f8fd1b742e4d52a97e11430e713a243b/somatic-r15-eft-human-anchor-tail-factorial-20260831-D.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "fe4290eeb5bef2fb554b15d22773e03edca2b4c26d54e14eff62eb000750e40f",
+            "text_unicode_characters": 578,
+            "text_utf8_bytes": 580,
+            "token_length": 121,
+            "word_count": 105
+          }
+        ]
+      },
+      "result_commit": "623a520962cfb5fa9ea01130714e6f30f1fbcec3",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "91128f4c4a3e9e22a440ab88f244467ff328ce54",
+      "task_id": "275ed948-6aa4-4d9f-b47d-89d2ad54827b",
+      "updated_utc": "2026-08-31T02:53:26.827932+00:00"
+    },
+    "H0": {
+      "cache_evidence": {
+        "path": "cache/pangram-4/4.0/00a753034b417b7512cd814ee3e78bc292961892a0fb85be31c5c269e3fc2c2d/somatic-r15-eft-human-anchor-tail-factorial-20260831-H0.json",
+        "sha256": "d8295004463b4ca42934392ae8632babcd64f56a3cfce16394d80c79b8bb0813"
+      },
+      "cache_state_before_call": "ABSENT",
+      "cache_status": "success",
+      "created_utc": "2026-08-31T02:51:56.717206+00:00",
+      "input": {
+        "cache_records": [],
+        "git_blob": "1a343e51e0b719894a8794a8c701bb99e14cf4b7",
+        "input_path": "state/experiments/somatic-r15-eft-human-anchor-tail-factorial-20260831/inputs/H0-gui-human-anchor.txt",
+        "measurement_key": "somatic-r15-eft-human-anchor-tail-factorial-20260831-H0",
+        "paragraph_boundary": null,
+        "pre_submission_classification": "EXACT_API_NEVER_SUBMITTED",
+        "sha256": "00a753034b417b7512cd814ee3e78bc292961892a0fb85be31c5c269e3fc2c2d",
+        "source_path": "tasks/somatic-r15-clean-continuation-20260830/surface-experiment-005/H0-gui-human-anchor.txt",
+        "tail_realization": null,
+        "terminal_newline": false,
+        "unicode_characters": 360,
+        "utf8_bytes": 360,
+        "whitespace_words": 65
+      },
+      "result": {
+        "fraction_ai": 0.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0,
+        "headline": "Human Written",
+        "num_ai_assisted_segments": 0,
+        "num_ai_segments": 0,
+        "num_human_segments": 1,
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "stage": "STAGE_SUCCESS",
+        "version": "4.0",
+        "windows": [
+          {
+            "ai_assistance_score": 0.00011896384239662439,
+            "confidence": "High",
+            "end_index": 358,
+            "exact_text_pointer": "cache/pangram-4/4.0/00a753034b417b7512cd814ee3e78bc292961892a0fb85be31c5c269e3fc2c2d/somatic-r15-eft-human-anchor-tail-factorial-20260831-H0.json#/result/windows/0/text",
+            "humanizer_score": 0.0,
+            "is_humanized": false,
+            "label": "Human Written",
+            "start_index": 0,
+            "text_sha256": "78255fd733e72b1476a83a3e4faadd863417b15971169774e851989da1249050",
+            "text_unicode_characters": 358,
+            "text_utf8_bytes": 358,
+            "token_length": 74,
+            "word_count": 65
+          }
+        ]
+      },
+      "result_commit": "8ae340c16dcaf58cad3298f042b4c1842aa92bea",
+      "submitted_model": "pangram-4",
+      "task_checkpoint_commit": "270073196553112e5a1db4b3d498c33077668a8e",
+      "task_id": "3fe1f45a-3c4d-4efa-967e-d47d8c8ff314",
+      "updated_utc": "2026-08-31T02:52:00.332083+00:00"
+    }
+  }
+}

@@ -46,6 +46,31 @@ def _validated_report_url(raw: str | None) -> str | None:
     return f"https://www.pangram.com{parsed.path.rstrip('/')}"
 
 
+def _request_direct_history_api_record(page: object, report_url: str) -> None:
+    """Re-emit one known report's stored JSON when the SPA serves a cached page.
+
+    The response listener remains the authority for exact-text binding. This
+    helper only performs an authenticated, read-only GET and deliberately
+    returns no private record identity or payload to the caller.
+    """
+    report_uuid = urlsplit(report_url).path.rstrip("/").rsplit("/", 1)[-1]
+    page.evaluate(
+        """async ({url}) => {
+          const response = await fetch(url, {
+            method: "GET",
+            credentials: "include",
+            cache: "no-store",
+          });
+          if (!response.ok) {
+            throw new Error(`stored history GET failed (${response.status})`);
+          }
+          await response.json();
+          return true;
+        }""",
+        {"url": f"https://web.pangram.com/api/history/{report_uuid}/"},
+    )
+
+
 def _failure_receipt(
     *,
     item: Mapping[str, object],
@@ -132,6 +157,10 @@ def localize_existing_report(
                     _wait(page, 800)
                 except Exception:
                     pass
+            if not exact_records:
+                stage = "direct_stored_api_record"
+                _request_direct_history_api_record(page, selected_report_url)
+                _wait(page, 250)
 
         if not exact_records:
             stage = "scan_stored_history"

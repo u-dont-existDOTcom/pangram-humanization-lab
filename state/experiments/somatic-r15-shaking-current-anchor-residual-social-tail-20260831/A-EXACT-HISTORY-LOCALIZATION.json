@@ -1,0 +1,732 @@
+{
+  "applicationMetadataInspection": "NOT_EXPORTED_NO_SUPPORTED_PRIVACY_SAFE_METADATA_SURFACE",
+  "completedAt": "2026-08-31T05:01:29.397096Z",
+  "dedicatedBrowserProcessPresentBeforeLaunch": false,
+  "detailReadStatus": "ok",
+  "detectorSubmissionAttempted": false,
+  "exactHistoryResultRecovered": true,
+  "failureTime": "2026-08-31T04:55:24.994487Z",
+  "historyApi": {
+    "candidatesAtOrAfterReservation": 1,
+    "candidatesScanned": 273,
+    "detailReadStatusCounts": {
+      "ok": 273
+    },
+    "detailRecordsInspected": 273,
+    "listRowsWithExactBinding": 0,
+    "pageResultCounts": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      3
+    ],
+    "pagesScanned": 28,
+    "paginationExhausted": true,
+    "reportedTotalCount": 273,
+    "requestAttempts": 301,
+    "requestStatusCounts": {
+      "ok": 28
+    },
+    "uniqueRecordIdentitiesObserved": 273
+  },
+  "historyResultIdentity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+    "authorized_word_count": 315,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+    "exact_word_count": 315,
+    "record_model_id": null,
+    "record_prediction": "We believe that this entire text is human-written.",
+    "record_prediction_prob": 0.18962115049362183,
+    "stored_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+    "stored_word_count": 315,
+    "transport_match_mode": "exact_utf8"
+  },
+  "historyUi": {
+    "exhaustionRule": "four_stable_scroll_shapes_without_load_button",
+    "historyLinksObserved": 0,
+    "scrollIterations": 5
+  },
+  "inputSha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+  "inputWords": 293,
+  "minutesAfterFailure": 6.073,
+  "nearMatchDiagnostics": [
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 300,
+            "character_delta": -1458,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 56,
+            "word_delta": -259
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 0
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 300,
+            "character_delta": -1458,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 56,
+            "word_delta": -259
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 1
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 300,
+            "character_delta": -1458,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 56,
+            "word_delta": -259
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 2
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 300,
+            "character_delta": -1458,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 56,
+            "word_delta": -259
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 3
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 100,
+            "character_delta": -1658,
+            "field_path": [
+              "response",
+              "overall",
+              "windows",
+              "[1]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 16,
+            "word_delta": -299
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 1
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1838,
+            "character_delta": 80,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 328,
+            "word_delta": 13
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 100,
+            "character_delta": -1658,
+            "field_path": [
+              "response",
+              "overall",
+              "windows",
+              "[1]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 17,
+            "word_delta": -298
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1830,
+            "character_delta": 72,
+            "field_path": [
+              "response",
+              "in_page",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 328,
+            "word_delta": 13
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1830,
+            "character_delta": 72,
+            "field_path": [
+              "response",
+              "in_page",
+              "ngram",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 328,
+            "word_delta": 13
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 2
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": true,
+            "character_count": 1631,
+            "character_delta": -127,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 293,
+            "word_delta": -22
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 3
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1876,
+            "character_delta": 118,
+            "field_path": [
+              "response",
+              "in_page",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 300,
+            "word_delta": -15
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1876,
+            "character_delta": 118,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 300,
+            "word_delta": -15
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 7
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1744,
+            "character_delta": -14,
+            "field_path": [
+              "response",
+              "in_page",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 299,
+            "word_delta": -16
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1931,
+            "character_delta": 173,
+            "field_path": [
+              "response",
+              "in_page",
+              "windows",
+              "[1]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 326,
+            "word_delta": 11
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1744,
+            "character_delta": -14,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 299,
+            "word_delta": -16
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1931,
+            "character_delta": 173,
+            "field_path": [
+              "response_payload",
+              "windows",
+              "[1]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 326,
+            "word_delta": 11
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 1,
+      "row": 8
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1652,
+            "character_delta": -106,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 304,
+            "word_delta": -11
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1649,
+            "character_delta": -109,
+            "field_path": [
+              "response",
+              "in_page",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 304,
+            "word_delta": -11
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1649,
+            "character_delta": -109,
+            "field_path": [
+              "response",
+              "in_page",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 304,
+            "word_delta": -11
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1649,
+            "character_delta": -109,
+            "field_path": [
+              "response",
+              "in_page",
+              "ngram",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 304,
+            "word_delta": -11
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 2,
+      "row": 5
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1682,
+            "character_delta": -76,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 309,
+            "word_delta": -6
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1679,
+            "character_delta": -79,
+            "field_path": [
+              "response",
+              "in_page",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 309,
+            "word_delta": -6
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1679,
+            "character_delta": -79,
+            "field_path": [
+              "response",
+              "in_page",
+              "windows",
+              "[0]",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 309,
+            "word_delta": -6
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1679,
+            "character_delta": -79,
+            "field_path": [
+              "response",
+              "in_page",
+              "ngram",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 309,
+            "word_delta": -6
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 2,
+      "row": 6
+    },
+    {
+      "comparison": {
+        "authorized_character_count": 1758,
+        "authorized_word_count": 315,
+        "candidate_fields": [
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1676,
+            "character_delta": -82,
+            "field_path": [
+              "prompt"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 305,
+            "word_delta": -10
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1673,
+            "character_delta": -85,
+            "field_path": [
+              "response",
+              "in_page",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 305,
+            "word_delta": -10
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1673,
+            "character_delta": -85,
+            "field_path": [
+              "response",
+              "in_page",
+              "ngram",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 305,
+            "word_delta": -10
+          },
+          {
+            "accepted_match_mode": null,
+            "candidate_contains_exact": false,
+            "candidate_is_substring_of_exact": false,
+            "character_count": 1673,
+            "character_delta": -85,
+            "field_path": [
+              "response_payload",
+              "text"
+            ],
+            "whitespace_collapsed_equal_diagnostic_only": false,
+            "word_count": 305,
+            "word_delta": -10
+          }
+        ],
+        "privacy_note": "No Pangram history-record text or private result URL is included."
+      },
+      "page": 2,
+      "row": 8
+    }
+  ],
+  "originalRunArtifacts": [
+    {
+      "name": "localization-failure.json",
+      "sha256": "23946437389c0ecbabdf52c24de2335b555ebedd1430f06f1f55d0f32f5815fb",
+      "utf8Bytes": 716
+    },
+    {
+      "name": "report-body.txt",
+      "sha256": "6ecc1247ae6727599addefd59f5ce486b0113408826da7061216aa3a80c4e020",
+      "utf8Bytes": 2089
+    },
+    {
+      "name": "report.pdf",
+      "sha256": "6b9e58fecc9ba6fa50cc499b91d34bb5258d0c1bc68a6871fa5646254a419d3f",
+      "utf8Bytes": 61833
+    },
+    {
+      "name": "result.json",
+      "sha256": "c983a673061687c4fdc0b360d319e74ea42dc384db3d7befe178e6a446ff3ca0",
+      "utf8Bytes": 3955
+    },
+    {
+      "name": "submission-reservation.json",
+      "sha256": "4d019e7e93c10064a787152c709dd12f10f624f70628f9838aad5fca5b033ce7",
+      "utf8Bytes": 510
+    }
+  ],
+  "privacyNote": "No UUID, private report URL, cookie, storage value, authorization header, unrelated prompt, or raw response is persisted.",
+  "providerOrTaskIdentityRecovered": true,
+  "reservationTime": "2026-08-31T04:55:14.797318Z",
+  "restoredTabStateBeforeNavigation": [
+    {
+      "detectorButtonState": "NOT_FOUND",
+      "exactInputPresent": false,
+      "title": "",
+      "urlClass": "ABOUT_BLANK_OR_INTERNAL",
+      "visibleStateMarkers": []
+    },
+    {
+      "detectorButtonState": "NOT_FOUND",
+      "exactInputPresent": false,
+      "title": "",
+      "urlClass": "ABOUT_BLANK_OR_INTERNAL",
+      "visibleStateMarkers": []
+    }
+  ],
+  "result": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "Human Written",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+      "authorized_word_count": 315,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+      "exact_word_count": 315,
+      "record_model_id": null,
+      "record_prediction": "We believe that this entire text is human-written.",
+      "record_prediction_prob": 0.18962115049362183,
+      "stored_text_sha256": "03037241afe8827df5b1ca2b81bc877704d5e198229a9759237b76245807ecd1",
+      "stored_word_count": 315,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "Human",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "scanId": "SOMATIC-SHAKING-RESIDUAL-SOCIAL-A-EXACT-LOCALIZATION-001",
+  "schemaVersion": 1,
+  "startedAt": "2026-08-31T04:57:31.187115Z",
+  "windows": [
+    {
+      "confidence": "High",
+      "end_index": 1750,
+      "is_humanized": false,
+      "label": "Human",
+      "start_index": 0,
+      "text": "Shaking Qigong / Shaking Medicine\nMy friend Louka is why I link this class. He had tried many healin",
+      "word_count": 316
+    }
+  ]
+}
