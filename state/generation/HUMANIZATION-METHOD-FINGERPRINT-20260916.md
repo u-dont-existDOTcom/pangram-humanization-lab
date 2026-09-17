@@ -1,108 +1,149 @@
-# Humanization method fingerprint — preserve the structure of a successful correction loop
+# Humanization method fingerprint — full coarse-to-fine correction loop
 
 Status: PROVISIONAL / owner-taught process lesson
-Date: 2026-09-16
+Date: 2026-09-16; corrected 2026-09-17
 
-## Triggering evidence
+## 2026-09-17 owner correction
 
-In the Inner Child Therapy manual-humanization loop, the successful late-stage Episode 007 process was more specific than the shorthand `write instructions, then apply them later`.
+The earlier version of this file over-weighted the **late-stage** Episode 007 residual-repair process and risked representing it as the whole successful method. Joel corrected that interpretation.
 
-The useful instruction form was:
+Episode 007 did not succeed by beginning with a 39-word repair. It humanized a large `My Journey` section over many turns. The one-sentence 39-word repair was only the terminal residual after repeated broad section/region revisions and progressive freezing of Human/high spans.
+
+Durable article-side reconstruction:
+
+`u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-007-FULL-SUCCESSFUL-METHOD-RECONSTRUCTION-20260917.md`
+
+## Full campaign evidence
+
+The durable sequence shows a coarse-to-fine trajectory:
+
+- initial candidate: 998 words, full natural section;
+- R2: 996 words, full section;
+- R3: 998 words, full section;
+- blind-audit + screenshot comparison identified broad model-shaped explanatory regions;
+- R4: 1002 words, broad structural/register reconstruction;
+- R5: 940 words, broad repair of remaining therapist/explainer mini-essays;
+- R6: 909 words, further broad repair;
+- R7: 800 words, structural method switch within the full section; owner Pangram screenshot still showed about 40.24% displayed AI but also established reliable Human/high islands;
+- R8: 738 words, first explicit known-green freeze + red-only repair;
+- R8D: sentence-level repair of the remaining red regions; displayed AI about 29.74%;
+- R8E: second residual pass; about 94.65% displayed Human, leaving one 39-word AI/high residual;
+- R8F: replaced only that final residual sentence while keeping its 50-word Human/high tail byte-for-byte;
+- owner result: `perfect, 100% human high conf. looks like we've nailed the process now at least for this style of writing.`
+
+The final 39-word repair is therefore evidence for the **terminal localization phase**, not evidence that successful humanization should begin with tiny edits.
+
+## Correct campaign fingerprint
+
+The validated process for this article style is:
+
+`full natural boundary -> broad repair while the failure is broad -> cold audit / owner-detector localization -> freeze reliable good islands -> repair remaining bad regions -> re-audit/retest -> freeze newly good islands -> progressively narrow to residuals`
+
+Short name: **coarse-to-fine iterative convergence with progressive locking**.
+
+### Phase A — full-boundary / broad repair
+
+Use when the natural section remains broadly model-shaped and there are no reliable internal green islands worth freezing.
+
+1. Freeze the complete natural source boundary and preservation units.
+2. Repair the whole boundary when architecture, register, thought order, reader relationship, or explanatory packaging is broadly wrong.
+3. Allow movement, merging, compression, and substantial realization change inside the authorized semantic delta.
+4. Deliver and inspect the complete integrated natural boundary.
+5. Cold-audit the full boundary. Do not assume removal of explicit listicles means the hidden mini-essay architecture is gone.
+6. Use owner/detector evidence only after editorial admission; compare segmentation against prior editorial predictions when possible.
+
+### Phase B — evidence-guided regional repair
+
+Enter only when reliable evidence has established good islands and bad regions.
+
+1. Freeze exact Human/high or otherwise strongly owner-validated spans that do not have a real editorial defect.
+2. Change only the identified bad regions.
+3. Keep returning the complete integrated boundary for owner checking.
+4. Re-run preservation and full-boundary cold audit after the regional edits.
+5. Let the edit scope shrink only as the failure itself localizes.
+
+### Phase C — sentence/residual repair
+
+This is where the prior shorthand belongs.
+
+For each surviving residual:
 
 `literal current sentence/span -> explicit operation -> concrete positive generation target`
 
-Typical operations were `keep`, `merge`, `rewrite`, `compress`, `delete as separate sentence`, `re-sequence`, or `demote`.
+Typical operations remain:
+- keep;
+- merge;
+- rewrite;
+- compress;
+- delete as separate sentence;
+- re-sequence;
+- demote.
 
-The positive target described what the replacement should *do* in the reader's experience, rather than supplying only prohibitions such as `don't sound academic`, `avoid listicles`, or `make it more human`.
+Additional requirements:
+- freeze known-green neighbors;
+- freeze instructions before generation when critic/writer separation is being tested;
+- apply them literally without silently redesigning the repair;
+- prove preservation;
+- adversarially cold-audit;
+- use Pangram only after editorial admission.
 
-After those instructions were frozen, applying them on a later owner turn produced materially better results in Episode 007. A later Episode 008 attempt preserved only the turn-separation dimension while applying a broader section-level guide. That was not a faithful reproduction of the successful method even though it was initially described as such.
+## Scope is evidence-responsive, not intrinsically sparse
 
-## Failure mechanism
+A large repair is not automatically method drift. A tiny repair is not automatically method fidelity.
 
-The method was compressed into one salient abstraction: `write repair instructions, then apply them on the next turn`.
+The relevant question is:
 
-That compression lost other defining dimensions:
+> Does the repair scope match the current localization evidence?
 
-- literal sentence/span anchoring;
-- one explicit operation per span;
-- positive, concrete replacement jobs;
-- preserving stronger attacks/rejected alternatives rather than only the winning edit;
-- applying the frozen guide without silently rewriting it during generation.
+If the whole subsection is model-shaped, broad subsection reconstruction can be faithful to the successful method. If 90% of the boundary is known Human/high, broad reconstruction would violate the same method; freeze the green material and repair the residual.
 
-As a result, an older available guide could satisfy the *label* of the method without satisfying its structure.
+## Why the prior fingerprint became misleading
 
-## Current method fingerprint
+The earlier fingerprint was written from the **successful late-stage Episode 007 process**. Its literal span anchoring and positive operation table were real and important, but the label was later treated as though it described the entire campaign.
 
-When this process is intentionally reused or tested, verify all of the following before calling it the same method:
+That lost the preceding trajectory in which the same natural boundary went through multiple broad/full-section realizations before detector/editorial evidence made localization possible.
 
-1. **Literal target anchoring** — work from the exact current sentence/span, not only a section-level diagnosis.
-2. **Explicit operation** — mark the local move: keep, merge, rewrite, compress, delete as a separate sentence, re-sequence, demote, etc.
-3. **Positive generation target** — specify the sentence's intended job in concrete reader-facing terms. Prefer `put the reader inside one recognizable state, then let the practical consequence follow` over `avoid abstraction`.
-4. **Instruction freeze** — finish and preserve the repair table before generation.
-5. **Phase separation when being tested** — if the experiment concerns critic/writer separation, cross a genuine owner turn or fresh context before applying the guide. Same-turn role-play is not independent.
-6. **Literal application** — apply the frozen table without redesigning the instructions while drafting.
-7. **Preservation proof** — re-run source->candidate and candidate->authority traceability with zero unexplained substantive deltas.
-8. **Adversarial cold audit** — identify the strongest remaining attacks on the candidate, including plausible stronger alternatives and why they were rejected.
-9. **Detector only after editorial admission** — do not spend Pangram while a concrete model-shaped defect is still believed present.
+General failure class:
 
-## Episode 008 R7 result — method fidelity is not sufficient by itself
+**terminal-step compression** — the last successful operation is mistaken for the whole causal method because it immediately precedes the endpoint.
 
-R7 was the first Episode 008 pass to reproduce this method fingerprint faithfully across a real owner-turn boundary. It remained preservation-clean and froze the prior known-green somatic material. Joel's Pangram screenshot nevertheless showed 1719 UI words split as:
+Recovery rule:
 
-- 334 AI / High from the opening;
-- 32 Human Written / Medium beginning `Sometimes you need more bottom-up...`;
-- 1353 AI / High beginning `If your body is still too clenched for tal...`.
+When a multi-turn writing method succeeds, preserve both:
+- the campaign trajectory and phase transitions;
+- the local operation fingerprint used inside each phase.
 
-By displayed segment word share, that is approximately 98.14% AI / 1.86% Human. Therefore the method fingerprint is **not a guarantee of detector success on a long practical-guide boundary**. It is an execution discipline that makes failures more interpretable and produces cleaner local teaching evidence.
+## Episode 008 implication
 
-A text-first prediction frozen before deliberate screenshot inspection correctly anticipated the broad red opening, a tiny somatic Human island—especially the `Sometimes you need more bottom-up...` paragraph—and a broad red tail beginning at the roadmap transition. Because the screenshot was attached in the same turn, this is non-isolated prediction evidence, not a genuinely independent blind test. The useful fact is narrower: the critic can now localize the large-scale guide-shape failure much better than the generator can remove it.
+A later section must enter the method at the phase justified by its evidence.
 
-## Minimal aligned owner repair versus broad voice dump
+Do not force a new, broadly model-shaped subsection into terminal residual mode merely because Episode 007 eventually reached residual mode. Conversely, once a later subsection obtains reliable Human/high islands, lock them and progressively localize instead of repeatedly rewriting the whole subsection.
 
-Current owner proposal: if further model-only minimal repair stalls, prefer **small same-thought owner edits** over a broad rough audio/voice dump for the purpose of teaching the humanization transformation.
+## Retrieval-first owner teaching still applies
 
-This is strongly consistent with the existing retrieval-first alignment classes:
+This file supplements `state/generation/RETRIEVAL-FIRST-OWNER-TEACHING-PROTOCOL.md`.
 
-- A minimal owner edit that preserves essentially the same thought can be captured as `ALIGNED_SAME_THOUGHT`, giving a clean literal model-before -> owner-after pair.
-- A broad audio/voice dump is likely to add, remove, reprioritize, reroute, or contextualize thought. That can be excellent authorial source material, but it will often classify as `OWNER_REAUTHORING` rather than clean realization evidence.
+Retrieve literal aligned transformations by rhetorical operation. During broad phases, use them as demonstrations of how realizations change, not as phrase banks or an accumulating prohibition environment. During localized phases, use the nearest literal successful operation examples for the exact residual problem.
 
-Therefore the current order for **generation learning** is:
+## Method failure / strategy switch rule
 
-1. try one bounded model minimal-repair pass when the critic has a specific, preservation-safe hypothesis;
-2. if it remains red, ask Joel for minimal same-thought corrections to selected spans and capture each aligned pair prospectively;
-3. use broader audio/voice input for Target #2 ownerization, new authorial cognition, or when the thought itself—not merely its realization—is missing.
+Do not declare this method exhausted because one variant failed unless the failed run entered the correct phase and faithfully executed that phase.
 
-This order is provisional until more aligned repairs transfer successfully, but it is methodologically cleaner than treating all fresh owner language as equivalent training evidence.
+A strategy replacement becomes justified when a faithful coarse-to-fine campaign stalls or regresses despite evidence-responsive scope changes, not merely when a broad candidate or one local repair fails.
 
-## General lesson
-
-**Method identity must be structural, not label-based.**
-
-When a workflow succeeds, save a compact fingerprint of the operations that made it distinct. On reuse, compare the current plan against that fingerprint. If a defining dimension is missing, call the new run a method variant rather than treating it as evidence for or against the original method.
-
-This matters especially when several factors can be confused:
-
-- turn/context separation;
-- instruction granularity;
-- positive versus negative guidance;
-- sentence-local versus section-level repair;
-- preservation gating;
-- post-generation adversarial audit.
-
-A failure of one variant does not falsify another unless the relevant factors actually match. Conversely, a faithful method reproduction that still fails Pangram falsifies the claim that the method alone is sufficient for that boundary; do not respond by silently weakening method identity or inventing another label for the same execution.
-
-## Relationship to retrieval-first owner teaching
-
-This supplements `state/generation/RETRIEVAL-FIRST-OWNER-TEACHING-PROTOCOL.md`.
-
-The existing episode rule preserves literal before/after/transfer prose. This method fingerprint preserves the **execution shape** of a successful owner-teaching loop so future workers do not retrieve the right prose lesson but apply it through a materially different repair architecture.
+Fresh-context or structurally different generation remains a valid contingency when the campaign actually stalls, but it is not the default replacement for a method that has already produced the owner target on a comparable article style.
 
 ## Evidence pointers
 
-- `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-007-OWNER-SENTENCE-REWRITE-GUIDE-20260916.md`
-- `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-008-R3-TO-R4-SENTENCE-REPAIR-GUIDE-20260916.md`
-- `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-008-R6-TO-R7-POSITIVE-SENTENCE-REPAIR-GUIDE-20260916.md`
-- `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-008-R7-OWNER-SCREENSHOT-RESULT-20260916.json`
-- `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-008-R7-TO-R8-MINIMAL-REPAIR-GUIDE-20260916.md`
-
-Episode 008 R8 detector outcome remains pending. The current lesson is process evidence plus one negative long-boundary result; it is not yet proof that the proposed minimal-repair pass will succeed.
+- `u-dont-existDOTcom/joel-articles:articles/inner-child-therapy/experiments/EPISODE-007-MY-JOURNEY-CANDIDATE-20260916.json`
+- `.../EPISODE-007-BLIND-SCREENSHOT-AUDIT-AND-REPAIR-20260916.md`
+- `.../EPISODE-007-MY-JOURNEY-CANDIDATE-R7-20260916.json`
+- `.../EPISODE-007-R7-PANGRAM-SCREENSHOT-RESULT-20260916.json`
+- `.../EPISODE-007-MY-JOURNEY-CANDIDATE-R8-20260916.json`
+- `.../EPISODE-007-OWNER-SENTENCE-REWRITE-GUIDE-20260916.md`
+- `.../EPISODE-007-R8D-PANGRAM-SCREENSHOT-RESULT-20260916.json`
+- `.../EPISODE-007-R8D-RESIDUAL-SENTENCE-FIX-GUIDE-20260916.md`
+- `.../EPISODE-007-R8E-PANGRAM-SCREENSHOT-RESULT-20260916.json`
+- `.../EPISODE-007-R8E-FINAL-RESIDUAL-FIX-GUIDE-20260916.md`
+- `.../EPISODE-007-MY-JOURNEY-CANDIDATE-R8F-FINAL-RESIDUAL-20260916.json`
+- `.../EPISODE-007-R8F-OWNER-RESULT-20260916.json`
