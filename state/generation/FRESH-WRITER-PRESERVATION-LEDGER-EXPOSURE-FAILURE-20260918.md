@@ -53,3 +53,41 @@ Explicit ledgers remain valuable for:
 - cases where the prose architecture is already stable.
 
 The finding applies most directly when a fresh writer is being asked to create a natural prose realization from several protected semantic units and repeatedly turns those units into a visible staircase.
+
+## Follow-up: ledger-hidden F2 result
+
+A second genuinely fresh writer was then given a **ledger-hidden** packet:
+- no explicit six-item preservation list;
+- one natural-language semantic brief;
+- the same placement and Lindsay Gibson link requirement;
+- the broad lockstep warning only.
+
+The F2 return again preserved all required Red1 meaning with zero unexplained substantive deltas.
+
+Its first paragraph was materially different from F1: several consecutive sentences stayed inside one thought about a single awful conversation occupying too much mental space before the author distrusted the resulting certainty. The preservation ledger was no longer visible one sentence at a time.
+
+The remaining failure localized mainly to paragraph 2, which recreated a symmetric two-case structure:
+- Gibson pattern principle;
+- a question;
+- matched `Maybe...` healthier-disagreement branch;
+- matched `Maybe...` recurrence branch.
+
+It also reintroduced one `can X and still Y` construction.
+
+### Updated interpretation
+
+For this target, hiding the explicit preservation ledger appears **directionally useful**, not sufficient.
+
+Observed scope:
+- F1 exposed ledger -> whole Red1 remained strongly sentence-per-function;
+- F2 hid ledger -> paragraph 1 became less ledger-shaped, while paragraph 2 retained a narrower model-designed bifurcation.
+
+Do not promote this to a universal generation law.
+
+The next discriminating step is smaller:
+- provisionally hold F2 paragraph 1;
+- use a fresh context for paragraph 2 only;
+- give one compact pattern-focused thought rather than several outcome branches;
+- supervisor checks preservation afterward.
+
+This keeps generation input lighter while fidelity remains a post-generation hard gate.
