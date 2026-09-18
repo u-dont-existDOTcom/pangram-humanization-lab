@@ -96,6 +96,7 @@ Do **not** treat every sentence as pristine positive style. Joel's current visua
 10. Do not assume subtraction/compression humanizes prose. Removing aftercare can expose an even more AI-shaped semantic skeleton where each surviving sentence carries one preservation function. Without evidence-supported green islands, stay in broad natural-boundary realization rather than manufacturing residual-edit phase. See `SUBTRACTION-SEMANTIC-SKELETON-FAILURE-20260918.md`.
 11. Lean literal rewriting can preserve the failed model prose's discourse architecture even in a genuinely fresh context. When semantic-led generation turns the ledger into an outline and literal-led generation merely inherits the old outline, stop blind rewrite cycles and seek decision-changing external localization before choosing another generator architecture. See `LITERAL-TRANSFORMATION-DISCOURSE-INHERITANCE-20260918.md`.
 10. Flag repeated concessive balancing such as `can be X and still Y`, `A but still B`, matched `maybe A / maybe B`, or polished `not X; Y` structures when they become the model's default way to reconcile preservation obligations. The issue is repeated dialectical compression, not a token ban. See `OWNER-CALIBRATION-CONCESSIVE-BALANCE-TIC-20260918.md`.
+12. Do not let a same-context `provisional hold` acquire green-lock semantics. Narrow the edit scope only after reliable good-region evidence supports it; otherwise the campaign can optimize around a pseudo-green model span. See `PROVISIONAL-HOLD-PSEUDO-GREEN-FAILURE-20260918.md`.
 
 ## Practical test
 
