@@ -91,6 +91,7 @@ Do **not** treat every sentence as pristine positive style. Joel's current visua
 5. When a real Joel example would materially improve grounding, flag the exact slot rather than inventing one.
 6. In fresh model-generated humanization, do not use standalone `Great.`, `Fine.`, or `Good.`
 7. A detector-Human model passage can still look AI to Joel. Do not let historical Pangram success automatically promote it to a positive imitation target.
+8. Avoid vague placeholder uses of `the thing`, `that thing`, and `the whole thing` as a generated prose tic. Name the referent naturally, use a cleaner pronoun/verb construction, or restructure the sentence; do not merely swap in another vague noun. See `OWNER-CALIBRATION-VAGUE-THE-THING-TIC-20260918.md`.
 
 ## Practical test
 
