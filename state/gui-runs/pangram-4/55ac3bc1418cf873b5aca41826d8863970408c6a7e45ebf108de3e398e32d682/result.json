@@ -1,0 +1,90 @@
+{
+  "browser_executable": "/opt/brave.com/brave/brave",
+  "captured_at_utc": "2026-09-18T18:33:31.867227Z",
+  "detector_submission_attempted": true,
+  "detector_version": "4.0",
+  "evidence_source": "new_detector_submission",
+  "headed": false,
+  "history_api_exact_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "55ac3bc1418cf873b5aca41826d8863970408c6a7e45ebf108de3e398e32d682",
+    "authorized_word_count": 234,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "55ac3bc1418cf873b5aca41826d8863970408c6a7e45ebf108de3e398e32d682",
+    "exact_word_count": 234,
+    "record_model_id": null,
+    "record_prediction": "We believe that this entire text is AI.",
+    "record_prediction_prob": 0.9999877214431763,
+    "stored_text_sha256": "55ac3bc1418cf873b5aca41826d8863970408c6a7e45ebf108de3e398e32d682",
+    "stored_word_count": 234,
+    "transport_match_mode": "exact_utf8"
+  },
+  "input_path": "/mnt/hdd/home/joel/Téléchargements/episode008-write-dont-send-b.txt",
+  "input_sha256": "55ac3bc1418cf873b5aca41826d8863970408c6a7e45ebf108de3e398e32d682",
+  "local_profile_path": "~/.config/pangram-local-browser",
+  "model": "pangram-4",
+  "parsed": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "AI Generated",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "55ac3bc1418cf873b5aca41826d8863970408c6a7e45ebf108de3e398e32d682",
+      "authorized_word_count": 234,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "55ac3bc1418cf873b5aca41826d8863970408c6a7e45ebf108de3e398e32d682",
+      "exact_word_count": 234,
+      "record_model_id": null,
+      "record_prediction": "We believe that this entire text is AI.",
+      "record_prediction_prob": 0.9999877214431763,
+      "stored_text_sha256": "55ac3bc1418cf873b5aca41826d8863970408c6a7e45ebf108de3e398e32d682",
+      "stored_word_count": 234,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "AI",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "pdf_provenance": "playwright_print_fallback",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "playwright_version": "1.62.0",
+  "profile_kind": "dedicated_persistent_automation_profile",
+  "report_body_sha256": "175673d14262d535eb132ccdd85f939a67f293163f6c3ae213d4fccc0c343d21",
+  "report_layout": "history_api_structured_result_v1",
+  "report_pdf_sha256": "d597fd2370b5e09862c4af00875b7fa0e5c650bbad8e29e49640cf48f1370cc4",
+  "report_url": "https://www.pangram.com/history/3cd03d59-2418-40f3-880a-2e668f1ac493",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "status": "complete",
+  "submission_reservation": {
+    "detector_submission_attempted": false,
+    "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+    "input_sha256": "55ac3bc1418cf873b5aca41826d8863970408c6a7e45ebf108de3e398e32d682",
+    "model": "pangram-4",
+    "reserved_at_utc": "2026-09-18T18:33:16.601002Z",
+    "schema_version": 1,
+    "status": "paid_gui_submission_reserved",
+    "transport": "local_playwright",
+    "transport_runner_version": "pangram-gui-local-playwright-v1",
+    "word_count": 234
+  },
+  "transport": "local_playwright",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "word_count": 234
+}
