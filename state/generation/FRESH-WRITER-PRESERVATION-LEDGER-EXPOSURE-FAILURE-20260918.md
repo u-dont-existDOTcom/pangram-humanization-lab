@@ -121,3 +121,35 @@ Therefore generation input and verification input should remain separated:
 - at late residual stages, re-expose only the specific missing fidelity constraint rather than the whole ledger.
 
 This does not justify weakening preservation. It supports moving fidelity enforcement to post-generation supervision while selectively restoring only the missing constraint in the next fresh residual task.
+
+## Follow-up: F4 selective fidelity re-exposure
+
+A fourth genuinely fresh paragraph-2 writer was given only the specific fidelity constraints that F3 had lost:
+- name emotional immaturity explicitly;
+- retain Lindsay Gibson + repeated relational behavior;
+- do not use an invented Joel-personal-preference wrapper;
+- do not invent a future-interaction count/horizon.
+
+The F4 return restored the missing fidelity and removed the two unsupported F3 additions without recreating F2's matched two-branch decision tree.
+
+Supervisor review then found its second sentence redundant:
+- sentence 1 already states repeated behavior across a relationship versus diagnosis from one dramatic exchange;
+- sentence 2 restates the same contrast as what keeps showing up across interactions versus what one conversation seemed to prove.
+
+The selected minimum-dose F4A therefore keeps F4 sentence 1 and deletes sentence 2.
+
+### Updated process evidence
+
+For this target, the observed sequence is now:
+
+1. full explicit ledger -> fidelity strong, discourse architecture visibly ledger-shaped;
+2. ledger hidden -> architecture improves, fidelity risk increases;
+3. selective late-stage re-exposure of only the missing fidelity constraint -> fidelity restored without restoring the full ledger architecture;
+4. cold audit can then remove redundant explanatory aftercare without changing protected meaning.
+
+This remains project-specific evidence, not a universal writing law.
+
+The useful process distinction is:
+- **generation input should be as light as possible for natural realization;**
+- **verification input remains complete and strict;**
+- **late residual prompts may selectively re-expose only the failed fidelity constraint rather than the whole preservation environment.**
