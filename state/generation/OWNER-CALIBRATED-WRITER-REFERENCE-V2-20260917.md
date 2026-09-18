@@ -92,6 +92,7 @@ Do **not** treat every sentence as pristine positive style. Joel's current visua
 6. In fresh model-generated humanization, do not use standalone `Great.`, `Fine.`, or `Good.`
 7. A detector-Human model passage can still look AI to Joel. Do not let historical Pangram success automatically promote it to a positive imitation target.
 8. Avoid vague placeholder uses of `the thing`, `that thing`, and `the whole thing` as a generated prose tic. Name the referent naturally, use a cleaner pronoun/verb construction, or restructure the sentence; do not merely swap in another vague noun. See `OWNER-CALIBRATION-VAGUE-THE-THING-TIC-20260918.md`.
+9. Do not treat mimetic repetition or prose that structurally enacts a described loop as positive Human evidence. A model can engineer `Sometimes -> So -> Then -> That -> takeaway` into a highly artificial demonstration. See `OWNER-CALIBRATION-MIMETIC-REPETITION-FALSE-POSITIVE-20260918.md`.
 
 ## Practical test
 
