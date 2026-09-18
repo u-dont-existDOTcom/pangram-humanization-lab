@@ -91,3 +91,33 @@ The next discriminating step is smaller:
 - supervisor checks preservation afterward.
 
 This keeps generation input lighter while fidelity remains a post-generation hard gate.
+
+## Follow-up: F3 localized paragraph result
+
+A third genuinely fresh writer was given only the provisionally held F2 paragraph 1 and asked to rewrite paragraph 2.
+
+Style improved again:
+- the matched `Maybe A / Maybe B` decision tree disappeared;
+- the repeated `can X and still Y` form disappeared from paragraph 2;
+- the result reduced to two sentences rather than a worked example.
+
+However, supervisor preservation review found the cost of the lighter generation interface:
+
+1. the active source distinction that one ugly conversation / time / disagreement / another person's boundary alone do **not establish emotional immaturity** had become only inferable across F2/F3 rather than explicit;
+2. F3 introduced `I'd want to see...`, an unsupported Joel-personal preference wrapper around general advice;
+3. F3 introduced `the next few times we talk`, an unsupported observation horizon/pseudo-count.
+
+### Updated method lesson
+
+The observed sequence now supports a two-sided conclusion for this target:
+
+- **more explicit preservation input** improved fidelity but encouraged ledger-shaped prose;
+- **lighter/hidden preservation input** improved prose architecture but increased omission/provenance drift.
+
+Therefore generation input and verification input should remain separated:
+- expose only the minimum meaning needed for natural realization;
+- keep the full preservation ledger with the supervisor;
+- run hard forward/reverse traceability after every fresh return;
+- at late residual stages, re-expose only the specific missing fidelity constraint rather than the whole ledger.
+
+This does not justify weakening preservation. It supports moving fidelity enforcement to post-generation supervision while selectively restoring only the missing constraint in the next fresh residual task.
