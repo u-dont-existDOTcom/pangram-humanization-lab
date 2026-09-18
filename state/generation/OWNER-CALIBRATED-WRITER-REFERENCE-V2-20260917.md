@@ -98,6 +98,7 @@ Do **not** treat every sentence as pristine positive style. Joel's current visua
 10. Flag repeated concessive balancing such as `can be X and still Y`, `A but still B`, matched `maybe A / maybe B`, or polished `not X; Y` structures when they become the model's default way to reconcile preservation obligations. The issue is repeated dialectical compression, not a token ban. See `OWNER-CALIBRATION-CONCESSIVE-BALANCE-TIC-20260918.md`.
 12. Do not let a same-context `provisional hold` acquire green-lock semantics. Narrow the edit scope only after reliable good-region evidence supports it; otherwise the campaign can optimize around a pseudo-green model span. See `PROVISIONAL-HOLD-PSEUDO-GREEN-FAILURE-20260918.md`.
 13. On difficult detector-guided humanization, use Pangram as an active convergence controller when it is producing useful localization: repair current red regions -> preservation check -> measure promptly -> use the result to set the next edit scope. Do not turn every detector result into a new strategy detour while measured progress is advancing. See `PANGRAM-AS-ACTIVE-CONVERGENCE-CONTROLLER-20260918.md`.
+14. Do not let a full-section Human result mask an AI paragraph. When technically measurable, each paragraph should independently clear the Human gate; leave independently Human paragraphs alone. Do not pad short paragraphs or hide them inside Human anchor context to manufacture a paragraph-level pass. See `OWNER-PARAGRAPH-LEVEL-HUMAN-GATE-20260918.md`.
 
 ## Practical test
 
