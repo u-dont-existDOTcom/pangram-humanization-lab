@@ -8,6 +8,10 @@ Preserve exact Pangram detector evidence, editorial authority, lesson closeout, 
 
 Current owner instructions, exact repository evidence, tests, and current `main` outrank historical chat or old task branches.
 
+## 2026-09-18 — GUI-over-API budget preference
+
+For ongoing Joel-byline humanization detector checks, Joel now prefers the cheaper Pangram GUI route over the API because his API balance is low. When direct connected-computer access is available, Remote Desktop Commander may be used to reach the local workflow; prefer the deterministic `pangram-local` / dedicated-profile path over free-form clicking when accessible. Do not silently spend API credits merely because the current chat can call the API more easily. See `state/OWNER-PANGRAM-GUI-BUDGET-PREFERENCE-20260918.md`.
+
 ## Current browser-interaction preference — 2026-08-28
 
 For multi-candidate Pangram work, Joel asked that Brave remain in the background and that the automation reuse its existing session/tab instead of repeatedly foregrounding, closing, and reopening tabs. The completed Human→AI packet used headless Brave with one persistent context and one reused result tab per batch. Treat this as the current interaction preference unless Joel asks to watch a headed run. It does not relax authentication, exact-identity, reservation, cache, or History recovery safeguards.
