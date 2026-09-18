@@ -93,6 +93,7 @@ Do **not** treat every sentence as pristine positive style. Joel's current visua
 7. A detector-Human model passage can still look AI to Joel. Do not let historical Pangram success automatically promote it to a positive imitation target.
 8. Avoid vague placeholder uses of `the thing`, `that thing`, and `the whole thing` as a generated prose tic. Name the referent naturally, use a cleaner pronoun/verb construction, or restructure the sentence; do not merely swap in another vague noun. See `OWNER-CALIBRATION-VAGUE-THE-THING-TIC-20260918.md`.
 9. Do not treat mimetic repetition or prose that structurally enacts a described loop as positive Human evidence. A model can engineer `Sometimes -> So -> Then -> That -> takeaway` into a highly artificial demonstration. See `OWNER-CALIBRATION-MIMETIC-REPETITION-FALSE-POSITIVE-20260918.md`.
+10. Flag repeated concessive balancing such as `can be X and still Y`, `A but still B`, matched `maybe A / maybe B`, or polished `not X; Y` structures when they become the model's default way to reconcile preservation obligations. The issue is repeated dialectical compression, not a token ban. See `OWNER-CALIBRATION-CONCESSIVE-BALANCE-TIC-20260918.md`.
 
 ## Practical test
 
