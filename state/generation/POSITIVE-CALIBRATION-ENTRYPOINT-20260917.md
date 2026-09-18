@@ -36,6 +36,7 @@ Also activate both direct owner calibrations:
 
 - `state/generation/OWNER-CALIBRATION-MARCHING-EFFICIENCY-20260917.md`
 - `state/generation/OWNER-CALIBRATION-READER-EXAMPLES-AND-CLIPPED-VERDICTS-20260917.md`
+- `state/generation/OWNER-CALIBRATION-VAGUE-THE-THING-TIC-20260918.md`
 
 The first names a frequent AI-shaped gestalt: **predictable marching advancement**. Sentence after sentence is optimized for near-maximum semantic efficiency, each has an obvious function, and the passage advances like an instruction manual. Occasional maximum efficiency is fine. Do not repair this by padding.
 
@@ -44,7 +45,7 @@ The second adds two production corrections:
 1. natural social/lived movement can come from source-grounded reader examples and questions such as whether the reader has experienced a recognizable version of the situation; this does not require invented Joel autobiography;
 2. when a genuine Joel life example would materially improve the passage, flag the exact slot rather than inventing it.
 
-Direct owner rule for fresh humanization generation: do not use the clipped standalone interjections `Great.`, `Fine.`, or `Good.` Existing owner-authored/locked prose is not automatically changed because it contains one.
+Direct owner rules for fresh humanization generation include: do not use the clipped standalone interjections `Great.`, `Fine.`, or `Good.`; and avoid vague placeholder uses of `the thing` / `that thing` / `the whole thing` when the prose knows a more natural referent or can omit the placeholder. Existing owner-authored/locked prose is not automatically changed merely because it contains one of these forms.
 
 Use the actual task's live source, owner corrections and destination for content. Calibration examples never authorize transplanting their facts, autobiography, jokes, metaphors, language or conclusions.
 
