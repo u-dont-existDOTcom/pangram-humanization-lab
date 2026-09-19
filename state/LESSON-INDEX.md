@@ -122,3 +122,6 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:local-saturation-not-global-dead-end-20260919 -->
 - **Local saturation ≠ global humanization dead end:** an all-red target only falsifies the tested target + generator/representation family. Compare against durable recent successes before escalating globally. When no green island exists, use progressive forward construction to earn a stable prefix, then return to the proven red-region convergence controller. See `state/generation/LOCAL-SATURATION-NOT-GLOBAL-DEAD-END-20260919.md`.
+
+<!-- closeout-request:inner-child-episode008-railway-p3-saturation-20260919 -->
+- **Railway Agent P3 target saturation:** on Inner Child Episode 008 P3, 20 owner-authorized Railway generations produced seven structurally varied detector-worthy candidates; all seven measured Pangram 4.0 AI 1.0 with exact History binding. Stop this Railway target lane at the 20-generation bound; do not generalize to other Railway targets. See `state/generation/INNER-CHILD-EPISODE008-RAILWAY-P3-SATURATION-20260919.md`.
