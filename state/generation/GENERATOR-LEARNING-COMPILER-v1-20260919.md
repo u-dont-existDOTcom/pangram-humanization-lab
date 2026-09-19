@@ -206,7 +206,8 @@ As of 2026-09-19:
 
 - critic/diagnostic learning: **strong**
 - literal episode preservation: **improving**
-- owner-thought preservation: **demonstrated**
+- near-verbatim owner-wording preservation: **demonstrated**
+- minimal rewriting that preserves owner Human thought shape: **not demonstrated**
 - fresh autonomous transfer: **not yet demonstrated reliably**
 - durable production writing skill: **not yet earned**
 
@@ -220,3 +221,19 @@ Preferred repair representation is now the **operation trace**:
 `exact failed sentence/span -> causal diagnosis -> keep/rewrite/merge/delete/move/subordinate -> protected function -> local replacement -> integrated outcome`.
 
 Use this for residual repair around earned Human spans. Do not misapply it as an endless sentence-paraphrase loop when an entire paragraph is red; the 2026-09-19 Railway comparison showed that even fully isolated local patch executors can keep producing model-shaped patches without a Human substrate.
+
+
+## 2026-09-19 strong-idea checkpoint — substrate + exemplar engineering both failed
+
+Two materially different ideas were tested after Joel explicitly relaxed the six-call ceiling for high-information GUI experiments:
+
+1. **Internal-cognition substrate**: switch from expository essay generation to literal self-questioning / changing-attention prose. Result: Pangram AI 1.0.
+2. **Exemplar-conditioned sentence engineering**: give the executor exact historically successful before/after operation traces, then apply local structural operations to the unresolved Write It. Don't Send It Yet paragraph. Result: Pangram AI 1.0.
+
+Both were exact-byte paragraph-level GUI checks.
+
+Implication:
+- do not continue nearby prompt variants on these architectures;
+- the current bottleneck is deeper than missing slogans, missing local operations, or missing thought-process framing;
+- wait for / use a materially different inference substrate or model execution path before more detector spend on the same generation prior;
+- once Joel's explicit CLI inference backend on Railway is available, use it for controlled fresh-model comparisons rather than the project-scoped Railway Agent.
