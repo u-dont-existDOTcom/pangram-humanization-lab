@@ -150,3 +150,10 @@ Version 1 starts conservatively.
 - r19/r20/r22/r25 are indexed with historical outcome evidence but remain ineligible for literal retrieval until their exact before/restrained/owner texts are imported.
 
 Do not fill these gaps from memory. Add exact historical artifacts when recovered, and capture all new owner teaching episodes prospectively so this problem stops recurring.
+
+
+## Generator learning compiler — 2026-09-19
+
+Literal retrieval alone is not sufficient if the writer still converts examples back into its default model prior. Before fresh generation, also apply `state/generation/GENERATOR-LEARNING-COMPILER-v1-20260919.md`.
+
+The additional requirement is behavioral: every useful teaching episode must produce a **generative delta** (what changes during composition), a fresh transfer target, and a promotion result. Critic recognition is not generator learning. A lesson remains diagnostic until transfer evidence exists.
