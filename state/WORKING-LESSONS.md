@@ -133,3 +133,11 @@ Durable findings:
 Therefore do not blacklist `same principle`, colons, three-item lists, transitions, compression, or any other isolated surface. The operative risk is often **stacked editorial closure**: several locally tidy operations compress, label, connect, and finish a thought in the same boundary. Preserve natural owner source when it is actually source-relevant to the target function, prefer the next necessary concrete move, and test interactions only when single-feature cells are null and the combination is decision-relevant.
 
 R09 supplies the production anchor: its byte-identical R08 paragraph was owner-localized Human/high, while its appended 66-word model/editorial required-functions paragraph was AI/high. Keep R08 frozen; retain the protected functions but redistribute or re-realize them rather than defending the compact package.
+
+## 2026-09-19 — Local saturation is not a global dead end
+
+A difficult target can saturate under one generator/representation family without invalidating the broader humanization program. Inner Child Therapy supplied the direct contrast on consecutive days: `Also Look Outward` converged under a stable-boundary red-region controller from AI 0.53295 -> 0.42430 -> 0.0 and was owner-accepted, while `Write It. Don't Send It Yet.` produced six materially varied all-red realizations under the tested generator family.
+
+Interpret the latter as **local saturation**, not proof that models cannot generate Human prose or that earlier methods stopped working. When no reliable Human island exists, create one through progressive forward construction: generate only the next natural beat, freeze owner/editorially accepted model-generated prefix text, continue from that prefix, then run the complete natural boundary through preservation and Pangram. Once real red/green localization exists, return immediately to the proven residual-repair controller instead of inventing another whole-paragraph architecture after each failure.
+
+Exact method note: `state/generation/LOCAL-SATURATION-NOT-GLOBAL-DEAD-END-20260919.md`.
