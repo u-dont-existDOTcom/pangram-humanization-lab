@@ -1,5 +1,7 @@
 # Positive prose calibration — active retrieval entry point
 
+> **Mandatory generation activation — 2026-09-19:** before using this calibration for fresh generation, read `state/generation/GENERATOR-LEARNING-COMPILER-v1-20260919.md`. The compiler separates critic knowledge from generator skill, activates only target-relevant literal episodes + generative deltas, and requires transfer evidence before calling a lesson learned. Do not replace it with a growing prohibition stack.
+
 Date: 2026-09-17
 Status: **SOURCE-VERIFIED DEVELOPMENT CALIBRATION / R17 WHOLE-SUBSECTION TRANSFER FAILED / OWNER-CALIBRATED V2 ACTIVE / USE DIFFERENT COMPOSITION ARCHITECTURE**
 
