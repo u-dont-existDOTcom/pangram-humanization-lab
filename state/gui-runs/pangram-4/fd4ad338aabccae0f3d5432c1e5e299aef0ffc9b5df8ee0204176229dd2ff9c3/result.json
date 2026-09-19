@@ -1,0 +1,90 @@
+{
+  "browser_executable": "/opt/brave.com/brave/brave",
+  "captured_at_utc": "2026-09-19T21:46:45.812194Z",
+  "detector_submission_attempted": true,
+  "detector_version": "4.0",
+  "evidence_source": "new_detector_submission",
+  "headed": false,
+  "history_api_exact_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "fd4ad338aabccae0f3d5432c1e5e299aef0ffc9b5df8ee0204176229dd2ff9c3",
+    "authorized_word_count": 81,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "fd4ad338aabccae0f3d5432c1e5e299aef0ffc9b5df8ee0204176229dd2ff9c3",
+    "exact_word_count": 81,
+    "record_model_id": null,
+    "record_prediction": "We believe that this entire text is AI.",
+    "record_prediction_prob": 0.9981101155281067,
+    "stored_text_sha256": "fd4ad338aabccae0f3d5432c1e5e299aef0ffc9b5df8ee0204176229dd2ff9c3",
+    "stored_word_count": 81,
+    "transport_match_mode": "exact_utf8"
+  },
+  "input_path": "/mnt/hdd/home/joel/Téléchargements/inner-child-evaluation-baseline-20260919.txt",
+  "input_sha256": "fd4ad338aabccae0f3d5432c1e5e299aef0ffc9b5df8ee0204176229dd2ff9c3",
+  "local_profile_path": "~/.config/pangram-local-browser",
+  "model": "pangram-4",
+  "parsed": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "AI Generated",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "fd4ad338aabccae0f3d5432c1e5e299aef0ffc9b5df8ee0204176229dd2ff9c3",
+      "authorized_word_count": 81,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "fd4ad338aabccae0f3d5432c1e5e299aef0ffc9b5df8ee0204176229dd2ff9c3",
+      "exact_word_count": 81,
+      "record_model_id": null,
+      "record_prediction": "We believe that this entire text is AI.",
+      "record_prediction_prob": 0.9981101155281067,
+      "stored_text_sha256": "fd4ad338aabccae0f3d5432c1e5e299aef0ffc9b5df8ee0204176229dd2ff9c3",
+      "stored_word_count": 81,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "AI",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "pdf_provenance": "playwright_print_fallback",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "playwright_version": "1.62.0",
+  "profile_kind": "dedicated_persistent_automation_profile",
+  "report_body_sha256": "f72c0c9fc2a5e3901dc2f0179224c5862b461b764f4ff1ca9764bdf26ce3f6c0",
+  "report_layout": "history_api_structured_result_v1",
+  "report_pdf_sha256": "6b209ec47d67ec00cd0834ac1e7a7e8ab93b3a7f06e67c794973f7e691db0d29",
+  "report_url": "https://www.pangram.com/history/5786c026-cb95-4390-984b-7eb1dd3009f2",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "status": "complete",
+  "submission_reservation": {
+    "detector_submission_attempted": false,
+    "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+    "input_sha256": "fd4ad338aabccae0f3d5432c1e5e299aef0ffc9b5df8ee0204176229dd2ff9c3",
+    "model": "pangram-4",
+    "reserved_at_utc": "2026-09-19T21:46:31.415391Z",
+    "schema_version": 1,
+    "status": "paid_gui_submission_reserved",
+    "transport": "local_playwright",
+    "transport_runner_version": "pangram-gui-local-playwright-v1",
+    "word_count": 81
+  },
+  "transport": "local_playwright",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "word_count": 81
+}
