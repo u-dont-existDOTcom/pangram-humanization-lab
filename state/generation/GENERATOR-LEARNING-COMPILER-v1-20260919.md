@@ -211,3 +211,12 @@ As of 2026-09-19:
 - durable production writing skill: **not yet earned**
 
 This status is intentional. Do not overclaim learning progress.
+
+## 2026-09-19 architecture amendment — engineering attractor
+
+Broad generation remains a strong failure mode on difficult Joel-byline prose. Activate `state/generation/SENTENCE-ENGINEERING-RESIDUAL-REPAIR-20260919.md` whenever a concrete model-shaped draft exists and failures can be localized.
+
+Preferred repair representation is now the **operation trace**:
+`exact failed sentence/span -> causal diagnosis -> keep/rewrite/merge/delete/move/subordinate -> protected function -> local replacement -> integrated outcome`.
+
+Use this for residual repair around earned Human spans. Do not misapply it as an endless sentence-paraphrase loop when an entire paragraph is red; the 2026-09-19 Railway comparison showed that even fully isolated local patch executors can keep producing model-shaped patches without a Human substrate.
