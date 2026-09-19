@@ -31,6 +31,22 @@ This is a transport/cost preference. It does not relax:
 
 Applies to ongoing Joel-byline humanization detector work until Joel changes the preference or the GUI route is genuinely unavailable/inappropriate for the requested evidence.
 
+
+## 2026-09-19 owner correction — Pangram GUI is a Chat action when direct computer access exists
+
+Joel corrected an unnecessary Work handoff:
+
+> pangram GUI doesn't require work
+
+Routing rule:
+
+- when the current Chat surface exposes direct authorized connected-computer / Remote Desktop Commander access, run the deterministic local `pangram-local` GUI workflow **from Chat**;
+- do not create a Work/Codex handoff merely because the Pangram action uses a local terminal, browser, headed GUI, or another machine;
+- Work/Codex is needed only if the active Chat surface genuinely lacks the required execution capability or the operation is otherwise too long/stateful to execute reliably in Chat;
+- this routing correction does not relax exact-text binding, dedicated-profile use, reservation-before-click, History recovery, duplicate-call defense, or owner budget preferences.
+
+This correction is a specialization of the universal rule that execution is routed by the **actual capabilities of the current Chat surface**, not by action category alone.
+
 ## 2026-09-19 owner clarification — six-call cap is an anti-loop guard, not an absolute ceiling
 
 Joel clarified that the six-call cap exists to prevent low-value iterative thrashing, not to prohibit a genuinely new discriminating experiment.
