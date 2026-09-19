@@ -30,3 +30,18 @@ This is a transport/cost preference. It does not relax:
 ## Scope
 
 Applies to ongoing Joel-byline humanization detector work until Joel changes the preference or the GUI route is genuinely unavailable/inappropriate for the requested evidence.
+
+## 2026-09-19 owner clarification — six-call cap is an anti-loop guard, not an absolute ceiling
+
+Joel clarified that the six-call cap exists to prevent low-value iterative thrashing, not to prohibit a genuinely new discriminating experiment.
+
+Updated rule:
+
+- six GUI calls remains the default stop checkpoint for one stable strategy/target;
+- do **not** exceed it for cosmetic rewrites, minor prompt variants, or repeated same-method attempts;
+- a materially different architecture with a clear falsifiable prediction may receive an additional GUI call when the expected information gain is high;
+- document why the new call is structurally different before spending it;
+- if the new architecture also fails, stop unless another comparably strong hypothesis appears;
+- GUI remains preferred over API because it is materially cheaper for Joel.
+
+This does not relax duplicate-call defense, exact-byte binding, or paragraph-level acceptance rules.
