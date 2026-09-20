@@ -249,3 +249,74 @@ the writer response preserved paragraph-level organizing-thought / omission / ad
 
 Next action:
 run one instrumented diagnostic generation whose prose and per-sentence map are emitted together. This is for a valid owner-help packet, not another open-ended same-method optimization campaign.
+
+
+## Instrumented diagnostic writer — exact pre-prose sentence map
+
+Purpose:
+after Transfer E passed a fresh reader but failed Pangram AI 1.0, one final instrumented diagnostic writer was run solely to create a valid owner-help packet. The writer was required to emit its exact sentence plan **before** the prose.
+
+### Exact planned map
+
+S1
+- role: establish the central distinction
+- source meaning: regret about communication does not invalidate the underlying complaint
+- local move: separate manner of speaking from reason for speaking
+- placement reason: give paragraph governing thought in ordinary terms
+- next sentence intended to: show how unresolved guilt can distort that distinction
+
+S2
+- role: identify the mistaken demand placed on the other person's reaction
+- source meaning: continued upset cannot determine whether the speaker was entitled to be upset
+- local move: private regret -> seeking external verdict
+- placement reason: locate the real problem without a list
+- next sentence intended to: show ordinary behavior that follows from seeking that verdict
+
+S3
+- role: make certainty-seeking concrete
+- source meaning: repeated apology/explanation can become an attempt to settle who was right
+- local move: abstract search for certainty -> recognizable conduct
+- placement reason: provide an excessive case
+- next sentence intended to: make a plain judgment about why the effort cannot succeed
+
+S4
+- role: close with broader premise
+- source meaning/addition: conflict rarely supplies complete moral certainty; remorse need not erase grievance
+- local move: reject hoped-for verdict and return to opening distinction
+- placement reason: complete the thought
+- next sentence intended to: none
+
+### Exact prose generated from that map
+
+> You may wish you had spoken differently and still believe the thing you were trying to say mattered. The trouble begins when you start watching the other person's reaction for a verdict about whether you were allowed to be upset at all. Then another apology or fuller explanation can feel as though it might finally settle the case. It won't. Conflict rarely leaves either person with that kind of clean answer, and remorse does not require you to erase your own grievance.
+
+### Internal review
+
+**FAIL before Pangram.**
+
+Observed failure is already visible in the plan:
+- S1 is a thesis/central-distinction announcement;
+- S2 names the abstract diagnostic mechanism;
+- S3 demonstrates the mechanism;
+- S4 explicitly returns to the opening distinction and completes it;
+- the map therefore contains the same `thesis -> diagnosis -> example -> closure` architecture the program has repeatedly identified as model-shaped.
+
+Prose-level consequences:
+- `The trouble begins when...` reads like editorial diagnosis;
+- `settle the case. It won't.` is a designed verdict beat;
+- final sentence is explicit recap/closure of S1 + S2.
+
+No Pangram call is warranted because the candidate failed the blocking humanization-shape review.
+
+## Owner-help status
+
+At this point the program has:
+- exact owner reauthoring evidence;
+- multiple fresh Railway writer architectures;
+- fresh independent reviewer passes/fails;
+- exact Pangram AI 1.0 on the strongest fresh transfer;
+- an instrumented candidate whose exact pre-prose sentence map demonstrates the remaining failure.
+
+The missing information is now owner cognition about **how Joel would organize this conflict thought before sentences**, not another implementation variant.
+
+Owner help is justified under the hard delivery admission contract.
