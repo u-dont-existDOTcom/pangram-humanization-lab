@@ -1,8 +1,8 @@
 # Joel-specific Human-facing tell construction library — v1
 
 Date: 2026-09-20
-Status: **ACTIVE RESEARCH LIBRARY / OWNER-CALIBRATED / NOT A UNIVERSAL AUTHORSHIP THEORY**
-Purpose: give sentence-repair ledgers positive construction operations, not only AI-defect diagnoses.
+Status: **FAILED AS A DIRECT GENERATIVE RECIPE / RETAIN AS DIAGNOSTIC-RETRIEVAL CATALOG ONLY**
+Purpose: preserve Human-facing patterns as diagnostic/retrieval hypotheses. Do not use them as simultaneous composition constraints.
 
 ## Core boundary
 
@@ -17,11 +17,20 @@ They are not:
 
 A Human-facing tell is usable only when the **source thought naturally supports it**. The same visible form can be fake/model-shaped when inserted merely to look Human.
 
-The intended workflow is:
+## 2026-09-20 failure amendment
 
-`mesoscale map -> identify local AI-shaped span -> select only source-earned Human-facing tell(s) -> write owner-readable repair instruction -> Chat executes that instruction -> integrate -> preservation -> cold audit -> detector only when decision-relevant`.
+The first direct use of this library as a generation recipe failed badly on the Inner Child checking section. The selected H2 candidate was owner-reported **Pangram AI High** and the owner said he could not even understand it.
 
-The repair instruction may be written as though it were guidance Joel could follow, but Chat executes it by default unless an irreducible authorial decision is missing.
+Causal finding: these patterns were descriptive/diagnostic evidence, not validated model-generation controls. Applying several of them simultaneously caused the writer to optimize against the critic's taxonomy, hide preservation-ledger structure through clause packing, invent synthetic first-person/colloquial voice, and degrade readability.
+
+Therefore the library is **not** an active writer checklist. Until prospective transfer evidence exists:
+- retrieve it only after generation to diagnose a literal candidate, or to help select a small number of relevant owner examples;
+- do not expose HT01–HT14 as simultaneous composition requirements;
+- do not treat T1/T2 owner evidence as proof of model transfer skill;
+- do not use the preservation ledger as a prose outline;
+- basic reader comprehension blocks all detector/humanization optimization.
+
+For fresh composition, follow the generator-learning compiler: writer sees the live thought, mesoscale role, and a small literal positive calibration set; preservation and tell diagnostics come afterward.
 
 ---
 
