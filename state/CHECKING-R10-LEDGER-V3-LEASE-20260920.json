@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "active",
+  "exclusive_writer": true,
+  "owned_branch": "evidence/checking-r10-ledger-v3-20260920",
+  "article_branch": "chat/inner-child-map-toolbox-recovery-20260919-2200",
+  "scope": "Two exact Pangram 4.0 GUI checks after ledger v3: 190-word model-only section excluding owner P4 and 126-word long P2.",
+  "inputs": [
+    {
+      "name": "r10_model_only",
+      "sha256": "bcde5d3d10e6ba0870b1e6f92ceda4b2f0e6176f4fd4a941151b5971957caa58",
+      "words": 190
+    },
+    {
+      "name": "r10_p2",
+      "sha256": "31de6071efabbeeaab15e59a77ac27ae9f856c1610dab484fa79b4dbd9ac2ef0",
+      "words": 126
+    }
+  ],
+  "max_new_submissions": 2,
+  "no_repeat": true,
+  "route": "local Playwright GUI"
+}
