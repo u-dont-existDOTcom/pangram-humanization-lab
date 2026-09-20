@@ -165,3 +165,60 @@ Attempt B is detector-eligible as a controlled transfer probe because:
 
 Detector result: **PENDING**.
 
+
+
+## Transfer attempts C-E — escalation after readiness target proved too short
+
+The initial readiness transfer produced a natural 35-word paragraph, but Pangram's live GUI would not enable the detection action at that short boundary. Attempts to extend it naturally failed editorially:
+- a metaphor-heavy 55–75-word rewrite failed independent naturalness review;
+- a no-metaphor rewrite failed the plain-reader gate;
+- a frozen-prefix extension failed independent naturalness and redundancy review.
+
+The too-short target was therefore abandoned rather than padded.
+
+A new transfer target was selected from a different conflict paragraph.
+
+### Transfer attempt C — governing thought only
+
+Result:
+clear, but same-context shape review rejected it before external review because it fell back into balanced `X does not mean Y / it also does not mean Z` packaging.
+
+### Transfer attempt D — explicit owner macro-map
+
+Fresh Railway writer received:
+`ORDINARY PREMISE -> BROADER HUMAN LIMIT -> OBVIOUS EXCESSIVE CASE + PLAIN JUDGMENT`.
+
+Independent reviewer:
+- comprehension PASS;
+- naturalness/model-shapedness FAIL;
+- continuity PASS;
+- diagnosed the visible three-step map execution and counseling-manual cadence.
+
+Conclusion:
+making the owner's route explicit as a map caused the model to execute the map too cleanly.
+
+### Transfer attempt E — literal teaching episodes, no explicit map
+
+Fresh Railway writer received the literal owner checking reauthoring plus the Episode-003 aligned owner rewrite, with provenance and an instruction to infer **selection/reframing decisions**, not surface style.
+
+Exact candidate:
+
+> You can regret the way you spoke without deciding you had no reason to be upset. Maybe you apologize and the other person is still angry. That is hard to leave alone, especially when your own guilt is still hanging around. But if you keep returning to explain yourself one more time, hoping their response will finally tell you who was right and who was wrong, you are asking the conversation for an answer that human conflict rarely gives.
+
+Writer trace:
+- organizing thought: regret can justify repair without turning the other person's response into a final moral verdict;
+- omitted: separate development of complaint-vs-communication and separate repeated-apology/repeated-explanation branches;
+- added: ordinary premise that human conflict rarely yields a clean final answer;
+- method: compressed the supplied distinctions into one larger thought rather than preserving every diagnostic point.
+
+Fresh independent Railway reviewer:
+- first-read comprehension: **PASS**;
+- naturalness/model-shapedness: **PASS**;
+- reader continuity: **PASS**;
+- movement: **one thought developing naturally**;
+- strongest weakness: final phrase `an answer that human conflict rarely gives` is slightly generalized/polished;
+- send-to-author readiness as prose only: **YES**.
+
+This is the first fresh transfer in this sequence to pass a genuinely separate naturalness review.
+
+Detector status: **PENDING exact-byte Pangram**.
