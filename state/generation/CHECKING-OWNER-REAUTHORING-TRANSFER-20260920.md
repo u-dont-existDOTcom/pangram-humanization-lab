@@ -222,3 +222,30 @@ Fresh independent Railway reviewer:
 This is the first fresh transfer in this sequence to pass a genuinely separate naturalness review.
 
 Detector status: **PENDING exact-byte Pangram**.
+
+
+## Transfer attempt E — detector result
+
+Exact candidate SHA-256:
+`5a1bbd6b4ed9431a0b5f80fe2d2741ea508f964565a9fbbbf8fa2d2e2ea7ef2b`
+
+Whitespace words: **79**.
+
+Pangram 4.0 GUI, exact_utf8:
+- AI: **1.0**
+- Human: **0.0**
+- AI-assisted: **0.0**
+- prediction probability: **0.999245285987854**
+- captured: 2026-09-20T20:09:38.680989Z.
+
+Interpretation:
+- literal owner teaching episodes materially improved fresh independent human-facing review;
+- this did **not** transfer to Pangram-recognized Human output on the tested paragraph;
+- do not promote the method as a production skill;
+- do not generate nearby variants merely to chase Pangram.
+
+Process limitation discovered:
+the writer response preserved paragraph-level organizing-thought / omission / addition trace, but did **not** preserve a contemporaneous per-sentence construction map. Under Joel's 2026-09-20 help-escalation rule, that is insufficient for an owner-help packet. Do not reconstruct a supposedly exact sentence map post hoc.
+
+Next action:
+run one instrumented diagnostic generation whose prose and per-sentence map are emitted together. This is for a valid owner-help packet, not another open-ended same-method optimization campaign.
