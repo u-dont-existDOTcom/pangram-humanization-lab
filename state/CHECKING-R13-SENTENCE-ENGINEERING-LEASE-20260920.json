@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "active",
+  "exclusive_writer": true,
+  "owned_branch": "evidence/checking-r13-sentence-engineering-20260920",
+  "article_branch": "chat/inner-child-map-toolbox-recovery-20260919-2200",
+  "scope": "Two exact Pangram 4.0 GUI checks for R13 after true sentence/span engineering: model-only section excluding owner P4 and 75-word long discrimination paragraph.",
+  "inputs": [
+    {
+      "name": "r13_model_only",
+      "sha256": "2f4bb7c0daf2a16dfe926e5a6fad9c6275b92627233e7316ceddb77172603f2a",
+      "words": 177
+    },
+    {
+      "name": "r13_p2b",
+      "sha256": "5f019e5baea5c17c5418b5f95bc0c1cdc22675a6fb81212a38691ead7c661ca9",
+      "words": 75
+    }
+  ],
+  "max_new_submissions": 2,
+  "no_repeat": true,
+  "route": "local Playwright GUI"
+}
