@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "active",
+  "exclusive_writer": true,
+  "owned_branch": "evidence/checking-r14-residual-20260920",
+  "article_branch": "chat/inner-child-map-toolbox-recovery-20260919-2200",
+  "scope": "Two exact Pangram 4.0 GUI checks for R14: model-only section excluding owner P4 and 70-word residual P2. No owner/donor text, heading, padding, or repeat.",
+  "inputs": [
+    {
+      "name": "r14_model_only",
+      "sha256": "dd1e168619f9c28f972fe06de4deb34436be6040e651d6554c638683fe0d50ae",
+      "words": 172
+    },
+    {
+      "name": "r14_p2",
+      "sha256": "32c9633a41c424d0c6dfac61ac1dc87c745f484a7031c2d58e7a2f41c55015c2",
+      "words": 70
+    }
+  ],
+  "max_new_submissions": 2,
+  "no_repeat": true,
+  "route": "local Playwright GUI"
+}
