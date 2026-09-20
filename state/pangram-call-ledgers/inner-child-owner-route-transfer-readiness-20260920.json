@@ -1,0 +1,30 @@
+{
+  "audit_id": "inner-child-owner-route-transfer-readiness-20260920",
+  "format": "pangram-call-ledger-v1",
+  "section_call_cap": 1,
+  "section_call_review_threshold": 6,
+  "sections": {
+    "inner-child-before-you-try-to-go-deep-transfer-probe\u001fpangram-4\u001f4.0": {
+      "budget_scope": "section",
+      "cache_hits": 0,
+      "estimated_cost_usd": 0.05,
+      "estimated_credits": 1,
+      "events": [
+        {
+          "budget_scope": "section",
+          "estimated_credits": 1,
+          "measurement_key": "inner-child-owner-route-transfer-readiness-20260920-a_T1",
+          "recorded_at_utc": "2026-09-20T19:50:42.580628+00:00",
+          "text_sha256": "ce94db19a8af7c7a232ac5eef1a9e88b9012b168b6cc7f8e6b76c7e6679db1e6",
+          "type": "paid_post_reserved",
+          "word_count": 35
+        }
+      ],
+      "model": "pangram-4",
+      "paid_api_calls": 1,
+      "pending_resumes": 0,
+      "section_id": "inner-child-before-you-try-to-go-deep-transfer-probe",
+      "version": "4.0"
+    }
+  }
+}
