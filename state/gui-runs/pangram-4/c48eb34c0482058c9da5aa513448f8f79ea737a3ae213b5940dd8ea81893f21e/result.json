@@ -1,0 +1,90 @@
+{
+  "browser_executable": "/opt/brave.com/brave/brave",
+  "captured_at_utc": "2026-09-20T02:02:52.548825Z",
+  "detector_submission_attempted": true,
+  "detector_version": "4.0",
+  "evidence_source": "new_detector_submission",
+  "headed": false,
+  "history_api_exact_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "c48eb34c0482058c9da5aa513448f8f79ea737a3ae213b5940dd8ea81893f21e",
+    "authorized_word_count": 60,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "c48eb34c0482058c9da5aa513448f8f79ea737a3ae213b5940dd8ea81893f21e",
+    "exact_word_count": 60,
+    "record_model_id": null,
+    "record_prediction": "We believe that this entire text is AI.",
+    "record_prediction_prob": 0.9986820220947266,
+    "stored_text_sha256": "c48eb34c0482058c9da5aa513448f8f79ea737a3ae213b5940dd8ea81893f21e",
+    "stored_word_count": 60,
+    "transport_match_mode": "exact_utf8"
+  },
+  "input_path": "/mnt/hdd/home/joel/Téléchargements/5meo-map-checking-20260920.txt",
+  "input_sha256": "c48eb34c0482058c9da5aa513448f8f79ea737a3ae213b5940dd8ea81893f21e",
+  "local_profile_path": "~/.config/pangram-local-browser",
+  "model": "pangram-4",
+  "parsed": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "AI Generated",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "c48eb34c0482058c9da5aa513448f8f79ea737a3ae213b5940dd8ea81893f21e",
+      "authorized_word_count": 60,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "c48eb34c0482058c9da5aa513448f8f79ea737a3ae213b5940dd8ea81893f21e",
+      "exact_word_count": 60,
+      "record_model_id": null,
+      "record_prediction": "We believe that this entire text is AI.",
+      "record_prediction_prob": 0.9986820220947266,
+      "stored_text_sha256": "c48eb34c0482058c9da5aa513448f8f79ea737a3ae213b5940dd8ea81893f21e",
+      "stored_word_count": 60,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "AI",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "pdf_provenance": "playwright_print_fallback",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "playwright_version": "1.62.0",
+  "profile_kind": "dedicated_persistent_automation_profile",
+  "report_body_sha256": "b8fe8807816ff2506194dd8d5b8a092549bf719f19ed04c02856468c4b042016",
+  "report_layout": "history_api_structured_result_v1",
+  "report_pdf_sha256": "fcc197510205684100cb42793ba9fb20a244182722e73cf575ae636e35210722",
+  "report_url": "https://www.pangram.com/history/c71fb477-a848-4cf2-a5d0-24a6f0d9cce9",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "status": "complete",
+  "submission_reservation": {
+    "detector_submission_attempted": false,
+    "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+    "input_sha256": "c48eb34c0482058c9da5aa513448f8f79ea737a3ae213b5940dd8ea81893f21e",
+    "model": "pangram-4",
+    "reserved_at_utc": "2026-09-20T02:02:29.824665Z",
+    "schema_version": 1,
+    "status": "paid_gui_submission_reserved",
+    "transport": "local_playwright",
+    "transport_runner_version": "pangram-gui-local-playwright-v1",
+    "word_count": 60
+  },
+  "transport": "local_playwright",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "word_count": 60
+}
