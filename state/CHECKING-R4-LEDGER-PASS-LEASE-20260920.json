@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "active",
+  "exclusive_writer": true,
+  "owned_branch": "evidence/checking-r4-ledger-pass-20260920",
+  "article_branch": "chat/inner-child-map-toolbox-recovery-20260919-2200",
+  "scope": "Three exact standalone Pangram 4.0 GUI checks after owner-requested AI/Human tell ledger: model-only checking section excluding owner P4, natural P2, natural P3. No owner/donor prose or padding.",
+  "inputs": [
+    {
+      "name": "section_model_only",
+      "sha256": "a1d9a45787230aa23b612fbf7256973b81773f4d08ee728cc96cb4d6c46a14af",
+      "words": 207
+    },
+    {
+      "name": "p2",
+      "sha256": "b2ef911e99c35a5b6fb16c3079bb7c32982ed68a77b89ca75f1cbd7969e46783",
+      "words": 103
+    },
+    {
+      "name": "p3",
+      "sha256": "2a72c1c05ace6b110088b51fc815085089a86bfc029cebaab65ed17e50b23f8c",
+      "words": 58
+    }
+  ],
+  "max_new_submissions": 3,
+  "no_repeat": true,
+  "route": "local Playwright GUI; API fallback only after genuine GUI unavailability and recovery of any ambiguous reservation"
+}
