@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "active",
+  "exclusive_writer": true,
+  "owned_branch": "evidence/checking-r8-ledger-v2-20260920",
+  "article_branch": "chat/inner-child-map-toolbox-recovery-20260919-2200",
+  "scope": "Two exact Pangram 4.0 GUI checks after ledger v2: model-only section excluding owner P4 and natural R8 paragraph 1. Paragraph 2 is 45 words and must not be padded.",
+  "inputs": [
+    {
+      "name": "r8_model_only",
+      "sha256": "3e5cb0277dd0377bfd732c63dc8b4cb08d37e695a20007e5a01a34ef34d80ad9",
+      "words": 182
+    },
+    {
+      "name": "r8_p1",
+      "sha256": "7072090f2d3aa82bc4e3cb46e11db3d93e70e3539a30558d3ab31ec10d6bd141",
+      "words": 118
+    }
+  ],
+  "max_new_submissions": 2,
+  "no_repeat": true,
+  "route": "local Playwright GUI"
+}
