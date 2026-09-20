@@ -320,3 +320,72 @@ At this point the program has:
 The missing information is now owner cognition about **how Joel would organize this conflict thought before sentences**, not another implementation variant.
 
 Owner help is justified under the hard delivery admission contract.
+
+
+## 2026-09-20 owner correction — surrounding context was missing
+
+Joel corrected the teaching setup:
+
+> i'm not sure what the context is, you always need to give me the surrounding context for me to write well
+
+He then supplied a provisional rewrite **without fully understanding the placement**:
+
+> You can genuinely regret how you communicated even if you had a valid complaint. The other person may also stay upset despite your guilt. It is nice to try to develop mutual understanding, but as with everything else, don't get mired in vicious cycles and blame games. If you can learn something, learn and move on happily.
+
+Joel immediately noted:
+
+> seems maybe this is duplicating some prior functions?
+
+### Classification
+
+**CONTEXT-LIMITED OWNER REAUTHORING / NOT ELIGIBLE AS A CLEAN GENERATION DEMONSTRATION YET**
+
+Reason:
+the rewrite request omitted the surrounding paragraph chain. After recovering that chain, several prompted functions were already handled adjacent to the target.
+
+Immediate context under `Also Look Outward`:
+
+1. preceding owner paragraph: uncertainty about whether the other person can respond more healthily; realistic boundaries; high expectations without relying on promises;
+2. preceding one-line bridge: `If you really did hurt them, repair it.`
+3. target model paragraph: apology / complaint / continued upset / explanation / guilt / manipulation inference;
+4. following owner-grounded `Write It. Don't Send It Yet.` paragraphs: owning poor communication, apologizing for excessive directness without hiding one's upset, choosing battles, communicating in ways that can be heard.
+
+### Functional overlap in Joel's provisional rewrite
+
+- `regret how you communicated even if you had a valid complaint` strongly overlaps the following owner-grounded Write-It discussion;
+- `try to develop mutual understanding` overlaps the surrounding communication/boundary material;
+- `don't get mired in vicious cycles and blame games` partially overlaps the preceding repeated-relational-pattern / realistic-boundary functions;
+- `learn and move on happily` is a new broad stop/judgment, but its necessity cannot be evaluated apart from the surrounding chain.
+
+### Revised teaching rule
+
+Owner cognition cannot be elicited reliably from an isolated target when article placement determines what should be omitted.
+
+Before every future owner rewrite request, provide:
+- heading;
+- relevant preceding paragraphs;
+- exact target;
+- relevant following paragraphs;
+- explicit suspected duplicates.
+
+Do not derive a reusable thought-map lesson from an owner rewrite produced under context deprivation.
+
+### Retrospective implication for the original checking target
+
+The same context error likely inflated the checking P2/P3 preservation burden.
+
+In the `When Healing Turns Into Checking` section:
+- the long exact owner paragraph already evaluates what the practice is supposed to help, initial signs of progress, daily-life improvement, reduced need for therapy, and whether the inner-child/adult relationship improves;
+- the short final paragraph already supplies the ritual/return-to-life stopping boundary.
+
+Therefore earlier model-generation prompts that forced P2 to also carry:
+- `what changed last time`;
+- cognition becoming feeling;
+- changed decision/response;
+
+were partly duplicating evaluation functions already supplied downstream by owner authority.
+
+This is a candidate causal explanation for why the model paragraph kept becoming a diagnostic checklist.
+
+Status:
+**PROMOTED PROCESS CORRECTION / TRANSFER HYPOTHESIS MUST BE REBUILT WITH FULL PARAGRAPH CONTEXT.**
