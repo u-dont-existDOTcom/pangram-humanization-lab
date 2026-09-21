@@ -539,3 +539,33 @@ Promoted conclusion:
 
 See:
 `state/generation/INNER-CHILD-CHECKING-OWNER-DERIVED-TELL-LEDGER-RESULT-20260921.md`.
+
+
+## 2026-09-21 completeness correction — tell-clean does not imply detector-clean
+
+The checking RT2 retrospective audit supplies an explicit counterexample to any stronger interpretation of this catalog.
+
+A Railway-generated P3:
+- already contained several positive HT relations;
+- was Pangram AI 1.0 at probability `0.9988531470298767`.
+
+A retrospective tell ledger then removed every AI-shaped operation the current catalog/review could identify. A fresh independent reader reported no obvious remaining AI-shaped operation. The repaired 57-word diagnostic still returned Pangram AI 1.0 at probability `0.8679472208023071`.
+
+Therefore this library is **not a complete inventory of Pangram-relevant AI/Human tells**.
+
+Use it as:
+- editorial diagnosis;
+- retrieval of source-earned Human relations;
+- local repair guidance;
+- a way to prevent known model-shaped operations.
+
+Do **not** use it as:
+- a causal model of Pangram;
+- a completeness certificate;
+- a claim that `no listed AI tell` means `Human`;
+- evidence that several HT relations are sufficient for detector success.
+
+This does not invalidate the catalog. The owner-derived checking P3 still showed that post-generation tell repair can materially improve a real production passage and help reach a Pangram-Human endpoint. It only limits the claim: the catalog is useful and incomplete.
+
+See:
+`state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
