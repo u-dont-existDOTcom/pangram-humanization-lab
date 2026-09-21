@@ -1,0 +1,81 @@
+{
+  "browser_executable": "/opt/brave.com/brave/brave",
+  "captured_at_utc": "2026-09-21T18:50:25.250794Z",
+  "detector_submission_attempted": false,
+  "detector_version": "4.0",
+  "evidence_source": "recovered_existing_report_direct_history_api",
+  "headed": false,
+  "history_api_exact_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "879bd8737f01a8262ee93037483a1c9208fedbd5a36182bcecfc89ad9ad12dd8",
+    "authorized_word_count": 359,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "879bd8737f01a8262ee93037483a1c9208fedbd5a36182bcecfc89ad9ad12dd8",
+    "exact_word_count": 359,
+    "record_model_id": null,
+    "record_prediction": "We believe that this entire text is AI.",
+    "record_prediction_prob": 0.9873712062835693,
+    "stored_text_sha256": "879bd8737f01a8262ee93037483a1c9208fedbd5a36182bcecfc89ad9ad12dd8",
+    "stored_word_count": 359,
+    "transport_match_mode": "exact_utf8"
+  },
+  "history_list_candidate_count": 10,
+  "input_path": "work/inner-child-safety-v8/dangerous-present-adult-v8.txt",
+  "input_sha256": "879bd8737f01a8262ee93037483a1c9208fedbd5a36182bcecfc89ad9ad12dd8",
+  "local_profile_path": "~/.config/pangram-local-browser",
+  "model": "pangram-4",
+  "parsed": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "AI Generated",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "879bd8737f01a8262ee93037483a1c9208fedbd5a36182bcecfc89ad9ad12dd8",
+      "authorized_word_count": 359,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "879bd8737f01a8262ee93037483a1c9208fedbd5a36182bcecfc89ad9ad12dd8",
+      "exact_word_count": 359,
+      "record_model_id": null,
+      "record_prediction": "We believe that this entire text is AI.",
+      "record_prediction_prob": 0.9873712062835693,
+      "stored_text_sha256": "879bd8737f01a8262ee93037483a1c9208fedbd5a36182bcecfc89ad9ad12dd8",
+      "stored_word_count": 359,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "AI",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "pdf_provenance": "playwright_print_fallback",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "playwright_version": "1.62.0",
+  "profile_kind": "dedicated_persistent_automation_profile",
+  "recovery_note": "Stock listener-based recover missed a late exact record; direct authenticated History API list/record retrieval found and exact-bound the stored scan without detector resubmission.",
+  "report_body_sha256": "1bdb8954b88171d896c38b343550f341d946af73cca0a37aeef7194adae06148",
+  "report_layout": "history_api_structured_result_v1",
+  "report_pdf_sha256": "8f9964926938b92e02761182874ae58b19154ef64556277844e6a786a7daf821",
+  "report_url": "https://www.pangram.com/history/76d71773-b97d-48d3-86db-5118bf568fae",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "seconds_from_paid_reservation": 225.404,
+  "status": "complete",
+  "transport": "local_playwright",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "word_count": 359
+}
