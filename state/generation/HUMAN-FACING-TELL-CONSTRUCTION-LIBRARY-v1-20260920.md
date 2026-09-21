@@ -569,3 +569,49 @@ This does not invalidate the catalog. The owner-derived checking P3 still showed
 
 See:
 `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
+
+
+## 2026-09-21 owner correction — RT2 was not actually tell-clean
+
+The earlier completeness correction used the 57-word Railway RT2 repair as evidence that the current catalog could identify no remaining AI-shaped operation while Pangram still returned AI.
+
+Joel rejected that premise on direct inspection, and the re-audit found several obvious surviving AI tells:
+- a **scene-skinned semantic staircase** whose beats still map one-for-one to protected source functions;
+- synthetic example continuity where pan/cooking/carrot/dinner act mainly as didactic props;
+- generic therapeutic abstraction inside the concrete scene;
+- simulated spontaneity markers (`Okay`, `Hm. There you are.`) functioning as transition camouflage;
+- concrete image followed by explanatory aftercare;
+- equalized efficiency despite surface conversationality.
+
+Therefore **withdraw this case as evidence that the tell catalog is incomplete**.
+
+The broader claim that the catalog may be incomplete remains an open hypothesis, not a conclusion established by RT2.
+
+### Required paragraph-level tell audit
+
+A post-generation ledger must inspect two levels:
+
+1. **local realization**
+   - sentence/phrase tells;
+   - abstraction;
+   - symmetry;
+   - aftercare;
+   - fake spontaneity;
+   - permission syntax;
+   - generic bridges.
+
+2. **mesoscale function topology**
+   - does the paragraph still march through protected functions in source-ledger order?
+   - has a single cute/concrete scene merely hidden the staircase?
+   - are details causally load-bearing or interchangeable props?
+   - does one concrete beat immediately get translated by the next sentence?
+
+A candidate is not tell-clean until both levels have been audited.
+
+### T4 hypothesis: causal surplus
+
+Owner correction suggests a potentially important positive variable:
+
+> concrete detail may be more Human when it has **causal surplus**—the detail changes later emotion, judgment, memory, or action—rather than merely illustrating a source function.
+
+This is not promoted as a positive Human tell yet. It requires evidence on another target.
