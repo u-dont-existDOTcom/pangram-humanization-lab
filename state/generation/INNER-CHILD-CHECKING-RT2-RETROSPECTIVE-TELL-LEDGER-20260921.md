@@ -274,3 +274,140 @@ Do not claim:
 
 The catalog is now best described as:
 **a useful but incomplete post-generation editorial/tell diagnostic system, with demonstrated production value but incomplete Pangram predictiveness.**
+
+
+## 2026-09-21 owner correction — the "tell-clean" diagnosis was itself wrong
+
+Joel immediately challenged the claim that the 57-word diagnostic had no obvious AI tells.
+
+That correction is accepted.
+
+The prior conclusion:
+
+> a fresh reader can see no obvious remaining AI-shaped operation
+
+is preserved above only as historical evidence of the reviewer failure. It is **not** the current diagnosis.
+
+### Obvious AI tells that were still present
+
+#### 1. Scene-skinned semantic staircase
+
+The source-function order is still plainly visible underneath the dinner scene:
+
+`practical action -> grief recurrence -> checker -> return to life`.
+
+The paragraph no longer uses one abstract sentence per function, but each beat of the scene still advances exactly one protected obligation in the same order.
+
+This is not genuine function integration. It is a semantic checklist wearing one continuous example.
+
+#### 2. Synthetic scene continuity / didactic prop selection
+
+`pan -> cooking -> checker -> carrot -> dinner` is unusually convenient.
+
+Each object exists because the paragraph needs the next source function:
+- pan = practical action;
+- cooking = place for grief recurrence;
+- checker = non-response;
+- carrot/dinner = return to life.
+
+The details are coherent, but mostly interchangeable. They do not create much causal surplus beyond illustrating the lesson.
+
+Contrast the accepted owner-derived seat-belt example:
+`refusal -> crash -> broken collar bone -> blame -> later guilt`.
+
+Those details change one another causally and morally. They are not merely props selected to cover functions.
+
+#### 3. Generic therapeutic abstraction inside the "concrete" example
+
+> Old grief might show up while you're cooking too, and suddenly you're feeling the old thing all over again.
+
+This is still generic therapeutic narration:
+- `old grief`;
+- `might show up`;
+- `the old thing`;
+- `all over again`.
+
+The sentence remains a model-safe abstraction even though it is surrounded by kitchen objects.
+
+#### 4. Simulated spontaneity as transition markers
+
+> Okay.
+
+and:
+
+> Hm. There you are.
+
+look conversational, but function mainly as stage directions between source obligations.
+
+They do not arise from a surprising thought-turn; they help the prose *look* less engineered while the underlying sequence remains engineered.
+
+The tell library already warns against fake hesitation/filler. The reviewer failed to apply that warning.
+
+#### 5. Concrete beat followed by explanatory aftercare
+
+> The carrot's still on the board. You were in the middle of dinner.
+
+The first sentence already performs return-to-life concretely.
+
+The second sentence explains/translates what the carrot means.
+
+That is classic aftercare/overcompletion: image -> immediate interpretation.
+
+#### 6. Equalized efficiency remains
+
+Every sentence/fragment advances the assignment. Nothing receives disproportionate thought because it actually became interesting.
+
+The paragraph is short, tidy, and maximally useful. The apparent messiness is surface-level.
+
+#### 7. Human-looking forms were mistaken for Human relations
+
+The paragraph contains:
+- a concrete example;
+- self-talk;
+- fragments;
+- recurrence;
+- colloquial beats.
+
+But the library itself says those forms are not Human tells by themselves.
+
+The reviewer effectively promoted their **presence** into evidence instead of asking whether they changed the underlying thought topology.
+
+### Correct interpretation of the diagnostic Pangram result
+
+The 57-word Pangram AI 1.0 result does **not** establish that a truly tell-clean candidate remained detector-AI.
+
+It establishes that:
+- the first retrospective tell audit was still too shallow;
+- several obvious AI-shaped operations survived;
+- independent naturalness review was insufficiently sensitive;
+- surface Human markers can mask an unchanged semantic staircase.
+
+Therefore this specific control **does not prove tell-catalog incompleteness**.
+
+The catalog may still be incomplete; that remains plausible and likely. But this experiment cannot establish it because the supposed `tell-clean` premise was false.
+
+### New diagnostic hypothesis — causal surplus / non-interchangeable detail
+
+Do not promote this as HT15 yet.
+
+T4 hypothesis:
+
+> A source-earned example feels more Human when its details generate consequences that alter later thought, rather than serving as interchangeable props assigned to protected functions.
+
+Candidate contrast:
+- Railway: pan/cooking/carrot/dinner = coherent but mostly didactic props;
+- owner: seat-belt refusal/crash/injury/blame/guilt = details accumulate causal and moral consequences.
+
+This needs transfer evidence on a different target before promotion.
+
+### Process repair
+
+Before declaring a candidate `tell-clean`:
+1. audit local spans;
+2. audit the **paragraph-level source-function topology**;
+3. ask whether a single scene merely skins the same source ledger;
+4. check whether concrete details have causal surplus or are interchangeable props;
+5. identify fake spontaneity/filler used as transition camouflage;
+6. check for image -> explanatory aftercare.
+
+Do not infer `no AI tells` from the presence of examples, self-talk, fragments, or colloquial markers.

@@ -176,3 +176,25 @@ The later owner-derived P3 passed Human at 86/167/318 words, so the detector is 
 Do not say `there are no AI tells` when what is actually known is only `our current ledger/reviewer did not identify any`.
 
 See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
+
+
+## 2026-09-21 — A cute scene can hide the same AI staircase
+
+Owner correction to the checking RT2 audit: the supposed `tell-clean` Railway-derived paragraph still contained obvious AI tells.
+
+The failure was mesoscale. Pan -> cooking -> checker -> carrot/dinner looked more Human because it used one coherent scene, self-talk, and fragments, but the scene still walked through the protected functions in order. The semantic staircase had been **skinned with a scenario**, not dissolved.
+
+Additional missed tells included generic therapeutic abstraction, fake-spontaneity markers used as stage transitions, and image -> explanatory aftercare.
+
+Do not treat:
+- concrete example;
+- self-talk;
+- fragments;
+- colloquial filler;
+- recurrence;
+
+as evidence by themselves. Audit whether they changed the underlying thought topology.
+
+New T4 hypothesis: **causal surplus / non-interchangeable detail**. Joel's seat-belt example accumulates refusal -> crash -> injury -> blame -> guilt. Railway's pan/carrot details mainly illustrate functions and could be swapped out cheaply. Test this on another target before promoting it.
+
+Consequently, RT2 no longer supports the claim that the tell catalog is proven incomplete. The catalog may be incomplete, but this control did not isolate that because the `tell-clean` premise was false.

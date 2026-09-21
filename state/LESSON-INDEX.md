@@ -132,3 +132,7 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:inner-child-checking-tell-clean-counterexample-20260921 -->
 - **Tell-clean ≠ detector-clean:** the current Human-facing tell catalog is useful but incomplete. A Railway checking candidate still measured Pangram AI 1.0 after all currently identified AI-shaped operations were repaired and an independent reader saw no obvious remaining model-shaped operation. Do not treat the absence of catalogued AI tells, or the presence of several HT relations, as sufficient for Pangram Human. See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
+
+
+<!-- closeout-request:inner-child-rt2-scene-skinned-staircase-20260921 -->
+- **Scene-skinned staircase:** a coherent concrete scenario can still preserve the same one-function-per-beat AI topology. Audit paragraph-level source-function order, fake spontaneity, interchangeable didactic props, and image→aftercare before calling prose tell-clean. The RT2 control no longer establishes catalog incompleteness because its tell-clean premise was false. See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
