@@ -155,3 +155,24 @@ Evidence boundary:
 - the final owner-derived P3 measured Pangram Human 1.0 alone (86 words), with P1+P2 context (167 words), and in the complete section (318 words).
 
 Therefore the promoted production lesson is **owner-derived substrate + post-generation tell repair can work**. Fresh autonomous transfer remains unproven. Do not expose HT01–HT14 as a writer checklist merely because the repair ledger succeeded.
+
+
+## 2026-09-21 — Tell-clean is not detector-clean
+
+A current Inner Child checking control directly falsifies a stronger tell-model claim.
+
+The failed Railway RT2 already had multiple Human-facing relations. A retrospective post-generation ledger then removed all AI-shaped operations the current catalog could name, and a fresh independent reader reported no obvious remaining AI-shaped operation. The resulting 57-word diagnostic still measured Pangram 4.0 AI 1.0, probability `0.8679472208023071`.
+
+This means the current tell system is **useful but incomplete**. It cannot certify detector-readiness.
+
+Open possibilities include:
+- missing Pangram-relevant features outside the current semantic/rhetorical catalog;
+- distributed feature interactions;
+- model-generated simulations of Human-facing relations that remain statistically model-like;
+- short-boundary effects.
+
+The later owner-derived P3 passed Human at 86/167/318 words, so the detector is not simply rejecting the topic or section. The unresolved variable lies somewhere in the realization/substrate/boundary features not fully represented by the current tell ledger.
+
+Do not say `there are no AI tells` when what is actually known is only `our current ledger/reviewer did not identify any`.
+
+See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
