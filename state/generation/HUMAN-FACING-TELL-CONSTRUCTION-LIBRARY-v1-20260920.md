@@ -368,6 +368,56 @@ Positive owner references such as Catch the Hook and long Romance sections do no
 
 ---
 
+# New owner-calibrated negative tells — 2026-09-21 V19
+
+These are negative diagnostics from direct owner review of the Inner Child safety H2. They do **not** become generation instructions.
+
+## AI-N15 — fake personal stake / irrelevant first-person authority
+
+In explanatory or therapeutic guide prose, first person can be strongly AI-shaped when it inserts the author's preference without a reader-relevant reason.
+
+Owner-rejected examples:
+- `I care about...`
+- `I care less about...`
+- `I want...`
+- `I don't want...`
+- `I'd want to see...`
+- `That tells me...`
+
+Diagnostic question:
+> Why should the reader care what the author personally cares/wants here?
+
+If the answer is only `because this sounds more personal`, the first person is decorative/fake-personal rather than source-earned authorial judgment.
+
+This sharpens HT05. **Authorial judgment with consequence is Human-facing only when the owner's actual judgment is substantively relevant and changes the argument or action.** It is not licensed by first-person syntax.
+
+## AI-N16 — cumulative instruction-manual / compressed-listicle cadence
+
+A single direct command, verdict, compact question, or list can be perfectly natural. The AI tell is cumulative:
+
+`compressed command/verdict/list -> compressed command/verdict/list -> compressed question -> compressed lesson`
+
+The passage becomes maximally efficient at teaching, with each sentence performing a clean instructional job and handing off to the next. Judge this at section scale, not one sentence at a time.
+
+Related failure:
+- **optimal-efficiency teaching units**: sentences may be individually good but collectively reveal one compact lesson per beat;
+- **compressed lesson sound bites**: a line that could be Human once becomes model-shaped when the section repeatedly ends thoughts as portable mini-lessons.
+
+## AI-N17 — abrupt complication without reader-visible setup
+
+A substantively valid distinction can still be AI-shaped when it appears simply because the source ledger contains another obligation.
+
+Diagnostic questions:
+- Why did this concern become relevant *now*?
+- Does the previous thought generate it?
+- Are vague umbrella terms hiding a more nuanced distinction?
+
+Do not solve abruptness with `And I don't want...`, `I also think...`, or another personal transition marker.
+
+## Rollback rule
+
+When a clear AI-written source is more readable and less strange than the humanized candidate, roll back toward the clear source. Do not preserve fake-personal voice, colloquial markers, compressed judgments, or other Human-looking forms merely because they were introduced as anti-AI repairs.
+
 # Important non-tells / counterexamples
 
 The following are **not** Human tells by themselves:
