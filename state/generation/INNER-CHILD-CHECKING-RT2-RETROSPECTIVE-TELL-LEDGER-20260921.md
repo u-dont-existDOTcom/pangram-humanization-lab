@@ -190,3 +190,87 @@ This is a **diagnostic-only** candidate. It is not article prose and will not be
 
 Call-budget note:
 this is the sixth and final new Pangram submission in the current checking-section audit. No seventh call is authorized without a new owner gate.
+
+
+## Pangram result of tell-repaired Railway-derived candidate
+
+Exact diagnostic candidate:
+- words: **57**
+- SHA-256: `d8498ac7bc75a1371a566230da5107dae5a2c341aa5001bb928617c379058977`
+
+Pangram 4.0 exact UTF-8:
+- AI: **1.0**
+- Human: **0.0**
+- AI-assisted: **0.0**
+- prediction probability: **0.8679472208023071**
+- captured: `2026-09-21T16:04:38.312009Z`
+- UI additionally marked confidence limited because the text is short.
+
+This was the **sixth and final new Pangram submission in the current checking-section audit**. No seventh call is authorized under the current section budget.
+
+### Discriminating result
+
+The retrospective ledger removed the AI-shaped operations it could currently identify:
+- abstract rule-before-example entry;
+- `X can Y without Z` permission architecture;
+- immediate abstraction back to `inquiry`;
+- matched `Maybe it is / maybe it isn't` ambiguity;
+- generic `You don't have to X before Y` therapeutic permission syntax;
+- dual activity/relationship coverage in the final sentence.
+
+A fresh independent reader then reported:
+- comprehension PASS;
+- semantic fidelity PASS;
+- naturalness/model-shapedness PASS;
+- **no obvious remaining AI-shaped operation**;
+- detector-research readiness YES.
+
+Yet Pangram still returned AI 1.0.
+
+### Correct conclusion
+
+This result **does establish a limitation in the current tell model**.
+
+The current catalog contains real useful tells and repairs, but it is **not a complete or sufficiently predictive detector model**.
+
+Specifically:
+- a paragraph can instantiate several catalogued Human-facing relations;
+- known visible AI-shaped operations can be removed;
+- a fresh reader can see no obvious remaining AI-shaped operation;
+- and Pangram can still classify the exact boundary as AI.
+
+Therefore `tell-clean` must not be treated as `Pangram-ready by causal understanding`.
+
+Possible explanations remain open:
+1. Pangram-relevant features exist that are not represented in the current semantic/rhetorical tell catalog;
+2. the detector is responding to distributed interactions among otherwise acceptable features rather than a local visible tell;
+3. model-generated prose can simulate Human-facing relations in a way that remains statistically model-like;
+4. short-boundary sensitivity may contribute, though it cannot by itself explain the original 67-word RT2's much stronger AI probability `0.9988531470298767`.
+
+### Important comparison
+
+Original Railway RT2:
+- 67 words;
+- AI probability `0.9988531470298767`.
+
+Tell-repaired Railway-derived diagnostic:
+- 57 words;
+- AI probability `0.8679472208023071`.
+
+Owner-derived final P3:
+- 86 words;
+- AI probability `0.015982024371623993`;
+- Human 1.0.
+
+The tell-repair package moved the Railway-derived text in the Human direction numerically, but it did **not** cross the detector boundary. Because multiple features and length changed together, do not attribute the probability movement to any single repair.
+
+### What this falsifies
+
+Do not claim:
+- that the current HT01–HT14 catalog enumerates the important Human/AI tells completely;
+- that absence of catalogued AI tells means a candidate should pass Pangram;
+- that presence of several Human-facing tells is sufficient;
+- that a fresh prose reviewer can certify detector-readiness.
+
+The catalog is now best described as:
+**a useful but incomplete post-generation editorial/tell diagnostic system, with demonstrated production value but incomplete Pangram predictiveness.**
