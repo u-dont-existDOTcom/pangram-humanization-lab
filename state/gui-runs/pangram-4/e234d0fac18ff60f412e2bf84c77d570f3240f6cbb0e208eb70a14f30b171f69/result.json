@@ -1,0 +1,90 @@
+{
+  "browser_executable": "/opt/brave.com/brave/brave",
+  "captured_at_utc": "2026-09-21T15:24:31.136688Z",
+  "detector_submission_attempted": true,
+  "detector_version": "4.0",
+  "evidence_source": "new_detector_submission",
+  "headed": true,
+  "history_api_exact_identity": {
+    "api_path": "/api/history/<uuid>/",
+    "authorized_text_sha256": "e234d0fac18ff60f412e2bf84c77d570f3240f6cbb0e208eb70a14f30b171f69",
+    "authorized_word_count": 318,
+    "exact_text_field_path": [
+      "prompt"
+    ],
+    "exact_text_sha256": "e234d0fac18ff60f412e2bf84c77d570f3240f6cbb0e208eb70a14f30b171f69",
+    "exact_word_count": 318,
+    "record_model_id": null,
+    "record_prediction": "We believe that this entire text is human-written.",
+    "record_prediction_prob": 0.06802033632993698,
+    "stored_text_sha256": "e234d0fac18ff60f412e2bf84c77d570f3240f6cbb0e208eb70a14f30b171f69",
+    "stored_word_count": 318,
+    "transport_match_mode": "exact_utf8"
+  },
+  "input_path": "/mnt/hdd/home/joel/Téléchargements/pangram-checking-owner-derived-20260921/work/checking-owner-derived-20260921/full-section.txt",
+  "input_sha256": "e234d0fac18ff60f412e2bf84c77d570f3240f6cbb0e208eb70a14f30b171f69",
+  "local_profile_path": "~/.config/pangram-local-browser",
+  "model": "pangram-4",
+  "parsed": {
+    "detector_stage": "STAGE_SUCCESS",
+    "detector_version": "4.0",
+    "headline": "Human Written",
+    "history_record_identity": {
+      "api_path": "/api/history/<uuid>/",
+      "authorized_text_sha256": "e234d0fac18ff60f412e2bf84c77d570f3240f6cbb0e208eb70a14f30b171f69",
+      "authorized_word_count": 318,
+      "exact_text_field_path": [
+        "prompt"
+      ],
+      "exact_text_sha256": "e234d0fac18ff60f412e2bf84c77d570f3240f6cbb0e208eb70a14f30b171f69",
+      "exact_word_count": 318,
+      "record_model_id": null,
+      "record_prediction": "We believe that this entire text is human-written.",
+      "record_prediction_prob": 0.06802033632993698,
+      "stored_text_sha256": "e234d0fac18ff60f412e2bf84c77d570f3240f6cbb0e208eb70a14f30b171f69",
+      "stored_word_count": 318,
+      "transport_match_mode": "exact_utf8"
+    },
+    "prediction_short": "Human",
+    "report_layout": "history_api_structured_result_v1",
+    "segments": [],
+    "structured_result_field_path": [
+      "response",
+      "overall"
+    ],
+    "summary": {
+      "fraction_ai": 0.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "fraction_lightly_ai_assisted": null,
+      "fraction_moderately_ai_assisted": null
+    },
+    "summary_source": "stored_history_structured_result"
+  },
+  "pdf_provenance": "playwright_print_fallback",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "playwright_version": "1.62.0",
+  "profile_kind": "dedicated_persistent_automation_profile",
+  "report_body_sha256": "a436df721ecb6c53457f45bc11b411adce9182bfd850dd5bb443c351067eaede",
+  "report_layout": "history_api_structured_result_v1",
+  "report_pdf_sha256": "6e8586aa7daa4bf3b2e115488ad5a696cc62852bb53bb2a974e8d05a85980508",
+  "report_url": "https://www.pangram.com/history/2b43b6da-0461-427c-bb37-51616fc00d1c",
+  "runner_version": "pangram-gui-browserbase-v1",
+  "schema_version": 1,
+  "status": "complete",
+  "submission_reservation": {
+    "detector_submission_attempted": false,
+    "duplicate_guard": "Presence of this reservation without a complete result blocks automatic repeat submission.",
+    "input_sha256": "e234d0fac18ff60f412e2bf84c77d570f3240f6cbb0e208eb70a14f30b171f69",
+    "model": "pangram-4",
+    "reserved_at_utc": "2026-09-21T15:21:29.505430Z",
+    "schema_version": 1,
+    "status": "paid_gui_submission_reserved",
+    "transport": "local_playwright",
+    "transport_runner_version": "pangram-gui-local-playwright-v1",
+    "word_count": 318
+  },
+  "transport": "local_playwright",
+  "transport_runner_version": "pangram-gui-local-playwright-v1",
+  "word_count": 318
+}
