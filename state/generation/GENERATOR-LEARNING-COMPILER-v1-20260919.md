@@ -237,3 +237,34 @@ Implication:
 - the current bottleneck is deeper than missing slogans, missing local operations, or missing thought-process framing;
 - wait for / use a materially different inference substrate or model execution path before more detector spend on the same generation prior;
 - once Joel's explicit CLI inference backend on Railway is available, use it for controlled fresh-model comparisons rather than the project-scoped Railway Agent.
+
+## 2026-09-21 amendment — sentence-job plans vs post-generation tell repair
+
+Inner Child checking P3 supplied a direct owner correction to the generation architecture.
+
+Failure:
+- a contemporaneous pre-prose map assigned S1–S5 one protected function each;
+- the prose then reproduced that exact instruction sequence and failed independent naturalness;
+- the help-trace requirement had been misapplied as the generator's sentence plan.
+
+Correct phase separation:
+1. generation must use a shared local thought/scene and may let multiple functions ride inside one example/self-talk move;
+2. preservation units stay outside prose order;
+3. the Human-facing tell catalog is applied **after literal prose exists**;
+4. the tell ledger must be executed, not merely reported;
+5. downstream reviews/Pangram rerun after tell repairs.
+
+Fresh autonomous relational-thought generation improved human-facing review but still returned Pangram AI 1.0 on the tested 67-word P3. Therefore the correction is **not yet autonomous-transfer evidence**.
+
+Production succeeded only after switching to owner-derived source-relevant substrate plus post-generation tell repairs. The exact owner-derived P3 then passed Pangram Human 1.0 at:
+- P3, 86 words;
+- active P1+P2+P3, 167 words;
+- complete section, 318 words.
+
+Classification:
+- relational-thought architecture: **EXPLAINED / fresh transfer failed**;
+- post-generation tell ledger on owner-derived substrate: **REPRODUCED_FROM_OWNER / production-success evidence**;
+- no claim of fresh-generation production skill.
+
+See:
+`state/generation/INNER-CHILD-CHECKING-OWNER-DERIVED-TELL-LEDGER-RESULT-20260921.md`.
