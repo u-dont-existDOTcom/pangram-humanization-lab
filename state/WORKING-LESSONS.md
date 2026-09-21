@@ -141,3 +141,17 @@ A difficult target can saturate under one generator/representation family withou
 Interpret the latter as **local saturation**, not proof that models cannot generate Human prose or that earlier methods stopped working. When no reliable Human island exists, create one through progressive forward construction: generate only the next natural beat, freeze owner/editorially accepted model-generated prefix text, continue from that prefix, then run the complete natural boundary through preservation and Pangram. Once real red/green localization exists, return immediately to the proven residual-repair controller instead of inventing another whole-paragraph architecture after each failure.
 
 Exact method note: `state/generation/LOCAL-SATURATION-NOT-GLOBAL-DEAD-END-20260919.md`.
+
+## 2026-09-21 — Relational generation and post-generation tell repair are different phases
+
+Inner Child checking P3 exposed a representation error: a contemporaneous help map had been turned into a pre-writing sentence allocation (`S1=function A ... S5=function E`), then the resulting prose was criticized for doing exactly one function per sentence. Do not use the help-trace requirement as the generator's sentence plan.
+
+Owner correction: let thoughts interact through source-grounded examples, self-talk, parenthetical realization, and uneven attention; then use the Human-facing tell catalog **after** literal prose exists. The tell ledger must be executed, not merely reported.
+
+Evidence boundary:
+- fresh autonomous relational-thought Railway generation passed a human-facing reader but still measured Pangram AI 1.0 on the tested 67-word P3;
+- production switched to Joel's source-relevant seat-belt/checker substrate;
+- post-generation tell repairs removed deferred-homework implication, checker-monitoring ambiguity, a second-ending slogan, and chronology ambiguity;
+- the final owner-derived P3 measured Pangram Human 1.0 alone (86 words), with P1+P2 context (167 words), and in the complete section (318 words).
+
+Therefore the promoted production lesson is **owner-derived substrate + post-generation tell repair can work**. Fresh autonomous transfer remains unproven. Do not expose HT01–HT14 as a writer checklist merely because the repair ledger succeeded.
