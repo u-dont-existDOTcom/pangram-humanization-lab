@@ -164,3 +164,29 @@ Decision value:
 - if it remains AI, that is direct evidence that the current tell model is incomplete or that unmodeled interactions/boundary features remain.
 
 No broader causal claim is allowed from one result.
+
+
+## Pre-Pangram review of the discriminating repair
+
+Exact candidate:
+
+> If the pan is smoking, take it off the stove. Old grief might show up while you're cooking too, and suddenly you're feeling the old thing all over again. Okay. Then the checker goes, “Are you sure this isn’t important?” Hm. There you are. The carrot's still on the board. You were in the middle of dinner.
+
+Exact UTF-8 SHA-256:
+`d8498ac7bc75a1371a566230da5107dae5a2c341aa5001bb928617c379058977`
+
+Whitespace words:
+**57**
+
+Fresh independent reader:
+- comprehension PASS;
+- semantic fidelity PASS;
+- naturalness/model-shapedness PASS;
+- no obvious remaining AI-shaped operation identified;
+- strongest weakness: `Hm. There you are.` is slightly stylized/ambiguous;
+- detector-research readiness YES.
+
+This is a **diagnostic-only** candidate. It is not article prose and will not be promoted.
+
+Call-budget note:
+this is the sixth and final new Pangram submission in the current checking-section audit. No seventh call is authorized without a new owner gate.
