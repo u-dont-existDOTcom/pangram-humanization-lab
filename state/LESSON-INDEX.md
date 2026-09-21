@@ -128,3 +128,7 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:inner-child-checking-owner-derived-tell-ledger-20260921 -->
 - **Relational generation vs post-generation tell repair:** do not preassign one sentence per protected function. Generate from a shared thought/scene, then apply the Human-facing tell catalog to the literal prose and execute the tell repairs. Inner Child checking P3 provides Pangram-Human production evidence for owner-derived substrate + tell repair at 86/167/318-word boundaries, while fresh autonomous relational-thought generation on the same target remained Pangram AI 1.0. Treat this as post-generation repair evidence, not autonomous-transfer skill. See `state/generation/INNER-CHILD-CHECKING-OWNER-DERIVED-TELL-LEDGER-RESULT-20260921.md` and `state/generation/HUMAN-FACING-TELL-CONSTRUCTION-LIBRARY-v1-20260920.md`.
+
+
+<!-- closeout-request:inner-child-checking-tell-clean-counterexample-20260921 -->
+- **Tell-clean ≠ detector-clean:** the current Human-facing tell catalog is useful but incomplete. A Railway checking candidate still measured Pangram AI 1.0 after all currently identified AI-shaped operations were repaired and an independent reader saw no obvious remaining model-shaped operation. Do not treat the absence of catalogued AI tells, or the presence of several HT relations, as sufficient for Pangram Human. See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
