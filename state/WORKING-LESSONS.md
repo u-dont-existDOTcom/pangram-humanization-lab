@@ -157,23 +157,15 @@ Evidence boundary:
 Therefore the promoted production lesson is **owner-derived substrate + post-generation tell repair can work**. Fresh autonomous transfer remains unproven. Do not expose HT01–HT14 as a writer checklist merely because the repair ledger succeeded.
 
 
-## 2026-09-21 — Tell-clean is not detector-clean
+## 2026-09-21 — Superseded RT2 tell-clean conclusion
 
-A current Inner Child checking control directly falsifies a stronger tell-model claim.
+The earlier RT2 interpretation said that the current tell catalog was proven incomplete because a supposedly tell-clean 57-word repair still measured Pangram AI 1.0. **That inference is superseded.**
 
-The failed Railway RT2 already had multiple Human-facing relations. A retrospective post-generation ledger then removed all AI-shaped operations the current catalog could name, and a fresh independent reader reported no obvious remaining AI-shaped operation. The resulting 57-word diagnostic still measured Pangram 4.0 AI 1.0, probability `0.8679472208023071`.
+Joel's owner re-audit found obvious surviving AI-shaped operations: scene-skinned source-function staircase, interchangeable didactic props, generic therapeutic abstraction, simulated spontaneity, image -> explanatory aftercare, and equalized semantic efficiency. The premise that RT2 was actually tell-clean was false.
 
-This means the current tell system is **useful but incomplete**. It cannot certify detector-readiness.
+Therefore RT2 does **not** establish that a genuinely tell-clean passage can still be detector-AI, and it does not prove catalog incompleteness. Catalog incompleteness remains possible on other evidence; this control cannot establish it.
 
-Open possibilities include:
-- missing Pangram-relevant features outside the current semantic/rhetorical catalog;
-- distributed feature interactions;
-- model-generated simulations of Human-facing relations that remain statistically model-like;
-- short-boundary effects.
-
-The later owner-derived P3 passed Human at 86/167/318 words, so the detector is not simply rejecting the topic or section. The unresolved variable lies somewhere in the realization/substrate/boundary features not fully represented by the current tell ledger.
-
-Do not say `there are no AI tells` when what is actually known is only `our current ledger/reviewer did not identify any`.
+Retain the narrower language rule: do not say `there are no AI tells` when the evidence is only `our current ledger/reviewer did not identify any`.
 
 See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
 
@@ -198,3 +190,21 @@ as evidence by themselves. Audit whether they changed the underlying thought top
 New T4 hypothesis: **causal surplus / non-interchangeable detail**. Joel's seat-belt example accumulates refusal -> crash -> injury -> blame -> guilt. Railway's pan/carrot details mainly illustrate functions and could be swapped out cheaply. Test this on another target before promoting it.
 
 Consequently, RT2 no longer supports the claim that the tell catalog is proven incomplete. The catalog may be incomplete, but this control did not isolate that because the `tell-clean` premise was false.
+
+## 2026-09-22 — Freshness is not critic competence
+
+The Inner Child dangerous-present-adult campaign exposed a process false positive before Pangram: a fresh critic returned `DEFINITE_AI_REMAINS: NO` even though Joel later identified obvious cumulative instruction-manual/listicle cadence and missing reader-purpose structure.
+
+The critic had noticed several ingredients as separate `mixed` findings but did not aggregate them into the known cumulative AI-N16 pattern. Earlier calibration had shown only that the critic could accept a known-good same-register paragraph. That tested specificity, not sensitivity.
+
+Production correction:
+- fresh critic packets must include the natural reading boundary plus intended reader/local purpose, not target text alone when audience/continuity can matter;
+- critic order is adversarial first: strongest AI-shape case before positive Human-facing features;
+- mixed findings must be aggregated at paragraph/section scale;
+- protected meaning cannot justify preserving model-shaped realization;
+- reader model, why-now, and antecedent checks are blocking;
+- before non-detection can gate detector admission, the same materially current critic configuration must blindly accept a same-register known-good control **and** detect a same-register owner-rejected known-bad control.
+
+A bare `no definite AI tells` result is therefore non-gating. This is an audit-admission rule, not a detector-causality claim.
+
+See `state/generation/INNER-CHILD-SAFETY-FRESH-CRITIC-FALSE-PASS-20260922.md` and the canonical Joel Articles `docs/HUMANIZATION-FRESH-CRITIC-GATE.md`.
