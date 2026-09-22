@@ -59,14 +59,16 @@ PASSAGE:
 
 ## Run discipline
 
-- Same frozen prompt for all 20.
-- One genuinely new Railway Agent thread per passage; no thread continuation.
+- Same frozen prompt for all 20; canonical prompt bytes are in `critic-prompt.txt`.
+- One independent stateless Venice chat-completions request per passage through the authenticated UDA model gateway.
+- Model alias: `gpt-5.6-sol`; temperature: `0`.
 - No prior sample labels, provenance, Pangram results, score, benchmark position, or other responses supplied.
-- Tell Railway Agent not to use sub-tools.
+- No tool access is provided to the classifier.
 - No rubric edits during the run.
-- Capture thread id, literal response, tool-call count, parse result, and sample SHA.
+- Capture literal response, provider response id/model, usage, parse result, elapsed time, and sample SHA.
 - Score only after all 20 responses are frozen.
 - Any invalid/non-binary response is a benchmark miss unless a purely mechanical JSON extraction succeeds without semantic reinterpretation.
+- A prior Railway Agent attempt on B01–B04 is excluded: the Agent refused prose classification because it now enforces Railway/DevOps scope. Those refusals contained no classification and occurred before the first valid benchmark response. See `RAILWAY-AGENT-TRANSPORT-FAILURE.json`.
 
 ## Interpretation
 
