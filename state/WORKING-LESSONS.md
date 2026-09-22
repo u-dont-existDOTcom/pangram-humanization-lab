@@ -208,3 +208,16 @@ Production correction:
 A bare `no definite AI tells` result is therefore non-gating. This is an audit-admission rule, not a detector-causality claim.
 
 See `state/generation/INNER-CHILD-SAFETY-FRESH-CRITIC-FALSE-PASS-20260922.md` and the canonical Joel Articles `docs/HUMANIZATION-FRESH-CRITIC-GATE.md`.
+
+
+## 2026-09-22 — Human-facing devices must break the scaffold, not merely decorate it
+
+A frozen 20-item provenance benchmark tested the then-current fresh-critic logic on ten known-Human and ten known-model passages. Ground truth came from authorship provenance, not Pangram. Stateless Venice GPT-5.6 Sol classified all ten Human passages correctly but only four of ten AI passages: **14/20 overall, 10/10 Human, 4/10 AI**.
+
+The six false negatives were not cases where the critic saw no model structure. It often identified the efficient teaching topology correctly and then let a concrete reaction, strong judgment, unresolved endpoint, social address, or sustained metaphor override it as “Human-facing.”
+
+Correction: Human-looking devices are not positive authorship votes merely because they are apt. Content-neutralize first and inspect the functional skeleton. If the scaffold remains an unusually efficient teaching staircase, vivid or emotionally plausible detail counts as Human evidence only when it creates genuine **Human surplus** that materially disrupts that scaffold rather than serving it one-for-one.
+
+For the current Joel humanization critic, a materially changed rubric/provider/model configuration is non-gating until it passes a frozen 20-item blinded provenance holdout at 20/20. If a benchmark is used to tune the rubric, that set becomes development data and validation moves to a new untouched holdout. Pangram-passing model prose may be a useful stress set, but its provenance remains AI.
+
+Exact evidence: `state/generation/critic-benchmark-20260922/V1-RESULT-AND-RUBRIC-DIAGNOSIS.md`.

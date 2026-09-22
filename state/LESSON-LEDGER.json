@@ -1027,6 +1027,31 @@
       "source_path": "state/generation/INNER-CHILD-SAFETY-FRESH-CRITIC-FALSE-PASS-20260922.md",
       "source_ref": "working-tree",
       "source_sha256": "51c06d2d0a615007df564bceb86da1957fa41ac627f91ffc89465cbf996859a3"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "A 20-item provenance benchmark scored 14/20 under the prior critic rubric: 10/10 Human but 4/10 AI. Human-looking devices can simulate authorship and must count only when they materially disrupt the content-neutralized model scaffold; tuned sets become development data and validation moves to a new frozen holdout.",
+      "id": "L-2069f2485d-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-22T23:47:40.366711+00:00",
+      "source_path": "state/generation/critic-benchmark-20260922/V1-RESULT-AND-RUBRIC-DIAGNOSIS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "2069f2485d65fa18192e24b37f5eec7ea9dab14fea59a305cb0dfce7f01321bc"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The first rubric-v2 rerun returned HTTP 402 on all 20 UDA Venice gateway requests and produced no classification evidence.",
+      "id": "L-b0d7811159-01",
+      "promoted_to": [],
+      "reason": "Transport/payment state only; the existing provider-outage rule already covers it and the run supplies no evidence about rubric v2.",
+      "recorded_at_utc": "2026-09-22T23:47:40.451312+00:00",
+      "source_path": "state/generation/critic-benchmark-20260922/V2-VENICE-TRANSPORT-FAILURE-402.json",
+      "source_ref": "working-tree",
+      "source_sha256": "b0d781115916c4f5a8c4ba3425b908446d5290294d642d35a4cca18379dfaf9e"
     }
   ],
   "schema_version": 1

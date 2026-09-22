@@ -1,0 +1,10 @@
+{
+  "event": "invalid_transport_attempt",
+  "date_utc": "2026-09-22",
+  "transport": "Railway Agent",
+  "disposition": "EXCLUDED_FROM_BENCHMARK_SCORING",
+  "reason": "Railway Agent now enforces Railway/DevOps scope and refused generic prose classification. No authorship classifications were returned.",
+  "samples_attempted": ["B01","B02","B03","B04"],
+  "scientific_effect": "None on gold labels or benchmark score. Transport was replaced before the first valid classification response.",
+  "pangram_calls": 0
+}

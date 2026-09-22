@@ -139,3 +139,7 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:inner-child-safety-fresh-critic-false-pass-20260922 -->
 - **Freshness ≠ critic competence:** before a fresh critic's non-detection can gate Joel production Pangram work, give it the natural reading boundary plus intended reader/local purpose, aggregate mixed findings, keep protected cognition separate from realization, and require blind same-register known-good **and** known-bad calibration. Known-good acceptance alone tests specificity, not sensitivity. See `state/generation/INNER-CHILD-SAFETY-FRESH-CRITIC-FALSE-PASS-20260922.md`.
+
+
+<!-- closeout-request:humanization-critic-provenance-benchmark-v1-20260922 -->
+- **Fresh-critic provenance calibration / Human-surplus gate:** a frozen 20-item benchmark scored 14/20 under the prior rubric—10/10 Human but only 4/10 AI—because model-simulated concrete detail, judgment, unresolvedness, social address, and metaphor could override recognized AI topology. Content-neutralize the functional scaffold first; positive Human-facing evidence counts only when it materially breaks that scaffold. A materially changed Joel critic must reach 20/20 on a new frozen provenance holdout before its non-detection can gate Pangram. See `state/generation/critic-benchmark-20260922/V1-RESULT-AND-RUBRIC-DIAGNOSIS.md`.

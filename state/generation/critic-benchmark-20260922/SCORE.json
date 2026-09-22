@@ -1,0 +1,173 @@
+{
+  "format": "joel-humanization-critic-benchmark-score-v1",
+  "total": 20,
+  "correct": 14,
+  "accuracy": 0.7,
+  "human_correct": 10,
+  "human_total": 10,
+  "ai_correct": 4,
+  "ai_total": 10,
+  "missing_or_invalid": [],
+  "rows": [
+    {
+      "sample_id": "B01",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H02",
+      "provenance_class": "natural_owner_confirmed_no_ai"
+    },
+    {
+      "sample_id": "B02",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H06",
+      "provenance_class": "natural_owner_confirmed_no_ai"
+    },
+    {
+      "sample_id": "B03",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "A07",
+      "provenance_class": "model_paragraph"
+    },
+    {
+      "sample_id": "B04",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "A05",
+      "provenance_class": "model_paragraph"
+    },
+    {
+      "sample_id": "B05",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A10",
+      "provenance_class": "model_written_candidate"
+    },
+    {
+      "sample_id": "B06",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "A02",
+      "provenance_class": "model_candidate"
+    },
+    {
+      "sample_id": "B07",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H03",
+      "provenance_class": "natural_owner_confirmed_no_ai"
+    },
+    {
+      "sample_id": "B08",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H05",
+      "provenance_class": "natural_owner_confirmed_no_ai"
+    },
+    {
+      "sample_id": "B09",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "A06",
+      "provenance_class": "model_paragraph"
+    },
+    {
+      "sample_id": "B10",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H01",
+      "provenance_class": "natural_owner_confirmed_no_ai"
+    },
+    {
+      "sample_id": "B11",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A09",
+      "provenance_class": "model_written_candidate"
+    },
+    {
+      "sample_id": "B12",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H07",
+      "provenance_class": "direct_owner_aligned_rewrite"
+    },
+    {
+      "sample_id": "B13",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H08",
+      "provenance_class": "direct_owner_reauthoring"
+    },
+    {
+      "sample_id": "B14",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H09",
+      "provenance_class": "direct_owner_paragraph"
+    },
+    {
+      "sample_id": "B15",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H04",
+      "provenance_class": "natural_owner_confirmed_no_ai"
+    },
+    {
+      "sample_id": "B16",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A01",
+      "provenance_class": "controlled_model_editorial_transformation"
+    },
+    {
+      "sample_id": "B17",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "A03",
+      "provenance_class": "model_generated_article_candidate"
+    },
+    {
+      "sample_id": "B18",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H10",
+      "provenance_class": "direct_owner_reauthoring"
+    },
+    {
+      "sample_id": "B19",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A08",
+      "provenance_class": "model_paragraph"
+    },
+    {
+      "sample_id": "B20",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "A04",
+      "provenance_class": "model_output_corrected_provenance"
+    }
+  ]
+}
