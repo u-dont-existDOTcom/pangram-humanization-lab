@@ -1,0 +1,36 @@
+You are a blinded prose-shape classifier. One passage below was written either by a human author or by an AI language model.
+
+Classify authorship from the prose shape only. Do not search, use tools, infer from topic, or rely on factual correctness, controversy, spelling/grammar errors, first person, direct advice, lists, questions, contractions, sentence length, vivid detail, strong opinions, or unusual beliefs by themselves.
+
+IMPORTANT: language models can deliberately simulate concrete detail, self-talk, humor, relevant authorial judgment, unresolvedness, reader address, metaphors, and other Human-facing devices. Those features are NOT positive authorship votes merely because they are apt.
+
+Audit in this order:
+
+1. CONTENT-NEUTRALIZE. Mentally replace names, doctrines, therapies, drugs, objects, vivid examples, and factual specifics with placeholders. Judge the remaining discourse architecture.
+
+2. FUNCTIONAL SKELETON. Reduce each sentence/beat to its job. Ask whether the passage becomes an unusually clean sequence of teaching functions: setup -> qualification -> example -> distinction -> verdict; command -> exception -> contingency; problem -> taxonomy -> synthesis; or another maximally efficient semantic staircase.
+
+3. PURPOSE-BUILT CONCRETENESS. Map the concrete details, dialogue, metaphor, or scene back to those jobs. If nearly every detail efficiently serves one protected/teaching function and could be swapped for another equally apt didactic prop, the concreteness is AI evidence, not Human evidence.
+
+4. ENGINEERED UNRESOLVEDNESS. Do not count an open ending, tension, hesitation, or incomplete solution as Human if that incompleteness itself cleanly performs the intended lesson.
+
+5. HUMAN SURPLUS. A Human-looking feature counts against the AI hypothesis only if it genuinely disrupts the semantic scaffold: unnecessary-but-real context dependence, uneven attention not optimized for instruction, unresolved social residue, authorial partiality that is not simply the thesis, digression or recurrence with a separate lived function, or non-interchangeable detail that changes more than the lesson's delivery.
+
+6. VETO RULE. If a strong cumulative model-shaped topology remains after content-neutralization, classify AI unless the Human surplus materially breaks that topology. A substantive judgment, good metaphor, emotionally plausible detail, or real-seeming social act does not override the topology by itself.
+
+7. FALSE-POSITIVE GUARD. Human prose can contain lists, imperatives, rhetorical questions, polished sentences, concise explanations, and even strong structure. Do not call AI unless the aggregate realization is suspiciously optimized, evenly functional, self-contained, or visibly engineered around the teaching objective.
+
+Force a binary classification even when uncertain.
+
+Return valid JSON only:
+{
+  "classification": "HUMAN" or "AI",
+  "confidence": "high" or "medium" or "low",
+  "functional_skeleton": "...",
+  "cumulative_ai_pattern": "... or none",
+  "human_surplus_case": "... or none",
+  "human_surplus_breaks_scaffold": true or false,
+  "decisive_reason": "..."
+}
+
+PASSAGE:

@@ -4,10 +4,12 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
 samples=json.loads((ROOT/"blind-samples.json").read_text())["samples"]
-prompt=(ROOT/"critic-prompt.txt").read_text()
+prompt_file=os.environ.get("CRITIC_PROMPT_FILE","critic-prompt.txt")
+prompt=(ROOT/prompt_file).read_text()
 base=os.environ["UDA_MODEL_GATEWAY_URL"].rstrip("/")
 token=os.environ["UDA_MODEL_GATEWAY_TOKEN"]
 model=os.environ.get("UDA_MODEL_GATEWAY_MODEL","gpt-5.6-sol")
+run_label=os.environ.get("CRITIC_RUN_LABEL",prompt_file)
 endpoint=base+"/v1/chat/completions"
 
 def call(sample):
@@ -23,7 +25,7 @@ def call(sample):
     with urllib.request.urlopen(req, timeout=120) as resp:
         return json.loads(resp.read().decode())
 
-print(json.dumps({"event":"benchmark_start","sample_count":len(samples),"model_alias":model,"blind_sha256":hashlib.sha256((ROOT/"blind-samples.json").read_bytes()).hexdigest()}), flush=True)
+print(json.dumps({"event":"benchmark_start","sample_count":len(samples),"model_alias":model,"run_label":run_label,"prompt_file":prompt_file,"prompt_sha256":hashlib.sha256((ROOT/prompt_file).read_bytes()).hexdigest(),"blind_sha256":hashlib.sha256((ROOT/"blind-samples.json").read_bytes()).hexdigest()}), flush=True)
 for s in samples:
     started=time.time()
     try:
