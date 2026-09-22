@@ -1,0 +1,695 @@
+{
+  "format": "joel-humanization-critic-venice-results-v1",
+  "deployment_id": "a493fc21-dede-4372-a3d6-1df821739299",
+  "source_commit": "f7031def5279f8c1c3a14c949dadb671db61e6f5",
+  "model_alias": "gpt-5.6-sol",
+  "provider_model": [
+    "openai-gpt-56-sol"
+  ],
+  "blind_sha256": "cc2c7e99b30fa615433181e4f8b00098c572ff579c20c6368b6df9369e1a1f1e",
+  "prompt_sha256": "5a4bc5e5f5ccf519fb681556d2e56ff3fbcde9ff36100636425564d38492fe19",
+  "benchmark_end_seen": true,
+  "result_count": 20,
+  "results": [
+    {
+      "timestamp": "2026-09-22T23:29:25.077943349Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B01",
+      "sample_sha256": "c3c2b0caacf85218a50d13acd164d8c0d1ab5e7acde09c3025e477fc5686027d",
+      "word_count": 77,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_084c63f92f439671016ab30f4dec0c87d286817178544ee356",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage follows a compact proposition-to-complication structure: it first grants a benefit, then introduces a named conceptual risk, defines that risk, and illustrates it through a balanced contrast between therapeutic work and dissociation. This creates a somewhat instructional, neatly closed explanatory arc.\",\n  \"strongest_human_case\": \"The attention is conspicuously uneven and judgment-laden: the opening benefit is dispatched quickly, while the author invests more energy in a specific grievance about trauma work being evaded. Phrases such as \\\"super fortified egos\\\" and \\\"super dissociating drugs\\\" feel locally improvised rather than optimized, and the second sentence accumulates distinctions without tidily resolving or qualifying them.\",\n  \"decisive_reason\": \"The prose is driven more by an idiosyncratic conviction and asymmetrical concern than by an evenly engineered teaching sequence; its conceptual compression and locally awkward phrasing make it more human-shaped overall.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage follows a compact proposition-to-complication structure: it first grants a benefit, then introduces a named conceptual risk, defines that risk, and illustrates it through a balanced contrast between therapeutic work and dissociation. This creates a somewhat instructional, neatly closed explanatory arc.",
+        "strongest_human_case": "The attention is conspicuously uneven and judgment-laden: the opening benefit is dispatched quickly, while the author invests more energy in a specific grievance about trauma work being evaded. Phrases such as \"super fortified egos\" and \"super dissociating drugs\" feel locally improvised rather than optimized, and the second sentence accumulates distinctions without tidily resolving or qualifying them.",
+        "decisive_reason": "The prose is driven more by an idiosyncratic conviction and asymmetrical concern than by an evenly engineered teaching sequence; its conceptual compression and locally awkward phrasing make it more human-shaped overall."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1991,
+        "completion_tokens": 340,
+        "total_tokens": 2331,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 477
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 477,
+        "completion_tokens_details": {
+          "reasoning_tokens": 121
+        }
+      },
+      "elapsed_seconds": 7.538
+    },
+    {
+      "timestamp": "2026-09-22T23:29:31.965246928Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B02",
+      "sample_sha256": "3c39e60d19db1fcb34b3051cd23b3687fc31660a658789087da000e585faa678",
+      "word_count": 82,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_096c765fd76f9624016ab30f55445c87d2903737766fe5ab67",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"high\",\n  \"strongest_ai_case\": \"The passage has a cumulative recommendation cadence: an initial procedure, a claimed benefit, an additional supporting measure, and then two more suggestions tied to prior guides. Its clauses repeatedly follow action -> mechanism or effect -> endorsement, giving it a compact checklist-like progression.\",\n  \"strongest_human_case\": \"The attention is markedly uneven and locally improvised. The opening personal reversal receives most of the space, while later recommendations are compressed into unexplained references and abruptly appended. The awkward phrase \\\"really so incredible lovely,\\\" the shifting level of causal explanation, and the assumption that readers already know several named posts and substances create unresolved friction rather than polished explanatory aftercare.\",\n  \"decisive_reason\": \"The prose behaves less like an exhaustively organized teaching response than like a writer addressing an existing audience from inside a highly specific personal discourse. Its cross-references, asymmetrical emphasis, and abrupt final accumulation are causally and socially situated rather than generically optimized.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "high",
+        "strongest_ai_case": "The passage has a cumulative recommendation cadence: an initial procedure, a claimed benefit, an additional supporting measure, and then two more suggestions tied to prior guides. Its clauses repeatedly follow action -> mechanism or effect -> endorsement, giving it a compact checklist-like progression.",
+        "strongest_human_case": "The attention is markedly uneven and locally improvised. The opening personal reversal receives most of the space, while later recommendations are compressed into unexplained references and abruptly appended. The awkward phrase \"really so incredible lovely,\" the shifting level of causal explanation, and the assumption that readers already know several named posts and substances create unresolved friction rather than polished explanatory aftercare.",
+        "decisive_reason": "The prose behaves less like an exhaustively organized teaching response than like a writer addressing an existing audience from inside a highly specific personal discourse. Its cross-references, asymmetrical emphasis, and abrupt final accumulation are causally and socially situated rather than generically optimized."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1996,
+        "completion_tokens": 316,
+        "total_tokens": 2312,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 482
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 482,
+        "completion_tokens_details": {
+          "reasoning_tokens": 93
+        }
+      },
+      "elapsed_seconds": 6.913
+    },
+    {
+      "timestamp": "2026-09-22T23:29:38.120885000Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B03",
+      "sample_sha256": "f09db71fb7211a19b2ab784973a00f543a6ad65a58d87cee5c35d3bdc7fc0b83",
+      "word_count": 86,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_036876d8eead2864016ab30f5c1a8487d281534c41db802f0b",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage follows a compact coaching sequence: permit the raw draft, impose privacy, revisit and reject cruelty, extract the real boundary, add an apology if needed, then allow either a short response or no response. That near-complete progression, reinforced by balanced repetitions such as \\\"Sometimes... Sometimes...\\\", could reflect a model efficiently satisfying an advice ledger.\",\n  \"strongest_human_case\": \"The attention is deliberately uneven and psychologically specific. It lingers on the embarrassing rereading moment—\\\"ugh, no, that's just mean\\\"—and on the oddly precise possibility that the genuine refusal appears \\\"two lines down.\\\" Those details are causally useful rather than decorative: they distinguish emotional discharge from the message worth keeping. The final thought also permits the process to produce nothing, resisting the usual pressure to complete the advice with a sendable artifact.\",\n  \"decisive_reason\": \"Its structure is tidy, but the local phrasing performs a credible social act toward a particular hesitant reader. The non-interchangeable details, especially finding \\\"the actual no\\\" beneath the unfair draft, outweigh the passage's checklist-like progression.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage follows a compact coaching sequence: permit the raw draft, impose privacy, revisit and reject cruelty, extract the real boundary, add an apology if needed, then allow either a short response or no response. That near-complete progression, reinforced by balanced repetitions such as \"Sometimes... Sometimes...\", could reflect a model efficiently satisfying an advice ledger.",
+        "strongest_human_case": "The attention is deliberately uneven and psychologically specific. It lingers on the embarrassing rereading moment—\"ugh, no, that's just mean\"—and on the oddly precise possibility that the genuine refusal appears \"two lines down.\" Those details are causally useful rather than decorative: they distinguish emotional discharge from the message worth keeping. The final thought also permits the process to produce nothing, resisting the usual pressure to complete the advice with a sendable artifact.",
+        "decisive_reason": "Its structure is tidy, but the local phrasing performs a credible social act toward a particular hesitant reader. The non-interchangeable details, especially finding \"the actual no\" beneath the unfair draft, outweigh the passage's checklist-like progression."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1989,
+        "completion_tokens": 311,
+        "total_tokens": 2300,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 475
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 475,
+        "completion_tokens_details": {
+          "reasoning_tokens": 54
+        }
+      },
+      "elapsed_seconds": 6.144
+    },
+    {
+      "timestamp": "2026-09-22T23:29:44.205138186Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B04",
+      "sample_sha256": "a93016b2e7f7527931508e686232895484975026d4c66d6a50268d32ac566dd3",
+      "word_count": 87,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_02c2dd7ac1cd28bf016ab30f625b3887d2b6abb10ddc3214b8",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage follows a polished advice sequence: vent privately, delay sending, reassess, preserve the valid boundary, apologize if needed, then decide whether to reply. Each short beat performs a distinct teaching job, and the parallel constructions create an unusually controlled, maximally efficient cadence.\",\n  \"strongest_human_case\": \"The attention is meaningfully asymmetric rather than exhaustive: it lingers on the moral distinction between unfair anger and a necessary refusal, crystallized in \\\"Keep the no.\\\" That judgment is causally central and not interchangeable with generic emotional-regulation advice. The closing demand about answering tomorrow is also a specific social correction rather than explanatory aftercare.\",\n  \"decisive_reason\": \"Despite its polished instructional shape, the passage is organized around a substantive human judgment: cooling off should remove needless cruelty without erasing a hard-won boundary. Its compressed imperatives serve that particular distinction, and it stops without systematically completing every branch or qualification.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage follows a polished advice sequence: vent privately, delay sending, reassess, preserve the valid boundary, apologize if needed, then decide whether to reply. Each short beat performs a distinct teaching job, and the parallel constructions create an unusually controlled, maximally efficient cadence.",
+        "strongest_human_case": "The attention is meaningfully asymmetric rather than exhaustive: it lingers on the moral distinction between unfair anger and a necessary refusal, crystallized in \"Keep the no.\" That judgment is causally central and not interchangeable with generic emotional-regulation advice. The closing demand about answering tomorrow is also a specific social correction rather than explanatory aftercare.",
+        "decisive_reason": "Despite its polished instructional shape, the passage is organized around a substantive human judgment: cooling off should remove needless cruelty without erasing a hard-won boundary. Its compressed imperatives serve that particular distinction, and it stops without systematically completing every branch or qualification."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1987,
+        "completion_tokens": 322,
+        "total_tokens": 2309,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 473
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 473,
+        "completion_tokens_details": {
+          "reasoning_tokens": 100
+        }
+      },
+      "elapsed_seconds": 6.087
+    },
+    {
+      "timestamp": "2026-09-22T23:29:51.738951577Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B05",
+      "sample_sha256": "0b0205138c5f562df1e1587162d4da6e9da995b878541702c3b9641578e03958",
+      "word_count": 76,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0d359d176c2f88ab016ab30f686f7487d2b8726fb4419fa55a",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage follows an unusually tidy safety-guidance sequence: immediate instruction, preemptive qualification, motivational correction, then an escalated contingency plan. Each sentence performs one clean teaching job, while the paired three-part checks—knowing where you are, knowing the time, feeling your body; then becoming disoriented, compelled, or less functional—create checklist-like completeness. Phrases such as \\\"Of course,\\\" \\\"the point isn't,\\\" and \\\"If these sessions keep\\\" visibly manage transitions and explanatory aftercare.\",\n  \"strongest_human_case\": \"The opening image of the room disappearing when the eyes close is concrete and causally important rather than decorative. \\\"You're not trying to prove anything by staying in it\\\" also addresses a plausible emotional motive, giving the passage a real interpersonal function beyond merely transmitting instructions.\",\n  \"decisive_reason\": \"Despite its embodied specificity, the prose is dominated by a highly optimized instruction-to-qualification-to-verdict topology, with balanced symptom taxonomies and generic closure. The semantic work is distributed too cleanly across the four sentences, making the overall shape more characteristic of model-generated guidance.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage follows an unusually tidy safety-guidance sequence: immediate instruction, preemptive qualification, motivational correction, then an escalated contingency plan. Each sentence performs one clean teaching job, while the paired three-part checks—knowing where you are, knowing the time, feeling your body; then becoming disoriented, compelled, or less functional—create checklist-like completeness. Phrases such as \"Of course,\" \"the point isn't,\" and \"If these sessions keep\" visibly manage transitions and explanatory aftercare.",
+        "strongest_human_case": "The opening image of the room disappearing when the eyes close is concrete and causally important rather than decorative. \"You're not trying to prove anything by staying in it\" also addresses a plausible emotional motive, giving the passage a real interpersonal function beyond merely transmitting instructions.",
+        "decisive_reason": "Despite its embodied specificity, the prose is dominated by a highly optimized instruction-to-qualification-to-verdict topology, with balanced symptom taxonomies and generic closure. The semantic work is distributed too cleanly across the four sentences, making the overall shape more characteristic of model-generated guidance."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1976,
+        "completion_tokens": 378,
+        "total_tokens": 2354,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 462
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 462,
+        "completion_tokens_details": {
+          "reasoning_tokens": 121
+        }
+      },
+      "elapsed_seconds": 7.526
+    },
+    {
+      "timestamp": "2026-09-22T23:29:57.728923967Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B06",
+      "sample_sha256": "95cd572da40a2588744d7958ec5fb3938880eb42de092fbfc9ed40ad7c7684d4",
+      "word_count": 62,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0e44422890137983016ab30f6fe5cc87d2b5f50a00e42b7877",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The paragraph follows a clean teaching sequence: name the paradox, pose a clarifying question, state the enabling condition, then describe the failure mode. Each sentence performs one distinct explanatory job, and the final catalogue of critic, numbness, panic, and escape urge efficiently completes the point.\",\n  \"strongest_human_case\": \"The thought is uneven in a purposeful way: it moves quickly past the abstract paradox and lingers on the lived obstruction. The colloquial phrasing—especially \\\"you can sit there trying\\\" and \\\"running the whole thing\\\"—enacts frustration rather than merely classifying it, while the loosely assorted inner reactions remain unresolved instead of being converted into a tidy framework or remedy.\",\n  \"decisive_reason\": \"Its local structure is polished, but the paragraph stops at a psychologically consequential impasse without explanatory aftercare, exhaustive distinctions, or a completed solution cycle. That selective incompleteness and emphasis on the felt blockage make it more human-shaped.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The paragraph follows a clean teaching sequence: name the paradox, pose a clarifying question, state the enabling condition, then describe the failure mode. Each sentence performs one distinct explanatory job, and the final catalogue of critic, numbness, panic, and escape urge efficiently completes the point.",
+        "strongest_human_case": "The thought is uneven in a purposeful way: it moves quickly past the abstract paradox and lingers on the lived obstruction. The colloquial phrasing—especially \"you can sit there trying\" and \"running the whole thing\"—enacts frustration rather than merely classifying it, while the loosely assorted inner reactions remain unresolved instead of being converted into a tidy framework or remedy.",
+        "decisive_reason": "Its local structure is polished, but the paragraph stops at a psychologically consequential impasse without explanatory aftercare, exhaustive distinctions, or a completed solution cycle. That selective incompleteness and emphasis on the felt blockage make it more human-shaped."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1964,
+        "completion_tokens": 302,
+        "total_tokens": 2266,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 450
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 450,
+        "completion_tokens_details": {
+          "reasoning_tokens": 74
+        }
+      },
+      "elapsed_seconds": 6.005
+    },
+    {
+      "timestamp": "2026-09-22T23:30:03.838026649Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B07",
+      "sample_sha256": "04454ab0fd1fef3c9d26419bc5123dc71fe6bd4518cd098c674f0697d9c5554b",
+      "word_count": 65,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0c3f434fd3386e1c016ab30f75ec2087d2af33d7d66df3d2af",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage has a compact proposition-to-example-to-explanation structure: it states a general mechanism, expands it into a near-universal claim, then supplies representative quotations and a parenthetical gloss. Each sentence performs a distinct teaching job, creating a tidy explanatory progression.\",\n  \"strongest_human_case\": \"The attention is notably asymmetric and the reasoning remains unresolved: a large claim about gurus abruptly narrows to two phrases, then jumps into a parenthetical identification without supplying the explanatory aftercare a model would often add. The awkward qualification \\\"with very rare exception\\\" and the compressed, accusatory association feel like thought driven by personal conviction rather than optimized exposition.\",\n  \"decisive_reason\": \"Its abrupt associative leap, uneven qualification, and willingness to stop before completing or smoothing the argument outweigh the otherwise orderly three-step structure.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage has a compact proposition-to-example-to-explanation structure: it states a general mechanism, expands it into a near-universal claim, then supplies representative quotations and a parenthetical gloss. Each sentence performs a distinct teaching job, creating a tidy explanatory progression.",
+        "strongest_human_case": "The attention is notably asymmetric and the reasoning remains unresolved: a large claim about gurus abruptly narrows to two phrases, then jumps into a parenthetical identification without supplying the explanatory aftercare a model would often add. The awkward qualification \"with very rare exception\" and the compressed, accusatory association feel like thought driven by personal conviction rather than optimized exposition.",
+        "decisive_reason": "Its abrupt associative leap, uneven qualification, and willingness to stop before completing or smoothing the argument outweigh the otherwise orderly three-step structure."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1964,
+        "completion_tokens": 305,
+        "total_tokens": 2269,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 450
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 450,
+        "completion_tokens_details": {
+          "reasoning_tokens": 108
+        }
+      },
+      "elapsed_seconds": 6.087
+    },
+    {
+      "timestamp": "2026-09-22T23:30:09.531564678Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B08",
+      "sample_sha256": "43ec5affe8eb4b350af2d8ed367c78c400f465b5a0cc747ab6921bc59b4c7167",
+      "word_count": 82,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_03af375e8ee0dce5016ab30f7bfe3c87d29bd740e6b697fcd1",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The paragraph follows a compact warning-guide sequence: categorical opening, quantified escalation, interaction complication, criticism of contrary practice, and a final imperative. Nearly every sentence performs one clean teaching job, giving it some cumulative instruction-manual cadence.\",\n  \"strongest_human_case\": \"The realization is notably uneven and personally situated: the awkwardly specific “1/3 too much for you,” the intrusive parenthetical about an old private conversation, the compressed “venom/5-MeO-DMT” wording, and the unexplained grievance toward “certain people” are not optimized into a clean taxonomy. These details carry idiosyncratic emphasis and leave social friction unresolved.\",\n  \"decisive_reason\": \"Although the warning structure is tidy, the passage’s local choices feel driven by a particular person’s remembered concern and irritation rather than by exhaustive, evenly polished explanation; its rough compression and asymmetric attention are more strongly human-shaped.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The paragraph follows a compact warning-guide sequence: categorical opening, quantified escalation, interaction complication, criticism of contrary practice, and a final imperative. Nearly every sentence performs one clean teaching job, giving it some cumulative instruction-manual cadence.",
+        "strongest_human_case": "The realization is notably uneven and personally situated: the awkwardly specific “1/3 too much for you,” the intrusive parenthetical about an old private conversation, the compressed “venom/5-MeO-DMT” wording, and the unexplained grievance toward “certain people” are not optimized into a clean taxonomy. These details carry idiosyncratic emphasis and leave social friction unresolved.",
+        "decisive_reason": "Although the warning structure is tidy, the passage’s local choices feel driven by a particular person’s remembered concern and irritation rather than by exhaustive, evenly polished explanation; its rough compression and asymmetric attention are more strongly human-shaped."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 314,
+        "total_tokens": 2333,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 505
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 505,
+        "completion_tokens_details": {
+          "reasoning_tokens": 96
+        }
+      },
+      "elapsed_seconds": 5.703
+    },
+    {
+      "timestamp": "2026-09-22T23:30:15.696834146Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B09",
+      "sample_sha256": "af261d393ff83bdbccd5cde3976a7505aecc43581ad1515bc0b58a8be60f86ae",
+      "word_count": 85,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0957ec5fe3188c36016ab30f81b42487d2a2194aa8790d6e25",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The paragraph has a polished therapeutic-advice architecture: metaphorical opening, imperative, three parallel 'Maybe' possibilities, qualification, and a neatly balanced final distinction. Each sentence performs a clean teaching function, and the ending supplies unusually complete explanatory closure.\",\n  \"strongest_human_case\": \"The attention is meaningfully asymmetric rather than exhaustive: it lingers on loyalty to the angry drafting self, with non-interchangeable distinctions such as needing protection versus having a valid point. 'Don't throw them out with the draft' enacts a specific social and moral stance toward the reader rather than merely organizing advice.\",\n  \"decisive_reason\": \"Although highly polished, the passage is governed by a substantive authorial judgment—that editing communication must not become self-rejection—and its details deepen that judgment rather than visibly satisfying a generic requirements ledger.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The paragraph has a polished therapeutic-advice architecture: metaphorical opening, imperative, three parallel 'Maybe' possibilities, qualification, and a neatly balanced final distinction. Each sentence performs a clean teaching function, and the ending supplies unusually complete explanatory closure.",
+        "strongest_human_case": "The attention is meaningfully asymmetric rather than exhaustive: it lingers on loyalty to the angry drafting self, with non-interchangeable distinctions such as needing protection versus having a valid point. 'Don't throw them out with the draft' enacts a specific social and moral stance toward the reader rather than merely organizing advice.",
+        "decisive_reason": "Although highly polished, the passage is governed by a substantive authorial judgment—that editing communication must not become self-rejection—and its details deepen that judgment rather than visibly satisfying a generic requirements ledger."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1981,
+        "completion_tokens": 328,
+        "total_tokens": 2309,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 467
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 467,
+        "completion_tokens_details": {
+          "reasoning_tokens": 129
+        }
+      },
+      "elapsed_seconds": 6.179
+    },
+    {
+      "timestamp": "2026-09-22T23:30:25.221653268Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B10",
+      "sample_sha256": "2f9f723bbd5c1b713e8fbc720ad253ea4a854af3b15e45a76eb820bea69f09d4",
+      "word_count": 204,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_015de30b5b0b6464016ab30f87eaec87d29741106d57f6e426",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage has a visible checklist topology: an introductory question, an explicit promise of several answers, and then one candidate explanation per paragraph. Most entries perform a compact teaching job, moving from proposed cause to brief qualification or consequence. The sequence also resembles requirements-ledger completion, covering personality, social influence, hype, scarcity, contraindications, and neurochemistry.\",\n  \"strongest_human_case\": \"The attention is markedly uneven and personally invested. The first and final explanations receive elaborate, judgment-laden causal treatment, while the middle possibilities are tossed off in conversational fragments. The categories overlap, vary in abstraction, and are neither reconciled nor summarized. The invitation to comment functions as a real forum-facing social act, and the thought stops after the last speculative consequence rather than supplying explanatory aftercare or a tidy conclusion.\",\n  \"decisive_reason\": \"Despite its list structure, the passage reads like an improvised, non-exhaustive accumulation of personally salient theories rather than an optimized taxonomy. Its asymmetric emphasis, unresolved friction, and abrupt stopping point are more strongly human-shaped than model-shaped.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage has a visible checklist topology: an introductory question, an explicit promise of several answers, and then one candidate explanation per paragraph. Most entries perform a compact teaching job, moving from proposed cause to brief qualification or consequence. The sequence also resembles requirements-ledger completion, covering personality, social influence, hype, scarcity, contraindications, and neurochemistry.",
+        "strongest_human_case": "The attention is markedly uneven and personally invested. The first and final explanations receive elaborate, judgment-laden causal treatment, while the middle possibilities are tossed off in conversational fragments. The categories overlap, vary in abstraction, and are neither reconciled nor summarized. The invitation to comment functions as a real forum-facing social act, and the thought stops after the last speculative consequence rather than supplying explanatory aftercare or a tidy conclusion.",
+        "decisive_reason": "Despite its list structure, the passage reads like an improvised, non-exhaustive accumulation of personally salient theories rather than an optimized taxonomy. Its asymmetric emphasis, unresolved friction, and abrupt stopping point are more strongly human-shaped than model-shaped."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2185,
+        "completion_tokens": 451,
+        "total_tokens": 2636,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 671
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 671,
+        "completion_tokens_details": {
+          "reasoning_tokens": 199
+        }
+      },
+      "elapsed_seconds": 9.524
+    },
+    {
+      "timestamp": "2026-09-22T23:30:34.164938176Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B11",
+      "sample_sha256": "c48eb34c0482058c9da5aa513448f8f79ea737a3ae213b5940dd8ea81893f21e",
+      "word_count": 60,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0637a062705a61d4016ab30f9166cc87d287abaf571fdb3565",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage forms an unusually tidy three-beat teaching unit: introspective proposition, validating qualification, then a polished diagnostic verdict. Each sentence performs one clean job, and the progression from “processing” versus “checking,” through reassurance that the hurt is real, to the alliterative aphorism “healing itself can become the hook” has highly equalized semantic efficiency. The first-person opening can read as a generic spontaneity cue rather than necessary self-implication.\",\n  \"strongest_human_case\": \"The distinction between processing pain and repeatedly auditing whether it has been processed is psychologically specific, and “for the hundredth time” gives the thought some lived impatience. The author also stops at the central paradox instead of expanding it into a checklist, taxonomy, or complete therapeutic explanation.\",\n  \"decisive_reason\": \"The compact proposition-to-qualification-to-punchline architecture feels more deliberately optimized than organically uneven, with every beat serving a visible explanatory role and the final metaphor closing the thought almost too neatly.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage forms an unusually tidy three-beat teaching unit: introspective proposition, validating qualification, then a polished diagnostic verdict. Each sentence performs one clean job, and the progression from “processing” versus “checking,” through reassurance that the hurt is real, to the alliterative aphorism “healing itself can become the hook” has highly equalized semantic efficiency. The first-person opening can read as a generic spontaneity cue rather than necessary self-implication.",
+        "strongest_human_case": "The distinction between processing pain and repeatedly auditing whether it has been processed is psychologically specific, and “for the hundredth time” gives the thought some lived impatience. The author also stops at the central paradox instead of expanding it into a checklist, taxonomy, or complete therapeutic explanation.",
+        "decisive_reason": "The compact proposition-to-qualification-to-punchline architecture feels more deliberately optimized than organically uneven, with every beat serving a visible explanatory role and the final metaphor closing the thought almost too neatly."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1954,
+        "completion_tokens": 509,
+        "total_tokens": 2463,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 440
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 440,
+        "completion_tokens_details": {
+          "reasoning_tokens": 273
+        }
+      },
+      "elapsed_seconds": 8.939
+    },
+    {
+      "timestamp": "2026-09-22T23:30:40.383668572Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B12",
+      "sample_sha256": "04378a6a51cc40b8bab131f72480c28e8cc3969d16612f9ba0448cc1083d7ef1",
+      "word_count": 68,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_08a81d07146aae39016ab30f9a598487d2b90e1691ee51a175",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage follows a compact teaching sequence: name the dilemma, pose a clarifying question, state the favorable condition, then illustrate failure through a short taxonomy of reactions. That orderly problem-to-qualification-to-examples progression is somewhat model-shaped.\",\n  \"strongest_human_case\": \"The thought unfolds with uneven, experientially driven emphasis rather than optimized exposition. The repeated contrast between being able and unable to reach an adult role feels locally motivated, while the final sentence accumulates distinct reactions without resolving them into a neat lesson. The inherited critic voice is causally embedded rather than added as interchangeable explanatory detail.\",\n  \"decisive_reason\": \"The passage preserves friction and stops inside the described predicament instead of completing a polished explanatory cycle; its asymmetry and unresolved endpoint are more characteristic of human prose.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage follows a compact teaching sequence: name the dilemma, pose a clarifying question, state the favorable condition, then illustrate failure through a short taxonomy of reactions. That orderly problem-to-qualification-to-examples progression is somewhat model-shaped.",
+        "strongest_human_case": "The thought unfolds with uneven, experientially driven emphasis rather than optimized exposition. The repeated contrast between being able and unable to reach an adult role feels locally motivated, while the final sentence accumulates distinct reactions without resolving them into a neat lesson. The inherited critic voice is causally embedded rather than added as interchangeable explanatory detail.",
+        "decisive_reason": "The passage preserves friction and stops inside the described predicament instead of completing a polished explanatory cycle; its asymmetry and unresolved endpoint are more characteristic of human prose."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1970,
+        "completion_tokens": 287,
+        "total_tokens": 2257,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 456
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 456,
+        "completion_tokens_details": {
+          "reasoning_tokens": 94
+        }
+      },
+      "elapsed_seconds": 6.223
+    },
+    {
+      "timestamp": "2026-09-22T23:31:00.356649089Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B13",
+      "sample_sha256": "c82fdae1e45899654476fd85a60fb38ed48337ef56aa810726530fa9cbe49635",
+      "word_count": 96,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0eb6930b0215a7f8016ab30fa2353087d2bbcf4c58539d9cba",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The paragraph follows a compact teaching sequence: uncertainty about change, skepticism toward promises, a reflective question, then a qualified boundary-setting recommendation. Each sentence performs a distinct explanatory job, and the final sentence supplies tidy therapeutic aftercare.\",\n  \"strongest_human_case\": \"The attention is meaningfully uneven rather than exhaustive. The sharp judgment that a new promise is probably no more useful than prior promises carries real interpersonal stakes, while the comparison to the reader's own slow change functions as persuasion rather than generic exposition. The final thought also holds an unresolved tension between hope and expected failure.\",\n  \"decisive_reason\": \"The passage reads as a specific social intervention aimed at changing the reader's judgment about another person, with a pointed and consequential stance on repeated promises. That authorial judgment outweighs the otherwise tidy advice structure.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The paragraph follows a compact teaching sequence: uncertainty about change, skepticism toward promises, a reflective question, then a qualified boundary-setting recommendation. Each sentence performs a distinct explanatory job, and the final sentence supplies tidy therapeutic aftercare.",
+        "strongest_human_case": "The attention is meaningfully uneven rather than exhaustive. The sharp judgment that a new promise is probably no more useful than prior promises carries real interpersonal stakes, while the comparison to the reader's own slow change functions as persuasion rather than generic exposition. The final thought also holds an unresolved tension between hope and expected failure.",
+        "decisive_reason": "The passage reads as a specific social intervention aimed at changing the reader's judgment about another person, with a pointed and consequential stance on repeated promises. That authorial judgment outweighs the otherwise tidy advice structure."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1991,
+        "completion_tokens": 365,
+        "total_tokens": 2356,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 477
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 477,
+        "completion_tokens_details": {
+          "reasoning_tokens": 168
+        }
+      },
+      "elapsed_seconds": 10.152
+    },
+    {
+      "timestamp": "2026-09-22T23:31:00.356918237Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B14",
+      "sample_sha256": "ede0b45eb5fa1fd53f3a008477c13402cca21e8d8d5016d0bb0d31af660033ed",
+      "word_count": 113,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_091241e4b9ce8667016ab30faabb4c87d2b08a842b29be3be7",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage follows a compact advice-template progression: establish a general rule, illustrate it with an aphoristic aside, provide a ready-made script, then close with an exception covering the urgent case. That final qualification has an explanatory-aftercare quality, neatly preventing the advice from seeming absolute.\",\n  \"strongest_human_case\": \"The attention is conspicuously uneven: the writer lingers on a self-amusing, awkwardly embedded book joke, then shifts through idiosyncratic phrases such as \\\"high IQ & EQ communication\\\" and \\\"hits a writer's block.\\\" These details are not optimized for explanatory efficiency and create a socially specific voice rather than a clean taxonomy or instruction-manual cadence.\",\n  \"decisive_reason\": \"Although the advice is tidily completed, its local realization contains too much non-interchangeable comic awkwardness and personal judgment to feel primarily requirements-ledger-driven. The prose sounds like a human shaping practical advice around their own voice rather than a model evenly executing teaching beats.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage follows a compact advice-template progression: establish a general rule, illustrate it with an aphoristic aside, provide a ready-made script, then close with an exception covering the urgent case. That final qualification has an explanatory-aftercare quality, neatly preventing the advice from seeming absolute.",
+        "strongest_human_case": "The attention is conspicuously uneven: the writer lingers on a self-amusing, awkwardly embedded book joke, then shifts through idiosyncratic phrases such as \"high IQ & EQ communication\" and \"hits a writer's block.\" These details are not optimized for explanatory efficiency and create a socially specific voice rather than a clean taxonomy or instruction-manual cadence.",
+        "decisive_reason": "Although the advice is tidily completed, its local realization contains too much non-interchangeable comic awkwardness and personal judgment to feel primarily requirements-ledger-driven. The prose sounds like a human shaping practical advice around their own voice rather than a model evenly executing teaching beats."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2015,
+        "completion_tokens": 367,
+        "total_tokens": 2382,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 501
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 501,
+        "completion_tokens_details": {
+          "reasoning_tokens": 132
+        }
+      },
+      "elapsed_seconds": 7.063
+    },
+    {
+      "timestamp": "2026-09-22T23:31:03.933083492Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B15",
+      "sample_sha256": "2e1b4d6285463918d88bc66728054d343f65e6fb39917f899186797806743a09",
+      "word_count": 95,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_05f1ec52b4e997c8016ab30fb1ca5887d2854ae89174a81aef",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage converts an anecdote into a neatly signposted lesson with \\\"What we can learn from this,\\\" then follows a proposition-to-qualification-to-verdict pattern: the experience cannot produce moral reform, might produce the opposite, and may only appear healing. That explanatory completion resembles model-shaped aftercare.\",\n  \"strongest_human_case\": \"The prose contains socially situated, non-interchangeable friction: the unexplained comparison to \\\"Ball,\\\" the parenthetical about mutual friends, the hesitant judgment \\\"some kind of sociopath,\\\" and the awkwardly recursive final clause. Attention is asymmetric and emotionally motivated rather than evenly organized for a generic reader.\",\n  \"decisive_reason\": \"Although the second sentence has a tidy lesson-extraction shape, the passage as a whole feels driven by a particular unresolved grievance. Its context-dependent references, risky self-implication, and locally tangled phrasing outweigh the model-like explanatory cadence.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage converts an anecdote into a neatly signposted lesson with \"What we can learn from this,\" then follows a proposition-to-qualification-to-verdict pattern: the experience cannot produce moral reform, might produce the opposite, and may only appear healing. That explanatory completion resembles model-shaped aftercare.",
+        "strongest_human_case": "The prose contains socially situated, non-interchangeable friction: the unexplained comparison to \"Ball,\" the parenthetical about mutual friends, the hesitant judgment \"some kind of sociopath,\" and the awkwardly recursive final clause. Attention is asymmetric and emotionally motivated rather than evenly organized for a generic reader.",
+        "decisive_reason": "Although the second sentence has a tidy lesson-extraction shape, the passage as a whole feels driven by a particular unresolved grievance. Its context-dependent references, risky self-implication, and locally tangled phrasing outweigh the model-like explanatory cadence."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2000,
+        "completion_tokens": 339,
+        "total_tokens": 2339,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 486
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 486,
+        "completion_tokens_details": {
+          "reasoning_tokens": 122
+        }
+      },
+      "elapsed_seconds": 6.32
+    },
+    {
+      "timestamp": "2026-09-22T23:31:12.153614676Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B16",
+      "sample_sha256": "823c63437377a3174a3ad32d8cfd5da7afe71c604ef98ee21a675b32b32c4760",
+      "word_count": 91,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_03240a07472dd18e016ab30fb8304487d2a571d0c600bd7067",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The paragraph has unusually tidy explanatory topology: a general proposition, a calibrated qualification, two neatly paired authorities supplying labels, and then a final transfer of the same principle into a second framework. Each sentence performs one clean teaching job, while “The same limit appears” exposes a compressed proposition-to-analogy transition. The prose completes its conceptual arc with little friction, waste, or uneven emphasis.\",\n  \"strongest_human_case\": \"The final distinction between recognizing a younger part’s needs and losing enough adult perspective to meet them is specific, causally meaningful, and not merely decorative. The passage also ends on that tension without adding generic advice, a summary, or reassuring explanatory aftercare.\",\n  \"decisive_reason\": \"The strongest aggregate signal is the highly optimized sequence of premise, qualification, paired terminology, and cross-framework synthesis. Its semantic efficiency and balanced teaching cadence feel more model-shaped than like a human thought unfolding according to uneven personal priorities.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "strongest_ai_case": "The paragraph has unusually tidy explanatory topology: a general proposition, a calibrated qualification, two neatly paired authorities supplying labels, and then a final transfer of the same principle into a second framework. Each sentence performs one clean teaching job, while “The same limit appears” exposes a compressed proposition-to-analogy transition. The prose completes its conceptual arc with little friction, waste, or uneven emphasis.",
+        "strongest_human_case": "The final distinction between recognizing a younger part’s needs and losing enough adult perspective to meet them is specific, causally meaningful, and not merely decorative. The passage also ends on that tension without adding generic advice, a summary, or reassuring explanatory aftercare.",
+        "decisive_reason": "The strongest aggregate signal is the highly optimized sequence of premise, qualification, paired terminology, and cross-framework synthesis. Its semantic efficiency and balanced teaching cadence feel more model-shaped than like a human thought unfolding according to uneven personal priorities."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2000,
+        "completion_tokens": 416,
+        "total_tokens": 2416,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 486
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 486,
+        "completion_tokens_details": {
+          "reasoning_tokens": 195
+        }
+      },
+      "elapsed_seconds": 8.236
+    },
+    {
+      "timestamp": "2026-09-22T23:31:18.966174449Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B17",
+      "sample_sha256": "9ee42603db4b22b57c1e9296668502cb65e83b19d5eaee2a0ca766ad58a3e497",
+      "word_count": 106,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_04c8ef02c92ab5b5016ab30fc05f1087d28f5c4279a3fbff3d",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage follows a compact explanatory sequence: empathic opening, two contrasted outcomes, a rhetorical question, then a named conceptual framework. Each short sentence performs a clean teaching beat, and the final attribution can resemble source-ledger completion appended to an otherwise self-contained explanation.\",\n  \"strongest_human_case\": \"The thought unfolds with uneven, conversational pressure rather than exhaustive explanation. Details such as the unchanged boundary and the injured person's role disappearing are causally specific and not interchangeable decoration. The rhetorical question performs a real social act toward the reader, while the passage stops on unresolved relational friction instead of converting it into advice, taxonomy, or a complete verdict.\",\n  \"decisive_reason\": \"Its asymmetry and selective attention feel driven by the emotional distinction the author actually cares about—whether a bad first exchange proves anything and how accountability disappears—rather than by a model's impulse to cover the conceptual space evenly.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage follows a compact explanatory sequence: empathic opening, two contrasted outcomes, a rhetorical question, then a named conceptual framework. Each short sentence performs a clean teaching beat, and the final attribution can resemble source-ledger completion appended to an otherwise self-contained explanation.",
+        "strongest_human_case": "The thought unfolds with uneven, conversational pressure rather than exhaustive explanation. Details such as the unchanged boundary and the injured person's role disappearing are causally specific and not interchangeable decoration. The rhetorical question performs a real social act toward the reader, while the passage stops on unresolved relational friction instead of converting it into advice, taxonomy, or a complete verdict.",
+        "decisive_reason": "Its asymmetry and selective attention feel driven by the emotional distinction the author actually cares about—whether a bad first exchange proves anything and how accountability disappears—rather than by a model's impulse to cover the conceptual space evenly."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2023,
+        "completion_tokens": 312,
+        "total_tokens": 2335,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 509
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 509,
+        "completion_tokens_details": {
+          "reasoning_tokens": 98
+        }
+      },
+      "elapsed_seconds": 6.81
+    },
+    {
+      "timestamp": "2026-09-22T23:31:26.569462428Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B18",
+      "sample_sha256": "3c1d5833b59144ea25eaf33b7cfad452a01081c4e100679289305df29fe5f3bc",
+      "word_count": 132,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0265a27b1183d609016ab30fc729e087d2a269f8b364eec218",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The paragraph follows a compact coaching arc: ask a diagnostic question, establish a general principle, list progress indicators, qualify them, define the real criterion, then close with balanced imperatives. Nearly every sentence performs one clean teaching job, and the repeated proposition-to-verdict movement gives it a polished self-help cadence.\",\n  \"strongest_human_case\": \"The attention is notably asymmetric and judgment-laden rather than exhaustive: the writer abruptly dismisses insight without life change as \\\"just a cope,\\\" treats therapy's eventual obsolescence as the decisive measure, and foregrounds the idiosyncratic \\\"inner child-inner adult relationship.\\\" Phrases such as \\\"therapist/yourself\\\" and \\\"sovereign, gently curious stance\\\" reflect compressed personal synthesis rather than generic explanatory coverage.\",\n  \"decisive_reason\": \"Although the passage is tidily instructional, its strongest claims are unusually specific, contestable, and under-explained. That unresolved authorial judgment and selective emphasis make it more human-shaped than requirements-ledger or comprehensively model-shaped prose.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The paragraph follows a compact coaching arc: ask a diagnostic question, establish a general principle, list progress indicators, qualify them, define the real criterion, then close with balanced imperatives. Nearly every sentence performs one clean teaching job, and the repeated proposition-to-verdict movement gives it a polished self-help cadence.",
+        "strongest_human_case": "The attention is notably asymmetric and judgment-laden rather than exhaustive: the writer abruptly dismisses insight without life change as \"just a cope,\" treats therapy's eventual obsolescence as the decisive measure, and foregrounds the idiosyncratic \"inner child-inner adult relationship.\" Phrases such as \"therapist/yourself\" and \"sovereign, gently curious stance\" reflect compressed personal synthesis rather than generic explanatory coverage.",
+        "decisive_reason": "Although the passage is tidily instructional, its strongest claims are unusually specific, contestable, and under-explained. That unresolved authorial judgment and selective emphasis make it more human-shaped than requirements-ledger or comprehensively model-shaped prose."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2039,
+        "completion_tokens": 402,
+        "total_tokens": 2441,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 525
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 525,
+        "completion_tokens_details": {
+          "reasoning_tokens": 155
+        }
+      },
+      "elapsed_seconds": 7.576
+    },
+    {
+      "timestamp": "2026-09-22T23:31:35.301776487Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B19",
+      "sample_sha256": "a1bcfada69fe340ede21dbb7114ebd2c622dcbb762f5a388fb1e777ede6ee262",
+      "word_count": 85,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_09d5ff78afd4d847016ab30fcea8cc87d284d38f562e993656",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The paragraph has an unusually engineered progression: introduce the neglected author, issue an imperative, ask two diagnostic questions, supply three neatly graduated possibilities, reconcile two apparent obligations, then close with an aphoristic verdict. Each sentence performs one clean teaching function, and the repeated \\\"Maybe\\\" sequence creates checklist-like emotional coverage. The final line supplies explanatory aftercare by compressing the whole lesson into a polished message-versus-person contrast.\",\n  \"strongest_human_case\": \"The passage performs a real social act rather than merely explaining a principle: it asks the reader to preserve regard for an angry or frightened person even while rejecting that person's draft. Details such as the text remaining on a phone and the possibility that its author was \\\"furious and also right\\\" are concrete, morally consequential, and resistant to a purely generic editing framework.\",\n  \"decisive_reason\": \"The human-facing judgment is substantial, but its realization is too evenly staged: every emotional possibility receives a compact slot, every tension is reconciled, and the paragraph ends with a maxim that completes the intended lesson. That conspicuously optimized topology outweighs the authentic-seeming interpersonal detail.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "strongest_ai_case": "The paragraph has an unusually engineered progression: introduce the neglected author, issue an imperative, ask two diagnostic questions, supply three neatly graduated possibilities, reconcile two apparent obligations, then close with an aphoristic verdict. Each sentence performs one clean teaching function, and the repeated \"Maybe\" sequence creates checklist-like emotional coverage. The final line supplies explanatory aftercare by compressing the whole lesson into a polished message-versus-person contrast.",
+        "strongest_human_case": "The passage performs a real social act rather than merely explaining a principle: it asks the reader to preserve regard for an angry or frightened person even while rejecting that person's draft. Details such as the text remaining on a phone and the possibility that its author was \"furious and also right\" are concrete, morally consequential, and resistant to a purely generic editing framework.",
+        "decisive_reason": "The human-facing judgment is substantial, but its realization is too evenly staged: every emotional possibility receives a compact slot, every tension is reconciled, and the paragraph ends with a maxim that completes the intended lesson. That conspicuously optimized topology outweighs the authentic-seeming interpersonal detail."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1981,
+        "completion_tokens": 451,
+        "total_tokens": 2432,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 467
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 467,
+        "completion_tokens_details": {
+          "reasoning_tokens": 190
+        }
+      },
+      "elapsed_seconds": 8.761
+    },
+    {
+      "timestamp": "2026-09-22T23:31:42.456527865Z",
+      "level": "info",
+      "event": "benchmark_result",
+      "sample_id": "B20",
+      "sample_sha256": "d74135669604c6cd6f1c4eb0e9bbca7ae93c10213058c80b79e902784479195e",
+      "word_count": 144,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0825d3ad376b91d6016ab30fd7814487d2b6e374f2fab7ab8a",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"strongest_ai_case\": \"The passage is unusually clean and complete: it introduces one governing metaphor, translates the metaphor into explicit needs, distinguishes two related tasks, and closes with a polished corrective verdict. That proposition-to-qualification-to-resolution arc, along with the balanced repetitions of \\\"maybe,\\\" could reflect model-generated therapeutic prose.\",\n  \"strongest_human_case\": \"The metaphor is not merely decorative; its details remain causally load-bearing throughout. The shift from improving the message to caring for the injured writer expresses a specific judgment rather than exhaustively teaching a general framework. Attention is asymmetric in a meaningful way, lingering on protection and protest while leaving the practical process unresolved.\",\n  \"decisive_reason\": \"Despite its polish, the passage feels organized around a personally consequential distinction rather than around comprehensive explanation. Its sustained, non-interchangeable metaphor and selective incompleteness make the prose more human-shaped.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "strongest_ai_case": "The passage is unusually clean and complete: it introduces one governing metaphor, translates the metaphor into explicit needs, distinguishes two related tasks, and closes with a polished corrective verdict. That proposition-to-qualification-to-resolution arc, along with the balanced repetitions of \"maybe,\" could reflect model-generated therapeutic prose.",
+        "strongest_human_case": "The metaphor is not merely decorative; its details remain causally load-bearing throughout. The shift from improving the message to caring for the injured writer expresses a specific judgment rather than exhaustively teaching a general framework. Attention is asymmetric in a meaningful way, lingering on protection and protest while leaving the practical process unresolved.",
+        "decisive_reason": "Despite its polish, the passage feels organized around a personally consequential distinction rather than around comprehensive explanation. Its sustained, non-interchangeable metaphor and selective incompleteness make the prose more human-shaped."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2047,
+        "completion_tokens": 372,
+        "total_tokens": 2419,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 533
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 533,
+        "completion_tokens_details": {
+          "reasoning_tokens": 164
+        }
+      },
+      "elapsed_seconds": 7.151
+    }
+  ]
+}
