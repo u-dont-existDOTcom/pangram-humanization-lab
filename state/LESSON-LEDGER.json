@@ -1013,6 +1013,20 @@
       "source_path": "state/generation/INNER-CHILD-EPISODE003-STABILITY-20260915.md",
       "source_ref": "task/inner-child-stability-correction-20260915",
       "source_sha256": "cb049ff156ec6038c9ee7c5bb7368771aba367834e03af4a5c0dd99fea634988"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Fresh-context non-detection is non-gating unless the critic sees the natural reader boundary, aggregates mixed model-shape, keeps protected cognition separate from realization, and demonstrates blind same-register sensitivity plus specificity with known-bad and known-good controls.",
+      "id": "L-51c06d2d0a-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-22T22:18:00.335416+00:00",
+      "source_path": "state/generation/INNER-CHILD-SAFETY-FRESH-CRITIC-FALSE-PASS-20260922.md",
+      "source_ref": "working-tree",
+      "source_sha256": "51c06d2d0a615007df564bceb86da1957fa41ac627f91ffc89465cbf996859a3"
     }
   ],
   "schema_version": 1

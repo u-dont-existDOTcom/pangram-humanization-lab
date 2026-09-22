@@ -131,8 +131,11 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 
 <!-- closeout-request:inner-child-checking-tell-clean-counterexample-20260921 -->
-- **Tell-clean ≠ detector-clean:** the current Human-facing tell catalog is useful but incomplete. A Railway checking candidate still measured Pangram AI 1.0 after all currently identified AI-shaped operations were repaired and an independent reader saw no obvious remaining model-shaped operation. Do not treat the absence of catalogued AI tells, or the presence of several HT relations, as sufficient for Pangram Human. See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
+- **SUPERSEDED — RT2 did not establish tell-clean ≠ detector-clean:** owner re-audit found obvious surviving AI-shaped operations, so the tell-clean premise was false. Do not use RT2 as proof that the current catalog is incomplete. Retain only the narrower rule that critic non-detection is not proof of absence. See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
 
 
 <!-- closeout-request:inner-child-rt2-scene-skinned-staircase-20260921 -->
 - **Scene-skinned staircase:** a coherent concrete scenario can still preserve the same one-function-per-beat AI topology. Audit paragraph-level source-function order, fake spontaneity, interchangeable didactic props, and image→aftercare before calling prose tell-clean. The RT2 control no longer establishes catalog incompleteness because its tell-clean premise was false. See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
+
+<!-- closeout-request:inner-child-safety-fresh-critic-false-pass-20260922 -->
+- **Freshness ≠ critic competence:** before a fresh critic's non-detection can gate Joel production Pangram work, give it the natural reading boundary plus intended reader/local purpose, aggregate mixed findings, keep protected cognition separate from realization, and require blind same-register known-good **and** known-bad calibration. Known-good acceptance alone tests specificity, not sensitivity. See `state/generation/INNER-CHILD-SAFETY-FRESH-CRITIC-FALSE-PASS-20260922.md`.
