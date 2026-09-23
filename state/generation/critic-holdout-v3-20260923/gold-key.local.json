@@ -1,0 +1,165 @@
+{
+  "format": "joel-humanization-critic-holdout-v3-gold",
+  "items": [
+    {
+      "sample_id": "HV3-01",
+      "label": "HUMAN",
+      "internal_id": "H3-A5",
+      "source": "already/outside-help",
+      "sha256": "8e41b74063b5ae3c0a51b983e15dd723c29854be7474194a880563095f3d9cbb",
+      "word_count": 78
+    },
+    {
+      "sample_id": "HV3-02",
+      "label": "HUMAN",
+      "internal_id": "H3-T6",
+      "source": "tough/H",
+      "sha256": "26d54261fdc35e1f7b3621c3c456586b8acbb2cb8a510b22e3096ee5d4fc533c",
+      "word_count": 49
+    },
+    {
+      "sample_id": "HV3-03",
+      "label": "HUMAN",
+      "internal_id": "H3-A3",
+      "source": "already/pink-elephants",
+      "sha256": "00c0340cc85352e031245f88a797217c01d2e067136f1c5a5cdc8f3e61dad240",
+      "word_count": 61
+    },
+    {
+      "sample_id": "HV3-04",
+      "label": "AI",
+      "internal_id": "AI3-T1",
+      "source": "tough/red-spirit",
+      "sha256": "a18ed8c4b8933fd3fdd6c9f03f3809b2be5b64cc953b631b0833ed68b39fdc88",
+      "word_count": 98
+    },
+    {
+      "sample_id": "HV3-05",
+      "label": "AI",
+      "internal_id": "AI3-R1",
+      "source": "already/attempt1",
+      "sha256": "bc926fe8424b1749e7c29f11b4e0d8173e68818db5084b887dcafed454a5b3ad",
+      "word_count": 54
+    },
+    {
+      "sample_id": "HV3-06",
+      "label": "HUMAN",
+      "internal_id": "H3-T1",
+      "source": "tough/Somé",
+      "sha256": "889247aef6fea3c1103bffe1e7584383f56c6434d5f722f215d04fb7dd62b9c1",
+      "word_count": 82
+    },
+    {
+      "sample_id": "HV3-07",
+      "label": "AI",
+      "internal_id": "AI3-TR2",
+      "source": "trust-model/p2",
+      "sha256": "60facf19fa4a9a31c2bd435d6590246352c88ce42c39c047a3d0f7c2455628a9",
+      "word_count": 87
+    },
+    {
+      "sample_id": "HV3-08",
+      "label": "AI",
+      "internal_id": "AI3-A3",
+      "source": "candidate-A/p3",
+      "sha256": "8dd0bddef5ca725fa8cbc588f02665c8f7eb5ce473416b289918a2d934d81dcb",
+      "word_count": 73
+    },
+    {
+      "sample_id": "HV3-09",
+      "label": "HUMAN",
+      "internal_id": "H3-C1",
+      "source": "catch/new-age",
+      "sha256": "dbffb6907925bc46cb3476dda2824cb19943b49c7c9b74b6d1658e1abf442e5c",
+      "word_count": 58
+    },
+    {
+      "sample_id": "HV3-10",
+      "label": "HUMAN",
+      "internal_id": "H3-5M4",
+      "source": "5meo/5M04",
+      "sha256": "afcede358e2b8c76f5b1a739685e5edd194fab33c60a78abdfbe5a756587cec7",
+      "word_count": 55
+    },
+    {
+      "sample_id": "HV3-11",
+      "label": "AI",
+      "internal_id": "AI3-R2",
+      "source": "already/attempt2",
+      "sha256": "fed3065b5f02818fec0783bdefecab70b3e49c9a8baacc36fb9be09030b7f180",
+      "word_count": 49
+    },
+    {
+      "sample_id": "HV3-12",
+      "label": "AI",
+      "internal_id": "AI3-R3",
+      "source": "already/attempt3",
+      "sha256": "5b6b87da8a61cc83aa16132a44a650693e9d40fd88071c2ebb6a17135cc18428",
+      "word_count": 50
+    },
+    {
+      "sample_id": "HV3-13",
+      "label": "HUMAN",
+      "internal_id": "H3-T2",
+      "source": "tough/spirit",
+      "sha256": "243766a97fdeab4a33ad1dbc01e25503686b7170b127f1cc271369560b2a05e9",
+      "word_count": 77
+    },
+    {
+      "sample_id": "HV3-14",
+      "label": "AI",
+      "internal_id": "AI3-IM3",
+      "source": "inner-model/p3",
+      "sha256": "7f41a1c27ef6b5e485008a5b55dc2f571c2c18c44e7c21b41eeee2b79156868f",
+      "word_count": 40
+    },
+    {
+      "sample_id": "HV3-15",
+      "label": "AI",
+      "internal_id": "AI3-TR5",
+      "source": "trust-model/p5",
+      "sha256": "66b883d88537e4efcbad635862ab1135616f439722c9b30dcf700de8164d5d9f",
+      "word_count": 41
+    },
+    {
+      "sample_id": "HV3-16",
+      "label": "AI",
+      "internal_id": "AI3-IM1",
+      "source": "inner-model/p1",
+      "sha256": "28586e8b46d1021eb553c787e8d135bd0fd01609285432242452b3801f99047f",
+      "word_count": 57
+    },
+    {
+      "sample_id": "HV3-17",
+      "label": "AI",
+      "internal_id": "AI3-A4",
+      "source": "candidate-A/p4",
+      "sha256": "cae9d31fb9e275c25d2f44e5d9c885458f4d5396889cdc4d44d1ec657e4b1a8a",
+      "word_count": 47
+    },
+    {
+      "sample_id": "HV3-18",
+      "label": "HUMAN",
+      "internal_id": "H3-A2",
+      "source": "already/honesty-overload",
+      "sha256": "8c3e33dd3f9705f8172d419c48b7ead793098b377f8c1d44876a4c42d1339c73",
+      "word_count": 52
+    },
+    {
+      "sample_id": "HV3-19",
+      "label": "HUMAN",
+      "internal_id": "H3-T5",
+      "source": "tough/prioritized",
+      "sha256": "a1549b65b13247f08b2a2fdcd17eeefbc81748f9651954f0cc52fd6eba62662d",
+      "word_count": 53
+    },
+    {
+      "sample_id": "HV3-20",
+      "label": "HUMAN",
+      "internal_id": "H3-A1",
+      "source": "already/some-things",
+      "sha256": "2c0f1fa0bdbb1d94927928c8eb413b9c0c1f5ab47b8c5ac4a1a234c06ea28ab0",
+      "word_count": 53
+    }
+  ]
+}
