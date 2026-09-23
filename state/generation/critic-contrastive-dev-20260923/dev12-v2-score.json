@@ -1,0 +1,104 @@
+{
+  "total": 12,
+  "correct": 11,
+  "accuracy": 0.9166666666666666,
+  "human_correct": 5,
+  "human_total": 6,
+  "ai_correct": 6,
+  "ai_total": 6,
+  "misses": [
+    {
+      "sample_id": "CD2-04",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "source_sample_id": "B18"
+    }
+  ],
+  "rows": [
+    {
+      "sample_id": "CD2-01",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "source_sample_id": "B17"
+    },
+    {
+      "sample_id": "CD2-02",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "source_sample_id": "B08"
+    },
+    {
+      "sample_id": "CD2-03",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "source_sample_id": "B11"
+    },
+    {
+      "sample_id": "CD2-04",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "source_sample_id": "B18"
+    },
+    {
+      "sample_id": "CD2-05",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "source_sample_id": "B05"
+    },
+    {
+      "sample_id": "CD2-06",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "source_sample_id": "B04"
+    },
+    {
+      "sample_id": "CD2-07",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "source_sample_id": "B13"
+    },
+    {
+      "sample_id": "CD2-08",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "source_sample_id": "B01"
+    },
+    {
+      "sample_id": "CD2-09",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "source_sample_id": "HV2-08"
+    },
+    {
+      "sample_id": "CD2-10",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "source_sample_id": "B20"
+    },
+    {
+      "sample_id": "CD2-11",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "source_sample_id": "HV2-04"
+    },
+    {
+      "sample_id": "CD2-12",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "source_sample_id": "B02"
+    }
+  ]
+}
