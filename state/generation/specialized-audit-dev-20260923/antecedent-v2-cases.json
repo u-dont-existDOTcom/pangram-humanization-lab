@@ -1,0 +1,19 @@
+{
+  "format": "joel-antecedent-audit-v2-dev",
+  "cases": [
+    {
+      "case_id": "AN1V2",
+      "previous": "## You Don’t Need an Inner Monologue",
+      "target": "If you don't hear a little kid talking in your head, don't invent one. Actually, this is one place where the usual inner-child prompt can get confusing, because “ask” sounds like you're supposed to ask a question and then wait for a second voice to answer. Maybe that's what happens for some people, but you might not be some people.",
+      "next": "You might barely have spontaneous words in your mind and yet still be able to think a sentence on purpose. Try it and see. If words are there, speak or write them.",
+      "expected": "FAIL"
+    },
+    {
+      "case_id": "AN2V2",
+      "previous": "## You Don’t Need an Inner Monologue\n\nBefore trying an inner dialogue, notice how you ordinarily think. How often do actual silent words or sentences occur—rarely or never, sometimes, often, or almost constantly? Can you deliberately think a sentence silently even when words don’t usually arrive on their own? Those are different questions from whether a feeling came before words in one particular moment. There is no required feeling-first or words-first sequence.",
+      "target": "“Voice,” “ask,” and “answer” below need not mean a literal conversation in your head. You can speak aloud, write, draw, use a picture or song, notice a sensation or urge, or try a caring action. Little inner speech doesn’t automatically mean vivid imagery, either. A quiet mind is not, by itself, resistance or failed contact. Use the form that helps with this particular difficulty, and change it when it doesn’t.",
+      "next": "You don’t have to translate everything into words immediately, but words can help you examine what you felt, compare explanations, and choose what to do. Plain analysis is not automatically avoidance, and a feeling is not beyond analysis because it arrived without words. Neither form is inherently deeper or truer.",
+      "expected": "PASS"
+    }
+  ]
+}

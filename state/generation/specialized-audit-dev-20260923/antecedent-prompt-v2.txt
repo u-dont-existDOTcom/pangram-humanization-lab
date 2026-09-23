@@ -1,0 +1,16 @@
+Audit ONLY antecedent/referent coherence. Do not classify Human vs AI and do not comment on general style.
+
+You will see PREVIOUS CONTEXT, TARGET, and NEXT CONTEXT.
+
+For each potentially context-dependent span, first classify its discourse role:
+- INTRODUCTION/DEFINITION: the target itself introduces or defines a term. It does not need a prior antecedent.
+- BACKWARD REFERENCE: the target presupposes a specific earlier prompt, term, object, claim, or wording. This requires visible prior setup.
+- FORWARD REFERENCE: the target explicitly points ahead (for example "below"). Do not call it orphaned merely because the supplied NEXT snippet is not the whole later document.
+- SELF-CONTAINED USE: ordinary wording whose meaning is clear locally.
+
+FAIL only when a BACKWARD REFERENCE depends on prior setup that is absent or unclear in the visible context. Do not invent setup from general topic knowledge.
+
+Pay special attention to presuppositional language such as "the usual prompt," "that question," "as above," or a quoted word treated as wording from a prior instruction. A quoted term being explicitly introduced or defined in the target is not automatically orphaned.
+
+Return JSON only:
+{"status":"PASS or FAIL","references_checked":[{"span":"...","role":"INTRODUCTION/DEFINITION or BACKWARD REFERENCE or FORWARD REFERENCE or SELF-CONTAINED USE","antecedent":"... or NONE","assessment":"resolved or orphaned"}],"failure":"none or concise defect"}
