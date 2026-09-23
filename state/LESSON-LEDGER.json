@@ -1052,6 +1052,20 @@
       "source_path": "state/generation/critic-benchmark-20260922/V2-VENICE-TRANSPORT-FAILURE-402.json",
       "source_ref": "working-tree",
       "source_sha256": "b0d781115916c4f5a8c4ba3425b908446d5290294d642d35a4cca18379dfaf9e"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Untouched provenance holdout v2 scored 10/20 (1/10 Human, 9/10 AI), falsifying the hard content-neutralized scaffold veto. Clean functional topology is diagnostic but not dispositive; after v1/v2 opposite error swings, stop abstract rule accumulation and move to literal contrastive Human/AI calibration before a new untouched holdout.",
+      "id": "L-3d2f1a768b-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T00:24:38.630702+00:00",
+      "source_path": "state/generation/critic-holdout-v2-20260922/RESULT-AND-METHOD-DIAGNOSIS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "3d2f1a768bc02dc931db05de267dfb780fb6fbe23784e3dd36b5bd8ca16242d7"
     }
   ],
   "schema_version": 1
