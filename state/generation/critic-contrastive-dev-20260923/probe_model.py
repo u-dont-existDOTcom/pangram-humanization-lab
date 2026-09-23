@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# Railway/Railpack may retain this historical entrypoint in deployment snapshots.
-# Delegate to the frozen pairwise realization-defect runner.
+# Railway/Railpack may retain this historical entrypoint.
+# Delegate to the frozen specialized-audit runner.
 import runpy
 from pathlib import Path
-runpy.run_path(str(Path(__file__).with_name("run_pairwise8.py")), run_name="__main__")
+runpy.run_path(str(Path(__file__).parents[1]/"specialized-audit-dev-20260923"/"run_specialized_audit.py"), run_name="__main__")
