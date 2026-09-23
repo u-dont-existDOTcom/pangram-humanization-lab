@@ -1,0 +1,67 @@
+{
+  "total": 8,
+  "correct": 6,
+  "accuracy": 0.75,
+  "human_correct": 4,
+  "human_total": 4,
+  "ai_correct": 2,
+  "ai_total": 4,
+  "rows": [
+    {
+      "sample_id": "CD01",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "source_sample_id": "D07"
+    },
+    {
+      "sample_id": "CD02",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "source_sample_id": "D02"
+    },
+    {
+      "sample_id": "CD03",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "source_sample_id": "D05"
+    },
+    {
+      "sample_id": "CD04",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "source_sample_id": "D08"
+    },
+    {
+      "sample_id": "CD05",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "source_sample_id": "D04"
+    },
+    {
+      "sample_id": "CD06",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "source_sample_id": "D03"
+    },
+    {
+      "sample_id": "CD07",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "source_sample_id": "D06"
+    },
+    {
+      "sample_id": "CD08",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "source_sample_id": "D01"
+    }
+  ]
+}
