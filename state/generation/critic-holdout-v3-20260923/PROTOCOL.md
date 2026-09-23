@@ -45,7 +45,7 @@ Ten items per class were sampled deterministically from the eligible pools, then
 
 ## Blind-key separation
 
-The gold key must not exist on the classifier branch during the run. Store it on a separate evidence branch and record only its branch/commit pointer plus the pre-run SHA here.
+The gold key must not exist on the classifier branch during the run. It is stored on separate evidence branch `evidence/humanization-critic-holdout-v3-key-20260923`, exact key commit `ce3ce122a04fd10ca26ba8e686213827a5832bc4`. The pre-run key SHA remains the commitment above.
 
 Do not fetch/read the key branch in the runner or classifier context until:
 1. all 20 valid responses exist;
