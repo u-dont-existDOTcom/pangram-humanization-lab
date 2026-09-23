@@ -1080,6 +1080,20 @@
       "source_path": "state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUDIT-RESULT.md",
       "source_ref": "working-tree",
       "source_sha256": "cc9a1a61f12dc96e7fa10eea80f2aea3308047bd79126360bf245287a596121e"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Opus 5.5 global tell sweep outperformed GPT-6 Sol in the bounded direct-OpenRouter comparison; uncertainty remains unresolved and requires focused follow-up.",
+      "id": "L-871424f529-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T18:41:28.701737+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "871424f52919c75703f36e2224299da277b8b6761ec9407e1edadbcfceca0db5"
     }
   ],
   "schema_version": 1

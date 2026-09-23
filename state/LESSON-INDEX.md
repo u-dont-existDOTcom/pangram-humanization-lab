@@ -146,3 +146,7 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:humanization-specialized-defect-audits-20260923 -->
 - **Specialized defect audits, not global authorship verdicts:** decompose unpaid pre-Pangram review into narrow observable axes. Current GPT-6 Sol controls reproduce the dangerous-adult owner corrections at 10/10 across reader-purpose (2/2), instruction-manual/listicle cadence (4/4), and corrected antecedent/referent coherence (4/4). Calibrate each axis on positive/negative controls for that exact defect; a failed axis auditor is non-gating, a narrow FAIL is a repair candidate rather than proof of AI authorship, and absence of FAILs still requires direct editorial reading. See `state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUDIT-RESULT.md`.
+
+
+<!-- closeout-request:global-tell-opus55-vs-gpt6-20260923 -->
+- **Global tell sweep — Opus 5.5 vs GPT-6 Sol:** direct OpenRouter six-case comparison on 12 owner-grounded tell cells scored Opus 5.5 at 9/12 strict vs GPT-6 Sol at 6/12. Opus made zero wrong-polarity calls (three UNCERTAIN); GPT made five wrong-polarity calls. Use Opus as the current preferred fresh full-catalog sweep when available, but treat UNCERTAIN as unresolved and resolve with narrow audit/editorial review. This supplements rather than replaces the full tell ledger. See `state/generation/global-tell-model-comparison-20260923/RESULT.md`.

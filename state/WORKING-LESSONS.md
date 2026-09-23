@@ -265,3 +265,25 @@ Promoted process lesson:
 For the Inner Child dangerous-adult case, unpaid review should have blocked before Pangram on at least three independently observable defects: instruction-manual cadence, missing reader-purpose/pragmatic setup, and the orphaned `ask` reference after removal of the source's `voice / ask / answer` setup.
 
 Exact evidence: `state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUDIT-RESULT.md`.
+
+
+## 2026-09-23 — Claude Opus 5.5 improves the one-call global tell ledger, but uncertainty must remain blocking
+
+A direct OpenRouter comparison tested the original production question rather than hidden authorship: give the model the full current tell inventory and require one PRESENT / ABSENT / UNCERTAIN row per tell, with no overall Human/AI vote.
+
+On twelve owner/editorially grounded tell cells across six cases:
+- Claude Opus 5.5: **9/12 strict exact-status accuracy**;
+- GPT-6 Sol: **6/12**.
+
+More important for gate safety, Claude had **zero wrong-polarity calls** on the twelve grounded cells: nine exact and three UNCERTAIN. GPT-6 Sol had five wrong-polarity calls and one UNCERTAIN.
+
+Claude's three uncertain cells were:
+- readiness AI-N16/manual cadence, owner-known PRESENT;
+- RT2 scene-skinned staircase, owner-known PRESENT;
+- owner-derived seat-belt AI-N16, owner-known ABSENT.
+
+Therefore Claude is materially better in this bounded comparison as a **global catalog sweep**, but it is not a sole certifier. Treat UNCERTAIN as unresolved, never as ABSENT. The full tell ledger remains authoritative; use focused/narrow audit or direct editorial review to resolve PRESENT/UNCERTAIN findings. No global Human/AI vote may override individual tell rows.
+
+Current evidence supports Claude Opus 5.5 as the preferred fresh global-sweep model over GPT-6 Sol while the tested model/prompt configuration remains relevant. This is a bounded six-case result, not universal accuracy evidence.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/RESULT.md`.
