@@ -1,0 +1,186 @@
+{
+  "format": "joel-humanization-critic-holdout-v3-score",
+  "total": 20,
+  "correct": 10,
+  "accuracy": 0.5,
+  "human_correct": 7,
+  "human_total": 10,
+  "ai_correct": 3,
+  "ai_total": 10,
+  "false_ai_on_human": [
+    "HV3-02",
+    "HV3-03",
+    "HV3-20"
+  ],
+  "false_human_on_ai": [
+    "HV3-04",
+    "HV3-05",
+    "HV3-07",
+    "HV3-11",
+    "HV3-12",
+    "HV3-15",
+    "HV3-16"
+  ],
+  "rows": [
+    {
+      "sample_id": "HV3-01",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H3-A5",
+      "source": "already/outside-help"
+    },
+    {
+      "sample_id": "HV3-02",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H3-T6",
+      "source": "tough/H"
+    },
+    {
+      "sample_id": "HV3-03",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H3-A3",
+      "source": "already/pink-elephants"
+    },
+    {
+      "sample_id": "HV3-04",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "AI3-T1",
+      "source": "tough/red-spirit"
+    },
+    {
+      "sample_id": "HV3-05",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "AI3-R1",
+      "source": "already/attempt1"
+    },
+    {
+      "sample_id": "HV3-06",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H3-T1",
+      "source": "tough/Som\u00e9"
+    },
+    {
+      "sample_id": "HV3-07",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "AI3-TR2",
+      "source": "trust-model/p2"
+    },
+    {
+      "sample_id": "HV3-08",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "AI3-A3",
+      "source": "candidate-A/p3"
+    },
+    {
+      "sample_id": "HV3-09",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H3-C1",
+      "source": "catch/new-age"
+    },
+    {
+      "sample_id": "HV3-10",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H3-5M4",
+      "source": "5meo/5M04"
+    },
+    {
+      "sample_id": "HV3-11",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "AI3-R2",
+      "source": "already/attempt2"
+    },
+    {
+      "sample_id": "HV3-12",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "AI3-R3",
+      "source": "already/attempt3"
+    },
+    {
+      "sample_id": "HV3-13",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H3-T2",
+      "source": "tough/spirit"
+    },
+    {
+      "sample_id": "HV3-14",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "AI3-IM3",
+      "source": "inner-model/p3"
+    },
+    {
+      "sample_id": "HV3-15",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "AI3-TR5",
+      "source": "trust-model/p5"
+    },
+    {
+      "sample_id": "HV3-16",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "AI3-IM1",
+      "source": "inner-model/p1"
+    },
+    {
+      "sample_id": "HV3-17",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "AI3-A4",
+      "source": "candidate-A/p4"
+    },
+    {
+      "sample_id": "HV3-18",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H3-A2",
+      "source": "already/honesty-overload"
+    },
+    {
+      "sample_id": "HV3-19",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H3-T5",
+      "source": "tough/prioritized"
+    },
+    {
+      "sample_id": "HV3-20",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H3-A1",
+      "source": "already/some-things"
+    }
+  ]
+}

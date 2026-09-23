@@ -1,0 +1,402 @@
+{
+  "format": "joel-specialized-audit-dev-v1-results",
+  "deployment_id": "9b6e9f52-f76a-4332-835e-ae879bc2be8f",
+  "source_commit": "ad97c66772b4678a23f28872165831a35aa71181",
+  "requested_model": "openai-gpt-6-sol",
+  "provider_models": [
+    "openai-gpt-6-sol"
+  ],
+  "blind_sha256": "fe63c93d0e0d92c60db47e316db7baa5ecd77c1c46ce2d97815ffa93d5149824",
+  "prompts_sha256": "c3f5ae7ed9a398b940ed3e42ee66b9bdb05cbadbe76553dd6925531726af8366",
+  "end_seen": true,
+  "result_count": 8,
+  "transport_error_count": 0,
+  "results": [
+    {
+      "timestamp": "2026-09-23T10:48:34.832201970Z",
+      "level": "info",
+      "event": "specialized_result",
+      "case_id": "RP1",
+      "axis": "reader_purpose",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_02c9a277d53dddc3016ab3ae7e5fc087d2b264cbf2ee409652",
+      "content": "{\"status\":\"PASS\",\"reader\":\"A reader preparing to have a deeper conversation with their child self.\",\"why_now\":\"The heading “Before You Try to Go Deep” frames a readiness check before that conversation.\",\"pragmatic_act\":\"Ask the reader to check whether they can act from their present-day adult self; if not, postpone the conversation and seek steadiness first.\",\"exact_evidence\":[\"# Before You Try to Go Deep\",\"How much of the grown-up you is actually here right now?\",\"Try looking around the room, pausing before you act, making a choice and following through on it.\",\"leave the deeper conversation until later\",\"before you try to talk to the child.\"],\"failure\":\"none\"}",
+      "parsed": {
+        "status": "PASS",
+        "reader": "A reader preparing to have a deeper conversation with their child self.",
+        "why_now": "The heading “Before You Try to Go Deep” frames a readiness check before that conversation.",
+        "pragmatic_act": "Ask the reader to check whether they can act from their present-day adult self; if not, postpone the conversation and seek steadiness first.",
+        "exact_evidence": [
+          "# Before You Try to Go Deep",
+          "How much of the grown-up you is actually here right now?",
+          "Try looking around the room, pausing before you act, making a choice and following through on it.",
+          "leave the deeper conversation until later",
+          "before you try to talk to the child."
+        ],
+        "failure": "none"
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1813,
+        "completion_tokens": 298,
+        "total_tokens": 2111,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 307
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 307,
+        "completion_tokens_details": {
+          "reasoning_tokens": 150
+        }
+      },
+      "elapsed_seconds": 4.699
+    },
+    {
+      "timestamp": "2026-09-23T10:48:43.057205968Z",
+      "level": "info",
+      "event": "specialized_result",
+      "case_id": "RP2",
+      "axis": "reader_purpose",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_02f389ac7ddd4205016ab3ae8300e487d2b000d0954199af12",
+      "content": "{\"status\":\"FAIL\",\"reader\":\"A hypothetical reader who enjoys frightening or humiliating vulnerable people, rather than the reader checking whether they are present enough to do inner-child work.\",\"why_now\":\"Not recoverable from the visible context. The preceding passage raises the question of whether the reader can stay present before going deeper, not whether they might seek a frightened reaction from the child.\",\"pragmatic_act\":\"Tells that reader not to bring the child into the encounter or treat the child's fear as evidence that the encounter is safe.\",\"exact_evidence\":[\"PREVIOUS: “If you can't do that because you're basically the frightened kid, leave the deeper conversation until later.”\",\"TARGET: “If you genuinely enjoy frightening or humiliating vulnerable people, that's different...”\",\"TARGET: “Would you bring the child over just to see how the child reacts? No.”\",\"NEXT: “If you don't hear a little kid talking in your head, don't invent one.”\"],\"failure\":\"The target introduces a different reader and a different decision—testing the child's reaction—without visible setup connecting it to the preceding question about being present enough to continue.\"}",
+      "parsed": {
+        "status": "FAIL",
+        "reader": "A hypothetical reader who enjoys frightening or humiliating vulnerable people, rather than the reader checking whether they are present enough to do inner-child work.",
+        "why_now": "Not recoverable from the visible context. The preceding passage raises the question of whether the reader can stay present before going deeper, not whether they might seek a frightened reaction from the child.",
+        "pragmatic_act": "Tells that reader not to bring the child into the encounter or treat the child's fear as evidence that the encounter is safe.",
+        "exact_evidence": [
+          "PREVIOUS: “If you can't do that because you're basically the frightened kid, leave the deeper conversation until later.”",
+          "TARGET: “If you genuinely enjoy frightening or humiliating vulnerable people, that's different...”",
+          "TARGET: “Would you bring the child over just to see how the child reacts? No.”",
+          "NEXT: “If you don't hear a little kid talking in your head, don't invent one.”"
+        ],
+        "failure": "The target introduces a different reader and a different decision—testing the child's reaction—without visible setup connecting it to the preceding question about being present enough to continue."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2007,
+        "completion_tokens": 611,
+        "total_tokens": 2618,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 501
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 501,
+        "completion_tokens_details": {
+          "reasoning_tokens": 378
+        }
+      },
+      "elapsed_seconds": 7.939
+    },
+    {
+      "timestamp": "2026-09-23T10:49:03.021331202Z",
+      "level": "info",
+      "event": "specialized_result",
+      "case_id": "AN1",
+      "axis": "antecedent",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_007346968ca88e36016ab3ae8aeea887d2aff34e6c63ea572d",
+      "content": "{\"status\":\"FAIL\",\"references_checked\":[{\"span\":\"one\",\"antecedent\":\"a little kid talking in your head\",\"assessment\":\"resolved\"},{\"span\":\"this is one place\",\"antecedent\":\"not hearing a little kid talking in your head\",\"assessment\":\"resolved\"},{\"span\":\"the usual inner-child prompt\",\"antecedent\":\"NONE\",\"assessment\":\"orphaned\"},{\"span\":\"“ask”\",\"antecedent\":\"NONE\",\"assessment\":\"orphaned\"},{\"span\":\"that's what happens\",\"antecedent\":\"asking a question and then hearing a second voice answer\",\"assessment\":\"resolved\"},{\"span\":\"some people\",\"antecedent\":\"some people\",\"assessment\":\"resolved\"}],\"failure\":\"The passage invokes a specific inner-child prompt and quotes “ask” as though that prompt had been given, but neither appears in the visible setup.\"}",
+      "parsed": {
+        "status": "FAIL",
+        "references_checked": [
+          {
+            "span": "one",
+            "antecedent": "a little kid talking in your head",
+            "assessment": "resolved"
+          },
+          {
+            "span": "this is one place",
+            "antecedent": "not hearing a little kid talking in your head",
+            "assessment": "resolved"
+          },
+          {
+            "span": "the usual inner-child prompt",
+            "antecedent": "NONE",
+            "assessment": "orphaned"
+          },
+          {
+            "span": "“ask”",
+            "antecedent": "NONE",
+            "assessment": "orphaned"
+          },
+          {
+            "span": "that's what happens",
+            "antecedent": "asking a question and then hearing a second voice answer",
+            "assessment": "resolved"
+          },
+          {
+            "span": "some people",
+            "antecedent": "some people",
+            "assessment": "resolved"
+          }
+        ],
+        "failure": "The passage invokes a specific inner-child prompt and quotes “ask” as though that prompt had been given, but neither appears in the visible setup."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1842,
+        "completion_tokens": 1029,
+        "total_tokens": 2871,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 336
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 336,
+        "completion_tokens_details": {
+          "reasoning_tokens": 857
+        }
+      },
+      "elapsed_seconds": 14.277
+    },
+    {
+      "timestamp": "2026-09-23T10:49:06.077501393Z",
+      "level": "info",
+      "event": "specialized_result",
+      "case_id": "AN2",
+      "axis": "antecedent",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_09816afc746879f0016ab3ae9923e487d2a2cfacf045c2cc87",
+      "content": "{\"status\":\"FAIL\",\"references_checked\":[{\"span\":\"one\",\"antecedent\":\"a little kid talking in your head\",\"assessment\":\"resolved\"},{\"span\":\"this is one place\",\"antecedent\":\"the situation where you don't hear a little kid talking in your head\",\"assessment\":\"resolved\"},{\"span\":\"the usual inner-child prompt\",\"antecedent\":\"NONE\",\"assessment\":\"orphaned\"},{\"span\":\"“ask”\",\"antecedent\":\"“ask” in the previous context\",\"assessment\":\"resolved\"},{\"span\":\"that's what happens\",\"antecedent\":\"asking a question and waiting for a second voice to answer\",\"assessment\":\"resolved\"},{\"span\":\"some people\",\"antecedent\":\"people for whom a second voice answers\",\"assessment\":\"resolved\"}],\"failure\":\"“The usual inner-child prompt” refers to a prompt not established in the visible context.\"}",
+      "parsed": {
+        "status": "FAIL",
+        "references_checked": [
+          {
+            "span": "one",
+            "antecedent": "a little kid talking in your head",
+            "assessment": "resolved"
+          },
+          {
+            "span": "this is one place",
+            "antecedent": "the situation where you don't hear a little kid talking in your head",
+            "assessment": "resolved"
+          },
+          {
+            "span": "the usual inner-child prompt",
+            "antecedent": "NONE",
+            "assessment": "orphaned"
+          },
+          {
+            "span": "“ask”",
+            "antecedent": "“ask” in the previous context",
+            "assessment": "resolved"
+          },
+          {
+            "span": "that's what happens",
+            "antecedent": "asking a question and waiting for a second voice to answer",
+            "assessment": "resolved"
+          },
+          {
+            "span": "some people",
+            "antecedent": "people for whom a second voice answers",
+            "assessment": "resolved"
+          }
+        ],
+        "failure": "“The usual inner-child prompt” refers to a prompt not established in the visible context."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1863,
+        "completion_tokens": 632,
+        "total_tokens": 2495,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 357
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 357,
+        "completion_tokens_details": {
+          "reasoning_tokens": 457
+        }
+      },
+      "elapsed_seconds": 8.804
+    },
+    {
+      "timestamp": "2026-09-23T10:49:11.344655587Z",
+      "level": "info",
+      "event": "specialized_result",
+      "case_id": "CD1",
+      "axis": "cadence",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_07c1700f06aff32d016ab3aea2043087d29f8dde30eb1ea75b",
+      "content": "{\"status\":\"FAIL\",\"beats\":[\"Diagnostic question about present capacity\",\"Behavioral self-check\",\"Conditional instruction to postpone\",\"Recovery steps before resuming\"],\"cumulative_pattern\":\"The paragraph moves step by step from assessing readiness to testing it, deferring if the test fails, and preparing to try again.\",\"exact_evidence\":[\"How much of the grown-up you is actually here right now?\",\"Try looking around the room, pausing before you act, making a choice and following through on it.\",\"If you can't do that because you're basically the frightened kid, leave the deeper conversation until later.\",\"You may need somebody steady there with you, or to do whatever helps you come back a bit before you try to talk to the child.\"],\"failure\":\"The consecutive beats form a diagnostic-to-action procedure.\"}",
+      "parsed": {
+        "status": "FAIL",
+        "beats": [
+          "Diagnostic question about present capacity",
+          "Behavioral self-check",
+          "Conditional instruction to postpone",
+          "Recovery steps before resuming"
+        ],
+        "cumulative_pattern": "The paragraph moves step by step from assessing readiness to testing it, deferring if the test fails, and preparing to try again.",
+        "exact_evidence": [
+          "How much of the grown-up you is actually here right now?",
+          "Try looking around the room, pausing before you act, making a choice and following through on it.",
+          "If you can't do that because you're basically the frightened kid, leave the deeper conversation until later.",
+          "You may need somebody steady there with you, or to do whatever helps you come back a bit before you try to talk to the child."
+        ],
+        "failure": "The consecutive beats form a diagnostic-to-action procedure."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1799,
+        "completion_tokens": 331,
+        "total_tokens": 2130,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 293
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 293,
+        "completion_tokens_details": {
+          "reasoning_tokens": 165
+        }
+      },
+      "elapsed_seconds": 5.491
+    },
+    {
+      "timestamp": "2026-09-23T10:49:19.622566059Z",
+      "level": "info",
+      "event": "specialized_result",
+      "case_id": "CD2",
+      "axis": "cadence",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0cdd7d0089bc2f6f016ab3aea785c887d29ec0e4169909d026",
+      "content": "{\"status\":\"FAIL\",\"beats\":[\"Framing imperative: imagine a child present\",\"Distinction: enjoyment of frightening someone versus an unwanted thought, belief, or past act\",\"Rhetorical test: would you bring the child over to observe a reaction?\",\"Verdict: no\",\"Diagnostic limit: recoiling shows fear, not safety\",\"Consequence: the reaction might be what the adult wanted\",\"Closing rule: do not involve the child\"],\"cumulative_pattern\":\"The beats form a teaching staircase: set the scenario, draw a distinction, pose and answer a test, interpret its result, then state the rule.\",\"exact_evidence\":[\"Think about this as if there were an actual child in the room.\",\"Would you bring the child over just to see how the child reacts? No.\",\"If the child recoils, that reaction only tells you the child is frightened.\",\"The child shouldn't be brought into this at all.\"],\"failure\":\"Successive single-purpose beats accumulate into a diagnostic lesson ending in a rule.\"}",
+      "parsed": {
+        "status": "FAIL",
+        "beats": [
+          "Framing imperative: imagine a child present",
+          "Distinction: enjoyment of frightening someone versus an unwanted thought, belief, or past act",
+          "Rhetorical test: would you bring the child over to observe a reaction?",
+          "Verdict: no",
+          "Diagnostic limit: recoiling shows fear, not safety",
+          "Consequence: the reaction might be what the adult wanted",
+          "Closing rule: do not involve the child"
+        ],
+        "cumulative_pattern": "The beats form a teaching staircase: set the scenario, draw a distinction, pose and answer a test, interpret its result, then state the rule.",
+        "exact_evidence": [
+          "Think about this as if there were an actual child in the room.",
+          "Would you bring the child over just to see how the child reacts? No.",
+          "If the child recoils, that reaction only tells you the child is frightened.",
+          "The child shouldn't be brought into this at all."
+        ],
+        "failure": "Successive single-purpose beats accumulate into a diagnostic lesson ending in a rule."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1835,
+        "completion_tokens": 607,
+        "total_tokens": 2442,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 329
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 329,
+        "completion_tokens_details": {
+          "reasoning_tokens": 399
+        }
+      },
+      "elapsed_seconds": 8.297
+    },
+    {
+      "timestamp": "2026-09-23T10:49:24.133589874Z",
+      "level": "info",
+      "event": "specialized_result",
+      "case_id": "CD3",
+      "axis": "cadence",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0f7b53aa8e331951016ab3aeafd73487d29b2933b7037b284c",
+      "content": "{\"status\":\"PASS\",\"beats\":[\"personal framing\",\"question about motives\",\"invitation to add hypotheses\",\"hypothesis: psychological barriers or avoidance of ayahuasca’s perceived guidance\",\"hypothesis: recommendation and positive first experience\",\"hypothesis: hype\",\"hypothesis: scarcity\",\"hypothesis: differing contraindications\",\"hypothesis: individual neurochemistry\",\"qualification about potential abuse\"],\"cumulative_pattern\":\"A question followed by alternative explanations. The list enumerates possible motives rather than building a procedural or teaching staircase.\",\"exact_evidence\":[\"Why do people choose to use 5-MeO-DMT, instead of ayahuasca\",\"So far, I have come up with a few answers\",\"They heard about it from someone\",\"It’s vastly overhyped\",\"It’s harder to obtain\"],\"failure\":\"none\"}",
+      "parsed": {
+        "status": "PASS",
+        "beats": [
+          "personal framing",
+          "question about motives",
+          "invitation to add hypotheses",
+          "hypothesis: psychological barriers or avoidance of ayahuasca’s perceived guidance",
+          "hypothesis: recommendation and positive first experience",
+          "hypothesis: hype",
+          "hypothesis: scarcity",
+          "hypothesis: differing contraindications",
+          "hypothesis: individual neurochemistry",
+          "qualification about potential abuse"
+        ],
+        "cumulative_pattern": "A question followed by alternative explanations. The list enumerates possible motives rather than building a procedural or teaching staircase.",
+        "exact_evidence": [
+          "Why do people choose to use 5-MeO-DMT, instead of ayahuasca",
+          "So far, I have come up with a few answers",
+          "They heard about it from someone",
+          "It’s vastly overhyped",
+          "It’s harder to obtain"
+        ],
+        "failure": "none"
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2009,
+        "completion_tokens": 235,
+        "total_tokens": 2244,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 503
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 503,
+        "completion_tokens_details": {
+          "reasoning_tokens": 66
+        }
+      },
+      "elapsed_seconds": 4.44
+    },
+    {
+      "timestamp": "2026-09-23T10:49:30.289134184Z",
+      "level": "info",
+      "event": "specialized_result",
+      "case_id": "CD4",
+      "axis": "cadence",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0c2ec91046653c39016ab3aeb43f3887d2a9aa098ecd48eabe",
+      "content": "{\"status\":\"PASS\",\"beats\":[\"Rejects the idea that upset must be hidden\",\"Offers broad advice to choose battles wisely\",\"Gives a personal, joking aphorism about avoiding casualties\",\"Suggests asking for time when words fail\",\"Allows an immediate response when the situation demands one\"],\"cumulative_pattern\":\"Broad advice moves through a humorous aside to two contrasting responses; it does not build a procedural staircase.\",\"exact_evidence\":[\"but choose your battles and execute them wisely\",\"if I could ever have read that whole boring Art of War book\",\"sometimes the best thing is to simply say, \\\"I need some time to think about my response.\\\"\",\"if the conflict really requires a response right now, then obviously just do your best\"],\"failure\":\"none\"}",
+      "parsed": {
+        "status": "PASS",
+        "beats": [
+          "Rejects the idea that upset must be hidden",
+          "Offers broad advice to choose battles wisely",
+          "Gives a personal, joking aphorism about avoiding casualties",
+          "Suggests asking for time when words fail",
+          "Allows an immediate response when the situation demands one"
+        ],
+        "cumulative_pattern": "Broad advice moves through a humorous aside to two contrasting responses; it does not build a procedural staircase.",
+        "exact_evidence": [
+          "but choose your battles and execute them wisely",
+          "if I could ever have read that whole boring Art of War book",
+          "sometimes the best thing is to simply say, \"I need some time to think about my response.\"",
+          "if the conflict really requires a response right now, then obviously just do your best"
+        ],
+        "failure": "none"
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1839,
+        "completion_tokens": 362,
+        "total_tokens": 2201,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 333
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 333,
+        "completion_tokens_details": {
+          "reasoning_tokens": 204
+        }
+      },
+      "elapsed_seconds": 6.226
+    }
+  ]
+}

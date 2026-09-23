@@ -1,0 +1,288 @@
+{
+  "format": "joel-humanization-contrastive-quick8-results-v1",
+  "deployment_id": "d0f75e8e-887c-4952-9b0f-812d1d8f8655",
+  "source_commit": "b27bd16378f9ad7783da845e2d96891bafa61479",
+  "requested_model": "openai-gpt-6-sol",
+  "provider_models": [
+    "openai-gpt-6-sol"
+  ],
+  "prompt_sha256": "833610f9d8fd07662d5fbd45b20f08bb608e306184dc59a675f6feb155716913",
+  "blind_sha256": "95cd34e33891663025400d22d94a18cf3a22ccb15ba8938d7510b688ba476da5",
+  "end_seen": true,
+  "result_count": 8,
+  "transport_error_count": 0,
+  "results": [
+    {
+      "timestamp": "2026-09-23T00:43:37.268861931Z",
+      "level": "info",
+      "event": "contrastive_result",
+      "sample_id": "CD01",
+      "sample_sha256": "34c5d1a93f40b28fccfac9cd8760be634f98c91743b169d706ac2962eebc4d42",
+      "word_count": 98,
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0bdfcdbcd8717bba016ab320a4aa5c87d2ac3e3696a2cc5b70",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"closest_human_reference\": \"P3 — It revises an initial interpretation when a new detail changes what deserves attention.\",\n  \"closest_ai_reference\": \"P2 — It moves through qualifications toward a tidy general test, with a cited authority folded in near the conclusion.\",\n  \"decisive_contrast\": \"The later conversation genuinely complicates the first impression, as in P3. But the target quickly turns that complication into a clean distinction between one bad fight and a recurring pattern, then stops on a polished restatement of the pattern. That controlled arc is closer to P2.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "closest_human_reference": "P3 — It revises an initial interpretation when a new detail changes what deserves attention.",
+        "closest_ai_reference": "P2 — It moves through qualifications toward a tidy general test, with a cited authority folded in near the conclusion.",
+        "decisive_contrast": "The later conversation genuinely complicates the first impression, as in P3. But the target quickly turns that complication into a clean distinction between one bad fight and a recurring pattern, then stops on a polished restatement of the pattern. That controlled arc is closer to P2."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2809,
+        "completion_tokens": 1482,
+        "total_tokens": 4291,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1303
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1303,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1340
+        }
+      },
+      "elapsed_seconds": 19.107
+    },
+    {
+      "timestamp": "2026-09-23T00:43:57.298327009Z",
+      "level": "info",
+      "event": "contrastive_result",
+      "sample_id": "CD02",
+      "sample_sha256": "ede0b45eb5fa1fd53f3a008477c13402cca21e8d8d5016d0bb0d31af660033ed",
+      "word_count": 113,
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0efffcfc80908400016ab320b7bc4c87d28ea2428350f75b99",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"closest_human_reference\": \"P3 — Offers a practical move, then backs off it when the situation makes it unworkable.\",\n  \"closest_ai_reference\": \"P3 — Also moves through advice, an example, and a qualification in a conversational voice.\",\n  \"decisive_contrast\": \"The target’s final exception changes what the reader should actually do: taking time is useful unless a response is needed now. That practical reversal, after a brief detour through the war metaphor, is closer to the human reference’s willingness to abandon its own suggestion than to the AI reference’s accumulation of illustrative possibilities.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "closest_human_reference": "P3 — Offers a practical move, then backs off it when the situation makes it unworkable.",
+        "closest_ai_reference": "P3 — Also moves through advice, an example, and a qualification in a conversational voice.",
+        "decisive_contrast": "The target’s final exception changes what the reader should actually do: taking time is useful unless a response is needed now. That practical reversal, after a brief detour through the war metaphor, is closer to the human reference’s willingness to abandon its own suggestion than to the AI reference’s accumulation of illustrative possibilities."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2810,
+        "completion_tokens": 818,
+        "total_tokens": 3628,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1304
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1304,
+        "completion_tokens_details": {
+          "reasoning_tokens": 668
+        }
+      },
+      "elapsed_seconds": 12.105
+    },
+    {
+      "timestamp": "2026-09-23T00:43:57.299665229Z",
+      "level": "info",
+      "event": "contrastive_result",
+      "sample_id": "CD03",
+      "sample_sha256": "f09db71fb7211a19b2ab784973a00f543a6ad65a58d87cee5c35d3bdc7fc0b83",
+      "word_count": 86,
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_09a0691d08d244af016ab320c3d5fc87d2992362959a2a0612",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"closest_human_reference\": \"P3 — The advice follows what might actually happen and allows the exercise to end without producing the expected result.\",\n  \"closest_ai_reference\": \"P3 — It also uses conversational instructions and conditional turns.\",\n  \"decisive_contrast\": \"The target stays with the consequences of writing: an unfair draft, a usable no, a possible apology, or nothing to send. Like the human P3, it lets the task change or fall away rather than rounding those possibilities into a reassuring conclusion.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "closest_human_reference": "P3 — The advice follows what might actually happen and allows the exercise to end without producing the expected result.",
+        "closest_ai_reference": "P3 — It also uses conversational instructions and conditional turns.",
+        "decisive_contrast": "The target stays with the consequences of writing: an unfair draft, a usable no, a possible apology, or nothing to send. Like the human P3, it lets the task change or fall away rather than rounding those possibilities into a reassuring conclusion."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2784,
+        "completion_tokens": 648,
+        "total_tokens": 3432,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1278
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1278,
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      },
+      "elapsed_seconds": 9.33
+    },
+    {
+      "timestamp": "2026-09-23T00:44:06.026511263Z",
+      "level": "info",
+      "event": "contrastive_result",
+      "sample_id": "CD04",
+      "sample_sha256": "5b23e87b2629e4fa4ed24e7be53c04bc862494148cc1167a46cb88e8162dc964",
+      "word_count": 61,
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_065a9469580d8f20016ab320cd30ec87d2a28b0e93eac5f3d6",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"closest_human_reference\": \"P1 — a sincere intention runs into a mistaken internal premise, and the prose stays with that difficulty rather than resolving it.\",\n  \"closest_ai_reference\": \"P4 — its first-person account also moves from a feeling to a proposed course of action.\",\n  \"decisive_contrast\": \"The target’s quoted explanation repeats the narrator’s questionable logic without smoothing it into a lesson. Despite its compact, orderly phrasing, that unresolved self-accounting is closer to P1 than to P4’s completed sequence.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "closest_human_reference": "P1 — a sincere intention runs into a mistaken internal premise, and the prose stays with that difficulty rather than resolving it.",
+        "closest_ai_reference": "P4 — its first-person account also moves from a feeling to a proposed course of action.",
+        "decisive_contrast": "The target’s quoted explanation repeats the narrator’s questionable logic without smoothing it into a lesson. Despite its compact, orderly phrasing, that unresolved self-accounting is closer to P1 than to P4’s completed sequence."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2756,
+        "completion_tokens": 652,
+        "total_tokens": 3408,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1250
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1250,
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      },
+      "elapsed_seconds": 9.079
+    },
+    {
+      "timestamp": "2026-09-23T00:44:26.055642126Z",
+      "level": "info",
+      "event": "contrastive_result",
+      "sample_id": "CD05",
+      "sample_sha256": "7109652755318bd0a18a56a0e7a3d482033b93c8637afbeb4d36608aec915c68",
+      "word_count": 80,
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0d4cd9de463d0e3a016ab320d6601887d2b7b90a9075279cdc",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"closest_human_reference\": \"P4 — earnest advice moves from a personal account of love to a specific practice without smoothing over its unusual assumptions.\",\n  \"closest_ai_reference\": \"P2 — it also develops advice through a coherent sequence of qualifications.\",\n  \"decisive_contrast\": \"Despite that orderly sequence, the target makes a sharper turn from distinguishing desire and commitment to the specific advice to keep people around who know both partners. That practical stopping point feels less like the AI reference’s neatly completed explanation.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "closest_human_reference": "P4 — earnest advice moves from a personal account of love to a specific practice without smoothing over its unusual assumptions.",
+        "closest_ai_reference": "P2 — it also develops advice through a coherent sequence of qualifications.",
+        "decisive_contrast": "Despite that orderly sequence, the target makes a sharper turn from distinguishing desire and commitment to the specific advice to keep people around who know both partners. That practical stopping point feels less like the AI reference’s neatly completed explanation."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2770,
+        "completion_tokens": 948,
+        "total_tokens": 3718,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1264
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1264,
+        "completion_tokens_details": {
+          "reasoning_tokens": 819
+        }
+      },
+      "elapsed_seconds": 14.144
+    },
+    {
+      "timestamp": "2026-09-23T00:44:28.935799369Z",
+      "level": "info",
+      "event": "contrastive_result",
+      "sample_id": "CD06",
+      "sample_sha256": "a9aad0629b318d8a0f1d169004dd6a382127a97e7f195347e1807a24ebc28c11",
+      "word_count": 106,
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_00ad475dfcb523ee016ab320e4671c87d2b1edcde607014b73",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"closest_human_reference\": \"P3 — a personal observation interrupts the expected line of thought and changes what the earlier details mean.\",\n  \"closest_ai_reference\": \"P2 — the ending gathers several ideas into a broader explanation.\",\n  \"decisive_contrast\": \"The final synthesis resembles P2's AI reference, but the target first pauses over a wish the speaker says they could not have understood at the time. That qualification complicates the account of their parents rather than merely smoothing the way to its conclusion.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "closest_human_reference": "P3 — a personal observation interrupts the expected line of thought and changes what the earlier details mean.",
+        "closest_ai_reference": "P2 — the ending gathers several ideas into a broader explanation.",
+        "decisive_contrast": "The final synthesis resembles P2's AI reference, but the target first pauses over a wish the speaker says they could not have understood at the time. That qualification complicates the account of their parents rather than merely smoothing the way to its conclusion."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2804,
+        "completion_tokens": 486,
+        "total_tokens": 3290,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1298
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1298,
+        "completion_tokens_details": {
+          "reasoning_tokens": 356
+        }
+      },
+      "elapsed_seconds": 8.76
+    },
+    {
+      "timestamp": "2026-09-23T00:44:48.942779049Z",
+      "level": "info",
+      "event": "contrastive_result",
+      "sample_id": "CD07",
+      "sample_sha256": "af261d393ff83bdbccd5cde3976a7505aecc43581ad1515bc0b58a8be60f86ae",
+      "word_count": 85,
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0c7860855b823d23016ab320ed257087d29f6151ba620f2d6f",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"closest_human_reference\": \"P3 — both redirect attention from the initial exercise to what the person may actually need.\",\n  \"closest_ai_reference\": \"P3 — both move through a short range of sympathetic possibilities toward a compact closing principle.\",\n  \"decisive_contrast\": \"The target's possibilities all serve a carefully sustained distinction between editing the draft and rejecting its writer. Unlike the human P3, where a competing need can change the course of the exercise, the target returns each detail to its planned conclusion.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "closest_human_reference": "P3 — both redirect attention from the initial exercise to what the person may actually need.",
+        "closest_ai_reference": "P3 — both move through a short range of sympathetic possibilities toward a compact closing principle.",
+        "decisive_contrast": "The target's possibilities all serve a carefully sustained distinction between editing the draft and rejecting its writer. Unlike the human P3, where a competing need can change the course of the exercise, the target returns each detail to its planned conclusion."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2776,
+        "completion_tokens": 1215,
+        "total_tokens": 3991,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1270
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1270,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1086
+        }
+      },
+      "elapsed_seconds": 15.745
+    },
+    {
+      "timestamp": "2026-09-23T00:44:54.556641751Z",
+      "level": "info",
+      "event": "contrastive_result",
+      "sample_id": "CD08",
+      "sample_sha256": "2f9f723bbd5c1b713e8fbc720ad253ea4a854af3b15e45a76eb820bea69f09d4",
+      "word_count": 204,
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_00d8c0592cd52e9c016ab320fcec4487d2aca4f49bb895955a",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"closest_human_reference\": \"P3 — it moves through distinct possibilities without forcing them into one explanation, then stops on a consequential qualification.\",\n  \"closest_ai_reference\": \"P3 — it also offers a range of possible explanations, including concrete and psychological ones.\",\n  \"decisive_contrast\": \"Despite that overlap, the target’s explanations are uneven in scale and conviction: it jumps from a charged psychological theory to hearsay, hype, availability, interactions, and individual response. Its final point complicates the question rather than neatly resolving the list. That movement is closer to the human references.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "closest_human_reference": "P3 — it moves through distinct possibilities without forcing them into one explanation, then stops on a consequential qualification.",
+        "closest_ai_reference": "P3 — it also offers a range of possible explanations, including concrete and psychological ones.",
+        "decisive_contrast": "Despite that overlap, the target’s explanations are uneven in scale and conviction: it jumps from a charged psychological theory to hearsay, hype, availability, interactions, and individual response. Its final point complicates the question rather than neatly resolving the list. That movement is closer to the human references."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2980,
+        "completion_tokens": 471,
+        "total_tokens": 3451,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1474
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1474,
+        "completion_tokens_details": {
+          "reasoning_tokens": 324
+        }
+      },
+      "elapsed_seconds": 9.831
+    }
+  ]
+}
