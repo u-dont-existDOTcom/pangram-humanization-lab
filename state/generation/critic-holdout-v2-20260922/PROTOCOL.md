@@ -32,7 +32,7 @@ Human labels use direct/natural Joel prose with explicit provenance. AI labels u
 
 The gold key is **not** stored on this branch or on canonical `main` before the run.
 
-A separate private evidence branch stores the exact key. Do not fetch/read that branch in any classifier context or runner preparation context. After all 20 classifier responses and their hashes are frozen durably and an explicit end marker exists, a scoring context may read the key and compare outputs.
+A separate private evidence branch stores the exact key: `evidence/humanization-critic-holdout-v2-key-20260922-2350`, key commit `c9c490298be73b8599b3ad48273ed807eb2910a8`. Do not fetch/read that branch in any classifier context or runner preparation context. After all 20 classifier responses and their hashes are frozen durably and an explicit end marker exists, a scoring context may read the key and compare outputs.
 
 The gold-key SHA above is the pre-run commitment.
 
