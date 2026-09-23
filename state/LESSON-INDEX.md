@@ -157,3 +157,7 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:global-tell-jev-20260923 -->
 - **Jev typed tell ledger:** TypeSafe Jev 1.13 scored **9/12 exact** on the same six-case / twelve-cell owner-grounded tell benchmark at about **$0.00073 total**, but made three confident false-ABSENT calls. Use Jev only as optional cheap positive triage/advisory: PRESENT can prioritize inspection; ABSENT cannot clear a tell. See `state/generation/global-tell-model-comparison-20260923/JEV-RESULT.md`.
+
+
+<!-- closeout-request:global-tell-calibration-coverage-20260923 -->
+- **Tell-level calibration coverage:** current scored evidence is uneven: T02 has strong two-sided owner/editorial controls; T03–T09 are positive-only; T01 and T10–T12 are unscored. Opus 5.5 max reaching 11/12 on existing grounded cells argues against wholesale tell rewrites. Expand two-sided controls tell-by-tell first; revise a definition only after repeated max-effort errors persist with good positive/negative controls for that exact tell. See `state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md`.

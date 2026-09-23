@@ -317,3 +317,22 @@ Therefore Jev is useful only as an optional cheap typed **positive-triage/adviso
 - Jev cannot override Opus max, a calibrated narrow audit, or direct editorial judgment.
 
 Exact evidence: `state/generation/global-tell-model-comparison-20260923/JEV-RESULT.md`.
+
+
+## 2026-09-23 — Tell calibration coverage is the next bottleneck, not tell-definition rewrite
+
+Current scored evidence is uneven:
+- T02 has strong two-sided owner/editorial controls;
+- T03–T09 are positive-only;
+- T01 and T10–T12 are unscored.
+
+Opus 5.5 max reached 11/12 on the existing grounded cells with zero wrong-polarity calls. That argues against wholesale tell rewrites.
+
+Next method step:
+- preserve current definitions;
+- add two-sided controls tell-by-tell;
+- start with T11, T01, and T10 where owner-correction evidence already points to literal examples;
+- split the RT2 T04–T09 cluster into independent controls;
+- revise a tell only if repeated max-effort errors remain after good positive/negative controls exist for that exact tell.
+
+Exact evidence: `state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md`.
