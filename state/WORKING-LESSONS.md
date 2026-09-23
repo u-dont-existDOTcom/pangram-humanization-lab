@@ -303,3 +303,17 @@ This materially weakens the hypothesis that the tell definitions themselves are 
 Sol and Astra remain useful cheaper/free-credit alternatives, but on this bounded task max reasoning did not make either as safe as Opus: both retained confident wrong-polarity calls.
 
 Exact evidence: `state/generation/global-tell-model-comparison-20260923/MAX-EFFORT-RESULT.md`.
+
+
+## 2026-09-23 — Jev is useful as cheap tell triage, not as a clearing gate
+
+On the same frozen six-case / twelve owner-grounded tell cells, TypeSafe Jev 1.13 via OpenRouter Decisions scored **9/12 exact** at about **$0.00073 total**.
+
+It correctly handled readiness/manual cadence, dangerous-adult manual cadence, four RT2 tell cells, and all three Human cadence controls. But it made three confident false-ABSENT calls on owner-known defects: dangerous-adult abrupt complication, RT2 scene-skinned staircase, and RT2 equalized semantic efficiency.
+
+Therefore Jev is useful only as an optional cheap typed **positive-triage/advisory** layer:
+- Jev PRESENT may prioritize a tell for inspection;
+- Jev ABSENT does not clear a tell;
+- Jev cannot override Opus max, a calibrated narrow audit, or direct editorial judgment.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/JEV-RESULT.md`.

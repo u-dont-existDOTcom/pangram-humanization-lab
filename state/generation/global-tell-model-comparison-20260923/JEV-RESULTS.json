@@ -1,0 +1,806 @@
+{
+  "format": "joel-global-tell-jev-v1",
+  "model": "typesafe/jev-1.13",
+  "cases_sha256": "8bb8a3ba99e617de68c2d146efc15a31d929e72a8dda02c91b039c6d7b0ddd2f",
+  "rows": [
+    {
+      "case_id": "GLOB-BAD-READINESS",
+      "answers": {
+        "T01": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 1,
+            "PRESENT": 0,
+            "UNCERTAIN": 0
+          },
+          "confidence": 1
+        },
+        "T02": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.46,
+            "PRESENT": 0.52,
+            "UNCERTAIN": 0.02
+          },
+          "confidence": 0.28
+        },
+        "T03": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.77,
+            "PRESENT": 0.22,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.66
+        },
+        "T04": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.95,
+            "PRESENT": 0.01,
+            "UNCERTAIN": 0.04
+          },
+          "confidence": 0.92
+        },
+        "T05": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.78,
+            "PRESENT": 0.2,
+            "UNCERTAIN": 0.02
+          },
+          "confidence": 0.67
+        },
+        "T06": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.81,
+            "PRESENT": 0.18,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.72
+        },
+        "T07": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.95,
+            "PRESENT": 0.04,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.92
+        },
+        "T08": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.67,
+            "PRESENT": 0.32,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.51
+        },
+        "T09": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.27,
+            "PRESENT": 0.71,
+            "UNCERTAIN": 0.02
+          },
+          "confidence": 0.56
+        },
+        "T10": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.73,
+            "PRESENT": 0.26,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.6
+        },
+        "T11": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.78,
+            "PRESENT": 0.21,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.67
+        },
+        "T12": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.93,
+            "PRESENT": 0.07,
+            "UNCERTAIN": 0
+          },
+          "confidence": 0.89
+        }
+      },
+      "usage": {
+        "input_tokens": 2820,
+        "output_tokens": 521,
+        "cost": 0.00011844
+      },
+      "provider": "TypeSafe",
+      "response_id": "gen-dec-1790194719-xnzfQchAbOyMIRiTI6Ok",
+      "elapsed_seconds": 0.877
+    },
+    {
+      "case_id": "GLOB-BAD-DANGEROUS",
+      "answers": {
+        "T01": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.93,
+            "PRESENT": 0.06
+          },
+          "confidence": 0.9
+        },
+        "T02": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.34,
+            "PRESENT": 0.65
+          },
+          "confidence": 0.48
+        },
+        "T03": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.66,
+            "PRESENT": 0.33
+          },
+          "confidence": 0.48
+        },
+        "T04": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.05,
+            "ABSENT": 0.92,
+            "PRESENT": 0.03
+          },
+          "confidence": 0.88
+        },
+        "T05": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.55,
+            "PRESENT": 0.44
+          },
+          "confidence": 0.32
+        },
+        "T06": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.75,
+            "PRESENT": 0.24
+          },
+          "confidence": 0.62
+        },
+        "T07": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.95,
+            "PRESENT": 0.04
+          },
+          "confidence": 0.93
+        },
+        "T08": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.11,
+            "PRESENT": 0.88
+          },
+          "confidence": 0.83
+        },
+        "T09": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "UNCERTAIN": 0.02,
+            "ABSENT": 0.42,
+            "PRESENT": 0.56
+          },
+          "confidence": 0.34
+        },
+        "T10": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.9,
+            "PRESENT": 0.09
+          },
+          "confidence": 0.86
+        },
+        "T11": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.79,
+            "PRESENT": 0.2
+          },
+          "confidence": 0.69
+        },
+        "T12": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.5,
+            "PRESENT": 0.49
+          },
+          "confidence": 0.26
+        }
+      },
+      "usage": {
+        "input_tokens": 3025,
+        "output_tokens": 522,
+        "cost": 0.00012705
+      },
+      "provider": "TypeSafe",
+      "response_id": "gen-dec-1790194719-uwoTMjnglMm3BYzkRWSz",
+      "elapsed_seconds": 1.066
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "answers": {
+        "T01": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.96,
+            "UNCERTAIN": 0.01,
+            "PRESENT": 0.03
+          },
+          "confidence": 0.93
+        },
+        "T02": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.72,
+            "UNCERTAIN": 0.02,
+            "PRESENT": 0.26
+          },
+          "confidence": 0.59
+        },
+        "T03": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.39,
+            "UNCERTAIN": 0.04,
+            "PRESENT": 0.57
+          },
+          "confidence": 0.36
+        },
+        "T04": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.81,
+            "UNCERTAIN": 0.16,
+            "PRESENT": 0.03
+          },
+          "confidence": 0.71
+        },
+        "T05": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.13,
+            "UNCERTAIN": 0.02,
+            "PRESENT": 0.85
+          },
+          "confidence": 0.78
+        },
+        "T06": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.01,
+            "UNCERTAIN": 0,
+            "PRESENT": 0.99
+          },
+          "confidence": 0.99
+        },
+        "T07": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.13,
+            "UNCERTAIN": 0.05,
+            "PRESENT": 0.82
+          },
+          "confidence": 0.73
+        },
+        "T08": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.2,
+            "UNCERTAIN": 0.02,
+            "PRESENT": 0.78
+          },
+          "confidence": 0.68
+        },
+        "T09": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.84,
+            "UNCERTAIN": 0.03,
+            "PRESENT": 0.13
+          },
+          "confidence": 0.76
+        },
+        "T10": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.99,
+            "UNCERTAIN": 0,
+            "PRESENT": 0.01
+          },
+          "confidence": 0.99
+        },
+        "T11": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.66,
+            "UNCERTAIN": 0.01,
+            "PRESENT": 0.33
+          },
+          "confidence": 0.48
+        },
+        "T12": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.99,
+            "UNCERTAIN": 0,
+            "PRESENT": 0.01
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 2793,
+        "output_tokens": 524,
+        "cost": 0.000117306
+      },
+      "provider": "TypeSafe",
+      "response_id": "gen-dec-1790194719-rShp8bUZDm67TJzBCau9",
+      "elapsed_seconds": 0.863
+    },
+    {
+      "case_id": "GLOB-GOOD-5MEO-LIST",
+      "answers": {
+        "T01": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.9,
+            "PRESENT": 0.09
+          },
+          "confidence": 0.86
+        },
+        "T02": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0,
+            "ABSENT": 0.93,
+            "PRESENT": 0.07
+          },
+          "confidence": 0.89
+        },
+        "T03": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.88,
+            "PRESENT": 0.11
+          },
+          "confidence": 0.82
+        },
+        "T04": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.99,
+            "PRESENT": 0
+          },
+          "confidence": 0.98
+        },
+        "T05": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.03,
+            "ABSENT": 0.84,
+            "PRESENT": 0.13
+          },
+          "confidence": 0.76
+        },
+        "T06": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.75,
+            "PRESENT": 0.24
+          },
+          "confidence": 0.62
+        },
+        "T07": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0,
+            "ABSENT": 0.97,
+            "PRESENT": 0.03
+          },
+          "confidence": 0.94
+        },
+        "T08": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.84,
+            "PRESENT": 0.15
+          },
+          "confidence": 0.75
+        },
+        "T09": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.02,
+            "ABSENT": 0.65,
+            "PRESENT": 0.33
+          },
+          "confidence": 0.48
+        },
+        "T10": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0,
+            "ABSENT": 1,
+            "PRESENT": 0
+          },
+          "confidence": 1
+        },
+        "T11": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.52,
+            "PRESENT": 0.47
+          },
+          "confidence": 0.29
+        },
+        "T12": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.84,
+            "PRESENT": 0.15
+          },
+          "confidence": 0.76
+        }
+      },
+      "usage": {
+        "input_tokens": 3037,
+        "output_tokens": 519,
+        "cost": 0.000127554
+      },
+      "provider": "TypeSafe",
+      "response_id": "gen-dec-1790194776-LkHJShXaE3w4QkcqLiwh",
+      "elapsed_seconds": null,
+      "retry_after_http_529": true
+    },
+    {
+      "case_id": "GLOB-GOOD-ADVICE",
+      "answers": {
+        "T01": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "PRESENT": 0.25,
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.74
+          },
+          "confidence": 0.61
+        },
+        "T02": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "PRESENT": 0.37,
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.62
+          },
+          "confidence": 0.43
+        },
+        "T03": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "PRESENT": 0.18,
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.81
+          },
+          "confidence": 0.71
+        },
+        "T04": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "PRESENT": 0,
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.99
+          },
+          "confidence": 0.98
+        },
+        "T05": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "PRESENT": 0.75,
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.24
+          },
+          "confidence": 0.62
+        },
+        "T06": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.01,
+            "PRESENT": 0.22,
+            "ABSENT": 0.77
+          },
+          "confidence": 0.67
+        },
+        "T07": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "PRESENT": 0.19,
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.8
+          },
+          "confidence": 0.71
+        },
+        "T08": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "PRESENT": 0.41,
+            "UNCERTAIN": 0.02,
+            "ABSENT": 0.57
+          },
+          "confidence": 0.36
+        },
+        "T09": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "UNCERTAIN": 0.02,
+            "PRESENT": 0.17,
+            "ABSENT": 0.81
+          },
+          "confidence": 0.71
+        },
+        "T10": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "PRESENT": 0.92,
+            "UNCERTAIN": 0,
+            "ABSENT": 0.08
+          },
+          "confidence": 0.88
+        },
+        "T11": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "PRESENT": 0.15,
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.84
+          },
+          "confidence": 0.76
+        },
+        "T12": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "PRESENT": 0.27,
+            "UNCERTAIN": 0.01,
+            "ABSENT": 0.72
+          },
+          "confidence": 0.58
+        }
+      },
+      "usage": {
+        "input_tokens": 2851,
+        "output_tokens": 521,
+        "cost": 0.000119742
+      },
+      "provider": "TypeSafe",
+      "response_id": "gen-dec-1790194720-JvwWde9YogRXna6oybPi",
+      "elapsed_seconds": 1.485
+    },
+    {
+      "case_id": "GLOB-GOOD-SEATBELT",
+      "answers": {
+        "T01": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.92,
+            "PRESENT": 0.08,
+            "UNCERTAIN": 0
+          },
+          "confidence": 0.88
+        },
+        "T02": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.62,
+            "PRESENT": 0.37,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.43
+        },
+        "T03": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.6,
+            "PRESENT": 0.39,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.4
+        },
+        "T04": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.9,
+            "PRESENT": 0.06,
+            "UNCERTAIN": 0.04
+          },
+          "confidence": 0.84
+        },
+        "T05": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.11,
+            "PRESENT": 0.88,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.83
+        },
+        "T06": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.64,
+            "PRESENT": 0.35,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.47
+        },
+        "T07": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.54,
+            "PRESENT": 0.44,
+            "UNCERTAIN": 0.02
+          },
+          "confidence": 0.32
+        },
+        "T08": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.17,
+            "PRESENT": 0.82,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.73
+        },
+        "T09": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.74,
+            "PRESENT": 0.25,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.6
+        },
+        "T10": {
+          "type": "choice",
+          "choice": "PRESENT",
+          "probabilities": {
+            "ABSENT": 0.43,
+            "PRESENT": 0.56,
+            "UNCERTAIN": 0.01
+          },
+          "confidence": 0.34
+        },
+        "T11": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.76,
+            "PRESENT": 0.24,
+            "UNCERTAIN": 0
+          },
+          "confidence": 0.64
+        },
+        "T12": {
+          "type": "choice",
+          "choice": "ABSENT",
+          "probabilities": {
+            "ABSENT": 0.96,
+            "PRESENT": 0.04,
+            "UNCERTAIN": 0
+          },
+          "confidence": 0.94
+        }
+      },
+      "usage": {
+        "input_tokens": 2826,
+        "output_tokens": 522,
+        "cost": 0.000118692
+      },
+      "provider": "TypeSafe",
+      "response_id": "gen-dec-1790194720-7awlDJYECyS7pUTbR3Zc",
+      "elapsed_seconds": 0.607
+    }
+  ]
+}
