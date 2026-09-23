@@ -286,3 +286,20 @@ Current evidence supports Claude Opus 5.5 as the preferred fresh global-sweep mo
 Exact evidence:
 - `state/generation/global-tell-model-comparison-20260923/RESULT.md`
 - `state/generation/global-tell-model-comparison-20260923/REPEATABILITY.md`.
+
+
+## 2026-09-23 — Max reasoning materially improves the full tell sweep
+
+On the same frozen six-case / 12-cell global tell-ledger benchmark, explicit `reasoning.effort=max` with a 48,000-token completion ceiling materially changed performance without changing the tell definitions:
+
+- Claude Opus 5.5 max: **11/12 exact**, **0 wrong polarity**, 1 UNCERTAIN;
+- GPT-6 Sol max via Venice: **8/12 exact**, 3 wrong polarity, 1 UNCERTAIN;
+- GPT-6 Astra max via Venice: **7/12 exact**, 4 wrong polarity, 1 UNCERTAIN.
+
+Opus max correctly found every owner-known positive defect in the scored set, including readiness manual cadence, both dangerous-adult defects, and all six RT2 tell cells. Its only miss was a conservative UNCERTAIN on the Human seat-belt cadence control.
+
+This materially weakens the hypothesis that the tell definitions themselves are broadly defective. Preserve the current catalog for now. Prefer Opus 5.5 max for a high-rigor fresh global sweep when cost/latency justify it; treat UNCERTAIN as unresolved; broaden positive/negative calibration across the rest of the tell catalog before changing definitions.
+
+Sol and Astra remain useful cheaper/free-credit alternatives, but on this bounded task max reasoning did not make either as safe as Opus: both retained confident wrong-polarity calls.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/MAX-EFFORT-RESULT.md`.
