@@ -362,3 +362,25 @@ This does not establish Claude Code subscription-CLI effort routing. Recalibrate
 Do not rewrite the tell catalog because lower-effort runs were less decisive. The next bottleneck remains two-sided tell calibration coverage.
 
 Exact evidence: `state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-LADDER-RESULT.md`.
+
+
+## 2026-09-23 — GPT subscription CLI saves API spend but does not replace Opus for the full tell ledger
+
+The same frozen six-case / twelve-cell tell benchmark was run through clean local Codex subscription CLI sessions at xhigh, with user/project rules ignored, neutral `/tmp` workspaces, ephemeral sessions, read-only sandboxing, structured output, and no tool use.
+
+Results:
+- GPT-6 Sol CLI: **9/12 exact**, 1 UNCERTAIN, **2 wrong-polarity** calls;
+- GPT-6 Astra CLI: **8/12 exact**, 1 UNCERTAIN, **3 wrong-polarity** calls.
+
+Sol CLI improved somewhat versus Sol max through Venice (8/12, 3 wrong polarity), confirming that provider surface can affect behavior. But both GPT CLI models still confidently flagged known-Human cadence controls as defective; Astra also missed the dangerous-adult abrupt-complication defect.
+
+Therefore:
+- provider-native subscription CLI remains the preferred execution route when authenticated/capability-equivalent;
+- CLI economy does not imply evaluator adequacy;
+- Sol CLI may be a secondary/advisory cross-check;
+- Astra CLI currently adds no tell-ledger value over Sol CLI;
+- neither GPT CLI model should clear the full tell ledger against stronger owner/editorial/Opus evidence.
+
+Claude Code CLI exists with low/medium/high/xhigh/max controls but was unauthenticated during this test. Its effort ladder must be calibrated separately after re-login; OpenRouter Opus effort results cannot be transferred mechanically to the CLI route.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/CODEX-CLI-XHIGH-RESULT.md`.
