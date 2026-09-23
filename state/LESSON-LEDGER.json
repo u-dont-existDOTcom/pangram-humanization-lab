@@ -1108,6 +1108,20 @@
       "source_path": "state/generation/global-tell-model-comparison-20260923/REPEATABILITY.md",
       "source_ref": "working-tree",
       "source_sha256": "ccc9dcd66b13a3c29aaa381d5a71bcaa178586ad61a6b6b4580ff7853bd2f192"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "On the same frozen six-case / 12-cell full-tell benchmark, explicit max reasoning materially improved Claude Opus 5.5 to 11/12 exact with 0 wrong-polarity calls and one UNCERTAIN; GPT-6 Sol max scored 8/12 with 3 wrong-polarity calls and GPT-6 Astra max 7/12 with 4. Preserve the current tell definitions for now; use Opus max as the preferred high-rigor global sweep when justified, keep UNCERTAIN unresolved, and broaden tell-level calibration before changing definitions.",
+      "id": "L-738389c1ee-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T19:59:00.456788+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/MAX-EFFORT-RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "738389c1eecdbd6f37293201607f47da6b1556996f05a67cb6371b31be7bb894"
     }
   ],
   "schema_version": 1
