@@ -1,0 +1,69 @@
+You are performing the ORIGINAL Joel humanization task: a GLOBAL TELL-LEDGER CHECK. You are NOT classifying hidden authorship and you are NOT allowed to average tells into one overall Human/AI judgment.
+
+Audit the literal TARGET against EVERY tell below. Return one ledger row for every tell ID. A tell may be PRESENT, ABSENT, or UNCERTAIN.
+
+Rules:
+- PRESENT means the actual operation is instantiated in this prose, not merely that a surface form associated with it appears.
+- A list, first person, direct advice, rhetorical question, short sentence, fragment, colloquial word, metaphor, or polished sentence is not itself a tell.
+- Judge paragraph/section-scale tells at paragraph/section scale.
+- Human-looking features do not cancel a tell that is genuinely present.
+- Conversely, do not force a tell because prose is model-authored or because another tell is present.
+- Exact evidence must quote the smallest useful span(s).
+- You must emit all tell IDs exactly once. Do not add new tell IDs.
+- Do not output a global HUMAN/AI classification.
+
+CURRENT TELL INVENTORY:
+
+T01 — fake personal stake / irrelevant first-person authority
+First person inserts the author's preference/want/care as pseudo-personal authority without a reader-relevant reason. Do not flag source-earned first person merely because it is first person.
+
+T02 — cumulative instruction-manual / compressed-listicle cadence
+At paragraph/section scale, consecutive compressed commands, verdicts, questions, conditions, distinctions, or lessons each do one clean teaching job and hand off to the next. A list, imperative, direct advice, or question alone is not this tell.
+
+T03 — abrupt complication without reader-visible setup
+A new concern/distinction appears because the requirements/source ledger needs it, but the previous visible thought does not generate why it matters now.
+
+T04 — scene-skinned semantic staircase
+A concrete/coherent scene merely skins the same source-function checklist: each scene beat maps one-for-one to a protected obligation in source-ledger order.
+
+T05 — synthetic/didactic prop continuity
+Concrete details are unusually convenient, mainly selected to carry the next teaching/source function, and are largely interchangeable rather than causally load-bearing.
+
+T06 — generic therapeutic abstraction
+Generic therapy-safe abstraction appears where the prose sounds concrete, e.g. vague grief/old thing/healing/process language that summarizes instead of carrying a specific lived relation.
+
+T07 — simulated spontaneity / fake filler as transition camouflage
+Hesitations, fragments, colloquial fillers, or self-talk function mainly as stage directions between engineered beats rather than arising from a real thought-turn.
+
+T08 — concrete image followed by explanatory aftercare / overcompletion
+A concrete beat already performs the function, then the next sentence immediately translates, explains, moralizes, or summarizes what it means.
+
+T09 — equalized / optimal semantic efficiency
+Nearly every sentence or fragment advances the assignment with similar efficiency; nothing receives disproportionate attention because it actually became interesting.
+
+T10 — generic permission syntax
+Generic therapeutic permission packaging such as 'you don't have to X before Y' carries a requirement as a reusable counseling formula rather than an earned local relation.
+
+T11 — generic bridge / connective tissue
+A transition mainly announces or connects document functions rather than being required by the live thought; polished bridge language could move between many topics.
+
+T12 — symmetry / balanced contrast / tidy taxonomy
+Matched A/B cases, balanced categories, or a closed taxonomy package the thought into neat coverage. Do not flag genuine open hypothesis enumeration or a naturally necessary contrast merely because it has multiple items.
+
+Return valid JSON only:
+{
+  "ledger": [
+    {"tell_id":"T01","status":"PRESENT|ABSENT|UNCERTAIN","evidence":["..."],"reason":"..."}
+  ],
+  "blocking_present_ids":["..."],
+  "audit_complete":true
+}
+
+PREVIOUS CONTEXT:
+<PREVIOUS>
+
+TARGET:
+<TARGET>
+
+NEXT CONTEXT:
+<NEXT>
