@@ -338,7 +338,7 @@ Next method step:
 Exact evidence: `state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md`.
 
 
-## 2026-09-23 — Opus xhigh is the default full-ledger effort; max is escalation
+## 2026-09-23 — OpenRouter Opus xhigh is the API-fallback full-ledger effort; max is escalation
 
 A reasoning-effort ladder reused the exact same six-case / twelve-cell global tell benchmark and unchanged tell definitions.
 
@@ -352,10 +352,12 @@ Primary preserved runs:
 
 The effort ladder is not perfectly monotonic, but xhigh is the lowest tested effort that repeatedly enters the same fail-safe regime as max while costing roughly one-sixth as much.
 
-Current routing:
-- **xhigh** = default high-rigor Opus 5.5 global tell-ledger sweep;
+Current **OpenRouter API fallback** routing:
+- **xhigh** = default high-rigor Opus 5.5 API global tell-ledger sweep;
 - **max** = escalation only when xhigh leaves a decision-changing tell UNCERTAIN or editorially disputed;
-- lower efforts are not current clearing defaults because they leave materially more cells unresolved.
+- lower API efforts are not current clearing defaults because they leave materially more cells unresolved.
+
+This does not establish Claude Code subscription-CLI effort routing. Recalibrate effort separately on the provider-native CLI once its authentication is restored.
 
 Do not rewrite the tell catalog because lower-effort runs were less decisive. The next bottleneck remains two-sided tell calibration coverage.
 
