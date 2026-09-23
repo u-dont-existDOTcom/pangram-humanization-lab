@@ -164,3 +164,7 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:global-tell-opus-effort-ladder-20260923 -->
 - **OpenRouter Opus reasoning-effort ladder:** same frozen six-case / 12-cell benchmark with unchanged tell definitions: low 7/12, medium 9/12, high 8/12, xhigh 11/12 then 10/12, max 11/12; the preserved Opus runs all stayed at zero wrong-polarity calls. For the **OpenRouter API fallback route**, use Opus 5.5 xhigh as the routine high-rigor full-ledger sweep and reserve max for decision-changing unresolved/disputed tells. This does not establish the Claude Code subscription CLI effort setting; recalibrate separately once CLI auth is available. The next bottleneck is tell-level calibration coverage, not a wholesale definition rewrite. See `state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-LADDER-RESULT.md`.
+
+
+<!-- closeout-request:codex-cli-global-tell-20260923 -->
+- **Codex subscription-CLI tell sweep:** on the same frozen six-case / 12-cell ledger at xhigh, GPT-6 Sol via clean ephemeral Codex CLI scored **9/12 exact, 2 wrong polarity, 1 UNCERTAIN**; GPT-6 Astra scored **8/12, 3 wrong polarity, 1 UNCERTAIN**. CLI-first routing saves metered API spend and Sol improved modestly versus Venice, but neither GPT CLI model is safe as the primary clearing sweep; Astra adds no current advantage over Sol for this task. Claude CLI effort remains separately uncalibrated pending authentication. See `state/generation/global-tell-model-comparison-20260923/CODEX-CLI-XHIGH-RESULT.md`.
