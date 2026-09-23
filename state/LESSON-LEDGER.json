@@ -1153,7 +1153,7 @@
     },
     {
       "disposition": "promoted",
-      "finding": "On the frozen six-case / twelve-cell global tell benchmark, Opus 5.5 xhigh scored 11/12 then 10/12 with zero wrong-polarity calls at roughly one-sixth the cost of max; max scored 11/12. Use xhigh as the routine high-rigor full-ledger sweep and reserve max for decision-changing unresolved/disputed tells. Preserve current tell definitions; expand two-sided tell calibration before revising them.",
+      "finding": "On the frozen six-case / twelve-cell global tell benchmark, OpenRouter Opus 5.5 xhigh scored 11/12 then 10/12 with zero wrong-polarity calls at roughly one-sixth the cost of max; max scored 11/12. For the OpenRouter API fallback route, use xhigh as the routine high-rigor full-ledger sweep and reserve max for decision-changing unresolved/disputed tells. This does not establish Claude Code CLI effort routing; recalibrate CLI effort separately once provider-native CLI authentication is available. Preserve current tell definitions; expand two-sided tell calibration before revising them.",
       "id": "L-589db72051-01",
       "promoted_to": [
         "state/LESSON-INDEX.md",
@@ -1163,7 +1163,7 @@
       "recorded_at_utc": "2026-09-23T21:04:31.536386+00:00",
       "source_path": "state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-LADDER-RESULT.md",
       "source_ref": "working-tree",
-      "source_sha256": "589db72051d7c43a809d39b3e0366dc4b436ac0e3a6f1259ed1f96073598debe"
+      "source_sha256": "02f9b99931925cc0e23748184d9abfd4b887aa3e70c8dabf69b862e7910b4eab"
     }
   ],
   "schema_version": 1

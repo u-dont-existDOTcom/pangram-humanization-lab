@@ -1,11 +1,11 @@
 # Claude Opus 5.5 reasoning-effort ladder — global tell sweep
 
 Date: 2026-09-23
-Status: BOUNDED EFFORT-SELECTION EVIDENCE / NO PANGRAM CALLS
+Status: BOUNDED OPENROUTER-API EFFORT-SELECTION EVIDENCE / NO PANGRAM CALLS
 
 ## Parent decision
 
-Determine the **lowest Opus reasoning effort that preserves the safe full tell-ledger behavior** on the existing frozen six-case / twelve owner-grounded tell benchmark.
+Determine the **lowest OpenRouter Opus reasoning effort that preserves the safe full tell-ledger behavior** on the existing frozen six-case / twelve owner-grounded tell benchmark.
 
 The tell definitions, cases, scoring cells, temperature, model ID, and output contract were unchanged.
 
@@ -24,7 +24,7 @@ The effort ladder is not perfectly monotonic on exact accuracy: medium exceeded 
 
 ## Decision
 
-**Use `xhigh` as the default high-rigor Opus 5.5 full-ledger sweep.**
+**For the OpenRouter API fallback route, use `xhigh` as the default high-rigor Opus 5.5 full-ledger sweep.**
 
 Evidence:
 - xhigh entered the same fail-safe regime as max: zero wrong-polarity calls;
@@ -32,7 +32,7 @@ Evidence:
 - max scored 11/12;
 - xhigh cost roughly $0.45–$0.48 for the six-case benchmark versus ~$3.00 for max.
 
-Therefore max is not justified as the routine default.
+Therefore max is not justified as the routine **OpenRouter API** default.
 
 Use `max` only as escalation when:
 - xhigh leaves an important tell UNCERTAIN;
@@ -59,6 +59,6 @@ Build two-sided owner/editorial controls for those tells before changing wording
 
 ## Limits
 
-This is six passages / twelve scored tell cells. It selects the current project default; it is not a universal reasoning-effort benchmark.
+This is six passages / twelve scored tell cells on the OpenRouter API route. It selects the current **API-fallback** default only; it is not a universal reasoning-effort benchmark and does not establish Claude Code CLI effort routing. UDA prefers an authenticated provider-native subscription CLI before metered API use when capability/isolation are equivalent, so Claude CLI effort must be calibrated separately once CLI authentication is restored.
 
 No Pangram calls were used.
