@@ -1,0 +1,72 @@
+{
+  "format": "joel-pairwise-realization-defect-dev-v1-score",
+  "total": 8,
+  "correct": 5,
+  "accuracy": 0.625,
+  "rows": [
+    {
+      "sample_id": "PW01",
+      "gold_defective": "B",
+      "predicted_defective": "A",
+      "correct": false,
+      "source_case": "Q1",
+      "source_note": "direct owner-final Write-It P1 vs model Candidate M P1"
+    },
+    {
+      "sample_id": "PW02",
+      "gold_defective": "A",
+      "predicted_defective": "B",
+      "correct": false,
+      "source_case": "Q2",
+      "source_note": "owner Romance exclusivity causal route vs compressed assistant anecdote"
+    },
+    {
+      "sample_id": "PW03",
+      "gold_defective": "A",
+      "predicted_defective": "A",
+      "correct": true,
+      "source_case": "Q3",
+      "source_note": "owner evaluation reauthoring vs model predecessor"
+    },
+    {
+      "sample_id": "PW04",
+      "gold_defective": "A",
+      "predicted_defective": "A",
+      "correct": true,
+      "source_case": "Q4",
+      "source_note": "Already-in-it owner final opening vs detector-red opening"
+    },
+    {
+      "sample_id": "PW05",
+      "gold_defective": "B",
+      "predicted_defective": "A",
+      "correct": false,
+      "source_case": "Q5",
+      "source_note": "Already-in-it lived radical-honesty complication vs detector-red disclaimer"
+    },
+    {
+      "sample_id": "PW06",
+      "gold_defective": "B",
+      "predicted_defective": "B",
+      "correct": true,
+      "source_case": "Q6",
+      "source_note": "Tough Love owner spirit mechanism vs detector-red relationship-spirit window"
+    },
+    {
+      "sample_id": "PW07",
+      "gold_defective": "A",
+      "predicted_defective": "A",
+      "correct": true,
+      "source_case": "Q7",
+      "source_note": "Catch-hook Probe 5 Human/medium vs Probe 4 AI/medium"
+    },
+    {
+      "sample_id": "PW08",
+      "gold_defective": "B",
+      "predicted_defective": "B",
+      "correct": true,
+      "source_case": "Q8",
+      "source_note": "relational-capacity owner reauthoring vs owner-characterized very-AI model prompt"
+    }
+  ]
+}
