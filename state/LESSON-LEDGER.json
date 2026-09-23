@@ -1136,6 +1136,20 @@
       "source_path": "state/generation/global-tell-model-comparison-20260923/JEV-RESULT.md",
       "source_ref": "working-tree",
       "source_sha256": "3b744c84a4e14747d12b855d636561aecafbd0148573ed864559ba3d3d57d525"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Project-scoped calibration coverage: T02 has strong two-sided owner/editorial controls; T03-T09 are positive-only; T01 and T10-T12 are unscored. Opus 5.5 max at 11/12 on existing grounded cells argues against wholesale tell rewrites. Expand two-sided tell-level controls first, and revise a definition only if repeated max-effort errors persist after good positive/negative controls exist for that exact tell.",
+      "id": "L-650f29982d-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "Current bounded evidence directly changes the next humanization-method decision; scope is this Joel/Pangram tell catalog, not universal prose theory.",
+      "recorded_at_utc": "2026-09-23T20:44:21.019196+00:00",
+      "source_path": "state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md",
+      "source_ref": "working-tree",
+      "source_sha256": "650f29982d9eff40076b2d2916f708290cc57e70c9e1d667212d7c52ff9ed6ff"
     }
   ],
   "schema_version": 1
