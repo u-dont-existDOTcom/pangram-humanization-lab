@@ -1150,6 +1150,20 @@
       "source_path": "state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md",
       "source_ref": "working-tree",
       "source_sha256": "650f29982d9eff40076b2d2916f708290cc57e70c9e1d667212d7c52ff9ed6ff"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Project-scoped effort routing: Opus 5.5 medium repeated at 9/12 exact with zero wrong-polarity calls and about one-tenth the cost of max; max reached 11/12 with zero wrong-polarity but about $3 per six-case sweep. Use medium for routine full-catalog sweeps and escalate unresolved/high-consequence tells to max or calibrated narrow audit. Explicit high was worse than medium, so effort labels were non-monotonic on this task.",
+      "id": "L-90bf7484f9-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "Directly changes the cost/quality routing for the current Joel/Pangram tell-ledger workflow; bounded to this benchmark/model/provider configuration.",
+      "recorded_at_utc": "2026-09-23T20:56:23.396975+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-SWEEP.md",
+      "source_ref": "working-tree",
+      "source_sha256": "90bf7484f9b0a71529f56b0a7a32b0df1b2c0c9371bfc81e3edaf327faad0b8c"
     }
   ],
   "schema_version": 1

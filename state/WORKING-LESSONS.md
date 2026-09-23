@@ -336,3 +336,26 @@ Next method step:
 - revise a tell only if repeated max-effort errors remain after good positive/negative controls exist for that exact tell.
 
 Exact evidence: `state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md`.
+
+
+## 2026-09-23 — Opus medium is the current routine tell-ledger sweet spot
+
+On the unchanged six-case / 12-cell global tell benchmark:
+
+- Opus max: 11/12 exact, 0 wrong polarity, 1 UNCERTAIN, ~$2.996/run;
+- Opus high: 8/12, 1 wrong polarity, 3 UNCERTAIN, ~$0.318;
+- Opus medium: 9/12 on **two independent runs**, 0 wrong polarity on both, 3 UNCERTAIN each, ~$0.30/run;
+- Opus low: 7/12, 0 wrong polarity, 5 UNCERTAIN, ~$0.155.
+
+Medium repeated at 18/24 exact, 0 wrong-polarity, and identical status on 10/12 cells.
+
+Current project routing:
+- routine full-catalog sweep: **Opus 5.5 medium**;
+- PRESENT remains blocking;
+- UNCERTAIN remains unresolved and routes to a calibrated narrow audit or Opus max on the disputed tell/span;
+- use max for especially consequential final review or unresolved residue;
+- do not default to explicit high merely because its label sounds stronger—behavior was non-monotonic on this task.
+
+This is bounded project evidence, not a universal Claude reasoning-effort law.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-SWEEP.md`.

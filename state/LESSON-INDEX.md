@@ -161,3 +161,7 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:global-tell-calibration-coverage-20260923 -->
 - **Tell-level calibration coverage:** current scored evidence is uneven: T02 has strong two-sided owner/editorial controls; T03–T09 are positive-only; T01 and T10–T12 are unscored. Opus 5.5 max reaching 11/12 on existing grounded cells argues against wholesale tell rewrites. Expand two-sided controls tell-by-tell first; revise a definition only after repeated max-effort errors persist with good positive/negative controls for that exact tell. See `state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md`.
+
+
+<!-- closeout-request:opus55-effort-sweep-20260923 -->
+- **Opus 5.5 reasoning effort for the full tell ledger:** same frozen six-case / 12-cell benchmark: max 11/12 exact at ~$2.996; high 8/12 with 1 wrong-polarity call; medium 9/12 twice with 0 wrong-polarity calls and 10/12 repeatability; low 7/12 with 0 wrong-polarity calls but 5 UNCERTAIN. Current project routing: use **Opus medium** for the routine fresh global sweep and escalate only unresolved/high-consequence tells to max or calibrated narrow audit. Do not assume effort labels are monotonic. See `state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-SWEEP.md`.

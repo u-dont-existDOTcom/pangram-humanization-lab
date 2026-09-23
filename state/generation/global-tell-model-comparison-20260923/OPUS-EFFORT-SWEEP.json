@@ -1,0 +1,48 @@
+{
+  "format": "joel-opus55-reasoning-effort-sweep-v1",
+  "benchmark": "global-tell-six-case-12-cell",
+  "max": {
+    "exact": 11,
+    "total": 12,
+    "wrong_polarity": 0,
+    "uncertain": 1,
+    "cost": 2.99572
+  },
+  "high": {
+    "exact": 8,
+    "total": 12,
+    "wrong_polarity": 1,
+    "uncertain": 3,
+    "cost": 0.31792
+  },
+  "medium_run1": {
+    "exact": 9,
+    "total": 12,
+    "wrong_polarity": 0,
+    "uncertain": 3,
+    "cost": 0.30736
+  },
+  "medium_run2": {
+    "exact": 9,
+    "total": 12,
+    "wrong_polarity": 0,
+    "uncertain": 3,
+    "cost": 0.29074
+  },
+  "medium_combined": {
+    "exact": 18,
+    "total": 24,
+    "wrong_polarity": 0,
+    "uncertain": 6,
+    "status_repeatability": "10/12",
+    "cost": 0.5981
+  },
+  "low": {
+    "exact": 7,
+    "total": 12,
+    "wrong_polarity": 0,
+    "uncertain": 5,
+    "cost": 0.15488
+  },
+  "current_recommendation": "medium_global_then_escalate_uncertain"
+}

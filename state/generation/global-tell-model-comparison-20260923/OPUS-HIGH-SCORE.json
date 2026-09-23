@@ -1,0 +1,96 @@
+{
+  "effort": "high",
+  "exact": 8,
+  "total": 12,
+  "uncertain": 3,
+  "wrong_polarity": 1,
+  "cost": 0.31792,
+  "completion_tokens": 13868,
+  "reasoning_tokens": 5605,
+  "cells": [
+    {
+      "case_id": "GLOB-BAD-READINESS",
+      "tell_id": "T02",
+      "expected": "PRESENT",
+      "actual": "ABSENT",
+      "correct": false
+    },
+    {
+      "case_id": "GLOB-BAD-DANGEROUS",
+      "tell_id": "T02",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true
+    },
+    {
+      "case_id": "GLOB-BAD-DANGEROUS",
+      "tell_id": "T03",
+      "expected": "PRESENT",
+      "actual": "UNCERTAIN",
+      "correct": false
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T04",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T05",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T06",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T07",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T08",
+      "expected": "PRESENT",
+      "actual": "UNCERTAIN",
+      "correct": false
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T09",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true
+    },
+    {
+      "case_id": "GLOB-GOOD-5MEO-LIST",
+      "tell_id": "T02",
+      "expected": "ABSENT",
+      "actual": "ABSENT",
+      "correct": true
+    },
+    {
+      "case_id": "GLOB-GOOD-ADVICE",
+      "tell_id": "T02",
+      "expected": "ABSENT",
+      "actual": "ABSENT",
+      "correct": true
+    },
+    {
+      "case_id": "GLOB-GOOD-SEATBELT",
+      "tell_id": "T02",
+      "expected": "ABSENT",
+      "actual": "UNCERTAIN",
+      "correct": false
+    }
+  ]
+}
