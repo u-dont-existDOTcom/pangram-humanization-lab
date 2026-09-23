@@ -1,0 +1,33 @@
+{
+  "format": "joel-antecedent-audit-v3-dev",
+  "cases": [
+    {
+      "case_id": "AV3-1",
+      "previous": "## You Don’t Need an Inner Monologue",
+      "target": "If you don't hear a little kid talking in your head, don't invent one. Actually, this is one place where the usual inner-child prompt can get confusing, because “ask” sounds like you're supposed to ask a question and then wait for a second voice to answer. Maybe that's what happens for some people, but you might not be some people.",
+      "next": "",
+      "expected": "FAIL"
+    },
+    {
+      "case_id": "AV3-2",
+      "previous": "## You Don’t Need an Inner Monologue\n\n“Voice,” “ask,” and “answer” below need not mean a literal conversation in your head.",
+      "target": "If you don't hear a little kid talking in your head, don't invent one. Actually, this is one place where the usual inner-child prompt can get confusing, because “ask” sounds like you're supposed to ask a question and then wait for a second voice to answer. Maybe that's what happens for some people, but you might not be some people.",
+      "next": "",
+      "expected": "PASS"
+    },
+    {
+      "case_id": "AV3-3",
+      "previous": "",
+      "target": "When people spiritually bypass their inner child traumas, they end up using spirituality as an excuse for their harmful behaviors. This is seen in pretty much every guru, with very rare exception. They say things like \"We Are All One,\" or they claim to be God, and this means they can do whatever they want (which is the Free Masonic creed, \"Do As Thou Wilt\").",
+      "next": "",
+      "expected": "PASS"
+    },
+    {
+      "case_id": "AV3-4",
+      "previous": "",
+      "target": "They say things like \"We Are All One,\" or they claim to be God, and this means they can do whatever they want (which is the Free Masonic creed, \"Do As Thou Wilt\").",
+      "next": "",
+      "expected": "FAIL"
+    }
+  ]
+}
