@@ -77,13 +77,14 @@ The evidence currently supports a different next step:
 2. build two-sided owner/editorial controls tell-by-tell;
 3. start with T11, T01, and T10 because existing owner-correction records already point to literal examples;
 4. separate the RT2 cluster into independent T04–T09 controls rather than treating one red paragraph as six fully calibrated tells;
-5. only revise a definition if repeated Opus-max errors remain after good positive/negative controls exist for that exact tell.
+5. only revise a definition if repeated Opus-xhigh errors remain after good positive/negative controls exist for that exact tell; use max only as a decision-changing escalation before blaming the definition.
 
 ## Model-routing consequence
 
 Current bounded evidence:
-- Opus 5.5 max: preferred high-rigor global sweep;
-- Sol/Astra max: cheaper Venice alternatives but still produce wrong-polarity calls;
+- Opus 5.5 **xhigh**: preferred high-rigor global sweep; two runs scored 11/12 and 10/12 with zero wrong-polarity calls at roughly one-sixth the cost of max;
+- Opus 5.5 max: escalation only when xhigh leaves a decision-changing tell unresolved or editorially disputed;
+- Sol/Astra max: cheaper/free-credit Venice alternatives but still produce wrong-polarity calls;
 - Jev: optional cheap positive triage only; ABSENT cannot clear a tell.
 
 No further paid Opus call is justified until the next batch adds genuinely new tell-level calibration coverage.
