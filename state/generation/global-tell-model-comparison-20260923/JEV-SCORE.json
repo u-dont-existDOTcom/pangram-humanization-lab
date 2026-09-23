@@ -1,0 +1,168 @@
+{
+  "format": "joel-global-tell-jev-score-v1",
+  "model": "typesafe/jev-1.13",
+  "exact": 9,
+  "total": 12,
+  "accuracy": 0.75,
+  "uncertain": 0,
+  "wrong_polarity": 3,
+  "reported_cost": 0.0007287840000000001,
+  "cells": [
+    {
+      "case_id": "GLOB-BAD-READINESS",
+      "tell_id": "T02",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true,
+      "probabilities": {
+        "ABSENT": 0.46,
+        "PRESENT": 0.52,
+        "UNCERTAIN": 0.02
+      },
+      "confidence": 0.28
+    },
+    {
+      "case_id": "GLOB-BAD-DANGEROUS",
+      "tell_id": "T02",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true,
+      "probabilities": {
+        "UNCERTAIN": 0.01,
+        "ABSENT": 0.34,
+        "PRESENT": 0.65
+      },
+      "confidence": 0.48
+    },
+    {
+      "case_id": "GLOB-BAD-DANGEROUS",
+      "tell_id": "T03",
+      "expected": "PRESENT",
+      "actual": "ABSENT",
+      "correct": false,
+      "probabilities": {
+        "UNCERTAIN": 0.01,
+        "ABSENT": 0.66,
+        "PRESENT": 0.33
+      },
+      "confidence": 0.48
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T04",
+      "expected": "PRESENT",
+      "actual": "ABSENT",
+      "correct": false,
+      "probabilities": {
+        "ABSENT": 0.81,
+        "UNCERTAIN": 0.16,
+        "PRESENT": 0.03
+      },
+      "confidence": 0.71
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T05",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true,
+      "probabilities": {
+        "ABSENT": 0.13,
+        "UNCERTAIN": 0.02,
+        "PRESENT": 0.85
+      },
+      "confidence": 0.78
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T06",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true,
+      "probabilities": {
+        "ABSENT": 0.01,
+        "UNCERTAIN": 0,
+        "PRESENT": 0.99
+      },
+      "confidence": 0.99
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T07",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true,
+      "probabilities": {
+        "ABSENT": 0.13,
+        "UNCERTAIN": 0.05,
+        "PRESENT": 0.82
+      },
+      "confidence": 0.73
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T08",
+      "expected": "PRESENT",
+      "actual": "PRESENT",
+      "correct": true,
+      "probabilities": {
+        "ABSENT": 0.2,
+        "UNCERTAIN": 0.02,
+        "PRESENT": 0.78
+      },
+      "confidence": 0.68
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "tell_id": "T09",
+      "expected": "PRESENT",
+      "actual": "ABSENT",
+      "correct": false,
+      "probabilities": {
+        "ABSENT": 0.84,
+        "UNCERTAIN": 0.03,
+        "PRESENT": 0.13
+      },
+      "confidence": 0.76
+    },
+    {
+      "case_id": "GLOB-GOOD-5MEO-LIST",
+      "tell_id": "T02",
+      "expected": "ABSENT",
+      "actual": "ABSENT",
+      "correct": true,
+      "probabilities": {
+        "UNCERTAIN": 0,
+        "ABSENT": 0.93,
+        "PRESENT": 0.07
+      },
+      "confidence": 0.89
+    },
+    {
+      "case_id": "GLOB-GOOD-ADVICE",
+      "tell_id": "T02",
+      "expected": "ABSENT",
+      "actual": "ABSENT",
+      "correct": true,
+      "probabilities": {
+        "PRESENT": 0.37,
+        "UNCERTAIN": 0.01,
+        "ABSENT": 0.62
+      },
+      "confidence": 0.43
+    },
+    {
+      "case_id": "GLOB-GOOD-SEATBELT",
+      "tell_id": "T02",
+      "expected": "ABSENT",
+      "actual": "ABSENT",
+      "correct": true,
+      "probabilities": {
+        "ABSENT": 0.62,
+        "PRESENT": 0.37,
+        "UNCERTAIN": 0.01
+      },
+      "confidence": 0.43
+    }
+  ]
+}

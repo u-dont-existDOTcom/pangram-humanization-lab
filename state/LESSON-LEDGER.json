@@ -1122,6 +1122,20 @@
       "source_path": "state/generation/global-tell-model-comparison-20260923/MAX-EFFORT-RESULT.md",
       "source_ref": "working-tree",
       "source_sha256": "738389c1eecdbd6f37293201607f47da6b1556996f05a67cb6371b31be7bb894"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "TypeSafe Jev 1.13 scored 9/12 exact on the frozen six-case tell benchmark at about $0.00073 total, but made three confident false-ABSENT calls. Use it only as optional cheap positive triage/advisory; Jev ABSENT cannot clear a tell.",
+      "id": "L-3b744c84a4-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T20:22:35.820321+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/JEV-RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "3b744c84a4e14747d12b855d636561aecafbd0148573ed864559ba3d3d57d525"
     }
   ],
   "schema_version": 1

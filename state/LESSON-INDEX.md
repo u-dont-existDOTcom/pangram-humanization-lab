@@ -153,3 +153,7 @@ Do not load every historical experiment indiscriminately. Start with the current
 
 <!-- closeout-request:global-tell-max-effort-20260923 -->
 - **Max-effort global tell sweep:** same frozen six-case / 12-cell benchmark, unchanged tell definitions: Opus 5.5 max **11/12 exact, 0 wrong polarity, 1 UNCERTAIN**; GPT-6 Sol max via Venice **8/12, 3 wrong polarity**; GPT-6 Astra max via Venice **7/12, 4 wrong polarity**. Preserve the current tell catalog for now; prefer Opus max for high-rigor global sweeps when justified, keep UNCERTAIN unresolved, and broaden tell-level calibration before revising definitions. See `state/generation/global-tell-model-comparison-20260923/MAX-EFFORT-RESULT.md`.
+
+
+<!-- closeout-request:global-tell-jev-20260923 -->
+- **Jev typed tell ledger:** TypeSafe Jev 1.13 scored **9/12 exact** on the same six-case / twelve-cell owner-grounded tell benchmark at about **$0.00073 total**, but made three confident false-ABSENT calls. Use Jev only as optional cheap positive triage/advisory: PRESENT can prioritize inspection; ABSENT cannot clear a tell. See `state/generation/global-tell-model-comparison-20260923/JEV-RESULT.md`.
