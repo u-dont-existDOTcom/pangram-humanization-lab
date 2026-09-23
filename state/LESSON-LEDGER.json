@@ -1094,6 +1094,20 @@
       "source_path": "state/generation/global-tell-model-comparison-20260923/RESULT.md",
       "source_ref": "working-tree",
       "source_sha256": "871424f52919c75703f36e2224299da277b8b6761ec9407e1edadbcfceca0db5"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Two identical direct-OpenRouter repeats strengthen the bounded preference for Claude Opus 5.5 as the fresh global full-tell-ledger sweep: Opus 17/24 exact with 0 wrong-polarity calls and 11/12 status repeatability versus GPT-6 Sol 13/24 exact with 9 wrong-polarity calls and 8/12 repeatability. Treat Opus UNCERTAIN as unresolved; the full tell catalog and focused/editorial review remain authoritative.",
+      "id": "L-ccc9dcd66b-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T19:06:30.502626+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/REPEATABILITY.md",
+      "source_ref": "working-tree",
+      "source_sha256": "ccc9dcd66b13a3c29aaa381d5a71bcaa178586ad61a6b6b4580ff7853bd2f192"
     }
   ],
   "schema_version": 1

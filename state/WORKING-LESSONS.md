@@ -271,19 +271,18 @@ Exact evidence: `state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUD
 
 A direct OpenRouter comparison tested the original production question rather than hidden authorship: give the model the full current tell inventory and require one PRESENT / ABSENT / UNCERTAIN row per tell, with no overall Human/AI vote.
 
-On twelve owner/editorially grounded tell cells across six cases:
-- Claude Opus 5.5: **9/12 strict exact-status accuracy**;
-- GPT-6 Sol: **6/12**.
+Two independent temperature-0 runs reused the same frozen prompt and six owner-grounded cases.
 
-More important for gate safety, Claude had **zero wrong-polarity calls** on the twelve grounded cells: nine exact and three UNCERTAIN. GPT-6 Sol had five wrong-polarity calls and one UNCERTAIN.
+Across 24 scored tell cells:
+- Claude Opus 5.5: **17/24 exact**, **0 wrong-polarity calls**, **7 UNCERTAIN**, with identical status on **11/12** cells between repeats;
+- GPT-6 Sol: **13/24 exact**, **9 wrong-polarity calls**, **2 UNCERTAIN**, with identical status on **8/12** cells between repeats.
 
-Claude's three uncertain cells were:
-- readiness AI-N16/manual cadence, owner-known PRESENT;
-- RT2 scene-skinned staircase, owner-known PRESENT;
-- owner-derived seat-belt AI-N16, owner-known ABSENT.
+Opus varied only on one Human cadence control, moving from ABSENT to UNCERTAIN. GPT varied on four cells and repeatedly made confident polarity reversals, including false ABSENTs on owner-known defects and false PRESENTs on Human controls.
 
 Therefore Claude is materially better in this bounded comparison as a **global catalog sweep**, but it is not a sole certifier. Treat UNCERTAIN as unresolved, never as ABSENT. The full tell ledger remains authoritative; use focused/narrow audit or direct editorial review to resolve PRESENT/UNCERTAIN findings. No global Human/AI vote may override individual tell rows.
 
-Current evidence supports Claude Opus 5.5 as the preferred fresh global-sweep model over GPT-6 Sol while the tested model/prompt configuration remains relevant. This is a bounded six-case result, not universal accuracy evidence.
+Current evidence supports Claude Opus 5.5 as the preferred fresh global-sweep model over GPT-6 Sol while the tested model/prompt configuration remains relevant. Opus cost about 3x more in these runs. This is a bounded six-case repeatability result, not universal model-ranking evidence.
 
-Exact evidence: `state/generation/global-tell-model-comparison-20260923/RESULT.md`.
+Exact evidence:
+- `state/generation/global-tell-model-comparison-20260923/RESULT.md`
+- `state/generation/global-tell-model-comparison-20260923/REPEATABILITY.md`.
