@@ -1,0 +1,265 @@
+{
+  "format": "joel-antecedent-audit-v3-results",
+  "deployment_id": "d4e33484-ba6c-459a-a127-885c81d06181",
+  "source_commit": "fa23345ac2e3127966ba1ccc2c196fb5866f535a",
+  "requested_model": "openai-gpt-6-sol",
+  "provider_models": [
+    "openai-gpt-6-sol"
+  ],
+  "prompt_sha256": "53248de48eae76e1d760436ffa30853633f610b46d74bd4ad0503f46977c5cb8",
+  "cases_sha256": "23f72f62e45d724625de57dc5e24b84c6140a0474e1f7768b660d3a16d786346",
+  "end_seen": true,
+  "result_count": 4,
+  "transport_error_count": 0,
+  "results": [
+    {
+      "timestamp": "2026-09-23T15:52:28.620528105Z",
+      "level": "info",
+      "event": "antecedent_v3_result",
+      "case_id": "AV3-1",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_06d543d017d083d4016ab3f5b5841c87d2be5b3faaabdf9c42",
+      "content": "{\"status\":\"FAIL\",\"references_checked\":[{\"span\":\"a little kid talking in your head\",\"role\":\"SELF-CONTAINED USE\",\"antecedent\":\"NONE\",\"assessment\":\"resolved\"},{\"span\":\"this is one place\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"If you don't hear a little kid talking in your head\",\"assessment\":\"resolved\"},{\"span\":\"the usual inner-child prompt\",\"role\":\"BRIDGING/GENERIC REFERENCE\",\"antecedent\":\"NONE\",\"assessment\":\"resolved\"},{\"span\":\"“ask”\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"NONE\",\"assessment\":\"orphaned\"},{\"span\":\"that's what happens\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"asking a question and waiting for a second voice to answer\",\"assessment\":\"resolved\"}],\"failure\":\"The quoted word “ask” is treated as wording from an inner-child prompt, but that wording does not appear in the supplied context.\"}",
+      "parsed": {
+        "status": "FAIL",
+        "references_checked": [
+          {
+            "span": "a little kid talking in your head",
+            "role": "SELF-CONTAINED USE",
+            "antecedent": "NONE",
+            "assessment": "resolved"
+          },
+          {
+            "span": "this is one place",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "If you don't hear a little kid talking in your head",
+            "assessment": "resolved"
+          },
+          {
+            "span": "the usual inner-child prompt",
+            "role": "BRIDGING/GENERIC REFERENCE",
+            "antecedent": "NONE",
+            "assessment": "resolved"
+          },
+          {
+            "span": "“ask”",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "NONE",
+            "assessment": "orphaned"
+          },
+          {
+            "span": "that's what happens",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "asking a question and waiting for a second voice to answer",
+            "assessment": "resolved"
+          }
+        ],
+        "failure": "The quoted word “ask” is treated as wording from an inner-child prompt, but that wording does not appear in the supplied context."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1943,
+        "completion_tokens": 546,
+        "total_tokens": 2489,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_creation_input_tokens": 1940
+        },
+        "cache_creation_input_tokens": 1940,
+        "completion_tokens_details": {
+          "reasoning_tokens": 345
+        }
+      },
+      "elapsed_seconds": 7.468
+    },
+    {
+      "timestamp": "2026-09-23T15:52:36.456056256Z",
+      "level": "info",
+      "event": "antecedent_v3_result",
+      "case_id": "AV3-2",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0411d02c13d92375016ab3f5bccf9087d2bdc8a743adc0be78",
+      "content": "{\"status\":\"PASS\",\"references_checked\":[{\"span\":\"one\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"a little kid talking in your head\",\"assessment\":\"resolved\"},{\"span\":\"this is one place\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"the situation described in the preceding sentence\",\"assessment\":\"resolved\"},{\"span\":\"the usual inner-child prompt\",\"role\":\"BRIDGING/GENERIC REFERENCE\",\"antecedent\":\"NONE\",\"assessment\":\"resolved\"},{\"span\":\"“ask”\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"“ask” in the previous context\",\"assessment\":\"resolved\"},{\"span\":\"that's what happens\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"asking a question and waiting for a second voice to answer\",\"assessment\":\"resolved\"},{\"span\":\"some people\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"some people in the same sentence\",\"assessment\":\"resolved\"}],\"failure\":\"none\"}",
+      "parsed": {
+        "status": "PASS",
+        "references_checked": [
+          {
+            "span": "one",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "a little kid talking in your head",
+            "assessment": "resolved"
+          },
+          {
+            "span": "this is one place",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "the situation described in the preceding sentence",
+            "assessment": "resolved"
+          },
+          {
+            "span": "the usual inner-child prompt",
+            "role": "BRIDGING/GENERIC REFERENCE",
+            "antecedent": "NONE",
+            "assessment": "resolved"
+          },
+          {
+            "span": "“ask”",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "“ask” in the previous context",
+            "assessment": "resolved"
+          },
+          {
+            "span": "that's what happens",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "asking a question and waiting for a second voice to answer",
+            "assessment": "resolved"
+          },
+          {
+            "span": "some people",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "some people in the same sentence",
+            "assessment": "resolved"
+          }
+        ],
+        "failure": "none"
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1964,
+        "completion_tokens": 453,
+        "total_tokens": 2417,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 458
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 458,
+        "completion_tokens_details": {
+          "reasoning_tokens": 248
+        }
+      },
+      "elapsed_seconds": 7.827
+    },
+    {
+      "timestamp": "2026-09-23T15:52:42.727063781Z",
+      "level": "info",
+      "event": "antecedent_v3_result",
+      "case_id": "AV3-3",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0156aa32c2da924d016ab3f5c4aaa487d2b61c8c1d7164bc99",
+      "content": "{\"status\":\"PASS\",\"references_checked\":[{\"span\":\"their inner child traumas\",\"role\":\"BRIDGING/GENERIC REFERENCE\",\"antecedent\":\"people\",\"assessment\":\"resolved\"},{\"span\":\"This is seen\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"using spirituality as an excuse for harmful behaviors\",\"assessment\":\"resolved\"},{\"span\":\"They say things like\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"gurus\",\"assessment\":\"resolved\"},{\"span\":\"\\\"We Are All One\\\"\",\"role\":\"INTRODUCTION/DEFINITION\",\"antecedent\":\"NONE\",\"assessment\":\"resolved\"},{\"span\":\"this means they can do whatever they want\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"the gurus’ stated claims about oneness or being God\",\"assessment\":\"resolved\"},{\"span\":\"the Free Masonic creed, \\\"Do As Thou Wilt\\\"\",\"role\":\"INTRODUCTION/DEFINITION\",\"antecedent\":\"NONE\",\"assessment\":\"resolved\"}],\"failure\":\"none\"}",
+      "parsed": {
+        "status": "PASS",
+        "references_checked": [
+          {
+            "span": "their inner child traumas",
+            "role": "BRIDGING/GENERIC REFERENCE",
+            "antecedent": "people",
+            "assessment": "resolved"
+          },
+          {
+            "span": "This is seen",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "using spirituality as an excuse for harmful behaviors",
+            "assessment": "resolved"
+          },
+          {
+            "span": "They say things like",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "gurus",
+            "assessment": "resolved"
+          },
+          {
+            "span": "\"We Are All One\"",
+            "role": "INTRODUCTION/DEFINITION",
+            "antecedent": "NONE",
+            "assessment": "resolved"
+          },
+          {
+            "span": "this means they can do whatever they want",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "the gurus’ stated claims about oneness or being God",
+            "assessment": "resolved"
+          },
+          {
+            "span": "the Free Masonic creed, \"Do As Thou Wilt\"",
+            "role": "INTRODUCTION/DEFINITION",
+            "antecedent": "NONE",
+            "assessment": "resolved"
+          }
+        ],
+        "failure": "none"
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1941,
+        "completion_tokens": 372,
+        "total_tokens": 2313,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 435
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 435,
+        "completion_tokens_details": {
+          "reasoning_tokens": 164
+        }
+      },
+      "elapsed_seconds": 6.286
+    },
+    {
+      "timestamp": "2026-09-23T15:52:48.346037020Z",
+      "level": "info",
+      "event": "antecedent_v3_result",
+      "case_id": "AV3-4",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_025d2467d3d00596016ab3f5cb00c887d2a742beb0836f92ba",
+      "content": "{\"status\":\"FAIL\",\"references_checked\":[{\"span\":\"They / they\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"NONE\",\"assessment\":\"orphaned\"},{\"span\":\"things like \\\"We Are All One\\\"\",\"role\":\"INTRODUCTION/DEFINITION\",\"antecedent\":\"NONE\",\"assessment\":\"resolved\"},{\"span\":\"this\",\"role\":\"EXPLICIT BACKWARD REFERENCE\",\"antecedent\":\"the preceding claims about being one or being God\",\"assessment\":\"resolved\"},{\"span\":\"which is the Free Masonic creed, \\\"Do As Thou Wilt\\\"\",\"role\":\"SELF-CONTAINED USE\",\"antecedent\":\"the preceding claim that they can do whatever they want\",\"assessment\":\"resolved\"}],\"failure\":\"The subject of “They say” and “they claim” is absent from the supplied context; knowing who is being discussed materially affects the sentence’s meaning.\"}",
+      "parsed": {
+        "status": "FAIL",
+        "references_checked": [
+          {
+            "span": "They / they",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "NONE",
+            "assessment": "orphaned"
+          },
+          {
+            "span": "things like \"We Are All One\"",
+            "role": "INTRODUCTION/DEFINITION",
+            "antecedent": "NONE",
+            "assessment": "resolved"
+          },
+          {
+            "span": "this",
+            "role": "EXPLICIT BACKWARD REFERENCE",
+            "antecedent": "the preceding claims about being one or being God",
+            "assessment": "resolved"
+          },
+          {
+            "span": "which is the Free Masonic creed, \"Do As Thou Wilt\"",
+            "role": "SELF-CONTAINED USE",
+            "antecedent": "the preceding claim that they can do whatever they want",
+            "assessment": "resolved"
+          }
+        ],
+        "failure": "The subject of “They say” and “they claim” is absent from the supplied context; knowing who is being discussed materially affects the sentence’s meaning."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1904,
+        "completion_tokens": 338,
+        "total_tokens": 2242,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 398
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 398,
+        "completion_tokens_details": {
+          "reasoning_tokens": 157
+        }
+      },
+      "elapsed_seconds": 5.606
+    }
+  ]
+}
