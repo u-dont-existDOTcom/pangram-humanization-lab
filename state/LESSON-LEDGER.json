@@ -1066,6 +1066,20 @@
       "source_path": "state/generation/critic-holdout-v2-20260922/RESULT-AND-METHOD-DIAGNOSIS.md",
       "source_ref": "working-tree",
       "source_sha256": "3d2f1a768bc02dc931db05de267dfb780fb6fbe23784e3dd36b5bd8ca16242d7"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Stop global Human/AI or good/bad prose judges for production admission. Use narrow observable defect auditors calibrated per axis. Current GPT-6 Sol controls reproduce the dangerous-adult owner corrections at 10/10 across reader-purpose, cumulative manual cadence, and corrected antecedent coherence; narrow FAILs are repair evidence, not authorship proof, and absence of FAILs still requires direct editorial reading.",
+      "id": "L-cc9a1a61f1-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T15:59:57.730716+00:00",
+      "source_path": "state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUDIT-RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "cc9a1a61f12dc96e7fa10eea80f2aea3308047bd79126360bf245287a596121e"
     }
   ],
   "schema_version": 1

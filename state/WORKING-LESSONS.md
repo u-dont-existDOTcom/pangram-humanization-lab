@@ -230,3 +230,38 @@ The oscillation between v1 and v2 crosses the method-escalation threshold. Do no
 Exact evidence:
 - `state/generation/critic-benchmark-20260922/V1-RESULT-AND-RUBRIC-DIAGNOSIS.md`
 - `state/generation/critic-holdout-v2-20260922/RESULT-AND-METHOD-DIAGNOSIS.md`
+
+
+## 2026-09-23 — Stop global prose judges; use specialized defect audits
+
+The dangerous-present-adult process failure triggered a sequence of blinded GPT-5.6/GPT-6 Sol critic experiments. The global-judge family did not generalize:
+
+- abstract authorship rubric v1: 14/20;
+- hard content-neutralized scaffold veto v2: 10/20;
+- literal contrastive absolute classifier holdout v3: 10/20 after 11/12 development;
+- matched pairwise realization-defect chooser: 5/8.
+
+These failures have different error directions and survive materially different prompting architectures. Do not respond by adding more global anti-pattern rules or more few-shot pairs.
+
+The production question is narrower than hidden authorship: **does this literal realization still contain a concrete editorial/model-shape defect that should block a paid Pangram call?**
+
+A specialized-audit decomposition performed materially better on the owner-correction-relevant axes:
+
+- reader-purpose / pragmatic act: 2/2;
+- cumulative instruction-manual/listicle cadence: 4/4, including two Human controls showing that lists/advice alone are not the defect;
+- antecedent/referent coherence: after correcting malformed controls, 4/4 on the same `ask` sentence with/without its source setup plus self-contained/corrupted Human controls.
+
+Combined current scoped controls: 10/10.
+
+Promoted process lesson:
+- use narrow observable defect auditors, one axis per request;
+- calibrate each axis on positive and negative examples for that exact defect;
+- owner/editorial realization judgment is the relevant label, not hidden model provenance;
+- a narrow FAIL identifies a repair candidate; it does not prove AI authorship;
+- an auditor that fails its own controls is non-gating;
+- absence of narrow FAILs is not a certificate and still requires a direct natural-boundary editorial read;
+- Pangram remains downstream and cannot rescue a failed unpaid audit.
+
+For the Inner Child dangerous-adult case, unpaid review should have blocked before Pangram on at least three independently observable defects: instruction-manual cadence, missing reader-purpose/pragmatic setup, and the orphaned `ask` reference after removal of the source's `voice / ask / answer` setup.
+
+Exact evidence: `state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUDIT-RESULT.md`.
