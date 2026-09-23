@@ -1,0 +1,35 @@
+{
+  "format": "joel-antecedent-audit-v3-score",
+  "total": 4,
+  "correct": 4,
+  "rows": [
+    {
+      "case_id": "AV3-1",
+      "expected": "FAIL",
+      "basis": "quoted metaword ask is discussed as wording from a prompt, but no visible setup provides it",
+      "predicted": "FAIL",
+      "correct": true
+    },
+    {
+      "case_id": "AV3-2",
+      "expected": "PASS",
+      "basis": "same target; exact source setup explicitly introduces voice/ask/answer",
+      "predicted": "PASS",
+      "correct": true
+    },
+    {
+      "case_id": "AV3-3",
+      "expected": "PASS",
+      "basis": "known Human/no-AI paragraph with all material references resolved locally",
+      "predicted": "PASS",
+      "correct": true
+    },
+    {
+      "case_id": "AV3-4",
+      "expected": "FAIL",
+      "basis": "controlled deletion removes gurus/people antecedent for They",
+      "predicted": "FAIL",
+      "correct": true
+    }
+  ]
+}
