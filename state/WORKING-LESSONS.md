@@ -298,7 +298,7 @@ On the same frozen six-case / 12-cell global tell-ledger benchmark, explicit `re
 
 Opus max correctly found every owner-known positive defect in the scored set, including readiness manual cadence, both dangerous-adult defects, and all six RT2 tell cells. Its only miss was a conservative UNCERTAIN on the Human seat-belt cadence control.
 
-This materially weakens the hypothesis that the tell definitions themselves are broadly defective. Preserve the current catalog for now. Prefer Opus 5.5 max for a high-rigor fresh global sweep when cost/latency justify it; treat UNCERTAIN as unresolved; broaden positive/negative calibration across the rest of the tell catalog before changing definitions.
+This materially weakens the hypothesis that the tell definitions themselves are broadly defective. Preserve the current catalog for now. The original recommendation to prefer max by default is **superseded by the later reasoning-effort ladder**: use xhigh as the current high-rigor default and reserve max for decision-changing unresolved cases. Treat UNCERTAIN as unresolved; broaden positive/negative calibration across the rest of the tell catalog before changing definitions.
 
 Sol and Astra remain useful cheaper/free-credit alternatives, but on this bounded task max reasoning did not make either as safe as Opus: both retained confident wrong-polarity calls.
 
@@ -336,3 +336,27 @@ Next method step:
 - revise a tell only if repeated max-effort errors remain after good positive/negative controls exist for that exact tell.
 
 Exact evidence: `state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md`.
+
+
+## 2026-09-23 — Opus xhigh is the default full-ledger effort; max is escalation
+
+A reasoning-effort ladder reused the exact same six-case / twelve-cell global tell benchmark and unchanged tell definitions.
+
+Primary preserved runs:
+- low: **7/12 exact**, 5 UNCERTAIN, 0 wrong polarity, ~$0.155;
+- medium: **9/12 exact**, 3 UNCERTAIN, 0 wrong polarity, ~$0.291;
+- high: **8/12 exact**, 4 UNCERTAIN, 0 wrong polarity, ~$0.322;
+- xhigh run 1: **11/12 exact**, 1 UNCERTAIN, 0 wrong polarity, ~$0.450;
+- xhigh run 2: **10/12 exact**, 2 UNCERTAIN, 0 wrong polarity, ~$0.481;
+- max: **11/12 exact**, 1 UNCERTAIN, 0 wrong polarity, ~$2.996.
+
+The effort ladder is not perfectly monotonic, but xhigh is the lowest tested effort that repeatedly enters the same fail-safe regime as max while costing roughly one-sixth as much.
+
+Current routing:
+- **xhigh** = default high-rigor Opus 5.5 global tell-ledger sweep;
+- **max** = escalation only when xhigh leaves a decision-changing tell UNCERTAIN or editorially disputed;
+- lower efforts are not current clearing defaults because they leave materially more cells unresolved.
+
+Do not rewrite the tell catalog because lower-effort runs were less decisive. The next bottleneck remains two-sided tell calibration coverage.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-LADDER-RESULT.md`.
