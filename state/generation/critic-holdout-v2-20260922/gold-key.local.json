@@ -1,0 +1,186 @@
+{
+  "format": "joel-humanization-critic-holdout-v2-gold",
+  "labels_hidden_from_critic": true,
+  "items": [
+    {
+      "internal_id": "H2-05",
+      "label": "HUMAN",
+      "provenance_class": "exact_owner_source",
+      "source": "heart-loop owner exact added paragraph",
+      "sha256": "792a6cbb29d71b19f9b7104f52a006719463fbaa97dc4e97bc5ddf6e57960e77",
+      "word_count": 122,
+      "sample_id": "HV2-01"
+    },
+    {
+      "internal_id": "H2-03",
+      "label": "HUMAN",
+      "provenance_class": "direct_owner_aligned_rewrite",
+      "source": "inner-monologue owner p2",
+      "sha256": "ac42c590daa5e9cbc3923a1e5cc9394da2e578d64cef3268c725b49c33a8e843",
+      "word_count": 100,
+      "sample_id": "HV2-02"
+    },
+    {
+      "internal_id": "H2-07",
+      "label": "HUMAN",
+      "provenance_class": "direct_owner_final",
+      "source": "tough-love owner parents/community paragraph",
+      "sha256": "a9aad0629b318d8a0f1d169004dd6a382127a97e7f195347e1807a24ebc28c11",
+      "word_count": 106,
+      "sample_id": "HV2-03"
+    },
+    {
+      "internal_id": "A2-08",
+      "label": "AI",
+      "provenance_class": "model_paragraph",
+      "source": "candidate C p1",
+      "sha256": "a9b400732996df647f9119d92db0bf0eedac2d57d610fe753d63809e97708f59",
+      "word_count": 64,
+      "sample_id": "HV2-04"
+    },
+    {
+      "internal_id": "A2-07",
+      "label": "AI",
+      "provenance_class": "model_paragraph",
+      "source": "candidate B p4",
+      "sha256": "301ea6367e4483314bd16726c61de07b10d9c6ba334a5cbe0aa3bbb538eb1779",
+      "word_count": 64,
+      "sample_id": "HV2-05"
+    },
+    {
+      "internal_id": "H2-02",
+      "label": "HUMAN",
+      "provenance_class": "direct_owner_final",
+      "source": "catch-hook owner-final p2",
+      "sha256": "173633be7c3907ab9a1356887cc22f5ce77a1b4746c061997eaa4b06293578d6",
+      "word_count": 80,
+      "sample_id": "HV2-06"
+    },
+    {
+      "internal_id": "H2-08",
+      "label": "HUMAN",
+      "provenance_class": "direct_owner_final",
+      "source": "tough-love owner son letter paragraph",
+      "sha256": "7109652755318bd0a18a56a0e7a3d482033b93c8637afbeb4d36608aec915c68",
+      "word_count": 80,
+      "sample_id": "HV2-07"
+    },
+    {
+      "internal_id": "H2-10",
+      "label": "HUMAN",
+      "provenance_class": "direct_owner_final",
+      "source": "already-in-it owner door/lying paragraph",
+      "sha256": "9654f2136f3e8f6a2aa4181aa6f54107c866c96cf7d9faeb0fd44859782df956",
+      "word_count": 72,
+      "sample_id": "HV2-08"
+    },
+    {
+      "internal_id": "A2-01",
+      "label": "AI",
+      "provenance_class": "model_baseline",
+      "source": "inner-monologue model baseline p2",
+      "sha256": "25435d2b96410548b4abfdafc70027502c5f31b99b616b2a7b5abde6b50bf131",
+      "word_count": 99,
+      "sample_id": "HV2-09"
+    },
+    {
+      "internal_id": "A2-06",
+      "label": "AI",
+      "provenance_class": "model_paragraph",
+      "source": "candidate B p3",
+      "sha256": "2ce1dffede7df16994a2f9c24548a681f3e12d23774fc29e9eaae5a01f8f73a8",
+      "word_count": 88,
+      "sample_id": "HV2-10"
+    },
+    {
+      "internal_id": "A2-05",
+      "label": "AI",
+      "provenance_class": "model_paragraph",
+      "source": "candidate B p1",
+      "sha256": "34c5d1a93f40b28fccfac9cd8760be634f98c91743b169d706ac2962eebc4d42",
+      "word_count": 98,
+      "sample_id": "HV2-11"
+    },
+    {
+      "internal_id": "H2-01",
+      "label": "HUMAN",
+      "provenance_class": "direct_owner_final",
+      "source": "catch-hook owner-final p1",
+      "sha256": "d167f974a524e19c11accd95c5ddc3774fae908d939a62dfd50eb58e877e93d7",
+      "word_count": 80,
+      "sample_id": "HV2-12"
+    },
+    {
+      "internal_id": "A2-02",
+      "label": "AI",
+      "provenance_class": "model_realization",
+      "source": "heart-loop model-added p4",
+      "sha256": "7d7dd254eddefd28288ec870c9eea6beeb4bc2b117fc832eebec8de8f303a078",
+      "word_count": 67,
+      "sample_id": "HV2-13"
+    },
+    {
+      "internal_id": "A2-10",
+      "label": "AI",
+      "provenance_class": "model_paragraph",
+      "source": "candidate D p3",
+      "sha256": "1c52cd9890cbf2251aed56a8d4b0f8a15b46a3f34aee834e3edc4145ee65b298",
+      "word_count": 92,
+      "sample_id": "HV2-14"
+    },
+    {
+      "internal_id": "H2-06",
+      "label": "HUMAN",
+      "provenance_class": "direct_owner_rewrite",
+      "source": "romance exclusivity owner-selected high",
+      "sha256": "af1df6bb868df366b28d40cdcdb79ab06e55e8b8a84373f8a7ad0c70a6a9409e",
+      "word_count": 201,
+      "sample_id": "HV2-15"
+    },
+    {
+      "internal_id": "A2-04",
+      "label": "AI",
+      "provenance_class": "assistant_attempt",
+      "source": "romance exclusivity assistant comparison p2",
+      "sha256": "5b23e87b2629e4fa4ed24e7be53c04bc862494148cc1167a46cb88e8162dc964",
+      "word_count": 61,
+      "sample_id": "HV2-16"
+    },
+    {
+      "internal_id": "H2-04",
+      "label": "HUMAN",
+      "provenance_class": "natural_owner_minimum_normalization",
+      "source": "trust-normalized-owner exact paragraph",
+      "sha256": "6ceaa3becafb78bb75df043e5ff88cd41d46496ef93d9a0500b6759856c5811a",
+      "word_count": 126,
+      "sample_id": "HV2-17"
+    },
+    {
+      "internal_id": "A2-09",
+      "label": "AI",
+      "provenance_class": "model_paragraph",
+      "source": "candidate D p1",
+      "sha256": "73d6e5dac15d14d610327a5b1d87a4910931396c9344336e022eeafa95194c87",
+      "word_count": 90,
+      "sample_id": "HV2-18"
+    },
+    {
+      "internal_id": "H2-09",
+      "label": "HUMAN",
+      "provenance_class": "direct_owner_final",
+      "source": "already-in-it owner Bee/Key trust paragraph",
+      "sha256": "35f6768b9a25aedf5cea1bbb7d3e98ebb4df522fa2236365366c8e50be239e9e",
+      "word_count": 67,
+      "sample_id": "HV2-19"
+    },
+    {
+      "internal_id": "A2-03",
+      "label": "AI",
+      "provenance_class": "assistant_attempt",
+      "source": "romance exclusivity assistant comparison p1",
+      "sha256": "a00dd494db4f07248f15faca7dd87a406e3c88db4c5d4f147376a27a79b2e57b",
+      "word_count": 61,
+      "sample_id": "HV2-20"
+    }
+  ]
+}
