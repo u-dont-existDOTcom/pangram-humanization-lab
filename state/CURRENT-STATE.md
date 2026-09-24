@@ -269,3 +269,24 @@ Exact evidence:
 
 No Pangram calls were used.
 
+## 2026-09-24 — Specialized T01 audit transfer
+
+The experimental compact V2.1 global prompt improved T10 on a fresh positive/negative pair and retained the consumed T11 regression pair, but it falsely flagged a fresh source-earned T01 authorial judgment. Repeated global-prompt patching for T01 was stopped.
+
+A one-axis T01 audit was calibrated around the missing distinction: depersonalization must preserve **speech act and epistemic force**, not merely proposition.
+
+Fresh held-out result with Claude Opus 5.5 CLI high: **2/2 exact**:
+- general helper criterion staged through `I care / I want` -> PRESENT;
+- genuine owner-specific self-relating motive -> ABSENT.
+
+Current routing:
+- global Claude CLI high sweep remains the broad catalog check;
+- disputed/PRESENT/UNCERTAIN T01 may route to the specialized T01 audit;
+- T10's compact rule has 2/2 fresh evidence but remains narrow-development evidence;
+- T11 still lacks genuinely fresh tell-specific validation and remains editorial/manual when disputed.
+
+No Pangram calls were used.
+
+Exact evidence:
+`state/generation/global-tell-model-comparison-20260923/T01-SPECIALIZED-AUDIT-RESULT-20260924.md`.
+
