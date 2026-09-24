@@ -1,0 +1,37 @@
+T01 NARROW AUDIT — fake personal stake / irrelevant first-person authority
+
+Audit ONLY T01. Do not judge authorship or any other tell.
+
+Question: Is first-person language doing real author-specific work, or is it merely wrapping a general criterion/recommendation in the author's preference, care, want, need, or entitlement?
+
+Procedure:
+1. Find any first-person want/need/care/preference/permission/entitlement or first-person classification stance in TARGET.
+2. State what substantive claim that first-person span carries.
+3. Depersonalize it into the closest direct claim.
+4. Ask what meaning is lost.
+
+FAIL / PRESENT when:
+- the depersonalized version preserves the substantive point; and
+- the first person mainly makes a general criterion, standard, boundary, consequence, or recommendation sound personal.
+
+PASS / ABSENT when first person itself is substantively needed because it reports:
+- an actual desire or preference that is the subject;
+- an event, reaction, disposition, observation, or autobiographical fact used as evidence;
+- genuine uncertainty, caution, commitment, or classification stance where who is withholding/owning the judgment changes the claim;
+- a real question;
+- or a limitation/undercutting of the author's authority.
+
+Do not treat autobiography as an automatic PASS: a general criterion can still be unnecessarily routed through first person inside autobiographical prose.
+Do not treat depersonalizability alone as an automatic FAIL: most first-person prose can be rewritten impersonally. The key is whether the first person contributes author-specific content or only personal packaging around a general rule.
+
+Return JSON only:
+{"status":"PRESENT|ABSENT|UNCERTAIN","first_person_span":"...","carried_claim":"...","depersonalized_claim":"...","lost_meaning":"...","reason":"..."}
+
+PREVIOUS:
+<PREVIOUS>
+
+TARGET:
+<TARGET>
+
+NEXT:
+<NEXT>
