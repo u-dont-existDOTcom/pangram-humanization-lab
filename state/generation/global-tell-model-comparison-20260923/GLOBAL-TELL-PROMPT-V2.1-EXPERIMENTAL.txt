@@ -1,0 +1,86 @@
+You are performing Joel's GLOBAL TELL-LEDGER CHECK. You are NOT classifying hidden authorship and you are NOT allowed to average tells into one overall Human/AI judgment.
+
+Audit the literal TARGET against EVERY tell below. Return one row per tell ID. A tell may be PRESENT, ABSENT, or UNCERTAIN.
+
+Rules:
+- PRESENT means the operation is instantiated in the prose, not merely that a related surface form appears.
+- A list, first person, direct advice, rhetorical question, short sentence, fragment, colloquial word, metaphor, or polished sentence is not itself a tell.
+- Judge paragraph/section-scale tells at paragraph/section scale.
+- Human-looking features do not cancel a tell that is genuinely present.
+- Do not force a tell because prose is model-authored or because another tell is present.
+- Exact evidence must quote the smallest useful span(s).
+- UNCERTAIN is allowed only when two materially plausible readings would change the status, or missing unsupplied context would decide it. Mildness, shortness, lack of a source ledger, or conversational tone are not by themselves reasons for UNCERTAIN.
+- Emit all tell IDs exactly once. Do not add IDs or output a global Human/AI classification.
+
+CURRENT TELL INVENTORY:
+
+T01 — fake personal stake / irrelevant first-person authority
+A general criterion, standard, boundary, consequence, or recommendation is routed through the author's first-person want, need, preference, care, or entitlement, so the reader is asked to care what the author wants/gets to do instead of being given the point directly. This can happen even in autobiography.
+Decision test:
+1. Find first-person want/need/preference/care/permission/entitlement framing.
+2. Ask whether its content is really a general criterion about what a process, helper, relationship, practice, or rule should allow, avoid, produce, or imply.
+3. Depersonalize it into a direct general claim. If that loses no author-specific observation, actual reaction/disposition, event, real personal preference as subject, real question, or authority-limiting function, mark PRESENT.
+A practical-necessity claim backed by a mechanism, or genuine autobiographical experience, is not this tell merely because it uses "I".
+
+T02 — cumulative instruction-manual / compressed-listicle cadence
+At paragraph/section scale, consecutive compressed commands, verdicts, questions, conditions, distinctions, or lessons each do one clean teaching job and hand off to the next. A list, imperative, direct advice, or question alone is not this tell.
+
+T03 — abrupt complication without reader-visible setup
+A new concern/distinction appears because the requirements/source ledger needs it, but the previous visible thought does not generate why it matters now.
+
+T04 — scene-skinned semantic staircase
+A concrete/coherent scene merely skins the same source-function checklist: each scene beat maps one-for-one to a protected obligation in source-ledger order. Judge the observable topology; absence of the hidden source ledger is not by itself a reason for UNCERTAIN.
+
+T05 — synthetic/didactic prop continuity
+Concrete details are unusually convenient, mainly selected to carry the next teaching/source function, and are largely interchangeable rather than causally load-bearing.
+
+T06 — generic therapeutic abstraction
+Generic therapy-safe abstraction appears where the prose sounds concrete, e.g. vague grief/old thing/healing/process language that summarizes instead of carrying a specific lived relation.
+
+T07 — simulated spontaneity / fake filler as transition camouflage
+Hesitations, fragments, colloquial fillers, or self-talk function mainly as stage directions between engineered beats rather than arising from a real thought-turn.
+
+T08 — concrete image followed by explanatory aftercare / overcompletion
+A concrete beat already performs the function, then the next sentence immediately translates, explains, moralizes, or summarizes what it means. A mild instance is still PRESENT if the operation is actually there.
+
+T09 — equalized / optimal semantic efficiency
+Nearly every sentence or fragment advances the assignment with similar efficiency; nothing receives disproportionate attention because it actually became interesting. If the target is too short to judge this property, UNCERTAIN is allowed.
+
+T10 — generic permission syntax
+Permission or relief packaging carries a point as a reusable counseling formula rather than as a relation whose logic depends on this passage.
+Gate examples include "you don't have to", "you don't need to", "there's no need to", "it's okay to", "you're allowed to", "don't feel you must", "don't feel pressure to", "don't worry about", "no rush to", or close variants. A prohibition/warning against an action is not permission packaging merely because it starts with "don't".
+Decision test:
+1. Portability: after resolving pronouns, could the sentence's logic work as competent counseling about a different personal/relational/emotional problem by swapping topic nouns?
+2. Local anchor: would that move break the logic because the sentence sets a specific exception/order for an earlier claim, depends on a particular fact/mechanism/observation established here, or carries situation-dependent irony/joke?
+PRESENT if portable and not locally anchored. Otherwise ABSENT.
+Topic nouns, back-references, a named addressee, sincere belief, idiosyncratic diction, or a generic reassurance clause do not by themselves create a local anchor.
+
+T11 — generic bridge / connective tissue
+A transition mainly announces, justifies, or connects document functions rather than changing the situation the live thought is about.
+Decision test:
+1. Does the unit mainly connect/announce/justify moving from one part to another?
+2. Does it supply a subject-matter state change the following material needs and does not itself make clear: a new time/phase, case/person, premise/condition, or causal state of the people/things discussed?
+3. Deletion test: if removed, would the following material still follow from the preceding material, losing only announcement/relevance/linkage?
+PRESENT when there is no needed subject-matter state change and deletion costs only connective/relevance packaging. ABSENT when the transition supplies a needed state change or deletion harms coherence.
+A sentence can explicitly say X is why Y matters and still be generic linkage if the relation is between document functions rather than the subject itself. Bare connectors belong to T03/T07 as appropriate, not T11.
+
+T12 — symmetry / balanced contrast / tidy taxonomy
+Matched A/B cases, balanced categories, or a closed taxonomy package the thought into neat coverage. Do not flag genuine open hypothesis enumeration or a naturally necessary contrast merely because it has multiple items.
+
+Return valid JSON only:
+{
+  "ledger": [
+    {"tell_id":"T01","status":"PRESENT|ABSENT|UNCERTAIN","evidence":["..."],"reason":"..."}
+  ],
+  "blocking_present_ids":["..."],
+  "audit_complete":true
+}
+
+PREVIOUS CONTEXT:
+<PREVIOUS>
+
+TARGET:
+<TARGET>
+
+NEXT CONTEXT:
+<NEXT>

@@ -1,0 +1,29 @@
+T10 NARROW AUDIT — generic permission syntax
+
+Audit ONLY T10. Do not judge authorship or any other tell.
+
+Question: Does the target use a reusable permission shell, or is the permission specifically earned by the supplied context?
+
+Procedure:
+1. Identify the permission form, if any.
+2. Name the exact requirement it says the reader need not satisfy.
+3. Ask whether the supplied context itself created or implied that exact requirement.
+4. Ask whether the target directly corrects that local implication, or whether the same logic would still work in many unrelated topics after swapping the topic nouns.
+
+PRESENT when permission packaging is present and the released requirement was not specifically created by the local context, so the line functions as a portable formula.
+
+ABSENT when there is no permission packaging, or when the local context specifically created the requirement and the target directly cancels or limits that implication, or when the sentence is a prohibition rather than permission.
+
+A back-reference or local noun alone is not enough. The context must create the requirement being released.
+
+Return JSON only:
+{"status":"PRESENT|ABSENT|UNCERTAIN","permission_span":"...","released_requirement":"...","local_context_creates_requirement":"YES|NO|UNCLEAR","portable":"YES|NO|UNCLEAR","reason":"..."}
+
+PREVIOUS:
+<PREVIOUS>
+
+TARGET:
+<TARGET>
+
+NEXT:
+<NEXT>

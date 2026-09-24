@@ -246,3 +246,60 @@ Interpretation boundary:
 - Pangram remains downstream and cannot rescue a failed unpaid audit.
 
 No additional Pangram call was made during this debugging sequence after the six-call dangerous-adult budget had been exhausted.
+
+## 2026-09-24 — Claude CLI tell-ledger calibration checkpoint
+
+Claude Code CLI is now authenticated through the first-party subscription route and has been separately calibrated rather than inheriting OpenRouter effort results.
+
+On the frozen six-case / twelve-cell full-ledger benchmark:
+- medium: 9/12 exact, 3 UNCERTAIN, 0 wrong polarity;
+- high: 10/12 exact, 2 UNCERTAIN, 0 wrong polarity in two independent runs;
+- xhigh: 10/12 exact, 2 UNCERTAIN, 0 wrong polarity.
+
+High is the current CLI efficiency target because xhigh added material thinking/latency without aggregate gain. This is an execution-efficiency result, not a universal clearance certificate.
+
+A more explicit Claude-designed V2 rubric was rejected after a new T01/T10/T11 development holdout: it increased cost/latency and did not improve valid-cell accuracy. One T10 negative control was also found malformed because overall owner preference had been mistaken for tell-specific ABSENT evidence.
+
+Compact V2.1 is frozen as experimental only and awaits a genuinely fresh tell-specific holdout. Production keeps the existing full-ledger + specialized-audit architecture meanwhile.
+
+Jev remains optional positive triage only: it caught 6/9 known defects and all 6 PRESENT calls were correct in the small current benchmark, but its three errors were confident false ABSENTs. No Jev ABSENT may clear a tell.
+
+Exact evidence:
+`state/generation/global-tell-model-comparison-20260923/CLAUDE-CLI-CALIBRATION-AND-RUBRIC-V2-20260924.md`.
+
+No Pangram calls were used.
+
+## 2026-09-24 — Specialized T01 audit transfer
+
+The experimental compact V2.1 global prompt improved T10 on a fresh positive/negative pair and retained the consumed T11 regression pair, but it falsely flagged a fresh source-earned T01 authorial judgment. Repeated global-prompt patching for T01 was stopped.
+
+A one-axis T01 audit was calibrated around the missing distinction: depersonalization must preserve **speech act and epistemic force**, not merely proposition.
+
+Fresh held-out result with Claude Opus 5.5 CLI high: **2/2 exact**:
+- general helper criterion staged through `I care / I want` -> PRESENT;
+- genuine owner-specific self-relating motive -> ABSENT.
+
+Current routing:
+- global Claude CLI high sweep remains the broad catalog check;
+- disputed/PRESENT/UNCERTAIN T01 may route to the specialized T01 audit;
+- T10's compact rule has 2/2 fresh evidence but remains narrow-development evidence;
+- T11 still lacks genuinely fresh tell-specific validation and remains editorial/manual when disputed.
+
+No Pangram calls were used.
+
+Exact evidence:
+`state/generation/global-tell-model-comparison-20260923/T01-SPECIALIZED-AUDIT-RESULT-20260924.md`.
+
+## 2026-09-24 — Narrow tell-auditor routing
+
+The global tell-ledger remains the master sweep, but further global-rubric expansion is paused after V2/V2.1 cross-tell regressions.
+
+Current narrow-audit status:
+- **T11 generic bridge/connective tissue:** seeded low-effort Opus narrow auditor currently passes 4/4 post-freeze cross-domain controls plus 2/2 real regression controls; may be used as a cheap specialized audit on the current prompt/configuration.
+- **T01 fake personal stake:** narrow auditor remains advisory/manual only; one hard real negative is still falsely flagged.
+- **T10 generic permission syntax:** attempted narrow calibration rejected because the proposed negative-control theory was malformed and both known model-shaped permission endings were missed.
+
+Do not promote V2/V2.1 as the production global prompt. Do not infer T10 ABSENT from local motivation alone. Do not use owner preference/authorship as a tell-negative label.
+
+No Pangram calls were used.
+

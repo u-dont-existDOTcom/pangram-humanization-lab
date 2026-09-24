@@ -384,3 +384,70 @@ Therefore:
 Claude Code CLI exists with low/medium/high/xhigh/max controls but was unauthenticated during this test. Its effort ladder must be calibrated separately after re-login; OpenRouter Opus effort results cannot be transferred mechanically to the CLI route.
 
 Exact evidence: `state/generation/global-tell-model-comparison-20260923/CODEX-CLI-XHIGH-RESULT.md`.
+
+## 2026-09-24 — Claude CLI high is the efficiency target; rubric expansion must earn itself
+
+Provider-native Claude Code CLI was separately calibrated on the frozen six-case / twelve-cell full-ledger benchmark after first-party subscription authentication was restored.
+
+Results:
+- medium: **9/12 exact**, 3 UNCERTAIN, 0 wrong polarity;
+- high run 1: **10/12**, 2 UNCERTAIN, 0 wrong polarity;
+- high run 2: **10/12**, 2 UNCERTAIN, 0 wrong polarity;
+- xhigh: **10/12**, 2 UNCERTAIN, 0 wrong polarity.
+
+High repeated the same aggregate score while xhigh used roughly twice the thinking tokens and more latency. Therefore **Claude CLI high is the current efficiency target for the global tell sweep**. This is not permission to treat high as a sole certifier: PRESENT and UNCERTAIN remain unresolved, and under-calibrated tell families still require narrow/editorial review.
+
+A Claude-designed expanded V2 rubric then failed a new T01/T10/T11 development holdout. It was slower, more verbose, and no more accurate than V1; after removing one malformed T10 negative control, V1 scored 3/5 with one wrong polarity and one UNCERTAIN, while V2 scored 3/5 with two wrong-polarity calls and no UNCERTAIN. **Do not promote procedural bulk merely because it sounds more explicit.**
+
+Useful diagnosis from that failure:
+- T01 must distinguish a genuinely author-specific observation/reaction from a general criterion wearing first-person syntax, even inside autobiography;
+- T10 needs tell-specific controls: owner preference/authorship is not evidence that permission packaging is absent;
+- T11 should ask whether a bridge changes time/case/premise/causal state and whether deleting it harms coherence, not merely whether it names a relation.
+
+Compact V2.1 is experimental only until a genuinely fresh tell-specific holdout passes.
+
+Exact evidence:
+`state/generation/global-tell-model-comparison-20260923/CLAUDE-CLI-CALIBRATION-AND-RUBRIC-V2-20260924.md`.
+
+### Jev role, quantified
+
+Jev 1.13 remains useful as **positive triage**:
+- 6/9 known defects caught on the current 12-cell benchmark;
+- 3/3 known ABSENT controls left ABSENT;
+- all 6 Jev PRESENT calls were correct in this small set;
+- all 3 errors were false ABSENTs.
+
+Thus Jev can cheaply surface some already-blocked candidates before a slower Opus sweep, but a Jev ABSENT has no clearance value. The observed precision/recall are small-sample evidence, not stable estimates.
+
+## 2026-09-24 — T01 improved only after switching from global-prompt patching to a one-axis audit
+
+Compact global-rubric V2.1 improved the fresh T10 pair and preserved the consumed T11 regression pair, but it over-flagged a fresh T01 negative control. That repeated T01 instability crossed the same-method refinement threshold.
+
+The method changed rather than adding another global exception. A dedicated T01 auditor now asks whether depersonalization preserves not just proposition but also **speech act and epistemic force**. A situated/provisional first-person judgment remains source-earned when removing `I` would turn it into a more categorical rule.
+
+Fresh held-out transfer:
+- fake/general helper criterion wrapped in `I care / I want`: **PRESENT**;
+- owner-cognition-assisted personal motive inside the pencil/inner-child metaphor: **ABSENT**.
+
+Result: **2/2 exact** with Claude Opus 5.5 CLI high.
+
+Promoted architecture lesson: when one tell remains unstable under the full-ledger prompt, prefer a calibrated one-axis auditor over more global rubric clauses. The full ledger still runs; the narrow audit resolves implicated/disputed T01 findings. T10 has 2/2 fresh decision-rule evidence but is not yet independently validated as its own narrow auditor. T11 currently has only the consumed positive/negative regression pair.
+
+Exact evidence:
+`state/generation/global-tell-model-comparison-20260923/T01-SPECIALIZED-AUDIT-RESULT-20260924.md`.
+
+## 2026-09-24 — Under-calibrated tells should become narrow auditors, not more global-rubric complexity
+
+An expanded full-ledger V2 and compact V2.1 both showed the same architectural risk: improving one tell inside the global prompt can regress another. The method therefore switched from further global-rubric refinement to tell-specific narrow auditors.
+
+Post-freeze cross-domain controls at Opus 5.5 low/high were 4/4 each for T01, T10, and T11, but harder real-example regression separated the tells:
+
+- **T11:** low-effort narrow auditor passed 6/6 across seeded holdout + real regression and used zero thinking tokens on the low run. Current evidence supports low-effort T11 narrow auditing as a cheap specialized check.
+- **T01:** low-effort narrow auditor passed 3/4 real regression cases; it still over-flattens some first-person epistemic/classification stance into fake-personal criterion packaging. Do not use it as a clearing gate yet.
+- **T10:** the attempted local-anchor theory failed on both known model-shaped permission endings, and the supposed negative control was not a tell-specific owner/editorial ABSENT judgment. Reject that calibration architecture; T10 needs a genuine gate-passing negative control before model clearance is trusted.
+
+General lesson: when a tell is under-calibrated, do not invent negative controls from owner authorship/preference or from nearby repair instructions. Use direct tell-specific editorial labels. If the global prompt starts accumulating tell-local logic, decompose instead of turning the whole rubric into a larger instruction environment.
+
+Exact evidence:
+`state/generation/global-tell-model-comparison-20260923/CLAUDE-CLI-CALIBRATION-AND-RUBRIC-V2-20260924.md`.
+

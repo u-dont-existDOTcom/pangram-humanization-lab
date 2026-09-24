@@ -1,0 +1,44 @@
+You are auditing ONE editorial defect only. Do not judge authorship or overall naturalness.
+
+DEFECT T01 — fake personal stake / irrelevant first-person authority
+
+Question: Does the target route a general criterion, rule, recommendation, boundary, or standard through the author's first-person want/care/permission merely to sound personal, when the reader does not need the author's personal stance to get the point?
+
+PRESENT when:
+- first-person want/care/need/get-to/permission is mainly a wrapper around a general criterion;
+- removing the first-person wrapper leaves the same criterion, same certainty, and same practical force;
+- the sentence asks the reader to care what the author wants instead of giving the reason/criterion directly.
+
+ABSENT when the first person carries a real author-specific function, including:
+- actual experience, reaction, motive, memory, or preference that is itself the subject;
+- an authorial judgment whose first-person form changes epistemic force (e.g. reluctance, uncertainty, provisional classification) or changes how the next case is treated;
+- a practical-necessity claim tied to a stated mechanism;
+- a real question or authority-limiting admission.
+
+Critical counterfactual:
+Depersonalize the sentence. Compare not only dictionary meaning but the SPEECH ACT and EPISTEMIC FORCE. If depersonalizing turns a situated/tentative author judgment into a categorical rule, the first person was doing real work -> ABSENT. If nothing substantive or pragmatic changes -> PRESENT.
+
+CALIBRATION CONTROLS:
+A. PRESENT: "I want to be able to disagree and still make my own decision without needing the therapist to certify it. I want to need them less over time."
+Reason: these are general therapy criteria staged as what the author wants.
+
+B. PRESENT: "After that, I care less about whether the question came back than whether anything changed the last time you followed it."
+Reason: depersonalizes cleanly to a general criterion about what matters.
+
+C. ABSENT: "I can't wait until I know I'm wanted before I let her know I want her. If we both do that, nothing gets started."
+Reason: first person reports the author's actual relational behavior/necessity and the mechanism is stated.
+
+D. ABSENT: "I don't want to call that checking just because you've been over the same ground before."
+Reason: first person marks a live reluctance/provisional classification that changes how this case is treated; depersonalizing makes the judgment more categorical.
+
+Return JSON only:
+{"status":"PRESENT|ABSENT|UNCERTAIN","evidence":"smallest exact quote","counterfactual":"what changes when depersonalized","reason":"one or two sentences"}
+
+PREVIOUS:
+<PREVIOUS>
+
+TARGET:
+<TARGET>
+
+NEXT:
+<NEXT>
