@@ -1,0 +1,66 @@
+GLOBAL TELL-LEDGER CHECK — V2.1
+
+Audit the literal TARGET against each tell below, one at a time. Do not classify authorship or give an overall Human/AI verdict. PREVIOUS and NEXT are context only; quote evidence from TARGET only.
+
+STATUS
+- PRESENT: the tell's test is met in TARGET. A mild or brief instance is still PRESENT.
+- ABSENT: the test is not met, or TARGET lacks the material the tell needs.
+- UNCERTAIN only if (a) the deciding test has two named readings, equally supported by the prose, that give opposite statuses; or (b) the deciding fact lies in text not supplied. Never for mildness, shortness, "cannot confirm", missing source ledger, style, or overlap with another tell. Expect zero; if you have more than one, re-decide each.
+
+RULES
+- Surface forms are not tells: a list, first person, advice, imperative, question, short sentence, fragment, colloquialism, metaphor, or polish.
+- Human-looking features do not cancel a met test; model-looking features do not create one. One sentence may show several tells; judge each by its own test.
+- T02 and T09 judge patterns inside TARGET; context cannot supply missing sentences. T02 needs at least 3 sentences in one TARGET paragraph, T09 at least 5 in TARGET; otherwise ABSENT.
+- No source ledger is given; every test uses the prose alone.
+
+TELLS
+
+T01 — fake personal stake / irrelevant first-person authority
+First person inserts the author's want, preference, care, or entitlement as pseudo-authority without a reader-relevant reason. Test: in each such statement, substitute a generic agent (someone in that position) for the first person. PRESENT if it becomes the same general criterion or advice with nothing lost. ABSENT if something author-specific is lost: an experience, observation, history, or reaction the passage uses as evidence or reasons from, or a limit on the author's authority. A hypothetical first-person case is not experience. A want that is the topic being analyzed, rather than the standard offered to the reader, is not T01.
+
+T02 — cumulative instruction-manual / compressed-listicle cadence
+Consecutive compressed teaching moves each do one clean job and hand off. Teaching move: command, conditional instruction, self-test or fixed-answer question, verdict, rule, permission, prohibition, stated distinction, general lesson. Not: narration, anecdote, open hypothesis, aside, evidence report, the author reasoning about their own case, or a unit with detail its job does not need. PRESENT if a TARGET paragraph has 3 or more consecutive teaching moves forming at least three-quarters of it. Interdependent steps (a procedure) and softeners do not count against it.
+
+T03 — abrupt complication without reader-visible setup
+PRESENT if a concern, distinction, or entity new in TARGET is not prompted by, answering, or following from the visible material just before it. An unfamiliar term the thought leads to is not T03.
+
+T04 — scene-skinned semantic staircase
+Needs a scene with at least 2 sequential concrete beats. PRESENT if nearly every beat restates as a standalone lesson, beats follow lesson order rather than causes inside the scene, and no beat matters to the scene without mapping to a lesson. One analogy or thought experiment serving one argument is not T04.
+
+T05 — synthetic/didactic prop continuity
+PRESENT if most concrete details carried across beats mainly serve the next teaching function, are swappable for a generic same-kind item, and nothing depends on their particulars. Examples inside one sentence, subject-matter facts, and actions the reader is told to do are not props.
+
+T06 — generic therapeutic abstraction
+PRESENT if therapy-safe abstraction (vague grief, healing, process, the old thing) stands in for a specific lived relation amid concrete or lived-experience prose, so the reader cannot say what is meant. Emotion words with a stated cause, and general wording in purely expository or advice prose, are not T06.
+
+T07 — simulated spontaneity / fake filler as transition camouflage
+PRESENT if most hesitations, fillers, fragments, or self-talk sit between engineered beats, are deletable losing only pacing, and respond to nothing specific. Sounding natural does not count against it. Content-bearing fragments and colloquial words inside claims are not T07.
+
+T08 — concrete image followed by explanatory aftercare / overcompletion
+A concrete beat (image, action, object, sensory detail) already works, then the next sentence or clause states what it means or teaches. PRESENT if deleting the follow-up loses only that explicit meaning, even when the gloss is short; ABSENT if it adds a new claim, event, or consequence. Verdicts and arguments are not concrete beats.
+
+T09 — equalized / optimal semantic efficiency
+PRESENT if nearly every sentence advances the apparent assignment with similar efficiency and nothing gets more space than its function needs (lingering, digression, pet emphasis, joke).
+
+T10 — generic permission syntax
+Permission packaging carries a requirement as a reusable counseling formula rather than an earned local relation. Gate: the sentence's main job is to release the reader from a necessity or grant permission, in necessity/permission grammar. Paradigm: prerequisite-release, X is not required before, until, or in order to Y. A plain imperative, including one about the reader's feelings or beliefs, fails the gate unless it states a prerequisite release. PRESENT if the release still works in counseling on another problem with only its slot-fillers swapped; local nouns in the slots, or reference back to earlier material, do not make it local. ABSENT only if the relation itself depends on a claim or constraint argued in this passage.
+
+T11 — generic bridge / connective tissue
+Candidate: a sentence or clause whose main job is linking, previewing, or justifying adjacent material. Bare connectors are not candidates (a jump joined only by one is T03); fillers are T07. Deletion test: remove the candidate and reread what follows. ABSENT if the reader would now misread which time, stage, case, condition, or premise the next material applies to; the candidate carries a necessary state change. PRESENT if what follows still reads correctly and only a link or justification of the document's structure is lost. Naming a causal or additive relation does not by itself make a transition necessary. If the test turns on unsupplied NEXT text, use UNCERTAIN(b).
+
+T12 — symmetry / balanced contrast / tidy taxonomy
+PRESENT if parallel items or categories are matched in form or weight, framed as complete coverage, and at least one only fills out the set. Open hypotheses, tentative candidates, illustrative sets, and contrasts the point needs are not T12.
+
+OUTPUT
+JSON only, one row per tell, T01 to T12 in order:
+{"ledger":[{"tell_id":"T01","status":"PRESENT|ABSENT|UNCERTAIN","evidence":["shortest exact TARGET span"],"reason":"at most 25 words: deciding test and result"}]}
+evidence is [] when ABSENT. An UNCERTAIN reason names both readings or the missing text. No other fields.
+
+PREVIOUS CONTEXT:
+<PREVIOUS>
+
+TARGET:
+<TARGET>
+
+NEXT CONTEXT:
+<NEXT>
