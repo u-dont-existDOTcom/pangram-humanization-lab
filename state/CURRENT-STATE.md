@@ -246,3 +246,26 @@ Interpretation boundary:
 - Pangram remains downstream and cannot rescue a failed unpaid audit.
 
 No additional Pangram call was made during this debugging sequence after the six-call dangerous-adult budget had been exhausted.
+
+## 2026-09-24 — Claude CLI tell-ledger calibration checkpoint
+
+Claude Code CLI is now authenticated through the first-party subscription route and has been separately calibrated rather than inheriting OpenRouter effort results.
+
+On the frozen six-case / twelve-cell full-ledger benchmark:
+- medium: 9/12 exact, 3 UNCERTAIN, 0 wrong polarity;
+- high: 10/12 exact, 2 UNCERTAIN, 0 wrong polarity in two independent runs;
+- xhigh: 10/12 exact, 2 UNCERTAIN, 0 wrong polarity.
+
+High is the current CLI efficiency target because xhigh added material thinking/latency without aggregate gain. This is an execution-efficiency result, not a universal clearance certificate.
+
+A more explicit Claude-designed V2 rubric was rejected after a new T01/T10/T11 development holdout: it increased cost/latency and did not improve valid-cell accuracy. One T10 negative control was also found malformed because overall owner preference had been mistaken for tell-specific ABSENT evidence.
+
+Compact V2.1 is frozen as experimental only and awaits a genuinely fresh tell-specific holdout. Production keeps the existing full-ledger + specialized-audit architecture meanwhile.
+
+Jev remains optional positive triage only: it caught 6/9 known defects and all 6 PRESENT calls were correct in the small current benchmark, but its three errors were confident false ABSENTs. No Jev ABSENT may clear a tell.
+
+Exact evidence:
+`state/generation/global-tell-model-comparison-20260923/CLAUDE-CLI-CALIBRATION-AND-RUBRIC-V2-20260924.md`.
+
+No Pangram calls were used.
+
