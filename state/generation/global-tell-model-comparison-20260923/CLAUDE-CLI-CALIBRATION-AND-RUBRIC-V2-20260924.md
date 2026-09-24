@@ -162,3 +162,67 @@ Interpretation:
 7. Treat compact V2.1 as an experiment awaiting a fresh blind holdout.
 8. Keep OpenRouter xhigh as the current API-fallback setting; max remains escalation only.
 9. No Pangram calls were made in this work.
+
+## Partial V2.1 transfer test and method switch
+
+A compact V2.1 kept V1 as the base and changed only T01/T10/T11 decision procedures.
+
+Fresh controls:
+- T01 PRESENT: `I care less about...` general criterion wrapper.
+- T01 ABSENT: `I don't want to call that checking...` source-required provisional authorial judgment.
+- T10 PRESENT: `You don't have to keep producing new versions of the same no.` — contemporaneously audited as a model-shaped permission/advice close.
+- T10 ABSENT: `You don't have to make vivid pictures appear just because the words aren't there. Quiet can just be quiet.` — locally anchored correction to the specific false inference that absent words create an obligation to visualize.
+
+Consumed T11 regression controls:
+- generic document-linkage bridge: PRESENT;
+- required Romance temporal/case transition: ABSENT.
+
+Results at Claude CLI high:
+- V1 on the four fresh T01/T10 controls: **2/4 exact**, 1 UNCERTAIN, 1 wrong polarity.
+- V2.1 on the same four fresh controls: **3/4 exact**, 0 UNCERTAIN, 1 wrong polarity.
+- V2.1 on the consumed T11 pair: **2/2 exact**.
+
+V2.1 fixed both T10 fresh controls and preserved the T11 regressions, but it **over-flagged the fresh T01 ABSENT**. The depersonalization rule treated a provisional first-person classification as equivalent to a categorical rule and therefore erased the speech-act/epistemic-force difference.
+
+This crosses the same-method refinement threshold for T01. Do not add another global-rule patch merely to fit it.
+
+## Specialized T01 architecture
+
+The T01 question was moved out of the global rubric into a one-axis audit.
+
+The specialized test explicitly asks whether depersonalization preserves:
+- proposition;
+- speech act;
+- epistemic force;
+- practical force.
+
+It marks ABSENT when first person carries genuine author-specific experience/reaction/motive or a situated/provisional judgment whose depersonalization would become more categorical.
+
+Calibration examples in the narrow prompt:
+- two PRESENT controls: generic therapy criteria wrapped in `I want...` / `I care less...`;
+- two ABSENT controls: actual relational necessity with a stated mechanism; provisional classification `I don't want to call that checking...`.
+
+Fresh held-out controls:
+1. PRESENT — `The test I care about is whether I slowly need the helper less...` general helper criterion.
+2. ABSENT — owner-cognition-assisted `I don't want the adult to arrive, grab the pencil...` actual self-relating motive/metaphor.
+
+Claude Opus 5.5 CLI high result: **2/2 exact**.
+
+Interpretation:
+- this is scoped evidence that a one-axis audit is better than further global-rubric accretion for T01;
+- it is not a universal accuracy estimate;
+- retain direct editorial authority and expand two-sided controls before claiming broad certification.
+
+## Current architecture after this checkpoint
+
+- optional Jev positive triage;
+- Claude Code CLI high global full-ledger sweep using the compact production base;
+- specialized/narrow audit for implicated or disputed axes;
+- **T01:** narrow specialized auditor now has a 2/2 fresh held-out transfer;
+- **T10:** compact decision rule has 2/2 fresh transfer evidence but has not yet been separately validated as a dedicated narrow auditor;
+- **T11:** compact decision rule passes the consumed positive/negative regression pair only; fresh tell-specific validation remains missing;
+- direct natural-boundary editorial read remains mandatory;
+- Pangram stays downstream.
+
+No Pangram calls were made.
+
