@@ -1,0 +1,65 @@
+You are performing a GLOBAL TELL-LEDGER CHECK for Joel humanization. You are NOT classifying hidden authorship and must NOT output an overall Human/AI judgment.
+
+Audit the literal TARGET against EVERY tell below. Return one row for every tell ID using PRESENT, ABSENT, or UNCERTAIN.
+
+Rules:
+- PRESENT means the observable operation is instantiated, not merely a related surface form.
+- Judge paragraph/section tells at that scale. Human-looking features do not cancel a tell; model-looking features do not create one.
+- A list, first person, advice, question, short sentence, fragment, colloquialism, metaphor, or polished sentence is not itself a tell.
+- Exact evidence must quote the smallest useful TARGET span(s).
+- UNCERTAIN is allowed only when the supplied prose supports two materially plausible readings that imply opposite statuses, or missing context explicitly required by the tell would decide it. Mildness, brevity, a short target, lack of a source ledger, or Human-looking features are NOT reasons for UNCERTAIN.
+- Emit T01-T12 exactly once. Do not add tell IDs.
+
+T01 — fake personal stake / irrelevant first-person authority
+First person makes a general criterion, standard, boundary, consequence, or recommendation ride on the author's want, need, care, preference, or entitlement. Ask: if this were stated directly as a general claim, would anything reader-relevant be lost besides the first-person wrapper? PRESENT when no: the first person contributes no author-specific event, observation, actual preference-as-subject, practical reaction, or authority-limiting fact. This can occur even when the author discusses their own therapy or relationship. ABSENT for actual autobiography, observed reaction/behavior, a real personal preference that is itself the subject, a real question, or first person that materially limits authority.
+
+T02 — cumulative instruction-manual / compressed-listicle cadence
+At paragraph/section scale, consecutive compressed teaching moves each do one clean job and hand off to the next. A teaching move includes a command, self-test question, fixed-answer rhetorical question, conditional instruction, verdict, prohibition/permission, distinction, or portable lesson. PRESENT when a paragraph contains at least 3 consecutive such moves with no substantive anecdote, hypothesis, digression, enacted scene, or surplus thought interrupting the run. Logical dependency between steps does NOT defeat the tell: test -> result -> action -> fallback is a manual sequence. An open hypothesis list, one imperative, one list, or advice broken by real anecdote/aside is not enough.
+
+T03 — abrupt complication without reader-visible setup
+A new concern/distinction appears, but the visible preceding thought does not generate why it matters now. Ask whether the preceding context gives the reader a reason it now matters: it answers, complicates, follows from, or is prompted by what came before. If not, PRESENT. An undefined term alone is not enough when the thought visibly leads to it.
+
+T04 — scene-skinned semantic staircase
+A coherent scene skins a checklist: sequential concrete beats each carry a separable lesson/function rather than following from causes, time, or motives inside the scene. Reconstruct the possible checklist from the prose itself; no source ledger is required. PRESENT when most scene beats can be translated into standalone general lessons, the beats do not materially cause one another inside the scene, and there is little scene detail with independent causal/moral consequence. ABSENT for a single analogy or a scene whose details causally change later events or judgments.
+
+T05 — synthetic/didactic prop continuity
+Concrete details are unusually convenient, mainly selected to carry the next teaching function, and largely interchangeable rather than causally load-bearing. Ask whether the main props could be swapped for generic equivalents without changing consequences, irony, later action, or judgment. If mostly yes and they mainly serve teaching functions, PRESENT.
+
+T06 — generic therapeutic abstraction
+Generic therapy-safe abstraction appears inside otherwise concrete/lived prose and substitutes for specific relation/content: vague grief, old thing, healing/process language, etc. Plain emotion words tied to a stated cause or ordinary general exposition are not enough.
+
+T07 — simulated spontaneity / fake filler as transition camouflage
+Hesitations, fragments, colloquial fillers, or self-talk function mainly as stage directions between engineered beats rather than arising from a visible thought-turn. Deletion that loses only pacing/transition supports PRESENT; a fragment that carries content or responds to real reconsideration is not.
+
+T08 — concrete image followed by explanatory aftercare / overcompletion
+A concrete beat already performs its function, then the next sentence/clause immediately translates, explains, moralizes, or summarizes what it means. PRESENT even when the gloss is mild or brief if deleting it loses only the explicit statement of the image's meaning. ABSENT when the next sentence adds a genuinely new claim, event, consequence, or fact.
+
+T09 — equalized / optimal semantic efficiency
+Nearly every sentence or fragment advances the assignment with similar efficiency; nothing receives disproportionate attention because it actually became interesting. Judge the complete natural boundary. Uneven elaboration, a real digression/joke, or source-earned lingering beyond immediate function is evidence against this tell.
+
+T10 — generic permission syntax
+Permission/relief packaging carries a point as a reusable counseling formula rather than an earned local relation. Includes 'you don't have to/need to', 'it's okay to', 'you're allowed to', 'don't feel pressure to', 'no need to', and close functional variants. Ask whether the sentence's LOGIC would remain competent self-help advice after swapping the topic nouns. PRESENT when yes and its logic does not depend on a specific earlier mechanism, exception, step order, consequence, joke, or irony. A pronoun/back-reference, named addressee, local nouns, or generic reassurance does not by itself create a local anchor. A true prohibition/warning ('don't do X' because X is harmful) is not permission syntax.
+
+T11 — generic bridge / connective tissue
+A transition mainly announces, justifies, or connects document functions instead of changing the live subject. Use two tests: (1) STATE CHANGE — does it supply a needed shift of time/phase, case/person, premise/condition, or causal state that following material depends on? (2) DELETION — if removed, would the following material still follow, losing only announcement/relevance/linkage? PRESENT when state-change=NO and deletion=YES. ABSENT when following material needs the stated shift. Causal words such as 'why' or a reference to earlier material do not by themselves make a bridge substantive. Bare conjunctions/adverbs are not T11.
+
+T12 — symmetry / balanced contrast / tidy taxonomy
+Matched A/B cases, balanced categories, or a closed taxonomy package the thought into neat coverage. Do not flag a genuine open hypothesis enumeration or a naturally necessary contrast merely because it has multiple items.
+
+Return valid JSON only:
+{
+  "ledger": [
+    {"tell_id":"T01","status":"PRESENT|ABSENT|UNCERTAIN","evidence":["..."],"reason":"..."}
+  ],
+  "blocking_present_ids":["..."],
+  "audit_complete":true
+}
+
+PREVIOUS CONTEXT:
+<PREVIOUS>
+
+TARGET:
+<TARGET>
+
+NEXT CONTEXT:
+<NEXT>
