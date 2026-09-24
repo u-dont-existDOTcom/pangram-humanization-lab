@@ -290,3 +290,16 @@ No Pangram calls were used.
 Exact evidence:
 `state/generation/global-tell-model-comparison-20260923/T01-SPECIALIZED-AUDIT-RESULT-20260924.md`.
 
+## 2026-09-24 — Narrow tell-auditor routing
+
+The global tell-ledger remains the master sweep, but further global-rubric expansion is paused after V2/V2.1 cross-tell regressions.
+
+Current narrow-audit status:
+- **T11 generic bridge/connective tissue:** seeded low-effort Opus narrow auditor currently passes 4/4 post-freeze cross-domain controls plus 2/2 real regression controls; may be used as a cheap specialized audit on the current prompt/configuration.
+- **T01 fake personal stake:** narrow auditor remains advisory/manual only; one hard real negative is still falsely flagged.
+- **T10 generic permission syntax:** attempted narrow calibration rejected because the proposed negative-control theory was malformed and both known model-shaped permission endings were missed.
+
+Do not promote V2/V2.1 as the production global prompt. Do not infer T10 ABSENT from local motivation alone. Do not use owner preference/authorship as a tell-negative label.
+
+No Pangram calls were used.
+
