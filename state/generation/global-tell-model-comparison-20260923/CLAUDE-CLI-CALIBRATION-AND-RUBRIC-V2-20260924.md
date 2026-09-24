@@ -226,3 +226,85 @@ Interpretation:
 
 No Pangram calls were made.
 
+## Narrow-auditor strategy switch — 2026-09-24
+
+The global-rubric V2/V2.1 iterations reached the method-switch threshold. A global prompt change that helped one under-calibrated tell could regress another. The next experiment therefore decomposed T01, T10, and T11 into one-axis auditors rather than adding more global rubric machinery.
+
+### Frozen narrow prompts
+
+Before constructing the new holdouts, three narrow prompts were frozen locally:
+
+- T01 narrow SHA-256: `b52a6aba6e36378a15eadf9d503e08e3d950e2281f59a1290e9c1c3b45d3d5a0`
+- T10 narrow SHA-256: `207439ffb284b473371deb6f2ff4d04cf5abd2e01cecc85edd396b0c42aa47d5`
+- T11 narrow SHA-256: `c7bfdb481e176aa7b854d1b5cd76d2988023cf2e758a1bcf379fff45a992f5ae`
+
+Each auditor asks one observable editorial question and emits one PRESENT / ABSENT / UNCERTAIN result. No global Human/AI judgment is allowed.
+
+### Post-freeze cross-domain holdout
+
+Each narrow auditor was tested on four controls constructed only after its prompt was frozen.
+
+At Claude Opus 5.5 **high**:
+- T01: **4/4**
+- T10: **4/4**
+- T11: **4/4**
+
+At Claude Opus 5.5 **low** on the exact same controls:
+- T01: **4/4**
+- T10: **4/4**
+- T11: **4/4**
+
+The low runs used zero thinking tokens on all twelve cells.
+
+This synthetic/controlled 12/12 result is useful routing evidence, but it is not sufficient calibration authority by itself.
+
+### Hard real-example regression
+
+The same low-effort narrow auditors were then checked against the harder real development examples that motivated the tells.
+
+**T01 low**
+- original owner-rejected therapy preference/permission wrapper: correct PRESENT;
+- Romance actual desire/disposition: correct ABSENT;
+- `I care less about...` fake-personal criterion wrapper: correct PRESENT;
+- `I don't want to call that checking...`: **false PRESENT** against the contemporaneous editorial/H4 disposition.
+
+Result: **3/4** on the harder real regression set.
+
+Interpretation: the narrow depersonalization test is useful but still over-flattens some first-person epistemic/classification stance. T01 is **not ready as a low-effort clearing auditor**.
+
+**T10 low**
+- RT2 `You don't have to settle that before...`: **false ABSENT**;
+- B2 `You don't have to keep producing new versions...`: **false ABSENT**;
+- inner-monologue visualization permission: ABSENT under the attempted label.
+
+The two known model-shaped permission endings were missed because the new auditor treated local motivation as sufficient to make permission syntax earned.
+
+More importantly, the supposed inner-monologue ABSENT control was never a tell-specific owner/editorial ABSENT judgment; it was inferred from a repair guide that actually asked to merge/demote the permission form. The T10 negative-control premise is therefore unreliable.
+
+Interpretation: **reject the attempted T10 calibration architecture**. T10 currently lacks a trustworthy gate-passing negative control. Do not keep refining against invented negatives. Treat T10 as manual/editorial or advisory until a direct tell-specific negative control exists.
+
+**T11 low**
+- cross-domain holdout: **4/4**;
+- real connective-tissue PRESENT regression: correct;
+- necessary Romance time/phase bridge ABSENT regression: correct.
+
+Result: **6/6** across seeded holdout + real regression, with zero thinking tokens in the low run.
+
+Interpretation: T11 is the only one of these three tells with current evidence supporting a **low-effort narrow auditor**. This remains a small seeded calibration, not an accuracy estimate.
+
+### Production routing consequence
+
+Do not promote global V2 or V2.1.
+
+Current economical routing is:
+
+1. optional Jev positive triage;
+2. compact Claude global sweep when the whole catalog needs review;
+3. tell-specific narrow auditor only when that axis has real calibration evidence;
+4. T11 may use the low-effort narrow auditor on the current prompt/configuration;
+5. T01 remains manual/editorial or higher-rigor advisory until its epistemic-stance boundary is better calibrated;
+6. T10 remains manual/editorial/advisory until a genuine gate-passing negative control exists;
+7. no ABSENT from Jev or an uncalibrated narrow auditor may clear a tell.
+
+No Pangram calls were used.
+
