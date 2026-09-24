@@ -1,0 +1,30 @@
+T11 NARROW AUDIT — generic bridge / connective tissue
+
+Audit ONLY T11. Do not judge authorship or any other tell.
+
+Question: Does the target merely connect document parts, or does it supply a subject-matter state change that the next material needs?
+
+Procedure:
+1. State the target's job.
+2. Identify any new subject-matter state it supplies: time or phase, case or person, premise or condition, causal state, or live question.
+3. Deletion test: remove TARGET mentally. Would NEXT still follow from PREVIOUS with the same subject-matter meaning, losing only announcement or linkage?
+
+PRESENT when no needed subject-matter state change is supplied and deleting TARGET costs only connective or relevance packaging.
+
+ABSENT when TARGET supplies a needed state change, or deleting it materially harms coherence or changes how NEXT should be read.
+
+A sentence can explicitly say that one part is why another matters and still be PRESENT if the relation is about the document rather than the subject.
+A short or colloquial transition can still be PRESENT.
+A bare conjunction or adverb alone is not T11.
+
+Return JSON only:
+{"status":"PRESENT|ABSENT|UNCERTAIN","job":"...","subject_state_change":"...","deletion_effect":"...","reason":"..."}
+
+PREVIOUS:
+<PREVIOUS>
+
+TARGET:
+<TARGET>
+
+NEXT:
+<NEXT>
