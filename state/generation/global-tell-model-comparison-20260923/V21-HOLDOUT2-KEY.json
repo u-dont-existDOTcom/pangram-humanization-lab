@@ -1,0 +1,42 @@
+{
+  "format": "joel-tell-ledger-v21-heldout2-key-v1",
+  "labels": [
+    {
+      "case_id": "H2-T01-PRESENT",
+      "tell_id": "T01",
+      "expected": "PRESENT",
+      "basis": "The active Human-facing tell library records owner-rejected fake-personal examples including 'I care less about...'; the first-person preference adds no author-specific evidence and wraps the general criterion of whether another processing round changed anything."
+    },
+    {
+      "case_id": "H2-T01-ABSENT",
+      "tell_id": "T01",
+      "expected": "ABSENT",
+      "basis": "Natural owner prose states an actual authorial refusal/policy and its reason; the first-person decision itself is the subject and cannot be depersonalized without changing what Joel says he will do."
+    },
+    {
+      "case_id": "H2-T10-PRESENT",
+      "tell_id": "T10",
+      "expected": "PRESENT",
+      "basis": "The strict audit explicitly diagnoses the surrounding realization as ending in a concise permission/advice close; this sentence is portable permission packaging rather than a relation that depends on the local case."
+    },
+    {
+      "case_id": "H2-T10-ABSENT",
+      "tell_id": "T10",
+      "expected": "ABSENT",
+      "basis": "Natural owner prose uses superficially similar 'you don't need' syntax to make a specific evidentiary-sufficiency claim: the published public program itself supplies the evidence, so conspiracy framing is unnecessary. The logic depends on this evidence relation rather than generic therapeutic permission."
+    },
+    {
+      "case_id": "H2-T11-PRESENT",
+      "tell_id": "T11",
+      "expected": "PRESENT",
+      "basis": "Owner calibration and the Human-facing transition library identify 'The same principle extends...' as model-shaped cross-domain connective tissue; the bridge clause announces transfer while the substantive inner-child claim can stand without that generic linkage."
+    },
+    {
+      "case_id": "H2-T11-ABSENT",
+      "tell_id": "T11",
+      "expected": "ABSENT",
+      "basis": "Natural owner prose marks a genuine premise change from recommendation/praise to the limiting condition that the governance system depends on centuries of shared culture; the following explanation requires that caveat."
+    }
+  ],
+  "scoring_rule": "Score only the named tell_id for each case. UNCERTAIN is unresolved, not exact. Any wrong-polarity result blocks promotion. This is a small iteration holdout, not universal accuracy evidence."
+}
