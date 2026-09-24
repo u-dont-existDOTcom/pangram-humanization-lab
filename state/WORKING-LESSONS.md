@@ -436,3 +436,18 @@ Promoted architecture lesson: when one tell remains unstable under the full-ledg
 Exact evidence:
 `state/generation/global-tell-model-comparison-20260923/T01-SPECIALIZED-AUDIT-RESULT-20260924.md`.
 
+## 2026-09-24 — Under-calibrated tells should become narrow auditors, not more global-rubric complexity
+
+An expanded full-ledger V2 and compact V2.1 both showed the same architectural risk: improving one tell inside the global prompt can regress another. The method therefore switched from further global-rubric refinement to tell-specific narrow auditors.
+
+Post-freeze cross-domain controls at Opus 5.5 low/high were 4/4 each for T01, T10, and T11, but harder real-example regression separated the tells:
+
+- **T11:** low-effort narrow auditor passed 6/6 across seeded holdout + real regression and used zero thinking tokens on the low run. Current evidence supports low-effort T11 narrow auditing as a cheap specialized check.
+- **T01:** low-effort narrow auditor passed 3/4 real regression cases; it still over-flattens some first-person epistemic/classification stance into fake-personal criterion packaging. Do not use it as a clearing gate yet.
+- **T10:** the attempted local-anchor theory failed on both known model-shaped permission endings, and the supposed negative control was not a tell-specific owner/editorial ABSENT judgment. Reject that calibration architecture; T10 needs a genuine gate-passing negative control before model clearance is trusted.
+
+General lesson: when a tell is under-calibrated, do not invent negative controls from owner authorship/preference or from nearby repair instructions. Use direct tell-specific editorial labels. If the global prompt starts accumulating tell-local logic, decompose instead of turning the whole rubric into a larger instruction environment.
+
+Exact evidence:
+`state/generation/global-tell-model-comparison-20260923/CLAUDE-CLI-CALIBRATION-AND-RUBRIC-V2-20260924.md`.
+
