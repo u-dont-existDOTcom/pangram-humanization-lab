@@ -1,0 +1,103 @@
+{
+  "format": "tell-v21-second-holdout-20260924-v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "note": "Primary cells are editorial-operation labels, not authorship labels. Synthetic cases are controlled one-variable probes and are not article prose.",
+  "cases": [
+    {
+      "case_id": "H2-T01-PRESENT-SYNTH-COMMUNITY",
+      "previous": "A community can absorb only as much need as its members have free resource to meet.",
+      "target": "I want a community to take on only as much need as its members have free resource to meet.",
+      "next": "That is a resource constraint, not a judgment of anyone's worth.",
+      "scored": [
+        {
+          "tell_id": "T01",
+          "expected": "PRESENT",
+          "basis": "Controlled mutation: first-person want adds no author-specific evidence; generic-agent substitution preserves the proposition."
+        }
+      ]
+    },
+    {
+      "case_id": "H2-T01-ABSENT-TRANSCRIPT",
+      "previous": "[DOCUMENT_START]",
+      "target": "So my childhood was a lot of bouncing around between different communes like Twin Oaks, Acorn, East Wind, Padanaram, Zendik, etc. I was never quite the commune kid; I was the perpetual visitor's kid, which turned out to be rarer and stranger: I got the comparison view.",
+      "next": "Dozens of experiments, side by side, decades apart.",
+      "scored": [
+        {
+          "tell_id": "T01",
+          "expected": "ABSENT",
+          "basis": "Autobiographical experience is the evidence; generic-agent substitution destroys the source-specific observation."
+        }
+      ]
+    },
+    {
+      "case_id": "H2-T10-PRESENT-SYNTH-COMMUNITY",
+      "previous": "You can start building the relationships before you own land.",
+      "target": "You don't have to know exactly what your future community will look like before finding two or three people to practice with.",
+      "next": "A living room and a commitment to meet are enough to begin.",
+      "scored": [
+        {
+          "tell_id": "T10",
+          "expected": "PRESENT",
+          "basis": "Controlled prerequisite-release formula; relation is reusable with slot substitution and is not earned by a mechanism in the passage."
+        }
+      ]
+    },
+    {
+      "case_id": "H2-T10-ABSENT-SYNTH-RULE",
+      "previous": "In this example, big decisions are made by the membership rather than by a founder acting alone.",
+      "target": "Because the membership holds that decision, you don't have to ask the founder's permission before the vote can proceed.",
+      "next": "The permission follows from the governance rule just stated.",
+      "scored": [
+        {
+          "tell_id": "T10",
+          "expected": "ABSENT",
+          "basis": "Permission follows from an explicit governance mechanism immediately before; the relation itself depends on that local rule."
+        }
+      ]
+    },
+    {
+      "case_id": "H2-T11-PRESENT-COMMUNITY",
+      "previous": "The thing that's missing is spiritual community without the cult plumbing: depth work and play that is peer-distributed—held by everyone, owed to no one.",
+      "target": "That's what the rest of this article is about.",
+      "next": "# The conversation problem",
+      "scored": [
+        {
+          "tell_id": "T11",
+          "expected": "PRESENT",
+          "basis": "Deleting target loses only an announcement of document scope; following heading remains correctly interpretable."
+        }
+      ]
+    },
+    {
+      "case_id": "H2-T11-ABSENT-COMMUNITY",
+      "previous": "Every connection to the dominant system—medical, financial, communicative, legal, alimentary, energetic—is a separate decision with real costs in both directions.",
+      "target": "The hardest coupling is medicine, so look at it directly.",
+      "next": "Modern medicine is about to get very good—possibly nanobot-and-gene-edit good—and almost everything it offers will require full enrollment in the system.",
+      "scored": [
+        {
+          "tell_id": "T11",
+          "expected": "ABSENT",
+          "basis": "Target performs a substantive case shift from couplings generally to medicine specifically; it selects which case the following paragraph instantiates."
+        }
+      ]
+    },
+    {
+      "case_id": "H2-REGRESSION-TRANSCRIPT",
+      "previous": "He was like, no, it's okay. Thanks. I just drink vodka.",
+      "target": "And I said, you should love your inner child. Try loving your inner child. And he was like, what do you mean? Oh, he thought I said something else. I was like, no, no. Like I said it again. He's like, hmm. Oh, you mean like Michael Jackson? I was like, no, actually, Michael Jackson was the inner child.",
+      "next": "So he was identifying as the inner child. That was not what I'm talking about.",
+      "scored": [
+        {
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "basis": "Narrated dialogue and idiosyncratic exchange, not three consecutive compressed teaching moves."
+        },
+        {
+          "tell_id": "T09",
+          "expected": "ABSENT",
+          "basis": "Uneven narrated dialogue, repetition, misunderstanding, and surplus detail prevent equalized semantic efficiency."
+        }
+      ]
+    }
+  ]
+}
