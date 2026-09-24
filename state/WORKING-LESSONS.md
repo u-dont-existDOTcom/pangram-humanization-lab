@@ -419,3 +419,20 @@ Jev 1.13 remains useful as **positive triage**:
 
 Thus Jev can cheaply surface some already-blocked candidates before a slower Opus sweep, but a Jev ABSENT has no clearance value. The observed precision/recall are small-sample evidence, not stable estimates.
 
+## 2026-09-24 — T01 improved only after switching from global-prompt patching to a one-axis audit
+
+Compact global-rubric V2.1 improved the fresh T10 pair and preserved the consumed T11 regression pair, but it over-flagged a fresh T01 negative control. That repeated T01 instability crossed the same-method refinement threshold.
+
+The method changed rather than adding another global exception. A dedicated T01 auditor now asks whether depersonalization preserves not just proposition but also **speech act and epistemic force**. A situated/provisional first-person judgment remains source-earned when removing `I` would turn it into a more categorical rule.
+
+Fresh held-out transfer:
+- fake/general helper criterion wrapped in `I care / I want`: **PRESENT**;
+- owner-cognition-assisted personal motive inside the pencil/inner-child metaphor: **ABSENT**.
+
+Result: **2/2 exact** with Claude Opus 5.5 CLI high.
+
+Promoted architecture lesson: when one tell remains unstable under the full-ledger prompt, prefer a calibrated one-axis auditor over more global rubric clauses. The full ledger still runs; the narrow audit resolves implicated/disputed T01 findings. T10 has 2/2 fresh decision-rule evidence but is not yet independently validated as its own narrow auditor. T11 currently has only the consumed positive/negative regression pair.
+
+Exact evidence:
+`state/generation/global-tell-model-comparison-20260923/T01-SPECIALIZED-AUDIT-RESULT-20260924.md`.
+
