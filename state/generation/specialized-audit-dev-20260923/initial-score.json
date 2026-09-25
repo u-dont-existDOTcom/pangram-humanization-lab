@@ -1,0 +1,63 @@
+{
+  "format": "joel-specialized-audit-dev-v1-score",
+  "total": 8,
+  "correct": 7,
+  "rows": [
+    {
+      "case_id": "RP1",
+      "expected": "PASS",
+      "basis": "reader is the guide user; heading supplies why-now/readiness function",
+      "predicted": "PASS",
+      "correct": true
+    },
+    {
+      "case_id": "RP2",
+      "expected": "FAIL",
+      "basis": "owner correction: H2 silently loses ordinary reader/pragmatic reason; who is this talking to and why care",
+      "predicted": "FAIL",
+      "correct": true
+    },
+    {
+      "case_id": "AN1",
+      "expected": "FAIL",
+      "basis": "owner correction: quoted metaword ask survives after setup introducing voice/ask/answer was removed",
+      "predicted": "FAIL",
+      "correct": true
+    },
+    {
+      "case_id": "AN2",
+      "expected": "PASS",
+      "basis": "raw setup explicitly introduces voice/ask/answer before target use",
+      "predicted": "FAIL",
+      "correct": false
+    },
+    {
+      "case_id": "CD1",
+      "expected": "FAIL",
+      "basis": "owner correction: instruction-manual/listicle cadence",
+      "predicted": "FAIL",
+      "correct": true
+    },
+    {
+      "case_id": "CD2",
+      "expected": "FAIL",
+      "basis": "owner correction: more listicle/manual cadence in H2",
+      "predicted": "FAIL",
+      "correct": true
+    },
+    {
+      "case_id": "CD3",
+      "expected": "PASS",
+      "basis": "known Human authored hypothesis list; enumeration alone is not instruction-manual cadence",
+      "predicted": "PASS",
+      "correct": true
+    },
+    {
+      "case_id": "CD4",
+      "expected": "PASS",
+      "basis": "direct owner Human/medium advice; imperatives/advice alone are not cadence failure",
+      "predicted": "PASS",
+      "correct": true
+    }
+  ]
+}

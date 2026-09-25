@@ -1,0 +1,736 @@
+{
+  "format": "joel-humanization-critic-holdout-v2-results",
+  "deployment_id": "636f1efe-9117-4f78-9754-88c90bd4415a",
+  "source_commit": "a85538c9b6e9ec24cbd1195408621d914b2b7628",
+  "model_alias": "gpt-5.6-sol",
+  "provider_models": [
+    "openai-gpt-56-sol"
+  ],
+  "blind_sha256": "9afcdc6662c2a3df916b7cfd31037c630c19bef7182c657653d65b15da5e571a",
+  "prompt_sha256": "64f7d6cfdc8f577ee2fe6d5c4f6a0306205fe418937f86618c5120aaa48329e4",
+  "holdout_end_seen": true,
+  "result_count": 20,
+  "transport_error_count": 0,
+  "results": [
+    {
+      "timestamp": "2026-09-23T00:12:11.184180342Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-01",
+      "sample_sha256": "792a6cbb29d71b19f9b7104f52a006719463fbaa97dc4e97bc5ddf6e57960e77",
+      "word_count": 122,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_055b31f7cd6dfa84016ab31954869c87d2aef2623324f4a321",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Promise an accessible benefit -> prescribe the first physical action and assign its symbolic function -> prescribe the second action and assign its symbolic function -> justify that association through bodily vulnerability -> convert the bodily claim into a psychological inference -> conclude with a reciprocal visualization that completes the exercise.\",\n  \"cumulative_ai_pattern\": \"The passage forms an unusually clean instructional staircase. Every action receives an immediate explanation, the concrete bodily example exists solely to support the symbolic mapping, and the final image neatly synthesizes the two earlier placements into a closed loop.\",\n  \"human_surplus_case\": \"The abrupt example involving a slap and the slightly compressed final phrasing create some local roughness, but neither introduces context, residue, or attention outside the lesson.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, nearly every sentence performs one necessary teaching function in a self-contained sequence, while the apparently distinctive concrete detail is purpose-built to justify the exercise rather than disrupting its scaffold.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Promise an accessible benefit -> prescribe the first physical action and assign its symbolic function -> prescribe the second action and assign its symbolic function -> justify that association through bodily vulnerability -> convert the bodily claim into a psychological inference -> conclude with a reciprocal visualization that completes the exercise.",
+        "cumulative_ai_pattern": "The passage forms an unusually clean instructional staircase. Every action receives an immediate explanation, the concrete bodily example exists solely to support the symbolic mapping, and the final image neatly synthesizes the two earlier placements into a closed loop.",
+        "human_surplus_case": "The abrupt example involving a slap and the slightly compressed final phrasing create some local roughness, but neither introduces context, residue, or attention outside the lesson.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, nearly every sentence performs one necessary teaching function in a self-contained sequence, while the apparently distinctive concrete detail is purpose-built to justify the exercise rather than disrupting its scaffold."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2290,
+        "completion_tokens": 395,
+        "total_tokens": 2685,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 776
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 776,
+        "completion_tokens_details": {
+          "reasoning_tokens": 164
+        }
+      },
+      "elapsed_seconds": 6.928
+    },
+    {
+      "timestamp": "2026-09-23T00:12:19.101632768Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-02",
+      "sample_sha256": "ac42c590daa5e9cbc3923a1e5cc9394da2e578d64cef3268c725b49c33a8e843",
+      "word_count": 100,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0ba86b2762b6885f016ab3195b5a3c87d2adca647c8e50b060",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Initial qualification -> proposed experiment -> conditional instruction -> benefit -> burden-based exception -> alternative somatic cue -> alternative environmental cue -> synthesis converting absent verbal feedback into self-directed action.\",\n  \"cumulative_ai_pattern\": \"A compact, self-contained semantic staircase in which every sentence advances the guidance through a neatly managed branch: try the exercise, externalize the result, stop if it becomes burdensome, redirect attention, then extract a practical conclusion. The examples and metaphor are purpose-built for those functions.\",\n  \"human_surplus_case\": \"The image of doing homework for an unresponsive child and the phrase “imagination land” add voice, but neither creates context, residue, or a competing concern beyond the instructional thesis.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the passage remains unusually optimized around one teaching objective, with concrete details functioning as interchangeable supports for a clean sequence of instruction, exception, redirection, and synthesis.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Initial qualification -> proposed experiment -> conditional instruction -> benefit -> burden-based exception -> alternative somatic cue -> alternative environmental cue -> synthesis converting absent verbal feedback into self-directed action.",
+        "cumulative_ai_pattern": "A compact, self-contained semantic staircase in which every sentence advances the guidance through a neatly managed branch: try the exercise, externalize the result, stop if it becomes burdensome, redirect attention, then extract a practical conclusion. The examples and metaphor are purpose-built for those functions.",
+        "human_surplus_case": "The image of doing homework for an unresponsive child and the phrase “imagination land” add voice, but neither creates context, residue, or a competing concern beyond the instructional thesis.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the passage remains unusually optimized around one teaching objective, with concrete details functioning as interchangeable supports for a clean sequence of instruction, exception, redirection, and synthesis."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2263,
+        "completion_tokens": 439,
+        "total_tokens": 2702,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 749
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 749,
+        "completion_tokens_details": {
+          "reasoning_tokens": 210
+        }
+      },
+      "elapsed_seconds": 7.779
+    },
+    {
+      "timestamp": "2026-09-23T00:12:28.780325985Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-03",
+      "sample_sha256": "a9aad0629b318d8a0f1d169004dd6a382127a97e7f195347e1807a24ebc28c11",
+      "word_count": 106,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0b7f5be38d91381d016ab319632da087d2b4cce81b3d5c3515",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Inherited belief -> qualifying contrast about the parents' relationship -> retrospective personal exception -> parallel inherited belief -> compact synthesis distinguishing what was learned from what remained unlearned.\",\n  \"cumulative_ai_pattern\": \"The passage forms a tightly optimized staircase in which every autobiographical detail supports the final lesson. The apparent hesitation and emotional incompleteness are themselves functional, preparing the concluding contrast between idealized communal love and the damage caused by unresolved human limitations.\",\n  \"human_surplus_case\": \"The unexplained reference to Somé, the awkward repetition of 'also,' and the narrator's uncertain 'I guess' create some context dependence and local unevenness.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains an unusually clean setup-qualification-personal-example-parallel-synthesis structure, with virtually no detail performing a function independent of the concluding lesson.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Inherited belief -> qualifying contrast about the parents' relationship -> retrospective personal exception -> parallel inherited belief -> compact synthesis distinguishing what was learned from what remained unlearned.",
+        "cumulative_ai_pattern": "The passage forms a tightly optimized staircase in which every autobiographical detail supports the final lesson. The apparent hesitation and emotional incompleteness are themselves functional, preparing the concluding contrast between idealized communal love and the damage caused by unresolved human limitations.",
+        "human_surplus_case": "The unexplained reference to Somé, the awkward repetition of 'also,' and the narrator's uncertain 'I guess' create some context dependence and local unevenness.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains an unusually clean setup-qualification-personal-example-parallel-synthesis structure, with virtually no detail performing a function independent of the concluding lesson."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2273,
+        "completion_tokens": 529,
+        "total_tokens": 2802,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 759
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 759,
+        "completion_tokens_details": {
+          "reasoning_tokens": 315
+        }
+      },
+      "elapsed_seconds": 9.808
+    },
+    {
+      "timestamp": "2026-09-23T00:12:37.132315582Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-04",
+      "sample_sha256": "a9b400732996df647f9119d92db0bf0eedac2d57d610fe753d63809e97708f59",
+      "word_count": 64,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0d938eaff6e61a26016ab3196cfaf487d2a1f30696ed2e4699",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"high\",\n  \"functional_skeleton\": \"Initial judgment after a negative event -> later counterevidence -> two calibrated concessions -> distinction between isolated event and recurring pattern -> external framework reinforcing that distinction.\",\n  \"cumulative_ai_pattern\": \"The passage forms an unusually clean corrective staircase. Each sentence performs one discrete teaching function, and every concrete element is interchangeable support for the same episode-versus-pattern lesson. Even the concessions are symmetrically placed to make the conclusion sound nuanced without disrupting it.\",\n  \"human_surplus_case\": \"The named source and linked reference could reflect context outside the passage, but within the prose they function primarily as a compact authority-backed conclusion.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains a tightly optimized sequence of misconception, corrective scenario, balanced qualification, distilled principle, and validating framework, with no materially scaffold-breaking residue.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "high",
+        "functional_skeleton": "Initial judgment after a negative event -> later counterevidence -> two calibrated concessions -> distinction between isolated event and recurring pattern -> external framework reinforcing that distinction.",
+        "cumulative_ai_pattern": "The passage forms an unusually clean corrective staircase. Each sentence performs one discrete teaching function, and every concrete element is interchangeable support for the same episode-versus-pattern lesson. Even the concessions are symmetrically placed to make the conclusion sound nuanced without disrupting it.",
+        "human_surplus_case": "The named source and linked reference could reflect context outside the passage, but within the prose they function primarily as a compact authority-backed conclusion.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains a tightly optimized sequence of misconception, corrective scenario, balanced qualification, distilled principle, and validating framework, with no materially scaffold-breaking residue."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2240,
+        "completion_tokens": 325,
+        "total_tokens": 2565,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 726
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 726,
+        "completion_tokens_details": {
+          "reasoning_tokens": 117
+        }
+      },
+      "elapsed_seconds": 8.335
+    },
+    {
+      "timestamp": "2026-09-23T00:12:42.149203037Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-05",
+      "sample_sha256": "301ea6367e4483314bd16726c61de07b10d9c6ba334a5cbe0aa3bbb538eb1779",
+      "word_count": 64,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0e23eb2fcb83982a016ab319755a8887d28596cf97c84cb44e",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Setup of persistent disagreement -> charitable exception for an inadequate explanation -> acknowledgment that clarification can help -> contrast with cases where understanding is already present -> distinction between seeking comprehension and seeking agreement -> cautionary verdict.\",\n  \"cumulative_ai_pattern\": \"The passage forms an unusually clean semantic staircase. Every sentence performs a distinct teaching function, the qualification is precisely bounded, and the final line compresses the preceding distinction into a reusable lesson.\",\n  \"human_surplus_case\": \"none\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains tightly engineered around one distinction, with no context-dependent residue or uneven attention that materially disrupts the instructional scaffold.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Setup of persistent disagreement -> charitable exception for an inadequate explanation -> acknowledgment that clarification can help -> contrast with cases where understanding is already present -> distinction between seeking comprehension and seeking agreement -> cautionary verdict.",
+        "cumulative_ai_pattern": "The passage forms an unusually clean semantic staircase. Every sentence performs a distinct teaching function, the qualification is precisely bounded, and the final line compresses the preceding distinction into a reusable lesson.",
+        "human_surplus_case": "none",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains tightly engineered around one distinction, with no context-dependent residue or uneven attention that materially disrupts the instructional scaffold."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2221,
+        "completion_tokens": 288,
+        "total_tokens": 2509,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 707
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 707,
+        "completion_tokens_details": {
+          "reasoning_tokens": 115
+        }
+      },
+      "elapsed_seconds": 5.043
+    },
+    {
+      "timestamp": "2026-09-23T00:12:48.705956101Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-06",
+      "sample_sha256": "173633be7c3907ab9a1356887cc22f5ce77a1b4746c061997eaa4b06293578d6",
+      "word_count": 80,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_06bb196cc13bab07016ab3197a85cc87d2b1c83dac886b2001",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Notice the target state -> positively reframe noticing -> apply a safety exception -> pause before acting -> state a compact principle -> offer two beneficial contingencies.\",\n  \"cumulative_ai_pattern\": \"The passage forms a compact, self-contained behavioral lesson in which the quotation, playful phrasing, safety qualification, aphorism, and contrasting outcomes each occupy a precise instructional role. After content-neutralization, it remains an unusually efficient semantic staircase.\",\n  \"human_surplus_case\": \"The emoji, the phrase \\\"a breath or three,\\\" and the somewhat idiosyncratic language about having \\\"enough adult around\\\" create an informal personal texture.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"Nearly every apparently spontaneous or human-facing detail is interchangeable and purpose-built to soften, qualify, or reinforce the same teaching objective; none creates meaningful residue outside that scaffold.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Notice the target state -> positively reframe noticing -> apply a safety exception -> pause before acting -> state a compact principle -> offer two beneficial contingencies.",
+        "cumulative_ai_pattern": "The passage forms a compact, self-contained behavioral lesson in which the quotation, playful phrasing, safety qualification, aphorism, and contrasting outcomes each occupy a precise instructional role. After content-neutralization, it remains an unusually efficient semantic staircase.",
+        "human_surplus_case": "The emoji, the phrase \"a breath or three,\" and the somewhat idiosyncratic language about having \"enough adult around\" create an informal personal texture.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "Nearly every apparently spontaneous or human-facing detail is interchangeable and purpose-built to soften, qualify, or reinforce the same teaching objective; none creates meaningful residue outside that scaffold."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2243,
+        "completion_tokens": 304,
+        "total_tokens": 2547,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 729
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 729,
+        "completion_tokens_details": {
+          "reasoning_tokens": 93
+        }
+      },
+      "elapsed_seconds": 6.544
+    },
+    {
+      "timestamp": "2026-09-23T00:12:57.458845092Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-07",
+      "sample_sha256": "7109652755318bd0a18a56a0e7a3d482033b93c8637afbeb4d36608aec915c68",
+      "word_count": 80,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0b1a6d32b888cc4f016ab31980f46487d2be36809d0c34c3b5",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Affectionate setup and normative definition -> warning against confusing desire with love -> qualification about commitment developing organically -> practical sequence of caution and social safeguards.\",\n  \"cumulative_ai_pattern\": \"The passage forms a compact, self-contained teaching staircase. Each sentence performs a distinct advisory function, and nearly every concrete element maps efficiently onto the central lesson without creating independent context or social residue.\",\n  \"human_surplus_case\": \"The intimate address, compressed phrasing, ampersand, and hearts-sync metaphor provide some personal texture, but none materially disrupts the instructional architecture.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains conspicuously optimized as a progression from definition through distinction and qualification to actionable safeguards, with little non-instrumental surplus.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Affectionate setup and normative definition -> warning against confusing desire with love -> qualification about commitment developing organically -> practical sequence of caution and social safeguards.",
+        "cumulative_ai_pattern": "The passage forms a compact, self-contained teaching staircase. Each sentence performs a distinct advisory function, and nearly every concrete element maps efficiently onto the central lesson without creating independent context or social residue.",
+        "human_surplus_case": "The intimate address, compressed phrasing, ampersand, and hearts-sync metaphor provide some personal texture, but none materially disrupts the instructional architecture.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains conspicuously optimized as a progression from definition through distinction and qualification to actionable safeguards, with little non-instrumental surplus."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2239,
+        "completion_tokens": 509,
+        "total_tokens": 2748,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 725
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 725,
+        "completion_tokens_details": {
+          "reasoning_tokens": 314
+        }
+      },
+      "elapsed_seconds": 8.766
+    },
+    {
+      "timestamp": "2026-09-23T00:13:06.866015999Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-08",
+      "sample_sha256": "9654f2136f3e8f6a2aa4181aa6f54107c866c96cf7d9faeb0fd44859782df956",
+      "word_count": 72,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0d6de445089333de016ab31989b24c87d2bb039b5313b8afba",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Category is difficult to define -> compact illustrative incident -> emotional reaction and rhetorical question -> retrospective reinterpretation -> qualifying character assessment.\",\n  \"cumulative_ai_pattern\": \"The passage forms a highly efficient semantic staircase. Every element advances one distinction between strategic deception and behavior arising without apparent strategy; the concrete incident, emotional response, quotation marks, and final qualification each perform a precise explanatory role.\",\n  \"human_surplus_case\": \"The contextual phrase \\\"these relationships,\\\" the name Bee, and the lingering personal frustration create some dependence on a larger narrative and some social residue.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After neutralizing the personal details, the prose remains an unusually clean setup-example-reaction-reframing-qualification sequence, with no substantial detail or recurrence operating independently of the intended distinction.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Category is difficult to define -> compact illustrative incident -> emotional reaction and rhetorical question -> retrospective reinterpretation -> qualifying character assessment.",
+        "cumulative_ai_pattern": "The passage forms a highly efficient semantic staircase. Every element advances one distinction between strategic deception and behavior arising without apparent strategy; the concrete incident, emotional response, quotation marks, and final qualification each perform a precise explanatory role.",
+        "human_surplus_case": "The contextual phrase \"these relationships,\" the name Bee, and the lingering personal frustration create some dependence on a larger narrative and some social residue.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After neutralizing the personal details, the prose remains an unusually clean setup-example-reaction-reframing-qualification sequence, with no substantial detail or recurrence operating independently of the intended distinction."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2235,
+        "completion_tokens": 527,
+        "total_tokens": 2762,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 721
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 721,
+        "completion_tokens_details": {
+          "reasoning_tokens": 329
+        }
+      },
+      "elapsed_seconds": 9.39
+    },
+    {
+      "timestamp": "2026-09-23T00:13:14.266283942Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-09",
+      "sample_sha256": "25435d2b96410548b4abfdafc70027502c5f31b99b616b2a7b5abde6b50bf131",
+      "word_count": 99,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0dfc31e498295560016ab31993153087d2a2dd61d0f58f0c5a",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"high\",\n  \"functional_skeleton\": \"Reassurance through distinction -> invitation to test -> conditional instruction -> permission to stop if the method becomes burdensome -> taxonomy of alternative signals -> gentle synthesis that preserves uncertainty while supplying a moral endpoint.\",\n  \"cumulative_ai_pattern\": \"The passage forms an unusually efficient semantic staircase. Every sentence advances the teaching objective, each concrete detail occupies a distinct explanatory slot, and the ending's unresolvedness is engineered to complete the lesson rather than leave genuine residue.\",\n  \"human_surplus_case\": \"The phrases about an imaginary-conversation zone and doing homework for an unresponsive child add tonal specificity, but both remain interchangeable didactic devices serving the same scaffold.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains a tightly optimized command-exception-contingency sequence in which virtually every detail performs a protected instructional function and no independent lived context disrupts the architecture.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "high",
+        "functional_skeleton": "Reassurance through distinction -> invitation to test -> conditional instruction -> permission to stop if the method becomes burdensome -> taxonomy of alternative signals -> gentle synthesis that preserves uncertainty while supplying a moral endpoint.",
+        "cumulative_ai_pattern": "The passage forms an unusually efficient semantic staircase. Every sentence advances the teaching objective, each concrete detail occupies a distinct explanatory slot, and the ending's unresolvedness is engineered to complete the lesson rather than leave genuine residue.",
+        "human_surplus_case": "The phrases about an imaginary-conversation zone and doing homework for an unresponsive child add tonal specificity, but both remain interchangeable didactic devices serving the same scaffold.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains a tightly optimized command-exception-contingency sequence in which virtually every detail performs a protected instructional function and no independent lived context disrupts the architecture."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2267,
+        "completion_tokens": 396,
+        "total_tokens": 2663,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 753
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 753,
+        "completion_tokens_details": {
+          "reasoning_tokens": 179
+        }
+      },
+      "elapsed_seconds": 7.362
+    },
+    {
+      "timestamp": "2026-09-23T00:13:21.163245171Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-10",
+      "sample_sha256": "2ce1dffede7df16994a2f9c24548a681f3e12d23774fc29e9eaae5a01f8f73a8",
+      "word_count": 88,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0cd044d746c14745016ab3199a8de487d2ab7a5922499e3ffc",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Conditional acknowledgment of harm -> warning that repair can expand into broader self-doubt -> compressed illustrative progression -> concession that additional fault is possible -> rejection of emotion as reliable evidence -> symmetrical extension rejecting the opposite accusation as equally unsupported.\",\n  \"cumulative_ai_pattern\": \"The passage forms an unusually efficient epistemic staircase. Every sentence performs a distinct balancing or teaching function, and the concrete interpersonal framing is fully subordinate to that structure. The final symmetry neatly protects the lesson from leaning toward either self-blame or blame of the other person.\",\n  \"human_surplus_case\": \"The slightly abrupt final sentence and colloquial phrasing create some natural texture, but they do not introduce context, partiality, residue, or digression independent of the teaching objective.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the passage remains a tightly engineered sequence of premise, caution, example, concession, epistemic rule, and balanced corollary, with no material surplus disrupting that scaffold.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Conditional acknowledgment of harm -> warning that repair can expand into broader self-doubt -> compressed illustrative progression -> concession that additional fault is possible -> rejection of emotion as reliable evidence -> symmetrical extension rejecting the opposite accusation as equally unsupported.",
+        "cumulative_ai_pattern": "The passage forms an unusually efficient epistemic staircase. Every sentence performs a distinct balancing or teaching function, and the concrete interpersonal framing is fully subordinate to that structure. The final symmetry neatly protects the lesson from leaning toward either self-blame or blame of the other person.",
+        "human_surplus_case": "The slightly abrupt final sentence and colloquial phrasing create some natural texture, but they do not introduce context, partiality, residue, or digression independent of the teaching objective.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the passage remains a tightly engineered sequence of premise, caution, example, concession, epistemic rule, and balanced corollary, with no material surplus disrupting that scaffold."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2248,
+        "completion_tokens": 382,
+        "total_tokens": 2630,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 734
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 734,
+        "completion_tokens_details": {
+          "reasoning_tokens": 145
+        }
+      },
+      "elapsed_seconds": 6.942
+    },
+    {
+      "timestamp": "2026-09-23T00:13:27.606888134Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-11",
+      "sample_sha256": "34c5d1a93f40b28fccfac9cd8760be634f98c91743b169d706ac2962eebc4d42",
+      "word_count": 98,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_089ee46fd00223a4016ab319a1608087d29bc68340bbf9fc56",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Initial event invites a firm judgment -> later behavior complicates that judgment -> disagreement is distinguished from failure to engage -> isolated evidence is declared inconclusive -> recurrence across contexts is proposed as the diagnostic test -> an authority is cited -> the recurring pattern is compressed into a final formulation.\",\n  \"cumulative_ai_pattern\": \"The passage forms an unusually efficient semantic staircase. Every sentence either qualifies premature judgment, sharpens the distinction, supplies the diagnostic criterion, or crystallizes the lesson. The conversational details are interchangeable props serving that scaffold, and the ending neatly synthesizes the criterion.\",\n  \"human_surplus_case\": \"The first-person hesitation and specific citation create some situated authorial texture, but neither develops an independent lived or social function; both reinforce the instructional objective.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains a tightly engineered progression from misleading single incident to cross-context pattern recognition, with virtually no detail or residue outside that teaching function.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Initial event invites a firm judgment -> later behavior complicates that judgment -> disagreement is distinguished from failure to engage -> isolated evidence is declared inconclusive -> recurrence across contexts is proposed as the diagnostic test -> an authority is cited -> the recurring pattern is compressed into a final formulation.",
+        "cumulative_ai_pattern": "The passage forms an unusually efficient semantic staircase. Every sentence either qualifies premature judgment, sharpens the distinction, supplies the diagnostic criterion, or crystallizes the lesson. The conversational details are interchangeable props serving that scaffold, and the ending neatly synthesizes the criterion.",
+        "human_surplus_case": "The first-person hesitation and specific citation create some situated authorial texture, but neither develops an independent lived or social function; both reinforce the instructional objective.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains a tightly engineered progression from misleading single incident to cross-context pattern recognition, with virtually no detail or residue outside that teaching function."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2278,
+        "completion_tokens": 357,
+        "total_tokens": 2635,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 764
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 764,
+        "completion_tokens_details": {
+          "reasoning_tokens": 124
+        }
+      },
+      "elapsed_seconds": 6.45
+    },
+    {
+      "timestamp": "2026-09-23T00:13:34.608112362Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-12",
+      "sample_sha256": "d167f974a524e19c11accd95c5ddc3774fae908d939a62dfd50eb58e877e93d7",
+      "word_count": 80,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_00a25a2c861fb7fc016ab319a7d3e487d28543e51fec586e3f",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Present early recognition -> contrast with delayed recognition -> supply bodily and behavioral indicators -> stage the moment of realization -> attach a named concept -> recommend postponing causal analysis.\",\n  \"cumulative_ai_pattern\": \"The passage forms a compact semantic staircase in which every sentence advances the same teaching objective. The alternatives, concrete symptoms, self-observation pivot, named concept, and closing advice are tightly coordinated and largely interchangeable with other didactic props.\",\n  \"human_surplus_case\": \"The embarrassment, emoji, bodily details, and 'parts detective work' phrasing create an informal interpersonal texture, but none introduces context, residue, or uneven attention outside the explanatory scaffold.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains unusually optimized: recognition timing, observable cues, conceptual label, and practical instruction arrive in a clean, self-contained progression with no material surplus disrupting it.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Present early recognition -> contrast with delayed recognition -> supply bodily and behavioral indicators -> stage the moment of realization -> attach a named concept -> recommend postponing causal analysis.",
+        "cumulative_ai_pattern": "The passage forms a compact semantic staircase in which every sentence advances the same teaching objective. The alternatives, concrete symptoms, self-observation pivot, named concept, and closing advice are tightly coordinated and largely interchangeable with other didactic props.",
+        "human_surplus_case": "The embarrassment, emoji, bodily details, and 'parts detective work' phrasing create an informal interpersonal texture, but none introduces context, residue, or uneven attention outside the explanatory scaffold.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains unusually optimized: recognition timing, observable cues, conceptual label, and practical instruction arrive in a clean, self-contained progression with no material surplus disrupting it."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2250,
+        "completion_tokens": 395,
+        "total_tokens": 2645,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 736
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 736,
+        "completion_tokens_details": {
+          "reasoning_tokens": 177
+        }
+      },
+      "elapsed_seconds": 7
+    },
+    {
+      "timestamp": "2026-09-23T00:13:42.332450830Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-13",
+      "sample_sha256": "7d7dd254eddefd28288ec870c9eea6beeb4bc2b117fc832eebec8de8f303a078",
+      "word_count": 67,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0e5a1e23dcad260c016ab319aed8a487d2a58787d011046282",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Establish an internal condition -> reject one possible use of it -> offer a safer substitute with interchangeable examples -> describe a bidirectional visualization that completes the exercise.\",\n  \"cumulative_ai_pattern\": \"The three sentences form a compact, self-contained therapeutic staircase. Each detail has a precise instructional role: the opening creates opportunity, the list guarantees an accessible emotional source, and the bodily imagery converts that source into a procedure. Almost nothing remains functionally idle.\",\n  \"human_surplus_case\": \"The reference to a younger part located around a particular bodily area is somewhat idiosyncratic and may depend on a larger personal framework.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the passage remains unusually optimized as condition -> correction -> substitute -> guided action, while its concrete and emotional details operate as efficient, replaceable supports for that instructional design.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Establish an internal condition -> reject one possible use of it -> offer a safer substitute with interchangeable examples -> describe a bidirectional visualization that completes the exercise.",
+        "cumulative_ai_pattern": "The three sentences form a compact, self-contained therapeutic staircase. Each detail has a precise instructional role: the opening creates opportunity, the list guarantees an accessible emotional source, and the bodily imagery converts that source into a procedure. Almost nothing remains functionally idle.",
+        "human_surplus_case": "The reference to a younger part located around a particular bodily area is somewhat idiosyncratic and may depend on a larger personal framework.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the passage remains unusually optimized as condition -> correction -> substitute -> guided action, while its concrete and emotional details operate as efficient, replaceable supports for that instructional design."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2228,
+        "completion_tokens": 430,
+        "total_tokens": 2658,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 714
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 714,
+        "completion_tokens_details": {
+          "reasoning_tokens": 217
+        }
+      },
+      "elapsed_seconds": 7.727
+    },
+    {
+      "timestamp": "2026-09-23T00:13:49.155456440Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-14",
+      "sample_sha256": "1c52cd9890cbf2251aed56a8d4b0f8a15b46a3f34aee834e3edc4145ee65b298",
+      "word_count": 92,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_063889cf92eb6a5b016ab319b697e087d28901180aaa1d7471",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"high\",\n  \"functional_skeleton\": \"Conditional command to repair harm -> distinguish accountability from emotional avoidance -> allow a limited exception for genuine lack of clarity -> identify the point where explanation becomes a demand for validation -> accept that validation may never arrive -> separate guilt from responsibility and manipulation -> authorize an unresolved ending.\",\n  \"cumulative_ai_pattern\": \"The passage forms an unusually clean therapeutic staircase. Each sentence performs one distinct teaching function, every qualification protects the central advice from an obvious objection, and the emotional details are interchangeable props serving the responsibility-versus-validation distinction. The final unresolvedness neatly completes the lesson rather than disrupting it.\",\n  \"human_surplus_case\": \"The phrasing about waiting for the other person's understanding carries plausible emotional insight, but it introduces no context, residue, digression, or partiality beyond the thesis.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains a compact, evenly optimized sequence of command, qualification, exception, diagnostic distinction, and synthesis, with no surplus that materially disturbs the instructional scaffold.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "high",
+        "functional_skeleton": "Conditional command to repair harm -> distinguish accountability from emotional avoidance -> allow a limited exception for genuine lack of clarity -> identify the point where explanation becomes a demand for validation -> accept that validation may never arrive -> separate guilt from responsibility and manipulation -> authorize an unresolved ending.",
+        "cumulative_ai_pattern": "The passage forms an unusually clean therapeutic staircase. Each sentence performs one distinct teaching function, every qualification protects the central advice from an obvious objection, and the emotional details are interchangeable props serving the responsibility-versus-validation distinction. The final unresolvedness neatly completes the lesson rather than disrupting it.",
+        "human_surplus_case": "The phrasing about waiting for the other person's understanding carries plausible emotional insight, but it introduces no context, residue, digression, or partiality beyond the thesis.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains a compact, evenly optimized sequence of command, qualification, exception, diagnostic distinction, and synthesis, with no surplus that materially disturbs the instructional scaffold."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2253,
+        "completion_tokens": 387,
+        "total_tokens": 2640,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 739
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 739,
+        "completion_tokens_details": {
+          "reasoning_tokens": 143
+        }
+      },
+      "elapsed_seconds": 6.824
+    },
+    {
+      "timestamp": "2026-09-23T00:13:58.797467522Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-15",
+      "sample_sha256": "af1df6bb868df366b28d40cdcdb79ab06e55e8b8a84373f8a7ad0c70a6a9409e",
+      "word_count": 201,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0e649877c0b4989d016ab319bd6ab487d29139e78a32cdb656",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Rhetorical setup -> general biological claim -> anthropological qualification -> historical cause -> institutional culmination -> scientific disclaimer and synthesis -> modern psychological escalation -> personal application -> dialogue framing the next problem.\",\n  \"cumulative_ai_pattern\": \"The passage forms a highly efficient semantic staircase from species-level premise through cultural history and academic qualification to a personal dilemma. Nearly every concrete element serves that progression, and the personal disclosure arrives exactly where needed to convert exposition into narrative stakes.\",\n  \"human_surplus_case\": \"Coinages, playful agricultural imagery, compressed historical rhetoric, and the initial beside-like question create an individual voice, but none introduces context, residue, or attention independent of the central argument.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains unusually optimized as a premise-to-qualification-to-explanation-to-personal-application sequence; its apparent idiosyncrasies decorate rather than disrupt that scaffold.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Rhetorical setup -> general biological claim -> anthropological qualification -> historical cause -> institutional culmination -> scientific disclaimer and synthesis -> modern psychological escalation -> personal application -> dialogue framing the next problem.",
+        "cumulative_ai_pattern": "The passage forms a highly efficient semantic staircase from species-level premise through cultural history and academic qualification to a personal dilemma. Nearly every concrete element serves that progression, and the personal disclosure arrives exactly where needed to convert exposition into narrative stakes.",
+        "human_surplus_case": "Coinages, playful agricultural imagery, compressed historical rhetoric, and the initial beside-like question create an individual voice, but none introduces context, residue, or attention independent of the central argument.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains unusually optimized as a premise-to-qualification-to-explanation-to-personal-application sequence; its apparent idiosyncrasies decorate rather than disrupt that scaffold."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2403,
+        "completion_tokens": 519,
+        "total_tokens": 2922,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 889
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 889,
+        "completion_tokens_details": {
+          "reasoning_tokens": 293
+        }
+      },
+      "elapsed_seconds": 9.614
+    },
+    {
+      "timestamp": "2026-09-23T00:14:05.851199285Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-16",
+      "sample_sha256": "5b23e87b2629e4fa4ed24e7be53c04bc862494148cc1167a46cb88e8162dc964",
+      "word_count": 61,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_003d91fc5f3d1c4e016ab319c7168087d29f6b3d7cb350661f",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Context-dependent escalation -> partner's desire for marriage -> narrator's conflicting attraction -> retrospective account of a questionable inference -> quoted explanation given to the partner.\",\n  \"cumulative_ai_pattern\": \"The beats form a clean causal progression, but not an unusually elaborate or optimized teaching staircase.\",\n  \"human_surplus_case\": \"The backward reference in “further than that,” the anonymized initial, and the self-distancing phrase “somehow I decided” leave contextual and interpersonal residue that the passage does not explain or convert into a complete lesson.\",\n  \"human_surplus_breaks_scaffold\": true,\n  \"decisive_reason\": \"The passage reads as a context-dependent fragment of retrospective narration rather than a self-contained construction engineered to deliver a maximally efficient explanatory point.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "medium",
+        "functional_skeleton": "Context-dependent escalation -> partner's desire for marriage -> narrator's conflicting attraction -> retrospective account of a questionable inference -> quoted explanation given to the partner.",
+        "cumulative_ai_pattern": "The beats form a clean causal progression, but not an unusually elaborate or optimized teaching staircase.",
+        "human_surplus_case": "The backward reference in “further than that,” the anonymized initial, and the self-distancing phrase “somehow I decided” leave contextual and interpersonal residue that the passage does not explain or convert into a complete lesson.",
+        "human_surplus_breaks_scaffold": true,
+        "decisive_reason": "The passage reads as a context-dependent fragment of retrospective narration rather than a self-contained construction engineered to deliver a maximally efficient explanatory point."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2225,
+        "completion_tokens": 395,
+        "total_tokens": 2620,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 711
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 711,
+        "completion_tokens_details": {
+          "reasoning_tokens": 209
+        }
+      },
+      "elapsed_seconds": 7.083
+    },
+    {
+      "timestamp": "2026-09-23T00:14:13.348758306Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-17",
+      "sample_sha256": "6ceaa3becafb78bb75df043e5ff88cd41d46496ef93d9a0500b6759856c5811a",
+      "word_count": 126,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_02cb9b147c0631ea016ab319ce181c87d28278e62c1e32cc5a",
+      "content": "{\n  \"classification\": \"HUMAN\",\n  \"confidence\": \"high\",\n  \"functional_skeleton\": \"felt barrier -> imagined internal observation -> retaliatory self-blame -> recognition of conflict between younger and older selves -> mocking distrust of promised care -> report that a prior coping method has not helped\",\n  \"cumulative_ai_pattern\": \"none\",\n  \"human_surplus_case\": \"The passage has context-dependent residue, especially the unexplained reference to relaxation, and its attention moves unevenly through resentment, blame, protection, mockery, and failed coping rather than forming a clean instructional staircase. The internal dialogue recurs as an active conflict instead of functioning merely as an illustrative prop.\",\n  \"human_surplus_breaks_scaffold\": true,\n  \"decisive_reason\": \"After content-neutralization, the prose remains a messy report of an unresolved internal struggle rather than an optimized explanation: the role reversal, lingering hostility, tonal lurch into mockery, and dangling reference to relaxation materially resist a purpose-built teaching architecture.\"\n}",
+      "parsed": {
+        "classification": "HUMAN",
+        "confidence": "high",
+        "functional_skeleton": "felt barrier -> imagined internal observation -> retaliatory self-blame -> recognition of conflict between younger and older selves -> mocking distrust of promised care -> report that a prior coping method has not helped",
+        "cumulative_ai_pattern": "none",
+        "human_surplus_case": "The passage has context-dependent residue, especially the unexplained reference to relaxation, and its attention moves unevenly through resentment, blame, protection, mockery, and failed coping rather than forming a clean instructional staircase. The internal dialogue recurs as an active conflict instead of functioning merely as an illustrative prop.",
+        "human_surplus_breaks_scaffold": true,
+        "decisive_reason": "After content-neutralization, the prose remains a messy report of an unresolved internal struggle rather than an optimized explanation: the role reversal, lingering hostility, tonal lurch into mockery, and dangling reference to relaxation materially resist a purpose-built teaching architecture."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2301,
+        "completion_tokens": 386,
+        "total_tokens": 2687,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 787
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 787,
+        "completion_tokens_details": {
+          "reasoning_tokens": 170
+        }
+      },
+      "elapsed_seconds": 7.49
+    },
+    {
+      "timestamp": "2026-09-23T00:14:20.565386028Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-18",
+      "sample_sha256": "73d6e5dac15d14d610327a5b1d87a4910931396c9344336e022eeafa95194c87",
+      "word_count": 90,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_0d3c1eb4f3ae6527016ab319d5992887d296b0b1ec3c5f2e49",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"high\",\n  \"functional_skeleton\": \"Salient event -> acknowledge possible significance -> introduce counterevidence and qualification -> reject overgeneralization from one event -> contrast with a recurring relational pattern -> classify the pattern through an external framework.\",\n  \"cumulative_ai_pattern\": \"The passage forms an unusually efficient semantic staircase. Each sentence performs a distinct teaching function, and the concrete relational details are tightly selected to distinguish isolated conflict from persistent dysfunction. Even the emotionally sharp phrase about maintaining an unwanted boundary functions as an engineered safeguard against a simplistic verdict.\",\n  \"human_surplus_case\": \"The named source and linked reference provide some context dependence, while the phrasing carries mild authorial judgment.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, nearly every element remains optimized around one calibrated lesson: do not diagnose from a single conflict, but attend to a repeated pattern of emotional displacement. The apparent nuance and unresolved disagreement reinforce that instructional architecture rather than disrupting it.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "high",
+        "functional_skeleton": "Salient event -> acknowledge possible significance -> introduce counterevidence and qualification -> reject overgeneralization from one event -> contrast with a recurring relational pattern -> classify the pattern through an external framework.",
+        "cumulative_ai_pattern": "The passage forms an unusually efficient semantic staircase. Each sentence performs a distinct teaching function, and the concrete relational details are tightly selected to distinguish isolated conflict from persistent dysfunction. Even the emotionally sharp phrase about maintaining an unwanted boundary functions as an engineered safeguard against a simplistic verdict.",
+        "human_surplus_case": "The named source and linked reference provide some context dependence, while the phrasing carries mild authorial judgment.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, nearly every element remains optimized around one calibrated lesson: do not diagnose from a single conflict, but attend to a repeated pattern of emotional displacement. The apparent nuance and unresolved disagreement reinforce that instructional architecture rather than disrupting it."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2270,
+        "completion_tokens": 355,
+        "total_tokens": 2625,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 756
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 756,
+        "completion_tokens_details": {
+          "reasoning_tokens": 130
+        }
+      },
+      "elapsed_seconds": 7.204
+    },
+    {
+      "timestamp": "2026-09-23T00:14:27.364199215Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-19",
+      "sample_sha256": "35f6768b9a25aedf5cea1bbb7d3e98ebb4df522fa2236365366c8e50be239e9e",
+      "word_count": 67,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_060e7286210a3c80016ab319dcc6a887d2913652e64e216353",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Identify the underlying issue -> contrast professed trust with actual distrust -> define the distrust as an all-or-nothing pattern -> state a general relationship principle through dialogue -> explain the pattern through trauma and arrested development.\",\n  \"cumulative_ai_pattern\": \"The passage forms a compact, self-contained interpretive staircase in which every sentence advances the same diagnosis. The named people, quoted statement, and psychological explanation each perform a clean supporting function without creating independent context or social residue.\",\n  \"human_surplus_case\": \"The conversational phrasing and blunt judgment create a personal voice, but neither materially disrupts the explanatory sequence.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After neutralizing the names and psychological specifics, the passage remains an unusually efficient thesis-to-evidence-to-pattern-to-principle-to-cause structure, with no detail serving a substantial purpose outside that scaffold.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Identify the underlying issue -> contrast professed trust with actual distrust -> define the distrust as an all-or-nothing pattern -> state a general relationship principle through dialogue -> explain the pattern through trauma and arrested development.",
+        "cumulative_ai_pattern": "The passage forms a compact, self-contained interpretive staircase in which every sentence advances the same diagnosis. The named people, quoted statement, and psychological explanation each perform a clean supporting function without creating independent context or social residue.",
+        "human_surplus_case": "The conversational phrasing and blunt judgment create a personal voice, but neither materially disrupts the explanatory sequence.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After neutralizing the names and psychological specifics, the passage remains an unusually efficient thesis-to-evidence-to-pattern-to-principle-to-cause structure, with no detail serving a substantial purpose outside that scaffold."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2233,
+        "completion_tokens": 370,
+        "total_tokens": 2603,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 719
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 719,
+        "completion_tokens_details": {
+          "reasoning_tokens": 158
+        }
+      },
+      "elapsed_seconds": 6.808
+    },
+    {
+      "timestamp": "2026-09-23T00:14:32.777922342Z",
+      "level": "info",
+      "event": "holdout_result",
+      "sample_id": "HV2-20",
+      "sample_sha256": "a00dd494db4f07248f15faca7dd87a406e3c88db4c5d4f147376a27a79b2e57b",
+      "word_count": 61,
+      "model": "openai-gpt-56-sol",
+      "response_id": "resp_027a30e058ef2aa6016ab319e39b7087d298ce4ea4ceb3fd09",
+      "content": "{\n  \"classification\": \"AI\",\n  \"confidence\": \"medium\",\n  \"functional_skeleton\": \"Historical setup -> later intensification -> cross-cultural qualification -> concise terminology label.\",\n  \"cumulative_ai_pattern\": \"The passage forms a compact, self-contained explanatory staircase. Each sentence performs one distinct teaching function, and the historical and cultural specifics act as interchangeable supports for the final conceptual distinction.\",\n  \"human_surplus_case\": \"The conversational phrasing and broad assertions create some informality, but no detail introduces an independent lived, social, or digressive function.\",\n  \"human_surplus_breaks_scaffold\": false,\n  \"decisive_reason\": \"After content-neutralization, the prose remains an unusually efficient sequence of claim, development, exception, and label, with virtually no material outside the explanatory scaffold.\"\n}",
+      "parsed": {
+        "classification": "AI",
+        "confidence": "medium",
+        "functional_skeleton": "Historical setup -> later intensification -> cross-cultural qualification -> concise terminology label.",
+        "cumulative_ai_pattern": "The passage forms a compact, self-contained explanatory staircase. Each sentence performs one distinct teaching function, and the historical and cultural specifics act as interchangeable supports for the final conceptual distinction.",
+        "human_surplus_case": "The conversational phrasing and broad assertions create some informality, but no detail introduces an independent lived, social, or digressive function.",
+        "human_surplus_breaks_scaffold": false,
+        "decisive_reason": "After content-neutralization, the prose remains an unusually efficient sequence of claim, development, exception, and label, with virtually no material outside the explanatory scaffold."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2226,
+        "completion_tokens": 307,
+        "total_tokens": 2533,
+        "prompt_tokens_details": {
+          "cached_tokens": 1511,
+          "cache_creation_input_tokens": 712
+        },
+        "cache_read_input_tokens": 1511,
+        "cache_creation_input_tokens": 712,
+        "completion_tokens_details": {
+          "reasoning_tokens": 134
+        }
+      },
+      "elapsed_seconds": 5.407
+    }
+  ]
+}

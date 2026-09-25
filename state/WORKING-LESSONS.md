@@ -133,3 +133,254 @@ Durable findings:
 Therefore do not blacklist `same principle`, colons, three-item lists, transitions, compression, or any other isolated surface. The operative risk is often **stacked editorial closure**: several locally tidy operations compress, label, connect, and finish a thought in the same boundary. Preserve natural owner source when it is actually source-relevant to the target function, prefer the next necessary concrete move, and test interactions only when single-feature cells are null and the combination is decision-relevant.
 
 R09 supplies the production anchor: its byte-identical R08 paragraph was owner-localized Human/high, while its appended 66-word model/editorial required-functions paragraph was AI/high. Keep R08 frozen; retain the protected functions but redistribute or re-realize them rather than defending the compact package.
+
+## 2026-09-19 — Local saturation is not a global dead end
+
+A difficult target can saturate under one generator/representation family without invalidating the broader humanization program. Inner Child Therapy supplied the direct contrast on consecutive days: `Also Look Outward` converged under a stable-boundary red-region controller from AI 0.53295 -> 0.42430 -> 0.0 and was owner-accepted, while `Write It. Don't Send It Yet.` produced six materially varied all-red realizations under the tested generator family.
+
+Interpret the latter as **local saturation**, not proof that models cannot generate Human prose or that earlier methods stopped working. When no reliable Human island exists, create one through progressive forward construction: generate only the next natural beat, freeze owner/editorially accepted model-generated prefix text, continue from that prefix, then run the complete natural boundary through preservation and Pangram. Once real red/green localization exists, return immediately to the proven residual-repair controller instead of inventing another whole-paragraph architecture after each failure.
+
+Exact method note: `state/generation/LOCAL-SATURATION-NOT-GLOBAL-DEAD-END-20260919.md`.
+
+## 2026-09-21 — Relational generation and post-generation tell repair are different phases
+
+Inner Child checking P3 exposed a representation error: a contemporaneous help map had been turned into a pre-writing sentence allocation (`S1=function A ... S5=function E`), then the resulting prose was criticized for doing exactly one function per sentence. Do not use the help-trace requirement as the generator's sentence plan.
+
+Owner correction: let thoughts interact through source-grounded examples, self-talk, parenthetical realization, and uneven attention; then use the Human-facing tell catalog **after** literal prose exists. The tell ledger must be executed, not merely reported.
+
+Evidence boundary:
+- fresh autonomous relational-thought Railway generation passed a human-facing reader but still measured Pangram AI 1.0 on the tested 67-word P3;
+- production switched to Joel's source-relevant seat-belt/checker substrate;
+- post-generation tell repairs removed deferred-homework implication, checker-monitoring ambiguity, a second-ending slogan, and chronology ambiguity;
+- the final owner-derived P3 measured Pangram Human 1.0 alone (86 words), with P1+P2 context (167 words), and in the complete section (318 words).
+
+Therefore the promoted production lesson is **owner-derived substrate + post-generation tell repair can work**. Fresh autonomous transfer remains unproven. Do not expose HT01–HT14 as a writer checklist merely because the repair ledger succeeded.
+
+
+## 2026-09-21 — Superseded RT2 tell-clean conclusion
+
+The earlier RT2 interpretation said that the current tell catalog was proven incomplete because a supposedly tell-clean 57-word repair still measured Pangram AI 1.0. **That inference is superseded.**
+
+Joel's owner re-audit found obvious surviving AI-shaped operations: scene-skinned source-function staircase, interchangeable didactic props, generic therapeutic abstraction, simulated spontaneity, image -> explanatory aftercare, and equalized semantic efficiency. The premise that RT2 was actually tell-clean was false.
+
+Therefore RT2 does **not** establish that a genuinely tell-clean passage can still be detector-AI, and it does not prove catalog incompleteness. Catalog incompleteness remains possible on other evidence; this control cannot establish it.
+
+Retain the narrower language rule: do not say `there are no AI tells` when the evidence is only `our current ledger/reviewer did not identify any`.
+
+See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
+
+
+## 2026-09-21 — A cute scene can hide the same AI staircase
+
+Owner correction to the checking RT2 audit: the supposed `tell-clean` Railway-derived paragraph still contained obvious AI tells.
+
+The failure was mesoscale. Pan -> cooking -> checker -> carrot/dinner looked more Human because it used one coherent scene, self-talk, and fragments, but the scene still walked through the protected functions in order. The semantic staircase had been **skinned with a scenario**, not dissolved.
+
+Additional missed tells included generic therapeutic abstraction, fake-spontaneity markers used as stage transitions, and image -> explanatory aftercare.
+
+Do not treat:
+- concrete example;
+- self-talk;
+- fragments;
+- colloquial filler;
+- recurrence;
+
+as evidence by themselves. Audit whether they changed the underlying thought topology.
+
+New T4 hypothesis: **causal surplus / non-interchangeable detail**. Joel's seat-belt example accumulates refusal -> crash -> injury -> blame -> guilt. Railway's pan/carrot details mainly illustrate functions and could be swapped out cheaply. Test this on another target before promoting it.
+
+Consequently, RT2 no longer supports the claim that the tell catalog is proven incomplete. The catalog may be incomplete, but this control did not isolate that because the `tell-clean` premise was false.
+
+## 2026-09-22 — Freshness is not critic competence
+
+The Inner Child dangerous-present-adult campaign exposed a process false positive before Pangram: a fresh critic returned `DEFINITE_AI_REMAINS: NO` even though Joel later identified obvious cumulative instruction-manual/listicle cadence and missing reader-purpose structure.
+
+The critic had noticed several ingredients as separate `mixed` findings but did not aggregate them into the known cumulative AI-N16 pattern. Earlier calibration had shown only that the critic could accept a known-good same-register paragraph. That tested specificity, not sensitivity.
+
+Production correction:
+- fresh critic packets must include the natural reading boundary plus intended reader/local purpose, not target text alone when audience/continuity can matter;
+- critic order is adversarial first: strongest AI-shape case before positive Human-facing features;
+- mixed findings must be aggregated at paragraph/section scale;
+- protected meaning cannot justify preserving model-shaped realization;
+- reader model, why-now, and antecedent checks are blocking;
+- before non-detection can gate detector admission, the same materially current critic configuration must blindly accept a same-register known-good control **and** detect a same-register owner-rejected known-bad control.
+
+A bare `no definite AI tells` result is therefore non-gating. This is an audit-admission rule, not a detector-causality claim.
+
+See `state/generation/INNER-CHILD-SAFETY-FRESH-CRITIC-FALSE-PASS-20260922.md` and the canonical Joel Articles `docs/HUMANIZATION-FRESH-CRITIC-GATE.md`.
+
+
+## 2026-09-22 — SUPERSEDED: Human-surplus hard gate
+
+Benchmark v1 scored **14/20 overall, 10/10 Human, 4/10 AI** and correctly showed that model-simulated concrete detail, judgment, unresolvedness, social address, and metaphor cannot be treated as automatic Human votes.
+
+The first correction overreached by turning content-neutralized scaffold analysis into a veto and requiring Human evidence to materially break that scaffold.
+
+An untouched v2 holdout then scored **10/20 overall, 1/10 Human, 9/10 AI**. The rule had mostly inverted the error direction.
+
+Therefore:
+- model-simulated Human-looking devices are not automatic positive evidence;
+- a clean/efficient functional skeleton is also not automatic AI evidence;
+- genuine Human prose may be compact, instructional, causal, polished, and easy to summarize by sentence function;
+- content-neutralization is a diagnostic stress test, not a classifier;
+- do not require Human prose to contain inefficiency, digression, or functionally unnecessary surplus.
+
+The oscillation between v1 and v2 crosses the method-escalation threshold. Do not add another abstract prohibition stack. Develop a materially different **literal contrastive** classifier against provenance-secure Human/AI examples, then require a new untouched 20/20 holdout before production gating.
+
+Exact evidence:
+- `state/generation/critic-benchmark-20260922/V1-RESULT-AND-RUBRIC-DIAGNOSIS.md`
+- `state/generation/critic-holdout-v2-20260922/RESULT-AND-METHOD-DIAGNOSIS.md`
+
+
+## 2026-09-23 — Stop global prose judges; use specialized defect audits
+
+The dangerous-present-adult process failure triggered a sequence of blinded GPT-5.6/GPT-6 Sol critic experiments. The global-judge family did not generalize:
+
+- abstract authorship rubric v1: 14/20;
+- hard content-neutralized scaffold veto v2: 10/20;
+- literal contrastive absolute classifier holdout v3: 10/20 after 11/12 development;
+- matched pairwise realization-defect chooser: 5/8.
+
+These failures have different error directions and survive materially different prompting architectures. Do not respond by adding more global anti-pattern rules or more few-shot pairs.
+
+The production question is narrower than hidden authorship: **does this literal realization still contain a concrete editorial/model-shape defect that should block a paid Pangram call?**
+
+A specialized-audit decomposition performed materially better on the owner-correction-relevant axes:
+
+- reader-purpose / pragmatic act: 2/2;
+- cumulative instruction-manual/listicle cadence: 4/4, including two Human controls showing that lists/advice alone are not the defect;
+- antecedent/referent coherence: after correcting malformed controls, 4/4 on the same `ask` sentence with/without its source setup plus self-contained/corrupted Human controls.
+
+Combined current scoped controls: 10/10.
+
+Promoted process lesson:
+- use narrow observable defect auditors, one axis per request;
+- calibrate each axis on positive and negative examples for that exact defect;
+- owner/editorial realization judgment is the relevant label, not hidden model provenance;
+- a narrow FAIL identifies a repair candidate; it does not prove AI authorship;
+- an auditor that fails its own controls is non-gating;
+- absence of narrow FAILs is not a certificate and still requires a direct natural-boundary editorial read;
+- Pangram remains downstream and cannot rescue a failed unpaid audit.
+
+For the Inner Child dangerous-adult case, unpaid review should have blocked before Pangram on at least three independently observable defects: instruction-manual cadence, missing reader-purpose/pragmatic setup, and the orphaned `ask` reference after removal of the source's `voice / ask / answer` setup.
+
+Exact evidence: `state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUDIT-RESULT.md`.
+
+
+## 2026-09-23 — Claude Opus 5.5 improves the one-call global tell ledger, but uncertainty must remain blocking
+
+A direct OpenRouter comparison tested the original production question rather than hidden authorship: give the model the full current tell inventory and require one PRESENT / ABSENT / UNCERTAIN row per tell, with no overall Human/AI vote.
+
+Two independent temperature-0 runs reused the same frozen prompt and six owner-grounded cases.
+
+Across 24 scored tell cells:
+- Claude Opus 5.5: **17/24 exact**, **0 wrong-polarity calls**, **7 UNCERTAIN**, with identical status on **11/12** cells between repeats;
+- GPT-6 Sol: **13/24 exact**, **9 wrong-polarity calls**, **2 UNCERTAIN**, with identical status on **8/12** cells between repeats.
+
+Opus varied only on one Human cadence control, moving from ABSENT to UNCERTAIN. GPT varied on four cells and repeatedly made confident polarity reversals, including false ABSENTs on owner-known defects and false PRESENTs on Human controls.
+
+Therefore Claude is materially better in this bounded comparison as a **global catalog sweep**, but it is not a sole certifier. Treat UNCERTAIN as unresolved, never as ABSENT. The full tell ledger remains authoritative; use focused/narrow audit or direct editorial review to resolve PRESENT/UNCERTAIN findings. No global Human/AI vote may override individual tell rows.
+
+Current evidence supports Claude Opus 5.5 as the preferred fresh global-sweep model over GPT-6 Sol while the tested model/prompt configuration remains relevant. Opus cost about 3x more in these runs. This is a bounded six-case repeatability result, not universal model-ranking evidence.
+
+Exact evidence:
+- `state/generation/global-tell-model-comparison-20260923/RESULT.md`
+- `state/generation/global-tell-model-comparison-20260923/REPEATABILITY.md`.
+
+
+## 2026-09-23 — Max reasoning materially improves the full tell sweep
+
+On the same frozen six-case / 12-cell global tell-ledger benchmark, explicit `reasoning.effort=max` with a 48,000-token completion ceiling materially changed performance without changing the tell definitions:
+
+- Claude Opus 5.5 max: **11/12 exact**, **0 wrong polarity**, 1 UNCERTAIN;
+- GPT-6 Sol max via Venice: **8/12 exact**, 3 wrong polarity, 1 UNCERTAIN;
+- GPT-6 Astra max via Venice: **7/12 exact**, 4 wrong polarity, 1 UNCERTAIN.
+
+Opus max correctly found every owner-known positive defect in the scored set, including readiness manual cadence, both dangerous-adult defects, and all six RT2 tell cells. Its only miss was a conservative UNCERTAIN on the Human seat-belt cadence control.
+
+This materially weakens the hypothesis that the tell definitions themselves are broadly defective. Preserve the current catalog for now. The original recommendation to prefer max by default is **superseded by the later reasoning-effort ladder**: use xhigh as the current high-rigor default and reserve max for decision-changing unresolved cases. Treat UNCERTAIN as unresolved; broaden positive/negative calibration across the rest of the tell catalog before changing definitions.
+
+Sol and Astra remain useful cheaper/free-credit alternatives, but on this bounded task max reasoning did not make either as safe as Opus: both retained confident wrong-polarity calls.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/MAX-EFFORT-RESULT.md`.
+
+
+## 2026-09-23 — Jev is useful as cheap tell triage, not as a clearing gate
+
+On the same frozen six-case / twelve owner-grounded tell cells, TypeSafe Jev 1.13 via OpenRouter Decisions scored **9/12 exact** at about **$0.00073 total**.
+
+It correctly handled readiness/manual cadence, dangerous-adult manual cadence, four RT2 tell cells, and all three Human cadence controls. But it made three confident false-ABSENT calls on owner-known defects: dangerous-adult abrupt complication, RT2 scene-skinned staircase, and RT2 equalized semantic efficiency.
+
+Therefore Jev is useful only as an optional cheap typed **positive-triage/advisory** layer:
+- Jev PRESENT may prioritize a tell for inspection;
+- Jev ABSENT does not clear a tell;
+- Jev cannot override Opus max, a calibrated narrow audit, or direct editorial judgment.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/JEV-RESULT.md`.
+
+
+## 2026-09-23 — Tell calibration coverage is the next bottleneck, not tell-definition rewrite
+
+Current scored evidence is uneven:
+- T02 has strong two-sided owner/editorial controls;
+- T03–T09 are positive-only;
+- T01 and T10–T12 are unscored.
+
+Opus 5.5 max reached 11/12 on the existing grounded cells with zero wrong-polarity calls. That argues against wholesale tell rewrites.
+
+Next method step:
+- preserve current definitions;
+- add two-sided controls tell-by-tell;
+- start with T11, T01, and T10 where owner-correction evidence already points to literal examples;
+- split the RT2 T04–T09 cluster into independent controls;
+- revise a tell only if repeated max-effort errors remain after good positive/negative controls exist for that exact tell.
+
+Exact evidence: `state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md`.
+
+
+## 2026-09-23 — OpenRouter Opus xhigh is the API-fallback full-ledger effort; max is escalation
+
+A reasoning-effort ladder reused the exact same six-case / twelve-cell global tell benchmark and unchanged tell definitions.
+
+Primary preserved runs:
+- low: **7/12 exact**, 5 UNCERTAIN, 0 wrong polarity, ~$0.155;
+- medium: **9/12 exact**, 3 UNCERTAIN, 0 wrong polarity, ~$0.291;
+- high: **8/12 exact**, 4 UNCERTAIN, 0 wrong polarity, ~$0.322;
+- xhigh run 1: **11/12 exact**, 1 UNCERTAIN, 0 wrong polarity, ~$0.450;
+- xhigh run 2: **10/12 exact**, 2 UNCERTAIN, 0 wrong polarity, ~$0.481;
+- max: **11/12 exact**, 1 UNCERTAIN, 0 wrong polarity, ~$2.996.
+
+The effort ladder is not perfectly monotonic, but xhigh is the lowest tested effort that repeatedly enters the same fail-safe regime as max while costing roughly one-sixth as much.
+
+Current **OpenRouter API fallback** routing:
+- **xhigh** = default high-rigor Opus 5.5 API global tell-ledger sweep;
+- **max** = escalation only when xhigh leaves a decision-changing tell UNCERTAIN or editorially disputed;
+- lower API efforts are not current clearing defaults because they leave materially more cells unresolved.
+
+This does not establish Claude Code subscription-CLI effort routing. Recalibrate effort separately on the provider-native CLI once its authentication is restored.
+
+Do not rewrite the tell catalog because lower-effort runs were less decisive. The next bottleneck remains two-sided tell calibration coverage.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-LADDER-RESULT.md`.
+
+
+## 2026-09-23 — GPT subscription CLI saves API spend but does not replace Opus for the full tell ledger
+
+The same frozen six-case / twelve-cell tell benchmark was run through clean local Codex subscription CLI sessions at xhigh, with user/project rules ignored, neutral `/tmp` workspaces, ephemeral sessions, read-only sandboxing, structured output, and no tool use.
+
+Results:
+- GPT-6 Sol CLI: **9/12 exact**, 1 UNCERTAIN, **2 wrong-polarity** calls;
+- GPT-6 Astra CLI: **8/12 exact**, 1 UNCERTAIN, **3 wrong-polarity** calls.
+
+Sol CLI improved somewhat versus Sol max through Venice (8/12, 3 wrong polarity), confirming that provider surface can affect behavior. But both GPT CLI models still confidently flagged known-Human cadence controls as defective; Astra also missed the dangerous-adult abrupt-complication defect.
+
+Therefore:
+- provider-native subscription CLI remains the preferred execution route when authenticated/capability-equivalent;
+- CLI economy does not imply evaluator adequacy;
+- Sol CLI may be a secondary/advisory cross-check;
+- Astra CLI currently adds no tell-ledger value over Sol CLI;
+- neither GPT CLI model should clear the full tell ledger against stronger owner/editorial/Opus evidence.
+
+Claude Code CLI exists with low/medium/high/xhigh/max controls but was unauthenticated during this test. Its effort ladder must be calibrated separately after re-login; OpenRouter Opus effort results cannot be transferred mechanically to the CLI route.
+
+Exact evidence: `state/generation/global-tell-model-comparison-20260923/CODEX-CLI-XHIGH-RESULT.md`.

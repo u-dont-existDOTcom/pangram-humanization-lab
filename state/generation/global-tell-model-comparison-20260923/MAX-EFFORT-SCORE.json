@@ -1,0 +1,303 @@
+{
+  "format": "joel-global-tell-max-effort-score-v1",
+  "reasoning": {
+    "effort": "max"
+  },
+  "max_completion_tokens": 48000,
+  "models": {
+    "anthropic/claude-opus-5.5:max": {
+      "exact": 11,
+      "total": 12,
+      "accuracy": 0.9166666666666666,
+      "uncertain": 1,
+      "wrong_polarity": 0,
+      "complete_ledgers": 6,
+      "cases": 6,
+      "reasoning_tokens": 136240,
+      "completion_tokens": 147758,
+      "reported_cost": 2.99572,
+      "cells": [
+        {
+          "case_id": "GLOB-BAD-READINESS",
+          "tell_id": "T02",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-DANGEROUS",
+          "tell_id": "T02",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-DANGEROUS",
+          "tell_id": "T03",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T04",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T05",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T06",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T07",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T08",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T09",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-GOOD-5MEO-LIST",
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "actual": "ABSENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-GOOD-ADVICE",
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "actual": "ABSENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-GOOD-SEATBELT",
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "actual": "UNCERTAIN",
+          "correct": false
+        }
+      ]
+    },
+    "openai-gpt-6-sol:max": {
+      "exact": 8,
+      "total": 12,
+      "accuracy": 0.6666666666666666,
+      "uncertain": 1,
+      "wrong_polarity": 3,
+      "complete_ledgers": 6,
+      "cases": 6,
+      "reasoning_tokens": 54437,
+      "completion_tokens": 58452,
+      "reported_cost": 0.0,
+      "cells": [
+        {
+          "case_id": "GLOB-BAD-READINESS",
+          "tell_id": "T02",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-GOOD-5MEO-LIST",
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "actual": "ABSENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T04",
+          "expected": "PRESENT",
+          "actual": "UNCERTAIN",
+          "correct": false
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T05",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T06",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T07",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T08",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T09",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-DANGEROUS",
+          "tell_id": "T02",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-DANGEROUS",
+          "tell_id": "T03",
+          "expected": "PRESENT",
+          "actual": "ABSENT",
+          "correct": false
+        },
+        {
+          "case_id": "GLOB-GOOD-ADVICE",
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "actual": "PRESENT",
+          "correct": false
+        },
+        {
+          "case_id": "GLOB-GOOD-SEATBELT",
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "actual": "PRESENT",
+          "correct": false
+        }
+      ]
+    },
+    "openai-gpt-6-astra:max": {
+      "exact": 7,
+      "total": 12,
+      "accuracy": 0.5833333333333334,
+      "uncertain": 1,
+      "wrong_polarity": 4,
+      "complete_ledgers": 6,
+      "cases": 6,
+      "reasoning_tokens": 52163,
+      "completion_tokens": 59166,
+      "reported_cost": 0.0,
+      "cells": [
+        {
+          "case_id": "GLOB-BAD-READINESS",
+          "tell_id": "T02",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T04",
+          "expected": "PRESENT",
+          "actual": "UNCERTAIN",
+          "correct": false
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T05",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T06",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T07",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T08",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T09",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-DANGEROUS",
+          "tell_id": "T02",
+          "expected": "PRESENT",
+          "actual": "PRESENT",
+          "correct": true
+        },
+        {
+          "case_id": "GLOB-BAD-DANGEROUS",
+          "tell_id": "T03",
+          "expected": "PRESENT",
+          "actual": "ABSENT",
+          "correct": false
+        },
+        {
+          "case_id": "GLOB-GOOD-5MEO-LIST",
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "actual": "PRESENT",
+          "correct": false
+        },
+        {
+          "case_id": "GLOB-GOOD-ADVICE",
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "actual": "PRESENT",
+          "correct": false
+        },
+        {
+          "case_id": "GLOB-GOOD-SEATBELT",
+          "tell_id": "T02",
+          "expected": "ABSENT",
+          "actual": "PRESENT",
+          "correct": false
+        }
+      ]
+    }
+  }
+}

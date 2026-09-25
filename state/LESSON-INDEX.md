@@ -119,3 +119,52 @@ Do not load every historical experiment indiscriminately. Start with the current
 - **Structural approval ≠ wording approval:** after an assistant move/consolidation/deletion/compression is owner-approved, humanize only the surviving assistant realization; preserve untouched owner prose and prefer minimum-dose rollback to actual owner language over fresh imitation. Romance R7 supplies owner-reported Human/high exact-candidate evidence without implying phrase causality. See `state/ROMANCE-R7-MINIMUM-DOSE-OWNER-ROLLBACK-2026-08-27.md`.
 <!-- closeout-request:human-to-ai-minimal-pairs-20260828 -->
 - **Stacked editorial closure / feature interactions:** isolated completion, sentence equalization, taxonomy closure, bridging, compression, or relationship language may remain Human while combinations cross Pangram's boundary. In the controlled 2026-08-28 packet, compact Somatic compression + polished cross-domain synthesis was AI `1.0` in two alternate realizations; a long conversational taxonomy + polished bridge became Mixed while colloquializing either component restored Human. Diagnose complete operation packages and boundaries, preserve owner source, and do not create phrase blacklists. See `state/experiments/human-to-ai-minimal-pairs-20260828/LESSONS.md` and the appended section in `state/WORKING-LESSONS.md`.
+
+<!-- closeout-request:local-saturation-not-global-dead-end-20260919 -->
+- **Local saturation ≠ global humanization dead end:** an all-red target only falsifies the tested target + generator/representation family. Compare against durable recent successes before escalating globally. When no green island exists, use progressive forward construction to earn a stable prefix, then return to the proven red-region convergence controller. See `state/generation/LOCAL-SATURATION-NOT-GLOBAL-DEAD-END-20260919.md`.
+
+<!-- closeout-request:inner-child-episode008-railway-p3-saturation-20260919 -->
+- **Railway Agent P3 target saturation:** on Inner Child Episode 008 P3, 20 owner-authorized Railway generations produced seven structurally varied detector-worthy candidates; all seven measured Pangram 4.0 AI 1.0 with exact History binding. Stop this Railway target lane at the 20-generation bound; do not generalize to other Railway targets. See `state/generation/INNER-CHILD-EPISODE008-RAILWAY-P3-SATURATION-20260919.md`.
+
+<!-- closeout-request:inner-child-checking-owner-derived-tell-ledger-20260921 -->
+- **Relational generation vs post-generation tell repair:** do not preassign one sentence per protected function. Generate from a shared thought/scene, then apply the Human-facing tell catalog to the literal prose and execute the tell repairs. Inner Child checking P3 provides Pangram-Human production evidence for owner-derived substrate + tell repair at 86/167/318-word boundaries, while fresh autonomous relational-thought generation on the same target remained Pangram AI 1.0. Treat this as post-generation repair evidence, not autonomous-transfer skill. See `state/generation/INNER-CHILD-CHECKING-OWNER-DERIVED-TELL-LEDGER-RESULT-20260921.md` and `state/generation/HUMAN-FACING-TELL-CONSTRUCTION-LIBRARY-v1-20260920.md`.
+
+
+<!-- closeout-request:inner-child-checking-tell-clean-counterexample-20260921 -->
+- **SUPERSEDED — RT2 did not establish tell-clean ≠ detector-clean:** owner re-audit found obvious surviving AI-shaped operations, so the tell-clean premise was false. Do not use RT2 as proof that the current catalog is incomplete. Retain only the narrower rule that critic non-detection is not proof of absence. See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
+
+
+<!-- closeout-request:inner-child-rt2-scene-skinned-staircase-20260921 -->
+- **Scene-skinned staircase:** a coherent concrete scenario can still preserve the same one-function-per-beat AI topology. Audit paragraph-level source-function order, fake spontaneity, interchangeable didactic props, and image→aftercare before calling prose tell-clean. The RT2 control no longer establishes catalog incompleteness because its tell-clean premise was false. See `state/generation/INNER-CHILD-CHECKING-RT2-RETROSPECTIVE-TELL-LEDGER-20260921.md`.
+
+<!-- closeout-request:inner-child-safety-fresh-critic-false-pass-20260922 -->
+- **Freshness ≠ critic competence:** before a fresh critic's non-detection can gate Joel production Pangram work, give it the natural reading boundary plus intended reader/local purpose, aggregate mixed findings, keep protected cognition separate from realization, and require blind same-register known-good **and** known-bad calibration. Known-good acceptance alone tests specificity, not sensitivity. See `state/generation/INNER-CHILD-SAFETY-FRESH-CRITIC-FALSE-PASS-20260922.md`.
+
+
+<!-- closeout-request:humanization-critic-provenance-benchmark-v1-20260922 -->
+- **SUPERSEDED — global Human/AI critic calibration:** the 20/20 hidden-authorship idea is no longer the production target. Abstract v1 scored 14/20, hard-veto v2 10/20, seven-pair absolute contrastive holdout v3 10/20 after 11/12 development, and matched pairwise realization-defect choice 5/8. Stop the global-judge family rather than adding more examples/rules. See `state/generation/critic-benchmark-20260922/V1-RESULT-AND-RUBRIC-DIAGNOSIS.md`, `state/generation/critic-holdout-v2-20260922/RESULT-AND-METHOD-DIAGNOSIS.md`, `state/generation/critic-holdout-v3-20260923/RESULT-AND-TARGET-CORRECTION.md`, and `state/generation/critic-pairwise-dev-20260923/PAIRWISE8-RESULT.md`.
+
+<!-- closeout-request:humanization-specialized-defect-audits-20260923 -->
+- **Specialized defect audits, not global authorship verdicts:** decompose unpaid pre-Pangram review into narrow observable axes. Current GPT-6 Sol controls reproduce the dangerous-adult owner corrections at 10/10 across reader-purpose (2/2), instruction-manual/listicle cadence (4/4), and corrected antecedent/referent coherence (4/4). Calibrate each axis on positive/negative controls for that exact defect; a failed axis auditor is non-gating, a narrow FAIL is a repair candidate rather than proof of AI authorship, and absence of FAILs still requires direct editorial reading. See `state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUDIT-RESULT.md`.
+
+
+<!-- closeout-request:global-tell-opus55-vs-gpt6-20260923 -->
+- **Global tell sweep — Opus 5.5 vs GPT-6 Sol:** two direct OpenRouter repeats on the same frozen six-case / 12-cell benchmark produced Opus 5.5 **17/24 exact, 0 wrong polarity, 7 UNCERTAIN, 11/12 status-repeatability** versus GPT-6 Sol **13/24 exact, 9 wrong polarity, 2 UNCERTAIN, 8/12 status-repeatability**. Use Opus as the current preferred fresh full-catalog sweep when available, but treat UNCERTAIN as unresolved and resolve with narrow audit/editorial review. This supplements rather than replaces the full tell ledger. See `state/generation/global-tell-model-comparison-20260923/RESULT.md` and `state/generation/global-tell-model-comparison-20260923/REPEATABILITY.md`.
+
+<!-- closeout-request:global-tell-max-effort-20260923 -->
+- **Max-effort global tell sweep — default superseded by effort ladder:** same frozen six-case / 12-cell benchmark, unchanged tell definitions: Opus 5.5 max **11/12 exact, 0 wrong polarity, 1 UNCERTAIN**; GPT-6 Sol max via Venice **8/12, 3 wrong polarity**; GPT-6 Astra max via Venice **7/12, 4 wrong polarity**. Preserve the current tell catalog for now. Later effort-ladder evidence makes OpenRouter Opus xhigh the routine **API-fallback** high-rigor default and max an escalation path; it does not establish Claude Code CLI effort routing. See `state/generation/global-tell-model-comparison-20260923/MAX-EFFORT-RESULT.md` and `state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-LADDER-RESULT.md`.
+
+
+<!-- closeout-request:global-tell-jev-20260923 -->
+- **Jev typed tell ledger:** TypeSafe Jev 1.13 scored **9/12 exact** on the same six-case / twelve-cell owner-grounded tell benchmark at about **$0.00073 total**, but made three confident false-ABSENT calls. Use Jev only as optional cheap positive triage/advisory: PRESENT can prioritize inspection; ABSENT cannot clear a tell. See `state/generation/global-tell-model-comparison-20260923/JEV-RESULT.md`.
+
+
+<!-- closeout-request:global-tell-calibration-coverage-20260923 -->
+- **Tell-level calibration coverage:** current scored evidence is uneven: T02 has strong two-sided owner/editorial controls; T03–T09 are positive-only; T01 and T10–T12 are unscored. Opus 5.5 max reaching 11/12 on existing grounded cells argues against wholesale tell rewrites. Expand two-sided controls tell-by-tell first; revise a definition only after repeated max-effort errors persist with good positive/negative controls for that exact tell. See `state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md`.
+
+<!-- closeout-request:global-tell-opus-effort-ladder-20260923 -->
+- **OpenRouter Opus reasoning-effort ladder:** same frozen six-case / 12-cell benchmark with unchanged tell definitions: low 7/12, medium 9/12, high 8/12, xhigh 11/12 then 10/12, max 11/12; the preserved Opus runs all stayed at zero wrong-polarity calls. For the **OpenRouter API fallback route**, use Opus 5.5 xhigh as the routine high-rigor full-ledger sweep and reserve max for decision-changing unresolved/disputed tells. This does not establish the Claude Code subscription CLI effort setting; recalibrate separately once CLI auth is available. The next bottleneck is tell-level calibration coverage, not a wholesale definition rewrite. See `state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-LADDER-RESULT.md`.
+
+
+<!-- closeout-request:codex-cli-global-tell-20260923 -->
+- **Codex subscription-CLI tell sweep:** on the same frozen six-case / 12-cell ledger at xhigh, GPT-6 Sol via clean ephemeral Codex CLI scored **9/12 exact, 2 wrong polarity, 1 UNCERTAIN**; GPT-6 Astra scored **8/12, 3 wrong polarity, 1 UNCERTAIN**. CLI-first routing saves metered API spend and Sol improved modestly versus Venice, but neither GPT CLI model is safe as the primary clearing sweep; Astra adds no current advantage over Sol for this task. Claude CLI effort remains separately uncalibrated pending authentication. See `state/generation/global-tell-model-comparison-20260923/CODEX-CLI-XHIGH-RESULT.md`.

@@ -8,6 +8,10 @@ Preserve exact Pangram detector evidence, editorial authority, lesson closeout, 
 
 Current owner instructions, exact repository evidence, tests, and current `main` outrank historical chat or old task branches.
 
+## 2026-09-18 — GUI-over-API budget preference
+
+For ongoing Joel-byline humanization detector checks, Joel now prefers the cheaper Pangram GUI route over the API because his API balance is low. When direct connected-computer access is available, Remote Desktop Commander may be used to reach the local workflow; prefer the deterministic `pangram-local` / dedicated-profile path over free-form clicking when accessible. Do not silently spend API credits merely because the current chat can call the API more easily. See `state/OWNER-PANGRAM-GUI-BUDGET-PREFERENCE-20260918.md`.
+
 ## Current browser-interaction preference — 2026-08-28
 
 For multi-candidate Pangram work, Joel asked that Brave remain in the background and that the automation reuse its existing session/tab instead of repeatedly foregrounding, closing, and reopening tabs. The completed Human→AI packet used headless Brave with one persistent context and one reused result tab per batch. Treat this as the current interaction preference unless Joel asks to watch a headed run. It does not relax authentication, exact-identity, reservation, cache, or History recovery safeguards.
@@ -213,3 +217,32 @@ Never silently substitute one transport for the other when Joel has specified GU
 After interruption or a fresh chat, inspect this checkpoint, `docs/PANGRAM-LOCAL-PLAYWRIGHT.md`, the historical live-validation state `state/PANGRAM-LOCAL-PLAYWRIGHT-CURRENT-STATE-2026-08-18.md` on `agent/pangram-local-playwright-gpt-20260818`, `state/LESSON-INDEX.md`, and the active article task state. Inspect API/private-executor state only when the requested transport is API or when cross-transport paid-call ambiguity makes it relevant.
 
 Never infer paid-call state from chat. Never repeat ambiguous/already-paid work before exact durable state is recovered or deliberately resolved.
+
+
+## 2026-09-23 — Humanization pre-Pangram critic architecture
+
+The Inner Child dangerous-present-adult debugging lane falsified a sequence of global prose-judge approaches:
+
+- abstract authorship rubric v1: 14/20;
+- hard scaffold-veto v2: 10/20;
+- literal contrastive absolute holdout v3: 10/20 after 11/12 development;
+- matched pairwise realization-defect chooser: 5/8.
+
+Do not continue training one external model to emit a single Human/AI or good/bad realization verdict.
+
+The supported development direction is **specialized observable defect auditing**. Current GPT-6 Sol controls reproduce the owner-identified dangerous-adult failures at 10/10 across:
+- reader-purpose / pragmatic act: 2/2;
+- cumulative instruction-manual/listicle cadence: 4/4;
+- corrected antecedent/referent coherence: 4/4.
+
+Exact evidence: `state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUDIT-RESULT.md`.
+
+Interpretation boundary:
+- these are scoped editorial audits, not authorship classifiers;
+- calibrate each axis on positive/negative examples for that exact defect;
+- a narrow FAIL is a repair candidate, not proof of AI authorship;
+- an axis auditor that fails its regression controls is non-gating;
+- absence of narrow FAILs still requires direct natural-boundary editorial review;
+- Pangram remains downstream and cannot rescue a failed unpaid audit.
+
+No additional Pangram call was made during this debugging sequence after the six-call dangerous-adult budget had been exhausted.

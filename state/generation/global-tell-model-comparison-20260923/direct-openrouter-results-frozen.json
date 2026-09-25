@@ -1,0 +1,1148 @@
+{
+  "format": "joel-global-tell-opus55-vs-gpt6-direct-openrouter-v1",
+  "models": [
+    "anthropic/claude-opus-5.5",
+    "openai/gpt-6-sol"
+  ],
+  "prompt_sha256": "b2d3de84afe7798b8910b7a22370ad83b3e2afe1a6b62eb98a6b5f67bef09e9f",
+  "cases_sha256": "8bb8a3ba99e617de68c2d146efc15a31d929e72a8dda02c91b039c6d7b0ddd2f",
+  "transport": "UDA scripts/uda_openrouter.py -> OpenRouter direct",
+  "rows": [
+    {
+      "model": "anthropic/claude-opus-5.5",
+      "case_id": "GLOB-BAD-READINESS",
+      "provider_model": "anthropic/claude-opus-5.5",
+      "response_id": "gen-1790189641-sHn9oCtbNrdZvA5VHnDK",
+      "content": "```json\n{\n  \"ledger\": [\n    {\n      \"tell_id\": \"T01\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There is no first-person author voice. The prose speaks to the reader in second person and never inserts the author's preference or care as authority.\"\n    },\n    {\n      \"tell_id\": \"T02\",\n      \"status\": \"UNCERTAIN\",\n      \"evidence\": [\n        \"How much of the grown-up you is actually here right now?\",\n        \"Try looking around the room, pausing before you act, making a choice and following through on it.\",\n        \"If you can't do that because you're basically the frightened kid, leave the deeper conversation until later.\"\n      ],\n      \"reason\": \"The paragraph runs question, then a compressed three-part test, then a conditional verdict, then options. Each step does one clean teaching job and hands off, which resembles manual cadence. But it is one short paragraph serving a single self-check, and the steps follow from each other, so the section-scale cumulative pattern is not clearly established.\"\n    },\n    {\n      \"tell_id\": \"T03\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"No new concern is introduced without setup. The condition 'If you can't do that' comes directly from the test just described.\"\n    },\n    {\n      \"tell_id\": \"T04\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There is no scene or narrative, so no scene is skinning a checklist.\"\n    },\n    {\n      \"tell_id\": \"T05\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\n        \"looking around the room\"\n      ],\n      \"reason\": \"The only concrete detail is a standard grounding check that does its job directly. It is not a convenient prop continued across teaching beats.\"\n    },\n    {\n      \"tell_id\": \"T06\",\n      \"status\": \"UNCERTAIN\",\n      \"evidence\": [\n        \"do whatever helps you come back a bit\",\n        \"the deeper conversation\"\n      ],\n      \"reason\": \"Some phrasing is vague therapy-safe abstraction ('come back a bit', 'whatever helps'). However, the paragraph also gives a specific functional test (pausing before acting, following through on a choice), so it only partly summarizes instead of specifying.\"\n    },\n    {\n      \"tell_id\": \"T07\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There are no hesitations, fillers, or self-talk acting as stage directions. 'Basically' is ordinary colloquial phrasing inside a real condition, not transition camouflage.\"\n    },\n    {\n      \"tell_id\": \"T08\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"No concrete image is followed by an explanatory gloss. The sentences give a test and a consequence without moralizing afterward.\"\n    },\n    {\n      \"tell_id\": \"T09\",\n      \"status\": \"UNCERTAIN\",\n      \"evidence\": [\n        \"How much of the grown-up you is actually here right now?\",\n        \"You may need somebody steady there with you, or to do whatever helps you come back a bit before you try to talk to the child.\"\n      ],\n      \"reason\": \"Every sentence advances the assignment with similar efficiency and nothing gets disproportionate attention. But four sentences is too little text to judge equalized efficiency reliably.\"\n    },\n    {\n      \"tell_id\": \"T10\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\n        \"leave the deeper conversation until later\"\n      ],\n      \"reason\": \"This is a direct conditional instruction tied to the local test. It is not a reusable 'you don't have to X before Y' permission formula.\"\n    },\n    {\n      \"tell_id\": \"T11\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There is no bridge sentence announcing or connecting document functions. The paragraph ends on its instruction rather than pointing ahead to the next section.\"\n    },\n    {\n      \"tell_id\": \"T12\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\n        \"somebody steady there with you, or to do whatever helps you come back a bit\"\n      ],\n      \"reason\": \"The two options are an open, practical alternative, not a matched A/B contrast. The three-part grounding test is not a closed taxonomy.\"\n    }\n  ],\n  \"blocking_present_ids\": [],\n  \"audit_complete\": true\n}\n```",
+      "parsed": null,
+      "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "usage": {
+        "prompt_tokens": 1589,
+        "completion_tokens": 2111,
+        "total_tokens": 3700,
+        "cost": 0.048576,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.048576,
+          "upstream_inference_prompt_cost": 0.006356,
+          "upstream_inference_completions_cost": 0.04222
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 660,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 23.463
+    },
+    {
+      "model": "anthropic/claude-opus-5.5",
+      "case_id": "GLOB-BAD-DANGEROUS",
+      "provider_model": "anthropic/claude-opus-5.5",
+      "response_id": "gen-1790189664-cLGnVbxT7q1bAiadnMDL",
+      "content": "{\n  \"ledger\": [\n    {\"tell_id\":\"T01\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There is no first-person authorial preference or pseudo-personal stake. The prose addresses the reader throughout.\"},\n    {\"tell_id\":\"T02\",\"status\":\"PRESENT\",\"evidence\":[\"Think about this as if there were an actual child in the room.\",\"Would you bring the child over just to see how the child reacts? No.\",\"If the child recoils, that reaction only tells you the child is frightened.\",\"The child shouldn't be brought into this at all.\"],\"reason\":\"At paragraph scale, the text moves through a fixed chain of compressed teaching moves: framing command, distinction, rhetorical question with a one-word verdict, conditional, negation of the inference, final rule. Each move does one clean job and hands off to the next.\"},\n    {\"tell_id\":\"T03\",\"status\":\"PRESENT\",\"evidence\":[\"Think about this as if there were an actual child in the room. If you genuinely enjoy frightening or humiliating vulnerable people, that's different from having an intrusive thought you hate\"],\"reason\":\"The thought-experiment frame is set up, then immediately interrupted by a disclaimer-style distinction. Nothing in the visible thought generates that distinction. It appears because the requirements need the carve-out, not because the imagined child-in-room scenario raised it.\"},\n    {\"tell_id\":\"T04\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The child-in-room is a brief hypothetical, not a developed scene whose beats skin a source checklist.\"},\n    {\"tell_id\":\"T05\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There are almost no concrete props. The imagined child is the necessary subject, not a convenient interchangeable detail.\"},\n    {\"tell_id\":\"T06\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There is no vague healing or grief abstraction. The language names specific behaviors and inferences.\"},\n    {\"tell_id\":\"T07\",\"status\":\"ABSENT\",\"evidence\":[\"No.\"],\"reason\":\"The one-word answer is a direct verdict, not hesitation, filler, or self-talk used as a stage direction.\"},\n    {\"tell_id\":\"T08\",\"status\":\"UNCERTAIN\",\"evidence\":[\"Would you bring the child over just to see how the child reacts? No.\",\"The child shouldn't be brought into this at all.\"],\"reason\":\"The closing sentence partly restates a verdict the 'No.' had already delivered. However, the preceding lines are reasoning rather than aftercare on a concrete image, so the overcompletion is only mild.\"},\n    {\"tell_id\":\"T09\",\"status\":\"PRESENT\",\"evidence\":[\"It doesn't tell you that you're safe for the child, and it may give you exactly the reaction you wanted.\"],\"reason\":\"Every sentence advances the assignment with similar efficiency. No point receives disproportionate dwelling, and there is no digression or uneven attention.\"},\n    {\"tell_id\":\"T10\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"No 'you don't have to X before Y' style permission formula appears.\"},\n    {\"tell_id\":\"T11\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The opening line sets up the operative thought experiment rather than serving as a portable bridge between document sections.\"},\n    {\"tell_id\":\"T12\",\"status\":\"PRESENT\",\"evidence\":[\"having an intrusive thought you hate, holding a strange belief, or having done something harmful in the past\"],\"reason\":\"A neat three-item exclusion set packages coverage of adjacent cases as a tidy taxonomy set against the single dangerous case. It reads as disclaimer completeness rather than open enumeration arising from the thought.\"}\n  ],\n  \"blocking_present_ids\":[\"T02\",\"T03\",\"T09\",\"T12\"],\n  \"audit_complete\":true\n}",
+      "parsed": {
+        "ledger": [
+          {
+            "tell_id": "T01",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There is no first-person authorial preference or pseudo-personal stake. The prose addresses the reader throughout."
+          },
+          {
+            "tell_id": "T02",
+            "status": "PRESENT",
+            "evidence": [
+              "Think about this as if there were an actual child in the room.",
+              "Would you bring the child over just to see how the child reacts? No.",
+              "If the child recoils, that reaction only tells you the child is frightened.",
+              "The child shouldn't be brought into this at all."
+            ],
+            "reason": "At paragraph scale, the text moves through a fixed chain of compressed teaching moves: framing command, distinction, rhetorical question with a one-word verdict, conditional, negation of the inference, final rule. Each move does one clean job and hands off to the next."
+          },
+          {
+            "tell_id": "T03",
+            "status": "PRESENT",
+            "evidence": [
+              "Think about this as if there were an actual child in the room. If you genuinely enjoy frightening or humiliating vulnerable people, that's different from having an intrusive thought you hate"
+            ],
+            "reason": "The thought-experiment frame is set up, then immediately interrupted by a disclaimer-style distinction. Nothing in the visible thought generates that distinction. It appears because the requirements need the carve-out, not because the imagined child-in-room scenario raised it."
+          },
+          {
+            "tell_id": "T04",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The child-in-room is a brief hypothetical, not a developed scene whose beats skin a source checklist."
+          },
+          {
+            "tell_id": "T05",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There are almost no concrete props. The imagined child is the necessary subject, not a convenient interchangeable detail."
+          },
+          {
+            "tell_id": "T06",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There is no vague healing or grief abstraction. The language names specific behaviors and inferences."
+          },
+          {
+            "tell_id": "T07",
+            "status": "ABSENT",
+            "evidence": [
+              "No."
+            ],
+            "reason": "The one-word answer is a direct verdict, not hesitation, filler, or self-talk used as a stage direction."
+          },
+          {
+            "tell_id": "T08",
+            "status": "UNCERTAIN",
+            "evidence": [
+              "Would you bring the child over just to see how the child reacts? No.",
+              "The child shouldn't be brought into this at all."
+            ],
+            "reason": "The closing sentence partly restates a verdict the 'No.' had already delivered. However, the preceding lines are reasoning rather than aftercare on a concrete image, so the overcompletion is only mild."
+          },
+          {
+            "tell_id": "T09",
+            "status": "PRESENT",
+            "evidence": [
+              "It doesn't tell you that you're safe for the child, and it may give you exactly the reaction you wanted."
+            ],
+            "reason": "Every sentence advances the assignment with similar efficiency. No point receives disproportionate dwelling, and there is no digression or uneven attention."
+          },
+          {
+            "tell_id": "T10",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "No 'you don't have to X before Y' style permission formula appears."
+          },
+          {
+            "tell_id": "T11",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The opening line sets up the operative thought experiment rather than serving as a portable bridge between document sections."
+          },
+          {
+            "tell_id": "T12",
+            "status": "PRESENT",
+            "evidence": [
+              "having an intrusive thought you hate, holding a strange belief, or having done something harmful in the past"
+            ],
+            "reason": "A neat three-item exclusion set packages coverage of adjacent cases as a tidy taxonomy set against the single dangerous case. It reads as disclaimer completeness rather than open enumeration arising from the thought."
+          }
+        ],
+        "blocking_present_ids": [
+          "T02",
+          "T03",
+          "T09",
+          "T12"
+        ],
+        "audit_complete": true
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1875,
+        "completion_tokens": 2046,
+        "total_tokens": 3921,
+        "cost": 0.04842,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.04842,
+          "upstream_inference_prompt_cost": 0.0075,
+          "upstream_inference_completions_cost": 0.04092
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 775,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 21.928
+    },
+    {
+      "model": "anthropic/claude-opus-5.5",
+      "case_id": "GLOB-BAD-RT2",
+      "provider_model": "anthropic/claude-opus-5.5",
+      "response_id": "gen-1790189686-WbpFGKdFTdulDyXatCeA",
+      "content": "```json\n{\n  \"ledger\": [\n    {\n      \"tell_id\": \"T01\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There is no first person. The prose uses second-person address throughout, so no author preference or authority is inserted.\"\n    },\n    {\n      \"tell_id\": \"T02\",\n      \"status\": \"PRESENT\",\n      \"evidence\": [\n        \"If the pan is smoking, take it off the stove.\",\n        \"Okay. Then the checker goes,\",\n        \"Hm. There you are.\"\n      ],\n      \"reason\": \"Across the whole paragraph, each short unit does one clean teaching job and hands off to the next: a conditional command, a grief-arrival claim, a checker prompt, a reorientation verdict, and a grounding cue. Together they form a compressed instructional sequence rather than a developing thought.\"\n    },\n    {\n      \"tell_id\": \"T03\",\n      \"status\": \"PRESENT\",\n      \"evidence\": [\n        \"Old grief might show up while you're cooking too\",\n        \"Then the checker goes,\"\n      ],\n      \"reason\": \"Grief enters immediately after a stove-safety instruction, joined only by 'too'; nothing in the smoking pan generates it. 'The checker' is introduced with a definite article as if already established, but the reader has never met it.\"\n    },\n    {\n      \"tell_id\": \"T04\",\n      \"status\": \"UNCERTAIN\",\n      \"evidence\": [\n        \"The carrot's still on the board. You were in the middle of dinner.\"\n      ],\n      \"reason\": \"The cooking scene appears to skin a sequence of functions: safety action, intrusion of grief, intrusive checking thought, then grounding in the present. The source ledger isn't visible, so a one-for-one mapping can't be confirmed.\"\n    },\n    {\n      \"tell_id\": \"T05\",\n      \"status\": \"PRESENT\",\n      \"evidence\": [\n        \"If the pan is smoking\",\n        \"The carrot's still on the board.\"\n      ],\n      \"reason\": \"The pan and carrot are convenient, interchangeable kitchen props. They are selected to carry the functions of practical action and present-moment grounding, and neither has any causal connection to the grief.\"\n    },\n    {\n      \"tell_id\": \"T06\",\n      \"status\": \"PRESENT\",\n      \"evidence\": [\n        \"Old grief\",\n        \"feeling the old thing all over again\"\n      ],\n      \"reason\": \"Vague, therapy-safe abstraction stands in for any specific loss or lived relation. 'Old grief' and 'the old thing' summarize rather than specify.\"\n    },\n    {\n      \"tell_id\": \"T07\",\n      \"status\": \"PRESENT\",\n      \"evidence\": [\n        \"Okay.\",\n        \"Hm.\",\n        \"There you are.\"\n      ],\n      \"reason\": \"These one-word interjections sit between engineered beats as stage directions. They mark transitions rather than arising from an actual turn in thought.\"\n    },\n    {\n      \"tell_id\": \"T08\",\n      \"status\": \"PRESENT\",\n      \"evidence\": [\n        \"The carrot's still on the board. You were in the middle of dinner.\"\n      ],\n      \"reason\": \"The carrot image already performs the grounding. The following sentence immediately restates its meaning (you are back in the ordinary present), and 'There you are' pre-announces the same reorientation.\"\n    },\n    {\n      \"tell_id\": \"T09\",\n      \"status\": \"PRESENT\",\n      \"evidence\": [\n        \"If the pan is smoking, take it off the stove.\",\n        \"Then the checker goes, “Are you sure this isn’t important?”\"\n      ],\n      \"reason\": \"Every sentence and fragment advances the assignment with similar efficiency. No detail, whether the grief, the checker, or the carrot, receives disproportionate attention or lingering interest.\"\n    },\n    {\n      \"tell_id\": \"T10\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"No permission formula such as 'you don't have to X before Y' appears.\"\n    },\n    {\n      \"tell_id\": \"T11\",\n      \"status\": \"UNCERTAIN\",\n      \"evidence\": [\n        \"while you're cooking too\",\n        \"Then the checker goes\"\n      ],\n      \"reason\": \"'Too' and 'Then' serve partly as connective glue joining document functions (safety instruction to grief, grief to checker) rather than being required by a live thought. However, they are minimal and not polished bridge language.\"\n    },\n    {\n      \"tell_id\": \"T12\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"The paragraph contains no matched A/B cases, balanced contrast, or closed taxonomy.\"\n    }\n  ],\n  \"blocking_present_ids\": [\"T02\", \"T03\", \"T05\", \"T06\", \"T07\", \"T08\", \"T09\"],\n  \"audit_complete\": true\n}\n```",
+      "parsed": null,
+      "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "usage": {
+        "prompt_tokens": 1550,
+        "completion_tokens": 2577,
+        "total_tokens": 4127,
+        "cost": 0.05774,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.05774,
+          "upstream_inference_prompt_cost": 0.0062,
+          "upstream_inference_completions_cost": 0.05154
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 989,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 25.86
+    },
+    {
+      "model": "anthropic/claude-opus-5.5",
+      "case_id": "GLOB-GOOD-5MEO-LIST",
+      "provider_model": "anthropic/claude-opus-5.5",
+      "response_id": "gen-1790189711-HUCgGJjlqeWFdb1RhTYS",
+      "content": "```json\n{\n  \"ledger\": [\n    {\n      \"tell_id\": \"T01\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"This is a question I always ask myself.\", \"So far, I have come up with a few answers (comment if you have others!)\"],\n      \"reason\": \"The first person frames a forum question and the poster's own tentative answers. It is not an inserted preference or care posing as authority. The reader-relevant function is to invite discussion.\"\n    },\n    {\n      \"tell_id\": \"T02\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"Super entrenched ego, due to psychopathy, narcissism, and/or (c)PTSD\", \"basically nothing to compare it to\"],\n      \"reason\": \"The list is an open hypothesis enumeration that explicitly invites additions. The items vary in length, register and hedging, so there is no clean handoff of compressed teaching units.\"\n    },\n    {\n      \"tell_id\": \"T03\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"The people who find it helpful for muting their emotional pain are also most at risk of abusing it.\"],\n      \"reason\": \"The abuse-risk point grows directly out of the preceding claim about people finding it pleasurable. It is not an unmotivated ledger insertion.\"\n    },\n    {\n      \"tell_id\": \"T04\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There is no scene.\"\n    },\n    {\n      \"tell_id\": \"T05\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There are no concrete props or staged details.\"\n    },\n    {\n      \"tell_id\": \"T06\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"muting their emotional pain\"],\n      \"reason\": \"This is a brief, specific causal claim about self-medication, not vague healing or process language standing in for concreteness.\"\n    },\n    {\n      \"tell_id\": \"T07\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"basically nothing to compare it to\"],\n      \"reason\": \"The colloquial phrasing is ordinary forum voice inside a claim. It is not filler camouflaging transitions between engineered beats.\"\n    },\n    {\n      \"tell_id\": \"T08\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"which makes it seem more interesting\"],\n      \"reason\": \"The clause is the reason itself, not aftercare following an already-complete image.\"\n    },\n    {\n      \"tell_id\": \"T09\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"(or especially the Ultimate Psychedelic)\", \"Or, because they wish to avoid the moralizing guiding spirit (teacher) of ayahuasca.\"],\n      \"reason\": \"The prose has idiosyncratic asides and uneven emphasis. The first item receives much more elaboration, and pet notions intrude, so efficiency is not equalized.\"\n    },\n    {\n      \"tell_id\": \"T10\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There is no permission syntax.\"\n    },\n    {\n      \"tell_id\": \"T11\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"So far, I have come up with a few answers\"],\n      \"reason\": \"This is a plain, situated forum lead-in to the poster's own list, not portable bridge language connecting document functions.\"\n    },\n    {\n      \"tell_id\": \"T12\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"comment if you have others!\"],\n      \"reason\": \"The enumeration is explicitly open and heterogeneous. It is not a balanced A/B contrast or a closed taxonomy.\"\n    }\n  ],\n  \"blocking_present_ids\": [],\n  \"audit_complete\": true\n}\n```",
+      "parsed": null,
+      "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "usage": {
+        "prompt_tokens": 1909,
+        "completion_tokens": 1707,
+        "total_tokens": 3616,
+        "cost": 0.041776,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.041776,
+          "upstream_inference_prompt_cost": 0.007636,
+          "upstream_inference_completions_cost": 0.03414
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 468,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 18.233
+    },
+    {
+      "model": "anthropic/claude-opus-5.5",
+      "case_id": "GLOB-GOOD-ADVICE",
+      "provider_model": "anthropic/claude-opus-5.5",
+      "response_id": "gen-1790189730-9CpEWqP80sgEGtWgRnJj",
+      "content": "```json\n{\n  \"ledger\": [\n    {\n      \"tell_id\": \"T01\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"if I could ever have read that whole boring Art of War book\"],\n      \"reason\": \"The only first person is a self-deprecating aside that undercuts the author's authority. It does not insert a preference or care as pseudo-authority.\"\n    },\n    {\n      \"tell_id\": \"T02\",\n      \"status\": \"UNCERTAIN\",\n      \"evidence\": [\n        \"choose your battles and execute them wisely\",\n        \"sometimes the best thing is to simply say\",\n        \"And if the conflict really requires a response right now, then obviously just do your best\"\n      ],\n      \"reason\": \"The paragraph moves through several compressed advice units and conditional handoffs. However, the rambling misattributed Lao Tsu digression breaks the clean one-job-per-sentence cadence, so it is not clearly instantiated.\"\n    },\n    {\n      \"tell_id\": \"T03\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"When high IQ & EQ communication hits a writer's block\"],\n      \"reason\": \"Each new concern follows from the prior one. Choosing battles leads to not knowing how to respond, and asking for time leads to the case where time is unavailable.\"\n    },\n    {\n      \"tell_id\": \"T04\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There is no scene; this is expository advice.\"\n    },\n    {\n      \"tell_id\": \"T05\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"There are no convenient concrete props carrying teaching functions. The permit and book references are jokey, not staged details.\"\n    },\n    {\n      \"tell_id\": \"T06\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"No vague healing or process language stands in for specific relation. 'high IQ & EQ communication' is idiosyncratic rather than therapy-safe abstraction.\"\n    },\n    {\n      \"tell_id\": \"T07\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"(if I could ever have read that whole boring Art of War book)\", \"obviously just\"],\n      \"reason\": \"The aside is a genuine comic self-undercut with a real misattribution, not a filler stage direction between beats. 'obviously just' is ordinary emphasis.\"\n    },\n    {\n      \"tell_id\": \"T08\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [],\n      \"reason\": \"The quote is not followed by an explanatory translation. The paragraph moves on to a new point.\"\n    },\n    {\n      \"tell_id\": \"T09\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"As Lao Tsu might have said (if I could ever have read that whole boring Art of War book)\"],\n      \"reason\": \"The digression is inefficient and gets disproportionate attention, so efficiency is not equalized across sentences.\"\n    },\n    {\n      \"tell_id\": \"T10\",\n      \"status\": \"UNCERTAIN\",\n      \"evidence\": [\"It doesn't mean you need to hide your upset\"],\n      \"reason\": \"This resembles 'you don't have to X' permission packaging. It is immediately localized by the absurd 'apply for a permit to protest' and tied to the preceding point, so it is not clearly a reusable counseling formula.\"\n    },\n    {\n      \"tell_id\": \"T11\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"As Lao Tsu might have said\"],\n      \"reason\": \"This introduces a specific (botched) quotation rather than serving as portable bridge language between document functions.\"\n    },\n    {\n      \"tell_id\": \"T12\",\n      \"status\": \"ABSENT\",\n      \"evidence\": [\"say, \\\"I need some time to think about my response.\\\" And if the conflict really requires a response right now\"],\n      \"reason\": \"The take-time versus respond-now contrast is a naturally necessary exception, not a tidy matched taxonomy.\"\n    }\n  ],\n  \"blocking_present_ids\": [],\n  \"audit_complete\": true\n}\n```",
+      "parsed": null,
+      "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "usage": {
+        "prompt_tokens": 1626,
+        "completion_tokens": 2133,
+        "total_tokens": 3759,
+        "cost": 0.049164,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.049164,
+          "upstream_inference_prompt_cost": 0.006504,
+          "upstream_inference_completions_cost": 0.04266
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 788,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 21.993
+    },
+    {
+      "model": "anthropic/claude-opus-5.5",
+      "case_id": "GLOB-GOOD-SEATBELT",
+      "provider_model": "anthropic/claude-opus-5.5",
+      "response_id": "gen-1790189752-4OtYe7ygOEon99mHHYkj",
+      "content": "{\n  \"ledger\": [\n    {\"tell_id\":\"T01\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The passage has no first person. It is second-person address with no inserted authorial preference.\"},\n    {\"tell_id\":\"T02\",\"status\":\"UNCERTAIN\",\"evidence\":[\"If you're feeling guilty because you didn't put your seat belt on, just put it on. If you still want to investigate it later, fine.\",\"Seat belt's on. Where were we?\"],\"reason\":\"The opening runs condition, command, condition, verdict in a compressed advice cadence. The oddly specific collarbone digression breaks the clean one-job-per-sentence handoff, so the cumulative manual cadence is not clearly sustained across the paragraph.\"},\n    {\"tell_id\":\"T03\",\"status\":\"UNCERTAIN\",\"evidence\":[\"Then the background checker goes, “But are you really listening?”\"],\"reason\":\"The 'background checker' arrives with no introduction, and there is no previous context to explain it. Still, it follows from the preceding thought about feeling bad and re-investigating. It reads more like idiosyncratic shorthand than a ledger-required complication.\"},\n    {\"tell_id\":\"T04\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There is no sustained scene whose beats map onto a checklist. The seat belt case is a single illustrative situation.\"},\n    {\"tell_id\":\"T05\",\"status\":\"ABSENT\",\"evidence\":[\"broke your collar bone in a crash, and then got blamed for not wearing it\"],\"reason\":\"The collarbone detail is not a convenient teaching prop. It is oddly specific and does more than the lesson requires, which makes it idiosyncratic rather than interchangeable.\"},\n    {\"tell_id\":\"T06\",\"status\":\"ABSENT\",\"evidence\":[\"That's natural\"],\"reason\":\"There is only a mild reassuring phrase. The content stays tied to a specific seat belt and guilt relation rather than to vague healing or process language.\"},\n    {\"tell_id\":\"T07\",\"status\":\"ABSENT\",\"evidence\":[\"There it is. Seat belt's on. Where were we?\"],\"reason\":\"The fragments enact the advice itself: notice, fix, resume. They are not filler camouflaging transitions between engineered beats.\"},\n    {\"tell_id\":\"T08\",\"status\":\"ABSENT\",\"evidence\":[\"That's natural, but doesn't mean there's something new to look at.\"],\"reason\":\"The memory example needs the judgment that follows to make its point, so this is not redundant aftercare. The closing fragments are not explained after the fact.\"},\n    {\"tell_id\":\"T09\",\"status\":\"ABSENT\",\"evidence\":[\"that time you refused to put it on, broke your collar bone in a crash, and then got blamed for not wearing it\"],\"reason\":\"Attention is uneven. The collarbone anecdote gets disproportionate elaboration relative to its function.\"},\n    {\"tell_id\":\"T10\",\"status\":\"ABSENT\",\"evidence\":[\"If you still want to investigate it later, fine.\"],\"reason\":\"This is a local, offhand concession tied to the seat belt case, not a reusable 'you don't have to X before Y' counseling formula.\"},\n    {\"tell_id\":\"T11\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There is no polished bridge language. 'Then' simply sequences the live thought.\"},\n    {\"tell_id\":\"T12\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There are no matched A/B cases or tidy taxonomy.\"}\n  ],\n  \"blocking_present_ids\":[],\n  \"audit_complete\":true\n}",
+      "parsed": {
+        "ledger": [
+          {
+            "tell_id": "T01",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The passage has no first person. It is second-person address with no inserted authorial preference."
+          },
+          {
+            "tell_id": "T02",
+            "status": "UNCERTAIN",
+            "evidence": [
+              "If you're feeling guilty because you didn't put your seat belt on, just put it on. If you still want to investigate it later, fine.",
+              "Seat belt's on. Where were we?"
+            ],
+            "reason": "The opening runs condition, command, condition, verdict in a compressed advice cadence. The oddly specific collarbone digression breaks the clean one-job-per-sentence handoff, so the cumulative manual cadence is not clearly sustained across the paragraph."
+          },
+          {
+            "tell_id": "T03",
+            "status": "UNCERTAIN",
+            "evidence": [
+              "Then the background checker goes, “But are you really listening?”"
+            ],
+            "reason": "The 'background checker' arrives with no introduction, and there is no previous context to explain it. Still, it follows from the preceding thought about feeling bad and re-investigating. It reads more like idiosyncratic shorthand than a ledger-required complication."
+          },
+          {
+            "tell_id": "T04",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There is no sustained scene whose beats map onto a checklist. The seat belt case is a single illustrative situation."
+          },
+          {
+            "tell_id": "T05",
+            "status": "ABSENT",
+            "evidence": [
+              "broke your collar bone in a crash, and then got blamed for not wearing it"
+            ],
+            "reason": "The collarbone detail is not a convenient teaching prop. It is oddly specific and does more than the lesson requires, which makes it idiosyncratic rather than interchangeable."
+          },
+          {
+            "tell_id": "T06",
+            "status": "ABSENT",
+            "evidence": [
+              "That's natural"
+            ],
+            "reason": "There is only a mild reassuring phrase. The content stays tied to a specific seat belt and guilt relation rather than to vague healing or process language."
+          },
+          {
+            "tell_id": "T07",
+            "status": "ABSENT",
+            "evidence": [
+              "There it is. Seat belt's on. Where were we?"
+            ],
+            "reason": "The fragments enact the advice itself: notice, fix, resume. They are not filler camouflaging transitions between engineered beats."
+          },
+          {
+            "tell_id": "T08",
+            "status": "ABSENT",
+            "evidence": [
+              "That's natural, but doesn't mean there's something new to look at."
+            ],
+            "reason": "The memory example needs the judgment that follows to make its point, so this is not redundant aftercare. The closing fragments are not explained after the fact."
+          },
+          {
+            "tell_id": "T09",
+            "status": "ABSENT",
+            "evidence": [
+              "that time you refused to put it on, broke your collar bone in a crash, and then got blamed for not wearing it"
+            ],
+            "reason": "Attention is uneven. The collarbone anecdote gets disproportionate elaboration relative to its function."
+          },
+          {
+            "tell_id": "T10",
+            "status": "ABSENT",
+            "evidence": [
+              "If you still want to investigate it later, fine."
+            ],
+            "reason": "This is a local, offhand concession tied to the seat belt case, not a reusable 'you don't have to X before Y' counseling formula."
+          },
+          {
+            "tell_id": "T11",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There is no polished bridge language. 'Then' simply sequences the live thought."
+          },
+          {
+            "tell_id": "T12",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There are no matched A/B cases or tidy taxonomy."
+          }
+        ],
+        "blocking_present_ids": [],
+        "audit_complete": true
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1591,
+        "completion_tokens": 1905,
+        "total_tokens": 3496,
+        "cost": 0.044464,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.044464,
+          "upstream_inference_prompt_cost": 0.006364,
+          "upstream_inference_completions_cost": 0.0381
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 722,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 20.076
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "case_id": "GLOB-BAD-READINESS",
+      "provider_model": "openai/gpt-6-sol",
+      "response_id": "gen-1790189772-w6XFM2WqfobRJEauY3dM",
+      "content": "{\n  \"ledger\": [\n    {\"tell_id\":\"T01\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"No first-person claim or personal preference appears.\"},\n    {\"tell_id\":\"T02\",\"status\":\"PRESENT\",\"evidence\":[\"How much of the grown-up you is actually here right now?\",\"Try looking around the room, pausing before you act, making a choice and following through on it.\",\"If you can't do that because you're basically the frightened kid, leave the deeper conversation until later.\",\"You may need somebody steady there with you\"],\"reason\":\"At paragraph scale, a readiness question hands off to a compact test, a postponement rule, and fallback advice; each sentence performs a distinct instructional job.\"},\n    {\"tell_id\":\"T03\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The possibility of postponing follows from the readiness test, and the suggestion of support follows from that difficulty.\"},\n    {\"tell_id\":\"T04\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There is no developed scene whose beats carry a checklist.\"},\n    {\"tell_id\":\"T05\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The room is part of a suggested grounding action, not a convenient recurring prop.\"},\n    {\"tell_id\":\"T06\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The paragraph uses broad inner-child language, but its central advice rests on observable actions rather than an abstraction presented as a specific lived relation.\"},\n    {\"tell_id\":\"T07\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"No hesitation or filler camouflages a transition.\"},\n    {\"tell_id\":\"T08\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The condition following the suggested actions explains what to do if they are not possible; it does not restate the meaning of a completed concrete image.\"},\n    {\"tell_id\":\"T09\",\"status\":\"PRESENT\",\"evidence\":[\"How much of the grown-up you is actually here right now? Try looking around the room, pausing before you act, making a choice and following through on it. If you can't do that because you're basically the frightened kid, leave the deeper conversation until later. You may need somebody steady there with you, or to do whatever helps you come back a bit before you try to talk to the child.\"],\"reason\":\"Every sentence moves efficiently through the readiness check and its consequences, with no detail receiving attention beyond that instructional purpose.\"},\n    {\"tell_id\":\"T10\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The advice to wait is conditional on a stated difficulty, not packaged as a generic therapeutic permission formula.\"},\n    {\"tell_id\":\"T11\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The connections between sentences are needed for the immediate conditional reasoning, not generic document bridges.\"},\n    {\"tell_id\":\"T12\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The two possible kinds of help are not developed into matched cases or a closed taxonomy.\"}\n  ],\n  \"blocking_present_ids\":[\"T02\",\"T09\"],\n  \"audit_complete\":true\n}",
+      "parsed": {
+        "ledger": [
+          {
+            "tell_id": "T01",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "No first-person claim or personal preference appears."
+          },
+          {
+            "tell_id": "T02",
+            "status": "PRESENT",
+            "evidence": [
+              "How much of the grown-up you is actually here right now?",
+              "Try looking around the room, pausing before you act, making a choice and following through on it.",
+              "If you can't do that because you're basically the frightened kid, leave the deeper conversation until later.",
+              "You may need somebody steady there with you"
+            ],
+            "reason": "At paragraph scale, a readiness question hands off to a compact test, a postponement rule, and fallback advice; each sentence performs a distinct instructional job."
+          },
+          {
+            "tell_id": "T03",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The possibility of postponing follows from the readiness test, and the suggestion of support follows from that difficulty."
+          },
+          {
+            "tell_id": "T04",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There is no developed scene whose beats carry a checklist."
+          },
+          {
+            "tell_id": "T05",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The room is part of a suggested grounding action, not a convenient recurring prop."
+          },
+          {
+            "tell_id": "T06",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The paragraph uses broad inner-child language, but its central advice rests on observable actions rather than an abstraction presented as a specific lived relation."
+          },
+          {
+            "tell_id": "T07",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "No hesitation or filler camouflages a transition."
+          },
+          {
+            "tell_id": "T08",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The condition following the suggested actions explains what to do if they are not possible; it does not restate the meaning of a completed concrete image."
+          },
+          {
+            "tell_id": "T09",
+            "status": "PRESENT",
+            "evidence": [
+              "How much of the grown-up you is actually here right now? Try looking around the room, pausing before you act, making a choice and following through on it. If you can't do that because you're basically the frightened kid, leave the deeper conversation until later. You may need somebody steady there with you, or to do whatever helps you come back a bit before you try to talk to the child."
+            ],
+            "reason": "Every sentence moves efficiently through the readiness check and its consequences, with no detail receiving attention beyond that instructional purpose."
+          },
+          {
+            "tell_id": "T10",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The advice to wait is conditional on a stated difficulty, not packaged as a generic therapeutic permission formula."
+          },
+          {
+            "tell_id": "T11",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The connections between sentences are needed for the immediate conditional reasoning, not generic document bridges."
+          },
+          {
+            "tell_id": "T12",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The two possible kinds of help are not developed into matched cases or a closed taxonomy."
+          }
+        ],
+        "blocking_present_ids": [
+          "T02",
+          "T09"
+        ],
+        "audit_complete": true
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 904,
+        "completion_tokens": 1383,
+        "total_tokens": 2287,
+        "cost": 0.015638,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.015638,
+          "upstream_inference_prompt_cost": 0.001808,
+          "upstream_inference_completions_cost": 0.01383
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 732,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 17.524
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "case_id": "GLOB-BAD-DANGEROUS",
+      "provider_model": "openai/gpt-6-sol",
+      "response_id": "gen-1790189789-E1uIiex8qnyOBCxMRKZV",
+      "content": "{\n  \"ledger\": [\n    {\"tell_id\":\"T01\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"No first-person preference or claim of personal authority appears.\"},\n    {\"tell_id\":\"T02\",\"status\":\"ABSENT\",\"evidence\":[\"Would you bring the child over just to see how the child reacts? No. If the child recoils, that reaction only tells you the child is frightened.\"],\"reason\":\"The question and answer lead into a connected argument about what the child's reaction can establish, rather than a run of separate teaching steps.\"},\n    {\"tell_id\":\"T03\",\"status\":\"ABSENT\",\"evidence\":[\"When the Present-Day Adult Is Dangerous to the Child\",\"If you genuinely enjoy frightening or humiliating vulnerable people\"],\"reason\":\"The distinction is introduced by the section's stated concern, not by an unexplained change of subject.\"},\n    {\"tell_id\":\"T04\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The hypothetical child is used to test one safety question, not to stage a sequence of scene beats.\"},\n    {\"tell_id\":\"T05\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There are no convenient, interchangeable props carrying successive teaching functions.\"},\n    {\"tell_id\":\"T06\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The prose addresses a specific risk to a child rather than substituting generic healing language for a lived relation.\"},\n    {\"tell_id\":\"T07\",\"status\":\"ABSENT\",\"evidence\":[\"Would you bring the child over just to see how the child reacts? No.\"],\"reason\":\"The short answer resolves the question; it is not filler camouflaging a transition.\"},\n    {\"tell_id\":\"T08\",\"status\":\"ABSENT\",\"evidence\":[\"If the child recoils, that reaction only tells you the child is frightened. It doesn't tell you that you're safe for the child\"],\"reason\":\"The follow-up makes a substantive point about the limits of that reaction as evidence, rather than merely explaining an image that already made the point.\"},\n    {\"tell_id\":\"T09\",\"status\":\"ABSENT\",\"evidence\":[\"Would you bring the child over just to see how the child reacts? No. If the child recoils\"],\"reason\":\"The prose dwells on the implications of one hypothetical reaction rather than giving every sentence an equal, separate assignment function.\"},\n    {\"tell_id\":\"T10\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"No reusable therapeutic permission formula appears.\"},\n    {\"tell_id\":\"T11\",\"status\":\"ABSENT\",\"evidence\":[\"Think about this as if there were an actual child in the room.\"],\"reason\":\"This sets up the hypothetical on which the paragraph's reasoning depends, rather than merely linking document sections.\"},\n    {\"tell_id\":\"T12\",\"status\":\"ABSENT\",\"evidence\":[\"that's different from having an intrusive thought you hate, holding a strange belief, or having done something harmful in the past\"],\"reason\":\"The contrast distinguishes enjoyment of frightening vulnerable people from other experiences; it is not a tidy taxonomy offered for balanced coverage.\"}\n  ],\n  \"blocking_present_ids\":[],\n  \"audit_complete\":true\n}",
+      "parsed": {
+        "ledger": [
+          {
+            "tell_id": "T01",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "No first-person preference or claim of personal authority appears."
+          },
+          {
+            "tell_id": "T02",
+            "status": "ABSENT",
+            "evidence": [
+              "Would you bring the child over just to see how the child reacts? No. If the child recoils, that reaction only tells you the child is frightened."
+            ],
+            "reason": "The question and answer lead into a connected argument about what the child's reaction can establish, rather than a run of separate teaching steps."
+          },
+          {
+            "tell_id": "T03",
+            "status": "ABSENT",
+            "evidence": [
+              "When the Present-Day Adult Is Dangerous to the Child",
+              "If you genuinely enjoy frightening or humiliating vulnerable people"
+            ],
+            "reason": "The distinction is introduced by the section's stated concern, not by an unexplained change of subject."
+          },
+          {
+            "tell_id": "T04",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The hypothetical child is used to test one safety question, not to stage a sequence of scene beats."
+          },
+          {
+            "tell_id": "T05",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There are no convenient, interchangeable props carrying successive teaching functions."
+          },
+          {
+            "tell_id": "T06",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The prose addresses a specific risk to a child rather than substituting generic healing language for a lived relation."
+          },
+          {
+            "tell_id": "T07",
+            "status": "ABSENT",
+            "evidence": [
+              "Would you bring the child over just to see how the child reacts? No."
+            ],
+            "reason": "The short answer resolves the question; it is not filler camouflaging a transition."
+          },
+          {
+            "tell_id": "T08",
+            "status": "ABSENT",
+            "evidence": [
+              "If the child recoils, that reaction only tells you the child is frightened. It doesn't tell you that you're safe for the child"
+            ],
+            "reason": "The follow-up makes a substantive point about the limits of that reaction as evidence, rather than merely explaining an image that already made the point."
+          },
+          {
+            "tell_id": "T09",
+            "status": "ABSENT",
+            "evidence": [
+              "Would you bring the child over just to see how the child reacts? No. If the child recoils"
+            ],
+            "reason": "The prose dwells on the implications of one hypothetical reaction rather than giving every sentence an equal, separate assignment function."
+          },
+          {
+            "tell_id": "T10",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "No reusable therapeutic permission formula appears."
+          },
+          {
+            "tell_id": "T11",
+            "status": "ABSENT",
+            "evidence": [
+              "Think about this as if there were an actual child in the room."
+            ],
+            "reason": "This sets up the hypothetical on which the paragraph's reasoning depends, rather than merely linking document sections."
+          },
+          {
+            "tell_id": "T12",
+            "status": "ABSENT",
+            "evidence": [
+              "that's different from having an intrusive thought you hate, holding a strange belief, or having done something harmful in the past"
+            ],
+            "reason": "The contrast distinguishes enjoyment of frightening vulnerable people from other experiences; it is not a tidy taxonomy offered for balanced coverage."
+          }
+        ],
+        "blocking_present_ids": [],
+        "audit_complete": true
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1097,
+        "completion_tokens": 1173,
+        "total_tokens": 2270,
+        "cost": 0.0119548,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1094,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0119548,
+          "upstream_inference_prompt_cost": 0.0002248,
+          "upstream_inference_completions_cost": 0.01173
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 516,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 15.882
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "case_id": "GLOB-BAD-RT2",
+      "provider_model": "openai/gpt-6-sol",
+      "response_id": "gen-1790189805-52CiO37hqiVSbQgx5b6W",
+      "content": "{\n  \"ledger\": [\n    {\"tell_id\":\"T01\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"No first-person preference or claim to personal authority appears.\"},\n    {\"tell_id\":\"T02\",\"status\":\"PRESENT\",\"evidence\":[\"If the pan is smoking, take it off the stove.\",\"Old grief might show up while you're cooking too\",\"Then the checker goes\",\"The carrot's still on the board.\"],\"reason\":\"At paragraph scale, brief beats successively handle safety, grief, an internal question, and a return to dinner, with little development between them.\"},\n    {\"tell_id\":\"T03\",\"status\":\"PRESENT\",\"evidence\":[\"Old grief might show up while you're cooking too\",\"Then the checker goes, “Are you sure this isn’t important?”\"],\"reason\":\"The checker enters without a reader-visible reason for this new concern to arise from the preceding thought.\"},\n    {\"tell_id\":\"T04\",\"status\":\"UNCERTAIN\",\"evidence\":[\"If the pan is smoking, take it off the stove.\",\"The carrot's still on the board.\"],\"reason\":\"The cooking scene carries several distinct functions, but no source ledger is available to establish a one-for-one mapping in source order.\"},\n    {\"tell_id\":\"T05\",\"status\":\"PRESENT\",\"evidence\":[\"The carrot's still on the board.\"],\"reason\":\"The carrot is a convenient, interchangeable kitchen detail used to return attention to dinner; it does not causally shape what happens.\"},\n    {\"tell_id\":\"T06\",\"status\":\"PRESENT\",\"evidence\":[\"Old grief might show up\",\"feeling the old thing all over again\"],\"reason\":\"The grief is named in generic terms without a specific relation or memory to carry it.\"},\n    {\"tell_id\":\"T07\",\"status\":\"PRESENT\",\"evidence\":[\"Okay. Then the checker goes\",\"Hm. There you are.\"],\"reason\":\"The filler-like pauses sit at handoffs between distinct beats rather than marking a developed change in thought.\"},\n    {\"tell_id\":\"T08\",\"status\":\"PRESENT\",\"evidence\":[\"The carrot's still on the board. You were in the middle of dinner.\"],\"reason\":\"The second sentence immediately spells out the situation the concrete image has already conveyed.\"},\n    {\"tell_id\":\"T09\",\"status\":\"PRESENT\",\"evidence\":[\"If the pan is smoking, take it off the stove.\",\"Old grief might show up while you're cooking too\",\"The carrot's still on the board. You were in the middle of dinner.\"],\"reason\":\"The brief beats each serve the passage's progression; none of the particular details receives attention beyond that job.\"},\n    {\"tell_id\":\"T10\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There is no generic therapeutic permission formula.\"},\n    {\"tell_id\":\"T11\",\"status\":\"PRESENT\",\"evidence\":[\"Old grief might show up while you're cooking too\",\"Then the checker goes\"],\"reason\":\"These transitions connect the cooking, grief, and checker functions without a visible event or thought that requires the next move.\"},\n    {\"tell_id\":\"T12\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The passage does not arrange its thought into matched cases or a closed taxonomy.\"}\n  ],\n  \"blocking_present_ids\":[\"T02\",\"T03\",\"T05\",\"T06\",\"T07\",\"T08\",\"T09\",\"T11\"],\n  \"audit_complete\":true\n}",
+      "parsed": {
+        "ledger": [
+          {
+            "tell_id": "T01",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "No first-person preference or claim to personal authority appears."
+          },
+          {
+            "tell_id": "T02",
+            "status": "PRESENT",
+            "evidence": [
+              "If the pan is smoking, take it off the stove.",
+              "Old grief might show up while you're cooking too",
+              "Then the checker goes",
+              "The carrot's still on the board."
+            ],
+            "reason": "At paragraph scale, brief beats successively handle safety, grief, an internal question, and a return to dinner, with little development between them."
+          },
+          {
+            "tell_id": "T03",
+            "status": "PRESENT",
+            "evidence": [
+              "Old grief might show up while you're cooking too",
+              "Then the checker goes, “Are you sure this isn’t important?”"
+            ],
+            "reason": "The checker enters without a reader-visible reason for this new concern to arise from the preceding thought."
+          },
+          {
+            "tell_id": "T04",
+            "status": "UNCERTAIN",
+            "evidence": [
+              "If the pan is smoking, take it off the stove.",
+              "The carrot's still on the board."
+            ],
+            "reason": "The cooking scene carries several distinct functions, but no source ledger is available to establish a one-for-one mapping in source order."
+          },
+          {
+            "tell_id": "T05",
+            "status": "PRESENT",
+            "evidence": [
+              "The carrot's still on the board."
+            ],
+            "reason": "The carrot is a convenient, interchangeable kitchen detail used to return attention to dinner; it does not causally shape what happens."
+          },
+          {
+            "tell_id": "T06",
+            "status": "PRESENT",
+            "evidence": [
+              "Old grief might show up",
+              "feeling the old thing all over again"
+            ],
+            "reason": "The grief is named in generic terms without a specific relation or memory to carry it."
+          },
+          {
+            "tell_id": "T07",
+            "status": "PRESENT",
+            "evidence": [
+              "Okay. Then the checker goes",
+              "Hm. There you are."
+            ],
+            "reason": "The filler-like pauses sit at handoffs between distinct beats rather than marking a developed change in thought."
+          },
+          {
+            "tell_id": "T08",
+            "status": "PRESENT",
+            "evidence": [
+              "The carrot's still on the board. You were in the middle of dinner."
+            ],
+            "reason": "The second sentence immediately spells out the situation the concrete image has already conveyed."
+          },
+          {
+            "tell_id": "T09",
+            "status": "PRESENT",
+            "evidence": [
+              "If the pan is smoking, take it off the stove.",
+              "Old grief might show up while you're cooking too",
+              "The carrot's still on the board. You were in the middle of dinner."
+            ],
+            "reason": "The brief beats each serve the passage's progression; none of the particular details receives attention beyond that job."
+          },
+          {
+            "tell_id": "T10",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There is no generic therapeutic permission formula."
+          },
+          {
+            "tell_id": "T11",
+            "status": "PRESENT",
+            "evidence": [
+              "Old grief might show up while you're cooking too",
+              "Then the checker goes"
+            ],
+            "reason": "These transitions connect the cooking, grief, and checker functions without a visible event or thought that requires the next move."
+          },
+          {
+            "tell_id": "T12",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The passage does not arrange its thought into matched cases or a closed taxonomy."
+          }
+        ],
+        "blocking_present_ids": [
+          "T02",
+          "T03",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09",
+          "T11"
+        ],
+        "audit_complete": true
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 875,
+        "completion_tokens": 1662,
+        "total_tokens": 2537,
+        "cost": 0.01837,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.01837,
+          "upstream_inference_prompt_cost": 0.00175,
+          "upstream_inference_completions_cost": 0.01662
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 953,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 22.554
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "case_id": "GLOB-GOOD-5MEO-LIST",
+      "provider_model": "openai/gpt-6-sol",
+      "response_id": "gen-1790189828-RZjvkFUirYfW9aiHbIhy",
+      "content": "{\n  \"ledger\": [\n    {\"tell_id\":\"T01\",\"status\":\"ABSENT\",\"evidence\":[\"This is a question I always ask myself.\"],\"reason\":\"The first person frames a question; it does not use a personal preference as authority.\"},\n    {\"tell_id\":\"T02\",\"status\":\"ABSENT\",\"evidence\":[\"So far, I have come up with a few answers (comment if you have others!):\"],\"reason\":\"The entries are open-ended possible answers, not a cumulative sequence of teaching steps.\"},\n    {\"tell_id\":\"T03\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"Each proposed explanation follows from the opening question; no new concern arrives without visible setup.\"},\n    {\"tell_id\":\"T04\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There is no scene.\"},\n    {\"tell_id\":\"T05\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There are no concrete props carrying successive teaching functions.\"},\n    {\"tell_id\":\"T06\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The prose does not use therapy-safe abstraction in place of an apparently concrete lived account.\"},\n    {\"tell_id\":\"T07\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"Its conversational phrasing does not serve as filler between engineered beats.\"},\n    {\"tell_id\":\"T08\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"No concrete image is immediately translated into an explanatory moral or summary.\"},\n    {\"tell_id\":\"T09\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"Although the entries are concise, this is an expressly open list of hypotheses, not uniformly optimized sentence-by-sentence coverage.\"},\n    {\"tell_id\":\"T10\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"No generic therapeutic permission formula appears.\"},\n    {\"tell_id\":\"T11\",\"status\":\"ABSENT\",\"evidence\":[\"So far, I have come up with a few answers (comment if you have others!):\"],\"reason\":\"The transition directly introduces the writer's answers to the stated question rather than supplying interchangeable connective tissue.\"},\n    {\"tell_id\":\"T12\",\"status\":\"ABSENT\",\"evidence\":[\"a few answers (comment if you have others!)\"],\"reason\":\"The alternatives are explicitly open-ended hypotheses, not a balanced or closed taxonomy.\"}\n  ],\n  \"blocking_present_ids\":[],\n  \"audit_complete\":true\n}",
+      "parsed": {
+        "ledger": [
+          {
+            "tell_id": "T01",
+            "status": "ABSENT",
+            "evidence": [
+              "This is a question I always ask myself."
+            ],
+            "reason": "The first person frames a question; it does not use a personal preference as authority."
+          },
+          {
+            "tell_id": "T02",
+            "status": "ABSENT",
+            "evidence": [
+              "So far, I have come up with a few answers (comment if you have others!):"
+            ],
+            "reason": "The entries are open-ended possible answers, not a cumulative sequence of teaching steps."
+          },
+          {
+            "tell_id": "T03",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "Each proposed explanation follows from the opening question; no new concern arrives without visible setup."
+          },
+          {
+            "tell_id": "T04",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There is no scene."
+          },
+          {
+            "tell_id": "T05",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There are no concrete props carrying successive teaching functions."
+          },
+          {
+            "tell_id": "T06",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The prose does not use therapy-safe abstraction in place of an apparently concrete lived account."
+          },
+          {
+            "tell_id": "T07",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "Its conversational phrasing does not serve as filler between engineered beats."
+          },
+          {
+            "tell_id": "T08",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "No concrete image is immediately translated into an explanatory moral or summary."
+          },
+          {
+            "tell_id": "T09",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "Although the entries are concise, this is an expressly open list of hypotheses, not uniformly optimized sentence-by-sentence coverage."
+          },
+          {
+            "tell_id": "T10",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "No generic therapeutic permission formula appears."
+          },
+          {
+            "tell_id": "T11",
+            "status": "ABSENT",
+            "evidence": [
+              "So far, I have come up with a few answers (comment if you have others!):"
+            ],
+            "reason": "The transition directly introduces the writer's answers to the stated question rather than supplying interchangeable connective tissue."
+          },
+          {
+            "tell_id": "T12",
+            "status": "ABSENT",
+            "evidence": [
+              "a few answers (comment if you have others!)"
+            ],
+            "reason": "The alternatives are explicitly open-ended hypotheses, not a balanced or closed taxonomy."
+          }
+        ],
+        "blocking_present_ids": [],
+        "audit_complete": true
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 1102,
+        "completion_tokens": 1021,
+        "total_tokens": 2123,
+        "cost": 0.0104358,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1099,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0104358,
+          "upstream_inference_prompt_cost": 0.0002258,
+          "upstream_inference_completions_cost": 0.01021
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 516,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 15.004
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "case_id": "GLOB-GOOD-ADVICE",
+      "provider_model": "openai/gpt-6-sol",
+      "response_id": "gen-1790189843-zVkYBdWu7zzpmcRBO1Bk",
+      "content": "{\n  \"ledger\": [\n    {\"tell_id\":\"T01\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The first-person aside jokes about not having read the book; it does not claim personal authority for the advice.\"},\n    {\"tell_id\":\"T02\",\"status\":\"PRESENT\",\"evidence\":[\"choose your battles and execute them wisely\",\"a war with no casualties is the best possible war\",\"sometimes the best thing is to simply say, \\\"I need some time to think about my response.\\\"\",\"if the conflict really requires a response right now, then obviously just do your best\"],\"reason\":\"Across the paragraph, successive sentences deliver a compact injunction, maxim, suggested script, and exception. The joke interrupts the cadence but does not displace it.\"},\n    {\"tell_id\":\"T03\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The need for an immediate response is a visible exception to the preceding suggestion to take time.\"},\n    {\"tell_id\":\"T04\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There is no concrete scene whose beats track a checklist.\"},\n    {\"tell_id\":\"T05\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The book reference is an aside, not a convenient prop carrying successive teaching functions.\"},\n    {\"tell_id\":\"T06\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The advice does not substitute vague therapeutic language for a purportedly specific lived relation.\"},\n    {\"tell_id\":\"T07\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The parenthetical joke follows the war analogy rather than disguising a transition between engineered beats.\"},\n    {\"tell_id\":\"T08\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The sentence after the war metaphor supplies a possible response; it does not immediately explain what the image means.\"},\n    {\"tell_id\":\"T09\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The book aside makes the sentences uneven in attention and efficiency.\"},\n    {\"tell_id\":\"T10\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The opening qualification is tied to the local advice about choosing battles, not packaged as a reusable therapeutic permission formula.\"},\n    {\"tell_id\":\"T11\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The final transition introduces a relevant exception to waiting before responding.\"},\n    {\"tell_id\":\"T12\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"Waiting versus responding immediately is a practical conditional distinction, not an artificially closed taxonomy.\"}\n  ],\n  \"blocking_present_ids\":[\"T02\"],\n  \"audit_complete\":true\n}",
+      "parsed": {
+        "ledger": [
+          {
+            "tell_id": "T01",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The first-person aside jokes about not having read the book; it does not claim personal authority for the advice."
+          },
+          {
+            "tell_id": "T02",
+            "status": "PRESENT",
+            "evidence": [
+              "choose your battles and execute them wisely",
+              "a war with no casualties is the best possible war",
+              "sometimes the best thing is to simply say, \"I need some time to think about my response.\"",
+              "if the conflict really requires a response right now, then obviously just do your best"
+            ],
+            "reason": "Across the paragraph, successive sentences deliver a compact injunction, maxim, suggested script, and exception. The joke interrupts the cadence but does not displace it."
+          },
+          {
+            "tell_id": "T03",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The need for an immediate response is a visible exception to the preceding suggestion to take time."
+          },
+          {
+            "tell_id": "T04",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There is no concrete scene whose beats track a checklist."
+          },
+          {
+            "tell_id": "T05",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The book reference is an aside, not a convenient prop carrying successive teaching functions."
+          },
+          {
+            "tell_id": "T06",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The advice does not substitute vague therapeutic language for a purportedly specific lived relation."
+          },
+          {
+            "tell_id": "T07",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The parenthetical joke follows the war analogy rather than disguising a transition between engineered beats."
+          },
+          {
+            "tell_id": "T08",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The sentence after the war metaphor supplies a possible response; it does not immediately explain what the image means."
+          },
+          {
+            "tell_id": "T09",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The book aside makes the sentences uneven in attention and efficiency."
+          },
+          {
+            "tell_id": "T10",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The opening qualification is tied to the local advice about choosing battles, not packaged as a reusable therapeutic permission formula."
+          },
+          {
+            "tell_id": "T11",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The final transition introduces a relevant exception to waiting before responding."
+          },
+          {
+            "tell_id": "T12",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "Waiting versus responding immediately is a practical conditional distinction, not an artificially closed taxonomy."
+          }
+        ],
+        "blocking_present_ids": [
+          "T02"
+        ],
+        "audit_complete": true
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 932,
+        "completion_tokens": 2212,
+        "total_tokens": 3144,
+        "cost": 0.023984,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.023984,
+          "upstream_inference_prompt_cost": 0.001864,
+          "upstream_inference_completions_cost": 0.02212
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1666,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 30.29
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "case_id": "GLOB-GOOD-SEATBELT",
+      "provider_model": "openai/gpt-6-sol",
+      "response_id": "gen-1790189873-8PjbmZMqxRfvZauoM4Kg",
+      "content": "{\n  \"ledger\": [\n    {\"tell_id\":\"T01\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"No authorial first-person preference or personal authority appears.\"},\n    {\"tell_id\":\"T02\",\"status\":\"PRESENT\",\"evidence\":[\"If you're feeling guilty because you didn't put your seat belt on, just put it on. If you still want to investigate it later, fine.\",\"That's natural, but doesn't mean there's something new to look at.\"],\"reason\":\"Across the paragraph, compressed condition, instruction, permission, example, and verdict hand off in a teaching sequence.\"},\n    {\"tell_id\":\"T03\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The background checker's question follows the established concern about whether there is more to examine.\"},\n    {\"tell_id\":\"T04\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"There is no sustained scene whose successive beats map onto a checklist.\"},\n    {\"tell_id\":\"T05\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The seat belt is causally relevant to the guilt and the crash, not an interchangeable teaching prop.\"},\n    {\"tell_id\":\"T06\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The prose does not substitute generic therapeutic language for the specific situation.\"},\n    {\"tell_id\":\"T07\",\"status\":\"UNCERTAIN\",\"evidence\":[\"There it is. Seat belt's on. Where were we?\"],\"reason\":\"The clipped self-talk could be staged to close the teaching sequence, but it also plausibly responds to the immediately preceding interruption.\"},\n    {\"tell_id\":\"T08\",\"status\":\"UNCERTAIN\",\"evidence\":[\"broke your collar bone in a crash, and then got blamed for not wearing it. That's natural, but doesn't mean there's something new to look at.\"],\"reason\":\"An abstract verdict immediately follows the concrete example, though it may add a distinction rather than merely explain what the example already conveyed.\"},\n    {\"tell_id\":\"T09\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The particular crash and blame receive more attention than strict semantic efficiency would require.\"},\n    {\"tell_id\":\"T10\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The allowance to investigate later is tied to the immediate seat-belt situation, not packaged as a reusable therapeutic formula.\"},\n    {\"tell_id\":\"T11\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The transitions participate in the ongoing thought rather than merely announcing document functions.\"},\n    {\"tell_id\":\"T12\",\"status\":\"ABSENT\",\"evidence\":[],\"reason\":\"The paragraph does not arrange its cases into a matched contrast or closed taxonomy.\"}\n  ],\n  \"blocking_present_ids\":[\"T02\"],\n  \"audit_complete\":true\n}",
+      "parsed": {
+        "ledger": [
+          {
+            "tell_id": "T01",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "No authorial first-person preference or personal authority appears."
+          },
+          {
+            "tell_id": "T02",
+            "status": "PRESENT",
+            "evidence": [
+              "If you're feeling guilty because you didn't put your seat belt on, just put it on. If you still want to investigate it later, fine.",
+              "That's natural, but doesn't mean there's something new to look at."
+            ],
+            "reason": "Across the paragraph, compressed condition, instruction, permission, example, and verdict hand off in a teaching sequence."
+          },
+          {
+            "tell_id": "T03",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The background checker's question follows the established concern about whether there is more to examine."
+          },
+          {
+            "tell_id": "T04",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "There is no sustained scene whose successive beats map onto a checklist."
+          },
+          {
+            "tell_id": "T05",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The seat belt is causally relevant to the guilt and the crash, not an interchangeable teaching prop."
+          },
+          {
+            "tell_id": "T06",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The prose does not substitute generic therapeutic language for the specific situation."
+          },
+          {
+            "tell_id": "T07",
+            "status": "UNCERTAIN",
+            "evidence": [
+              "There it is. Seat belt's on. Where were we?"
+            ],
+            "reason": "The clipped self-talk could be staged to close the teaching sequence, but it also plausibly responds to the immediately preceding interruption."
+          },
+          {
+            "tell_id": "T08",
+            "status": "UNCERTAIN",
+            "evidence": [
+              "broke your collar bone in a crash, and then got blamed for not wearing it. That's natural, but doesn't mean there's something new to look at."
+            ],
+            "reason": "An abstract verdict immediately follows the concrete example, though it may add a distinction rather than merely explain what the example already conveyed."
+          },
+          {
+            "tell_id": "T09",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The particular crash and blame receive more attention than strict semantic efficiency would require."
+          },
+          {
+            "tell_id": "T10",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The allowance to investigate later is tied to the immediate seat-belt situation, not packaged as a reusable therapeutic formula."
+          },
+          {
+            "tell_id": "T11",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The transitions participate in the ongoing thought rather than merely announcing document functions."
+          },
+          {
+            "tell_id": "T12",
+            "status": "ABSENT",
+            "evidence": [],
+            "reason": "The paragraph does not arrange its cases into a matched contrast or closed taxonomy."
+          }
+        ],
+        "blocking_present_ids": [
+          "T02"
+        ],
+        "audit_complete": true
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 905,
+        "completion_tokens": 2127,
+        "total_tokens": 3032,
+        "cost": 0.02308,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.02308,
+          "upstream_inference_prompt_cost": 0.00181,
+          "upstream_inference_completions_cost": 0.02127
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1552,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "elapsed_seconds": 30.252
+    }
+  ]
+}

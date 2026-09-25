@@ -1,0 +1,59 @@
+{
+  "format": "joel-global-tell-model-comparison-v1-key",
+  "items": [
+    {
+      "case_id": "GLOB-BAD-READINESS",
+      "expected_present": [
+        "T02"
+      ],
+      "expected_absent": [],
+      "basis": "Owner correction: instruction-manual/listicle cadence."
+    },
+    {
+      "case_id": "GLOB-BAD-DANGEROUS",
+      "expected_present": [
+        "T02",
+        "T03"
+      ],
+      "expected_absent": [],
+      "basis": "Owner correction: more listicle/manual cadence plus abrupt complication/missing reader-visible setup."
+    },
+    {
+      "case_id": "GLOB-BAD-RT2",
+      "expected_present": [
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T08",
+        "T09"
+      ],
+      "expected_absent": [],
+      "basis": "Owner re-audit explicitly identified scene-skinned staircase, didactic props, generic therapeutic abstraction, simulated spontaneity, image->aftercare, equalized efficiency."
+    },
+    {
+      "case_id": "GLOB-GOOD-5MEO-LIST",
+      "expected_present": [],
+      "expected_absent": [
+        "T02"
+      ],
+      "basis": "Known Human/no-AI hypothesis list; specialized cadence control PASS. Enumeration alone is not manual/listicle cadence."
+    },
+    {
+      "case_id": "GLOB-GOOD-ADVICE",
+      "expected_present": [],
+      "expected_absent": [
+        "T02"
+      ],
+      "basis": "Direct owner Human/medium advice; specialized cadence control PASS."
+    },
+    {
+      "case_id": "GLOB-GOOD-SEATBELT",
+      "expected_present": [],
+      "expected_absent": [
+        "T02"
+      ],
+      "basis": "Owner-derived Human-facing control used as positive calibration; not an instruction-manual/listicle staircase."
+    }
+  ]
+}

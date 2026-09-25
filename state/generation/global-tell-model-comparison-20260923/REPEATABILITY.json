@@ -1,0 +1,77 @@
+{
+  "format": "joel-global-tell-model-comparison-repeatability-v1",
+  "models": {
+    "anthropic/claude-opus-5.5": {
+      "run_a": {
+        "correct": 9,
+        "total": 12,
+        "cost": 0.28542
+      },
+      "run_b": {
+        "correct": 8,
+        "total": 12,
+        "cost": 0.29014
+      },
+      "combined_exact": 17,
+      "combined_total": 24,
+      "combined_accuracy": 0.7083333333333334,
+      "combined_uncertain": 7,
+      "combined_wrong_polarity": 0,
+      "status_repeatability": 11,
+      "status_cells": 12,
+      "changed_cells": [
+        {
+          "case_id": "GLOB-GOOD-ADVICE",
+          "tell_id": "T02",
+          "run_a": "ABSENT",
+          "run_b": "UNCERTAIN"
+        }
+      ]
+    },
+    "openai/gpt-6-sol": {
+      "run_a": {
+        "correct": 6,
+        "total": 12,
+        "cost": 0.092146
+      },
+      "run_b": {
+        "correct": 7,
+        "total": 12,
+        "cost": 0.1034626
+      },
+      "combined_exact": 13,
+      "combined_total": 24,
+      "combined_accuracy": 0.5416666666666666,
+      "combined_uncertain": 2,
+      "combined_wrong_polarity": 9,
+      "status_repeatability": 8,
+      "status_cells": 12,
+      "changed_cells": [
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T04",
+          "run_a": "ABSENT",
+          "run_b": "UNCERTAIN"
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T05",
+          "run_a": "UNCERTAIN",
+          "run_b": "PRESENT"
+        },
+        {
+          "case_id": "GLOB-BAD-RT2",
+          "tell_id": "T09",
+          "run_a": "ABSENT",
+          "run_b": "PRESENT"
+        },
+        {
+          "case_id": "GLOB-GOOD-ADVICE",
+          "tell_id": "T02",
+          "run_a": "ABSENT",
+          "run_b": "PRESENT"
+        }
+      ]
+    }
+  }
+}

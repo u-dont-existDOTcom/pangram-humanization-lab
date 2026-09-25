@@ -1002,6 +1002,182 @@
       "source_path": "state/experiments/human-to-ai-minimal-pairs-20260828/RESULTS.json",
       "source_ref": "working-tree",
       "source_sha256": "f4d8e633a6baebdc8088ddc0dbfdc22215051c81f89a28f20db52a5f876ae456"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Exact Pangram 4 repeats on the Inner Child episode 003 model candidate returned Human, Human, Human, AI. The current owner correction rejects detector instability as a production endpoint when the goal is robust Human classification; contradictory repeats must not be averaged into a pass.",
+      "id": "L-cb049ff156-01",
+      "promoted_to": [],
+      "reason": "The repeat distribution and literal teaching pair are bound to Inner Child episode 003. The general workflow consequence is an application and clarification of the existing 100%-Human standing completion gate plus evaluator-reproducibility rules, not a new detector-causality or phrase rule.",
+      "recorded_at_utc": "2026-09-15T19:39:56.867764+00:00",
+      "source_path": "state/generation/INNER-CHILD-EPISODE003-STABILITY-20260915.md",
+      "source_ref": "task/inner-child-stability-correction-20260915",
+      "source_sha256": "cb049ff156ec6038c9ee7c5bb7368771aba367834e03af4a5c0dd99fea634988"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Fresh-context non-detection is non-gating unless the critic sees the natural reader boundary, aggregates mixed model-shape, keeps protected cognition separate from realization, and demonstrates blind same-register sensitivity plus specificity with known-bad and known-good controls.",
+      "id": "L-51c06d2d0a-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-22T22:18:00.335416+00:00",
+      "source_path": "state/generation/INNER-CHILD-SAFETY-FRESH-CRITIC-FALSE-PASS-20260922.md",
+      "source_ref": "working-tree",
+      "source_sha256": "51c06d2d0a615007df564bceb86da1957fa41ac627f91ffc89465cbf996859a3"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "A 20-item provenance benchmark scored 14/20 under the prior critic rubric: 10/10 Human but 4/10 AI. Human-looking devices can simulate authorship and must count only when they materially disrupt the content-neutralized model scaffold; tuned sets become development data and validation moves to a new frozen holdout.",
+      "id": "L-2069f2485d-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-22T23:47:40.366711+00:00",
+      "source_path": "state/generation/critic-benchmark-20260922/V1-RESULT-AND-RUBRIC-DIAGNOSIS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "2069f2485d65fa18192e24b37f5eec7ea9dab14fea59a305cb0dfce7f01321bc"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "The first rubric-v2 rerun returned HTTP 402 on all 20 UDA Venice gateway requests and produced no classification evidence.",
+      "id": "L-b0d7811159-01",
+      "promoted_to": [],
+      "reason": "Transport/payment state only; the existing provider-outage rule already covers it and the run supplies no evidence about rubric v2.",
+      "recorded_at_utc": "2026-09-22T23:47:40.451312+00:00",
+      "source_path": "state/generation/critic-benchmark-20260922/V2-VENICE-TRANSPORT-FAILURE-402.json",
+      "source_ref": "working-tree",
+      "source_sha256": "b0d781115916c4f5a8c4ba3425b908446d5290294d642d35a4cca18379dfaf9e"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Untouched provenance holdout v2 scored 10/20 (1/10 Human, 9/10 AI), falsifying the hard content-neutralized scaffold veto. Clean functional topology is diagnostic but not dispositive; after v1/v2 opposite error swings, stop abstract rule accumulation and move to literal contrastive Human/AI calibration before a new untouched holdout.",
+      "id": "L-3d2f1a768b-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T00:24:38.630702+00:00",
+      "source_path": "state/generation/critic-holdout-v2-20260922/RESULT-AND-METHOD-DIAGNOSIS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "3d2f1a768bc02dc931db05de267dfb780fb6fbe23784e3dd36b5bd8ca16242d7"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Stop global Human/AI or good/bad prose judges for production admission. Use narrow observable defect auditors calibrated per axis. Current GPT-6 Sol controls reproduce the dangerous-adult owner corrections at 10/10 across reader-purpose, cumulative manual cadence, and corrected antecedent coherence; narrow FAILs are repair evidence, not authorship proof, and absence of FAILs still requires direct editorial reading.",
+      "id": "L-cc9a1a61f1-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T15:59:57.730716+00:00",
+      "source_path": "state/generation/specialized-audit-dev-20260923/SPECIALIZED-AUDIT-RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "cc9a1a61f12dc96e7fa10eea80f2aea3308047bd79126360bf245287a596121e"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Opus 5.5 global tell sweep outperformed GPT-6 Sol in the bounded direct-OpenRouter comparison; uncertainty remains unresolved and requires focused follow-up.",
+      "id": "L-871424f529-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T18:41:28.701737+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "871424f52919c75703f36e2224299da277b8b6761ec9407e1edadbcfceca0db5"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Two identical direct-OpenRouter repeats strengthen the bounded preference for Claude Opus 5.5 as the fresh global full-tell-ledger sweep: Opus 17/24 exact with 0 wrong-polarity calls and 11/12 status repeatability versus GPT-6 Sol 13/24 exact with 9 wrong-polarity calls and 8/12 repeatability. Treat Opus UNCERTAIN as unresolved; the full tell catalog and focused/editorial review remain authoritative.",
+      "id": "L-ccc9dcd66b-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T19:06:30.502626+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/REPEATABILITY.md",
+      "source_ref": "working-tree",
+      "source_sha256": "ccc9dcd66b13a3c29aaa381d5a71bcaa178586ad61a6b6b4580ff7853bd2f192"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "On the same frozen six-case / 12-cell full-tell benchmark, explicit max reasoning materially improved Claude Opus 5.5 to 11/12 exact with 0 wrong-polarity calls and one UNCERTAIN; GPT-6 Sol max scored 8/12 with 3 wrong-polarity calls and GPT-6 Astra max 7/12 with 4. Preserve the current tell definitions for now; use Opus max as the preferred high-rigor global sweep when justified, keep UNCERTAIN unresolved, and broaden tell-level calibration before changing definitions.",
+      "id": "L-738389c1ee-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T19:59:00.456788+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/MAX-EFFORT-RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "738389c1eecdbd6f37293201607f47da6b1556996f05a67cb6371b31be7bb894"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "TypeSafe Jev 1.13 scored 9/12 exact on the frozen six-case tell benchmark at about $0.00073 total, but made three confident false-ABSENT calls. Use it only as optional cheap positive triage/advisory; Jev ABSENT cannot clear a tell.",
+      "id": "L-3b744c84a4-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T20:22:35.820321+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/JEV-RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "3b744c84a4e14747d12b855d636561aecafbd0148573ed864559ba3d3d57d525"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Project-scoped calibration coverage: T02 has strong two-sided owner/editorial controls; T03-T09 are positive-only; T01 and T10-T12 are unscored. Opus 5.5 max at 11/12 on existing grounded cells argues against wholesale tell rewrites. Expand two-sided tell-level controls first, and revise a definition only if repeated max-effort errors persist after good positive/negative controls exist for that exact tell.",
+      "id": "L-650f29982d-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "Current bounded evidence directly changes the next humanization-method decision; scope is this Joel/Pangram tell catalog, not universal prose theory.",
+      "recorded_at_utc": "2026-09-23T20:44:21.019196+00:00",
+      "source_path": "state/generation/GLOBAL-TELL-CALIBRATION-COVERAGE-20260923.md",
+      "source_ref": "working-tree",
+      "source_sha256": "650f29982d9eff40076b2d2916f708290cc57e70c9e1d667212d7c52ff9ed6ff"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "On the frozen six-case / twelve-cell global tell benchmark, OpenRouter Opus 5.5 xhigh scored 11/12 then 10/12 with zero wrong-polarity calls at roughly one-sixth the cost of max; max scored 11/12. For the OpenRouter API fallback route, use xhigh as the routine high-rigor full-ledger sweep and reserve max for decision-changing unresolved/disputed tells. This does not establish Claude Code CLI effort routing; recalibrate CLI effort separately once provider-native CLI authentication is available. Preserve current tell definitions; expand two-sided tell calibration before revising them.",
+      "id": "L-589db72051-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "",
+      "recorded_at_utc": "2026-09-23T21:04:31.536386+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/OPUS-EFFORT-LADDER-RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "02f9b99931925cc0e23748184d9abfd4b887aa3e70c8dabf69b862e7910b4eab"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "On the same frozen tell-ledger benchmark, clean provider-native Codex CLI xhigh scored GPT-6 Sol 9/12 exact with 2 wrong-polarity calls and GPT-6 Astra 8/12 with 3 wrong-polarity calls. CLI-first routing avoids metered API spend but does not make either GPT model safe as the primary clearing sweep; Astra adds no current advantage over Sol. Claude Code CLI remains separately uncalibrated pending authentication.",
+      "id": "L-7c8288dc96-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "Directly informs provider-route and model fallback decisions for the current humanization workflow without changing the tell definitions.",
+      "recorded_at_utc": "2026-09-23T21:39:24.973745+00:00",
+      "source_path": "state/generation/global-tell-model-comparison-20260923/CODEX-CLI-XHIGH-RESULT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "7c8288dc966e118a80ad777f25532cee759ba3b722f7699461dfe62c7b1f3ccb"
     }
   ],
   "schema_version": 1

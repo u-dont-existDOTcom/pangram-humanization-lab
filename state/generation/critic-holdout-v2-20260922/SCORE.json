@@ -1,0 +1,206 @@
+{
+  "format": "joel-humanization-critic-holdout-v2-score",
+  "total": 20,
+  "correct": 10,
+  "accuracy": 0.5,
+  "human_correct": 1,
+  "human_total": 10,
+  "ai_correct": 9,
+  "ai_total": 10,
+  "false_ai_on_human": [
+    "HV2-01",
+    "HV2-02",
+    "HV2-03",
+    "HV2-06",
+    "HV2-07",
+    "HV2-08",
+    "HV2-12",
+    "HV2-15",
+    "HV2-19"
+  ],
+  "false_human_on_ai": [
+    "HV2-16"
+  ],
+  "rows": [
+    {
+      "sample_id": "HV2-01",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H2-05",
+      "provenance_class": "exact_owner_source",
+      "source": "heart-loop owner exact added paragraph"
+    },
+    {
+      "sample_id": "HV2-02",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H2-03",
+      "provenance_class": "direct_owner_aligned_rewrite",
+      "source": "inner-monologue owner p2"
+    },
+    {
+      "sample_id": "HV2-03",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H2-07",
+      "provenance_class": "direct_owner_final",
+      "source": "tough-love owner parents/community paragraph"
+    },
+    {
+      "sample_id": "HV2-04",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A2-08",
+      "provenance_class": "model_paragraph",
+      "source": "candidate C p1"
+    },
+    {
+      "sample_id": "HV2-05",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A2-07",
+      "provenance_class": "model_paragraph",
+      "source": "candidate B p4"
+    },
+    {
+      "sample_id": "HV2-06",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H2-02",
+      "provenance_class": "direct_owner_final",
+      "source": "catch-hook owner-final p2"
+    },
+    {
+      "sample_id": "HV2-07",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H2-08",
+      "provenance_class": "direct_owner_final",
+      "source": "tough-love owner son letter paragraph"
+    },
+    {
+      "sample_id": "HV2-08",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H2-10",
+      "provenance_class": "direct_owner_final",
+      "source": "already-in-it owner door/lying paragraph"
+    },
+    {
+      "sample_id": "HV2-09",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A2-01",
+      "provenance_class": "model_baseline",
+      "source": "inner-monologue model baseline p2"
+    },
+    {
+      "sample_id": "HV2-10",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A2-06",
+      "provenance_class": "model_paragraph",
+      "source": "candidate B p3"
+    },
+    {
+      "sample_id": "HV2-11",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A2-05",
+      "provenance_class": "model_paragraph",
+      "source": "candidate B p1"
+    },
+    {
+      "sample_id": "HV2-12",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H2-01",
+      "provenance_class": "direct_owner_final",
+      "source": "catch-hook owner-final p1"
+    },
+    {
+      "sample_id": "HV2-13",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A2-02",
+      "provenance_class": "model_realization",
+      "source": "heart-loop model-added p4"
+    },
+    {
+      "sample_id": "HV2-14",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A2-10",
+      "provenance_class": "model_paragraph",
+      "source": "candidate D p3"
+    },
+    {
+      "sample_id": "HV2-15",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H2-06",
+      "provenance_class": "direct_owner_rewrite",
+      "source": "romance exclusivity owner-selected high"
+    },
+    {
+      "sample_id": "HV2-16",
+      "gold": "AI",
+      "predicted": "HUMAN",
+      "correct": false,
+      "internal_id": "A2-04",
+      "provenance_class": "assistant_attempt",
+      "source": "romance exclusivity assistant comparison p2"
+    },
+    {
+      "sample_id": "HV2-17",
+      "gold": "HUMAN",
+      "predicted": "HUMAN",
+      "correct": true,
+      "internal_id": "H2-04",
+      "provenance_class": "natural_owner_minimum_normalization",
+      "source": "trust-normalized-owner exact paragraph"
+    },
+    {
+      "sample_id": "HV2-18",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A2-09",
+      "provenance_class": "model_paragraph",
+      "source": "candidate D p1"
+    },
+    {
+      "sample_id": "HV2-19",
+      "gold": "HUMAN",
+      "predicted": "AI",
+      "correct": false,
+      "internal_id": "H2-09",
+      "provenance_class": "direct_owner_final",
+      "source": "already-in-it owner Bee/Key trust paragraph"
+    },
+    {
+      "sample_id": "HV2-20",
+      "gold": "AI",
+      "predicted": "AI",
+      "correct": true,
+      "internal_id": "A2-03",
+      "provenance_class": "assistant_attempt",
+      "source": "romance exclusivity assistant comparison p1"
+    }
+  ]
+}

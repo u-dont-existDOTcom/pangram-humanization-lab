@@ -4,9 +4,10 @@
 
 1. Current owner and task requirements
 2. `state/LESSON-INDEX.md` for the current lesson read order and branch routing
-3. `docs/INDEX.md` for experiments, closeout, Actions, and release evidence
-4. Current case artifacts, tests, cache/state records, and Git history
-5. Relevant current patterns from `u-dont-existDOTcom/universal-dev-architecture`
+3. For humanization **generation or transfer-learning work**, read `state/generation/RETRIEVAL-FIRST-OWNER-TEACHING-PROTOCOL.md` and `state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json` before drafting. Literal owner teaching episodes outrank abstract reconstruction of what an earlier correction supposedly taught; preserve provenance/alignment classes and never reconstruct missing episode text from memory.
+4. `docs/INDEX.md` for experiments, closeout, Actions, and release evidence
+5. Current case artifacts, tests, cache/state records, and Git history
+6. Relevant current patterns from `u-dont-existDOTcom/universal-dev-architecture`
 
 Do not rely on remembered phrase rules or stale bundles.
 
@@ -27,6 +28,8 @@ Live Pangram calls require explicit task authorization, the established cache/ch
 
 Use an isolated task branch/worktree and a pull request. For substantive editorial, detector, experiment, reconstruction, or automation work, run lesson closeout before reporting completion. Record each finding as promoted, provisional, project-specific, superseded, or no-new-lesson, with exact evidence. Update the current recovery checkpoint at durable boundaries.
 
+When Joel supplies an aligned paragraph-level rewrite/correction or a subsequent model attempt demonstrably transfers that teaching, capture the literal teaching episode in the owner-aligned transformation corpus **before** reducing it to a prose lesson. Whole-article owner rewrites that change the thought remain valuable authority but must be classified as owner re-authoring rather than clean same-thought generation demonstrations.
+
 ## Branch roles
 
 - `main`: canonical code, current lessons, and project state
@@ -42,5 +45,6 @@ Never print or commit the Pangram key. Preserve task IDs and ambiguous transport
 - Human/editorial judgment remains the authority; detector outcomes are evidence, not license to damage meaning, voice, or owner-final claims.
 - Every substantive finding must be dispositioned and tied to exact evidence; changed evidence requires review again.
 - Do not promote passage-specific detector quirks into universal phrase rules without transferable evidence and limits.
+- Pangram is not a mandatory teaching-episode checkpoint. If a competent cold read already makes model-shapedness obvious and a detector result cannot change the next decision, do not spend a call merely to certify the obvious.
 
 Treat chat as disposable working memory. A fresh worker must recover from Git without repeating completed work.

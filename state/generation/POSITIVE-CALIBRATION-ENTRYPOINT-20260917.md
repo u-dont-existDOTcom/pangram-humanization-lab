@@ -1,0 +1,82 @@
+# Positive prose calibration — active retrieval entry point
+
+> **Mandatory generation activation — 2026-09-19:** before using this calibration for fresh generation, read `state/generation/GENERATOR-LEARNING-COMPILER-v1-20260919.md`. The compiler separates critic knowledge from generator skill, activates only target-relevant literal episodes + generative deltas, and requires transfer evidence before calling a lesson learned. Do not replace it with a growing prohibition stack.
+
+Date: 2026-09-17
+Status: **SOURCE-VERIFIED DEVELOPMENT CALIBRATION / R17 WHOLE-SUBSECTION TRANSFER FAILED / OWNER-CALIBRATED V2 ACTIVE / USE DIFFERENT COMPOSITION ARCHITECTURE**
+
+Joel requested recovery and study of the actual Human/AI prose comparisons and successful revision sequences, rather than another expanding list of prohibitions. The recovery pass assembled and verified that material. A subsequent fresh R17 writer used the richer calibration plus direct owner cadence guidance and still produced a strongly staircase-shaped subsection. Therefore the bundle remains useful calibration evidence, but the proposition that this whole-subsection writer interface is portable enough for the current target is not supported.
+
+## Exact bundle
+
+Repository: `u-dont-existDOTcom/pangram-humanization-lab`
+
+Evidence bundle commit: `ef62a22df58565575b3cc25419fe13fa0b5f0509`
+
+Verified receipt commit: `4b492f07ba85a38c145974c8fc0b241b7c40d3d7`
+
+Directory: `state/generation/positive-calibration-20260917/`
+
+## Active writer calibration
+
+Use:
+
+`state/generation/OWNER-CALIBRATED-WRITER-REFERENCE-V2-20260917.md`
+
+This is now the primary practical writer/calibration entry because Joel's direct visual review reclassified several Pangram-Human model passages as still visibly AI-shaped. In particular:
+
+- the historically successful EFT model transfer is detector/transfer evidence but **not** a clean positive style target;
+- `The same principle extends...` and `This also happens...` both still look AI to Joel despite different historical detector outcomes;
+- the explanatory completion sentence `The problem, then...` remained Human in its controlled detector boundary but makes the prose look more AI to Joel;
+- the complete My Journey endpoint remains important successful-campaign evidence, but not every sentence is now treated as pristine style calibration.
+
+Primary positive style references in v2 favor owner-written/owner-final prose such as Catch the Hook, the inner-monologue repair, adult-child distrust, `If you're already in it`, and `Tough Love`.
+
+For broad campaign history, the immutable [complete successful My Journey reference](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/ef62a22df58565575b3cc25419fe13fa0b5f0509/state/generation/positive-calibration-20260917/JOURNEY-POSITIVE-REFERENCE.md) remains available as externally supervised model-revision evidence.
+
+Also activate both direct owner calibrations:
+
+- `state/generation/OWNER-CALIBRATION-MARCHING-EFFICIENCY-20260917.md`
+- `state/generation/OWNER-CALIBRATION-READER-EXAMPLES-AND-CLIPPED-VERDICTS-20260917.md`
+- `state/generation/OWNER-CALIBRATION-VAGUE-THE-THING-TIC-20260918.md`
+
+The first names a frequent AI-shaped gestalt: **predictable marching advancement**. Sentence after sentence is optimized for near-maximum semantic efficiency, each has an obvious function, and the passage advances like an instruction manual. Occasional maximum efficiency is fine. Do not repair this by padding.
+
+The second adds two production corrections:
+
+1. natural social/lived movement can come from source-grounded reader examples and questions such as whether the reader has experienced a recognizable version of the situation; this does not require invented Joel autobiography;
+2. when a genuine Joel life example would materially improve the passage, flag the exact slot rather than inventing it.
+
+Direct owner rules for fresh humanization generation include: do not use the clipped standalone interjections `Great.`, `Fine.`, or `Good.`; and avoid vague placeholder uses of `the thing` / `that thing` / `the whole thing` when the prose knows a more natural referent or can omit the placeholder. Existing owner-authored/locked prose is not automatically changed merely because it contains one of these forms.
+
+Use the actual task's live source, owner corrections and destination for content. Calibration examples never authorize transplanting their facts, autobiography, jokes, metaphors, language or conclusions.
+
+## Supervisor and recovery input
+
+- [Study of the actual transformations and counterexamples](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/ef62a22df58565575b3cc25419fe13fa0b5f0509/state/generation/positive-calibration-20260917/STUDY.md).
+- [Twenty classified study cases across fourteen source families](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/ef62a22df58565575b3cc25419fe13fa0b5f0509/state/generation/positive-calibration-20260917/CURRICULUM.json).
+- [Complete thirteen-candidate campaign recovery](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/ef62a22df58565575b3cc25419fe13fa0b5f0509/state/generation/positive-calibration-20260917/CAMPAIGN-AND-RECOVERY.md).
+- [Source-verification receipt](https://github.com/u-dont-existDOTcom/pangram-humanization-lab/blob/4b492f07ba85a38c145974c8fc0b241b7c40d3d7/state/generation/positive-calibration-20260917/RECOVERY-VERIFICATION.json).
+- `state/generation/OWNER-CALIBRATION-MARCHING-EFFICIENCY-20260917.md` — owner visual calibration on sustained maximum efficiency and manual-like cadence.
+- `state/generation/OWNER-CALIBRATION-READER-EXAMPLES-AND-CLIPPED-VERDICTS-20260917.md` — owner correction on reader examples, optional owner-example slots, and the `Great./Fine./Good.` generated-humanization ban.
+- `state/generation/OWNER-CALIBRATED-WRITER-REFERENCE-V2-20260917.md` — corrected positive/negative writer reference after Joel visually reclassified several detector-Human model examples.
+
+These are development cases, **not clean independent style-only pairs**. The curriculum distinguishes aligned transformations, owner reauthoring, successful model revision, Human-to-Human comparisons, correlated controlled cells, and recent failures without detector results.
+
+## What this changes
+
+The old `generation_demo_eligible` flag in `OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json` describes a narrow owner-aligned demonstration class, not the total useful positive evidence. Successful model revisions and complete owner sections can calibrate a writer with their correct provenance; owner reauthoring remains source/cognition evidence, not proof of style-only transfer.
+
+Counterexamples remain essential. Successful source passages contain direct advice, reassurance, questions, contrasts and sources. Some controlled additions of explanation, sentence equalization, or a taxonomy stayed Human. Therefore a familiar outline, permission sentence, explicit source, or explanation is not itself a valid AI admission rule.
+
+The owner cadence calibration adds a whole-boundary axis: a passage can avoid those named local forms and still feel model-generated because **every sentence is maximally optimized and predictably advances one function**. This is not a license to bloat prose. Audit sustained distribution across the passage, not isolated sentence efficiency.
+
+The R17 failure adds a method boundary: **prompting the same autonomous whole-subsection writer with more literal examples plus the cadence rule did not overcome that default on this target**. Do not respond with another similar packet or a larger prohibition stack. Shift to a materially different composition architecture: source-grounded reader situations, optional owner-example slots, exact owner prose where authoritative, and manual/supervised assembly with smaller local generation.
+
+## Evidence boundary
+
+Recovery and comparative study are complete for this bundle. One prospective whole-subsection transfer attempt has now been run and failed editorially before Pangram. This does not mean the calibration corpus is useless; it means this specific autonomous transfer route did not establish portable generation competence for the current target.
+
+No Pangram call is warranted for an obviously model-shaped candidate. Continue external supervision and preservation checks under the article task.
+
+Semantic disposition: **project-specific method failure for the R17 whole-subsection writer interface; owner-calibrated generation lessons active; historical detector facts unchanged.**

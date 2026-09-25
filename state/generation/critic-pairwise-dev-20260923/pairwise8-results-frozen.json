@@ -1,0 +1,287 @@
+{
+  "format": "joel-pairwise-realization-defect-dev-v1-results",
+  "deployment_id": "60e9d4c5-7b05-429c-aecf-d7033eeb17e2",
+  "source_commit": "f61f3038c6336a57e5095edab9a9ffb6d119c706",
+  "requested_model": "openai-gpt-6-sol",
+  "provider_models": [
+    "openai-gpt-6-sol"
+  ],
+  "prompt_sha256": "09a61a990bd0ae78eb4875a4efcc6f142046482b849df5b7b78d98afee57f2f3",
+  "blind_sha256": "8f9caa122eb2afdd22d719d9b78eb692d1efd947ca402ea5653d0aa5f6c369a2",
+  "end_seen": true,
+  "result_count": 8,
+  "transport_error_count": 0,
+  "results": [
+    {
+      "timestamp": "2026-09-23T10:40:00.272356439Z",
+      "level": "info",
+      "event": "pairwise_result",
+      "sample_id": "PW01",
+      "sha_a": "fb580ff880c246d60267e449f711a3486d784967d08782181d7607bbc02d5392",
+      "sha_b": "f09db71fb7211a19b2ab784973a00f543a6ad65a58d87cee5c35d3bdc7fc0b83",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_006ece5124a2770a016ab3ac6c728487d29370a4edc570cbd8",
+      "content": "{\n  \"defective_passage\": \"A\",\n  \"confidence\": \"high\",\n  \"defect_operation\": \"It turns drafting a reply into a tidy emotional-release sequence: write, feel better, then return when calmer. It assumes the writing has done its job before examining what it contains.\",\n  \"accepted_advantage\": \"B lets the draft become something to inspect. The writer can separate a mean line from a real boundary, add an apology, or decide there is nothing to send.\",\n  \"closest_reference_pair\": \"P3 — the accepted passage follows what actually emerges from an exercise, including the possibility that the expected response is not the useful one.\"\n}",
+      "parsed": {
+        "defective_passage": "A",
+        "confidence": "high",
+        "defect_operation": "It turns drafting a reply into a tidy emotional-release sequence: write, feel better, then return when calmer. It assumes the writing has done its job before examining what it contains.",
+        "accepted_advantage": "B lets the draft become something to inspect. The writer can separate a mean line from a real boundary, add an apology, or decide there is nothing to send.",
+        "closest_reference_pair": "P3 — the accepted passage follows what actually emerges from an exercise, including the possibility that the expected response is not the useful one."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2870,
+        "completion_tokens": 658,
+        "total_tokens": 3528,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_creation_input_tokens": 2867
+        },
+        "cache_creation_input_tokens": 2867,
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      },
+      "elapsed_seconds": 11.393
+    },
+    {
+      "timestamp": "2026-09-23T10:40:04.164936217Z",
+      "level": "info",
+      "event": "pairwise_result",
+      "sample_id": "PW02",
+      "sha_a": "5b23e87b2629e4fa4ed24e7be53c04bc862494148cc1167a46cb88e8162dc964",
+      "sha_b": "298f481b11054c00e9bc12600287903fac8e4292d4f00bfdabd0ca93dc159677",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_043617e9e128d250016ab3ac77b57487d2b7efdce6e31684db",
+      "content": "{\n  \"defective_passage\": \"B\",\n  \"confidence\": \"high\",\n  \"defect_operation\": \"B builds a broad explanatory chain that makes the speaker’s decision sound like the necessary result of a general theory. That polished rationale smooths over the uneasy, questionable leap from feeling attraction to postponing marriage.\",\n  \"accepted_advantage\": \"A stays with the lived sequence: B. wanted to marry him, he was attracted to others, and he somehow decided he had to fix that first. The quoted explanation then reveals how he presented that decision to her.\",\n  \"closest_reference_pair\": \"P2 — the AI realization similarly uses a tidy conceptual bridge where the human realization lets the experience unfold more directly.\"\n}",
+      "parsed": {
+        "defective_passage": "B",
+        "confidence": "high",
+        "defect_operation": "B builds a broad explanatory chain that makes the speaker’s decision sound like the necessary result of a general theory. That polished rationale smooths over the uneasy, questionable leap from feeling attraction to postponing marriage.",
+        "accepted_advantage": "A stays with the lived sequence: B. wanted to marry him, he was attracted to others, and he somehow decided he had to fix that first. The quoted explanation then reveals how he presented that decision to her.",
+        "closest_reference_pair": "P2 — the AI realization similarly uses a tidy conceptual bridge where the human realization lets the experience unfold more directly."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2911,
+        "completion_tokens": 670,
+        "total_tokens": 3581,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1405
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1405,
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      },
+      "elapsed_seconds": 12.684
+    },
+    {
+      "timestamp": "2026-09-23T10:40:24.161012673Z",
+      "level": "info",
+      "event": "pairwise_result",
+      "sample_id": "PW03",
+      "sha_a": "fd4ad338aabccae0f3d5432c1e5e299aef0ffc9b5df8ee0204176229dd2ff9c3",
+      "sha_b": "3c1d5833b59144ea25eaf33b7cfad452a01081c4e100679289305df29fe5f3bc",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0ba48ac9585b81ac016ab3ac84687487d2a12b39f8d3452beb",
+      "content": "{\n  \"defective_passage\": \"A\",\n  \"confidence\": \"high\",\n  \"defect_operation\": \"It turns a question about how to judge healing into a generic effectiveness check: identify the goal, watch for results, and change methods if needed. That preserves the practical advice but loses the passage’s argument about growing less dependent on therapy and strengthening the inner child–inner adult relationship.\",\n  \"accepted_advantage\": \"B moves from a question you can ask yourself or a therapist, through the distinction between early relief and lasting change, to a more specific standard for healing. Its final advice to adapt the practice follows from that argument.\",\n  \"closest_reference_pair\": \"P2 — the AI realization similarly compresses a developing, situated line of thought into a tidy therapeutic summary.\"\n}",
+      "parsed": {
+        "defective_passage": "A",
+        "confidence": "high",
+        "defect_operation": "It turns a question about how to judge healing into a generic effectiveness check: identify the goal, watch for results, and change methods if needed. That preserves the practical advice but loses the passage’s argument about growing less dependent on therapy and strengthening the inner child–inner adult relationship.",
+        "accepted_advantage": "B moves from a question you can ask yourself or a therapist, through the distinction between early relief and lasting change, to a more specific standard for healing. Its final advice to adapt the practice follows from that argument.",
+        "closest_reference_pair": "P2 — the AI realization similarly compresses a developing, situated line of thought into a tidy therapeutic summary."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2954,
+        "completion_tokens": 725,
+        "total_tokens": 3679,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1448
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1448,
+        "completion_tokens_details": {
+          "reasoning_tokens": 558
+        }
+      },
+      "elapsed_seconds": 12.835
+    },
+    {
+      "timestamp": "2026-09-23T10:40:44.160781019Z",
+      "level": "info",
+      "event": "pairwise_result",
+      "sample_id": "PW04",
+      "sha_a": "df1bdccbe61b3bb06de90d717ad83d77d86598501396bd2553687473ab6e4cbf",
+      "sha_b": "3ad5a928a25dc08f850177bdda3be2cc491d1e1802296877ae78c263a72139c4",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0c5cf930925bc6da016ab3ac91e6d887d2a3313dfd45448cf6",
+      "content": "{\n  \"defective_passage\": \"A\",\n  \"confidence\": \"medium\",\n  \"defect_operation\": \"It replaces the headlong choice at the center of the contrast with the abstract idea of a relationship gaining momentum, then inventories situations where slowing down may be too late.\",\n  \"accepted_advantage\": \"B keeps the contrast between rushing into a relationship and finding yourself already married with children direct and immediate.\",\n  \"closest_reference_pair\": \"P2 — the AI realization similarly smooths a headlong image into a more generalized account of timing and caution.\"\n}",
+      "parsed": {
+        "defective_passage": "A",
+        "confidence": "medium",
+        "defect_operation": "It replaces the headlong choice at the center of the contrast with the abstract idea of a relationship gaining momentum, then inventories situations where slowing down may be too late.",
+        "accepted_advantage": "B keeps the contrast between rushing into a relationship and finding yourself already married with children direct and immediate.",
+        "closest_reference_pair": "P2 — the AI realization similarly smooths a headlong image into a more generalized account of timing and caution."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2791,
+        "completion_tokens": 1428,
+        "total_tokens": 4219,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1285
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1285,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1306
+        }
+      },
+      "elapsed_seconds": 22.934
+    },
+    {
+      "timestamp": "2026-09-23T10:41:04.176250077Z",
+      "level": "info",
+      "event": "pairwise_result",
+      "sample_id": "PW05",
+      "sha_a": "8c3e33dd3f9705f8172d419c48b7ead793098b377f8c1d44876a4c42d1339c73",
+      "sha_b": "5b6b87da8a61cc83aa16132a44a650693e9d40fd88071c2ebb6a17135cc18428",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0f672f7d08348f09016ab3aca84a7c87d2a928049175085560",
+      "content": "{\n  \"defective_passage\": \"A\",\n  \"confidence\": \"high\",\n  \"defect_operation\": \"It turns a concrete warning against using honesty as a license to unload on a partner into a vague retrospective judgment that the partner could not handle the truth. That shifts attention away from the speaker’s behavior before the shared decision about honesty.\",\n  \"accepted_advantage\": \"B names the behavior to avoid, then keeps the tension intact: both people should agree to prioritize honesty, but postponement cannot continue forever.\",\n  \"closest_reference_pair\": \"P4 — the AI realization substitutes a smoother personal reflection for the accepted version’s more concrete, usable move.\"\n}",
+      "parsed": {
+        "defective_passage": "A",
+        "confidence": "high",
+        "defect_operation": "It turns a concrete warning against using honesty as a license to unload on a partner into a vague retrospective judgment that the partner could not handle the truth. That shifts attention away from the speaker’s behavior before the shared decision about honesty.",
+        "accepted_advantage": "B names the behavior to avoid, then keeps the tension intact: both people should agree to prioritize honesty, but postponement cannot continue forever.",
+        "closest_reference_pair": "P4 — the AI realization substitutes a smoother personal reflection for the accepted version’s more concrete, usable move."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2831,
+        "completion_tokens": 958,
+        "total_tokens": 3789,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1325
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1325,
+        "completion_tokens_details": {
+          "reasoning_tokens": 816
+        }
+      },
+      "elapsed_seconds": 15.294
+    },
+    {
+      "timestamp": "2026-09-23T10:41:34.231052938Z",
+      "level": "info",
+      "event": "pairwise_result",
+      "sample_id": "PW06",
+      "sha_a": "16d501b6ec374076bda48fcf6f8462d896d954edf98f891e4fa748246617b967",
+      "sha_b": "a18ed8c4b8933fd3fdd6c9f03f3809b2be5b64cc953b631b0833ed68b39fdc88",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0a8f406450952630016ab3acb7682487d28a563edb5405ee4f",
+      "content": "{\n  \"defective_passage\": \"B\",\n  \"confidence\": \"medium\",\n  \"defect_operation\": \"It turns a consequential spiritual claim into a smoother, safer relational summary: something larger appears between two people, but the account no longer moves through how that spirit changes what they can see about themselves or asks them to change.\",\n  \"accepted_advantage\": \"A lets the idea develop from the relationship’s importance into an account of self-discovery, service, and change. Its spiritual language does work rather than merely naming the bond.\",\n  \"closest_reference_pair\": \"P4 — the AI realization preserves the broad loving intention while softening the human version’s more particular spiritual conception.\"\n}",
+      "parsed": {
+        "defective_passage": "B",
+        "confidence": "medium",
+        "defect_operation": "It turns a consequential spiritual claim into a smoother, safer relational summary: something larger appears between two people, but the account no longer moves through how that spirit changes what they can see about themselves or asks them to change.",
+        "accepted_advantage": "A lets the idea develop from the relationship’s importance into an account of self-discovery, service, and change. Its spiritual language does work rather than merely naming the bond.",
+        "closest_reference_pair": "P4 — the AI realization preserves the broad loving intention while softening the human version’s more particular spiritual conception."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 3026,
+        "completion_tokens": 2024,
+        "total_tokens": 5050,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1520
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1520,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1876
+        }
+      },
+      "elapsed_seconds": 30.05
+    },
+    {
+      "timestamp": "2026-09-23T10:41:43.298226491Z",
+      "level": "info",
+      "event": "pairwise_result",
+      "sample_id": "PW07",
+      "sha_a": "7c5cefcafedf24a7979aa1f4748a3c5c4688f43183fb90a33a531a64adfe3652",
+      "sha_b": "373123a538820edbf921fa5f6e18e8f01c3a43ed298b7a13fbe431d849140cae",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_032abbde307924be016ab3acd5870c87d2bba7a53d04c6a83f",
+      "content": "{\n  \"defective_passage\": \"A\",\n  \"confidence\": \"medium\",\n  \"defect_operation\": \"It inserts an explicit reflection prompt between the pause and the example, turning an unsettled observation into a staged exercise. That extra step also competes with the closing advice to defer judgment.\",\n  \"accepted_advantage\": \"B lets the possibility of a real boundary crossing and an old wound coexist without forcing an immediate question about what happened.\",\n  \"closest_reference_pair\": \"P2 — the AI realization adds an organizing bridge where the human realization lets the next thought arrive directly.\"\n}",
+      "parsed": {
+        "defective_passage": "A",
+        "confidence": "medium",
+        "defect_operation": "It inserts an explicit reflection prompt between the pause and the example, turning an unsettled observation into a staged exercise. That extra step also competes with the closing advice to defer judgment.",
+        "accepted_advantage": "B lets the possibility of a real boundary crossing and an old wound coexist without forcing an immediate question about what happened.",
+        "closest_reference_pair": "P2 — the AI realization adds an organizing bridge where the human realization lets the next thought arrive directly."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 3125,
+        "completion_tokens": 1268,
+        "total_tokens": 4393,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1619
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1619,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1141
+        }
+      },
+      "elapsed_seconds": 17.909
+    },
+    {
+      "timestamp": "2026-09-23T10:42:03.008609684Z",
+      "level": "info",
+      "event": "pairwise_result",
+      "sample_id": "PW08",
+      "sha_a": "c82fdae1e45899654476fd85a60fb38ed48337ef56aa810726530fa9cbe49635",
+      "sha_b": "5a0e25526970084f29938006b1e8fdddbe868d79f847519c584fede85a41b420",
+      "model": "openai-gpt-6-sol",
+      "response_id": "resp_0baced97af90fccb016ab3ace769f087d29dc5658cca53a3cd",
+      "content": "{\n  \"defective_passage\": \"B\",\n  \"confidence\": \"high\",\n  \"defect_operation\": \"It compresses a reflective argument into a clean decision rule and a protective closing maxim, skipping the reasoning about how slowly change happens and why a boundary can coexist with high expectations.\",\n  \"accepted_advantage\": \"A lets the thought develop through uncertainty, prior promises, a question about the reader’s own experience of change, and the practical tension between hope and preparedness.\",\n  \"closest_reference_pair\": \"P2 — the AI realization similarly smooths a staged, conversational line of thought into a concise takeaway.\"\n}",
+      "parsed": {
+        "defective_passage": "B",
+        "confidence": "high",
+        "defect_operation": "It compresses a reflective argument into a clean decision rule and a protective closing maxim, skipping the reasoning about how slowly change happens and why a boundary can coexist with high expectations.",
+        "accepted_advantage": "A lets the thought develop through uncertainty, prior promises, a question about the reader’s own experience of change, and the practical tension between hope and preparedness.",
+        "closest_reference_pair": "P2 — the AI realization similarly smooths a staged, conversational line of thought into a concise takeaway."
+      },
+      "parse_error": null,
+      "usage": {
+        "prompt_tokens": 2879,
+        "completion_tokens": 637,
+        "total_tokens": 3516,
+        "prompt_tokens_details": {
+          "cached_tokens": 1503,
+          "cache_creation_input_tokens": 1373
+        },
+        "cache_read_input_tokens": 1503,
+        "cache_creation_input_tokens": 1373,
+        "completion_tokens_details": {
+          "reasoning_tokens": 504
+        }
+      },
+      "elapsed_seconds": 11.467
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+Audit ONLY material antecedent/referent coherence. Do not classify Human vs AI and do not comment on general style.
+
+You will see PREVIOUS CONTEXT, TARGET, and NEXT CONTEXT. Treat the supplied context as the complete local context relevant to the TARGET.
+
+For each potentially context-dependent span, classify its role:
+- INTRODUCTION/DEFINITION: the TARGET itself introduces or defines the term.
+- EXPLICIT BACKWARD REFERENCE: the wording presupposes a specific earlier term, instruction, person, claim, or wording.
+- BRIDGING/GENERIC REFERENCE: a conventional category can be understood without a specific earlier sentence (for example "the usual inner-child prompt").
+- FORWARD REFERENCE: the wording explicitly points ahead.
+- SELF-CONTAINED USE: locally intelligible without other setup.
+
+Quoted/metalinguistic wording is important. If the TARGET talks about a particular quoted word as wording from an instruction/prompt, check whether visible context has actually made that word available. Do not treat generic category language as orphaned merely because no earlier sentence defined the category.
+
+FAIL only when a material EXPLICIT BACKWARD REFERENCE lacks visible setup and the missing setup affects how a normal reader understands the TARGET. Do not fail on harmless discourse particles or names merely because a larger document might have said more.
+
+Return JSON only:
+{"status":"PASS or FAIL","references_checked":[{"span":"...","role":"INTRODUCTION/DEFINITION or EXPLICIT BACKWARD REFERENCE or BRIDGING/GENERIC REFERENCE or FORWARD REFERENCE or SELF-CONTAINED USE","antecedent":"... or NONE","assessment":"resolved or orphaned"}],"failure":"none or concise defect"}
