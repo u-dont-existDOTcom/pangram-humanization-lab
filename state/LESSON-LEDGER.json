@@ -1178,6 +1178,17 @@
       "source_path": "state/generation/global-tell-model-comparison-20260923/CODEX-CLI-XHIGH-RESULT.md",
       "source_ref": "working-tree",
       "source_sha256": "7c8288dc966e118a80ad777f25532cee759ba3b722f7699461dfe62c7b1f3ccb"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Joel's 2026-09-15 correction: do not run Pangram merely to confirm prose that already looks obviously AI-shaped on a competent cold read; use it when classification is genuinely uncertain or a controlled detector measurement can change the next research/editorial decision. Already-run obvious-result measurements (including the 2026-09-15 held-out Brainspotting AI/High call) remain valid evidence and are not repeated.",
+      "id": "L-c265f42e11-01",
+      "promoted_to": [],
+      "reason": "The transferable rule is already current on main in AGENTS.md (code review rule: do not spend a call merely to certify the obvious when a detector result cannot change the next decision) and in state/generation/RETRIEVAL-FIRST-OWNER-TEACHING-PROTOCOL.md (Relationship to Pangram). This exact record adds the direct owner provenance and is linked from docs/CHATGPT-OPERATING-GUIDE.md so the rule visibly governs every Pangram call rather than only teaching episodes or aggregate certification; it does not change the certification gate when a detector result is decision-relevant.",
+      "recorded_at_utc": "2026-09-26T00:49:32.967974+00:00",
+      "source_path": "state/PANGRAM-DECISION-VALUE-OWNER-CORRECTION-20260915.md",
+      "source_ref": "547bc49e64c0cf3f357207453d0099d870fcd2b5",
+      "source_sha256": "c265f42e111f0f28970df9611a53a187f989bce074be26f2423f5fbc968fa0ff"
     }
   ],
   "schema_version": 1

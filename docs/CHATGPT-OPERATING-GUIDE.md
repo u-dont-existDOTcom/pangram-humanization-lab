@@ -57,6 +57,8 @@ A Human headline or a partial result such as 93% Human is progress only; under a
 
 The normal editorial terminal states are: (1) the exact intended delivery boundary passes every required detector/editorial gate; or (2) the worker genuinely knows no further faithful coherent repair and makes an **unresolved authorial handoff**. Reaching a local repair section's paid-call limit creates an **operational suspension** for that section, not completion: stop before a seventh section-scoped paid POST and request narrow help rather than resetting the section identity. Aggregate certification calls are governed instead by exact-cache, recovery, version, and decision-value gates.
 
+Decision value applies to every Pangram call, not only aggregate certification: do not spend a call merely to confirm prose that already looks obviously AI-shaped on a competent cold read; use Pangram when classification is genuinely uncertain or the result can change the next decision (owner correction: `../state/PANGRAM-DECISION-VALUE-OWNER-CORRECTION-20260915.md`).
+
 Any unresolved authorial handoff or operational suspension must record `text_sha256`; `fraction_human`, `fraction_ai`, and `fraction_ai_assisted`; detector version; result path; result commit; attempted faithful approaches; protected claims/functions; paid-call state; and the narrow owner input needed.
 
 A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance loss also fails the gate.
