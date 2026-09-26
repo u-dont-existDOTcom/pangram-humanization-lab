@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-09-17T19:38:13.902111+00:00",
+  "bundle_commit_verified": "ef62a22df58565575b3cc25419fe13fa0b5f0509",
+  "verification_scope": "Source identity, source reachability, exact control bytes, campaign text identity, quoted demonstration fidelity. This is not a writing-quality or transfer-validation result.",
+  "curriculum_cases": 20,
+  "source_families": 14,
+  "unmodified_source_snapshots_checked_against_original_git_blobs": 29,
+  "source_snapshot_failures": [],
+  "curriculum_source_pointer_failures": [],
+  "controlled_candidate_files_checked_against_saved_result_hashes": 15,
+  "controlled_candidate_hash_failures": [],
+  "literal_campaign_records_checked": 13,
+  "campaign_recovery_table_hash_and_word_count_failures": [],
+  "writer_blockquotes_checked": 6,
+  "writer_blockquote_failures": [],
+  "blockquote_comparison": "Removed Markdown quotation prefixes and normalized line-end whitespace only; every resulting complete quote appears in a source or exact candidate string.",
+  "whole_journey_positive_reference_matches_exact_successful_candidate": true,
+  "historical_metadata_warnings": [
+    {
+      "files": [
+        "EPISODE-007-MY-JOURNEY-CANDIDATE-20260916.json",
+        "EPISODE-007-MY-JOURNEY-CANDIDATE-R2-20260916.json",
+        "EPISODE-007-MY-JOURNEY-CANDIDATE-R3-20260916.json"
+      ],
+      "issue": "The files' historical candidate_markdown_sha256_no_terminal_newline fields do not match their stored candidate_markdown strings.",
+      "disposition": "Actual stored strings are newly hashed in CAMPAIGN-AND-RECOVERY.md and retained for historical study. Do not call the early records hash-proven exact detector controls or silently alter the historical metadata. This does not establish loss of accepted article prose."
+    },
+    {
+      "file": "sources/legacy-corpus.json",
+      "issue": "The legacy recorded C1 file hash omits its last two characters.",
+      "verified_complete_hash": "b115de4e6f70c09eaa6a35245f5fbc4bdf06fcc2b7fc3dce3de685e3394e7c12",
+      "disposition": "Use the complete hash in sources/controls-results.json, verified against the actual C1 input. Keep the historical snapshot unchanged."
+    }
+  ],
+  "lesson_changed_range_check": {
+    "command": "PYTHONPATH=src python3 -m pangram_lab.lesson_closeout check --base 300f34e40f50dfbd2f5031763b1dbfdbc7ec24fb --head ef62a22df58565575b3cc25419fe13fa0b5f0509",
+    "ok": true,
+    "errors": [],
+    "reviewed": [],
+    "limit": "The current checker does not require semantic ledger entries for these nested generation paths. Its green result is not proof that a semantic review or learning transfer occurred."
+  },
+  "development_reading": "Completed source-led comparisons of the literal demonstrations, positive complete sections, broad and regional Journey revisions, and counterexamples. Same-context, non-isolated study.",
+  "new_pangram_calls": 0,
+  "new_article_candidate_generated": false,
+  "independent_recognition_test": "NOT RUN",
+  "prospective_generation_transfer": "NOT RUN",
+  "article_prose_changed": false,
+  "parallel_article_state_changed": false,
+  "status": "RECOVERED MATERIAL VERIFIED; GENERATION EFFICACY UNESTABLISHED"
+}
