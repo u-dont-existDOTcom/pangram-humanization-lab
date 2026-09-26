@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "repository": "u-dont-existDOTcom/pangram-humanization-lab",
+  "snapshot_prefix": "state/generation/positive-calibration-20260917/sources/",
+  "commits": {
+    "main": "300f34e40f50dfbd2f5031763b1dbfdbc7ec24fb",
+    "method": "127e77bf9ac96c5bbe0739cdf6aa25f148e66d62",
+    "reparenting": "51d7da198df423cb0e3aedd47b3dd7b67aa56346"
+  },
+  "columns": ["snapshot_relative_path", "commit_alias", "original_path", "git_blob_sha", "sha256_complete_file"],
+  "entries": [
+    ["legacy-corpus.json","main","state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json","c2e12f9dfc75046d6ed7ea7ac3831463b6005e18","556831b1c2bfe80f43ed3aa75a0b1618b41a8d30084fb2e1020fa36d5b946c5e"],
+    ["inner-monologue-pair.md","method","state/generation/INNER-CHILD-EPISODE008-OWNER-INNER-MONOLOGUE-PAIR-20260916.md","1d2912181ce892783e70da5e7b794844948eb3fc","937180f0d145998a05044302ccf5bc7e7f4ad63d5e39173c8ffbd5a8f4297542"],
+    ["catch-hook-owner.md","method","state/generation/INNER-CHILD-EPISODE008-CATCH-HOOK-OWNER-CALIBRATION-20260916.md","7f5aea0337ea280381c3c60eaa57e3d6874b3230","a348ae4dadbd82fb0eb95437d04e2d6c773b9890b8c66321ca56210deb530114"],
+    ["relational-capacity-owner.md","main","state/generation/INNER-CHILD-EPISODE008-OWNER-REAUTHORING-20260917.md","e9e39a92f274619d8ce952fb7a2407d189bca02f","b34c247db8aafbbcbb9727d7f363deff324f123e363258285aa8795ebfbd8ee2"],
+    ["trust-raw-owner.md","reparenting","state/experiments/REPARENTING-R07-RAW-OWNER-ADULT-TRUST-20260828.md","081419be41845dec79299da8fa8069b4f6c626c7","50c72b6ebca4d131c42d0ddd76fc126290007e56dcf5725f1840d7edacb3561f"],
+    ["trust-normalized-owner.md","reparenting","state/experiments/REPARENTING-R08-MINIMUM-NORMALIZATION-20260828.md","8ada2db22e53651a4d0162e9fb031192e1fcb3d3","46de1b352ca0756ab1d624798e4955e627bdb118ac62046f7524cc2694ba136c"],
+    ["trust-model-reconstruction.md","reparenting","state/experiments/REPARENTING-R06-ADULT-TRUST-20260828.md","95f9a9ccd3c27a8a73533f85d41fdf234e2bb8cc","19a92ba2507170c6f7ed3627b4a9bfdf5cc7a464c0ff12ba59d8113d1b8c191c"],
+    ["heart-loop-model.md","reparenting","state/experiments/REPARENTING-WRITTEN-REGISTER-HEART-LOOP-20260828-H.md","e98fcb4b0a92b4b8dfa8c3d6ee976ff7a6912a4e","60a26d42f44c873d6afe5ded6f91119a2c43b891a5d41f5c9356d086a7824f08"],
+    ["heart-loop-owner.md","reparenting","state/experiments/REPARENTING-WRITTEN-REGISTER-OWNER-HEART-LOOP-20260828-I.md","63c6223e54ebe5c64e8c0be4cac9fcb4f9cd3646","43949c19547550cb2464ce2967ea07673284b4c25e2c43e1e7d969057226d49c"],
+    ["tough-love.md","main","state/ROMANCE-TOUGH-LOVE-DETECTOR-REPAIR-2026-08-16.md","5e053342af68a522db8c228a338b429771468790","92e272e43d684fbe536c806175a437c60aca6fe6f6dfa80c8346e3917c327668"],
+    ["already-in-it.md","main","state/ROMANCE-IF-ALREADY-IN-IT-DETECTOR-REPAIR-2026-08-16.md","839a4334e7de5bcf1e14aafb2a06a456c8240bae","855146deeb70e2cf4ec0eb2ecb54b20f77fbd6579576b083e191ea41523b9fc3"],
+    ["exclusivity.md","main","state/ROMANCE-EXCLUSIVITY-INTERLOCUTOR-MINIMAL-PAIR-2026-08-21.md","72424f037c4ec83cb6713e0c38a11f4ebbd27583","30022fa25d54a8c0c76f3f97df222ff5fd4b8b64204c0c456213db53ff58fe53"],
+    ["controls-design.md","main","state/experiments/human-to-ai-minimal-pairs-20260828/DESIGN.md","a2a1228220407d541cfeac0f5b14177643defc8a","53fbe6dd6254cf2668053456f1dc5f3fb97ac0ab6e4ef33b2dbeb84ff901fd47"],
+    ["controls-results.json","main","state/experiments/human-to-ai-minimal-pairs-20260828/RESULTS.json","11f3fb1ff3bf72017698f37dbca07cb4f71a0475","f4d8e633a6baebdc8088ddc0dbfdc22215051c81f89a28f20db52a5f876ae456"],
+    ["controls/A1-r08-explanatory-completion.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/A1-r08-explanatory-completion.txt","eca735f476b311fec71020011c04704b072e1d73","78966db7d5fae9e891d6b941cb8efe918e543bb65427f5381a962360b7941279"],
+    ["controls/A2-r08-sentence-equalization.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/A2-r08-sentence-equalization.txt","f74e50fdb0a9b0aeac4052677b813651117e9fdf","45b10d6457f9199276c3ea95a8a53c837833fdef64b39cd98b265fc90669d1a1"],
+    ["controls/B1-cancer-taxonomy-closure.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/B1-cancer-taxonomy-closure.txt","09916bd0843e2f644200abbe894f1f88f55a6536","a729a0ff68111e19a2562efdc735e4f7afaf0a770e74bd5dcc0b2815144668f8"],
+    ["controls/B2-cancer-connective-tissue.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/B2-cancer-connective-tissue.txt","d42f35840be2462d161ba717d417b2c5d204dbd6","fd769658a9e4cec311066b586d23be325e924bd5f2fc918baabb8df14bad75f6"],
+    ["controls/C1-somatic-intro-abstraction-compression.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/C1-somatic-intro-abstraction-compression.txt","5cc1d72e41f05c67a8a513bebfe77558b9d86abf","b115de4e6f70c09eaa6a35245f5fbc4bdf06fcc2b7fc3dce3de685e3394e7c12"],
+    ["controls/C2-somatic-intro-polished-transition.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/C2-somatic-intro-polished-transition.txt","27d1752a10295463458bbb09e7f57404949266e6","1c9f634c4cb1233a225d15406e50a90eec00c9b51462db25ca3785164a50a7c0"],
+    ["controls/C3-somatic-intro-paragraph-packing-only.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/C3-somatic-intro-paragraph-packing-only.txt","5c28f14877b328025bce3a62f48703784d3d34ea","b3f7120403408aa7d9db8f0d8f7fc92f8d449df63da827332e5ff80f2e8dbbfa"],
+    ["controls/C4-somatic-intro-explicit-relation-colloquial.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/C4-somatic-intro-explicit-relation-colloquial.txt","a1a219c62704fbd8809ffa8545dae2d3da5c1dfc","707e14ba5942801cf985240ad64df1dc5c01967a0395b5800363f0845b09d009"],
+    ["controls/C5-somatic-intro-compression-minus-synthesis.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/C5-somatic-intro-compression-minus-synthesis.txt","e4ccc2584e2540487988beacc6f9f84d57a6278d","5a00ed0537636acac1cd3c13b5e0e32eb398b9844006456c13458b8d8612697d"],
+    ["controls/C6-somatic-intro-middle-compression-only.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/C6-somatic-intro-middle-compression-only.txt","70bcf9333f127ab691240806ba619e62b73588e0","d3453f1a84f937ec6eae2cedc00448e65acc527b66e42b4fe2569467b6204d74"],
+    ["controls/A3-r08-explanatory-completion-plus-equalization.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/A3-r08-explanatory-completion-plus-equalization.txt","c7165a1d9f6b249847060731ca7417acd1108c3e","d4cbb9c52499af0c05ac639a6c58aae38ef2c44351a896f277948e7ff34b8c31"],
+    ["controls/B3-cancer-taxonomy-plus-connective-tissue.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/B3-cancer-taxonomy-plus-connective-tissue.txt","dc455c5c8c05678f745220547087cd4d57afb5eb","82a3b66f9cf4f2f4162fbffa7c8ffaaa89a78dc61c9f8a4600c0f2c19b1e1311"],
+    ["controls/C7-somatic-intro-compression-plus-alternate-polished-transition.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/C7-somatic-intro-compression-plus-alternate-polished-transition.txt","3ada584594a3e2f0789541c1b67580db4c74791e","fc023c3f605c1ffedcbf0939133b436cc749cffda9347c48bdfa6d8291c9687a"],
+    ["controls/B4-cancer-taxonomy-plus-colloquial-bridge.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/B4-cancer-taxonomy-plus-colloquial-bridge.txt","4859ba9a825b0ced5d5549cd476a945d5d858088","c6896d2182b2f55155422dc36bcb428822df204124da37c62f66112bb9fd941f"],
+    ["controls/B5-cancer-colloquial-closure-plus-polished-bridge.txt","main","state/experiments/human-to-ai-minimal-pairs-20260828/inputs/B5-cancer-colloquial-closure-plus-polished-bridge.txt","d93a89ba9cc42d27f06dd30883851db905bbc3b1","9562f1c63483b5fa6658ab435f594f13a53fc25ec4de78b2912b0ff55c458983"]
+  ]
+}

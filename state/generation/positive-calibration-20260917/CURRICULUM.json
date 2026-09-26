@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "title": "Positive prose calibration: literal examples, not an AI-pattern blacklist",
+  "status": "development calibration corpus; transfer efficacy not yet independently established",
+  "created_date": "2026-09-17",
+  "authority": "Writing calibration and historical experiment evidence only. No article authority or permission to transplant content.",
+  "source_snapshots": {
+    "main_commit": "300f34e40f50dfbd2f5031763b1dbfdbc7ec24fb",
+    "method_commit": "127e77bf9ac96c5bbe0739cdf6aa25f148e66d62",
+    "reparenting_commit": "51d7da198df423cb0e3aedd47b3dd7b67aa56346",
+    "lab_repository": "u-dont-existDOTcom/pangram-humanization-lab",
+    "article_commit": "a2cde973fd9a2ac5d3564cd6e7536b02c36790cd",
+    "article_repository": "u-dont-existDOTcom/joel-articles",
+    "import_rule": "Files in sources/ are unmodified copies of existing Git blobs. Their historical protocol prose is evidence, not a replacement for live repository governance."
+  },
+  "label_rules": {
+    "authorship": "Record owner-authored, minimally edited owner, model-generated, or unknown separately from detector outcome.",
+    "editorial": "Owner acceptance/rejection and current editorial analysis are separate from Pangram labels.",
+    "detector": "Retain exact named boundary, model/version where recorded, confidence, and whether the evidence is an owner report or a saved result. Never assign a whole-window result to an isolated sentence.",
+    "alignment": "A same-topic pair is not necessarily a same-thought pair. Preserve semantic differences explicitly.",
+    "independence": "Examples from one source family, campaign, or factorial are correlated. This corpus is development material, not a held-out accuracy benchmark.",
+    "facts": "Historical health, spiritual and relationship claims in examples are not freshly fact-checked recommendations. Do not export their claims into another article."
+  },
+  "families": [
+    {"id":"chicken-egg","name":"When adult language becomes a symptom inventory"},
+    {"id":"inner-monologue","name":"Inner speech, bodily attention and timing uncertainty"},
+    {"id":"catch-hook","name":"Catch-the-Hook owner calibration ladder"},
+    {"id":"eft-transfer","name":"EFT portable-use model transfer"},
+    {"id":"adult-trust","name":"Adult-child distrust, normalization and null controls"},
+    {"id":"heart-loop","name":"Concrete heart-loop instructions and owner-source recovery"},
+    {"id":"journey-campaign","name":"Complete My Journey correction campaign"},
+    {"id":"relational-capacity","name":"Owner reauthoring of promises and realistic boundaries"},
+    {"id":"already-in-it","name":"Honesty advice grounded in an actual complication"},
+    {"id":"tough-love","name":"Relationship spirit and the sealed-room causal image"},
+    {"id":"exclusivity","name":"Human-to-Human interlocutor confidence comparison"},
+    {"id":"cancer-controls","name":"Research prose, taxonomy and bridge interactions"},
+    {"id":"somatic-controls","name":"Compression and cross-domain synthesis interactions"},
+    {"id":"recent-coarse-failures","name":"Recent self-admission and forecast failures"}
+  ],
+  "cases": [
+    {
+      "id":"C01","family":"chicken-egg","kind":"ALIGNED_SAME_THOUGHT_WITH_OWNER_EXAMPLE_SUBSTITUTION",
+      "sources":["sources/legacy-corpus.json"],
+      "locator":"episodes[id=inner-child-chicken-and-egg-owner-aligned-20260915]",
+      "use":"Literal model-before and owner-after; preserve the changed escape-versus-throwing-a-fit example in the alignment note.",
+      "positive_move":"Turn the symptom inventory into something unfolding while the reader tries to speak lovingly.",
+      "limit":"The owner endpoint was Human/low in the local report; this is not a robust-Human certification of the assembled opening."
+    },
+    {
+      "id":"C02","family":"inner-monologue","kind":"ALIGNED_GOVERNING_THOUGHT_OWNER_SUPERSEDES_EXAMPLES",
+      "sources":["sources/inner-monologue-pair.md"],
+      "use":"Read both complete three-paragraph realizations and the recorded paragraph-2/paragraph-3 combinations.",
+      "positive_move":"Let language use lead to the reader's actual comfort or attention, rather than enumerate every available modality and then explain the epistemology.",
+      "limit":"The combined owner edits passed where either alone did not. The example inventory changes; neither exact semantic identity nor a one-phrase cause is established."
+    },
+    {
+      "id":"C03","family":"catch-hook","kind":"BOUNDED_OWNER_REALIZATION_COMPARISON",
+      "sources":["sources/catch-hook-owner.md","CAMPAIGN-AND-RECOVERY.md"],
+      "use":"Compare probes 1 and 2 at the immutable article-side ladder path in the recovery manifest.",
+      "positive_move":"Say what happened to jaw and stomach directly instead of giving neighboring body cues separate rhetorical beats.",
+      "limit":"The local two-paragraph boundary changed AI/medium to Human/medium. No isolated body-cue test or universal rule was established."
+    },
+    {
+      "id":"C04","family":"catch-hook","kind":"OWNER_CONTROLLED_DELETION",
+      "sources":["sources/catch-hook-owner.md","CAMPAIGN-AND-RECOVERY.md"],
+      "use":"Compare probes 4 and 5 in the article-side ladder; record exactly the deleted later-analysis instruction.",
+      "positive_move":"Proceed to the actual relational event without first announcing an analysis stage.",
+      "limit":"This does not prohibit temporal bridges or all explicit instructions. It is a local boundary comparison."
+    },
+    {
+      "id":"C05","family":"catch-hook","kind":"OWNER_REAUTHORING_AND_POSITIVE_WHOLE_SECTION",
+      "sources":["sources/catch-hook-owner.md"],
+      "use":"Read the complete owner-final three paragraphs as the communication benchmark, not a phrase bank.",
+      "positive_move":"Appreciate noticing with the reader, reduce pressure, then state a supported disagreement with the self-created-problems frame.",
+      "limit":"The final endpoint adds authorial stance. Do not call the whole before/after a clean style-only pair or infer emoji causality."
+    },
+    {
+      "id":"C06","family":"eft-transfer","kind":"MODEL_TRANSFER_SUCCESS_OWNER_TEACHING_BYTES_MISSING",
+      "sources":["sources/legacy-corpus.json"],
+      "locator":"episodes[id=eft-portability-transfer-20260831]",
+      "use":"Read failed model text and successful model transfer literally; do not relabel the latter as Joel-authored.",
+      "positive_move":"State use, felt effect and the remaining deeper difficulty without performing the writer's responsible interpretive position.",
+      "limit":"Both versions retain similar overall progression and examples. This is a counterexample to requiring a wholly different abstract outline for every successful repair."
+    },
+    {
+      "id":"C07","family":"adult-trust","kind":"OWNER_SOURCE_MINIMUM_NORMALIZATION",
+      "sources":["sources/trust-raw-owner.md","sources/trust-normalized-owner.md"],
+      "use":"Compare the raw owner paragraph with its minimally normalized published-register version.",
+      "positive_move":"Keep the unresolved exchange between adult promises and the child's judgment of the adult's record while repairing readability.",
+      "limit":"Both were owner-reported Human/medium. Typos, lowercase and rough transcription are not required Human signals."
+    },
+    {
+      "id":"C08","family":"adult-trust","kind":"SOURCE_RESTORATION_WITH_SCOPE_DIFFERENCE",
+      "sources":["sources/trust-model-reconstruction.md","sources/trust-normalized-owner.md"],
+      "use":"Compare the model's trust paragraph and surrounding theory with the owner paragraph; explicitly track the extra roles/fallback material in the larger model boundary.",
+      "positive_move":"Allow the specific distrust to remain unresolved instead of converting it immediately into named roles and a treatment sequence.",
+      "limit":"These complete test boundaries are not semantically identical. Do not present this as a controlled style-only flip."
+    },
+    {
+      "id":"C09","family":"heart-loop","kind":"OWNER_SOURCE_RECOVERY_NOT_CLEAN_STYLE_PAIR",
+      "sources":["sources/heart-loop-model.md","sources/heart-loop-owner.md"],
+      "use":"Compare complete boundaries and then their different final practice paragraphs.",
+      "positive_move":"Give the person concrete placement, a source-grounded reason and the actual action rather than gently narrate readiness and a hypothetical attempt.",
+      "limit":"The owner version adds hand placement and rationale; the model version contains love-source and softening functions absent from the owner diagnostic. These are different semantic subsets. Historical claims are not endorsed here."
+    },
+    {
+      "id":"C10","family":"journey-campaign","kind":"MODEL_REGIONAL_REVISION_WITH_EXTERNAL_OUTCOME",
+      "sources":["CAMPAIGN-AND-RECOVERY.md","JOURNEY-POSITIVE-REFERENCE.md"],
+      "use":"Compare the R8D and R8E no-self/therapy regions using exact candidate sources, not just the terminal R8F sentence.",
+      "positive_move":"Carry the newly emerging ability to say no across the two situations; let the actual difficulty of objecting do the work of the separate conclusions.",
+      "limit":"Regional editorial comparison; no claim that every deleted sentence was independently detector-causal."
+    },
+    {
+      "id":"C11","family":"journey-campaign","kind":"FULL_ITERATIVE_MODEL_CAMPAIGN",
+      "sources":["CAMPAIGN-AND-RECOVERY.md","JOURNEY-POSITIVE-REFERENCE.md"],
+      "use":"Recover all thirteen candidate records, their instructions, forecasts and outcome files. Preserve broad, regional and residual phases and the flat intermediate results.",
+      "positive_move":"Use external correction to change the realization, retain demonstrated progress, and let edit scope follow actual localization.",
+      "limit":"The final 39-word operation is not the whole method. Completing this historical campaign does not certify new one-shot generation or a universal classifier."
+    },
+    {
+      "id":"C12","family":"relational-capacity","kind":"OWNER_REAUTHORING",
+      "sources":["sources/relational-capacity-owner.md"],
+      "use":"Read the literal model core and Joel's replacement, including its newly added thought.",
+      "positive_move":"Use the reader's own time spent changing as the reason to assess promises realistically, and connect boundaries with supporting the other person.",
+      "limit":"Mutual uncertainty, growth timescale and supportive boundaries are new owner cognition. Not an aligned style-only demonstration; current owner prose remains locked."
+    },
+    {
+      "id":"C13","family":"already-in-it","kind":"OWNER_REAUTHORING_WITH_UNCHANGED_SENTENCE_CONTROL",
+      "sources":["sources/already-in-it.md"],
+      "use":"Compare the generic radical-honesty disclaimer with the owner's actual countercase; inspect the advice sentences retained verbatim afterward.",
+      "positive_move":"Acknowledge the author's own damaging excess before asking the couple to agree about honesty.",
+      "limit":"The retained advice occurred in an AI window and later in a Human/high section. It cannot be declared intrinsically AI from the first window. No invented autobiography is permitted."
+    },
+    {
+      "id":"C14","family":"tough-love","kind":"OWNER_REAUTHORING_AND_CONTEXTUAL_REPAIR",
+      "sources":["sources/tough-love.md"],
+      "use":"Read the two reported red windows beside the complete owner-final section; track unchanged myth sentences and the typo correction.",
+      "positive_move":"Make the institutional mechanism intelligible through the sealed-room/fresh-air/mold relation; do not merely announce that relationships bear too much pressure.",
+      "limit":"This authorial image and spiritual mechanism are not transplantable content. Lists, direct counsel and neat sentences survive in the successful section."
+    },
+    {
+      "id":"C15","family":"exclusivity","kind":"HUMAN_TO_HUMAN_CONFIDENCE_COMPARISON",
+      "sources":["sources/exclusivity.md"],
+      "use":"Compare the two near-identical owner versions, then separately inspect the earlier model version with its content differences.",
+      "positive_move":"Ask for the reader's recognition where shared curiosity is actually being invited.",
+      "limit":"Both near-identical versions were Human. The question is not a Human/AI switch rule; the older model comparison is not a same-thought minimal pair."
+    },
+    {
+      "id":"C16","family":"adult-trust","kind":"CONTROLLED_NULL_FAMILY",
+      "sources":["sources/controls-results.json","sources/controls/A1-r08-explanatory-completion.txt","sources/controls/A2-r08-sentence-equalization.txt","sources/controls/A3-r08-explanatory-completion-plus-equalization.txt"],
+      "use":"Read every complete cell; compare with the normalized owner baseline.",
+      "outcomes":"A1 Human 1.0; A2 Human 1.0; A3 Human 1.0 in the saved Pangram 4 results.",
+      "limit":"Adding explanatory aftercare, equalizing sentences, or combining them did not cause a detector regression here. This does not make unnecessary aftercare editorially desirable."
+    },
+    {
+      "id":"C17","family":"cancer-controls","kind":"CONTROLLED_INTERACTION_AND_NULLS",
+      "sources":["sources/controls-design.md","sources/controls-results.json","sources/controls/B1-cancer-taxonomy-closure.txt","sources/controls/B2-cancer-connective-tissue.txt","sources/controls/B3-cancer-taxonomy-plus-connective-tissue.txt","sources/controls/B4-cancer-taxonomy-plus-colloquial-bridge.txt","sources/controls/B5-cancer-colloquial-closure-plus-polished-bridge.txt"],
+      "outcomes":"B1 and B2 Human; B3 Mixed, AI fraction 0.132098034; B4 and B5 Human.",
+      "use":"Compare the same two added jobs singly, together, and with either realization changed.",
+      "limit":"Five correlated cells, not five independent case successes. Clinical source content is historical calibration only."
+    },
+    {
+      "id":"C18","family":"somatic-controls","kind":"CONTROLLED_REVERSE_ALIGNED_FAMILY",
+      "sources":["sources/legacy-corpus.json","sources/controls-design.md","sources/controls-results.json","sources/controls/C1-somatic-intro-abstraction-compression.txt","sources/controls/C2-somatic-intro-polished-transition.txt","sources/controls/C3-somatic-intro-paragraph-packing-only.txt","sources/controls/C4-somatic-intro-explicit-relation-colloquial.txt","sources/controls/C5-somatic-intro-compression-minus-synthesis.txt","sources/controls/C6-somatic-intro-middle-compression-only.txt","sources/controls/C7-somatic-intro-compression-plus-alternate-polished-transition.txt"],
+      "outcomes":"C1 and C7 AI 1.0; C2 Mixed; C3, C4, C5 and C6 Human 1.0.",
+      "positive_move":"Let the concrete limitation remain understandable instead of compressing it into a polished cross-domain synthesis.",
+      "limit":"Paragraph packing, compression and explicit linkage were not independently sufficient. The earlier v1 C1 recorded file hash is incomplete; use the full hash in controls-results.json and verify actual bytes."
+    },
+    {
+      "id":"C19","family":"recent-coarse-failures","kind":"OWNER_REPORTED_DETECTOR_PREDICTION_FAILURE",
+      "sources":["RECENT-FAILURE-CALIBRATION.md"],
+      "use":"Compare the exact R14 third paragraph with the earlier Human forecast and later explanation.",
+      "limit":"Owner reported AI for the paragraphs under discussion; complete submission details/confidence are not recovered. Post-result explanation is not independent proof of a detector cause."
+    },
+    {
+      "id":"C20","family":"recent-coarse-failures","kind":"EDITORIAL_AND_FIDELITY_FAILURE_NO_DETECTOR_RESULT",
+      "sources":["RECENT-FAILURE-CALIBRATION.md"],
+      "use":"Inspect the exact R15 semantic shifts and the first admission audit's rationalizations.",
+      "limit":"R15 was not measured by Pangram in this lane. Do not manufacture an AI detector label or treat a later self-audit as an independent judge."
+    }
+  ],
+  "activation": {
+    "writer_default": "WRITER-CALIBRATION.md",
+    "supervisor_study": "STUDY.md",
+    "campaign_recovery": "CAMPAIGN-AND-RECOVERY.md",
+    "regression_check": "RECENT-FAILURE-CALIBRATION.md",
+    "selection": "Retrieve by the actual rhetorical/semantic problem. Do not dump this complete archive into every writing context.",
+    "outcome_check": "The next new candidate still needs source fidelity and external owner/detector evidence under the active article contract. Corpus assembly is not generation validation."
+  }
+}

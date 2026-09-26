@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "experiment_id": "human-to-ai-minimal-pairs-20260828",
+  "status": "complete",
+  "completed_at_utc": "2026-08-28T15:16:41.264685Z",
+  "purpose": "Start with genuinely human Joel prose and isolate model/editorial interventions that introduce Pangram AI signal.",
+  "authority": "detector research only; not article authority",
+  "pangram_version": "4.0",
+  "transport": {
+    "route": "authenticated local Playwright through Brave",
+    "headed": false,
+    "session_policy": "one persistent context and one reused result tab per batch",
+    "identity_binding": "exact UTF-8 stored History prompt",
+    "duplicate_policy": "content-addressed cache and durable pre-click reservation; no completed exact input repeated"
+  },
+  "call_accounting": {
+    "no_submit_human_baselines": 3,
+    "paid_calls": 15,
+    "stage_1": 6,
+    "stage_2": 6,
+    "stage_3": 3,
+    "duplicate_paid_calls": 0
+  },
+  "owner_anchor": {
+    "id": "R09",
+    "input_sha256": "639ff62f42ebc9f8f25571e2471de57a1f4cc982160d7e7b5717ee9c290be35b",
+    "paragraph_1": "Human / high confidence",
+    "paragraph_2": "AI / high confidence",
+    "source": "owner report, 2026-08-28"
+  },
+  "candidates": [
+    {"id":"A1","file":"inputs/A1-r08-explanatory-completion.txt","sha256":"78966db7d5fae9e891d6b941cb8efe918e543bb65427f5381a962360b7941279","words":145,"feature":"explanatory completion","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"A2","file":"inputs/A2-r08-sentence-equalization.txt","sha256":"45b10d6457f9199276c3ea95a8a53c837833fdef64b39cd98b265fc90669d1a1","words":125,"feature":"sentence equalization","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"B1","file":"inputs/B1-cancer-taxonomy-closure.txt","sha256":"a729a0ff68111e19a2562efdc735e4f7afaf0a770e74bd5dcc0b2815144668f8","words":295,"feature":"taxonomy/list closure","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"B2","file":"inputs/B2-cancer-connective-tissue.txt","sha256":"fd769658a9e4cec311066b586d23be325e924bd5f2fc918baabb8df14bad75f6","words":280,"feature":"model-generated connective tissue","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"C1","file":"inputs/C1-somatic-intro-abstraction-compression.txt","sha256":"b115de4e6f70c09eaa6a35245f5fbc4bdf06fcc2b7fc3dce3de685e3394e7c12","words":91,"feature":"abstraction/compression plus polished cross-domain synthesis","result":"AI","fraction_ai":1.0,"fraction_human":0.0},
+    {"id":"C2","file":"inputs/C2-somatic-intro-polished-transition.txt","sha256":"1c9f634c4cb1233a225d15406e50a90eec00c9b51462db25ca3785164a50a7c0","words":112,"feature":"polished cross-domain transition","result":"Mixed","fraction_ai":0.3076923192,"fraction_human":0.6923077106},
+    {"id":"C3","file":"inputs/C3-somatic-intro-paragraph-packing-only.txt","sha256":"b3f7120403408aa7d9db8f0d8f7fc92f8d449df63da827332e5ff80f2e8dbbfa","words":108,"feature":"paragraph packing only","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"C4","file":"inputs/C4-somatic-intro-explicit-relation-colloquial.txt","sha256":"707e14ba5942801cf985240ad64df1dc5c01967a0395b5800363f0845b09d009","words":111,"feature":"explicit cross-domain relation, colloquial realization","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"C5","file":"inputs/C5-somatic-intro-compression-minus-synthesis.txt","sha256":"5a00ed0537636acac1cd3c13b5e0e32eb398b9844006456c13458b8d8612697d","words":87,"feature":"compression package without explicit synthesis","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"C6","file":"inputs/C6-somatic-intro-middle-compression-only.txt","sha256":"d3453f1a84f937ec6eae2cedc00448e65acc527b66e42b4fe2569467b6204d74","words":92,"feature":"middle-paragraph compression only","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"A3","file":"inputs/A3-r08-explanatory-completion-plus-equalization.txt","sha256":"d4cbb9c52499af0c05ac639a6c58aae38ef2c44351a896f277948e7ff34b8c31","words":144,"feature":"explanatory completion plus sentence equalization","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"B3","file":"inputs/B3-cancer-taxonomy-plus-connective-tissue.txt","sha256":"82a3b66f9cf4f2f4162fbffa7c8ffaaa89a78dc61c9f8a4600c0f2c19b1e1311","words":305,"feature":"polished taxonomy closure plus polished connective tissue","result":"Mixed","fraction_ai":0.132098034,"fraction_human":0.8679019809},
+    {"id":"C7","file":"inputs/C7-somatic-intro-compression-plus-alternate-polished-transition.txt","sha256":"fc023c3f605c1ffedcbf0939133b436cc749cffda9347c48bdfa6d8291c9687a","words":91,"feature":"compression plus alternate polished cross-domain transition","result":"AI","fraction_ai":1.0,"fraction_human":0.0},
+    {"id":"B4","file":"inputs/B4-cancer-taxonomy-plus-colloquial-bridge.txt","sha256":"c6896d2182b2f55155422dc36bcb428822df204124da37c62f66112bb9fd941f","words":309,"feature":"polished taxonomy plus colloquial bridge","result":"Human","fraction_ai":0.0,"fraction_human":1.0},
+    {"id":"B5","file":"inputs/B5-cancer-colloquial-closure-plus-polished-bridge.txt","sha256":"9562f1c63483b5fa6658ab435f594f13a53fc25ec4de78b2912b0ff55c458983","words":304,"feature":"colloquial open closure plus polished bridge","result":"Human","fraction_ai":0.0,"fraction_human":1.0}
+  ],
+  "preservation": {
+    "forward_traceability": "PASS",
+    "reverse_traceability": "PASS",
+    "unexplained_substantive_deltas": 0,
+    "article_authority_impact": "none"
+  }
+}
