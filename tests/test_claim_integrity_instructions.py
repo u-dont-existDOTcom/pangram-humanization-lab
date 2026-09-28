@@ -7,6 +7,7 @@ those files and in the assembled runtime prompt, so it cannot disappear silently
 """
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pytest
@@ -37,7 +38,7 @@ ROLE_ANCHORS = {
         ("CI-02", "Put only exact words inside quotation marks."),
         ("CI-03", "Before saying a probe drops or adds something, check the whole probe and the whole Human endpoint for it."),
         ("CI-08", "Compare every quotation, number, date, and name in each synthetic probe with `HUMAN_ENDPOINT` word for word."),
-        ("CI-11", "Compare every quotation, number, date, and name in each synthetic probe with `HUMAN_ENDPOINT` word for word."),
+        ("CI-11", "Approve only probes that preserve the Human endpoint's substantive thought: claims, certainty, actor/action/object, chronology, causality, attribution, examples, scope, and relationship between ideas."),
         ("CI-08", "Reject a synthetic probe that changes any of them or adds a factual claim the Human endpoint does not make."),
         ("CI-09", "state the strongest reading under which it is not a problem, and drop the note if that reading is plausible"),
         ("CI-09", "Call something a contradiction only when both statements cannot be true under any reasonable reading."),
@@ -149,4 +150,4 @@ def test_runtime_instructions_do_not_depend_on_the_development_pack():
     for path in [*(PROMPTS / f"{role}.md" for role in ROLE_ANCHORS), OPERATING_GUIDE]:
         text = path.read_text(encoding="utf-8")
         assert "universal-dev-architecture" not in text, path.name
-        assert "CI-0" not in text and "CI-10" not in text, path.name
+        assert re.search(r"\bCI-(?:\d{2}|X1)\b", text) is None, path.name
