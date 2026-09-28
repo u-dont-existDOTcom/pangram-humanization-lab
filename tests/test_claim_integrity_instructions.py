@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PROMPTS = ROOT / "prompts"
 OPERATING_GUIDE = ROOT / "docs" / "CHATGPT-OPERATING-GUIDE.md"
 
-ASSIGNED_CHECKS = {f"CI-{n:02d}" for n in range(1, 11)}
+ASSIGNED_CHECKS = {f"CI-{n:02d}" for n in range(1, 12)}
 
 ROLE_ANCHORS = {
     "designer": [
@@ -37,6 +37,7 @@ ROLE_ANCHORS = {
         ("CI-02", "Put only exact words inside quotation marks."),
         ("CI-03", "Before saying a probe drops or adds something, check the whole probe and the whole Human endpoint for it."),
         ("CI-08", "Compare every quotation, number, date, and name in each synthetic probe with `HUMAN_ENDPOINT` word for word."),
+        ("CI-11", "Compare every quotation, number, date, and name in each synthetic probe with `HUMAN_ENDPOINT` word for word."),
         ("CI-08", "Reject a synthetic probe that changes any of them or adds a factual claim the Human endpoint does not make."),
         ("CI-09", "state the strongest reading under which it is not a problem, and drop the note if that reading is plausible"),
         ("CI-09", "Call something a contradiction only when both statements cannot be true under any reasonable reading."),
@@ -80,6 +81,8 @@ GUIDE_ANCHORS = [
     ("CI-09", "There is no minimum number of findings."),
     ("CI-10", "compare what you are about to say with what you already said on the same topic, including earlier detector results"),
     ("CI-10", "Label estimates as estimates, and report a derived number at the resolution of its inputs."),
+    ("CI-11", "Before returning a rewrite that adds or changes facts, a review of Joel's prose, a source attribution, or a statement that something was verified, make a claim ledger."),
+    ("CI-11", "If no separate checker is available, check each ledger entry against its source yourself immediately before delivery and do not call the result independently checked."),
 ]
 
 # Rules that already covered part of a check before the claim-integrity text was added.
