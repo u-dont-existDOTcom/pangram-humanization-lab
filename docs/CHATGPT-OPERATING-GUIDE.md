@@ -15,6 +15,10 @@ Current owner instructions and exact repository evidence outrank stale summaries
 
 For Joel article humanization, first load `../state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` and the normative `joel-articles/docs/PANGRAM-PRODUCTION-BUDGET-20261020.md`. In **production** only, the active ceiling is two new Pangram submissions per paragraph lineage (and stop at two prediction misses), one initial section call plus at most one targeted retest after independently Human paragraphs, and full-article checks only at final readiness (one initial plus at most one localized final retest). Work on at most one natural section or about five paragraphs at a time. The old six-call section ceiling is a wider upper safeguard, not permission to spend six. Exhausted cases require literal passage/positive Human-tell escalation to Joel, not another autonomous rewrite/test batch. New text/hypothesis is never a budget reset. Preserve all exact-history/cache/identity safeguards. The standard scorecard keeps pre-result predictions and misses current. These stricter limits supersede any inconsistent later wording in this guide.
 
+## New Pangram 4.1 GUI shading observation (2026-10-20)
+
+Before production detector work, load `state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` and its linked Joel normative rule, including the Pangram 4.1 sentence-shading clause. When reading an already-budgeted authenticated GUI check, inspect dark green (definitely Human), light green (probably Human), and red/pink per-sentence shading alongside the actual paragraph/section verdict. Joel reports light green can turn red in a **larger real context**, so prefer faithful dark-green sentence realizations when there is an identifiable issue, but do not guarantee shade stability or create extra checks. Never concatenate passages from nonadjacent source locations as a natural detector window. Separate GUI product release identity from any unchanged API 4.0 backend response until directly verified.
+
 ## Current detector transports
 
 As of 2026-08-20:

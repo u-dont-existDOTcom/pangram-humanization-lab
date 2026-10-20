@@ -11,6 +11,8 @@
 
 Do not rely on remembered phrase rules or stale bundles.
 
+**Pangram 4.1 shading:** for Joel production, activate `state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` including its newest sentence-level UI shading/context rule. Inspect shades only on budgeted natural-boundary checks; strive for faithful dark green when possible, record light-green→red contextual regressions, and never reset attempt ceilings. GUI release and API backend versions must not be conflated.
+
 ## Validation
 
 - Install test environment: `python -m pip install -e '.[test]'`

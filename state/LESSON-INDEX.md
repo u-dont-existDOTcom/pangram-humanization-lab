@@ -4,6 +4,8 @@ Use this file as the starting point for current lesson retrieval.
 
 **2026-10-20 direct owner production override (highest priority):** first read `state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` for any Joel article Pangram/humanization request. The normative one-version production rule lives in `u-dont-existDOTcom/joel-articles/docs/PANGRAM-PRODUCTION-BUDGET-20261020.md`: at most two new submissions per paragraph/repair lineage, stop after two incorrect predictions, at most one natural section/≈5 paragraphs per work batch, one section check plus one justified retest only *after* individual Human checks, full article at final readiness only. Earlier six-call and unlimited-turn text is historical where it conflicts. Preserve cache/History/ambiguity and accurate scorecard updates.
 
+**Pangram 4.1 GUI shading / 2026-10-20 owner observation:** the same active owner production correction now records sentence-level dark-green versus light-green grading and light-green→red regression in larger natural contexts. Retrieve the linked normative Joel production rule, and treat shade as context-sensitive evidence, *never* as a reason for extra paid submissions or semantic loss. Backend Pangram API `version` remains separately verified from GUI release identity.
+
 ## Required read order
 
 1. `state/WORKING-LESSONS.md` — consolidated lessons through 2026-08-12, plus promoted cross-cutting additions appended as they are learned.
