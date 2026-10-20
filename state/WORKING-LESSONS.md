@@ -4,6 +4,12 @@
 
 Research state only. These are contextual findings and process constraints, not phrase blacklists. Human editorial quality, semantic sanity, fidelity, and source integrity outrank Pangram.
 
+## Direct owner guidance — Pangram 4.1 GUI sentence shading and context (2026-10-20)
+
+On current Pangram GUI 4.1, Joel observes dark-green (**definitely Human**) and light-green (**probably Human**) sentence shading. Light-green sentences have sometimes turned red in a larger natural context. **Prefer faithful dark-green sentences** where concrete editorial reasons justify revision, but do not infer deterministic causality, use shading to certify authorship, rewrite sound owner prose solely to game color, or expand the production call budget. Record sentence shading and exact boundary *alongside* the paragraph and assembled-section verdict, never substituting a concatenation of disconnected article passages for genuine surrounding context. The linked normative production ceiling remains two new submissions per paragraph, one initial section check plus at most one justified retest, and full article only at final readiness.
+
+A 2026-10-20 Pangram 4.1 GUI trial shows a distinct unresolved operations risk: the legacy Playwright readiness selector timed out after a reserved submission, and the authenticated History page then displayed `Credits 0 left`. Neither a measured detector verdict nor evidence of which mechanism caused the timeout was obtained. **Recover exact History/account status before any retry**; the one potentially paid attempt remains unresolved. See `state/PANGRAM-41-GUI-READOUT-INCIDENT-20261020.md`. Do not silently assume GUI release 4.1 implies API/backend Pangram-4 `version: "4.1"` instead of the previously documented `4.0`.
+
 ## Blocking execution order
 
 - **Semantic sanity comes before humanization.** Before rewriting, inspect the thought itself: premise, actor/action/object, causality, chronology, certainty, ordinary human dynamics, and whether the supposed contradiction survives contact with reality. Rewriting a bad thought wastes effort and often produces polished nonsense.
