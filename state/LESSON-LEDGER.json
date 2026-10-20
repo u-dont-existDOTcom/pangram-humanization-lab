@@ -1239,6 +1239,20 @@
       "source_path": "state/PANGRAM-41-GUI-READOUT-INCIDENT-20261020.md",
       "source_ref": "efb610000ab76070ebca9038a86e4b3123bedf58",
       "source_sha256": "37f476ff55d9e27fe298be769773fab3d0d9be952fda38d8859346cbe4b4cbaa"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Direct owner superseded two attempts: up to six new Pangram submissions per paragraph, each further check requiring a concrete faithful diagnosis. Different sentences exposed after prior repairs can justify continuation without resetting the count; stop early if stuck or two unexplained misses concern the same unresolved problem.",
+      "id": "L-a055346ce3-01",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "Direct project-specific production rule; the source note and active normative Joel rule preserve exact scope. No fresh detector science claimed.",
+      "recorded_at_utc": "2026-10-20T16:41:29+00:00",
+      "source_path": "state/OWNER-PANGRAM-SIX-HYPOTHESIS-GATED-TRIALS-20261020.md",
+      "source_ref": "cc159391677b5f1c064cc567296a8055ac37791a",
+      "source_sha256": "a055346ce33bcb4c4deb0a03d070c3c4ea4a0bd7b21dfbf7c3dee80684b2079c"
     }
   ],
   "schema_version": 1
