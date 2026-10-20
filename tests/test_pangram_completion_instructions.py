@@ -126,14 +126,14 @@ def test_oct20_owner_call_budget_and_human_tell_escalation_are_loaded():
     }.items():
         assert "OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md" in text, label
 
-    assert "two new paid/credit-consuming submissions total per paragraph" in policy
-    assert "Two prediction misses" in policy
+    assert "two new paid/credit-consuming submissions total per paragraph repair lineage" in policy.lower()
+    assert "two prediction misses require immediate stop" in policy.lower()
     assert "one natural section or about five paragraphs" in policy
     assert "at most one substantial targeted section retest" in policy
     assert "once at final readiness" in policy
     assert "I can't find AI tells here" in policy
-    assert "the positive Human tells" in policy
-    assert "New strategy, new task ID" in policy
+    assert "positive human evidence" in policy.lower()
+    assert "scope ids, renaming" in policy.lower()
     assert "no live provider call is authorized" in policy.lower()
     assert "after every accepted edit" not in operating.lower()
     assert "at most one localized final retest" in operating
