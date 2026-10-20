@@ -6,6 +6,8 @@ Use this file as the starting point for current lesson retrieval.
 
 **Pangram 4.1 GUI shading / 2026-10-20 owner observation:** the same active owner production correction now records sentence-level dark-green versus light-green grading and light-green→red regression in larger natural contexts. Retrieve the linked normative Joel production rule, and treat shade as context-sensitive evidence, *never* as a reason for extra paid submissions or semantic loss. Backend Pangram API `version` remains separately verified from GUI release identity.
 
+**Newest owner correction:** read `state/OWNER-PANGRAM-SIX-HYPOTHESIS-GATED-TRIALS-20261020.md` for up to six diagnosis-gated attempts per paragraph, early stop when stuck, and the unchanged section/article ceilings.
+
 ## Required read order
 
 1. `state/WORKING-LESSONS.md` — consolidated lessons through 2026-08-12, plus promoted cross-cutting additions appended as they are learned.
