@@ -8,6 +8,10 @@ Joel reported that approximately $30 of Pangram credit was spent in one day and 
 
 Joel requires **stopping to ask for his explanation of the Human tells** when a paragraph's prediction/repair keeps failing, instead of buying scores repeatedly. His requested wording when the worker cannot identify actual AI tells is: "I can't find AI tells here, and here are the human tells I see, but it doesn't pass. Can you explain?" Show literal text, positive Human evidence, candidate AI tells, predicted/measured outcomes, semantics at risk, and attempt/cost counts.
 
+## 2026-10-20 additional owner observation — Pangram 4.1 GUI sentence shading
+
+Pangram GUI 4.1 now shows per-sentence shading. Joel calls dark green **definitely Human** and light green **probably Human**, and has seen light-green sentences turn red in a wider natural context. Make dark-green stability the **preferred editorial target** when feasible without changing the thought/voice; light green is a warning to examine context, not itself a defect or permission for further paid calls. For every already-justified check, record the exact sentence and shade, source paragraph and contiguous context span, GUI release and verified legend, and any observed light-green-to-red change. Keep the exact paragraph-first, section and full-article call ceilings from the normative Joel rule. A UI release version is not evidence the API backend version field changed from Pangram 4.0; distinguish them until verified. The source rule's Pangram 4.1 section is the sole normative owner of this addition.
+
 ## Lab execution binding
 
 - Production article work only: handle at most one natural section or about five paragraphs in one active work batch. Do not test multiple sections or large text repeatedly during paragraph development.
