@@ -42,7 +42,7 @@ def test_joel_pangram_completion_requires_exact_100_percent_and_handoff():
         assert "is not a pass" in text, label
         assert "terminal states" in text, label
         assert "unresolved authorial handoff" in text, label
-        assert "operational suspension" in text, label
+        assert ("operational suspension" in text or "mandatory suspension" in text), label
         assert "seventh paid POST" in text, label
         assert "Section/window measurements are diagnostic" in text, label
         # Owner correction (2026-10-20): an edit invalidates old certification
@@ -63,10 +63,10 @@ def test_joel_pangram_completion_requires_exact_100_percent_and_handoff():
 
     operating = texts["operating guide"]
     assert (
-        "Historical hard upper limit: at most 6 new paid Pangram POSTs per genuine local repair section per audit"
+        "Historical section count: at most 6 paid Pangram POSTs per local repair section per audit"
         in operating
     )
-    assert "a stricter direct owner production policy is now active" in operating
+    assert "permits up to 6 hypothesis-gated submissions per paragraph lineage" in operating
     assert "at most one localized final retest" in operating
     assert (
         "multi-section aggregate certification boundaries remain fully accounted but are not subject to the six-call section cap"
@@ -126,8 +126,8 @@ def test_oct20_owner_call_budget_and_human_tell_escalation_are_loaded():
     }.items():
         assert "OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md" in text, label
 
-    assert "two new paid/credit-consuming submissions total per paragraph repair lineage" in policy.lower()
-    assert "two prediction misses require immediate stop" in policy.lower()
+    assert "six new paid/credit-consuming submissions per paragraph repair lineage" in policy.lower()
+    assert "two consecutive *unexplained* prediction misses" in policy.lower()
     assert "one natural section or about five paragraphs" in policy
     assert "at most one substantial targeted section retest" in policy
     assert "once at final readiness" in policy
@@ -137,3 +137,16 @@ def test_oct20_owner_call_budget_and_human_tell_escalation_are_loaded():
     assert "no live provider call is authorized" in policy.lower()
     assert "after every accepted edit" not in operating.lower()
     assert "at most one localized final retest" in operating
+
+def test_latest_owner_six_attempts_require_real_diagnosis():
+    policy = OCT20_POLICY.read_text(encoding="utf-8").lower()
+    guide = OPERATING_GUIDE.read_text(encoding="utf-8").lower()
+    index = LESSON_INDEX.read_text(encoding="utf-8").lower()
+    assert "six new paid/credit-consuming submissions per paragraph repair lineage" in policy
+    assert "stop as soon as no credible fix remains" in policy
+    assert "newly exposed distinct sentence" in policy
+    assert "two consecutive *unexplained* prediction misses" in policy
+    assert "one initial section check, at most one substantial targeted section retest" in policy
+    assert "permits up to 6 hypothesis-gated submissions per paragraph lineage" in guide
+    assert "six-attempt-per-paragraph ceiling" in index
+    assert "two new paid/credit-consuming submissions total per paragraph repair lineage" not in policy
