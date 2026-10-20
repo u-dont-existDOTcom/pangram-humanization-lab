@@ -1,5 +1,7 @@
 # Current working detector + humanization lessons — Romance continuation, 2026-08-12
 
+**Newer direct owner production rule, 2026-10-20:** When writing for Joel, activate `state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` and the canonical Joel production budget: freeze Human/AI predictions and count misses before detector calls; two submissions maximum per paragraph, section testing only after individual Human checks (one initial plus one targeted retest), one section or ≈5 paragraphs per batch, full article only at final readiness, and stop to request Joel's *positive human-tell explanation* instead of looping on red prose. Historical six-section-call safety/backstop and per-turn unlimited permission do not authorize more production Pangram. This is a direct owner operational correction, not detector proof.
+
 Research state only. These are contextual findings and process constraints, not phrase blacklists. Human editorial quality, semantic sanity, fidelity, and source integrity outrank Pangram.
 
 ## Blocking execution order

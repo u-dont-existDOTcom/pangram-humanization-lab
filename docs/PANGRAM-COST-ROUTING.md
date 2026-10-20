@@ -2,9 +2,11 @@
 
 Status: **ACTIVE owner policy**
 
-Updated: 2026-08-24
+Updated: 2026-10-20 (direct owner production call-cap override; historical route policy retained)
 
 ## Rule
+
+**Production volume constraint (newer owner instruction):** when Pangram is part of Joel article humanization, follow `../state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` and the normative Joel production budget. At most two new checks per paragraph, one section check plus one justified retest after individual Human results, one initial final article check plus one localized final retest, and stop for the owner's Human-tell analysis after two prediction misses. Never test multiple sections while revising their individual paragraphs. These tighter limits supersede the older six-call per-section maximum for production; GUI selection does not waive them.
 
 Use the authenticated Pangram GUI for large production boundaries. Use the Pangram API for short/local sections.
 
@@ -40,6 +42,6 @@ Changing transport never resets paid-call accounting. Across API and GUI routes:
 3. never repeat an exact paid measurement merely because the transport changed;
 4. require Pangram 4 / version 4.0 evidence;
 5. persist reservation/checkpoint/result state before the next paid submission;
-6. preserve the six-new-paid-calls per stable audit/section cap unless Joel explicitly changes it.
+6. preserve the six-new-paid-calls per stable audit/section **upper safety cap**, and honor Joel's newer 2026-10-20 **stricter production target ceilings**; neither a cheaper transport nor a fresh audit ID authorizes more calls.
 
 GUI is a cost-routing choice, not permission to weaken duplicate protection or detector evidence standards.

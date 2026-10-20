@@ -1,0 +1,25 @@
+# Joel owner correction — Pangram production credit and prediction ceilings — 2026-10-20
+
+Status: **ACTIVE OWNER INSTRUCTION**, project-specific production operation; not a detector-science finding. Canonical normative rule: `u-dont-existDOTcom/joel-articles/docs/PANGRAM-PRODUCTION-BUDGET-20261020.md`. This lab file carries the detector-execution binding; it must not become a divergent second editorial policy.
+
+## Source and interpretation
+
+Joel reported that approximately $30 of Pangram credit was spent in one day and that one worker had tried a paragraph roughly forty times. These are **his reported observations**, not independently verified provider billing/audit figures. He expects informed pre-result Human/AI predictions and points to a scorecard with ~85% recent prediction accuracy. The Community scorecard inspected on 2026-10-20 indeed records 63/74 right (~85%) in batches 420–429; its aggregate remains 1,391/1,898 (~73%). The window and sample size must accompany claims; performance on one ten-batch window is not a guarantee.
+
+Joel requires **stopping to ask for his explanation of the Human tells** when a paragraph's prediction/repair keeps failing, instead of buying scores repeatedly. His requested wording when the worker cannot identify actual AI tells is: "I can't find AI tells here, and here are the human tells I see, but it doesn't pass. Can you explain?" Show literal text, positive Human evidence, candidate AI tells, predicted/measured outcomes, semantics at risk, and attempt/cost counts.
+
+## Lab execution binding
+
+- Production article work only: handle at most one natural section or about five paragraphs in one active work batch. Do not test multiple sections or large text repeatedly during paragraph development.
+- Record a literal justified `Human`/`AI` prediction **before** each new measurement; append actual Pangram result and error analysis afterward to the article scorecard and miss ledger. Keep accuracy per rolling window *and* cumulative with denominators and always-AI baseline. Scorecard is article-owned; no post-hoc predictions.
+- After the preservation/semantic/architecture preflight, measure each untested eligible paragraph individually. At most **two new paid/credit-consuming submissions total per paragraph repair lineage** (initial plus one substantive revision); **two prediction misses require immediate stop**. Owner-supplied results are not re-submitted. Do not mechanically cycle forty rewrites, punctuation changes or prompts on the same paragraph.
+- Assemble and measure the natural section only when eligible paragraphs are independently Human or an explicit owner exception is recorded; **one initial section check, at most one substantial targeted section retest**. A neighbor-pair diagnostic is exceptional and counted, not a way around the rule.
+- Measure a full article **only once at final readiness**, with at most one further final aggregate call after localized repair and renewed readiness. No costly whole-article checks after every paragraph or section during development.
+- The historical six-new-POST safety cap per genuine local repair section is a *maximum*, not a production entitlement. The historical "six GUI calls plus novel architecture exception" and aggregate-call six-cap exemption do not override Joel's newer production target-specific ceilings. Scope IDs, renaming, across API/GUI, multiple workers/chats, or transport failover never reset budget. Independently owner-authorized, explicitly budgeted detector research is separate and cannot be used to conceal production test volume.
+- Continue ordinary exact hash, cache, task checkpoint, local GUI reservation, Pangram History, recovery-before-repeat, version and duplicate-call safeguards. A possibly submitted ambiguous call counts conservatively until recovered. GUI is still preferred over API for Joel production under the existing 2026-09-18 routing preference; neither path is assumed free or unlimited. No live provider call is authorized by recording this correction.
+
+## Source precedence and historical records
+
+This direct 2026-10-20 owner instruction supersedes conflicting production permission in older Joel `docs/HUMANIZATION-GATE.md` ("no limit on checks per turn," 2026-09-26/2026-10-04), `state/OWNER-CORRECTION-SECTION-ONLY-CALL-CAP-2026-08-21.md`, and the 2026-09-19 novel-hypothesis GUI exception *only to the extent those previously allowed more production calls*. Preserve their history and their broader detector-research validity. This case is an owner policy clarification and a **promoted project-specific operations rule**, not evidence that any particular writing technique predicts Pangram better.
+
+Implementation evidence: the linked Joel production rule, `docs/CHATGPT-OPERATING-GUIDE.md`, `docs/PANGRAM-COST-ROUTING.md`, `state/LESSON-INDEX.md`, and current state. Textual policy changes do not prove the metered caller implements automated per-paragraph counters; label that control *manual* until demonstrated by actual execution-side tests.

@@ -13,11 +13,10 @@ TRIGGER = (
     "Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes "
     "Pangram success a delivery requirement, this gate applies."
 )
-FULL_ARTICLE_RETEST = (
-    "For a full article, the complete exact article boundary must itself satisfy the "
-    "gate after every accepted edit; section-level 100% results do not aggregate into "
-    "an article pass."
-)
+FINAL_ARTICLE_ACCEPTANCE = "section-level 100% results do not aggregate into an article pass."
+OCT20_POLICY = ROOT / "state" / "OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md"
+JOEL_GUIDANCE = ROOT / "AGENTS.md"
+
 EDITORIAL_GATE = (
     "A 100% Human result with semantic, rhetorical, editorial, fidelity, or provenance "
     "loss also fails the gate."
@@ -46,7 +45,11 @@ def test_joel_pangram_completion_requires_exact_100_percent_and_handoff():
         assert "operational suspension" in text, label
         assert "seventh paid POST" in text, label
         assert "Section/window measurements are diagnostic" in text, label
-        assert FULL_ARTICLE_RETEST in text, label
+        # Owner correction (2026-10-20): an edit invalidates old certification
+        # but does not authorize repeated whole-article tests during editing.
+        assert FINAL_ARTICLE_ACCEPTANCE in text.lower(), label
+        assert "after every accepted edit" not in text.lower(), label
+        assert ("final readiness" in text.lower() or "finally ready" in text.lower()), label
         assert EDITORIAL_GATE in text, label
         assert "`text_sha256`" in text, label
         assert "`fraction_human`, `fraction_ai`, and `fraction_ai_assisted`" in text, label
@@ -60,9 +63,11 @@ def test_joel_pangram_completion_requires_exact_100_percent_and_handoff():
 
     operating = texts["operating guide"]
     assert (
-        "Hard limit: at most 6 new paid Pangram POSTs per genuine local repair section per audit"
+        "Historical hard upper limit: at most 6 new paid Pangram POSTs per genuine local repair section per audit"
         in operating
     )
+    assert "a stricter direct owner production policy is now active" in operating
+    assert "at most one localized final retest" in operating
     assert (
         "multi-section aggregate certification boundaries remain fully accounted but are not subject to the six-call section cap"
         in operating
@@ -104,3 +109,31 @@ def test_humanization_rechecks_global_architecture_after_detector_edits():
         assert "article-wide" in lowered, label
         assert "owner realization" in lowered, label
         assert "100% human" in lowered, label
+
+
+def test_oct20_owner_call_budget_and_human_tell_escalation_are_loaded():
+    policy = OCT20_POLICY.read_text(encoding="utf-8")
+    operating = OPERATING_GUIDE.read_text(encoding="utf-8")
+    agents = JOEL_GUIDANCE.read_text(encoding="utf-8")
+    index = LESSON_INDEX.read_text(encoding="utf-8")
+
+    # Verify the new owner correction is reachable at routine execution entrypoints,
+    # not merely preserved in an unused archival incident note.
+    for label, text in {
+        "operating guide": operating,
+        "agents": agents,
+        "lesson index": index,
+    }.items():
+        assert "OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md" in text, label
+
+    assert "two new paid/credit-consuming submissions total per paragraph repair lineage" in policy.lower()
+    assert "two prediction misses require immediate stop" in policy.lower()
+    assert "one natural section or about five paragraphs" in policy
+    assert "at most one substantial targeted section retest" in policy
+    assert "once at final readiness" in policy
+    assert "I can't find AI tells here" in policy
+    assert "positive human evidence" in policy.lower()
+    assert "scope ids, renaming" in policy.lower()
+    assert "no live provider call is authorized" in policy.lower()
+    assert "after every accepted edit" not in operating.lower()
+    assert "at most one localized final retest" in operating

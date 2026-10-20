@@ -5,7 +5,7 @@
 1. `../state/CURRENT-STATE.md`: canonical recovery checkpoint and current detector-transport routing
 2. `../state/PANGRAM-SELFHOST-ROUTING-CORRECTION-2026-08-20.md`: direct owner correction plus fresh live proof for the private self-hosted executor; use it when transport/credit conclusions conflict
 3. `../state/LESSON-INDEX.md`: current lesson authority, read order, and evidence branches
-4. `CHATGPT-OPERATING-GUIDE.md`: end-to-end operating rules
+4. `CHATGPT-OPERATING-GUIDE.md`: end-to-end operating rules; for Joel production Pangram read `../state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` first (stricter Oct 20 owner call budget, prediction-error brake, and owner escalation)
 5. `PANGRAM-API-DETECT-FILE.md`: hash-gated single-file Pangram-4 API measurement with cache/checkpoint durability and public-cache safety
 6. `PANGRAM-LOCAL-PLAYWRIGHT.md`: supported local Brave/Chromium GUI fallback, exact stored-History binding, recovery-before-repeat, and operator commands
 7. `IDIOLECT-RETENTION-PROTOCOL.md`: edit-dose policy, private author profiles, single-author retention proxy, and closed-set IER

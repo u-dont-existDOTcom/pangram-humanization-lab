@@ -2,7 +2,7 @@
 
 Adaptive detector-research harness for Joel Rosenblum's humanization work.
 
-**Current recovery authority is `state/CURRENT-STATE.md`.** As of 2026-08-20 the supported transport architecture is:
+**Current recovery authority is `state/CURRENT-STATE.md`.** **Joel article production now has tighter Pangram volume/stop limits than the historical six-call cap:** load `state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` and the `joel-articles` canonical production budget before a paid measurement; paragraph predictions, targeted one-section work and final-article-only certification are required. As of 2026-08-20 the supported transport architecture is:
 
 1. the owner's self-hosted Pangram API path for normal programmatic detector work;
 2. `pangram-local`, a headed local Brave/Chromium + Playwright GUI fallback for authenticated History recovery, visual evidence, and resilience.

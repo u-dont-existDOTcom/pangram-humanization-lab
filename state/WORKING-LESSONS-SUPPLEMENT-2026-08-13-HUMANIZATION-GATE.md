@@ -10,7 +10,7 @@ Durable rule: **diagnose function separately from realization.** Do not delete a
 
 Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pangram success a delivery requirement, this gate applies. The exact intended delivery boundary must measure 100% Human: `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `detector.fraction_human == 1.0`, `detector.fraction_ai == 0.0`, and `detector.fraction_ai_assisted == 0.0`. A `Human` headline, `prediction_short == "Human"`, or partial score such as 93% or 99% is diagnostic progress only; it is not a pass. This owner-specific acceptance target supersedes general guidance that tiny differences inside a Human classification need not control editorial choice.
 
-Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
+Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must satisfy the gate at final readiness; any subsequent accepted edit invalidates the earlier certificate but does not justify repeated whole-article detector calls during paragraph/section editing. Section-level 100% results do not aggregate into an article pass. Joel's 2026-10-20 production budget in `state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` controls new paid submissions.
 
 ### Certify the reader-visible representation, not source markup
 

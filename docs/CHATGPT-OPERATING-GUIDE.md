@@ -11,6 +11,10 @@ This **public** repository is the canonical detector-research store for Joel Ros
 
 Current owner instructions and exact repository evidence outrank stale summaries, old branch handoffs, and historical transport runbooks.
 
+## Newer direct owner production-call limit (2026-10-20)
+
+For Joel article humanization, first load `../state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` and the normative `joel-articles/docs/PANGRAM-PRODUCTION-BUDGET-20261020.md`. In **production** only, the active ceiling is two new Pangram submissions per paragraph lineage (and stop at two prediction misses), one initial section call plus at most one targeted retest after independently Human paragraphs, and full-article checks only at final readiness (one initial plus at most one localized final retest). Work on at most one natural section or about five paragraphs at a time. The old six-call section ceiling is a wider upper safeguard, not permission to spend six. Exhausted cases require literal passage/positive Human-tell escalation to Joel, not another autonomous rewrite/test batch. New text/hypothesis is never a budget reset. Preserve all exact-history/cache/identity safeguards. The standard scorecard keeps pre-result predictions and misses current. These stricter limits supersede any inconsistent later wording in this guide.
+
 ## Current detector transports
 
 As of 2026-08-20:
@@ -51,7 +55,7 @@ A requested humanization pass is not complete until:
 4. every detector-driven change has been re-audited for semantic/rhetorical loss;
 5. user-facing detector claims come from measured results rather than prediction or intuition.
 
-Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
+Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must satisfy the gate **once the article is finally ready**, with at most one localized final retest under the 2026-10-20 production policy. Edits invalidate old certification but do not authorize repeated article-wide calls during ongoing paragraph/section development; section-level 100% results do not aggregate into an article pass.
 
 A Human headline or a partial result such as 93% Human is progress only; under a 100% requirement it is not a pass.
 
@@ -100,7 +104,7 @@ The review queue stores source identity and detector triage metadata, not tested
 
 For every new humanization audit that may make paid Pangram calls, assign stable audit/boundary identities before the first submission. The historical fixed-batch budget key is `audit_id + section_id + detector model + expected version`; other transports must preserve the same principle of stable identity and durable accounting.
 
-**Hard limit: at most 6 new paid Pangram POSTs per genuine local repair section per audit.** Whole-article, article-half, and other multi-section aggregate certification boundaries remain fully accounted but are not subject to the six-call section cap. Splitting the same local section across new batches, transports, branches, workflows, chats, or retries does not reset its budget.
+**Historical hard upper limit: at most 6 new paid Pangram POSTs per genuine local repair section per audit; a stricter direct owner production policy is now active (`../state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md`) and takes precedence for production text.** Whole-article, article-half, and other multi-section aggregate certification boundaries remain fully accounted but are not subject to the six-call section cap. Splitting the same local section across new batches, transports, branches, workflows, chats, or retries does not reset its budget.
 
 Before any new paid submission:
 
@@ -114,7 +118,7 @@ Before any new paid submission:
 
 Count toward a local section's paid cap every new detector submission for that section and every ambiguous action that may have reached Pangram. Do not count exact cache hits, non-billable verification, polling, or read-only recovery of already-paid work. Aggregate certification calls are still durably counted for cost/provenance even though the section cap does not apply.
 
-Before a seventh paid POST for the same genuine local repair section, stop and request narrow help from Joel. Do not silently reset the section identity or raise the cap. This six-call guard does not apply to whole-article, half-article, or other multi-section aggregate certification boundaries; those calls still require exact cache/recovery and a decision-changing reason.
+In Joel article production, stop **much earlier** at the active two-new-submission paragraph ceiling, two-prediction-miss brake or the second section/final-article measurement; do not wait for a seventh paid POST. Historical detector research and nonproduction work still stop before a seventh paid POST for the same genuine local repair section unless separately authorized. Do not silently reset the section identity or raise the cap. This six-call guard does not apply to whole-article, half-article, or other multi-section aggregate certification boundaries; those calls still require exact cache/recovery and a decision-changing reason.
 
 Record per measured boundary:
 

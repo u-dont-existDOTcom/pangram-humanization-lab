@@ -130,7 +130,7 @@ Whenever Joel asks to humanize text, make it pass Pangram, or otherwise makes Pa
 
 The exact intended delivery boundary must satisfy the requested editorial/fidelity gates and the required detector gate. Under Joel's standing 100% Pangram-4 gate, require `detector.stage == "STAGE_SUCCESS"`, `detector.version == "4.0"`, `fraction_human == 1.0`, `fraction_ai == 0.0`, and `fraction_ai_assisted == 0.0`.
 
-A partial result such as 93% Human is progress only; it is not a pass. Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must itself satisfy the gate after every accepted edit; section-level 100% results do not aggregate into an article pass.
+A partial result such as 93% Human is progress only; it is not a pass. Section/window measurements are diagnostic unless that unit is the complete requested deliverable. For a full article, the complete exact article boundary must satisfy the gate at final readiness; any subsequent accepted edit invalidates the earlier certificate but does not justify repeated whole-article detector calls during paragraph/section editing. Section-level 100% results do not aggregate into an article pass. Joel's 2026-10-20 production budget in `state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` controls new paid submissions.
 
 The normal editorial terminal states are either a fully passing exact boundary or an **unresolved authorial handoff** when no further faithful coherent repair is known. Hitting the paid-call limit is an **operational suspension**, not completion: stop before a seventh paid POST and obtain the narrow owner input needed.
 
