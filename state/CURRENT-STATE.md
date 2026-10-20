@@ -8,6 +8,10 @@ Preserve exact Pangram detector evidence, editorial authority, lesson closeout, 
 
 Current owner instructions, exact repository evidence, tests, and current `main` outrank historical chat or old task branches.
 
+## 2026-10-20 — Production Pangram budget/prediction override
+
+Joel's newer production testing and owner-escalation rule is recorded in `state/OWNER-PANGRAM-PRODUCTION-BUDGET-CORRECTION-20261020.md` and normatively in `joel-articles/docs/PANGRAM-PRODUCTION-BUDGET-20261020.md`. It overrides the historical unlimited-turn permission and the six-call section backstop wherever those would allow more **article production** calls: at most two per paragraph, stop after two prediction misses, measure one section only after its paragraphs pass and recheck that section at most once, and test the entire article only at final readiness. Preserve the old historical evidence and the separate detector-research mode. No new Pangram calls were authorized or performed by this policy correction.
+
 ## 2026-09-18 — GUI-over-API budget preference
 
 For ongoing Joel-byline humanization detector checks, Joel now prefers the cheaper Pangram GUI route over the API because his API balance is low. When direct connected-computer access is available, Remote Desktop Commander may be used to reach the local workflow; prefer the deterministic `pangram-local` / dedicated-profile path over free-form clicking when accessible. Do not silently spend API credits merely because the current chat can call the API more easily. See `state/OWNER-PANGRAM-GUI-BUDGET-PREFERENCE-20260918.md`.
