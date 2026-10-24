@@ -1253,6 +1253,138 @@
       "source_path": "state/OWNER-PANGRAM-SIX-HYPOTHESIS-GATED-TRIALS-20261020.md",
       "source_ref": "cc159391677b5f1c064cc567296a8055ac37791a",
       "source_sha256": "a055346ce33bcb4c4deb0a03d070c3c4ea4a0bd7b21dfbf7c3dee80684b2079c"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Explicit thought-development rubric matched11/15 recent4.1 outcomes, versus10/15 constantHuman.",
+      "id": "L-178e86b44e-01",
+      "promoted_to": [],
+      "reason": "Small selected panel, one author/register and single-arm current-context evaluation; no demonstrated improvement over a prior model.",
+      "recorded_at_utc": "2026-10-24T13:10:38.242550+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/RESULT.json",
+      "source_ref": "working-tree",
+      "source_sha256": "178e86b44e04ea846264607849ab8ff95a81e726351fa415ff712ef8f53c9d44"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Unpacking the final inference failed to restore all-Human labels in both controlled source passages; repetitive length controls also failed.",
+      "id": "L-178e86b44e-02",
+      "promoted_to": [],
+      "reason": "Reject these operationalizations, not all useful elaboration. Two local source families; wording packages co-varied.",
+      "recorded_at_utc": "2026-10-24T13:10:38.281054+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/RESULT.json",
+      "source_ref": "working-tree",
+      "source_sha256": "178e86b44e04ea846264607849ab8ff95a81e726351fa415ff712ef8f53c9d44"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Changing only an ending changed labels on exact unchanged earlier substrings.",
+      "id": "L-178e86b44e-03",
+      "promoted_to": [],
+      "reason": "Observed on these exact4.1 boundaries; segment attribution is contextual, not sentence provenance.",
+      "recorded_at_utc": "2026-10-24T13:10:38.320172+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/RESULT.json",
+      "source_ref": "working-tree",
+      "source_sha256": "178e86b44e04ea846264607849ab8ff95a81e726351fa415ff712ef8f53c9d44"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Direct action realization retained the explicit T04 criteria and returned allHuman segments, but the analogous T06 test remainedMixed.",
+      "id": "L-178e86b44e-04",
+      "promoted_to": [],
+      "reason": "One local success, repaired endLow confidence, no cross-family validated recipe. No production edits made.",
+      "recorded_at_utc": "2026-10-24T13:10:38.360865+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/RESULT.json",
+      "source_ref": "working-tree",
+      "source_sha256": "178e86b44e04ea846264607849ab8ff95a81e726351fa415ff712ef8f53c9d44"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Supporting frozen protocol, input, forecast, manifest, or report for the bounded explanatory-development experiment.",
+      "id": "L-960786264a-01",
+      "promoted_to": [],
+      "reason": "Substantive findings and limits are dispositioned against the exact RESULT.json; this companion does not establish an additional general rule.",
+      "recorded_at_utc": "2026-10-24T13:10:38.399346+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/README.md",
+      "source_ref": "working-tree",
+      "source_sha256": "960786264ae7af5189bc9413d232d006b2a08e86782f817d1511f24386211ed0"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Supporting frozen protocol, input, forecast, manifest, or report for the bounded explanatory-development experiment.",
+      "id": "L-2508533ed5-01",
+      "promoted_to": [],
+      "reason": "Substantive findings and limits are dispositioned against the exact RESULT.json; this companion does not establish an additional general rule.",
+      "recorded_at_utc": "2026-10-24T13:10:38.437272+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/MANIFEST.json",
+      "source_ref": "working-tree",
+      "source_sha256": "2508533ed528dd75f77af228651dffb512dd805b2dfb11ccae7b69f4897b8ab6"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Supporting frozen protocol, input, forecast, manifest, or report for the bounded explanatory-development experiment.",
+      "id": "L-efe297ed28-01",
+      "promoted_to": [],
+      "reason": "Substantive findings and limits are dispositioned against the exact RESULT.json; this companion does not establish an additional general rule.",
+      "recorded_at_utc": "2026-10-24T13:10:38.490516+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/INPUTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "efe297ed28b2f97c56449aea9fb8b9f3f375c6006ed7af13ab14d2300fc09cd6"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Supporting frozen protocol, input, forecast, manifest, or report for the bounded explanatory-development experiment.",
+      "id": "L-9bdadb050e-01",
+      "promoted_to": [],
+      "reason": "Substantive findings and limits are dispositioned against the exact RESULT.json; this companion does not establish an additional general rule.",
+      "recorded_at_utc": "2026-10-24T13:10:38.529079+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/API-EXPERIMENT.json",
+      "source_ref": "working-tree",
+      "source_sha256": "9bdadb050e5e73ad956eceb5728409e4c9d222c5c9b97366c349bffc9044c55d"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Supporting frozen protocol, input, forecast, manifest, or report for the bounded explanatory-development experiment.",
+      "id": "L-8f1852e359-01",
+      "promoted_to": [],
+      "reason": "Substantive findings and limits are dispositioned against the exact RESULT.json; this companion does not establish an additional general rule.",
+      "recorded_at_utc": "2026-10-24T13:10:38.568471+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/FOLLOWUP-SPEC.frozen.json",
+      "source_ref": "working-tree",
+      "source_sha256": "8f1852e35900b020666d65e203e53b6cc97267c876568f5cd6ed2964745afeca"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Supporting frozen protocol, input, forecast, manifest, or report for the bounded explanatory-development experiment.",
+      "id": "L-a7b9a566ec-01",
+      "promoted_to": [],
+      "reason": "Substantive findings and limits are dispositioned against the exact RESULT.json; this companion does not establish an additional general rule.",
+      "recorded_at_utc": "2026-10-24T13:10:38.609102+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/v2-predictions.frozen.json",
+      "source_ref": "working-tree",
+      "source_sha256": "a7b9a566ec86caed1cfc286d90fde938e8d5e8d1177455a0dd99f5780661eb52"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Supporting frozen protocol, input, forecast, manifest, or report for the bounded explanatory-development experiment.",
+      "id": "L-974e01f6ad-01",
+      "promoted_to": [],
+      "reason": "Substantive findings and limits are dispositioned against the exact RESULT.json; this companion does not establish an additional general rule.",
+      "recorded_at_utc": "2026-10-24T13:10:38.652185+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/METHOD-REVISION.md",
+      "source_ref": "working-tree",
+      "source_sha256": "974e01f6ad26fedd4a6285cb474364e5774fcfe1f5b380cbb3a6648d50a72382"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Supporting frozen protocol, input, forecast, manifest, or report for the bounded explanatory-development experiment.",
+      "id": "L-d2d91b5d41-01",
+      "promoted_to": [],
+      "reason": "Substantive findings and limits are dispositioned against the exact RESULT.json; this companion does not establish an additional general rule.",
+      "recorded_at_utc": "2026-10-24T13:10:38.691187+00:00",
+      "source_path": "state/experiments/explanation-development-heldout-20261024/PROTOCOL-v2.json",
+      "source_ref": "working-tree",
+      "source_sha256": "d2d91b5d41b27c56f94380660e6670186a625a4eedbc50cdef5a095cc2a35c60"
     }
   ],
   "schema_version": 1
