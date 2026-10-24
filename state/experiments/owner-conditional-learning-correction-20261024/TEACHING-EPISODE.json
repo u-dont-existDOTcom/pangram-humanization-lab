@@ -1,0 +1,31 @@
+{
+  "id": "owner-thank-you-humor-reauthoring-20261024",
+  "alignment_class": "OWNER_REAUTHORING",
+  "topic": "Warmth, reciprocal advice, trust and the thank-you joke",
+  "failed_model_span": "Your little one might not take it well at first.",
+  "displaced_span_preferred_by_owner": "The thank-you you weren’t waiting for might not come anyway.",
+  "immediate_following_context": "😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!”",
+  "owner_explanation": "the humor is gone and now the emoji makes no sense...",
+  "owner_reauthored_after": "If the love still isn’t coming, you can at least be present for your little one, without any judgements. Helpful advice is great, when they're ready for it (or when you're ready for theirs). And that warmth, well, we do need to get there.  If you can't find it yet, borrow some. That’s enough to start being the adult, but trust is earned over time. \n\nThe thank-you you weren’t waiting for? It might not come anyway. 😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!” ",
+  "source": "OWNER-ANSWERS.json, answers.thanks.reason",
+  "source_scope": "The owner replaced a larger two-paragraph boundary than the single rejected sentence. Do not call this a clean minimal pair.",
+  "substantive_changes": [
+    "Nonjudgment becomes being present without judgment.",
+    "Advice becomes reciprocal: readiness to receive their advice is added.",
+    "Trust is explicitly described as earned over time.",
+    "The thank-you joke is retained and its timing changes.",
+    "Other earlier instructional wording and the prior final conclusion are not retained verbatim."
+  ],
+  "evidence": {
+    "owner_naturalness_preference": "A is clearly less AI-shaped",
+    "owner_fidelity_judgment": "No, something important is lost or altered",
+    "owner_detector_report": "this one passes",
+    "detector_version": null,
+    "detector_confidence": null,
+    "numeric_detector_result": null,
+    "fresh_model_transfer": "NOT_ATTEMPTED"
+  },
+  "generation_demo_eligible": false,
+  "reason_not_demo_eligible": "Owner reauthoring changes several substantive and rhetorical functions. Preserve as literal cognition/humor teaching, not same-thought style-only transfer.",
+  "new_pangram_calls": 0
+}

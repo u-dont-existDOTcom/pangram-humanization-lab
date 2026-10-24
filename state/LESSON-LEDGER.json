@@ -1253,6 +1253,50 @@
       "source_path": "state/OWNER-PANGRAM-SIX-HYPOTHESIS-GATED-TRIALS-20261020.md",
       "source_ref": "cc159391677b5f1c064cc567296a8055ac37791a",
       "source_sha256": "a055346ce33bcb4c4deb0a03d070c3c4ea4a0bd7b21dfbf7c3dee80684b2079c"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Joel corrects the single-pair transfer method: interactions require multi-passage paired evaluation of conditional benefits, not treating one second-case pass or non-pass as proof. The returned ratings also reject a humor-losing edit and a non-spatial-to-spatial meaning change. Exact owner source, detector labels and prospective design remain separate.",
+      "id": "L-df894dd157-01",
+      "promoted_to": [],
+      "reason": "Direct owner editorial/method correction. The roughly 30-family comparison is proposed, not executed; no new detector or independent transfer evidence is claimed.",
+      "recorded_at_utc": "2026-10-24T19:39:21.835719+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/README.md",
+      "source_ref": "8131659fcb15afe58805550f3535e0a92464ba68",
+      "source_sha256": "df894dd157cb4e32b481bec673b52ed48751b835836760b3817cbf10801d8390"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Original uploaded owner feedback is retained verbatim. Envy-context B is preferred with meaning preserved; thank-you B is rejected for humor loss; belonging B is smoother but fidelity-rejected. Owner's new rewrite has an owner-reported pass only.",
+      "id": "L-76999d56f0-01",
+      "promoted_to": [],
+      "reason": "Direct editorial authority for these exact comparisons; not general detector causality or verified authorship.",
+      "recorded_at_utc": "2026-10-24T19:39:47.675195+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/OWNER-ANSWERS.json",
+      "source_ref": "51a6384dc54ad96aa2f1a3cc74d2c0b0b42326a2",
+      "source_sha256": "76999d56f05d17acd2b7fd6c7e7dccd95cde7a45e9d665e9758aa4d459cd55d9"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Literal owner two-paragraph rewrite retains the thank-you joke and changes advice, warmth and trust framing. Classify OWNER_REAUTHORING and preserve its owner-reported pass without inventing raw detector details or fresh model transfer.",
+      "id": "L-9bb04e8d0d-01",
+      "promoted_to": [],
+      "reason": "A source-authored multi-function revision, not an isolated causal comparison or validated portable generation skill.",
+      "recorded_at_utc": "2026-10-24T19:40:22.323674+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/TEACHING-EPISODE.json",
+      "source_ref": "0439b7ec77f3e252bd4575ede1afb5ee862ea4e5",
+      "source_sha256": "9bb04e8d0d1273f9f471672ac78d84fe3d1178b79eb6626a3c1fbf4f459ef8f8"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Literal owner thank-you rewrite captured as OWNER_REAUTHORING in the existing corpus, retaining humor and semantic changes while marking same-thought demo and fresh model transfer ineligible.",
+      "id": "L-c8eab53606-01",
+      "promoted_to": [],
+      "reason": "Exact owner teaching for this source; owner-reported detector pass has no raw version/confidence data.",
+      "recorded_at_utc": "2026-10-24T19:41:23.279825+00:00",
+      "source_path": "state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json",
+      "source_ref": "18f96cb166e8c0122a0e4d36c5a6d8f7fc9a6bf2",
+      "source_sha256": "c8eab53606cae810dfe5762badd55733362207c8b44a36e1eac523c0227037db"
     }
   ],
   "schema_version": 1
