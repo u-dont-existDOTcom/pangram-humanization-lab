@@ -1253,6 +1253,108 @@
       "source_path": "state/OWNER-PANGRAM-SIX-HYPOTHESIS-GATED-TRIALS-20261020.md",
       "source_ref": "cc159391677b5f1c064cc567296a8055ac37791a",
       "source_sha256": "a055346ce33bcb4c4deb0a03d070c3c4ea4a0bd7b21dfbf7c3dee80684b2079c"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Joel corrects the single-pair transfer method: interactions require multi-passage paired evaluation of conditional benefits, not treating one second-case pass or non-pass as proof. The returned ratings also reject a humor-losing edit and a non-spatial-to-spatial meaning change. Exact owner source, detector labels and prospective design remain separate.",
+      "id": "L-df894dd157-01",
+      "promoted_to": [],
+      "reason": "Direct owner editorial/method correction. The roughly 30-family comparison is proposed, not executed; no new detector or independent transfer evidence is claimed.",
+      "recorded_at_utc": "2026-10-24T19:39:21.835719+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/README.md",
+      "source_ref": "8131659fcb15afe58805550f3535e0a92464ba68",
+      "source_sha256": "df894dd157cb4e32b481bec673b52ed48751b835836760b3817cbf10801d8390"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Original uploaded owner feedback is retained verbatim. Envy-context B is preferred with meaning preserved; thank-you B is rejected for humor loss; belonging B is smoother but fidelity-rejected. Owner's new rewrite has an owner-reported pass only.",
+      "id": "L-76999d56f0-01",
+      "promoted_to": [],
+      "reason": "Direct editorial authority for these exact comparisons; not general detector causality or verified authorship.",
+      "recorded_at_utc": "2026-10-24T19:39:47.675195+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/OWNER-ANSWERS.json",
+      "source_ref": "51a6384dc54ad96aa2f1a3cc74d2c0b0b42326a2",
+      "source_sha256": "76999d56f05d17acd2b7fd6c7e7dccd95cde7a45e9d665e9758aa4d459cd55d9"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Literal owner two-paragraph rewrite retains the thank-you joke and changes advice, warmth and trust framing. Classify OWNER_REAUTHORING and preserve its owner-reported pass without inventing raw detector details or fresh model transfer.",
+      "id": "L-9bb04e8d0d-01",
+      "promoted_to": [],
+      "reason": "A source-authored multi-function revision, not an isolated causal comparison or validated portable generation skill.",
+      "recorded_at_utc": "2026-10-24T19:40:22.323674+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/TEACHING-EPISODE.json",
+      "source_ref": "0439b7ec77f3e252bd4575ede1afb5ee862ea4e5",
+      "source_sha256": "9bb04e8d0d1273f9f471672ac78d84fe3d1178b79eb6626a3c1fbf4f459ef8f8"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Literal owner thank-you rewrite captured as OWNER_REAUTHORING in the existing corpus, retaining humor and semantic changes while marking same-thought demo and fresh model transfer ineligible.",
+      "id": "L-c8eab53606-01",
+      "promoted_to": [],
+      "reason": "Exact owner teaching for this source; owner-reported detector pass has no raw version/confidence data.",
+      "recorded_at_utc": "2026-10-24T19:41:23.279825+00:00",
+      "source_path": "state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json",
+      "source_ref": "18f96cb166e8c0122a0e4d36c5a6d8f7fc9a6bf2",
+      "source_sha256": "c8eab53606cae810dfe5762badd55733362207c8b44a36e1eac523c0227037db"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Owner-directed research workflow correction: a single changed paragraph does not establish general sufficiency or uselessness; test conditional benefits across distinct matched passage families and preserve humor/non-spatial meaning.",
+      "id": "L-df894dd157-02",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "Promotion is the direct owner operational instruction, not an empirically validated detector rule or production skill.",
+      "recorded_at_utc": "2026-10-24T19:47:16.165739+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/README.md",
+      "source_ref": "8131659fcb15afe58805550f3535e0a92464ba68",
+      "source_sha256": "df894dd157cb4e32b481bec673b52ed48751b835836760b3817cbf10801d8390"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Direct owner designation of the exact forgiveness revision as golden human-sounding calibration; model provenance, approved span and no-transfer limits are explicit.",
+      "id": "L-1456f6ded6-01",
+      "promoted_to": [],
+      "reason": "Owner style endorsement of this exact comparison, not a causal or generalized detector mechanism. Existing historical outputs and prior owner decisions preserved.",
+      "recorded_at_utc": "2026-10-24T21:01:06.472930+00:00",
+      "source_path": "state/generation/golden-examples/forgiveness-20261024/EPISODE.json",
+      "source_ref": "62abad9d2f32f3c97301a460c8aee0b73e3e50eb",
+      "source_sha256": "1456f6ded68dd1fb7d345fda22887c4f8f59325a9366bc2026e52078143fcc49"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Direct owner designation of the exact forgiveness revision as golden human-sounding calibration; model provenance, approved span and no-transfer limits are explicit.",
+      "id": "L-f3b6d719ae-01",
+      "promoted_to": [],
+      "reason": "Owner style endorsement of this exact comparison, not a causal or generalized detector mechanism. Existing historical outputs and prior owner decisions preserved.",
+      "recorded_at_utc": "2026-10-24T21:01:06.482306+00:00",
+      "source_path": "state/generation/golden-examples/forgiveness-20261024/README.md",
+      "source_ref": "62abad9d2f32f3c97301a460c8aee0b73e3e50eb",
+      "source_sha256": "f3b6d719aef5555c1c7258b51cad43de7eb7774c7d5ab590d857163326627bf7"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Direct owner designation of the exact forgiveness revision as golden human-sounding calibration; model provenance, approved span and no-transfer limits are explicit.",
+      "id": "L-a6d96b2c08-01",
+      "promoted_to": [],
+      "reason": "Owner style endorsement of this exact comparison, not a causal or generalized detector mechanism. Existing historical outputs and prior owner decisions preserved.",
+      "recorded_at_utc": "2026-10-24T21:01:06.491007+00:00",
+      "source_path": "state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json",
+      "source_ref": "62abad9d2f32f3c97301a460c8aee0b73e3e50eb",
+      "source_sha256": "a6d96b2c0858e97705d4ab82308ca00e8cbaecf56761da4be488e03b4389c408"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Direct owner designation of the exact forgiveness revision as golden human-sounding calibration; model provenance, approved span and no-transfer limits are explicit.",
+      "id": "L-28f57cdbdd-01",
+      "promoted_to": [],
+      "reason": "Owner style endorsement of this exact comparison, not a causal or generalized detector mechanism. Existing historical outputs and prior owner decisions preserved.",
+      "recorded_at_utc": "2026-10-24T21:01:06.499549+00:00",
+      "source_path": "state/generation/OWNER-CALIBRATED-WRITER-REFERENCE-V2-20260917.md",
+      "source_ref": "62abad9d2f32f3c97301a460c8aee0b73e3e50eb",
+      "source_sha256": "28f57cdbdd9934dfe7fc81671442be1562648d06256ac8879514307d2380576b"
     }
   ],
   "schema_version": 1

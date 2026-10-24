@@ -10,12 +10,20 @@
     "OWNER_REAUTHORING": "Owner changed, added, removed, or rerouted substantive thought. Valuable authorial cognition, but not a clean style/realization training pair.",
     "CONTROLLED_REVERSE_ALIGNED_PAIR": "Owner-Human text predates a controlled AI-shaped transformation that preserved the same protected claims. May be read in reverse as an aligned AI-to-Human demonstration, but chronology must remain explicit.",
     "TRANSFER_SUCCESS_WITH_OWNER_INTERVENTION": "A model-generated candidate successfully transferred prior owner teaching. Preserve it as transfer evidence; do not relabel the model output as owner prose.",
-    "LEGACY_INDEX_ONLY": "Outcome is durably known but exact before/after texts have not yet been recovered into this corpus. Not eligible for literal few-shot retrieval until imported."
+    "LEGACY_INDEX_ONLY": "Outcome is durably known but exact before/after texts have not yet been recovered into this corpus. Not eligible for literal few-shot retrieval until imported.",
+    "OWNER_ENDORSED_MODEL_REVISION": "Literal model-before and model-after judged by Joel to be a golden same-purpose style contrast. Preserve model authorship; endorsement is not a new transfer test or blanket factual approval."
   },
   "retrieval_policy": {
-    "preferred_demo_classes": ["ALIGNED_SAME_THOUGHT", "CONTROLLED_REVERSE_ALIGNED_PAIR"],
+    "preferred_demo_classes": [
+      "ALIGNED_SAME_THOUGHT",
+      "CONTROLLED_REVERSE_ALIGNED_PAIR",
+      "OWNER_ENDORSED_MODEL_REVISION"
+    ],
     "transfer_evidence_class": "TRANSFER_SUCCESS_WITH_OWNER_INTERVENTION",
-    "exclude_from_realization_training": ["OWNER_REAUTHORING", "LEGACY_INDEX_ONLY"],
+    "exclude_from_realization_training": [
+      "OWNER_REAUTHORING",
+      "LEGACY_INDEX_ONLY"
+    ],
     "max_examples_default": 4,
     "selection_basis": "semantic/rhetorical operation and failure topology, not phrase similarity",
     "anti_imitation_rule": "Examples teach transformations, not phrases. Never transplant anecdotes, personal facts, jokes, unusual wording, or content-specific details into a new target."
@@ -25,7 +33,11 @@
       "id": "eft-portability-transfer-20260831",
       "alignment_class": "TRANSFER_SUCCESS_WITH_OWNER_INTERVENTION",
       "topic": "Somatic / EFT portability",
-      "failure_tags": ["polished_editorial_completion", "portable-practical-tail", "tidy_closure"],
+      "failure_tags": [
+        "polished_editorial_completion",
+        "portable-practical-tail",
+        "tidy_closure"
+      ],
       "failed_model_text": "The big advantage is that EFT travels. I can tap before a difficult conversation, immediately after somebody triggers me, or when a thought loop has recruited my whole body. It can take the pressure down. I don't confuse that with finishing the deeper trauma work.",
       "failed_model_text_sha256_no_terminal_newline": "4c5589b3f6458efce19bdb09ba0bf3a4ce3d74c2aba38c99efb8b78ea1f386e0",
       "owner_aligned_after": null,
@@ -48,7 +60,11 @@
       "id": "somatic-compact-trauma-c0-c1-reverse-pair-20260828",
       "alignment_class": "CONTROLLED_REVERSE_ALIGNED_PAIR",
       "topic": "Somatic / gradual trauma work and inner-child state",
-      "failure_tags": ["abstract_compression", "polished_cross_domain_synthesis", "relationship_announcement"],
+      "failure_tags": [
+        "abstract_compression",
+        "polished_cross_domain_synthesis",
+        "relationship_announcement"
+      ],
       "ai_shaped_before": "Physical trauma reactions can persist after the danger has passed, even when you know you're safe. With complex or developmental trauma, direct work on the deepest memory can be overwhelming, so a gradual approach may be enough: Buddhist nun Pema Chodron calls it a “feather touch,” and Peter Levine, the founder of Somatic Experiencing, calls gentle work around the edges “pendulation.” The same limit appears in inner-child therapy: you can know what the younger part needs yet enter the child-state so fully that too little adult perspective remains to provide it.",
       "owner_human_after": "Physical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.",
       "provenance": {
@@ -74,7 +90,11 @@
       "id": "inner-child-chicken-and-egg-owner-aligned-20260915",
       "alignment_class": "ALIGNED_SAME_THOUGHT",
       "topic": "Inner child / difficulty accessing the adult role from inside the child-state",
-      "failure_tags": ["tidy_explanatory_skeleton", "model_polished_symptom_list", "detector_boundary_instability"],
+      "failure_tags": [
+        "tidy_explanatory_skeleton",
+        "model_polished_symptom_list",
+        "detector_boundary_instability"
+      ],
       "failed_model_text": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
       "failed_model_text_sha256_no_terminal_newline": "95cd572da40a2588744d7958ec5fb3938880eb42de092fbfc9ed40ad7c7684d4",
       "owner_aligned_after": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. But when you can't, it's like you sit there trying to be loving while your mind is becoming controlled again by the inherited critic voice, or you start going numb, throwing a fit, or panicking.",
@@ -95,7 +115,12 @@
         "model_candidate_repeat_stability": {
           "detector": "Pangram 4.0",
           "same_exact_bytes": true,
-          "runs": ["Human / Medium", "Human / Medium", "Human / Medium", "AI / Medium"],
+          "runs": [
+            "Human / Medium",
+            "Human / Medium",
+            "Human / Medium",
+            "AI / Medium"
+          ],
           "paid_api_calls": 4,
           "cache_hits": 0,
           "interpretation": "The candidate is detector-unstable near a decision boundary. This does not prove AI authorship, but it fails Joel's robust-Human production acceptance target. Majority-Human repeats are not an acceptance rule."
@@ -109,7 +134,14 @@
       "alignment_class": "LEGACY_INDEX_ONLY",
       "topic": "Inner child",
       "exact_text_status": "PENDING_RECOVERY",
-      "historical_outcomes": {"pangram_3_historical_ai":0.907,"pangram_3_restrained_complete_thought":0.212,"pangram_3_owner_endpoint":0.196,"pangram_4_historical_ai_fraction":1.0,"pangram_4_restrained_human_fraction":1.0,"pangram_4_owner_endpoint_human_fraction":1.0},
+      "historical_outcomes": {
+        "pangram_3_historical_ai": 0.907,
+        "pangram_3_restrained_complete_thought": 0.212,
+        "pangram_3_owner_endpoint": 0.196,
+        "pangram_4_historical_ai_fraction": 1.0,
+        "pangram_4_restrained_human_fraction": 1.0,
+        "pangram_4_owner_endpoint_human_fraction": 1.0
+      },
       "lesson_status": "Strong legacy transfer evidence: semantic restoration alone was sufficient; exact owner cadence added little. Import exact before/restrained/owner text before using as a literal demonstration.",
       "generation_demo_eligible": false
     },
@@ -118,7 +150,14 @@
       "alignment_class": "LEGACY_INDEX_ONLY",
       "topic": "Nibbāna",
       "exact_text_status": "PENDING_RECOVERY",
-      "historical_outcomes": {"pangram_3_historical_ai":0.957,"pangram_3_restrained_complete_thought":0.297,"pangram_3_owner_endpoint_range":[0.028,0.036]},
+      "historical_outcomes": {
+        "pangram_3_historical_ai": 0.957,
+        "pangram_3_restrained_complete_thought": 0.297,
+        "pangram_3_owner_endpoint_range": [
+          0.028,
+          0.036
+        ]
+      },
       "lesson_status": "Complete source-memory plus judgment did most of the repair under Pangram 3; exact owner realization added another stage. Pangram-4 endpoint selection later had a known labeling problem, so exact texts/provenance must be recovered before reuse.",
       "generation_demo_eligible": false
     },
@@ -127,7 +166,14 @@
       "alignment_class": "LEGACY_INDEX_ONLY",
       "topic": "Romance",
       "exact_text_status": "PENDING_RECOVERY",
-      "historical_outcomes": {"pangram_3_historical_ai":0.993,"pangram_3_restrained_complete_thought":0.569,"pangram_3_owner_endpoint":0.087,"pangram_4_historical_ai_fraction":1.0,"pangram_4_restrained_human_fraction":0.201267,"pangram_4_owner_endpoint_human_fraction":0.276316},
+      "historical_outcomes": {
+        "pangram_3_historical_ai": 0.993,
+        "pangram_3_restrained_complete_thought": 0.569,
+        "pangram_3_owner_endpoint": 0.087,
+        "pangram_4_historical_ai_fraction": 1.0,
+        "pangram_4_restrained_human_fraction": 0.201267,
+        "pangram_4_owner_endpoint_human_fraction": 0.276316
+      },
       "lesson_status": "Distributed later-function interaction mattered; neither isolated sub-block was sufficient. Recover exact pair/training chronology before literal retrieval.",
       "generation_demo_eligible": false
     },
@@ -136,14 +182,126 @@
       "alignment_class": "LEGACY_INDEX_ONLY",
       "topic": "Different Levels",
       "exact_text_status": "PENDING_RECOVERY",
-      "historical_outcomes": {"pangram_3_historical_ai":0.318,"pangram_3_restrained_complete_thought":0.033,"pangram_3_owner_endpoint":0.005,"pangram_4_historical_ai_fraction":0.312658,"pangram_4_restrained_human_fraction":0.740171,"pangram_4_owner_endpoint_human_fraction":0.835255},
+      "historical_outcomes": {
+        "pangram_3_historical_ai": 0.318,
+        "pangram_3_restrained_complete_thought": 0.033,
+        "pangram_3_owner_endpoint": 0.005,
+        "pangram_4_historical_ai_fraction": 0.312658,
+        "pangram_4_restrained_human_fraction": 0.740171,
+        "pangram_4_owner_endpoint_human_fraction": 0.835255
+      },
       "lesson_status": "Complete-thought restoration was sufficient under Pangram 3; further ownerization was below materiality. Recover exact source-exact assistant-r22 / owner-r23 artifacts before literal retrieval.",
       "generation_demo_eligible": false
+    },
+    {
+      "id": "owner-thank-you-humor-reauthoring-20261024",
+      "alignment_class": "OWNER_REAUTHORING",
+      "topic": "Warmth, reciprocal advice, trust and the thank-you joke",
+      "failed_model_span": "Your little one might not take it well at first.",
+      "displaced_span_preferred_by_owner": "The thank-you you weren’t waiting for might not come anyway.",
+      "immediate_following_context": "😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!”",
+      "owner_explanation": "the humor is gone and now the emoji makes no sense...",
+      "owner_reauthored_after": "If the love still isn’t coming, you can at least be present for your little one, without any judgements. Helpful advice is great, when they're ready for it (or when you're ready for theirs). And that warmth, well, we do need to get there.  If you can't find it yet, borrow some. That’s enough to start being the adult, but trust is earned over time. \n\nThe thank-you you weren’t waiting for? It might not come anyway. 😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!” ",
+      "source": "OWNER-ANSWERS.json, answers.thanks.reason",
+      "source_scope": "The owner replaced a larger two-paragraph boundary than the single rejected sentence. Do not call this a clean minimal pair.",
+      "substantive_changes": [
+        "Nonjudgment becomes being present without judgment.",
+        "Advice becomes reciprocal: readiness to receive their advice is added.",
+        "Trust is explicitly described as earned over time.",
+        "The thank-you joke is retained and its timing changes.",
+        "Other earlier instructional wording and the prior final conclusion are not retained verbatim."
+      ],
+      "evidence": {
+        "owner_naturalness_preference": "A is clearly less AI-shaped",
+        "owner_fidelity_judgment": "No, something important is lost or altered",
+        "owner_detector_report": "this one passes",
+        "detector_version": null,
+        "detector_confidence": null,
+        "numeric_detector_result": null,
+        "fresh_model_transfer": "NOT_ATTEMPTED"
+      },
+      "generation_demo_eligible": false,
+      "reason_not_demo_eligible": "Owner reauthoring changes several substantive and rhetorical functions. Preserve as literal cognition/humor teaching, not same-thought style-only transfer.",
+      "new_pangram_calls": 0,
+      "provenance": {
+        "source": "state/experiments/owner-conditional-learning-correction-20261024/TEACHING-EPISODE.json",
+        "source_ref": "301ed014515c413ca013dada89fae75e0c614e7e",
+        "classification": "literal owner reauthoring; no fresh model transfer"
+      }
+    },
+    {
+      "id": "forgiveness-owner-endorsed-golden-20261024",
+      "alignment_class": "OWNER_ENDORSED_MODEL_REVISION",
+      "calibration_status": "GOLDEN_OWNER_STYLE_REFERENCE",
+      "topic": "Forgiveness alongside harm, accountability and boundaries",
+      "model_before": "The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "model_before_sha256": "d3f4a4f7e06eb85e8acdb3505f3d62b60f45b3b01d9a23e7f4e39537172a2789",
+      "owner_endorsed_model_after": "They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.",
+      "owner_endorsed_model_after_sha256": "f9d81467653ab8af18d3f3bebb8bc6f0e100983c09e7eaf8aea6e1675467d30c",
+      "owner_aligned_after": null,
+      "full_tested_before": "We can not ‘force’ forgiveness on ourselves, it has to come from a place of understanding otherwise it can be bypassing. However, if we remain in the anger forever, we are allowing the injury to dictate how we live our lives in the present. So how do we hold all of this? We just remember that it can all be true at once. The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "full_tested_before_sha256": "fd731a46b244cddb05d28574d39f9bf888c7defbb802bf628edebceaec2b9191",
+      "full_tested_after": "We can not ‘force’ forgiveness on ourselves, it has to come from a place of understanding otherwise it can be bypassing. However, if we remain in the anger forever, we are allowing the injury to dictate how we live our lives in the present. So how do we hold all of this? We just remember that it can all be true at once. They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.",
+      "full_tested_after_sha256": "31582ab9a89a16868a4577a8265ef380b5510e848cfe2752a8ccabf64ccf3092",
+      "owner_endorsement_verbatim": "absoluely, that revision \"They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.\" sounds WAY more human than the original. keep that as a golden example right there\n\ncontinue",
+      "endorsement_scope": "Exact revised ending is strongly preferred as human-sounding; not blanket approval of the unchanged prefix or factual/clinical endorsement. Joel endorses model-written wording, not authorship.",
+      "provenance": {
+        "author_of_after": "model-written historical revision, directly endorsed by Joel",
+        "source_repository": "u-dont-existDOTcom/joel-articles",
+        "source_commit": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+        "before_path": "articles/inner-signal/humanize/fix-20261020/b467/batch/texts/HG35-forgive-e2.txt",
+        "after_path": "articles/inner-signal/humanize/fix-20261020/b468/batch/texts/HG35-forgive-e3.txt",
+        "chronology": "model revision and saved detector results on October 21; direct Joel golden-example endorsement October 24"
+      },
+      "protected_functions": [
+        "The harm occurred.",
+        "The person remains accountable for the harm.",
+        "The boundary still matters.",
+        "Forgiveness may arrive later without being forced; it is not guaranteed or required now."
+      ],
+      "semantic_alignment": {
+        "reviewer": "current Chat, non-isolated source comparison",
+        "class": "same substantive thought within ordinary preservation tolerance",
+        "changes": [
+          "Abstract propositions become references to the people concerned.",
+          "Possible later forgiveness becomes a later recognition: we may find that we have forgiven them."
+        ],
+        "owner_fidelity_approval": "No new explicit separate fidelity rating; do not turn style praise into wider approval."
+      },
+      "historical_detector": {
+        "version": "4.1",
+        "before": "AI Detected; last two sentences AI Medium and High",
+        "after": "Human Written, single Human/High window over full paragraph",
+        "source_before": "articles/inner-signal/humanize/fix-20261020/b467/batch/b467-results.json",
+        "source_after": "articles/inner-signal/humanize/fix-20261020/b468/batch/b468-results.json",
+        "fresh_call": false
+      },
+      "generative_delta_hypothesis": "Express what the involved people did, still owe, maintain, and may later recognize as a connected thought, rather than packaging each consideration as a separate balanced proposition.",
+      "counterrules": [
+        "Not an instruction to make every sentence long.",
+        "Do not add and/but mechanically or copy the wording.",
+        "Do not remove accountability or the boundary to obtain warmth.",
+        "Do not impose forgiveness or change possible recognition into an instruction.",
+        "Do not treat one example as a sufficient cross-case detector rule."
+      ],
+      "generation_demo_eligible": true,
+      "eligibility_scope": "Owner-endorsed model realization example with exact before/after; not owner-authored prose or demonstrated fresh transfer.",
+      "learning_stage": "OWNER_ENDORSED_OBSERVATION; prospective transfer NOT_RUN",
+      "new_pangram_calls": 0
     }
   ],
   "capture_requirement": {
     "trigger": "Any Joel paragraph rewrite/correction that teaches a realization while preserving essentially the same thought, or any subsequent model output that visibly transfers that teaching.",
-    "required_fields": ["exact model-before text + SHA-256","exact Joel-after text + SHA-256","alignment classification before generalizing","provenance and chronology","what substantive units changed, if any","exact next model transfer output when one is attempted","owner/cold-read/detector result only when it adds decision value","whether transfer succeeded without sentence-specific prompting"],
+    "required_fields": [
+      "exact model-before text + SHA-256",
+      "exact Joel-after text + SHA-256",
+      "alignment classification before generalizing",
+      "provenance and chronology",
+      "what substantive units changed, if any",
+      "exact next model transfer output when one is attempted",
+      "owner/cold-read/detector result only when it adds decision value",
+      "whether transfer succeeded without sentence-specific prompting"
+    ],
     "durability_rule": "Do not close the teaching episode by saving only a prose lesson. The literal before/after/transfer artifacts are the durable learning object."
   }
 }
