@@ -1,0 +1,13 @@
+# Full-section contextual recheck — 2026-10-24, prediction frozen before paid call
+
+Target: "When to Change the Strategy", 504 words, SHA-256 9308c6df633047bdf021a96155ae5113a14a2dd963354e5939fbff2899dbafa6. Input saved outside repository at `emulate-runs/wcs-20261024-meaning-restored-section-v1.txt`.
+Exact changes from owner-provided reordered five-paragraph text: (1) replace P2 only with Emulate-informed, meaning-restored candidate cbcb3f59eb93612eef5a3fe6b0399b68d861bf15506e0a39fc9647a066670900 (P2 alone confirmed Pangram 4.1 structured `fraction_human=1.0`, `document_confidence.level=High`, but GUI short-text label says "Possibly human"); (2) delete only the rhetorical meta-preface "One more thing about telling whether it helped. " from P3. P1, P4, P5 are BYTE FOR BYTE unchanged. P3's remaining reader-facing claim and optional OCD stop are unchanged.
+
+Why previous P4 local rewrites are excluded: two different GPT-authored "meaning-restored Emulate" variants were each flagged Pangram 4.1 “Possibly AI” on exact isolated checks, despite the original P4 being owner-reported Human alone. Further same-style attempts are suspended; preserve original P4 and test its contextual effect. New text is a section assembly, not a third P4 rewrite or a fresh claim.
+
+Causal hypothesis: a stronger P2 paragraph and deletion of P3's redundant "One more thing" transition may eliminate the contiguous-window AI signature or reduce it, restoring the previously isolated-Human P4 in a coherent context. This is a different boundary test, not a synonym roulette. Even if P4 continues to flag, the result decides whether to investigate P2-to-P4 interactions or different structural treatment.
+
+**Prediction before call:** likely improved over owner's previously screenshot-highlighted section, with P2 reading Human and fewer orange highlighted openings. Do NOT predict guaranteed whole-section 100% Human because P3/P4 contextual interaction is unresolved. Treat any mixed result as a failure requiring section-localized diagnosis, not proof P2 is bad.
+
+Semantic proof: P2 restored originally protected four functions with exact roles, P3 meta cut is redundant and supplies no independent claim, P1/P4/P5 unchanged; forward/backwards source-to-candidate trace has zero unexplained substantive differences. No new fact about Joel's life.
+The owner explicitly authorized Pangram testing on 2026-10-24; count as one section-level diagnostic recheck, not a rolling unlimited production check. Recover exact submission by SHA and History timestamp if old runner flags ambiguous. No duplicate paid submit.
