@@ -1,12 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "provisional",
+  "finding": "The owner-disputed envy paragraph is detector-Human alone, AI-labeled in one archived context, and Human in a later context differing by only one preceding sentence. The removed neighboring sentence repeats the target's take-seriously/obligation advice pattern; the prior stored forecast had already identified that echo. Preserve owner-rated AI-like prosody separately from detector-label forecasting. A read-only exact-block audit of 102 saved 4.1 inputs found six status-changing placements among 38 comparisons across 33 targets.",
+  "ledger_entry_ids": [
+    "L-217df2c91e-01"
+  ],
+  "processed_at_utc": "2026-10-24T15:48:39.101320+00:00",
+  "promoted_to": [],
+  "reason": "Retrospective, production-selected and dependent observations. The edit also changes stance, clause structure, length and semantic explicitness; recurrence is not isolated as the sole detector mechanism. Owner style judgment is authoritative for calibration but does not prove authorship or classifier internals. No new Pangram calls or article edits.",
   "request_id": "content-cadence-context-20261024",
+  "schema_version": 1,
   "source_path": "state/experiments/content-cadence-context-20261024/README.md",
   "source_ref": "27f542c6d4ecf6e19c592cf36e2647c72808e260",
   "source_sha256": "217df2c91e5a1937138ff7db552f9f7bd94c51d65c8d8891ac88a75362a06ce9",
-  "finding": "The owner-disputed envy paragraph is detector-Human alone, AI-labeled in one archived context, and Human in a later context differing by only one preceding sentence. The removed neighboring sentence repeats the target's take-seriously/obligation advice pattern; the prior stored forecast had already identified that echo. Preserve owner-rated AI-like prosody separately from detector-label forecasting. A read-only exact-block audit of 102 saved 4.1 inputs found six status-changing placements among 38 comparisons across 33 targets.",
-  "disposition": "provisional",
-  "reason": "Retrospective, production-selected and dependent observations. The edit also changes stance, clause structure, length and semantic explicitness; recurrence is not isolated as the sole detector mechanism. Owner style judgment is authoritative for calibration but does not prove authorship or classifier internals. No new Pangram calls or article edits.",
-  "promoted_to": [],
-  "status": "pending"
+  "status": "processed"
 }
