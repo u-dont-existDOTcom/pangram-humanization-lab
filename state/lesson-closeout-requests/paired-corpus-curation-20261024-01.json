@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "Recovered 50 exact saved versions, oriented 30 comparisons across 20 recorded paragraph families, and separated 8 provisional same-thought candidates from 6 uncertain and 16 content/function/scope/repair comparisons. Candidate outcomes are descriptive, not independent causal effects or owner approval.",
+  "ledger_entry_ids": [
+    "L-9b3b9c8a19-01"
+  ],
+  "processed_at_utc": "2026-10-24T20:21:58.905341+00:00",
+  "promoted_to": [],
+  "reason": "Retrospective current-Chat curation with known results and adaptive production selection. Source integrity is mechanically checked; semantic judgments remain provisional. No fresh detector or independent evaluation.",
   "request_id": "paired-corpus-curation-20261024-01",
+  "schema_version": 1,
   "source_path": "state/experiments/paired-corpus-curation-20261024/BROWSER-CHECK.json",
   "source_ref": "ffb757283c7d7bae5dd19803c8d53c7d9461c397",
   "source_sha256": "9b3b9c8a1911fa3e65f06202e213b9ae03d501085e8f4335f7195ae5be2e1c50",
-  "finding": "Recovered 50 exact saved versions, oriented 30 comparisons across 20 recorded paragraph families, and separated 8 provisional same-thought candidates from 6 uncertain and 16 content/function/scope/repair comparisons. Candidate outcomes are descriptive, not independent causal effects or owner approval.",
-  "disposition": "no-new-lesson",
-  "reason": "Retrospective current-Chat curation with known results and adaptive production selection. Source integrity is mechanically checked; semantic judgments remain provisional. No fresh detector or independent evaluation.",
-  "promoted_to": []
+  "status": "processed"
 }
