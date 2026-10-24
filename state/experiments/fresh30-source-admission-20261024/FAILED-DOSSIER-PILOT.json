@@ -1,0 +1,318 @@
+{
+  "schema": "fresh30-dossier-baseline-smoke-v1",
+  "date": "2026-10-24",
+  "cases": [
+    {
+      "case": "T05",
+      "model": "sonnet",
+      "effort": "medium",
+      "baseline_prose": "I've come to think that some difference in maturity between partners is normal, and that it only becomes a problem at the extremes. I can only speak from three of my own relationships, so I'm describing what I noticed there, not a rule for everyone. In the most lopsided stretches, one person always seemed to take the child's seat while the other was always the therapist, the guru, the doctor, or the dad. That arrangement didn't hold steady. It tended to provoke backlash, or the pendulum swung and the roles reversed. When I became consistently responsible, I also found myself held responsible for everything that went wrong. From where I stood, clinginess and jealousy came along with that dynamic, too.",
+      "baseline_sha256": "4215a9b483c3f7a3320f5877bdbcd36a43d72a305c8738787350f7482c482cea",
+      "fidelity_report": {
+        "preserve_all_critical_units": false,
+        "omissions": [
+          "The judgment that the child/therapist-guru-doctor-dad arrangement is \"too unequal\" is missing.",
+          "\"Eventually\" is missing. The source says the swing or backlash comes eventually.",
+          "\"Unhealthy\" is dropped from \"unhealthy clinginess\".",
+          "\"And all the rest which went along with that dynamic\" is dropped. The draft lists only clinginess and jealousy.",
+          "The source says the narrator was \"consistently the responsible one\", which made them responsible for everything that went wrong. The draft recasts this as the narrator being held responsible by others."
+        ],
+        "additions": [
+          "The disclaimer \"I can only speak from three of my own relationships... not a rule for everyone\" is not in the source.",
+          "\"I've come to think\" and \"From where I stood\" are added framing that the source does not have.",
+          "\"The roles reversed\" is new. The source says only \"pendulum swing or backlash\", not that the roles switch.",
+          "\"Didn't hold steady\" is a new characterization of the arrangement.",
+          "\"Only becomes a problem at the extremes\" adds exclusivity. The source says only that it \"can get out of hand at the extremes\"."
+        ],
+        "certainty_changes": [
+          "The source says \"eventually there will be some kind of pendulum swing or backlash\". The draft says it \"tended to provoke backlash\", which is much weaker and probabilistic.",
+          "The source says this was noticed in \"all three\" relationships. The draft limits it to \"the most lopsided stretches\" and says one person \"seemed to\" take the child's seat, which hedges the observation.",
+          "The source asserts the narrator's responsibility for everything that went wrong as fact. The draft softens it with \"I found myself\".",
+          "The clinginess and jealousy are presented in the source as a plain accompanying consequence. The draft hedges them with \"From where I stood\"."
+        ],
+        "notes": "The draft keeps the basic structure: some maturity difference is normal, extremes cause problems, the roles are named, and being the responsible one brings blame plus clinginess and jealousy. But it weakens the source's confident claims, adds a generalization disclaimer and a role-reversal claim, and drops \"too unequal\", \"eventually\", \"unhealthy\" and \"all the rest\". The shift from \"responsible for everything that went wrong\" to \"held responsible\" changes who is assigning the blame."
+      },
+      "fidelity_report_sha256": "7e8697c45125a34f00cc4d7438c5819acf44fa6d44ecf5046ab8b11105dfce18",
+      "baseline_usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2552,
+        "cache_read_input_tokens": 535,
+        "output_tokens": 216,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2552,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 216,
+            "cache_read_input_tokens": 535,
+            "cache_creation_input_tokens": 2552,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2552
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "review_usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 96475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1373,
+        "output_tokens_details": {
+          "thinking_tokens": 503
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 96475,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1373,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 96475,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 96475
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "baseline_status": "REJECTED_BY_FROZEN_FIDELITY_GATE",
+      "A_B_writer_calls": 0,
+      "Pangram_calls": 0
+    },
+    {
+      "case": "T09",
+      "model": "sonnet",
+      "effort": "medium",
+      "baseline_prose": "When members of an intentional community take jobs outside the group, the change reaches well beyond income. Those jobs bring outside schedules, new kinds of status, social worlds the group does not share, competing loyalties, and fresh expectations about what people should be able to consume. For that reason, at an early stage, before a full common purse exists, an outside earner ought to contribute an agreed share. But the money must stay at the cash interface. It cannot buy exemption from ordinary communal work, and it cannot buy extra political power inside the group. The group should also watch whether outside jobs are draining away the people and skills it needs to build shared livelihoods. If it does not, a supposedly money-free commune can remain dependent on the cash economy, closer to a dormitory than a common purse.",
+      "baseline_sha256": "7303227b3e7cd826a0ad91cc72e1c68cab228ab34044b79ae8a649aa94d66d47",
+      "fidelity_report": {
+        "preserve_all_critical_units": false,
+        "omissions": [
+          "The opening claim that outside work 'complicates that boundary' is gone. The draft says the change 'reaches well beyond income', which drops the reference to a boundary and the point that the complication arises 'even before a common purse'.",
+          "The source says the group is 'moving toward a common purse', a trajectory. The draft's 'closer to a dormitory than a common purse' reduces this to a static comparison.",
+          "The source says 'first stage', a named phase of a staged process. The draft's 'at an early stage' does not preserve it as a defined stage."
+        ],
+        "additions": [
+          "'the money must stay at the cash interface' is not in the source.",
+          "'For that reason' adds a causal link between the list of outside-work effects and the agreed-share rule. The source does not state that link.",
+          "'before a full common purse exists' adds a specific condition on the first stage. The source does not give this.",
+          "'social worlds the group does not share' and 'competing loyalties' add qualifiers. The source says only 'social world' and 'set of loyalties'.",
+          "'supposedly money-free commune' adds a characterisation of the commune that the source does not make.",
+          "'dependent on the cash economy' replaces the source's 'dormitory for the cash economy'. It introduces the idea of dependence."
+        ],
+        "certainty_changes": [
+          "The source says 'Otherwise the commune remains a dormitory'. The draft says 'can remain', which softens a stated consequence into a possibility.",
+          "The source says an outside earner 'should contribute' and the group 'has to notice'. The draft's 'ought to contribute' is close, but 'should also watch' loosens the obligation to notice slightly.",
+          "'cannot buy exemption' and 'cannot buy extra political power' keep the source's firmness."
+        ],
+        "notes": "The draft keeps the core rules: an agreed share, no exemption from communal work, no extra political authority, and attention to the drain on people and skills. The failures are that it drops the boundary and 'even before a common purse' framing and the 'moving toward a common purse' trajectory. It also adds the cash-interface and causal-link wording and softens 'remains' to 'can remain'. These count as semantic drift, so the draft does not preserve all critical units."
+      },
+      "fidelity_report_sha256": "2f725910e43b58d618ac78b2ecc162c24880cf44d062e474fc570366e30cd412",
+      "baseline_usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 912,
+        "cache_read_input_tokens": 2181,
+        "output_tokens": 245,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 912,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 245,
+            "cache_read_input_tokens": 2181,
+            "cache_creation_input_tokens": 912,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 912
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "review_usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 98588,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1282,
+        "output_tokens_details": {
+          "thinking_tokens": 502
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 98588,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1282,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 98588,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 98588
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "baseline_status": "REJECTED_BY_FROZEN_FIDELITY_GATE",
+      "A_B_writer_calls": 0,
+      "Pangram_calls": 0
+    },
+    {
+      "case": "T13",
+      "model": "sonnet",
+      "effort": "medium",
+      "baseline_prose": "For some people, grieving opens into something unexpected: warmth, a sense of connection, even a bodily feeling of being held by the universe. If that happens to you, take it as it is, an experience that matters on its own terms. It doesn't tell us what is happening in the body, so there's no need to attach an explanation to it. Love and care can also work the other way. Receiving them may bring up grief for the care you didn't get earlier, and that doesn't mean the love in front of you has failed. It may only mean something long unmet has finally been noticed. Go forward only while you can stay present and still feel that the choice is yours. More tears are not proof of more healing, and you're free to pause.",
+      "baseline_sha256": "a877531155d3a2f12e399b1ba5cbcd92f4e1e632a03d8bec5ee10a78ffd68db9",
+      "fidelity_report": {
+        "preserve_all_critical_units": false,
+        "omissions": [
+          "The word \"deep\" in \"deep grieving\" is dropped.",
+          "\"By themselves\" is dropped from \"more tears are not, by themselves, proof of more healing\", which turns a qualified claim into a flat one.",
+          "The framing \"Stay with it when you can\" is not stated as such. It is replaced by a restriction, \"Go forward only while...\"."
+        ],
+        "additions": [
+          "\"Unexpected\" is added as a characterization of the experience.",
+          "\"If that happens to you\" and \"take it as it is\" add direct advice that the source does not give.",
+          "\"An experience that matters on its own terms\" adds a value judgment about the experience.",
+          "\"There's no need to attach an explanation to it\" adds a prescription.",
+          "\"Care you didn't get earlier\" adds a temporal framing that the source does not give.",
+          "\"It may only mean something long unmet has finally been noticed\" adds a new interpretation of what the grief means.",
+          "\"You're free to pause\" adds a new permission."
+        ],
+        "certainty_changes": [
+          "The source says the experience is \"not evidence for one particular physiological mechanism\". The draft says it \"doesn't tell us what is happening in the body\", which is broader. It rules out any bodily inference, not one specific mechanism.",
+          "\"That need not mean the love failed\" (possibility) becomes \"that doesn't mean the love... has failed\" (flat denial), which is slightly stronger.",
+          "\"Stay with it when you can remain present and retain choice\" (a permissive condition) becomes \"Go forward only while you can...\" (an exclusive limit), which is stronger and more restrictive.",
+          "\"Not, by themselves, proof\" becomes \"not proof\", which is slightly more absolute."
+        ],
+        "notes": "All five main ideas appear in the draft: the grief-to-warmth experience, the experience-versus-mechanism distinction, care evoking grief, love not necessarily having failed, and presence, choice and tears not proving healing. Fidelity is weakened mainly by the broadened mechanism claim, the shift from permissive to exclusive condition on continuing, and several added interpretive or advisory statements. The draft cannot be judged fully faithful without revision."
+      },
+      "fidelity_report_sha256": "69a37a1b658b8aa62cbf04a945a3dfe6033c1bfff931f569a0124cbf5905af15",
+      "baseline_usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 877,
+        "cache_read_input_tokens": 2181,
+        "output_tokens": 214,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 877,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 214,
+            "cache_read_input_tokens": 2181,
+            "cache_creation_input_tokens": 877,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 877
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "review_usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1005,
+        "cache_read_input_tokens": 2181,
+        "output_tokens": 1476,
+        "output_tokens_details": {
+          "thinking_tokens": 676
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1005,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1476,
+            "cache_read_input_tokens": 2181,
+            "cache_creation_input_tokens": 1005,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1005
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "baseline_status": "REJECTED_BY_FROZEN_FIDELITY_GATE",
+      "A_B_writer_calls": 0,
+      "Pangram_calls": 0
+    }
+  ],
+  "method": "Separate CLI sessions; model drafted from semantic dossier without source prose; separate model reviewed against source",
+  "outcome": "ZERO_OF_THREE_BASELINES_ADMITTED, NO A/B OR PANGRAM",
+  "interpretation": "Some reviewer flags are lexical and over-strict; real omissions, certainty shifts and additions are also present. Do not treat this result as proof that source-faithful baselines or example-assisted revision are impossible. Stop this source-dossier method and compare a different architecture.",
+  "new_pangram_calls": 0,
+  "owner_editorial_approval": false
+}
