@@ -10,12 +10,14 @@
     "OWNER_REAUTHORING": "Owner changed, added, removed, or rerouted substantive thought. Valuable authorial cognition, but not a clean style/realization training pair.",
     "CONTROLLED_REVERSE_ALIGNED_PAIR": "Owner-Human text predates a controlled AI-shaped transformation that preserved the same protected claims. May be read in reverse as an aligned AI-to-Human demonstration, but chronology must remain explicit.",
     "TRANSFER_SUCCESS_WITH_OWNER_INTERVENTION": "A model-generated candidate successfully transferred prior owner teaching. Preserve it as transfer evidence; do not relabel the model output as owner prose.",
-    "LEGACY_INDEX_ONLY": "Outcome is durably known but exact before/after texts have not yet been recovered into this corpus. Not eligible for literal few-shot retrieval until imported."
+    "LEGACY_INDEX_ONLY": "Outcome is durably known but exact before/after texts have not yet been recovered into this corpus. Not eligible for literal few-shot retrieval until imported.",
+    "OWNER_ENDORSED_MODEL_REVISION": "Literal model-before and model-after judged by Joel to be a golden same-purpose style contrast. Preserve model authorship; endorsement is not a new transfer test or blanket factual approval."
   },
   "retrieval_policy": {
     "preferred_demo_classes": [
       "ALIGNED_SAME_THOUGHT",
-      "CONTROLLED_REVERSE_ALIGNED_PAIR"
+      "CONTROLLED_REVERSE_ALIGNED_PAIR",
+      "OWNER_ENDORSED_MODEL_REVISION"
     ],
     "transfer_evidence_class": "TRANSFER_SUCCESS_WITH_OWNER_INTERVENTION",
     "exclude_from_realization_training": [
@@ -226,6 +228,66 @@
         "source_ref": "301ed014515c413ca013dada89fae75e0c614e7e",
         "classification": "literal owner reauthoring; no fresh model transfer"
       }
+    },
+    {
+      "id": "forgiveness-owner-endorsed-golden-20261024",
+      "alignment_class": "OWNER_ENDORSED_MODEL_REVISION",
+      "calibration_status": "GOLDEN_OWNER_STYLE_REFERENCE",
+      "topic": "Forgiveness alongside harm, accountability and boundaries",
+      "model_before": "The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "model_before_sha256": "d3f4a4f7e06eb85e8acdb3505f3d62b60f45b3b01d9a23e7f4e39537172a2789",
+      "owner_endorsed_model_after": "They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.",
+      "owner_endorsed_model_after_sha256": "f9d81467653ab8af18d3f3bebb8bc6f0e100983c09e7eaf8aea6e1675467d30c",
+      "owner_aligned_after": null,
+      "full_tested_before": "We can not ‘force’ forgiveness on ourselves, it has to come from a place of understanding otherwise it can be bypassing. However, if we remain in the anger forever, we are allowing the injury to dictate how we live our lives in the present. So how do we hold all of this? We just remember that it can all be true at once. The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "full_tested_before_sha256": "fd731a46b244cddb05d28574d39f9bf888c7defbb802bf628edebceaec2b9191",
+      "full_tested_after": "We can not ‘force’ forgiveness on ourselves, it has to come from a place of understanding otherwise it can be bypassing. However, if we remain in the anger forever, we are allowing the injury to dictate how we live our lives in the present. So how do we hold all of this? We just remember that it can all be true at once. They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.",
+      "full_tested_after_sha256": "31582ab9a89a16868a4577a8265ef380b5510e848cfe2752a8ccabf64ccf3092",
+      "owner_endorsement_verbatim": "absoluely, that revision \"They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.\" sounds WAY more human than the original. keep that as a golden example right there\n\ncontinue",
+      "endorsement_scope": "Exact revised ending is strongly preferred as human-sounding; not blanket approval of the unchanged prefix or factual/clinical endorsement. Joel endorses model-written wording, not authorship.",
+      "provenance": {
+        "author_of_after": "model-written historical revision, directly endorsed by Joel",
+        "source_repository": "u-dont-existDOTcom/joel-articles",
+        "source_commit": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+        "before_path": "articles/inner-signal/humanize/fix-20261020/b467/batch/texts/HG35-forgive-e2.txt",
+        "after_path": "articles/inner-signal/humanize/fix-20261020/b468/batch/texts/HG35-forgive-e3.txt",
+        "chronology": "model revision and saved detector results on October 21; direct Joel golden-example endorsement October 24"
+      },
+      "protected_functions": [
+        "The harm occurred.",
+        "The person remains accountable for the harm.",
+        "The boundary still matters.",
+        "Forgiveness may arrive later without being forced; it is not guaranteed or required now."
+      ],
+      "semantic_alignment": {
+        "reviewer": "current Chat, non-isolated source comparison",
+        "class": "same substantive thought within ordinary preservation tolerance",
+        "changes": [
+          "Abstract propositions become references to the people concerned.",
+          "Possible later forgiveness becomes a later recognition: we may find that we have forgiven them."
+        ],
+        "owner_fidelity_approval": "No new explicit separate fidelity rating; do not turn style praise into wider approval."
+      },
+      "historical_detector": {
+        "version": "4.1",
+        "before": "AI Detected; last two sentences AI Medium and High",
+        "after": "Human Written, single Human/High window over full paragraph",
+        "source_before": "articles/inner-signal/humanize/fix-20261020/b467/batch/b467-results.json",
+        "source_after": "articles/inner-signal/humanize/fix-20261020/b468/batch/b468-results.json",
+        "fresh_call": false
+      },
+      "generative_delta_hypothesis": "Express what the involved people did, still owe, maintain, and may later recognize as a connected thought, rather than packaging each consideration as a separate balanced proposition.",
+      "counterrules": [
+        "Not an instruction to make every sentence long.",
+        "Do not add and/but mechanically or copy the wording.",
+        "Do not remove accountability or the boundary to obtain warmth.",
+        "Do not impose forgiveness or change possible recognition into an instruction.",
+        "Do not treat one example as a sufficient cross-case detector rule."
+      ],
+      "generation_demo_eligible": true,
+      "eligibility_scope": "Owner-endorsed model realization example with exact before/after; not owner-authored prose or demonstrated fresh transfer.",
+      "learning_stage": "OWNER_ENDORSED_OBSERVATION; prospective transfer NOT_RUN",
+      "new_pangram_calls": 0
     }
   ],
   "capture_requirement": {

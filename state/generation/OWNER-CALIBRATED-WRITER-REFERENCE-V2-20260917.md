@@ -46,6 +46,16 @@ Useful as a long natural example where a causal image, personal history, book di
 Source:
 `state/generation/positive-calibration-20260917/sources/tough-love.md`
 
+### Golden forgiveness revision — direct owner endorsement, 2026-10-24
+
+Joel called the revised ending "WAY more human" and explicitly asked to keep it as a golden example. It is model-written, owner-endorsed prose; do not relabel it as owner-authored.
+
+Before: The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.
+
+After: They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.
+
+Keep all four substantive functions. Use the connected people-centered realization as a literal comparator, not a universal long-sentence or conjunction recipe. The exact ending, not the whole surrounding paragraph, is the endorsed scope. Historical Pangram 4.1 evidence is supplementary; no fresh transfer is established. Full source identity, hashes and owner words: `state/generation/golden-examples/forgiveness-20261024/EPISODE.json`.
+
 ## Reclassified: detector success but NOT clean positive style targets
 
 ### EFT successful model transfer
