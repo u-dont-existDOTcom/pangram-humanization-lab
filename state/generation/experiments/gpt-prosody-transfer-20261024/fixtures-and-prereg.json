@@ -1,0 +1,122 @@
+{
+  "schema": "GPT_PROSODY_TRANSFER_PILOT_V1",
+  "date_utc": "2026-10-24",
+  "status": "PREREGISTERED_BEFORE_GENERATION",
+  "objective": "Learn to generate faithful natural prose in GPT fresh contexts without calling Emulate or using Emulate target output; distinguish the ability to diagnose from ability to generate and to generalize.",
+  "canonical_sources": {
+    "lab_corpus_blob_sha": "bda9fce200d3dc23b5827581b0be81913342c8cc",
+    "reg": "state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json",
+    "train_P2_provenance": "Pangram 4.1 owner-side exact-bound result, Emulate-informed GPT repaired output; original owner input in current conversation",
+    "train_forgiveness_provenance": {
+      "author_of_after": "model-written historical revision, directly endorsed by Joel",
+      "source_repository": "u-dont-existDOTcom/joel-articles",
+      "source_commit": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+      "before_path": "articles/inner-signal/humanize/fix-20261020/b467/batch/texts/HG35-forgive-e2.txt",
+      "after_path": "articles/inner-signal/humanize/fix-20261020/b468/batch/texts/HG35-forgive-e3.txt",
+      "chronology": "model revision and saved detector results on October 21; direct Joel golden-example endorsement October 24"
+    },
+    "holdout_somatic_provenance": {
+      "owner_human_after": "Joel owner-supplied Human exemplar",
+      "ai_shaped_before": "controlled model/editorial transformation made later from that Human baseline",
+      "chronology": "Human -> AI experimentally; use only as a reverse aligned demonstration"
+    },
+    "holdout_innerchild_provenance": {
+      "failed_model_text": "Chat-authored model candidate in Inner Child Therapy paragraph-level humanization loop",
+      "owner_aligned_after": "Joel owner-supplied rewrite explicitly offered as a Human same-thought realization",
+      "chronology": "model candidate -> owner detector judgment -> owner aligned rewrite -> exact-repeat detector stability experiment on model candidate",
+      "source_record": "u-dont-existDOTcom/joel-articles@task/inner-child-therapy-intake-20260915:articles/inner-child-therapy/experiments/EPISODE-003-RESULT-20260915.json"
+    }
+  },
+  "training": [
+    {
+      "id": "T-P2",
+      "kind": "Emulate-informed meaning-preserving repair; Human/high isolated",
+      "before": "Maybe you’ve been trying to comfort your little one for weeks, and the words are all there, but the loving grown-up behind them isn’t, not yet. Some people at that point might try saying sweeter and sweeter things, and then upon that not working, perhaps just “throw the baby out with the bathwater,” and decide reparenting is useless. I’d borrow that grown-up first. Then try again, and see if your little one can tell the difference.",
+      "after": "Maybe you've been trying to offer your little one comfort for weeks, and the words are all there, but the loving grown-up behind them isn't there yet. Some people keep trying sweeter and sweeter things, then throw the baby out with the bathwater when that doesn't help and decide reparenting is useless. I'd borrow that grown-up first, try again, and see if your little one can tell the difference.",
+      "usable_as_positive_demo": true,
+      "notes": "Must not infer that raw Emulate was meaning preserving; only audited repaired result used."
+    },
+    {
+      "id": "T-FG",
+      "kind": "Joel-endorsed model revision, Human/high in full paragraph",
+      "before": "The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "after": "They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.",
+      "usable_as_positive_demo": true,
+      "notes": "Fidelity endorsed as same substantive thought within ordinary tolerance; stronger sentence connects people, responsibility, boundary, possible later recognition."
+    }
+  ],
+  "holdouts": [
+    {
+      "id": "H-SOM",
+      "kind": "cross-topic controlled reverse aligned owner Human baseline vs deliberately AI-shaped variant",
+      "source": "Physical trauma reactions can persist after the danger has passed, even when you know you're safe. With complex or developmental trauma, direct work on the deepest memory can be overwhelming, so a gradual approach may be enough: Buddhist nun Pema Chodron calls it a “feather touch,” and Peter Levine, the founder of Somatic Experiencing, calls gentle work around the edges “pendulation.” The same limit appears in inner-child therapy: you can know what the younger part needs yet enter the child-state so fully that too little adult perspective remains to provide it.",
+      "owner_reference_hidden_from_writer": "Physical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.",
+      "protected": [
+        "physical trauma reactions may persist after objective danger despite feeling cognitively safe",
+        "for complex/developmental trauma direct deepest-memory work can overwhelm",
+        "gradual engagement can suffice",
+        "Pema Chodron and feather touch attribution",
+        "Peter Levine pendulation and gentle edge-work attribution",
+        "child state may consume adult perspective despite knowing child's need"
+      ],
+      "historical_control": "model variant Pangram 4 AI; owner Human owner-reported, transport/version differences limit comparison"
+    },
+    {
+      "id": "H-CHICKEN",
+      "kind": "near-topic owner-aligned exemplar with small known local semantic divergence",
+      "source": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
+      "owner_reference_hidden_from_writer": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. But when you can't, it's like you sit there trying to be loving while your mind is becoming controlled again by the inherited critic voice, or you start going numb, throwing a fit, or panicking.",
+      "protected": [
+        "chicken-and-egg difficulty: inside child-state so deeply adult role hard to access",
+        "adult guidance easier when an adult role is available",
+        "possible inherited critic, numbness and panic and urge to get away; if changed report deviation"
+      ],
+      "historical_control": "model candidate unstable repeat on Pangram4, owner after Human/low owner reported"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "A",
+      "label": "baseline",
+      "exposure": "Only source, purpose, preserve-meaning constraints; no teaching examples and no Emulate."
+    },
+    {
+      "id": "B",
+      "label": "causal-thought",
+      "exposure": "Same source + concise actual-problem/experiencer/causal-action composition step; no examples or Emulate."
+    },
+    {
+      "id": "C",
+      "label": "positive-examples",
+      "exposure": "Same source + causal-thought instruction + exactly T-P2 & T-FG literal before/after successful examples; no target-specific hints, no Emulate calls and no hidden reference."
+    }
+  ],
+  "execution": {
+    "model": "gpt-6.1-sol via authenticated Codex CLI",
+    "effort": "high",
+    "isolated_context_each": true,
+    "session_persistence": false,
+    "sandbox": "read-only",
+    "tools": "No tools requested; independent temporary cwd and prompt-only inputs; inspect run logs for unexpected tool calls.",
+    "order": [
+      "H-SOM:A",
+      "H-SOM:B",
+      "H-SOM:C",
+      "H-CHICKEN:C",
+      "H-CHICKEN:B",
+      "H-CHICKEN:A"
+    ],
+    "outcomes_unseen_by_writer": true,
+    "owner_reference_unseen_by_writer": true,
+    "eval": [
+      "Preservation: enumerate forward + reverse unexplained semantic deltas; any missing attribution, risk condition, actor, causal mechanism, certainty or invented example rejects candidate",
+      "Cold naturalness + speaker coherence graded by fresh reader blind to condition (secondary; owner reading primary)",
+      "Prosody: inspect repeated cadence and what the thought movement does, not count sentence lengths or guess labels",
+      "Pangram 4.1 only for candidates passing preservation; max 2 paid checks in this pilot, exact hashes and natural paragraph context if feasible",
+      "Compare paired A/B/C per target, not unrelated examples."
+    ],
+    "promotion_gate": "No claim of GPT skill unless at least two different unseen rhetorical jobs obtain owner-approved naturalness, zero semantic misses, and meaningful paragraph/context Human results without Emulate. Two successes merely transferred twice, not permanent model-weight learning.",
+    "stop_gate": "If treatment regresses both targets or clear preservation defects remain, do not run more same-template retries. Review architecture; save negative result.",
+    "controls": "Owner-reference and known Pangram outcomes withheld from generators. Reviewer receives anonymized version labels and sources only; critic same context cannot constitute independent evidence."
+  }
+}
