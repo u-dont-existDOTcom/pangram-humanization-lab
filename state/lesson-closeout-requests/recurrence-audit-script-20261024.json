@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "Offline script reproduces the 102-input, 38-placement recurrence table and the three exact single-replacement contrasts without network, credentials or detector calls.",
+  "ledger_entry_ids": [
+    "L-d06947e242-01"
+  ],
+  "processed_at_utc": "2026-10-24T16:17:29.052557+00:00",
+  "promoted_to": [],
+  "reason": "Deterministic supporting verification for the companion provisional report, not an additional detector finding. Executed successfully on the 19 source-result JSONL files.",
   "request_id": "recurrence-audit-script-20261024",
+  "schema_version": 1,
   "source_path": "state/experiments/recurrence-counterexamples-next-step-20261024/audit_saved_contexts.py",
   "source_ref": "8c384fead5f182f2a181a51432b7ddd773487173",
   "source_sha256": "d06947e2421f161e750e00a67a5e6f44a3c9e1416fd4b14c40d49f1231dc28f9",
-  "finding": "Offline script reproduces the 102-input, 38-placement recurrence table and the three exact single-replacement contrasts without network, credentials or detector calls.",
-  "disposition": "no-new-lesson",
-  "reason": "Deterministic supporting verification for the companion provisional report, not an additional detector finding. Executed successfully on the 19 source-result JSONL files.",
-  "promoted_to": []
+  "status": "processed"
 }

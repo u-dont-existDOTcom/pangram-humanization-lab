@@ -1506,6 +1506,28 @@
       "source_path": "state/experiments/content-cadence-context-20261024/README.md",
       "source_ref": "27f542c6d4ecf6e19c592cf36e2647c72808e260",
       "source_sha256": "217df2c91e5a1937138ff7db552f9f7bd94c51d65c8d8891ac88a75362a06ce9"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Offline script reproduces the 102-input, 38-placement recurrence table and the three exact single-replacement contrasts without network, credentials or detector calls.",
+      "id": "L-d06947e242-01",
+      "promoted_to": [],
+      "reason": "Deterministic supporting verification for the companion provisional report, not an additional detector finding. Executed successfully on the 19 source-result JSONL files.",
+      "recorded_at_utc": "2026-10-24T16:17:29.049423+00:00",
+      "source_path": "state/experiments/recurrence-counterexamples-next-step-20261024/audit_saved_contexts.py",
+      "source_ref": "8c384fead5f182f2a181a51432b7ddd773487173",
+      "source_sha256": "d06947e2421f161e750e00a67a5e6f44a3c9e1416fd4b14c40d49f1231dc28f9"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "A second archived one-sentence contextual repair changed a 353-word input from Mixed to all-Human windows while keeping total and changed-sentence word counts constant. It removes a thank-you echo but also broadens the thought to negative reception. An exact heading-echo removal remained Mixed. In the 33 all-Human standalone placements, three-word overlap occurred in 17 placements with three regressions versus 16 with no overlap and two regressions. Lexical recurrence is not an adequate substitute for cadence, semantics or owner judgment. A specific next owner-calibration question is recorded rather than treating detector-green prose as approved.",
+      "id": "L-373b770d9f-01",
+      "promoted_to": [],
+      "reason": "Retrospective dependent production sample, few regressions, and wording/meaning changes co-vary. All source identity and contrast checks passed, but no causal mechanism, generalized predictor or owner acceptance is established. Zero new Pangram submissions. Previously blocked live execution was not retried.",
+      "recorded_at_utc": "2026-10-24T16:17:29.059407+00:00",
+      "source_path": "state/experiments/recurrence-counterexamples-next-step-20261024/README.md",
+      "source_ref": "af2cd8df8a395a39c6c1140a52f913b537cfbeb5",
+      "source_sha256": "373b770d9f6e6632e553bfbd32cd3c7f16dbe3a014df6b7edc1ef60385de2759"
     }
   ],
   "schema_version": 1
