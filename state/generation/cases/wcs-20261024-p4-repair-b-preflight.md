@@ -1,0 +1,12 @@
+# P4 revision B — before Pangram submission, 2026-10-24
+
+Original source: 71 words, SHA-256 `edc73c5287f03e9c9b7d65c71b79656753e42050adafba9a2caf4ec0acfd9a0f`.
+Original owner meaning: good session; ordinary patterns recur days later (skipping lunch, saying yes); **do not** deepen next session as the first response; tentative explanation is the failure to bring care for one's little one into outside life; try a tiny piece outside, e.g. text friend "rough day" instead of "fine".
+The immediately prior repaired P4, `82962aee814ba15d18767f70da043390f155bcc1e52a589f56789bf13e111f34`, produced Pangram GUI v4.1 “Possibly AI,” 100% AI by UI, on one paid isolated submission. It contained a GPT-style string of equalized separate functions: setup → short verdict → tentative diagnosis → directive.
+Emulate P4 first output is preserved outside the repository in the user's Emulate run files, and its sentence structure provided the causal/subordinate-clause direction for this revision. Emulate P4 second output changed genre into a mock forum post and was rejected.
+**New candidate B:** file `wcs-20261024-p4-emu1-semantic-repair-b.txt`, SHA-256 `8838d176c8b00ff7367757e972fbb449567cc1472ec425c0a318953a8158a51d`; 76 whitespace words.
+Literal text:
+> Sometimes even if the session feels really great, a few days later you might find yourself skipping lunch and saying yes to everything again. I wouldn't try going deeper next time, because I suspect you haven't brought the care you gave your little one out into the rest of your life yet. Try a tiny bit of it outside the session, like texting a friend that you're having a rough day instead of saying you're fine.
+**Hypothesis/prediction before another detector submission:** B should be more Human than the previous P4 candidate because it retains Emulate's less segmented setup and makes the tentative cause and the next action one connected thought instead of separate checklist sentences. Predict Pangram Human or mixed (AI-suspicion lower than prior all-AI), not confident enough to assert High. It preserves the possibility rather than blaming the reader.
+**Semantic proof:** all five source functions enumerated above remain, no new autobiographical fact, warning, or example; no unexplained substantive delta identified. Distinct claim: "care you gave your little one" spells out the reparenting care already implied by "whatever you did for your little one".
+Budget: P4 attempt #2; do not retry identical bytes after an ambiguous outcome; recover Pangram History by timestamp and exact file identity.
