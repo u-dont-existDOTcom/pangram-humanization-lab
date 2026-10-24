@@ -1,0 +1,119 @@
+{
+  "id": "development-versus-repetition-20261024-v1",
+  "status": "FROZEN_BEFORE_API",
+  "at_utc": "2026-10-24T12:58:53.472645+00:00",
+  "purpose": "Distinguish developing the compact final inference from merely lengthening the passage. Both source passages have archived 4.1 Mixed results localized to their final sentence.",
+  "hypothesis": "Unpacked versions improve over unchanged baseline and similarly lengthened repetitive versions across both families. Failure on either family narrows the claim; do not optimize further wordings to get a pass.",
+  "comparison_limit": "Unpacking and repetition are different wording packages; not an isolated causal proof about sentence length or any word. Short-text labels are uncertain.",
+  "planned_submissions": 6,
+  "authority": "Current user explicitly permits hypothesis-driven Pangram API research,1-3paragraphs per call. Each input is1paragraph.",
+  "baseline_repeat_justification": "Two unchanged same-byte originals are deliberate contemporary reproducibility controls for causal comparison, not blind duplicate retries.",
+  "stop": "Stop on version mismatch, auth/credit failure, ambiguous POST, or after the six registered cells. No extra variants without a new substantive reason.",
+  "primary": "All returned segment labels Human versus not; compare within each family.",
+  "secondary": "Preserve document fractions and raw segment class_probabilities without equating them to actual authorship probability.",
+  "preservation": "Prefixes byte-identical; listed content remains; research-only, no article changes.",
+  "variants": [
+    {
+      "id": "T04_baseline",
+      "family": "T04",
+      "arm": "baseline",
+      "text_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+      "words": 66,
+      "paragraphs": 1,
+      "p_human_forecast": 0.3,
+      "source_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+      "changed_scope": "last sentence only; prefix exact",
+      "preserved_units": [
+        "Take real suffering seriously",
+        "Continue meeting obligations to other people",
+        "Being miserable oneself is not required"
+      ],
+      "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+    },
+    {
+      "id": "T04_unpacked",
+      "family": "T04",
+      "arm": "unpacked",
+      "text_sha256": "a9294c51a77ded6b2dea914ea981c6ab6a6c8c8d369014c0d7e5cac04dc9fe5b",
+      "words": 77,
+      "paragraphs": 1,
+      "p_human_forecast": 0.65,
+      "source_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+      "changed_scope": "last sentence only; prefix exact",
+      "preserved_units": [
+        "Take real suffering seriously",
+        "Continue meeting obligations to other people",
+        "Being miserable oneself is not required"
+      ],
+      "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+    },
+    {
+      "id": "T04_repeated",
+      "family": "T04",
+      "arm": "repeated",
+      "text_sha256": "63cc7dbe0aa99936dc2e15cf597e2b844e3a11ae6c645fde40e5a40bb17a0dce",
+      "words": 80,
+      "paragraphs": 1,
+      "p_human_forecast": 0.3,
+      "source_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+      "changed_scope": "last sentence only; prefix exact",
+      "preserved_units": [
+        "Take real suffering seriously",
+        "Continue meeting obligations to other people",
+        "Being miserable oneself is not required"
+      ],
+      "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+    },
+    {
+      "id": "T06_baseline",
+      "family": "T06",
+      "arm": "baseline",
+      "text_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+      "words": 81,
+      "paragraphs": 1,
+      "p_human_forecast": 0.3,
+      "source_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+      "changed_scope": "last sentence only; prefix exact",
+      "preserved_units": [
+        "Institutional backing does not establish truth of a model",
+        "Certificates do not establish truth of a model",
+        "Neither backing nor certificates establish personal safety"
+      ],
+      "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+    },
+    {
+      "id": "T06_unpacked",
+      "family": "T06",
+      "arm": "unpacked",
+      "text_sha256": "6c0c936b0f97d4c391080eb73b6a8f9d6d464c72ea8faa75003443b7533da0cf",
+      "words": 93,
+      "paragraphs": 1,
+      "p_human_forecast": 0.6,
+      "source_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+      "changed_scope": "last sentence only; prefix exact",
+      "preserved_units": [
+        "Institutional backing does not establish truth of a model",
+        "Certificates do not establish truth of a model",
+        "Neither backing nor certificates establish personal safety"
+      ],
+      "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+    },
+    {
+      "id": "T06_repeated",
+      "family": "T06",
+      "arm": "repeated",
+      "text_sha256": "301254ebd3dc067d069eb3fd8b261926a431d461189d7941c58dac9afe3a964c",
+      "words": 94,
+      "paragraphs": 1,
+      "p_human_forecast": 0.25,
+      "source_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+      "changed_scope": "last sentence only; prefix exact",
+      "preserved_units": [
+        "Institutional backing does not establish truth of a model",
+        "Certificates do not establish truth of a model",
+        "Neither backing nor certificates establish personal safety"
+      ],
+      "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+    }
+  ]
+}

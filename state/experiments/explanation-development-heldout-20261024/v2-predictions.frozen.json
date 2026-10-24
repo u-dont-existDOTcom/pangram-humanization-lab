@@ -1,0 +1,143 @@
+{
+  "frozen_before_key_reveal": true,
+  "at_utc": "2026-10-24T12:55:20.382317+00:00",
+  "predictor": "Current Chat reasoning model; single-arm diagnostic",
+  "scale": "p_human is forecast probability of all-Human segment labels; source-derived truth not actual authorship",
+  "predictions": [
+    {
+      "id": "T01",
+      "p_human": 0.78,
+      "label": "Human",
+      "productive_elaboration": 2,
+      "packing": 0,
+      "editorial_closure": 0,
+      "reason": "The gratitude examples approach the same claim through money, toilet-time and waiting; the extra detail develops rather than merely summarizes it."
+    },
+    {
+      "id": "T02",
+      "p_human": 0.25,
+      "label": "NotHuman",
+      "productive_elaboration": 0,
+      "packing": 1,
+      "editorial_closure": 2,
+      "reason": "The paragraph moves from two needs to an unnamed deeper question and a polished discovery question without explaining that deeper relation."
+    },
+    {
+      "id": "T03",
+      "p_human": 0.3,
+      "label": "NotHuman",
+      "productive_elaboration": 1,
+      "packing": 1,
+      "editorial_closure": 2,
+      "reason": "The test metaphor becomes a sequence of compressed verdict, permission, instruction and balanced relationship closer."
+    },
+    {
+      "id": "T04",
+      "p_human": 0.42,
+      "label": "NotHuman",
+      "productive_elaboration": 1,
+      "packing": 1,
+      "editorial_closure": 2,
+      "reason": "A personal observation is quickly followed by two protective qualifications and a compact instruction to skip misery."
+    },
+    {
+      "id": "T05",
+      "p_human": 0.6,
+      "label": "Human",
+      "productive_elaboration": 2,
+      "packing": 0,
+      "editorial_closure": 1,
+      "reason": "The request to examine a claim develops through examples and limits, then returns to the particular decision; the qualification has a role."
+    },
+    {
+      "id": "T06",
+      "p_human": 0.67,
+      "label": "Human",
+      "productive_elaboration": 2,
+      "packing": 0,
+      "editorial_closure": 1,
+      "reason": "The list supports the maze concern, then a useful practitioner distinction changes the claim before the institution warning."
+    },
+    {
+      "id": "T07",
+      "p_human": 0.64,
+      "label": "Human",
+      "productive_elaboration": 2,
+      "packing": 1,
+      "editorial_closure": 0,
+      "reason": "The meditation exception and the touching example distinguish dismissing a thought from acting on a present signal."
+    },
+    {
+      "id": "T08",
+      "p_human": 0.66,
+      "label": "Human",
+      "productive_elaboration": 2,
+      "packing": 0,
+      "editorial_closure": 1,
+      "reason": "The helper withdrawing because someone improved is a useful second angle on loss; the list is not merely synonymous padding."
+    },
+    {
+      "id": "T09",
+      "p_human": 0.34,
+      "label": "NotHuman",
+      "productive_elaboration": 1,
+      "packing": 1,
+      "editorial_closure": 2,
+      "reason": "The scenario is followed by a mirrored permission/prohibition, specific repair and retrospective emotional interpretation in orderly teaching beats."
+    },
+    {
+      "id": "T10",
+      "p_human": 0.64,
+      "label": "Human",
+      "productive_elaboration": 1,
+      "packing": 0,
+      "editorial_closure": 1,
+      "reason": "The callback, borrowing condition and shift to a particular frightening experience are less tightly packaged, though the final reassurance is broad."
+    },
+    {
+      "id": "T11",
+      "p_human": 0.38,
+      "label": "NotHuman",
+      "productive_elaboration": 1,
+      "packing": 1,
+      "editorial_closure": 2,
+      "reason": "Several broad abstractions are followed by an announced distinction and prescribed way in without much development of the distinction."
+    },
+    {
+      "id": "T12",
+      "p_human": 0.62,
+      "label": "Human",
+      "productive_elaboration": 1,
+      "packing": 0,
+      "editorial_closure": 1,
+      "reason": "The act of noticing is enacted before two unequal possible responses; the playfulness is not the sole basis for the forecast."
+    },
+    {
+      "id": "T13",
+      "p_human": 0.3,
+      "label": "NotHuman",
+      "productive_elaboration": 0,
+      "packing": 2,
+      "editorial_closure": 2,
+      "reason": "Naming, recording, comforting and replying arrive as tightly packed instruction units with a compact tone rule and reference."
+    },
+    {
+      "id": "T14",
+      "p_human": 0.77,
+      "label": "Human",
+      "productive_elaboration": 2,
+      "packing": 0,
+      "editorial_closure": 0,
+      "reason": "The example about being fifteen is extended to adulthood; the digression does explanatory work instead of simply completing a tidy summary."
+    },
+    {
+      "id": "T15",
+      "p_human": 0.35,
+      "label": "NotHuman",
+      "productive_elaboration": 0,
+      "packing": 1,
+      "editorial_closure": 1,
+      "reason": "The warning expands into general precautions and deciding for oneself without clarifying how the added distinctions change the action."
+    }
+  ]
+}

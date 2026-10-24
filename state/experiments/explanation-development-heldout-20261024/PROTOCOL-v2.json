@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN_BEFORE_FORECASTS",
+  "cohort": "unseen literal Inner Child API inputs from pinned repository; exact hashes verified; previously discussed lineages excluded",
+  "selection": "at most10 Human and10 nonHuman, one per source-lineage/near-duplicate component, deterministic selection; balanced diagnostic sample not prevalence estimate",
+  "families": 15,
+  "cases": 15,
+  "primary_label": "all returned segment labels Human; label variant sensitivity for numeric project rule reported separately",
+  "predictor": "current Chat reasoning model; outcome-blind to selected exact texts, not independent new model context; no claimed baseline comparison",
+  "rubric": [
+    "productive elaboration and necessary links may help",
+    "excessive packing and decorative closure may hurt in combination",
+    "illogic is not Human evidence",
+    "metaphors/lists/first-person are not decisive",
+    "preserve nuance and separate quality from detector likelihood"
+  ],
+  "metrics": [
+    "accuracy versus majority baseline",
+    "Brier versus constant0.5",
+    "Human and NotHuman recall",
+    "quoted case-level errors"
+  ],
+  "no_retuning": "freeze all probabilities and reasons before exposing key; no tuning on these outcomes",
+  "API": "only named hypothesis,1-3paragraphs,50+words,cache first,pre-POST reservation; new variants recorded, not inserted in articles"
+}

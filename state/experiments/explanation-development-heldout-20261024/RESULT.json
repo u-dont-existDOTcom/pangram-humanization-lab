@@ -1,0 +1,1357 @@
+{
+  "experiment": "explanation-development-heldout-20261024",
+  "status": "BOUNDED_PASS_COMPLETE_MECHANISM_UNRESOLVED",
+  "source_commit": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+  "lab_base_commit": "f73e5fa91bec4522f9ce19d89edc883f48941460",
+  "method_limit": "Single current-context model, exact outcomes concealed until forecasts frozen; not the blocked independent two-arm comparison. Prior archive familiarity not erased.",
+  "holdout": {
+    "summary": {
+      "n": 15,
+      "families": 15,
+      "correct": 11,
+      "accuracy": 0.7333333333333333,
+      "observed_human": 10,
+      "observed_nothuman": 5,
+      "always_human": 0.6666666666666666,
+      "always_nothuman": 0.3333333333333333,
+      "human_recall": 0.7,
+      "nothuman_recall": 0.8,
+      "balanced_accuracy": 0.75,
+      "brier": 0.19805333333333333,
+      "brier_constant_half": 0.25,
+      "sample_base_brier": 0.22222222222222224,
+      "prediction_hash": "a7b9a566ec86caed1cfc286d90fde938e8d5e8d1177455a0dd99f5780661eb52",
+      "no_new_pangram_calls": true,
+      "selection_warning": "Requested up to10 per class; limited eligible unseen failing families yielded an imbalanced panel. Do not infer natural prevalence."
+    },
+    "rows": [
+      {
+        "id": "T01",
+        "p_human": 0.78,
+        "label": "Human",
+        "productive_elaboration": 2,
+        "packing": 0,
+        "editorial_closure": 0,
+        "reason": "The gratitude examples approach the same claim through money, toilet-time and waiting; the extra detail develops rather than merely summarizes it.",
+        "observed": "Human",
+        "correct": true,
+        "source_name": "t101_askgod_ofcourse",
+        "family": "G13",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 2.8144238876885356e-40,
+        "human": true,
+        "text": "Of course, that’s not to say you should not try to suffer less, or get away from abusers. The point of life, according to every spiritual tradition and religion, I think, is to suffer less, which first requires us to understand the cause of suffering, and what real suffering and real happiness are. If you, like Biggie Smalls, have come to understand that having money is not real happiness, that’s a big deal! That’s something to be grateful for. If we get a chance to meditate or pray today, while on the toilet, upon waking up, while ChatGPT is “thinking” for us, that’s something to be thankful for, for sure.",
+        "sha256": "fb8b66445cb46290301a208f51eb56409e04635b8a2d1b2679b353089370c87b",
+        "source_path": "articles/inner-child-therapy/experiments/t101-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t101-api/texts/t101_askgod_ofcourse.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t101-api/texts/t101_askgod_ofcourse.txt"
+      },
+      {
+        "id": "T02",
+        "p_human": 0.25,
+        "label": "NotHuman",
+        "productive_elaboration": 0,
+        "packing": 1,
+        "editorial_closure": 2,
+        "reason": "The paragraph moves from two needs to an unnamed deeper question and a polished discovery question without explaining that deeper relation.",
+        "observed": "NotHuman",
+        "correct": true,
+        "source_name": "t97b_happy_P4his",
+        "family": "G05",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 0.9999873638153076,
+        "human": false,
+        "text": "Sometimes care isn’t the main thing missing. A meal can help, and so can a boundary, but is that actually targeting the deeper existential question underneath? Life shouldn’t be just something you endure, like a hamster wheel or a rat race. What would you need to bring zest to a life of discovery?",
+        "sha256": "ffddd28722e82903efa17b3c61492c5728e5be5afaadb1a055e37bbaf694f573",
+        "source_path": "articles/inner-child-therapy/experiments/t97-api/API-RESULTS-2.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t97-api/texts/t97b_happy_P4his.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t97-api/texts/t97b_happy_P4his.txt"
+      },
+      {
+        "id": "T03",
+        "p_human": 0.3,
+        "label": "NotHuman",
+        "productive_elaboration": 1,
+        "packing": 1,
+        "editorial_closure": 2,
+        "reason": "The test metaphor becomes a sequence of compressed verdict, permission, instruction and balanced relationship closer.",
+        "observed": "Human",
+        "correct": false,
+        "source_name": "t103_97_14",
+        "family": "G12",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 7.615554762501395e-32,
+        "human": true,
+        "text": "Then there are people you’re just getting to know. Meeting them can turn into a kind of test--”First impressions are everything,” as they say, but it could be even worse than that, if you need them to prove you’re lovable. Nobody’s a reassurance machine. I’m giving you permission now to quit school and flunk the tests. Get curious about who this person is, and who you are, and let both of you have your own reasons for being there in the beautiful present. Leaning on each other is still a big part of relationships, and it goes both ways.",
+        "sha256": "48190ba2509864706158e9009d54a6523dd339d8a491cb0c2d16f0fe8f3eccd9",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_14.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t103-api/texts/t103_97_14.txt"
+      },
+      {
+        "id": "T04",
+        "p_human": 0.42,
+        "label": "NotHuman",
+        "productive_elaboration": 1,
+        "packing": 1,
+        "editorial_closure": 2,
+        "reason": "A personal observation is quickly followed by two protective qualifications and a compact instruction to skip misery.",
+        "observed": "NotHuman",
+        "correct": true,
+        "source_name": "t99_bb_new1",
+        "family": "G01",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 0.4004651606082916,
+        "human": false,
+        "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. I’d still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too.",
+        "sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+        "source_path": "articles/inner-child-therapy/experiments/t99-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t99-api/texts/t99_bb_new1.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t99-api/texts/t99_bb_new1.txt"
+      },
+      {
+        "id": "T05",
+        "p_human": 0.6,
+        "label": "Human",
+        "productive_elaboration": 2,
+        "packing": 0,
+        "editorial_closure": 1,
+        "reason": "The request to examine a claim develops through examples and limits, then returns to the particular decision; the qualification has a role.",
+        "observed": "Human",
+        "correct": true,
+        "source_name": "t103_97_10",
+        "family": "G15",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 0.0,
+        "human": true,
+        "text": "But if you’re still thinking of staking your life on the opposite claim, that death is just nothing, look into that claim first. Researchers at the University of Virginia have been collecting cases of small children who talk about a past life for about sixty years, and there’s a big pile of near-death accounts too. I don’t think any of it can tell you what dying will be like for you, but I’d read a few of those cases before betting my life on “nothing.”",
+        "sha256": "a1ee0d6c7e7c115d486d7c7fc6292d61ad71fef13b603cab0478ff30b5bca285",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_10.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t103-api/texts/t103_97_10.txt"
+      },
+      {
+        "id": "T06",
+        "p_human": 0.67,
+        "label": "Human",
+        "productive_elaboration": 2,
+        "packing": 0,
+        "editorial_closure": 1,
+        "reason": "The list supports the maze concern, then a useful practitioner distinction changes the claim before the institution warning.",
+        "observed": "NotHuman",
+        "correct": false,
+        "source_name": "t99_ifs7",
+        "family": "G07",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 0.24148109555244446,
+        "human": false,
+        "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it. Some practitioners are gentle about it and walk you through the maze just fine. Others seem to leave people more split up than when they started. A big institute and a pile of certificates won’t tell you whether a model is true, or whether it’s safe for you.",
+        "sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+        "source_path": "articles/inner-child-therapy/experiments/t99-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t99-api/texts/t99_ifs7.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t99-api/texts/t99_ifs7.txt"
+      },
+      {
+        "id": "T07",
+        "p_human": 0.64,
+        "label": "Human",
+        "productive_elaboration": 2,
+        "packing": 1,
+        "editorial_closure": 0,
+        "reason": "The meditation exception and the touching example distinguish dismissing a thought from acting on a present signal.",
+        "observed": "Human",
+        "correct": true,
+        "source_name": "t103_97_3",
+        "family": "G06",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 3.339294240486039e-42,
+        "human": true,
+        "text": "The opposite extreme of our pendulum, throwing everything transient away, as some people do with “thought-noting” practice, also isn’t healthy, except as a meditation exercise. Transient feelings and thoughts can be meaningful signals. For example, if you don’t want to be touched, say no now and work out what it means later.",
+        "sha256": "dd9211ea715aaae6006a75d896e01609e744c2dc1cbb9ef753e8a25b3bfffeb7",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_3.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t103-api/texts/t103_97_3.txt"
+      },
+      {
+        "id": "T08",
+        "p_human": 0.66,
+        "label": "Human",
+        "productive_elaboration": 2,
+        "packing": 0,
+        "editorial_closure": 1,
+        "reason": "The helper withdrawing because someone improved is a useful second angle on loss; the list is not merely synonymous padding.",
+        "observed": "Human",
+        "correct": true,
+        "source_name": "t100_ended1",
+        "family": "G04",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 1.9407629482646935e-37,
+        "human": true,
+        "text": "Your little one can get really loud in the gap after one life ends and before the next one has formed. A breakup will do it, or moving to another country, an illness, losing your faith or a role, your youngest moving out. Maybe you’ve left a family or community, maybe you’ve stayed on new terms. A therapist or helper might step back because you’re doing so much better, and suddenly your little one is wailing. For a while the old you is gone and the new you hasn’t shown up yet. Tibetan Buddhism calls an in-between state like that a bardo (I’m only borrowing the word, so what it teaches about death and rebirth is up to you).",
+        "sha256": "b7aaa413dced7e9361759e5b1b3320b9e52a60df9f11b8b908af30c8675e588c",
+        "source_path": "articles/inner-child-therapy/experiments/t100-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t100-api/texts/t100_ended1.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t100-api/texts/t100_ended1.txt"
+      },
+      {
+        "id": "T09",
+        "p_human": 0.34,
+        "label": "NotHuman",
+        "productive_elaboration": 1,
+        "packing": 1,
+        "editorial_closure": 2,
+        "reason": "The scenario is followed by a mirrored permission/prohibition, specific repair and retrospective emotional interpretation in orderly teaching beats.",
+        "observed": "NotHuman",
+        "correct": true,
+        "source_name": "t99_guide5",
+        "family": "G03",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 0.6456171870231628,
+        "human": false,
+        "text": "Once a need does show, after all that hiding, it’s okay to want a lot of closeness. So then someone you love goes for a walk alone, and you’ve texted “hello??” before they’re at the corner. When they get back, you sulk all night. Wanting them close is fine! Blowing up their phone and sulking all night is a different story. Your Guide could help you ask for what you need instead, like a hug before they go and a rough idea of when they’ll be back. Before any of that, though, I’d let your little one say what’s going on. I think it just wants to know they’re coming back.",
+        "sha256": "fec51829d6cc08f0532a029b5398a970fbecd7c333380e0379fcf108b3791ea7",
+        "source_path": "articles/inner-child-therapy/experiments/t99-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t99-api/texts/t99_guide5.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t99-api/texts/t99_guide5.txt"
+      },
+      {
+        "id": "T10",
+        "p_human": 0.64,
+        "label": "Human",
+        "productive_elaboration": 1,
+        "packing": 0,
+        "editorial_closure": 1,
+        "reason": "The callback, borrowing condition and shift to a particular frightening experience are less tightly packaged, though the final reassurance is broad.",
+        "observed": "Human",
+        "correct": true,
+        "source_name": "t103_97_6",
+        "family": "G08",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 1.0532528761352826e-26,
+        "human": true,
+        "text": "Remember those guards from The Urge to Escape, above? Same deal here, so get enough Nurturer and Protector in the room before you go deep. Borrowed is fine, as long as it’s from someone steady who won’t try to run your trip for you. But feeling attacked by a demon on a psychedelic is not necessarily paranoia. It can be real, and it’s also not bad unless you’re unprepared. It can be supremely empowering when you can send love and see how it fixes the situation.",
+        "sha256": "e98384eb887c4fb38cf1bc5c074282a7e22797f7c8b02818729e6b072d923a46",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_6.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t103-api/texts/t103_97_6.txt"
+      },
+      {
+        "id": "T11",
+        "p_human": 0.38,
+        "label": "NotHuman",
+        "productive_elaboration": 1,
+        "packing": 1,
+        "editorial_closure": 2,
+        "reason": "Several broad abstractions are followed by an announced distinction and prescribed way in without much development of the distinction.",
+        "observed": "Human",
+        "correct": false,
+        "source_name": "t103e_98_9_s06",
+        "family": "G11",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 5.252014874446741e-21,
+        "human": true,
+        "text": "The Guide also points beyond itself, toward somewhere you belong that doesn’t ask you to give up being yourself. That might be nature, or existence itself. It might be whatever your tradition sees as ultimate. Love can come from any of these places, and you also belong there, which is a little different. Maybe you’ve felt that outside somewhere, like you didn’t need anybody’s okay to be there. The way in is time in nature and contemplative practice, like meditation.",
+        "sha256": "e843ca5ab4264f11c8561ff310cae2d01c9ed42c5076c8247cda2e53fa9cbc47",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-5.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103e_98_9_s06.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t103-api/texts/t103e_98_9_s06.txt"
+      },
+      {
+        "id": "T12",
+        "p_human": 0.62,
+        "label": "Human",
+        "productive_elaboration": 1,
+        "packing": 0,
+        "editorial_closure": 1,
+        "reason": "The act of noticing is enacted before two unequal possible responses; the playfulness is not the sole basis for the forecast.",
+        "observed": "Human",
+        "correct": true,
+        "source_name": "t103_97_2",
+        "family": "G02",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 4.980489021441905e-28,
+        "human": true,
+        "text": "When you catch it, look around and just take a moment to enjoy some free honesty: “Oh! I’m hooked again! That’s awesome I could notice it!” Take a breath or three before you finish whatever you were doing. Sometimes human beings need to be being, not always doing. 🙃 Maybe then you’ll find there’s enough adult around to be nice to your little boo for a second. Or enough Protector to stop something you’d regret later.",
+        "sha256": "28f8486e698d7302ef014a4e753469e4cdb012453ba51078a46db79cd4f4476e",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_2.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t103-api/texts/t103_97_2.txt"
+      },
+      {
+        "id": "T13",
+        "p_human": 0.3,
+        "label": "NotHuman",
+        "productive_elaboration": 0,
+        "packing": 2,
+        "editorial_closure": 2,
+        "reason": "Naming, recording, comforting and replying arrive as tightly packed instruction units with a compact tone rule and reference.",
+        "observed": "NotHuman",
+        "correct": true,
+        "source_name": "t97_parentP4",
+        "family": "G09",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 1.0,
+        "human": false,
+        "text": "A good routine kept in the warden’s tone still feels like punishment to your little one. If talking back to that voice feels disloyal, give it a name of its own, like the Critic. Write its lines down, with who said them and when. Comfort your little one first, then write a reply to each line, firm or funny but never mean (ST-CA has this as an exercise, section 18.12.2).",
+        "sha256": "f489da42f1677534db0dda49c015019daa8ef0ee4d2bccb5266dc74771b028b9",
+        "source_path": "articles/inner-child-therapy/experiments/t97-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t97-api/texts/t97_parentP4.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t97-api/texts/t97_parentP4.txt"
+      },
+      {
+        "id": "T14",
+        "p_human": 0.77,
+        "label": "Human",
+        "productive_elaboration": 2,
+        "packing": 0,
+        "editorial_closure": 0,
+        "reason": "The example about being fifteen is extended to adulthood; the digression does explanatory work instead of simply completing a tidy summary.",
+        "observed": "Human",
+        "correct": true,
+        "source_name": "t103_98_3",
+        "family": "G10",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 3.493531763343482e-27,
+        "human": true,
+        "text": "Whichever age it picks on, saving everybody was never your job. At fifteen you probably didn’t even have your own money, or anywhere else to go. And actually, not to beat a dead horse here, but every age of you was stuck with whatever it had then, even the adult you were last year. Hindsight being 20/20 doesn’t change that.",
+        "sha256": "d4b4b93009c9c452e0e425b4299901c2d5e14bd8d651e83572a5e64990c47fb2",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_98_3.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t103-api/texts/t103_98_3.txt"
+      },
+      {
+        "id": "T15",
+        "p_human": 0.35,
+        "label": "NotHuman",
+        "productive_elaboration": 0,
+        "packing": 1,
+        "editorial_closure": 1,
+        "reason": "The warning expands into general precautions and deciding for oneself without clarifying how the added distinctions change the action.",
+        "observed": "Human",
+        "correct": false,
+        "source_name": "t103_97_7",
+        "family": "G14",
+        "historical_version": "4.1",
+        "historical_fraction_ai": 2.8192793308154825e-37,
+        "human": true,
+        "text": "Any of those reactions, from mania to paranoia, can also point to a vulnerability in you, so I’d be careful with other drugs that mess with what’s real too. And any predisposition toward mania or psychosis is a warning sign too, whether it’s family history, a bad environment or a bad mindset. I can’t tell you exactly what to do about it, and nobody can tell you for sure what’s best for you. There are just caution signs, and when you see them, you take more precautions of every kind. You have to figure out what they mean for you, and if you can’t, get help from trusted advisors.",
+        "sha256": "53aee8511be8b0f44434acc5c2609fb17d4dffd1c49263a3d64c4c2da99e77eb",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_7.txt",
+        "text_source": "u-dont-existDOTcom/joel-articles@dc929e66beb4b06cbc8b80d5be7eec7cd967c89f/articles/inner-child-therapy/experiments/t103-api/texts/t103_97_7.txt"
+      }
+    ]
+  },
+  "api_plan": {
+    "id": "development-versus-repetition-20261024-v1",
+    "status": "FROZEN_BEFORE_API",
+    "at_utc": "2026-10-24T12:58:53.472645+00:00",
+    "purpose": "Distinguish developing the compact final inference from merely lengthening the passage. Both source passages have archived 4.1 Mixed results localized to their final sentence.",
+    "hypothesis": "Unpacked versions improve over unchanged baseline and similarly lengthened repetitive versions across both families. Failure on either family narrows the claim; do not optimize further wordings to get a pass.",
+    "comparison_limit": "Unpacking and repetition are different wording packages; not an isolated causal proof about sentence length or any word. Short-text labels are uncertain.",
+    "planned_submissions": 6,
+    "authority": "Current user explicitly permits hypothesis-driven Pangram API research,1-3paragraphs per call. Each input is1paragraph.",
+    "baseline_repeat_justification": "Two unchanged same-byte originals are deliberate contemporary reproducibility controls for causal comparison, not blind duplicate retries.",
+    "stop": "Stop on version mismatch, auth/credit failure, ambiguous POST, or after the six registered cells. No extra variants without a new substantive reason.",
+    "primary": "All returned segment labels Human versus not; compare within each family.",
+    "secondary": "Preserve document fractions and raw segment class_probabilities without equating them to actual authorship probability.",
+    "preservation": "Prefixes byte-identical; listed content remains; research-only, no article changes.",
+    "variants": [
+      {
+        "id": "T04_baseline",
+        "family": "T04",
+        "arm": "baseline",
+        "text_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+        "words": 66,
+        "paragraphs": 1,
+        "p_human_forecast": 0.3,
+        "source_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+        "changed_scope": "last sentence only; prefix exact",
+        "preserved_units": [
+          "Take real suffering seriously",
+          "Continue meeting obligations to other people",
+          "Being miserable oneself is not required"
+        ],
+        "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+      },
+      {
+        "id": "T04_unpacked",
+        "family": "T04",
+        "arm": "unpacked",
+        "text_sha256": "a9294c51a77ded6b2dea914ea981c6ab6a6c8c8d369014c0d7e5cac04dc9fe5b",
+        "words": 77,
+        "paragraphs": 1,
+        "p_human_forecast": 0.65,
+        "source_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+        "changed_scope": "last sentence only; prefix exact",
+        "preserved_units": [
+          "Take real suffering seriously",
+          "Continue meeting obligations to other people",
+          "Being miserable oneself is not required"
+        ],
+        "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+      },
+      {
+        "id": "T04_repeated",
+        "family": "T04",
+        "arm": "repeated",
+        "text_sha256": "63cc7dbe0aa99936dc2e15cf597e2b844e3a11ae6c645fde40e5a40bb17a0dce",
+        "words": 80,
+        "paragraphs": 1,
+        "p_human_forecast": 0.3,
+        "source_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+        "changed_scope": "last sentence only; prefix exact",
+        "preserved_units": [
+          "Take real suffering seriously",
+          "Continue meeting obligations to other people",
+          "Being miserable oneself is not required"
+        ],
+        "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+      },
+      {
+        "id": "T06_baseline",
+        "family": "T06",
+        "arm": "baseline",
+        "text_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+        "words": 81,
+        "paragraphs": 1,
+        "p_human_forecast": 0.3,
+        "source_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+        "changed_scope": "last sentence only; prefix exact",
+        "preserved_units": [
+          "Institutional backing does not establish truth of a model",
+          "Certificates do not establish truth of a model",
+          "Neither backing nor certificates establish personal safety"
+        ],
+        "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+      },
+      {
+        "id": "T06_unpacked",
+        "family": "T06",
+        "arm": "unpacked",
+        "text_sha256": "6c0c936b0f97d4c391080eb73b6a8f9d6d464c72ea8faa75003443b7533da0cf",
+        "words": 93,
+        "paragraphs": 1,
+        "p_human_forecast": 0.6,
+        "source_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+        "changed_scope": "last sentence only; prefix exact",
+        "preserved_units": [
+          "Institutional backing does not establish truth of a model",
+          "Certificates do not establish truth of a model",
+          "Neither backing nor certificates establish personal safety"
+        ],
+        "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+      },
+      {
+        "id": "T06_repeated",
+        "family": "T06",
+        "arm": "repeated",
+        "text_sha256": "301254ebd3dc067d069eb3fd8b261926a431d461189d7941c58dac9afe3a964c",
+        "words": 94,
+        "paragraphs": 1,
+        "p_human_forecast": 0.25,
+        "source_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+        "changed_scope": "last sentence only; prefix exact",
+        "preserved_units": [
+          "Institutional backing does not establish truth of a model",
+          "Certificates do not establish truth of a model",
+          "Neither backing nor certificates establish personal safety"
+        ],
+        "interpretation": "Editorial operation package, not a pure token-level intervention. No new evidence or events introduced."
+      }
+    ]
+  },
+  "api_followup_plan": {
+    "id": "development-versus-repetition-20261024-followup1",
+    "at_utc": "2026-10-24T13:02:49.502897+00:00",
+    "parent_experiment": "development-versus-repetition-20261024-v1",
+    "new_evidence": "All4 expanded variants remained Mixed, and unchanged prefix spans changed label. Archived t100 repairs of both families are Human but simplify or consolidate the distinct source criteria.",
+    "question": "Can a direct action/decision realization retain the original explicit criteria without either the expanded repeated caveats or the archived repair’s semantic consolidation?",
+    "not_claimed": "This is not a proof of a universal first-person or imperative rule, and not a pure length intervention.",
+    "submissions": 2,
+    "prior_submissions_same_audit": 6,
+    "stop": "After these2cells, no further rewrites in this pass; disclose failures without tuning until green.",
+    "variants": [
+      {
+        "id": "T04_direct_preserved",
+        "family": "T04",
+        "sha256": "3e44b71dabda4548628b74446d1db672ea3d3c078b8a7c35fefca97562acd230",
+        "words": 61,
+        "paragraphs": 1,
+        "p_human_forecast": 0.55,
+        "direction": "less AI-like than current source control",
+        "preservation": "Original prefix exact. Suffering, obligations and no required misery retained for T04. Institution/certificates, truth and personal safety all explicit for T06. T06 adds an authorial decision framing; this is an operation package, not pure syntax."
+      },
+      {
+        "id": "T06_direct_preserved",
+        "family": "T06",
+        "sha256": "19cdbf300da2e982f1ca5e88a06d1793318f6b7ec53a2ca83f8985626abbcf46",
+        "words": 92,
+        "paragraphs": 1,
+        "p_human_forecast": 0.55,
+        "direction": "less AI-like than current source control",
+        "preservation": "Original prefix exact. Suffering, obligations and no required misery retained for T04. Institution/certificates, truth and personal safety all explicit for T06. T06 adds an authorial decision framing; this is an operation package, not pure syntax."
+      }
+    ]
+  },
+  "api_observations": [
+    {
+      "id": "T04_baseline",
+      "input_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+      "local_words": 66,
+      "paragraphs": 1,
+      "all_segments_human": false,
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. I’d still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too.",
+        "version": "4.1",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.4004651606082916,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.5995348691940308,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 2,
+        "windows": [
+          {
+            "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs.",
+            "label": "Human Written",
+            "ai_assistance_score": 7.418422709149428e-24,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 125,
+            "word_count": 23,
+            "token_length": 27,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              1.0,
+              0.0,
+              7.418422709149428e-24
+            ],
+            "calibrated_confidence": 0.9951445337576968
+          },
+          {
+            "text": " That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.04136991873383522,
+            "confidence": "Low",
+            "start_index": 125,
+            "end_index": 216,
+            "word_count": 19,
+            "token_length": 21,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              0.9586300849914551,
+              1.401298464324817e-45,
+              0.04136991873383522
+            ],
+            "calibrated_confidence": 0.5309585690261428
+          },
+          {
+            "text": " I’d still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "Medium",
+            "start_index": 216,
+            "end_index": 354,
+            "word_count": 27,
+            "token_length": 30,
+            "is_humanized": false,
+            "humanizer_score": 0.16200004518032074,
+            "class_probabilities": [
+              2.108536456546517e-09,
+              0.0,
+              1.0
+            ],
+            "calibrated_confidence": 0.9087603878116344
+          }
+        ]
+      }
+    },
+    {
+      "id": "T04_unpacked",
+      "input_sha256": "a9294c51a77ded6b2dea914ea981c6ab6a6c8c8d369014c0d7e5cac04dc9fe5b",
+      "local_words": 77,
+      "paragraphs": 1,
+      "all_segments_human": false,
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. I’d still take real suffering seriously. You still have obligations to the people around you, and I’m not saying you should stop doing what you owe them. But being miserable yourself isn’t another thing you owe them.",
+        "version": "4.1",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.7113627791404724,
+        "fraction_ai_assisted": 2.8569056824277684e-26,
+        "fraction_human": 0.2886372208595276,
+        "headline": "AI Detected",
+        "num_ai_segments": 3,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.0001607082667760551,
+            "confidence": "Low",
+            "start_index": 0,
+            "end_index": 125,
+            "word_count": 23,
+            "token_length": 27,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              0.9998393058776855,
+              7.237533928266875e-37,
+              0.0001607082667760551
+            ],
+            "calibrated_confidence": 0.6493428912783752
+          },
+          {
+            "text": " That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "Medium",
+            "start_index": 125,
+            "end_index": 216,
+            "word_count": 19,
+            "token_length": 21,
+            "is_humanized": false,
+            "humanizer_score": 0.08182656019926071,
+            "class_probabilities": [
+              1.1015026391003602e-10,
+              3.831906702634785e-40,
+              1.0
+            ],
+            "calibrated_confidence": 0.9444106556380001
+          },
+          {
+            "text": " I’d still take real suffering seriously. You still have obligations to the people around you, and I’m not saying you should stop doing what you owe them.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "High",
+            "start_index": 216,
+            "end_index": 370,
+            "word_count": 29,
+            "token_length": 32,
+            "is_humanized": false,
+            "humanizer_score": 0.08182656019926071,
+            "class_probabilities": [
+              6.321557058827752e-23,
+              5.802709937240948e-30,
+              1.0
+            ],
+            "calibrated_confidence": 0.9967275219706464
+          },
+          {
+            "text": " But being miserable yourself isn’t another thing you owe them.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "Medium",
+            "start_index": 370,
+            "end_index": 433,
+            "word_count": 11,
+            "token_length": 12,
+            "is_humanized": false,
+            "humanizer_score": 0.08182656019926071,
+            "class_probabilities": [
+              1.5294867152307323e-14,
+              1.963414026153493e-25,
+              1.0
+            ],
+            "calibrated_confidence": 0.9863589367308141
+          }
+        ]
+      }
+    },
+    {
+      "id": "T04_repeated",
+      "input_sha256": "63cc7dbe0aa99936dc2e15cf597e2b844e3a11ae6c645fde40e5a40bb17a0dce",
+      "local_words": 80,
+      "paragraphs": 1,
+      "all_segments_human": false,
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. I’d still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too. You do not have to add that misery yourself. It is not a requirement.",
+        "version": "4.1",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.7251448035240173,
+        "fraction_ai_assisted": 9.43873552211138e-25,
+        "fraction_human": 0.27485519647598267,
+        "headline": "AI Detected",
+        "num_ai_segments": 4,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.0676988735795021,
+            "confidence": "Low",
+            "start_index": 0,
+            "end_index": 125,
+            "word_count": 23,
+            "token_length": 27,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              0.9323011040687561,
+              0.0,
+              0.0676988735795021
+            ],
+            "calibrated_confidence": 0.5309585690261428
+          },
+          {
+            "text": " That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999895691871643,
+            "confidence": "Low",
+            "start_index": 125,
+            "end_index": 216,
+            "word_count": 19,
+            "token_length": 21,
+            "is_humanized": false,
+            "humanizer_score": 0.32805877923965454,
+            "class_probabilities": [
+              1.0422254490549676e-05,
+              0.0,
+              0.9999895691871643
+            ],
+            "calibrated_confidence": 0.7134522992450242
+          },
+          {
+            "text": " I’d still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "High",
+            "start_index": 216,
+            "end_index": 354,
+            "word_count": 27,
+            "token_length": 30,
+            "is_humanized": false,
+            "humanizer_score": 0.32805877923965454,
+            "class_probabilities": [
+              2.3773187993508476e-35,
+              0.0,
+              1.0
+            ],
+            "calibrated_confidence": 0.9971368998964039
+          },
+          {
+            "text": " You do not have to add that misery yourself.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "Medium",
+            "start_index": 354,
+            "end_index": 399,
+            "word_count": 9,
+            "token_length": 10,
+            "is_humanized": false,
+            "humanizer_score": 0.32805877923965454,
+            "class_probabilities": [
+              6.476079655176603e-12,
+              1.1021212421914686e-41,
+              1.0
+            ],
+            "calibrated_confidence": 0.967029679272379
+          },
+          {
+            "text": " It is not a requirement.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999992847442627,
+            "confidence": "Low",
+            "start_index": 399,
+            "end_index": 424,
+            "word_count": 5,
+            "token_length": 6,
+            "is_humanized": false,
+            "humanizer_score": 0.32805877923965454,
+            "class_probabilities": [
+              7.253202625179256e-07,
+              1.600809560327308e-23,
+              0.9999992847442627
+            ],
+            "calibrated_confidence": 0.7635107679804958
+          }
+        ]
+      }
+    },
+    {
+      "id": "T06_baseline",
+      "input_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+      "local_words": 81,
+      "paragraphs": 1,
+      "all_segments_human": false,
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it. Some practitioners are gentle about it and walk you through the maze just fine. Others seem to leave people more split up than when they started. A big institute and a pile of certificates won’t tell you whether a model is true, or whether it’s safe for you.",
+        "version": "4.1",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.2415364682674408,
+        "fraction_ai_assisted": 4.162185365899576e-27,
+        "fraction_human": 0.7584635019302368,
+        "headline": "AI Detected",
+        "num_ai_segments": 1,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 2,
+        "windows": [
+          {
+            "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it.",
+            "label": "Human Written",
+            "ai_assistance_score": 2.1699552601519318e-21,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 209,
+            "word_count": 35,
+            "token_length": 49,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              1.0,
+              5.605193857299268e-45,
+              2.1699552601519318e-21
+            ],
+            "calibrated_confidence": 0.9943519994311145
+          },
+          {
+            "text": " Some practitioners are gentle about it and walk you through the maze just fine. Others seem to leave people more split up than when they started.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.00026929538580588996,
+            "confidence": "Low",
+            "start_index": 209,
+            "end_index": 355,
+            "word_count": 26,
+            "token_length": 28,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              0.9997307062149048,
+              1.334179957105689e-26,
+              0.00026929538580588996
+            ],
+            "calibrated_confidence": 0.7291858905004259
+          },
+          {
+            "text": " A big institute and a pile of certificates won’t tell you whether a model is true, or whether it’s safe for you.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9999977946281433,
+            "confidence": "Low",
+            "start_index": 355,
+            "end_index": 468,
+            "word_count": 24,
+            "token_length": 26,
+            "is_humanized": false,
+            "humanizer_score": 0.06849346309900284,
+            "class_probabilities": [
+              2.2049155177228386e-06,
+              0.0,
+              0.9999977946281433
+            ],
+            "calibrated_confidence": 0.7271657596705399
+          }
+        ]
+      }
+    },
+    {
+      "id": "T06_unpacked",
+      "input_sha256": "6c0c936b0f97d4c391080eb73b6a8f9d6d464c72ea8faa75003443b7533da0cf",
+      "local_words": 93,
+      "paragraphs": 1,
+      "all_segments_human": false,
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it. Some practitioners are gentle about it and walk you through the maze just fine. Others seem to leave people more split up than when they started. Knowing that there’s a big institute behind a model doesn’t tell you whether it’s true. Seeing a pile of certificates doesn’t tell you that either. Neither one tells you whether it’s safe for you.",
+        "version": "4.1",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.46151283383369446,
+        "fraction_ai_assisted": 3.918226279100089e-27,
+        "fraction_human": 0.5384871363639832,
+        "headline": "AI Detected",
+        "num_ai_segments": 2,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 2,
+        "windows": [
+          {
+            "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it.",
+            "label": "Human Written",
+            "ai_assistance_score": 3.4923919312035423e-10,
+            "confidence": "Medium",
+            "start_index": 0,
+            "end_index": 209,
+            "word_count": 35,
+            "token_length": 49,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              1.0,
+              8.40540857855955e-41,
+              3.4923919312035423e-10
+            ],
+            "calibrated_confidence": 0.935395623236712
+          },
+          {
+            "text": " Some practitioners are gentle about it and walk you through the maze just fine.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.0014729208778589964,
+            "confidence": "Low",
+            "start_index": 209,
+            "end_index": 289,
+            "word_count": 14,
+            "token_length": 15,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              0.9985270500183105,
+              1.4210738910028573e-29,
+              0.0014729208778589964
+            ],
+            "calibrated_confidence": 0.5752700798496947
+          },
+          {
+            "text": " Others seem to leave people more split up than when they started.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.8732917904853821,
+            "confidence": "Low",
+            "start_index": 289,
+            "end_index": 355,
+            "word_count": 12,
+            "token_length": 13,
+            "is_humanized": false,
+            "humanizer_score": 0.10004832595586777,
+            "class_probabilities": [
+              0.12670820951461792,
+              3.2753393851211613e-26,
+              0.8732917904853821
+            ],
+            "calibrated_confidence": 0.5027589796980739
+          },
+          {
+            "text": " Knowing that there’s a big institute behind a model doesn’t tell you whether it’s true. Seeing a pile of certificates doesn’t tell you that either. Neither one tells you whether it’s safe for you.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "High",
+            "start_index": 355,
+            "end_index": 552,
+            "word_count": 39,
+            "token_length": 42,
+            "is_humanized": false,
+            "humanizer_score": 0.10004832595586777,
+            "class_probabilities": [
+              1.3815994520924602e-18,
+              1.0593516059524588e-34,
+              1.0
+            ],
+            "calibrated_confidence": 0.9939085012239145
+          }
+        ]
+      }
+    },
+    {
+      "id": "T06_repeated",
+      "input_sha256": "301254ebd3dc067d069eb3fd8b261926a431d461189d7941c58dac9afe3a964c",
+      "local_words": 94,
+      "paragraphs": 1,
+      "all_segments_human": false,
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it. Some practitioners are gentle about it and walk you through the maze just fine. Others seem to leave people more split up than when they started. A big institute and a pile of certificates won’t tell you whether a model is true, or whether it’s safe for you. Those things do not answer those questions, and the questions still need answers.",
+        "version": "4.1",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.5734958052635193,
+        "fraction_ai_assisted": 6.472834426156801e-39,
+        "fraction_human": 0.4265041649341583,
+        "headline": "AI Detected",
+        "num_ai_segments": 3,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 1,
+        "windows": [
+          {
+            "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it.",
+            "label": "Human Written",
+            "ai_assistance_score": 0.0029972358606755733,
+            "confidence": "Low",
+            "start_index": 0,
+            "end_index": 209,
+            "word_count": 35,
+            "token_length": 49,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              0.9970027804374695,
+              0.0,
+              0.0029972358606755733
+            ],
+            "calibrated_confidence": 0.5752700798496948
+          },
+          {
+            "text": " Some practitioners are gentle about it and walk you through the maze just fine.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.6730928421020508,
+            "confidence": "Low",
+            "start_index": 209,
+            "end_index": 289,
+            "word_count": 14,
+            "token_length": 15,
+            "is_humanized": false,
+            "humanizer_score": 0.252267062664032,
+            "class_probabilities": [
+              0.3269071578979492,
+              1.1088474748202277e-41,
+              0.6730928421020508
+            ],
+            "calibrated_confidence": 0.5027589796980739
+          },
+          {
+            "text": " Others seem to leave people more split up than when they started.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.9992250204086304,
+            "confidence": "Low",
+            "start_index": 289,
+            "end_index": 355,
+            "word_count": 12,
+            "token_length": 13,
+            "is_humanized": false,
+            "humanizer_score": 0.252267062664032,
+            "class_probabilities": [
+              0.0007749645737931132,
+              5.392684703106867e-38,
+              0.9992250204086304
+            ],
+            "calibrated_confidence": 0.6177285318559557
+          },
+          {
+            "text": " A big institute and a pile of certificates won’t tell you whether a model is true, or whether it’s safe for you. Those things do not answer those questions, and the questions still need answers.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "High",
+            "start_index": 355,
+            "end_index": 550,
+            "word_count": 37,
+            "token_length": 41,
+            "is_humanized": false,
+            "humanizer_score": 0.252267062664032,
+            "class_probabilities": [
+              4.425842688764469e-18,
+              0.0,
+              1.0
+            ],
+            "calibrated_confidence": 0.9948371369231891
+          }
+        ]
+      }
+    },
+    {
+      "id": "T04_direct_preserved",
+      "input_sha256": "3e44b71dabda4548628b74446d1db672ea3d3c078b8a7c35fefca97562acd230",
+      "local_words": 61,
+      "paragraphs": 1,
+      "all_segments_human": true,
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. Take real suffering seriously, and do what you owe the people around you. You don’t have to make yourself miserable too.",
+        "version": "4.1",
+        "prediction": "We believe that this entire text is human-written.",
+        "prediction_short": "Human",
+        "fraction_ai": 7.528478249696491e-07,
+        "fraction_ai_assisted": 2.1799577639946445e-20,
+        "fraction_human": 0.9999992251396179,
+        "headline": "Human Written",
+        "num_ai_segments": 0,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 3,
+        "windows": [
+          {
+            "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs.",
+            "label": "Human Written",
+            "ai_assistance_score": 3.988719573633841e-34,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 125,
+            "word_count": 23,
+            "token_length": 27,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              1.0,
+              0.0,
+              3.988719573633841e-34
+            ],
+            "calibrated_confidence": 0.9971361086507233
+          },
+          {
+            "text": " That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help.",
+            "label": "Human Written",
+            "ai_assistance_score": 1.33898087062434e-10,
+            "confidence": "Medium",
+            "start_index": 125,
+            "end_index": 216,
+            "word_count": 19,
+            "token_length": 21,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              1.0,
+              2.2098476782402365e-42,
+              1.33898087062434e-10
+            ],
+            "calibrated_confidence": 0.9444106556380001
+          },
+          {
+            "text": " Take real suffering seriously, and do what you owe the people around you. You don’t have to make yourself miserable too.",
+            "label": "Human Written",
+            "ai_assistance_score": 2.096673824780737e-06,
+            "confidence": "Low",
+            "start_index": 216,
+            "end_index": 337,
+            "word_count": 22,
+            "token_length": 25,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              0.9999979138374329,
+              6.071452704881231e-20,
+              2.096673824780737e-06
+            ],
+            "calibrated_confidence": 0.7433389498077487
+          }
+        ]
+      }
+    },
+    {
+      "id": "T06_direct_preserved",
+      "input_sha256": "19cdbf300da2e982f1ca5e88a06d1793318f6b7ec53a2ca83f8985626abbcf46",
+      "local_words": 92,
+      "paragraphs": 1,
+      "all_segments_human": false,
+      "result": {
+        "stage": "STAGE_SUCCESS",
+        "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it. Some practitioners are gentle about it and walk you through the maze just fine. Others seem to leave people more split up than when they started. I wouldn’t trust a model more just because there’s a big institute behind it handing out certificates. You still need to know whether the model is true and whether it’s safe for you.",
+        "version": "4.1",
+        "prediction": "We believe that this text is a mix of AI and human-written content.",
+        "prediction_short": "Mixed",
+        "fraction_ai": 0.46220487356185913,
+        "fraction_ai_assisted": 3.846348247002881e-21,
+        "fraction_human": 0.5377951264381409,
+        "headline": "AI Detected",
+        "num_ai_segments": 3,
+        "num_ai_assisted_segments": 0,
+        "num_human_segments": 2,
+        "windows": [
+          {
+            "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it.",
+            "label": "Human Written",
+            "ai_assistance_score": 5.236321788042318e-20,
+            "confidence": "High",
+            "start_index": 0,
+            "end_index": 209,
+            "word_count": 35,
+            "token_length": 49,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              1.0,
+              1.0390059073688126e-36,
+              5.236321788042318e-20
+            ],
+            "calibrated_confidence": 0.9953981205154662
+          },
+          {
+            "text": " Some practitioners are gentle about it and walk you through the maze just fine.",
+            "label": "Human Written",
+            "ai_assistance_score": 9.20619925182109e-07,
+            "confidence": "Low",
+            "start_index": 209,
+            "end_index": 289,
+            "word_count": 14,
+            "token_length": 15,
+            "is_humanized": false,
+            "humanizer_score": 0.0,
+            "class_probabilities": [
+              0.9999991059303284,
+              5.806968953964664e-22,
+              9.20619925182109e-07
+            ],
+            "calibrated_confidence": 0.7536111111111111
+          },
+          {
+            "text": " Others seem to leave people more split up than when they started.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 0.994941771030426,
+            "confidence": "Low",
+            "start_index": 289,
+            "end_index": 355,
+            "word_count": 12,
+            "token_length": 13,
+            "is_humanized": false,
+            "humanizer_score": 0.08668431639671326,
+            "class_probabilities": [
+              0.0050582196563482285,
+              3.0649684795640724e-20,
+              0.994941771030426
+            ],
+            "calibrated_confidence": 0.5752700798496947
+          },
+          {
+            "text": " I wouldn’t trust a model more just because there’s a big institute behind it handing out certificates.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "Low",
+            "start_index": 355,
+            "end_index": 458,
+            "word_count": 19,
+            "token_length": 20,
+            "is_humanized": false,
+            "humanizer_score": 0.08668431639671326,
+            "class_probabilities": [
+              2.6244407536069048e-08,
+              2.8490166111523717e-27,
+              1.0
+            ],
+            "calibrated_confidence": 0.8553175497933108
+          },
+          {
+            "text": " You still need to know whether the model is true and whether it’s safe for you.",
+            "label": "AI-Generated",
+            "ai_assistance_score": 1.0,
+            "confidence": "Medium",
+            "start_index": 458,
+            "end_index": 538,
+            "word_count": 17,
+            "token_length": 18,
+            "is_humanized": false,
+            "humanizer_score": 0.08668431639671326,
+            "class_probabilities": [
+              1.9720761482155957e-11,
+              2.572365791153014e-31,
+              1.0
+            ],
+            "calibrated_confidence": 0.9612121212121212
+          }
+        ]
+      }
+    }
+  ],
+  "prefix_label_changes": [
+    {
+      "id": "T04_unpacked",
+      "events": [
+        {
+          "span": [
+            125,
+            216
+          ],
+          "exact_unchanged_text": " That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help.",
+          "before": "Human Written",
+          "after": "AI-Generated"
+        }
+      ]
+    },
+    {
+      "id": "T04_repeated",
+      "events": [
+        {
+          "span": [
+            125,
+            216
+          ],
+          "exact_unchanged_text": " That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help.",
+          "before": "Human Written",
+          "after": "AI-Generated"
+        }
+      ]
+    },
+    {
+      "id": "T04_direct_preserved",
+      "events": []
+    },
+    {
+      "id": "T06_unpacked",
+      "events": [
+        {
+          "span": [
+            289,
+            355
+          ],
+          "exact_unchanged_text": " Others seem to leave people more split up than when they started.",
+          "before": "Human Written",
+          "after": "AI-Generated"
+        }
+      ]
+    },
+    {
+      "id": "T06_repeated",
+      "events": [
+        {
+          "span": [
+            209,
+            289
+          ],
+          "exact_unchanged_text": " Some practitioners are gentle about it and walk you through the maze just fine.",
+          "before": "Human Written",
+          "after": "AI-Generated"
+        },
+        {
+          "span": [
+            289,
+            355
+          ],
+          "exact_unchanged_text": " Others seem to leave people more split up than when they started.",
+          "before": "Human Written",
+          "after": "AI-Generated"
+        }
+      ]
+    },
+    {
+      "id": "T06_direct_preserved",
+      "events": [
+        {
+          "span": [
+            289,
+            355
+          ],
+          "exact_unchanged_text": " Others seem to leave people more split up than when they started.",
+          "before": "Human Written",
+          "after": "AI-Generated"
+        }
+      ]
+    }
+  ],
+  "accounting": {
+    "new_paid_submissions": 8,
+    "local_words_submitted": 644,
+    "max_paragraphs_per_submission": 1,
+    "long_section_or_article_submissions": 0,
+    "baseline_reproducibility_controls": 2,
+    "failed_or_ambiguous_posts": 0,
+    "price_not_inferred": true
+  },
+  "dispositions": [
+    {
+      "finding": "Explicit thought-development rubric matched11/15 recent4.1 outcomes, versus10/15 constantHuman.",
+      "disposition": "provisional",
+      "reason": "Small selected panel, one author/register and single-arm current-context evaluation; no demonstrated improvement over a prior model."
+    },
+    {
+      "finding": "Unpacking the final inference failed to restore all-Human labels in both controlled source passages; repetitive length controls also failed.",
+      "disposition": "provisional",
+      "reason": "Reject these operationalizations, not all useful elaboration. Two local source families; wording packages co-varied."
+    },
+    {
+      "finding": "Changing only an ending changed labels on exact unchanged earlier substrings.",
+      "disposition": "article-specific",
+      "reason": "Observed on these exact4.1 boundaries; segment attribution is contextual, not sentence provenance."
+    },
+    {
+      "finding": "Direct action realization retained the explicit T04 criteria and returned allHuman segments, but the analogous T06 test remainedMixed.",
+      "disposition": "article-specific",
+      "reason": "One local success, repaired endLow confidence, no cross-family validated recipe. No production edits made."
+    }
+  ]
+}
