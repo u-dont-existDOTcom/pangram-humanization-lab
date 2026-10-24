@@ -2,15 +2,48 @@
   "created_utc": "2026-10-24T23:43:44.389043+00:00",
   "expected_version": "4.0",
   "format": "pangram-cache-v2",
-  "last_error": "",
+  "last_error": "terminal version '4.1' did not match expected '4.0'",
   "measurement_key": "fresh30-v2-T13-baseline-20261024",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 7.019498523767461e-36,
+    "fraction_human": 5.198147402772996e-20,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "Some people find that deep grieving gives way to warmth, connection, or a bodily sense of being held by the universe. That is a description of an experience, and it is not evidence for any particular physiological mechanism. Love can also open grief from the other direction: being cared for may bring sadness about the care that was missing, which does not mean the love failed. Stay with the experience when you can remain present and keep your choice about it. More tears, by themselves, do not prove more healing.",
+    "version": "4.1",
+    "windows": [
+      {
+        "ai_assistance_score": 1.0,
+        "calibrated_confidence": 0.9979299756432056,
+        "class_probabilities": [
+          5.198147079655569e-20,
+          7.019498523767461e-36,
+          1.0
+        ],
+        "confidence": "High",
+        "end_index": 517,
+        "humanizer_score": 0.012614606879651546,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "Some people find that deep grieving gives way to warmth, connection, or a bodily sense of being held by the universe. That is a description of an experience, and it is not evidence for any particular physiological mechanism. Love can also open grief from the other direction: being cared for may bring sadness about the care that was missing, which does not mean the love failed. Stay with the experience when you can remain present and keep your choice about it. More tears, by themselves, do not prove more healing.",
+        "token_length": 103,
+        "word_count": 90
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "terminal_wrong_version",
   "submitted_model": "pangram-4",
   "task_id": "934228d2-362a-4944-ac94-6bf1b6ab2c5b",
   "text": "Some people find that deep grieving gives way to warmth, connection, or a bodily sense of being held by the universe. That is a description of an experience, and it is not evidence for any particular physiological mechanism. Love can also open grief from the other direction: being cared for may bring sadness about the care that was missing, which does not mean the love failed. Stay with the experience when you can remain present and keep your choice about it. More tears, by themselves, do not prove more healing.",
   "text_sha256": "f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373",
-  "updated_utc": "2026-10-24T23:43:44.389057+00:00"
+  "updated_utc": "2026-10-24T23:43:50.375284+00:00"
 }
