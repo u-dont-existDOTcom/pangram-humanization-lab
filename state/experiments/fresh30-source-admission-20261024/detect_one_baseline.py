@@ -24,7 +24,8 @@ def git(*a):
     return p.stdout.strip()
 
 assert git("branch","--show-current")=="research/fresh30-admission-20261024"
-assert git("status","--porcelain")== "?? state/experiments/fresh30-source-admission-20261024/PILOT-RESULTS/\n?? state/experiments/fresh30-source-admission-20261024/PILOT-SOURCE-RESULTS/" or True
+assert not git("diff","--name-only"),"Tracked working files changed before detector"
+assert not git("diff","--cached","--name-only"),"Staged content must be committed before detector"
 # Preserve the full incoming source+source checked result as immutable git evidence before a paid call.
 cache=PangramCache(R/"PANGRAM-BASELINE-CACHE")
 key="fresh30-v2-T13-baseline-20261024"
