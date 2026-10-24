@@ -1,0 +1,408 @@
+{
+  "status": "SOURCE_INVENTORY_NOT_VALIDATED_PILOT",
+  "source_commit": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+  "planning_target": 30,
+  "sources": [
+    {
+      "path": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "sha256": "e73a051c4bd843b39bdfb08005c06386c9cd84e054c128b4e2069a79fe38331e",
+      "records": 452
+    },
+    {
+      "path": "articles/inner-signal/humanize/pangram-ledger.jsonl",
+      "sha256": "4ff8ad92b567a087cd31f30db587343769f8aa2a30007e2ff56ec8995d0c2ea9",
+      "records": 143
+    },
+    {
+      "path": "articles/nibbana/humanize/pangram-ledger.jsonl",
+      "sha256": "a6b74b35d9a6faf04037460c663621e15109be1fe1527dac5bee008e8d19bfb9",
+      "records": 70
+    }
+  ],
+  "candidate_ledger_groups": 20,
+  "groups_with_two_or_more_exact_texts_in_recent_join": 11,
+  "groups": [
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "bb-new1",
+      "input_hashes": [
+        "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+        "c5f93b768956464839f70413133e04f5271288364680e03a8c4f14170f7548d9"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 2,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "bb-new1#114",
+        "bb-new1#123"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "guide-P5",
+      "input_hashes": [
+        "e5a7dd16db085f5f26402cb96911e899aa598003480e9bbd9315531a43271c34",
+        "fec51829d6cc08f0532a029b5398a970fbecd7c333380e0379fcf108b3791ea7"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 2,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "guide-P5#117",
+        "guide-P5#124"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "ended-P1",
+      "input_hashes": [
+        "b7aaa413dced7e9361759e5b1b3320b9e52a60df9f11b8b908af30c8675e588c",
+        "c326c6619caa167b3af9a7802688d1e8a96972c992224080f6260dacbb23315c"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 2,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "ended-P1#119",
+        "ended-P1#125"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "ifs-P7",
+      "input_hashes": [
+        "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+        "fdccb337210c68817d5171402fc5c2876add40da45a0f67f17f8a057beaf4ea8"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 2,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "ifs-P7#121",
+        "ifs-P7#126"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "borrow-p5",
+      "input_hashes": [
+        "21696846e350d4e2640ef5c986c182e8bd47c1387f519a1ff92249a50e798e8d",
+        "8fd59d7c96fff4580aaa96714c72ab841963174fa76e966a6ad6bd2ae2d288c0"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 2,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "borrow-p5#134",
+        "borrow-p5#144"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "untangle-slow",
+      "input_hashes": [
+        "44ca1f6a68e91c10cefccc59ac25400d4205bbd1471028c70fd73a05ac5bcbf4",
+        "76c3696f7d34fd1884532322bdb1420c306995f35c624547901e0f7be8ccbbaf",
+        "b13560fd60561b946a424dfffe7bf16ddc547738930b2a43472cd5ee330eceab"
+      ],
+      "distinct_inputs": 3,
+      "exact_texts_available_in_recent_join": 3,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "untangle-slow#146",
+        "untangle-slow#150",
+        "untangle-slow#151"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "cut-97.8",
+      "input_hashes": [
+        "3f3d189e2dd81a705354b5ea79d156e780d0d19caa8c13b37cd76ac28c6672a1",
+        "44202f65ebd0c2ba33e057edb273438b3f34240af1443f53bc0444d121bfa3fe",
+        "a5b447ccc099fdfb3248e1be256e5fd2cd1d248733612a2b07b362a6ad7c99cd"
+      ],
+      "distinct_inputs": 3,
+      "exact_texts_available_in_recent_join": 3,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "cut-97.8#158",
+        "cut-97.8#171",
+        "cut-97.8#194"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "cut-97.12",
+      "input_hashes": [
+        "4db638e71a4e4d6f80c8cce6da685b39098f10d73580dc30ed786a325593f3fb",
+        "ec418f06054b3969cf1e0d8f4b68a2d2b9a56b245009c1dd8e04d5130e8b0442",
+        "f25cfc61bf02db7144ed8fbd68d57011abebb63c2524e1346d9fcb49bbc2c943"
+      ],
+      "distinct_inputs": 3,
+      "exact_texts_available_in_recent_join": 3,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "cut-97.12#161",
+        "cut-97.12#172",
+        "cut-97.12#196"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "cut-98.2",
+      "input_hashes": [
+        "4e557aa349437b92fdf2f0c65e857fc0e0c4a6a2f148840383516ec4e5790821",
+        "feb17cfba8f9cf935a01720cec84a0f7d467a54ad890d7537e19b0b9d32f906f"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 2,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "cut-98.2#165",
+        "cut-98.2#173"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "cut-98.7",
+      "input_hashes": [
+        "010b44a9fecbe50ca83a5ffe483711bfa81f8388d0c2527df851d54428e84c3b",
+        "d690aed8d291878f8c8dc98ec236b30e143e70ad8e40eeb12a03f6e07f6b278a",
+        "f217e1bc868fe3142c3e3a04198820e800a479cb43daf975a1cdfb3da44de097"
+      ],
+      "distinct_inputs": 3,
+      "exact_texts_available_in_recent_join": 3,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "cut-98.7#168",
+        "cut-98.7#174",
+        "cut-98.7#195"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-child-therapy",
+      "ledger_lineage": "cut-98.9",
+      "input_hashes": [
+        "a6f0f4e1047de5778ccde80d3317c72e1633b554a4e9c5599452287c139b0005",
+        "e843ca5ab4264f11c8561ff310cae2d01c9ed42c5076c8247cda2e53fa9cbc47"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 2,
+      "source_ledger": "articles/inner-child-therapy/tools/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "cut-98.9#169",
+        "cut-98.9#203"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-signal",
+      "ledger_lineage": "HG15-p9",
+      "input_hashes": [
+        "e2a7669aff449e5d463753aa9ad6f80870b1784115def239129bdebf913b081e",
+        "faadb6e364f9990dc7884e8ddbc7fbaf0a3b66f206b39ae693da7652af8eef9e"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 0,
+      "source_ledger": "articles/inner-signal/humanize/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "HG15-p9#5",
+        "HG15-p9#13"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-signal",
+      "ledger_lineage": "HG35-p13",
+      "input_hashes": [
+        "31582ab9a89a16868a4577a8265ef380b5510e848cfe2752a8ccabf64ccf3092",
+        "fd731a46b244cddb05d28574d39f9bf888c7defbb802bf628edebceaec2b9191"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 0,
+      "source_ledger": "articles/inner-signal/humanize/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "HG35-p13#8",
+        "HG35-p13#14"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "inner-signal",
+      "ledger_lineage": "HG17-B306",
+      "input_hashes": [
+        "0582e76475d1f7dbf427f6efc364e1711d6e15d6496c2fb13e80a544b5b2660e",
+        "0b6aa86e8d573ecba5b1fe979e44d514c8842128ae8d2bb92392a898934ac435",
+        "e97e1bc328080d18a219d7793d49e64f0437e32093e3da22c899685ac524e36b",
+        "f684236b6d4c45c184f33d9b19a38861de8f6bb3f23f7770b0040f3e22a43804"
+      ],
+      "distinct_inputs": 4,
+      "exact_texts_available_in_recent_join": 0,
+      "source_ledger": "articles/inner-signal/humanize/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "HG17-B306#43",
+        "HG17-B306#45",
+        "HG17-B306#49",
+        "HG17-B306#51"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "nibbana",
+      "ledger_lineage": "NB-P92",
+      "input_hashes": [
+        "7a28c5435e930d57d8f199a7f3108aa22bf0835e55f1cb711040b854bf4f84cc",
+        "a56a806772aa48061298c19b859a32869ae7ab397cf24954e27125fb98f75012",
+        "fd72210e97cb94dd2a07a1a2d7d3372868e2ce4bf58e979747ded8a8c919720b"
+      ],
+      "distinct_inputs": 3,
+      "exact_texts_available_in_recent_join": 0,
+      "source_ledger": "articles/nibbana/humanize/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "NB-P92#2",
+        "NB-P92#10",
+        "NB-P92#16"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "nibbana",
+      "ledger_lineage": "NB-P134",
+      "input_hashes": [
+        "047a345f3eed238f4d84c61907999417d7b86fa71fc0b1bac176d6e980ffb447",
+        "c21631b5bb24bf80438b5b12179ffd459d28cdeb59cb4678547f6671b8bd3ba4"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 0,
+      "source_ledger": "articles/nibbana/humanize/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "NB-P134#3",
+        "NB-P134#11"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "nibbana",
+      "ledger_lineage": "NB-P165",
+      "input_hashes": [
+        "2afc35d81c2ccf2a40f637067a214f0c224a847f959246f308dd5b1faa8d5563",
+        "57842ebc50670cb031a64a963524e4a2cc0284a66a84a044ca00464c4776f5d9",
+        "ef1e3473b482adbf978c74ec672b1a7cb036b65dfb6c9f4635aac14dbb7fc98e"
+      ],
+      "distinct_inputs": 3,
+      "exact_texts_available_in_recent_join": 0,
+      "source_ledger": "articles/nibbana/humanize/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "NB-P165#4",
+        "NB-P165#12",
+        "NB-P165#17"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "nibbana",
+      "ledger_lineage": "NB-P228",
+      "input_hashes": [
+        "445732eacdb1f6388a81eb4955363fe5d7f388d081feee1286e4c66202f1760f",
+        "450ff066458a570d236c80d70416752fd600f3ba34a17da7221793b03bd68d67",
+        "c86c1b387e0344ed95cfabd70fe16b0a996f7f34766c961ce8ced05ad0715491"
+      ],
+      "distinct_inputs": 3,
+      "exact_texts_available_in_recent_join": 0,
+      "source_ledger": "articles/nibbana/humanize/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "NB-P228#6",
+        "NB-P228#22",
+        "NB-P228#23"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "nibbana",
+      "ledger_lineage": "NB-P230",
+      "input_hashes": [
+        "16050f00fe383141c5a7d8951cea187fdc8a3525ef6fbf679f09b682d1582375",
+        "62054d8c775a78cb3bcd210e2d79c87e67bfbf69196661507897362723c4ebcc",
+        "edba36ff26537230b4dd5301b089d4a341202898f2bb7b30c1941042e81b2f33"
+      ],
+      "distinct_inputs": 3,
+      "exact_texts_available_in_recent_join": 0,
+      "source_ledger": "articles/nibbana/humanize/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "NB-P230#7",
+        "NB-P230#13",
+        "NB-P230#18"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    },
+    {
+      "lane": "nibbana",
+      "ledger_lineage": "NB-P237",
+      "input_hashes": [
+        "5d4ddf73b04fa3640d7d14561fdf5120f8ad40cd479c9b4ce6ea5d9e1a008552",
+        "b9501c01973e01a6a5469cd3038df3e8acb6eaffc22637ff81e7674238122371"
+      ],
+      "distinct_inputs": 2,
+      "exact_texts_available_in_recent_join": 0,
+      "source_ledger": "articles/nibbana/humanize/pangram-ledger.jsonl",
+      "source_prediction_ids": [
+        "NB-P237#8",
+        "NB-P237#15"
+      ],
+      "semantic_family_independence": "NOT_YET_ADJUDICATED",
+      "alignment": "NOT_YET_ADJUDICATED",
+      "selection_note": "Included by paragraph scope and multiple distinct hashes; detector outcomes were not used for this inclusion rule."
+    }
+  ],
+  "limitation": "Ledger lineages are not automatically independent semantic families. Exact source texts and protected functions need alignment review. No treatment assignment, validation split or detector effect estimate is claimed.",
+  "new_detector_calls": 0
+}
