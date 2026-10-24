@@ -1,0 +1,104 @@
+{
+  "schema": "fresh30-real-separated-context-smoke-v1",
+  "created": "2026-10-24",
+  "status": "PILOT_DESIGNED_NOT_EXECUTED",
+  "cases": [
+    "T05",
+    "T09",
+    "T13"
+  ],
+  "selection_pre_outcome": "One medium, one weak, one strong teaching match from different articles, chosen before any experimental outputs; not selected for forecast detector success.",
+  "model": "sonnet",
+  "effort": "medium",
+  "max_turns": 1,
+  "tools": "none",
+  "session_persistence": "disabled",
+  "settings": "hooks disabled, setting sources none",
+  "generate_one_baseline_per_case": true,
+  "baseline_from_semantic_dossier_not_source_wording": true,
+  "arms": {
+    "A": "shared exact baseline, meaning dossier, no teaching card",
+    "B": "same baseline/dossier plus one preselected literal teaching card"
+  },
+  "order": {
+    "T05": [
+      "A",
+      "B"
+    ],
+    "T09": [
+      "B",
+      "A"
+    ],
+    "T13": [
+      "A",
+      "B"
+    ]
+  },
+  "fresh_process_for_each_call": true,
+  "pangram_calls_planned_for_smoke": 0,
+  "usage_accounting": "Record actual CLI model, tokens when reported, calls and errors; no retry or post-result repair in primary.",
+  "semantic_gold": "Exact COHORT.json source paragraphs are withheld from writer and passed to a separate fidelity evaluator only.",
+  "source_dossiers": {
+    "T05": {
+      "voice": "first person, reflective",
+      "facts": [
+        "Some difference in partner maturity is normal; extremes can be harmful.",
+        "The narrator describes an observation across three of his own reference relationships, not a universal rule.",
+        "At extremes, one partner may always take the child role while the other is always therapist, guru, doctor, or dad; the imbalance can provoke backlash or a pendulum reversal.",
+        "When the narrator became consistently responsible, he also found himself held responsible for everything that went wrong.",
+        "Clinginess and jealousy accompanied that dynamic, from the narrator's perspective."
+      ],
+      "restrictions": [
+        "Do not invent a partner name, diagnosis, crime or chronology.",
+        "Do not reduce the comparison to a slogan or assert a universal scientific law."
+      ]
+    },
+    "T09": {
+      "voice": "argument about practical community finance",
+      "facts": [
+        "In an intentional community, employment outside the group changes more than its income; it adds outside schedules, status, social worlds, loyalties, and consumption expectations.",
+        "At an early stage before a full common purse, an outside earner ought to contribute an agreed share.",
+        "Outside money must not buy exemption from normal communal work or extra political power.",
+        "The group has to notice when outside jobs drain the people and skills needed to build shared livelihoods.",
+        "Otherwise a supposedly money-free commune can remain effectively dependent on the cash economy, closer to a dormitory than a common purse."
+      ],
+      "restrictions": [
+        "Do not add amounts, specific laws, examples or policies absent from the source.",
+        "Retain the distinction between cash interface and internal communal power."
+      ]
+    },
+    "T13": {
+      "voice": "direct but non-dogmatic guide",
+      "facts": [
+        "For some people, grieving may open into warmth, connection or a bodily experience of being held by the universe.",
+        "That is an experience; it does not establish a particular physiological mechanism.",
+        "Love or receiving care may also uncover grief for earlier missing care, rather than always reducing sadness.",
+        "That reaction does not in itself prove that love failed.",
+        "Continue only when the person can stay present and choose; more tears alone are not evidence of more healing."
+      ],
+      "restrictions": [
+        "Do not assert that any of these experiences is universal or medically verified.",
+        "Retain voluntariness and uncertainty; do not add treatment claims or quantities."
+      ]
+    }
+  },
+  "prompt_contract": {
+    "baseline": "Write one clear, earnest paragraph of 70–130 words from supplied facts, first person only when specified, with no source prose supplied. No deliberate AI tells, invented case details or meta commentary. Return plain text only.",
+    "revision": "You receive a model-written paragraph and the protected source fact/function list. Make one faithful first revision that reads naturally, or return unchanged if already appropriate. Preserve specific facts and rhetorical distinctions. No extra facts, fabricated voice, padding or forced sentence template. Return plain text only.",
+    "evaluator": "As a separately invoked context, compare the registered source paragraph and two anonymous candidate versions. Report preserved/lost/added source units, style/naturalness distinction, and confidence, without Pangram or arm identity. Do not endorse truth of source claims."
+  },
+  "stop_gates": [
+    "If CLI unavailable, stop without repeating transport or switching providers.",
+    "If baseline drops protected meaning, mark it failed; no hidden replacement.",
+    "If evaluator observes important meaning loss, retain both outputs but do not run Pangram on them.",
+    "Pilot smoke is diagnostic and not a three-case causal test of example utility.",
+    "No model weights, Pangram credentials or user secrets stored in public GitHub."
+  ],
+  "source_artifacts": [
+    "COHORT.json",
+    "TEACHING.json",
+    "MATCH-QUALITY.json",
+    "EVALUATION-CONTRACT.md"
+  ],
+  "results": null
+}
