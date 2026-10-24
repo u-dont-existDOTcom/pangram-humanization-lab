@@ -1572,6 +1572,17 @@
       "source_path": "state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json",
       "source_ref": "18f96cb166e8c0122a0e4d36c5a6d8f7fc9a6bf2",
       "source_sha256": "c8eab53606cae810dfe5762badd55733362207c8b44a36e1eac523c0227037db"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Read-only inventory found 20 multi-input paragraph ledger lineages across Inner Child, Inner Signal and Nibbana; 11 have two or more exact texts in the current recent-result join. These are candidate groups, not 30 independent aligned pairs.",
+      "id": "L-355bee50b3-01",
+      "promoted_to": [],
+      "reason": "Mechanical lineage grouping; semantic independence and preservation have not been adjudicated. Outcomes were not used for inclusion, and no new detector calls were made.",
+      "recorded_at_utc": "2026-10-24T19:52:42.983951+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/CANDIDATE-INVENTORY.json",
+      "source_ref": "0b14dda2c35c9c1c0f573b6047c023acf2af6c56",
+      "source_sha256": "355bee50b3e54f777b7a70a0f500e4561a51c2edd2f1b158fc06eab2fc2cded5"
     }
   ],
   "schema_version": 1
