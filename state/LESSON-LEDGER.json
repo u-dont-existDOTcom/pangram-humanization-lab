@@ -1297,6 +1297,20 @@
       "source_path": "state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json",
       "source_ref": "18f96cb166e8c0122a0e4d36c5a6d8f7fc9a6bf2",
       "source_sha256": "c8eab53606cae810dfe5762badd55733362207c8b44a36e1eac523c0227037db"
+    },
+    {
+      "disposition": "promoted",
+      "finding": "Owner-directed research workflow correction: a single changed paragraph does not establish general sufficiency or uselessness; test conditional benefits across distinct matched passage families and preserve humor/non-spatial meaning.",
+      "id": "L-df894dd157-02",
+      "promoted_to": [
+        "state/LESSON-INDEX.md",
+        "state/WORKING-LESSONS.md"
+      ],
+      "reason": "Promotion is the direct owner operational instruction, not an empirically validated detector rule or production skill.",
+      "recorded_at_utc": "2026-10-24T19:47:16.165739+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/README.md",
+      "source_ref": "8131659fcb15afe58805550f3535e0a92464ba68",
+      "source_sha256": "df894dd157cb4e32b481bec673b52ed48751b835836760b3817cbf10801d8390"
     }
   ],
   "schema_version": 1

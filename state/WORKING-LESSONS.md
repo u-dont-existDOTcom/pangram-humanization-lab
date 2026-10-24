@@ -392,3 +392,7 @@ Therefore:
 Claude Code CLI exists with low/medium/high/xhigh/max controls but was unauthenticated during this test. Its effort ladder must be calibrated separately after re-login; OpenRouter Opus effort results cannot be transferred mechanically to the CLI route.
 
 Exact evidence: `state/generation/global-tell-model-comparison-20260923/CODEX-CLI-XHIGH-RESULT.md`.
+<!-- closeout-request:owner-conditional-study-policy-20261024 -->
+## Owner correction: conditional evidence, humor and fidelity (2026-10-24)
+
+A local edit may help while other interacting features keep a paragraph failing. Do not accept/reject its general utility from one second-case pass or non-pass. For research transfer, compare matched edits across varied distinct passage families (owner example: roughly 30 pairs), record gains, harms and no-flips, and preserve source/context boundaries. Thirty is pilot guidance, not a statistical guarantee. Keep owner quality, fidelity and detector outcome separate. The thank-you repeat carried a joke and the emoji; removing it was owner-rejected despite a detector improvement. Changing belonging beyond place into somewhere to belong lost meaning despite smoother prose. Exact owner feedback and reauthoring are in state/experiments/owner-conditional-learning-correction-20261024/. No new detector test or fresh generator transfer was performed.
