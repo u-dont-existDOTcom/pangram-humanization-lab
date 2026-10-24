@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "article-specific",
+  "finding": "Original uploaded owner feedback is retained verbatim. Envy-context B is preferred with meaning preserved; thank-you B is rejected for humor loss; belonging B is smoother but fidelity-rejected. Owner's new rewrite has an owner-reported pass only.",
+  "ledger_entry_ids": [
+    "L-76999d56f0-01"
+  ],
+  "processed_at_utc": "2026-10-24T19:39:47.677153+00:00",
+  "promoted_to": [],
+  "reason": "Direct editorial authority for these exact comparisons; not general detector causality or verified authorship.",
   "request_id": "owner-feedback-three-comparisons-20261024",
+  "schema_version": 1,
   "source_path": "state/experiments/owner-conditional-learning-correction-20261024/OWNER-ANSWERS.json",
   "source_ref": "51a6384dc54ad96aa2f1a3cc74d2c0b0b42326a2",
   "source_sha256": "76999d56f05d17acd2b7fd6c7e7dccd95cde7a45e9d665e9758aa4d459cd55d9",
-  "finding": "Original uploaded owner feedback is retained verbatim. Envy-context B is preferred with meaning preserved; thank-you B is rejected for humor loss; belonging B is smoother but fidelity-rejected. Owner's new rewrite has an owner-reported pass only.",
-  "disposition": "article-specific",
-  "reason": "Direct editorial authority for these exact comparisons; not general detector causality or verified authorship.",
-  "promoted_to": []
+  "status": "processed"
 }
