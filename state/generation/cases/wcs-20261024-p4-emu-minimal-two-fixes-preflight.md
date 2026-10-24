@@ -1,0 +1,11 @@
+# P4 diagnostic-driven Emulate two-clause repair: pre-detector freezing
+
+Date 2026-10-24. Emulate raw P4 SHA 949dea8825807b615bd008315d0bf7d74be01983169499f1d43b31941377f2e7 was **100% Human** in Pangram GUI 4.1 alone, albeit subject to the short-text “Possibly human” label. Both GPT-authored P4 rewrites were **100% Possibly AI** in solo Pangram, and original owner P4 was Human solo but flagged as the sole AI window in a 504-word context section.
+The raw Emulate text has two substantive errors: (1) “you are failing to bring” assigns blame and generalizes the work; (2) “try something small to support the work” does not clearly direct applying the care outside the session.
+**Exact two edits only, all other bytes unchanged:**
+1. “you are failing to bring the work out into the world with you” → “you haven't brought what you did for your little one out into the world with you yet”
+2. “Try something small to support the work you did with your little one in session.” → “Try a tiny bit of it out here.”
+The resulting 91-word P4 candidate has SHA-256 `9670c097af0ec10eefc08502819abe9a4db71d628843a392c095efbab577bcd1`.
+Protected meaning forward/reverse: good session followed days later by skipping lunch and people-pleasing; author recommends NOT going deeper next session; author *suspects* work caring for little one hasn't made it into everyday life; try a tiny piece of that same practice outside, illustrated by texting friend rough day instead of “fine.” No additional anecdote, therapy claim, or accusation. Both corrections restore source fidelity while retaining Emulate’s original syntactic architecture, including awkward and idiosyncratic roughness.
+**Prediction before Pangram**: Human more likely than AI in isolation based on raw Emulate result and only two clause repairs; this is not independent causal identification, since 2 edits at once and the detector is contextual. A context-level certification would still be required if it passes solo.
+Production/experimental count: P4 candidate A, candidate B, raw Emulate diagnostic, now candidate C. This is a structurally different preservation method, not the third GPT rephrasing. Stop if this repeats the same failure with no clearer local cause; keep older successes and failures in scorecard.
