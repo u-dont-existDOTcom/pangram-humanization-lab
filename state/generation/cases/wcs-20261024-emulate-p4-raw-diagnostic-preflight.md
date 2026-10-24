@@ -1,0 +1,8 @@
+# Emulate P4 raw diagnostic control — 2026-10-24
+
+The owner explicitly requested learning what exactly in Emulate's writing makes it pass Pangram, not to trust its meaning. This one test is **detector-method research only** and carries no article-insertion authority.
+Input: Emulate output #1 for P4, exact UTF-8 SHA-256 `949dea8825807b615bd008315d0bf7d74be01983169499f1d43b31941377f2e7`, 94 input/output whitespace words in the raw Emulate output, saved outside repository.
+**Known semantic problems:** falsely accuses the reader of "failing to bring" work into ordinary life; generic "the work out into the world"; need to preserve tentative hypothesis without blame; the person's care for their little one should transfer to everyday behavior, with exact friend-text example, not just vague "support the work." Emulate's "slipping back into skipping" is awkward, and might affect Joel's reading judgment.
+Two GPT-authored P4 repair attempts were individually **AI** on Pangram 4.1; owner original P4 was reportedly Human alone but AI when appended to the section. A fresh Claude Opus attempt mostly repeated the existing AI narrative pattern and was editorially rejected before Pangram.
+**Research hypothesis/prediction before call:** Raw Emulate P4 is more likely to be Pangram Human alone than the GPT-repaired alternatives, despite its semantic mistakes. If it passes, compare sentence/clause shape and restore only the exact wrong meaning without replacing all syntax. If it fails, do not take Emulate style as a reliable substrate on this target; stop this method. One Pangram call only, not an invitation to repeat.
+This is not a production-worthy candidate, no source claim or article text will be promoted from a Pangram result.
