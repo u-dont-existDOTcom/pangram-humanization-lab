@@ -1,0 +1,56 @@
+{
+  "H-SOM-A": {
+    "target": "H-SOM",
+    "arm": "A",
+    "sha256": "6ecfa7f28d8cbefd3150d29dba35543f0dec60ba1ca568a365f19955a65fff9b",
+    "words": 95,
+    "text": "Your body can keep reacting to trauma after the danger has passed, even when you know you’re safe. With complex or developmental trauma, working directly on the deepest memory can be overwhelming, so a gradual approach may be enough. Buddhist nun Pema Chodron calls this a “feather touch”; Peter Levine, the founder of Somatic Experiencing, calls gentle work around the edges “pendulation.” The same limit shows up in inner-child therapy: you may know what the younger part needs, yet enter the child-state so completely that you have too little adult perspective left to provide it.",
+    "model_log": "model: gpt-6.1-sol",
+    "possible_tool_log_lines": []
+  },
+  "H-SOM-B": {
+    "target": "H-SOM",
+    "arm": "B",
+    "sha256": "1cc65c38c2719a54ad741ec4d148b5bc2bc2453c6ae97dbaf58c71df2bac313c",
+    "words": 96,
+    "text": "You can know you’re safe after the danger has passed and still have physical reactions to trauma. With complex or developmental trauma, working directly on the deepest memory can be overwhelming, so a gradual approach may be enough. Buddhist nun Pema Chodron calls it a “feather touch”; Peter Levine, the founder of Somatic Experiencing, calls gentle work around the edges “pendulation.” Inner-child therapy can bring you up against the same limit: knowing what the younger part needs doesn’t mean you can provide it if you enter the child-state so fully that too little adult perspective remains.",
+    "model_log": "model: gpt-6.1-sol",
+    "possible_tool_log_lines": []
+  },
+  "H-SOM-C": {
+    "target": "H-SOM",
+    "arm": "C",
+    "sha256": "18d0845a33c83b1efbe5aad7cd16fc4c9736649fab480e310e08d9061368c20e",
+    "words": 102,
+    "text": "You can know you’re safe and still have your body react to danger that has already passed. With complex or developmental trauma, going straight to the deepest memory can be overwhelming, so it may be enough to approach it gradually, with what Buddhist nun Pema Chodron calls a “feather touch.” Peter Levine, the founder of Somatic Experiencing, calls gentle work around the edges “pendulation.” You can run into the same limit in inner-child therapy when you know what your younger part needs but get so caught up in being that child that you have too little adult perspective left to give it.",
+    "model_log": "model: gpt-6.1-sol",
+    "possible_tool_log_lines": []
+  },
+  "H-CHICKEN-C": {
+    "target": "H-CHICKEN",
+    "arm": "C",
+    "sha256": "97e11aea6c384c5fddc623f65133892ee1b0c4c63f3a78480c1c0450e514ef1a",
+    "words": 65,
+    "text": "But what if you’re so far inside the child-state that you can’t become the adult? That’s the chicken-and-egg problem here, because this is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or the urge to get away is running the whole thing.",
+    "model_log": "model: gpt-6.1-sol",
+    "possible_tool_log_lines": []
+  },
+  "H-CHICKEN-B": {
+    "target": "H-CHICKEN",
+    "arm": "B",
+    "sha256": "a5da334f38594f7502137b28cd4d5888d5e7a506139a471c87abe0d54e60b54a",
+    "words": 69,
+    "text": "But that leaves a chicken-and-egg problem: if you’re so far inside the child-state that you can’t become the adult, how do you do this? It’s much easier when you already have access to one of those adult roles. Without that access, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is still running the whole thing.",
+    "model_log": "model: gpt-6.1-sol",
+    "possible_tool_log_lines": []
+  },
+  "H-CHICKEN-A": {
+    "target": "H-CHICKEN",
+    "arm": "A",
+    "sha256": "a55fee3cb020576a6f879f57092d779ed69b5e97cacce4862c8b908ecf1bcc1a",
+    "words": 64,
+    "text": "But that leaves a chicken-and-egg problem. What if you’re so deep in the child-state that you can’t become the adult? This is much easier when you can already step into one of those adult roles. If you can’t, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away runs the whole show.",
+    "model_log": "model: gpt-6.1-sol",
+    "possible_tool_log_lines": []
+  }
+}
