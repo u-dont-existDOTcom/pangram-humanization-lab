@@ -1528,6 +1528,17 @@
       "source_path": "state/experiments/recurrence-counterexamples-next-step-20261024/README.md",
       "source_ref": "af2cd8df8a395a39c6c1140a52f913b537cfbeb5",
       "source_sha256": "373b770d9f6e6632e553bfbd32cd3c7f16dbe3a014df6b7edc1ef60385de2759"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Joel corrects the single-pair transfer method: interactions require multi-passage paired evaluation of conditional benefits, not treating one second-case pass or non-pass as proof. The returned ratings also reject a humor-losing edit and a non-spatial-to-spatial meaning change. Exact owner source, detector labels and prospective design remain separate.",
+      "id": "L-df894dd157-01",
+      "promoted_to": [],
+      "reason": "Direct owner editorial/method correction. The roughly 30-family comparison is proposed, not executed; no new detector or independent transfer evidence is claimed.",
+      "recorded_at_utc": "2026-10-24T19:39:21.835719+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/README.md",
+      "source_ref": "8131659fcb15afe58805550f3535e0a92464ba68",
+      "source_sha256": "df894dd157cb4e32b481bec673b52ed48751b835836760b3817cbf10801d8390"
     }
   ],
   "schema_version": 1
