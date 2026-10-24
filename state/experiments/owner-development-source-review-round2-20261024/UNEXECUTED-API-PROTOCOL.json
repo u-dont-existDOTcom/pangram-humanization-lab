@@ -1,0 +1,129 @@
+{
+  "experiment": "owner-development-controlled-repacking-20261024",
+  "parent": "explanation-development-heldout-20261024",
+  "anchor": "Understand explicit textual differences that predict Pangram outcomes; do not substitute owner style preference or actual authorship.",
+  "owner_authority": "Continue hypothesis-driven research; API only 1–3 paragraphs per submission; no long sections or articles.",
+  "created_utc": "2026-10-24T13:28:46.828203+00:00",
+  "methods": "Three source-family local comparisons, including a two-factor four-cell adjacent-paragraph test. Current Chat predictions; no independent benchmark or reviewer claim. Separate evaluator route was previously blocked and is not retried.",
+  "question": "Does compressing source-supported development into a more coordinated or abstract formulation change labels while keeping claims, examples, imagery and paragraph count?",
+  "hypotheses": [
+    "M: packing either paragraph may be insufficient, while packing both may increase non-Human classification; old evidence mixed wording with changed meanings, so these variants retain the owner example set and causal claim.",
+    "C: packing three cultural actions into one coordinated sentence may make the same causal image less Human-likely. Word count and both metaphors are nearly fixed.",
+    "R: compressing the reader comparison into a single consideration may make its literal causal invitation less Human-likely, even with other claims fixed."
+  ],
+  "primary_outcome": "All returned windows Human versus any non-Human window. Document headline and raw fraction_ai retained separately, not authorship probability.",
+  "secondary": "Paired word-count differences, confidence categories, exact unchanged-context label changes.",
+  "source_records": {
+    "M": {
+      "path": "state/generation/positive-calibration-20260917/sources/inner-monologue-pair.md",
+      "sha256": "937180f0d145998a05044302ccf5bc7e7f4ad63d5e39173c8ffbd5a8f4297542"
+    },
+    "C": {
+      "path": "state/generation/positive-calibration-20260917/sources/tough-love.md",
+      "sha256": "92e272e43d684fbe536c806175a437c60aca6fe6f6dfa80c8346e3917c327668"
+    },
+    "R": {
+      "path": "state/generation/positive-calibration-20260917/sources/relational-capacity-owner.md",
+      "sha256": "b34c247db8aafbbcbb9727d7f363deff324f123e363258285aa8795ebfbd8ee2"
+    }
+  },
+  "source_limits": {
+    "M": "Historical owner-reported all-Human three-paragraph boundary; not assumed to reproduce under4.1.",
+    "C": "Historical all-Human evidence covers whole section, not this new two-paragraph excerpt.",
+    "R": "Owner called the rewrite human and more useful; that is not an archived detector result."
+  },
+  "preservation": {
+    "M": [
+      "Inner speech need not be spontaneous for intentional wording to be possible; try it.",
+      "Speaking/writing may feel more comfortable than imagined dialogue.",
+      "Drop it when it becomes homework for a nonanswering child.",
+      "A stomach knot or a place one wants to leave can need attention; no answer is necessary to recognize what would be nice for oneself.",
+      "Order varies; feelings can precede thought; thoughts can provoke feelings; hindsight may not resolve order; uncertainty is okay.",
+      "P1 remains byte-identical in all cells; example set is unchanged."
+    ],
+    "C": [
+      "Long learning process and existence of private pathology; favorable environment enables it.",
+      "Culture seals couple and calls it luxurious privacy.",
+      "Sealed room is expected to supply wider-support fresh air: lover/family/community/therapist/etc.",
+      "Predictable damage is blamed privately, like inexplicable mold.",
+      "Myths paragraph remains byte-identical, including the full list and marriage sequence."
+    ],
+    "R": [
+      "Both people may lack certainty about response capacity.",
+      "Past promises inform usefulness of a new promise.",
+      "Reader asked to compare personal recovery time with change caused by an immediate promise.",
+      "Realistic boundary can support another, with high expectations and preparedness for disappointment.",
+      "Only the two-sentence reader-comparison span changes."
+    ]
+  },
+  "intervention_limits": "Operation packages alter wording and syntax together. C minimizes word-count/imagery changes. The comparison tests specific realizations, not a universal law. No new claims, jokes, biographies, examples or deliberate errors are licensed.",
+  "stopping_rule": "Measure the eight frozen cells once or reuse exact current cached results. No tuning after observing outcomes. Additional work requires a genuinely different evidence-backed decision.",
+  "new_api_calls_max": 8,
+  "prior_parent_api_calls": 8,
+  "variants": [
+    {
+      "id": "M00_owner",
+      "sha256": "d4db2938b024b1f96f5ece1a74b6578ba18b1cefc40568ac61df20caadfbebf0",
+      "words": 205,
+      "paragraphs": 3,
+      "p_all_human": 0.8,
+      "forecast": "Human"
+    },
+    {
+      "id": "M10_p2_packed",
+      "sha256": "acbabc66408dfecdf27025a820a97de6c2dc15f2aa6e3dcf04cb086983b0a67e",
+      "words": 190,
+      "paragraphs": 3,
+      "p_all_human": 0.6,
+      "forecast": "Human"
+    },
+    {
+      "id": "M01_p3_packed",
+      "sha256": "0411254b65754dea204088010607d39e3abf942d01f7646e8f47656fddd93745",
+      "words": 197,
+      "paragraphs": 3,
+      "p_all_human": 0.65,
+      "forecast": "Human"
+    },
+    {
+      "id": "M11_both_packed",
+      "sha256": "e003f1d4df7f108d959a3fc68d0caad013e157706ccf946afdcde16986e1ef78",
+      "words": 182,
+      "paragraphs": 3,
+      "p_all_human": 0.35,
+      "forecast": "Not-all-Human"
+    },
+    {
+      "id": "C0_causal_owner",
+      "sha256": "24917d096c84715ec387c612285794522624b4619161a343a53c750c77edcee4",
+      "words": 140,
+      "paragraphs": 2,
+      "p_all_human": 0.8,
+      "forecast": "Human"
+    },
+    {
+      "id": "C1_causal_packed",
+      "sha256": "98f4044109504a43a67400b89783f757ae08e38a36ecdb84beac2aa4017d394d",
+      "words": 137,
+      "paragraphs": 2,
+      "p_all_human": 0.4,
+      "forecast": "Not-all-Human"
+    },
+    {
+      "id": "R0_reader_owner",
+      "sha256": "c82fdae1e45899654476fd85a60fb38ed48337ef56aa810726530fa9cbe49635",
+      "words": 96,
+      "paragraphs": 1,
+      "p_all_human": 0.7,
+      "forecast": "Human"
+    },
+    {
+      "id": "R1_reader_packed",
+      "sha256": "6c3dda69a0ec503b25a51de2eb3675458540922fb181fd4ae1df54b1377d9e16",
+      "words": 90,
+      "paragraphs": 1,
+      "p_all_human": 0.45,
+      "forecast": "Not-all-Human"
+    }
+  ]
+}

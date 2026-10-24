@@ -1,0 +1,1 @@
+The attempted live API execution was blocked by OpenAI safety checks before execution in this continuation. No round2 journal or API-results directory was created. Do not retry or reroute the blocked request. The eight prepared cells are UNEXECUTED, not findings. Prior accepted calls remain eight in the parent study. Offline work may continue from already saved evidence.

@@ -1,0 +1,90 @@
+{
+  "created_utc": "2026-10-24T13:32:09.705003+00:00",
+  "blind_input_sha256": "dc3b02aafda63615aac6bf6c05056c2297fac6f26710f3e6d51c5a02e88867b1",
+  "rubric": {
+    "version": "source-development-rubric-v2",
+    "target": "All returned windows Human, not authorship or preferred style.",
+    "principles": [
+      "Distinguish a necessary next response to the actual situation from generic advice/checklist completion.",
+      "Useful development may approach the same issue from another meaningful angle, including hesitation or complication supplied by the text.",
+      "A list, efficient sentence, metaphor, reassurance or correct logic is not itself a veto.",
+      "Do not treat punctuation, errors, illogic or personal claims as authorship proof.",
+      "Context-dependent safety constraints can be necessary; judge their realization, not their mere presence."
+    ],
+    "limitations": "Same Chat context; archive familiarity; one author and mostly one guide; different ledger lineages/lexical-screened inputs are not guaranteed semantically independent families."
+  },
+  "predictions": [
+    {
+      "id": "U01",
+      "p_all_human": 0.4,
+      "forecast": "Not-all-Human",
+      "reason": "Loss, behavior, obligations and envy are resolved into one compact evaluative instruction; the situation remains fairly generic."
+    },
+    {
+      "id": "U02",
+      "p_all_human": 0.4,
+      "forecast": "Not-all-Human",
+      "reason": "It moves through differentiation, distance, return, permanent exit, permission and a concluding restatement in tidy consecutive steps."
+    },
+    {
+      "id": "U03",
+      "p_all_human": 0.6,
+      "forecast": "Human",
+      "reason": "The practical problem develops into a real conflict: diagnostics during crisis versus near-daily attacks; the final paired caveat remains a risk, not a veto."
+    },
+    {
+      "id": "U04",
+      "p_all_human": 0.35,
+      "forecast": "Not-all-Human",
+      "reason": "The vivid daily-life example still runs through a complete lesson arc ending in the comparative ten-meditations maxim."
+    },
+    {
+      "id": "U05",
+      "p_all_human": 0.4,
+      "forecast": "Not-all-Human",
+      "reason": "This short span packs localization, risk threshold, fallback script and care-redirection into a complete compact prescription."
+    },
+    {
+      "id": "U06",
+      "p_all_human": 0.7,
+      "forecast": "Human",
+      "reason": "The writer revisits confidentiality from changing practical concerns and a particular counterexample; the safety ending has an actual local reason."
+    },
+    {
+      "id": "U07",
+      "p_all_human": 0.25,
+      "forecast": "Not-all-Human",
+      "reason": "Three consecutive sentences each complete a distinct standardized caution or escalation function with little developed local problem."
+    },
+    {
+      "id": "U08",
+      "p_all_human": 0.55,
+      "forecast": "Human",
+      "reason": "The answer may be voice, hunch or grief before advice becomes relevant; some qualifications unfold naturally rather than as a single capability inventory."
+    },
+    {
+      "id": "U09",
+      "p_all_human": 0.35,
+      "forecast": "Not-all-Human",
+      "reason": "A sequence of minimum adult duties, a therapist-booking joke, and trust/warmth/borrowing closes several teaching functions rapidly."
+    },
+    {
+      "id": "U10",
+      "p_all_human": 0.75,
+      "forecast": "Human",
+      "reason": "The quoted response leads to the same live question about feared changes; examples and costs work on that question rather than adding unrelated teaching jobs."
+    },
+    {
+      "id": "U11",
+      "p_all_human": 0.45,
+      "forecast": "Not-all-Human",
+      "reason": "The guide-function explanation and a three-name taxonomy are compact, though the concrete rejection thought gives the function context."
+    },
+    {
+      "id": "U12",
+      "p_all_human": 0.65,
+      "forecast": "Human",
+      "reason": "The text approaches grief from both grieving-into-warmth and being-loved-into-grief, then the limit follows from that experiential question."
+    }
+  ]
+}

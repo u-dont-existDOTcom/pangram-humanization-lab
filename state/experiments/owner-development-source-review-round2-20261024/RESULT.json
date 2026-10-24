@@ -1,0 +1,872 @@
+{
+  "id": "owner-development-source-review-round2-20261024",
+  "status": "OFFLINE_EVALUATION_COMPLETE_LIVE_COMPARISONS_UNEXECUTED",
+  "objective": "Understand explicit textual differences that predict Pangram outcomes, without substituting authorship attribution or owner style preference.",
+  "source_repo_commit": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+  "parent_lab_commit": "607c07a066eed4be14a968928e7151720e3c4174",
+  "offline": {
+    "summary": {
+      "n": 12,
+      "correct": 9,
+      "human_count": 8,
+      "not_all_human_count": 4,
+      "always_human_correct": 8,
+      "always_not_human_correct": 4,
+      "TP": 5,
+      "TN": 4,
+      "FP": 0,
+      "FN": 3,
+      "brier": 0.185625,
+      "constant_half_brier": 0.25,
+      "sample_rate_brier": 0.22222222222222224,
+      "balanced_accuracy": 0.8125,
+      "forecast_sha256": "8a8e08b56f88ba5ebea4d2dc3fb54bde5e9a6a539c8f7aebe364f5832cb8677f",
+      "new_pangram_submissions": 0
+    },
+    "rows": [
+      {
+        "id": "U01",
+        "p_all_human": 0.4,
+        "forecast": "Not-all-Human",
+        "reason": "Loss, behavior, obligations and envy are resolved into one compact evaluative instruction; the situation remains fairly generic.",
+        "source_name": "t99_bb_new2",
+        "lineage": "bb-new2",
+        "text": "Some friends or family really might not like it when you get happier, though. Someone might pull away, or keep dragging you back into the old misery. I’d take that loss seriously, and look at what they do and what you owe them, before deciding it’s envy.",
+        "sha256": "4e3eba91c170dfadc15938e100417578337788faf5d43935db321baa25c87a96",
+        "source_path": "articles/inner-child-therapy/experiments/t99-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t99-api/texts/t99_bb_new2.txt",
+        "human": true,
+        "observed": "Human",
+        "correct": false,
+        "raw_result": {
+          "name": "t99_bb_new2",
+          "sha256": "4e3eba91c170dfadc15938e100417578337788faf5d43935db321baa25c87a96",
+          "words": 47,
+          "headline": "Human Written",
+          "prediction_short": "Human",
+          "fraction_ai": 1.1682168191561449e-21,
+          "fraction_ai_assisted": 8.000585595308083e-35,
+          "fraction_human": 1.0,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/5a276026-12c9-4528-8df4-93ddbf904692",
+          "utc": "2026-10-23T10:42:02Z",
+          "windows": [
+            [
+              "Human Written",
+              "High",
+              49,
+              0,
+              254,
+              "Some friends or family really might not like it when you get happier, though. Someone might pull away, or keep dragging you back into the old misery. I’d take that loss seriously, and look at what they do and what you owe them, before deciding it’s envy."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U02",
+        "p_all_human": 0.4,
+        "forecast": "Not-all-Human",
+        "reason": "It moves through differentiation, distance, return, permanent exit, permission and a concluding restatement in tidy consecutive steps.",
+        "source_name": "t102b_untangle_old",
+        "lineage": "untangle-slow",
+        "text": "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference.",
+        "sha256": "76c3696f7d34fd1884532322bdb1420c306995f35c624547901e0f7be8ccbbaf",
+        "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-2.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t102-api/texts/t102b_untangle_old.txt",
+        "human": true,
+        "observed": "Human",
+        "correct": false,
+        "raw_result": {
+          "name": "t102b_untangle_old",
+          "sha256": "76c3696f7d34fd1884532322bdb1420c306995f35c624547901e0f7be8ccbbaf",
+          "words": 74,
+          "headline": "Human Written",
+          "prediction_short": "Human",
+          "fraction_ai": 6.001946530886926e-05,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 0.9999399781227112,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/65c4489e-c342-4cb4-bd9d-0197cbdb5b8c",
+          "utc": "2026-10-23T18:15:23Z",
+          "windows": [
+            [
+              "Human Written",
+              "Medium",
+              10,
+              0,
+              56,
+              "Differentiation is slow, and it goes on your whole life."
+            ],
+            [
+              "Human Written",
+              "High",
+              24,
+              56,
+              181,
+              " If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary."
+            ],
+            [
+              "Human Written",
+              "Medium",
+              8,
+              181,
+              229,
+              " Some people come back later on different terms."
+            ],
+            [
+              "Human Written",
+              "Low",
+              35,
+              229,
+              431,
+              " Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U03",
+        "p_all_human": 0.6,
+        "forecast": "Human",
+        "reason": "The practical problem develops into a real conflict: diagnostics during crisis versus near-daily attacks; the final paired caveat remains a risk, not a veto.",
+        "source_name": "t102_pain_p",
+        "lineage": "pain-diagnostics",
+        "text": "And when the symptoms come and go randomly, the best time to get diagnostics done could be right at the actual time of the crisis, rather than waiting until you feel well enough to make an appointment, and they may be able to treat it while it’s happening. But what if the attacks come almost every day? You can’t move into the ER. And normal test results don’t prove the pain is imaginary, just as a treatment that helps doesn’t explain what’s causing it.",
+        "sha256": "831db62c871688ecf1612b100892598690127faf68fb6333b572d85f07b12c6d",
+        "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t102-api/texts/t102_pain_p.txt",
+        "human": true,
+        "observed": "Human",
+        "correct": true,
+        "raw_result": {
+          "name": "t102_pain_p",
+          "sha256": "831db62c871688ecf1612b100892598690127faf68fb6333b572d85f07b12c6d",
+          "words": 84,
+          "headline": "Human Written",
+          "prediction_short": "Human",
+          "fraction_ai": 2.55854804009914e-09,
+          "fraction_ai_assisted": 1.2311196247365183e-25,
+          "fraction_human": 1.0,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/6f6a0142-c329-4046-bfa8-58bf1142d607",
+          "utc": "2026-10-23T18:10:57Z",
+          "windows": [
+            [
+              "Human Written",
+              "High",
+              58,
+              0,
+              303,
+              "And when the symptoms come and go randomly, the best time to get diagnostics done could be right at the actual time of the crisis, rather than waiting until you feel well enough to make an appointment, and they may be able to treat it while it’s happening. But what if the attacks come almost every day?"
+            ],
+            [
+              "Human Written",
+              "Medium",
+              7,
+              303,
+              331,
+              " You can’t move into the ER."
+            ],
+            [
+              "Human Written",
+              "Low",
+              24,
+              331,
+              456,
+              " And normal test results don’t prove the pain is imaginary, just as a treatment that helps doesn’t explain what’s causing it."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U04",
+        "p_all_human": 0.35,
+        "forecast": "Not-all-Human",
+        "reason": "The vivid daily-life example still runs through a complete lesson arc ending in the comparative ten-meditations maxim.",
+        "source_name": "t103_98_7",
+        "lineage": "cut-98.7",
+        "text": "Sometimes the session itself goes really well. You feel real care for your little one and say exactly what they needed to hear. And a few days later you’re skipping lunch and saying yes to everything again. A lot of people’s first guess is that they didn’t go deep enough. I don’t think that’s it, though, and I don’t think this one failed either. Maybe the grown-up just hasn’t come out of the exercise with you yet. Whatever you did for your little one in there, I’d try a tiny bit of it out here, like texting a friend that you’re having a rough day instead of saying you’re fine. That can honestly be harder than the meditation was. One small thing like that can teach your little one more than ten more good meditations.",
+        "sha256": "010b44a9fecbe50ca83a5ffe483711bfa81f8388d0c2527df851d54428e84c3b",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_98_7.txt",
+        "human": false,
+        "observed": "Not-all-Human",
+        "correct": true,
+        "raw_result": {
+          "name": "t103_98_7",
+          "sha256": "010b44a9fecbe50ca83a5ffe483711bfa81f8388d0c2527df851d54428e84c3b",
+          "words": 135,
+          "headline": "AI Detected",
+          "prediction_short": "AI",
+          "fraction_ai": 0.9612295627593994,
+          "fraction_ai_assisted": 6.338365014358467e-16,
+          "fraction_human": 0.03877044469118118,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/92c0822d-5e94-4ed7-b44a-b3c1c9e785d5",
+          "utc": "2026-10-23T22:01:07Z",
+          "windows": [
+            [
+              "AI-Generated",
+              "Low",
+              23,
+              0,
+              127,
+              "Sometimes the session itself goes really well. You feel real care for your little one and say exactly what they needed to hear."
+            ],
+            [
+              "AI-Generated",
+              "Low",
+              15,
+              127,
+              206,
+              " And a few days later you’re skipping lunch and saying yes to everything again."
+            ],
+            [
+              "AI-Generated",
+              "Medium",
+              15,
+              206,
+              272,
+              " A lot of people’s first guess is that they didn’t go deep enough."
+            ],
+            [
+              "AI-Generated",
+              "High",
+              17,
+              272,
+              347,
+              " I don’t think that’s it, though, and I don’t think this one failed either."
+            ],
+            [
+              "AI-Generated",
+              "Medium",
+              15,
+              347,
+              417,
+              " Maybe the grown-up just hasn’t come out of the exercise with you yet."
+            ],
+            [
+              "AI-Generated",
+              "High",
+              36,
+              417,
+              583,
+              " Whatever you did for your little one in there, I’d try a tiny bit of it out here, like texting a friend that you’re having a rough day instead of saying you’re fine."
+            ],
+            [
+              "AI-Generated",
+              "Medium",
+              25,
+              583,
+              725,
+              " That can honestly be harder than the meditation was. One small thing like that can teach your little one more than ten more good meditations."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U05",
+        "p_all_human": 0.4,
+        "forecast": "Not-all-Human",
+        "reason": "This short span packs localization, risk threshold, fallback script and care-redirection into a complete compact prescription.",
+        "source_name": "t103_97_15",
+        "lineage": "cut-97.15",
+        "text": "All of this happens in you, so it doesn’t matter whether they get any of it (nobody’s checking their inbox). And if it starts making you more compulsive, or a bit unreal, so you can’t get back to your life, make it simpler: “I miss you, and I care.” Some of that same care can go to the part of you that’s still here.",
+        "sha256": "d95f088d94ac6921f53f4e41159ca4c29852c90599393f21ffd9ad7d473156cd",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_15.txt",
+        "human": true,
+        "observed": "Human",
+        "correct": false,
+        "raw_result": {
+          "name": "t103_97_15",
+          "sha256": "d95f088d94ac6921f53f4e41159ca4c29852c90599393f21ffd9ad7d473156cd",
+          "words": 64,
+          "headline": "Human Written",
+          "prediction_short": "Human",
+          "fraction_ai": 2.942598702708114e-27,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/00cba5c1-294b-4f65-89ac-db9263c9f49b",
+          "utc": "2026-10-23T22:00:48Z",
+          "windows": [
+            [
+              "Human Written",
+              "High",
+              68,
+              0,
+              317,
+              "All of this happens in you, so it doesn’t matter whether they get any of it (nobody’s checking their inbox). And if it starts making you more compulsive, or a bit unreal, so you can’t get back to your life, make it simpler: “I miss you, and I care.” Some of that same care can go to the part of you that’s still here."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U06",
+        "p_all_human": 0.7,
+        "forecast": "Human",
+        "reason": "The writer revisits confidentiality from changing practical concerns and a particular counterexample; the safety ending has an actual local reason.",
+        "source_name": "t102_sharing_p",
+        "lineage": "sharing-law",
+        "text": "So I’d ask them, before handing over any tricky specifics: “What does the law require you to report?” That’s a normal and expected question. Although personally I wouldn’t even bother with that, because whatever they tell you today, the law can change tomorrow. I’d assume that what you tell won’t be completely confidential, especially if it sounds like something dangerous. You can always rephrase things as a dream narrative to get the emotional content across without triggering alarm bells (although I actually got in trouble with TalkSpace therapy bot even for a dream!). Just don’t hold back a danger that’s happening now from people who can help, and get anyone in danger safe before worrying about the rest. Sometimes telling on yourself is the thing that keeps someone safe, whatever it costs you legally.",
+        "sha256": "3806564437ed8f689c22650ac6103c90b2387061779527c201ddb785e30562ba",
+        "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t102-api/texts/t102_sharing_p.txt",
+        "human": true,
+        "observed": "Human",
+        "correct": true,
+        "raw_result": {
+          "name": "t102_sharing_p",
+          "sha256": "3806564437ed8f689c22650ac6103c90b2387061779527c201ddb785e30562ba",
+          "words": 134,
+          "headline": "Human Written",
+          "prediction_short": "Human",
+          "fraction_ai": 0.0,
+          "fraction_ai_assisted": 0.0,
+          "fraction_human": 1.0,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/7235759d-d2ef-4631-9fe3-f675d8f1818e",
+          "utc": "2026-10-23T18:11:09Z",
+          "windows": [
+            [
+              "Human Written",
+              "High",
+              141,
+              0,
+              815,
+              "So I’d ask them, before handing over any tricky specifics: “What does the law require you to report?” That’s a normal and expected question. Although personally I wouldn’t even bother with that, because whatever they tell you today, the law can change tomorrow. I’d assume that what you tell won’t be completely confidential, especially if it sounds like something dangerous. You can always rephrase things as a dream narrative to get the emotional content across without triggering alarm bells (although I actually got in trouble with TalkSpace therapy bot even for a dream!). Just don’t hold back a danger that’s happening now from people who can help, and get anyone in danger safe before worrying about the rest. Sometimes telling on yourself is the thing that keeps someone safe, whatever it costs you legally."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U07",
+        "p_all_human": 0.25,
+        "forecast": "Not-all-Human",
+        "reason": "Three consecutive sentences each complete a distinct standardized caution or escalation function with little developed local problem.",
+        "source_name": "t103_97_8",
+        "lineage": "cut-97.8",
+        "text": "Milder reactions afterward count as caution signs too, like getting confused or spaced out (dissociating) again and again. Get professional help right away if any of this is severe or risky, and especially if it keeps going or comes back while you’re sober. Don’t suddenly quit a prescribed medicine, or anything your body is dependent on, just because it might be part of the problem; have a doctor help you stop safely.",
+        "sha256": "a5b447ccc099fdfb3248e1be256e5fd2cd1d248733612a2b07b362a6ad7c99cd",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_8.txt",
+        "human": false,
+        "observed": "Not-all-Human",
+        "correct": true,
+        "raw_result": {
+          "name": "t103_97_8",
+          "sha256": "a5b447ccc099fdfb3248e1be256e5fd2cd1d248733612a2b07b362a6ad7c99cd",
+          "words": 72,
+          "headline": "AI Generated",
+          "prediction_short": "AI",
+          "fraction_ai": 0.9999997019767761,
+          "fraction_ai_assisted": 4.8830072067356286e-33,
+          "fraction_human": 3.0255236538323516e-07,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/4b249916-5525-49aa-bbbb-072a3ff3ee8a",
+          "utc": "2026-10-23T21:59:10Z",
+          "windows": [
+            [
+              "AI-Generated",
+              "Medium",
+              44,
+              0,
+              257,
+              "Milder reactions afterward count as caution signs too, like getting confused or spaced out (dissociating) again and again. Get professional help right away if any of this is severe or risky, and especially if it keeps going or comes back while you’re sober."
+            ],
+            [
+              "AI-Generated",
+              "Low",
+              30,
+              257,
+              421,
+              " Don’t suddenly quit a prescribed medicine, or anything your body is dependent on, just because it might be part of the problem; have a doctor help you stop safely."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U08",
+        "p_all_human": 0.55,
+        "forecast": "Human",
+        "reason": "The answer may be voice, hunch or grief before advice becomes relevant; some qualifications unfold naturally rather than as a single capability inventory.",
+        "source_name": "t103_97_5",
+        "lineage": "cut-97.5",
+        "text": "Or if you do get an answer, it could come in different forms, like as a voice or just a hunch. It’s often more like a feeling. Maybe grief or anger. If so just listen and be present for it if that’s what it wants. If it tells you to do something, I’d only do it if it’s loving and leaves you free. It should make sense, too. Even then, anything big or hard to undo can wait until you’re calm and you’ve checked it against what you actually know.",
+        "sha256": "bc29b5d396c4b2659e53d67926134de079de87be87203ab8cfeb4385755f21b6",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_5.txt",
+        "human": true,
+        "observed": "Human",
+        "correct": true,
+        "raw_result": {
+          "name": "t103_97_5",
+          "sha256": "bc29b5d396c4b2659e53d67926134de079de87be87203ab8cfeb4385755f21b6",
+          "words": 90,
+          "headline": "Human Written",
+          "prediction_short": "Human",
+          "fraction_ai": 1.035612961303093e-21,
+          "fraction_ai_assisted": 3.8465634437925443e-38,
+          "fraction_human": 1.0,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/58855ec8-be35-4dea-b55d-1c0573b03fba",
+          "utc": "2026-10-23T21:58:53Z",
+          "windows": [
+            [
+              "Human Written",
+              "High",
+              96,
+              0,
+              445,
+              "Or if you do get an answer, it could come in different forms, like as a voice or just a hunch. It’s often more like a feeling. Maybe grief or anger. If so just listen and be present for it if that’s what it wants. If it tells you to do something, I’d only do it if it’s loving and leaves you free. It should make sense, too. Even then, anything big or hard to undo can wait until you’re calm and you’ve checked it against what you actually know."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U09",
+        "p_all_human": 0.35,
+        "forecast": "Not-all-Human",
+        "reason": "A sequence of minimum adult duties, a therapist-booking joke, and trust/warmth/borrowing closes several teaching functions rapidly.",
+        "source_name": "t102_borrow_p5",
+        "lineage": "borrow-p5",
+        "text": "If the love still isn’t coming, you can at least stop judging your little one. Obviously no insults. If you have advice, let them take it in at their own pace. And don’t expect a thank-you for the session, like they booked it. That’s enough to start being the adult, even if it isn’t enough yet for them to trust you. That takes warmth, and if there isn’t any yet, borrow some.",
+        "sha256": "8fd59d7c96fff4580aaa96714c72ab841963174fa76e966a6ad6bd2ae2d288c0",
+        "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t102-api/texts/t102_borrow_p5.txt",
+        "human": false,
+        "observed": "Not-all-Human",
+        "correct": true,
+        "raw_result": {
+          "name": "t102_borrow_p5",
+          "sha256": "8fd59d7c96fff4580aaa96714c72ab841963174fa76e966a6ad6bd2ae2d288c0",
+          "words": 72,
+          "headline": "AI Generated",
+          "prediction_short": "AI",
+          "fraction_ai": 1.0,
+          "fraction_ai_assisted": 2.3249959824800965e-30,
+          "fraction_human": 1.1265141380487065e-12,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/bf6562e2-577e-4fce-a12e-af98c12c7688",
+          "utc": "2026-10-23T18:10:53Z",
+          "windows": [
+            [
+              "AI-Generated",
+              "High",
+              16,
+              0,
+              78,
+              "If the love still isn’t coming, you can at least stop judging your little one."
+            ],
+            [
+              "AI-Generated",
+              "Medium",
+              3,
+              78,
+              100,
+              " Obviously no insults."
+            ],
+            [
+              "AI-Generated",
+              "High",
+              47,
+              100,
+              317,
+              " If you have advice, let them take it in at their own pace. And don’t expect a thank-you for the session, like they booked it. That’s enough to start being the adult, even if it isn’t enough yet for them to trust you."
+            ],
+            [
+              "AI-Generated",
+              "Medium",
+              12,
+              317,
+              377,
+              " That takes warmth, and if there isn’t any yet, borrow some."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U10",
+        "p_all_human": 0.75,
+        "forecast": "Human",
+        "reason": "The quoted response leads to the same live question about feared changes; examples and costs work on that question rather than adding unrelated teaching jobs.",
+        "source_name": "t103_97_11",
+        "lineage": "cut-97.11",
+        "text": "My father used to tell suicidal people, “Oh, you want to kill yourself? That’s wonderful. Now you can change what you’ve always been too afraid to change in your life, and then see if you still want to end it!” His point wasn’t that dying is wonderful. If everything’s already on the table, what’s the change you still can’t bring yourself to make? Leaving? Quitting? Moving? Telling your family who you really are? Those aren’t free, and you can’t always take them back, but they’re smaller than dying. Look at that life you’ve been afraid to change while you still have a human body.",
+        "sha256": "561868c51637a869871399f952df596b4853cafe55e101ca9be78eb032f0c2d5",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_11.txt",
+        "human": true,
+        "observed": "Human",
+        "correct": true,
+        "raw_result": {
+          "name": "t103_97_11",
+          "sha256": "561868c51637a869871399f952df596b4853cafe55e101ca9be78eb032f0c2d5",
+          "words": 104,
+          "headline": "Human Written",
+          "prediction_short": "Human",
+          "fraction_ai": 1.34854946653995e-10,
+          "fraction_ai_assisted": 1.10680397139018e-11,
+          "fraction_human": 1.0,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/a2967542-d928-47da-b0b3-add8d16a4682",
+          "utc": "2026-10-23T21:59:27Z",
+          "windows": [
+            [
+              "Human Written",
+              "High",
+              13,
+              0,
+              71,
+              "My father used to tell suicidal people, “Oh, you want to kill yourself?"
+            ],
+            [
+              "Human Written",
+              "Medium",
+              3,
+              71,
+              89,
+              " That’s wonderful."
+            ],
+            [
+              "Human Written",
+              "High",
+              34,
+              89,
+              252,
+              " Now you can change what you’ve always been too afraid to change in your life, and then see if you still want to end it!” His point wasn’t that dying is wonderful."
+            ],
+            [
+              "Human Written",
+              "Medium",
+              22,
+              252,
+              375,
+              " If everything’s already on the table, what’s the change you still can’t bring yourself to make? Leaving? Quitting? Moving?"
+            ],
+            [
+              "Human Written",
+              "High",
+              42,
+              375,
+              585,
+              " Telling your family who you really are? Those aren’t free, and you can’t always take them back, but they’re smaller than dying. Look at that life you’ve been afraid to change while you still have a human body."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U11",
+        "p_all_human": 0.45,
+        "forecast": "Not-all-Human",
+        "reason": "The guide-function explanation and a three-name taxonomy are compact, though the concrete rejection thought gives the function context.",
+        "source_name": "t103_97_12",
+        "lineage": "cut-97.12",
+        "text": "With that under you, belonging with people can get a lot less desperate. Not all at once, but the Guide keeps watching for the moment your little one starts thinking, “If they stop liking me, I won’t belong anywhere,” and keeps reminding it that a group’s approval isn’t the deepest belonging there is. By the way, this job doesn’t have to be called the Guide. The Wise One works, or your Inner Teacher, and “Guru” does for some people.",
+        "sha256": "ec418f06054b3969cf1e0d8f4b68a2d2b9a56b245009c1dd8e04d5130e8b0442",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_12.txt",
+        "human": false,
+        "observed": "Not-all-Human",
+        "correct": true,
+        "raw_result": {
+          "name": "t103_97_12",
+          "sha256": "ec418f06054b3969cf1e0d8f4b68a2d2b9a56b245009c1dd8e04d5130e8b0442",
+          "words": 79,
+          "headline": "AI Detected",
+          "prediction_short": "AI",
+          "fraction_ai": 0.8348624110221863,
+          "fraction_ai_assisted": 4.035739577255473e-42,
+          "fraction_human": 0.16513758897781372,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/ae33a2e2-0c16-4c90-9317-7134c113e110",
+          "utc": "2026-10-23T21:59:35Z",
+          "windows": [
+            [
+              "Human Written",
+              "Low",
+              13,
+              0,
+              72,
+              "With that under you, belonging with people can get a lot less desperate."
+            ],
+            [
+              "AI-Generated",
+              "Medium",
+              56,
+              72,
+              360,
+              " Not all at once, but the Guide keeps watching for the moment your little one starts thinking, “If they stop liking me, I won’t belong anywhere,” and keeps reminding it that a group’s approval isn’t the deepest belonging there is. By the way, this job doesn’t have to be called the Guide."
+            ],
+            [
+              "AI-Generated",
+              "Low",
+              14,
+              360,
+              436,
+              " The Wise One works, or your Inner Teacher, and “Guru” does for some people."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      },
+      {
+        "id": "U12",
+        "p_all_human": 0.65,
+        "forecast": "Human",
+        "reason": "The text approaches grief from both grieving-into-warmth and being-loved-into-grief, then the limit follows from that experiential question.",
+        "source_name": "t103_97_13",
+        "lineage": "cut-97.13",
+        "text": "Rumi says you have to keep breaking your heart until it stays open. Some people find that deep grieving gives way to warmth, or to feeling connected. Some feel held, in the body. Being loved can open grief, too. Someone takes care of you, and you think, “Why does this make me sad?” It can be sadness for the care that was missing. While you’re present and still choosing, stay with it. Once it’s swamping you instead of opening you, slow down (like turning the song off for the night).",
+        "sha256": "f6b004278b368ac91c86e4f12cec5e3286c67619a971ded38f3299ecec46488f",
+        "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+        "text_path": "articles/inner-child-therapy/experiments/t103-api/texts/t103_97_13.txt",
+        "human": true,
+        "observed": "Human",
+        "correct": true,
+        "raw_result": {
+          "name": "t103_97_13",
+          "sha256": "f6b004278b368ac91c86e4f12cec5e3286c67619a971ded38f3299ecec46488f",
+          "words": 90,
+          "headline": "Human Written",
+          "prediction_short": "Human",
+          "fraction_ai": 1.857838626492179e-24,
+          "fraction_ai_assisted": 3.6956543361842317e-26,
+          "fraction_human": 1.0,
+          "version": "4.1",
+          "source": "new",
+          "dashboard_link": "https://www.pangram.com/history/66dbae9f-2187-40ec-b344-e6557e134dba",
+          "utc": "2026-10-23T22:00:38Z",
+          "windows": [
+            [
+              "Human Written",
+              "High",
+              92,
+              0,
+              486,
+              "Rumi says you have to keep breaking your heart until it stays open. Some people find that deep grieving gives way to warmth, or to feeling connected. Some feel held, in the body. Being loved can open grief, too. Someone takes care of you, and you think, “Why does this make me sad?” It can be sadness for the care that was missing. While you’re present and still choosing, stay with it. Once it’s swamping you instead of opening you, slow down (like turning the song off for the night)."
+            ]
+          ]
+        },
+        "segment_text_equals_input": true
+      }
+    ]
+  },
+  "archived_controlled_contrasts": [
+    {
+      "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-1.jsonl",
+      "text_path": "articles/inner-child-therapy/experiments/t102-api/texts/t102_untangle_p.txt",
+      "lineage": "untangle-slow",
+      "name": "t102_untangle_p",
+      "text": "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. Even when it isn’t, a break can let the old programming quiet down long enough for what you actually want to come up. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference.",
+      "result": {
+        "name": "t102_untangle_p",
+        "sha256": "b13560fd60561b946a424dfffe7bf16ddc547738930b2a43472cd5ee330eceab",
+        "words": 97,
+        "headline": "AI Generated",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 5.999056205732746e-22,
+        "version": "4.1",
+        "source": "new",
+        "dashboard_link": "https://www.pangram.com/history/6aa17696-41e5-4a7c-88be-8bb14af1ee45",
+        "utc": "2026-10-23T18:11:05Z",
+        "windows": [
+          [
+            "AI-Generated",
+            "High",
+            101,
+            0,
+            549,
+            "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. Even when it isn’t, a break can let the old programming quiet down long enough for what you actually want to come up. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference."
+          ]
+        ]
+      },
+      "previous_prediction": "Human",
+      "previous_diagnosis": "95.2 A: one new sentence after his distance sentence; the paragraph read Human in its sections before",
+      "added_span": "Even when it isn’t, a break can let the old programming quiet down long enough for what you actually want to come up.",
+      "unchanged_remainder_exact": true
+    },
+    {
+      "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-2.jsonl",
+      "text_path": "articles/inner-child-therapy/experiments/t102-api/texts/t102b_untangle_old.txt",
+      "lineage": "untangle-slow",
+      "name": "t102b_untangle_old",
+      "text": "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference.",
+      "result": {
+        "name": "t102b_untangle_old",
+        "sha256": "76c3696f7d34fd1884532322bdb1420c306995f35c624547901e0f7be8ccbbaf",
+        "words": 74,
+        "headline": "Human Written",
+        "prediction_short": "Human",
+        "fraction_ai": 6.001946530886926e-05,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 0.9999399781227112,
+        "version": "4.1",
+        "source": "new",
+        "dashboard_link": "https://www.pangram.com/history/65c4489e-c342-4cb4-bd9d-0197cbdb5b8c",
+        "utc": "2026-10-23T18:15:23Z",
+        "windows": [
+          [
+            "Human Written",
+            "Medium",
+            10,
+            0,
+            56,
+            "Differentiation is slow, and it goes on your whole life."
+          ],
+          [
+            "Human Written",
+            "High",
+            24,
+            56,
+            181,
+            " If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary."
+          ],
+          [
+            "Human Written",
+            "Medium",
+            8,
+            181,
+            229,
+            " Some people come back later on different terms."
+          ],
+          [
+            "Human Written",
+            "Low",
+            35,
+            229,
+            431,
+            " Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference."
+          ]
+        ]
+      },
+      "previous_prediction": "AI",
+      "previous_diagnosis": "a diagnostic: with my 95.2 sentence the whole paragraph was one High AI window (#146), and the paragraph had never been checked alone, so this is it as it was before this turn; AI here means my older sentences are the cause, Human means my new one is",
+      "unchanged_remainder_exact": true
+    },
+    {
+      "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-3.jsonl",
+      "text_path": "articles/inner-child-therapy/experiments/t102-api/texts/t102c_untangle_u02.txt",
+      "lineage": "untangle-slow",
+      "name": "t102c_untangle_u02",
+      "text": "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. And sometimes you need the break anyway, because it’s hard to hear what you actually want while the old programming is still playing in your ear. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference.",
+      "result": {
+        "name": "t102c_untangle_u02",
+        "sha256": "44ca1f6a68e91c10cefccc59ac25400d4205bbd1471028c70fd73a05ac5bcbf4",
+        "words": 100,
+        "headline": "AI Generated",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.143378721975162e-20,
+        "version": "4.1",
+        "source": "new",
+        "dashboard_link": "https://www.pangram.com/history/b85736b8-dc31-4927-b434-626210690b5f",
+        "utc": "2026-10-23T18:17:28Z",
+        "windows": [
+          [
+            "AI-Generated",
+            "High",
+            104,
+            0,
+            577,
+            "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. And sometimes you need the break anyway, because it’s hard to hear what you actually want while the old programming is still playing in your ear. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference."
+          ]
+        ]
+      },
+      "previous_prediction": "Human",
+      "previous_diagnosis": "#146's sentence explained in abstract chains (a concessive opener, a break as the agent, a purpose chain); u02 says it as a plain reason with a concrete picture and no concessive opener or purpose chain",
+      "added_span": "And sometimes you need the break anyway, because it’s hard to hear what you actually want while the old programming is still playing in your ear.",
+      "unchanged_remainder_exact": true
+    },
+    {
+      "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-3.jsonl",
+      "text_path": null,
+      "lineage": "untangle-slow",
+      "name": "t102c_untangle_u03",
+      "text": "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary (and sometimes it’s worth taking anyway, since it’s hard to hear what you actually want with the old programming still playing in your ear). Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference.",
+      "result": {
+        "name": "t102c_untangle_u03",
+        "sha256": "765f5808973c757858417ebe2f45eef411cfa1e2bb25948facd14c52584f7ddb",
+        "words": 98,
+        "headline": "AI Generated",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 1.0103956588414805e-17,
+        "version": "4.1",
+        "source": "new",
+        "dashboard_link": "https://www.pangram.com/history/9546ae2e-83fb-4fc9-9bb6-dc35fda537a1",
+        "utc": "2026-10-23T18:17:32Z",
+        "windows": [
+          [
+            "AI-Generated",
+            "High",
+            103,
+            0,
+            571,
+            "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary (and sometimes it’s worth taking anyway, since it’s hard to hear what you actually want with the old programming still playing in your ear). Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference."
+          ]
+        ]
+      },
+      "provenance": "complete returned window text matching stored input hash",
+      "added_span": "(and sometimes it’s worth taking anyway, since it’s hard to hear what you actually want with the old programming still playing in your ear)",
+      "unchanged_remainder_exact": true
+    }
+  ],
+  "live_api": {
+    "accepted_submissions": 0,
+    "stage": "BLOCKED_BEFORE_EXECUTION",
+    "prepared_cells": 8,
+    "prior_parent_accepted_submissions": 8,
+    "no_reroute": true
+  },
+  "interpretations": [
+    {
+      "finding": "The rubric still overflags some concise, orderly source prose. All3 misses in this12-case batch were all-Human results.",
+      "status": "provisional",
+      "limit": "Small same-context evaluation, same author, one guide; not independent validation."
+    },
+    {
+      "finding": "A74-word Human paragraph becomes all-AI in3 archived realizations of one added reason for taking distance. Removing only the addition exactly recovers the same baseline bytes.",
+      "status": "article-specific",
+      "limit": "Existing4.1 results, not a current rerun; repeated realizations are correlated, not independent studies. The inserted idea and surface/context all change together."
+    },
+    {
+      "finding": "The source examples improve thought or pragmatic function as well as wording; they cannot all be treated as same-content style effects.",
+      "status": "provisional",
+      "limit": "Interpretation of identified source episodes, not a validated detector mechanism."
+    }
+  ],
+  "scope_limits": [
+    "Exact outcomes concealed until predictions saved; prior archive familiarity remains.",
+    "Sampling excluded prior lineages and close strings; lexical screening is not a guarantee of semantic independence.",
+    "Labels are Pangram outcomes, not actual authorship.",
+    "Live predictions and variants are frozen but have no new outcomes.",
+    "No production article or active writing rule changed."
+  ]
+}

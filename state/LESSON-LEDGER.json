@@ -1385,6 +1385,116 @@
       "source_path": "state/experiments/explanation-development-heldout-20261024/PROTOCOL-v2.json",
       "source_ref": "working-tree",
       "source_sha256": "d2d91b5d41b27c56f94380660e6670186a625a4eedbc50cdef5a095cc2a35c60"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Source-derived current-Chat forecasts matched9/12 saved4.1 outcomes, versus8/12 alwaysHuman; all3 misses overflagged Human prose.",
+      "id": "L-4e3efd6805-01",
+      "promoted_to": [],
+      "reason": "Small same-context sample; source-lineage and text-distance screens do not guarantee semantic independence.",
+      "recorded_at_utc": "2026-10-24T13:39:45.178104+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/RESULT.json",
+      "source_ref": "working-tree",
+      "source_sha256": "4e3efd68056e645f45b9eeaa5be495b2a2e223d796a2d1e11cfe8626c1b7ee44"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Three archived realizations of one added explanation changed a74-word all-Human paragraph to all-AI; deletion-only checks exactly recover the same source.",
+      "id": "L-4e3efd6805-02",
+      "promoted_to": [],
+      "reason": "Historical4.1 input/result comparisons; correlated variants, not fresh repeated measurements or a universal explanation rule.",
+      "recorded_at_utc": "2026-10-24T13:39:45.241610+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/RESULT.json",
+      "source_ref": "working-tree",
+      "source_sha256": "4e3efd68056e645f45b9eeaa5be495b2a2e223d796a2d1e11cfe8626c1b7ee44"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Eight same-claims/same-imagery repacking cells and predictions are frozen but unexecuted; live API execution was blocked before it began.",
+      "id": "L-4e3efd6805-03",
+      "promoted_to": [],
+      "reason": "No accepted new API submissions and no evidence for the proposed intervention effects; block was not bypassed.",
+      "recorded_at_utc": "2026-10-24T13:39:45.280951+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/RESULT.json",
+      "source_ref": "working-tree",
+      "source_sha256": "4e3efd68056e645f45b9eeaa5be495b2a2e223d796a2d1e11cfe8626c1b7ee44"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Companion source-review evidence, frozen forecasts or explicitly unexecuted live-study plan; no additional detector finding.",
+      "id": "L-0b9ecd8556-01",
+      "promoted_to": [],
+      "reason": "Supporting exact record for round2 result; not a newly measured live experiment.",
+      "recorded_at_utc": "2026-10-24T13:39:45.321161+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/README.md",
+      "source_ref": "working-tree",
+      "source_sha256": "0b9ecd855621a406890379b9ec586406b92d3f75d7e50da4fd4d96813e851032"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Companion source-review evidence, frozen forecasts or explicitly unexecuted live-study plan; no additional detector finding.",
+      "id": "L-a53d8dd3c6-01",
+      "promoted_to": [],
+      "reason": "Supporting exact record for round2 result; not a newly measured live experiment.",
+      "recorded_at_utc": "2026-10-24T13:39:45.361867+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/MANIFEST.json",
+      "source_ref": "working-tree",
+      "source_sha256": "a53d8dd3c6cddecc6cf785faa77b01fbd3296dd82abb6d9c04bfdf4d72c9201d"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Companion source-review evidence, frozen forecasts or explicitly unexecuted live-study plan; no additional detector finding.",
+      "id": "L-8a8e08b56f-01",
+      "promoted_to": [],
+      "reason": "Supporting exact record for round2 result; not a newly measured live experiment.",
+      "recorded_at_utc": "2026-10-24T13:39:45.401700+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/PREDICTIONS.frozen.json",
+      "source_ref": "working-tree",
+      "source_sha256": "8a8e08b56f88ba5ebea4d2dc3fb54bde5e9a6a539c8f7aebe364f5832cb8677f"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Companion source-review evidence, frozen forecasts or explicitly unexecuted live-study plan; no additional detector finding.",
+      "id": "L-b6db20d6da-01",
+      "promoted_to": [],
+      "reason": "Supporting exact record for round2 result; not a newly measured live experiment.",
+      "recorded_at_utc": "2026-10-24T13:39:45.440629+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/OFFLINE-PROTOCOL.json",
+      "source_ref": "working-tree",
+      "source_sha256": "b6db20d6dadaab2ea37651763f62fd614dcbaadbdd72b0870eb1d2473f7b5406"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Companion source-review evidence, frozen forecasts or explicitly unexecuted live-study plan; no additional detector finding.",
+      "id": "L-667223b56d-01",
+      "promoted_to": [],
+      "reason": "Supporting exact record for round2 result; not a newly measured live experiment.",
+      "recorded_at_utc": "2026-10-24T13:39:45.480139+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/UNEXECUTED-API-PROTOCOL.json",
+      "source_ref": "working-tree",
+      "source_sha256": "667223b56d16b59fbfb19b03442d5f2983ffd449ed4ed932b760282b8855d0d4"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Companion source-review evidence, frozen forecasts or explicitly unexecuted live-study plan; no additional detector finding.",
+      "id": "L-23448d977e-01",
+      "promoted_to": [],
+      "reason": "Supporting exact record for round2 result; not a newly measured live experiment.",
+      "recorded_at_utc": "2026-10-24T13:39:45.520107+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/UNEXECUTED-API-INPUTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "23448d977e4f83127e3528287a7d300e503f29ebd7091b34048b058d5400b478"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Companion source-review evidence, frozen forecasts or explicitly unexecuted live-study plan; no additional detector finding.",
+      "id": "L-ae50c76c2e-01",
+      "promoted_to": [],
+      "reason": "Supporting exact record for round2 result; not a newly measured live experiment.",
+      "recorded_at_utc": "2026-10-24T13:39:45.561160+00:00",
+      "source_path": "state/experiments/owner-development-source-review-round2-20261024/LIVE-API-BLOCK.md",
+      "source_ref": "working-tree",
+      "source_sha256": "ae50c76c2e1301a7ebdbcbc7c549067f17c4997be8144e53e69595c156cc0139"
     }
   ],
   "schema_version": 1
