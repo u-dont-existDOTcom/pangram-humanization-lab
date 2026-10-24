@@ -1,0 +1,47 @@
+{
+  "families": 20,
+  "exact_unique_inputs": 50,
+  "contrasts": 30,
+  "same_thought_candidates": 8,
+  "same_thought_distinct_families": 8,
+  "candidate_outcomes": {
+    "gain": 3,
+    "both_not_all_human": 5
+  },
+  "other_outcomes": {
+    "gain": 4,
+    "regression": 5,
+    "both_not_all_human": 9,
+    "both_all_human": 4
+  },
+  "all_outcomes": {
+    "gain": 7,
+    "regression": 5,
+    "both_not_all_human": 14,
+    "both_all_human": 4
+  },
+  "classification_counts": {
+    "OWNER_APPROVED_SAME_THOUGHT": 1,
+    "MEANING_OR_FUNCTION_CHANGE": 7,
+    "ALIGNMENT_REVIEW": 6,
+    "CONTENT_ADDITION": 1,
+    "CONTENT_DELETION": 3,
+    "PROVISIONAL_SAME_THOUGHT": 7,
+    "SCOPE_CHANGE": 1,
+    "OWNER_REJECTED_FIDELITY": 1,
+    "SEMANTIC_REPAIR": 3
+  },
+  "source_order_reversed": 5,
+  "api_rows_with_full_window_verification": 46,
+  "gui_rows_name_hash_ledger_link_bound": 4,
+  "new_detector_calls": 0,
+  "causal_or_general_success_rate": null,
+  "limitations": [
+    "Adaptive production-selected sample; no randomized treatment or untreated control",
+    "Most editorial judgments are by current Chat, not owner or independent reviewer",
+    "Known outcomes/diagnoses were present; not blinded",
+    "Multiple transformations co-vary; no single-factor causal attribution",
+    "Do not pool GUI avg_ai_likelihood with API fraction_ai as if same calibrated metric",
+    "20 ledger families are not 20 independent studies; articles/sections share context"
+  ]
+}
