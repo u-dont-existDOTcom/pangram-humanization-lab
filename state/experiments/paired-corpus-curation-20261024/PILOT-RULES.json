@@ -1,0 +1,51 @@
+{
+  "schema": "whole-method-paired-pilot-v2",
+  "status": "EVALUATION_RULES_FROZEN_TARGET_SET_NOT_READY",
+  "main_objective": "Improve faithful human-sounding prose and learn conditional relations between realization and Pangram behavior; do not optimize detector labels by losing meaning.",
+  "planning_target_families": 30,
+  "planning_count_not_power_claim": true,
+  "development_corpus": {
+    "families": 20,
+    "contrasts": 30,
+    "known_outcomes": true,
+    "independent_validation": false
+  },
+  "next_target_set": "New distinct passage families not represented by these source paragraphs, owner rewrites, neighboring same-section variants or already-discussed outcomes; split by source family and keep section/article grouping visible.",
+  "arms": {
+    "A": "Same fixed concise source/meaning brief and current revision instructions; no target-matched teaching episodes.",
+    "B": "Same brief, model/reasoning/token budget and permitted changes, plus up to three literal owner-endorsed or clearly marked provisional teaching episodes matched by rhetorical function. Exclude target family, its rewrites and detector outcomes."
+  },
+  "important_distinction": "This tests whether example retrieval improves the complete writing method. It does not isolate one textual feature. A later feature study requires a different predeclared multi-family intervention.",
+  "generation": "One first candidate per arm per target, genuinely separate fresh contexts. No same-context pretending to forget a target. Counterbalance arm order and preserve exact prompts/output/model settings. No adaptive retries in the primary comparison.",
+  "source_constraints": [
+    "Retain substantive claims, certainty, attribution, actors, causality and action-changing qualifications.",
+    "Retain meaningful humor, contrast, analogy and legitimate abstraction.",
+    "Do not require preserving every scaffolding sentence verbatim; document genuine implication preservation instead of automatically treating every deletion as a lost fact."
+  ],
+  "primary_evidence": [
+    "Source-alignment assessment, with pass/change/uncertain and exact explanation.",
+    "Owner naturalness preference on a small balanced calibration subset, with roles and blind/nonblind status explicit.",
+    "Fresh reviewer estimates on remaining cases labeled as reviewer estimates, not owner preferences."
+  ],
+  "detector_evidence": [
+    "Exact input boundary and version for every observed result.",
+    "Standalone and selected genuine 2–3-paragraph contexts are separate outcomes.",
+    "Count all-Human gains, regressions and no-flips across families; report altered-span windows separately where exact mapping is possible.",
+    "Keep GUI avg_ai_likelihood and API fraction_ai under their original field names; do not pool them as calibrated probabilities.",
+    "A no-flip does not prove no editorial or detector benefit. A numerical change alone does not prove a causal benefit."
+  ],
+  "fidelity_accounting": "Retain every generated candidate in the denominator. Report meaning/rhetorical damage separately and disqualify it from joint-quality success; do not silently filter failures after seeing outcomes.",
+  "statistics": "First report paired descriptive differences and family-clustered uncertainty. Do not count multiple revisions of one target as independent. Do not pool the current outcome-adapted production archive into a prospective causal effect estimate.",
+  "interaction_followup": "Only after a plausible conditional pattern recurs across several target families, predeclare a small matched interaction comparison. Single-paragraph flips may motivate it but cannot validate portability.",
+  "admission_before_paid_calls": [
+    "Pin exact target set, source functions and split.",
+    "Complete distinct-context route verification without using already-known target outcomes.",
+    "Freeze prompts, candidate outputs and predictions.",
+    "Check prior exact-input cache and keep an auditable call journal."
+  ],
+  "execution_boundary": "No paid or independent-evaluator execution in this packet. Earlier blocked live API/evaluator actions were not retried or rerouted.",
+  "api_size_limit": "1–3 paragraphs per submission; whole-article checks remain the owner manual Substack route.",
+  "calls_executed": 0,
+  "owner_action_requested_now": false,
+  "next_safe_action": "Recover additional clean, function-diverse owner-aligned episodes or source paragraphs using the pinned paths in the curation; then construct the distinct-family target manifest. Do not launch a claimed 30-family trial from 30 dependent/meaning-changing comparisons."
+}

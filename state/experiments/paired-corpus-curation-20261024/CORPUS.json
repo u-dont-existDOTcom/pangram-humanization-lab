@@ -1,0 +1,3699 @@
+{
+  "schema": "curated-pangram-development-corpus-v1",
+  "source_repository": "u-dont-existDOTcom/joel-articles",
+  "source_commit": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+  "records": [
+    {
+      "name": "t99_bb_new1",
+      "sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+      "words": 66,
+      "headline": "AI Detected",
+      "prediction_short": "Mixed",
+      "fraction_ai": 0.4004651606082916,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.5995348691940308,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/80b68055-4d4e-4330-a8fd-fde76c3884eb",
+      "utc": "2026-10-23T10:41:57Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          23,
+          0,
+          125,
+          "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs."
+        ],
+        [
+          "Human Written",
+          "Low",
+          19,
+          125,
+          216,
+          " That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          27,
+          216,
+          354,
+          " I’d still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t99-api/API-RESULTS-1.jsonl",
+      "source_line": 1,
+      "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. I’d still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.4004651606082916
+      },
+      "ledger_result": {
+        "ai_fraction": 0.4005,
+        "at": "2026-10-23T10:41:57Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/80b68055-4d4e-4330-a8fd-fde76c3884eb",
+        "prediction": "bb-new1#114",
+        "right": false,
+        "sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 66
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t100_bb_new1",
+      "sha256": "c5f93b768956464839f70413133e04f5271288364680e03a8c4f14170f7548d9",
+      "words": 59,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 4.374853805622079e-42,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/72df4253-a0b1-4895-921b-6fb88a762bbd",
+      "utc": "2026-10-23T12:54:50Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          61,
+          0,
+          313,
+          "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. Do your part for people who are suffering, and skip the part where you have to be miserable too."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t100-api/API-RESULTS-1.jsonl",
+      "source_line": 1,
+      "text": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. Do your part for people who are suffering, and skip the part where you have to be miserable too.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 4.374853805622079e-42
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T12:54:50Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/72df4253-a0b1-4895-921b-6fb88a762bbd",
+        "prediction": "bb-new1#123",
+        "right": true,
+        "sha256": "c5f93b768956464839f70413133e04f5271288364680e03a8c4f14170f7548d9",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 59
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t99_guide5",
+      "sha256": "fec51829d6cc08f0532a029b5398a970fbecd7c333380e0379fcf108b3791ea7",
+      "words": 111,
+      "headline": "AI Detected",
+      "prediction_short": "Mixed",
+      "fraction_ai": 0.6456171870231628,
+      "fraction_ai_assisted": 5.6317137977252386e-21,
+      "fraction_human": 0.35438281297683716,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/aaab3a44-7f7a-48c0-b13e-d89d863d9b82",
+      "utc": "2026-10-23T10:42:11Z",
+      "windows": [
+        [
+          "Human Written",
+          "Medium",
+          39,
+          0,
+          189,
+          "Once a need does show, after all that hiding, it’s okay to want a lot of closeness. So then someone you love goes for a walk alone, and you’ve texted “hello??” before they’re at the corner."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          8,
+          189,
+          229,
+          " When they get back, you sulk all night."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          5,
+          229,
+          257,
+          " Wanting them close is fine!"
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          12,
+          257,
+          324,
+          " Blowing up their phone and sulking all night is a different story."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          27,
+          324,
+          449,
+          " Your Guide could help you ask for what you need instead, like a hug before they go and a rough idea of when they’ll be back."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          16,
+          449,
+          522,
+          " Before any of that, though, I’d let your little one say what’s going on."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          11,
+          522,
+          573,
+          " I think it just wants to know they’re coming back."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t99-api/API-RESULTS-1.jsonl",
+      "source_line": 4,
+      "text": "Once a need does show, after all that hiding, it’s okay to want a lot of closeness. So then someone you love goes for a walk alone, and you’ve texted “hello??” before they’re at the corner. When they get back, you sulk all night. Wanting them close is fine! Blowing up their phone and sulking all night is a different story. Your Guide could help you ask for what you need instead, like a hug before they go and a rough idea of when they’ll be back. Before any of that, though, I’d let your little one say what’s going on. I think it just wants to know they’re coming back.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.6456171870231628
+      },
+      "ledger_result": {
+        "ai_fraction": 0.6456,
+        "at": "2026-10-23T10:42:11Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/aaab3a44-7f7a-48c0-b13e-d89d863d9b82",
+        "prediction": "guide-P5#117",
+        "right": true,
+        "sha256": "fec51829d6cc08f0532a029b5398a970fbecd7c333380e0379fcf108b3791ea7",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 111
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t100_guide5",
+      "sha256": "e5a7dd16db085f5f26402cb96911e899aa598003480e9bbd9315531a43271c34",
+      "words": 90,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 8.032256678746338e-24,
+      "fraction_ai_assisted": 3.044432003262448e-30,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/5ee698a9-da9c-4ca9-80ee-9866cfab16ef",
+      "utc": "2026-10-23T12:54:54Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          95,
+          0,
+          453,
+          "Once a need does show, after all that hiding, it’s okay to want a lot of closeness. So then someone you love goes for a walk alone, and you’ve texted “hello??” before they’re at the corner. When they get back, you sulk all night. Wanting them close is fine! But they get to go for a walk too. Ask your little one what it’s afraid of. I think it just wants to know they’re coming back. Then the Guide can come up with something like “See you in an hour?”"
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t100-api/API-RESULTS-1.jsonl",
+      "source_line": 2,
+      "text": "Once a need does show, after all that hiding, it’s okay to want a lot of closeness. So then someone you love goes for a walk alone, and you’ve texted “hello??” before they’re at the corner. When they get back, you sulk all night. Wanting them close is fine! But they get to go for a walk too. Ask your little one what it’s afraid of. I think it just wants to know they’re coming back. Then the Guide can come up with something like “See you in an hour?”",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 8.032256678746338e-24
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T12:54:54Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/5ee698a9-da9c-4ca9-80ee-9866cfab16ef",
+        "prediction": "guide-P5#124",
+        "right": false,
+        "sha256": "e5a7dd16db085f5f26402cb96911e899aa598003480e9bbd9315531a43271c34",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 90
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t99_ended1",
+      "sha256": "c326c6619caa167b3af9a7802688d1e8a96972c992224080f6260dacbb23315c",
+      "words": 126,
+      "headline": "AI Detected",
+      "prediction_short": "Mixed",
+      "fraction_ai": 0.658869743347168,
+      "fraction_ai_assisted": 2.186458949730301e-24,
+      "fraction_human": 0.34113025665283203,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/470c2aaa-c8d2-494b-8125-9c34390eb052",
+      "utc": "2026-10-23T10:42:19Z",
+      "windows": [
+        [
+          "Human Written",
+          "Low",
+          43,
+          0,
+          221,
+          "Your little one can get really loud in the gap after one life ends and before the next one has formed. A breakup will do it, or moving to another country, an illness, losing your faith or a role, your youngest moving out."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          14,
+          221,
+          290,
+          " So can leaving a family or a community, or staying but on new terms."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          33,
+          290,
+          452,
+          " Even a therapist or helper stepping back, once you’ve grown a lot, can set it off. In Tibetan Buddhism there’s a word for an in-between state like this: a bardo."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          14,
+          452,
+          523,
+          " I’m not asking you to believe what they teach about death and rebirth."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          27,
+          523,
+          648,
+          " The word is just handy for that weird stretch after an ending, when the old you is gone and the new you hasn’t shown up yet."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t99-api/API-RESULTS-1.jsonl",
+      "source_line": 6,
+      "text": "Your little one can get really loud in the gap after one life ends and before the next one has formed. A breakup will do it, or moving to another country, an illness, losing your faith or a role, your youngest moving out. So can leaving a family or a community, or staying but on new terms. Even a therapist or helper stepping back, once you’ve grown a lot, can set it off. In Tibetan Buddhism there’s a word for an in-between state like this: a bardo. I’m not asking you to believe what they teach about death and rebirth. The word is just handy for that weird stretch after an ending, when the old you is gone and the new you hasn’t shown up yet.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.658869743347168
+      },
+      "ledger_result": {
+        "ai_fraction": 0.6589,
+        "at": "2026-10-23T10:42:19Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/470c2aaa-c8d2-494b-8125-9c34390eb052",
+        "prediction": "ended-P1#119",
+        "right": true,
+        "sha256": "c326c6619caa167b3af9a7802688d1e8a96972c992224080f6260dacbb23315c",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 126
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t100_ended1",
+      "sha256": "b7aaa413dced7e9361759e5b1b3320b9e52a60df9f11b8b908af30c8675e588c",
+      "words": 119,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 1.9407629482646935e-37,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/50f027e5-f84e-47d9-bbc0-43ee045bea9c",
+      "utc": "2026-10-23T12:54:58Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          125,
+          0,
+          630,
+          "Your little one can get really loud in the gap after one life ends and before the next one has formed. A breakup will do it, or moving to another country, an illness, losing your faith or a role, your youngest moving out. Maybe you’ve left a family or community, maybe you’ve stayed on new terms. A therapist or helper might step back because you’re doing so much better, and suddenly your little one is wailing. For a while the old you is gone and the new you hasn’t shown up yet. Tibetan Buddhism calls an in-between state like that a bardo (I’m only borrowing the word, so what it teaches about death and rebirth is up to you)."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t100-api/API-RESULTS-1.jsonl",
+      "source_line": 3,
+      "text": "Your little one can get really loud in the gap after one life ends and before the next one has formed. A breakup will do it, or moving to another country, an illness, losing your faith or a role, your youngest moving out. Maybe you’ve left a family or community, maybe you’ve stayed on new terms. A therapist or helper might step back because you’re doing so much better, and suddenly your little one is wailing. For a while the old you is gone and the new you hasn’t shown up yet. Tibetan Buddhism calls an in-between state like that a bardo (I’m only borrowing the word, so what it teaches about death and rebirth is up to you).",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.9407629482646935e-37
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T12:54:58Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/50f027e5-f84e-47d9-bbc0-43ee045bea9c",
+        "prediction": "ended-P1#125",
+        "right": false,
+        "sha256": "b7aaa413dced7e9361759e5b1b3320b9e52a60df9f11b8b908af30c8675e588c",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 119
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t99_ifs7",
+      "sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+      "words": 81,
+      "headline": "AI Detected",
+      "prediction_short": "Mixed",
+      "fraction_ai": 0.24148109555244446,
+      "fraction_ai_assisted": 3.391927788383378e-27,
+      "fraction_human": 0.7585188746452332,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/f26e19ca-ba9a-4348-882e-67300a6837d9",
+      "utc": "2026-10-23T10:42:28Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          35,
+          0,
+          209,
+          "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it."
+        ],
+        [
+          "Human Written",
+          "Low",
+          26,
+          209,
+          355,
+          " Some practitioners are gentle about it and walk you through the maze just fine. Others seem to leave people more split up than when they started."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          24,
+          355,
+          468,
+          " A big institute and a pile of certificates won’t tell you whether a model is true, or whether it’s safe for you."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t99-api/API-RESULTS-1.jsonl",
+      "source_line": 8,
+      "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it. Some practitioners are gentle about it and walk you through the maze just fine. Others seem to leave people more split up than when they started. A big institute and a pile of certificates won’t tell you whether a model is true, or whether it’s safe for you.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.24148109555244446
+      },
+      "ledger_result": {
+        "ai_fraction": 0.2415,
+        "at": "2026-10-23T10:42:28Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/f26e19ca-ba9a-4348-882e-67300a6837d9",
+        "prediction": "ifs-P7#121",
+        "right": true,
+        "sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 81
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t100_ifs7",
+      "sha256": "fdccb337210c68817d5171402fc5c2876add40da45a0f67f17f8a057beaf4ea8",
+      "words": 76,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 5.163418791198637e-06,
+      "fraction_ai_assisted": 1.2297095794721204e-35,
+      "fraction_human": 0.9999948143959045,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/b7311406-1ae8-4279-8791-fa3e66734bb2",
+      "utc": "2026-10-23T12:55:02Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          49,
+          0,
+          289,
+          "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it. Some practitioners are gentle about it and walk you through the maze just fine."
+        ],
+        [
+          "Human Written",
+          "Medium",
+          12,
+          289,
+          355,
+          " Others seem to leave people more split up than when they started."
+        ],
+        [
+          "Human Written",
+          "Low",
+          19,
+          355,
+          458,
+          " I wouldn’t trust a model more just because there’s a big institute behind it handing out certificates."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t100-api/API-RESULTS-1.jsonl",
+      "source_line": 4,
+      "text": "And the parts just keep coming: managers, firefighters, exiles, polarized parts, legacy burdens, Self-energy, guides, new subparts... At some point it’s a maze, with a little one somewhere in the middle of it. Some practitioners are gentle about it and walk you through the maze just fine. Others seem to leave people more split up than when they started. I wouldn’t trust a model more just because there’s a big institute behind it handing out certificates.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 5.163418791198637e-06
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T12:55:02Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/b7311406-1ae8-4279-8791-fa3e66734bb2",
+        "prediction": "ifs-P7#126",
+        "right": true,
+        "sha256": "fdccb337210c68817d5171402fc5c2876add40da45a0f67f17f8a057beaf4ea8",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 76
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t101_borrow_p5",
+      "sha256": "21696846e350d4e2640ef5c986c182e8bd47c1387f519a1ff92249a50e798e8d",
+      "words": 74,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 2.551718385201962e-12,
+      "fraction_ai_assisted": 2.931940344213615e-32,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/889500ce-16d6-4f28-bf5c-fb4044ededdb",
+      "utc": "2026-10-23T14:11:18Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          68,
+          0,
+          337,
+          "If the love still isn’t coming, you can at least stop judging your little one. Obviously no insults. Helpful advice is great, we all need advice. Let them absorb it at their pace. And don’t expect a thank-you for the session, like they booked it. That’s enough to start being the adult, even if it isn’t enough yet for them to trust you."
+        ],
+        [
+          "Human Written",
+          "Medium",
+          12,
+          337,
+          397,
+          " That takes warmth, and if there isn’t any yet, borrow some."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t101-api/API-RESULTS-1.jsonl",
+      "source_line": 1,
+      "text": "If the love still isn’t coming, you can at least stop judging your little one. Obviously no insults. Helpful advice is great, we all need advice. Let them absorb it at their pace. And don’t expect a thank-you for the session, like they booked it. That’s enough to start being the adult, even if it isn’t enough yet for them to trust you. That takes warmth, and if there isn’t any yet, borrow some.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 2.551718385201962e-12
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T14:11:18Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/889500ce-16d6-4f28-bf5c-fb4044ededdb",
+        "prediction": "borrow-p5#134",
+        "right": true,
+        "sha256": "21696846e350d4e2640ef5c986c182e8bd47c1387f519a1ff92249a50e798e8d",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 74
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t102_borrow_p5",
+      "sha256": "8fd59d7c96fff4580aaa96714c72ab841963174fa76e966a6ad6bd2ae2d288c0",
+      "words": 72,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 2.3249959824800965e-30,
+      "fraction_human": 1.1265141380487065e-12,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/bf6562e2-577e-4fce-a12e-af98c12c7688",
+      "utc": "2026-10-23T18:10:53Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          16,
+          0,
+          78,
+          "If the love still isn’t coming, you can at least stop judging your little one."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          3,
+          78,
+          100,
+          " Obviously no insults."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          47,
+          100,
+          317,
+          " If you have advice, let them take it in at their own pace. And don’t expect a thank-you for the session, like they booked it. That’s enough to start being the adult, even if it isn’t enough yet for them to trust you."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          12,
+          317,
+          377,
+          " That takes warmth, and if there isn’t any yet, borrow some."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-1.jsonl",
+      "source_line": 1,
+      "text": "If the love still isn’t coming, you can at least stop judging your little one. Obviously no insults. If you have advice, let them take it in at their own pace. And don’t expect a thank-you for the session, like they booked it. That’s enough to start being the adult, even if it isn’t enough yet for them to trust you. That takes warmth, and if there isn’t any yet, borrow some.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T18:10:53Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Generated",
+        "link": "https://www.pangram.com/history/bf6562e2-577e-4fce-a12e-af98c12c7688",
+        "prediction": "borrow-p5#144",
+        "right": false,
+        "sha256": "8fd59d7c96fff4580aaa96714c72ab841963174fa76e966a6ad6bd2ae2d288c0",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 72
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t102b_untangle_old",
+      "sha256": "76c3696f7d34fd1884532322bdb1420c306995f35c624547901e0f7be8ccbbaf",
+      "words": 74,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 6.001946530886926e-05,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.9999399781227112,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/65c4489e-c342-4cb4-bd9d-0197cbdb5b8c",
+      "utc": "2026-10-23T18:15:23Z",
+      "windows": [
+        [
+          "Human Written",
+          "Medium",
+          10,
+          0,
+          56,
+          "Differentiation is slow, and it goes on your whole life."
+        ],
+        [
+          "Human Written",
+          "High",
+          24,
+          56,
+          181,
+          " If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary."
+        ],
+        [
+          "Human Written",
+          "Medium",
+          8,
+          181,
+          229,
+          " Some people come back later on different terms."
+        ],
+        [
+          "Human Written",
+          "Low",
+          35,
+          229,
+          431,
+          " Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-2.jsonl",
+      "source_line": 3,
+      "text": "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 6.001946530886926e-05
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0001,
+        "at": "2026-10-23T18:15:23Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/65c4489e-c342-4cb4-bd9d-0197cbdb5b8c",
+        "prediction": "untangle-slow#150",
+        "right": true,
+        "sha256": "76c3696f7d34fd1884532322bdb1420c306995f35c624547901e0f7be8ccbbaf",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 74
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t102_untangle_p",
+      "sha256": "b13560fd60561b946a424dfffe7bf16ddc547738930b2a43472cd5ee330eceab",
+      "words": 97,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 5.999056205732746e-22,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/6aa17696-41e5-4a7c-88be-8bb14af1ee45",
+      "utc": "2026-10-23T18:11:05Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          101,
+          0,
+          549,
+          "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. Even when it isn’t, a break can let the old programming quiet down long enough for what you actually want to come up. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-1.jsonl",
+      "source_line": 3,
+      "text": "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. Even when it isn’t, a break can let the old programming quiet down long enough for what you actually want to come up. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T18:11:05Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Generated",
+        "link": "https://www.pangram.com/history/6aa17696-41e5-4a7c-88be-8bb14af1ee45",
+        "prediction": "untangle-slow#146",
+        "right": false,
+        "sha256": "b13560fd60561b946a424dfffe7bf16ddc547738930b2a43472cd5ee330eceab",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 97
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t102c_untangle_u02",
+      "sha256": "44ca1f6a68e91c10cefccc59ac25400d4205bbd1471028c70fd73a05ac5bcbf4",
+      "words": 100,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.143378721975162e-20,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/b85736b8-dc31-4927-b434-626210690b5f",
+      "utc": "2026-10-23T18:17:28Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          104,
+          0,
+          577,
+          "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. And sometimes you need the break anyway, because it’s hard to hear what you actually want while the old programming is still playing in your ear. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t102-api/API-RESULTS-3.jsonl",
+      "source_line": 1,
+      "text": "Differentiation is slow, and it goes on your whole life. If a family, group or relationship won’t let you do this while you’re still part of it, temporary distance may be necessary. And sometimes you need the break anyway, because it’s hard to hear what you actually want while the old programming is still playing in your ear. Some people come back later on different terms. Sometimes the leaving turns out to be permanent, because going back would mean disappearing again. You don’t have to know yet which one yours is. As you differentiate, you learn to tell the difference.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T18:17:28Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Generated",
+        "link": "https://www.pangram.com/history/b85736b8-dc31-4927-b434-626210690b5f",
+        "prediction": "untangle-slow#151",
+        "right": false,
+        "sha256": "44ca1f6a68e91c10cefccc59ac25400d4205bbd1471028c70fd73a05ac5bcbf4",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 100
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103b_97_8_old",
+      "sha256": "3f3d189e2dd81a705354b5ea79d156e780d0d19caa8c13b37cd76ac28c6672a1",
+      "words": 84,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 0.0013316103722900152,
+      "fraction_ai_assisted": 4.828450677204043e-33,
+      "fraction_human": 0.998668372631073,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/16fb63cc-426a-4730-bdf2-8dadeaa7b521",
+      "utc": "2026-10-23T22:04:34Z",
+      "windows": [
+        [
+          "Human Written",
+          "Low",
+          89,
+          0,
+          485,
+          "Milder reactions afterward count as caution signs too, like getting confused or spaced out (dissociating) again and again. Get professional help right away if any of this is severe or risky, and especially if it keeps going or comes back while you’re sober. If you can’t tell whether you’re safe, I’d treat that as risky. Don’t suddenly quit a prescribed medicine, or anything your body is dependent on, just because it might be part of the problem; have a doctor help you stop safely."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-2.jsonl",
+      "source_line": 1,
+      "text": "Milder reactions afterward count as caution signs too, like getting confused or spaced out (dissociating) again and again. Get professional help right away if any of this is severe or risky, and especially if it keeps going or comes back while you’re sober. If you can’t tell whether you’re safe, I’d treat that as risky. Don’t suddenly quit a prescribed medicine, or anything your body is dependent on, just because it might be part of the problem; have a doctor help you stop safely.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.0013316103722900152
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0013,
+        "at": "2026-10-23T22:04:34Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/16fb63cc-426a-4730-bdf2-8dadeaa7b521",
+        "prediction": "cut-97.8#171",
+        "right": true,
+        "sha256": "3f3d189e2dd81a705354b5ea79d156e780d0d19caa8c13b37cd76ac28c6672a1",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 84
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103_97_8",
+      "sha256": "a5b447ccc099fdfb3248e1be256e5fd2cd1d248733612a2b07b362a6ad7c99cd",
+      "words": 72,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 0.9999997019767761,
+      "fraction_ai_assisted": 4.8830072067356286e-33,
+      "fraction_human": 3.0255236538323516e-07,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/4b249916-5525-49aa-bbbb-072a3ff3ee8a",
+      "utc": "2026-10-23T21:59:10Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "Medium",
+          44,
+          0,
+          257,
+          "Milder reactions afterward count as caution signs too, like getting confused or spaced out (dissociating) again and again. Get professional help right away if any of this is severe or risky, and especially if it keeps going or comes back while you’re sober."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          30,
+          257,
+          421,
+          " Don’t suddenly quit a prescribed medicine, or anything your body is dependent on, just because it might be part of the problem; have a doctor help you stop safely."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+      "source_line": 7,
+      "text": "Milder reactions afterward count as caution signs too, like getting confused or spaced out (dissociating) again and again. Get professional help right away if any of this is severe or risky, and especially if it keeps going or comes back while you’re sober. Don’t suddenly quit a prescribed medicine, or anything your body is dependent on, just because it might be part of the problem; have a doctor help you stop safely.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.9999997019767761
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T21:59:10Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Generated",
+        "link": "https://www.pangram.com/history/4b249916-5525-49aa-bbbb-072a3ff3ee8a",
+        "prediction": "cut-97.8#158",
+        "right": false,
+        "sha256": "a5b447ccc099fdfb3248e1be256e5fd2cd1d248733612a2b07b362a6ad7c99cd",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 72
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103c_97_8_s01",
+      "sha256": "44202f65ebd0c2ba33e057edb273438b3f34240af1443f53bc0444d121bfa3fe",
+      "words": 77,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 4.931100866180774e-20,
+      "fraction_human": 1.353265237499443e-13,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/32cfcfdc-cd7a-4edd-86aa-c2b3a6653022",
+      "utc": "2026-10-23T22:12:31Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          70,
+          0,
+          395,
+          "Milder reactions afterward count as caution signs too, like getting confused or spaced out (dissociating) again and again. If any of this is severe or risky, I’d get professional help right away, especially if it keeps going or comes back while you’re sober. And I wouldn’t suddenly quit a prescribed medicine, or anything your body is dependent on, just because it might be part of the problem."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          11,
+          395,
+          439,
+          " I’d ask a doctor how to come off it safely."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-3.jsonl",
+      "source_line": 1,
+      "text": "Milder reactions afterward count as caution signs too, like getting confused or spaced out (dissociating) again and again. If any of this is severe or risky, I’d get professional help right away, especially if it keeps going or comes back while you’re sober. And I wouldn’t suddenly quit a prescribed medicine, or anything your body is dependent on, just because it might be part of the problem. I’d ask a doctor how to come off it safely.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T22:12:31Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Generated",
+        "link": "https://www.pangram.com/history/32cfcfdc-cd7a-4edd-86aa-c2b3a6653022",
+        "prediction": "cut-97.8#194",
+        "right": false,
+        "sha256": "44202f65ebd0c2ba33e057edb273438b3f34240af1443f53bc0444d121bfa3fe",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 77
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103b_97_12_old",
+      "sha256": "4db638e71a4e4d6f80c8cce6da685b39098f10d73580dc30ed786a325593f3fb",
+      "words": 92,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 5.052663942924678e-21,
+      "fraction_ai_assisted": 2.066172546693013e-40,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/3d70db8d-37bf-4910-896d-48cb398ed934",
+      "utc": "2026-10-23T22:04:42Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          96,
+          0,
+          513,
+          "With that under you, belonging with people can get a lot less desperate. Not all at once, but the Guide keeps watching for the moment your little one starts thinking, “If they stop liking me, I won’t belong anywhere,” and keeps reminding it that a group’s approval isn’t the deepest belonging there is. By the way, this job doesn’t have to be called the Guide. The Wise One works, or your Inner Teacher, and “Guru” does for some people, though for cult survivors it can be a trigger word, which is understandable."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-2.jsonl",
+      "source_line": 2,
+      "text": "With that under you, belonging with people can get a lot less desperate. Not all at once, but the Guide keeps watching for the moment your little one starts thinking, “If they stop liking me, I won’t belong anywhere,” and keeps reminding it that a group’s approval isn’t the deepest belonging there is. By the way, this job doesn’t have to be called the Guide. The Wise One works, or your Inner Teacher, and “Guru” does for some people, though for cult survivors it can be a trigger word, which is understandable.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 5.052663942924678e-21
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T22:04:42Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/3d70db8d-37bf-4910-896d-48cb398ed934",
+        "prediction": "cut-97.12#172",
+        "right": true,
+        "sha256": "4db638e71a4e4d6f80c8cce6da685b39098f10d73580dc30ed786a325593f3fb",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 92
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103_97_12",
+      "sha256": "ec418f06054b3969cf1e0d8f4b68a2d2b9a56b245009c1dd8e04d5130e8b0442",
+      "words": 79,
+      "headline": "AI Detected",
+      "prediction_short": "AI",
+      "fraction_ai": 0.8348624110221863,
+      "fraction_ai_assisted": 4.035739577255473e-42,
+      "fraction_human": 0.16513758897781372,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/ae33a2e2-0c16-4c90-9317-7134c113e110",
+      "utc": "2026-10-23T21:59:35Z",
+      "windows": [
+        [
+          "Human Written",
+          "Low",
+          13,
+          0,
+          72,
+          "With that under you, belonging with people can get a lot less desperate."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          56,
+          72,
+          360,
+          " Not all at once, but the Guide keeps watching for the moment your little one starts thinking, “If they stop liking me, I won’t belong anywhere,” and keeps reminding it that a group’s approval isn’t the deepest belonging there is. By the way, this job doesn’t have to be called the Guide."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          14,
+          360,
+          436,
+          " The Wise One works, or your Inner Teacher, and “Guru” does for some people."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+      "source_line": 10,
+      "text": "With that under you, belonging with people can get a lot less desperate. Not all at once, but the Guide keeps watching for the moment your little one starts thinking, “If they stop liking me, I won’t belong anywhere,” and keeps reminding it that a group’s approval isn’t the deepest belonging there is. By the way, this job doesn’t have to be called the Guide. The Wise One works, or your Inner Teacher, and “Guru” does for some people.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.8348624110221863
+      },
+      "ledger_result": {
+        "ai_fraction": 0.8349,
+        "at": "2026-10-23T21:59:35Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/ae33a2e2-0c16-4c90-9317-7134c113e110",
+        "prediction": "cut-97.12#161",
+        "right": false,
+        "sha256": "ec418f06054b3969cf1e0d8f4b68a2d2b9a56b245009c1dd8e04d5130e8b0442",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 79
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103c_97_12_p10",
+      "sha256": "f25cfc61bf02db7144ed8fbd68d57011abebb63c2524e1346d9fcb49bbc2c943",
+      "words": 53,
+      "headline": "AI Detected",
+      "prediction_short": "Mixed",
+      "fraction_ai": 0.7615894079208374,
+      "fraction_ai_assisted": 9.508964655673132e-32,
+      "fraction_human": 0.2384105920791626,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/73a1184b-14d7-4094-b2f5-d4a13b4be59d",
+      "utc": "2026-10-23T22:12:43Z",
+      "windows": [
+        [
+          "Human Written",
+          "Low",
+          13,
+          0,
+          72,
+          "With that under you, belonging with people can get a lot less desperate."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          43,
+          72,
+          302,
+          " Not all at once, but the Guide keeps watching for the moment your little one starts thinking, “If they stop liking me, I won’t belong anywhere,” and keeps reminding it that a group’s approval isn’t the deepest belonging there is."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-3.jsonl",
+      "source_line": 3,
+      "text": "With that under you, belonging with people can get a lot less desperate. Not all at once, but the Guide keeps watching for the moment your little one starts thinking, “If they stop liking me, I won’t belong anywhere,” and keeps reminding it that a group’s approval isn’t the deepest belonging there is.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.7615894079208374
+      },
+      "ledger_result": {
+        "ai_fraction": 0.7616,
+        "at": "2026-10-23T22:12:43Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/73a1184b-14d7-4094-b2f5-d4a13b4be59d",
+        "prediction": "cut-97.12#196",
+        "right": true,
+        "sha256": "f25cfc61bf02db7144ed8fbd68d57011abebb63c2524e1346d9fcb49bbc2c943",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 53
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103b_98_2_old",
+      "sha256": "4e557aa349437b92fdf2f0c65e857fc0e0c4a6a2f148840383516ec4e5790821",
+      "words": 87,
+      "headline": "AI Detected",
+      "prediction_short": "AI",
+      "fraction_ai": 0.9813821315765381,
+      "fraction_ai_assisted": 3.505625303934501e-11,
+      "fraction_human": 0.018617885187268257,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/8e13e541-1157-4912-b56d-e68dfbf338d6",
+      "utc": "2026-10-23T22:04:47Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "Low",
+          54,
+          0,
+          302,
+          "After the day, look at what actually happened. If you did the Protector action(s), not feeling better right away is information to learn from. It doesn’t mean failure. Healing is nonlinear, and sometimes standing up for yourself might make you feel worse at first. Not doing it is harder to figure out."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          32,
+          302,
+          455,
+          " Fear is the first guess, but maybe you didn’t know how or why. Being worn out can stop you too, and sometimes whoever said they’d help couldn’t make it."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          6,
+          455,
+          484,
+          " Hey, we’ve all been there. 🤗"
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-2.jsonl",
+      "source_line": 3,
+      "text": "After the day, look at what actually happened. If you did the Protector action(s), not feeling better right away is information to learn from. It doesn’t mean failure. Healing is nonlinear, and sometimes standing up for yourself might make you feel worse at first. Not doing it is harder to figure out. Fear is the first guess, but maybe you didn’t know how or why. Being worn out can stop you too, and sometimes whoever said they’d help couldn’t make it. Hey, we’ve all been there. 🤗",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.9813821315765381
+      },
+      "ledger_result": {
+        "ai_fraction": 0.9814,
+        "at": "2026-10-23T22:04:47Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/8e13e541-1157-4912-b56d-e68dfbf338d6",
+        "prediction": "cut-98.2#173",
+        "right": false,
+        "sha256": "4e557aa349437b92fdf2f0c65e857fc0e0c4a6a2f148840383516ec4e5790821",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 87
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103_98_2",
+      "sha256": "feb17cfba8f9cf935a01720cec84a0f7d467a54ad890d7537e19b0b9d32f906f",
+      "words": 83,
+      "headline": "AI Detected",
+      "prediction_short": "Mixed",
+      "fraction_ai": 0.397489070892334,
+      "fraction_ai_assisted": 1.5792787910751116e-10,
+      "fraction_human": 0.602510929107666,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/3f3313f9-dc3e-413d-968b-e2bea8ac5d4a",
+      "utc": "2026-10-23T22:00:54Z",
+      "windows": [
+        [
+          "Human Written",
+          "Low",
+          8,
+          0,
+          46,
+          "After the day, look at what actually happened."
+        ],
+        [
+          "Human Written",
+          "Medium",
+          33,
+          46,
+          239,
+          " If you did the Protector action(s), not feeling better right away is information to learn from. Healing is nonlinear, and sometimes standing up for yourself might make you feel worse at first."
+        ],
+        [
+          "Human Written",
+          "Low",
+          8,
+          239,
+          277,
+          " Not doing it is harder to figure out."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          32,
+          277,
+          430,
+          " Fear is the first guess, but maybe you didn’t know how or why. Being worn out can stop you too, and sometimes whoever said they’d help couldn’t make it."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          6,
+          430,
+          459,
+          " Hey, we’ve all been there. 🤗"
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+      "source_line": 14,
+      "text": "After the day, look at what actually happened. If you did the Protector action(s), not feeling better right away is information to learn from. Healing is nonlinear, and sometimes standing up for yourself might make you feel worse at first. Not doing it is harder to figure out. Fear is the first guess, but maybe you didn’t know how or why. Being worn out can stop you too, and sometimes whoever said they’d help couldn’t make it. Hey, we’ve all been there. 🤗",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.397489070892334
+      },
+      "ledger_result": {
+        "ai_fraction": 0.3975,
+        "at": "2026-10-23T22:00:54Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/3f3313f9-dc3e-413d-968b-e2bea8ac5d4a",
+        "prediction": "cut-98.2#165",
+        "right": false,
+        "sha256": "feb17cfba8f9cf935a01720cec84a0f7d467a54ad890d7537e19b0b9d32f906f",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 83
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103b_98_7_old",
+      "sha256": "f217e1bc868fe3142c3e3a04198820e800a479cb43daf975a1cdfb3da44de097",
+      "words": 143,
+      "headline": "AI Detected",
+      "prediction_short": "Mixed",
+      "fraction_ai": 0.7331635355949402,
+      "fraction_ai_assisted": 5.421713448960309e-19,
+      "fraction_human": 0.2668364346027374,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/7fa4b100-ed61-41ee-92e1-ae84c11d7af3",
+      "utc": "2026-10-23T22:04:55Z",
+      "windows": [
+        [
+          "Human Written",
+          "Low",
+          38,
+          0,
+          206,
+          "Sometimes the session itself goes really well. You feel real care for your little one and say exactly what they needed to hear. And a few days later you’re skipping lunch and saying yes to everything again."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          15,
+          206,
+          272,
+          " A lot of people’s first guess is that they didn’t go deep enough."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          32,
+          272,
+          417,
+          " I don’t think that’s it, though, and I don’t think this one failed either. Maybe the grown-up just hasn’t come out of the exercise with you yet."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          36,
+          417,
+          583,
+          " Whatever you did for your little one in there, I’d try a tiny bit of it out here, like texting a friend that you’re having a rough day instead of saying you’re fine."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          25,
+          583,
+          725,
+          " That can honestly be harder than the meditation was. One small thing like that can teach your little one more than ten more good meditations."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          9,
+          725,
+          772,
+          " It doesn’t have to happen after every session."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-2.jsonl",
+      "source_line": 4,
+      "text": "Sometimes the session itself goes really well. You feel real care for your little one and say exactly what they needed to hear. And a few days later you’re skipping lunch and saying yes to everything again. A lot of people’s first guess is that they didn’t go deep enough. I don’t think that’s it, though, and I don’t think this one failed either. Maybe the grown-up just hasn’t come out of the exercise with you yet. Whatever you did for your little one in there, I’d try a tiny bit of it out here, like texting a friend that you’re having a rough day instead of saying you’re fine. That can honestly be harder than the meditation was. One small thing like that can teach your little one more than ten more good meditations. It doesn’t have to happen after every session.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.7331635355949402
+      },
+      "ledger_result": {
+        "ai_fraction": 0.7332,
+        "at": "2026-10-23T22:04:55Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/7fa4b100-ed61-41ee-92e1-ae84c11d7af3",
+        "prediction": "cut-98.7#174",
+        "right": true,
+        "sha256": "f217e1bc868fe3142c3e3a04198820e800a479cb43daf975a1cdfb3da44de097",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 143
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103_98_7",
+      "sha256": "010b44a9fecbe50ca83a5ffe483711bfa81f8388d0c2527df851d54428e84c3b",
+      "words": 135,
+      "headline": "AI Detected",
+      "prediction_short": "AI",
+      "fraction_ai": 0.9612295627593994,
+      "fraction_ai_assisted": 6.338365014358467e-16,
+      "fraction_human": 0.03877044469118118,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/92c0822d-5e94-4ed7-b44a-b3c1c9e785d5",
+      "utc": "2026-10-23T22:01:07Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "Low",
+          23,
+          0,
+          127,
+          "Sometimes the session itself goes really well. You feel real care for your little one and say exactly what they needed to hear."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          15,
+          127,
+          206,
+          " And a few days later you’re skipping lunch and saying yes to everything again."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          15,
+          206,
+          272,
+          " A lot of people’s first guess is that they didn’t go deep enough."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          17,
+          272,
+          347,
+          " I don’t think that’s it, though, and I don’t think this one failed either."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          15,
+          347,
+          417,
+          " Maybe the grown-up just hasn’t come out of the exercise with you yet."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          36,
+          417,
+          583,
+          " Whatever you did for your little one in there, I’d try a tiny bit of it out here, like texting a friend that you’re having a rough day instead of saying you’re fine."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          25,
+          583,
+          725,
+          " That can honestly be harder than the meditation was. One small thing like that can teach your little one more than ten more good meditations."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+      "source_line": 17,
+      "text": "Sometimes the session itself goes really well. You feel real care for your little one and say exactly what they needed to hear. And a few days later you’re skipping lunch and saying yes to everything again. A lot of people’s first guess is that they didn’t go deep enough. I don’t think that’s it, though, and I don’t think this one failed either. Maybe the grown-up just hasn’t come out of the exercise with you yet. Whatever you did for your little one in there, I’d try a tiny bit of it out here, like texting a friend that you’re having a rough day instead of saying you’re fine. That can honestly be harder than the meditation was. One small thing like that can teach your little one more than ten more good meditations.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.9612295627593994
+      },
+      "ledger_result": {
+        "ai_fraction": 0.9612,
+        "at": "2026-10-23T22:01:07Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Detected",
+        "link": "https://www.pangram.com/history/92c0822d-5e94-4ed7-b44a-b3c1c9e785d5",
+        "prediction": "cut-98.7#168",
+        "right": false,
+        "sha256": "010b44a9fecbe50ca83a5ffe483711bfa81f8388d0c2527df851d54428e84c3b",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 135
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103c_98_7_s02",
+      "sha256": "d690aed8d291878f8c8dc98ec236b30e143e70ad8e40eeb12a03f6e07f6b278a",
+      "words": 108,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 1.1897981329228524e-37,
+      "fraction_human": 3.807396157249135e-15,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/80ce41ab-d0f2-46b1-8155-577397f1d8b9",
+      "utc": "2026-10-23T22:12:38Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "Medium",
+          7,
+          0,
+          46,
+          "Sometimes the session itself goes really well."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          107,
+          46,
+          565,
+          " You feel real care for your little one and say exactly what they needed to hear, and a few days later you’re skipping lunch and saying yes to everything again. A lot of people figure it didn’t work, or they didn’t go deep enough. I think it just hasn’t carried over into the rest of your week yet. So try a tiny bit of the same care in your day, like texting a friend that you’re having a rough day instead of saying you’re fine. One small thing like that can teach your little one more than ten more good meditations."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-3.jsonl",
+      "source_line": 2,
+      "text": "Sometimes the session itself goes really well. You feel real care for your little one and say exactly what they needed to hear, and a few days later you’re skipping lunch and saying yes to everything again. A lot of people figure it didn’t work, or they didn’t go deep enough. I think it just hasn’t carried over into the rest of your week yet. So try a tiny bit of the same care in your day, like texting a friend that you’re having a rough day instead of saying you’re fine. One small thing like that can teach your little one more than ten more good meditations.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T22:12:38Z",
+        "detector": "pangram-4.1-api",
+        "headline": "AI Generated",
+        "link": "https://www.pangram.com/history/80ce41ab-d0f2-46b1-8155-577397f1d8b9",
+        "prediction": "cut-98.7#195",
+        "right": false,
+        "sha256": "d690aed8d291878f8c8dc98ec236b30e143e70ad8e40eeb12a03f6e07f6b278a",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 108
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103_98_9",
+      "sha256": "a6f0f4e1047de5778ccde80d3317c72e1633b554a4e9c5599452287c139b0005",
+      "words": 84,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 2.0693133251370455e-07,
+      "fraction_ai_assisted": 3.158517096926498e-26,
+      "fraction_human": 0.9999998211860657,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/cc74222a-f971-4619-ad21-304c4eb719ad",
+      "utc": "2026-10-23T22:01:11Z",
+      "windows": [
+        [
+          "Human Written",
+          "Low",
+          24,
+          0,
+          130,
+          "The Guide also points beyond itself, toward a belonging deeper than any group, one that doesn’t ask you to give up being yourself."
+        ],
+        [
+          "Human Written",
+          "Medium",
+          16,
+          130,
+          227,
+          " That might be nature, or existence itself. It might be whatever your tradition sees as ultimate."
+        ],
+        [
+          "Human Written",
+          "High",
+          48,
+          227,
+          488,
+          " Love can come from any of these places, and you also belong there, which is a little different. Maybe you’ve felt that outside somewhere, like you didn’t need anybody’s okay to be there. The way in is time in nature and contemplative practice, like meditation."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-1.jsonl",
+      "source_line": 18,
+      "text": "The Guide also points beyond itself, toward a belonging deeper than any group, one that doesn’t ask you to give up being yourself. That might be nature, or existence itself. It might be whatever your tradition sees as ultimate. Love can come from any of these places, and you also belong there, which is a little different. Maybe you’ve felt that outside somewhere, like you didn’t need anybody’s okay to be there. The way in is time in nature and contemplative practice, like meditation.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 2.0693133251370455e-07
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T22:01:11Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/cc74222a-f971-4619-ad21-304c4eb719ad",
+        "prediction": "cut-98.9#169",
+        "right": true,
+        "sha256": "a6f0f4e1047de5778ccde80d3317c72e1633b554a4e9c5599452287c139b0005",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 84
+      },
+      "historical_only": true
+    },
+    {
+      "name": "t103e_98_9_s06",
+      "sha256": "e843ca5ab4264f11c8561ff310cae2d01c9ed42c5076c8247cda2e53fa9cbc47",
+      "words": 80,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 5.252014874446741e-21,
+      "fraction_ai_assisted": 7.92482486750791e-24,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/691a7c98-6213-4851-9b1c-4c457c903425",
+      "utc": "2026-10-23T22:20:50Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          84,
+          0,
+          470,
+          "The Guide also points beyond itself, toward somewhere you belong that doesn’t ask you to give up being yourself. That might be nature, or existence itself. It might be whatever your tradition sees as ultimate. Love can come from any of these places, and you also belong there, which is a little different. Maybe you’ve felt that outside somewhere, like you didn’t need anybody’s okay to be there. The way in is time in nature and contemplative practice, like meditation."
+        ]
+      ],
+      "source_path": "articles/inner-child-therapy/experiments/t103-api/API-RESULTS-5.jsonl",
+      "source_line": 1,
+      "text": "The Guide also points beyond itself, toward somewhere you belong that doesn’t ask you to give up being yourself. That might be nature, or existence itself. It might be whatever your tradition sees as ultimate. Love can come from any of these places, and you also belong there, which is a little different. Maybe you’ve felt that outside somewhere, like you didn’t need anybody’s okay to be there. The way in is time in nature and contemplative practice, like meditation.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 5.252014874446741e-21
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T22:20:50Z",
+        "detector": "pangram-4.1-api",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/691a7c98-6213-4851-9b1c-4c457c903425",
+        "prediction": "cut-98.9#203",
+        "right": true,
+        "sha256": "e843ca5ab4264f11c8561ff310cae2d01c9ed42c5076c8247cda2e53fa9cbc47",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 80
+      },
+      "historical_only": true
+    },
+    {
+      "name": "HG15-p9e",
+      "sha256": "faadb6e364f9990dc7884e8ddbc7fbaf0a3b66f206b39ae693da7652af8eef9e",
+      "text": "What is the difference between a human doer and a human being? If you don’t feel good enough as a human being, you will try to become good enough as a human doer by for example being beautiful, doing something well, being smart, having a certain status, being spiritual, etc. Those can all be real gifts, but if failing at one of them feels like losing yourself, it has become a way to buy belonging.",
+      "source_path": "articles/inner-signal/humanize/fix-20261020/b467/batch/texts/HG15-p9e.txt",
+      "source_line": 1,
+      "text_hash_verified": true,
+      "evidence_kind": "text+ledger/GUI-summary",
+      "version": "4.1",
+      "raw_window_offsets_available": false,
+      "raw_gui_summary": {
+        "history_id": 16871621,
+        "link": "https://www.pangram.com/history/6e97d63f-765f-4e8d-aecc-39ca783c05fa",
+        "utc": "2026-10-21T00:17:57Z",
+        "words": 76,
+        "avg_ai_likelihood": 0.3125,
+        "headline": "AI Detected",
+        "version": "4.1",
+        "windows": [
+          "Human, High, 51",
+          "AI-Generated, Medium, 25"
+        ],
+        "flagged": [
+          "AI-Generated (25 words): Those can all be real gifts, but if failing at one of them feels like losing yourself, it has become a way to buy belonging."
+        ]
+      },
+      "result_source_path": "articles/inner-signal/humanize/fix-20261020/b467/batch/b467-results.json",
+      "all_human_segments": false,
+      "headline": "AI Detected",
+      "numeric_measure": {
+        "field": "avg_ai_likelihood",
+        "value": 0.3125
+      },
+      "utc": "2026-10-21T00:17:57Z",
+      "ledger_result": {
+        "at": "2026-10-21T00:17:57Z",
+        "detector": "pangram 4.1, web app",
+        "headline": "AI Detected",
+        "likelihood": 0.3125,
+        "link": "https://www.pangram.com/history/6e97d63f-765f-4e8d-aecc-39ca783c05fa",
+        "prediction": "HG15-p9#5",
+        "right": false,
+        "sha256": "faadb6e364f9990dc7884e8ddbc7fbaf0a3b66f206b39ae693da7652af8eef9e",
+        "type": "result",
+        "verdict": "Mixed",
+        "windows": [
+          "Human, High, 51",
+          "AI-Generated, Medium, 25"
+        ],
+        "words_read": 76
+      },
+      "historical_only": true
+    },
+    {
+      "name": "HG15-p9e2",
+      "sha256": "e2a7669aff449e5d463753aa9ad6f80870b1784115def239129bdebf913b081e",
+      "text": "What is the difference between a human doer and a human being? If you don’t feel good enough as a human being, you will try to become good enough as a human doer by for example being beautiful, doing something well, being smart, having a certain status, being spiritual, etc. I’m not saying those can’t be real gifts, but if failing at one of them feels like losing yourself, then you’re using it to buy belonging.",
+      "source_path": "articles/inner-signal/humanize/fix-20261020/b468/batch/texts/HG15-p9e2.txt",
+      "source_line": 1,
+      "text_hash_verified": true,
+      "evidence_kind": "text+ledger/GUI-summary",
+      "version": "4.1",
+      "raw_window_offsets_available": false,
+      "raw_gui_summary": {
+        "history_id": 16875374,
+        "link": "https://www.pangram.com/history/b252243a-a20d-4f01-8643-7551ffcb5d56",
+        "utc": "2026-10-21T00:59:59Z",
+        "words": 80,
+        "avg_ai_likelihood": 0.3357487916946411,
+        "headline": "AI Detected",
+        "version": "4.1",
+        "windows": [
+          "Human, High, 51",
+          "AI-Generated, High, 29"
+        ],
+        "flagged": [
+          "AI-Generated (29 words): I’m not saying those can’t be real gifts, but if failing at one of them feels like losing yourself, then you’re using it to buy belonging."
+        ]
+      },
+      "result_source_path": "articles/inner-signal/humanize/fix-20261020/b468/batch/b468-results.json",
+      "all_human_segments": false,
+      "headline": "AI Detected",
+      "numeric_measure": {
+        "field": "avg_ai_likelihood",
+        "value": 0.3357487916946411
+      },
+      "utc": "2026-10-21T00:59:59Z",
+      "ledger_result": {
+        "at": "2026-10-21T00:59:59Z",
+        "detector": "pangram 4.1, web app",
+        "headline": "AI Detected",
+        "likelihood": 0.3357487916946411,
+        "link": "https://www.pangram.com/history/b252243a-a20d-4f01-8643-7551ffcb5d56",
+        "prediction": "HG15-p9#13",
+        "right": false,
+        "sha256": "e2a7669aff449e5d463753aa9ad6f80870b1784115def239129bdebf913b081e",
+        "type": "result",
+        "verdict": "Mixed",
+        "windows": [
+          "Human, High, 51",
+          "AI-Generated, High, 29"
+        ],
+        "words_read": 80
+      },
+      "historical_only": true
+    },
+    {
+      "name": "HG35-forgive-e2",
+      "sha256": "fd731a46b244cddb05d28574d39f9bf888c7defbb802bf628edebceaec2b9191",
+      "text": "We can not ‘force’ forgiveness on ourselves, it has to come from a place of understanding otherwise it can be bypassing. However, if we remain in the anger forever, we are allowing the injury to dictate how we live our lives in the present. So how do we hold all of this? We just remember that it can all be true at once. The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "source_path": "articles/inner-signal/humanize/fix-20261020/b467/batch/texts/HG35-forgive-e2.txt",
+      "source_line": 1,
+      "text_hash_verified": true,
+      "evidence_kind": "text+ledger/GUI-summary",
+      "version": "4.1",
+      "raw_window_offsets_available": false,
+      "raw_gui_summary": {
+        "history_id": 16871656,
+        "link": "https://www.pangram.com/history/25833096-c587-4602-b24d-ba7affdfbcf3",
+        "utc": "2026-10-21T00:18:28Z",
+        "words": 84,
+        "avg_ai_likelihood": 0.28958049416542053,
+        "headline": "AI Detected",
+        "version": "4.1",
+        "windows": [
+          "Human, High, 44",
+          "Human, Low, 8",
+          "Human, Low, 11",
+          "AI-Generated, Medium, 8",
+          "AI-Generated, High, 13"
+        ],
+        "flagged": [
+          "AI-Generated (8 words): The harm happened, and the boundary still matters.",
+          "AI-Generated (13 words): The person is still accountable, and forgiveness may come later on its own."
+        ]
+      },
+      "result_source_path": "articles/inner-signal/humanize/fix-20261020/b467/batch/b467-results.json",
+      "all_human_segments": false,
+      "headline": "AI Detected",
+      "numeric_measure": {
+        "field": "avg_ai_likelihood",
+        "value": 0.28958049416542053
+      },
+      "utc": "2026-10-21T00:18:28Z",
+      "ledger_result": {
+        "at": "2026-10-21T00:18:28Z",
+        "detector": "pangram 4.1, web app",
+        "headline": "AI Detected",
+        "likelihood": 0.28958049416542053,
+        "link": "https://www.pangram.com/history/25833096-c587-4602-b24d-ba7affdfbcf3",
+        "prediction": "HG35-p13#8",
+        "right": false,
+        "sha256": "fd731a46b244cddb05d28574d39f9bf888c7defbb802bf628edebceaec2b9191",
+        "type": "result",
+        "verdict": "Mixed",
+        "windows": [
+          "Human, High, 44",
+          "Human, Low, 8",
+          "Human, Low, 11",
+          "AI-Generated, Medium, 8",
+          "AI-Generated, High, 13"
+        ],
+        "words_read": 84
+      },
+      "historical_only": true
+    },
+    {
+      "name": "HG35-forgive-e3",
+      "sha256": "31582ab9a89a16868a4577a8265ef380b5510e848cfe2752a8ccabf64ccf3092",
+      "text": "We can not ‘force’ forgiveness on ourselves, it has to come from a place of understanding otherwise it can be bypassing. However, if we remain in the anger forever, we are allowing the injury to dictate how we live our lives in the present. So how do we hold all of this? We just remember that it can all be true at once. They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.",
+      "source_path": "articles/inner-signal/humanize/fix-20261020/b468/batch/texts/HG35-forgive-e3.txt",
+      "source_line": 1,
+      "text_hash_verified": true,
+      "evidence_kind": "text+ledger/GUI-summary",
+      "version": "4.1",
+      "raw_window_offsets_available": false,
+      "raw_gui_summary": {
+        "history_id": 16875392,
+        "link": "https://www.pangram.com/history/637e6fb4-3a47-4fe6-899f-b5ff0923e7f3",
+        "utc": "2026-10-21T01:00:10Z",
+        "words": 94,
+        "avg_ai_likelihood": 1.3023854489144558e-28,
+        "headline": "Human Written",
+        "version": "4.1",
+        "windows": [
+          "Human, High, 94"
+        ],
+        "flagged": []
+      },
+      "result_source_path": "articles/inner-signal/humanize/fix-20261020/b468/batch/b468-results.json",
+      "all_human_segments": true,
+      "headline": "Human Written",
+      "numeric_measure": {
+        "field": "avg_ai_likelihood",
+        "value": 1.3023854489144558e-28
+      },
+      "utc": "2026-10-21T01:00:10Z",
+      "ledger_result": {
+        "at": "2026-10-21T01:00:10Z",
+        "detector": "pangram 4.1, web app",
+        "headline": "Human Written",
+        "likelihood": 1.3023854489144558e-28,
+        "link": "https://www.pangram.com/history/637e6fb4-3a47-4fe6-899f-b5ff0923e7f3",
+        "prediction": "HG35-p13#14",
+        "right": false,
+        "sha256": "31582ab9a89a16868a4577a8265ef380b5510e848cfe2752a8ccabf64ccf3092",
+        "type": "result",
+        "verdict": "Human",
+        "windows": [
+          "Human, High, 94"
+        ],
+        "words_read": 94
+      },
+      "historical_only": true
+    },
+    {
+      "name": "b472_s2e_alone",
+      "sha256": "0b6aa86e8d573ecba5b1fe979e44d514c8842128ae8d2bb92392a898934ac435",
+      "words": 124,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 2.6808232401103412e-36,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T01:49:47Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          133,
+          0,
+          645,
+          "If you ever want to get rid of the shortcut, quit practicing it, take it out of your recordings and whatever apps you set it up in, and go back to your usual induction. Decide that while you’re wide awake, and say it to yourself. Don’t be surprised if it still works on you for a while, though. Saying it’s gone doesn’t erase it overnight. If it keeps kicking in when you don’t want it to, or it leaves you spacey and disoriented after you use it, get help from someone qualified. And if you’d rather keep it, that’s fine, as long as you only use it to start a session you’ve chosen for later. Either way, today’s trance ends when you come back."
+        ]
+      ],
+      "source_path": "articles/inner-signal/humanize/fix-20261023/b472/API-RESULTS-4.jsonl",
+      "source_line": 2,
+      "text": "If you ever want to get rid of the shortcut, quit practicing it, take it out of your recordings and whatever apps you set it up in, and go back to your usual induction. Decide that while you’re wide awake, and say it to yourself. Don’t be surprised if it still works on you for a while, though. Saying it’s gone doesn’t erase it overnight. If it keeps kicking in when you don’t want it to, or it leaves you spacey and disoriented after you use it, get help from someone qualified. And if you’d rather keep it, that’s fine, as long as you only use it to start a session you’ve chosen for later. Either way, today’s trance ends when you come back.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T01:49:47Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/inner-signal/humanize/fix-20261023/b472/API-CHECKS.md#b472_s2e_alone",
+        "prediction": "HG17-B306#43",
+        "right": false,
+        "sha256": "0b6aa86e8d573ecba5b1fe979e44d514c8842128ae8d2bb92392a898934ac435",
+        "shading": "red: one window, High, the whole paragraph",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 124
+      },
+      "historical_only": true
+    },
+    {
+      "name": "b472_s2f_alone",
+      "sha256": "f684236b6d4c45c184f33d9b19a38861de8f6bb3f23f7770b0040f3e22a43804",
+      "words": 110,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 0.0,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T01:52:51Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          116,
+          0,
+          579,
+          "If you ever want to retire the shortcut, stop practicing it, take it out of your recordings and any apps that play it, and go back to your usual induction. Decide that while you’re wide awake, and tell yourself so. Don’t be surprised if it still works on you for a while, though, since saying it’s gone doesn’t erase it overnight. You can also keep it, but only to start a session you’ve chosen ahead of time. If it keeps pulling you in when you don’t want it to, or you come out of it disoriented, find someone qualified to help you with it, like a therapist who knows hypnosis."
+        ]
+      ],
+      "source_path": "articles/inner-signal/humanize/fix-20261023/b472/API-RESULTS-5.jsonl",
+      "source_line": 2,
+      "text": "If you ever want to retire the shortcut, stop practicing it, take it out of your recordings and any apps that play it, and go back to your usual induction. Decide that while you’re wide awake, and tell yourself so. Don’t be surprised if it still works on you for a while, though, since saying it’s gone doesn’t erase it overnight. You can also keep it, but only to start a session you’ve chosen ahead of time. If it keeps pulling you in when you don’t want it to, or you come out of it disoriented, find someone qualified to help you with it, like a therapist who knows hypnosis.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T01:52:51Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/inner-signal/humanize/fix-20261023/b472/API-CHECKS.md#b472_s2f_alone",
+        "prediction": "HG17-B306#45",
+        "right": false,
+        "sha256": "f684236b6d4c45c184f33d9b19a38861de8f6bb3f23f7770b0040f3e22a43804",
+        "shading": "red: one window, High, the whole paragraph",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 110
+      },
+      "historical_only": true
+    },
+    {
+      "name": "b473_seam_bj_p1",
+      "sha256": "e97e1bc328080d18a219d7793d49e64f0437e32093e3da22c899685ac524e36b",
+      "words": 146,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 5.988362060716032e-30,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/8c07a601-45c9-4d33-9555-6b51302e81d3",
+      "utc": "2026-10-23T13:00:57Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          157,
+          0,
+          736,
+          "If you want to turn this one off, all you have to do is not practice it anymore, take it out of your recordings, take it out of your apps if you’re using it there, and start using your regular induction again. You may want to say that you won’t use this one anymore in your waking life, but saying that it’s gone doesn’t mean it’s going to be gone right away. If it’s causing you a problem (you’re responding to it when you don’t want to, you’re having disorientation issues, whatever), then get help from someone who’s qualified to help you. If you want to keep it around so you can use it to go back into a trance at a later date when you want to, that’s fine. But for now, when you come out of this trance, it will be over for today."
+        ]
+      ],
+      "source_path": "articles/inner-signal/humanize/fix-20261023/b473/API-RESULTS-1.jsonl",
+      "source_line": 1,
+      "text": "If you want to turn this one off, all you have to do is not practice it anymore, take it out of your recordings, take it out of your apps if you’re using it there, and start using your regular induction again. You may want to say that you won’t use this one anymore in your waking life, but saying that it’s gone doesn’t mean it’s going to be gone right away. If it’s causing you a problem (you’re responding to it when you don’t want to, you’re having disorientation issues, whatever), then get help from someone who’s qualified to help you. If you want to keep it around so you can use it to go back into a trance at a later date when you want to, that’s fine. But for now, when you come out of this trance, it will be over for today.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 5.988362060716032e-30
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T13:00:57Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/8c07a601-45c9-4d33-9555-6b51302e81d3",
+        "prediction": "HG17-B306#49",
+        "right": true,
+        "sha256": "e97e1bc328080d18a219d7793d49e64f0437e32093e3da22c899685ac524e36b",
+        "shading": "Human High (157w)",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 146
+      },
+      "historical_only": true
+    },
+    {
+      "name": "b473_seam_bj_p1_t",
+      "sha256": "0582e76475d1f7dbf427f6efc364e1711d6e15d6496c2fb13e80a544b5b2660e",
+      "words": 144,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 9.642182349712587e-17,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/1129f619-ef4e-4276-8889-f8b3496f19b7",
+      "utc": "2026-10-23T13:13:24Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          141,
+          0,
+          662,
+          "If you want to turn this one off, all you have to do is not practice it anymore, take it out of your recordings, take it out of your apps if you’re using it there, and start using your regular induction again. You’ll want to say, while you’re awake, that you won’t use this one anymore, but saying that it’s gone doesn’t mean it’s going to be gone right away. If it’s causing you a problem (you’re responding to it when you don’t want to, you’re having disorientation issues, whatever), then get help from someone who’s qualified to help you. If you want to keep it around so you can use it to go back into a trance at a later date when you want to, that’s fine."
+        ],
+        [
+          "Human Written",
+          "Medium",
+          16,
+          662,
+          736,
+          " But for now, when you come out of this trance, it will be over for today."
+        ]
+      ],
+      "source_path": "articles/inner-signal/humanize/fix-20261023/b473/API-RESULTS-3.jsonl",
+      "source_line": 1,
+      "text": "If you want to turn this one off, all you have to do is not practice it anymore, take it out of your recordings, take it out of your apps if you’re using it there, and start using your regular induction again. You’ll want to say, while you’re awake, that you won’t use this one anymore, but saying that it’s gone doesn’t mean it’s going to be gone right away. If it’s causing you a problem (you’re responding to it when you don’t want to, you’re having disorientation issues, whatever), then get help from someone who’s qualified to help you. If you want to keep it around so you can use it to go back into a trance at a later date when you want to, that’s fine. But for now, when you come out of this trance, it will be over for today.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 9.642182349712587e-17
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T13:13:24Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/1129f619-ef4e-4276-8889-f8b3496f19b7",
+        "prediction": "HG17-B306#51",
+        "right": true,
+        "sha256": "0582e76475d1f7dbf427f6efc364e1711d6e15d6496c2fb13e80a544b5b2660e",
+        "shading": "Human High (141w); Human Medium (16w)",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 144
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_nde",
+      "sha256": "7a28c5435e930d57d8f199a7f3108aa22bf0835e55f1cb711040b854bf4f84cc",
+      "words": 108,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 8.039063630457175e-32,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:24:32Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          122,
+          0,
+          690,
+          "The closest comparison that’s worth mentioning is the out-of-body perception in some near-death experiences. People sometimes report seeing things from impossible angles, and a controversial subset of those reports were verified by others in the room. Those cases had a target that other people could check, and my room experience didn’t, since I wasn’t floating around noticing specific details. So they can’t vouch for my event, but they help show what I mean by an experience that wasn’t stuck at the body’s vantage point anymore. If you want to dig in, there’s this systematic analysis of near-death reports, the AWARE-II cardiac-arrest study, and a recent veridical-NDE evidence scale."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-1.jsonl",
+      "source_line": 2,
+      "text": "The closest comparison that’s worth mentioning is the out-of-body perception in some near-death experiences. People sometimes report seeing things from impossible angles, and a controversial subset of those reports were verified by others in the room. Those cases had a target that other people could check, and my room experience didn’t, since I wasn’t floating around noticing specific details. So they can’t vouch for my event, but they help show what I mean by an experience that wasn’t stuck at the body’s vantage point anymore. If you want to dig in, there’s this systematic analysis of near-death reports, the AWARE-II cardiac-arrest study, and a recent veridical-NDE evidence scale.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T02:24:32Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_nde",
+        "prediction": "NB-P92#2",
+        "right": false,
+        "sha256": "7a28c5435e930d57d8f199a7f3108aa22bf0835e55f1cb711040b854bf4f84cc",
+        "shading": "AI High (122w)",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 108
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_nde_t2",
+      "sha256": "fd72210e97cb94dd2a07a1a2d7d3372868e2ce4bf58e979747ded8a8c919720b",
+      "words": 108,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 0.9953603744506836,
+      "fraction_ai_assisted": 2.0573041659353632e-20,
+      "fraction_human": 0.004639596678316593,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:28:33Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "Low",
+          19,
+          0,
+          93,
+          "The closest thing I can compare it to is the out-of-body part of some near-death experiences."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          101,
+          93,
+          660,
+          " People sometimes report seeing things from impossible angles, and some of those reports (controversially) were verified by others in the room. My room event had nothing like that to check, though, since I wasn’t floating around noticing any details. So those cases can’t back mine up. They just help me show what I mean by an experience that wasn’t stuck at the body’s vantage point anymore. If you want to go down that rabbit hole, there’s this systematic analysis of near-death reports, the AWARE-II cardiac-arrest study, and a recent veridical-NDE evidence scale."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-2.jsonl",
+      "source_line": 1,
+      "text": "The closest thing I can compare it to is the out-of-body part of some near-death experiences. People sometimes report seeing things from impossible angles, and some of those reports (controversially) were verified by others in the room. My room event had nothing like that to check, though, since I wasn’t floating around noticing any details. So those cases can’t back mine up. They just help me show what I mean by an experience that wasn’t stuck at the body’s vantage point anymore. If you want to go down that rabbit hole, there’s this systematic analysis of near-death reports, the AWARE-II cardiac-arrest study, and a recent veridical-NDE evidence scale.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.9953603744506836
+      },
+      "ledger_result": {
+        "ai_fraction": 0.9954,
+        "at": "2026-10-23T02:28:33Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_nde_t2",
+        "prediction": "NB-P92#10",
+        "right": false,
+        "sha256": "fd72210e97cb94dd2a07a1a2d7d3372868e2ce4bf58e979747ded8a8c919720b",
+        "shading": "AI Low (19w); AI High (101w)",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 108
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_nde_t3",
+      "sha256": "a56a806772aa48061298c19b859a32869ae7ab397cf24954e27125fb98f75012",
+      "words": 99,
+      "headline": "AI Detected",
+      "prediction_short": "AI",
+      "fraction_ai": 0.8368580341339111,
+      "fraction_ai_assisted": 1.2338736387278906e-17,
+      "fraction_human": 0.16314199566841125,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:45:00Z",
+      "windows": [
+        [
+          "Human Written",
+          "Low",
+          18,
+          0,
+          108,
+          "The closest comparison that’s worth mentioning is the out-of-body perception in some near-death experiences."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          43,
+          108,
+          382,
+          " People sometimes report seeing things from impossible angles, and a controversial subset of those reports were verified by others in the room (see this systematic analysis of near-death reports, the AWARE-II cardiac-arrest study, and a recent veridical-NDE evidence scale)."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          50,
+          382,
+          662,
+          " Nobody could check anything like that in my room event, since I wasn’t floating around noticing specific details, so those reports don’t prove anything about mine. They might still help explain what I mean by an experience that wasn’t limited by the body’s vantage point anymore."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-3.jsonl",
+      "source_line": 2,
+      "text": "The closest comparison that’s worth mentioning is the out-of-body perception in some near-death experiences. People sometimes report seeing things from impossible angles, and a controversial subset of those reports were verified by others in the room (see this systematic analysis of near-death reports, the AWARE-II cardiac-arrest study, and a recent veridical-NDE evidence scale). Nobody could check anything like that in my room event, since I wasn’t floating around noticing specific details, so those reports don’t prove anything about mine. They might still help explain what I mean by an experience that wasn’t limited by the body’s vantage point anymore.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.8368580341339111
+      },
+      "ledger_result": {
+        "ai_fraction": 0.8369,
+        "at": "2026-10-23T02:45:00Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Detected",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_nde_t3",
+        "prediction": "NB-P92#16",
+        "right": true,
+        "sha256": "a56a806772aa48061298c19b859a32869ae7ab397cf24954e27125fb98f75012",
+        "shading": "Human Low (18w); AI High (43w); AI Medium (50w)",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 99
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_percentages",
+      "sha256": "047a345f3eed238f4d84c61907999417d7b86fa71fc0b1bac176d6e980ffb447",
+      "words": 96,
+      "headline": "AI Detected",
+      "prediction_short": "Mixed",
+      "fraction_ai": 0.5092214941978455,
+      "fraction_ai_assisted": 5.32279298762206e-13,
+      "fraction_human": 0.49077847599983215,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:24:33Z",
+      "windows": [
+        [
+          "Human Written",
+          "Medium",
+          44,
+          0,
+          288,
+          "This distinction isn’t laid out explicitly in the suttas. AN 11.12 says a noble disciple can reach ease and joy through recollecting the Buddha, Dhamma, & Saṅgha – the community of realized disciples – or recollecting ethical conduct, generosity, or qualities shared with heavenly beings."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          11,
+          288,
+          358,
+          " In my experience there can also be physical loosening of unification."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          41,
+          358,
+          587,
+          " My percentages are just playful shorthand for how much binding has dissolved, and partial untying isn’t limited to the range I give: at around 1% a person can still do everything fine, and by roughly 5% they can barely function."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-1.jsonl",
+      "source_line": 3,
+      "text": "This distinction isn’t laid out explicitly in the suttas. AN 11.12 says a noble disciple can reach ease and joy through recollecting the Buddha, Dhamma, & Saṅgha – the community of realized disciples – or recollecting ethical conduct, generosity, or qualities shared with heavenly beings. In my experience there can also be physical loosening of unification. My percentages are just playful shorthand for how much binding has dissolved, and partial untying isn’t limited to the range I give: at around 1% a person can still do everything fine, and by roughly 5% they can barely function.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.5092214941978455
+      },
+      "ledger_result": {
+        "ai_fraction": 0.5092,
+        "at": "2026-10-23T02:24:33Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Detected",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_percentages",
+        "prediction": "NB-P134#3",
+        "right": false,
+        "sha256": "047a345f3eed238f4d84c61907999417d7b86fa71fc0b1bac176d6e980ffb447",
+        "shading": "Human Medium (44w); AI Low (11w); AI High (41w)",
+        "type": "result",
+        "verdict": "Mixed",
+        "words_read": 96
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_percentages_t2",
+      "sha256": "c21631b5bb24bf80438b5b12179ffd459d28cdeb59cb4678547f6671b8bd3ba4",
+      "words": 94,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 5.258372937078093e-08,
+      "fraction_ai_assisted": 2.0555213228816123e-16,
+      "fraction_human": 0.9999999403953552,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:28:37Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          44,
+          0,
+          288,
+          "This distinction isn’t laid out explicitly in the suttas. AN 11.12 says a noble disciple can reach ease and joy through recollecting the Buddha, Dhamma, & Saṅgha – the community of realized disciples – or recollecting ethical conduct, generosity, or qualities shared with heavenly beings."
+        ],
+        [
+          "Human Written",
+          "Medium",
+          41,
+          288,
+          528,
+          " In my experience there can also be physical loosening of unification. My percentages are just a playful way of saying how much binding has dissolved. Around 1%, a person can still do everything fine. Around 5%, they can hardly do anything."
+        ],
+        [
+          "Human Written",
+          "Low",
+          8,
+          528,
+          578,
+          " (And partial untying goes beyond that range too.)"
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-2.jsonl",
+      "source_line": 2,
+      "text": "This distinction isn’t laid out explicitly in the suttas. AN 11.12 says a noble disciple can reach ease and joy through recollecting the Buddha, Dhamma, & Saṅgha – the community of realized disciples – or recollecting ethical conduct, generosity, or qualities shared with heavenly beings. In my experience there can also be physical loosening of unification. My percentages are just a playful way of saying how much binding has dissolved. Around 1%, a person can still do everything fine. Around 5%, they can hardly do anything. (And partial untying goes beyond that range too.)",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 5.258372937078093e-08
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T02:28:37Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "Human Written",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_percentages_t2",
+        "prediction": "NB-P134#11",
+        "right": false,
+        "sha256": "c21631b5bb24bf80438b5b12179ffd459d28cdeb59cb4678547f6671b8bd3ba4",
+        "shading": "Human Medium (41w); Human Low (8w)",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 94
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_burden",
+      "sha256": "ef1e3473b482adbf978c74ec672b1a7cb036b65dfb6c9f4635aac14dbb7fc98e",
+      "words": 78,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 0.9999998211860657,
+      "fraction_ai_assisted": 1.7059811679639991e-12,
+      "fraction_human": 1.854610616192076e-07,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:24:35Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          72,
+          0,
+          389,
+          "In SN 22.22 the Buddha keeps two things apart: the five aggregates are the burden, and craving is what picks it up. The tangle is heavy all by itself (even an arahant still feels the first dart), and craving is why we keep carrying it. Physics actually agrees that binding is heavy, literally: quarks supply less than 1% of a proton’s mass, and roughly 99% comes from gluon-binding energy."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          6,
+          389,
+          428,
+          " Matter weighs what its binding weighs."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          3,
+          428,
+          450,
+          " Light weighs nothing."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-1.jsonl",
+      "source_line": 4,
+      "text": "In SN 22.22 the Buddha keeps two things apart: the five aggregates are the burden, and craving is what picks it up. The tangle is heavy all by itself (even an arahant still feels the first dart), and craving is why we keep carrying it. Physics actually agrees that binding is heavy, literally: quarks supply less than 1% of a proton’s mass, and roughly 99% comes from gluon-binding energy. Matter weighs what its binding weighs. Light weighs nothing.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.9999998211860657
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T02:24:35Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_burden",
+        "prediction": "NB-P165#4",
+        "right": true,
+        "sha256": "ef1e3473b482adbf978c74ec672b1a7cb036b65dfb6c9f4635aac14dbb7fc98e",
+        "shading": "AI High (72w); AI Medium (6w); AI Low (3w)",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 78
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_burden_t2",
+      "sha256": "2afc35d81c2ccf2a40f637067a214f0c224a847f959246f308dd5b1faa8d5563",
+      "words": 86,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 0.9999986886978149,
+      "fraction_ai_assisted": 5.006646208727261e-10,
+      "fraction_human": 1.3246640264696907e-06,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:28:42Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          80,
+          0,
+          416,
+          "In SN 22.22 the Buddha puts the weight in one place and the carrying in another. The five aggregates are the burden, and craving is what picks it up. The tangle is heavy all by itself (even an arahant still feels the first dart), and craving is why we keep lugging it around. Physics backs this up, and I mean literally: quarks supply less than 1% of a proton’s mass, and roughly 99% comes from gluon-binding energy."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          6,
+          416,
+          455,
+          " Matter weighs what its binding weighs."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          3,
+          455,
+          477,
+          " Light weighs nothing."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-2.jsonl",
+      "source_line": 3,
+      "text": "In SN 22.22 the Buddha puts the weight in one place and the carrying in another. The five aggregates are the burden, and craving is what picks it up. The tangle is heavy all by itself (even an arahant still feels the first dart), and craving is why we keep lugging it around. Physics backs this up, and I mean literally: quarks supply less than 1% of a proton’s mass, and roughly 99% comes from gluon-binding energy. Matter weighs what its binding weighs. Light weighs nothing.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.9999986886978149
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T02:28:42Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_burden_t2",
+        "prediction": "NB-P165#12",
+        "right": true,
+        "sha256": "2afc35d81c2ccf2a40f637067a214f0c224a847f959246f308dd5b1faa8d5563",
+        "shading": "AI High (80w); AI Medium (6w); AI Low (3w)",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 86
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_burden_t3",
+      "sha256": "57842ebc50670cb031a64a963524e4a2cc0284a66a84a044ca00464c4776f5d9",
+      "words": 74,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 0.9999095797538757,
+      "fraction_ai_assisted": 3.3196377504512986e-12,
+      "fraction_human": 9.043572208611295e-05,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:45:01Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "Medium",
+          24,
+          0,
+          124,
+          "In SN 22.22 the five aggregates are the burden and craving is what picks it up, so the Buddha splits the accounting cleanly."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          21,
+          124,
+          234,
+          " The tangle’s heavy by nature (even an arahant feels the first dart), and craving’s what keeps us carrying it."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          25,
+          234,
+          374,
+          " And binding is literally heavy in physics too (quarks supply less than 1% of a proton’s mass, roughly 99% comes from gluon-binding energy)."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          9,
+          374,
+          435,
+          " Matter weighs what its binding weighs. Light weighs nothing."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-3.jsonl",
+      "source_line": 3,
+      "text": "In SN 22.22 the five aggregates are the burden and craving is what picks it up, so the Buddha splits the accounting cleanly. The tangle’s heavy by nature (even an arahant feels the first dart), and craving’s what keeps us carrying it. And binding is literally heavy in physics too (quarks supply less than 1% of a proton’s mass, roughly 99% comes from gluon-binding energy). Matter weighs what its binding weighs. Light weighs nothing.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.9999095797538757
+      },
+      "ledger_result": {
+        "ai_fraction": 0.9999,
+        "at": "2026-10-23T02:45:01Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_burden_t3",
+        "prediction": "NB-P165#17",
+        "right": true,
+        "sha256": "57842ebc50670cb031a64a963524e4a2cc0284a66a84a044ca00464c4776f5d9",
+        "shading": "AI Medium (24w); AI High (21w); AI Medium (25w); AI Low (9w)",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 74
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_rebirth",
+      "sha256": "c86c1b387e0344ed95cfabd70fe16b0a996f7f34766c961ce8ced05ad0715491",
+      "words": 96,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 0.0005874581984244287,
+      "fraction_ai_assisted": 4.3065189855708274e-29,
+      "fraction_human": 0.9994125366210938,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:24:38Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          45,
+          0,
+          253,
+          "Stream entry’s greatest prize is a “release date”: AN 3.88  allows at most seven more lives before final awakening. There is actually quite a lot of modern academic evidence for rebirth. But who’s going around getting reborn if no permanent self exists?"
+        ],
+        [
+          "Human Written",
+          "Medium",
+          12,
+          253,
+          332,
+          " Buddhists don’t imagine any permanent self-essence/soul moving between bodies."
+        ],
+        [
+          "Human Written",
+          "Low",
+          31,
+          332,
+          524,
+          " What continues is a chain of causes with no traveler riding along, often called a mind-stream: craving and clinging condition becoming, and becoming becomes birth. More like a driverless car."
+        ],
+        [
+          "Human Written",
+          "High",
+          15,
+          524,
+          629,
+          " The later Buddhist philosopher Milindapañha compared rebirth to one lamp being used to lighting another."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-1.jsonl",
+      "source_line": 6,
+      "text": "Stream entry’s greatest prize is a “release date”: AN 3.88  allows at most seven more lives before final awakening. There is actually quite a lot of modern academic evidence for rebirth. But who’s going around getting reborn if no permanent self exists? Buddhists don’t imagine any permanent self-essence/soul moving between bodies. What continues is a chain of causes with no traveler riding along, often called a mind-stream: craving and clinging condition becoming, and becoming becomes birth. More like a driverless car. The later Buddhist philosopher Milindapañha compared rebirth to one lamp being used to lighting another.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.0005874581984244287
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0006,
+        "at": "2026-10-23T02:24:38Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "Human Written",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_rebirth",
+        "prediction": "NB-P228#6",
+        "right": true,
+        "sha256": "c86c1b387e0344ed95cfabd70fe16b0a996f7f34766c961ce8ced05ad0715491",
+        "shading": "Human Medium (12w); Human Low (31w)",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 96
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n2_rebirth_bj",
+      "sha256": "445732eacdb1f6388a81eb4955363fe5d7f388d081feee1286e4c66202f1760f",
+      "words": 112,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 4.1787640845563306e-22,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/d09ef29a-c0be-4cd6-a42f-99383aa60007",
+      "utc": "2026-10-23T13:00:52Z",
+      "windows": [
+        [
+          "Human Written",
+          "High",
+          120,
+          0,
+          699,
+          "Stream entry’s greatest prize is a “release date”: AN 3.88 allows at most seven more lives before final awakening. There is actually quite a lot of modern academic evidence for rebirth. But who’s going around getting reborn if no permanent self exists? Buddhists don’t imagine any permanent self-essence/soul moving between bodies. Rather, rebirth is seen as a causal process: there is a continuity (often called a “mind-stream”), but there is not a “thing” that’s moving from one life to the next. Craving and clinging lead to becoming, and becoming leads to birth. More like a driverless car. The later Buddhist philosopher Milindapañha compared rebirth to one lamp being used to lighting another."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n2/API-RESULTS-1.jsonl",
+      "source_line": 1,
+      "text": "Stream entry’s greatest prize is a “release date”: AN 3.88 allows at most seven more lives before final awakening. There is actually quite a lot of modern academic evidence for rebirth. But who’s going around getting reborn if no permanent self exists? Buddhists don’t imagine any permanent self-essence/soul moving between bodies. Rather, rebirth is seen as a causal process: there is a continuity (often called a “mind-stream”), but there is not a “thing” that’s moving from one life to the next. Craving and clinging lead to becoming, and becoming leads to birth. More like a driverless car. The later Buddhist philosopher Milindapañha compared rebirth to one lamp being used to lighting another.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 4.1787640845563306e-22
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T13:00:52Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/d09ef29a-c0be-4cd6-a42f-99383aa60007",
+        "prediction": "NB-P228#22",
+        "right": true,
+        "sha256": "445732eacdb1f6388a81eb4955363fe5d7f388d081feee1286e4c66202f1760f",
+        "shading": "Human High (120w)",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 112
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n2_rebirth_bj_r",
+      "sha256": "450ff066458a570d236c80d70416752fd600f3ba34a17da7221793b03bd68d67",
+      "words": 109,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 4.013882559661397e-09,
+      "fraction_ai_assisted": 6.375908012677918e-43,
+      "fraction_human": 1.0,
+      "version": "4.1",
+      "source": "new",
+      "dashboard_link": "https://www.pangram.com/history/27a1f56f-5d39-4a84-a406-6e3af4b64dcf",
+      "utc": "2026-10-23T13:09:04Z",
+      "windows": [
+        [
+          "Human Written",
+          "Medium",
+          21,
+          0,
+          114,
+          "Stream entry’s greatest prize is a “release date”: AN 3.88 allows at most seven more lives before final awakening."
+        ],
+        [
+          "Human Written",
+          "High",
+          36,
+          114,
+          331,
+          " There is actually quite a lot of modern academic evidence for rebirth. But who’s going around getting reborn if no permanent self exists? Buddhists don’t imagine any permanent self-essence/soul moving between bodies."
+        ],
+        [
+          "Human Written",
+          "Medium",
+          30,
+          331,
+          490,
+          " Rather, rebirth is a causal process: there is a continuity (often called a “mind-stream”), but there is not a “thing” that’s moving from one life to the next."
+        ],
+        [
+          "Human Written",
+          "Low",
+          10,
+          490,
+          560,
+          " Craving and clinging condition becoming, and becoming leads to birth."
+        ],
+        [
+          "Human Written",
+          "Medium",
+          20,
+          560,
+          693,
+          " More like a driverless car. The later Buddhist philosopher Milindapañha compared rebirth to one lamp being used to lighting another."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n2/API-RESULTS-2.jsonl",
+      "source_line": 1,
+      "text": "Stream entry’s greatest prize is a “release date”: AN 3.88 allows at most seven more lives before final awakening. There is actually quite a lot of modern academic evidence for rebirth. But who’s going around getting reborn if no permanent self exists? Buddhists don’t imagine any permanent self-essence/soul moving between bodies. Rather, rebirth is a causal process: there is a continuity (often called a “mind-stream”), but there is not a “thing” that’s moving from one life to the next. Craving and clinging condition becoming, and becoming leads to birth. More like a driverless car. The later Buddhist philosopher Milindapañha compared rebirth to one lamp being used to lighting another.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 4.013882559661397e-09
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T13:09:04Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "Human Written",
+        "link": "https://www.pangram.com/history/27a1f56f-5d39-4a84-a406-6e3af4b64dcf",
+        "prediction": "NB-P228#23",
+        "right": true,
+        "sha256": "450ff066458a570d236c80d70416752fd600f3ba34a17da7221793b03bd68d67",
+        "shading": "Human Medium (21w); Human High (36w); Human Medium (30w); Human Low (10w); Human Medium (20w)",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 109
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_diamond",
+      "sha256": "62054d8c775a78cb3bcd210e2d79c87e67bfbf69196661507897362723c4ebcc",
+      "words": 82,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 5.948632721541998e-22,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:24:40Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          83,
+          0,
+          443,
+          "I used to attribute “life is like a dream” directly to the historical Buddha. Turns out the famous stanza I loved comes from the later Mahāyāna Diamond Sutra, which puts some words in his mouth. The early Pāli texts do have images that are pretty close, though: SN 22.95 compares form to foam, feeling to a bubble, perception to a mirage and consciousness to a magic trick, and Dhammapada 170 asks us to see the world as a bubble and a mirage."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-1.jsonl",
+      "source_line": 7,
+      "text": "I used to attribute “life is like a dream” directly to the historical Buddha. Turns out the famous stanza I loved comes from the later Mahāyāna Diamond Sutra, which puts some words in his mouth. The early Pāli texts do have images that are pretty close, though: SN 22.95 compares form to foam, feeling to a bubble, perception to a mirage and consciousness to a magic trick, and Dhammapada 170 asks us to see the world as a bubble and a mirage.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T02:24:40Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_diamond",
+        "prediction": "NB-P230#7",
+        "right": false,
+        "sha256": "62054d8c775a78cb3bcd210e2d79c87e67bfbf69196661507897362723c4ebcc",
+        "shading": "AI High (83w)",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 82
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_diamond_t2",
+      "sha256": "16050f00fe383141c5a7d8951cea187fdc8a3525ef6fbf679f09b682d1582375",
+      "words": 86,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 1.58808132049988e-15,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:28:43Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "Medium",
+          14,
+          0,
+          77,
+          "I used to attribute “life is like a dream” directly to the historical Buddha."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          73,
+          77,
+          465,
+          " The famous stanza I loved is actually from the later Mahāyāna Diamond Sutra, which puts some words in his mouth. The early Pāli texts were already reaching for the same kind of pictures, though. In SN 22.95 form is like foam, feeling is like a bubble, perception is a mirage and consciousness is a magic trick, and Dhammapada 170 tells us to look at the world like a bubble, or a mirage."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-2.jsonl",
+      "source_line": 4,
+      "text": "I used to attribute “life is like a dream” directly to the historical Buddha. The famous stanza I loved is actually from the later Mahāyāna Diamond Sutra, which puts some words in his mouth. The early Pāli texts were already reaching for the same kind of pictures, though. In SN 22.95 form is like foam, feeling is like a bubble, perception is a mirage and consciousness is a magic trick, and Dhammapada 170 tells us to look at the world like a bubble, or a mirage.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T02:28:43Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_diamond_t2",
+        "prediction": "NB-P230#13",
+        "right": false,
+        "sha256": "16050f00fe383141c5a7d8951cea187fdc8a3525ef6fbf679f09b682d1582375",
+        "shading": "AI Medium (14w); AI High (73w)",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 86
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_diamond_t3",
+      "sha256": "edba36ff26537230b4dd5301b089d4a341202898f2bb7b30c1941042e81b2f33",
+      "words": 80,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "fraction_human": 7.989485809045682e-13,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:45:03Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "Medium",
+          37,
+          0,
+          202,
+          "I used to attribute “life is like a dream” directly to the historical Buddha, until I found out the famous stanza I loved comes from the later Mahāyāna Diamond Sutra, which puts some words in his mouth."
+        ],
+        [
+          "AI-Generated",
+          "High",
+          44,
+          202,
+          436,
+          " The early Pāli texts do have closely related images (SN 22.95 compares form to foam, feeling to a bubble, perception to a mirage and consciousness to a magic trick, and Dhammapada 170 asks us to see the world as a bubble and mirage)."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-3.jsonl",
+      "source_line": 4,
+      "text": "I used to attribute “life is like a dream” directly to the historical Buddha, until I found out the famous stanza I loved comes from the later Mahāyāna Diamond Sutra, which puts some words in his mouth. The early Pāli texts do have closely related images (SN 22.95 compares form to foam, feeling to a bubble, perception to a mirage and consciousness to a magic trick, and Dhammapada 170 asks us to see the world as a bubble and mirage).",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 1.0
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T02:45:03Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_diamond_t3",
+        "prediction": "NB-P230#18",
+        "right": true,
+        "sha256": "edba36ff26537230b4dd5301b089d4a341202898f2bb7b30c1941042e81b2f33",
+        "shading": "AI Medium (37w); AI High (44w)",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 80
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_science",
+      "sha256": "b9501c01973e01a6a5469cd3038df3e8acb6eaffc22637ff81e7674238122371",
+      "words": 93,
+      "headline": "Human Written",
+      "prediction_short": "Human",
+      "fraction_ai": 2.414550726825837e-05,
+      "fraction_ai_assisted": 3.3085142156323577e-13,
+      "fraction_human": 0.999975860118866,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:24:41Z",
+      "windows": [
+        [
+          "Human Written",
+          "Low",
+          94,
+          0,
+          567,
+          "Science only gets to circle the edges of consciousness, though it finds some wild stuff out there: people functioning with no felt controller, several things cognized at once, split-brain patients who can seem like two knowers sharing a skull, and one recent theory that models minds as nested parallel observers. The full nerdy tour is in the research report. Science gives my argument a third wheel, making it safer to ride, but it will never show nibbāna itself – self and sense organs unweaving into self-presenting light flows of bliss. That requires meditation."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-1.jsonl",
+      "source_line": 8,
+      "text": "Science only gets to circle the edges of consciousness, though it finds some wild stuff out there: people functioning with no felt controller, several things cognized at once, split-brain patients who can seem like two knowers sharing a skull, and one recent theory that models minds as nested parallel observers. The full nerdy tour is in the research report. Science gives my argument a third wheel, making it safer to ride, but it will never show nibbāna itself – self and sense organs unweaving into self-presenting light flows of bliss. That requires meditation.",
+      "text_hash_verified": true,
+      "all_human_segments": true,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 2.414550726825837e-05
+      },
+      "ledger_result": {
+        "ai_fraction": 0.0,
+        "at": "2026-10-23T02:24:41Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "Human Written",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_science",
+        "prediction": "NB-P237#8",
+        "right": false,
+        "sha256": "b9501c01973e01a6a5469cd3038df3e8acb6eaffc22637ff81e7674238122371",
+        "shading": "Human Low (94w)",
+        "type": "result",
+        "verdict": "Human",
+        "words_read": 93
+      },
+      "historical_only": true
+    },
+    {
+      "name": "n1_science_t2",
+      "sha256": "5d4ddf73b04fa3640d7d14561fdf5120f8ad40cd479c9b4ce6ea5d9e1a008552",
+      "words": 91,
+      "headline": "AI Generated",
+      "prediction_short": "AI",
+      "fraction_ai": 0.9999998807907104,
+      "fraction_ai_assisted": 3.6478888486290995e-12,
+      "fraction_human": 1.1060149063268909e-07,
+      "version": "4.1",
+      "source": "new",
+      "utc": "2026-10-23T02:44:56Z",
+      "windows": [
+        [
+          "AI-Generated",
+          "High",
+          59,
+          0,
+          349,
+          "Science circles the edges of consciousness, and here’s some of what it finds out there: people functioning with no felt controller, several things cognized at once, split-brain patients who can seem like two knowers sharing a skull, and one recent theory that models minds as nested parallel observers. The full nerdy tour is in the research report."
+        ],
+        [
+          "AI-Generated",
+          "Medium",
+          31,
+          349,
+          530,
+          " Science gives my argument a third wheel, making it safer to ride, but it will never show nibbāna itself – self and sense organs unweaving into self-presenting light flows of bliss."
+        ],
+        [
+          "AI-Generated",
+          "Low",
+          3,
+          530,
+          556,
+          " That requires meditation."
+        ]
+      ],
+      "source_path": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-3.jsonl",
+      "source_line": 1,
+      "text": "Science circles the edges of consciousness, and here’s some of what it finds out there: people functioning with no felt controller, several things cognized at once, split-brain patients who can seem like two knowers sharing a skull, and one recent theory that models minds as nested parallel observers. The full nerdy tour is in the research report. Science gives my argument a third wheel, making it safer to ride, but it will never show nibbāna itself – self and sense organs unweaving into self-presenting light flows of bliss. That requires meditation.",
+      "text_hash_verified": true,
+      "all_human_segments": false,
+      "numeric_measure": {
+        "field": "fraction_ai",
+        "value": 0.9999998807907104
+      },
+      "ledger_result": {
+        "ai_fraction": 1.0,
+        "at": "2026-10-23T02:44:56Z",
+        "detector": "pangram 4.1, the API (Joel's key, run on his laptop; E218)",
+        "headline": "AI Generated",
+        "link": "https://github.com/u-dont-existDOTcom/joel-articles/blob/claude/community-joel-1018/articles/nibbana/humanize/fix-20261023/n1/API-CHECKS.md#n1_science_t2",
+        "prediction": "NB-P237#15",
+        "right": false,
+        "sha256": "5d4ddf73b04fa3640d7d14561fdf5120f8ad40cd479c9b4ce6ea5d9e1a008552",
+        "shading": "AI High (59w); AI Medium (31w); AI Low (3w)",
+        "type": "result",
+        "verdict": "AI",
+        "words_read": 91
+      },
+      "historical_only": true
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "C01",
+      "family_id": "F01",
+      "lane": "inner-child-therapy",
+      "lineage": "bb-new1",
+      "before_name": "t99_bb_new1",
+      "after_name": "t100_bb_new1",
+      "before_sha256": "67aaf0abeb5525b5e1297d93899b046819097dd0df0dc56729a0a700c5a7eeb6",
+      "after_sha256": "c5f93b768956464839f70413133e04f5271288364680e03a8c4f14170f7548d9",
+      "status": "OWNER_APPROVED_SAME_THOUGHT",
+      "operation": "Simplifies a three-part concession into direct advice.",
+      "preservation_note": "Joel explicitly approved this exact changed ending as the same substantive thought; do not extend that approval to the unchanged envy paragraph.",
+      "operation_tags": [
+        "clause packaging",
+        "speaker stance"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "endorsed exact changed ending",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C02",
+      "family_id": "F02",
+      "lane": "inner-child-therapy",
+      "lineage": "guide-P5",
+      "before_name": "t99_guide5",
+      "after_name": "t100_guide5",
+      "before_sha256": "fec51829d6cc08f0532a029b5398a970fbecd7c333380e0379fcf108b3791ea7",
+      "after_sha256": "e5a7dd16db085f5f26402cb96911e899aa598003480e9bbd9315531a43271c34",
+      "status": "MEANING_OR_FUNCTION_CHANGE",
+      "operation": "Reorders concern before the proposed response and changes examples.",
+      "preservation_note": "The hug before departure is removed; a rough return-time request becomes a specific spoken one-hour suggestion; the partner’s right to walk becomes explicit. Useful reauthoring, not a pure style comparison.",
+      "operation_tags": [
+        "sequence",
+        "example substitution",
+        "dialogue"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C03",
+      "family_id": "F03",
+      "lane": "inner-child-therapy",
+      "lineage": "ended-P1",
+      "before_name": "t99_ended1",
+      "after_name": "t100_ended1",
+      "before_sha256": "c326c6619caa167b3af9a7802688d1e8a96972c992224080f6260dacbb23315c",
+      "after_sha256": "b7aaa413dced7e9361759e5b1b3320b9e52a60df9f11b8b908af30c8675e588c",
+      "status": "ALIGNMENT_REVIEW",
+      "operation": "Describes the in-between experience before naming bardo, with a parenthetical qualification.",
+      "preservation_note": "Most functions remain. However, a helper stepping back once growth has occurred becomes stepping back because growth occurred; confirm that causal strengthening against the source brief.",
+      "operation_tags": [
+        "sequence",
+        "causal explicitness",
+        "parenthesis"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C04",
+      "family_id": "F04",
+      "lane": "inner-child-therapy",
+      "lineage": "ifs-P7",
+      "before_name": "t99_ifs7",
+      "after_name": "t100_ifs7",
+      "before_sha256": "2b24b5ee54e8f0728f6cc8a893eeae24c27c91ad1f30fe36d67fe20d8731e1f5",
+      "after_sha256": "fdccb337210c68817d5171402fc5c2876add40da45a0f67f17f8a057beaf4ea8",
+      "status": "MEANING_OR_FUNCTION_CHANGE",
+      "operation": "Replaces two explicit evaluation criteria with personal trust.",
+      "preservation_note": "Whether a model is true and safe for you are replaced by whether the speaker trusts it more; the criteria should not silently disappear from a same-thought comparison.",
+      "operation_tags": [
+        "speaker stance",
+        "criterion compression"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C05",
+      "family_id": "F05",
+      "lane": "inner-child-therapy",
+      "lineage": "borrow-p5",
+      "before_name": "t101_borrow_p5",
+      "after_name": "t102_borrow_p5",
+      "before_sha256": "21696846e350d4e2640ef5c986c182e8bd47c1387f519a1ff92249a50e798e8d",
+      "after_sha256": "8fd59d7c96fff4580aaa96714c72ab841963174fa76e966a6ad6bd2ae2d288c0",
+      "status": "MEANING_OR_FUNCTION_CHANGE",
+      "operation": "Combines advice and pacing into one conditional sentence.",
+      "preservation_note": "The affirmation that helpful advice is great and that everyone needs it is removed. Record the normalization function rather than automatically calling it redundant. This is a study classification, not a reversal of an authorized article edit.",
+      "operation_tags": [
+        "compression",
+        "normalization omission"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C06",
+      "family_id": "F06",
+      "lane": "inner-child-therapy",
+      "lineage": "untangle-slow",
+      "before_name": "t102b_untangle_old",
+      "after_name": "t102_untangle_p",
+      "before_sha256": "76c3696f7d34fd1884532322bdb1420c306995f35c624547901e0f7be8ccbbaf",
+      "after_sha256": "b13560fd60561b946a424dfffe7bf16ddc547738930b2a43472cd5ee330eceab",
+      "status": "CONTENT_ADDITION",
+      "operation": "Adds a reason a break may help even when separation is not necessary.",
+      "preservation_note": "The original has no quieting-old-programming explanation. Preserve as an addition experiment, not a same-content style pair.",
+      "operation_tags": [
+        "rationale addition"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": true,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C07",
+      "family_id": "F06",
+      "lane": "inner-child-therapy",
+      "lineage": "untangle-slow",
+      "before_name": "t102_untangle_p",
+      "after_name": "t102c_untangle_u02",
+      "before_sha256": "b13560fd60561b946a424dfffe7bf16ddc547738930b2a43472cd5ee330eceab",
+      "after_sha256": "44ca1f6a68e91c10cefccc59ac25400d4205bbd1471028c70fd73a05ac5bcbf4",
+      "status": "ALIGNMENT_REVIEW",
+      "operation": "Rephrases the new explanation with a listening metaphor.",
+      "preservation_note": "Even when distance is unnecessary becomes sometimes needing the break anyway. Core own-wants explanation is similar, but optionality/necessity must be checked. Both are model realizations, not an owner rewrite.",
+      "operation_tags": [
+        "metaphor",
+        "modality"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C08",
+      "family_id": "F07",
+      "lane": "inner-child-therapy",
+      "lineage": "cut-97.8",
+      "before_name": "t103b_97_8_old",
+      "after_name": "t103_97_8",
+      "before_sha256": "3f3d189e2dd81a705354b5ea79d156e780d0d19caa8c13b37cd76ac28c6672a1",
+      "after_sha256": "a5b447ccc099fdfb3248e1be256e5fd2cd1d248733612a2b07b362a6ad7c99cd",
+      "status": "CONTENT_DELETION",
+      "operation": "Removes the instruction for uncertainty about safety.",
+      "preservation_note": "If you cannot tell whether you are safe, treat that as risky is an explicit decision threshold absent from the shorter version. This is not merely removal of I’d.",
+      "operation_tags": [
+        "safety-threshold deletion"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": true,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C09",
+      "family_id": "F07",
+      "lane": "inner-child-therapy",
+      "lineage": "cut-97.8",
+      "before_name": "t103_97_8",
+      "after_name": "t103c_97_8_s01",
+      "before_sha256": "a5b447ccc099fdfb3248e1be256e5fd2cd1d248733612a2b07b362a6ad7c99cd",
+      "after_sha256": "44202f65ebd0c2ba33e057edb273438b3f34240af1443f53bc0444d121bfa3fe",
+      "status": "PROVISIONAL_SAME_THOUGHT",
+      "operation": "Changes direct commands into first-person advice and splits the medication sentence.",
+      "preservation_note": "Against the already-cut baseline, both retain the same help triggers and warn against abrupt cessation with medical help. No claim that the medical guidance itself has been fact-checked. Current reviewer only; owner approval is unknown.",
+      "operation_tags": [
+        "speaker stance",
+        "sentence splitting"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C10",
+      "family_id": "F08",
+      "lane": "inner-child-therapy",
+      "lineage": "cut-97.12",
+      "before_name": "t103b_97_12_old",
+      "after_name": "t103_97_12",
+      "before_sha256": "4db638e71a4e4d6f80c8cce6da685b39098f10d73580dc30ed786a325593f3fb",
+      "after_sha256": "ec418f06054b3969cf1e0d8f4b68a2d2b9a56b245009c1dd8e04d5130e8b0442",
+      "status": "CONTENT_DELETION",
+      "operation": "Removes the cult-survivor qualification attached to Guru.",
+      "preservation_note": "The trigger-word caution is an additional content/function unit, whether or not its article removal was authorized.",
+      "operation_tags": [
+        "qualification deletion"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": true,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C11",
+      "family_id": "F08",
+      "lane": "inner-child-therapy",
+      "lineage": "cut-97.12",
+      "before_name": "t103_97_12",
+      "after_name": "t103c_97_12_p10",
+      "before_sha256": "ec418f06054b3969cf1e0d8f4b68a2d2b9a56b245009c1dd8e04d5130e8b0442",
+      "after_sha256": "f25cfc61bf02db7144ed8fbd68d57011abebb63c2524e1346d9fcb49bbc2c943",
+      "status": "SCOPE_CHANGE",
+      "operation": "Tests the belonging paragraph without its naming aside.",
+      "preservation_note": "The naming options Guide, Wise One, Inner Teacher and Guru are absent from the measured scope. A scope-localization probe is not a style rewrite.",
+      "operation_tags": [
+        "scope reduction"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C12",
+      "family_id": "F09",
+      "lane": "inner-child-therapy",
+      "lineage": "cut-98.2",
+      "before_name": "t103b_98_2_old",
+      "after_name": "t103_98_2",
+      "before_sha256": "4e557aa349437b92fdf2f0c65e857fc0e0c4a6a2f148840383516ec4e5790821",
+      "after_sha256": "feb17cfba8f9cf935a01720cec84a0f7d467a54ad890d7537e19b0b9d32f906f",
+      "status": "ALIGNMENT_REVIEW",
+      "operation": "Removes It doesn’t mean failure.",
+      "preservation_note": "The surrounding nonlinear-healing explanation may already carry that inference, but the explicit reassurance is gone. Do not automatically atomize it into a new fact or automatically erase its rhetorical function; keep the ambiguity visible.",
+      "operation_tags": [
+        "reassurance explicitness"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": true,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C13",
+      "family_id": "F10",
+      "lane": "inner-child-therapy",
+      "lineage": "cut-98.7",
+      "before_name": "t103b_98_7_old",
+      "after_name": "t103_98_7",
+      "before_sha256": "f217e1bc868fe3142c3e3a04198820e800a479cb43daf975a1cdfb3da44de097",
+      "after_sha256": "010b44a9fecbe50ca83a5ffe483711bfa81f8388d0c2527df851d54428e84c3b",
+      "status": "CONTENT_DELETION",
+      "operation": "Removes the every-session frequency qualification.",
+      "preservation_note": "It doesn’t have to happen after every session is absent. A changed expectation about frequency is not an isolated style operation.",
+      "operation_tags": [
+        "frequency qualifier deletion"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": true,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C14",
+      "family_id": "F10",
+      "lane": "inner-child-therapy",
+      "lineage": "cut-98.7",
+      "before_name": "t103_98_7",
+      "after_name": "t103c_98_7_s02",
+      "before_sha256": "010b44a9fecbe50ca83a5ffe483711bfa81f8388d0c2527df851d54428e84c3b",
+      "after_sha256": "d690aed8d291878f8c8dc98ec236b30e143e70ad8e40eeb12a03f6e07f6b278a",
+      "status": "MEANING_OR_FUNCTION_CHANGE",
+      "operation": "Rewrites the relapse explanation and removes paired denials.",
+      "preservation_note": "The claim that applying care can be harder than meditation is omitted; the exercise-to-day metaphor is also changed. A potentially useful reauthoring episode, not evidence solely about cadence.",
+      "operation_tags": [
+        "explanation restructuring",
+        "comparative difficulty omission"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C15",
+      "family_id": "F11",
+      "lane": "inner-child-therapy",
+      "lineage": "cut-98.9",
+      "before_name": "t103_98_9",
+      "after_name": "t103e_98_9_s06",
+      "before_sha256": "a6f0f4e1047de5778ccde80d3317c72e1633b554a4e9c5599452287c139b0005",
+      "after_sha256": "e843ca5ab4264f11c8561ff310cae2d01c9ed42c5076c8247cda2e53fa9cbc47",
+      "status": "OWNER_REJECTED_FIDELITY",
+      "operation": "Replaces belonging deeper than any group with somewhere to belong.",
+      "preservation_note": "Joel directly says this changes belonging beyond place into finding a place. Keep the smoother wording out of positive fidelity-preserving examples.",
+      "operation_tags": [
+        "abstraction substitution"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "fidelity rejected",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C16",
+      "family_id": "F12",
+      "lane": "inner-signal",
+      "lineage": "HG15-p9",
+      "before_name": "HG15-p9e",
+      "after_name": "HG15-p9e2",
+      "before_sha256": "faadb6e364f9990dc7884e8ddbc7fbaf0a3b66f206b39ae693da7652af8eef9e",
+      "after_sha256": "e2a7669aff449e5d463753aa9ad6f80870b1784115def239129bdebf913b081e",
+      "status": "PROVISIONAL_SAME_THOUGHT",
+      "operation": "Moves a gifts-versus-earned-belonging concession into first person.",
+      "preservation_note": "The being/doer distinction, possible genuine gifts and conditional purchasing of belonging remain. The stance and grammatical agency change together; this is not a lexical I’m experiment. Current reviewer only.",
+      "operation_tags": [
+        "speaker stance",
+        "agency",
+        "concession"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C17",
+      "family_id": "F13",
+      "lane": "inner-signal",
+      "lineage": "HG35-p13",
+      "before_name": "HG35-forgive-e2",
+      "after_name": "HG35-forgive-e3",
+      "before_sha256": "fd731a46b244cddb05d28574d39f9bf888c7defbb802bf628edebceaec2b9191",
+      "after_sha256": "31582ab9a89a16868a4577a8265ef380b5510e848cfe2752a8ccabf64ccf3092",
+      "status": "PROVISIONAL_SAME_THOUGHT",
+      "operation": "Replaces four abstract coordinated propositions with an uneven people-centered sentence.",
+      "preservation_note": "Harm, continuing accountability, the boundary and possible spontaneous later forgiveness remain. Preserve all four functions rather than learning simply to make sentences longer. Current reviewer only.",
+      "operation_tags": [
+        "experiencer-centered wording",
+        "clause linkage",
+        "uneven development"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C18",
+      "family_id": "F14",
+      "lane": "inner-signal",
+      "lineage": "HG17-B306",
+      "before_name": "b472_s2e_alone",
+      "after_name": "b472_s2f_alone",
+      "before_sha256": "0b6aa86e8d573ecba5b1fe979e44d514c8842128ae8d2bb92392a898934ac435",
+      "after_sha256": "f684236b6d4c45c184f33d9b19a38861de8f6bb3f23f7770b0040f3e22a43804",
+      "status": "MEANING_OR_FUNCTION_CHANGE",
+      "operation": "Reorders the retirement/referral guidance and changes its ending.",
+      "preservation_note": "The explicit today’s trance ends when you return is removed and a hypnosis-therapist example is added. Not a clean same-thought paragraph pair.",
+      "operation_tags": [
+        "sequence",
+        "session-ending omission",
+        "example addition"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C19",
+      "family_id": "F14",
+      "lane": "inner-signal",
+      "lineage": "HG17-B306",
+      "before_name": "b472_s2f_alone",
+      "after_name": "b473_seam_bj_p1",
+      "before_sha256": "f684236b6d4c45c184f33d9b19a38861de8f6bb3f23f7770b0040f3e22a43804",
+      "after_sha256": "e97e1bc328080d18a219d7793d49e64f0437e32093e3da22c899685ac524e36b",
+      "status": "MEANING_OR_FUNCTION_CHANGE",
+      "operation": "Changes generator method and restores the today-ending statement.",
+      "preservation_note": "The awake declaration becomes optional and in your waking life can describe where non-use applies rather than when the declaration is spoken. Several semantic and rhetorical changes co-vary.",
+      "operation_tags": [
+        "generator change",
+        "modality",
+        "temporal ambiguity"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C20",
+      "family_id": "F14",
+      "lane": "inner-signal",
+      "lineage": "HG17-B306",
+      "before_name": "b473_seam_bj_p1",
+      "after_name": "b473_seam_bj_p1_t",
+      "before_sha256": "e97e1bc328080d18a219d7793d49e64f0437e32093e3da22c899685ac524e36b",
+      "after_sha256": "0582e76475d1f7dbf427f6efc364e1711d6e15d6496c2fb13e80a544b5b2660e",
+      "status": "SEMANTIC_REPAIR",
+      "operation": "Restores an awake-time directive in the model-produced paragraph.",
+      "preservation_note": "You may want to say ... in your waking life becomes You’ll want to say, while you’re awake. This is documented meaning repair, not style-only transfer.",
+      "operation_tags": [
+        "modality repair",
+        "temporal repair"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C21",
+      "family_id": "F15",
+      "lane": "nibbana",
+      "lineage": "NB-P92",
+      "before_name": "n1_nde",
+      "after_name": "n1_nde_t2",
+      "before_sha256": "7a28c5435e930d57d8f199a7f3108aa22bf0835e55f1cb711040b854bf4f84cc",
+      "after_sha256": "fd72210e97cb94dd2a07a1a2d7d3372868e2ce4bf58e979747ded8a8c919720b",
+      "status": "ALIGNMENT_REVIEW",
+      "operation": "Makes the NDE comparison more conversational and separates its limitation.",
+      "preservation_note": "Noticing specific details becomes noticing any details, a potentially stronger autobiographical absence. Do not silently count that as semantically identical.",
+      "operation_tags": [
+        "conversational register",
+        "scope of absence"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C22",
+      "family_id": "F15",
+      "lane": "nibbana",
+      "lineage": "NB-P92",
+      "before_name": "n1_nde",
+      "after_name": "n1_nde_t3",
+      "before_sha256": "7a28c5435e930d57d8f199a7f3108aa22bf0835e55f1cb711040b854bf4f84cc",
+      "after_sha256": "a56a806772aa48061298c19b859a32869ae7ab397cf24954e27125fb98f75012",
+      "status": "PROVISIONAL_SAME_THOUGHT",
+      "operation": "Moves sources beside the claim they support and ends on the purpose of comparison.",
+      "preservation_note": "Comparison, reported corroboration, the uncheckable personal event, lack of evidential support for that event and all three source references remain. Might help is more tentative than help; preserve that noted nuance. No fresh fact-check or author attribution claim.",
+      "operation_tags": [
+        "source placement",
+        "sequence",
+        "qualification"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C23",
+      "family_id": "F16",
+      "lane": "nibbana",
+      "lineage": "NB-P134",
+      "before_name": "n1_percentages",
+      "after_name": "n1_percentages_t2",
+      "before_sha256": "047a345f3eed238f4d84c61907999417d7b86fa71fc0b1bac176d6e980ffb447",
+      "after_sha256": "c21631b5bb24bf80438b5b12179ffd459d28cdeb59cb4678547f6671b8bd3ba4",
+      "status": "PROVISIONAL_SAME_THOUGHT",
+      "operation": "Separates definition, two numeric examples and the range caveat.",
+      "preservation_note": "Same source attribution, physical-loosening claim, playful percentage explanation, approximate 1%/5% examples and beyond-range caveat remain. Multiple realization operations; not a sentence-length law.",
+      "operation_tags": [
+        "explanatory unpacking",
+        "qualifier placement"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C24",
+      "family_id": "F17",
+      "lane": "nibbana",
+      "lineage": "NB-P165",
+      "before_name": "n1_burden",
+      "after_name": "n1_burden_t2",
+      "before_sha256": "ef1e3473b482adbf978c74ec672b1a7cb036b65dfb6c9f4635aac14dbb7fc98e",
+      "after_sha256": "2afc35d81c2ccf2a40f637067a214f0c224a847f959246f308dd5b1faa8d5563",
+      "status": "ALIGNMENT_REVIEW",
+      "operation": "Adds a weight/carrying image and first-person literalness aside.",
+      "preservation_note": "Physics agrees that binding is heavy becomes Physics backs this up, which may broaden the support claim from physical binding to the preceding Buddhist analogy. Keep the scope-of-evidence ambiguity.",
+      "operation_tags": [
+        "metaphor",
+        "evidence linkage"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C25",
+      "family_id": "F17",
+      "lane": "nibbana",
+      "lineage": "NB-P165",
+      "before_name": "n1_burden",
+      "after_name": "n1_burden_t3",
+      "before_sha256": "ef1e3473b482adbf978c74ec672b1a7cb036b65dfb6c9f4635aac14dbb7fc98e",
+      "after_sha256": "57842ebc50670cb031a64a963524e4a2cc0284a66a84a044ca00464c4776f5d9",
+      "status": "PROVISIONAL_SAME_THOUGHT",
+      "operation": "States the burden relation before its accounting summary and moves the physics numbers into parentheses.",
+      "preservation_note": "The burden/craving distinction, first-dart qualification, mass percentages and two closing lines remain. This evaluates preservation of supplied claims, not their scientific or doctrinal truth. Current reviewer only.",
+      "operation_tags": [
+        "sequence",
+        "parenthesis",
+        "metaphor"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C26",
+      "family_id": "F18",
+      "lane": "nibbana",
+      "lineage": "NB-P228",
+      "before_name": "n1_rebirth",
+      "after_name": "n2_rebirth_bj",
+      "before_sha256": "c86c1b387e0344ed95cfabd70fe16b0a996f7f34766c961ce8ced05ad0715491",
+      "after_sha256": "445732eacdb1f6388a81eb4955363fe5d7f388d081feee1286e4c66202f1760f",
+      "status": "MEANING_OR_FUNCTION_CHANGE",
+      "operation": "Expands the mind-stream sentence.",
+      "preservation_note": "The asserted account becomes is seen as, and condition becomes lead to. The stored fidelity reviewer identified both changes; do not let a detector gain overrule them.",
+      "operation_tags": [
+        "explanatory unpacking",
+        "attribution shift",
+        "causal wording"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C27",
+      "family_id": "F18",
+      "lane": "nibbana",
+      "lineage": "NB-P228",
+      "before_name": "n2_rebirth_bj",
+      "after_name": "n2_rebirth_bj_r",
+      "before_sha256": "445732eacdb1f6388a81eb4955363fe5d7f388d081feee1286e4c66202f1760f",
+      "after_sha256": "450ff066458a570d236c80d70416752fd600f3ba34a17da7221793b03bd68d67",
+      "status": "SEMANTIC_REPAIR",
+      "operation": "Restores assertion and the first conditioning link.",
+      "preservation_note": "Removes seen as and changes the first lead to back to condition. Keep this as meaning repair, not clean evidence that a stylistic operation caused the detector outcome.",
+      "operation_tags": [
+        "attribution repair",
+        "causal wording repair"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C28",
+      "family_id": "F19",
+      "lane": "nibbana",
+      "lineage": "NB-P230",
+      "before_name": "n1_diamond",
+      "after_name": "n1_diamond_t2",
+      "before_sha256": "62054d8c775a78cb3bcd210e2d79c87e67bfbf69196661507897362723c4ebcc",
+      "after_sha256": "16050f00fe383141c5a7d8951cea187fdc8a3525ef6fbf679f09b682d1582375",
+      "status": "ALIGNMENT_REVIEW",
+      "operation": "Changes source-reporting clauses into images and conversational comparison.",
+      "preservation_note": "The Dhammapada comparison moves from bubble and mirage to bubble, or mirage; whether this changes the attributed instruction needs source-level checking. Do not certify fidelity from shared imagery alone.",
+      "operation_tags": [
+        "image presentation",
+        "attribution wording"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C29",
+      "family_id": "F19",
+      "lane": "nibbana",
+      "lineage": "NB-P230",
+      "before_name": "n1_diamond",
+      "after_name": "n1_diamond_t3",
+      "before_sha256": "62054d8c775a78cb3bcd210e2d79c87e67bfbf69196661507897362723c4ebcc",
+      "after_sha256": "edba36ff26537230b4dd5301b089d4a341202898f2bb7b30c1941042e81b2f33",
+      "status": "PROVISIONAL_SAME_THOUGHT",
+      "operation": "Combines the attribution correction with its discovery and makes the source examples parenthetical.",
+      "preservation_note": "The earlier mistaken attribution, later source, historical distinction, four image correspondences and Dhammapada comparison remain. Literal source claims are preserved, not independently verified. Current reviewer only.",
+      "operation_tags": [
+        "narrative sequence",
+        "source placement",
+        "parenthesis"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    },
+    {
+      "id": "C30",
+      "family_id": "F20",
+      "lane": "nibbana",
+      "lineage": "NB-P237",
+      "before_name": "n1_science",
+      "after_name": "n1_science_t2",
+      "before_sha256": "b9501c01973e01a6a5469cd3038df3e8acb6eaffc22637ff81e7674238122371",
+      "after_sha256": "5d4ddf73b04fa3640d7d14561fdf5120f8ad40cd479c9b4ce6ea5d9e1a008552",
+      "status": "SEMANTIC_REPAIR",
+      "operation": "Removes only and wild stuff from the scientific framing.",
+      "preservation_note": "The earlier review identified these as additions a reader would treat as claims. Removing an overstatement/evaluation is a content correction; preserve it but do not label it pure stylistic transfer.",
+      "operation_tags": [
+        "scope repair",
+        "evaluation removal"
+      ],
+      "selected_without_outcome_criterion": true,
+      "current_review": "non-isolated retrospective source comparison",
+      "owner_quality": "not newly rated",
+      "test_order_reversed": false,
+      "source_snapshot": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f"
+    }
+  ],
+  "summary": {
+    "families": 20,
+    "exact_unique_inputs": 50,
+    "contrasts": 30,
+    "same_thought_candidates": 8,
+    "same_thought_distinct_families": 8,
+    "candidate_outcomes": {
+      "gain": 3,
+      "both_not_all_human": 5
+    },
+    "other_outcomes": {
+      "gain": 4,
+      "regression": 5,
+      "both_not_all_human": 9,
+      "both_all_human": 4
+    },
+    "all_outcomes": {
+      "gain": 7,
+      "regression": 5,
+      "both_not_all_human": 14,
+      "both_all_human": 4
+    },
+    "classification_counts": {
+      "OWNER_APPROVED_SAME_THOUGHT": 1,
+      "MEANING_OR_FUNCTION_CHANGE": 7,
+      "ALIGNMENT_REVIEW": 6,
+      "CONTENT_ADDITION": 1,
+      "CONTENT_DELETION": 3,
+      "PROVISIONAL_SAME_THOUGHT": 7,
+      "SCOPE_CHANGE": 1,
+      "OWNER_REJECTED_FIDELITY": 1,
+      "SEMANTIC_REPAIR": 3
+    },
+    "source_order_reversed": 5,
+    "api_rows_with_full_window_verification": 46,
+    "gui_rows_name_hash_ledger_link_bound": 4,
+    "new_detector_calls": 0,
+    "causal_or_general_success_rate": null,
+    "limitations": [
+      "Adaptive production-selected sample; no randomized treatment or untreated control",
+      "Most editorial judgments are by current Chat, not owner or independent reviewer",
+      "Known outcomes/diagnoses were present; not blinded",
+      "Multiple transformations co-vary; no single-factor causal attribution",
+      "Do not pool GUI avg_ai_likelihood with API fraction_ai as if same calibrated metric",
+      "20 ledger families are not 20 independent studies; articles/sections share context"
+    ]
+  },
+  "annotation_sha256": "f7cc37a2ba92625271cdb7f2c1aa3d7fbf43c9af9908e1ec0f5e56e08eba658d",
+  "source_snapshot_heads": {
+    "universal-dev-architecture": "6f4b1675e0f275833024dd20b7da82a2a8008c38",
+    "joel-articles": "7a159f868f04bcf407b44019c6391e406c388d8d",
+    "pangram-humanization-lab": "f73e5fa91bec4522f9ce19d89edc883f48941460",
+    "research": "1f7cc051ae9492eaf278f7dc4d3a9ae82cd13c9a"
+  }
+}
