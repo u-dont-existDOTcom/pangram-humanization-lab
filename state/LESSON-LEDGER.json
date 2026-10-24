@@ -1550,6 +1550,17 @@
       "source_path": "state/experiments/owner-conditional-learning-correction-20261024/OWNER-ANSWERS.json",
       "source_ref": "51a6384dc54ad96aa2f1a3cc74d2c0b0b42326a2",
       "source_sha256": "76999d56f05d17acd2b7fd6c7e7dccd95cde7a45e9d665e9758aa4d459cd55d9"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Literal owner two-paragraph rewrite retains the thank-you joke and changes advice, warmth and trust framing. Classify OWNER_REAUTHORING and preserve its owner-reported pass without inventing raw detector details or fresh model transfer.",
+      "id": "L-9bb04e8d0d-01",
+      "promoted_to": [],
+      "reason": "A source-authored multi-function revision, not an isolated causal comparison or validated portable generation skill.",
+      "recorded_at_utc": "2026-10-24T19:40:22.323674+00:00",
+      "source_path": "state/experiments/owner-conditional-learning-correction-20261024/TEACHING-EPISODE.json",
+      "source_ref": "0439b7ec77f3e252bd4575ede1afb5ee862ea4e5",
+      "source_sha256": "9bb04e8d0d1273f9f471672ac78d84fe3d1178b79eb6626a3c1fbf4f459ef8f8"
     }
   ],
   "schema_version": 1
