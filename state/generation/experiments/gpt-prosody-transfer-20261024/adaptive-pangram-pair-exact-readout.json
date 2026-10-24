@@ -1,0 +1,76 @@
+{
+  "D": {
+    "matched": true,
+    "sha256": "41b5adee9ba34507ce6f7ed8beba16b7a0e6227189b6b30c36e585c1d15353e7",
+    "match_mode": "exact_utf8",
+    "word_count": 122,
+    "exact_match_count": 1,
+    "created_at_utc": "2026-10-24T22:05:27.538351Z",
+    "overall": {
+      "stage": "STAGE_SUCCESS",
+      "version": "4.1",
+      "headline": "Mostly Human Written",
+      "document_confidence": {
+        "level": "Low",
+        "boundary": "human"
+      },
+      "fraction_ai": 0.010729621164500713,
+      "fraction_human": 0.9729291200637817,
+      "fraction_mixed": 0.01634126529097557,
+      "fraction_breakdown": {
+        "ai": {
+          "low-confidence": 0.010729621164500713,
+          "high-confidence": 0.0,
+          "medium-confidence": 0.0
+        },
+        "human": {
+          "low-confidence": 0.0,
+          "high-confidence": 0.9729291200637817,
+          "medium-confidence": 0.0
+        },
+        "ai-assisted": {
+          "lightly": 0.01634126529097557,
+          "moderately": 0.0
+        }
+      },
+      "confidence_policy_id": "pangram-4.1-calibrated-accuracy-v2"
+    }
+  },
+  "E": {
+    "matched": true,
+    "sha256": "387a3b33c50ffb3eb397184d825764e48d50ab4ca6b1c17cdafa4b8ded4e0c7c",
+    "match_mode": "exact_utf8",
+    "word_count": 135,
+    "exact_match_count": 1,
+    "created_at_utc": "2026-10-24T22:06:48.205322Z",
+    "overall": {
+      "stage": "STAGE_SUCCESS",
+      "version": "4.1",
+      "headline": "Human Written",
+      "document_confidence": {
+        "level": "Low",
+        "boundary": "human"
+      },
+      "fraction_ai": 0.0009372069034725428,
+      "fraction_human": 0.9990622997283936,
+      "fraction_mixed": 4.7028893845890707e-07,
+      "fraction_breakdown": {
+        "ai": {
+          "low-confidence": 0.0009372069034725428,
+          "high-confidence": 0.0,
+          "medium-confidence": 0.0
+        },
+        "human": {
+          "low-confidence": 0.0,
+          "high-confidence": 0.9990622997283936,
+          "medium-confidence": 0.0
+        },
+        "ai-assisted": {
+          "lightly": 4.7028893845890707e-07,
+          "moderately": 0.0
+        }
+      },
+      "confidence_policy_id": "pangram-4.1-calibrated-accuracy-v2"
+    }
+  }
+}
