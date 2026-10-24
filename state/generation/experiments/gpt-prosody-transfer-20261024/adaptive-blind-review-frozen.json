@@ -1,0 +1,144 @@
+{
+  "reviewer": "Fresh Claude Opus CLI, one no-tools context per target",
+  "mapping": {
+    "H-CHICKEN": {
+      "X": "E",
+      "Y": "D"
+    },
+    "H-SOM": {
+      "X": "D",
+      "Y": "E"
+    }
+  },
+  "reviews": {
+    "H-CHICKEN": {
+      "units": [
+        {
+          "id": "S1",
+          "meaning": "The problem is circular, like a chicken and an egg: what if you are so far inside the child-state that you cannot become the adult? This is posed as a question."
+        },
+        {
+          "id": "S2",
+          "meaning": "'This', meaning the self-directed loving or reparenting, is much easier when you can already reach at least one of your adult roles."
+        },
+        {
+          "id": "S3",
+          "meaning": "Without that access, you can sit there saying all the loving things while the old critic, numbness, panic, or urge to get away runs the whole thing. All four of these forces are named, and the claim is strong: they are in full control."
+        }
+      ],
+      "candidates": [
+        {
+          "label": "X",
+          "fidelity": "FAIL",
+          "semantic_deltas": [
+            "'much easier' is weakened to 'easier'.",
+            "'This' is spelled out as 'Giving yourself love'. That is a reasonable reading but an inference.",
+            "The order is reversed. The easier-with-adult-roles claim comes first and the dilemma second, so the circular problem now looks like a result of that claim rather than the opening question.",
+            "The rhetorical question 'What if you're so far inside...' becomes a hedged statement: 'you may be so deep'.",
+            "'old critic' becomes 'inherited critic', which adds a claim about where the critic came from.",
+            "'the adult' becomes 'the adult you need', adding a sense of need.",
+            "'running the whole thing' becomes 'still dominates the process'. This is close but less total.",
+            "The added final sentence ('it's uncertain whether you can offer the love you're trying to give') is not in the source. It also replaces the source's confident claim that these forces run everything with uncertainty, which is a change in certainty."
+          ],
+          "naturalness": 3,
+          "prosody": "'Giving yourself love is easier when you can already access at least one of your adult roles' reads clearly. 'That creates a chicken-and-egg dilemma' is a smooth bridge. 'still dominates the process' sounds clinical. The ending, 'The words may be loving, but without access to that adult role, it's uncertain whether...', has a flat, hedging rhythm that summarizes and lets the paragraph trail off.",
+          "publish_unchanged": false,
+          "arm_after_review": "E"
+        },
+        {
+          "label": "Y",
+          "fidelity": "FAIL",
+          "semantic_deltas": [
+            "'much easier' is weakened to 'easier'.",
+            "The question is turned into a statement ('You may be so deep'), and a new question ('What happens when that access is missing?') is added later. The question now sits in a different place.",
+            "'old critic' becomes 'inherited critic', which adds a claim about origin.",
+            "'the adult' becomes 'the adult you need'.",
+            "'running the whole thing' becomes 'dominates the process', which is softer.",
+            "The added final sentence ('the difficulty of accessing the adult who could provide it leaves the attempt uncertain') is not in the source. It shifts the source's strong claim to uncertainty.",
+            "'offer the love you need' brings in neediness that the source does not mention."
+          ],
+          "naturalness": 3,
+          "prosody": "'There's a chicken-and-egg dilemma here' opens in the same order as the source. In 'you can't become the adult you need, yet offering yourself love is easier...', the word 'yet' makes the circular logic work. 'What happens when that access is missing?' flows well. The ending, 'the difficulty of accessing the adult who could provide it leaves the attempt uncertain', is heavy with nouns and abstract, a clunky line to close on.",
+          "publish_unchanged": false,
+          "arm_after_review": "D"
+        }
+      ],
+      "rank": [
+        "X",
+        "Y"
+      ],
+      "reason": "Neither candidate passes. Both weaken 'much easier', both add 'inherited', and both end with an invented sentence that turns the source's strong claim (the critic, numbness, panic, or urge to get away runs the whole thing) into uncertainty. Y keeps the source's opening order and its circular logic better. However, it also adds 'the love you need' and ends on a more awkward abstract sentence. X has slightly fewer additions and its final line is more readable. Either one needs revision: restore 'much easier' and 'old critic', and drop the added final sentence so the paragraph ends on the critic, numbness, panic, or urge to get away running the whole thing.",
+      "rank_by_arm": [
+        "E",
+        "D"
+      ]
+    },
+    "H-SOM": {
+      "units": [
+        {
+          "id": "S1",
+          "meaning": "Physical trauma reactions can persist after the danger has passed, even when you know you are safe."
+        },
+        {
+          "id": "S2",
+          "meaning": "With complex or developmental trauma, working directly on the deepest memory can be overwhelming, so a gradual approach may be enough."
+        },
+        {
+          "id": "S3",
+          "meaning": "Attribution: Buddhist nun Pema Chodron calls this gentle approach a 'feather touch.'"
+        },
+        {
+          "id": "S4",
+          "meaning": "Attribution: Peter Levine, founder of Somatic Experiencing, calls gentle work around the edges 'pendulation.'"
+        },
+        {
+          "id": "S5",
+          "meaning": "Inner-child therapy has the same limit: you can know what the younger part needs, yet enter the child-state so fully that too little adult perspective remains to provide it."
+        }
+      ],
+      "candidates": [
+        {
+          "label": "X",
+          "fidelity": "PASS",
+          "semantic_deltas": [
+            "S1: adds the explicit cause 'because conscious knowledge of safety does not necessarily shift your bodily state.' The source implies this, and the hedge 'not necessarily' keeps it from overreaching.",
+            "S1: 'can persist' becomes 'may persist,' which is a negligible change in modality.",
+            "S2: 'direct work' becomes 'going straight to,' and 'a gradual approach may be enough' becomes 'gentle, gradual work around the edges may suffice.' The second change pulls Levine's 'around the edges' wording into the general claim. This is minor.",
+            "S3: Chodron's 'feather touch' is tied to 'a gentle approach' rather than to the gradual approach just described. This is a slight loosening.",
+            "S5: adds a closing line that generalizes the point: 'Knowing what's needed and being able to provide it are separate things.' It states as a categorical rule something the source presents only as a possible limit. This is a small rise in certainty.",
+            "S5: 'the same limit' becomes 'a parallel,' which keeps the analogy."
+          ],
+          "naturalness": 4,
+          "prosody": "The opening 'The danger is over. You know you're safe. Yet your body's trauma reactions may persist' uses short, punchy sentences that read well but feel a little staged. 'gentle, gradual work around the edges may suffice' is followed by 'calls gentle work around the edges' two sentences later, which repeats the phrase awkwardly. The second paragraph reads smoothly ('There's a parallel in inner-child therapy'), but the closing aphorism 'are separate things' feels tacked on and restates the point.",
+          "publish_unchanged": false,
+          "arm_after_review": "D"
+        },
+        {
+          "label": "Y",
+          "fidelity": "PASS",
+          "semantic_deltas": [
+            "S1: adds 'beyond the objective threat' and the explicit cause 'conscious knowledge does not necessarily shift that bodily state.' Both are implied by the source and hedged.",
+            "S1: 'can persist' becomes 'may persist,' which is negligible.",
+            "S2: 'can overwhelm someone' changes the grammatical subject from 'you' to 'someone,' then goes back to 'you' in S5. This shifts perspective but not meaning.",
+            "S2: like X, it pulls 'around the edges' into the general claim. This is minor.",
+            "S3: like X, it uses 'feather touch' for 'a gentle approach.' This is a slight loosening.",
+            "S5: frames the parallel as 'knowing what is needed does not always mean being able to provide it.' The hedge 'not always' matches the source's level of certainty. The mechanism (absorbed in the child-state, too little access to an adult perspective) is kept faithfully."
+          ],
+          "naturalness": 3,
+          "prosody": "The first sentence runs long and is joined by a colon: 'You can know that the danger is over and that you are safe while your body continues to react: trauma reactions may persist...'. This feels dense and a bit expository. 'A parallel arises in inner-child therapy, where...' sounds formal. Like X, it repeats 'gentle, gradual work around the edges' and then 'gentle work around the edges.' The order in the second paragraph, general claim first and mechanism second, flows logically and doesn't end on a redundant tag.",
+          "publish_unchanged": true,
+          "arm_after_review": "E"
+        }
+      ],
+      "rank": [
+        "Y",
+        "X"
+      ],
+      "reason": "Both candidates keep every claim, attribution, actor and qualification from the source, so both pass on fidelity. Y keeps the source's level of certainty in the inner-child point ('does not always mean'). X's closing line 'Knowing what's needed and being able to provide it are separate things' turns that point into a categorical rule and adds nothing new. X has the livelier cadence, but its extra certainty and its tacked-on ending mean it would need a small edit before publication. Y can be published as is, despite its heavier opening sentence.",
+      "rank_by_arm": [
+        "E",
+        "D"
+      ]
+    }
+  }
+}

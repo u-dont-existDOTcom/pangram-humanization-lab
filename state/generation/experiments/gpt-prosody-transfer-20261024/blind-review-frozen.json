@@ -1,0 +1,182 @@
+{
+  "model": "Claude Opus CLI fresh --tools none, per target",
+  "time": "2026-10-24",
+  "reviews": {
+    "H-SOM": {
+      "source_units": [
+        {
+          "id": "S1",
+          "proposition": "Physical trauma reactions can persist after the danger has passed, even when you know you're safe."
+        },
+        {
+          "id": "S2",
+          "proposition": "With complex or developmental trauma, direct work on the deepest memory can be overwhelming."
+        },
+        {
+          "id": "S3",
+          "proposition": "So a gradual approach may be enough (hedged: 'may')."
+        },
+        {
+          "id": "S4",
+          "proposition": "Attribution: Buddhist nun Pema Chodron calls it (the gradual approach) a 'feather touch'."
+        },
+        {
+          "id": "S5",
+          "proposition": "Attribution: Peter Levine, founder of Somatic Experiencing, calls gentle work around the edges 'pendulation'."
+        },
+        {
+          "id": "S6",
+          "proposition": "The same limit appears in inner-child therapy: you can know what the younger part needs yet enter the child-state so fully that too little adult perspective remains to provide it."
+        }
+      ],
+      "candidates": [
+        {
+          "label": "X",
+          "fidelity": "PASS",
+          "missing_or_changes": [
+            "S1: 'trauma reactions' becomes 'have your body react to danger that has already passed'. 'Physical' is carried by 'your body' and persistence by 'already passed'. The word 'trauma' is dropped from this sentence, but the meaning holds.",
+            "S3/S4: 'it may be enough to approach it gradually, with what ... Pema Chodron calls a \"feather touch\"' makes the feather touch the manner of the gradual approach. This matches the source's attribution, and the hedge 'may' is kept.",
+            "S5: Kept exactly.",
+            "S6: 'enter the child-state so fully' becomes 'get so caught up in being that child'. This is a slightly more colloquial paraphrase with the same meaning. 'the younger part' becomes 'your younger part', a harmless change of possessive. 'You can run into the same limit ... when' keeps the 'can' modality.",
+            "Invented details: none."
+          ],
+          "naturalness_1to5": 4,
+          "prosodic_note": "The biggest defect is the opening construction 'still have your body react to danger', which is slightly clunky and causative. 'Have your body react' reads like something done to the body rather than something the body does on its own. The rest flows conversationally, and folding the feather-touch attribution into the sentence works well.",
+          "publish_unchanged": "YES - It is faithful and readable. The opening is a little awkward but acceptable in a conversational self-help register.",
+          "rank": 2,
+          "arm_after_review": "C"
+        },
+        {
+          "label": "Y",
+          "fidelity": "PASS",
+          "missing_or_changes": [
+            "S1: 'Physical trauma reactions can persist' becomes 'Your body can keep reacting to trauma'. Physicality and persistence are kept, along with the 'even when you know you're safe' contrast.",
+            "S2/S3: Kept, with the hedge 'may'.",
+            "S4: 'calls it' becomes 'calls this'. The referent is the gradual approach, so the attribution is unchanged.",
+            "S5: Kept exactly.",
+            "S6: 'you can know' becomes 'you may know'. The modality is equivalent. 'so fully' becomes 'so completely', and 'too little adult perspective remains to provide it' becomes 'you have too little adult perspective left to provide it'. These are equivalent.",
+            "Invented details: none."
+          ],
+          "naturalness_1to5": 4,
+          "prosodic_note": "The biggest defect is 'reacting to trauma', a mildly imprecise phrase. The body reacts to reminders of danger, not to 'trauma' as an object. The semicolon joining the two attributions is a bit formal for a conversational article, but it reads cleanly. Otherwise the cadence is smooth and the hedges are clear.",
+          "publish_unchanged": "YES - It is the most faithful of the three, with every unit and hedge intact, and the prose is clean and clear.",
+          "rank": 1,
+          "arm_after_review": "A"
+        },
+        {
+          "label": "Z",
+          "fidelity": "PASS",
+          "missing_or_changes": [
+            "S1: The phrase order is shifted: 'You can know you're safe after the danger has passed and still have physical reactions to trauma.' 'After the danger has passed' now attaches to knowing you're safe, not to the persistence of the reactions. The idea of reactions persisting is only implied by 'still'. This is a minor emphasis shift, not a reversal.",
+            "S4/S5: Kept.",
+            "S6: Recast as a conditional: 'knowing what the younger part needs doesn't mean you can provide it if you enter the child-state so fully that too little adult perspective remains.' The source presents the overlap as a possibility ('can know ... yet enter'), and Z turns it into an if-clause. The meaning survives, but the framing is slightly altered.",
+            "Invented details: none."
+          ],
+          "naturalness_1to5": 3,
+          "prosodic_note": "The biggest defect is the misplaced modifier in the opening sentence. 'You can know you're safe after the danger has passed' makes the timing seem to belong to the knowing. That muddies the main point that bodily reactions outlast the danger, and 'still have physical reactions to trauma' trails off weakly. The final sentence is long and back-loaded, with its key condition arriving last.",
+          "publish_unchanged": "NO - The opening sentence's modifier placement blurs the central claim about persistence and should be recast. The conditional ending is also heavier than necessary.",
+          "rank": 3,
+          "arm_after_review": "B"
+        }
+      ],
+      "rank_by_arm": [
+        "A",
+        "C",
+        "B"
+      ]
+    },
+    "H-CHICKEN": {
+      "source_units": [
+        {
+          "id": "S1",
+          "text": "Framing: here's the chicken-and-egg problem (a new difficulty announced on its own, not presented as a consequence of earlier text)"
+        },
+        {
+          "id": "S2",
+          "text": "Rhetorical question: what if you're so far inside the child-state that you can't become the adult?"
+        },
+        {
+          "id": "S3",
+          "text": "This is much easier when you can already reach one of those adult roles"
+        },
+        {
+          "id": "S4",
+          "text": "Without that, you can sit there trying to say all the loving things"
+        },
+        {
+          "id": "S5",
+          "text": "...while the old critic, numbness, panic, or urge to get away is running the whole thing (four-item parallel list, progressive aspect)"
+        }
+      ],
+      "candidates": [
+        {
+          "label": "X",
+          "fidelity": "UNCERTAIN",
+          "missing_or_changes": [
+            "S1: 'here's the chicken-and-egg problem' becomes 'that leaves a chicken-and-egg problem', so the problem now reads as a consequence of the preceding text. This is a small shift and depends on context.",
+            "S2: adds a new question, 'how do you do this?'. The source only poses 'what if'; X turns it into a request for a method and depends on an outside referent for 'this'. This is invented framing.",
+            "S3: 'can already reach' becomes 'already have access to'. Equivalent.",
+            "S5: adds 'still' ('is still running'), which implies the critic and the rest were already running before the attempt. This is a small new implication.",
+            "No invented factual examples. All four list items are kept."
+          ],
+          "naturalness_1to5": 3,
+          "prosodic_note": "The opening sentence carries too much: a colon, an 'if' clause, then a tacked-on 'how do you do this?' that ends on a vague 'this'. The repetition of 'have access to' / 'Without that access' also sounds clunky.",
+          "publish_unchanged": "NO: the added 'how do you do this?' changes the rhetorical move and leans on an unclear referent, and the 'access...access' echo needs editing.",
+          "arm_after_review": "B"
+        },
+        {
+          "label": "Y",
+          "fidelity": "PASS",
+          "missing_or_changes": [
+            "S1/S2: reordered so the question comes first and the label follows ('That's the chicken-and-egg problem here'). The propositions are kept.",
+            "S2→S3: adds an explicit 'because', making the source's implied logic (why it is chicken-and-egg) into a stated causal link. This is consistent with the source's meaning and adds nothing new, but it changes the discourse structure.",
+            "S5: 'urge to get away' becomes 'the urge to get away'. Adding the article breaks the four-item parallel list slightly. The meaning is unchanged.",
+            "No invented details."
+          ],
+          "naturalness_1to5": 4,
+          "prosodic_note": "After the reorder, 'That's the chicken-and-egg problem here, because this is much easier...' sounds stiff, and 'this' has a weaker referent than in the source because it now sits inside a subordinate clause. The added 'the' before 'urge' breaks the rhythm of the list.",
+          "publish_unchanged": "NO: the meaning is faithful, but the 'here, because this' join is awkward and the list parallelism should be restored. It needs a light edit.",
+          "arm_after_review": "C"
+        },
+        {
+          "label": "Z",
+          "fidelity": "PASS",
+          "missing_or_changes": [
+            "S1: 'here's the' becomes 'that leaves a'. As in X, this implies a link to the preceding text. It is a minor shift and acceptable if the prior paragraph sets up the technique.",
+            "S2: 'so far inside' becomes 'so deep in'. Equivalent.",
+            "S3: 'can already reach' becomes 'can already step into'. Near-equivalent. It suggests entering a role rather than accessing one, but this is not a material change.",
+            "S4: 'Without that' becomes 'If you can't'. Equivalent.",
+            "S5: 'is running the whole thing' becomes 'runs the whole show'. The idiom swap and the change from progressive to simple present are slight register and aspect shifts with no change in meaning. All four list items are kept and parallel.",
+            "No invented details."
+          ],
+          "naturalness_1to5": 5,
+          "prosodic_note": "There is no significant defect. The only point to watch is that 'that leaves' needs the preceding paragraph to support it.",
+          "publish_unchanged": "YES: it is faithful, conversational, rhythmically clean and keeps the list parallel. It can go out unchanged, provided the preceding paragraph sets up the 'that leaves' transition.",
+          "arm_after_review": "A"
+        }
+      ],
+      "rank": [
+        "Z",
+        "Y",
+        "X"
+      ],
+      "rank_by_arm": [
+        "A",
+        "C",
+        "B"
+      ]
+    }
+  },
+  "mapping": {
+    "H-SOM": {
+      "X": "C",
+      "Y": "A",
+      "Z": "B"
+    },
+    "H-CHICKEN": {
+      "X": "B",
+      "Y": "C",
+      "Z": "A"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "GPT_SOURCE_SURFACE_EXPOSURE_V1",
+  "date_utc": "2026-10-24",
+  "status": "ADAPTIVE_FOLLOWUP_PREREG_AFTER_NEGATIVE_A_B_C",
+  "reason": "The first three GPT rewrite prompt architectures were editorially ranked A>C>B on two holdouts, and matched H-SOM A and C both scored Pangram 4.1 AI/100. Isolate whether seeing the original AI-shaped source sentences prevents generation from a differently formed cognitive plan.",
+  "source_fixture": "fixtures-and-prereg.json",
+  "cards": {
+    "H-SOM": "The body's trauma reactions may persist after objective danger is over, even when the person knows consciously that they are safe. With complex/developmental trauma, directly working on the deepest memory can overwhelm someone; gentle gradual work around the edges may suffice. Attribution: Buddhist nun Pema Chodron uses the phrase 'feather touch' for gentle approach; Peter Levine, founder of Somatic Experiencing, calls gentle edge-work 'pendulation'. There is a parallel in inner-child therapy: knowing what the younger part needs is not enough when one is so absorbed in the child-state that adult perspective is insufficient to offer it.",
+    "H-CHICKEN": "The writer is encountering a chicken-and-egg dilemma. A person may be so far inside their child-state they cannot become the needed adult. Providing love is easier if one can already access at least one of their adult roles. Without that, the person might try speaking loving words while the inherited critic, numbness, panic, or urge to escape dominates the process. The uncertainty is situational, not evidence that the person is insincere."
+  },
+  "conditions": [
+    {
+      "id": "D",
+      "description": "fresh writer receives cards plus one frozen attention/causal plan, NOT original AI-shaped source sentences",
+      "emulate_access": false
+    },
+    {
+      "id": "E",
+      "description": "fresh writer receives SAME cards and SAME plan, plus original source sentences, used only for fidelity",
+      "emulate_access": false
+    }
+  ],
+  "stage1": "For each target, a fresh planning model receives card only and reports a compact logical/attentional plan, no polished paragraphs. Freeze the plan before any D/E generation.",
+  "stage2": "Four fresh GPT-6.1 Sol High generations, one context per arm+target, order H-CHICKEN:D,E and H-SOM:E,D. No tools / Emulate and no target owner-reference shown; model and prompts identical across arms except source sentence exposure.",
+  "evaluation": "Blind fidelity and naturalness; mandatory zero unexplained semantic deltas; compare D vs E per target; optional one matched Pangram pair only if both pass editorial fidelity and comparison changes next method decision; at most 2 new research scans.",
+  "prediction": "D may break the original's recursive cadence, but may also become generic or omit named roles; E may preserve details better but reproduce source rhythm. The result is not guaranteed and cannot independently prove a permanent GPT skill.",
+  "stop": "If the plan+card writer still falls back into AI shapes or introduces material shifts, stop adding instruction prohibitions; label generator-model architecture limitation. Do not promote lessons without owner reading and prospective new-target success.",
+  "known_limits": "Posthoc adaptive research after seeing results of A/B/C; independent generator contexts, but targets known to supervising context. Any positive result is exploratory pending replication on a genuinely new owner-supplied holdout."
+}
