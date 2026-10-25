@@ -47,3 +47,49 @@ A full six-passage side-by-side HTML review packet was generated in this convers
 ## Remaining editorial dependency
 
 Joel's reading judgment on candidate B/F and authorization of any substantive D/E restructuring. The original six source spans remain exact in the frozen source. The next detector test, if any, must be a specific meaning-clean local/section repair with prediction frozen before submission; avoid duplicate tests of already stored hashes.
+
+## 2026-10-25 follow-up — direct owner correction and exact contextual results
+
+The owner judged earlier B wording better but correctly flagged that **“I'd want”** often appears as generic model phrasing. New positive diagnostic: **“who cares what I want?”** Use first person only if the author’s personal choice or judgment actually determines a reader-relevant decision; this instance concerns what he would value if he went to a retreat. This is not a ban on the phrase.
+
+### B — owner phrasing, factual conflict, measured fact-corrected alternative
+
+Literal owner revision (2026-10-25) is preserved separately in `OWNER-CORRECTION-20261025.md`. The parenthetical “Goenka ... never talks about nibbana” is contradicted by Goenka's published `Realizing the Four Noble Truths` (`https://discourses.dhamma.org/posts/46874`); the phrase “nine days of intense body scanning” misdescribes the course (3½ days breath focus then scanning from day four, metta on day 10: `https://rs.dhamma.org/en/course-info/`). These are concrete historical-fact corrections, not a model license to flatten the author's criticism.
+
+Direct owner speech “I’d say it makes more sense…” and the kindness-before-trauma claim were retained in a fact-corrected **experimental B3 candidate**:
+
+> The Buddha taught that kindness was necessary preparation for real nibbana meditation. In Goenka’s course, the first nine days are spent on breath meditation and intensive body scanning instead. I’d say it makes more sense for kindness to be there when trauma starts coming up, not nine days in.
+
+Preceding green: “Goenka puts metta on day ten. Briefly. Mostly to share merit. I think that’s backwards.” B3 avoids repeating this claim as an identical sentence. A prior differently worded attempt was rejected before testing for an unclear “By that point” and a lost Buddha/Goenka contrast. Original B Human 99.45% prior result remains a **different input**, not automatically transferable.
+
+One **new** exact B3 contextual Pangram 4.1 submission, 89 words, SHA `5c0e53cd29401ad54d44b39d9c5c7deda21af473da5b4482e893553c9b56e6ec`: `response.overall` headline **AI Assisted**, `fraction_mixed=0.9993616342544556`, approximately **99.94% moderately AI-assisted**, confidence **Low**. This was a **prediction miss** relative to preflight “Human likely”; no same-style rewrite loop was run. B3 is **not** a certified replacement and has not been owner-reading-approved. Full exact evidence `owner-corrections-exact-history-20261025.json`.
+
+### F — owner-authorized deletion; certified excerpt
+
+Joel requested deleting the qualifying second sentence about anecdote/incidence from the previously measured F candidate. The original article **does** already acknowledge Goenka participants may benefit (“I’m really happy if you benefited...”), but that is **not logically equivalent** to saying anecdotes don't establish incidence. The deletion is **OWNER_REAUTHORING**, not style-only preservation.
+
+Updated candidate:
+
+> You can skip these accounts if you don’t need them; some are rough to read.
+
+Pangram 4.1, **107-word** contiguous excerpt with original green introduction and two first survivor summaries, exact SHA `2a3f3645790eba5d4fb2480378732f3018620f789fedf0ade4b85d24d773ad3d`: **100% Human**, document confidence **High**, exact History matched. This is a viable local passage pending final owner review; no full-article claim. Exact evidence same JSON above.
+
+### C — structural integration helped but not fully passed
+
+GPT moved the aftercare and purpose of Oliver's story into one sentence following the unchanged green anecdote:
+
+> Oliver’s story is one reason I take the “metta first” possibility seriously, not a recipe you have to follow.
+
+Fresh Claude cold audit: fidelity PASS, naturalness 4/5, only mild “X, not Y” polished tail. Exact 74-word Pangram context `3eb77206d15e1ee24420ee93076a09cd1d277ec61cfae224f353f8c0887fea7b` scored **75.11% Human / 24.89% AI**, document confidence High; orange was precisely the new closing sentence, while original green anecdote remained green. Do **not** call this a pass or count it as a transferred skill. Result `C-integrated-exact-history-20261025.json`. The locally altered structure did not eliminate the aftercare tell. Stop another same-structure synonym pass without owner thought or a different placement.
+
+### D — changed writing architecture also failed cold reading
+
+After repeated same-pattern failures, launched one **genuinely fresh** GPT-6.1 Sol High context as if answering a reader's question, not rewriting source prose; authorial claims and two green neighbors were supplied without the original target wording. Literal 106-word output and its non-isolated editorial rejection are in `D-DIALOGUE-NEGATIVE-RESULT-20261025.md`. It kept the same if-then ladder and added generic safety aftercare (“Those are possibilities, not a sequence I’d feel obliged to complete”), as well as an extra leave-vs-pause contrast. **No detector call**; stop this method until structurally different positive author cognition is available.
+
+### Disposition
+
+- B owner preferred wording: **stored exact, fact-check flagged**; B3 fact-corrected candidate **AI-assisted**, pending owner reading.
+- F owner-authorized shortened version: **Human/High contextual pass**, but explicitly omits a distinct prevalence caveat.
+- C structural integration: **25% AI-context residual**, not owner approved.
+- A/D/E remain unresolved. No new cached or paid Pangram calls on them.
+- No changes to article master or Substack. Previous green source text remains protected.
