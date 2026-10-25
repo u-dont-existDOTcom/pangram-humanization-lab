@@ -3962,6 +3962,17 @@
       "source_path": "state/experiments/fresh30-source-admission-20261024/TEACHING.json",
       "source_ref": "b6ce20d7e23f617b6a59a0433b79c5ec1137e298",
       "source_sha256": "42bf0058a3c21a9e9e7961b5587c46d97cb6f6b3eb2439494fe9d126ee6d4d95"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Exact executed model-input prompts bound to saved result prompt hashes; no hidden rewrite or repeated inference. Provider trace metadata remains local.",
+      "id": "L-694b271e47-01",
+      "promoted_to": [],
+      "reason": "Reproducibility provenance only; no new empirical result, independence claim, owner rating, or detector submission.",
+      "recorded_at_utc": "2026-10-25T12:13:53.878575+00:00",
+      "source_path": "state/experiments/fresh30-source-admission-20261024/EXECUTION-PROMPTS.json",
+      "source_ref": "55a6996f4fdf1aa9f2f72b31ae7c06dcdf0b85bb",
+      "source_sha256": "694b271e47c3c1b456167df71d3a1d754e6714fc2a0c18c99818eeec84e045fd"
     }
   ],
   "schema_version": 1
