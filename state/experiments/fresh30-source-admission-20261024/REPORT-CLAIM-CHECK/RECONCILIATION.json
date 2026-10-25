@@ -1,0 +1,82 @@
+{
+  "schema": "report-claim-check-reconciliation-v1",
+  "review": "REPORT-CLAIM-CHECK/RECORD.json",
+  "reason": "Fresh checker marked report supported, with caveats for provenance evidence omitted from its input packet. These direct source checks supply those missing anchors; original checker output remains unchanged.",
+  "checks": [
+    {
+      "claim": "baseline gate status T03",
+      "source": "state/experiments/fresh30-source-admission-20261024/PILOT-RESTRICTED-RESULTS/T03/baseline_fidelity.json",
+      "sha256": "9a26df4bdc460649ba842a0a2b33e28a3e0af1ab32d849ba1854bd41ed641731",
+      "top_level_preservation": false,
+      "flag_counts": {
+        "omissions": 1,
+        "additions": 3,
+        "certainty_changes": 2
+      }
+    },
+    {
+      "claim": "baseline gate status T05",
+      "source": "state/experiments/fresh30-source-admission-20261024/PILOT-RESTRICTED-RESULTS/T05/baseline_fidelity.json",
+      "sha256": "0d8c68602037a2ea1595e143f883a6199faf25a1e090f1e5541429af294c19b3",
+      "top_level_preservation": true,
+      "flag_counts": {
+        "omissions": 0,
+        "additions": 0,
+        "certainty_changes": 1
+      }
+    },
+    {
+      "claim": "baseline gate status T20",
+      "source": "state/experiments/fresh30-source-admission-20261024/PILOT-RESTRICTED-RESULTS/T20/baseline_fidelity.json",
+      "sha256": "cc460cd918190ac0a14c9c73a76b4e7085c8a36b4a71bc8384ec4eb9a4ce039b",
+      "top_level_preservation": false,
+      "flag_counts": {
+        "omissions": 1,
+        "additions": 1,
+        "certainty_changes": 1
+      }
+    },
+    {
+      "claim": "prior runner expected 4.0, actual backend 4.1, preserved task",
+      "source": "state/experiments/fresh30-source-admission-20261024/PANGRAM-BASELINE-CACHE/pangram-4/4.0/f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373/fresh30-v2-T13-baseline-20261024.json",
+      "expected": "4.0",
+      "actual": "4.1",
+      "status": "terminal_wrong_version"
+    },
+    {
+      "claim": "source privilege omitted in style-only task, no owner labels sent",
+      "case": "envy",
+      "mixed_contains_source_block": true,
+      "style_contains_source_block": false,
+      "literal_owner_ratings_in_either": false
+    },
+    {
+      "claim": "source privilege omitted in style-only task, no owner labels sent",
+      "case": "thanks",
+      "mixed_contains_source_block": true,
+      "style_contains_source_block": false,
+      "literal_owner_ratings_in_either": false
+    },
+    {
+      "claim": "source privilege omitted in style-only task, no owner labels sent",
+      "case": "heading",
+      "mixed_contains_source_block": true,
+      "style_contains_source_block": false,
+      "literal_owner_ratings_in_either": false
+    },
+    {
+      "claim": "source privilege omitted in style-only task, no owner labels sent",
+      "case": "golden-forgiveness",
+      "mixed_contains_source_block": true,
+      "style_contains_source_block": false,
+      "literal_owner_ratings_in_either": false
+    },
+    {
+      "claim": "owner thank-you reasoning",
+      "source": "REVIEWER-CALIBRATION/INPUTS.json",
+      "exact_comment": "the humor is gone and now the emoji makes no sense... this one passes If the love still isn’t coming, you can at least be present for your little one, without any judgements. Helpful advice is great, when they're ready for it (or when you're ready for theirs). And that warmth, well, we do need to get there.  If you can't find it yet, borrow some. That’s enough to start being the adult, but trust is earned over time. \n\nThe thank-you you weren’t waiting for? It might not come anyway. 😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!” "
+    }
+  ],
+  "new_model_calls": 0,
+  "new_detector_calls": 0
+}

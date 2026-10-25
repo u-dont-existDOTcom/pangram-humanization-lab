@@ -1,0 +1,40 @@
+{
+  "return_code": 0,
+  "prompt_sha256": "1dc8249604fa7fc16acb38aa168af31e6d5122b72bab68f64e0c003d6bea896a",
+  "result": "```json\n{\n  \"supported\": true,\n  \"material_errors\": [],\n  \"caveats\": [\n    \"Counts check out. Selected/admitted/rejected is 30/27/3. Naturalness is 15 B, 9 A, 3 tie. Overall preference is 19 A, 6 B, 2 tie. Fidelity is 27 for A and 21 for B. A is unchanged in 15, B in 0, and B is longer in 24. The Pangram readings, the 10 distinct tasks, 823 words and 12 raw cache records, the pool outcomes, and the calibration table all match the evidence.\",\n    \"Quote: \\\"Two were judged materially unfaithful by the model\\\". The evidence gives only baseline_rejected = 3 and the T05 gate note. It does not record the reasons for the other two rejections, so this is inferred.\",\n    \"Quote: \\\"The earlier T13 result returned backend 4.1 despite the runner expecting 4.0. It was recovered and rekeyed without resubmission.\\\" The evidence confirms only that T13 returned 4.1 AI/high from one paid call. The runner's 4.0 expectation and the rekeying are not in the supplied evidence. The 'stricter older 4.0 production gate' is mentioned, which is related but not the same claim.\",\n    \"Quote: \\\"The model was not shown the owner's ratings or prior detector results.\\\" The evidence says only that the reviewer contexts were fresh and that the owner's prior judgments remain authoritative. The blinding is not documented.\",\n    \"Quote: \\\"A second, separately invoked style-only architecture withheld the privileged source block.\\\" The evidence shows no fidelity scoring (the model_fidelity values are null). It does not state that the source block was withheld, although the 'Source-free' label in the table implies it.\",\n    \"Quote: \\\"Joel's judgment that the callback carried humor and made the emoji work.\\\" The evidence records only that the owner chose A for the thank-you case. The owner's stated reasoning is not in the evidence. The mixed reviewer's own comments about the callback and the joke are model statements, not owner truth.\",\n    \"Quote: \\\"Original A was included as a candidate, recreating the source-conservative setting.\\\" This is consistent with the model outputs, which show A identical to the source. It is the author's characterization of the design.\",\n    \"Interpretive statements are labeled as such and are consistent with the evidence. These include 'example exposure was associated with more intervention', 'could already have been humanized', 'adaptive local calibration', and the practical-decision section. The 'evaluator was rewarding the wrong style' headline is an interpretation resting on the four calibration cases. The evidence itself labels those cases hand-selected and not held-out.\",\n    \"'No new Pangram call was made during this continuation' matches fresh_Pangram_calls_this_recovery = 0. The three new A/B Pangram posts (new_post_count = 3) happened earlier and are counted correctly as 10 distinct tasks.\"\n  ]\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 15255,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 3278,
+    "output_tokens_details": {
+      "thinking_tokens": 2279
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15255,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3278,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 15255,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15255
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "scope": "Fresh restricted model fact/number check, same provider; not independent owner style judgment or external fact verification."
+}
