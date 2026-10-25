@@ -1,24 +1,22 @@
 # Fresh30 continuation checkpoint — 2026-10-25
 
-Status: owner-bounded local writing experiment completed and audited; no new Pangram submissions; no article master or publication changed.
+Status: six saved AI-labeled source drafts and six provisional current-context alternatives are recorded. The intended independent Sonnet/Opus writing-route comparison is BLOCKED_BEFORE_EXECUTION, not completed.
 
 ## Current read order
+1. WEAK-PROSE-ROUTE-20261025/REPORT.md
+2. WEAK-PROSE-ROUTE-20261025/DRAFTS.json and INPUTS.json
+3. WEAK-PROSE-ROUTE-20261025/EXECUTION-STATUS.json and VERIFICATION.json
+4. OWNER-BOUNDED-WRITING-20261025/REPORT.md for the preceding bounded-edit result
+5. OWNER-HOLDOUT-20261025/REPORT.md for evaluator limits
 
-1. OWNER-BOUNDED-WRITING-20261025/REPORT.md
-2. OWNER-BOUNDED-WRITING-20261025/RESULTS.json and INPUTS.json
-3. OWNER-HOLDOUT-20261025/REPORT.md for the preceding evaluator failure
-4. FINAL-RESEARCH-REPORT.md for the larger Fresh30 investigation
+## Latest work and exact limitation
+Six prior experimental paragraphs were recovered with source hashes and historical exact Pangram 4.1 AI/High records. A paired Sonnet-high/Opus-high study was frozen. The tool-safety layer blocked its runner-creation/launch call before execution; readback found no runner or outputs. It was not retried through another wrapper.
 
-## Latest measured result
+Current ChatGPT instead drafted and revised six whole-paragraph alternatives in its already-informed context. DRAFTS.json labels that provenance explicitly. These are NOT results of the isolated model comparison, not owner-approved, not independently reviewed, and not Pangram-tested. Exact source/candidate hash checks pass, but those checks do not prove naturalness or semantic equivalence. The care/grief and checkable-evidence relations were kept explicit; the shortcut draft still resembles an instruction sequence.
 
-The twelve previously judged keep/cut cases were used as development/implementation probes, not a new holdout. The baseline applies six owner cuts, six keeps and the specific F22 correction. A fresh restricted writer could add at most two exact-span local edits, with retained targets locked experimentally. All twelve candidates preserved those literal constraints; six made no change and six proposed one edit. Four changes were tentative small cleanups with consistent style preference and no material difference reported, one had no clear style benefit, and one was fidelity-rejected. The rejected F25 edit collapsed first feeling love as one's own and then gradually internalizing it into feeling alone, despite preserving the separate locked sentence about spiritual relationships.
+The matched model experiment remains unexecuted. Parent research remains open; no general humanization skill is claimed. Existing twelve-case bounded-edit results, new-family evaluator checks and the earlier Fresh30 trial stay unchanged. Golden forgiveness stays golden.
 
-Twenty-four experimental model calls (12 writers, six source-free style comparisons, six source-aware delta inventories), plus one report claim check. Zero new Pangram calls. Same model/provider in distinct restricted contexts; no owner approval of the new prose. Literal scope preservation is enforced partly by construction, not proof the model learned twelve editorial judgments. The style outputs contain two numerical/verbal preference disagreements; these were retained, not cherry-picked.
+## Delivery and next decision
+A read-only six-case comparison and ZIP were placed at the owner OS-designated download directory. Sandbox counterparts include source-function notes and comparison data. No current article, owner-final prose or production writing rule changed, and zero new external-model or Pangram calls occurred in this turn.
 
-## Prior evidence stays unchanged
-
-Fresh30: thirty source families attempted, twenty-seven paired outputs; no broad example-assisted humanization gain established. Prior owner evaluator check: style matched four of five different comparisons in both orders; deletion task matched three of twelve, and full context corrected three of six selected errors. Direct owner decisions control even when model reviews disagree. Golden forgiveness remains golden and unchanged.
-
-## Boundary and next useful work
-
-Do not ask models to vote again on known owner keep/cut decisions, do not promote small grammatical cleanup as whole-thought humanization, and do not spend detector credits certifying those cleanup edits. A future generation comparison needs genuinely weak model prose with a source-grounded relational thought worth recovering. Existing readable owner-corrected paragraphs can be damage controls, not assumed failed-AI targets. Exact source spans and full rhetorical context remain available in the saved inputs. No production rule has been promoted from this bounded twelve-case study.
+The next editorial decision is whether any exact new alternative improves the thought's realization rather than merely rearranging model prose. Do not infer approval from this checkpoint or count the six drafts as independent trials. Any later permitted isolated run must retain its own configuration and outputs and must not relabel these drafts as its result.
