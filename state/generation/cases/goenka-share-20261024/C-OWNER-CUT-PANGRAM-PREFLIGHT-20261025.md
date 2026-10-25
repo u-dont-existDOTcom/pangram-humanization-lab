@@ -1,0 +1,11 @@
+# Pangram 4.1 preflight — Oliver owner cut
+
+Date: 2026-10-25. Exact target scope: 67 whitespace words / SHA-256 `e2b04aa271251f877def57fd8cb04c493d3c4128141ce0f22afb976057277350`, saved as `C-OLIVER-OWNER-CUT-EXCERPT-20261025.txt` in this branch, mounted locally on owner's authenticated GUI device.
+
+**Change authorized by Joel, exact phrase deletion:** the earlier 74-word integrated candidate's sentence ended “..., not a recipe you have to follow.” The owner expressly ordered removal of that suffix because it sounded AI. This revised excerpt includes: original green Oliver narrative, the remaining exact sentence “Oliver’s story is one reason I take the ‘metta first’ possibility seriously.”, and original green transition to the next problem. All named details (Ajahn Sona, five weeks, cPTSD, Cinnamon Ayahuasca, Ultimate Psychedelic Protocol) and the author's subjective anecdote are unchanged. The non-prescriptive caveat is knowingly deleted under direct owner re-authoring.
+
+**Previous exact control:** the longer 74-word context, SHA `3eb77206d15e1ee24420ee93076a09cd1d277ec61cfae224f353f8c0887fea7b`, scored 75.11% Human / 24.89% AI, with the only AI-shaded part being the full appended two-function closer. Pangram's exact History URL for that earlier control has been user-shared in this conversation but does not apply to this new input.
+
+**Pretest prediction:** the shorter excerpt should be more likely Human because it removes the over-complete generic disclaimer and preserves one genuine reason for including Oliver's example; expect Human >95% in the 67-word local boundary. Pangram 4.1 will still report low short-text confidence if appropriate. If the remaining “one reason ... seriously” is red, stop and do NOT add another disclaimer; check whether the whole closing metacommentary is simply unnecessary and ask owner about a cut only if that changes the article.
+
+**Admission:** one Pangram 4.1 GUI submission of this exact SHA (not a duplicate and within the owner-corrected paragraph trial limit). Recover the exact History record and user-facing URL in the authenticated browser after the known legacy GUI waiter falsely times out; do not resubmit. This is a local research certification, not final full-article certification. No Substack publication or article master edit.
