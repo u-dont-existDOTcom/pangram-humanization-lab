@@ -5,12 +5,45 @@
   "last_error": "",
   "measurement_key": "fresh30-v3-baseline-T11-20261025",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 5.264642454622104e-12,
+    "fraction_ai_assisted": 6.281431624843847e-11,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "After several such episodes, I decided to stop giving in to the victim mentality and to treat the experience seriously as part of my spiritual practice. My inner guide saw it as an ideal chance to show that love is more powerful than fear. The next time it happened, I sent unconditional love to the demon on me, even though it was frightening. It took some minutes, but the demon left and never returned.",
+    "version": "4.1",
+    "windows": [
+      {
+        "ai_assistance_score": 3.667180448196916e-11,
+        "calibrated_confidence": 0.9772690859680377,
+        "class_probabilities": [
+          1.0,
+          6.281431624843847e-11,
+          5.264642454622104e-12
+        ],
+        "confidence": "Medium",
+        "end_index": 405,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "After several such episodes, I decided to stop giving in to the victim mentality and to treat the experience seriously as part of my spiritual practice. My inner guide saw it as an ideal chance to show that love is more powerful than fear. The next time it happened, I sent unconditional love to the demon on me, even though it was frightening. It took some minutes, but the demon left and never returned.",
+        "token_length": 84,
+        "word_count": 74
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "3fa1c1b1-2e75-4cf9-9ad6-c6f61142cfb9",
   "text": "After several such episodes, I decided to stop giving in to the victim mentality and to treat the experience seriously as part of my spiritual practice. My inner guide saw it as an ideal chance to show that love is more powerful than fear. The next time it happened, I sent unconditional love to the demon on me, even though it was frightening. It took some minutes, but the demon left and never returned.",
   "text_sha256": "5662e11595e17b793c3f238458c792dc1b03d8fc7c49786637ff1fa833af46bc",
-  "updated_utc": "2026-10-25T01:09:22.161268+00:00"
+  "updated_utc": "2026-10-25T01:09:24.956088+00:00"
 }
