@@ -23,6 +23,28 @@
       ],
       "paid_task_reuse": false,
       "task_record_id_present": true
+    },
+    {
+      "case": "T16",
+      "arm": "B",
+      "text_sha256": "e4b1b31acafeb6686b93f1c3ef278fd172618b7d030d2fabc5c3a0df50971e2d",
+      "frozen_forecast_p_all_human": 0.47,
+      "forecast": "AI/mixed (uncertain)",
+      "stage": "STAGE_SUCCESS",
+      "version": "4.1",
+      "headline": "AI Generated",
+      "categorical_all_Human": false,
+      "fraction_human": 0.0,
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "windows": [
+        {
+          "label": "AI-Generated",
+          "confidence": "High"
+        }
+      ],
+      "paid_task_reuse": false,
+      "task_record_id_present": true
     }
   ],
   "existing_baseline_controls": {
@@ -32,7 +54,7 @@
   "actual_version": "4.1",
   "one_paragraph_per_new_call": true,
   "max_new_paid_tasks": 3,
-  "new_post_count": 1,
+  "new_post_count": 2,
   "source_gold_preserved": true,
   "owner_style_approval": false,
   "scope": "Two AI-starting families only; cannot infer general transfer from local scores."
