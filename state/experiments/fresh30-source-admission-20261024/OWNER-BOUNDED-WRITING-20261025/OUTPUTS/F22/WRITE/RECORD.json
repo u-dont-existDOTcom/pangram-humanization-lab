@@ -1,0 +1,56 @@
+{
+  "case": "F22",
+  "stage": "WRITE",
+  "prompt_sha256": "31c04d46c5e81fee025c9decbd58bdbed8916ca0a38379c5ff9b61ec947a0292",
+  "response_sha256": "9fa693a7ac8ec4f889ff52a0ea9c2bb6bbd1b94f32e0494c775b6ae8af910bd4",
+  "result": "{\"edits\":[{\"old\":\"is a warning sign too, whether it's family history\",\"new\":\"is a warning sign, whether it's family history\",\"why\":\"The sentence before already ends with \\\"too\\\", so the second \\\"too\\\" in the next sentence reads as a repeated tic. Cutting it changes nothing in meaning.\"}],\"no_change_reason\":\"\"}",
+  "parsed": {
+    "edits": [
+      {
+        "old": "is a warning sign too, whether it's family history",
+        "new": "is a warning sign, whether it's family history",
+        "why": "The sentence before already ends with \"too\", so the second \"too\" in the next sentence reads as a repeated tic. Cutting it changes nothing in meaning."
+      }
+    ],
+    "no_change_reason": ""
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2784,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 275,
+    "output_tokens_details": {
+      "thinking_tokens": 162
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2784,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 275,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2784,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2784
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.01389,
+  "elapsed_s": 6.46,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

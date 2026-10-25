@@ -1,0 +1,56 @@
+{
+  "case": "F19",
+  "stage": "WRITE",
+  "prompt_sha256": "e090cfca35c73ea7283d3450f0ac0f56af8c3d3e5a0b3b7317de833ef77aee59",
+  "response_sha256": "7b2b5f5bc083f3621fdbbcd6d81f4852cde3a594efe990eccb2e0d084fe04638",
+  "result": "{\"edits\":[{\"old\":\"And the love or grief that sounded like therapy talk is just obvious.\",\"new\":\"And the love or grief that used to sound like therapy talk is just obvious.\",\"why\":\"'Sounded' in the simple past reads as if it never sounded that way now; 'used to sound' fixes the time contrast with the sentence before without changing meaning.\"}],\"no_change_reason\":\"\"}",
+  "parsed": {
+    "edits": [
+      {
+        "old": "And the love or grief that sounded like therapy talk is just obvious.",
+        "new": "And the love or grief that used to sound like therapy talk is just obvious.",
+        "why": "'Sounded' in the simple past reads as if it never sounded that way now; 'used to sound' fixes the time contrast with the sentence before without changing meaning."
+      }
+    ],
+    "no_change_reason": ""
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2064,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 130,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2064,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 130,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2064,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2064
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009559999999999999,
+  "elapsed_s": 3.6,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "F22",
+  "status": "ASSEMBLED",
+  "baseline_sha256": "4c5befcb3d236d9d376966871cfab8d6c5e81e2ba2ac5f7d1d21688d110af4ea",
+  "candidate": "Any of those reactions, from mania to paranoia, can also point to a vulnerability in you, so I'd be careful with other drugs that mess with what's real too. And any predisposition toward mania or psychosis is a warning sign, whether it's family history, a bad environment or a bad mindset. These are just caution signs, and when you see them, you take more precautions of every kind. You have to figure out what they mean for you, and if you can't, get help from trusted advisors.",
+  "candidate_sha256": "9d757429cac20347aab438ee45f73422d6836ee6d8f4d6f1326e4090d449d762",
+  "changed": true,
+  "edits": [
+    {
+      "old": "is a warning sign too, whether it's family history",
+      "new": "is a warning sign, whether it's family history",
+      "why": "The sentence before already ends with \"too\", so the second \"too\" in the next sentence reads as a repeated tic. Cutting it changes nothing in meaning."
+    }
+  ],
+  "no_change_reason": "",
+  "literal_owner_scope_pass": true,
+  "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+}

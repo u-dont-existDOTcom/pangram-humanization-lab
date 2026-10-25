@@ -1,0 +1,56 @@
+{
+  "case": "F10",
+  "stage": "WRITE",
+  "prompt_sha256": "34e820e9446d3bd06d9222ae3d8274c0c8b1215bf5af2bc4d54f92fcff85d9ce",
+  "response_sha256": "227c243445e849890e00f2f87388597207b8d1d3934476c6a62022cf3822dc75",
+  "result": "{\"edits\":[{\"old\":\"to a glass “half full perception.”\",\"new\":\"to a “glass half full” perception.\",\"why\":\"The quotation marks are misplaced and the phrase doesn't mirror the “glass half empty” wording before it. This fixes the quoted phrase and its parallel without changing the meaning.\"}],\"no_change_reason\":\"\"}",
+  "parsed": {
+    "edits": [
+      {
+        "old": "to a glass “half full perception.”",
+        "new": "to a “glass half full” perception.",
+        "why": "The quotation marks are misplaced and the phrase doesn't mirror the “glass half empty” wording before it. This fixes the quoted phrase and its parallel without changing the meaning."
+      }
+    ],
+    "no_change_reason": ""
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2966,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 269,
+    "output_tokens_details": {
+      "thinking_tokens": 154
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2966,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 269,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2966,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2966
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.014558,
+  "elapsed_s": 7.77,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

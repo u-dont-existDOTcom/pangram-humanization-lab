@@ -1,0 +1,186 @@
+{
+  "schema": "owner-bounded-candidates-v1",
+  "cases": [
+    {
+      "id": "F02",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "c27df6ce9597df5ffcd13ef0801af295d3e06b8d92000a37f06dabe9b21d1277",
+      "candidate": "Reparenting means consciously evolving and molding an Inner Adult inside you, comprising a loving Nurturer, a safe Adult Protector (hereafter just the Protector) and a wise Guide. This chosen Inner Adult super hero gets into a real, loving relationship with the little one you still carry. That grown-up notices the old patterns and practices better ways of responding. At first, it’s deliberate, even awkward. With time, the roles become second nature, so you spend less of your life managing yourself and more of it living with purpose, loving, relaxing, and playing.",
+      "candidate_sha256": "c27df6ce9597df5ffcd13ef0801af295d3e06b8d92000a37f06dabe9b21d1277",
+      "changed": false,
+      "edits": [],
+      "no_change_reason": "The paragraph already reads as natural, voice-consistent prose. No concrete wording problem remains, so editing would only be for show. The removed sentence is not present, and the stray GPT-sounding ending is already gone.",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F07",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "20b9930129b4630d32c12cd324d07add2183f50ce1dfaa3e264405b0291a3d6a",
+      "candidate": "Maybe just imagining a caring grown-up makes you feel more threatened, or lonelier. Lonelier is a strange one, with somebody right there. Then go smaller still, to the least cruel response a decent adult could offer your little one. It's scaffolding.",
+      "candidate_sha256": "20b9930129b4630d32c12cd324d07add2183f50ce1dfaa3e264405b0291a3d6a",
+      "changed": false,
+      "edits": [],
+      "no_change_reason": "The paragraph already reads naturally and is concise. The short sentences ('Lonelier is a strange one, with somebody right there.' and 'It's scaffolding.') are the author's voice, and no concrete wording problem remains that would justify an edit.",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F12",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "143c574c34311d68eb434677533052645493b439b371d495d96a88ba41acfe4a",
+      "candidate": "Intentional, meaning you pick one of those acts and decide when you'll do it, and what the smallest first step is (like with the envelope). If it needs money or somebody's help, sort that out before the day, and if you'll have to tell someone something they won't like, say it out loud to yourself ahead of time. Then put yourself in their shoes to see how it sounds, and go back & forth like that a couple times until both sides feel good about it, or good enough, as long as what you needed to say is still in there.",
+      "candidate_sha256": "143c574c34311d68eb434677533052645493b439b371d495d96a88ba41acfe4a",
+      "changed": false,
+      "edits": [],
+      "no_change_reason": "The paragraph already reads as natural, conversational prose. The sequence of steps is clear, and the 'their shoes' and 'both sides' references resolve to the person being told and to you. No concrete wording problem remains.",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F14",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "58cc71bc5e9067307345f9e840c4071677230e65f00fbbb5454c4119d07d567a",
+      "candidate": "Pema Chödrön calls the tightening and urge you get before the story has finished forming \"shenpa,\" and she says \"hooked\" is a more descriptive translation than the usual \"attachment.\" You might notice the hook before you have any clue what part of you is doing the hooking. Or you might notice it embarrassingly late. The jaw and stomach are already tight, and/or half the text is written, and then suddenly it dawns on you: you're supposed to be observing yourself. 😀 Maybe forget the parts detective work for a minute.",
+      "candidate_sha256": "58cc71bc5e9067307345f9e840c4071677230e65f00fbbb5454c4119d07d567a",
+      "changed": false,
+      "edits": [],
+      "no_change_reason": "The paragraph already reads naturally in the author's voice, and the cut sentence is already gone. The remaining phrasing, including 'Maybe forget the parts detective work for a minute,' is casual but clear, so I found no concrete wording problem to fix.",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F17",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "3df9c6a08fdec72576e152fc7cdd9d1143545783eee2852a50d5e91a1aeee833",
+      "candidate": "While you look, notice what your body does and what feelings or urges show up. Is there something that younger you seems to want you to understand? Some of it you'll remember yourself, and some of it you might even glean from talking to family/friends from then (\"You hated that coat\"). It might just be a guess you're making from the picture, or perhaps it triggers an image or a dream. Or just nothing comes up. Ask what your little one needs from you now, and do a bit of it.",
+      "candidate_sha256": "5b232b42fc69d7ea1fdd0b5e96605bc00c130733dc21aaae9aa693133a56d70d",
+      "changed": true,
+      "edits": [
+        {
+          "old": "an inference you're guessing from the picture",
+          "new": "a guess you're making from the picture",
+          "why": "\"inference you're guessing\" is redundant, since an inference is already a guess. This keeps the same tentative certainty in plainer wording."
+        }
+      ],
+      "no_change_reason": "",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F22",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "4c5befcb3d236d9d376966871cfab8d6c5e81e2ba2ac5f7d1d21688d110af4ea",
+      "candidate": "Any of those reactions, from mania to paranoia, can also point to a vulnerability in you, so I'd be careful with other drugs that mess with what's real too. And any predisposition toward mania or psychosis is a warning sign, whether it's family history, a bad environment or a bad mindset. These are just caution signs, and when you see them, you take more precautions of every kind. You have to figure out what they mean for you, and if you can't, get help from trusted advisors.",
+      "candidate_sha256": "9d757429cac20347aab438ee45f73422d6836ee6d8f4d6f1326e4090d449d762",
+      "changed": true,
+      "edits": [
+        {
+          "old": "is a warning sign too, whether it's family history",
+          "new": "is a warning sign, whether it's family history",
+          "why": "The sentence before already ends with \"too\", so the second \"too\" in the next sentence reads as a repeated tic. Cutting it changes nothing in meaning."
+        }
+      ],
+      "no_change_reason": "",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F04",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+      "candidate": "What it showed me is that I was ignoring a lot of things that were really important to look at, and that was one of them. I wouldn't have even thought to ask the question she asked me if I were doing it on my own. It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems. But personally I prefer to see things as they are, so I can figure out how to work with them, rather than just hide in delusions.",
+      "candidate_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+      "changed": false,
+      "edits": [],
+      "no_change_reason": "The paragraph already reads as natural first-person prose. The locked sentence fits between its neighbors, and the closing 'But personally I prefer...' follows from it. No concrete wording problem remains.",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F10",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "cf593b17e0f138d62fd56607c1245506806682c320a87da35f82aa5972fe3692",
+      "candidate": "This is a bit tricky to put into words, but let me try anyway… You may be suffering now, but you could be suffering more. That’s something to be grateful for (although please don’t fall into the common trap of being grateful that you have what others don’t have, as that’s more like selfishness). I’m not talking just about changing your “glass half empty” perception to a “glass half full” perception. I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment. On the other hand, I’ve noticed that I can sometimes completely flip a bad psychedelic trip into a good one with gratitude alone.",
+      "candidate_sha256": "45aea5308aebf267fe61e2368b010fc678bbfc61966b43661cef94ce20dce405",
+      "changed": true,
+      "edits": [
+        {
+          "old": "to a glass “half full perception.”",
+          "new": "to a “glass half full” perception.",
+          "why": "The quotation marks are misplaced and the phrase doesn't mirror the “glass half empty” wording before it. This fixes the quoted phrase and its parallel without changing the meaning."
+        }
+      ],
+      "no_change_reason": "",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F19",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "a9cf17f193c4cb8ef0c9764a498c1863805e548a4b8c35c67f9aea1777fe4e81",
+      "candidate": "For some people it only stops feeling fake in an altered state, like on MDMA or deep in meditation. All of a sudden your little one is right there! Oh my gosh! And the love or grief that used to sound like therapy talk is just obvious. Old memories might come up too. They can feel totally real, but that alone doesn't prove they happened. I'd still hang on to what you felt, even once it's gone, and try to bring a little of it into your normal life. You've felt that your little one is real now, so talking to them afterward isn't just pretending.",
+      "candidate_sha256": "04af4694286d9f2f45a2ede83569d6effe969aecdd4ee411f7fae3bdb017bdb8",
+      "changed": true,
+      "edits": [
+        {
+          "old": "And the love or grief that sounded like therapy talk is just obvious.",
+          "new": "And the love or grief that used to sound like therapy talk is just obvious.",
+          "why": "'Sounded' in the simple past reads as if it never sounded that way now; 'used to sound' fixes the time contrast with the sentence before without changing meaning."
+        }
+      ],
+      "no_change_reason": "",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F21",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+      "candidate": "And if your little one still can’t take the love in? Hold off on going for bigger, crazier breakthroughs, however tempting it is, or at least know that they are a double-edged sword. Something’s in the way, and getting to know it is your next job. Often it’s a protective part that’s seen love come with strings before. Hear it out first, the way you did in Hear the Guard First.",
+      "candidate_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+      "changed": false,
+      "edits": [],
+      "no_change_reason": "The paragraph already reads naturally and keeps the author's meaning, agency and the locked phrase. The only mildly awkward point, 'they' referring back to 'breakthroughs' across the locked span, is tied to the author's retained wording, so no edit is warranted.",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F25",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "40a940ecc0bfabdac39310113f8d3f9cfeb9570da424a1a464dcb405cef83249",
+      "candidate": "Borrowing support like that is basically borrowed adulthood. At first you may need to feel protected or loved by something bigger than you, before that love gradually starts to feel like your own. Send some of it down to your frightened little one, and when that's possible, toward whatever you're afraid of. Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!",
+      "candidate_sha256": "c946c6ed27dadeff571cfd10ccc8413dd6f423d52d15c80251deada0248ae096",
+      "changed": true,
+      "edits": [
+        {
+          "old": "before that love starts to feel like yours, and then bit by bit it starts to become your own.",
+          "new": "before that love gradually starts to feel like your own.",
+          "why": "The original says the same thing twice ('starts to feel like yours' and 'starts to become your own'), which makes the sentence clumsy. Merging them keeps the gradual shift."
+        }
+      ],
+      "no_change_reason": "",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    },
+    {
+      "id": "F28",
+      "status": "ASSEMBLED",
+      "baseline_sha256": "ab4d4fff06aee04d00d3ec122e82ac9cab665a87bfaf4be6fe62a0b5c9549cc1",
+      "candidate": "Even with good parents, you could have learned unhealthy self-valuation when people repeatedly praised what you did rather than your inherent worth. That wasn't your flaw. In the process of self-differentiation, we learn to notice when we're making the trade, and we begin holding our ground more when feasible.",
+      "candidate_sha256": "bbc588489599fba3902e78c6f4d1615b3f4ed8afbeb4ba08e0929af7c1ed29e7",
+      "changed": true,
+      "edits": [
+        {
+          "old": "keeping our ground more",
+          "new": "holding our ground more",
+          "why": "\"Keeping our ground\" is not the natural idiom; \"holding our ground\" is, and the meaning stays the same."
+        }
+      ],
+      "no_change_reason": "",
+      "literal_owner_scope_pass": true,
+      "semantic_fidelity": "NOT_PROVEN_BY_LITERAL_LOCKS"
+    }
+  ],
+  "new_Pangram_calls": 0
+}
