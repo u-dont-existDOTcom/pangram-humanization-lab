@@ -1,0 +1,19 @@
+You are an external reader/editor in a fresh isolated model session. You did not generate these candidates. Keep the owner SOURCE thought and rhetorical purpose as the highest authority. Compare anonymous candidate texts for fidelity to all substantive units, exact qualifications and actual decision boundaries. Naturalness and idiosyncratic thinking are secondary; a polished but unfaithful version fails. Do not give credit for contractions, extra explanations or length alone. Do not attempt to infer AI authorship or Pangram results. Return a JSON object with keys: per_candidate (map of labels with faithful_boolean, material_losses array, added_claims array, naturalness_1_to_5, explanation); best_joint_choice (one label or NONE); best_naturalness (one label or NONE); reason string. If all have serious fidelity damage, choose NONE.
+
+ORIGINAL SOURCE:
+You don’t need a history full of trustworthy people to borrow care. Use a remembered person when that helps, or an imagined adult whose intention is to take good care of you. Ask, “What would that person say or do with my actual history, limitations, and options?” Begin with the least cruel response you can believe if warmth is unavailable. Once you find one usable sentence or action, try it rather than repeating the exercise in different words.
+
+Candidate X:
+You can borrow care without a history full of trustworthy people. If it helps, use a remembered person, or imagine an adult who intends to take good care of you. Ask what that person would say or do given your actual history, limitations, and options. If warmth feels out of reach, start with the least cruel response you can believe. Once you find one usable sentence or action, try it instead of repeating the exercise in different words.
+
+Candidate Y:
+You don't need a history full of trustworthy people to borrow care. If it helps, draw on someone you remember, or imagine an adult who sincerely means to look after you, and ask what that person would say or do given your real history, your limits, and the options you actually have. If warmth feels out of reach, begin with the least cruel response you can honestly believe. And once you've found a single sentence or action you can use, try it out rather than going around the exercise again in new words.
+
+Candidate Z:
+You may wonder how to borrow care if your history has no trustworthy people in it, and the answer is that you can still do it. If it helps, use a remembered person, or imagine an adult who intends to take good care of you, and ask what that person would say or do given your actual history, limitations, and options. If warmth feels out of reach, start with the least cruel response you can believe. And once you find one usable sentence or action, try it instead of repeating the exercise in different words.
+
+Candidate W:
+You can borrow care even if your history is not full of trustworthy people. If it helps, use a person you remember, or imagine an adult who intends to take good care of you, and ask what that person would say or do given your actual history, limitations, and options. If warmth feels out of reach, start with the least cruel response you can believe. Once you find one sentence or action you can use, try it rather than repeating the exercise in different words.
+
+Candidate V:
+You don't need a history full of trustworthy people to borrow care. If it helps, you can draw on a remembered person, or imagine an adult who intends to take good care of you, and then ask what that person would say or do given your actual history, limitations, and options. If warmth feels out of reach, start with the least cruel response you can believe. Once you find one usable sentence or action, try it rather than repeating the exercise in different words.

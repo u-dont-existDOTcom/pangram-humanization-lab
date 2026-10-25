@@ -1,0 +1,62 @@
+{
+  "id": "S01",
+  "stage": "order-1",
+  "prompt_sha256": "55e42144e4e54ecf490b7f1538672ee3d9a3676a6b2735848917a0e4db2a65a6",
+  "response_sha256": "b389ca242d351cb4c0c45e0831c02266254098260a1d2fceeb5b175a9252df3c",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 3.5,\n    \"prose_comment\": \"Reads like plain first-person speech. The em-dash list flows and 'my body has joined in' is a casual, believable image. The three short sentences after it are a little flat and disconnected: 'It takes some pressure off' is mild, and 'The deeper trauma can still be sitting there' is an abrupt, somewhat passive hedge that doesn't clearly connect back to the preceding thought. It feels like a quiet, understated aside, which is human, but the transitions are thin.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 3.5,\n    \"prose_comment\": \"Has a more assertive, opinionated voice, opening with a thesis-like line ('The big advantage is that EFT travels') and then following with concrete examples. 'A thought loop has recruited my whole body' is vivid, though slightly more crafted. The closing 'I don't confuse that with finishing the deeper trauma work' gives a clear personal stance and links logically to the prior sentence. The rhythm (claim, list, short sentence, caveat) is a bit tidy and essay-like, but it sounds like a person with a position.\"\n  },\n  \"preference\": \"TIE\",\n  \"why\": \"Both are credible. X is looser and more casual but its ending is vague and loosely connected. Y has stronger logical flow and a clearer personal stance, but its structure and 'recruited' metaphor feel slightly more polished and composed. These strengths and weaknesses roughly offset, so neither clearly sounds more natural.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 3.5,
+      "prose_comment": "Reads like plain first-person speech. The em-dash list flows and 'my body has joined in' is a casual, believable image. The three short sentences after it are a little flat and disconnected: 'It takes some pressure off' is mild, and 'The deeper trauma can still be sitting there' is an abrupt, somewhat passive hedge that doesn't clearly connect back to the preceding thought. It feels like a quiet, understated aside, which is human, but the transitions are thin."
+    },
+    "Y": {
+      "voice_score_1_to_5": 3.5,
+      "prose_comment": "Has a more assertive, opinionated voice, opening with a thesis-like line ('The big advantage is that EFT travels') and then following with concrete examples. 'A thought loop has recruited my whole body' is vivid, though slightly more crafted. The closing 'I don't confuse that with finishing the deeper trauma work' gives a clear personal stance and links logically to the prior sentence. The rhythm (claim, list, short sentence, caveat) is a bit tidy and essay-like, but it sounds like a person with a position."
+    },
+    "preference": "TIE",
+    "why": "Both are credible. X is looser and more casual but its ending is vague and loosely connected. Y has stronger logical flow and a clearer personal stance, but its structure and 'recruited' metaphor feel slightly more polished and composed. These strengths and weaknesses roughly offset, so neither clearly sounds more natural."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 915,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 532,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 915,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 532,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 915,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 915
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.008983999999999999,
+  "elapsed_s": 6.33,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "X": "B",
+    "Y": "A"
+  }
+}

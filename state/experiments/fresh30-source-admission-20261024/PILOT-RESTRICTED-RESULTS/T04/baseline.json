@@ -1,0 +1,46 @@
+{
+  "case": "T04",
+  "stage": "baseline",
+  "prompt_sha256": "c664bf37e256a3098434c73da8214dcd88d386d3cb4003993d805cce1e5c73c1",
+  "elapsed_s": 3.26,
+  "return_code": 0,
+  "error": null,
+  "result": "I'm not trying to bash John Legend or *All of Me*. It's one of the most beautiful, most hopelessly romantic songs in history, and part of it applies directly to my point: for your partner to feel truly safe with you, they have to know you accept all of them. But there's a toxic side to this. If you *just* accept everything, you're a yes man, a doormat, nothing special, and you invite them to shit-test you.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 838,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 135,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 838,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 135,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 838,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 838
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004706,
+  "is_error": false,
+  "result_sha256": "269b0ddbcc9645c6277d6e74eb8c4b39fe636f166970eaf25d5c921c18e7ec8f"
+}

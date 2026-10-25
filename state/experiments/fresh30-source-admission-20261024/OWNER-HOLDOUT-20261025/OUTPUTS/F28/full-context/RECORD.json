@@ -1,0 +1,70 @@
+{
+  "id": "F28",
+  "stage": "full-context",
+  "prompt_sha256": "343a8d3c1e8204e9442661a6e49fb8e8c77ef7417b03003fe5434679337b4ef6",
+  "response_sha256": "aa88ed50659d2e933d247c67a7784a0f9a869247489f6eff5a01c3af9c91289e",
+  "result": "{\"recommendation\":\"KEEP\",\"material_function_lost\":true,\"functions_retained\":[\"Claim that people learn to notice when they're making the trade\",\"Claim that people begin keeping their ground more\",\"Reassurance that the learned pattern wasn't the reader's flaw\",\"Explanation of how praise for doing can create unhealthy self-valuation\"],\"functions_lost\":[\"Qualification that keeping one's ground is not always possible or expected\",\"Realistic limit that prevents the sentence from implying consistent, unconditional boundary-holding\",\"Consistency with the author's tone of gradual, non-perfectionist growth\"],\"exact_supporting_words\":[\"when feasible\",\"we begin keeping our ground more\"],\"why\":\"\\\"When feasible\\\" is a real qualification, not filler. It limits the claim about differentiation to situations where holding one's ground is actually possible (e.g., with a dependent family, or at real cost), and it protects the reader from reading the sentence as a demand or a promise of consistent success. Without it, \\\"keeping our ground more\\\" reads as a more general, unconditional outcome. The surrounding text stresses real costs of the belonging bargains (losing people, taking those losses seriously), so the condition is action-relevant and fits the author's attitude. The deletion is not redundant with any other sentence in the passage, so the cut changes the claim and should not be made.\"}",
+  "parsed": {
+    "recommendation": "KEEP",
+    "material_function_lost": true,
+    "functions_retained": [
+      "Claim that people learn to notice when they're making the trade",
+      "Claim that people begin keeping their ground more",
+      "Reassurance that the learned pattern wasn't the reader's flaw",
+      "Explanation of how praise for doing can create unhealthy self-valuation"
+    ],
+    "functions_lost": [
+      "Qualification that keeping one's ground is not always possible or expected",
+      "Realistic limit that prevents the sentence from implying consistent, unconditional boundary-holding",
+      "Consistency with the author's tone of gradual, non-perfectionist growth"
+    ],
+    "exact_supporting_words": [
+      "when feasible",
+      "we begin keeping our ground more"
+    ],
+    "why": "\"When feasible\" is a real qualification, not filler. It limits the claim about differentiation to situations where holding one's ground is actually possible (e.g., with a dependent family, or at real cost), and it protects the reader from reading the sentence as a demand or a promise of consistent success. Without it, \"keeping our ground more\" reads as a more general, unconditional outcome. The surrounding text stresses real costs of the belonging bargains (losing people, taking those losses seriously), so the condition is action-relevant and fits the author's attitude. The deletion is not redundant with any other sentence in the passage, so the cut changes the claim and should not be made."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2032,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 444,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2032,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 444,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2032,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2032
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.012572,
+  "elapsed_s": 8.29,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "same proposed deletion with full original section",
+    "source_section_sha256": "f7645440a7b82526dfa001c58d731f99ed2b5a82af65588961e03712bf603bea"
+  }
+}

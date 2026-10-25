@@ -1,0 +1,46 @@
+{
+  "case": "T15",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "67b44817d3a681d7beca77f78349148a905413c19c0a5d1f2be099d0e2ea53bb",
+  "elapsed_s": 4.31,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material units are preserved: the critic softening into fear, vague hurt becoming a specific need, anger clarifying a boundary that needs action, responding to what has become available rather than restarting, offering care once a need is clear and noticing how it lands, no requirement for an age/recovered memory/full cast of parts, small shifts being useful, and intensity not being the only way forward. Differences are stylistic only: 'Then follow what changes' became 'Next, notice what changes' (a slight shift from 'follow' to 'notice', not material), 'may' became 'can' for small shifts, and 'work with a feeling' was recast as 'working with a feeling doesn't require'. Hedging and the imperative/advisory tone are retained.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 999,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 296,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 999,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 296,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 999,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 999
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.006960000000000001,
+  "is_error": false,
+  "result_sha256": "90aebbe0a27fe1e6bddd03d0100e8fdd4f220d32212d2a475ca33e819b1c94e5"
+}

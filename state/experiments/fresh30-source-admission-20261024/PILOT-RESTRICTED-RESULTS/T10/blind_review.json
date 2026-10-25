@@ -1,0 +1,46 @@
+{
+  "case": "T10",
+  "stage": "blind_review",
+  "prompt_sha256": "c86d927a4baefb53dc876b5bec85e7ffdca7355a9b4bcb62c0f7ab0d2d321720",
+  "elapsed_s": 7.3,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"Minor: 'likewise' softens the parallel to the source's 'need the same separation' but preserves the sense.\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Keeps the source's paragraph rhythm of short-to-medium declaratives. The catalogue of events is followed by a clear claim about obligations. The final sentence mirrors the source's pivot ('Solidarity is not...') with 'does not mean... nor...', which keeps the aphoristic punch. Reads natural and controlled, with only slight smoothing of the source's terseness.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"A causal 'because' is introduced, making the list of event types the reason for needing honesty. The source presents them as an illustration, not as a justification.\",\n      \"'nor does it give anyone' adds the notion of conferring a claim, a slight reframing of 'an unlimited claim on'.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Merges several of the source's discrete sentences into long, clause-chained ones ('because... and while... others do not', 'and where cash is used...'). This blurs the source's separation of ideas and makes the middle sections heavy. The final sentence is fine, but the overall effect is more run-on and less deliberate than the source's crisp, list-then-principle structure.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both are broadly faithful, but X preserves the source's sentence boundaries and rhetorical function: each sentence makes one move, and the closing principle lands as a distinct statement. Y adds an unintended causal link ('because') and merges sentences into long chains, which slightly alters the argument's structure and weakens the clarity of the distinctions the passage is about. X is also more natural and readable.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1367,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 658,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1367,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 658,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1367,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1367
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.012051999999999998,
+  "is_error": false,
+  "result_sha256": "d995bc2fbe581b22f9cab1707d7c1986d5b0cdad0c2e4804e1e6dfafd2ea8422"
+}

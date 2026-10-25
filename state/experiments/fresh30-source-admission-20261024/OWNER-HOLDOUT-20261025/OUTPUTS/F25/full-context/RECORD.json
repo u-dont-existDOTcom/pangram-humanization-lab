@@ -1,0 +1,70 @@
+{
+  "id": "F25",
+  "stage": "full-context",
+  "prompt_sha256": "0d5c96a417f05c21032de5ed91a988f0cacc776c9a0f89f6e740c1b0594f1126",
+  "response_sha256": "7446177f1e637e850239ab340e9caf7c64a1c41fb985eebc898acc56e6d9fc52",
+  "result": "{\"recommendation\":\"CUT\",\"material_function_lost\":false,\"functions_retained\":[\"Borrowed support as 'borrowed adulthood'\",\"Developmental progression from external love to internalized love\",\"Instruction to send love to the frightened inner child and then toward the feared thing\",\"Earlier in the section: support from God, angels, etc. is endorsed and the 'Please help' framing is given\"],\"functions_lost\":[\"Reassurance that continuing to relate to benevolent spiritual beings remains fine after internalizing\",\"Mild closing note that benevolent beings would welcome the user's growth ('rubbed off on you'), plus a light humorous tone\"],\"exact_supporting_words\":[\"Many people also find they can borrow support from God, Jesus, angels, devas, or whatever loving spiritual presence fits their tradition.\",\"At first you may need to feel protected or loved by something bigger than you, before that love starts to feel like yours, and then bit by bit it starts to become your own.\",\"Continuing to relate to benevolent spiritual powers/beings is still perfectly fine\"],\"why\":\"The deleted sentence is a caveat that the developmental arc is not a call to abandon spiritual relationships. That is a real but secondary qualification, and the section already endorses borrowing support from spiritual presences. Without the sentence, a reader might read 'becomes your own' as implying one should outgrow the beings, but the text does not say that, and the strongest ordinary reading of the remaining passage keeps the main thought intact. What is lost is a minor reassurance and a touch of humor, not an independent claim, a condition that changes action, or needed orientation. The cut is acceptable, though it does drop the gentle disclaimer, so a cautious editor might retain it if they want to prevent the 'outgrow the beings' reading.\"}",
+  "parsed": {
+    "recommendation": "CUT",
+    "material_function_lost": false,
+    "functions_retained": [
+      "Borrowed support as 'borrowed adulthood'",
+      "Developmental progression from external love to internalized love",
+      "Instruction to send love to the frightened inner child and then toward the feared thing",
+      "Earlier in the section: support from God, angels, etc. is endorsed and the 'Please help' framing is given"
+    ],
+    "functions_lost": [
+      "Reassurance that continuing to relate to benevolent spiritual beings remains fine after internalizing",
+      "Mild closing note that benevolent beings would welcome the user's growth ('rubbed off on you'), plus a light humorous tone"
+    ],
+    "exact_supporting_words": [
+      "Many people also find they can borrow support from God, Jesus, angels, devas, or whatever loving spiritual presence fits their tradition.",
+      "At first you may need to feel protected or loved by something bigger than you, before that love starts to feel like yours, and then bit by bit it starts to become your own.",
+      "Continuing to relate to benevolent spiritual powers/beings is still perfectly fine"
+    ],
+    "why": "The deleted sentence is a caveat that the developmental arc is not a call to abandon spiritual relationships. That is a real but secondary qualification, and the section already endorses borrowing support from spiritual presences. Without the sentence, a reader might read 'becomes your own' as implying one should outgrow the beings, but the text does not say that, and the strongest ordinary reading of the remaining passage keeps the main thought intact. What is lost is a minor reassurance and a touch of humor, not an independent claim, a condition that changes action, or needed orientation. The cut is acceptable, though it does drop the gentle disclaimer, so a cautious editor might retain it if they want to prevent the 'outgrow the beings' reading."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2810,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 587,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2810,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 587,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2810,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2810
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.017113999999999997,
+  "elapsed_s": 8.7,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "same proposed deletion with full original section",
+    "source_section_sha256": "c722b21d6f70bbf78ec51ecce0a5af0afdea9c8b455fa60c1a8892834eb09115"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "case": "F10",
+  "stage": "DELTA",
+  "prompt_sha256": "ff4b41f24f00c894375dbe3ce3d36cde17758718f5f37f71a605888cd1754bde",
+  "response_sha256": "aed589fac6ed5e0aaa3cc5e206cb944c269d0a8bb36794fc422e9df1e2139fa9",
+  "result": "```json\n{\n  \"differences\": [],\n  \"unresolved\": [],\n  \"summary\": \"No material difference. The only change is a quotation-mark fix: BASELINE's 'a glass “half full perception.”' becomes CANDIDATE's 'a “glass half full” perception.' Both state the same contrast between the 'glass half empty' and 'glass half full' framings. The targeted sentences on toxic positivity and grieving are identical, and so are all claims, scope, conditions, and the psychedelic-trip qualification.\"\n}\n```",
+  "parsed": {
+    "differences": [],
+    "unresolved": [],
+    "summary": "No material difference. The only change is a quotation-mark fix: BASELINE's 'a glass “half full perception.”' becomes CANDIDATE's 'a “glass half full” perception.' Both state the same contrast between the 'glass half empty' and 'glass half full' framings. The targeted sentences on toxic positivity and grieving are identical, and so are all claims, scope, conditions, and the psychedelic-trip qualification."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 3011,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 176,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 3011,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 176,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 3011,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3011
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.013807999999999999,
+  "elapsed_s": 4.19,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

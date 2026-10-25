@@ -1,0 +1,46 @@
+{
+  "case": "T10",
+  "stage": "arm_B",
+  "prompt_sha256": "a960f104d2833fa61383a21c687e8bb5be142fe7631d80c94530adf4798151e5",
+  "elapsed_s": 5.02,
+  "return_code": 0,
+  "error": null,
+  "result": "Exchange and obligation call for the same honesty even where no one uses money internally, because gifts of food, pooled medicine, loans of a vehicle or tool, reciprocal labor, emergency housing, shared building projects, and visits meant mainly for training or relationship-building are different kinds of events, and while some create a future obligation, others do not. A federation can keep records for specific purposes without pricing everything or forcing every transfer into parity, and where cash is used at the outside interface, grants, loans, guarantees, and shared-enterprise commitments likewise need to be kept separate. Solidarity does not mean unlimited joint liability, nor does it give anyone an unlimited claim on another community's labor, stores, land, or tools.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1130,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 472,
+    "output_tokens_details": {
+      "thinking_tokens": 235
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1130,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 472,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1130,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1130
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009243999999999999,
+  "is_error": false,
+  "result_sha256": "5c70209e3e59488214949c86953b654bc5deb05f60da5b91f4ef30d66859f5a4"
+}

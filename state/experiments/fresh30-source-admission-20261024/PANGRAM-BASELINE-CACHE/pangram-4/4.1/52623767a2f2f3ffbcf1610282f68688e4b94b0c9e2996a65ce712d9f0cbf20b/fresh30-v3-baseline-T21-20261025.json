@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-25T01:09:37.725973+00:00",
+  "expected_version": "4.1",
+  "format": "pangram-cache-v2",
+  "last_error": "",
+  "measurement_key": "fresh30-v3-baseline-T21-20261025",
+  "model": "pangram-4",
+  "result": {
+    "fraction_ai": 2.5956153363796084e-38,
+    "fraction_ai_assisted": 4.901353658408955e-30,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 1,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "Ironically, he found his true master in that brutal Chinese prison camp. The master taught him to love the Chinese and to be glad he was growing rice for them, since the people were not their government. There his practice of loving-kindness flowered, and he became a light of love in the world. I thought that if he could find love there, perhaps I could stop using my own hell as an excuse.",
+    "version": "4.1",
+    "windows": [
+      {
+        "ai_assistance_score": 2.4506768292044773e-30,
+        "calibrated_confidence": 0.9974040911167623,
+        "class_probabilities": [
+          1.0,
+          4.901353658408955e-30,
+          2.595615616639301e-38
+        ],
+        "confidence": "High",
+        "end_index": 392,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "Ironically, he found his true master in that brutal Chinese prison camp. The master taught him to love the Chinese and to be glad he was growing rice for them, since the people were not their government. There his practice of loving-kindness flowered, and he became a light of love in the world. I thought that if he could find love there, perhaps I could stop using my own hell as an excuse.",
+        "token_length": 86,
+        "word_count": 74
+      }
+    ]
+  },
+  "source": "live",
+  "status": "success",
+  "submitted_model": "pangram-4",
+  "task_id": "9191fd55-a9e1-44c5-a9ed-5a37bf606de9",
+  "text": "Ironically, he found his true master in that brutal Chinese prison camp. The master taught him to love the Chinese and to be glad he was growing rice for them, since the people were not their government. There his practice of loving-kindness flowered, and he became a light of love in the world. I thought that if he could find love there, perhaps I could stop using my own hell as an excuse.",
+  "text_sha256": "52623767a2f2f3ffbcf1610282f68688e4b94b0c9e2996a65ce712d9f0cbf20b",
+  "updated_utc": "2026-10-25T01:09:41.616086+00:00"
+}

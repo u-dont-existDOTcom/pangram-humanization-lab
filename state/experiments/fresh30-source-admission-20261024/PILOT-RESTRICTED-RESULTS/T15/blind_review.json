@@ -1,0 +1,46 @@
+{
+  "case": "T15",
+  "stage": "blind_review",
+  "prompt_sha256": "e0af23207724e22d2fc7a49569774147ab8a534d1c67410ec7c19544a7b22a97",
+  "elapsed_s": 10.69,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"'whatever has become available' slightly broadens 'what has become available' (negligible)\",\n      \"'Next, notice' replaces 'Then follow' – 'notice' is a mild shift from 'follow' (tracking/going along with)\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Keeps the source's short, declarative, instructional rhythm. Sentence boundaries mirror the original almost one-to-one, so the pacing of discrete, calm directives is preserved. The list of three transformations stays as a parallel series with 'and' closing it, which keeps each shift equally weighted as an example. 'Working with a feeling doesn't require...' recasts the second-person 'You don't need' into an impersonal construction, a slight loss of direct address but still natural. Clean and idiomatic; reads somewhat close to a light paraphrase of the source.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"'or anger may sharpen' changes the list's conjunction from additive 'and/;' to 'or', framing the three as alternatives rather than co-occurring examples (small rhetorical shift, arguably more accurate as illustration)\",\n      \"'sharpen into a boundary' vs. 'clarify a boundary': 'sharpen' adds a nuance of intensification not in the source\",\n      \"'because greater intensity isn't the only way forward' makes explicit a causal link the source leaves implicit (source states it as a separate point)\",\n      \"'Next' replaces 'Then follow' – 'notice' is a shift from 'follow'\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Combines sentences with a colon and a 'because' clause, producing longer, more flowing but more knotted sentences. 'Whatever has become available is what to respond to' is a bit stilted and inverts the source's direct imperative ('Respond to...'), weakening the instructional punch. The final sentence fuses the 'don't need' point and the 'small shift' point with an invented causal connection, which blunts the source's clipped, list-like cadence. Readable, but less faithful in rhetorical function and more conspicuously reworked.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both candidates preserve the core content: attend to what shifts, respond to the newly available material rather than restart, offer the clarified care, and don't require elaborate parts-work scaffolding or intensity. X better preserves the source's rhetorical function: separate imperatives, a parallel list of examples, and the independent closing assertions that small shifts are enough and intensity isn't the only route. Y introduces a causal 'because' that the source doesn't claim, swaps 'and' for 'or', uses 'sharpen' where the source says 'clarify', and turns the imperative 'Respond to...' into a more passive, awkward construction. X is also more natural and closer to the source's calm, directive voice.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1140,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1023,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1140,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1023,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1140,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1140
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.014794,
+  "is_error": false,
+  "result_sha256": "79c9a6f1e4286e7afa2fd1d6cbdb51150e7b1eb97830bf6ae441d4f12453a0a2"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "F07",
+  "stage": "full-context",
+  "prompt_sha256": "5635761ddc5d56f4afb5276edbd239af55ab05e57334d3ccbe3a8f2b725b9c29",
+  "response_sha256": "3fdf8d7db1204b27c900661871e76206670085b3d99e9043bbb8a2f29b2a471a",
+  "result": "{\"recommendation\":\"KEEP\",\"material_function_lost\":true,\"functions_retained\":[\"Instruction to go smaller to the least cruel adult response\",\"Framing of that step as scaffolding (temporary support)\",\"Orientation about the preceding threatened/lonelier experience\"],\"functions_lost\":[\"Reassurance that struggling to feel warmth or needing this minimal step is not evidence of having been insufficiently loved\",\"Disclaimer that the scaffolding is not a diagnostic test of one's past or worth\",\"Emotional safeguarding for readers who may read the small step as a verdict on their childhood\"],\"exact_supporting_words\":[\"it isn't a test of whether you were loved enough\",\"If you weren't loved well as a child\",\"It's scaffolding\"],\"why\":\"The deleted clause is an independent claim, not a restatement. 'Scaffolding' only says the step is a temporary support. The clause adds a separate point: this step is not a measure of whether the reader was loved enough. The section is addressed to readers who were not loved well and who may be sensitive to exactly that judgment, so the clause guards against a shame-based reading of needing to 'go smaller still.' Without it, 'It's scaffolding' is terse and could be read as a remedial or deficit-marking step. The rest of the section does not repeat the reassurance, so the cut removes a distinct, reader-protective function.\"}",
+  "parsed": {
+    "recommendation": "KEEP",
+    "material_function_lost": true,
+    "functions_retained": [
+      "Instruction to go smaller to the least cruel adult response",
+      "Framing of that step as scaffolding (temporary support)",
+      "Orientation about the preceding threatened/lonelier experience"
+    ],
+    "functions_lost": [
+      "Reassurance that struggling to feel warmth or needing this minimal step is not evidence of having been insufficiently loved",
+      "Disclaimer that the scaffolding is not a diagnostic test of one's past or worth",
+      "Emotional safeguarding for readers who may read the small step as a verdict on their childhood"
+    ],
+    "exact_supporting_words": [
+      "it isn't a test of whether you were loved enough",
+      "If you weren't loved well as a child",
+      "It's scaffolding"
+    ],
+    "why": "The deleted clause is an independent claim, not a restatement. 'Scaffolding' only says the step is a temporary support. The clause adds a separate point: this step is not a measure of whether the reader was loved enough. The section is addressed to readers who were not loved well and who may be sensitive to exactly that judgment, so the clause guards against a shame-based reading of needing to 'go smaller still.' Without it, 'It's scaffolding' is terse and could be read as a remedial or deficit-marking step. The rest of the section does not repeat the reassurance, so the cut removes a distinct, reader-protective function."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1779,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 448,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1779,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 448,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1779,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1779
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.0116,
+  "elapsed_s": 6.45,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "same proposed deletion with full original section",
+    "source_section_sha256": "7e728fff2f63543fa0bf6a5b4b922076e3dbcdc269ffb6134dc6824d79bd549d"
+  }
+}

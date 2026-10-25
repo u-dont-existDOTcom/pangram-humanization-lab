@@ -1,0 +1,41 @@
+{
+  "case": "envy",
+  "prompt_sha256": "5fe05ac10d821ab5f3dd882a7129326d61330f8953113be13f57b926055bd0ae",
+  "returncode": 0,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Identical to the source, so it keeps the casual first-person voice, the hedged 'I'd still...' stance, and the paired structure of the second paragraph. It reads naturally. The one slightly awkward spot is the stacked clauses in 'I'd still take real suffering seriously, and do what you owe the people around you, but skip...', but that is inherited from the source and is the original voice.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"The explicit 'I'd still take real suffering seriously' stance, which is the author's own hedged commitment.\",\n      \"The idea of what you owe 'the people around you' (a general obligation to those nearby). It is narrowed to 'people who are suffering'.\",\n      \"The softened first-person framing ('I'd') for the advice.\"\n    ],\n    \"added\": [\n      \"A direct imperative, 'Do your part for people who are suffering', which is more prescriptive than the source.\",\n      \"A narrowed scope: the obligation now applies only to suffering people, not to the people around you in general.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Reads smoothly and is shorter, but it shifts from the author's tentative 'I'd...' register to a brisker command. 'Do your part' is a stock phrase that flattens the particular wording. It also loses the 'take suffering seriously' beat and the 'what you owe' idea, which the second paragraph echoes ('what you owe them'), so the callback is weakened.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X preserves the source's meaning and rhetorical function exactly, including the hedged stance and the 'what you owe' idea that the second paragraph echoes. Y compresses the sentence into an imperative that changes its register and narrows its scope, and loses the explicit commitment to taking suffering seriously. Y is fluent, but its fidelity is weaker, so X is preferred.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1223,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 706,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1223,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 706,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1223,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1223
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.011956
+}

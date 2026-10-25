@@ -1,0 +1,2470 @@
+{
+  "schema": "fresh30-offline-editorial-outcomes-v1",
+  "created_date": "2026-10-25",
+  "method": "distinct restricted-context same-provider Claude Sonnet source-controlled baseline->A/B blind labels; owner has not rated",
+  "counts": {
+    "selected": 30,
+    "baseline_admitted": 27,
+    "paired": 27,
+    "baseline_rejected": 3,
+    "B_more_natural": 15,
+    "A_more_natural": 9,
+    "naturalness_tie": 3,
+    "B_reviewer_pref": 6,
+    "A_reviewer_pref": 19,
+    "reviewer_tie": 2,
+    "reviewer_A_fidelity_ok": 27,
+    "reviewer_B_fidelity_ok": 21,
+    "both_reviewer_fidelity_ok": 21,
+    "B_has_reported_additions": 26,
+    "A_has_reported_additions": 19,
+    "B_has_reported_missing": 17,
+    "A_has_reported_missing": 14,
+    "B_too_many_paragraphs": 0,
+    "A_too_many_paragraphs": 0,
+    "A_unchanged": 15,
+    "B_unchanged": 0
+  },
+  "by_teacher_relevance": {
+    "strong": {
+      "n": 2,
+      "B_more_natural": 2,
+      "A_more_natural": 0,
+      "B_review_preferred": 0,
+      "A_review_preferred": 1,
+      "review_tie": 1
+    },
+    "medium": {
+      "n": 16,
+      "B_more_natural": 8,
+      "A_more_natural": 6,
+      "B_review_preferred": 3,
+      "A_review_preferred": 12,
+      "review_tie": 1
+    },
+    "weak": {
+      "n": 9,
+      "B_more_natural": 5,
+      "A_more_natural": 3,
+      "B_review_preferred": 3,
+      "A_review_preferred": 6,
+      "review_tie": 0
+    }
+  },
+  "by_article": {
+    "communities": {
+      "selected": 5,
+      "paired": 5,
+      "B_style_wins": 1
+    },
+    "hypnosis": {
+      "selected": 5,
+      "paired": 4,
+      "B_style_wins": 3
+    },
+    "inner-child": {
+      "selected": 5,
+      "paired": 5,
+      "B_style_wins": 4
+    },
+    "nibbana": {
+      "selected": 5,
+      "paired": 5,
+      "B_style_wins": 2
+    },
+    "romance": {
+      "selected": 5,
+      "paired": 3,
+      "B_style_wins": 1
+    },
+    "somatic": {
+      "selected": 5,
+      "paired": 5,
+      "B_style_wins": 4
+    }
+  },
+  "mean_naturalness_delta_B_minus_A": 0.167,
+  "median_naturalness_delta_B_minus_A": 1.0,
+  "B_longer_words": 24,
+  "A_longer_words": 2,
+  "same_wordcount": 1,
+  "CLI_calls": 140,
+  "CLI_estimated_cost_usd": 1.1133,
+  "inherited_cache_read_tokens": 0,
+  "fresh_Pangram_API_calls_in_expansion": 0,
+  "historical_single_T13_Pangram_actual": "pangram-4 backend 4.1 AI/high; one paid call only; no A/B detector data",
+  "independence": "fresh restricted provider contexts, no cached conversation input, same model and single author across six article clusters",
+  "cohort_note": "6-case pilot was examined before extending other 24; 24 exploratory, not a pristine holdout",
+  "rows": [
+    {
+      "id": "T01",
+      "article": "romance",
+      "role": "Attraction and exclusivity",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material content is preserved: the ~99% success rate, the loss of interest in other women, the single exception (an extremely beautiful girl who caught his attention once), B.'s lingering disbelief in the switch, her hallucinating that he looked at or spoke to other women, the conclusion that her jealousy was not simply tracking his present behavior, and the hedged 'more likely' explanation of insecure attachment trying to justify its existence. Non-material differences: 'amazed' became 'surprised', a slight softening of intensity; 'never quite' became 'never fully'; 'from childhood' became 'from her childhood', a natural inference that B. is the person meant; and 'So' became 'then'. None of these changes the assertions, causality, or hedging."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.039186,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 3.0
+      },
+      "naturalness_delta_B_minus_A": 0.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 3,
+        "B": 3
+      },
+      "arms_reported_additions_n": {
+        "A": 2,
+        "B": 3
+      },
+      "reviewer_preference": "B",
+      "arm_word_counts": {
+        "A": 83,
+        "B": 84
+      },
+      "arm_chars": {
+        "A": 489,
+        "B": 490
+      },
+      "baseline_words": 83,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Clean and polished, but more formal and compressed than the source. The semicolon plus 'then' gives it an essayistic tone, and 'however' is a stock transition. Sentence boundaries are kept, so the rhythm of the original (short declaratives building to an analytical conclusion) is partly preserved. The 'amazed' to 'surprised' flattening and the merging of the exception into an appositive lose some of the source's wry aside.",
+        "B": "Keeps the source's inferential 'So', which preserves the rhetorical turn from evidence to interpretation. However, it fuses the first three sentences with a colon and a comma splice-like chain, which makes the passage heavier and less conversational than the source. 'Its own' is a small stylistic flourish. The result reads as fluent but a bit more engineered than the plain, direct original."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "The source's 'amazed' is softened to 'surprised'.",
+            "'So' as an explicit inferential connector is replaced by 'then', which is a minor shift.",
+            "'No longer interested' is rendered as 'lost interest', which is slightly more process-oriented."
+          ],
+          "added": [
+            "'however' marks the contrast with B. more explicitly than the source does.",
+            "'her childhood' makes the possessive explicit; the source says only 'childhood'."
+          ]
+        },
+        "B": {
+          "missing": [
+            "The source's 'amazed' is softened to 'surprised'.",
+            "'No longer interested' becomes 'lost interest', which is slightly more process-oriented.",
+            "The sentence break between the exception and B.'s disbelief is removed, so the tone loses some of the source's staccato."
+          ],
+          "added": [
+            "'though' adds a contrastive marker.",
+            "'its own' adds a little emphasis on the continued existence.",
+            "'her childhood' makes the possessive explicit."
+          ]
+        }
+      }
+    },
+    {
+      "id": "T02",
+      "article": "romance",
+      "role": "If slow isn’t realistic for you",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "The draft preserves every assertion, the parental-teaching causality, the shift toward suspicion, the red-flag-checking purpose, the 'badly want to please' qualification, and all four questions, including the twin-flame question. 'Check for' became 'look for' and 'really know' became 'know'. These are stylistic changes (the loss of the intensifier 'really' is negligible), not material changes. Other differences are contractions expanded, 'everybody' changed to 'everyone', 'somebody' changed to 'someone', and 'interest level' changed to 'level of interest'."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.035194,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 0,
+        "B": 0
+      },
+      "reviewer_preference": "B",
+      "arm_word_counts": {
+        "A": 75,
+        "B": 71
+      },
+      "arm_chars": {
+        "A": 393,
+        "B": 388
+      },
+      "baseline_words": 76,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Accurate and clean, but it expands every contraction ('I am', 'What is', 'that is'), which stiffens a confessional, conversational passage. 'Looking for red flags before I end up alone with someone' slightly shifts the source: 'end up' adds a hint of accident or drift that the original ('before I'm alone with') lacks. 'Level of interest' is a little more clinical than the source's 'interest level', though it is idiomatic. 'What lies beneath it' reads slightly literary. Overall competent, but more formal than the speaker's casual, anxious register.",
+        "B": "Keeps contractions ('I'm', 'What's', 'that's'), which preserves the casual, self-questioning tone of the source. 'To look for red flags before I'm alone with someone' tracks the original structure closely. 'Only contacts me sometimes' is a faithful word order for the source, and 'how interested she is' is a natural rephrasing of 'interest level' without changing its meaning. 'Underneath that' is a small shift in referent (that = her interest) but matches the source's intent. Reads like spoken, worried introspection, which fits the passage's rhetorical function."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": []
+        },
+        "B": {
+          "missing": [],
+          "added": []
+        }
+      }
+    },
+    {
+      "id": "T03",
+      "article": "romance",
+      "role": "The Queen of Orgasms",
+      "teacher_quality": "strong",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": false,
+        "omissions": [
+          "The source's rhetorical framing of critics as 'peanut gallery' and 'lazy' fact-checkers who 'often' cry fiction is softened: the draft drops the frequency ('often') and replaces the dismissive, mocking characterization with 'careless and uninformed', which loses the peanut-gallery dismissiveness."
+        ],
+        "additions": [
+          "The draft adds the attribution 'in the author's view', which turns the source's direct assertion into an explicitly subjective opinion and introduces an authorial stance marker not present in the source.",
+          "The draft recasts the critics as those who 'dismiss this topic as fiction' and calls them 'uninformed', adding a claim about lack of knowledge that the source did not state (it said 'lazy', not uninformed).",
+          "The draft says promoters 'go further', adding a comparative rhetorical function (escalation beyond the laboratory evidence) not explicit in the source."
+        ],
+        "certainty_changes": [
+          "The critics' unreliability is hedged by the added 'in the author's view', reducing the source's flat certainty into an opinion.",
+          "'establishes the uniqueness of the phenomenon' became 'establishes that the phenomenon is unique': the certainty level is essentially unchanged, so no material shift here."
+        ],
+        "notes": "The core factual content is preserved: the Komisaruk and Whipple finding, the severed spinal cord condition, the vagus nerve mechanism, the contrast with the clitoral spinal route, and the promoters' claims (days of afterglow, spiritual and physical healings, attributed to Anami, Richardson and others). The material differences are confined to the framing of the critics: lost 'often' and the 'peanut gallery' tone, the new 'in the author's view' hedge, and 'uninformed' replacing 'lazy'. 'Go further' is minor but adds an escalating contrast. The final certainty_changes item is listed only to record that it is not a material change."
+      },
+      "baseline_reviewer_admitted": false,
+      "baseline_reported_cost": null,
+      "writers_started": false,
+      "stages": [
+        "baseline",
+        "baseline_fidelity"
+      ],
+      "reported_cost_usd_estimate": 0.016794,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 2
+    },
+    {
+      "id": "T04",
+      "article": "romance",
+      "role": "De-ontologizing Twin Flames FTW 💗",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material content is preserved: the disclaimer about not bashing John Legend or the song; the praise of the song as one of the most beautiful, hopelessly romantic songs in history; the claim that part of it applies to the author's point; the claim that a partner must know you accept all of them to feel truly safe; and the warning that accepting everything makes you a yes man or doormat, nothing special, and invites shit-testing. Differences are stylistic: dropping 'Ok', 'nor' changed to 'or', 'hopeless' changed to 'hopelessly', 'really does apply' to 'applies directly', and 'what I'm talking about' to 'my point'. 'Really does apply' to 'applies directly' is a slight shift in emphasis but not a change in the assertion. 'Nothing actually special' to 'nothing special' loses a minor intensifier, which is not material. The 'toxic part' becomes 'toxic side', and the sentence split does not alter the causal or logical relation."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.037422000000000004,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.5,
+        "B": 3.0
+      },
+      "naturalness_delta_B_minus_A": -0.5,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 3,
+        "B": 3
+      },
+      "arms_reported_additions_n": {
+        "A": 2,
+        "B": 3
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 77,
+        "B": 80
+      },
+      "arm_chars": {
+        "A": 409,
+        "B": 424
+      },
+      "baseline_words": 77,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Clean and compact. Merges the source's separate sentences into one smooth flow and keeps the 'But there's a toxic side' pivot as a distinct sentence, which preserves the rhetorical turn well. The period after 'to this' makes the 'If you just accept everything...' sentence punchy. Slightly more polished and essay-like than the chatty, spoken-aloud original; the 'really does' emphasis is flattened. 'Invite them to shit-test you' lands naturally.",
+        "B": "Reads fluently but more written and chained: the 'which is' clause and 'because if' construction stack subordination, softening the punch of the source's short declarative beats. 'You become' subtly shifts from a state to a gradual change. The causal 'because' is a reasonable way to preserve the argument's logic, though it moves where the source puts it. Somewhat less conversational than X."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "Source's opening 'Ok' (casual discourse marker) dropped",
+            "'And there's a part of it which really does apply...' loses the intensifier 'really does' and the 'because' causal link between the song-part and the safety claim",
+            "'inviting them to shit-test you' becomes 'you invite them to shit-test you' (minor, no loss)"
+          ],
+          "added": [
+            "'my point' replaces 'what I'm talking about' (slight formalization)",
+            "'toxic side to this' replaces 'toxic part there' (minor reframing)"
+          ]
+        },
+        "B": {
+          "missing": [
+            "Source's opening 'Ok' dropped",
+            "'really does' intensifier dropped",
+            "Source's standalone sentence 'It's one of the most beautiful...' is folded into a relative clause ('which is'), reducing its declarative weight as a separate praise statement"
+          ],
+          "added": [
+            "'speaks directly to my point' replaces 'apply to what I'm talking about' (slight reframing)",
+            "'you become a yes man' replaces 'you're a yes man' (adds a process/transition nuance)",
+            "'because' retained in the toxic-side clause, which is a causal link present in source's logic but attached to a different clause"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T05",
+      "article": "romance",
+      "role": "When you and your partner are at different levels of maturity",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [
+          {
+            "source": "eventually there will be some kind of pendulum swing or backlash",
+            "draft": "eventually there is a pendulum swing or backlash",
+            "effect": "The hedge 'some kind of' is dropped and the future 'will be' becomes a present-tense generalization. The claim sounds slightly more definite, though 'eventually' and the overall meaning are preserved. This is a marginal shift."
+          }
+        ],
+        "notes": "All core assertions are preserved: the three reference relationships, the roles of child versus therapist/guru/doctor/dad, the 'too unequal' judgment, the eventual swing or backlash, and the narrator becoming responsible for everything that went wrong along with the clinginess and jealousy. 'Not to mention' becomes 'along with', which slightly softens the emphasis but changes no assertion. Other changes ('get out of hand at the extremes' to 'become extreme', 'all the rest' to 'everything else') are stylistic."
+      },
+      "baseline_reviewer_admitted": false,
+      "baseline_reported_cost": null,
+      "writers_started": false,
+      "stages": [
+        "baseline",
+        "baseline_fidelity"
+      ],
+      "reported_cost_usd_estimate": 0.017891999999999998,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 2
+    },
+    {
+      "id": "T06",
+      "article": "communities",
+      "role": "The New Age May Dawn Suddenly",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material content is preserved: the 1999-2001 dates, the family living with the Love Israel family in Washington, the Y2K motive, the characterization of the period and the two-digit-date joke, the yurt, the berries, the love of nature, and the negative feelings (lonely, bored, irritated by cult programming, missing Philadelphia friends). Dropping 'actually' is a minor tone change, not a material one. 'There were wild berries' becoming 'Wild berries grew there' is a harmless rephrase. Adding 'But' to the last sentence slightly sharpens the contrast that the source already implies, so it is not a material addition. 'While escaping Y2K' becoming 'to escape Y2K' makes the purpose a little more explicit, but the source already implies it, so this is not material."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.036346,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 3.0
+      },
+      "naturalness_delta_B_minus_A": -1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 1,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 2,
+        "B": 3
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 69,
+        "B": 77
+      },
+      "arm_chars": {
+        "A": 397,
+        "B": 422
+      },
+      "baseline_words": 69,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Tight and clean. It keeps the source's deadpan rhythm: the short 'We lived in a yurt.' beat, then the list of complaints in a compressed series ('lonely, bored, irritated by..., and missing...'). The parallel structure of the final list is preserved, which keeps the comic deflation. It is slightly more polished and generic than the source, and loses the faint conversational wryness of 'actually'. 'Defeated' is kept from the source, preserving the mock-epic military framing.",
+        "B": "More conversational and loose, but the final sentence breaks the source's compact list into three clauses with repeated subjects ('I was... I was... I missed'). This slows the deflating cascade and makes it read as more padded. 'Got ready' and 'stretch' are plausible casual choices, but together with the extra filler phrases ('all around', 'out in', 'back in') they feel like deliberate variation rather than a distinct voice. 'Toppled' is vivid but changes the source's wording without a clear gain."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "The source's 'actually' (a mild, wry emphasis on the surprising fact of living there) is dropped."
+          ],
+          "added": [
+            "'grew there' makes the berries explicitly a feature of the place; the source only says 'There were'. This is a minor, natural inference.",
+            "'But' added at the start of the last sentence, which makes the contrast between loving nature and being miserable explicit. The source relies on 'also' alone."
+          ]
+        },
+        "B": {
+          "missing": [
+            "The source's 'actually' is dropped.",
+            "The source's 'defeated' is changed to 'toppled', which shifts the image slightly from a military loss to the fall of a regime or structure. This weakens the mock-heroic joke a little."
+          ],
+          "added": [
+            "'grew all around' adds a sense of surrounding abundance not in the source.",
+            "'out in nature' and 'back in Philadelphia' add colloquial spatial touches.",
+            "'But' added before the last sentence, as in X."
+          ]
+        }
+      }
+    },
+    {
+      "id": "T07",
+      "article": "communities",
+      "role": "All is not well in paradise",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "The draft preserves all material content: the March 2026 enactment of Law No. 2026-08; the five-to-ten-year penalty for consensual same-sex intimacy; criminalization of public 'apology' and of certain financing or support intended to promote homosexuality; the context of arrests, family rejection, harassment, assault, and mob violence; the hedged attribution 'some say' that prison protects homosexuals from the mob; and the author's stated refusal to praise communal belonging while ignoring those who survive it by hiding or leaving. Changes are stylistic only (e.g., 'comes within the context of' to 'arrives amid', 'protects' to 'shields', 'people' to 'those', punctuation and quotation marks, semicolon in place of em dash). None alters assertions, certainty, agency, causality, or attribution."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.03824,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 3.0
+      },
+      "naturalness_delta_B_minus_A": -1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": false
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 0,
+        "B": 3
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 90,
+        "B": 97
+      },
+      "arm_chars": {
+        "A": 562,
+        "B": 595
+      },
+      "baseline_words": 90,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Stays very close to the source's structure. The semicolon before 'some say prison actually shields' keeps the aside as a quiet, almost parenthetical turn, close to the source's em dash. 'The law arrives amid an existing reality of...' preserves the source's framing of the law as arriving into a pre-existing condition. The final sentence is nearly identical in rhythm and stance to the source. Slightly formal ('I do not'), but consistent with the register. Reads as clean, controlled, and a bit close to the source in phrasing.",
+        "B": "More narrative and human-centered, which is arguably warmer, but the long run-on first sentence (two 'and also' clauses joined by commas) and the comma-spliced 'and some say prison actually shields...' flatten the rhetorical pivot. The aside about prison protecting homosexuals loses its set-off quality and reads as just another item in the list, which blunts the unsettling irony. The final sentence is fine, though 'the people who survive it' is slightly more concrete than the source's phrasing."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": []
+        },
+        "B": {
+          "missing": [
+            "The framing of arrests, rejection, harassment, assault and mob violence as an 'existing reality' is replaced by a narrative of a country where people 'were already' experiencing these things; the abstract 'reality' framing is lost.",
+            "The separation between the law's context and the 'some say' aside is weakened by comma splicing."
+          ],
+          "added": [
+            "'in a country where' introduces a geographic/setting framing not in the source.",
+            "'people were already being arrested...' converts the list of nouns into agent-focused verbs, adding a sense of human subjects and a temporal 'already' not explicit in the source.",
+            "'attacked by mobs' rewrites 'mob violence' as an active attack."
+          ]
+        }
+      }
+    },
+    {
+      "id": "T08",
+      "article": "communities",
+      "role": "Children Need Freedom Inside Real Protection",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material content is preserved. The opening imperative 'Keep relationships...' becomes 'Children should keep relationships...', which keeps the advisory function and only makes the subject explicit. 'Give' becomes 'offer', a harmless synonym. The sentences 'State intervention can fail spectacularly.' and 'Total community enclosure can also fail.' are merged with 'as well', with no change in meaning. The figures (1984, 112 children, Island Pond raid), the court's return of the children after rejecting the blanket request, the requirement of a contact reachable without going through community leadership, and the closing 'Children need more than one world' are all unchanged."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.037128,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 2.0
+      },
+      "naturalness_delta_B_minus_A": -2.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": false
+      },
+      "arms_reported_missing_n": {
+        "A": 2,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 4
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 86,
+        "B": 90
+      },
+      "arm_chars": {
+        "A": 594,
+        "B": 610
+      },
+      "baseline_words": 85,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Clean and natural. Sentence merging is modest and the two-clause pairing ('can fail spectacularly, and total community enclosure can fail as well') preserves the symmetry between state failure and community failure. The closing line lands with the same weight as the source. Slightly more connected than the clipped original, but rhetorically faithful.",
+        "B": "Over-engineered. Stacked subordination ('because', 'so', 'and yet') produces a long, clumsy sentence with a strained three-part logic chain. The added causal and concessive connectors change the rhetoric from a plain, even-handed assertion to an argumentative construction. The final sentence 'so state intervention can fail spectacularly, and yet total community enclosure can fail as well' reads awkwardly and muddles the point."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "Imperative voice of the source ('Keep relationships...') is converted to 'Children should keep...', a minor shift in address, not in meaning",
+            "Source's short separate sentences 'State intervention can fail spectacularly. Total community enclosure can also fail.' are merged into one, slightly softening the deliberate parallel/beat"
+          ],
+          "added": [
+            "Subject 'Children' introduced in the first sentence (implicit in source)"
+          ]
+        },
+        "B": {
+          "missing": [
+            "Source's balanced, equal-weight parallel between state failure and community failure is lost",
+            "Source's separation of the instruction from its justification (listing of people as a separate statement)"
+          ],
+          "added": [
+            "'a way to report harm' — the source says 'reporting route' without specifying harm",
+            "Causal 'because' linking the list of outside adults to the instruction, which the source does not assert",
+            "Causal 'so' implying the Island Pond outcome logically entails that state intervention can fail, recasting an example as a deduction",
+            "'and yet' introduces a contrastive turn that makes community enclosure a counterpoint rather than a parallel failure"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T09",
+      "article": "communities",
+      "role": "Lessons from the Black Tax",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "No material differences. 'Even before a common purse exists' is a grammatical expansion of the source. 'Must also notice' versus 'has to notice' keeps the same obligation. 'If it does not, the commune remains...' restates 'Otherwise the commune remains...' with the same conditional causality. All other claims are preserved: outside work brings more than cash (schedule, status system, social world, loyalties, consumption expectations), the agreed-share contribution in the first stage, no exemption from communal work or extra political authority, and the warning about drained people and skills."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.038818,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 1,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 3,
+        "B": 4
+      },
+      "reviewer_preference": "B",
+      "arm_word_counts": {
+        "A": 99,
+        "B": 110
+      },
+      "arm_chars": {
+        "A": 620,
+        "B": 671
+      },
+      "baseline_words": 98,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Tighter and more formal, with a colon-and-list sentence that reads like polished expository prose. Merging the first two sentences removes the punchy pause of the source and makes the passage more uniform in rhythm. The list is compact and faithful ('another schedule, status system, social world, and set of loyalties'), but the single 'another' makes it read as a catalogue rather than an accumulating burden. Clean and correct, but a little more generic and less distinctive.",
+        "B": "Keeps the source's staccato rhythm: 'It does not only bring cash' becomes 'It brings in more than cash,' followed by a separate sentence for the list. The repeated 'another' makes each item land as its own addition and echoes the source's cumulative effect. Contractions ('can't', 'doesn't') make it a bit more conversational than the source, but still plausible for an organizing or movement-essay register. The doubled 'it can't buy' adds a slight rhetorical emphasis that the source does not have. 'Stays' is a bit more casual than 'remains.'"
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "The source's separate short sentence 'It does not only bring cash' is folded into a subordinate clause, which softens its emphasis as a standalone beat"
+          ],
+          "added": [
+            "'because' makes the causal link explicit, where the source leaves it implicit across sentences",
+            "'must' for 'has to' (slight register shift)",
+            "'rather than' for 'instead of' (near-equivalent)"
+          ]
+        },
+        "B": {
+          "missing": [],
+          "added": [
+            "'exists' after 'common purse' (minor, grammatical)",
+            "'draining away' and 'it needs' (slight rephrase)",
+            "'can't buy extra political authority either' splits one clause into two, adding mild emphasis",
+            "'what to consume' for 'consumption expectations' (looser paraphrase)"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T10",
+      "article": "communities",
+      "role": "Federation Without Building Another State",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material units are preserved: the same honesty for exchange and obligation even without internal money; the same list of event types (food gifts, pooled medicine, vehicle/tool loans, reciprocal labor, emergency housing, shared building projects, training/relationship-building visits); some events create future obligation and some do not; federations can keep purpose-specific records without pricing everything or forcing parity; the same separation of grants, loans, guarantees and shared-enterprise commitments where cash is used at the outside interface; and solidarity is neither unlimited joint liability nor an unlimited claim on another community's labor, stores, land or tools. Changes are stylistic only: singular/plural shifts, 'need' to 'call for', 'purpose-specific' to 'for specific purposes', and the added 'likewise' and 'need to be kept separate', which restate the source's 'need the same separation'. The 'Solidarity is not... or' to 'does not mean... nor' rewording keeps the same scope and certainty."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.041648,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 3.0
+      },
+      "naturalness_delta_B_minus_A": -1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 2
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 112,
+        "B": 118
+      },
+      "arm_chars": {
+        "A": 751,
+        "B": 784
+      },
+      "baseline_words": 111,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Keeps the source's paragraph rhythm of short-to-medium declaratives. The catalogue of events is followed by a clear claim about obligations. The final sentence mirrors the source's pivot ('Solidarity is not...') with 'does not mean... nor...', which keeps the aphoristic punch. Reads natural and controlled, with only slight smoothing of the source's terseness.",
+        "B": "Merges several of the source's discrete sentences into long, clause-chained ones ('because... and while... others do not', 'and where cash is used...'). This blurs the source's separation of ideas and makes the middle sections heavy. The final sentence is fine, but the overall effect is more run-on and less deliberate than the source's crisp, list-then-principle structure."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": [
+            "Minor: 'likewise' softens the parallel to the source's 'need the same separation' but preserves the sense."
+          ]
+        },
+        "B": {
+          "missing": [],
+          "added": [
+            "A causal 'because' is introduced, making the list of event types the reason for needing honesty. The source presents them as an illustration, not as a justification.",
+            "'nor does it give anyone' adds the notion of conferring a claim, a slight reframing of 'an unlimited claim on'."
+          ]
+        }
+      }
+    },
+    {
+      "id": "T11",
+      "article": "inner-child",
+      "role": "Altered States Can Require Reparenting",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material content is preserved: the repeated episodes, the decision to stop giving in to the victim mentality, treating it seriously as spiritual practice, the inner guide's view of it as an opportunity to show love over fear, sending unconditional love despite fear, the 'some minutes' duration, and the demon leaving and never returning. Differences are wording only (multiple/several such, perfect/ideal, power of love over fear/love is more powerful than fear, scary/frightening). One minor point: the source's 'taking it seriously' has an ambiguous referent (the victim mentality or the episodes). The draft resolves it to 'the experience', which is a plausible reading and not a material change."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.039702,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 3,
+        "B": 3
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 4
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 74,
+        "B": 76
+      },
+      "arm_chars": {
+        "A": 405,
+        "B": 400
+      },
+      "baseline_words": 74,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Clean, accurate and closely tracks the source's structure. It reads as a careful paraphrase: 'ideal chance to show that love is more powerful than fear' and 'frightening' are correct but a little stiff and generic. 'Giving in to the victim mentality' is preserved from the source, so the register stays close to the original's therapeutic-spiritual vocabulary. Smooth but somewhat flat.",
+        "B": "More conversational and personal: 'I'd had enough,' 'frightening as that was,' and 'never came back' have a natural first-person spoken rhythm. The causal 'So' improves flow. The cost is small drifts in meaning: 'playing the victim' is more judgmental than 'victim mentality,' the seriousness marker is dropped, and 'on top of me' is more concrete than the source."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "'taking it seriously' is shifted to 'treat the experience seriously', which broadens the referent slightly from the victim mentality/episodes to the experience",
+            "'perfect' softened to 'ideal' (negligible)",
+            "'despite how scary it was' is retained but its position is moved after the action, so the emphasis on courage-before-action is slightly weaker"
+          ],
+          "added": [
+            "'of my' before 'spiritual practice' makes the possessive explicit (negligible)"
+          ]
+        },
+        "B": {
+          "missing": [
+            "'victim mentality' becomes 'playing the victim', which shifts from a mindset one gives in to toward a behavior one performs; this adds a mild connotation of self-dramatization",
+            "'taking it seriously' is reduced to 'treat the experience as part of my spiritual practice'; the explicit 'seriously' is lost, so the shift from dismissiveness to earnestness is less marked",
+            "'multiple' becomes 'several' (negligible)"
+          ],
+          "added": [
+            "'I'd had enough of' adds a note of exasperation and resolve not in the source",
+            "'So' links the action causally to the guide's framing, which is implied but not stated in the source",
+            "'on top of me' adds a physical positioning not stated in the source ('on me' could mean this, but it is more specific)",
+            "'a few minutes' for 'some minutes' (minor shift toward a smaller, more definite quantity)"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T12",
+      "article": "inner-child",
+      "role": "Borrow Love—or Borrow the Perspective of Care",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All assertions, qualifications, and advice are preserved. The care-delivery channels (words, imagery, presence, action), the two possible meanings of 'I care about you' (patience vs. a demand to hurry up and feel better), the distance/no-touch/different-voice/other-source options, the claim that difficulty with this offer does not establish an inability to receive love, and the closing advice to learn from the response rather than force a preferred version are all intact. The draft's 'the child cannot receive love' and 'the child's response' make explicit a referent the source leaves implicit, and the source's final sentence already names the child, so this is not a material addition. 'Does not establish' vs 'does not show' and 'inability to' vs 'cannot' are equivalent in certainty."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.040064,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": false
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 4,
+        "B": 7
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 86,
+        "B": 97
+      },
+      "arm_chars": {
+        "A": 504,
+        "B": 561
+      },
+      "baseline_words": 84,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Tracks the source almost sentence for sentence, preserving its four-beat structure: observation, example, remedy, caveat, and closing directive. Rhetorical function is intact: the 'patience vs. demand to hurry' contrast stays binary and terse, and the final sentence keeps its corrective force. The repeated 'the child' makes it slightly heavier and more explanatory than the source, and the phrasing is a little stiff, but it is clean, clear, and unobtrusive.",
+        "B": "Reads as more fluid and conversational, with longer, connected sentences and a vivid concrete rendering of what 'patience' sounds like. However, the rhetorical function shifts: the source's brisk, directive, separate statements become a chain of causal connectives, and the contrast moves from what the phrase can carry to how it lands on different children. The final sentence loses the imperative's directness, and the invented quotation adds content. It is more natural-sounding but a looser rendering."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": [
+            "'to the child' after 'intrusive' (clarifying who feels intrusion; source leaves the subject implicit)",
+            "'the child cannot receive love' replaces the source's more general 'an inability to receive love' (narrows to the child)",
+            "'the child's response' replaces 'the response' (specifies whose response)",
+            "'is being offered' (minor progressive shift)"
+          ]
+        },
+        "B": {
+          "missing": [
+            "The source's claim that 'I care about you' can carry patience or a demand to hurry is recast as differing by recipient; the point that the same words can function either way is partly kept but reframed",
+            "The explicit framing of difficulty as not 'establishing' an inability is softened to 'doesn't mean'"
+          ],
+          "added": [
+            "'to one child ... to another' (introduces a variation across different children, which the source does not claim)",
+            "Invented quoted paraphrase 'I'll wait as long as you need' standing in for 'patience'",
+            "'altogether' (emphasis)",
+            "'because' causal link between noticing and the meaning of the phrase (source presents these as separate statements)",
+            "'and so' causal link in the final sentence, making the teaching conclusion a consequence of the previous claim",
+            "'you can try' (softens the imperative to permission)",
+            "'the child's response should teach you' (shifts from imperative 'Let the response teach you' to a normative statement)"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T13",
+      "article": "inner-child",
+      "role": "Somatic Heart Opening",
+      "teacher_quality": "strong",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material units are preserved: the warmth/connection/being-held experience; the point that it is a description, not evidence for a physiological mechanism; care bringing sadness for missing care; the point that this does not mean the love failed; the advice to stay with it only when present and able to choose; and the point that more tears do not prove more healing. Two borderline wording shifts are not counted as material. First, 'need not mean the love failed' became 'does not mean the love failed', which is slightly more categorical. Second, 'stay with it' became 'stay with the experience', which slightly narrows an ambiguous referent. 'One particular' became 'any particular', which has the same practical meaning."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.041022,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 4,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 1
+      },
+      "arms_reported_additions_n": {
+        "A": 2,
+        "B": 5
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 87,
+        "B": 106
+      },
+      "arm_chars": {
+        "A": 507,
+        "B": 594
+      },
+      "baseline_words": 90,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Very close to the source, nearly sentence-for-sentence. Preserves the source's firm, slightly clinical register and its conditional structure ('when you can remain present and keep your choice'). The rhetorical function of each sentence is intact: the description-vs-evidence caveat, the reverse-direction grief, the 'need not mean' reassurance (folded into a relative clause, which slightly softens its standalone force), and the closing corrective. Reads clean but somewhat stiff, with little rewording beyond light edits; 'keep your choice about it' is a bit awkward.",
+        "B": "More natural and conversational, with direct address and smoother rhythm ('stir sadness over the care you didn't get'). Core claims survive: experience is not mechanism evidence, care can open grief without love failing, tears are not proof of healing. However, the register warms and softens: the stay-with guidance becomes gentle permission, and 'still feel the choice is yours' shifts from retaining actual choice to perceived choice. 'Is at work' and 'on its own' are fine. The final sentence, 'crying more... doesn't mean you're healing more,' is slightly more colloquial but equivalent in function."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": [
+            "'the experience' after 'Stay with' (clarifying object, minor)",
+            "'about it' after 'choice' (minor clarification)"
+          ]
+        },
+        "B": {
+          "missing": [
+            "The source's 'Stay with it when...' is an instruction conditional on presence and choice; Y reframes it as permission ('it's fine to stay with whatever comes up'), shifting directive to permissive."
+          ],
+          "added": [
+            "'after grieving deeply, something shifts into' (reframes 'deep grieving gives way to' as a temporal sequence with an implied agent-less shift)",
+            "'tells you what the experience was like' (gloss on 'describes an experience')",
+            "'whatever comes up' (broadens 'it' to all arising material, not just the warmth or grief described)",
+            "'it's fine to' (permission framing and reassurance tone)",
+            "'the choice is yours' (subjective feeling 'still feel the choice is yours' vs. 'retain choice')"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T14",
+      "article": "inner-child",
+      "role": "Regulation May Come Before Dialogue",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material content is preserved: the tension locations (solar plexus, abdomen, other areas), the blocking of relaxation and access to heart chakra love, the advice to try relaxation techniques, slower non-forced exhales, gentle self-massage, the first-person foot-massage example (Yin/Yang), and the option to start with circular or spiral massage on the tense area. Differences are stylistic only: 'access' became 'reach', 'seem to be blocking' became 'seem to block', 'heart chakra love' became 'the love of the heart chakra', 'like' became 'such as', 'start' became 'begin', 'nice' dropped from 'nice circular or spiral massage', and 'Ying' was corrected to 'Yin'. None of these alters assertions, certainty, agency, causality, or advice. The dropped 'nice' is a trivial softener, not a material omission."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.036598,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": false
+      },
+      "arms_reported_missing_n": {
+        "A": 2,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 3
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 70,
+        "B": 72
+      },
+      "arm_chars": {
+        "A": 391,
+        "B": 410
+      },
+      "baseline_words": 70,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Accurate and tidy, but 'in the manner of' is stiff and out of keeping with the casual, first-person 'I love using...' register. The compression of 'solar plexus, abdomen, or other areas' is clean. 'Reach the love of the heart chakra' reads a little abstract but mirrors the source's phrasing. Overall slightly more formal than the original.",
+        "B": "Reads more fluidly and conversationally; 'anywhere else that seems to block you from relaxing' and 'tracing the curve' have a gentle, embodied quality that suits the wellness-advice tone. However, the stylistic gains come at the cost of shifting the image: the source's Yin/Yang comparison is about the feet complementing each other, while Y turns it into a tracing gesture. 'Right on the area of tension' adds emphasis the source lacks."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "'nice' before circular or spiral massage (minor softener)",
+            "'non-forced' rendered as 'unforced' (equivalent, not a loss)"
+          ],
+          "added": [
+            "'in the manner of a Yin/Yang symbol' slightly formalizes the source's 'like a Yin/Yang symbol' but keeps the simile's meaning"
+          ]
+        },
+        "B": {
+          "missing": [
+            "'nice' before circular or spiral massage (minor softener)",
+            "The explicit 'like a Yin/Yang symbol' simile: the source says the foot-on-foot arrangement resembles the symbol (a pairing of two complementary parts), not that the motion traces a curve"
+          ],
+          "added": [
+            "'tracing the curve of a Yin/Yang symbol' introduces a specific motion (tracing an S-curve) that the source does not state",
+            "'strokes' and 'right on the area' add specificity and emphasis not in the source",
+            "'a few relaxation techniques' slightly softens 'some' and adds a countable framing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T15",
+      "article": "inner-child",
+      "role": "A Bottom-Up Sequence",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material units are preserved: the critic softening into fear, vague hurt becoming a specific need, anger clarifying a boundary that needs action, responding to what has become available rather than restarting, offering care once a need is clear and noticing how it lands, no requirement for an age/recovered memory/full cast of parts, small shifts being useful, and intensity not being the only way forward. Differences are stylistic only: 'Then follow what changes' became 'Next, notice what changes' (a slight shift from 'follow' to 'notice', not material), 'may' became 'can' for small shifts, and 'work with a feeling' was recast as 'working with a feeling doesn't require'. Hedging and the imperative/advisory tone are retained."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.037308,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 3.0
+      },
+      "naturalness_delta_B_minus_A": -1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 2,
+        "B": 4
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 90,
+        "B": 96
+      },
+      "arm_chars": {
+        "A": 498,
+        "B": 518
+      },
+      "baseline_words": 90,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Keeps the source's short, declarative, instructional rhythm. Sentence boundaries mirror the original almost one-to-one, so the pacing of discrete, calm directives is preserved. The list of three transformations stays as a parallel series with 'and' closing it, which keeps each shift equally weighted as an example. 'Working with a feeling doesn't require...' recasts the second-person 'You don't need' into an impersonal construction, a slight loss of direct address but still natural. Clean and idiomatic; reads somewhat close to a light paraphrase of the source.",
+        "B": "Combines sentences with a colon and a 'because' clause, producing longer, more flowing but more knotted sentences. 'Whatever has become available is what to respond to' is a bit stilted and inverts the source's direct imperative ('Respond to...'), weakening the instructional punch. The final sentence fuses the 'don't need' point and the 'small shift' point with an invented causal connection, which blunts the source's clipped, list-like cadence. Readable, but less faithful in rhetorical function and more conspicuously reworked."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": [
+            "'whatever has become available' slightly broadens 'what has become available' (negligible)",
+            "'Next, notice' replaces 'Then follow' – 'notice' is a mild shift from 'follow' (tracking/going along with)"
+          ]
+        },
+        "B": {
+          "missing": [],
+          "added": [
+            "'or anger may sharpen' changes the list's conjunction from additive 'and/;' to 'or', framing the three as alternatives rather than co-occurring examples (small rhetorical shift, arguably more accurate as illustration)",
+            "'sharpen into a boundary' vs. 'clarify a boundary': 'sharpen' adds a nuance of intensification not in the source",
+            "'because greater intensity isn't the only way forward' makes explicit a causal link the source leaves implicit (source states it as a separate point)",
+            "'Next' replaces 'Then follow' – 'notice' is a shift from 'follow'"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T16",
+      "article": "hypnosis",
+      "role": "When the adult role is not available yet",
+      "teacher_quality": "strong",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material units are preserved: no need for a trustworthy history to borrow care; the option of a remembered person or an imagined adult whose intention is good care; the question about what that person would say or do given actual history, limitations, and options; starting with the least cruel believable response if warmth is unavailable; and trying one usable sentence or action rather than repeating the exercise in different words. Differences are stylistic only. 'Use a remembered person when that helps' becomes 'If it helps, use...', and 'whose intention is to take good care of you' becomes 'who intends to take good care of you'. The 'with my actual history' to 'given your actual history' shift is a person change in phrasing (first to second person inside an indirect question) and does not alter meaning. 'Begin with' versus 'start with' and 'rather than' versus 'instead of' are equivalent."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.038666,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.5,
+        "B": 4.5
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 2,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 2,
+        "B": 6
+      },
+      "reviewer_preference": "TIE",
+      "arm_word_counts": {
+        "A": 85,
+        "B": 93
+      },
+      "arm_chars": {
+        "A": 462,
+        "B": 507
+      },
+      "baseline_words": 78,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Clean, plain, and tightly tracks the source's diction and rhythm ('actual history, limitations, and options'; 'repeating the exercise in different words'). It is slightly stiffer and more clinical, with no contractions and a flatter register. It preserves the source's restraint and avoids added emotional coloring, but reads closer to a light paraphrase than a recomposition.",
+        "B": "Reads warm, fluid, and human. Contractions and idiomatic phrasing ('look after', 'out of reach', 'going around the exercise again') give it a gentle spoken cadence that suits the supportive function. The trade-off is that it adds small emotional glosses (sincerely, honestly) that the plainer source doesn't have, so it is a bit more soothing than the source."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "'Use a remembered person' becomes 'use a person you remember', which is a neutral rephrase with no real loss.",
+            "The quoted question is rendered as indirect speech, same as X."
+          ],
+          "added": [
+            "'feels out of reach' for 'is unavailable' (a mild subjective shift, shared with X)",
+            "Opening is restructured to lead with the capability ('You can borrow care even if...') instead of the negation ('You don't need...'), which changes the emphasis slightly from reassurance about a non-requirement to affirmation of a possibility"
+          ]
+        },
+        "B": {
+          "missing": [
+            "The source's two-step structure ('Ask, \"What would that person say or do...?\"') is folded into a single sentence as indirect speech, which softens the directness of the quoted question slightly.",
+            "'Begin with' becomes 'begin with' correctly, but 'if warmth is unavailable' becomes 'feels out of reach', which adds a subjective-experience nuance."
+          ],
+          "added": [
+            "'sincerely' (intensifies 'whose intention is to'; slight emphasis on authenticity)",
+            "'honestly believe' (adds 'honestly' to 'believe'; mild intensification)",
+            "'look after you' for 'take good care of you' drops 'good' (minor)",
+            "'real' and 'actually' both appear, slightly doubling the emphasis on realism ('real history, your limits, and the options you actually have')",
+            "'going around the exercise again' is a more idiomatic and slightly more vivid image than 'repeating the exercise'",
+            "'try it out' gives a gentler, more experimental tone than 'try it'"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T17",
+      "article": "hypnosis",
+      "role": "Anchoring — giving the body a doorway back",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material content is preserved: the definition of an anchor and its example cues (hand on heart, two fingers touching, breath, word, posture, scent, song); the instruction to choose a real state and feel it; pairing the cue with 'This is available' while the state is clearly present; the hypnotic re-entry advice to choose a usable receptive state rather than peak emotional intensity; the pointer to 'A shortcut back into hypnosis' in the main induction section; and keeping the alert calming cue and synchronicity wake-up cue separate. Changes are stylistic only: 'connected to' became 'tied to a particular state', 'To set one' was added as a framing phrase for the existing steps, and 'alert calming' became 'alert calming cue', which clarifies the referent without changing meaning. No changes in certainty, agency, causality, attribution, or qualifications."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.039948000000000004,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": false
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 4
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 98,
+        "B": 114
+      },
+      "arm_chars": {
+        "A": 542,
+        "B": 620
+      },
+      "baseline_words": 98,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Clean, accurate, and orderly. It stays close to the source's compressed instruction style, expanding fragments into full sentences ('such as... a scent, or a song'). The result is clear but somewhat formal and procedural, with a manual-like evenness. Nothing jars, but little personality.",
+        "B": "Warmer, more conversational, and more natural as spoken guidance, with contractions and a direct address that suit a hypnosis-practice text. The cost is editorializing: the added rationale clause and the intensifier 'actually' change the rhetorical function slightly, turning a terse directive into an explained one. The opening 'And' is a stylistic choice that reads naturally but departs from the source's clipped register."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": [
+            "Opening framing 'To set one' makes the instruction sequence explicit (minor, consistent with source's imperative flow)"
+          ]
+        },
+        "B": {
+          "missing": [],
+          "added": [
+            "'let yourself feel it' softens the source's direct 'feel it' into a permissive stance",
+            "'you'd like' and 'actually use' add colloquial emphasis not in the source",
+            "'If you're using an anchor to get back into hypnosis' reframes a purpose condition as a conditional about the reader's activity",
+            "'so they don't blur into each other' adds a rationale for keeping cues separate that the source does not give"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T18",
+      "article": "hypnosis",
+      "role": "Learning, entering, and returning",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material units are preserved: authors, title, year, page ranges (24–27, 45–50, 83–90), topics (interactive hypnosis, sensory learning, self-hypnosis, definite return), the characterization as a professional clinical book and not a self-help manual, and the caution against wholesale import of case procedures and historical claims into solo practice. The Eason and Parris ISH article's coverage of self-directed learning and its relationship to another hypnotist and recordings is also intact. The draft turns 'shouldn't be imported' into 'should not be carried over' and adds the causal connector 'so', but this only makes explicit the reasoning already implied by the source and does not change the strength of the advice. 'Discusses' became 'covers' or 'addresses', which are harmless synonym changes."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.044632,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 0.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 0,
+        "B": 1
+      },
+      "reviewer_preference": "TIE",
+      "arm_word_counts": {
+        "A": 74,
+        "B": 80
+      },
+      "arm_chars": {
+        "A": 514,
+        "B": 548
+      },
+      "baseline_words": 74,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Stays close to the source's structure: the page ranges follow the title and date, then the topic list. 'Covers' and 'addresses' are neutral replacements for 'discusses'. 'Should not be carried over wholesale' keeps the cautionary function of the source's 'shouldn't be imported wholesale'. The last sentence ('how it relates to another hypnotist and to recordings') is compact but a little ambiguous about what 'it' refers to. The register is dry and bibliographic, which suits an annotation.",
+        "B": "Moves the page ranges to the end of the first sentence, which reads smoothly and keeps the list of topics uninterrupted. 'Shouldn't be carried over wholesale' keeps the source's contraction and the cautionary tone. The final sentence resolves the ambiguous referent by repeating 'learning', and the verb phrases are clearer, though slightly wordier and a small step toward interpretation ('looks at' for 'discusses')."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": []
+        },
+        "B": {
+          "missing": [],
+          "added": [
+            "Slight elaboration in the last sentence: 'working with another hypnotist' and 'using recordings' make explicit the activities the source only names as relationships."
+          ]
+        }
+      }
+    },
+    {
+      "id": "T19",
+      "article": "hypnosis",
+      "role": "Before you begin",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material units are preserved: base the next invitation on the actual response rather than the scripted one; utilization defined as working with what happens (thought, sound, movement, objection may change the practice's direction); notice what actually happens; absence of change is not hidden success; keep safety and exit instructions plain; Appendix B teaches richer language tools, and 'Let the next response guide you' shows their use after the induction. Differences are stylistic only: 'grow from' vs 'base on', 'may change where the practice goes' vs 'may shift the direction', 'Keep... plain' vs 'State... plainly' (a minor shift from keeping instructions plain to stating them plainly, not material). 'Actually received' is consistent with 'you got'. No changes in certainty, agency, causality, or attribution."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.036261999999999996,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": false
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 1
+      },
+      "arms_reported_additions_n": {
+        "A": 0,
+        "B": 3
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 84,
+        "B": 93
+      },
+      "arm_chars": {
+        "A": 502,
+        "B": 547
+      },
+      "baseline_words": 81,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Close, clean paraphrase that tracks the source clause by clause. Reads competent but slightly stiff and generic; 'an absence of change' is a more abstract, formal rendering of the source's plain 'no change'. Keeps the source's terse, instructional register and its definitional sentence structure ('Utilization means...').",
+        "B": "More natural and speakable, with a warmer, spoken-instruction feel ('Say the safety and exit instructions plainly', 'nothing changing'). The reads-aloud quality suits a practice guide. But it adds interpretive material and loosens the source's clipped, imperative rhythm."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": []
+        },
+        "B": {
+          "missing": [
+            "The source's definitional frame 'Utilization means working with what actually happens' is recast as a conversational aside ('That's what utilization means: you work with...'), slightly softening its role as a crisp definition."
+          ],
+          "added": [
+            "'without dressing them up' is an addition not in the source; it supplies an explanatory gloss on 'plainly' and slightly shifts the emphasis toward a contrast with ornamented language.",
+            "'so a thought... might shift' introduces a causal link ('so') that the source only implies with a colon.",
+            "'once the induction is done' is a minor looseness versus 'after the induction'."
+          ]
+        }
+      }
+    },
+    {
+      "id": "T20",
+      "article": "hypnosis",
+      "role": "Finding a hypnotist who can work with you",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": false,
+        "omissions": [
+          "SOURCE says the pattern of treating every objection as proof you need more of the same is what deserves scrutiny. The DRAFT's 'it deserves scrutiny when...' makes the antecedent 'it' read as discomfort, so the object of scrutiny shifts from the practitioner's or method's handling of objections to the discomfort itself. The warning about the objection-dismissing pattern as a red flag is blurred."
+        ],
+        "additions": [
+          "The DRAFT implies that discomfort deserves scrutiny, and the 'but' creates a contrast the SOURCE does not make. In the SOURCE the two clauses are parallel cautions: discomfort isn't conclusive, and the objection-as-proof pattern warrants scrutiny."
+        ],
+        "certainty_changes": [
+          "Advice strength: the SOURCE's imperative 'Ask the app or another informed person' becomes the permissive 'You can ask'. This is a minor softening."
+        ],
+        "notes": "Most other content is preserved: evaluating what happened, the purpose and agreement questions, the practitioner's response, the limit on what a brief account can establish, and the alternatives of self-hypnosis, combined work or another practitioner remaining the user's choice. The DRAFT's 'you shouldn't expect them to certify a practitioner' slightly shifts the SOURCE's 'without expecting a practitioner to be certified from a brief account', which concerns the limits of verifying certification, but the meaning is largely equivalent. The main material issue is the changed object of scrutiny, and the missing agency of who is doing the 'treating' is also less clear in the passive construction."
+      },
+      "baseline_reviewer_admitted": false,
+      "baseline_reported_cost": null,
+      "writers_started": false,
+      "stages": [
+        "baseline",
+        "baseline_fidelity"
+      ],
+      "reported_cost_usd_estimate": 0.021282000000000002,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 2
+    },
+    {
+      "id": "T21",
+      "article": "nibbana",
+      "role": "Desperation Did The Trick For Me & Bāhiya",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "The draft preserves all material content. The irony framing, the prison-camp setting, the master's teaching (love the Chinese, be happy about growing rice for them, the people are not the government), the blossoming of loving-kindness, the speaker's 'light of love' characterization, and the speaker's conditional reflection ('if he could find love there, perhaps I could stop...') are all intact. Changes are stylistic only: 'where he found his true master' became 'he found his true master in that camp'; 'happy' became 'glad'; 'blossomed' became 'flowered'; 'upon the world' became 'in the world'; 'treating... as an excuse' became 'using... as an excuse'. The hedge 'perhaps' is retained. Agency and causality are unchanged: the master teaches, the practice develops, and the speaker draws a lesson."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.035004,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 3.0
+      },
+      "naturalness_delta_B_minus_A": -1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 1,
+        "B": 1
+      },
+      "arms_reported_additions_n": {
+        "A": 0,
+        "B": 3
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 73,
+        "B": 84
+      },
+      "arm_chars": {
+        "A": 392,
+        "B": 440
+      },
+      "baseline_words": 73,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Clean, compact and close to the source's cadence. The reordering of the first sentence ('he found his true master in that brutal Chinese prison camp') loses the cleft emphasis on the place, but 'Ironically' still carries the turn. 'Using my own hell as an excuse' is a natural rendering of 'treating... as an excuse'. The rhythm is brisk and plain, slightly flatter than the source's warm tone, but it is consistent and idiomatic.",
+        "B": "The cleft construction ('it was in that brutal Chinese prison camp that he found...') keeps the source's emphasis on the place, which is a plus for rhetorical function. But the additions ('in a place like that', 'until he had become', 'not the same as') make the prose more explanatory and slightly padded. The result reads smooth but a little more elaborated and less terse than the source. 'Because' for 'since' is a fine choice."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "Nothing of consequence. 'blossomed' becomes 'flowered', a near-synonym. 'upon the world' becomes 'in the world', a slight loss of the benedictory register."
+          ],
+          "added": []
+        },
+        "B": {
+          "missing": [
+            "'upon the world' becomes 'in the world', as in X."
+          ],
+          "added": [
+            "'in a place like that' adds a gloss on the camp's harshness that the source leaves implicit (it says only 'there'). This is a mild but real expansion, though it echoes the 'brutal' framing.",
+            "'until he had become' adds a sequential or causal progression, where the source has a simple 'and he became'.",
+            "'not the same as their government' slightly rewords 'were not their government'. The meaning is nearly the same but the phrasing is looser and more explanatory."
+          ]
+        }
+      }
+    },
+    {
+      "id": "T22",
+      "article": "nibbana",
+      "role": "Binding Assembles the Mind",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All key assertions are preserved: one sense stream suffices for suffering; a single pleasure/pain channel still leaves pain; the plane analogy; full unweaving leaves no system that can suffer, lack, desire, gain, lose, recognize, or do anything; supreme bliss 'seems' to be left, contrary to the assumption of neutrality; and the Sāriputta/AN 9.34 attribution and quote. Two minor shifts are not material. The draft makes the analogy a simile for pain's presence ('just as a plane can land...') rather than saying pain itself lands, and it adds 'only' ('can land only because'), which slightly strengthens the source's 'because'. Neither changes the argument's substance."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.050792000000000004,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 3,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 5
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 100,
+        "B": 112
+      },
+      "arm_chars": {
+        "A": 601,
+        "B": 646
+      },
+      "baseline_words": 96,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Accurate and clean, but reads as a tidy paraphrase. The source's conversational, slightly abrupt rhythm ('The pain, like a plane, is able to land...') is smoothed into formal, balanced syntax. The reordering of the bliss sentence ('What seems to be left... is supreme bliss, though one might have assumed...') is faithful but stiff, and 'one might have assumed' is more academic than the source's 'you might assume'. The colon-to-'As' attribution is preserved well.",
+        "B": "More natural and spoken, with a conversational cadence closer to the source's register ('you might expect', 'the way a plane can land'). However, it embellishes: 'crowd' and 'plain' and 'at all' introduce flourishes the source lacks, and 'show up' adds a gloss that explains the analogy rather than just stating it. 'Expect' for 'assume' shifts nuance slightly (assumption vs. anticipation). The 'though' after 'In full unweaving' adds a contrast that matches the rhetorical turn but is editorially imposed."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "Source's 'And' opening connective is dropped; the claim is not framed as continuing a prior argument",
+            "Source's 'pleasure/pain' as a single compound channel is rendered 'pleasure and pain', a slight softening",
+            "Source's 'plane...able to land because there's somewhere solid to land' is kept, but the 'pain, like a plane' subject-simile structure is flattened into 'just as'"
+          ],
+          "added": [
+            "'just as' makes the analogy explicitly a comparison clause, slightly more formal than the source's appositive simile"
+          ]
+        },
+        "B": {
+          "missing": [
+            "Source's 'And' at the start is dropped, though a later 'And' is added elsewhere",
+            "'pleasure/pain' becomes 'pleasure and pain'"
+          ],
+          "added": [
+            "'a whole crowd of sense streams working together' amplifies 'multiple sense streams together' with a crowd metaphor",
+            "'though' and 'at all' add emphasis and a contrastive pivot not in the source",
+            "'plain neutrality' adds 'plain' as an intensifier",
+            "'have a place to show up' reframes the landing image: pain is personified as arriving, a shift from the source's plane-landing function",
+            "'And' opening the bliss sentence inserts a connective not in the source"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T23",
+      "article": "nibbana",
+      "role": "Go Into The Light",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material content is preserved: Dzogchen's more unified lens compared with the author's; the shared claim that the essence of the elements is light and matter is condensed light; the claim that masters' bodies dissolve into rainbow lights at death; the few 20th-century accounts; the Catholic priest's on-the-ground investigation; the account written by the dying master's nephew, Namkhai Norbu Rinpoche; and the pointer to the research report. Two small shifts are not material. 'They' became 'Its followers', which still attributes the claim to the tradition's adherents. 'Actually' was dropped from 'actually dissolve', which slightly softens the emphasis on literal dissolution but leaves the claim attributed and uncertain in the same way. 'Looked into' became 'investigated', and 'just' became 'simply'; both are harmless synonyms."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.046822,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 3.0
+      },
+      "naturalness_delta_B_minus_A": -1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 0,
+        "B": 2
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 85,
+        "B": 90
+      },
+      "arm_chars": {
+        "A": 535,
+        "B": 551
+      },
+      "baseline_words": 85,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Clean and natural. 'Approaches... through' is a smooth rendering of 'comes at... from', though it loses a little of the source's colloquial edge. 'Its followers even claim' keeps the 'even' (the escalating, slightly surprising force of the source). 'Bodies dissolve into rainbow lights' preserves the source's plural 'lights'. The colon-based structure for the two accounts is tidy and compact, and fuses the two accounts into one sentence as the source does. 'Simply' for 'just' is a slightly more formal register but acceptable.",
+        "B": "Reads fluently but slightly more polished and 'written'. 'Go further and claim' is a mild rhetorical embellishment that makes the escalation explicit instead of leaving it to 'even'. Changing 'rainbow lights' to 'rainbow light' shifts the image from discrete lights to a mass noun (small drift). Splitting the accounts into two short sentences with 'one of them' is clear but a little choppier and less faithful to the source's single-sentence rhythm. 'Yet' is a touch more formal than the source's plain 'but'."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": []
+        },
+        "B": {
+          "missing": [],
+          "added": [
+            "'yet' introduces an explicit contrast not marked by 'but' in the same way (minor)",
+            "'go further' replaces 'even' and adds an explicit sense of escalation (minor)"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T24",
+      "article": "nibbana",
+      "role": "Nibbāna Has Volume & Tuning Knobs",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "No material differences. All claims are preserved: the mostly unified body, single present scene and some witnessing, the comparison to other people, the shovel point about independent finger-flows and color clouds, the changed view of the unified self as only an approximation, nature assembling it for survival and reproduction, and the final realization. 'Bad' to 'poor', 'independent colors' to 'separate colors', 'aren't so useful' to 'would not help much', and 'I get it' to 'I understand that' are stylistic or synonymous changes. The conditional 'would not help' for the shovel remark does not meaningfully alter its certainty or function."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.038152,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 2,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 2
+      },
+      "reviewer_preference": "B",
+      "arm_word_counts": {
+        "A": 87,
+        "B": 87
+      },
+      "arm_chars": {
+        "A": 503,
+        "B": 498
+      },
+      "baseline_words": 87,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Clean and accurate, but a bit formal and stiff ('would not', 'I understand that now'). It loses the casual, wry bluntness of 'I get it now', which gives the source its conversational punch. The separate closing sentence preserves the source's rhythm, with its short, deflating final beat. Slightly over-polished, with less of the speaker's dry humor.",
+        "B": "More natural and spoken: contractions ('wouldn't'), the first-person shovel image, and a flowing final sentence read like a person talking. The added 'still' slightly sharpens the before/after contrast, which supports the passage's rhetorical function. Merging the last clause weakens the punchy 'I get it now' beat a little, but the overall register stays closer to the source's plain, personal tone."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "The source's 'Independently perfect' is rendered as 'Perfectly independent', a slight shift in modifier scope, but nothing substantive is lost.",
+            "The source's contrastive 'But' is replaced by 'though' mid-sentence, which softens the pivot slightly."
+          ],
+          "added": [
+            "'would not help much' is a mild softening of 'aren't so useful', and the tense shifts to a conditional."
+          ]
+        },
+        "B": {
+          "missing": [
+            "Same modifier reordering as X ('Perfectly independent').",
+            "Drops the full stop before 'I understand that now', so the final beat is folded into the previous sentence and loses some of the source's abruptness."
+          ],
+          "added": [
+            "'still' in 'I still operate' is not in the source, though it fits the implied continuity with 'Most of the time' and the contrast with 'always different from before'.",
+            "'when I'm using a shovel' makes the speaker present and concrete, a small but natural expansion of 'for using a shovel'."
+          ]
+        }
+      }
+    },
+    {
+      "id": "T25",
+      "article": "nibbana",
+      "role": "Why nibbāna is “awakening”",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "The draft keeps every material element: the lucid-dream comparison, the seven-life limit attributed by report ('said to be had by' / 'said to apply to') to the stream-enterer, the claim that recognizing a dream makes it naturally hard to stay stuck in it, the movie-theater analogy with lights coming on, and the appeal to lucid-dream experience. The changes are stylistic only: 'from earlier' became 'earlier', 'the dream' became 'a dream', 'known' became 'recognized', 'similar to how' became 'much as', and 'If you've ever had... you know' became 'Anyone who has had... will know'. The hedge 'said to' is retained, and the strength of the claims is unchanged."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.034718,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 0.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 0,
+        "B": 2
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 73,
+        "B": 74
+      },
+      "arm_chars": {
+        "A": 389,
+        "B": 389
+      },
+      "baseline_words": 71,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": false,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Close to the source in structure and register. 'Once a dream is recognized as a dream' keeps the source's impersonal framing, and 'Anyone who has had a lucid dream will know what I mean' is a natural, slightly more formal rendering of the closing appeal. 'Caught in it' and 'much as' are smooth. The tone is a little more written and measured than the source's conversational 'you know what I'm talking about,' but it stays within the author's reflective register. The impersonal 'a dream' does lose the source's direct 'you' in the middle sentence, though the source itself uses impersonal phrasing there ('Once the dream is known').",
+        "B": "Reads naturally and conversationally. 'If you have ever had a lucid dream, you will know what I mean' mirrors the source's direct address closely and keeps the intimate, appealing tone. Moving to 'you' earlier creates a consistent second-person thread, which is smooth but slightly changes the source's shift from impersonal explanation to personal appeal at the end. 'Colors how I understand' is a bit softer and more impressionistic than 'shapes,' and moves the sentence marginally away from the source's more structural claim."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": []
+        },
+        "B": {
+          "missing": [],
+          "added": [
+            "'colors' for 'shapes' is a slight shift in connotation (tinting vs. forming), but the rhetorical function is preserved",
+            "'Once you recognize' introduces second-person address in the middle sentence where the source is impersonal"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T26",
+      "article": "somatic",
+      "role": "Somatic Experiencing",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material content is preserved: the window-of-tolerance framing, the three techniques, the question of touching something difficult in a small dose, noticing, and returning, the three-to-six-month range with 'some people may', the longer timeline for severe developmental trauma, the 'not a countdown' qualification, and the conditional about being stable with one clear target and possibly being ready much sooner. One minor shift: 'orientation' became 'a rough guide'. This loses the echo of the technique term 'orientation' and slightly stresses approximation. The advice that the timeframe is not a deadline is intact, so I did not count it as material. Other changes ('usual'→'familiar', 'expanding'→'widening', 'all ways of asking'→'each ask the same question', 'come back'→'return') are stylistic."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.04249,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.5,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 0.5,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 3
+      },
+      "reviewer_preference": "B",
+      "arm_word_counts": {
+        "A": 87,
+        "B": 91
+      },
+      "arm_chars": {
+        "A": 526,
+        "B": 538
+      },
+      "baseline_words": 87,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Very close to the source, with light synonym swaps (usual→familiar, expanding→widening, come back→return). Reads clean and competent but slightly formal and uniform. 'Each ask the same question' is a mild tightening. 'Mainly building these capacities' keeps the source's register. The 'I would treat that as a rough guide' sentence is tidy but a bit stiff; no contractions, consistent with the source's measured, clinical-advisory tone.",
+        "B": "More conversational and spoken: contractions (I'd, you're), 'gets practical', 'mostly', 'with severe developmental trauma it can take longer'. The 'But' makes the hedge-then-reassure rhythm clearer and sounds like a clinician speaking to a reader. 'Small enough to handle' is a touch more explanatory than the source, but it fits the voice. Slightly less faithful to the source's restrained register, though it reads more naturally."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": [
+            "'rough guide' replaces 'orientation' in the last-but-two sentence. The source's 'orientation' means a directional aid. 'Rough guide' is a reasonable gloss, but it drops the word echo with the earlier technical term 'orientation' (which is the clinical concept). This arguably removes a potential ambiguity, but also adds an interpretation ('rough')."
+          ]
+        },
+        "B": {
+          "missing": [],
+          "added": [
+            "'But' opens the 'rough guide' sentence, adding an explicit contrastive connective the source only implies.",
+            "'rough guide' replaces 'orientation', as in X.",
+            "'dose small enough to handle' adds 'to handle', a slight elaboration of 'small enough dose'."
+          ]
+        }
+      }
+    },
+    {
+      "id": "T27",
+      "article": "somatic",
+      "role": "Shaking Qigong / Shaking Medicine",
+      "teacher_quality": "weak",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material units are preserved: daily autonomic discharge and energetic decompression as the purpose; Job 1 shaking staying mild and exploratory versus a regular discharge practice here; the condition that the person can still stop, orient, and settle afterward; the 10–45 minute range with 'might' hedging intact; and the four use cases (chronic freeze, non-verbal emotional processing, stress accumulating between therapy sessions, leftover activation after a deeper session). Changes such as 'Here the job is' to 'In this case, the purpose is', 'as long as' to 'provided', 'I think of' to 'I see', 'run' to 'last', and 'accumulates' to 'builds up' are stylistic and do not alter meaning, certainty, agency, or advice. The first-person framing ('I think of' / 'I see') is retained, so attribution is unchanged."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.038180000000000006,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 2,
+        "B": 3
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 3
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 70,
+        "B": 82
+      },
+      "arm_chars": {
+        "A": 454,
+        "B": 484
+      },
+      "baseline_words": 70,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Very close to the source, nearly a light paraphrase. 'Provided you can still...' is a bit stiffer and more written than the source's conversational dash-and-'as long as'. 'Builds up' and 'leftover activation' keep the source's compact, practitioner-notes register. 'Purpose' is a good match for 'job.' The list stays terse and parallel, which fits the source's clipped cadence. Reads clean but slightly formal.",
+        "B": "Reads more conversational and spoken, with more varied rhythm ('grow into', 'piles up', 'anywhere from'). The lead-in 'Where I see it helping is' is natural but shifts the stance from classification to benefit. 'Emotional processing that has no words' is vivid and warm but trades the technical register of 'non-verbal' for plain language. The list items are less parallel, which gives it a more human feel but loosens the source's tight structure."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "Source's 'Here' (spatial/contextual pointer) rendered as 'In this case' — minor loss of immediacy",
+            "Source's 'I think of' (personal framing) softened to 'I see'; function preserved"
+          ],
+          "added": [
+            "Merges two source sentences' rhetorical break: 'as long as' becomes 'provided', slightly more formal conditional; no new content"
+          ]
+        },
+        "B": {
+          "missing": [
+            "Source's 'Here' rendered as 'In this case'; same minor loss as X",
+            "'Non-verbal' is expanded to 'has no words', which loses the clinical term",
+            "'Leftover activation' becomes 'activation left over', a mere reordering"
+          ],
+          "added": [
+            "'anywhere from 10 to 45 minutes' adds a mild range-emphasis not present in the source",
+            "'Where I see it helping is' reframes the list as benefits ('helping'), which adds an efficacy claim the source's neutral 'use cases' does not make",
+            "'regular session' replaces 'regular practice', a small shift in the noun"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T28",
+      "article": "somatic",
+      "role": "EMDR",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "The draft preserves all material content. Both texts keep the same assertions: concern with regulation and post-session effects; EMDR can be highly effective; the writer does not automatically assume EMDR should come first for diffuse developmental trauma with an unstable nervous system; Brainspotting may fit better when there are no clear targets and the material is bodily, pre-verbal, or relational; and a stable person with one discrete event may be ready for EMDR much earlier. Differences are stylistic only: 'first thing they try' vs 'first approach', 'cannot identify any clear targets' vs 'no clear targets can be identified' (passive voice, same meaning), 'may fit better' vs 'may be a better fit', 'one discrete event' vs 'single discrete event'. Hedging ('may', 'do not automatically assume') is unchanged."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.037432,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 4.0,
+        "B": 2.5
+      },
+      "naturalness_delta_B_minus_A": -1.5,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 2,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 1,
+        "B": 1
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 84,
+        "B": 85
+      },
+      "arm_chars": {
+        "A": 498,
+        "B": 510
+      },
+      "baseline_words": 84,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Preserves the source's four-sentence structure and its rhetorical rhythm: statement of priority, concession with caution, conditional alternative, contrasting case. Each move keeps its own sentence, so the argument stays easy to follow and the final exception lands as a clear separate point. The passive in the Brainspotting sentence is slightly more impersonal than the source, but the overall tone remains natural and professional.",
+        "B": "Meaning is preserved, but the text is compressed into two long, clause-heavy sentences. The source's clinician voice relies on short declaratives ('I still care...', 'A stable person... is a different case') that read as measured, practiced judgment. X merges these, so the contrast between the general caution, the Brainspotting suggestion, and the stable-client exception blurs. The 'but' leading into the last clause ('...a better fit, but someone who is stable...') makes the exception read as an afterthought rather than a distinct case. It is readable but more written-up and less conversational."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "'If you cannot identify' (second-person, conversational) becomes the passive 'If no clear targets can be identified', which loses some of the direct, practitioner-to-peer address",
+            "'A stable person with one discrete event' becomes 'Someone who is stable and has a single discrete event', a minor softening of the compact phrasing"
+          ],
+          "added": [
+            "Nothing substantive"
+          ]
+        },
+        "B": {
+          "missing": [
+            "Source's 'if somebody has' conditional framing is converted to 'for someone with', slightly flattening the hypothetical",
+            "Source's separate sentences are collapsed, so the pivot 'EMDR can be highly effective, but...' is subordinated into 'although', reducing its weight as a standalone concession"
+          ],
+          "added": [
+            "Nothing substantive; the 'and' + 'but' chaining adds a mildly continuous, run-on logic that the source lacks"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T29",
+      "article": "somatic",
+      "role": "Don’t be so serious, you silly willy!",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "No material differences. Hedging ('I sometimes think', 'may not need') is preserved. Changes are stylistic or trivial: 'can also sit' to 'can fall', 'a little' to 'some' (same quantity sense, 'at least' retained), 'because' to 'since' (same causal link), 'one discrete event' to 'a single discrete event', and 'going into' to 'entering'. The contrast between preparatory/titrated work and highly charged developmental material, the EMDR-after-reparenting advice, the Nurturer/Protector rationale, and the point about stable persons with discrete events are all intact. The omission of 'also' is not material."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.037795999999999996,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 0,
+        "B": 0
+      },
+      "arms_reported_additions_n": {
+        "A": 0,
+        "B": 3
+      },
+      "reviewer_preference": "A",
+      "arm_word_counts": {
+        "A": 80,
+        "B": 86
+      },
+      "arm_chars": {
+        "A": 514,
+        "B": 543
+      },
+      "baseline_words": 80,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Very close to the source, with only light lexical swaps (fall on, whereas, entering, some, since, single). The 'whereas' clause keeps the contrast but reads slightly more formal and textbook-like than the source's looser semicolon. Rhythm is clean but a little flat. It preserves the source's plain, clinician-speaking-to-peer register, and 'access to a Nurturer and Protector' keeps the original's abstract noun phrasing.",
+        "B": "Reads more conversationally, with a colon and a 'but' that make the contrast between preparation and deeper dosing feel spoken. 'Land on either side' is livelier. Small additions ('straight', 'though', 'once you can reach', repeated 'a' before Protector) slightly sharpen or gloss the argument beyond the source. They do not distort the meaning, but 'straight' mildly intensifies the claim about going into charged material, and 'once you can reach' makes the logic a bit more sequential. Overall more natural and personable, at some cost to literal closeness."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [],
+          "added": []
+        },
+        "B": {
+          "missing": [],
+          "added": [
+            "'straight' in 'going straight into' adds a nuance of immediacy or lack of preparation not explicit in the source",
+            "'though' in the last sentence adds an explicit contrastive marker",
+            "'once you can reach' recasts access as a conditional/temporal step"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T30",
+      "article": "somatic",
+      "role": "Light CBT / Narrative Integration",
+      "teacher_quality": "medium",
+      "baseline_fidelity_result": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "Draft preserves all material content. 'Thin research literature' -> 'small body of research' and 'large research literature' -> 'large body of research' are equivalent. 'Does not prove' -> 'does not show' is a negligible shift in wording with no meaningful change in certainty. 'Pay attention to people with patterns similar to mine' -> 'look to people whose patterns resemble mine' keeps the same advice. 'Unglamorous question' -> 'plain question' slightly alters tone but keeps the rhetorical function. 'Actually doing better' is preserved. 'Confuse' -> 'mistake' is a synonym. The advice to go slowly, change one thing at a time where possible, and not equate intensity with healing is intact."
+      },
+      "baseline_reviewer_admitted": true,
+      "baseline_reported_cost": null,
+      "writers_started": true,
+      "stages": [
+        "baseline",
+        "baseline_fidelity",
+        "arm_A",
+        "arm_B",
+        "blind_review"
+      ],
+      "reported_cost_usd_estimate": 0.037798,
+      "inherited_cache_read_tokens": 0,
+      "actual_cli_calls": 5,
+      "arm_naturalness": {
+        "A": 3.0,
+        "B": 4.0
+      },
+      "naturalness_delta_B_minus_A": 1.0,
+      "arms_reviewer_fidelity": {
+        "A": true,
+        "B": true
+      },
+      "arms_reported_missing_n": {
+        "A": 1,
+        "B": 2
+      },
+      "arms_reported_additions_n": {
+        "A": 2,
+        "B": 3
+      },
+      "reviewer_preference": "B",
+      "arm_word_counts": {
+        "A": 81,
+        "B": 80
+      },
+      "arm_chars": {
+        "A": 453,
+        "B": 449
+      },
+      "baseline_words": 81,
+      "arm_format_onepara": {
+        "A": true,
+        "B": true
+      },
+      "arm_unchanged_from_baseline": {
+        "A": true,
+        "B": false
+      },
+      "reviewer_notes": {
+        "A": "Faithful and tidy, with the original's long-sentence rhythm and parallel structure intact. The indirect-question phrasing and lack of contractions make it read a bit stiff and formal compared with the first-person, conversational source. 'Mistake intensity for healing' is a clean rendering of 'confuse'. The two 'show' verbs make the opening contrast less varied than the source's 'prove' versus 'tell you'.",
+        "B": "Reads more like a person speaking, with contractions and the direct question 'am I actually doing better?' preserved as a question, which keeps the source's self-interrogating voice. The varied verbs ('show' then 'tell you') echo the source. The added 'So' and 'Then' are small connectives that smooth the flow but add logical and temporal framing the source does not spell out."
+      },
+      "reviewer_changes": {
+        "A": {
+          "missing": [
+            "'unglamorous' is rendered as 'plain', losing the connotation of the question being mundane and unexciting, in contrast to dramatic or intense healing."
+          ],
+          "added": [
+            "'show' is used twice in place of 'prove' and 'tell you', so the parallel gets slightly flattened.",
+            "'whether I am actually doing better' converts the direct question into an indirect clause, which slightly softens the self-interrogation."
+          ]
+        },
+        "B": {
+          "missing": [
+            "'unglamorous' is rendered as 'plain', so the sense of the question being deliberately unexciting is weakened.",
+            "The single list of four practices is broken into separate sentences, so the 'keep asking' step no longer reads as a parallel item in the same series."
+          ],
+          "added": [
+            "'So' is added at the start of the second sentence, which makes the inference from the first sentence explicit where the source leaves it implied.",
+            "'Then' is added before 'I'd keep asking', which imposes a sequence that the source does not state.",
+            "'where I can' replaces 'when possible', shifting slightly from general feasibility to personal capacity."
+          ]
+        }
+      }
+    }
+  ]
+}

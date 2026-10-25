@@ -1,0 +1,141 @@
+{
+  "schema": "owner-critic-calibration-results-v1",
+  "n": 4,
+  "cases": [
+    {
+      "case": "envy",
+      "owner_naturalness": "B",
+      "model_naturalness": "A",
+      "naturalness_matches_owner": false,
+      "owner_fidelity_B": true,
+      "model_fidelity_B": false,
+      "fidelity_matches_owner": false,
+      "joint_preference": "A",
+      "model_by_original_label": {
+        "A": {
+          "fidelity_ok": true,
+          "missing": [],
+          "added": [],
+          "voice_score_1_to_5": 4,
+          "prose_comment": "Identical to the source, so it keeps the casual first-person voice, the hedged 'I'd still...' stance, and the paired structure of the second paragraph. It reads naturally. The one slightly awkward spot is the stacked clauses in 'I'd still take real suffering seriously, and do what you owe the people around you, but skip...', but that is inherited from the source and is the original voice."
+        },
+        "B": {
+          "fidelity_ok": false,
+          "missing": [
+            "The explicit 'I'd still take real suffering seriously' stance, which is the author's own hedged commitment.",
+            "The idea of what you owe 'the people around you' (a general obligation to those nearby). It is narrowed to 'people who are suffering'.",
+            "The softened first-person framing ('I'd') for the advice."
+          ],
+          "added": [
+            "A direct imperative, 'Do your part for people who are suffering', which is more prescriptive than the source.",
+            "A narrowed scope: the obligation now applies only to suffering people, not to the people around you in general."
+          ],
+          "voice_score_1_to_5": 3,
+          "prose_comment": "Reads smoothly and is shorter, but it shifts from the author's tentative 'I'd...' register to a brisker command. 'Do your part' is a stock phrase that flattens the particular wording. It also loses the 'take suffering seriously' beat and the 'what you owe' idea, which the second paragraph echoes ('what you owe them'), so the callback is weakened."
+        }
+      },
+      "why": "X preserves the source's meaning and rhetorical function exactly, including the hedged stance and the 'what you owe' idea that the second paragraph echoes. Y compresses the sentence into an imperative that changes its register and narrows its scope, and loses the explicit commitment to taking suffering seriously. Y is fluent, but its fidelity is weaker, so X is preferred."
+    },
+    {
+      "case": "thanks",
+      "owner_naturalness": "A",
+      "model_naturalness": "TIE",
+      "naturalness_matches_owner": false,
+      "owner_fidelity_B": false,
+      "model_fidelity_B": false,
+      "fidelity_matches_owner": true,
+      "joint_preference": "A",
+      "model_by_original_label": {
+        "B": {
+          "fidelity_ok": false,
+          "missing": [
+            "The opening sentence of the second paragraph, 'The thank-you you weren't waiting for might not come anyway,' is gone. It linked back to the thank-you in the first paragraph and set up the 'Oh, so NOW you care?' retort as a stand-in for the missing thanks."
+          ],
+          "added": [
+            "'Your little one might not take it well at first.' This is a new claim. It shifts the point from thanks not arriving to the child reacting badly. It also adds 'at first,' which implies the reaction will soften, and the source says nothing like that."
+          ],
+          "voice_score_1_to_5": 4,
+          "prose_comment": "It reads smoothly and sounds natural. The rewritten line is plain and conversational. But 'More like...' now follows 'might not take it well' less cleanly, because the contrast with the expected thank-you has been lost. The paragraph also repeats 'Your little one' and 'Your first instinct' in quick succession."
+        },
+        "A": {
+          "fidelity_ok": true,
+          "missing": [],
+          "added": [],
+          "voice_score_1_to_5": 4,
+          "prose_comment": "It matches the source exactly, so the dry, wry voice and the emoji-led pivot are intact. 'More like...' lands as a contrast with the thank-you that won't come. The shift from the thank-you to the retort to the 'But I'm trying!' reflex keeps its comic timing."
+        }
+      },
+      "why": "Y preserves the source's meaning and rhetorical function. The 'thank-you you weren't waiting for' line bridges the two paragraphs and sets up the 'Oh, so NOW you care?' punchline. X replaces it with a different, more generic claim about the child's reaction, and that weakens the callback and the joke. The voice is similarly natural in both, so fidelity decides it."
+    },
+    {
+      "case": "heading",
+      "owner_naturalness": "B",
+      "model_naturalness": "TIE",
+      "naturalness_matches_owner": false,
+      "owner_fidelity_B": false,
+      "model_fidelity_B": true,
+      "fidelity_matches_owner": false,
+      "joint_preference": "A",
+      "model_by_original_label": {
+        "A": {
+          "fidelity_ok": true,
+          "missing": [],
+          "added": [],
+          "voice_score_1_to_5": 4,
+          "prose_comment": "Identical to the SOURCE, word for word. The phrasing 'toward a belonging deeper than any group' echoes the heading and keeps the sentence's rhetorical setup. The voice is warm, plain and conversational, with natural short sentences ('Not all at once, though.') and gentle hedging."
+        },
+        "B": {
+          "fidelity_ok": true,
+          "missing": [
+            "The explicit noun 'a belonging deeper than any group' in the first sentence, which echoes the heading and frames the concept as a state of belonging",
+            "The 'deeper than any group' comparison inside the body text, which is now carried only by the heading"
+          ],
+          "added": [
+            "'somewhere you belong' recasts the belonging as a place, which slightly narrows the abstract idea and anticipates the 'nature / existence / ultimate' list"
+          ],
+          "voice_score_1_to_5": 4,
+          "prose_comment": "Almost identical to the SOURCE, with one rewording. 'Somewhere you belong that doesn't ask you to give up being yourself' reads smoothly and avoids repeating the heading, and it is arguably a little more natural. It loses the heading echo and the 'deeper than' framing, which was the contrast with groups. The core meaning is preserved, and the later 'you also belong there' still works."
+        }
+      },
+      "why": "X reproduces the SOURCE exactly, so the 'deeper than any group' contrast and the heading echo stay intact. Y is a faithful paraphrase with equal voice quality, but it drops that contrast from the body and adds a spatial framing the SOURCE doesn't have. The voice is equally natural in both, so fidelity decides it."
+    },
+    {
+      "case": "golden-forgiveness",
+      "owner_naturalness": "B",
+      "model_naturalness": "A",
+      "naturalness_matches_owner": false,
+      "owner_fidelity_B": null,
+      "model_fidelity_B": false,
+      "fidelity_matches_owner": null,
+      "joint_preference": "A",
+      "model_by_original_label": {
+        "B": {
+          "fidelity_ok": false,
+          "missing": [
+            "The impersonal, declarative framing ('The harm happened', 'The person') is replaced with first-person plural 'us/we/them'.",
+            "'forgiveness may come later on its own' is weakened: 'on its own' (unforced, not required or demanded) is replaced by 'we may find that we have forgiven them', which changes the agent and the sense of arrival.",
+            "The terse, separate-sentence rhythm that sets boundary, accountability, and forgiveness as three distinct points is lost."
+          ],
+          "added": [
+            "'really did hurt us': adds emphasis and a specific relationship ('us').",
+            "'one day': adds a time frame that makes forgiveness a likelier outcome.",
+            "'we may find that we have forgiven them': adds a retrospective discovery framing and an agent.",
+            "'have to answer for it': recasts 'accountable' as an obligation to answer, which is close but slightly more forceful."
+          ],
+          "voice_score_1_to_5": 3,
+          "prose_comment": "Reads as a natural spoken sentence, but it is a run-on chain of clauses joined by commas and 'and'. It is warmer and more personal than the source, but it loses the source's crisp, axiomatic cadence. Meaning is mostly preserved, with drift in perspective and in how forgiveness is framed."
+        },
+        "A": {
+          "fidelity_ok": true,
+          "missing": [],
+          "added": [],
+          "voice_score_1_to_5": 4,
+          "prose_comment": "Identical to the source, word for word. It is clean, balanced, and rhythmic, with short declaratives that fit the rhetorical function. Fidelity is perfect because it is not a rewrite. If the task is to produce a rewrite, it shows no transformation."
+        }
+      },
+      "why": "Y keeps the source's meaning, structure, and rhetorical function intact: harm acknowledged, boundary upheld, accountability retained, forgiveness left as optional and self-arising. X changes the point of view, adds 'one day' and a discovery framing, and merges the short statements into one long sentence. One caveat: Y is a verbatim copy of the source, so if the goal is a paraphrase, it does not do the job. On fidelity and voice, Y is stronger."
+    }
+  ],
+  "new_Pangram_calls": 0,
+  "limitations": "four familiar hand-selected calibration cases; fresh reviewer contexts but same provider, not held-out population accuracy; owners prior direct judgments remain authoritative"
+}

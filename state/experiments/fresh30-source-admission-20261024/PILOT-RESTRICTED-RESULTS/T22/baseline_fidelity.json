@@ -1,0 +1,46 @@
+{
+  "case": "T22",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "794170eb4467646db667ad74082a42c4f37fbe285c6f97303ead9c59a753c4fa",
+  "elapsed_s": 7.64,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All key assertions are preserved: one sense stream suffices for suffering; a single pleasure/pain channel still leaves pain; the plane analogy; full unweaving leaves no system that can suffer, lack, desire, gain, lose, recognize, or do anything; supreme bliss 'seems' to be left, contrary to the assumption of neutrality; and the Sāriputta/AN 9.34 attribution and quote. Two minor shifts are not material. The draft makes the analogy a simile for pain's presence ('just as a plane can land...') rather than saying pain itself lands, and it adds 'only' ('can land only because'), which slightly strengthens the source's 'because'. Neither changes the argument's substance.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1093,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 701,
+    "output_tokens_details": {
+      "thinking_tokens": 406
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1093,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 701,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1093,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1093
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.011386,
+  "is_error": false,
+  "result_sha256": "9a3e9ad2e51270483b09afcdf4dab8a4851f1f1f40c5c7ead11797c6f7882d8b"
+}

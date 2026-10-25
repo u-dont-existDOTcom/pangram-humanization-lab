@@ -1,0 +1,46 @@
+{
+  "case": "T08",
+  "stage": "arm_B",
+  "prompt_sha256": "213e964da08e689478e090a2cc60e5fbd729d2bb5dbb10eea4e7aa07776a348b",
+  "elapsed_s": 3.49,
+  "return_code": 0,
+  "error": null,
+  "result": "Children should keep relationships, and a way to report harm, outside the community, because grandparents, cousins, local friends, teachers, and other trusted adults offer perspective and somewhere to speak. At least one trusted adult, advocate, or reporting route should be reachable without passing through community leadership. In 1984, Vermont authorities seized 112 children in the Island Pond raid, and the court returned them after rejecting the state's blanket request, so state intervention can fail spectacularly, and yet total community enclosure can fail as well. Children need more than one world.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1072,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 179,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1072,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 179,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1072,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1072
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.006082000000000001,
+  "is_error": false,
+  "result_sha256": "bc9a88fb52da6cd9571fc07ec87e0e00363c4c0cbbf4ad7377cac686b909ce9f"
+}

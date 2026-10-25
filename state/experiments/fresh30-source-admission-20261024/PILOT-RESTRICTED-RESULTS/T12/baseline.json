@@ -1,0 +1,46 @@
+{
+  "case": "T12",
+  "stage": "baseline",
+  "prompt_sha256": "1e7e3b2d02195effe4c4e9054ef7c46d7ec468be4f7ee2795c52b86f7bbb4214",
+  "elapsed_s": 3.15,
+  "return_code": 0,
+  "error": null,
+  "result": "Pay attention to how the care is offered: through words, imagery, presence, or action. \"I care about you\" can convey patience, or it can convey a demand to hurry up and feel better. If imagined closeness feels intrusive, try more distance, no touch, a different voice, or another source of care. Difficulty with this particular offer does not show that the child cannot receive love. Let the child's response teach you how to care, rather than forcing the child to accept your preferred version.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 818,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 146,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 818,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 146,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 818,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 818
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004736000000000001,
+  "is_error": false,
+  "result_sha256": "b1e1daffdeef8cd10d7373f4e4d5ebad997c3a926da3886bea68398a26a5fd28"
+}

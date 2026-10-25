@@ -1,0 +1,67 @@
+{
+  "id": "F12",
+  "stage": "function",
+  "prompt_sha256": "482b8d029600e54dd43d06e40c9560cb6501e606f4fa634ece6f1df18d24bbd0",
+  "response_sha256": "0569cf772efe110734e2fad671aab97be0db8c4272e1ddba8fb83a1c87e720ae",
+  "result": "{\"recommendation\":\"CUT\",\"material_function_lost\":false,\"functions_retained\":[\"definition of 'intentional' as picking an act, deciding when, and naming the smallest first step\",\"envelope example callback\",\"conditions about money/help to arrange before the day\",\"advice to rehearse unwelcome messages aloud and perspective-take\",\"qualification that the message must still be said\"],\"functions_lost\":[\"minor aside that some acts already consist of a single step, so the 'smallest first step' is trivially the act itself\"],\"exact_supporting_words\":[\"Some of them are only one step anyway.\"],\"why\":\"The deleted sentence is a small side remark that tempers the 'smallest first step' instruction for simple acts. It makes no independent claim the reader needs, and it changes no action: the reader can see for themselves that a one-step act's first step is the act. The following sentence ('If it needs money or somebody's help...') does not depend on it, since 'it' still refers to the chosen act. The definition, the envelope example, the preparation conditions and the rehearsal advice all remain. Only a little reassurance and a light conversational beat are lost, so the cut is acceptable.\"}",
+  "parsed": {
+    "recommendation": "CUT",
+    "material_function_lost": false,
+    "functions_retained": [
+      "definition of 'intentional' as picking an act, deciding when, and naming the smallest first step",
+      "envelope example callback",
+      "conditions about money/help to arrange before the day",
+      "advice to rehearse unwelcome messages aloud and perspective-take",
+      "qualification that the message must still be said"
+    ],
+    "functions_lost": [
+      "minor aside that some acts already consist of a single step, so the 'smallest first step' is trivially the act itself"
+    ],
+    "exact_supporting_words": [
+      "Some of them are only one step anyway."
+    ],
+    "why": "The deleted sentence is a small side remark that tempers the 'smallest first step' instruction for simple acts. It makes no independent claim the reader needs, and it changes no action: the reader can see for themselves that a one-step act's first step is the act. The following sentence ('If it needs money or somebody's help...') does not depend on it, since 'it' still refers to the chosen act. The definition, the envelope example, the preparation conditions and the rehearsal advice all remain. Only a little reassurance and a light conversational beat are lost, so the cut is acceptable."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1262,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 372,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1262,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 372,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1262,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1262
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.008772,
+  "elapsed_s": 7.23,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "delete nominated wording only"
+  }
+}

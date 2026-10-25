@@ -1,0 +1,46 @@
+{
+  "case": "T29",
+  "stage": "blind_review",
+  "prompt_sha256": "995d806dc1b74001227e50def25982778ab20084bdba4be1625e0f73f12a56f3",
+  "elapsed_s": 8.15,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Very close to the source, with only light lexical swaps (fall on, whereas, entering, some, since, single). The 'whereas' clause keeps the contrast but reads slightly more formal and textbook-like than the source's looser semicolon. Rhythm is clean but a little flat. It preserves the source's plain, clinician-speaking-to-peer register, and 'access to a Nurturer and Protector' keeps the original's abstract noun phrasing.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"'straight' in 'going straight into' adds a nuance of immediacy or lack of preparation not explicit in the source\",\n      \"'though' in the last sentence adds an explicit contrastive marker\",\n      \"'once you can reach' recasts access as a conditional/temporal step\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Reads more conversationally, with a colon and a 'but' that make the contrast between preparation and deeper dosing feel spoken. 'Land on either side' is livelier. Small additions ('straight', 'though', 'once you can reach', repeated 'a' before Protector) slightly sharpen or gloss the argument beyond the source. They do not distort the meaning, but 'straight' mildly intensifies the claim about going into charged material, and 'once you can reach' makes the logic a bit more sequential. Overall more natural and personable, at some cost to literal closeness.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both preserve the core argument: Brainspotting can be preparatory or deep; EMDR for diffuse relational trauma may fit better after some reparenting because a Nurturer and Protector help hold the material; stable people with a single event may skip preliminaries. X tracks the source more tightly with no additions to meaning or rhetorical force. Y has the more natural, spoken voice, but its additions ('straight', 'though', 'once you can reach') slightly shift emphasis, and the instruction asks for fidelity to meaning and rhetorical function to be weighed on its own. If voice were weighted more heavily, Y would win, but on fidelity X is the safer match.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1144,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 794,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1144,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 794,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1144,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1144
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.01252,
+  "is_error": false,
+  "result_sha256": "6e4447af05578438b762c0279e4a0d43542343ec4bf0269341c29064a4abb7ca"
+}

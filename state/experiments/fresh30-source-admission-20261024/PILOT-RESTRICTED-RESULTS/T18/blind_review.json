@@ -1,0 +1,46 @@
+{
+  "case": "T18",
+  "stage": "blind_review",
+  "prompt_sha256": "ca883d525afec0f3b8c196158f6b1c02c473f93952b3ee23beafbe57e118953e",
+  "elapsed_s": 7.13,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Stays close to the source's structure: the page ranges follow the title and date, then the topic list. 'Covers' and 'addresses' are neutral replacements for 'discusses'. 'Should not be carried over wholesale' keeps the cautionary function of the source's 'shouldn't be imported wholesale'. The last sentence ('how it relates to another hypnotist and to recordings') is compact but a little ambiguous about what 'it' refers to. The register is dry and bibliographic, which suits an annotation.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"Slight elaboration in the last sentence: 'working with another hypnotist' and 'using recordings' make explicit the activities the source only names as relationships.\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Moves the page ranges to the end of the first sentence, which reads smoothly and keeps the list of topics uninterrupted. 'Shouldn't be carried over wholesale' keeps the source's contraction and the cautionary tone. The final sentence resolves the ambiguous referent by repeating 'learning', and the verb phrases are clearer, though slightly wordier and a small step toward interpretation ('looks at' for 'discusses').\"\n  },\n  \"preference\": \"TIE\",\n  \"why\": \"Both preserve the meaning and rhetorical function of the source: a bibliographic pointer with specific page ranges, a warning not to import clinical procedures and historical claims wholesale into solo practice, and a note on how self-directed learning relates to another hypnotist and to recordings. Neither omits or distorts anything material. X is tighter and closer to the source's structure. Y reads slightly more naturally and removes the ambiguity in the last clause, at the cost of mild elaboration. The differences are small enough that neither clearly wins; if forced, choose Y for clarity, or X for stricter fidelity.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1250,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 716,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1250,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 716,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1250,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1250
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.012164,
+  "is_error": false,
+  "result_sha256": "f95ebc0395851543deab9dcdf20a2487f6364930212597f2e317006dcfbd9f53"
+}

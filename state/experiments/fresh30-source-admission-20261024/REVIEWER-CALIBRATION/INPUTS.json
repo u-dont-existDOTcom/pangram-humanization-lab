@@ -1,0 +1,83 @@
+{
+  "schema": "known-owner-judgment-calibration-v1",
+  "purpose": "Test evaluator agreement with four known owner style judgments and three known owner preservation judgments. This is local calibration, not independent generalization. No new writing or Pangram calls.",
+  "source_html_sha256": "6909a7fcfe8e9f64a3597de1ae3388f0269690692b0350737d12fc9e008543ab",
+  "cases": [
+    {
+      "id": "envy",
+      "source": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. I’d still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too.\n\nSome friends or family really might not like it when you get happier, though. Someone might pull away, or keep dragging you back into the old misery. I’d take that loss seriously, and look at what they do and what you owe them, before deciding it’s envy.",
+      "before": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. I’d still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too.\n\nSome friends or family really might not like it when you get happier, though. Someone might pull away, or keep dragging you back into the old misery. I’d take that loss seriously, and look at what they do and what you owe them, before deciding it’s envy.",
+      "after": "What I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. That might not be how it goes for everyone, and it doesn’t mean unhappy people can’t help. Do your part for people who are suffering, and skip the part where you have to be miserable too.\n\nSome friends or family really might not like it when you get happier, though. Someone might pull away, or keep dragging you back into the old misery. I’d take that loss seriously, and look at what they do and what you owe them, before deciding it’s envy.",
+      "heading": "",
+      "owner_naturalness": "B",
+      "owner_fidelity_B": true,
+      "owner_reason": "",
+      "owner_feedback_complete": {
+        "naturalness": "B is clearly less AI-shaped",
+        "fidelity": "Yes, the same substantive thought",
+        "reason": ""
+      },
+      "anonymous_map": {
+        "X": "A",
+        "Y": "B"
+      }
+    },
+    {
+      "id": "thanks",
+      "source": "If the love still isn’t coming, you can at least stop judging your little one. Obviously no insults. Helpful advice is great, we all need advice. Let them absorb it at their pace. And don’t expect a thank-you for the session, like they booked it. That’s enough to start being the adult, even if it isn’t enough yet for them to trust you. That takes warmth, and if there isn’t any yet, borrow some.\n\nThe thank-you you weren’t waiting for might not come anyway. 😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!” Some days, just hearing it out like a decent adult is the only thing you’ll manage to borrow.",
+      "before": "If the love still isn’t coming, you can at least stop judging your little one. Obviously no insults. Helpful advice is great, we all need advice. Let them absorb it at their pace. And don’t expect a thank-you for the session, like they booked it. That’s enough to start being the adult, even if it isn’t enough yet for them to trust you. That takes warmth, and if there isn’t any yet, borrow some.\n\nThe thank-you you weren’t waiting for might not come anyway. 😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!” Some days, just hearing it out like a decent adult is the only thing you’ll manage to borrow.",
+      "after": "If the love still isn’t coming, you can at least stop judging your little one. Obviously no insults. Helpful advice is great, we all need advice. Let them absorb it at their pace. And don’t expect a thank-you for the session, like they booked it. That’s enough to start being the adult, even if it isn’t enough yet for them to trust you. That takes warmth, and if there isn’t any yet, borrow some.\n\nYour little one might not take it well at first. 😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!” Some days, just hearing it out like a decent adult is the only thing you’ll manage to borrow.",
+      "heading": "",
+      "owner_naturalness": "A",
+      "owner_fidelity_B": false,
+      "owner_reason": "the humor is gone and now the emoji makes no sense... this one passes If the love still isn’t coming, you can at least be present for your little one, without any judgements. Helpful advice is great, when they're ready for it (or when you're ready for theirs). And that warmth, well, we do need to get there.  If you can't find it yet, borrow some. That’s enough to start being the adult, but trust is earned over time. \n\nThe thank-you you weren’t waiting for? It might not come anyway. 😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!” ",
+      "owner_feedback_complete": {
+        "naturalness": "A is clearly less AI-shaped",
+        "fidelity": "No, something important is lost or altered",
+        "reason": "the humor is gone and now the emoji makes no sense... this one passes If the love still isn’t coming, you can at least be present for your little one, without any judgements. Helpful advice is great, when they're ready for it (or when you're ready for theirs). And that warmth, well, we do need to get there.  If you can't find it yet, borrow some. That’s enough to start being the adult, but trust is earned over time. \n\nThe thank-you you weren’t waiting for? It might not come anyway. 😜 More like “Oh, so NOW you care?” Your first instinct might be “But I’m trying!” "
+      },
+      "anonymous_map": {
+        "X": "B",
+        "Y": "A"
+      }
+    },
+    {
+      "id": "heading",
+      "source": "A Belonging Deeper Than Any Group\n\nThe Guide also points beyond itself, toward a belonging deeper than any group, one that doesn’t ask you to give up being yourself. That might be nature, or existence itself. It might be whatever your tradition sees as ultimate. Love can come from any of these places, and you also belong there, which is a little different. Maybe you’ve felt that outside somewhere, like you didn’t need anybody’s okay to be there. The way in is time in nature and contemplative practice, like meditation.\n\nWith that under you, belonging with people can get a lot less desperate. Not all at once, though. Your little one might still think, “If they stop liking me, I won’t belong anywhere,” and the Guide can remind it there’s more to belong to than them.",
+      "before": "A Belonging Deeper Than Any Group\n\nThe Guide also points beyond itself, toward a belonging deeper than any group, one that doesn’t ask you to give up being yourself. That might be nature, or existence itself. It might be whatever your tradition sees as ultimate. Love can come from any of these places, and you also belong there, which is a little different. Maybe you’ve felt that outside somewhere, like you didn’t need anybody’s okay to be there. The way in is time in nature and contemplative practice, like meditation.\n\nWith that under you, belonging with people can get a lot less desperate. Not all at once, though. Your little one might still think, “If they stop liking me, I won’t belong anywhere,” and the Guide can remind it there’s more to belong to than them.",
+      "after": "A Belonging Deeper Than Any Group\n\nThe Guide also points beyond itself, toward somewhere you belong that doesn’t ask you to give up being yourself. That might be nature, or existence itself. It might be whatever your tradition sees as ultimate. Love can come from any of these places, and you also belong there, which is a little different. Maybe you’ve felt that outside somewhere, like you didn’t need anybody’s okay to be there. The way in is time in nature and contemplative practice, like meditation.\n\nWith that under you, belonging with people can get a lot less desperate. Not all at once, though. Your little one might still think, “If they stop liking me, I won’t belong anywhere,” and the Guide can remind it there’s more to belong to than them.",
+      "heading": "A Belonging Deeper Than Any Group",
+      "owner_naturalness": "B",
+      "owner_fidelity_B": false,
+      "owner_reason": "A sounds ai becase it's polished, but B changed the meaning to finding a place to belong rather than finding belonging beyond place, how did u not see that",
+      "owner_feedback_complete": {
+        "naturalness": "B is clearly less AI-shaped",
+        "fidelity": "No, something important is lost or altered",
+        "reason": "A sounds ai becase it's polished, but B changed the meaning to finding a place to belong rather than finding belonging beyond place, how did u not see that"
+      },
+      "anonymous_map": {
+        "X": "A",
+        "Y": "B"
+      }
+    },
+    {
+      "id": "golden-forgiveness",
+      "source": "The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "before": "The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "after": "They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.",
+      "heading": "",
+      "owner_naturalness": "B",
+      "owner_fidelity_B": null,
+      "owner_reason": "absoluely, that revision \"They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.\" sounds WAY more human than the original. keep that as a golden example right there\n\ncontinue",
+      "scope": "Owner endorsed style of exact ending, not separate fidelity or whole paragraph endorsement",
+      "anonymous_map": {
+        "X": "B",
+        "Y": "A"
+      }
+    }
+  ],
+  "method": "Fresh restricted Sonnet medium, exact source and anonymous versions; old scores and owner labels withheld from the actual evaluator message. Original source also appears as one version to test preservation bias.",
+  "primary": "Naturalness vs exact owner preference; after-version fidelity vs explicit owner yes/no. Golden fidelity unscored.",
+  "immutable_old_scores": true,
+  "new_pangram_calls": 0
+}

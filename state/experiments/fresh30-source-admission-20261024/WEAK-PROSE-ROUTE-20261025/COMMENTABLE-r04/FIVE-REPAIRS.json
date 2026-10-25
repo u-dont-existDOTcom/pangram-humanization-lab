@@ -1,0 +1,82 @@
+{
+  "schema": "owner-requested-five-passage-repair-v1",
+  "date": "2026-10-25",
+  "owner_request_verbatim": "what do you mean the others remain unchanged? i'm not wasting my time with them then...",
+  "supersedes": "The five uncorrected model proposals in COMMENTABLE-r03; historical source and test evidence remain unchanged.",
+  "status": "ALL_FIVE_REVISED_AND_CHECKED; NEW_WORDING_NOT_OWNER_APPROVED; NO_ARTICLE_INSTALLATION",
+  "lesson": "A correction to one paragraph is not permission to re-deliver the other passages with already-identified problems. Repair those before requesting another owner review. Do not convert a review page into a list of known failures for the owner to fix.",
+  "owner_W01": {
+    "text": "Being cared for can bring up grief for the care you didn’t get when you originally needed it most. It's good to let out tears of grief, and some people find  grieving eventually opens their heart into warmth and connection, even a sense the universe is holding them. Others may find that tears keep coming, yet their despair deepens.",
+    "sha256": "ac004ef8bfd0ec42ee21fe0f513d419fcd1d9d4b31379a839c6c885918cf4cdd",
+    "authority": "Exact directly supplied owner replacement. Retained verbatim including spacing. No restored physiology disclaimer, love-failed reassurance or appended safety sentence. Keep decision seeded; do not request repeat approval."
+  },
+  "revised_candidates": [
+    {
+      "id": "W02",
+      "title": "Borrowing a caring adult",
+      "text": "Picture an adult who would want to take good care of you, if that helps. They could be someone you remember or an imagined person. What would they say or do if they knew your history and understood what was possible for you now, including your limitations? If a warm response is too hard to believe, begin with the least cruel one you can believe. When you find something usable, try saying or doing it instead of going through the exercise again in different words.",
+      "sha256": "6a40159875b26234e158fd624ac3fa66dd0311074199e6f17d2038c2cb603a27",
+      "change": "Remove the abstract eligibility opener and repeated conditional-coaching structure. Bring the remembered or imagined adult into the actual question. Both are free options; imagining is not restricted to readers with no trustworthy history. Preserve the least-cruel fallback and action rather than rephrasing.",
+      "mechanical_lint": "REVIEW",
+      "lint_disposition": "Second-person language is native to this exercise. The fallback condition and action-versus-repetition contrast change what the reader does, rather than adding a nonclaim caveat. No hard FAIL remains."
+    },
+    {
+      "id": "W03",
+      "title": "Pacing trauma work",
+      "text": "How much of something difficult can you approach while noticing what happens, and then come back from? That’s the practical side of widening your “window of tolerance,” and the question you’re working with in titration, pendulation or orientation. Some people may spend three to six months mainly learning to do this, though it’s only a rough guide. Someone who’s stable and has one clear target may be ready for focused trauma work much sooner, while severe developmental trauma can take longer.",
+      "sha256": "a0331e7b67760459aff5638d476279ca11c79af0e31195cf177292e16d98079a",
+      "change": "Replace the polished rough-guide/not-countdown ending and abstract capacity language with the practical question and different readiness conditions. Retain supplied terms, approximate numbers and qualifications without claiming medical verification.",
+      "mechanical_lint": "CLEAR"
+    },
+    {
+      "id": "W04",
+      "title": "Retiring or keeping a hypnosis shortcut",
+      "text": "Today’s trance ends when you come back. You can keep the shortcut for later, using it only for a session you’ve chosen in advance. To retire the shortcut, make that decision while wide awake and say it to yourself, then take it out of your recordings and apps. Stop practicing it and return to your usual induction. It may still work for a while after you’ve told yourself it’s gone. If it keeps drawing you into trance when you haven’t chosen it, or using it leaves you spacey and disoriented, ask someone qualified to help.",
+      "sha256": "a74c146b62107cc58254c445e970a9c468d859da34755101a39ea84c956b1ef7",
+      "change": "Separate ending this session from the future shortcut choice; remove repeated using-it phrasing and a redundant even. Keep the qualified-help instruction immediately attached to unwanted activation or disorientation, and retain all retirement/voluntary-use conditions.",
+      "mechanical_lint": "REVIEW",
+      "lint_disposition": "Direct second person and permission concern the actual chosen use of a shortcut. They are retained for their substantive practical function, not defended as universally Human style. No hard FAIL remains."
+    },
+    {
+      "id": "W05",
+      "title": "A near-death comparison and its limit",
+      "text": "I wasn’t floating around my room noticing specific details that anyone else could check. The closest comparison is with the out-of-body perception in some near-death reports, where people describe views from impossible angles. In a controversial subset of those reports, others in the room verified the details. Those reports help explain what I mean by no longer being stuck at the body’s vantage point, although they can’t verify my own experience. There’s more on the reports in a systematic analysis of near-death reports, the AWARE-II cardiac-arrest study and a recent veridical-NDE evidence scale.",
+      "sha256": "f96f7eeebf28ada68f81be6d54368de3993ca4891ea1f3ff70a79af86fe6d07f",
+      "change": "Remove repeated standalone explanations of checkability, distinguish the narrator's account from other reports, and unpack the crowded evidential sentence. Retain all three named source leads. No new source research or factual endorsement.",
+      "mechanical_lint": "CLEAR"
+    },
+    {
+      "id": "W06",
+      "title": "Correcting a remembered quotation",
+      "text": "“Life is like a dream” was a line I used to attribute directly to the historical Buddha. The famous stanza I loved comes from the later Mahāyāna Diamond Sutra, which puts words in his mouth, although the early Pāli texts have similar images. Dhammapada 170 asks us to see the world as a bubble and a mirage. In SN 22.95, form is compared to foam and feeling to a bubble; perception to a mirage and consciousness to a magic trick.",
+      "sha256": "a04c6b5c375b0ebd1fe45cdb0c5ff75a8d7967e7bc395a5e50686bb1373f7d31",
+      "change": "Unpack the source-and-image inventory, preserve the attribution correction, and separate Dhammapada from the four SN image correspondences. All named references and pairings retained; no doctrinal verification or added authority claim.",
+      "mechanical_lint": "CLEAR"
+    }
+  ],
+  "checks": {
+    "linter_repository": "u-dont-existDOTcom/joel-articles",
+    "linter_path": "tools/humanization/tells_lint.py",
+    "linter_blob": "bef6a011ec4745c8ec01ca2a1339bd812c63c41e",
+    "hard_failures_final": 0,
+    "clear": 3,
+    "review_with_editorial_disposition": 2,
+    "optional_linter_limits": "Spelling library absent and parser unavailable; linter uses fallback short list. Manual spelling/referent reading supplements these; no claim of a full parser-enabled run.",
+    "fresh_preservation_reader": "One fresh restricted Claude Sonnet source-reader inspected five intermediate/final pairs. Exact final W03-W06 received no material-error finding. W02 was further revised: a follow-up reader caught optionality narrowing in an intermediate version, which was repaired by restoring unconditional choices and the optional invitation. Final W02 correction is manually verified; do not relabel the earlier reader result as a final independent pass.",
+    "owner_approval_new_five": false,
+    "new_Pangram_calls": 0,
+    "article_masters_changed": false
+  },
+  "review_delivery": {
+    "filename": "Five_Rewritten_Passages_Commentable_r04.html",
+    "sha256": "c34dbcf80d55eaf6c6562b70ec46f8b7132393cc8662a360af726eeed2256ead",
+    "parent_review_sha256": "7304675355db9e64bc0437cc6d39b3d98ed5ffe707ca84de96cd4a15be53988c",
+    "contract": "joel-commentable-diff-review-v4",
+    "left_column": "Previously delivered proposals for W02-W06; historical source remains for W01 with the recorded owner objection.",
+    "right_column": "Five repaired proposals; exact owner W01 remains Keep.",
+    "comment_buttons": 12,
+    "tested": "Desktop/mobile and light/dark comments, selected offsets, export/import and storage persistence across reinjection; r03 comment migration keeps historical wording and downgrades stale approvals on changed text.",
+    "navigation_limit": "Container browser blocks file navigation; interaction tests used page.set_content and storage shim. Do not claim new actual-file navigation or user-browser persistence verification.",
+    "minimum_tested_text_contrast": 14.67911847763172
+  }
+}

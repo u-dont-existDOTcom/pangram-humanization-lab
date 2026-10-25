@@ -1,0 +1,41 @@
+{
+  "case": "envy",
+  "prompt_sha256": "90f3e0bfe5267a29b3a870a9f51806a4e2ffa31b4fcb5384368a7c9a0ca378e8",
+  "returncode": 0,
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"The middle sentence of paragraph one is clumsy: 'I'd still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too.' It begins in first person, then shifts to an imperative, and 'take seriously' is stacked on 'do what you owe.' The conversational shrug at the end ('skip the part') is nice, but the sentence feels assembled. Also, 'take that loss seriously' in paragraph two repeats 'take ... seriously' from paragraph one, which reads as a verbal tic and not a deliberate echo. Overall the voice is plausible but a bit hedged and over-qualified.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"The imperative 'Do your part for people who are suffering, and skip the part where you have to be miserable too' is brisk and casual, and the 'part ... part' repetition reads as spoken, a natural rhetorical play. It avoids the doubled 'take seriously' phrasing, so the later 'I'd take that loss seriously' lands fresh. The shift from 'I found' to direct advice is a normal move in personal essays. The second paragraph is identical to X's and works fine here, with a more cohesive arc from the first.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"The two excerpts differ only in one sentence. Y's version is tighter and sounds more like a person talking, and it keeps 'take ... seriously' for one use so it works better in the second paragraph. X's version is wordier, mixes registers within one sentence, and repeats a phrase across paragraphs in a way that feels mechanical.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1111,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 587,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1111,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 587,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1111,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1111
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.010317999999999999
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "fresh30-isolated-six-family-prospective-v3",
+  "prepared_date": "2026-10-25",
+  "status": "FROZEN_BEFORE_V3_OUTPUTS",
+  "main_objective": "Compare source-faithful, natural prose generation across independent source-passage families, with example retrieval vs plain rewriting; fidelity and owner naturalness outrank detector pass.",
+  "design_rationale": "V1 semantic-dossier baselines failed fidelity in 3/3. V2 exact-source baselines passed 3/3 but nonrestricted CLI inherited very large context; first revisions often added rhetorical aftercare or lost claims. V3 uses Claude restricted mode verified on static smoke with ~443 input tokens and no project settings/tools/memory, separate processes and workspaces, the baseline prose rather than the source-function checklist as writing substrate.",
+  "cases": [
+    {
+      "id": "T05",
+      "source_article": "romance",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "match_quality": "medium"
+    },
+    {
+      "id": "T09",
+      "source_article": "communities",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "match_quality": "weak"
+    },
+    {
+      "id": "T13",
+      "source_article": "inner-child",
+      "baseline_mode": "recovered_frozen_V2",
+      "exact_baseline_sha256": "f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "match_quality": "strong",
+      "baseline_detector": "Pangram 4.1 AI/high; known diagnostic, not blind holdout"
+    },
+    {
+      "id": "T16",
+      "source_article": "hypnosis",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "match_quality": "strong"
+    },
+    {
+      "id": "T22",
+      "source_article": "nibbana",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "match_quality": "medium"
+    },
+    {
+      "id": "T28",
+      "source_article": "somatic",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "match_quality": "medium"
+    }
+  ],
+  "engine": {
+    "model": "claude-sonnet",
+    "effort": "medium",
+    "transport": "claude -p --restricted --strict-mcp-config --disable-slash-commands --setting-sources '' --tools '' --no-session-persistence",
+    "freshness": "separate process and per-stage empty working directory; explicit lean system prompt, no project/user/local auto-settings",
+    "stability_check": "static restricted mode 443 input tokens on test, no preloaded 94k cached project context; counts to be measured per task",
+    "max_turns": 1,
+    "actual_usage_recorded": true
+  },
+  "stages": [
+    {
+      "id": "baseline",
+      "source": "Exact registered source paragraph; nearby context only as needed for referent; output only new model-written faithful single paragraph",
+      "on_error": "fidelity fail -> stop case and preserve"
+    },
+    {
+      "id": "baseline_fidelity",
+      "source": "Original exact source and baseline, no Pangram labels, independent stage context",
+      "on_error": "fail -> stop"
+    },
+    {
+      "id": "A",
+      "source": "Common admitted model baseline, no teacher, no source text, one paragraph or unchanged"
+    },
+    {
+      "id": "B",
+      "source": "Same baseline and restrictions, plus exactly one preassigned literal cross-article teaching pair; no target/source leakage"
+    },
+    {
+      "id": "review",
+      "source": "Original source, anonymous A/B outputs, no teacher, no detector labels; assess meaning, rhetoric and voice separately"
+    }
+  ],
+  "output_format": "single paragraph, no headings/bullets/multi-para or extra JSON in generation outputs",
+  "acceptance": "Any missing actor/claim, changed certainty, invented rationale/example, lost humor, added clinical/medical advice or switch to multiple paragraphs disqualifies first-pass joint quality; retain all failed candidates.",
+  "analysis": "Descriptive only; 6 cases from 6 article clusters, one author; prior T13 detector known, no independent 6-case accuracy extrapolation. Categorize voice preference and fidelity separately. Only meaning-approved, decision-relevant future Pangram calls, one to three paragraphs with exact cached result.",
+  "paid_pangram_calls_planned": 0,
+  "owner_review_status": "NOT_REQUESTED_NOT_IMPLIED",
+  "current_generation_outputs": 0
+}

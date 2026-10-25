@@ -1,0 +1,8 @@
+{
+  "prompt": "Assess only the human-sounding naturalness of these two essay excerpts. Neither is privileged as a source or original. Do not infer actual authorship or detector scores. Do not score semantic fidelity in this stage. Judge the writing as a reader, including the relationships between thoughts, pacing, voice, and rhetorical effects. Clear, short, polished prose is not automatically more natural; a long sentence is not automatically worse. Do not penalize a version merely because it changes syntax or point of view compared with the other. Return JSON with X and Y objects containing voice_score_1_to_5 and prose_comment, plus preference X/Y/TIE and why.\nHEADING: \nCANDIDATE X:\nThe same principle extends to inner-child therapy: you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.\nCANDIDATE Y:\nThis also happens in inner-child therapy: you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.",
+  "sha256": "1262ea73a077ae047e4edbcfdba2c8a50f3dbd4a935bccb36bf491da0b8283d0",
+  "presentation": {
+    "X": "A",
+    "Y": "B"
+  }
+}

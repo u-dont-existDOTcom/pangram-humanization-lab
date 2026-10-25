@@ -1,0 +1,46 @@
+{
+  "case": "T24",
+  "stage": "blind_review",
+  "prompt_sha256": "3db5ea30c87c3c2d2d7656276a52926f724a0fbab050d87c98fab8fb3b79493a",
+  "elapsed_s": 8.84,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"The source's 'Independently perfect' is rendered as 'Perfectly independent', a slight shift in modifier scope, but nothing substantive is lost.\",\n      \"The source's contrastive 'But' is replaced by 'though' mid-sentence, which softens the pivot slightly.\"\n    ],\n    \"added\": [\n      \"'would not help much' is a mild softening of 'aren't so useful', and the tense shifts to a conditional.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Clean and accurate, but a bit formal and stiff ('would not', 'I understand that now'). It loses the casual, wry bluntness of 'I get it now', which gives the source its conversational punch. The separate closing sentence preserves the source's rhythm, with its short, deflating final beat. Slightly over-polished, with less of the speaker's dry humor.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Same modifier reordering as X ('Perfectly independent').\",\n      \"Drops the full stop before 'I understand that now', so the final beat is folded into the previous sentence and loses some of the source's abruptness.\"\n    ],\n    \"added\": [\n      \"'still' in 'I still operate' is not in the source, though it fits the implied continuity with 'Most of the time' and the contrast with 'always different from before'.\",\n      \"'when I'm using a shovel' makes the speaker present and concrete, a small but natural expansion of 'for using a shovel'.\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"More natural and spoken: contractions ('wouldn't'), the first-person shovel image, and a flowing final sentence read like a person talking. The added 'still' slightly sharpens the before/after contrast, which supports the passage's rhetorical function. Merging the last clause weakens the punchy 'I get it now' beat a little, but the overall register stays closer to the source's plain, personal tone.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Both candidates preserve the source's meaning and its argumentative structure: functioning through a unified self is practically necessary, but the speaker no longer mistakes it for reality, and it is an evolved survival construct. Y is warmer and more idiomatic, and its contractions and concrete shovel phrasing match the source's casual voice better. Its small additions ('still', 'when I'm using') do not change the claims. X is faithful but stiffer, and it gains only its preserved sentence break at the end. Y's voice advantage outweighs this.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1125,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 887,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1125,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 887,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1125,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1125
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.013374,
+  "is_error": false,
+  "result_sha256": "a70f6fbae64a738448241b704772e65b27a3c3e3005b6eb2f4800e545ec8097c"
+}

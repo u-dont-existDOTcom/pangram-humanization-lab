@@ -1,0 +1,41 @@
+{
+  "case": "golden-forgiveness",
+  "prompt_sha256": "bcddea24b6a2b6ab6e8270bebd6e28fcfe17b294de536bedbf673277b21036c3",
+  "returncode": 0,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"The impersonal, declarative framing ('The harm happened', 'The person') is replaced with first-person plural 'us/we/them'.\",\n      \"'forgiveness may come later on its own' is weakened: 'on its own' (unforced, not required or demanded) is replaced by 'we may find that we have forgiven them', which changes the agent and the sense of arrival.\",\n      \"The terse, separate-sentence rhythm that sets boundary, accountability, and forgiveness as three distinct points is lost.\"\n    ],\n    \"added\": [\n      \"'really did hurt us': adds emphasis and a specific relationship ('us').\",\n      \"'one day': adds a time frame that makes forgiveness a likelier outcome.\",\n      \"'we may find that we have forgiven them': adds a retrospective discovery framing and an agent.\",\n      \"'have to answer for it': recasts 'accountable' as an obligation to answer, which is close but slightly more forceful.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Reads as a natural spoken sentence, but it is a run-on chain of clauses joined by commas and 'and'. It is warmer and more personal than the source, but it loses the source's crisp, axiomatic cadence. Meaning is mostly preserved, with drift in perspective and in how forgiveness is framed.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Identical to the source, word for word. It is clean, balanced, and rhythmic, with short declaratives that fit the rhetorical function. Fidelity is perfect because it is not a rewrite. If the task is to produce a rewrite, it shows no transformation.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Y keeps the source's meaning, structure, and rhetorical function intact: harm acknowledged, boundary upheld, accountability retained, forgiveness left as optional and self-arising. X changes the point of view, adds 'one day' and a discovery framing, and merges the short statements into one long sentence. One caveat: Y is a verbatim copy of the source, so if the goal is a paraphrase, it does not do the job. On fidelity and voice, Y is stronger.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 807,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 799,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 807,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 799,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 807,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 807
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.011222000000000001
+}

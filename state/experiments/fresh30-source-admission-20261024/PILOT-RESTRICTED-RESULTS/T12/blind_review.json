@@ -1,0 +1,46 @@
+{
+  "case": "T12",
+  "stage": "blind_review",
+  "prompt_sha256": "74961d480721897a847987d4a33578aa22013f91fbb454881e6158ed8d2686e8",
+  "elapsed_s": 10.21,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"'to the child' after 'intrusive' (clarifying who feels intrusion; source leaves the subject implicit)\",\n      \"'the child cannot receive love' replaces the source's more general 'an inability to receive love' (narrows to the child)\",\n      \"'the child's response' replaces 'the response' (specifies whose response)\",\n      \"'is being offered' (minor progressive shift)\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Tracks the source almost sentence for sentence, preserving its four-beat structure: observation, example, remedy, caveat, and closing directive. Rhetorical function is intact: the 'patience vs. demand to hurry' contrast stays binary and terse, and the final sentence keeps its corrective force. The repeated 'the child' makes it slightly heavier and more explanatory than the source, and the phrasing is a little stiff, but it is clean, clear, and unobtrusive.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"The source's claim that 'I care about you' can carry patience or a demand to hurry is recast as differing by recipient; the point that the same words can function either way is partly kept but reframed\",\n      \"The explicit framing of difficulty as not 'establishing' an inability is softened to 'doesn't mean'\"\n    ],\n    \"added\": [\n      \"'to one child ... to another' (introduces a variation across different children, which the source does not claim)\",\n      \"Invented quoted paraphrase 'I'll wait as long as you need' standing in for 'patience'\",\n      \"'altogether' (emphasis)\",\n      \"'because' causal link between noticing and the meaning of the phrase (source presents these as separate statements)\",\n      \"'and so' causal link in the final sentence, making the teaching conclusion a consequence of the previous claim\",\n      \"'you can try' (softens the imperative to permission)\",\n      \"'the child's response should teach you' (shifts from imperative 'Let the response teach you' to a normative statement)\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Reads as more fluid and conversational, with longer, connected sentences and a vivid concrete rendering of what 'patience' sounds like. However, the rhetorical function shifts: the source's brisk, directive, separate statements become a chain of causal connectives, and the contrast moves from what the phrase can carry to how it lands on different children. The final sentence loses the imperative's directness, and the invented quotation adds content. It is more natural-sounding but a looser rendering.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X preserves the source's meaning, structure, and directive force with only minor clarifying additions of 'the child.' Y reads more smoothly, but it adds an invented quote, a between-children comparison, and causal connectives ('because,' 'and so') that alter the source's logic and soften its imperatives. Since the task weights fidelity to meaning and rhetorical function, with voice assessed separately, X wins on fidelity despite Y's somewhat better voice.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1130,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1058,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1130,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1058,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1130,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1130
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.015104,
+  "is_error": false,
+  "result_sha256": "8333698a97075b00bf741055699229c07a72ea8646094fadd4afb6e494079d7a"
+}

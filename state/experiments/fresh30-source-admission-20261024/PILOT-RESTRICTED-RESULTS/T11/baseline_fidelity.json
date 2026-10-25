@@ -1,0 +1,46 @@
+{
+  "case": "T11",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "622855d3c1f09005e4ec8fb278f0649c2596a008a7aa084226e63310d7869b62",
+  "elapsed_s": 6.01,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material content is preserved: the repeated episodes, the decision to stop giving in to the victim mentality, treating it seriously as spiritual practice, the inner guide's view of it as an opportunity to show love over fear, sending unconditional love despite fear, the 'some minutes' duration, and the demon leaving and never returning. Differences are wording only (multiple/several such, perfect/ideal, power of love over fear/love is more powerful than fear, scary/frightening). One minor point: the source's 'taking it seriously' has an ambiguous referent (the victim mentality or the episodes). The draft resolves it to 'the experience', which is a plausible reading and not a material change.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 948,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 560,
+    "output_tokens_details": {
+      "thinking_tokens": 280
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 948,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 560,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 948,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 948
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009395999999999998,
+  "is_error": false,
+  "result_sha256": "22cc3d6adfe900bb4ac77fa65a29b47685b36010b1c09875b7ef0f75ac88842b"
+}

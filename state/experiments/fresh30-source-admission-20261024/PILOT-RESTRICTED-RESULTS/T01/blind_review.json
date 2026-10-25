@@ -1,0 +1,46 @@
+{
+  "case": "T01",
+  "stage": "blind_review",
+  "prompt_sha256": "829bfa5e5632984039d3345a19732278f4d5fae193cdbf65d8b05bfee8f9ce2e",
+  "elapsed_s": 9.04,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"The source's 'amazed' is softened to 'surprised'.\",\n      \"'So' as an explicit inferential connector is replaced by 'then', which is a minor shift.\",\n      \"'No longer interested' is rendered as 'lost interest', which is slightly more process-oriented.\"\n    ],\n    \"added\": [\n      \"'however' marks the contrast with B. more explicitly than the source does.\",\n      \"'her childhood' makes the possessive explicit; the source says only 'childhood'.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Clean and polished, but more formal and compressed than the source. The semicolon plus 'then' gives it an essayistic tone, and 'however' is a stock transition. Sentence boundaries are kept, so the rhythm of the original (short declaratives building to an analytical conclusion) is partly preserved. The 'amazed' to 'surprised' flattening and the merging of the exception into an appositive lose some of the source's wry aside.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"The source's 'amazed' is softened to 'surprised'.\",\n      \"'No longer interested' becomes 'lost interest', which is slightly more process-oriented.\",\n      \"The sentence break between the exception and B.'s disbelief is removed, so the tone loses some of the source's staccato.\"\n    ],\n    \"added\": [\n      \"'though' adds a contrastive marker.\",\n      \"'its own' adds a little emphasis on the continued existence.\",\n      \"'her childhood' makes the possessive explicit.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Keeps the source's inferential 'So', which preserves the rhetorical turn from evidence to interpretation. However, it fuses the first three sentences with a colon and a comma splice-like chain, which makes the passage heavier and less conversational than the source. 'Its own' is a small stylistic flourish. The result reads as fluent but a bit more engineered than the plain, direct original.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Both candidates are faithful in substance and both soften 'amazed' to 'surprised', so fidelity is nearly tied. Y keeps the explicit 'So' that signals the move from evidence (B. hallucinating) to inference (her jealousy isn't tracking the present), which is the passage's key rhetorical function. X replaces it with a mid-sentence 'then', which weakens that pivot. X's advantage is that it keeps the sentences separate and so retains more of the source's short-sentence cadence. Y's merging into long sentences costs it on voice. I weigh the preserved argumentative structure slightly above the cadence, so the preference for Y is mild.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1118,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 950,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1118,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 950,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1118,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1118
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.013976,
+  "is_error": false,
+  "result_sha256": "71702e78e1d769109614326e29abd882670105dbd4f282ad2393e2169a2868fe"
+}

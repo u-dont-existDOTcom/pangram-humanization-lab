@@ -1,0 +1,46 @@
+{
+  "case": "T10",
+  "stage": "baseline",
+  "prompt_sha256": "bdb25a398f5ec4abcc16c8c6d951a46bc4b70e5294be97347ac3de32b7e34033",
+  "elapsed_s": 3.89,
+  "return_code": 0,
+  "error": null,
+  "result": "Exchange and obligation call for the same honesty even where no one uses money internally. Gifts of food, pooled medicine, loans of a vehicle or tool, reciprocal labor, emergency housing, shared building projects, and visits meant mainly for training or relationship-building are different kinds of events. Some create a future obligation, and some do not. A federation can keep records for specific purposes without pricing everything or forcing every transfer into parity. Where cash is used at the outside interface, grants, loans, guarantees, and shared-enterprise commitments likewise need to be kept separate. Solidarity does not mean unlimited joint liability, nor an unlimited claim on another community's labor, stores, land, or tools.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 900,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 231,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 900,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 231,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 900,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 900
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.005914,
+  "is_error": false,
+  "result_sha256": "010195cf35288b878f3bb666b36ef343b52bdc05d7be65c9b016a2d3a60c08d8"
+}

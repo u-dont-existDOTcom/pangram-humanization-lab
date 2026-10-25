@@ -1,0 +1,40 @@
+{
+  "prompt_sha256": "38373a1046905a25a0e92055e74271101e1504758fcc47a70bdc27bfaf54c5b3",
+  "result": "```json\n{\n  \"supported\": true,\n  \"errors\": [],\n  \"caveats\": [\n    \"I recomputed the counts against RESULTS.json and CONTEXT-RESULTS.json and found no numerical error. Style: 8 of 10 calls matched, and 4 of 5 comparisons matched in both orders (S02–S05). Deletion: 3 matches (F12, F22, F19), 6 opposite (F07, F17, F04, F10, F25, F28) and 3 UNCERTAIN (F02, F14, F21). The 6 KEEP / 6 CUT split holds, and 22 calls equals 10 style plus 12 function. The context diagnostic moved 3 of 6 (F17, F10, F28), while F07, F04 and F25 stayed wrong.\",\n    \"Every quoted owner answer in the report matches GOLD-KEY.json verbatim or by accurate paraphrase: the h4 answer, 'choose ur battles', and the sacrilegious remark about the spiritual-beings cut. The model's 'secondary generalization' and 'redundant softener' are paraphrases of its outputs, not exact quotes. They are fair, since F04 said 'side claim' and F28 said 'redundant softener'.\",\n    \"The report labels its limits accurately: curator not blind, five style cases rather than ten, a post-selection context diagnostic, and no 12-case full-context result. These are properly flagged uncertainty, not errors.\",\n    \"S05 is labeled 'explicit comparative style reason'. The owner's remark was 'this sounds more human', alongside a function-based reason. It is a weaker style label than S03 and S04, and the report's grouping of it as explicit slightly flatters it. This is minor.\",\n    \"The final claim that the owner-golden forgiveness revision was not reused, and the 'no article master/production rule changed' statement, cannot be verified from the supplied packet. Neither is contradicted.\",\n    \"The SHA-256 and OUTPUTS retention claims are not checkable here, because the raw OUTPUTS and PROMPTS.json were not supplied. The packet contains only parsed result files with response hashes.\",\n    \"The phrase 'recognized four new owner preferences' reflects the 4/5 consistent match. It applies only to the model's numeric rank. The S02 preference was qualified, and the owner said both versions still look AI. The report states this itself.\"\n  ]\n}\n```",
+  "response_sha256": "183e63b15737dff513458236b37009936f5f6c8c16cb01ccdb8792f12cdd318c",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 38803,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 2381,
+    "output_tokens_details": {
+      "thinking_tokens": 1578
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 38803,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2381,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 38803,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 38803
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "returncode": 0
+}

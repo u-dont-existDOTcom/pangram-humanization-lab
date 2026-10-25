@@ -1,0 +1,59 @@
+{
+  "case": "F19",
+  "stage": "DELTA",
+  "prompt_sha256": "30fce3b5798637c30087690c5fc4482119aa9ddc6314674d4ce33aebaaf62b06",
+  "response_sha256": "a391fa56477dea611837c9126c70713110b23e01423f014c21dade1a32fd93d0",
+  "result": "{\"differences\":[{\"baseline_words\":\"the love or grief that sounded like therapy talk is just obvious\",\"candidate_words\":\"the love or grief that used to sound like therapy talk is just obvious\",\"kind\":\"SHIFT\",\"material\":false,\"explanation\":\"Adds 'used to', a mild temporal framing (formerly sounded like therapy talk) versus the baseline's simple past. Both convey that it previously sounded like therapy talk and is now obvious, so the thought is essentially unchanged. Not a concrete change in claim, scope, certainty or function.\"}],\"unresolved\":[],\"summary\":\"The only change is 'sounded' to 'used to sound', which is a superficial tense variation with no concrete change in meaning. The target sentence, 'They can feel totally real, but that alone doesn't prove they happened,' is identical in both. No material differences.\"}",
+  "parsed": {
+    "differences": [
+      {
+        "baseline_words": "the love or grief that sounded like therapy talk is just obvious",
+        "candidate_words": "the love or grief that used to sound like therapy talk is just obvious",
+        "kind": "SHIFT",
+        "material": false,
+        "explanation": "Adds 'used to', a mild temporal framing (formerly sounded like therapy talk) versus the baseline's simple past. Both convey that it previously sounded like therapy talk and is now obvious, so the thought is essentially unchanged. Not a concrete change in claim, scope, certainty or function."
+      }
+    ],
+    "unresolved": [],
+    "summary": "The only change is 'sounded' to 'used to sound', which is a superficial tense variation with no concrete change in meaning. The target sentence, 'They can feel totally real, but that alone doesn't prove they happened,' is identical in both. No material differences."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2095,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 282,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2095,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 282,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2095,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2095
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.011204,
+  "elapsed_s": 4.61,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

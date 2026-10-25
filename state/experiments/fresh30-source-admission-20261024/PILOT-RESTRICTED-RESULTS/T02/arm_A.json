@@ -1,0 +1,46 @@
+{
+  "case": "T02",
+  "stage": "arm_A",
+  "prompt_sha256": "b01799510ac7c7594c7b9aef09c9e13e68ed85451202be38e0dd9c0a56f2107a",
+  "elapsed_s": 2.87,
+  "return_code": 0,
+  "error": null,
+  "result": "I grew up assuming the best of everyone, because that is what my parents taught me. Now I am trying to be more suspicious, looking for red flags before I end up alone with someone I badly want to please. Why does she contact me only sometimes? What is the pattern? Is she communicating enough for me to know her level of interest and what lies beneath it? Would my twin flame behave like this?",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 810,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 121,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 810,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 121,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 810,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 810
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004454,
+  "is_error": false,
+  "result_sha256": "0b31527274dcb6d09aef480a7c227fd33e4bcdf19484e92f0bf6c610005894ea"
+}

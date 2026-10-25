@@ -1,0 +1,46 @@
+{
+  "case": "T26",
+  "stage": "arm_B",
+  "prompt_sha256": "a07bb2c54e3f115d76138c7a6f53f5fc795e36d826df970593b5a6e2abd9ea1c",
+  "elapsed_s": 5.0,
+  "return_code": 0,
+  "error": null,
+  "result": "This is where the familiar talk of widening your \"window of tolerance\" gets practical. Titration, pendulation, and orientation all ask the same thing: can you touch something difficult in a dose small enough to handle, notice what happens, and come back? Some people may spend three to six months mostly building these capacities, and with severe developmental trauma it can take longer. But I'd take that as a rough guide, not a countdown. If you're stable and have one clear target, you may be ready for focused trauma work much sooner.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1177,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 419,
+    "output_tokens_details": {
+      "thinking_tokens": 258
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1177,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 419,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1177,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1177
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.008902,
+  "is_error": false,
+  "result_sha256": "ef0dcb085804c7b182ad5d9fe469f48c1328419f6b005e21121f2009d082bc0b"
+}

@@ -1,0 +1,62 @@
+{
+  "id": "S02",
+  "stage": "order-1",
+  "prompt_sha256": "312a7873945366ed22680b6d2cf494761fc22fc018261821359f37fd4ab63d0b",
+  "response_sha256": "7c66c138f2c4556ab16e99423a67b0922cff8d5bd524461b7d0674c309a59063",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"\\\"This also happens in...\\\" is a plain, conversational way to attach a new example. It sounds like someone thinking aloud and moving from one case to the next without ceremony. The colon-led second half is concrete and slightly intimate, and its long final clause carries the point naturally. The weak spot is that \\\"This\\\" has no explicit referent in the excerpt, though in a running essay that would read as ordinary backward reference.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"\\\"The same principle extends to...\\\" is more formal and expository. It names the earlier idea as a \\\"principle\\\" and says it \\\"extends,\\\" which is a stock essay transition that feels a bit like a lecture or textbook. The shared second half is just as vivid, but the opener adds abstraction and slightly flattens the voice. It is clear and fine, but less spoken and less personal than X.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"The sentences are identical after the colon, so the difference is the opener. X's casual \\\"This also happens in\\\" fits the plain, lived tone of the clause that follows. Y's \\\"The same principle extends to\\\" is a more generic, scaffolded transition and sounds more composed than spoken. The difference is small, and either would work in a full essay.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 4,
+      "prose_comment": "\"This also happens in...\" is a plain, conversational way to attach a new example. It sounds like someone thinking aloud and moving from one case to the next without ceremony. The colon-led second half is concrete and slightly intimate, and its long final clause carries the point naturally. The weak spot is that \"This\" has no explicit referent in the excerpt, though in a running essay that would read as ordinary backward reference."
+    },
+    "Y": {
+      "voice_score_1_to_5": 3,
+      "prose_comment": "\"The same principle extends to...\" is more formal and expository. It names the earlier idea as a \"principle\" and says it \"extends,\" which is a stock essay transition that feels a bit like a lecture or textbook. The shared second half is just as vivid, but the opener adds abstraction and slightly flattens the voice. It is clear and fine, but less spoken and less personal than X."
+    },
+    "preference": "X",
+    "why": "The sentences are identical after the colon, so the difference is the opener. X's casual \"This also happens in\" fits the plain, lived tone of the clause that follows. Y's \"The same principle extends to\" is a more generic, scaffolded transition and sounds more composed than spoken. The difference is small, and either would work in a full essay."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 875,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 461,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 875,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 461,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 875,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 875
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.008114,
+  "elapsed_s": 6.44,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "X": "B",
+    "Y": "A"
+  }
+}

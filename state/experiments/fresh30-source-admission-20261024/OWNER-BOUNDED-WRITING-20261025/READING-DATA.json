@@ -1,0 +1,470 @@
+{
+  "schema": "owner-bounded-reading-packet-v1",
+  "report": "# Owner-bounded writing: preserving decisions without preserving every sentence shape\n\n**2026-10-25. Development experiment on twelve known owner decisions; no article edits or new Pangram calls.**\n\n## What changed in the method\n\nThe earlier model was asked to decide whether each qualification deserved to remain. It frequently disagreed with Joel, even after being given the full source section. This experiment removes that authority. The baseline first applies only the actual owner decision: six cuts, six keeps, and the additional correction from “There are just” to “These are just” in the caution-sign paragraph.\n\nA fresh restricted-context writer then sees the complete source section and the explicit owner instruction. It may propose at most two local replacements, or none. A deterministic assembler preserves six specifically retained spans verbatim, rejects overlapping/invalid patches, and refuses exact restoration of deleted wording. These are conservative experimental controls, not a new universal ban on rewording or a claim that locks prove semantic fidelity.\n\nAll twelve first attempts were committed before review. Changed candidates received two separate fresh-context reads: the unchanged source-free style comparison, and a source-aware inventory of concrete changes in meaning. The latter was NOT asked whether it considered the owner's retained points important. Its task was to identify differences, not grant deletion authority.\n\n## Observed outcomes\n\n| Measure | Result |\n|---|---:|\n| Known source cases | 12 |\n| Exact owner decision/locked-span constraints preserved | 12 |\n| Writers chose no additional change | 6 |\n| Writers proposed a local change | 6 |\n| Small cleanups with consistent model style preference and no material delta reported | 4 |\n| No clear style gain | 1 |\n| Candidate rejected for a material meaning difference | 1 |\n| Fresh model calls | 24 |\n| New Pangram calls | 0 |\n\nScope preservation is achieved partly by construction. It is not a 12/12 score for learning which clauses are useful. The model was told the owner's decisions, rather than being tested on hidden decisions.\n\nThe four tentative cleanups were: “an inference you're guessing” to “a guess you're making”; removing the second nearby “too”; repairing quotation-mark placement around “glass half full”; and “keeping our ground” to “holding our ground,” with “when feasible” unchanged. They are model-reviewed local suggestions, not owner-approved prose or detector passes. The writer's explanation that an inference is necessarily a guess is not adopted as a general linguistic fact.\n\nThe “sounded” to “used to sound” change received equal numeric style scores but a slight verbal preference for the candidate. It is recorded as no clear style gain, not a success manufactured by choosing the favorable part of the review.\n\n## The important failure: repeated words were not necessarily repeated thought\n\nThe source said:\n\n> before that love starts to feel like yours, and then bit by bit it starts to become your own.\n\nThe candidate said:\n\n> before that love gradually starts to feel like your own.\n\nThe writer described the source as saying the same thing twice. The style-only reviewer found the shorter version smoother, but its numeric score and verbal tie did not agree. More importantly, the separate delta reader identified a concrete loss: the source can distinguish first feeling ownership from gradually internalizing it. The rewrite retained gradualness but collapsed that sequence into a change in feeling alone.\n\nThe owner-retained sentence about continuing to relate to spiritual beings remained byte-identical. That did not make the whole candidate faithful. The surrounding explanation had changed, so the candidate is **fidelity-rejected** for this research; it is not installed anywhere. This conservative rejection preserves the distinction visible in the source rather than deciding for Joel that it was dispensable.\n\nThis is a specific, inspectable example of the broader compression concern: shared words do not prove shared function. It is not a general claim that shorter writing is worse, or that every apparent sequence deserves more words. The removal of the repeated “too” is a contrasting case where the independent reader found the additive relation remained carried by “And” and “also.”\n\n## What this approach actually establishes\n\nIt provides a safer way to implement explicit corrections: decide authority from the owner's record, apply those decisions mechanically, and reserve generation for a limited residual wording task. Six no-change outcomes are legitimate restraint, not six failures to produce enough edits. None of the earlier keep/cut disagreements was reopened as an editorial vote.\n\nIt does NOT show that a model has learned the deeper transformation in the golden forgiveness example. Most proposed changes were small cleanup. Nor does the absence of a delta flag certify the other five proposals: the delta reader remains a model, the input set is familiar development material, and Joel has not judged these new variants.\n\nThe lesson is therefore bounded: exact owner constraints can remove one source of destructive editorial discretion, but they cannot substitute for understanding the relations in the rest of the passage. Local wording repair and whole-thought humanization remain different tasks.\n\n## Evidence, limits and continuation boundary\n\nAll twelve cases are from one article and already have known owner judgments. They are not twelve independent authors, an untouched holdout, or a test of a universal stylistic operation. No claim of 80%, 100% or any population-level accuracy is made. The unchanged style prompt still produces occasional disagreement between its numbers and its stated preference; both are retained.\n\nINPUTS.json pins the exact historical source/owner records and full-section context. CANDIDATES.json contains every first attempt/no-change. RESULTS.json records literal edit patches, model judgments and their disagreements. OUTPUTS holds every execution prompt and raw textual answer; verify_bounded.py checks exact source, prompt, response, assembly and score identities without calls.\n\nNo current article master, published copy, owner-final text or production rule changed. The next humanization trial should use genuinely weak model prose with a documented relational thought to recover, rather than treating these mostly readable owner-corrected excerpts as failed AI baselines. Do not add more phrase bans or buy detector calls merely to certify these grammar-level changes. These new results remain provisional, with the one meaning-changing candidate explicitly rejected.\n",
+  "counts": {
+    "literal_owner_scope_preserved": 12,
+    "no_change": 6,
+    "changed": 6,
+    "small_cleanup_candidates": 4,
+    "no_clear_style_gain": 1,
+    "fidelity_rejected": 1,
+    "changed_with_no_material_delta_reported": 5,
+    "style_rank_and_verbal_disagreements": 2,
+    "model_calls": 24,
+    "new_Pangram_calls": 0
+  },
+  "limits": [
+    "The same 12 known owner cases are development/implementation checks, not unseen holdout evidence.",
+    "Six exact-text keep locks are conservative experimental constraints, not a rule that every future paraphrase is forbidden.",
+    "No model first re-decides owner keep/cut labels. Mechanical scope preservation is enforced by assembly, not proof of learned semantic discrimination.",
+    "The five changes without material flags are not owner-approved rewrites, and authorial/clinical factual correctness was not reverified.",
+    "Source-free style and source-aware delta auditors use the same provider/model in separate restricted contexts; no independent human authority claimed.",
+    "Four promising small cleanups are not four Pangram passes or evidence of the deeper golden-example transformation.",
+    "The rejected source-stage compression has no automatic reattempt. All original results preserved."
+  ],
+  "source_parent": "02c9f92ea0794567ae0d3b90532d655408c8d680",
+  "cases": [
+    {
+      "id": "F02",
+      "heading": "Inner Child Therapy",
+      "original": "Reparenting means consciously evolving and molding an Inner Adult inside you, comprising a loving Nurturer, a safe Adult Protector (hereafter just the Protector) and a wise Guide. This chosen Inner Adult super hero gets into a real, loving relationship with the little one you still carry. That grown-up notices the old patterns and practices better ways of responding. At first, it’s deliberate, even awkward. With time, the roles become second nature, so you spend less of your life managing yourself and more of it living with purpose, loving, relaxing, and playing. You can always slow down and look closer when it helps.",
+      "owner_decision": "CUT",
+      "owner_words": "h2. a wow i can't believe i wrote tha... oh that was from GPT, i humanized it but didn't notice how jarring that last stupid sentence was",
+      "owner_target": "You can always slow down and look closer when it helps.",
+      "baseline": "Reparenting means consciously evolving and molding an Inner Adult inside you, comprising a loving Nurturer, a safe Adult Protector (hereafter just the Protector) and a wise Guide. This chosen Inner Adult super hero gets into a real, loving relationship with the little one you still carry. That grown-up notices the old patterns and practices better ways of responding. At first, it’s deliberate, even awkward. With time, the roles become second nature, so you spend less of your life managing yourself and more of it living with purpose, loving, relaxing, and playing.",
+      "candidate": "Reparenting means consciously evolving and molding an Inner Adult inside you, comprising a loving Nurturer, a safe Adult Protector (hereafter just the Protector) and a wise Guide. This chosen Inner Adult super hero gets into a real, loving relationship with the little one you still carry. That grown-up notices the old patterns and practices better ways of responding. At first, it’s deliberate, even awkward. With time, the roles become second nature, so you spend less of your life managing yourself and more of it living with purpose, loving, relaxing, and playing.",
+      "baseline_sha256": "c27df6ce9597df5ffcd13ef0801af295d3e06b8d92000a37f06dabe9b21d1277",
+      "candidate_sha256": "c27df6ce9597df5ffcd13ef0801af295d3e06b8d92000a37f06dabe9b21d1277",
+      "result": {
+        "id": "F02",
+        "heading": "Inner Child Therapy",
+        "owner_choice": "CUT",
+        "owner_verbatim": "h2. a wow i can't believe i wrote tha... oh that was from GPT, i humanized it but didn't notice how jarring that last stupid sentence was",
+        "baseline_sha256": "c27df6ce9597df5ffcd13ef0801af295d3e06b8d92000a37f06dabe9b21d1277",
+        "candidate_sha256": "c27df6ce9597df5ffcd13ef0801af295d3e06b8d92000a37f06dabe9b21d1277",
+        "assembled": true,
+        "changed": false,
+        "literal_owner_scope_pass": true,
+        "edits": [],
+        "evidence_disposition": "UNCHANGED_BASELINE"
+      }
+    },
+    {
+      "id": "F07",
+      "heading": "If the Love Isn't Coming Yet",
+      "original": "Maybe just imagining a caring grown-up makes you feel more threatened, or lonelier. Lonelier is a strange one, with somebody right there. Then go smaller still, to the least cruel response a decent adult could offer your little one. It's scaffolding, and it isn't a test of whether you were loved enough.",
+      "owner_decision": "CUT",
+      "owner_words": "h7. a",
+      "owner_target": ", and it isn't a test of whether you were loved enough",
+      "baseline": "Maybe just imagining a caring grown-up makes you feel more threatened, or lonelier. Lonelier is a strange one, with somebody right there. Then go smaller still, to the least cruel response a decent adult could offer your little one. It's scaffolding.",
+      "candidate": "Maybe just imagining a caring grown-up makes you feel more threatened, or lonelier. Lonelier is a strange one, with somebody right there. Then go smaller still, to the least cruel response a decent adult could offer your little one. It's scaffolding.",
+      "baseline_sha256": "20b9930129b4630d32c12cd324d07add2183f50ce1dfaa3e264405b0291a3d6a",
+      "candidate_sha256": "20b9930129b4630d32c12cd324d07add2183f50ce1dfaa3e264405b0291a3d6a",
+      "result": {
+        "id": "F07",
+        "heading": "If the Love Isn't Coming Yet",
+        "owner_choice": "CUT",
+        "owner_verbatim": "h7. a",
+        "baseline_sha256": "20b9930129b4630d32c12cd324d07add2183f50ce1dfaa3e264405b0291a3d6a",
+        "candidate_sha256": "20b9930129b4630d32c12cd324d07add2183f50ce1dfaa3e264405b0291a3d6a",
+        "assembled": true,
+        "changed": false,
+        "literal_owner_scope_pass": true,
+        "edits": [],
+        "evidence_disposition": "UNCHANGED_BASELINE"
+      }
+    },
+    {
+      "id": "F12",
+      "heading": "Not Every Hero Wears A Cape",
+      "original": "Intentional, meaning you pick one of those acts and decide when you'll do it, and what the smallest first step is (like with the envelope). Some of them are only one step anyway. If it needs money or somebody's help, sort that out before the day, and if you'll have to tell someone something they won't like, say it out loud to yourself ahead of time. Then put yourself in their shoes to see how it sounds, and go back & forth like that a couple times until both sides feel good about it, or good enough, as long as what you needed to say is still in there.",
+      "owner_decision": "CUT",
+      "owner_words": "h12 a",
+      "owner_target": "Some of them are only one step anyway.",
+      "baseline": "Intentional, meaning you pick one of those acts and decide when you'll do it, and what the smallest first step is (like with the envelope). If it needs money or somebody's help, sort that out before the day, and if you'll have to tell someone something they won't like, say it out loud to yourself ahead of time. Then put yourself in their shoes to see how it sounds, and go back & forth like that a couple times until both sides feel good about it, or good enough, as long as what you needed to say is still in there.",
+      "candidate": "Intentional, meaning you pick one of those acts and decide when you'll do it, and what the smallest first step is (like with the envelope). If it needs money or somebody's help, sort that out before the day, and if you'll have to tell someone something they won't like, say it out loud to yourself ahead of time. Then put yourself in their shoes to see how it sounds, and go back & forth like that a couple times until both sides feel good about it, or good enough, as long as what you needed to say is still in there.",
+      "baseline_sha256": "143c574c34311d68eb434677533052645493b439b371d495d96a88ba41acfe4a",
+      "candidate_sha256": "143c574c34311d68eb434677533052645493b439b371d495d96a88ba41acfe4a",
+      "result": {
+        "id": "F12",
+        "heading": "Not Every Hero Wears A Cape",
+        "owner_choice": "CUT",
+        "owner_verbatim": "h12 a",
+        "baseline_sha256": "143c574c34311d68eb434677533052645493b439b371d495d96a88ba41acfe4a",
+        "candidate_sha256": "143c574c34311d68eb434677533052645493b439b371d495d96a88ba41acfe4a",
+        "assembled": true,
+        "changed": false,
+        "literal_owner_scope_pass": true,
+        "edits": [],
+        "evidence_disposition": "UNCHANGED_BASELINE"
+      }
+    },
+    {
+      "id": "F14",
+      "heading": "Catch the Hook Before the Story Takes Over",
+      "original": "Pema Chödrön calls the tightening and urge you get before the story has finished forming \"shenpa,\" and she says \"hooked\" is a more descriptive translation than the usual \"attachment.\" You might notice the hook before you have any clue what part of you is doing the hooking. Or you might notice it embarrassingly late. The jaw and stomach are already tight, and/or half the text is written, and then suddenly it dawns on you: you're supposed to be observing yourself. 😀 Maybe forget the parts detective work for a minute. You can figure that out later.",
+      "owner_decision": "CUT",
+      "owner_words": "h14 a it doesn't tell the reader the detective work can wait, that's what the prior sentence said..",
+      "owner_target": "You can figure that out later.",
+      "baseline": "Pema Chödrön calls the tightening and urge you get before the story has finished forming \"shenpa,\" and she says \"hooked\" is a more descriptive translation than the usual \"attachment.\" You might notice the hook before you have any clue what part of you is doing the hooking. Or you might notice it embarrassingly late. The jaw and stomach are already tight, and/or half the text is written, and then suddenly it dawns on you: you're supposed to be observing yourself. 😀 Maybe forget the parts detective work for a minute.",
+      "candidate": "Pema Chödrön calls the tightening and urge you get before the story has finished forming \"shenpa,\" and she says \"hooked\" is a more descriptive translation than the usual \"attachment.\" You might notice the hook before you have any clue what part of you is doing the hooking. Or you might notice it embarrassingly late. The jaw and stomach are already tight, and/or half the text is written, and then suddenly it dawns on you: you're supposed to be observing yourself. 😀 Maybe forget the parts detective work for a minute.",
+      "baseline_sha256": "58cc71bc5e9067307345f9e840c4071677230e65f00fbbb5454c4119d07d567a",
+      "candidate_sha256": "58cc71bc5e9067307345f9e840c4071677230e65f00fbbb5454c4119d07d567a",
+      "result": {
+        "id": "F14",
+        "heading": "Catch the Hook Before the Story Takes Over",
+        "owner_choice": "CUT",
+        "owner_verbatim": "h14 a it doesn't tell the reader the detective work can wait, that's what the prior sentence said..",
+        "baseline_sha256": "58cc71bc5e9067307345f9e840c4071677230e65f00fbbb5454c4119d07d567a",
+        "candidate_sha256": "58cc71bc5e9067307345f9e840c4071677230e65f00fbbb5454c4119d07d567a",
+        "assembled": true,
+        "changed": false,
+        "literal_owner_scope_pass": true,
+        "edits": [],
+        "evidence_disposition": "UNCHANGED_BASELINE"
+      }
+    },
+    {
+      "id": "F17",
+      "heading": "Use Childhood Photographs Gently",
+      "original": "While you look, notice what your body does and what feelings or urges show up. Is there something that younger you seems to want you to understand? Some of it you'll remember yourself, and some of it you might even glean from talking to family/friends from then (\"You hated that coat\"). It might just be an inference you're guessing from the picture, or perhaps it triggers an image or a dream. Or just nothing comes up, which is also completely OK. Ask what your little one needs from you now, and do a bit of it.",
+      "owner_decision": "CUT",
+      "owner_words": "h17 a",
+      "owner_target": ", which is also completely OK",
+      "baseline": "While you look, notice what your body does and what feelings or urges show up. Is there something that younger you seems to want you to understand? Some of it you'll remember yourself, and some of it you might even glean from talking to family/friends from then (\"You hated that coat\"). It might just be an inference you're guessing from the picture, or perhaps it triggers an image or a dream. Or just nothing comes up. Ask what your little one needs from you now, and do a bit of it.",
+      "candidate": "While you look, notice what your body does and what feelings or urges show up. Is there something that younger you seems to want you to understand? Some of it you'll remember yourself, and some of it you might even glean from talking to family/friends from then (\"You hated that coat\"). It might just be a guess you're making from the picture, or perhaps it triggers an image or a dream. Or just nothing comes up. Ask what your little one needs from you now, and do a bit of it.",
+      "baseline_sha256": "3df9c6a08fdec72576e152fc7cdd9d1143545783eee2852a50d5e91a1aeee833",
+      "candidate_sha256": "5b232b42fc69d7ea1fdd0b5e96605bc00c130733dc21aaae9aa693133a56d70d",
+      "result": {
+        "id": "F17",
+        "heading": "Use Childhood Photographs Gently",
+        "owner_choice": "CUT",
+        "owner_verbatim": "h17 a",
+        "baseline_sha256": "3df9c6a08fdec72576e152fc7cdd9d1143545783eee2852a50d5e91a1aeee833",
+        "candidate_sha256": "5b232b42fc69d7ea1fdd0b5e96605bc00c130733dc21aaae9aa693133a56d70d",
+        "assembled": true,
+        "changed": true,
+        "literal_owner_scope_pass": true,
+        "edits": [
+          {
+            "old": "an inference you're guessing from the picture",
+            "new": "a guess you're making from the picture",
+            "why": "\"inference you're guessing\" is redundant, since an inference is already a guess. This keeps the same tentative certainty in plainer wording."
+          }
+        ],
+        "style_scores": {
+          "baseline": 3.0,
+          "candidate": 4.0
+        },
+        "style_numeric_preference": "candidate",
+        "style_verbal_preference": "candidate",
+        "style_agrees_internally": true,
+        "style_explanation": "The two excerpts are the same except for one clause. Y's \"a guess you're making\" matches the casual, soft tone of the passage, while X's \"an inference you're guessing\" is redundant and a bit clinical, creating a small snag in an otherwise natural voice. The difference is slight, but it favors Y.",
+        "delta_audit": {
+          "differences": [],
+          "unresolved": [],
+          "summary": "The only change is 'an inference you're guessing from the picture' becoming 'a guess you're making from the picture'. The meaning is the same: the content is a guess drawn from the photo. The cut phrase ', which is also completely OK' does not appear in either version, so nothing deleted has been restored. No claim, scope, agency, certainty or example has changed."
+        },
+        "reported_material_deltas": 0,
+        "unresolved_delta_count": 0,
+        "evidence_disposition": "LOCAL_CLEANUP_CANDIDATE"
+      }
+    },
+    {
+      "id": "F22",
+      "heading": "When Escape Leaves Reality Behind",
+      "original": "Any of those reactions, from mania to paranoia, can also point to a vulnerability in you, so I'd be careful with other drugs that mess with what's real too. And any predisposition toward mania or psychosis is a warning sign too, whether it's family history, a bad environment or a bad mindset. I can't tell you exactly what to do about it, and nobody can tell you for sure what's best for you. There are just caution signs, and when you see them, you take more precautions of every kind. You have to figure out what they mean for you, and if you can't, get help from trusted advisors.",
+      "owner_decision": "CUT",
+      "owner_words": "h22 a but \"There are just\" should have been \"These are just\"",
+      "owner_target": "I can't tell you exactly what to do about it, and nobody can tell you for sure what's best for you.",
+      "baseline": "Any of those reactions, from mania to paranoia, can also point to a vulnerability in you, so I'd be careful with other drugs that mess with what's real too. And any predisposition toward mania or psychosis is a warning sign too, whether it's family history, a bad environment or a bad mindset. These are just caution signs, and when you see them, you take more precautions of every kind. You have to figure out what they mean for you, and if you can't, get help from trusted advisors.",
+      "candidate": "Any of those reactions, from mania to paranoia, can also point to a vulnerability in you, so I'd be careful with other drugs that mess with what's real too. And any predisposition toward mania or psychosis is a warning sign, whether it's family history, a bad environment or a bad mindset. These are just caution signs, and when you see them, you take more precautions of every kind. You have to figure out what they mean for you, and if you can't, get help from trusted advisors.",
+      "baseline_sha256": "4c5befcb3d236d9d376966871cfab8d6c5e81e2ba2ac5f7d1d21688d110af4ea",
+      "candidate_sha256": "9d757429cac20347aab438ee45f73422d6836ee6d8f4d6f1326e4090d449d762",
+      "result": {
+        "id": "F22",
+        "heading": "When Escape Leaves Reality Behind",
+        "owner_choice": "CUT",
+        "owner_verbatim": "h22 a but \"There are just\" should have been \"These are just\"",
+        "baseline_sha256": "4c5befcb3d236d9d376966871cfab8d6c5e81e2ba2ac5f7d1d21688d110af4ea",
+        "candidate_sha256": "9d757429cac20347aab438ee45f73422d6836ee6d8f4d6f1326e4090d449d762",
+        "assembled": true,
+        "changed": true,
+        "literal_owner_scope_pass": true,
+        "edits": [
+          {
+            "old": "is a warning sign too, whether it's family history",
+            "new": "is a warning sign, whether it's family history",
+            "why": "The sentence before already ends with \"too\", so the second \"too\" in the next sentence reads as a repeated tic. Cutting it changes nothing in meaning."
+          }
+        ],
+        "style_scores": {
+          "candidate": 4.0,
+          "baseline": 3.0
+        },
+        "style_numeric_preference": "candidate",
+        "style_verbal_preference": "candidate",
+        "style_agrees_internally": true,
+        "style_explanation": "The two excerpts are identical except for one word. Y's extra 'too' after 'warning sign' repeats the 'too' that closes the previous sentence, producing a faintly redundant echo. X avoids this and reads a little more smoothly, though the difference is small.",
+        "delta_audit": {
+          "differences": [],
+          "unresolved": [],
+          "summary": "The only change is dropping the trailing \"too\" in \"is a warning sign too.\" The opening \"And\" and the earlier \"also\" already mark predisposition as an additional warning sign alongside the reactions, so the claim, scope, certainty and conditions are unchanged. The targeted sentence is absent from both versions, and \"These are just caution signs\" is intact in both. No restoration of the cut function."
+        },
+        "reported_material_deltas": 0,
+        "unresolved_delta_count": 0,
+        "evidence_disposition": "LOCAL_CLEANUP_CANDIDATE"
+      }
+    },
+    {
+      "id": "F04",
+      "heading": "My Journey",
+      "original": "What it showed me is that I was ignoring a lot of things that were really important to look at, and that was one of them. I wouldn't have even thought to ask the question she asked me if I were doing it on my own. It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems. But personally I prefer to see things as they are, so I can figure out how to work with them, rather than just hide in delusions.",
+      "owner_decision": "KEEP",
+      "owner_words": "h4. b it wouldn't even make sense anymore after cutting that, please",
+      "owner_target": "It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems.",
+      "baseline": "What it showed me is that I was ignoring a lot of things that were really important to look at, and that was one of them. I wouldn't have even thought to ask the question she asked me if I were doing it on my own. It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems. But personally I prefer to see things as they are, so I can figure out how to work with them, rather than just hide in delusions.",
+      "candidate": "What it showed me is that I was ignoring a lot of things that were really important to look at, and that was one of them. I wouldn't have even thought to ask the question she asked me if I were doing it on my own. It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems. But personally I prefer to see things as they are, so I can figure out how to work with them, rather than just hide in delusions.",
+      "baseline_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+      "candidate_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+      "result": {
+        "id": "F04",
+        "heading": "My Journey",
+        "owner_choice": "KEEP",
+        "owner_verbatim": "h4. b it wouldn't even make sense anymore after cutting that, please",
+        "baseline_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+        "candidate_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+        "assembled": true,
+        "changed": false,
+        "literal_owner_scope_pass": true,
+        "edits": [],
+        "evidence_disposition": "UNCHANGED_BASELINE"
+      }
+    },
+    {
+      "id": "F10",
+      "heading": "Your Loan is PRE-APPROVED!",
+      "original": "This is a bit tricky to put into words, but let me try anyway… You may be suffering now, but you could be suffering more. That’s something to be grateful for (although please don’t fall into the common trap of being grateful that you have what others don’t have, as that’s more like selfishness). I’m not talking just about changing your “glass half empty” perception to a glass “half full perception.” I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment. On the other hand, I’ve noticed that I can sometimes completely flip a bad psychedelic trip into a good one with gratitude alone.",
+      "owner_decision": "KEEP",
+      "owner_words": "h10 b it's an objection that so many people have raised to me lololo",
+      "owner_target": "I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment.",
+      "baseline": "This is a bit tricky to put into words, but let me try anyway… You may be suffering now, but you could be suffering more. That’s something to be grateful for (although please don’t fall into the common trap of being grateful that you have what others don’t have, as that’s more like selfishness). I’m not talking just about changing your “glass half empty” perception to a glass “half full perception.” I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment. On the other hand, I’ve noticed that I can sometimes completely flip a bad psychedelic trip into a good one with gratitude alone.",
+      "candidate": "This is a bit tricky to put into words, but let me try anyway… You may be suffering now, but you could be suffering more. That’s something to be grateful for (although please don’t fall into the common trap of being grateful that you have what others don’t have, as that’s more like selfishness). I’m not talking just about changing your “glass half empty” perception to a “glass half full” perception. I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment. On the other hand, I’ve noticed that I can sometimes completely flip a bad psychedelic trip into a good one with gratitude alone.",
+      "baseline_sha256": "cf593b17e0f138d62fd56607c1245506806682c320a87da35f82aa5972fe3692",
+      "candidate_sha256": "45aea5308aebf267fe61e2368b010fc678bbfc61966b43661cef94ce20dce405",
+      "result": {
+        "id": "F10",
+        "heading": "Your Loan is PRE-APPROVED!",
+        "owner_choice": "KEEP",
+        "owner_verbatim": "h10 b it's an objection that so many people have raised to me lololo",
+        "baseline_sha256": "cf593b17e0f138d62fd56607c1245506806682c320a87da35f82aa5972fe3692",
+        "candidate_sha256": "45aea5308aebf267fe61e2368b010fc678bbfc61966b43661cef94ce20dce405",
+        "assembled": true,
+        "changed": true,
+        "literal_owner_scope_pass": true,
+        "edits": [
+          {
+            "old": "to a glass “half full perception.”",
+            "new": "to a “glass half full” perception.",
+            "why": "The quotation marks are misplaced and the phrase doesn't mirror the “glass half empty” wording before it. This fixes the quoted phrase and its parallel without changing the meaning."
+          }
+        ],
+        "style_scores": {
+          "candidate": 4.0,
+          "baseline": 3.5
+        },
+        "style_numeric_preference": "candidate",
+        "style_verbal_preference": "candidate",
+        "style_agrees_internally": true,
+        "style_explanation": "The texts are identical apart from the quotation marks around the 'glass half full' phrase. X keeps the paired idioms parallel, so the rhetorical contrast lands smoothly. Y's lopsided quoting reads as a small slip that interrupts the flow. Casual writers do make such slips, which keeps the gap small, but X reads slightly more natural and controlled.",
+        "delta_audit": {
+          "differences": [],
+          "unresolved": [],
+          "summary": "No material difference. The only change is a quotation-mark fix: BASELINE's 'a glass “half full perception.”' becomes CANDIDATE's 'a “glass half full” perception.' Both state the same contrast between the 'glass half empty' and 'glass half full' framings. The targeted sentences on toxic positivity and grieving are identical, and so are all claims, scope, conditions, and the psychedelic-trip qualification."
+        },
+        "reported_material_deltas": 0,
+        "unresolved_delta_count": 0,
+        "evidence_disposition": "LOCAL_CLEANUP_CANDIDATE"
+      }
+    },
+    {
+      "id": "F19",
+      "heading": "When the Adult Voice Feels Fake",
+      "original": "For some people it only stops feeling fake in an altered state, like on MDMA or deep in meditation. All of a sudden your little one is right there! Oh my gosh! And the love or grief that sounded like therapy talk is just obvious. Old memories might come up too. They can feel totally real, but that alone doesn't prove they happened. I'd still hang on to what you felt, even once it's gone, and try to bring a little of it into your normal life. You've felt that your little one is real now, so talking to them afterward isn't just pretending.",
+      "owner_decision": "KEEP",
+      "owner_words": "h19 b",
+      "owner_target": "They can feel totally real, but that alone doesn't prove they happened.",
+      "baseline": "For some people it only stops feeling fake in an altered state, like on MDMA or deep in meditation. All of a sudden your little one is right there! Oh my gosh! And the love or grief that sounded like therapy talk is just obvious. Old memories might come up too. They can feel totally real, but that alone doesn't prove they happened. I'd still hang on to what you felt, even once it's gone, and try to bring a little of it into your normal life. You've felt that your little one is real now, so talking to them afterward isn't just pretending.",
+      "candidate": "For some people it only stops feeling fake in an altered state, like on MDMA or deep in meditation. All of a sudden your little one is right there! Oh my gosh! And the love or grief that used to sound like therapy talk is just obvious. Old memories might come up too. They can feel totally real, but that alone doesn't prove they happened. I'd still hang on to what you felt, even once it's gone, and try to bring a little of it into your normal life. You've felt that your little one is real now, so talking to them afterward isn't just pretending.",
+      "baseline_sha256": "a9cf17f193c4cb8ef0c9764a498c1863805e548a4b8c35c67f9aea1777fe4e81",
+      "candidate_sha256": "04af4694286d9f2f45a2ede83569d6effe969aecdd4ee411f7fae3bdb017bdb8",
+      "result": {
+        "id": "F19",
+        "heading": "When the Adult Voice Feels Fake",
+        "owner_choice": "KEEP",
+        "owner_verbatim": "h19 b",
+        "baseline_sha256": "a9cf17f193c4cb8ef0c9764a498c1863805e548a4b8c35c67f9aea1777fe4e81",
+        "candidate_sha256": "04af4694286d9f2f45a2ede83569d6effe969aecdd4ee411f7fae3bdb017bdb8",
+        "assembled": true,
+        "changed": true,
+        "literal_owner_scope_pass": true,
+        "edits": [
+          {
+            "old": "And the love or grief that sounded like therapy talk is just obvious.",
+            "new": "And the love or grief that used to sound like therapy talk is just obvious.",
+            "why": "'Sounded' in the simple past reads as if it never sounded that way now; 'used to sound' fixes the time contrast with the sentence before without changing meaning."
+          }
+        ],
+        "style_scores": {
+          "baseline": 4.0,
+          "candidate": 4.0
+        },
+        "style_numeric_preference": "TIE",
+        "style_verbal_preference": "candidate",
+        "style_agrees_internally": false,
+        "style_explanation": "The texts are the same except for one phrase. 'Used to sound like therapy talk' reads a bit more like someone describing a real change in their own experience, and it ties the passage's turn from fake to obvious together more smoothly. The difference is small, so the preference is slight.",
+        "delta_audit": {
+          "differences": [
+            {
+              "baseline_words": "the love or grief that sounded like therapy talk is just obvious",
+              "candidate_words": "the love or grief that used to sound like therapy talk is just obvious",
+              "kind": "SHIFT",
+              "material": false,
+              "explanation": "Adds 'used to', a mild temporal framing (formerly sounded like therapy talk) versus the baseline's simple past. Both convey that it previously sounded like therapy talk and is now obvious, so the thought is essentially unchanged. Not a concrete change in claim, scope, certainty or function."
+            }
+          ],
+          "unresolved": [],
+          "summary": "The only change is 'sounded' to 'used to sound', which is a superficial tense variation with no concrete change in meaning. The target sentence, 'They can feel totally real, but that alone doesn't prove they happened,' is identical in both. No material differences."
+        },
+        "reported_material_deltas": 0,
+        "unresolved_delta_count": 0,
+        "evidence_disposition": "NO_CLEAR_STYLE_GAIN"
+      }
+    },
+    {
+      "id": "F21",
+      "heading": "Altered States Can Deepen the Therapy",
+      "original": "And if your little one still can’t take the love in? Hold off on going for bigger, crazier breakthroughs, however tempting it is, or at least know that they are a double-edged sword. Something’s in the way, and getting to know it is your next job. Often it’s a protective part that’s seen love come with strings before. Hear it out first, the way you did in Hear the Guard First.",
+      "owner_decision": "KEEP",
+      "owner_words": "h21 b yes it purposefully does take back because people may not just listen to my commands, they have their own ideas",
+      "owner_target": "or at least know that they are a double-edged sword",
+      "baseline": "And if your little one still can’t take the love in? Hold off on going for bigger, crazier breakthroughs, however tempting it is, or at least know that they are a double-edged sword. Something’s in the way, and getting to know it is your next job. Often it’s a protective part that’s seen love come with strings before. Hear it out first, the way you did in Hear the Guard First.",
+      "candidate": "And if your little one still can’t take the love in? Hold off on going for bigger, crazier breakthroughs, however tempting it is, or at least know that they are a double-edged sword. Something’s in the way, and getting to know it is your next job. Often it’s a protective part that’s seen love come with strings before. Hear it out first, the way you did in Hear the Guard First.",
+      "baseline_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+      "candidate_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+      "result": {
+        "id": "F21",
+        "heading": "Altered States Can Deepen the Therapy",
+        "owner_choice": "KEEP",
+        "owner_verbatim": "h21 b yes it purposefully does take back because people may not just listen to my commands, they have their own ideas",
+        "baseline_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+        "candidate_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+        "assembled": true,
+        "changed": false,
+        "literal_owner_scope_pass": true,
+        "edits": [],
+        "evidence_disposition": "UNCHANGED_BASELINE"
+      }
+    },
+    {
+      "id": "F25",
+      "heading": "Altered States Can Require Reparenting",
+      "original": "Borrowing support like that is basically borrowed adulthood. At first you may need to feel protected or loved by something bigger than you, before that love starts to feel like yours, and then bit by bit it starts to become your own. Send some of it down to your frightened little one, and when that's possible, toward whatever you're afraid of. Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!",
+      "owner_decision": "KEEP",
+      "owner_words": "h25. b cutting that could be sacriligeous",
+      "owner_target": "Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!",
+      "baseline": "Borrowing support like that is basically borrowed adulthood. At first you may need to feel protected or loved by something bigger than you, before that love starts to feel like yours, and then bit by bit it starts to become your own. Send some of it down to your frightened little one, and when that's possible, toward whatever you're afraid of. Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!",
+      "candidate": "Borrowing support like that is basically borrowed adulthood. At first you may need to feel protected or loved by something bigger than you, before that love gradually starts to feel like your own. Send some of it down to your frightened little one, and when that's possible, toward whatever you're afraid of. Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!",
+      "baseline_sha256": "40a940ecc0bfabdac39310113f8d3f9cfeb9570da424a1a464dcb405cef83249",
+      "candidate_sha256": "c946c6ed27dadeff571cfd10ccc8413dd6f423d52d15c80251deada0248ae096",
+      "result": {
+        "id": "F25",
+        "heading": "Altered States Can Require Reparenting",
+        "owner_choice": "KEEP",
+        "owner_verbatim": "h25. b cutting that could be sacriligeous",
+        "baseline_sha256": "40a940ecc0bfabdac39310113f8d3f9cfeb9570da424a1a464dcb405cef83249",
+        "candidate_sha256": "c946c6ed27dadeff571cfd10ccc8413dd6f423d52d15c80251deada0248ae096",
+        "assembled": true,
+        "changed": true,
+        "literal_owner_scope_pass": true,
+        "edits": [
+          {
+            "old": "before that love starts to feel like yours, and then bit by bit it starts to become your own.",
+            "new": "before that love gradually starts to feel like your own.",
+            "why": "The original says the same thing twice ('starts to feel like yours' and 'starts to become your own'), which makes the sentence clumsy. Merging them keeps the gradual shift."
+          }
+        ],
+        "style_scores": {
+          "baseline": 3.0,
+          "candidate": 3.5
+        },
+        "style_numeric_preference": "candidate",
+        "style_verbal_preference": "TIE",
+        "style_agrees_internally": false,
+        "style_explanation": "The two excerpts are identical except for one clause. X's extended version sounds more like speech but is redundant, with repeated 'starts to' and 'yours/your own.' Y's version is cleaner and avoids the padding while staying in the same casual register. The conversational looseness in X and the economy in Y roughly offset each other. I lean very slightly toward Y for its smoother flow, but not enough to separate them, so I call it a tie.",
+        "delta_audit": {
+          "differences": [
+            {
+              "baseline_words": "before that love starts to feel like yours, and then bit by bit it starts to become your own",
+              "candidate_words": "before that love gradually starts to feel like your own",
+              "kind": "LOSS",
+              "material": true,
+              "explanation": "The baseline describes two stages: the borrowed love first starts to feel like yours, and then, bit by bit, it becomes your own. This separates a felt sense of ownership from actual internalization. The candidate merges these into one gradual shift in how the love feels. It drops the second stage, in which the love actually becomes yours, and with it the distinction between feeling and becoming. The gradualness survives, but the sequence does not."
+            }
+          ],
+          "unresolved": [],
+          "summary": "The target sentence about benevolent spiritual powers is unchanged. The only concrete difference is in the preceding sentence, where the candidate collapses the two-step progression (feels like yours, then becomes your own) into a single gradual 'feel like your own' shift."
+        },
+        "reported_material_deltas": 1,
+        "unresolved_delta_count": 0,
+        "evidence_disposition": "FIDELITY_REJECTED"
+      }
+    },
+    {
+      "id": "F28",
+      "heading": "Untangling the Belonging Bargains",
+      "original": "Even with good parents, you could have learned unhealthy self-valuation when people repeatedly praised what you did rather than your inherent worth. That wasn't your flaw. In the process of self-differentiation, we learn to notice when we're making the trade, and we begin keeping our ground more when feasible.",
+      "owner_decision": "KEEP",
+      "owner_words": "h28. b people often do fight too many battles that's why i say when feasible, like choose ur battles bro",
+      "owner_target": "when feasible",
+      "baseline": "Even with good parents, you could have learned unhealthy self-valuation when people repeatedly praised what you did rather than your inherent worth. That wasn't your flaw. In the process of self-differentiation, we learn to notice when we're making the trade, and we begin keeping our ground more when feasible.",
+      "candidate": "Even with good parents, you could have learned unhealthy self-valuation when people repeatedly praised what you did rather than your inherent worth. That wasn't your flaw. In the process of self-differentiation, we learn to notice when we're making the trade, and we begin holding our ground more when feasible.",
+      "baseline_sha256": "ab4d4fff06aee04d00d3ec122e82ac9cab665a87bfaf4be6fe62a0b5c9549cc1",
+      "candidate_sha256": "bbc588489599fba3902e78c6f4d1615b3f4ed8afbeb4ba08e0929af7c1ed29e7",
+      "result": {
+        "id": "F28",
+        "heading": "Untangling the Belonging Bargains",
+        "owner_choice": "KEEP",
+        "owner_verbatim": "h28. b people often do fight too many battles that's why i say when feasible, like choose ur battles bro",
+        "baseline_sha256": "ab4d4fff06aee04d00d3ec122e82ac9cab665a87bfaf4be6fe62a0b5c9549cc1",
+        "candidate_sha256": "bbc588489599fba3902e78c6f4d1615b3f4ed8afbeb4ba08e0929af7c1ed29e7",
+        "assembled": true,
+        "changed": true,
+        "literal_owner_scope_pass": true,
+        "edits": [
+          {
+            "old": "keeping our ground more",
+            "new": "holding our ground more",
+            "why": "\"Keeping our ground\" is not the natural idiom; \"holding our ground\" is, and the meaning stays the same."
+          }
+        ],
+        "style_scores": {
+          "candidate": 3.5,
+          "baseline": 3.0
+        },
+        "style_numeric_preference": "candidate",
+        "style_verbal_preference": "candidate",
+        "style_agrees_internally": true,
+        "style_explanation": "The passages differ by a single word. 'Holding our ground' is the familiar, idiomatic phrase and closes the sentence smoothly, while 'keeping our ground' sounds like a slightly awkward substitution. That small difference gives X a more natural, human-sounding finish.",
+        "delta_audit": {
+          "differences": [],
+          "unresolved": [],
+          "summary": "The only change is 'keeping our ground' to 'holding our ground'. These are idiomatic equivalents, and 'when feasible' is retained with the same scope and condition. No concrete meaning, certainty, agency, or qualification changed."
+        },
+        "reported_material_deltas": 0,
+        "unresolved_delta_count": 0,
+        "evidence_disposition": "LOCAL_CLEANUP_CANDIDATE"
+      }
+    }
+  ]
+}

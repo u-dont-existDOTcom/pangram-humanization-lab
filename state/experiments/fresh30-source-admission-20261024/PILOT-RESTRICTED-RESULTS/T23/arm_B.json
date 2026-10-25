@@ -1,0 +1,46 @@
+{
+  "case": "T23",
+  "stage": "arm_B",
+  "prompt_sha256": "72b6ee0bf08ea20b70f813eb5941e705f2ef992d22e943c980b0c00346240f08",
+  "elapsed_s": 7.14,
+  "return_code": 0,
+  "error": null,
+  "result": "Tibetan Dzogchen Buddhism looks at ultimate reality through a more unified lens than mine, yet it agrees that the essence of the elements is light, and that matter is simply that light condensed. Its followers go further and claim that their masters' bodies dissolve into rainbow light at death. A few twentieth-century accounts of this exist. A Catholic priest investigated one of them on the ground, and another was written down by the dying master's own nephew, Namkhai Norbu Rinpoche. (The full comparison with Dzogchen is in the research report.)",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1387,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 731,
+    "output_tokens_details": {
+      "thinking_tokens": 547
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1387,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 731,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1387,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1387
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.012861999999999998,
+  "is_error": false,
+  "result_sha256": "427063644ddb994fe778a82f5b546bead61f40ff4914de04c8e72b2bfacac459"
+}

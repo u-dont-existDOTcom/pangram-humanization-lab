@@ -1,0 +1,73 @@
+{
+  "schema": "fresh30-stratified-baseline-predictions-v1",
+  "date": "2026-10-25",
+  "purpose": "Decide if source-transformed model baselines are actually detector-AI before spending paired A/B credits; not a prevalence estimate for all 27.",
+  "selection_rule": "For each of six registered article clusters, take the first source-ordinal case with strict baseline fidelity admitted (T01,T06,T11,T16,T21,T26). Current A/B review outcomes played no role in choosing by ordinal; first T13 already measured AI/high is historical calibration, excluded from new prediction accuracy.",
+  "detector_model": "pangram-4",
+  "expected_actual_backend_version": "4.1",
+  "batch_size": "one paragraph per submission",
+  "sample": [
+    {
+      "id": "T01",
+      "article": "romance",
+      "sha256": "38bebe6cef2d0bb228b0e58e5a539914a000dd283102b2ee4d25a0ba25e1653a",
+      "p_all_human": 0.43,
+      "decision": "not_all_human",
+      "rationale": "Distinctive personal occurrence and attribution to jealousy may help, but however/then and neatly resolved childhood attachment inference are compact editorial signals."
+    },
+    {
+      "id": "T06",
+      "article": "communities",
+      "sha256": "44de1e910ad54a2a9e839b644b11ded03625a85825d85c71d24d774c102f6fc7",
+      "p_all_human": 0.78,
+      "decision": "all_human",
+      "rationale": "First-person yurt childhood scene, odd Y2K comparison and mixed feelings unfold concretely rather than as a tidy generalized explanation."
+    },
+    {
+      "id": "T11",
+      "article": "inner-child",
+      "sha256": "5662e11595e17b793c3f238458c792dc1b03d8fc7c49786637ff1fa833af46bc",
+      "p_all_human": 0.55,
+      "decision": "all_human",
+      "rationale": "Unusual first-person demon/loving-kindness encounter and concrete time course contrast with generic 'love more powerful than fear' synthesis; uncertain."
+    },
+    {
+      "id": "T16",
+      "article": "hypnosis",
+      "sha256": "856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126",
+      "p_all_human": 0.24,
+      "decision": "not_all_human",
+      "rationale": "Repeated if/ask/start/once advisory sequence and neatly exhausted alternatives carry a compressed therapeutic instruction-manual cadence."
+    },
+    {
+      "id": "T21",
+      "article": "nibbana",
+      "sha256": "52623767a2f2f3ffbcf1610282f68688e4b94b0c9e2996a65ce712d9f0cbf20b",
+      "p_all_human": 0.69,
+      "decision": "all_human",
+      "rationale": "Particular third-person history turns into an ordinary first-person lived challenge ('my own hell'), though generalized master/love language is polished."
+    },
+    {
+      "id": "T26",
+      "article": "somatic",
+      "sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+      "p_all_human": 0.21,
+      "decision": "not_all_human",
+      "rationale": "Four therapy terms distilled into a single question, case-conditioned timeline and standardized caveat; strong model-shaped informational cadence possible."
+    }
+  ],
+  "decision_after_reading": "If baseline Human throughout, classify its pair as a source-rewrite quality/damage control; do not call A/B for that case. If baseline AI and both candidates faithfully preserve source, evaluate whether a paid A/B comparison would distinguish live competing hypotheses; freeze A/B forecasts before any paid calls. No automatic repeated POSTs for uncertain tasks or wrong versions.",
+  "previous_paid_control": {
+    "case": "T13",
+    "actual_backend_version": "4.1",
+    "result": "AI Generated / High, fraction_ai 1.0",
+    "prior_task_id_reused": true,
+    "new_posts_this_round": 0
+  },
+  "billing": {
+    "maximum_new_baseline_posts": 6,
+    "repeat_policy": "none; content addressed cache plus task checkpoint",
+    "currency_estimates": "none promised"
+  },
+  "outcomes": null
+}

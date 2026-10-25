@@ -1,0 +1,46 @@
+{
+  "case": "T22",
+  "stage": "arm_A",
+  "prompt_sha256": "301babaac5e7ad72cd4e0fd90a0149c8960a20cdfd827a2bcabb947e53eb10c8",
+  "elapsed_s": 3.55,
+  "return_code": 0,
+  "error": null,
+  "result": "Suffering doesn't require several streams of sense experience together; one is enough. Even if only a single channel of pleasure and pain remained, pain would still be present, just as a plane can land only because there is something solid to land on. In full unweaving, no assembled system remains that could suffer, lack, desire, gain, lose, recognize, or do anything. What seems to be left when the capacity for suffering is released is supreme bliss, though one might have assumed that neutrality would remain. As Sāriputta put it in AN 9.34, \"nibbāna is pleasant precisely where nothing is felt.\"",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 875,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 191,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 875,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 191,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 875,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 875
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.005414,
+  "is_error": false,
+  "result_sha256": "1c89b19b9b0c68ca05bfbac5975f56cdb5eb168b18d0670c4c065fbbc6a3f35a"
+}

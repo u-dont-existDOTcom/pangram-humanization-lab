@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-25T01:09:30.355998+00:00",
+  "expected_version": "4.1",
+  "format": "pangram-cache-v2",
+  "last_error": "",
+  "measurement_key": "fresh30-v3-baseline-T16-20261025",
+  "model": "pangram-4",
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 0.0,
+    "fraction_human": 4.7062021655856166e-23,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "You can borrow care without a history full of trustworthy people. If it helps, use a remembered person, or imagine an adult who intends to take good care of you. Ask what that person would say or do given your actual history, limitations, and options. If warmth feels out of reach, start with the least cruel response you can believe. Once you find one usable sentence or action, try it instead of repeating the exercise in different words.",
+    "version": "4.1",
+    "windows": [
+      {
+        "ai_assistance_score": 1.0,
+        "calibrated_confidence": 0.9971680512043372,
+        "class_probabilities": [
+          4.7062021655856166e-23,
+          0.0,
+          1.0
+        ],
+        "confidence": "High",
+        "end_index": 440,
+        "humanizer_score": 0.04637804254889488,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "You can borrow care without a history full of trustworthy people. If it helps, use a remembered person, or imagine an adult who intends to take good care of you. Ask what that person would say or do given your actual history, limitations, and options. If warmth feels out of reach, start with the least cruel response you can believe. Once you find one usable sentence or action, try it instead of repeating the exercise in different words.",
+        "token_length": 90,
+        "word_count": 78
+      }
+    ]
+  },
+  "source": "live",
+  "status": "success",
+  "submitted_model": "pangram-4",
+  "task_id": "3a610aec-947f-4bf2-ac27-4fc3133d88b9",
+  "text": "You can borrow care without a history full of trustworthy people. If it helps, use a remembered person, or imagine an adult who intends to take good care of you. Ask what that person would say or do given your actual history, limitations, and options. If warmth feels out of reach, start with the least cruel response you can believe. Once you find one usable sentence or action, try it instead of repeating the exercise in different words.",
+  "text_sha256": "856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126",
+  "updated_utc": "2026-10-25T01:09:33.116983+00:00"
+}

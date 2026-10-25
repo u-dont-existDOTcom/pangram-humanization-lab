@@ -1,0 +1,46 @@
+{
+  "case": "T10",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "fbbb72ec28ea2d92765d11abd33eac8a69bffd0199bc7badcd754497df3e7471",
+  "elapsed_s": 5.0,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material units are preserved: the same honesty for exchange and obligation even without internal money; the same list of event types (food gifts, pooled medicine, vehicle/tool loans, reciprocal labor, emergency housing, shared building projects, training/relationship-building visits); some events create future obligation and some do not; federations can keep purpose-specific records without pricing everything or forcing parity; the same separation of grants, loans, guarantees and shared-enterprise commitments where cash is used at the outside interface; and solidarity is neither unlimited joint liability nor an unlimited claim on another community's labor, stores, land or tools. Changes are stylistic only: singular/plural shifts, 'need' to 'call for', 'purpose-specific' to 'for specific purposes', and the added 'likewise' and 'need to be kept separate', which restate the source's 'need the same separation'. The 'Solidarity is not... or' to 'does not mean... nor' rewording keeps the same scope and certainty.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1149,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 385,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1149,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 385,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1149,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1149
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.00845,
+  "is_error": false,
+  "result_sha256": "5c9b1c72a9b91f08e06e1b752d006ba8db6e951b3e0e62dd485c6736d5792545"
+}

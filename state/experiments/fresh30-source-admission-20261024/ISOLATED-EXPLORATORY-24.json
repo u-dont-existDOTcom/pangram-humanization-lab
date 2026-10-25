@@ -1,0 +1,354 @@
+{
+  "schema": "fresh30-exploratory-extension-v1",
+  "created_utc": "2026-10-25",
+  "status": "FROZEN_BEFORE_EXTENSION_OUTPUTS",
+  "parent": "ISOLATED-PILOT-V3.json",
+  "adapting_after_pilot": "Pilot results for six targets have been seen. The decision to extend is adaptive; do not describe the whole 30 as one untouched preregistered prospective validation. Original source cohort and teaching allocations were fixed before pilot results.",
+  "method": "EXACT same restricted Claude Sonnet medium baseline from original paragraph, shared baseline into two isolated writers, A no examples, B exactly one preassigned source-verified example, source-fidelity reviewer separate. One first attempt per stage; no retry after nonpassing baseline.",
+  "completed_pilot": [
+    "T05",
+    "T09",
+    "T13",
+    "T16",
+    "T22",
+    "T28"
+  ],
+  "extension_cases": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T06",
+    "T07",
+    "T08",
+    "T10",
+    "T11",
+    "T12",
+    "T14",
+    "T15",
+    "T17",
+    "T18",
+    "T19",
+    "T20",
+    "T21",
+    "T23",
+    "T24",
+    "T25",
+    "T26",
+    "T27",
+    "T29",
+    "T30"
+  ],
+  "groups": [
+    [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T06",
+      "T07"
+    ],
+    [
+      "T08",
+      "T10",
+      "T11",
+      "T12",
+      "T14",
+      "T15"
+    ],
+    [
+      "T17",
+      "T18",
+      "T19",
+      "T20",
+      "T21",
+      "T23"
+    ],
+    [
+      "T24",
+      "T25",
+      "T26",
+      "T27",
+      "T29",
+      "T30"
+    ]
+  ],
+  "case_plan": [
+    {
+      "id": "T01",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T02",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T03",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T04",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T06",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T07",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T08",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T10",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T11",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T12",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T14",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T15",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T17",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T18",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T19",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T20",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T21",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T23",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T24",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T25",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T26",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T27",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T29",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "A",
+        "B"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    },
+    {
+      "id": "T30",
+      "baseline_mode": "regenerate_restricted",
+      "arm_order": [
+        "B",
+        "A"
+      ],
+      "matched_example_ref": "TEACHING.json",
+      "format": "one paragraph",
+      "timeout_s": 180
+    }
+  ],
+  "controls": {
+    "source_authority": "COHORT.json SHA-verified, owner working article sources authoritative elsewhere",
+    "teacher_assignments": "TEACHING.json frozen before writer outcomes",
+    "match_quality": "MATCH-QUALITY.json fixed prior to pilot outcomes",
+    "model_and_context": "same as ISOLATED-PILOT-V3; no user/project Claude settings, no tools, no session persistence",
+    "outcomes": "full sample, including baseline failures/unchanged outputs, no Pangram during expansion",
+    "effective_units": "up to 30 paragraph families nested in six article/source clusters, one author",
+    "no_unjustified_interaction_claims": true
+  },
+  "new_Pangram_calls_planned": 0,
+  "owner_editorial_rating": "none yet",
+  "fresh_user_turn_completion": "execute extension then perform deterministic evidence audit; do not promote if scorecard unreliable"
+}

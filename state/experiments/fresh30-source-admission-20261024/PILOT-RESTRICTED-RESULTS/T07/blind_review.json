@@ -1,0 +1,46 @@
+{
+  "case": "T07",
+  "stage": "blind_review",
+  "prompt_sha256": "f65aaad04a25d1ca4727b160b44524ca111dfae55dc055a31bf48f730b0c2796",
+  "elapsed_s": 8.96,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Stays very close to the source's structure. The semicolon before 'some say prison actually shields' keeps the aside as a quiet, almost parenthetical turn, close to the source's em dash. 'The law arrives amid an existing reality of...' preserves the source's framing of the law as arriving into a pre-existing condition. The final sentence is nearly identical in rhythm and stance to the source. Slightly formal ('I do not'), but consistent with the register. Reads as clean, controlled, and a bit close to the source in phrasing.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"The framing of arrests, rejection, harassment, assault and mob violence as an 'existing reality' is replaced by a narrative of a country where people 'were already' experiencing these things; the abstract 'reality' framing is lost.\",\n      \"The separation between the law's context and the 'some say' aside is weakened by comma splicing.\"\n    ],\n    \"added\": [\n      \"'in a country where' introduces a geographic/setting framing not in the source.\",\n      \"'people were already being arrested...' converts the list of nouns into agent-focused verbs, adding a sense of human subjects and a temporal 'already' not explicit in the source.\",\n      \"'attacked by mobs' rewrites 'mob violence' as an active attack.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"More narrative and human-centered, which is arguably warmer, but the long run-on first sentence (two 'and also' clauses joined by commas) and the comma-spliced 'and some say prison actually shields...' flatten the rhetorical pivot. The aside about prison protecting homosexuals loses its set-off quality and reads as just another item in the list, which blunts the unsettling irony. The final sentence is fine, though 'the people who survive it' is slightly more concrete than the source's phrasing.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X preserves the source's meaning and rhetorical function more precisely: the nominal list of harms stays a list of conditions, the 'some say' aside remains a distinct and jarring turn, and the first sentence keeps the law's provisions cleanly separated. Y shifts toward a narrative framing with added agents and a setting ('in a country where'), and its run-on punctuation weakens the pivot that gives the passage its tension. Y has a somewhat warmer, more human voice, but this comes at the cost of fidelity to the source's structure and emphasis.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1234,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 893,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1234,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 893,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1234,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1234
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.01387,
+  "is_error": false,
+  "result_sha256": "7f4be1dcd36b57b9eee10b95acf7da74ffeed4309bb8c49fc66a2bf3817c49eb"
+}

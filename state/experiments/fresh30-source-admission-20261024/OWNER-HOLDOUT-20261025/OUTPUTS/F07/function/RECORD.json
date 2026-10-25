@@ -1,0 +1,67 @@
+{
+  "id": "F07",
+  "stage": "function",
+  "prompt_sha256": "808bb8cc953932bd039c24250c8d58e02a1088d5620c997b0f7cdd8a8f650973",
+  "response_sha256": "5cd6ef53db3687b7d1a2fb3170d7a6b28db3dde51076385a078dff5ce8c22874",
+  "result": "{\"recommendation\":\"KEEP\",\"material_function_lost\":true,\"functions_retained\":[\"Characterization of the exercise as scaffolding (a temporary support)\",\"Instruction to go smaller to the least cruel response\",\"Acknowledgment that imagining a caring adult can feel threatening or lonely\"],\"functions_lost\":[\"Explicit reassurance that difficulty with the exercise is not evidence of insufficient love in childhood\",\"Rebuttal of the self-blaming interpretation the heading and preceding sentences invite\",\"Emotional closure that relieves shame for readers who feel lonelier or threatened\"],\"exact_supporting_words\":[\"and it isn't a test of whether you were loved enough\"],\"why\":\"The deleted clause is an independent claim, not a restatement of 'scaffolding'. 'Scaffolding' says the exercise is a support tool, but it does not say what the reader's difficulty does or does not mean. The clause blocks a specific, likely inference: that feeling threatened or lonelier, or being unable to feel love, shows one was not loved enough. That is the heading's emotional stake ('If the Love Isn't Coming Yet'), and removing it leaves the reader without the reassurance that the struggle is not diagnostic. The remaining 'It's scaffolding' is compatible with it, but a reader could still take the exercise as a measure of their past. The cut therefore loses a distinct, action- and feeling-relevant function, so the cut should not be made.\"}",
+  "parsed": {
+    "recommendation": "KEEP",
+    "material_function_lost": true,
+    "functions_retained": [
+      "Characterization of the exercise as scaffolding (a temporary support)",
+      "Instruction to go smaller to the least cruel response",
+      "Acknowledgment that imagining a caring adult can feel threatening or lonely"
+    ],
+    "functions_lost": [
+      "Explicit reassurance that difficulty with the exercise is not evidence of insufficient love in childhood",
+      "Rebuttal of the self-blaming interpretation the heading and preceding sentences invite",
+      "Emotional closure that relieves shame for readers who feel lonelier or threatened"
+    ],
+    "exact_supporting_words": [
+      "and it isn't a test of whether you were loved enough"
+    ],
+    "why": "The deleted clause is an independent claim, not a restatement of 'scaffolding'. 'Scaffolding' says the exercise is a support tool, but it does not say what the reader's difficulty does or does not mean. The clause blocks a specific, likely inference: that feeling threatened or lonelier, or being unable to feel love, shows one was not loved enough. That is the heading's emotional stake ('If the Love Isn't Coming Yet'), and removing it leaves the reader without the reassurance that the struggle is not diagnostic. The remaining 'It's scaffolding' is compatible with it, but a reader could still take the exercise as a measure of their past. The cut therefore loses a distinct, action- and feeling-relevant function, so the cut should not be made."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1130,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 482,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1130,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 482,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1130,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1130
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009343999999999998,
+  "elapsed_s": 6.43,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "delete nominated wording only"
+  }
+}

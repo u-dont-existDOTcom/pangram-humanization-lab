@@ -1,0 +1,72 @@
+{
+  "id": "F10",
+  "stage": "full-context",
+  "prompt_sha256": "b2154a5c62fae541b696519e836bd6428fbf1d45c82613947ed1c00076824607",
+  "response_sha256": "e5f9864c31f3580700725881232026722a120eac1a1bc9fe07adcd0eaf796969",
+  "result": "{\"recommendation\":\"KEEP\",\"material_function_lost\":true,\"functions_retained\":[\"Gratitude for relative lesser suffering\",\"Warning against selfish comparison gratitude\",\"Distinction from mere glass-half-full reframing\",\"Anecdote that gratitude can flip a bad trip\"],\"functions_lost\":[\"Explicit disclaimer against toxic positivity\",\"Action-changing condition: gratitude should not be pushed on people who need to grieve\",\"Logical setup for 'On the other hand' contrast, which answers the grieving caveat\",\"Ethical care and sensitivity toward suffering readers\"],\"exact_supporting_words\":[\"I’m not pushing “toxic positivity.”\",\"Being thankful shouldn’t be pushed on people who just need to grieve for the moment.\",\"On the other hand, I’ve noticed\"],\"why\":\"The deleted sentences are an independent qualification, not a repeat of the glass-half-full line. The 'toxic positivity' line rejects a distinct misreading, and the grieving sentence adds a conditional limit: do not push gratitude on someone who needs to grieve. That limit changes how the advice should be applied. The following 'On the other hand' depends on it, since it contrasts the author's own experience of gratitude helping with the caution against imposing it. Without the caveat, the contrast has nothing to answer and the passage sounds more prescriptive. A later line ('not to say you should not try to suffer less') covers a different caveat and doesn't replace this one.\"}",
+  "parsed": {
+    "recommendation": "KEEP",
+    "material_function_lost": true,
+    "functions_retained": [
+      "Gratitude for relative lesser suffering",
+      "Warning against selfish comparison gratitude",
+      "Distinction from mere glass-half-full reframing",
+      "Anecdote that gratitude can flip a bad trip"
+    ],
+    "functions_lost": [
+      "Explicit disclaimer against toxic positivity",
+      "Action-changing condition: gratitude should not be pushed on people who need to grieve",
+      "Logical setup for 'On the other hand' contrast, which answers the grieving caveat",
+      "Ethical care and sensitivity toward suffering readers"
+    ],
+    "exact_supporting_words": [
+      "I’m not pushing “toxic positivity.”",
+      "Being thankful shouldn’t be pushed on people who just need to grieve for the moment.",
+      "On the other hand, I’ve noticed"
+    ],
+    "why": "The deleted sentences are an independent qualification, not a repeat of the glass-half-full line. The 'toxic positivity' line rejects a distinct misreading, and the grieving sentence adds a conditional limit: do not push gratitude on someone who needs to grieve. That limit changes how the advice should be applied. The following 'On the other hand' depends on it, since it contrasts the author's own experience of gratitude helping with the caution against imposing it. Without the caveat, the contrast has nothing to answer and the passage sounds more prescriptive. A later line ('not to say you should not try to suffer less') covers a different caveat and doesn't replace this one."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2942,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 490,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2942,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 490,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2942,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2942
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.016672,
+  "elapsed_s": 7.95,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "same proposed deletion with full original section",
+    "source_section_sha256": "e7c61a76f6ed0e7cf6b1513af38187fa9a535245248f0c35946889b0990f578e"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "F02",
+  "stage": "function",
+  "prompt_sha256": "3dd6c7fe898edc17921bdd3d17c0d02e95c79eb6606de74ab5098446fda73946",
+  "response_sha256": "ddc2883e346f3b56129cf52f7373fe75ab6ced85cdeef54a481a88e08c0fb52a",
+  "result": "{\"recommendation\":\"UNCERTAIN\",\"material_function_lost\":null,\"functions_retained\":[\"definition of reparenting and the three Inner Adult roles\",\"relationship with the inner child\",\"noticing old patterns and practicing better responses\",\"initial awkwardness giving way to second nature\",\"payoff of less self-management and more purposeful living, loving, relaxing, playing\"],\"functions_lost\":[\"reassurance that even after roles become second nature, the reader retains the option to deliberately slow down and examine closely\",\"qualification that the automatic mode is not a fixed state and deliberate attention remains available when helpful\"],\"exact_supporting_words\":[\"You can always slow down and look closer when it helps.\"],\"why\":\"The sentence is not mere repetition. It adds a qualification: second-nature responding does not replace deliberate attention, and the reader keeps the ability to return to it when needed. That plausibly guards against reading 'second nature' as fully automatic or as the end of conscious practice. Against that, the passage's main thought (define reparenting, the relationship, and the progression from awkward to natural) stays intact without it, and the sentence is a fairly generic closing reassurance. Whether it carries an independent action-changing condition or is just a soft closer depends on how much the author wants to emphasize ongoing conscious practice, so a clear cut or keep call isn't well supported by the excerpt alone.\"}",
+  "parsed": {
+    "recommendation": "UNCERTAIN",
+    "material_function_lost": null,
+    "functions_retained": [
+      "definition of reparenting and the three Inner Adult roles",
+      "relationship with the inner child",
+      "noticing old patterns and practicing better responses",
+      "initial awkwardness giving way to second nature",
+      "payoff of less self-management and more purposeful living, loving, relaxing, playing"
+    ],
+    "functions_lost": [
+      "reassurance that even after roles become second nature, the reader retains the option to deliberately slow down and examine closely",
+      "qualification that the automatic mode is not a fixed state and deliberate attention remains available when helpful"
+    ],
+    "exact_supporting_words": [
+      "You can always slow down and look closer when it helps."
+    ],
+    "why": "The sentence is not mere repetition. It adds a qualification: second-nature responding does not replace deliberate attention, and the reader keeps the ability to return to it when needed. That plausibly guards against reading 'second nature' as fully automatic or as the end of conscious practice. Against that, the passage's main thought (define reparenting, the relationship, and the progression from awkward to natural) stays intact without it, and the sentence is a fairly generic closing reassurance. Whether it carries an independent action-changing condition or is just a soft closer depends on how much the author wants to emphasize ongoing conscious practice, so a clear cut or keep call isn't well supported by the excerpt alone."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1319,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 451,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1319,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 451,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1319,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1319
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.00979,
+  "elapsed_s": 6.35,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "delete nominated wording only"
+  }
+}

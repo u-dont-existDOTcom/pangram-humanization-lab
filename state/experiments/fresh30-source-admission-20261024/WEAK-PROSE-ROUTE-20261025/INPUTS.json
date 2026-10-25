@@ -1,0 +1,183 @@
+{
+  "schema": "six-weak-prose-model-route-comparison-v1",
+  "source_base_commit": "1c9b5cef5db54ba4d3dbf68406744143185ad8a5",
+  "targets": [
+    {
+      "id": "W01",
+      "title": "Grief and receiving care",
+      "source_text": "Some people find that deep grieving gives way to warmth, connection, or a bodily sense of being held by the universe. That is a description of an experience, and it is not evidence for any particular physiological mechanism. Love can also open grief from the other direction: being cared for may bring sadness about the care that was missing, which does not mean the love failed. Stay with the experience when you can remain present and keep your choice about it. More tears, by themselves, do not prove more healing.",
+      "sha256": "f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373",
+      "origin_record": "state/experiments/fresh30-source-admission-20261024/PILOT-SOURCE-RESULTS/T13/baseline.json",
+      "source_class": "saved model-created baseline, not owner-final prose",
+      "previous_detector": "Pangram 4.1 all windows AI/High, historical exact result",
+      "evidence_paths": [
+        "state/experiments/fresh30-source-admission-20261024/PANGRAM-BASELINE-CACHE/pangram-4/4.1/f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373/fresh30-v2-T13-baseline-20261024.json"
+      ],
+      "rhetorical_pressure": "Care can uncover grief for earlier missing care without thereby failing; experience is distinct from physiology and emotional intensity from healing.",
+      "meaning_reference": "Some people find that deep grieving gives way to warmth, connection, or a bodily sense of being held by the universe. That describes an experience, not evidence for one particular physiological mechanism. Love can also open grief in the other direction: receiving care may bring sadness for the care that was missing. That need not mean the love failed. Stay with it when you can remain present and retain choice; more tears are not, by themselves, proof of more healing.",
+      "article": "inner-child",
+      "saturation": "Previously studied family; development not holdout."
+    },
+    {
+      "id": "W02",
+      "title": "Borrowing a caring adult",
+      "source_text": "You can borrow care without a history full of trustworthy people. If it helps, use a remembered person, or imagine an adult who intends to take good care of you. Ask what that person would say or do given your actual history, limitations, and options. If warmth feels out of reach, start with the least cruel response you can believe. Once you find one usable sentence or action, try it instead of repeating the exercise in different words.",
+      "sha256": "856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126",
+      "origin_record": "state/experiments/fresh30-source-admission-20261024/PILOT-RESTRICTED-RESULTS/T16/baseline.json",
+      "source_class": "saved model-created baseline, not owner-final prose",
+      "previous_detector": "Pangram 4.1 all windows AI/High, historical exact result",
+      "evidence_paths": [
+        "state/experiments/fresh30-source-admission-20261024/PANGRAM-BASELINE-CACHE/pangram-4/4.1/856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126/fresh30-v3-baseline-T16-20261025.json"
+      ],
+      "rhetorical_pressure": "Even without trustworthy models, find a believable caring response grounded in the actual situation and try it instead of continually reformulating the exercise.",
+      "meaning_reference": "You don’t need a history full of trustworthy people to borrow care. Use a remembered person when that helps, or an imagined adult whose intention is to take good care of you. Ask, “What would that person say or do with my actual history, limitations, and options?” Begin with the least cruel response you can believe if warmth is unavailable. Once you find one usable sentence or action, try it rather than repeating the exercise in different words.",
+      "article": "hypnosis",
+      "saturation": "Previously studied family; development not holdout."
+    },
+    {
+      "id": "W03",
+      "title": "Pacing trauma work",
+      "source_text": "This is where the familiar talk of widening your \"window of tolerance\" becomes practical. Titration, pendulation, and orientation each ask the same question: can you touch something difficult in a small enough dose, notice what happens, and return? Some people may spend three to six months mainly building these capacities, and severe developmental trauma can take longer. I would treat that as a rough guide, not a countdown. If you are stable and have one clear target, you may be ready for focused trauma work much sooner.",
+      "sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+      "origin_record": "state/experiments/fresh30-source-admission-20261024/PILOT-RESTRICTED-RESULTS/T26/baseline.json",
+      "source_class": "saved model-created baseline, not owner-final prose",
+      "previous_detector": "Pangram 4.1 all windows AI/High, historical exact result",
+      "evidence_paths": [
+        "state/experiments/fresh30-source-admission-20261024/PANGRAM-BASELINE-CACHE/pangram-4/4.1/c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8/fresh30-v3-baseline-T26-20261025.json"
+      ],
+      "rhetorical_pressure": "Small tolerable contact and return may take time to develop; the rough timeline varies with severity and readiness for a clear target.",
+      "meaning_reference": "This is where the usual language about expanding your “window of tolerance” becomes practical. Titration, pendulation, and orientation are all ways of asking: can you touch something difficult in a small enough dose, notice what happens, and come back? Some people may spend three to six months mainly building those capacities, and severe developmental trauma can take longer. I would treat that as orientation, not a countdown. If you are stable and have one clear target, you may be ready for focused trauma work much sooner.",
+      "article": "somatic",
+      "saturation": "Previously studied family; development not holdout."
+    },
+    {
+      "id": "W04",
+      "title": "Retiring or keeping a hypnosis shortcut",
+      "source_text": "If you ever want to get rid of the shortcut, quit practicing it, take it out of your recordings and whatever apps you set it up in, and go back to your usual induction. Decide that while you’re wide awake, and say it to yourself. Don’t be surprised if it still works on you for a while, though. Saying it’s gone doesn’t erase it overnight. If it keeps kicking in when you don’t want it to, or it leaves you spacey and disoriented after you use it, get help from someone qualified. And if you’d rather keep it, that’s fine, as long as you only use it to start a session you’ve chosen for later. Either way, today’s trance ends when you come back.",
+      "sha256": "0b6aa86e8d573ecba5b1fe979e44d514c8842128ae8d2bb92392a898934ac435",
+      "origin_record": "articles/inner-signal/humanize/fix-20261023/b472/API-RESULTS-4.jsonl",
+      "source_ref": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+      "source_line": 2,
+      "source_class": "archived model-candidate record, not current article authority",
+      "previous_detector": "Pangram 4.1 all windows AI/High, historical exact result",
+      "provider_evidence": {
+        "name": "b472_s2e_alone",
+        "sha256": "0b6aa86e8d573ecba5b1fe979e44d514c8842128ae8d2bb92392a898934ac435",
+        "words": 124,
+        "headline": "AI Generated",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 2.6808232401103412e-36,
+        "version": "4.1",
+        "source": "new",
+        "utc": "2026-10-23T01:49:47Z",
+        "windows": [
+          [
+            "AI-Generated",
+            "High",
+            133,
+            0,
+            645,
+            "If you ever want to get rid of the shortcut, quit practicing it, take it out of your recordings and whatever apps you set it up in, and go back to your usual induction. Decide that while you’re wide awake, and say it to yourself. Don’t be surprised if it still works on you for a while, though. Saying it’s gone doesn’t erase it overnight. If it keeps kicking in when you don’t want it to, or it leaves you spacey and disoriented after you use it, get help from someone qualified. And if you’d rather keep it, that’s fine, as long as you only use it to start a session you’ve chosen for later. Either way, today’s trance ends when you come back."
+          ]
+        ]
+      },
+      "rhetorical_pressure": "Choosing while awake to retire a learned shortcut does not guarantee it vanishes immediately; keeping it is limited to chosen future sessions, and neither choice prolongs today's trance.",
+      "meaning_reference": "If you ever want to get rid of the shortcut, quit practicing it, take it out of your recordings and whatever apps you set it up in, and go back to your usual induction. Decide that while you’re wide awake, and say it to yourself. Don’t be surprised if it still works on you for a while, though. Saying it’s gone doesn’t erase it overnight. If it keeps kicking in when you don’t want it to, or it leaves you spacey and disoriented after you use it, get help from someone qualified. And if you’d rather keep it, that’s fine, as long as you only use it to start a session you’ve chosen for later. Either way, today’s trance ends when you come back.",
+      "article": "hypnosis",
+      "saturation": "Previously inspected archived family, not hidden target."
+    },
+    {
+      "id": "W05",
+      "title": "A near-death comparison and its limit",
+      "source_text": "The closest comparison that’s worth mentioning is the out-of-body perception in some near-death experiences. People sometimes report seeing things from impossible angles, and a controversial subset of those reports were verified by others in the room. Those cases had a target that other people could check, and my room experience didn’t, since I wasn’t floating around noticing specific details. So they can’t vouch for my event, but they help show what I mean by an experience that wasn’t stuck at the body’s vantage point anymore. If you want to dig in, there’s this systematic analysis of near-death reports, the AWARE-II cardiac-arrest study, and a recent veridical-NDE evidence scale.",
+      "sha256": "7a28c5435e930d57d8f199a7f3108aa22bf0835e55f1cb711040b854bf4f84cc",
+      "origin_record": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-1.jsonl",
+      "source_ref": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+      "source_line": 2,
+      "source_class": "archived model-candidate record, not current article authority",
+      "previous_detector": "Pangram 4.1 all windows AI/High, historical exact result",
+      "provider_evidence": {
+        "name": "n1_nde",
+        "sha256": "7a28c5435e930d57d8f199a7f3108aa22bf0835e55f1cb711040b854bf4f84cc",
+        "words": 108,
+        "headline": "AI Generated",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 8.039063630457175e-32,
+        "version": "4.1",
+        "source": "new",
+        "utc": "2026-10-23T02:24:32Z",
+        "windows": [
+          [
+            "AI-Generated",
+            "High",
+            122,
+            0,
+            690,
+            "The closest comparison that’s worth mentioning is the out-of-body perception in some near-death experiences. People sometimes report seeing things from impossible angles, and a controversial subset of those reports were verified by others in the room. Those cases had a target that other people could check, and my room experience didn’t, since I wasn’t floating around noticing specific details. So they can’t vouch for my event, but they help show what I mean by an experience that wasn’t stuck at the body’s vantage point anymore. If you want to dig in, there’s this systematic analysis of near-death reports, the AWARE-II cardiac-arrest study, and a recent veridical-NDE evidence scale."
+          ]
+        ]
+      },
+      "rhetorical_pressure": "Checkable reported near-death details and the narrator's uncheckable event illustrate a shared vantage point but cannot prove the narrator's experience.",
+      "meaning_reference": "The closest comparison that’s worth mentioning is the out-of-body perception in some near-death experiences. People sometimes report seeing things from impossible angles, and a controversial subset of those reports were verified by others in the room. Those cases had a target that other people could check, and my room experience didn’t, since I wasn’t floating around noticing specific details. So they can’t vouch for my event, but they help show what I mean by an experience that wasn’t stuck at the body’s vantage point anymore. If you want to dig in, there’s this systematic analysis of near-death reports, the AWARE-II cardiac-arrest study, and a recent veridical-NDE evidence scale.",
+      "article": "nibbana",
+      "saturation": "Previously inspected archived family, not hidden target."
+    },
+    {
+      "id": "W06",
+      "title": "Correcting a remembered quotation",
+      "source_text": "I used to attribute “life is like a dream” directly to the historical Buddha. Turns out the famous stanza I loved comes from the later Mahāyāna Diamond Sutra, which puts some words in his mouth. The early Pāli texts do have images that are pretty close, though: SN 22.95 compares form to foam, feeling to a bubble, perception to a mirage and consciousness to a magic trick, and Dhammapada 170 asks us to see the world as a bubble and a mirage.",
+      "sha256": "62054d8c775a78cb3bcd210e2d79c87e67bfbf69196661507897362723c4ebcc",
+      "origin_record": "articles/nibbana/humanize/fix-20261023/n1/API-RESULTS-1.jsonl",
+      "source_ref": "dc929e66beb4b06cbc8b80d5be7eec7cd967c89f",
+      "source_line": 7,
+      "source_class": "archived model-candidate record, not current article authority",
+      "previous_detector": "Pangram 4.1 all windows AI/High, historical exact result",
+      "provider_evidence": {
+        "name": "n1_diamond",
+        "sha256": "62054d8c775a78cb3bcd210e2d79c87e67bfbf69196661507897362723c4ebcc",
+        "words": 82,
+        "headline": "AI Generated",
+        "prediction_short": "AI",
+        "fraction_ai": 1.0,
+        "fraction_ai_assisted": 0.0,
+        "fraction_human": 5.948632721541998e-22,
+        "version": "4.1",
+        "source": "new",
+        "utc": "2026-10-23T02:24:40Z",
+        "windows": [
+          [
+            "AI-Generated",
+            "High",
+            83,
+            0,
+            443,
+            "I used to attribute “life is like a dream” directly to the historical Buddha. Turns out the famous stanza I loved comes from the later Mahāyāna Diamond Sutra, which puts some words in his mouth. The early Pāli texts do have images that are pretty close, though: SN 22.95 compares form to foam, feeling to a bubble, perception to a mirage and consciousness to a magic trick, and Dhammapada 170 asks us to see the world as a bubble and a mirage."
+          ]
+        ]
+      },
+      "rhetorical_pressure": "Correct the narrator's mistaken historical attribution while retaining the later stanza and each similar but specifically different early-text image.",
+      "meaning_reference": "I used to attribute “life is like a dream” directly to the historical Buddha. Turns out the famous stanza I loved comes from the later Mahāyāna Diamond Sutra, which puts some words in his mouth. The early Pāli texts do have images that are pretty close, though: SN 22.95 compares form to foam, feeling to a bubble, perception to a mirage and consciousness to a magic trick, and Dhammapada 170 asks us to see the world as a bubble and a mirage.",
+      "article": "nibbana",
+      "saturation": "Previously inspected archived family, not hidden target."
+    }
+  ],
+  "examples": [
+    {
+      "id": "owner-golden-forgiveness",
+      "before": "The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "after": "They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.",
+      "provenance": "Model-written revised ending explicitly endorsed golden by Joel; not owner-authored."
+    },
+    {
+      "id": "inner-child-chicken-and-egg-owner-aligned-20260915",
+      "before": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
+      "after": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. But when you can't, it's like you sit there trying to be loving while your mind is becoming controlled again by the inherited critic voice, or you start going numb, throwing a fit, or panicking.",
+      "provenance": "Literal aligned owner revision; one local manifestation differs. Do not copy its facts or imagery."
+    }
+  ],
+  "article_master_mutations": false
+}

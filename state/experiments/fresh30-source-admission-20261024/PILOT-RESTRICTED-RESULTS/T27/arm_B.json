@@ -1,0 +1,46 @@
+{
+  "case": "T27",
+  "stage": "arm_B",
+  "prompt_sha256": "cc0be132bd70dc69241274eba3695ad698a287367a6af420a4baee68a9c657ec",
+  "elapsed_s": 3.57,
+  "return_code": 0,
+  "error": null,
+  "result": "In this case, the aim is daily autonomic discharge and energetic decompression. In Job 1, the shaking stays mild and exploratory, but here it can grow into a regular discharge practice, as long as you can still stop, orient, and settle afterward. A regular session might run anywhere from 10 to 45 minutes. Where I see it helping is chronic freeze, emotional processing that has no words, stress that piles up between therapy sessions, and activation left over after a deeper session.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1170,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 155,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1170,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 155,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1170,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1170
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.006234,
+  "is_error": false,
+  "result_sha256": "89f8f19171fc42942a416679c9a98b2b143a3fe67955cd4b96e45c73f7dc34b6"
+}

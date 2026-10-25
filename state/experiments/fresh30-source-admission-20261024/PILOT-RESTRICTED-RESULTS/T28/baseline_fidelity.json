@@ -1,0 +1,46 @@
+{
+  "case": "T28",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "2509635e511e9866c3786988ed4f38af88e566efe36ae3ff4c8203cc74978f21",
+  "elapsed_s": 4.22,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"The draft preserves all material content. Both texts keep the same assertions: concern with regulation and post-session effects; EMDR can be highly effective; the writer does not automatically assume EMDR should come first for diffuse developmental trauma with an unstable nervous system; Brainspotting may fit better when there are no clear targets and the material is bodily, pre-verbal, or relational; and a stable person with one discrete event may be ready for EMDR much earlier. Differences are stylistic only: 'first thing they try' vs 'first approach', 'cannot identify any clear targets' vs 'no clear targets can be identified' (passive voice, same meaning), 'may fit better' vs 'may be a better fit', 'one discrete event' vs 'single discrete event'. Hedging ('may', 'do not automatically assume') is unchanged.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 993,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 333,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 993,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 333,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 993,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 993
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.007306,
+  "is_error": false,
+  "result_sha256": "f252cb51afc407a31a0d6fbb3e5d4256a57d13b8dd11a8643028877794e688e1"
+}

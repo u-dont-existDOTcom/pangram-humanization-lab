@@ -1,0 +1,24 @@
+{
+  "schema": "owner-different-family-evaluator-validation-v1",
+  "date": "2026-10-25",
+  "status": "FROZEN_BEFORE_OUTPUTS",
+  "style_cases": 5,
+  "style_order_trials_per_case": 2,
+  "style_metric": "Exact rank of numerical scores relative to direct owner preference; ties reported not converted to wins; textual preference secondary; 10 order trials remain only 5 cases.",
+  "style_prompt_source": "REVIEWER-CALIBRATION/run_style_only.py from prior completed work; unchanged task paragraph, new candidate inputs only",
+  "function_cases": 12,
+  "function_metric": "Narrow deletion recommendation compared with owner KEEP/CUT, with rationale; historical owner editorial choice not relabeled as proof of semantic equivalence",
+  "function_class_balance": {
+    "CUT": 6,
+    "KEEP": 6
+  },
+  "function_scope": "12 distinct named sections of one guide; avoid independent author claim",
+  "selection_rule": "Explicit direct owner judgments with recoverable exact excerpts. Five style contrasts (4 from September original five questions; single-only bridge excluded, plus explicit chart-caption preference). Function cases exact H2,H7,H12,H14,H17,H22 plus H4,H10,H19,H21,H25,H28; one per heading, excludes four old calibration pairs, ambiguous/changed owner answers, compound h26/h38 actions, and context-overlapping old test paragraph H31.",
+  "fidelity_evaluator_change": "Separate recommendation task, protect substantive thought, conditions and rhetorical function; harmless wording can change; count no hidden-source preference. It is a new narrow method, not measured with old mixed score.",
+  "isolation": "Fresh restricted CLI invocation per trial, no tools, no memory or project settings, label/rationale files never sent, prompt/response hashes retained. Current curator not blind, evaluator is label-blind in input.",
+  "model": "Claude Sonnet medium",
+  "primary_no_adaptive_retry": true,
+  "stop": "Run frozen cases once, all results retained. If reviewer fails calibration, do not tune the same rubric repeatedly on them.",
+  "paid_Pangram_calls": 0,
+  "owner_quality_certification": false
+}

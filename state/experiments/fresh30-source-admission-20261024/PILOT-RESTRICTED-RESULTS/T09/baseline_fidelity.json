@@ -1,0 +1,46 @@
+{
+  "case": "T09",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "7c6316c21cf9f51c860f5062f8a71dd9f6590a0af9942b774a265fbd6026ef2f",
+  "elapsed_s": 4.21,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"No material differences. 'Even before a common purse exists' is a grammatical expansion of the source. 'Must also notice' versus 'has to notice' keeps the same obligation. 'If it does not, the commune remains...' restates 'Otherwise the commune remains...' with the same conditional causality. All other claims are preserved: outside work brings more than cash (schedule, status system, social world, loyalties, consumption expectations), the agreed-share contribution in the first stage, no exemption from communal work or extra political authority, and the warning about drained people and skills.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1045,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 240,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1045,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 240,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1045,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1045
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.006584,
+  "is_error": false,
+  "result_sha256": "4f93810d8a9aa4450134968b721b964d04aef7ea272a20351a99c2c08bd2724c"
+}

@@ -1,0 +1,162 @@
+{
+  "schema": "pangram41-baseline-categorical-adjudication-v1",
+  "date": "2026-10-25",
+  "source_frozen_forecasts": "BASELINE-DETECTOR-FORECASTS.json",
+  "source_unchanged_provider_cache": "PANGRAM-BASELINE-CACHE, model pangram-4, actual version 4.1",
+  "caveat": "Provider Human Written categories may have raw tiny nonzero AI and assisted fractions (between about 1e-38 and 1e-11 in this sample) while fraction_human rounds to 1.0. Exact-zero comparison of these floats mislabels Human categorical cases. Do not use the categorical result to claim the stricter, older 4.0 production exact-zero gate was met.",
+  "measured": 6,
+  "categorical_Human": 4,
+  "categorical_AI": 2,
+  "forecast_correct": 5,
+  "forecast_accuracy": 0.8333333333333334,
+  "brier_score": 0.12893333333333334,
+  "one_per_article_by_first_fidelity_admitted": true,
+  "representative_of_all_baselines": false,
+  "new_paid_calls_for_this_adjudication": 0,
+  "original_provider_task_records_preserved": true,
+  "previous_separate_T13": "AI Generated/high under version 4.1, not part of these six forecasts",
+  "records": [
+    {
+      "case": "T01",
+      "text_sha256": "38bebe6cef2d0bb228b0e58e5a539914a000dd283102b2ee4d25a0ba25e1653a",
+      "forecast_p_all_Human": 0.43,
+      "forecast_verdict": "not_all_human",
+      "actual_headline": "Human Written",
+      "actual_categorical_all_Human": true,
+      "all_windows_consistent": true,
+      "actual_window_labels": [
+        {
+          "label": "Human Written",
+          "confidence": "High"
+        },
+        {
+          "label": "Human Written",
+          "confidence": "Medium"
+        },
+        {
+          "label": "Human Written",
+          "confidence": "High"
+        },
+        {
+          "label": "Human Written",
+          "confidence": "Medium"
+        }
+      ],
+      "numerical_fraction_Human": 1.0,
+      "numerical_fraction_AI": 5.631013775923843e-13,
+      "numerical_fraction_AI_assisted": 5.681914899517693e-13,
+      "strict_exact_zero_gate": false,
+      "prior_script_all_human_field": false,
+      "prediction_correct": false
+    },
+    {
+      "case": "T06",
+      "text_sha256": "44de1e910ad54a2a9e839b644b11ded03625a85825d85c71d24d774c102f6fc7",
+      "forecast_p_all_Human": 0.78,
+      "forecast_verdict": "all_human",
+      "actual_headline": "Human Written",
+      "actual_categorical_all_Human": true,
+      "all_windows_consistent": true,
+      "actual_window_labels": [
+        {
+          "label": "Human Written",
+          "confidence": "Medium"
+        },
+        {
+          "label": "Human Written",
+          "confidence": "High"
+        }
+      ],
+      "numerical_fraction_Human": 1.0,
+      "numerical_fraction_AI": 2.4103369446843922e-14,
+      "numerical_fraction_AI_assisted": 1.9142541324581954e-23,
+      "strict_exact_zero_gate": false,
+      "prior_script_all_human_field": false,
+      "prediction_correct": true
+    },
+    {
+      "case": "T11",
+      "text_sha256": "5662e11595e17b793c3f238458c792dc1b03d8fc7c49786637ff1fa833af46bc",
+      "forecast_p_all_Human": 0.55,
+      "forecast_verdict": "all_human",
+      "actual_headline": "Human Written",
+      "actual_categorical_all_Human": true,
+      "all_windows_consistent": true,
+      "actual_window_labels": [
+        {
+          "label": "Human Written",
+          "confidence": "Medium"
+        }
+      ],
+      "numerical_fraction_Human": 1.0,
+      "numerical_fraction_AI": 5.264642454622104e-12,
+      "numerical_fraction_AI_assisted": 6.281431624843847e-11,
+      "strict_exact_zero_gate": false,
+      "prior_script_all_human_field": false,
+      "prediction_correct": true
+    },
+    {
+      "case": "T16",
+      "text_sha256": "856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126",
+      "forecast_p_all_Human": 0.24,
+      "forecast_verdict": "not_all_human",
+      "actual_headline": "AI Generated",
+      "actual_categorical_all_Human": false,
+      "all_windows_consistent": true,
+      "actual_window_labels": [
+        {
+          "label": "AI-Generated",
+          "confidence": "High"
+        }
+      ],
+      "numerical_fraction_Human": 4.7062021655856166e-23,
+      "numerical_fraction_AI": 1.0,
+      "numerical_fraction_AI_assisted": 0.0,
+      "strict_exact_zero_gate": false,
+      "prior_script_all_human_field": false,
+      "prediction_correct": true
+    },
+    {
+      "case": "T21",
+      "text_sha256": "52623767a2f2f3ffbcf1610282f68688e4b94b0c9e2996a65ce712d9f0cbf20b",
+      "forecast_p_all_Human": 0.69,
+      "forecast_verdict": "all_human",
+      "actual_headline": "Human Written",
+      "actual_categorical_all_Human": true,
+      "all_windows_consistent": true,
+      "actual_window_labels": [
+        {
+          "label": "Human Written",
+          "confidence": "High"
+        }
+      ],
+      "numerical_fraction_Human": 1.0,
+      "numerical_fraction_AI": 2.5956153363796084e-38,
+      "numerical_fraction_AI_assisted": 4.901353658408955e-30,
+      "strict_exact_zero_gate": false,
+      "prior_script_all_human_field": false,
+      "prediction_correct": true
+    },
+    {
+      "case": "T26",
+      "text_sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+      "forecast_p_all_Human": 0.21,
+      "forecast_verdict": "not_all_human",
+      "actual_headline": "AI Generated",
+      "actual_categorical_all_Human": false,
+      "all_windows_consistent": true,
+      "actual_window_labels": [
+        {
+          "label": "AI-Generated",
+          "confidence": "High"
+        }
+      ],
+      "numerical_fraction_Human": 1.0101907003599373e-28,
+      "numerical_fraction_AI": 1.0,
+      "numerical_fraction_AI_assisted": 5.863060800704321e-40,
+      "strict_exact_zero_gate": false,
+      "prior_script_all_human_field": false,
+      "prediction_correct": true
+    }
+  ]
+}

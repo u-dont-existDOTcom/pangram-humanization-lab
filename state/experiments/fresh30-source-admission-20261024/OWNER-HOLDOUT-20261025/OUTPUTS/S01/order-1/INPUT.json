@@ -1,0 +1,8 @@
+{
+  "prompt": "Assess only the human-sounding naturalness of these two essay excerpts. Neither is privileged as a source or original. Do not infer actual authorship or detector scores. Do not score semantic fidelity in this stage. Judge the writing as a reader, including the relationships between thoughts, pacing, voice, and rhetorical effects. Clear, short, polished prose is not automatically more natural; a long sentence is not automatically worse. Do not penalize a version merely because it changes syntax or point of view compared with the other. Return JSON with X and Y objects containing voice_score_1_to_5 and prose_comment, plus preference X/Y/TIE and why.\nHEADING: \nCANDIDATE X:\nI can use EFT almost anywhere—before a hard conversation, right after somebody triggers me, or when my mind is looping and my body has joined in. It takes some pressure off. The deeper trauma can still be sitting there.\nCANDIDATE Y:\nThe big advantage is that EFT travels. I can tap before a difficult conversation, immediately after somebody triggers me, or when a thought loop has recruited my whole body. It can take the pressure down. I don't confuse that with finishing the deeper trauma work.",
+  "sha256": "55e42144e4e54ecf490b7f1538672ee3d9a3676a6b2735848917a0e4db2a65a6",
+  "presentation": {
+    "X": "B",
+    "Y": "A"
+  }
+}

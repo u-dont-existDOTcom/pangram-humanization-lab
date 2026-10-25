@@ -1,0 +1,46 @@
+{
+  "case": "T25",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "08e2ff3e51d493515a76063c2d75c03bd3204f0cf28664936f85685e1dbc6b67",
+  "elapsed_s": 4.81,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"The draft keeps every material element: the lucid-dream comparison, the seven-life limit attributed by report ('said to be had by' / 'said to apply to') to the stream-enterer, the claim that recognizing a dream makes it naturally hard to stay stuck in it, the movie-theater analogy with lights coming on, and the appeal to lucid-dream experience. The changes are stylistic only: 'from earlier' became 'earlier', 'the dream' became 'a dream', 'known' became 'recognized', 'similar to how' became 'much as', and 'If you've ever had... you know' became 'Anyone who has had... will know'. The hedge 'said to' is retained, and the strength of the claims is unchanged.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 964,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 296,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 964,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 296,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 964,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 964
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.00682,
+  "is_error": false,
+  "result_sha256": "307314ba1cf284e3dfd4ee879f184917d8f446ce68ba91fb321a87a4ec6567af"
+}

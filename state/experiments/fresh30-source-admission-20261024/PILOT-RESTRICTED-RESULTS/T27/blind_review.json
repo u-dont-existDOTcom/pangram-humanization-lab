@@ -1,0 +1,46 @@
+{
+  "case": "T27",
+  "stage": "blind_review",
+  "prompt_sha256": "cecddcfaf4270201b56cd0b0a30e63764fe5b7684a610dd6dfc83677904b1306",
+  "elapsed_s": 9.95,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Source's 'Here' (spatial/contextual pointer) rendered as 'In this case' — minor loss of immediacy\",\n      \"Source's 'I think of' (personal framing) softened to 'I see'; function preserved\"\n    ],\n    \"added\": [\n      \"Merges two source sentences' rhetorical break: 'as long as' becomes 'provided', slightly more formal conditional; no new content\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Very close to the source, nearly a light paraphrase. 'Provided you can still...' is a bit stiffer and more written than the source's conversational dash-and-'as long as'. 'Builds up' and 'leftover activation' keep the source's compact, practitioner-notes register. 'Purpose' is a good match for 'job.' The list stays terse and parallel, which fits the source's clipped cadence. Reads clean but slightly formal.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Source's 'Here' rendered as 'In this case'; same minor loss as X\",\n      \"'Non-verbal' is expanded to 'has no words', which loses the clinical term\",\n      \"'Leftover activation' becomes 'activation left over', a mere reordering\"\n    ],\n    \"added\": [\n      \"'anywhere from 10 to 45 minutes' adds a mild range-emphasis not present in the source\",\n      \"'Where I see it helping is' reframes the list as benefits ('helping'), which adds an efficacy claim the source's neutral 'use cases' does not make\",\n      \"'regular session' replaces 'regular practice', a small shift in the noun\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Reads more conversational and spoken, with more varied rhythm ('grow into', 'piles up', 'anywhere from'). The lead-in 'Where I see it helping is' is natural but shifts the stance from classification to benefit. 'Emotional processing that has no words' is vivid and warm but trades the technical register of 'non-verbal' for plain language. The list items are less parallel, which gives it a more human feel but loosens the source's tight structure.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both preserve the core meaning: the daily discharge purpose, the contrast with Job 1, the stop/orient/settle condition, the 10–45 minute range, and the four use cases. X is more faithful in meaning and rhetorical function. It keeps 'use cases' as a neutral categorization, keeps 'non-verbal' as a precise term, and keeps 'regular practice' intact. Y reads somewhat more naturally, but it adds a mild efficacy framing ('helping'), changes 'practice' to 'session', and flattens 'non-verbal' into a paraphrase. If voice naturalness were weighted more heavily, Y would win, but since fidelity to rhetorical function is the main criterion, X is the better choice. The gap is small, so this is a narrow preference.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1129,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1041,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1129,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1041,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1129,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1129
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.014930000000000002,
+  "is_error": false,
+  "result_sha256": "c40f739c056aa3f73398ebc7f24f0c1b694ad385cb347b64ab54f0d8534be592"
+}

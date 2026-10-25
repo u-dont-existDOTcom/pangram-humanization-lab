@@ -1,0 +1,69 @@
+{
+  "id": "F19",
+  "stage": "function",
+  "prompt_sha256": "18d1ff2a66fde67b9f79cdc6c8ef431897b05d4115ed80cc291084259e3c2914",
+  "response_sha256": "cd163a33fea4f2b506c52dac0bc6db8e1578d4023a7d496051d1025d9f5f5389",
+  "result": "{\"recommendation\":\"KEEP\",\"material_function_lost\":true,\"functions_retained\":[\"Description of altered-state experience making the little one feel real\",\"Mention that old memories may surface\",\"Advice to hold onto what was felt and integrate it into normal life\",\"Conclusion that talking to the little one afterward isn't pretending\"],\"functions_lost\":[\"Epistemic caution that vivid memories surfacing in altered states are not proof the events happened\",\"Qualification limiting how far the felt realness should be trusted (feeling real applies to the little one/emotion, not to memory accuracy)\",\"Distinction between what to trust (the felt connection) and what not to infer (memory truth)\"],\"exact_supporting_words\":[\"They can feel totally real, but that alone doesn't prove they happened.\",\"I'd still hang on to what you felt\"],\"why\":\"The deleted sentence is an independent claim and a qualification, not repeated scaffolding. It warns that vivid memories arising in altered states shouldn't be taken as evidence of actual events. It also gives the following advice its contrast: \\\"I'd still hang on to what you felt\\\" reads as a partial counterpoint to the memory caveat. Without it, the author appears to endorse the felt reality of everything that surfaced, memories included, which changes the reader's likely action and risks an unsafe inference. Nothing else in the excerpt restates this caution. The cut loses a distinct, action-relevant thought, so it should not be made.\"}",
+  "parsed": {
+    "recommendation": "KEEP",
+    "material_function_lost": true,
+    "functions_retained": [
+      "Description of altered-state experience making the little one feel real",
+      "Mention that old memories may surface",
+      "Advice to hold onto what was felt and integrate it into normal life",
+      "Conclusion that talking to the little one afterward isn't pretending"
+    ],
+    "functions_lost": [
+      "Epistemic caution that vivid memories surfacing in altered states are not proof the events happened",
+      "Qualification limiting how far the felt realness should be trusted (feeling real applies to the little one/emotion, not to memory accuracy)",
+      "Distinction between what to trust (the felt connection) and what not to infer (memory truth)"
+    ],
+    "exact_supporting_words": [
+      "They can feel totally real, but that alone doesn't prove they happened.",
+      "I'd still hang on to what you felt"
+    ],
+    "why": "The deleted sentence is an independent claim and a qualification, not repeated scaffolding. It warns that vivid memories arising in altered states shouldn't be taken as evidence of actual events. It also gives the following advice its contrast: \"I'd still hang on to what you felt\" reads as a partial counterpoint to the memory caveat. Without it, the author appears to endorse the felt reality of everything that surfaced, memories included, which changes the reader's likely action and risks an unsafe inference. Nothing else in the excerpt restates this caution. The cut loses a distinct, action-relevant thought, so it should not be made."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1266,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 473,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1266,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 473,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1266,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1266
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009798,
+  "elapsed_s": 8.28,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "delete nominated wording only"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "case": "T09",
+  "stage": "blind_review",
+  "prompt_sha256": "23a776fc6d9f058d2d780344e368152c3c4b9813232a0dc9d128590216f9fd9f",
+  "elapsed_s": 9.07,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"'exists' after 'common purse' (minor, grammatical)\",\n      \"'draining away' and 'it needs' (slight rephrase)\",\n      \"'can't buy extra political authority either' splits one clause into two, adding mild emphasis\",\n      \"'what to consume' for 'consumption expectations' (looser paraphrase)\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Keeps the source's staccato rhythm: 'It does not only bring cash' becomes 'It brings in more than cash,' followed by a separate sentence for the list. The repeated 'another' makes each item land as its own addition and echoes the source's cumulative effect. Contractions ('can't', 'doesn't') make it a bit more conversational than the source, but still plausible for an organizing or movement-essay register. The doubled 'it can't buy' adds a slight rhetorical emphasis that the source does not have. 'Stays' is a bit more casual than 'remains.'\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"The source's separate short sentence 'It does not only bring cash' is folded into a subordinate clause, which softens its emphasis as a standalone beat\"\n    ],\n    \"added\": [\n      \"'because' makes the causal link explicit, where the source leaves it implicit across sentences\",\n      \"'must' for 'has to' (slight register shift)\",\n      \"'rather than' for 'instead of' (near-equivalent)\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Tighter and more formal, with a colon-and-list sentence that reads like polished expository prose. Merging the first two sentences removes the punchy pause of the source and makes the passage more uniform in rhythm. The list is compact and faithful ('another schedule, status system, social world, and set of loyalties'), but the single 'another' makes it read as a catalogue rather than an accumulating burden. Clean and correct, but a little more generic and less distinctive.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both candidates preserve the meaning and the rhetorical function: outside work as a complication that brings more than money, the conditions on the earner's contribution, and the warning about the commune becoming a dormitory. X better preserves the source's sentence structure and cadence, including the short standalone sentence that makes the claim land, and its repeated 'another' recreates the accumulating weight of the list. Y's merger into a causal 'because' sentence is fluent and faithful in content but flattens the rhythm and adds an explicit causal link the source only implies. X's contractions and doubled 'can't buy' are small departures in register and emphasis, but they cost less than Y's loss of cadence. The preference is modest.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1218,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 956,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1218,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 956,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1218,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1218
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.014436000000000001,
+  "is_error": false,
+  "result_sha256": "bc58031e345cb5755f32f4308103fc5254b9d705ea1c82f5752c2ddbafbe0de9"
+}

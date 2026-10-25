@@ -1,0 +1,69 @@
+{
+  "id": "F21",
+  "stage": "function",
+  "prompt_sha256": "22853d4fd3f33bd9a3d0226bfe1892990e4ec88dec85c996ec4d4116d678821d",
+  "response_sha256": "e3ba28a3d794acd523ee1e2e4b1b780b1fa9a27964fe00db2472015328d3dfc8",
+  "result": "{\"recommendation\":\"UNCERTAIN\",\"material_function_lost\":true,\"functions_retained\":[\"Core directive to hold off on bigger breakthroughs when the little one can't take love in\",\"Acknowledgment that the temptation is real ('however tempting it is')\",\"Rationale that something is in the way and exploring it is the next job\",\"Callback to 'Hear the Guard First'\"],\"functions_lost\":[\"Softening qualification: the fallback permission that if the reader does proceed with breakthroughs, they should do so aware of the risk\",\"Characterization of breakthroughs as double-edged (having both benefit and danger), not merely something to avoid\",\"Action-changing condition for readers who will not hold off\"],\"exact_supporting_words\":[\"or at least know that they are a double-edged sword\",\"Hold off on going for bigger, crazier breakthroughs, however tempting it is\"],\"why\":\"The deleted clause is not repeated scaffolding. It is an independent qualification that turns an absolute 'hold off' into a graded stance: ideally hold off, but if you won't, proceed with awareness that breakthroughs cut both ways. It also conveys that breakthroughs have real value and are not simply bad, which fits the heading 'Altered States Can Deepen the Therapy'. Without it the passage reads as a flat prohibition, and the heading's positive framing sits against a more categorical warning. The following sentences ('Something's in the way...') do justify holding off, so the main directive survives, and the loss is moderate rather than total. Because the clause is a real fallback and a nuance about breakthroughs, I lean against cutting, though a reader could take the remaining text as sufficient. Also, the resulting dangling 'tempting it is,.' needs only mechanical punctuation cleanup.\"}",
+  "parsed": {
+    "recommendation": "UNCERTAIN",
+    "material_function_lost": true,
+    "functions_retained": [
+      "Core directive to hold off on bigger breakthroughs when the little one can't take love in",
+      "Acknowledgment that the temptation is real ('however tempting it is')",
+      "Rationale that something is in the way and exploring it is the next job",
+      "Callback to 'Hear the Guard First'"
+    ],
+    "functions_lost": [
+      "Softening qualification: the fallback permission that if the reader does proceed with breakthroughs, they should do so aware of the risk",
+      "Characterization of breakthroughs as double-edged (having both benefit and danger), not merely something to avoid",
+      "Action-changing condition for readers who will not hold off"
+    ],
+    "exact_supporting_words": [
+      "or at least know that they are a double-edged sword",
+      "Hold off on going for bigger, crazier breakthroughs, however tempting it is"
+    ],
+    "why": "The deleted clause is not repeated scaffolding. It is an independent qualification that turns an absolute 'hold off' into a graded stance: ideally hold off, but if you won't, proceed with awareness that breakthroughs cut both ways. It also conveys that breakthroughs have real value and are not simply bad, which fits the heading 'Altered States Can Deepen the Therapy'. Without it the passage reads as a flat prohibition, and the heading's positive framing sits against a more categorical warning. The following sentences ('Something's in the way...') do justify holding off, so the main directive survives, and the loss is moderate rather than total. Because the clause is a real fallback and a nuance about breakthroughs, I lean against cutting, though a reader could take the remaining text as sufficient. Also, the resulting dangling 'tempting it is,.' needs only mechanical punctuation cleanup."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1165,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 578,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1165,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 578,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1165,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1165
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.010443999999999998,
+  "elapsed_s": 9.23,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "delete nominated wording only"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "schema": "six-case-restricted-pilot-analysis-v1",
+  "date": "2026-10-25",
+  "n_selected": 6,
+  "n_baselines_admitted": 5,
+  "n_pairs_completed": 5,
+  "n_style_B_greater": 4,
+  "n_reviewer_joint_preference_A": 3,
+  "n_reviewer_joint_preference_B": 1,
+  "n_reviewer_tie": 1,
+  "new_pangram_calls": 0,
+  "pre_existing_pangram_T13": "AI Generated/High, fraction_ai 1.0, actual API version 4.1, prior paid task retained and reused",
+  "independence_level": "distinct restricted contexts/no user-project settings and no model tools; same provider/model, not independent evaluative source or owner judgment",
+  "caveats": [
+    "not 6 or 5 independent authors; six topic clusters of one author",
+    "T13 baseline was recovered V2, not regenerated in restricted mode",
+    "fidelity reviewer sometimes endorses slight substantive glosses; strict owner editorial still undecided",
+    "no valid confidence interval or causal inference from 5 pairs",
+    "zero new detector measurements during this pilot"
+  ],
+  "cases": [
+    {
+      "case": "T05",
+      "baseline_stage": "fresh_restricted",
+      "baseline_sha256": "37b4f26df15b4d016c238d15e0a9726196d326720d52624ad3652503d4624063",
+      "baseline_admitted": false,
+      "baseline_fidelity_observation": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [
+          {
+            "source": "eventually there will be some kind of pendulum swing or backlash",
+            "draft": "eventually there is a pendulum swing or backlash",
+            "effect": "The hedge 'some kind of' is dropped and the future 'will be' becomes a present-tense generalization. The claim sounds slightly more definite, though 'eventually' and the overall meaning are preserved. This is a marginal shift."
+          }
+        ],
+        "notes": "All core assertions are preserved: the three reference relationships, the roles of child versus therapist/guru/doctor/dad, the 'too unequal' judgment, the eventual swing or backlash, and the narrator becoming responsible for everything that went wrong along with the clinginess and jealousy. 'Not to mention' becomes 'along with', which slightly softens the emphasis but changes no assertion. Other changes ('get out of hand at the extremes' to 'become extreme', 'all the rest' to 'everything else') are stylistic."
+      },
+      "A_B_validated": false
+    },
+    {
+      "case": "T09",
+      "baseline_stage": "fresh_restricted",
+      "baseline_sha256": "5e2541e111d3f47842615566b3fe62d69fe11167846396a05775caddb4c32206",
+      "baseline_admitted": true,
+      "baseline_fidelity_observation": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "No material differences. 'Even before a common purse exists' is a grammatical expansion of the source. 'Must also notice' versus 'has to notice' keeps the same obligation. 'If it does not, the commune remains...' restates 'Otherwise the commune remains...' with the same conditional causality. All other claims are preserved: outside work brings more than cash (schedule, status system, social world, loyalties, consumption expectations), the agreed-share contribution in the first stage, no exemption from communal work or extra political authority, and the warning about drained people and skills."
+      },
+      "A_B_validated": true,
+      "A": {
+        "sha256": "6eaf66be0a3a9286110816fdea1117f5ee4d9f0b10e37b6067631624295bc1a0",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 3
+      },
+      "B": {
+        "sha256": "466b28e7714a04c84c3984c2bc5001e797668e9ffea85145a227f9bab4615866",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 4
+      },
+      "reviewer_preference": "B",
+      "strict_material_change_debate": "Some reviewer fidelity_ok=true cases still list small alterations; owner review absent."
+    },
+    {
+      "case": "T13",
+      "baseline_stage": "recovered_V2",
+      "baseline_sha256": "f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373",
+      "baseline_admitted": true,
+      "baseline_fidelity_observation": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material units are preserved: the warmth/connection/being-held experience; the point that it is a description, not evidence for a physiological mechanism; care bringing sadness for missing care; the point that this does not mean the love failed; the advice to stay with it only when present and able to choose; and the point that more tears do not prove more healing. Two borderline wording shifts are not counted as material. First, 'need not mean the love failed' became 'does not mean the love failed', which is slightly more categorical. Second, 'stay with it' became 'stay with the experience', which slightly narrows an ambiguous referent. 'One particular' became 'any particular', which has the same practical meaning."
+      },
+      "A_B_validated": true,
+      "A": {
+        "sha256": "fcdbf55e756d324c3dc6364c7238d99cf4ec22bb0712eea4f21e8c628384acd9",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 3
+      },
+      "B": {
+        "sha256": "d2377d14a75645b897acabdf491977074a0117b8d14e9eae81d3603800526669",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 4
+      },
+      "reviewer_preference": "A",
+      "strict_material_change_debate": "Some reviewer fidelity_ok=true cases still list small alterations; owner review absent."
+    },
+    {
+      "case": "T16",
+      "baseline_stage": "fresh_restricted",
+      "baseline_sha256": "856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126",
+      "baseline_admitted": true,
+      "baseline_fidelity_observation": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All material units are preserved: no need for a trustworthy history to borrow care; the option of a remembered person or an imagined adult whose intention is good care; the question about what that person would say or do given actual history, limitations, and options; starting with the least cruel believable response if warmth is unavailable; and trying one usable sentence or action rather than repeating the exercise in different words. Differences are stylistic only. 'Use a remembered person when that helps' becomes 'If it helps, use...', and 'whose intention is to take good care of you' becomes 'who intends to take good care of you'. The 'with my actual history' to 'given your actual history' shift is a person change in phrasing (first to second person inside an indirect question) and does not alter meaning. 'Begin with' versus 'start with' and 'rather than' versus 'instead of' are equivalent."
+      },
+      "A_B_validated": true,
+      "A": {
+        "sha256": "15ea48b9751c9ff5a62f3799d81a79e21a7b2964f9584c099061ab13e3ee6657",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 3.5
+      },
+      "B": {
+        "sha256": "e4b1b31acafeb6686b93f1c3ef278fd172618b7d030d2fabc5c3a0df50971e2d",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 4.5
+      },
+      "reviewer_preference": "TIE",
+      "strict_material_change_debate": "Some reviewer fidelity_ok=true cases still list small alterations; owner review absent."
+    },
+    {
+      "case": "T22",
+      "baseline_stage": "fresh_restricted",
+      "baseline_sha256": "1b01b8c6bab2873a1a4938553367552d2823f9d8dbcc44fbff9f3b47d8ea2453",
+      "baseline_admitted": true,
+      "baseline_fidelity_observation": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "All key assertions are preserved: one sense stream suffices for suffering; a single pleasure/pain channel still leaves pain; the plane analogy; full unweaving leaves no system that can suffer, lack, desire, gain, lose, recognize, or do anything; supreme bliss 'seems' to be left, contrary to the assumption of neutrality; and the Sāriputta/AN 9.34 attribution and quote. Two minor shifts are not material. The draft makes the analogy a simile for pain's presence ('just as a plane can land...') rather than saying pain itself lands, and it adds 'only' ('can land only because'), which slightly strengthens the source's 'because'. Neither changes the argument's substance."
+      },
+      "A_B_validated": true,
+      "A": {
+        "sha256": "1c89b19b9b0c68ca05bfbac5975f56cdb5eb168b18d0670c4c065fbbc6a3f35a",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 3
+      },
+      "B": {
+        "sha256": "81918c917901be81722ad23661fc9cdb83c264955204767f4b8a1ca198cee10e",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 4
+      },
+      "reviewer_preference": "A",
+      "strict_material_change_debate": "Some reviewer fidelity_ok=true cases still list small alterations; owner review absent."
+    },
+    {
+      "case": "T28",
+      "baseline_stage": "fresh_restricted",
+      "baseline_sha256": "67274dcbaeca5872430a19127106b2c3fbd0179144d64f084e9d43e2f6c00ee2",
+      "baseline_admitted": true,
+      "baseline_fidelity_observation": {
+        "preserve_all_critical_units": true,
+        "omissions": [],
+        "additions": [],
+        "certainty_changes": [],
+        "notes": "The draft preserves all material content. Both texts keep the same assertions: concern with regulation and post-session effects; EMDR can be highly effective; the writer does not automatically assume EMDR should come first for diffuse developmental trauma with an unstable nervous system; Brainspotting may fit better when there are no clear targets and the material is bodily, pre-verbal, or relational; and a stable person with one discrete event may be ready for EMDR much earlier. Differences are stylistic only: 'first thing they try' vs 'first approach', 'cannot identify any clear targets' vs 'no clear targets can be identified' (passive voice, same meaning), 'may fit better' vs 'may be a better fit', 'one discrete event' vs 'single discrete event'. Hedging ('may', 'do not automatically assume') is unchanged."
+      },
+      "A_B_validated": true,
+      "A": {
+        "sha256": "67274dcbaeca5872430a19127106b2c3fbd0179144d64f084e9d43e2f6c00ee2",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 4
+      },
+      "B": {
+        "sha256": "7a00db491b597b0b29cd50659e2330c70e06c85892546ebf3792079b125659d8",
+        "format_ok": true,
+        "source_fidelity_reviewer": true,
+        "naturalness_score": 2.5
+      },
+      "reviewer_preference": "A",
+      "strict_material_change_debate": "Some reviewer fidelity_ok=true cases still list small alterations; owner review absent."
+    }
+  ]
+}

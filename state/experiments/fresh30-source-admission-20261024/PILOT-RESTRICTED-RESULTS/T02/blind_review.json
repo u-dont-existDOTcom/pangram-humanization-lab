@@ -1,0 +1,46 @@
+{
+  "case": "T02",
+  "stage": "blind_review",
+  "prompt_sha256": "79821299cc5635fe44670754d160faa9071e1618b505610f2e0478eba6e76d07",
+  "elapsed_s": 7.81,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Accurate and clean, but it expands every contraction ('I am', 'What is', 'that is'), which stiffens a confessional, conversational passage. 'Looking for red flags before I end up alone with someone' slightly shifts the source: 'end up' adds a hint of accident or drift that the original ('before I'm alone with') lacks. 'Level of interest' is a little more clinical than the source's 'interest level', though it is idiomatic. 'What lies beneath it' reads slightly literary. Overall competent, but more formal than the speaker's casual, anxious register.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Keeps contractions ('I'm', 'What's', 'that's'), which preserves the casual, self-questioning tone of the source. 'To look for red flags before I'm alone with someone' tracks the original structure closely. 'Only contacts me sometimes' is a faithful word order for the source, and 'how interested she is' is a natural rephrasing of 'interest level' without changing its meaning. 'Underneath that' is a small shift in referent (that = her interest) but matches the source's intent. Reads like spoken, worried introspection, which fits the passage's rhetorical function.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Both candidates preserve the meaning and rhetorical function: a self-aware shift from trust to suspicion, followed by a run of anxious rhetorical questions that end with the 'twin flame' idealization undercutting the caution. Neither omits or adds content. Y wins on voice: its contractions and plainer phrasing keep the intimate, slightly worried register of the source, while X's uncontracted forms and small word choices ('end up', 'lies beneath it') make it more formal and slightly alter the nuance. Fidelity is effectively tied, so voice decides it.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1044,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 713,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1044,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 713,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1044,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1044
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.01131,
+  "is_error": false,
+  "result_sha256": "e5051c069cd10b2145664b9b6b2173a933c85739ecf4ecc6362deb029c3b1d19"
+}

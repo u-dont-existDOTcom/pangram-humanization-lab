@@ -1,0 +1,69 @@
+{
+  "id": "F10",
+  "stage": "function",
+  "prompt_sha256": "c1fe01cb99f220d01ab244a93053a2f9df239e84eae2614e611ee1c3c865cdd6",
+  "response_sha256": "ba420710a9dca9f072ba9141d2190a5868d27729a12e386fec68e8b2b0716c8a",
+  "result": "{\"recommendation\":\"CUT\",\"material_function_lost\":false,\"functions_retained\":[\"Core claim that gratitude comes from recognizing one could be suffering more\",\"Caution against selfish comparison-based gratitude\",\"Distinction from mere glass-half-full reframing\",\"Contrast pivot ('On the other hand') to the psychedelic trip anecdote showing gratitude's power\"],\"functions_lost\":[\"Explicit disclaimer against 'toxic positivity'\",\"Qualification that gratitude shouldn't be pushed on people who need to grieve\"],\"exact_supporting_words\":[\"I’m not pushing “toxic positivity.”\",\"Being thankful shouldn’t be pushed on people who just need to grieve for the moment.\",\"On the other hand, I’ve noticed\"],\"why\":\"The deleted sentences are a disclaimer and a caveat that the author is not pressuring grieving people to be grateful. The main thought (gratitude via recognizing things could be worse, avoiding selfish comparison, not mere optimism reframing, and gratitude's power in a bad trip) remains intact. The caveat is a real qualification, but it is partly redundant with the preceding 'not just changing perception' disclaimer and the earlier 'please don't fall into the trap' caution. The one cost is that 'On the other hand' now contrasts less cleanly, since it was set up by the grieving caveat; it still reads acceptably as a contrast to the preceding denial that this is mere perception-shifting. The advice isn't action-changing in a way that makes the loss material, so the cut is acceptable, though some of the author's sensitivity to grief is lost.\"}",
+  "parsed": {
+    "recommendation": "CUT",
+    "material_function_lost": false,
+    "functions_retained": [
+      "Core claim that gratitude comes from recognizing one could be suffering more",
+      "Caution against selfish comparison-based gratitude",
+      "Distinction from mere glass-half-full reframing",
+      "Contrast pivot ('On the other hand') to the psychedelic trip anecdote showing gratitude's power"
+    ],
+    "functions_lost": [
+      "Explicit disclaimer against 'toxic positivity'",
+      "Qualification that gratitude shouldn't be pushed on people who need to grieve"
+    ],
+    "exact_supporting_words": [
+      "I’m not pushing “toxic positivity.”",
+      "Being thankful shouldn’t be pushed on people who just need to grieve for the moment.",
+      "On the other hand, I’ve noticed"
+    ],
+    "why": "The deleted sentences are a disclaimer and a caveat that the author is not pressuring grieving people to be grateful. The main thought (gratitude via recognizing things could be worse, avoiding selfish comparison, not mere optimism reframing, and gratitude's power in a bad trip) remains intact. The caveat is a real qualification, but it is partly redundant with the preceding 'not just changing perception' disclaimer and the earlier 'please don't fall into the trap' caution. The one cost is that 'On the other hand' now contrasts less cleanly, since it was set up by the grieving caveat; it still reads acceptably as a contrast to the preceding denial that this is mere perception-shifting. The advice isn't action-changing in a way that makes the loss material, so the cut is acceptable, though some of the author's sensitivity to grief is lost."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1348,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 537,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1348,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 537,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1348,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1348
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.010766000000000001,
+  "elapsed_s": 7.35,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "delete nominated wording only"
+  }
+}

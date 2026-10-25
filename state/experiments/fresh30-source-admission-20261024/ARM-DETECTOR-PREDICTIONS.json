@@ -1,0 +1,67 @@
+{
+  "schema": "pangram41-targeted-paired-predictions-v1",
+  "frozen_date": "2026-10-25",
+  "source": "FRESH30-OFFLINE-OUTCOMES.json & verified model-written first revisions",
+  "question": "For the two Pangram-4.1 AI/High starting baselines from the one-per-article screen, does example-conditioned rewriting produce an all-Human window without semantic damage where direct rewriting does not?",
+  "eligibility": [
+    {
+      "case": "T16",
+      "baseline": "AI Generated, High, fraction_ai 1.0",
+      "A_fidelity_reviewer": "true, owner not rated",
+      "B_fidelity_reviewer": "true, mild added intensifiers, owner not rated",
+      "A_sha256": "15ea48b9751c9ff5a62f3799d81a79e21a7b2964f9584c099061ab13e3ee6657",
+      "B_sha256": "e4b1b31acafeb6686b93f1c3ef278fd172618b7d030d2fabc5c3a0df50971e2d",
+      "teacher": "child-access; cross-article, strong match",
+      "planned_new_calls": 2
+    },
+    {
+      "case": "T26",
+      "baseline": "AI Generated, High, fraction_ai 1.0",
+      "A_fidelity_reviewer": "true, identical baseline",
+      "B_fidelity_reviewer": "true, slight connective/idiomatic changes",
+      "A_sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+      "B_sha256": "ef0dcb085804c7b182ad5d9fe469f48c1328419f6b005e21121f2009d082bc0b",
+      "teacher": "child-access; cross-article, weak match",
+      "planned_new_calls": 1,
+      "guard": "A is byte-identical to baseline, REUSE same cached Pangram4.1 AI/High result; do NOT buy repeat"
+    }
+  ],
+  "predictions": [
+    {
+      "case": "T16",
+      "arm": "A",
+      "sha256": "15ea48b9751c9ff5a62f3799d81a79e21a7b2964f9584c099061ab13e3ee6657",
+      "p_all_human": 0.24,
+      "predicted": "AI/mixed",
+      "reason": "Minimal phrasing differences retain procedural advice and repeated if/ask/once progression."
+    },
+    {
+      "case": "T16",
+      "arm": "B",
+      "sha256": "e4b1b31acafeb6686b93f1c3ef278fd172618b7d030d2fabc5c3a0df50971e2d",
+      "p_all_human": 0.47,
+      "predicted": "AI/mixed (uncertain)",
+      "reason": "Smoother first-person/reader voice and natural idioms may help; added emotional intensifiers risk polished therapy cadence. Reviewer rated it more natural but not decisively superior."
+    },
+    {
+      "case": "T26",
+      "arm": "B",
+      "sha256": "ef0dcb085804c7b182ad5d9fe469f48c1328419f6b005e21121f2009d082bc0b",
+      "p_all_human": 0.31,
+      "predicted": "AI/mixed",
+      "reason": "Contractions and one colloquial question improve flow, yet systematic definition→method→timeframe→exception→closure sequence still remains."
+    }
+  ],
+  "measurement": {
+    "backend": "pangram-4 actual version 4.1",
+    "size": "one paragraph per paid call",
+    "new_post_ceiling": 3,
+    "cache": "hash+model+version+measurement key, checkpoint before/after paid action",
+    "repeat_policy": "no rerun after ambiguity; T26A cache reuse",
+    "one_existing_control": "T13 previous AI/high but editorial meaning loss in B -> disqualified; no more calls",
+    "evidence_order": "predictions frozen and committed before provider calls",
+    "end_condition": "Stop after at most three new results, compare across two related families descriptively; no per-word generalization or additional method refinement without user-driven diagnosis."
+  },
+  "future_blindness": "Writer candidates committed before forecasts/results, truly separate restricted Claude contexts; current analyst predictor saw candidates, so forecasts are not blind to candidate prose, but still prospective wrt Pangram.",
+  "results": null
+}

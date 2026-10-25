@@ -1,0 +1,54 @@
+{
+  "schema": "weak-prose-route-trial-v1",
+  "status": "FROZEN_BEFORE_WRITING",
+  "n": 6,
+  "unit": "six developmental source families across four article topics under one byline",
+  "question": "Does a different native model configuration produce a better first whole-thought rewrite on genuinely AI-labeled prose under the same brief and examples?",
+  "models": [
+    {
+      "alias": "sonnet",
+      "effort": "high"
+    },
+    {
+      "alias": "opus",
+      "effort": "high"
+    }
+  ],
+  "identity": "Record returned modelUsage keys; alias is request, not claimed resolved model. Effort labels do not imply cross-model compute equality.",
+  "same_inputs_per_case": true,
+  "one_first_attempt_per_model": true,
+  "forbidden": "No master edits, false specifics, deliberate errors, substantive omissions, invented explanations, or stronger/weaker claims.",
+  "isolation": "Separate --restricted CLI contexts, no tools/settings/session persistence, per-stage directories. Successful target revisions and detector outputs withheld.",
+  "rationale": "Change model/inference route after archived generation-method failures; not another phrase prohibition or grammar-local repair.",
+  "evaluation": "Fresh source-aware concrete delta inventory without deletion discretion; separate source-free anonymous pair style ranking. Owner approval absent.",
+  "writer_input": "Same literal weak draft, one source-grounded live concern, two literal teaching contrasts; preservation ledger not supplied as sentence outline.",
+  "order": {
+    "W01": [
+      "sonnet",
+      "opus"
+    ],
+    "W02": [
+      "opus",
+      "sonnet"
+    ],
+    "W03": [
+      "sonnet",
+      "opus"
+    ],
+    "W04": [
+      "opus",
+      "sonnet"
+    ],
+    "W05": [
+      "sonnet",
+      "opus"
+    ],
+    "W06": [
+      "opus",
+      "sonnet"
+    ]
+  },
+  "Pangram": "No automatic calls. Freeze exact candidates; review actual meaning first. Only short, prospective, decision-changing calls after explicit admission.",
+  "stop": "One first pass per route, no adaptive patching within this study. Six-case development cannot demonstrate general reliability.",
+  "scope": "Preserve source claims, not factual/clinical/doctrinal endorsement."
+}

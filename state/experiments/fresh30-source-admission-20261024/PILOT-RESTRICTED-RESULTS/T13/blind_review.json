@@ -1,0 +1,46 @@
+{
+  "case": "T13",
+  "stage": "blind_review",
+  "prompt_sha256": "bb48320a95b6b70270cec3793490f503049502073758ea30ed58f98838df9daa",
+  "elapsed_s": 9.95,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"'the experience' after 'Stay with' (clarifying object, minor)\",\n      \"'about it' after 'choice' (minor clarification)\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Very close to the source, nearly sentence-for-sentence. Preserves the source's firm, slightly clinical register and its conditional structure ('when you can remain present and keep your choice'). The rhetorical function of each sentence is intact: the description-vs-evidence caveat, the reverse-direction grief, the 'need not mean' reassurance (folded into a relative clause, which slightly softens its standalone force), and the closing corrective. Reads clean but somewhat stiff, with little rewording beyond light edits; 'keep your choice about it' is a bit awkward.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"The source's 'Stay with it when...' is an instruction conditional on presence and choice; Y reframes it as permission ('it's fine to stay with whatever comes up'), shifting directive to permissive.\"\n    ],\n    \"added\": [\n      \"'after grieving deeply, something shifts into' (reframes 'deep grieving gives way to' as a temporal sequence with an implied agent-less shift)\",\n      \"'tells you what the experience was like' (gloss on 'describes an experience')\",\n      \"'whatever comes up' (broadens 'it' to all arising material, not just the warmth or grief described)\",\n      \"'it's fine to' (permission framing and reassurance tone)\",\n      \"'the choice is yours' (subjective feeling 'still feel the choice is yours' vs. 'retain choice')\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"More natural and conversational, with direct address and smoother rhythm ('stir sadness over the care you didn't get'). Core claims survive: experience is not mechanism evidence, care can open grief without love failing, tears are not proof of healing. However, the register warms and softens: the stay-with guidance becomes gentle permission, and 'still feel the choice is yours' shifts from retaining actual choice to perceived choice. 'Is at work' and 'on its own' are fine. The final sentence, 'crying more... doesn't mean you're healing more,' is slightly more colloquial but equivalent in function.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both preserve the main claims, but X is more faithful to rhetorical function: it keeps the conditional guidance as an instruction rather than converting it to permission, and it keeps 'retain choice' as an actual condition rather than a felt sense. Y reads better and sounds more natural, but its added reassurance ('it's fine'), broadened object ('whatever comes up'), and subjectivized choice shift the meaning and tone. If voice were weighted equally with fidelity Y would be competitive, but on the stated priority of meaning and rhetorical function, X is the safer match.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1142,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1028,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1142,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1028,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1142,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1142
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.014852,
+  "is_error": false,
+  "result_sha256": "baafb1ae14d7f1119e3707282a2b0fafefc44789d11b914d2ffa323ad495f8be"
+}

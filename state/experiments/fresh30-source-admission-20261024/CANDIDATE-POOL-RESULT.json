@@ -1,0 +1,114 @@
+{
+  "schema": "candidate-pool-exact-recovery-v1",
+  "cases": [
+    {
+      "id": "T16",
+      "joint_choice": "old_A",
+      "naturalness_choice": "old_A",
+      "ratings": {
+        "SPARSE": {
+          "faithful_boolean": true,
+          "material_losses": [],
+          "added_claims": [],
+          "naturalness_1_to_5": 4,
+          "explanation": "Keeps every unit: no need for a trustworthy history, a remembered or imagined caring adult, the question applied to actual history, limitations and options, the least cruel believable response, and trying one usable thing instead of repeating the exercise. Wording is slightly clipped but accurate."
+        },
+        "old_B": {
+          "faithful_boolean": false,
+          "material_losses": [],
+          "added_claims": [
+            "\"sincerely means\" adds a sincerity qualifier to the imagined adult's intention",
+            "\"honestly believe\" adds an honesty qualifier to the least cruel response",
+            "\"real\" and \"actually\" slightly shift the emphasis on history and options"
+          ],
+          "naturalness_1_to_5": 4,
+          "explanation": "All the units are present and the prose reads well. The added qualifiers (sincerely, honestly) change the exact qualification of the source. The shifts are small but real."
+        },
+        "ATTENTION": {
+          "faithful_boolean": false,
+          "material_losses": [],
+          "added_claims": [
+            "Opens with a hypothetical reader \"may wonder how to borrow care\" and answers it, which the source does not do",
+            "\"the answer is that you can still do it\" changes the framing from a statement that something is not needed to a Q&A"
+          ],
+          "naturalness_1_to_5": 3,
+          "explanation": "The core instructions are intact, but the invented opening framing adds content and changes the rhetorical stance. The opening is also wordy."
+        },
+        "old_A": {
+          "faithful_boolean": true,
+          "material_losses": [],
+          "added_claims": [],
+          "naturalness_1_to_5": 5,
+          "explanation": "Fully faithful. \"Even if your history is not full of trustworthy people\" preserves the meaning of the source's opening. Every later unit and qualification is exact, and the prose flows naturally."
+        },
+        "CONNECTED": {
+          "faithful_boolean": true,
+          "material_losses": [],
+          "added_claims": [],
+          "naturalness_1_to_5": 4,
+          "explanation": "Closest to the source in structure and wording, with all units and qualifications intact. \"And then ask\" is a minor harmless addition."
+        }
+      },
+      "source_hash": "e4cc24b26141051ff42c4b53f1790ccd3ca7338497903dcd6a195ecca030a86c"
+    },
+    {
+      "id": "T26",
+      "joint_choice": "old_A",
+      "naturalness_choice": "old_B",
+      "ratings": {
+        "old_A": {
+          "faithful_boolean": true,
+          "material_losses": [],
+          "added_claims": [],
+          "naturalness_1_to_5": 3,
+          "explanation": "Carries every unit: the practical turn on the window of tolerance, the three methods asking one question (small dose, notice, return), the 3-6 month 'mainly building' range, severe developmental trauma taking longer, the guide-not-countdown qualification, and the stable/one-target/sooner condition. 'Rough guide' is a reasonable rendering of 'orientation'. The wording stays close to the source and reads slightly formal."
+        },
+        "CONNECTED": {
+          "faithful_boolean": false,
+          "material_losses": [
+            "'mainly building' becomes 'focused effort', which loses the point that the time goes mostly to building capacities",
+            "The 'some people may spend' framing is turned into 'may take some people', a small shift"
+          ],
+          "added_claims": [
+            "'focused effort' implies an intensity of effort the source does not state"
+          ],
+          "naturalness_1_to_5": 3,
+          "explanation": "Mostly sound and the decision boundary is kept. The change to 'focused effort' alters the meaning of the time-range claim, and it also echoes 'focused trauma work' later in the passage. The long run-on sentences are somewhat stiff."
+        },
+        "old_B": {
+          "faithful_boolean": true,
+          "material_losses": [],
+          "added_claims": [
+            "'to handle' is a slight gloss on the dose size",
+            "'But' adds a contrast the source does not mark"
+          ],
+          "naturalness_1_to_5": 4,
+          "explanation": "All units and qualifications are kept: the range, the longer time for severe trauma, the guide-not-countdown framing, and the stable/one-target condition. The additions are minor and do not change the meaning. It reads the most naturally of the set."
+        },
+        "SPARSE": {
+          "faithful_boolean": true,
+          "material_losses": [],
+          "added_claims": [],
+          "naturalness_1_to_5": 3,
+          "explanation": "Identical to X and equally faithful."
+        },
+        "ATTENTION": {
+          "faithful_boolean": false,
+          "material_losses": [],
+          "added_claims": [
+            "Opening question 'How do you know whether you're ready to do the harder work?' is not in the source",
+            "'How long it takes to build that capacity varies' is an added sentence that duplicates the later range"
+          ],
+          "naturalness_1_to_5": 3,
+          "explanation": "The core text matches X, but the added opening question and the extra sentence introduce material absent from the source. They also change the passage's framing, so it fails on fidelity."
+        }
+      },
+      "source_hash": "27f7fc10e34c730aac2fa89605550433e13ea5a72566885ecc881bbc0bdb8f9f"
+    }
+  ],
+  "fresh_model_calls_this_recovery": 0,
+  "fresh_Pangram_calls_this_recovery": 0,
+  "new_pool_joint_winners": 0,
+  "old_candidates_chosen": 2,
+  "limits": "Two same-provider-selector cases; old_A duplicates SPARSE in T26. Do not infer an overall failure of diverse candidate selection."
+}

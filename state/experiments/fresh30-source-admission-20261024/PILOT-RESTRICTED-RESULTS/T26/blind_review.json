@@ -1,0 +1,46 @@
+{
+  "case": "T26",
+  "stage": "blind_review",
+  "prompt_sha256": "d929ac920d0686663ac0c87bf2e4b4b18d6298135c0d70934ffaa575e0120976",
+  "elapsed_s": 9.24,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"'rough guide' replaces 'orientation' in the last-but-two sentence. The source's 'orientation' means a directional aid. 'Rough guide' is a reasonable gloss, but it drops the word echo with the earlier technical term 'orientation' (which is the clinical concept). This arguably removes a potential ambiguity, but also adds an interpretation ('rough').\"\n    ],\n    \"voice_score_1_to_5\": 3.5,\n    \"prose_comment\": \"Very close to the source, with light synonym swaps (usual→familiar, expanding→widening, come back→return). Reads clean and competent but slightly formal and uniform. 'Each ask the same question' is a mild tightening. 'Mainly building these capacities' keeps the source's register. The 'I would treat that as a rough guide' sentence is tidy but a bit stiff; no contractions, consistent with the source's measured, clinical-advisory tone.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"'But' opens the 'rough guide' sentence, adding an explicit contrastive connective the source only implies.\",\n      \"'rough guide' replaces 'orientation', as in X.\",\n      \"'dose small enough to handle' adds 'to handle', a slight elaboration of 'small enough dose'.\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"More conversational and spoken: contractions (I'd, you're), 'gets practical', 'mostly', 'with severe developmental trauma it can take longer'. The 'But' makes the hedge-then-reassure rhythm clearer and sounds like a clinician speaking to a reader. 'Small enough to handle' is a touch more explanatory than the source, but it fits the voice. Slightly less faithful to the source's restrained register, though it reads more naturally.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Both preserve the source's meaning and its rhetorical moves: the practical reframing, the three techniques as one question, the time range with a caveat for severe trauma, the disclaimer that it's not a countdown, and the reassurance that stable people with a clear target can move faster. Both swap 'orientation' for 'rough guide' in the same way, so that is a wash. The difference is in voice. Y's contractions and the added 'But' give it a more natural, spoken-advice quality that suits the first-person 'I would' stance, while X is cleaner but more stiffly formal. Y's small additions ('to handle', 'But') don't change meaning or function, so Y's naturalness edge outweighs X's marginally tighter literalness. Preference is moderate rather than strong.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1149,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 932,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1149,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 932,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1149,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1149
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.013920000000000002,
+  "is_error": false,
+  "result_sha256": "8080c8820d0ad0e5f94523717cfc724b61d0b3b2c45b7b7ddc3cde9267c59eb4"
+}

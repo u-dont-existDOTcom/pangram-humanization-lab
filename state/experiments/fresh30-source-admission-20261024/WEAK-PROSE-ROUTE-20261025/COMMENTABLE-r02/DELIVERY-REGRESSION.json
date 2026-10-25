@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "current_page": {
+    "ok": true,
+    "errors": [],
+    "review_rows": 6,
+    "commentable_cells": 12,
+    "comment_buttons": 12,
+    "scope": "static contract only; browser test still required"
+  },
+  "old_static_page_correctly_rejected": true,
+  "negative_fixture_failures": [
+    "Missing actual textarea: commentText",
+    "Missing actual button: saveComment",
+    "Missing actual button: cancelComment",
+    "Missing actual button: exportJson",
+    "Missing actual button: exportMd",
+    "Missing actual button: copyJson",
+    "Missing actual button: copyMd",
+    "Missing actual input: search",
+    "Every review cell needs an actual comment button",
+    "Missing parseable review-data identity",
+    "Wrong or absent comment export contract",
+    "Wrong number of review items",
+    "Missing interaction/readability implementation: selectionSnapshots",
+    "Missing interaction/readability implementation: rememberSelection",
+    "Missing interaction/readability implementation: localStorage",
+    "Missing interaction/readability implementation: review-form-controls-v1",
+    "Missing interaction/readability implementation: -webkit-text-fill-color:#1f2937"
+  ],
+  "candidate_checks": "W01 exact deletion only; W02\u2013W06 unchanged; all six hashes verified"
+}

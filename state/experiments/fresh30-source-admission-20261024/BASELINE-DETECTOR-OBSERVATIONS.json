@@ -1,0 +1,154 @@
+{
+  "schema": "fresh30-baseline-detector-result-v1",
+  "requested_model": "pangram-4",
+  "verified_backend_version": "4.1",
+  "forecast_source": "BASELINE-DETECTOR-FORECASTS.json",
+  "selection_rule": "For each of six registered article clusters, take the first source-ordinal case with strict baseline fidelity admitted (T01,T06,T11,T16,T21,T26). Current A/B review outcomes played no role in choosing by ordinal; first T13 already measured AI/high is historical calibration, excluded from new prediction accuracy.",
+  "source_count": 6,
+  "measured_count": 6,
+  "measurements": [
+    {
+      "id": "T01",
+      "sha256": "38bebe6cef2d0bb228b0e58e5a539914a000dd283102b2ee4d25a0ba25e1653a",
+      "actual_version": "4.1",
+      "forecast_probability_all_human": 0.43,
+      "forecast_verdict": "not_all_human",
+      "detector_stage": "STAGE_SUCCESS",
+      "headline": "Human Written",
+      "fraction_human": 1.0,
+      "fraction_ai": 5.631013775923843e-13,
+      "fraction_ai_assisted": 5.681914899517693e-13,
+      "all_human": false,
+      "windows": [
+        {
+          "label": "Human Written",
+          "confidence": "High"
+        },
+        {
+          "label": "Human Written",
+          "confidence": "Medium"
+        },
+        {
+          "label": "Human Written",
+          "confidence": "High"
+        },
+        {
+          "label": "Human Written",
+          "confidence": "Medium"
+        }
+      ],
+      "cache_source": "live",
+      "task_recorded": true
+    },
+    {
+      "id": "T06",
+      "sha256": "44de1e910ad54a2a9e839b644b11ded03625a85825d85c71d24d774c102f6fc7",
+      "actual_version": "4.1",
+      "forecast_probability_all_human": 0.78,
+      "forecast_verdict": "all_human",
+      "detector_stage": "STAGE_SUCCESS",
+      "headline": "Human Written",
+      "fraction_human": 1.0,
+      "fraction_ai": 2.4103369446843922e-14,
+      "fraction_ai_assisted": 1.9142541324581954e-23,
+      "all_human": false,
+      "windows": [
+        {
+          "label": "Human Written",
+          "confidence": "Medium"
+        },
+        {
+          "label": "Human Written",
+          "confidence": "High"
+        }
+      ],
+      "cache_source": "live",
+      "task_recorded": true
+    },
+    {
+      "id": "T11",
+      "sha256": "5662e11595e17b793c3f238458c792dc1b03d8fc7c49786637ff1fa833af46bc",
+      "actual_version": "4.1",
+      "forecast_probability_all_human": 0.55,
+      "forecast_verdict": "all_human",
+      "detector_stage": "STAGE_SUCCESS",
+      "headline": "Human Written",
+      "fraction_human": 1.0,
+      "fraction_ai": 5.264642454622104e-12,
+      "fraction_ai_assisted": 6.281431624843847e-11,
+      "all_human": false,
+      "windows": [
+        {
+          "label": "Human Written",
+          "confidence": "Medium"
+        }
+      ],
+      "cache_source": "live",
+      "task_recorded": true
+    },
+    {
+      "id": "T16",
+      "sha256": "856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126",
+      "actual_version": "4.1",
+      "forecast_probability_all_human": 0.24,
+      "forecast_verdict": "not_all_human",
+      "detector_stage": "STAGE_SUCCESS",
+      "headline": "AI Generated",
+      "fraction_human": 4.7062021655856166e-23,
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "all_human": false,
+      "windows": [
+        {
+          "label": "AI-Generated",
+          "confidence": "High"
+        }
+      ],
+      "cache_source": "live",
+      "task_recorded": true
+    },
+    {
+      "id": "T21",
+      "sha256": "52623767a2f2f3ffbcf1610282f68688e4b94b0c9e2996a65ce712d9f0cbf20b",
+      "actual_version": "4.1",
+      "forecast_probability_all_human": 0.69,
+      "forecast_verdict": "all_human",
+      "detector_stage": "STAGE_SUCCESS",
+      "headline": "Human Written",
+      "fraction_human": 1.0,
+      "fraction_ai": 2.5956153363796084e-38,
+      "fraction_ai_assisted": 4.901353658408955e-30,
+      "all_human": false,
+      "windows": [
+        {
+          "label": "Human Written",
+          "confidence": "High"
+        }
+      ],
+      "cache_source": "live",
+      "task_recorded": true
+    },
+    {
+      "id": "T26",
+      "sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+      "actual_version": "4.1",
+      "forecast_probability_all_human": 0.21,
+      "forecast_verdict": "not_all_human",
+      "detector_stage": "STAGE_SUCCESS",
+      "headline": "AI Generated",
+      "fraction_human": 1.0101907003599373e-28,
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 5.863060800704321e-40,
+      "all_human": false,
+      "windows": [
+        {
+          "label": "AI-Generated",
+          "confidence": "High"
+        }
+      ],
+      "cache_source": "live",
+      "task_recorded": true
+    }
+  ],
+  "note": "One paragraph per call, cache/checkpoint and no automatic duplicate submit. Observations apply to model-transformed baselines only, not the owner source or both writing arms."
+}

@@ -1,0 +1,46 @@
+{
+  "case": "T30",
+  "stage": "blind_review",
+  "prompt_sha256": "f59bf1d0b2b53da11c1c39df1e8219260de43cf47a90d415ac228c946c6e6d63",
+  "elapsed_s": 9.53,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"'unglamorous' is rendered as 'plain', losing the connotation of the question being mundane and unexciting, in contrast to dramatic or intense healing.\"\n    ],\n    \"added\": [\n      \"'show' is used twice in place of 'prove' and 'tell you', so the parallel gets slightly flattened.\",\n      \"'whether I am actually doing better' converts the direct question into an indirect clause, which slightly softens the self-interrogation.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Faithful and tidy, with the original's long-sentence rhythm and parallel structure intact. The indirect-question phrasing and lack of contractions make it read a bit stiff and formal compared with the first-person, conversational source. 'Mistake intensity for healing' is a clean rendering of 'confuse'. The two 'show' verbs make the opening contrast less varied than the source's 'prove' versus 'tell you'.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"'unglamorous' is rendered as 'plain', so the sense of the question being deliberately unexciting is weakened.\",\n      \"The single list of four practices is broken into separate sentences, so the 'keep asking' step no longer reads as a parallel item in the same series.\"\n    ],\n    \"added\": [\n      \"'So' is added at the start of the second sentence, which makes the inference from the first sentence explicit where the source leaves it implied.\",\n      \"'Then' is added before 'I'd keep asking', which imposes a sequence that the source does not state.\",\n      \"'where I can' replaces 'when possible', shifting slightly from general feasibility to personal capacity.\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Reads more like a person speaking, with contractions and the direct question 'am I actually doing better?' preserved as a question, which keeps the source's self-interrogating voice. The varied verbs ('show' then 'tell you') echo the source. The added 'So' and 'Then' are small connectives that smooth the flow but add logical and temporal framing the source does not spell out.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Both candidates preserve the core meaning and rhetorical function: the two-sided caution about research volume, the first-principles and one-change-at-a-time approach, the outcome check, and the closing warning against equating intensity with healing. Both lose some of the connotation of 'unglamorous'. Y keeps the direct question form and has a more natural, spoken voice, which matches the source's personal register. Its added connectives ('So', 'Then') and the split of the list are minor departures from fidelity. X is slightly closer in sentence structure but is stiffer and softens the self-check into an indirect clause. On balance Y's gain in voice outweighs its small fidelity costs, so Y is mildly preferred.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1065,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 990,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1065,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 990,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1065,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1065
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.014164,
+  "is_error": false,
+  "result_sha256": "0bb1f76fad4f6fa9a3244ecac7735e34eb4e16fc1777ef2df68491bc33e97fbe"
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "fresh30-restricted-exploratory-v3",
+  "method": "distinct_fresh_restricted_no_autoload_cli_contexts",
+  "model": "sonnet",
+  "effort": "medium",
+  "cases": [
+    {
+      "case": "T24",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "104643edcc5f21d5f86bf10e507679a6cec90271fc15fde28a78c37bbf808f0b",
+      "arm_a_sha256": "4d5d99249fecc69d22313db90b3531ccec2aa010530edf53c1aca976661ac0f1",
+      "arm_b_sha256": "2fb15a18fdf2a4e832a1e7fad73d99500c012715e490170f0d1db4248fcebcda",
+      "format_pass_A": true,
+      "format_pass_B": true
+    },
+    {
+      "case": "T25",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "24e8f9db656057e349404dba5ebe9f2adc1acb8b558f36345f2d76d537d75237",
+      "arm_a_sha256": "1e90025918086b49861227ebd74c137dba4e193b8eb7fc9d118e620f32820137",
+      "arm_b_sha256": "5b88d7702167033184014bd451b6366aff61fadebe3137467ce9a380a65aad7f",
+      "format_pass_A": true,
+      "format_pass_B": true
+    },
+    {
+      "case": "T26",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+      "arm_a_sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+      "arm_b_sha256": "ef0dcb085804c7b182ad5d9fe469f48c1328419f6b005e21121f2009d082bc0b",
+      "format_pass_A": true,
+      "format_pass_B": true
+    },
+    {
+      "case": "T27",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "7258f5f127f3eb2d1100b22eaacbc5458fed49fe2d787f0f3eec10515fbf6c26",
+      "arm_a_sha256": "7258f5f127f3eb2d1100b22eaacbc5458fed49fe2d787f0f3eec10515fbf6c26",
+      "arm_b_sha256": "89f8f19171fc42942a416679c9a98b2b143a3fe67955cd4b96e45c73f7dc34b6",
+      "format_pass_A": true,
+      "format_pass_B": true
+    },
+    {
+      "case": "T29",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "b3df9b33025cd2a1e64f33f9cdfa7e39120f41a29b451ffa16e81a00c25073d3",
+      "arm_a_sha256": "b3df9b33025cd2a1e64f33f9cdfa7e39120f41a29b451ffa16e81a00c25073d3",
+      "arm_b_sha256": "5966a7cff1c5f362481811265569518294b2443262bd9266816968b5c5d71922",
+      "format_pass_A": true,
+      "format_pass_B": true
+    },
+    {
+      "case": "T30",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "66ee639e2f08f3ceb68c417bbaa7421f6c761bb8c2bc91190cf1ca4e5be0c11f",
+      "arm_a_sha256": "66ee639e2f08f3ceb68c417bbaa7421f6c761bb8c2bc91190cf1ca4e5be0c11f",
+      "arm_b_sha256": "0f9be3151ec9186fedcb2a56962a94cebb6b6a802d6d04b8b45095f692daccc2",
+      "format_pass_A": true,
+      "format_pass_B": true
+    }
+  ],
+  "calls_pangram": 0,
+  "owner_style_approval": false,
+  "independent_across_authors": false,
+  "pilot_only": true
+}

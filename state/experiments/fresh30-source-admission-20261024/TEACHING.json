@@ -1,0 +1,343 @@
+{
+  "schema": "frozen-teaching-source-map-v1",
+  "created": "2026-10-24",
+  "experiment_status": "PREPARED_NOT_RUN",
+  "examples": [
+    {
+      "id": "golden-forgiveness",
+      "kind": "owner-endorsed-model-revision",
+      "owner_approval": "GOLDEN",
+      "source_article": "hypnosis",
+      "source_family": "hypnosis:forgiveness",
+      "source_path": "state/generation/golden-examples/forgiveness-20261024/EPISODE.json",
+      "source_blob_sha": "e0118105b1f86e1dbd0dc6b7cf1dbe11157ae17c",
+      "source_before": "The harm happened, and the boundary still matters. The person is still accountable, and forgiveness may come later on its own.",
+      "source_after": "They really did hurt us and they still have to answer for it, and our boundary with them still matters, but one day we may find that we have forgiven them.",
+      "limits": "Only the changed ending is golden. Not owner-written. A single local pass is not evidence of general transfer. Harm, accountability, boundaries and possible forgiveness are preserved."
+    },
+    {
+      "id": "somatic-reverse",
+      "kind": "controlled-reverse-owner-human",
+      "owner_approval": "Source Human reported; experimental transformation",
+      "source_article": "somatic",
+      "source_family": "somatic:gradual-trauma-cross-domain",
+      "source_path": "state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json",
+      "source_blob_sha": "bda9fce200d3dc23b5827581b0be81913342c8cc",
+      "source_before": "Physical trauma reactions can persist after the danger has passed, even when you know you're safe. With complex or developmental trauma, direct work on the deepest memory can be overwhelming, so a gradual approach may be enough: Buddhist nun Pema Chodron calls it a “feather touch,” and Peter Levine, the founder of Somatic Experiencing, calls gentle work around the edges “pendulation.” The same limit appears in inner-child therapy: you can know what the younger part needs yet enter the child-state so fully that too little adult perspective remains to provide it.",
+      "source_after": "Physical trauma reactions can continue after the danger is over, even when you know you're safe.\n\nWith complex or developmental trauma, going straight for the deepest memory can be overwhelming. Instead of diving off the deep end heroically, take it easy, one step at a time. As Buddhist nun Pema Chodron says, \"feather touch\" is all it takes to gently open up.  Peter Levine, the founder of Somatic Experiencing, calls this gentle work around the edges, \"pendulation.\"\n\nIn inner-child therapy, you can know exactly what the younger part needs and still get pulled so far into the child-state that there isn't enough adult perspective left to give it.",
+      "limits": "Actual chronology owner-Human → model AI-shaped; reverse it only as teaching. Multiple changes together; don't infer single phrase/length effect."
+    },
+    {
+      "id": "child-access",
+      "kind": "owner-aligned-same-governing-thought",
+      "owner_approval": "Explicit owner supplied",
+      "source_article": "inner-child",
+      "source_family": "inner-child:chicken-and-egg",
+      "source_path": "state/generation/OWNER-ALIGNED-TRANSFORMATION-CORPUS-v1.json",
+      "source_blob_sha": "bda9fce200d3dc23b5827581b0be81913342c8cc",
+      "source_before": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. Without that, you can sit there trying to say all the loving things while the old critic, numbness, panic, or urge to get away is running the whole thing.",
+      "source_after": "But here’s the chicken-and-egg problem. What if you’re so far inside the child-state that you can’t become the adult? This is much easier when you can already reach one of those adult roles. But when you can't, it's like you sit there trying to be loving while your mind is becoming controlled again by the inherited critic voice, or you start going numb, throwing a fit, or panicking.",
+      "limits": "Local manifestation changed from urge to escape to throwing a fit. Owner result Human/low; previous model behavior unstable."
+    },
+    {
+      "id": "inner-monologue",
+      "kind": "provisional-multi-paragraph-owner-rewrite",
+      "owner_approval": "Owner final preferred reported",
+      "source_article": "inner-child",
+      "source_family": "inner-child:monologue-008",
+      "source_path": "state/generation/positive-calibration-20260917/sources/inner-monologue-pair.md",
+      "source_blob_sha": "1d2912181ce892783e70da5e7b794844948eb3fc",
+      "source_before": "If you don't hear a little kid talking in your head, don't invent one. Actually, this is one place where the usual inner-child language can get confusing, because “ask” sounds as though you're supposed to ask a question and then wait for a second voice to answer. Maybe that's what happens for some people. It isn't required.\n\nYou might barely have spontaneous words in your mind and still be perfectly capable of thinking a sentence on purpose. Try it and see. If words are there, use them; say the thing aloud, write it, whatever gets it out of the strange imaginary-conversation zone. And if that starts feeling like homework you're doing for a child who isn't answering, drop it. Maybe what's actually happening is a knot in your stomach, an urge to leave, some image that keeps coming up, a song that suddenly feels relevant. Sometimes nothing “answers” and you just know what would be kind.\n\nThe order gets murky too. Feeling can precede language, language can expose a feeling, and afterward you may not know which happened first. I don't think you need to solve that before using whatever words eventually help you understand it.",
+      "source_after": "If you don't hear a little kid talking in your head, don't invent one. Actually, this is one place where the usual inner-child prompt can get confusing, because “ask” sounds like you're supposed to ask a question and then wait for a second voice to answer. Maybe that's what happens for some people, but you might not be some people.\n\nYou might barely have spontaneous words in your mind and yet still be able to think a sentence on purpose. Try it and see. If words are there, speak or write them. You might feel more comfortable that way than just staying in imagination land.  And if that starts feeling like homework you're doing for a child who isn't answering, drop it. Maybe what's actually requiring your attention now is a knot in your stomach. Or perhaps you're in a place you want to leave. Sometimes nothing “answers” and you just know what would be nice to do for yourself.\n\nAnd it might not be the same order all the time. You could have a feeling before thoughts, or thoughts might come first and provoke a feeling. They say hindsight is 20/20, but you actually might not even know which happened first. That's ok, too. ",
+      "limits": "Several adjacent paragraphs changed together, including example inventory. Single repaired paragraph alone did not produce Human. Not a clean wording-only pair."
+    }
+  ],
+  "allocations": [
+    {
+      "target": "T01",
+      "article": "romance",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T02",
+      "article": "romance",
+      "teacher": "inner-monologue",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T03",
+      "article": "romance",
+      "teacher": "somatic-reverse",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T04",
+      "article": "romance",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T05",
+      "article": "romance",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T06",
+      "article": "communities",
+      "teacher": "child-access",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T07",
+      "article": "communities",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T08",
+      "article": "communities",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T09",
+      "article": "communities",
+      "teacher": "somatic-reverse",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T10",
+      "article": "communities",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T11",
+      "article": "inner-child",
+      "teacher": "somatic-reverse",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T12",
+      "article": "inner-child",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T13",
+      "article": "inner-child",
+      "teacher": "somatic-reverse",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T14",
+      "article": "inner-child",
+      "teacher": "somatic-reverse",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T15",
+      "article": "inner-child",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T16",
+      "article": "hypnosis",
+      "teacher": "child-access",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T17",
+      "article": "hypnosis",
+      "teacher": "inner-monologue",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T18",
+      "article": "hypnosis",
+      "teacher": "somatic-reverse",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T19",
+      "article": "hypnosis",
+      "teacher": "inner-monologue",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T20",
+      "article": "hypnosis",
+      "teacher": "child-access",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T21",
+      "article": "nibbana",
+      "teacher": "child-access",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T22",
+      "article": "nibbana",
+      "teacher": "inner-monologue",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T23",
+      "article": "nibbana",
+      "teacher": "somatic-reverse",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T24",
+      "article": "nibbana",
+      "teacher": "child-access",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T25",
+      "article": "nibbana",
+      "teacher": "child-access",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T26",
+      "article": "somatic",
+      "teacher": "child-access",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T27",
+      "article": "somatic",
+      "teacher": "child-access",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T28",
+      "article": "somatic",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T29",
+      "article": "somatic",
+      "teacher": "golden-forgiveness",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    },
+    {
+      "target": "T30",
+      "article": "somatic",
+      "teacher": "inner-monologue",
+      "teaching_reason": "Rhetorical-function match only, not lexical prediction; owner/material equivalence may be limited",
+      "match_strength": "PROVISIONAL_CANDIDATE",
+      "source_role": "working article source is fidelity anchor, NOT verified AI-shaped baseline",
+      "output_status": "UNGENERATED"
+    }
+  ],
+  "compliance": {
+    "target_count": 30,
+    "examples_per_target": 1,
+    "cross_article_teacher_exclusion": true,
+    "stage": "source/teacher context exposed only in corpus-building phase; cannot claim author/editor blindness in this phase",
+    "writer_context_isolation_required": true,
+    "outputs_generated": 0,
+    "pangram_calls": 0,
+    "privacy": "no keys/credentials"
+  },
+  "limits": [
+    "Only 4 training families; one example per target is sometimes weak and not guaranteed applicable",
+    "Cannot infer independent effects from one pair; later outcomes grouped by article and source family",
+    "Do not promote owner-approved detector-Human revisions as universal stylistic recipes",
+    "Owner-endorsed golden source wording is model-authored historical revision and must not be relabeled as owner-authored"
+  ]
+}

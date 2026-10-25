@@ -1,0 +1,623 @@
+{
+  "schema": "owner-different-family-evaluator-results-v1",
+  "style": [
+    {
+      "id": "S01",
+      "family": "eft-portability",
+      "label_strength": "qualified/small preference",
+      "owner_preference": "B",
+      "both_AI_like_according_to_owner": true,
+      "stable_between_orders": false,
+      "both_orders_agree_with_owner": false,
+      "any_order_agrees_with_owner": false,
+      "trials": [
+        {
+          "order": 0,
+          "owner_preference": "B",
+          "numeric_rank": "A",
+          "textual_preference": "A",
+          "agrees": false,
+          "scores": {
+            "A": 4.0,
+            "B": 3.0
+          },
+          "by_original_version": {
+            "A": {
+              "voice_score_1_to_5": 4,
+              "prose_comment": "Has a distinct, slightly wry personal voice. 'The big advantage is that EFT travels' is a casual, confident opener, and 'a thought loop has recruited my whole body' is a vivid, idiosyncratic image that sounds like a person rather than a template. The closing 'I don't confuse that with finishing the deeper trauma work' is a self-aware hedge that gives the passage a grounded, honest stance. The short sentences are varied enough in function (claim, examples, qualification, caveat) that the rhythm feels purposeful. Slight risk: the 'big advantage' framing and the tidy caveat read a bit like a point-then-qualify essay move."
+            },
+            "B": {
+              "voice_score_1_to_5": 3,
+              "prose_comment": "Smooth and conversational, with a natural em-dash list and a plausible 'my mind is looping and my body has joined in.' But it is blander: 'takes some pressure off' is stock phrasing, and the final line 'The deeper trauma can still be sitting there' is passive and vague, with less personal stake. The three short sentences feel evenly weighted, so the passage reads as competent but less individual. The em-dash opener is fine but slightly generic."
+            }
+          },
+          "why": "X has more personality and a clearer stance. Its fresh image ('recruited my whole body') and the first-person caveat give it a lived-in feel, and the ideas connect with purpose. Y is natural and clean but flatter, and its ending trails off in a generic way. X's slightly essayistic structure is a small cost compared to its stronger voice.",
+          "response_sha256": "1adf4c5d9723935344fac9feb7fa3b7cbb3b0bd259c23319c5af4f64f6898b20"
+        },
+        {
+          "order": 1,
+          "owner_preference": "B",
+          "numeric_rank": "TIE",
+          "textual_preference": "TIE",
+          "agrees": false,
+          "scores": {
+            "A": 3.5,
+            "B": 3.5
+          },
+          "by_original_version": {
+            "B": {
+              "voice_score_1_to_5": 3.5,
+              "prose_comment": "Reads like plain first-person speech. The em-dash list flows and 'my body has joined in' is a casual, believable image. The three short sentences after it are a little flat and disconnected: 'It takes some pressure off' is mild, and 'The deeper trauma can still be sitting there' is an abrupt, somewhat passive hedge that doesn't clearly connect back to the preceding thought. It feels like a quiet, understated aside, which is human, but the transitions are thin."
+            },
+            "A": {
+              "voice_score_1_to_5": 3.5,
+              "prose_comment": "Has a more assertive, opinionated voice, opening with a thesis-like line ('The big advantage is that EFT travels') and then following with concrete examples. 'A thought loop has recruited my whole body' is vivid, though slightly more crafted. The closing 'I don't confuse that with finishing the deeper trauma work' gives a clear personal stance and links logically to the prior sentence. The rhythm (claim, list, short sentence, caveat) is a bit tidy and essay-like, but it sounds like a person with a position."
+            }
+          },
+          "why": "Both are credible. X is looser and more casual but its ending is vague and loosely connected. Y has stronger logical flow and a clearer personal stance, but its structure and 'recruited' metaphor feel slightly more polished and composed. These strengths and weaknesses roughly offset, so neither clearly sounds more natural.",
+          "response_sha256": "b389ca242d351cb4c0c45e0831c02266254098260a1d2fceeb5b175a9252df3c"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "family": "cross-domain-transition",
+      "label_strength": "qualified/small preference",
+      "owner_preference": "B",
+      "both_AI_like_according_to_owner": true,
+      "stable_between_orders": true,
+      "both_orders_agree_with_owner": true,
+      "any_order_agrees_with_owner": true,
+      "trials": [
+        {
+          "order": 0,
+          "owner_preference": "B",
+          "numeric_rank": "B",
+          "textual_preference": "B",
+          "agrees": true,
+          "scores": {
+            "A": 3.0,
+            "B": 4.0
+          },
+          "by_original_version": {
+            "A": {
+              "voice_score_1_to_5": 3,
+              "prose_comment": "\"The same principle extends to\" has an essayistic, slightly abstract feel, as if a general rule had been stated and is now being applied to a new case. That makes the link to the preceding material explicit, but it also sounds a bit like a formal transition. The rest of the sentence is conversational and specific, so the opening and the body sit at slightly different registers. It reads fine and is competent, but a little more constructed."
+            },
+            "B": {
+              "voice_score_1_to_5": 4,
+              "prose_comment": "\"This also happens in\" is plainer and more spoken. It treats the inner-child case as another instance of something already described, without announcing a principle. The shift into the colon and the vivid second-person clause flows more evenly, so the register stays consistent. It feels like a writer simply moving on to the next example, which comes across as more natural, though \"also\" is a mildly generic connector."
+            }
+          },
+          "why": "The two sentences are identical after the opening, so the difference is the transition. Y's \"This also happens in\" matches the plain, direct tone of the rest of the sentence. X's \"The same principle extends to\" adds a formal, slightly lecturing layer that sits a bit awkwardly before the conversational second-person claim. The gap is small, but Y reads as more natural.",
+          "response_sha256": "93c5da6789b57093889f6a21e5ce5a97b0b6899623199d5c3d9b5091f4448713"
+        },
+        {
+          "order": 1,
+          "owner_preference": "B",
+          "numeric_rank": "B",
+          "textual_preference": "B",
+          "agrees": true,
+          "scores": {
+            "A": 3.0,
+            "B": 4.0
+          },
+          "by_original_version": {
+            "B": {
+              "voice_score_1_to_5": 4,
+              "prose_comment": "\"This also happens in...\" is a plain, conversational way to attach a new example. It sounds like someone thinking aloud and moving from one case to the next without ceremony. The colon-led second half is concrete and slightly intimate, and its long final clause carries the point naturally. The weak spot is that \"This\" has no explicit referent in the excerpt, though in a running essay that would read as ordinary backward reference."
+            },
+            "A": {
+              "voice_score_1_to_5": 3,
+              "prose_comment": "\"The same principle extends to...\" is more formal and expository. It names the earlier idea as a \"principle\" and says it \"extends,\" which is a stock essay transition that feels a bit like a lecture or textbook. The shared second half is just as vivid, but the opener adds abstraction and slightly flattens the voice. It is clear and fine, but less spoken and less personal than X."
+            }
+          },
+          "why": "The sentences are identical after the colon, so the difference is the opener. X's casual \"This also happens in\" fits the plain, lived tone of the clause that follows. Y's \"The same principle extends to\" is a more generic, scaffolded transition and sounds more composed than spoken. The difference is small, and either would work in a full essay.",
+          "response_sha256": "7c66c138f2c4556ab16e99423a67b0922cff8d5bd524461b7d0674c309a59063"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "family": "compact-explanatory-ending",
+      "label_strength": "explicit preference",
+      "owner_preference": "A",
+      "both_AI_like_according_to_owner": false,
+      "stable_between_orders": true,
+      "both_orders_agree_with_owner": true,
+      "any_order_agrees_with_owner": true,
+      "trials": [
+        {
+          "order": 0,
+          "owner_preference": "A",
+          "numeric_rank": "A",
+          "textual_preference": "A",
+          "agrees": true,
+          "scores": {
+            "A": 4.0,
+            "B": 2.5
+          },
+          "by_original_version": {
+            "A": {
+              "voice_score_1_to_5": 4,
+              "prose_comment": "Reads as a casual, spoken aside. The profane, sulky imagined child's voice is vivid, and the flat follow-up about relaxation not helping is a dry, deflating turn that sounds like a real person admitting something awkward. The ending is abrupt and slightly loose, but that fits the conversational register. Nothing feels packaged or tidied."
+            },
+            "B": {
+              "voice_score_1_to_5": 2.5,
+              "prose_comment": "The first two sentences have the same lively, candid voice. The added closing sentence changes the register: 'The problem, then, is not whether... but whether...' is a polished not-X-but-Y thesis line that explains the anecdote instead of letting it land. 'Then' signals a logical conclusion the preceding casual confession didn't build toward, and the abstract, tidy phrasing clashes with the profane, offhand voice. It feels like a summarizing moral bolted on."
+            }
+          },
+          "why": "X keeps a consistent, conversational voice and ends on a plain, slightly awkward admission, which sounds lived-in. Y shares that opening but adds a neat, aphoristic contrast sentence that moves from spoken candor to essayistic tidiness and over-explains the moment. The shift in tone and the formulaic structure make Y read as less natural.",
+          "response_sha256": "3748c097fd58c2600117a387b5170d220446e233adf525209410d1c7a4392819"
+        },
+        {
+          "order": 1,
+          "owner_preference": "A",
+          "numeric_rank": "A",
+          "textual_preference": "A",
+          "agrees": true,
+          "scores": {
+            "A": 4.0,
+            "B": 3.0
+          },
+          "by_original_version": {
+            "B": {
+              "voice_score_1_to_5": 3,
+              "prose_comment": "The opening is vivid and distinctly human: the child's sneering, profane retort has real comic bite and a lived-in voice. The second sentence is flat and personal, a casual aside that fits the confessional tone. The closing sentence changes register. 'The problem, then, is not whether the love is there, but whether the child believes the adult offering it' is a tidy not-X-but-Y aphorism with a 'then' that signals a conclusion the preceding lines have not quite earned. It reads like an essayist's summing-up bolted onto a raw, personal moment. It is competent and even insightful, but it explains the joke and smooths the awkwardness the previous sentence deliberately left standing."
+            },
+            "A": {
+              "voice_score_1_to_5": 4,
+              "prose_comment": "The excerpt keeps the child's profane, sarcastic line and follows it with a plain, slightly deflated personal remark. The pairing works: the abrupt shift from vivid quote to understated 'hasn't really affected that awkward, difficult time' has a natural, wry, unpolished quality. It does not wrap up or moralize, so the awkwardness stays in place and the voice remains consistent. It is short, but the brevity feels like a fragment of a longer piece rather than a truncated one, and nothing in it sounds engineered."
+            }
+          },
+          "why": "The two share the same opening. The difference is X's added final sentence, a neat contrast-structured moral that shifts to a more composed, explanatory register and tells the reader what the moment means. Y stays in the speaker's voice and leaves the tension unresolved, which reads as more natural.",
+          "response_sha256": "b66d9f2abc4369d5f34626598c7c29b41663a0ad3ee0d4c04b53129afcc3ed2b"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "family": "personal-vs-instruction",
+      "label_strength": "explicit preference",
+      "owner_preference": "A",
+      "both_AI_like_according_to_owner": false,
+      "stable_between_orders": true,
+      "both_orders_agree_with_owner": true,
+      "any_order_agrees_with_owner": true,
+      "trials": [
+        {
+          "order": 0,
+          "owner_preference": "A",
+          "numeric_rank": "A",
+          "textual_preference": "A",
+          "agrees": true,
+          "scores": {
+            "A": 4.0,
+            "B": 3.0
+          },
+          "by_original_version": {
+            "A": {
+              "voice_score_1_to_5": 4,
+              "prose_comment": "Sounds like a person talking. The concessive opening ('Maybe... Great.') turns into a blunt personal pivot ('It didn't for me.'), and the short sentences feel like deliberate emphasis. 'Radically insufficient' is a slightly stiff, abstract phrase in an otherwise plain voice, but it reads as a personal word choice rather than filler. The last clause, 'so I kept looking for something deeper', follows naturally and is a little generic. The movement from concession to personal stake to consequence is coherent and has a believable, slightly wry tone."
+            },
+            "B": {
+              "voice_score_1_to_5": 3,
+              "prose_comment": "Direct and conversational, with a real stance. The 'great—change your mind' concession, with its em dash, has a spoken edge. The second sentence is a tidy aphorism ('isn't the same thing yet') that feels a bit more constructed and slogan-like. The 'yet' adds a nice touch of nuance. Overall it's competent and natural, but it sounds more like advice delivered in a polished line than a lived moment, and there is less personal texture than in X."
+            }
+          },
+          "why": "X has a stronger sense of a specific speaker. Its concession is followed by a personal turn, and its rhythm of short statements gives a lived, slightly dry quality. Y is also natural and has a good conditional-then-caveat structure, but its closing line reads as a crafted maxim and carries less individual voice. The gap is modest.",
+          "response_sha256": "c59a4f0b9f679ed3fd45160095ea3ecda3733495d3016710752123095ca4d7d3"
+        },
+        {
+          "order": 1,
+          "owner_preference": "A",
+          "numeric_rank": "A",
+          "textual_preference": "A",
+          "agrees": true,
+          "scores": {
+            "A": 4.0,
+            "B": 3.0
+          },
+          "by_original_version": {
+            "B": {
+              "voice_score_1_to_5": 3,
+              "prose_comment": "Reads like advice from a speaker with a clear stance. The opening conditional ('If next time they actually show up differently, great') has a casual, slightly wry generosity. The second sentence restates the point in a balanced, aphoristic way ('isn't the same thing yet'), which feels a little tidy and explanatory, as if closing the thought with a neat moral. The 'yet' adds some human hedging. It's brief, so there's little room for voice to develop, and the two sentences make nearly the same point twice."
+            },
+            "A": {
+              "voice_score_1_to_5": 4,
+              "prose_comment": "Has a more personal, lived-in voice. It concedes a point ('Maybe ordinary life already gives you enough'), uses a clipped 'Great.' as a dry beat, then pivots to a blunt first-person admission ('It didn't for me'). The closing sentence is longer and more specific, with a slightly unexpected word choice ('radically insufficient') and a plain continuation ('so I kept looking'). The rhythm of short, short, longer feels spoken and unforced. A small risk is the faintly stagey 'Great.' as a rhetorical device, but it reads as tone, not formula."
+            }
+          },
+          "why": "Y shows stronger relationships between thoughts: concession, wry beat, personal turn, consequence. The pacing varies and the voice commits to a specific experience. X is competent and has a nice conditional opening, but its second sentence feels like a polished restatement or takeaway line, so it comes across as slightly more generic.",
+          "response_sha256": "0db7d4e7b3a17fee77187bbb639af592438c2c89a07fc1676bf9d4418c527df5"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "family": "chart-caption-limitation",
+      "label_strength": "explicit comparative style reason alongside owner function explanation",
+      "owner_preference": "A",
+      "both_AI_like_according_to_owner": null,
+      "stable_between_orders": true,
+      "both_orders_agree_with_owner": true,
+      "any_order_agrees_with_owner": true,
+      "trials": [
+        {
+          "order": 0,
+          "owner_preference": "A",
+          "numeric_rank": "A",
+          "textual_preference": "A",
+          "agrees": true,
+          "scores": {
+            "A": 4.0,
+            "B": 3.0
+          },
+          "by_original_version": {
+            "A": {
+              "voice_score_1_to_5": 4,
+              "prose_comment": "The trailing clause 'as best as I can fit' adds a modest, first-person admission that the image can't hold everything. It sounds like a real writer acknowledging a limit, which suits a heading like 'My Journey'. The phrasing 'as best as I can' is slightly colloquial and a little loose, which reads as natural speech rather than polish. The colon leads into the image neatly."
+            },
+            "B": {
+              "voice_score_1_to_5": 3,
+              "prose_comment": "This is clean and functional, a standard lead-in to a visual. It is perfectly acceptable but generic, with no personal presence or hint of the writer's stance. It reads like a template caption, so it is less distinctive, though its brevity isn't a flaw in itself."
+            }
+          },
+          "why": "X carries a small human touch, the hedge about fitting the details in, which gives it voice and suits a personal 'My Journey' piece. Y is fine but more generic and caption-like. The difference is slight because each is only a single short line.",
+          "response_sha256": "1f3cad8882cb5152bdb4a3caed6aa324edda1d0eee2a258eaa333055cadc4cc5"
+        },
+        {
+          "order": 1,
+          "owner_preference": "A",
+          "numeric_rank": "A",
+          "textual_preference": "A",
+          "agrees": true,
+          "scores": {
+            "A": 4.0,
+            "B": 3.0
+          },
+          "by_original_version": {
+            "B": {
+              "voice_score_1_to_5": 3,
+              "prose_comment": "A clean, conventional lead-in to a graphic. It is functional and plausible as a caption-style line under a 'My Journey' heading, but it has almost no personal voice. 'Maps out the details' is a slightly stock phrase, and the sentence does nothing beyond pointing at the image."
+            },
+            "A": {
+              "voice_score_1_to_5": 4,
+              "prose_comment": "The tacked-on 'as best as I can fit' adds a small, modest, first-person admission that the image is a compromise. That reads like a real person talking about their own constraints and fits the personal 'My Journey' heading. The phrasing is a bit loose ('as best as I can fit' is slightly off-grammar), but that looseness sounds spoken and human rather than a defect. The trailing qualifier gives the sentence a bit of rhythm and personality."
+            }
+          },
+          "why": "Y has a small hedge that gives it a personal, slightly imperfect voice suited to a journey narrative, while X is a tidy but generic signpost. The difference is slight given how short both excerpts are, but Y sounds more like a person.",
+          "response_sha256": "3992d8404ff8157f86079cf42fb02f6bb36899aaf012b40c1ad967bddfd9000c"
+        }
+      ]
+    }
+  ],
+  "function": [
+    {
+      "id": "F02",
+      "heading": "Inner Child Therapy",
+      "owner_recommendation": "CUT",
+      "model_recommendation": "UNCERTAIN",
+      "matches": false,
+      "material_function_lost": null,
+      "functions_retained": [
+        "definition of reparenting and the three Inner Adult roles",
+        "relationship with the inner child",
+        "noticing old patterns and practicing better responses",
+        "initial awkwardness giving way to second nature",
+        "payoff of less self-management and more purposeful living, loving, relaxing, playing"
+      ],
+      "functions_lost": [
+        "reassurance that even after roles become second nature, the reader retains the option to deliberately slow down and examine closely",
+        "qualification that the automatic mode is not a fixed state and deliberate attention remains available when helpful"
+      ],
+      "exact_supporting_words": [
+        "You can always slow down and look closer when it helps."
+      ],
+      "why": "The sentence is not mere repetition. It adds a qualification: second-nature responding does not replace deliberate attention, and the reader keeps the ability to return to it when needed. That plausibly guards against reading 'second nature' as fully automatic or as the end of conscious practice. Against that, the passage's main thought (define reparenting, the relationship, and the progression from awkward to natural) stays intact without it, and the sentence is a fairly generic closing reassurance. Whether it carries an independent action-changing condition or is just a soft closer depends on how much the author wants to emphasize ongoing conscious practice, so a clear cut or keep call isn't well supported by the excerpt alone.",
+      "owner_answer_verbatim": "h2. a wow i can't believe i wrote tha... oh that was from GPT, i humanized it but didn't notice how jarring that last stupid sentence was",
+      "response_sha256": "ddc2883e346f3b56129cf52f7373fe75ab6ced85cdeef54a481a88e08c0fb52a"
+    },
+    {
+      "id": "F07",
+      "heading": "If the Love Isn't Coming Yet",
+      "owner_recommendation": "CUT",
+      "model_recommendation": "KEEP",
+      "matches": false,
+      "material_function_lost": true,
+      "functions_retained": [
+        "Characterization of the exercise as scaffolding (a temporary support)",
+        "Instruction to go smaller to the least cruel response",
+        "Acknowledgment that imagining a caring adult can feel threatening or lonely"
+      ],
+      "functions_lost": [
+        "Explicit reassurance that difficulty with the exercise is not evidence of insufficient love in childhood",
+        "Rebuttal of the self-blaming interpretation the heading and preceding sentences invite",
+        "Emotional closure that relieves shame for readers who feel lonelier or threatened"
+      ],
+      "exact_supporting_words": [
+        "and it isn't a test of whether you were loved enough"
+      ],
+      "why": "The deleted clause is an independent claim, not a restatement of 'scaffolding'. 'Scaffolding' says the exercise is a support tool, but it does not say what the reader's difficulty does or does not mean. The clause blocks a specific, likely inference: that feeling threatened or lonelier, or being unable to feel love, shows one was not loved enough. That is the heading's emotional stake ('If the Love Isn't Coming Yet'), and removing it leaves the reader without the reassurance that the struggle is not diagnostic. The remaining 'It's scaffolding' is compatible with it, but a reader could still take the exercise as a measure of their past. The cut therefore loses a distinct, action- and feeling-relevant function, so the cut should not be made.",
+      "owner_answer_verbatim": "h7. a",
+      "response_sha256": "5cd6ef53db3687b7d1a2fb3170d7a6b28db3dde51076385a078dff5ce8c22874"
+    },
+    {
+      "id": "F12",
+      "heading": "Not Every Hero Wears A Cape",
+      "owner_recommendation": "CUT",
+      "model_recommendation": "CUT",
+      "matches": true,
+      "material_function_lost": false,
+      "functions_retained": [
+        "definition of 'intentional' as picking an act, deciding when, and naming the smallest first step",
+        "envelope example callback",
+        "conditions about money/help to arrange before the day",
+        "advice to rehearse unwelcome messages aloud and perspective-take",
+        "qualification that the message must still be said"
+      ],
+      "functions_lost": [
+        "minor aside that some acts already consist of a single step, so the 'smallest first step' is trivially the act itself"
+      ],
+      "exact_supporting_words": [
+        "Some of them are only one step anyway."
+      ],
+      "why": "The deleted sentence is a small side remark that tempers the 'smallest first step' instruction for simple acts. It makes no independent claim the reader needs, and it changes no action: the reader can see for themselves that a one-step act's first step is the act. The following sentence ('If it needs money or somebody's help...') does not depend on it, since 'it' still refers to the chosen act. The definition, the envelope example, the preparation conditions and the rehearsal advice all remain. Only a little reassurance and a light conversational beat are lost, so the cut is acceptable.",
+      "owner_answer_verbatim": "h12 a",
+      "response_sha256": "0569cf772efe110734e2fad671aab97be0db8c4272e1ddba8fb83a1c87e720ae"
+    },
+    {
+      "id": "F14",
+      "heading": "Catch the Hook Before the Story Takes Over",
+      "owner_recommendation": "CUT",
+      "model_recommendation": "UNCERTAIN",
+      "matches": false,
+      "material_function_lost": false,
+      "functions_retained": [
+        "Core claim that the hook may be noticed before or after its source is understood",
+        "Permission to drop the 'parts detective work' in the moment",
+        "Humor and gentle tone of 'Maybe forget the parts detective work for a minute'",
+        "Temporal softening: 'for a minute' already implies a temporary pause"
+      ],
+      "functions_lost": [
+        "Explicit reassurance that the parts analysis remains available later and is not being rejected",
+        "Slight clarification that the deferral is a postponement of inquiry, not a dismissal"
+      ],
+      "exact_supporting_words": [
+        "Maybe forget the parts detective work for a minute.",
+        "You can figure that out later."
+      ],
+      "why": "The cut removes a short reassurance that largely repeats what 'for a minute' already implies: the detective work is set aside temporarily. The main thought, which is to catch the hook without needing to identify which part is hooking, stays intact and unambiguous. The deleted sentence does add a small action-relevant note, that the inquiry is deferred and not abandoned, which may matter if the author's wider approach values parts work. That is why this is not a clear-cut CUT. Still, the implication survives in 'for a minute', so no independent claim, qualification, or humor is materially lost. Because the lost reassurance is mild and might read as more than redundant in context, I mark this UNCERTAIN, leaning toward acceptable.",
+      "owner_answer_verbatim": "h14 a it doesn't tell the reader the detective work can wait, that's what the prior sentence said..",
+      "response_sha256": "692718cf4964b7d8285d3c88e2c5726f63feb177f003f1854de7d67fa6923ef6"
+    },
+    {
+      "id": "F17",
+      "heading": "Use Childhood Photographs Gently",
+      "owner_recommendation": "CUT",
+      "model_recommendation": "KEEP",
+      "matches": false,
+      "material_function_lost": true,
+      "functions_retained": [
+        "Lists the possibility that nothing comes up",
+        "Preserves the flow into the instruction to ask what the little one needs"
+      ],
+      "functions_lost": [
+        "Reassurance that a blank response is acceptable and not a failure",
+        "Gentle, permission-giving tone suited to the heading 'Use Childhood Photographs Gently'",
+        "Prevents the reader from feeling they did the exercise wrong and abandoning it"
+      ],
+      "exact_supporting_words": [
+        "which is also completely OK",
+        "Use Childhood Photographs Gently"
+      ],
+      "why": "The clause is not a repeated explanation or scaffolding. It performs a distinct function: normalizing the 'nothing comes up' outcome. Without it, 'Or just nothing comes up.' reads as a neutral possibility, and a reader who feels nothing could interpret that as failing the exercise, which undercuts the heading's emphasis on gentleness. The thought that nothing may come up survives, but the permission and reassurance, which are the action-relevant part (continue to the next step without self-judgment), are lost. Keep the clause.",
+      "owner_answer_verbatim": "h17 a",
+      "response_sha256": "e5c4a2935e6fdd93c76a2671fd3487ab34aaf6551e52d5f49f8d8d0530ead0d3"
+    },
+    {
+      "id": "F22",
+      "heading": "When Escape Leaves Reality Behind",
+      "owner_recommendation": "CUT",
+      "model_recommendation": "CUT",
+      "matches": true,
+      "material_function_lost": false,
+      "functions_retained": [
+        "Warning that reactions and predispositions signal vulnerability",
+        "Guidance to take extra precautions when caution signs appear",
+        "Instruction to figure out personal meaning and seek trusted advisors if unable",
+        "Implicit individual-responsibility framing via 'You have to figure out what they mean for you'"
+      ],
+      "functions_lost": [
+        "Explicit author disclaimer of authority over what to do",
+        "Minor softening of tone / acknowledgment of individual variation"
+      ],
+      "exact_supporting_words": [
+        "There are just caution signs, and when you see them, you take more precautions of every kind.",
+        "You have to figure out what they mean for you, and if you can't, get help from trusted advisors."
+      ],
+      "why": "The deleted sentence is a disclaimer of the author's limits and that no one can know what's best for the reader. Its substantive point, that the reader must interpret the signs for themselves and seek advisors if unable, is retained and made action-guiding by the following sentences. The cut slightly weakens the humility framing, and 'There are just caution signs' loses its contrastive setup against 'what to do', but it still reads coherently as 'these are signs, not prescriptions'. No independent claim, condition, or causal link is lost.",
+      "owner_answer_verbatim": "h22 a but \"There are just\" should have been \"These are just\"",
+      "response_sha256": "1b685dd50f2e577edd0cd2b01acbe9d3bc9a04a3552415dfa078efb6dfd6b365"
+    },
+    {
+      "id": "F04",
+      "heading": "My Journey",
+      "owner_recommendation": "KEEP",
+      "model_recommendation": "CUT",
+      "matches": false,
+      "material_function_lost": false,
+      "functions_retained": [
+        "Insight that therapy revealed ignored important issues",
+        "Claim that the therapist's question wouldn't have occurred to the author alone",
+        "Author's stated preference for seeing things as they are and working with them rather than hiding in delusions"
+      ],
+      "functions_lost": [
+        "Explicit statement that therapy can make one feel worse by raising awareness of problems",
+        "Direct setup for the 'But personally I prefer...' contrast"
+      ],
+      "exact_supporting_words": [
+        "It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems.",
+        "But personally I prefer to see things as they are"
+      ],
+      "why": "The deleted sentence is an independent generalization about therapy's downside, so it is not mere scaffolding. But the author's own point survives: therapy exposed ignored things, and they prefer seeing reality over hiding in delusions. The 'But' still works against the earlier implicit discomfort of confronting overlooked issues, and 'hide in delusions' still implies the unpleasant side of awareness. What is lost is the explicit acknowledgment that therapy can worsen how one feels, a side claim that is not needed for the personal-journey thread. This is a modest loss of nuance rather than a loss of the core thought, so the cut is acceptable, though the reader gets less explicit orientation for why 'But' appears.",
+      "owner_answer_verbatim": "h4. b it wouldn't even make sense anymore after cutting that, please",
+      "response_sha256": "7d60b798860526ba7d8b0882406aeb6addc59509fb884112c2ecb97e4b336061"
+    },
+    {
+      "id": "F10",
+      "heading": "Your Loan is PRE-APPROVED!",
+      "owner_recommendation": "KEEP",
+      "model_recommendation": "CUT",
+      "matches": false,
+      "material_function_lost": false,
+      "functions_retained": [
+        "Core claim that gratitude comes from recognizing one could be suffering more",
+        "Caution against selfish comparison-based gratitude",
+        "Distinction from mere glass-half-full reframing",
+        "Contrast pivot ('On the other hand') to the psychedelic trip anecdote showing gratitude's power"
+      ],
+      "functions_lost": [
+        "Explicit disclaimer against 'toxic positivity'",
+        "Qualification that gratitude shouldn't be pushed on people who need to grieve"
+      ],
+      "exact_supporting_words": [
+        "I’m not pushing “toxic positivity.”",
+        "Being thankful shouldn’t be pushed on people who just need to grieve for the moment.",
+        "On the other hand, I’ve noticed"
+      ],
+      "why": "The deleted sentences are a disclaimer and a caveat that the author is not pressuring grieving people to be grateful. The main thought (gratitude via recognizing things could be worse, avoiding selfish comparison, not mere optimism reframing, and gratitude's power in a bad trip) remains intact. The caveat is a real qualification, but it is partly redundant with the preceding 'not just changing perception' disclaimer and the earlier 'please don't fall into the trap' caution. The one cost is that 'On the other hand' now contrasts less cleanly, since it was set up by the grieving caveat; it still reads acceptably as a contrast to the preceding denial that this is mere perception-shifting. The advice isn't action-changing in a way that makes the loss material, so the cut is acceptable, though some of the author's sensitivity to grief is lost.",
+      "owner_answer_verbatim": "h10 b it's an objection that so many people have raised to me lololo",
+      "response_sha256": "ba420710a9dca9f072ba9141d2190a5868d27729a12e386fec68e8b2b0716c8a"
+    },
+    {
+      "id": "F19",
+      "heading": "When the Adult Voice Feels Fake",
+      "owner_recommendation": "KEEP",
+      "model_recommendation": "KEEP",
+      "matches": true,
+      "material_function_lost": true,
+      "functions_retained": [
+        "Description of altered-state experience making the little one feel real",
+        "Mention that old memories may surface",
+        "Advice to hold onto what was felt and integrate it into normal life",
+        "Conclusion that talking to the little one afterward isn't pretending"
+      ],
+      "functions_lost": [
+        "Epistemic caution that vivid memories surfacing in altered states are not proof the events happened",
+        "Qualification limiting how far the felt realness should be trusted (feeling real applies to the little one/emotion, not to memory accuracy)",
+        "Distinction between what to trust (the felt connection) and what not to infer (memory truth)"
+      ],
+      "exact_supporting_words": [
+        "They can feel totally real, but that alone doesn't prove they happened.",
+        "I'd still hang on to what you felt"
+      ],
+      "why": "The deleted sentence is an independent claim and a qualification, not repeated scaffolding. It warns that vivid memories arising in altered states shouldn't be taken as evidence of actual events. It also gives the following advice its contrast: \"I'd still hang on to what you felt\" reads as a partial counterpoint to the memory caveat. Without it, the author appears to endorse the felt reality of everything that surfaced, memories included, which changes the reader's likely action and risks an unsafe inference. Nothing else in the excerpt restates this caution. The cut loses a distinct, action-relevant thought, so it should not be made.",
+      "owner_answer_verbatim": "h19 b",
+      "response_sha256": "cd163a33fea4f2b506c52dac0bc6db8e1578d4023a7d496051d1025d9f5f5389"
+    },
+    {
+      "id": "F21",
+      "heading": "Altered States Can Deepen the Therapy",
+      "owner_recommendation": "KEEP",
+      "model_recommendation": "UNCERTAIN",
+      "matches": false,
+      "material_function_lost": true,
+      "functions_retained": [
+        "Core directive to hold off on bigger breakthroughs when the little one can't take love in",
+        "Acknowledgment that the temptation is real ('however tempting it is')",
+        "Rationale that something is in the way and exploring it is the next job",
+        "Callback to 'Hear the Guard First'"
+      ],
+      "functions_lost": [
+        "Softening qualification: the fallback permission that if the reader does proceed with breakthroughs, they should do so aware of the risk",
+        "Characterization of breakthroughs as double-edged (having both benefit and danger), not merely something to avoid",
+        "Action-changing condition for readers who will not hold off"
+      ],
+      "exact_supporting_words": [
+        "or at least know that they are a double-edged sword",
+        "Hold off on going for bigger, crazier breakthroughs, however tempting it is"
+      ],
+      "why": "The deleted clause is not repeated scaffolding. It is an independent qualification that turns an absolute 'hold off' into a graded stance: ideally hold off, but if you won't, proceed with awareness that breakthroughs cut both ways. It also conveys that breakthroughs have real value and are not simply bad, which fits the heading 'Altered States Can Deepen the Therapy'. Without it the passage reads as a flat prohibition, and the heading's positive framing sits against a more categorical warning. The following sentences ('Something's in the way...') do justify holding off, so the main directive survives, and the loss is moderate rather than total. Because the clause is a real fallback and a nuance about breakthroughs, I lean against cutting, though a reader could take the remaining text as sufficient. Also, the resulting dangling 'tempting it is,.' needs only mechanical punctuation cleanup.",
+      "owner_answer_verbatim": "h21 b yes it purposefully does take back because people may not just listen to my commands, they have their own ideas",
+      "response_sha256": "e3ba28a3d794acd523ee1e2e4b1b780b1fa9a27964fe00db2472015328d3dfc8"
+    },
+    {
+      "id": "F25",
+      "heading": "Altered States Can Require Reparenting",
+      "owner_recommendation": "KEEP",
+      "model_recommendation": "CUT",
+      "matches": false,
+      "material_function_lost": false,
+      "functions_retained": [
+        "Core claim that borrowed support is borrowed adulthood",
+        "Developmental progression from external love to internalized love",
+        "Action instruction to send the love to the frightened inner child and toward the feared thing",
+        "Section's reparenting theme"
+      ],
+      "functions_lost": [
+        "Reassurance that continuing relationship with benevolent spiritual beings is still fine",
+        "Mild humorous closing note that such beings would be happy if their support rubbed off on you",
+        "Implied permission/non-replacement framing: internalizing support doesn't require abandoning spiritual relationships"
+      ],
+      "exact_supporting_words": [
+        "Continuing to relate to benevolent spiritual powers/beings is still perfectly fine",
+        "they would surely be happy if they rubbed off on you!"
+      ],
+      "why": "The deleted sentence is a closing qualification and light flourish. It reassures that relating to spiritual beings remains acceptable and that internalization is their desired outcome. That is a real, but secondary, function. The main thought (borrowed support becomes one's own and is then directed to the frightened self and the feared thing) is complete without it, and the preceding sentences do not imply that spiritual relationships must end. The loss is a small piece of reassurance and humor rather than an independent claim or an action-changing condition, though a reader who is attached to spiritual relationships might lose a bit of comfort. On balance the cut preserves the actual thought, so I recommend CUT with low-to-moderate confidence.",
+      "owner_answer_verbatim": "h25. b cutting that could be sacriligeous",
+      "response_sha256": "50344e05dc93b78c1fc540e34bff8b3adb27d897baea2e4a53cbc1c363ad6d14"
+    },
+    {
+      "id": "F28",
+      "heading": "Untangling the Belonging Bargains",
+      "owner_recommendation": "KEEP",
+      "model_recommendation": "CUT",
+      "matches": false,
+      "material_function_lost": false,
+      "functions_retained": [
+        "claim that differentiation teaches noticing the trade",
+        "claim that people begin keeping their ground more",
+        "gradual/progressive framing via 'begin' and 'more'",
+        "overall reassuring orientation of the passage"
+      ],
+      "functions_lost": [
+        "slight explicit acknowledgment that holding one's ground is not always possible"
+      ],
+      "exact_supporting_words": [
+        "we begin keeping our ground more",
+        "more"
+      ],
+      "why": "'When feasible' adds a mild qualification that holding ground is situational. But 'begin' and the comparative 'more' already convey partial, incremental change rather than a universal one, so the strongest ordinary reading is unchanged: people do it increasingly, not always. The phrase does not add an action-changing condition, causal claim, or independent assertion, and removing it creates no overclaim. The loss is a redundant softener, not a material function.",
+      "owner_answer_verbatim": "h28. b people often do fight too many battles that's why i say when feasible, like choose ur battles bro",
+      "response_sha256": "c0ee3c8548033becbcd37a10eb0609f909f460b96f4b6ea24bdc5b610ba53694"
+    }
+  ],
+  "counts": {
+    "style_cases": 5,
+    "style_trials": 10,
+    "numeric_rank_trial_agreement": 8,
+    "stable_both_order_owner_matches": 4,
+    "at_least_one_order_owner_matches": 4,
+    "stable_order_rankings": 4,
+    "function_cases": 12,
+    "function_owner_agreement": 3,
+    "owner_keep": 6,
+    "owner_cut": 6,
+    "model_keep": 3,
+    "model_cut": 6,
+    "keep_recall_numerator": 1,
+    "cut_recall_numerator": 2
+  },
+  "no_new_Pangram_calls": true,
+  "provider_calls": 22,
+  "inherited_cache_read_tokens": 0,
+  "provider_reported_cost_estimate_usd": 0.198078,
+  "limits": [
+    "Five distinct style comparisons, not ten independent tests; swapped order repeats are dependence diagnostics.",
+    "Style and function pools were curated with owner labels visible to the curator, but hidden from fresh model calls.",
+    "Historically developed source families are new to this unchanged style prompt calibration, not virgin project data.",
+    "Function labels are owner editorial KEEP/CUT decisions, not externally verified truth or medical guidance.",
+    "One writer, same model family; no claim of population accuracy or owner style equivalence."
+  ]
+}

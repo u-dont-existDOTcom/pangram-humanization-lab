@@ -1,0 +1,58 @@
+{
+  "case": "F28",
+  "stage": "STYLE",
+  "prompt_sha256": "146f6cd2413a9b9b4c2f20ccf2d538bd4a2f00be7fd602785248359622085c50",
+  "response_sha256": "43fc5a17be70854815c3792814d11f1c14b6264ced900959c3e4283737a53b0a",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 3.5,\n    \"prose_comment\": \"Reads as a plausible self-help or therapy-adjacent voice. The short sentence 'That wasn't your flaw.' gives a real beat of reassurance between two longer, more abstract sentences. 'Holding our ground more when feasible' is idiomatic: 'hold your ground' is the standard collocation, so the phrase lands without friction. The shift from 'you' to 'we' is a common move in this register and feels natural. The abstraction ('self-valuation', 'self-differentiation', 'making the trade') is somewhat jargony, but that is consistent with the genre.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 3.0,\n    \"prose_comment\": \"Identical to X except for 'keeping our ground', which is a slightly off collocation. Native speakers say 'hold' or 'stand' one's ground; 'keep' reads as a small slip or a synonym swap made for variety. It is not wrong enough to derail the sentence, but it makes the ending a touch less idiomatic and less confident. The rest of the voice, pacing, and reassurance beat are the same as in X.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"The passages differ by a single word. 'Holding our ground' is the familiar, idiomatic phrase and closes the sentence smoothly, while 'keeping our ground' sounds like a slightly awkward substitution. That small difference gives X a more natural, human-sounding finish.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 3.5,
+      "prose_comment": "Reads as a plausible self-help or therapy-adjacent voice. The short sentence 'That wasn't your flaw.' gives a real beat of reassurance between two longer, more abstract sentences. 'Holding our ground more when feasible' is idiomatic: 'hold your ground' is the standard collocation, so the phrase lands without friction. The shift from 'you' to 'we' is a common move in this register and feels natural. The abstraction ('self-valuation', 'self-differentiation', 'making the trade') is somewhat jargony, but that is consistent with the genre."
+    },
+    "Y": {
+      "voice_score_1_to_5": 3.0,
+      "prose_comment": "Identical to X except for 'keeping our ground', which is a slightly off collocation. Native speakers say 'hold' or 'stand' one's ground; 'keep' reads as a small slip or a synonym swap made for variety. It is not wrong enough to derail the sentence, but it makes the ending a touch less idiomatic and less confident. The rest of the voice, pacing, and reassurance beat are the same as in X."
+    },
+    "preference": "X",
+    "why": "The passages differ by a single word. 'Holding our ground' is the familiar, idiomatic phrase and closes the sentence smoothly, while 'keeping our ground' sounds like a slightly awkward substitution. That small difference gives X a more natural, human-sounding finish."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 968,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 516,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 968,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 516,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 968,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 968
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009035999999999999,
+  "elapsed_s": 10.72,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

@@ -1,0 +1,56 @@
+{
+  "case": "F28",
+  "stage": "WRITE",
+  "prompt_sha256": "345887f0a8e8bdff20ae8afd3c685a9ef8c2dfb6017311fc30c08c69a8d7f268",
+  "response_sha256": "a8ac3584ef202c6b36f4182eb11e3adde00dc4ad8c3c8cac15884e7d98c5fd48",
+  "result": "{\"edits\":[{\"old\":\"keeping our ground more\",\"new\":\"holding our ground more\",\"why\":\"\\\"Keeping our ground\\\" is not the natural idiom; \\\"holding our ground\\\" is, and the meaning stays the same.\"}],\"no_change_reason\":\"\"}",
+  "parsed": {
+    "edits": [
+      {
+        "old": "keeping our ground more",
+        "new": "holding our ground more",
+        "why": "\"Keeping our ground\" is not the natural idiom; \"holding our ground\" is, and the meaning stays the same."
+      }
+    ],
+    "no_change_reason": ""
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2097,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 283,
+    "output_tokens_details": {
+      "thinking_tokens": 196
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2097,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 283,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2097,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2097
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.011222,
+  "elapsed_s": 4.79,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

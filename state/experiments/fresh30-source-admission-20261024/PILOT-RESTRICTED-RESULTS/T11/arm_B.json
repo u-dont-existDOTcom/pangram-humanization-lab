@@ -1,0 +1,46 @@
+{
+  "case": "T11",
+  "stage": "arm_B",
+  "prompt_sha256": "15da4c5c18888a8ae1e9683df715ffa7ee3d7aa1dcb180000449e89dee1d3e64",
+  "elapsed_s": 3.37,
+  "return_code": 0,
+  "error": null,
+  "result": "After several such episodes, I decided I'd had enough of playing the victim and would treat the experience as part of my spiritual practice. My inner guide saw it as the perfect chance to show that love is stronger than fear. So the next time it happened, I sent unconditional love to the demon on top of me, frightening as that was. It took a few minutes, but the demon left, and it never came back.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1329,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 121,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1329,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 121,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1329,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1329
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.00653,
+  "is_error": false,
+  "result_sha256": "e17ba92b823f0bcc115b0cf4c2aa1dff40497e8c9118175410d404d540b84c62"
+}

@@ -1,0 +1,167 @@
+{
+  "schema": "match-relevance-audit-v1",
+  "created": "2026-10-24",
+  "basis": "Current informed critic reviewed rhetoric before any prospective writer outputs; NOT an independent human rating or measured utility.",
+  "entries": [
+    {
+      "id": "T01",
+      "assessment": "medium",
+      "reason": "Relational accountability parallels the golden contrast, but the attachment inference is a different cognitive job."
+    },
+    {
+      "id": "T02",
+      "assessment": "medium",
+      "reason": "Both texts involve trying to understand an internal response without turning questions into a checklist."
+    },
+    {
+      "id": "T03",
+      "assessment": "strong",
+      "reason": "Both involve evidence/synthesis that risks collapsing differentiated claims into a polished cross-domain conclusion."
+    },
+    {
+      "id": "T04",
+      "assessment": "medium",
+      "reason": "Both involve acceptance coexisting with accountability; the song/sexual context differs substantially."
+    },
+    {
+      "id": "T05",
+      "assessment": "medium",
+      "reason": "Unbalanced responsibility between people shares a relationship-and-obligations structure."
+    },
+    {
+      "id": "T06",
+      "assessment": "weak",
+      "reason": "A childhood commune memoir has little in common with the child-state therapeutic scenario; example may distract."
+    },
+    {
+      "id": "T07",
+      "assessment": "medium",
+      "reason": "The social warmth/harm tension resembles keeping harm and responsibility together, but no forgiveness frame belongs here."
+    },
+    {
+      "id": "T08",
+      "assessment": "medium",
+      "reason": "Safety and fairness coexist; the source situation is procedural rather than forgiveness-related."
+    },
+    {
+      "id": "T09",
+      "assessment": "weak",
+      "reason": "Outside employment and federation economics are not directly analogous to trauma pacing and cross-domain model synthesis."
+    },
+    {
+      "id": "T10",
+      "assessment": "medium",
+      "reason": "Specific reciprocal obligations and boundaries have a structural analogy to accountable agents."
+    },
+    {
+      "id": "T11",
+      "assessment": "weak",
+      "reason": "First-person supernatural/sleep-paralysis narrative is not an evidence-synthesis exposition like the teaching example."
+    },
+    {
+      "id": "T12",
+      "assessment": "medium",
+      "reason": "Consent and the impact of one person's care on another's response make a plausible relational thought match."
+    },
+    {
+      "id": "T13",
+      "assessment": "strong",
+      "reason": "Distinguishing grieving experiences from physiology closely fits differentiated trauma/source explanation."
+    },
+    {
+      "id": "T14",
+      "assessment": "medium",
+      "reason": "Bodily regulation sequencing resembles the controlled somatic example, but the actual foot massage is idiosyncratic."
+    },
+    {
+      "id": "T15",
+      "assessment": "weak",
+      "reason": "Protector consent and incremental action are not close enough to the golden forgiveness structure."
+    },
+    {
+      "id": "T16",
+      "assessment": "strong",
+      "reason": "Borrowed adult access and the difficulty of occupying the adult role share the same rhetorical problem."
+    },
+    {
+      "id": "T17",
+      "assessment": "medium",
+      "reason": "Sensory options and reader attention versus a complete modality inventory recur in both."
+    },
+    {
+      "id": "T18",
+      "assessment": "medium",
+      "reason": "Preserving scientific/clinical source roles rather than a polished synthesis is a partial match."
+    },
+    {
+      "id": "T19",
+      "assessment": "medium",
+      "reason": "Attention responsive to actual action echoes the inner-monologue example's reader-guided movement."
+    },
+    {
+      "id": "T20",
+      "assessment": "weak",
+      "reason": "Evaluating a hypnotherapist is a consent/assessment checklist, unlike the child-state inner conflict."
+    },
+    {
+      "id": "T21",
+      "assessment": "weak",
+      "reason": "Garchen's prison biography is a specific third-person spiritual story, not the child-state therapeutic example."
+    },
+    {
+      "id": "T22",
+      "assessment": "medium",
+      "reason": "Readers' felt sensory experience and abstract conclusion may share a thought-formation problem with inner-monologue."
+    },
+    {
+      "id": "T23",
+      "assessment": "medium",
+      "reason": "Need to distinguish Dzogchen source attributions from the author's synthesis, as in the controlled somatic example."
+    },
+    {
+      "id": "T24",
+      "assessment": "weak",
+      "reason": "Personal nibbāna account is conceptually distant from the child-access practical example."
+    },
+    {
+      "id": "T25",
+      "assessment": "weak",
+      "reason": "A lucid-dream metaphor about rebirth is not the same rhetorical issue as adult/child conflict."
+    },
+    {
+      "id": "T26",
+      "assessment": "weak",
+      "reason": "Somatic practice pacing would match the somatic reverse example better, but it was barred solely by cross-article selection."
+    },
+    {
+      "id": "T27",
+      "assessment": "weak",
+      "reason": "A practical qigong routine has only a faint resemblance to the inner-child access example."
+    },
+    {
+      "id": "T28",
+      "assessment": "medium",
+      "reason": "Conditional competing choices and client state resemble keeping obligations/possibilities connected."
+    },
+    {
+      "id": "T29",
+      "assessment": "medium",
+      "reason": "Readiness and trauma boundaries are relational/conditional, but the analogy to forgiveness is partial."
+    },
+    {
+      "id": "T30",
+      "assessment": "medium",
+      "reason": "Outcome-based self-observation versus modality inventory has a plausible connection to the monologue example."
+    }
+  ],
+  "counts": {
+    "medium": 17,
+    "strong": 3,
+    "weak": 10
+  },
+  "original_allocation_status": "One cross-article example per target was initially enforced for construction simplicity; this is not evidence that every match is pedagogically relevant.",
+  "primary_analysis_guard": "Report effects by predeclared match-strength strata; an apparently null overall result cannot be interpreted as failure of useful examples when many examples were poorly matched.",
+  "decision": "Do not represent the 30 initial allocations as thirty well-matched training demonstrations. Improving retrieval quality on weak cases is a separate architecture task; freeze all changes before candidate production.",
+  "independent_prospective_writer_runs": 0,
+  "paid_pangram_calls": 0
+}

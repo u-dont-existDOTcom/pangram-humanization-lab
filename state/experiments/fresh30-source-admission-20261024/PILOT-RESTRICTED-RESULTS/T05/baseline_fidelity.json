@@ -1,0 +1,46 @@
+{
+  "case": "T05",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "1bd9c9dbb3173e2ccb80ace70156764163f76a20de98db840fda0d7a9c5ffdca",
+  "elapsed_s": 8.42,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [\n    {\n      \"source\": \"eventually there will be some kind of pendulum swing or backlash\",\n      \"draft\": \"eventually there is a pendulum swing or backlash\",\n      \"effect\": \"The hedge 'some kind of' is dropped and the future 'will be' becomes a present-tense generalization. The claim sounds slightly more definite, though 'eventually' and the overall meaning are preserved. This is a marginal shift.\"\n    }\n  ],\n  \"notes\": \"All core assertions are preserved: the three reference relationships, the roles of child versus therapist/guru/doctor/dad, the 'too unequal' judgment, the eventual swing or backlash, and the narrator becoming responsible for everything that went wrong along with the clinginess and jealousy. 'Not to mention' becomes 'along with', which slightly softens the emphasis but changes no assertion. Other changes ('get out of hand at the extremes' to 'become extreme', 'all the rest' to 'everything else') are stylistic.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1029,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 877,
+    "output_tokens_details": {
+      "thinking_tokens": 498
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1029,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 877,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1029,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1029
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.01289,
+  "is_error": false,
+  "result_sha256": "35fd1823144372706baafc2fbcfa966bf413a581300d9b5bed3834880867e080"
+}

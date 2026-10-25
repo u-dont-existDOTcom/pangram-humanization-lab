@@ -1,0 +1,58 @@
+{
+  "case": "F10",
+  "stage": "STYLE",
+  "prompt_sha256": "5eb7f32b2560c340b18ac8bc2080b704f49130aae0ae1f3d69d4e74c8aa5441b",
+  "response_sha256": "1333a73d48a414576fccd448612d40496f33ad271a9ede91893ff86736615a1f",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Reads as a casual, candid personal essayist. The hedged opening ('a bit tricky to put into words, but let me try anyway…'), the parenthetical caveat, the short defensive 'I'm not pushing toxic positivity,' and the abrupt turn to the psychedelic-trip admission all feel like a real person thinking aloud. The quotation marks around the whole phrase \\\"glass half full\\\" are consistent with the earlier \\\"glass half empty,\\\" so the parallel reads cleanly and the punctuation doesn't pull attention away from the voice.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 3.5,\n    \"prose_comment\": \"Same conversational voice, hedging, and pivot, so the overall feel is nearly identical. The one difference is the quote placement: 'a glass \\\"half full perception.\\\"' leaves the quoted span lopsided against the earlier \\\"glass half empty\\\" perception, and the closing quote sits after 'perception' and the period. It looks like a slip, a bit like a typing accident. A casual blogger could plausibly do this, so it isn't clearly unnatural, but it breaks the parallel and momentarily draws the reader's eye to the mechanics rather than the thought.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"The texts are identical apart from the quotation marks around the 'glass half full' phrase. X keeps the paired idioms parallel, so the rhetorical contrast lands smoothly. Y's lopsided quoting reads as a small slip that interrupts the flow. Casual writers do make such slips, which keeps the gap small, but X reads slightly more natural and controlled.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 4,
+      "prose_comment": "Reads as a casual, candid personal essayist. The hedged opening ('a bit tricky to put into words, but let me try anyway…'), the parenthetical caveat, the short defensive 'I'm not pushing toxic positivity,' and the abrupt turn to the psychedelic-trip admission all feel like a real person thinking aloud. The quotation marks around the whole phrase \"glass half full\" are consistent with the earlier \"glass half empty,\" so the parallel reads cleanly and the punctuation doesn't pull attention away from the voice."
+    },
+    "Y": {
+      "voice_score_1_to_5": 3.5,
+      "prose_comment": "Same conversational voice, hedging, and pivot, so the overall feel is nearly identical. The one difference is the quote placement: 'a glass \"half full perception.\"' leaves the quoted span lopsided against the earlier \"glass half empty\" perception, and the closing quote sits after 'perception' and the period. It looks like a slip, a bit like a typing accident. A casual blogger could plausibly do this, so it isn't clearly unnatural, but it breaks the parallel and momentarily draws the reader's eye to the mechanics rather than the thought."
+    },
+    "preference": "X",
+    "why": "The texts are identical apart from the quotation marks around the 'glass half full' phrase. X keeps the paired idioms parallel, so the rhetorical contrast lands smoothly. Y's lopsided quoting reads as a small slip that interrupts the flow. Casual writers do make such slips, which keeps the gap small, but X reads slightly more natural and controlled."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1200,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 585,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1200,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 585,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1200,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1200
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.010654,
+  "elapsed_s": 7.05,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

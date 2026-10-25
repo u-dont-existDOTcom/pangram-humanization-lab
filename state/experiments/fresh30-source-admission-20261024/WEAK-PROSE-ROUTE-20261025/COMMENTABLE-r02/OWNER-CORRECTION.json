@@ -1,0 +1,25 @@
+{
+  "schema": "owner-review-and-prose-correction-v1",
+  "date": "2026-10-25",
+  "owner_verbatim": "first of all, why do you keep forgetting to give me the commentable pages? it amkes it hard to respond to each thing. \n\nbut re the grief para, you should ahve cut this obvious AI nonsense slop \"That is a description of an experience, and it is not evidence for any particular physiological mechanism.\"\n\nwho asked if it was evidence of a physiological mechanism? that's just the way ai is always adding nonsense in there to protect itself from some kind of fact check or something",
+  "source_commit": "d3f386517378acd95b58095171e314d7ea22a215",
+  "corrections": [
+    {
+      "id": "delivery-commentable",
+      "scope": "Prose comparisons and research reports requesting item-by-item owner feedback",
+      "action": "Deliver the actual canonical commentable review, not a static report, even when the work is labelled research. Verify comment/edit/reload/export and text contrast."
+    },
+    {
+      "id": "W01-physiology",
+      "source_quoted_sentence": "That is a description of an experience, and it is not evidence for any particular physiological mechanism.",
+      "previous_candidate_sentence": "Experiences like that aren’t evidence for any particular physiological mechanism.",
+      "action": "Remove the same unsolicited defensive qualification from the active candidate without replacement. Do not reintroduce a paraphrase.",
+      "before_sha256": "32520cf089bd17509ad84e86570b0236b531afb490af097c978acf9e08692a13",
+      "after_sha256": "1febd574dacf5822e7d0f745e4df49615476940ea98dfe5a39b7230800d77f8d",
+      "authority": "Direct owner deletion instruction; not blanket approval of the rest or a new detector pass."
+    }
+  ],
+  "failure_analysis": "A model-created baseline and experiment preservation brief had elevated a nonclaim disclaimer into a mandatory point. The owner explicitly rejects it. This is a preservation-authority error, not proof that every caveat is removable. A separate UI classification error treated owner-feedback research pages as read-only reports despite the existing review-interface rules.",
+  "new_Pangram_calls": 0,
+  "published_article_changed": false
+}

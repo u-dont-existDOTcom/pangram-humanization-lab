@@ -1,0 +1,46 @@
+{
+  "case": "T21",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "11d5cb9ef03cc9e9ddfac8a4e369011a81f24f95a824068161ba1c0b505fd858",
+  "elapsed_s": 4.34,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"The draft preserves all material content. The irony framing, the prison-camp setting, the master's teaching (love the Chinese, be happy about growing rice for them, the people are not the government), the blossoming of loving-kindness, the speaker's 'light of love' characterization, and the speaker's conditional reflection ('if he could find love there, perhaps I could stop...') are all intact. Changes are stylistic only: 'where he found his true master' became 'he found his true master in that camp'; 'happy' became 'glad'; 'blossomed' became 'flowered'; 'upon the world' became 'in the world'; 'treating... as an excuse' became 'using... as an excuse'. The hedge 'perhaps' is retained. Agency and causality are unchanged: the master teaches, the practice develops, and the speaker draws a lesson.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 940,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 332,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 940,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 332,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 940,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 940
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.007084,
+  "is_error": false,
+  "result_sha256": "d4a73a439622bc8f3952e43484d36ec4e30c20b5da274a9f73316af7987cb0b6"
+}

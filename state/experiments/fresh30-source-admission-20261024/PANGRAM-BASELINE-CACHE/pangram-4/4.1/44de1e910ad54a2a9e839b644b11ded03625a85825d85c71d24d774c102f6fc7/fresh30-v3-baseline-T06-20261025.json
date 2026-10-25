@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-10-25T01:09:14.171981+00:00",
+  "expected_version": "4.1",
+  "format": "pangram-cache-v2",
+  "last_error": "",
+  "measurement_key": "fresh30-v3-baseline-T06-20261025",
+  "model": "pangram-4",
+  "result": {
+    "fraction_ai": 2.4103369446843922e-14,
+    "fraction_ai_assisted": 1.9142541324581954e-23,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 2,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "From 1999 to 2001, my family lived with the Love Israel family in Washington to escape Y2K, that brief period when otherwise reasonable adults prepared for civilization to be defeated by a two-digit date. We lived in a yurt. Wild berries of every kind grew there, and I loved being in nature. But I was also lonely, bored, irritated by the cult programming, and missing my friends in Philadelphia.",
+    "version": "4.1",
+    "windows": [
+      {
+        "ai_assistance_score": 4.69070345987619e-14,
+        "calibrated_confidence": 0.9852900666629938,
+        "class_probabilities": [
+          1.0,
+          5.857427580877735e-43,
+          4.69070345987619e-14
+        ],
+        "confidence": "Medium",
+        "end_index": 204,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "From 1999 to 2001, my family lived with the Love Israel family in Washington to escape Y2K, that brief period when otherwise reasonable adults prepared for civilization to be defeated by a two-digit date.",
+        "token_length": 48,
+        "word_count": 35
+      },
+      {
+        "ai_assistance_score": 1.6742922389007486e-20,
+        "calibrated_confidence": 0.9966551815604885,
+        "class_probabilities": [
+          1.0,
+          3.9376108835520777e-23,
+          1.6723236459781004e-20
+        ],
+        "confidence": "High",
+        "end_index": 397,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 204,
+        "text": " We lived in a yurt. Wild berries of every kind grew there, and I loved being in nature. But I was also lonely, bored, irritated by the cult programming, and missing my friends in Philadelphia.",
+        "token_length": 45,
+        "word_count": 35
+      }
+    ]
+  },
+  "source": "live",
+  "status": "success",
+  "submitted_model": "pangram-4",
+  "task_id": "02418597-9847-4337-917c-22483565b203",
+  "text": "From 1999 to 2001, my family lived with the Love Israel family in Washington to escape Y2K, that brief period when otherwise reasonable adults prepared for civilization to be defeated by a two-digit date. We lived in a yurt. Wild berries of every kind grew there, and I loved being in nature. But I was also lonely, bored, irritated by the cult programming, and missing my friends in Philadelphia.",
+  "text_sha256": "44de1e910ad54a2a9e839b644b11ded03625a85825d85c71d24d774c102f6fc7",
+  "updated_utc": "2026-10-25T01:09:17.143695+00:00"
+}

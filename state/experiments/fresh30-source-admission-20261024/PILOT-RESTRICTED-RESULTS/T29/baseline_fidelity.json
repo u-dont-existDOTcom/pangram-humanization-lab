@@ -1,0 +1,46 @@
+{
+  "case": "T29",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "82617733038c8b3cef6082b047b0d9f3d89a3096f0c8f136910d1091212fc5b8",
+  "elapsed_s": 4.07,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"No material differences. Hedging ('I sometimes think', 'may not need') is preserved. Changes are stylistic or trivial: 'can also sit' to 'can fall', 'a little' to 'some' (same quantity sense, 'at least' retained), 'because' to 'since' (same causal link), 'one discrete event' to 'a single discrete event', and 'going into' to 'entering'. The contrast between preparatory/titrated work and highly charged developmental material, the EMDR-after-reparenting advice, the Nurturer/Protector rationale, and the point about stable persons with discrete events are all intact. The omission of 'also' is not material.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1003,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 273,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1003,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 273,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1003,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1003
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.006746,
+  "is_error": false,
+  "result_sha256": "f88c02d569398dadd53c2286f655cb61d5ca40690dd16dd3c0f64c0675ecdc12"
+}

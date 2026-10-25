@@ -1,0 +1,20 @@
+{
+  "schema": "pangram-baseline-prediction-v1",
+  "created_date": "2026-10-24",
+  "case": "T13",
+  "source_context": "Inner Child source-controlled V2 pilot: grief and care",
+  "candidate_id": "T13-source-model-baseline",
+  "exact_sha256": "f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373",
+  "exact_boundary": "one model-written paragraph, without article heading or neighbors",
+  "model_for_detector": "pangram-4",
+  "expected_backend_version": "4.0",
+  "forecast": {
+    "probability_all_human": 0.3,
+    "expected": "Non-Human window(s) / not all Human",
+    "reason": "The source-faithful model baseline is a sequence of compressed explanatory and cautionary functions ('an experience, not a mechanism' → 'grief comes back' → conditional permission → tears not healing). Despite natural word choices, it may retain Pangram-sensitive maximally efficient onward progression. This is a weak forecast."
+  },
+  "decision_if_human": "If Human throughout, stop treating this baseline as an AI-writing repair case; preserve as a source-transformation null/control and avoid A/B detector calls.",
+  "decision_if_ai": "If any AI region is detected, the case is detector-eligible as a model-written target, but A/B need separate fidelity/format admission and cannot be called successful solely for Pangram movement.",
+  "pricing": "One short paragraph; single new paid submission maximum unless existing exact cached result; no automatic repeat.",
+  "outcomes": null
+}

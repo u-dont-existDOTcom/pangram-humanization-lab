@@ -1,0 +1,46 @@
+{
+  "case": "T04",
+  "stage": "blind_review",
+  "prompt_sha256": "0892b2a0c83b77e6863932a45f3dbceeacfd4579ced9b0d900084ec2a5e4da67",
+  "elapsed_s": 9.86,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Source's opening 'Ok' (casual discourse marker) dropped\",\n      \"'And there's a part of it which really does apply...' loses the intensifier 'really does' and the 'because' causal link between the song-part and the safety claim\",\n      \"'inviting them to shit-test you' becomes 'you invite them to shit-test you' (minor, no loss)\"\n    ],\n    \"added\": [\n      \"'my point' replaces 'what I'm talking about' (slight formalization)\",\n      \"'toxic side to this' replaces 'toxic part there' (minor reframing)\"\n    ],\n    \"voice_score_1_to_5\": 3.5,\n    \"prose_comment\": \"Clean and compact. Merges the source's separate sentences into one smooth flow and keeps the 'But there's a toxic side' pivot as a distinct sentence, which preserves the rhetorical turn well. The period after 'to this' makes the 'If you just accept everything...' sentence punchy. Slightly more polished and essay-like than the chatty, spoken-aloud original; the 'really does' emphasis is flattened. 'Invite them to shit-test you' lands naturally.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Source's opening 'Ok' dropped\",\n      \"'really does' intensifier dropped\",\n      \"Source's standalone sentence 'It's one of the most beautiful...' is folded into a relative clause ('which is'), reducing its declarative weight as a separate praise statement\"\n    ],\n    \"added\": [\n      \"'speaks directly to my point' replaces 'apply to what I'm talking about' (slight reframing)\",\n      \"'you become a yes man' replaces 'you're a yes man' (adds a process/transition nuance)\",\n      \"'because' retained in the toxic-side clause, which is a causal link present in source's logic but attached to a different clause\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Reads fluently but more written and chained: the 'which is' clause and 'because if' construction stack subordination, softening the punch of the source's short declarative beats. 'You become' subtly shifts from a state to a gradual change. The causal 'because' is a reasonable way to preserve the argument's logic, though it moves where the source puts it. Somewhat less conversational than X.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both are faithful in meaning and rhetorical function: the praise of the song, the concession that it applies to the point about acceptance and safety, and the pivot to the toxic side where unconditional acceptance makes you a doormat who invites shit-testing. X retains slightly more of the source's separate beats and the state-of-being phrasing ('you're a yes man'), which keeps the pivot crisp and the voice closer to the spoken original. Y's subordinate clauses and 'become' make it a little more written and shift the nuance from a state to a process, though Y's 'because' does preserve the source's causal logic a bit more explicitly. The margin is small.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1110,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1034,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1110,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1034,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1110,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1110
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.014784000000000002,
+  "is_error": false,
+  "result_sha256": "6e0f7162dc1f8c2387ad7b93f0d50c1091fbdbdda603897909e20ef755ed3059"
+}

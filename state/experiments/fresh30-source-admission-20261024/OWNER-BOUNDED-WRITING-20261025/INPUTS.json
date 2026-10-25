@@ -1,0 +1,382 @@
+{
+  "schema": "owner-bounded-writing-inputs-v1",
+  "source_freeze_parent": "02c9f92ea0794567ae0d3b90532d655408c8d680",
+  "case_count": 12,
+  "scope": "HISTORICAL_NONAUTHORITATIVE_PROBES_NO_ARTICLE_EDITS",
+  "cases": [
+    {
+      "id": "F02",
+      "heading": "Inner Child Therapy",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "de52af5e73439e0138b0936c457ba69ac91dcbfb2fb8f4a540990c40f2c60678",
+        "context_sha256": "158d58f33ff971d38c3787a37cd86925daaa91955964b509a38eba838251a3b9"
+      },
+      "original_paragraph": "Reparenting means consciously evolving and molding an Inner Adult inside you, comprising a loving Nurturer, a safe Adult Protector (hereafter just the Protector) and a wise Guide. This chosen Inner Adult super hero gets into a real, loving relationship with the little one you still carry. That grown-up notices the old patterns and practices better ways of responding. At first, it’s deliberate, even awkward. With time, the roles become second nature, so you spend less of your life managing yourself and more of it living with purpose, loving, relaxing, and playing. You can always slow down and look closer when it helps.",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h2. a wow i can't believe i wrote tha... oh that was from GPT, i humanized it but didn't notice how jarring that last stupid sentence was",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "You can always slow down and look closer when it helps.",
+      "baseline": "Reparenting means consciously evolving and molding an Inner Adult inside you, comprising a loving Nurturer, a safe Adult Protector (hereafter just the Protector) and a wise Guide. This chosen Inner Adult super hero gets into a real, loving relationship with the little one you still carry. That grown-up notices the old patterns and practices better ways of responding. At first, it’s deliberate, even awkward. With time, the roles become second nature, so you spend less of your life managing yourself and more of it living with purpose, loving, relaxing, and playing.",
+      "baseline_sha256": "c27df6ce9597df5ffcd13ef0801af295d3e06b8d92000a37f06dabe9b21d1277",
+      "locked_spans": [],
+      "prohibited_restoration": "You can always slow down and look closer when it helps.",
+      "mechanical_owner_corrections": [],
+      "context": "## Inner Child Therapy\nWelcome, lovey bunnies!\nHere's the idea behind Inner Child Reparenting, in a nutshell:\nGrowing up, all of us picked up automatic ways of understanding situations we find ourselves in, reacting based on those understandings, and then treating ourselves partly based on how we happened to handle things. Some of those patterns are wise in general, although even then, we are always learning from what life throws at us. Others of those patterns were built for a crisis that’s long over, and some just seem to make every situation worse.\nReparenting means consciously evolving and molding an Inner Adult inside you, comprising a loving Nurturer, a safe Adult Protector (hereafter just the Protector) and a wise Guide. This chosen Inner Adult super hero gets into a real, loving relationship with the little one you still carry. That grown-up notices the old patterns and practices better ways of responding. At first, it’s deliberate, even awkward. With time, the roles become second nature, so you spend less of your life managing yourself and more of it living with purpose, loving, relaxing, and playing.\nIf that got to you at all, good. That was half the idea. I used to listen to Suzanne Vega's *The Queen and the Soldier* every night because it reliably got the tears out.\nThe crying helped me a lot in terms of not going numb inside. It didn't help me develop insight, though. I could have kept crying forever. It was Buddhism and then inner child therapy which helped create a new perspective that was more healthy. But I'm really happy I did do the crying that was needed at the time.\nMusic can help with feeling love, not just sadness, although sadness is often the first step to open up. So if you sit down to try any of this and feel nothing, that's when I'd put a song on. Céline's right up there if you don't have one, and Rosey Grier's *It's All Right to Cry* is a little further down. My sister used to sing that one to me almost daily in such a silly way it was really sweet of her.\nSome people, like another ex of mine, got so deep into crying that it became traumatizing. She actually had panic attacks from it. If you start getting scared of your own crying, turn the song off for tonight.\n",
+      "context_sha256": "74db783a82bd02aeb22c0c6a94d72a99e4eadacaa425cfd5cd5d77dee8679012",
+      "anonymous_style_map": {
+        "X": "baseline",
+        "Y": "candidate"
+      }
+    },
+    {
+      "id": "F07",
+      "heading": "If the Love Isn't Coming Yet",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "0d9517e0652c8ace9125d146801eb3493d1d7c5a5fd8308bde4d6ea49bbd1ae6",
+        "context_sha256": "4c1758bf87d27079aaef2226e2bcd9622981b3129c8711bf06038009e9becd52"
+      },
+      "original_paragraph": "Maybe just imagining a caring grown-up makes you feel more threatened, or lonelier. Lonelier is a strange one, with somebody right there. Then go smaller still, to the least cruel response a decent adult could offer your little one. It's scaffolding, and it isn't a test of whether you were loved enough.",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h7. a",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": ", and it isn't a test of whether you were loved enough",
+      "baseline": "Maybe just imagining a caring grown-up makes you feel more threatened, or lonelier. Lonelier is a strange one, with somebody right there. Then go smaller still, to the least cruel response a decent adult could offer your little one. It's scaffolding.",
+      "baseline_sha256": "20b9930129b4630d32c12cd324d07add2183f50ce1dfaa3e264405b0291a3d6a",
+      "locked_spans": [],
+      "prohibited_restoration": ", and it isn't a test of whether you were loved enough",
+      "mechanical_owner_corrections": [],
+      "context": "## If the Love Isn't Coming Yet\nIf you weren't loved well as a child, \"love your inner child\" can sound like nonsense. Love them how? Maybe you really want the best for your little one. Maybe you hug them in your imagination, or miss them. And you can still feel none of the warmth people mean when they say love. That doesn't close the door, though, it just means you start smaller.\nMaybe just imagining a caring grown-up makes you feel more threatened, or lonelier. Lonelier is a strange one, with somebody right there. Then go smaller still, to the least cruel response a decent adult could offer your little one. It's scaffolding.\nTaking the hostility out makes room for warmth. What people most often say helped is letting their defenses down. I mean by choice, after the part guarding you has been heard. If you've never been safe being loved, your ego can act like a rigid security guard that won't let the feeling in, and being vulnerable is the opening the feeling needs. (This guard is only about letting the feeling in. People still have to earn your trust.) Sometimes the warmth is there, with a cold part standing in front of it, guarding something. That part tends to step aside once it's been heard (see the section Hear the Guard First).\nIf the love still isn't coming, you can at least stop judging your little one. Obviously no insults. Helpful advice is great, we all need advice. Let them absorb it at their pace. And don't expect a thank-you for the session, like they booked it. That's enough to start being the adult, even if it isn't enough yet for them to trust you. That takes warmth, and if there isn't any yet, borrow some.\nYour little one might not take it well at first. 😜 More like \"Oh, so NOW you care?\" Your first instinct might be \"But I'm trying!\" Some days, just hearing it out like a decent adult is the only thing you'll manage to borrow.\n",
+      "context_sha256": "652d74eac4bbe07ce2de9635672d98a5a7eaac65f5b99ebd90b66f8e950de31d",
+      "anonymous_style_map": {
+        "X": "candidate",
+        "Y": "baseline"
+      }
+    },
+    {
+      "id": "F12",
+      "heading": "Not Every Hero Wears A Cape",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "504653273f53a18a0b0bbf0a61becba38bab1089f2f7e2f616afe564debb2c80",
+        "context_sha256": "719818ce6a13f133daa5bc96c8ab85d32e415eebc7818db39e08209af8e76380"
+      },
+      "original_paragraph": "Intentional, meaning you pick one of those acts and decide when you'll do it, and what the smallest first step is (like with the envelope). Some of them are only one step anyway. If it needs money or somebody's help, sort that out before the day, and if you'll have to tell someone something they won't like, say it out loud to yourself ahead of time. Then put yourself in their shoes to see how it sounds, and go back & forth like that a couple times until both sides feel good about it, or good enough, as long as what you needed to say is still in there.",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h12 a",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "Some of them are only one step anyway.",
+      "baseline": "Intentional, meaning you pick one of those acts and decide when you'll do it, and what the smallest first step is (like with the envelope). If it needs money or somebody's help, sort that out before the day, and if you'll have to tell someone something they won't like, say it out loud to yourself ahead of time. Then put yourself in their shoes to see how it sounds, and go back & forth like that a couple times until both sides feel good about it, or good enough, as long as what you needed to say is still in there.",
+      "baseline_sha256": "143c574c34311d68eb434677533052645493b439b371d495d96a88ba41acfe4a",
+      "locked_spans": [],
+      "prohibited_restoration": "Some of them are only one step anyway.",
+      "mechanical_owner_corrections": [],
+      "context": "## Not Every Hero Wears A Cape\nSet one boundary. \"What's a 'boundary'?\", I might be asking. That looks like saying no to something that's costing you too much (money, time, whatever it is). Handle that task you've been putting off, or the tax man, or your DUIs in Maryland, even if all you do today is open the envelope. Keep one small promise to your little one. Clean your room! Maybe your little one had grown-ups who said sweet things and then did nothing, and maybe you've done it too, so this is how they start to believe you.\nYou can protect your little one from yourself too, like by repairing after an internal attack. \"What's an 'internal attack'?\" Calling yourself an idiot for losing your keys again, for one. Your little one was listening, so you go back and apologize to them. If they're sarcastic about it, you hear it out instead of snapping back. They don't trust you yet, and you don't ask them to. They complain about something, and if they're right, you say so. All of that shows as clearly to them as the clean room did. It's evidence you're safe to be around and that you accept them. Love needs both, but without warmth they can still feel like they're only being put up with.\nPlenty of people are still at the putting-up-with part. Even with little or no warmth for your little one yet, the relationship can start with the Protector's plain acts and the warmth can come after, which feels backwards, because you'd think you have to feel it first before you could do anything for them. But yeah, bonding starts somewhere. And this is not to say you've never done anything to care for yourself. If not, you'd be dead right now. But we're making additional acts of care intentional now as a base for love to grow.\nIntentional, meaning you pick one of those acts and decide when you'll do it, and what the smallest first step is (like with the envelope). If it needs money or somebody's help, sort that out before the day, and if you'll have to tell someone something they won't like, say it out loud to yourself ahead of time. Then put yourself in their shoes to see how it sounds, and go back & forth like that a couple times until both sides feel good about it, or good enough, as long as what you needed to say is still in there.\nAfter the day, look at what actually happened. If you did the Protector action(s), not feeling better right away is information to learn from. Healing is nonlinear, and sometimes standing up for yourself might make you feel worse at first. Not doing it is harder to figure out. Fear is the first guess, but maybe you didn't know how or why. Being worn out can stop you too, and sometimes whoever said they'd help couldn't make it. Hey, we've all been there. 🤗\n",
+      "context_sha256": "64373c86a1c5cab7f5621e5eb32bcd5f252dc29ca7ca3271b873f57b97da1406",
+      "anonymous_style_map": {
+        "X": "baseline",
+        "Y": "candidate"
+      }
+    },
+    {
+      "id": "F14",
+      "heading": "Catch the Hook Before the Story Takes Over",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "bf638e8ef133c842e6db9c5e0c2451581fe9e4988407d462df475301fd0d5435",
+        "context_sha256": "6b9b9c3f8dec45444731da51748d0894f6ffef0ac495426428d87864354a6d98"
+      },
+      "original_paragraph": "Pema Chödrön calls the tightening and urge you get before the story has finished forming \"shenpa,\" and she says \"hooked\" is a more descriptive translation than the usual \"attachment.\" You might notice the hook before you have any clue what part of you is doing the hooking. Or you might notice it embarrassingly late. The jaw and stomach are already tight, and/or half the text is written, and then suddenly it dawns on you: you're supposed to be observing yourself. 😀 Maybe forget the parts detective work for a minute. You can figure that out later.",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h14 a it doesn't tell the reader the detective work can wait, that's what the prior sentence said..",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "You can figure that out later.",
+      "baseline": "Pema Chödrön calls the tightening and urge you get before the story has finished forming \"shenpa,\" and she says \"hooked\" is a more descriptive translation than the usual \"attachment.\" You might notice the hook before you have any clue what part of you is doing the hooking. Or you might notice it embarrassingly late. The jaw and stomach are already tight, and/or half the text is written, and then suddenly it dawns on you: you're supposed to be observing yourself. 😀 Maybe forget the parts detective work for a minute.",
+      "baseline_sha256": "58cc71bc5e9067307345f9e840c4071677230e65f00fbbb5454c4119d07d567a",
+      "locked_spans": [],
+      "prohibited_restoration": "You can figure that out later.",
+      "mechanical_owner_corrections": [],
+      "context": "## Catch the Hook Before the Story Takes Over\nPema Chödrön calls the tightening and urge you get before the story has finished forming \"shenpa,\" and she says \"hooked\" is a more descriptive translation than the usual \"attachment.\" You might notice the hook before you have any clue what part of you is doing the hooking. Or you might notice it embarrassingly late. The jaw and stomach are already tight, and/or half the text is written, and then suddenly it dawns on you: you're supposed to be observing yourself. 😀 Maybe forget the parts detective work for a minute.\nWhen you catch it, look around and just take a moment to enjoy some free honesty: \"Oh! I'm hooked again! That's awesome I could notice it!\" Take a breath or three before you finish whatever you were doing. Sometimes human beings need to be being, not always doing. 🙃 Maybe then you'll find there's enough adult around to be nice to your little boo for a second. Or enough Protector to stop something you'd regret later.\nHere's where I want to clearly depart from the new-age wizdumb that all your problems are self-created: Somebody may really have crossed a boundary. That's not just because they are your karmic partner mirroring what God wants to show you in yourself, even if that also applies sometimes. Your reaction is what you can control the most, though. If what they did hit something old in you, notice how that feels in your body. And notice how your feelings can also amplify or distort your perceptions of others. Just because your stomach tightened up doesn't mean their boundary crossing indicates “They're evil.” You can defer that judgement for when you're in your happy place.\nFeelings about yourself work the same way. \"I feel attracted\" or \"I feel ashamed\" is real as a feeling, but it doesn't settle who you are, or who you love. Making too much out of something momentary is one side of the human psyche's pendulum. Give yourself time to see what patterns form more durably, and what feels authentically yours vs something planted or manipulated into being there from society, influencers, family, friends, religion, etc., etc. You may find an exceptional freedom in exactly that in-between place where you don't have to decide what your pronouns are, or whether you believe in this or that. If you stay in flux forever, though, it can seem like there's nothing solid about you. In that case, sometimes it helps to meditate or talk with a good unbiased therapist who can help you see the pattern.\nThe opposite extreme of our pendulum, throwing everything transient away, as some people do with \"thought-noting\" practice, also isn't healthy, except as a meditation exercise. Transient feelings and thoughts can be meaningful signals. For example, if you don't want to be touched, say no now and work out what it means later.\n",
+      "context_sha256": "3b19c764e923a0d213fb94c56704881f5859d4d60bc07675a1d7cee9546ad823",
+      "anonymous_style_map": {
+        "X": "candidate",
+        "Y": "baseline"
+      }
+    },
+    {
+      "id": "F17",
+      "heading": "Use Childhood Photographs Gently",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "3d239ad892b753c3b374238093bbf777c20b17bd01aa49c5716562e4bc7b9831",
+        "context_sha256": "814b80cd5ebed59141fa26253524ef344b7d3b1118622f3eaa05c138068ee87f"
+      },
+      "original_paragraph": "While you look, notice what your body does and what feelings or urges show up. Is there something that younger you seems to want you to understand? Some of it you'll remember yourself, and some of it you might even glean from talking to family/friends from then (\"You hated that coat\"). It might just be an inference you're guessing from the picture, or perhaps it triggers an image or a dream. Or just nothing comes up, which is also completely OK. Ask what your little one needs from you now, and do a bit of it.",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h17 a",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": ", which is also completely OK",
+      "baseline": "While you look, notice what your body does and what feelings or urges show up. Is there something that younger you seems to want you to understand? Some of it you'll remember yourself, and some of it you might even glean from talking to family/friends from then (\"You hated that coat\"). It might just be an inference you're guessing from the picture, or perhaps it triggers an image or a dream. Or just nothing comes up. Ask what your little one needs from you now, and do a bit of it.",
+      "baseline_sha256": "3df9c6a08fdec72576e152fc7cdd9d1143545783eee2852a50d5e91a1aeee833",
+      "locked_spans": [],
+      "prohibited_restoration": ", which is also completely OK",
+      "mechanical_owner_corrections": [],
+      "context": "## Use Childhood Photographs Gently\nIf picturing your little one feels fake, like you're just making it up, a real photo of you as a child can help, since there's no face or posture to invent. Yes, yes, it might feel a bit strange, seeing your own face from back then. But look at it gently and just notice what comes up.\nWhile you look, notice what your body does and what feelings or urges show up. Is there something that younger you seems to want you to understand? Some of it you'll remember yourself, and some of it you might even glean from talking to family/friends from then (\"You hated that coat\"). It might just be an inference you're guessing from the picture, or perhaps it triggers an image or a dream. Or just nothing comes up. Ask what your little one needs from you now, and do a bit of it.\nWe don't need to ask it leading questions, like \"Who abused me & how?\" or \"What memory is my body hiding?\" Grilling one photo until a story shows up is a good way to get a story, but stories aren't necessarily the truth, and even if they are accurate, the feelings beneath them are still more important. Memory is an amorphous thing, easily influenced by guided imagery and suggestions, so we gotta be careful about that. Look at this study, for example, where people were shown a doctored photo of a childhood hot-air balloon ride they never took. Half of them actually started sorta remembering it. I'm sure you can relate.\nA photo is just one moment that somebody picked and framed... not necessarily representative. Flipping thru an album may give different jolts in your body.\nIf you start to suspect someone of something serious, like abusing you, please don't confront or accuse anyone based only on what came up here. You might be looking at the photo thinking, \"That would explain so much.\" Journal what came up and how it came up, and see if you can get support from someone level-headed who won't lead you toward an answer.\nPut the photo back in its drawer when you're finished. If it starts tugging at you, so you keep going back to search it or you need to know for sure, or you're getting overwhelmed, take a break from it right then. Settle yourself in the present to close out properly. Re-evaluation counseling always ends on this \"Present Time\" reminder. Can be as simple and silly as \"Oh, Today is Monday, my favorite day of the week!\"\n",
+      "context_sha256": "022da7c2b05af26c3d6292874350521468d99c54924ccecb00b4a9232f64ae93",
+      "anonymous_style_map": {
+        "X": "baseline",
+        "Y": "candidate"
+      }
+    },
+    {
+      "id": "F22",
+      "heading": "When Escape Leaves Reality Behind",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "2672cc2fab0ecfcee312c0baf64656273dee8902adc602984b94c2d3c483d1eb",
+        "context_sha256": "e0a69ae51acbe510b4ecd7abadbd18033385eae49a6776f753adfd9640c0a16f"
+      },
+      "original_paragraph": "Any of those reactions, from mania to paranoia, can also point to a vulnerability in you, so I'd be careful with other drugs that mess with what's real too. And any predisposition toward mania or psychosis is a warning sign too, whether it's family history, a bad environment or a bad mindset. I can't tell you exactly what to do about it, and nobody can tell you for sure what's best for you. There are just caution signs, and when you see them, you take more precautions of every kind. You have to figure out what they mean for you, and if you can't, get help from trusted advisors.",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h22 a but \"There are just\" should have been \"These are just\"",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "I can't tell you exactly what to do about it, and nobody can tell you for sure what's best for you.",
+      "baseline": "Any of those reactions, from mania to paranoia, can also point to a vulnerability in you, so I'd be careful with other drugs that mess with what's real too. And any predisposition toward mania or psychosis is a warning sign too, whether it's family history, a bad environment or a bad mindset. These are just caution signs, and when you see them, you take more precautions of every kind. You have to figure out what they mean for you, and if you can't, get help from trusted advisors.",
+      "baseline_sha256": "4c5befcb3d236d9d376966871cfab8d6c5e81e2ba2ac5f7d1d21688d110af4ea",
+      "locked_spans": [],
+      "prohibited_restoration": "I can't tell you exactly what to do about it, and nobody can tell you for sure what's best for you.",
+      "mechanical_owner_corrections": [
+        "There are just → These are just, exact additional owner correction"
+      ],
+      "context": "## When Escape Leaves Reality Behind\nAll kinds of psychoactive drugs can mess with your sense of what’s real, and that’s often the point of them, so you can break free of all your old patterns completely for a bit. But in general, try to select the healthiest ones and use slow and gentle protocols. I’d say one of the most abused psychedelics (aside from ketamine, if you call that a psychedelic) is 5-MeO-DMT. I have a guide on that. People very often believe you need a huge dose of it for a “full release.” They go through all kinds of screaming and shaking, nearly killing themselves, with absolutely zero inner-child work being done. It’s all spiritual bypassing.\nYour own drug history matters too. If you go manic, psychotic (by which I mean losing your sense of reality to the point of posing a risk to yourself or others), get super paranoid, or end up worse afterward than before, those are signs to reconsider trying the same thing again, and try to figure out why that happened. Don't try again until you understand what would make it safe. I’d look at the drug and the dosage, as well as mindset and setting etc.\nParanoia during a rough trip can be a warning sign for psychosis, but it doesn’t automatically lead there, since it can be valid. It tends to go that way when it isn’t balanced by practicality. “The CIA is mind-controlling me!” is paranoia. “The CIA, marketers, and other forces are conspiring to mind-control me, the way they do to everyone else! But since I can see that, I can prevent it to some extent, just by being aware of how it operates” is paranoia too, but it’s practically useful, and less likely to lead to psychosis. “...which means I can prevent it by standing on my head and counting backwards from 33, since 33 is their magic Freemason number!” is leaning psychotic. Some drugs are known for causing paranoia, like THC, so I’d avoid those. If you can’t clearly understand what happened yourself, get someone qualified to help. And if you have an idea of what happened but aren’t sure, ask someone who knows you well.\nAny of those reactions, from mania to paranoia, can also point to a vulnerability in you, so I'd be careful with other drugs that mess with what's real too. And any predisposition toward mania or psychosis is a warning sign too, whether it's family history, a bad environment or a bad mindset. These are just caution signs, and when you see them, you take more precautions of every kind. You have to figure out what they mean for you, and if you can't, get help from trusted advisors.\nBy trusted, I mean someone you know is trustworthy from a long relationship with them, not someone people on Reddit said was super magical and healing. That's called a crapshoot. It might turn out well, it might not. It might seem like it did, and then later you realize you were duped, as happened to me with Sidney the iboga shaman. A new therapist is not as trusted as an old one. As they say, \"new friends are silver, but old friends are gold.\"\nSay you keep coming back from trips confused or spaced out. Maybe nothing worse happens, but after several trips like that I'd be concerned. If you're having episodes when you're sober, or any of them are severe, see a psychiatrist. And don't suddenly stop a medication just because you suspect it's involved. Talk to the doctor who prescribed it. Benzos can be dangerous to quit cold turkey. Alcohol withdrawal can be dangerous if you're physically dependent.\nBe careful what you mix, too, and not just prescribed medicines. Even some basic things like cinnamon can be dangerous (and helpful) with ayahuasca, and doctors don't know about a lot of this. I also learned that mixing acacia confusa with mimosa hostilis is very dangerous. I'd never recommend anyone risk it, since it's highly destabilizing and challenging. I have a list of things to be cautious about with ayahuasca in particular.\nGentle meditation or self-hypnosis is a different story. It can really calm your nervous system down. A lot of people find that a mantra they feel some heart connection to, repeated in their head or out loud, especially with a nice melody, can lower the walls enough for the heart to open up. It's not something to lean on all day as a way of coping, but used as therapy it can be super effective. I personally love this beautiful Om Mane Pemme Hum mantra that I found in the Garchen Rinpoche documentary, For the Benefit of All Beings:\n",
+      "context_sha256": "5982053811bd34eca998603ea8c190e7ea27dc857651495ebb594490a023a149",
+      "anonymous_style_map": {
+        "X": "candidate",
+        "Y": "baseline"
+      }
+    },
+    {
+      "id": "F04",
+      "heading": "My Journey",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+        "context_sha256": "0ff4fd3eeec2449657d0323ac25b81e94b3e6657903e5dd3e4b5e2eb6fd896eb"
+      },
+      "original_paragraph": "What it showed me is that I was ignoring a lot of things that were really important to look at, and that was one of them. I wouldn't have even thought to ask the question she asked me if I were doing it on my own. It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems. But personally I prefer to see things as they are, so I can figure out how to work with them, rather than just hide in delusions.",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h4. b it wouldn't even make sense anymore after cutting that, please",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems.",
+      "baseline": "What it showed me is that I was ignoring a lot of things that were really important to look at, and that was one of them. I wouldn't have even thought to ask the question she asked me if I were doing it on my own. It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems. But personally I prefer to see things as they are, so I can figure out how to work with them, rather than just hide in delusions.",
+      "baseline_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+      "locked_spans": [
+        "It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems."
+      ],
+      "prohibited_restoration": null,
+      "mechanical_owner_corrections": [],
+      "context": "## My Journey\nI used to preach Buddhist enlightenment a lot. But an old childhood wound could still hit and suddenly I was the same little kid again, even when the spiritual part of me felt completely free.\nThe way I picture it is almost stupidly simple. Imagine you're broke and starving, and your baby is starving too. *Understandable*: there is no food. Then a food bank opens nearby and suddenly you've got lots of nutritious munchies. But you're eating all of it yourself while baby you is still starving. *Unforgivable.*\nNobody leaves a baby starving on purpose. I just didn't believe there was a baby. Inner-child stuff sounded silly to me until I could actually feel him. Then there was this little me actually hurting, and I could send some of the love I'd already found his way.\nI think most people who chase spiritual freedom are also trying to get away from something painful in themselves, and a lot of it goes back to childhood. That's spiritual bypassing. Plenty of seekers and gurus do it too; I've written about the Dalai Lama as one example. I did it too. It doesn't mean you're stupid or crazy.\nSpending your whole life processing your wounded inner child isn't freedom either. Spirituality opened a much bigger horizon for me—love and happiness beyond the conditions of my life story. Maybe ordinary life already gives you enough love and meaning. Great. It didn't for me. Conditional love felt radically insufficient, so I kept looking for something deeper.\nI was well-loved as a child, but from age twelve to twenty-six I was depressed and cried every night from feeling the pain of the world. Loving-kindness (metta) meditation healed that depression almost instantly for me.\nI found more love in Buddhist teachings—which, it turns out, also include inner-child self-love! and later in loveyhuasca. Metta gave all that love somewhere to land.\nBut it didn't reach everything. A lot of the child stuff around my attachment to women was still there. When I later tried self-directed inner-child therapy, it felt like I was making it up at first. That didn't stop me from practicing, but I did stop when I felt fake, stop in the sense of ... like I might still kind of allow the exercise to play out somehow but I would stop \"pushing\" it to be a certain way, and I'd stop trying to feel it was realer than it was. I would go more into listening and waiting mode rather than imagining mode.\nI used San Pedro cactus and CBD tea with sublingual mapacho, and that cracked it open; structured sessions with an inner-child therapist deepened it.\nI found the therapist, Daja, years later, randomly, and gave it a shot, although I didn't think I needed it. But she did actually help me see some things more clearly. For example, she had me write down how many people I could fully trust as a child (lots), then how many people I could fully trust as an adult (zero). That was difficult, and it's actually the opposite of what you might expect from inner-child therapy, since usually that's about people who had problems trusting as a child.\nWhat it showed me is that I was ignoring a lot of things that were really important to look at, and that was one of them. I wouldn't have even thought to ask the question she asked me if I were doing it on my own. It's also an example of how therapy can sometimes make you feel worse than before, when you become more aware of problems. But personally I prefer to see things as they are, so I can figure out how to work with them, rather than just hide in delusions.\nIt also showed me that I really do need to count more on myself than I assumed. I need to be much better as an inner adult for my inner child, because my childhood was actually so nice that I kind of just assume I can trust everyone, and that gets me into trouble. So it got me curious to learn more about inner-child therapy in general and map it out completely, which is a process I'm still in the midst of as I test this guide with people.\nThe image below maps out the details as best as I can fit:\n",
+      "context_sha256": "0ff4fd3eeec2449657d0323ac25b81e94b3e6657903e5dd3e4b5e2eb6fd896eb",
+      "anonymous_style_map": {
+        "X": "baseline",
+        "Y": "candidate"
+      }
+    },
+    {
+      "id": "F10",
+      "heading": "Your Loan is PRE-APPROVED!",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "cf593b17e0f138d62fd56607c1245506806682c320a87da35f82aa5972fe3692",
+        "context_sha256": "b1f52a3ab2893b34be52b5271a3006b59b2c082df0b9476fc724c8ac398297bb"
+      },
+      "original_paragraph": "This is a bit tricky to put into words, but let me try anyway… You may be suffering now, but you could be suffering more. That’s something to be grateful for (although please don’t fall into the common trap of being grateful that you have what others don’t have, as that’s more like selfishness). I’m not talking just about changing your “glass half empty” perception to a glass “half full perception.” I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment. On the other hand, I’ve noticed that I can sometimes completely flip a bad psychedelic trip into a good one with gratitude alone.",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h10 b it's an objection that so many people have raised to me lololo",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment.",
+      "baseline": "This is a bit tricky to put into words, but let me try anyway… You may be suffering now, but you could be suffering more. That’s something to be grateful for (although please don’t fall into the common trap of being grateful that you have what others don’t have, as that’s more like selfishness). I’m not talking just about changing your “glass half empty” perception to a glass “half full perception.” I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment. On the other hand, I’ve noticed that I can sometimes completely flip a bad psychedelic trip into a good one with gratitude alone.",
+      "baseline_sha256": "cf593b17e0f138d62fd56607c1245506806682c320a87da35f82aa5972fe3692",
+      "locked_spans": [
+        "I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment."
+      ],
+      "prohibited_restoration": null,
+      "mechanical_owner_corrections": [],
+      "context": "## Your Loan is PRE-APPROVED!\nOne practical door *anyone* can use to slowly experience divine love is gratitude (even after the Turkey’s done & Thanksgiving is over!). Genuinely cultivated gratitude (not just empty/forced ritual) is one way to experience divine love for the first time, or to get it back when the feeling fades. I think it’s essential if we want to live in that love instead of occasionally visiting it.\nThis is a bit tricky to put into words, but let me try anyway… You may be suffering now, but you could be suffering more. That’s something to be grateful for (although please don’t fall into the common trap of being grateful that you have what others don’t have, as that’s more like selfishness). I’m not talking just about changing your “glass half empty” perception to a glass “half full perception.” I’m not pushing “toxic positivity.” Being thankful shouldn’t be pushed on people who just need to grieve for the moment. On the other hand, I’ve noticed that I can sometimes completely flip a bad psychedelic trip into a good one with gratitude alone.\nAnd I’m certainly not preaching “prosperity philosophy,” even though it can seem to start at that. We still need to remember that if we can only be thankful for the good things we have, we can fall into the trap of thinking that what we have is happiness itself. I’m ultimately reaching for something much deeper. Because getting what you want is an endless loop, and it doesn't lead to being content with less. When you can see that less is more, at a deeper level, that's where the real gratitude flourishes.\nIf you have a moment right now to breathe, that’s something to be grateful for. I learned this many times the hard way. For example, when I got tuberculosis from a cave in Mexico at age 20, and coughed for six months straight, eventually literally unable to breathe, leading to a near death experience. And then in Senegal, I had a suspected bilharzia infection in 2021, and could only painfully pee blood, I promised to always be thankful if I could ever pee normally again. Miraculously, I then found some obscure ethnobotanical research (on Google Scholar, before AI) which led me to drink roselle tea. Within an hour, I was cured. I don’t always remember to say “thank you” when I pee now, but I try.\nThat may sound like a silly, quirky waste of time to some folks. But what I notice is that saying thank you for every little thing, whenever I remember to, is not about imposing some kind of “spiritual discipline.” It is directly reconnecting me to something pure and sacred.\nAnd even (or especially) when I am suffering, I try to remember to be grateful for that also, because if not for suffering, I would not even think about how much I have enjoyed not suffering as much, and how much this tribulation will help me to develop more compassion, wisdom, and gratitude in future. It connects me with the plight of the countless other beings suffering at that very moment, authentically bringing up a wellspring of compassion in my heart for all of us. And I see clearly that it is my inner child who is feeling this pain, and what an honor it is that I can be there for him.\nOf course, that’s not to say you should not try to suffer less, or get away from abusers. The point of life, according to every spiritual tradition and religion, I think, is to suffer less, which first requires us to understand the cause of suffering, and what real suffering and real happiness are. If you, like Biggie Smalls, have come to understand that having money is not real happiness, that’s a big deal! That’s something to be grateful for. If we get a chance to meditate or pray today, while on the toilet, upon waking up, while ChatGPT is “thinking” for us, that’s something to be thankful for, for sure.\nNotice how, when you offer thanks (to the universe, to life, to God, whatever you may believe in), a space in your heart opens up. It might not feel immediately like you suddenly know the real meaning of Divine Love, but it’s a little spark of … something.... There’s a tiny bit of freedom, of peace, stillness, softness. And as that softness deepens each time, you start to understand what I mean by Divine Love. Many people have written books on this topic (like A. Helwa’s book, Secrets of Divine Love, for example), so I won’t belabor the point further here, but I hope you are able to experience this when you try it out for a while, and I’d really love to know how it works for you!\nOnce you start to feel that lovely softness of the heart, invite your little one in with you as your spiritual integration practice. They might go numb, or call BS on that. If so, they might just need to see if you're actually humble enough, and grateful enough for them, to listen to their rejection and be patient. If you instead retreat back into your cozy corner, it's the food bank feast all over again: You can have an enormous spiritual feast upstairs while the child is still starving downstairs.\n",
+      "context_sha256": "b1f52a3ab2893b34be52b5271a3006b59b2c082df0b9476fc724c8ac398297bb",
+      "anonymous_style_map": {
+        "X": "candidate",
+        "Y": "baseline"
+      }
+    },
+    {
+      "id": "F19",
+      "heading": "When the Adult Voice Feels Fake",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "a9cf17f193c4cb8ef0c9764a498c1863805e548a4b8c35c67f9aea1777fe4e81",
+        "context_sha256": "d8d60ba8c7f3536a750549038a9965e21e47869be7f6a19af5b1b325254896c6"
+      },
+      "original_paragraph": "For some people it only stops feeling fake in an altered state, like on MDMA or deep in meditation. All of a sudden your little one is right there! Oh my gosh! And the love or grief that sounded like therapy talk is just obvious. Old memories might come up too. They can feel totally real, but that alone doesn't prove they happened. I'd still hang on to what you felt, even once it's gone, and try to bring a little of it into your normal life. You've felt that your little one is real now, so talking to them afterward isn't just pretending.",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h19 b",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "They can feel totally real, but that alone doesn't prove they happened.",
+      "baseline": "For some people it only stops feeling fake in an altered state, like on MDMA or deep in meditation. All of a sudden your little one is right there! Oh my gosh! And the love or grief that sounded like therapy talk is just obvious. Old memories might come up too. They can feel totally real, but that alone doesn't prove they happened. I'd still hang on to what you felt, even once it's gone, and try to bring a little of it into your normal life. You've felt that your little one is real now, so talking to them afterward isn't just pretending.",
+      "baseline_sha256": "a9cf17f193c4cb8ef0c9764a498c1863805e548a4b8c35c67f9aea1777fe4e81",
+      "locked_spans": [
+        "They can feel totally real, but that alone doesn't prove they happened."
+      ],
+      "prohibited_restoration": null,
+      "mechanical_owner_corrections": [],
+      "context": "## When the Adult Voice Feels Fake\nA lot of people get stuck right here. You call up the Nurturer and try to talk to your little one, and you get silence or a numb feeling, and all of a sudden your phone or the laundry feels urgent. Or some voice says this is silly, and it's hard to tell which part of you is saying it.\nMy friend Scott said:\n> \"Half the time when I try to connect to baby me, I feel fake and it seems crazy.\"\nI used to be all personal trainer and teach persistence on this as the remedy. Keeping at it does help, since a little one who learned to expect being dropped won't trust you right away. But I don't think that explains the adult feeling fully. More importantly, I think it could even be like unintentional gaslighting to the little one to ask to connect with them when you don't believe they're even real. Like when my mom pretended to listen to me when I was young, but even less excusable (from the inner child's view) because she was not asking for my time when she did that. So, it's worth meditating first on why it feels fake.\nSometimes kindness feels scary more than fake. One study's title has a word for that: \"compassion-threat.\" People in it with anxious or avoidant attachment reacted to compassion imagery like a threat, and a ten-minute exercise in feeling secure helped with the next try. Another found a first try at imagery like that \"can be frightening for people who have a tendency to be self-critical.\" So feeling fake could mean you need a bridge, more than a bigger performance of love.\nAnd picturing one ideal parent seems to help some people. There's a whole method built on it, called the Ideal Parent Figure method. In a small pilot, seventeen adults with complex PTSD from childhood trauma did five weeks of it and were still doing better eight months later. Seventeen people with nobody to compare them to won't prove the whole method, but it's a start.\nFor some people it only stops feeling fake in an altered state, like on MDMA or deep in meditation. All of a sudden your little one is right there! Oh my gosh! And the love or grief that sounded like therapy talk is just obvious. Old memories might come up too. They can feel totally real, but that alone doesn't prove they happened. I'd still hang on to what you felt, even once it's gone, and try to bring a little of it into your normal life. You've felt that your little one is real now, so talking to them afterward isn't just pretending.\n",
+      "context_sha256": "d8d60ba8c7f3536a750549038a9965e21e47869be7f6a19af5b1b325254896c6",
+      "anonymous_style_map": {
+        "X": "baseline",
+        "Y": "candidate"
+      }
+    },
+    {
+      "id": "F21",
+      "heading": "Altered States Can Deepen the Therapy",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+        "context_sha256": "98510646d65d047fe71d3f7bc92818892562635a385689d7749ce5c699430892"
+      },
+      "original_paragraph": "And if your little one still can’t take the love in? Hold off on going for bigger, crazier breakthroughs, however tempting it is, or at least know that they are a double-edged sword. Something’s in the way, and getting to know it is your next job. Often it’s a protective part that’s seen love come with strings before. Hear it out first, the way you did in Hear the Guard First.",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h21 b yes it purposefully does take back because people may not just listen to my commands, they have their own ideas",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "or at least know that they are a double-edged sword",
+      "baseline": "And if your little one still can’t take the love in? Hold off on going for bigger, crazier breakthroughs, however tempting it is, or at least know that they are a double-edged sword. Something’s in the way, and getting to know it is your next job. Often it’s a protective part that’s seen love come with strings before. Hear it out first, the way you did in Hear the Guard First.",
+      "baseline_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+      "locked_spans": [
+        "or at least know that they are a double-edged sword"
+      ],
+      "prohibited_restoration": null,
+      "mechanical_owner_corrections": [],
+      "context": "## Altered States Can Deepen the Therapy\nI’d learn to do inner-child therapy sober first, in your ordinary mindstate, since that’s the one you’ll be living in. Cars don’t start at 60mph, that’s not the way the universe seems to work. First gear leads to second leads to third, etc. Second gear, in this case, may refer to gentle meditation or self-hypnosis. When you’re ready, my self-hypnosis guide and lucid-dreaming guide can take those deeper, into third gear. Low doses of entheogens can also synergize compatibly with various gears: cactus, CBD tea with sublingual mapacho, Loveyhuasca, iboga, and so on.\nRemember those guards from The Urge to Escape, above? Same deal here, so get enough Nurturer and Protector in the room before you go deep. Borrowed is fine, as long as it’s from someone steady who won’t try to run your trip for you. But feeling attacked by a demon on a psychedelic is not necessarily paranoia. It can be real, and it’s also not bad unless you’re unprepared. It can be supremely empowering when you can send love and see how it fixes the situation.\nNow, the beautiful stuff. Say one night (on a psychedelic, in a dream, ten days into a meditation retreat, whatever) you felt more love than you knew was possible. Wonderful, and it matters! Keep it as a reference point, and chase it playfully, because it is already a part of you, and you’ll be like a cat chasing its tail, which can be cute and fun, or dizzy and absurd!\nJack Kornfield has a whole book on what comes next, After the Ecstasy, the Laundry. The title kind of says it all. That night can't be the bar for every morning after, or regular life starts to feel like failing. And gorgeous as it was, it doesn't mean you're done healing. The laundry will tell you more, and it's the same test as in Timing Is Individual, further down.\nOne reason the peak is so momentary is because we often don’t need to truly give anything up to get it. Say you’re still pretty angry, and you want enlightenment, but it has to come with the money and the partner in one package. Ketamine can get you to a peak anyway. Then, you might now have some kind of transcendental “understanding” glimpse that seems like it could fix everything, if only you could be more aware of it, which often leads into a cycle of taking more and more medicine over time. I’d prefer to ask if any of the discontent has been let go, or the anger? If not, that peak was less the love we’re after here than “I’ll be grateful once I’ve got it all,” the gratitude with conditions from Ask God for a Loan.\nAnd if your little one still can’t take the love in? Hold off on going for bigger, crazier breakthroughs, however tempting it is, or at least know that they are a double-edged sword. Something’s in the way, and getting to know it is your next job. Often it’s a protective part that’s seen love come with strings before. Hear it out first, the way you did in Hear the Guard First.\n",
+      "context_sha256": "98510646d65d047fe71d3f7bc92818892562635a385689d7749ce5c699430892",
+      "anonymous_style_map": {
+        "X": "candidate",
+        "Y": "baseline"
+      }
+    },
+    {
+      "id": "F25",
+      "heading": "Altered States Can Require Reparenting",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "40a940ecc0bfabdac39310113f8d3f9cfeb9570da424a1a464dcb405cef83249",
+        "context_sha256": "c3bd8922d333476e792b9c139f5ee49af2e65872b95b177e791eb9a356bd6119"
+      },
+      "original_paragraph": "Borrowing support like that is basically borrowed adulthood. At first you may need to feel protected or loved by something bigger than you, before that love starts to feel like yours, and then bit by bit it starts to become your own. Send some of it down to your frightened little one, and when that's possible, toward whatever you're afraid of. Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h25. b cutting that could be sacriligeous",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!",
+      "baseline": "Borrowing support like that is basically borrowed adulthood. At first you may need to feel protected or loved by something bigger than you, before that love starts to feel like yours, and then bit by bit it starts to become your own. Send some of it down to your frightened little one, and when that's possible, toward whatever you're afraid of. Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!",
+      "baseline_sha256": "40a940ecc0bfabdac39310113f8d3f9cfeb9570da424a1a464dcb405cef83249",
+      "locked_spans": [
+        "Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!"
+      ],
+      "prohibited_restoration": null,
+      "mechanical_owner_corrections": [],
+      "context": "## Altered States Can Require Reparenting\nHave you ever been attacked by a literal demon? Maybe during sleep paralysis or meditation or on a psychedelic trip? A lot of modern folk laugh at this, yet it’s really quite a common experience. I was being psychically attacked by ghosts in my home as a child. Because I was literally a child, I was an easy target. And since most people never actually grew up, they are easy targets for every kind of influence, including spirit influence.\nThose ghosts knew my weakness: dares. So they would dare me to jump out the window. I wasn’t suicidal, but I hated to seem like a “wussy.” Luckily, I trusted my parents with this information, and instead of taking me to a psychiatrist and pumping me full of anti-psychotic drugs, they put bars on the windows. Many kids are not so lucky in modern societies. They may get pumped full of anti-psychotic drugs for the rest of their life once diagnosed. That said, it'd make sense to get a professional to weigh in for some situations. I still played around with half-hanging out the windows, but I wasn’t quite dumb enough to jump out, and I really appreciate that my parents took it seriously without catastrophizing.\nAs a semi-adult, age 26, I discovered meditation. After I began meditating deeply for a while, it seemed like my astral portal opened. I started getting attacked by spirits during sleep paralysis. They would sit on me, prevent me from breathing, and instill tremendous fear into the core of my being.\nYep. Exactly like that.\nSleep paralysis is a trance-like state, and trance can be \"more scary\" because you're trapped in it, but it's also less actually dangerous. You can't ruin your life at all in trance (unless a bad hypnotic suggestion gets deeply implanted, perhaps), while without trance you can \"freak out\" in a way that might end up getting you committed to a mental hospital, thrown out of your housing, going to jail, possibly even killing yourself. In trance you can basically work with the fear. You recognize the fear has no real world significance and it's purely just fear, so it's super useful that way. The thing to fear is fear itself, since it actually opens us up to being manipulated by demons, which feed on it directly. So it's not really that they have no power. We give them the power.\nAfter multiple episodes of this I decided to stop giving in to the victim mentality, and to start taking it seriously as a part of spiritual practice. My inner Guide saw it as a perfect opportunity to demonstrate the power of love over fear. The next time it happened, despite how scary it was, I sent unconditional love to this demon on me. It took some minutes, but once that love was seen as enduring, the demon left, and it never returned.\nI’ve also trained other people to do this during spiritual attack while on psychedelics. It works a lot better if you are already trained in loving-kindness meditation to the point where it’s natural. I’d say it works way better than exorcism techniques (like Julian Palmer’s torping, which he also admits doesn’t work as well as love).\nThe astral plane is a bit different from the 3D. In the astral realm, unconditional love is a true, ultimately powerful physical force. Like a river, or a moat. There’s no evil that can trespass that moat. But don’t assume it will always work like that in the physical plane. It definitely has worked for me sometimes when facing some thugs, but definitely not with others. Loving someone does not mean you leave the front door unlocked with a sign saying “take whatever you want.”\nIf you’re not able yet (or in the moment) to summon real love for an enemy, you can first send love to your frightened little one from your adult Nurturer. Many people also find they can borrow support from God, Jesus, angels, devas, or whatever loving spiritual presence fits their tradition. If I were to do that, I would still be framing it as “Please help this situation with love” rather than “Strike down the enemy!” But if a presence seems to enjoy your fear, it's not one of your grown-ups, borrowed or not, whatever it says it is. Same goes if it demands you hurt or use anybody, yourself included.\nBorrowing support like that is basically borrowed adulthood. At first you may need to feel protected or loved by something bigger than you, before that love starts to feel like yours, and then bit by bit it starts to become your own. Send some of it down to your frightened little one, and when that's possible, toward whatever you're afraid of. Continuing to relate to benevolent spiritual powers/beings is still perfectly fine, but they would surely be happy if they rubbed off on you!\nIf a voice or urge is directing you towards harm, and you feel at risk of acting on it, as with myself and those ghosts at home, move away from that open window and get some outside support.\n",
+      "context_sha256": "c3bd8922d333476e792b9c139f5ee49af2e65872b95b177e791eb9a356bd6119",
+      "anonymous_style_map": {
+        "X": "baseline",
+        "Y": "candidate"
+      }
+    },
+    {
+      "id": "F28",
+      "heading": "Untangling the Belonging Bargains",
+      "source_reference": {
+        "repository": "u-dont-existDOTcom/joel-articles",
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t105-readers-edit/caveats/ARTICLE.txt",
+        "source_paragraph_sha256": "ab4d4fff06aee04d00d3ec122e82ac9cab665a87bfaf4be6fe62a0b5c9549cc1",
+        "context_sha256": "8aeef6fb443f59086b957284844673a4956134b7f61e2de6bf31c63121bcd48d"
+      },
+      "original_paragraph": "Even with good parents, you could have learned unhealthy self-valuation when people repeatedly praised what you did rather than your inherent worth. That wasn't your flaw. In the process of self-differentiation, we learn to notice when we're making the trade, and we begin keeping our ground more when feasible.",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h28. b people often do fight too many battles that's why i say when feasible, like choose ur battles bro",
+      "owner_source": {
+        "ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+        "path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md"
+      },
+      "target": "when feasible",
+      "baseline": "Even with good parents, you could have learned unhealthy self-valuation when people repeatedly praised what you did rather than your inherent worth. That wasn't your flaw. In the process of self-differentiation, we learn to notice when we're making the trade, and we begin keeping our ground more when feasible.",
+      "baseline_sha256": "ab4d4fff06aee04d00d3ec122e82ac9cab665a87bfaf4be6fe62a0b5c9549cc1",
+      "locked_spans": [
+        "when feasible"
+      ],
+      "prohibited_restoration": null,
+      "mechanical_owner_corrections": [],
+      "context": "## Untangling the Belonging Bargains\nPart of building who you are is untangling yourself from whatever pulls you away from your own knowing in return for belonging. A political tribe might expect consistent positions and predictable reactions, while a family or religion that's kind to you might have expectations that just feel like being good. Most groups expect some conformity, which is ordinary. Your family might want a particular kind of son or daughter, and your friends might have rules about what you can joke about or get upset about. But if going along means betraying yourself, that's the bargain. It can help to write down the rules your family ran on, including unspoken ones like \"Boys don't cry.\" Then write down the role you got handed, like the stand-in parent, or the one who got blamed for everything (ST-CA has lists of both, in sections 15.2.3 and 15.2.4).\nThen there's another bargain, where you have to earn your worth: when you don't feel your value inside as a human being, you can become a \"human doer,\" working for it in some arena outside yourself. That might be beauty, athleticism, sexual desirability, intelligence or grades. For some people it's money or status, and for others it's a sophisticated spiritual identity or becoming indispensable to everybody else's problems. It can feel really good to be the one everybody calls. In the more shadowy presentation, when you really need to feel needed, you might be like the firefighters who become arsonists to keep themselves employed.\nEven with good parents, you could have learned unhealthy self-valuation when people repeatedly praised what you did rather than your inherent worth. That wasn't your flaw. In the process of self-differentiation, we learn to notice when we're making the trade, and we begin keeping our ground more when feasible.\nSome families run on a bargain like \"If I'm happy while someone I love is suffering, I'm abandoning them.\"\nThat's exactly why I was crying for 14 years. Beginning at the age of 12, when I really started to understand that life is brutal for most people, I became convinced that being happy myself, while others weren't, was selfish. I had this poster in my room that really resonated with me, by the famous socialist, Eugene V. Debs. I told this to a therapist in college and she actually agreed it was a good reason to be depressed!\nWhat I found, once I started cultivating my own happiness, was that I got a lot better at helping other people toward theirs. Do your part for people who are suffering, and skip the part where you have to be miserable too.\nSome friends or family really might not like it when you get happier, though. Someone might pull away, or keep dragging you back into the old misery. I'd take that loss seriously, and look at what they do and what you owe them, before deciding it's envy.\nI'd still try a small good thing, like a nice meal, and see what actually happens.\n",
+      "context_sha256": "8aeef6fb443f59086b957284844673a4956134b7f61e2de6bf31c63121bcd48d",
+      "anonymous_style_map": {
+        "X": "candidate",
+        "Y": "baseline"
+      }
+    }
+  ]
+}
