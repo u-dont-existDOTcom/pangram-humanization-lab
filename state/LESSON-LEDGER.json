@@ -6063,6 +6063,28 @@
       "source_path": "state/experiments/fresh30-source-admission-20261024/WEAK-PROSE-ROUTE-20261025/COMMENTABLE-r04/FIVE-REPAIRS.json",
       "source_ref": "02e99dfcfdbdea2bab0c661b5af8587efce57d2e",
       "source_sha256": "58b9c43c2333beece5423771af4e7dd33769e239f26bc9535b0a70cee6f79a66"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Owner reports an already-Human version was rewritten and another worsened from Mixed. The five-revision recommendation is withdrawn, the workflow is paused, and exact owner prose and prior raw results remain unchanged. Historical AI labels apply only to their exact old sources, not later review-page versions.",
+      "id": "L-7c92b8732d-01",
+      "promoted_to": [],
+      "reason": "Direct owner feedback and bounded artifact-identity audit. No new detector outcome or general empirical rule; no more testing, rewriting or owner review assignment.",
+      "recorded_at_utc": "2026-10-25T20:52:43.632287+00:00",
+      "source_path": "state/experiments/fresh30-source-admission-20261024/CURRENT-STATE.md",
+      "source_ref": "65fbedaf444a764d2542aaa65a7bc0c731105e28",
+      "source_sha256": "7c92b8732d264c2b9e9a2c4789e4fd9cb56b0ef683f2f09cd804bc7983a9e462"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Owner reports an already-Human version was rewritten and another worsened from Mixed. The five-revision recommendation is withdrawn, the workflow is paused, and exact owner prose and prior raw results remain unchanged. Historical AI labels apply only to their exact old sources, not later review-page versions.",
+      "id": "L-dba72e8896-01",
+      "promoted_to": [],
+      "reason": "Direct owner feedback and bounded artifact-identity audit. No new detector outcome or general empirical rule; no more testing, rewriting or owner review assignment.",
+      "recorded_at_utc": "2026-10-25T20:52:43.647798+00:00",
+      "source_path": "state/experiments/fresh30-source-admission-20261024/WEAK-PROSE-ROUTE-20261025/COMMENTABLE-r04/OWNER-STOP-AND-REGRESSION-20261025.json",
+      "source_ref": "3c0c0ef787a8a301c963324798978e5bab817802",
+      "source_sha256": "dba72e8896b250b32d2d363ec19962de63f3cffedca2932c02375cc7e69cc76e"
     }
   ],
   "schema_version": 1
