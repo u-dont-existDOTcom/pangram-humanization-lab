@@ -1,0 +1,46 @@
+{
+  "case": "T14",
+  "stage": "blind_review",
+  "prompt_sha256": "97682ded33c3b1ba7e6249e69798b90f2288974da1e356938bc2cf3421044bd6",
+  "elapsed_s": 9.05,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"'nice' before circular or spiral massage (minor softener)\",\n      \"'non-forced' rendered as 'unforced' (equivalent, not a loss)\"\n    ],\n    \"added\": [\n      \"'in the manner of a Yin/Yang symbol' slightly formalizes the source's 'like a Yin/Yang symbol' but keeps the simile's meaning\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Accurate and tidy, but 'in the manner of' is stiff and out of keeping with the casual, first-person 'I love using...' register. The compression of 'solar plexus, abdomen, or other areas' is clean. 'Reach the love of the heart chakra' reads a little abstract but mirrors the source's phrasing. Overall slightly more formal than the original.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"'nice' before circular or spiral massage (minor softener)\",\n      \"The explicit 'like a Yin/Yang symbol' simile: the source says the foot-on-foot arrangement resembles the symbol (a pairing of two complementary parts), not that the motion traces a curve\"\n    ],\n    \"added\": [\n      \"'tracing the curve of a Yin/Yang symbol' introduces a specific motion (tracing an S-curve) that the source does not state\",\n      \"'strokes' and 'right on the area' add specificity and emphasis not in the source\",\n      \"'a few relaxation techniques' slightly softens 'some' and adds a countable framing\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Reads more fluidly and conversationally; 'anywhere else that seems to block you from relaxing' and 'tracing the curve' have a gentle, embodied quality that suits the wellness-advice tone. However, the stylistic gains come at the cost of shifting the image: the source's Yin/Yang comparison is about the feet complementing each other, while Y turns it into a tracing gesture. 'Right on the area of tension' adds emphasis the source lacks.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both are close paraphrases and both drop the minor 'nice.' X preserves the meaning and rhetorical function of the source, including the Yin/Yang simile, even if its phrasing is a bit stiff. Y has the smoother, warmer voice, but it reinterprets the Yin/Yang image as a specific tracing motion and adds emphasis ('right on'), changing the instruction slightly. Since fidelity is the primary criterion and voice is evaluated independently, X is preferred; Y wins on voice alone.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1074,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 921,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1074,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 921,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1074,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1074
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.013510000000000001,
+  "is_error": false,
+  "result_sha256": "c3f35d3b0673cb6028833db7619c5e67e76227818377d1b8b9dbe5fa642053b6"
+}

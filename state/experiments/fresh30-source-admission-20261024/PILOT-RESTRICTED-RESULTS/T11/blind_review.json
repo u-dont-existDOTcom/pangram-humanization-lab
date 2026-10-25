@@ -1,0 +1,46 @@
+{
+  "case": "T11",
+  "stage": "blind_review",
+  "prompt_sha256": "217c345a41301d703dac39068a1a93aa4ed40c0397f0ae7729cedf4858efc4b4",
+  "elapsed_s": 10.51,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"'taking it seriously' is shifted to 'treat the experience seriously', which broadens the referent slightly from the victim mentality/episodes to the experience\",\n      \"'perfect' softened to 'ideal' (negligible)\",\n      \"'despite how scary it was' is retained but its position is moved after the action, so the emphasis on courage-before-action is slightly weaker\"\n    ],\n    \"added\": [\n      \"'of my' before 'spiritual practice' makes the possessive explicit (negligible)\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Clean, accurate and closely tracks the source's structure. It reads as a careful paraphrase: 'ideal chance to show that love is more powerful than fear' and 'frightening' are correct but a little stiff and generic. 'Giving in to the victim mentality' is preserved from the source, so the register stays close to the original's therapeutic-spiritual vocabulary. Smooth but somewhat flat.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"'victim mentality' becomes 'playing the victim', which shifts from a mindset one gives in to toward a behavior one performs; this adds a mild connotation of self-dramatization\",\n      \"'taking it seriously' is reduced to 'treat the experience as part of my spiritual practice'; the explicit 'seriously' is lost, so the shift from dismissiveness to earnestness is less marked\",\n      \"'multiple' becomes 'several' (negligible)\"\n    ],\n    \"added\": [\n      \"'I'd had enough of' adds a note of exasperation and resolve not in the source\",\n      \"'So' links the action causally to the guide's framing, which is implied but not stated in the source\",\n      \"'on top of me' adds a physical positioning not stated in the source ('on me' could mean this, but it is more specific)\",\n      \"'a few minutes' for 'some minutes' (minor shift toward a smaller, more definite quantity)\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"More conversational and personal: 'I'd had enough,' 'frightening as that was,' and 'never came back' have a natural first-person spoken rhythm. The causal 'So' improves flow. The cost is small drifts in meaning: 'playing the victim' is more judgmental than 'victim mentality,' the seriousness marker is dropped, and 'on top of me' is more concrete than the source.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Judged on both fidelity and voice, X is the safer rendering. It keeps 'victim mentality,' keeps 'seriously,' and avoids invented detail, so the rhetorical function (a resolved decision to take the experience seriously, then a demonstration of love over fear) is intact. Y has the more natural voice, but it changes the rhetorical stance: 'playing the victim' is harsher and self-accusing, 'on top of me' adds imagery, and the explicit seriousness is lost. If voice were weighted more heavily Y would win, but the meaning drift is enough to favor X.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1051,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1066,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1051,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1066,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1051,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1051
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.014868000000000003,
+  "is_error": false,
+  "result_sha256": "300aedb3f6da4178707f2e493b6580d18da57a609d901a96348905893666f1e0"
+}

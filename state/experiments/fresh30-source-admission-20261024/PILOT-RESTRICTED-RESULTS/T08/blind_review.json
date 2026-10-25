@@ -1,0 +1,46 @@
+{
+  "case": "T08",
+  "stage": "blind_review",
+  "prompt_sha256": "12cee252b0936d1ec0bbf8ea3e87f0707a868203597cff51ae5180ef4fc336e5",
+  "elapsed_s": 8.99,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Imperative voice of the source ('Keep relationships...') is converted to 'Children should keep...', a minor shift in address, not in meaning\",\n      \"Source's short separate sentences 'State intervention can fail spectacularly. Total community enclosure can also fail.' are merged into one, slightly softening the deliberate parallel/beat\"\n    ],\n    \"added\": [\n      \"Subject 'Children' introduced in the first sentence (implicit in source)\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Clean and natural. Sentence merging is modest and the two-clause pairing ('can fail spectacularly, and total community enclosure can fail as well') preserves the symmetry between state failure and community failure. The closing line lands with the same weight as the source. Slightly more connected than the clipped original, but rhetorically faithful.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"Source's balanced, equal-weight parallel between state failure and community failure is lost\",\n      \"Source's separation of the instruction from its justification (listing of people as a separate statement)\"\n    ],\n    \"added\": [\n      \"'a way to report harm' — the source says 'reporting route' without specifying harm\",\n      \"Causal 'because' linking the list of outside adults to the instruction, which the source does not assert\",\n      \"Causal 'so' implying the Island Pond outcome logically entails that state intervention can fail, recasting an example as a deduction\",\n      \"'and yet' introduces a contrastive turn that makes community enclosure a counterpoint rather than a parallel failure\"\n    ],\n    \"voice_score_1_to_5\": 2,\n    \"prose_comment\": \"Over-engineered. Stacked subordination ('because', 'so', 'and yet') produces a long, clumsy sentence with a strained three-part logic chain. The added causal and concessive connectors change the rhetoric from a plain, even-handed assertion to an argumentative construction. The final sentence 'so state intervention can fail spectacularly, and yet total community enclosure can fail as well' reads awkwardly and muddles the point.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X keeps the source's meaning and rhetorical function: an instruction, a rationale by example, then an even-handed pairing of two failure modes, ending on the punchy thesis. Its changes are minor and structural. Y introduces unsupported causal ('because', 'so') and concessive ('and yet') logic, adds 'harm', and distorts the balanced parallel into a strained, awkward chain. X is also more natural to read.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1204,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 899,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1204,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 899,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1204,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1204
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.01381,
+  "is_error": false,
+  "result_sha256": "a8a8c77b882afea46179ba7aa3bc91fa3ca6886390a9887bda8c3d20ffd398fe"
+}

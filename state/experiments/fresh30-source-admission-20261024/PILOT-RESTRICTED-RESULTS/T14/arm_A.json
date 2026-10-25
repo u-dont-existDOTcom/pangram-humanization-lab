@@ -1,0 +1,46 @@
+{
+  "case": "T14",
+  "stage": "arm_A",
+  "prompt_sha256": "e76e0e62972e5e07343dd63f66de392782eb5257637ad34e4a7fa945ffad7218",
+  "elapsed_s": 3.37,
+  "return_code": 0,
+  "error": null,
+  "result": "If you notice tension in your solar plexus, abdomen, or other areas that seem to block your ability to relax and reach the love of the heart chakra, try some relaxation techniques, such as slower, unforced exhales and gentle self-massage. I love using one foot to massage the other in the manner of a Yin/Yang symbol, but you can begin with circular or spiral massage on the area of tension.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 818,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 128,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 818,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 128,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 818,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 818
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004556,
+  "is_error": false,
+  "result_sha256": "8f65120a72f0f9c52455c71fe1b8130d6c15a2e2b781244bcf8121ca4d45a364"
+}

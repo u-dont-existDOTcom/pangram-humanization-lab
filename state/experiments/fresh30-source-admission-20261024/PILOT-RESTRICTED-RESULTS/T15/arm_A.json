@@ -1,0 +1,46 @@
+{
+  "case": "T15",
+  "stage": "arm_A",
+  "prompt_sha256": "711be279cad2752e8c9aeb9852f3b3f955212cfa071dea0bb7475e0f4c405371",
+  "elapsed_s": 3.09,
+  "return_code": 0,
+  "error": null,
+  "result": "Next, notice what changes. A critic may soften into fear, a vague hurt may turn into a specific need, and anger may clarify a boundary that calls for action. Respond to whatever has become available rather than starting the original exercise over. Once a need is clear, try offering that kind of care and observe how it lands. Working with a feeling doesn't require an age, a recovered memory, or a full cast of parts. A useful shift can be small, and greater intensity is not the only way forward.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 843,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 153,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 843,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 153,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 843,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 843
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004906000000000001,
+  "is_error": false,
+  "result_sha256": "211ef36941c9f1b24ca1c2505e6b81da1fb05c07e30c1393b62c3a44a4ea3b9b"
+}

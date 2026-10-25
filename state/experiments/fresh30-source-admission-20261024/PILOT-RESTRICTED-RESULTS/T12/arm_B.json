@@ -1,0 +1,46 @@
+{
+  "case": "T12",
+  "stage": "arm_B",
+  "prompt_sha256": "a2543d910fe713049af7871998f3d98d5e5517d21f4dae8f05fe3ef1b3de719e",
+  "elapsed_s": 3.68,
+  "return_code": 0,
+  "error": null,
+  "result": "Pay attention to how the care is offered, whether through words, imagery, presence, or action, because \"I care about you\" can mean \"I'll wait as long as you need\" to one child and \"hurry up and feel better\" to another. If imagined closeness feels intrusive, you can try more distance, no touch, a different voice, or another source of care altogether. That a child struggles with this particular offer doesn't mean they can't receive love, and so the child's response should teach you how to care, rather than you pressing them to accept the version you prefer.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1045,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 165,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1045,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 165,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1045,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1045
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.005834,
+  "is_error": false,
+  "result_sha256": "4017fbf0a99a1dafec2dc30924103a3a82b1661f9f1330197d02e5d957060f12"
+}
