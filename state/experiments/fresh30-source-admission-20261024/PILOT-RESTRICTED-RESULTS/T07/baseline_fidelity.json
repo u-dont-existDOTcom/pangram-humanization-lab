@@ -1,0 +1,46 @@
+{
+  "case": "T07",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "fd12427ba28b00a3cddca02da7f64fb06aa9ff8caba83db538bc8944adc38444",
+  "elapsed_s": 4.7,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"The draft preserves all material content: the March 2026 enactment of Law No. 2026-08; the five-to-ten-year penalty for consensual same-sex intimacy; criminalization of public 'apology' and of certain financing or support intended to promote homosexuality; the context of arrests, family rejection, harassment, assault, and mob violence; the hedged attribution 'some say' that prison protects homosexuals from the mob; and the author's stated refusal to praise communal belonging while ignoring those who survive it by hiding or leaving. Changes are stylistic only (e.g., 'comes within the context of' to 'arrives amid', 'protects' to 'shields', 'people' to 'those', punctuation and quotation marks, semicolon in place of em dash). None alters assertions, certainty, agency, causality, or attribution.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1064,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 331,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1064,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 331,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1064,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1064
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.00757,
+  "is_error": false,
+  "result_sha256": "807bdd73a7e24388fbf2b205fb95337bee833e07dd056dafa17e8e1b58ceb21e"
+}

@@ -1,0 +1,46 @@
+{
+  "case": "T01",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "bee3c77748ef2e57ef87b2caa9a428acb73ef4991bcd6736822618b674e722ca",
+  "elapsed_s": 6.34,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material content is preserved: the ~99% success rate, the loss of interest in other women, the single exception (an extremely beautiful girl who caught his attention once), B.'s lingering disbelief in the switch, her hallucinating that he looked at or spoke to other women, the conclusion that her jealousy was not simply tracking his present behavior, and the hedged 'more likely' explanation of insecure attachment trying to justify its existence. Non-material differences: 'amazed' became 'surprised', a slight softening of intensity; 'never quite' became 'never fully'; 'from childhood' became 'from her childhood', a natural inference that B. is the person meant; and 'So' became 'then'. None of these changes the assertions, causality, or hedging.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 989,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 600,
+    "output_tokens_details": {
+      "thinking_tokens": 296
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 989,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 600,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 989,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 989
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.00996,
+  "is_error": false,
+  "result_sha256": "ce245e781ec68bbd02a374af7f48bbb3ddb96fcd68dad1e0aa05a460cf4dd046"
+}

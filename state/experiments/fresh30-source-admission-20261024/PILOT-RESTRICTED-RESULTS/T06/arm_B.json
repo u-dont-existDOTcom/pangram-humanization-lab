@@ -1,0 +1,46 @@
+{
+  "case": "T06",
+  "stage": "arm_B",
+  "prompt_sha256": "2fff9cc69f2f53146b14db599450a220ed28a44f0ed3d81807ff697a588b6252",
+  "elapsed_s": 3.35,
+  "return_code": 0,
+  "error": null,
+  "result": "From 1999 to 2001, my family lived with the Love Israel family in Washington to escape Y2K, that brief stretch when otherwise reasonable adults got ready for civilization to be toppled by a two-digit date. We lived in a yurt. Wild berries of every kind grew all around, and I loved being out in nature. But I was also lonely and bored, I was irritated by the cult programming, and I missed my friends back in Philadelphia.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1160,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 145,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1160,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 145,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1160,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1160
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.0060940000000000005,
+  "is_error": false,
+  "result_sha256": "f0d9c3aceaf091e36a5582ddf37edeedc86898fac1fbdbb4f85d60b71b18548b"
+}

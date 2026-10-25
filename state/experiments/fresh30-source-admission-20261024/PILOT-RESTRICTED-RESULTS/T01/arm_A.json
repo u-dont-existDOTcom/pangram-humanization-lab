@@ -1,0 +1,46 @@
+{
+  "case": "T01",
+  "stage": "arm_A",
+  "prompt_sha256": "bf6169a154ad04064b264af91a1a3b102bb7a26ce72f404333d7fbc288f6b715",
+  "elapsed_s": 3.07,
+  "return_code": 0,
+  "error": null,
+  "result": "It worked roughly 99% of the time. I lost interest in other women, with one exception: an extremely beautiful girl who caught my attention once, which surprised me. B., however, never fully believed the switch was real. She even began hallucinating that I was looking at or talking to other women when I wasn't. Her jealousy, then, was not simply tracking what I was doing in the present; it was more likely insecure attachment from her childhood trying to justify its continued existence.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 837,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 147,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 837,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 147,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 837,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 837
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004822,
+  "is_error": false,
+  "result_sha256": "c1699ddf52fa1ad23ab5c80d01c7029cbcdd26aa4c089dc769d2de32a8c9d695"
+}

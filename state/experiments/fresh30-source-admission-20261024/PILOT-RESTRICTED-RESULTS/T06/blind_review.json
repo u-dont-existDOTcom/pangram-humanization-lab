@@ -1,0 +1,46 @@
+{
+  "case": "T06",
+  "stage": "blind_review",
+  "prompt_sha256": "0731cd8aee7e57d74c653603928ddadaf8aba039a5e6b13aece81ca436642dc8",
+  "elapsed_s": 9.45,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"The source's 'actually' (a mild, wry emphasis on the surprising fact of living there) is dropped.\"\n    ],\n    \"added\": [\n      \"'grew there' makes the berries explicitly a feature of the place; the source only says 'There were'. This is a minor, natural inference.\",\n      \"'But' added at the start of the last sentence, which makes the contrast between loving nature and being miserable explicit. The source relies on 'also' alone.\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Tight and clean. It keeps the source's deadpan rhythm: the short 'We lived in a yurt.' beat, then the list of complaints in a compressed series ('lonely, bored, irritated by..., and missing...'). The parallel structure of the final list is preserved, which keeps the comic deflation. It is slightly more polished and generic than the source, and loses the faint conversational wryness of 'actually'. 'Defeated' is kept from the source, preserving the mock-epic military framing.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"The source's 'actually' is dropped.\",\n      \"The source's 'defeated' is changed to 'toppled', which shifts the image slightly from a military loss to the fall of a regime or structure. This weakens the mock-heroic joke a little.\"\n    ],\n    \"added\": [\n      \"'grew all around' adds a sense of surrounding abundance not in the source.\",\n      \"'out in nature' and 'back in Philadelphia' add colloquial spatial touches.\",\n      \"'But' added before the last sentence, as in X.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"More conversational and loose, but the final sentence breaks the source's compact list into three clauses with repeated subjects ('I was... I was... I missed'). This slows the deflating cascade and makes it read as more padded. 'Got ready' and 'stretch' are plausible casual choices, but together with the extra filler phrases ('all around', 'out in', 'back in') they feel like deliberate variation rather than a distinct voice. 'Toppled' is vivid but changes the source's wording without a clear gain.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both are faithful in meaning and share the same minor losses ('actually') and the added 'But'. X is closer to the source in rhetorical function: it keeps 'defeated', the compact parallel list, and the dry, brisk timing that makes the joke and the deflating final sentence land. Y's paraphrase of 'defeated' as 'toppled' and its expansion of the list into repeated 'I' clauses dilute the punch and add filler, without improving naturalness enough to compensate.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1102,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 941,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1102,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 941,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1102,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1102
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.013822000000000001,
+  "is_error": false,
+  "result_sha256": "d02f46758a512f691ac1090c9dc8a847fded4b9cea658dc6aa187ee554c58350"
+}

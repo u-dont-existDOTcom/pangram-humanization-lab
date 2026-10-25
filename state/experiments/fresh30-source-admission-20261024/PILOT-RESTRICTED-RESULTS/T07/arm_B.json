@@ -1,0 +1,46 @@
+{
+  "case": "T07",
+  "stage": "arm_B",
+  "prompt_sha256": "fa70107be6fba5204f6d1c73284a9c5868b62994cdedcabb1af7c699cdf060c2",
+  "elapsed_s": 3.56,
+  "return_code": 0,
+  "error": null,
+  "result": "In March 2026, Sénégal enacted Law No. 2026-08, which raises the penalty for consensual same-sex intimacy to five to ten years in prison, and the amended article also criminalizes public \"apology\" for homosexuality and certain financing or support meant to promote it. The law arrives in a country where people were already being arrested, rejected by their families, harassed, assaulted and attacked by mobs, and some say prison actually shields homosexuals from the mob. I do not want to praise communal belonging while ignoring the people who survive it by hiding who they are, or by leaving.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1081,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 188,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1081,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 188,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1081,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1081
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.006208,
+  "is_error": false,
+  "result_sha256": "3f1e89e8b6dd171c0739c72915ba0bd2e9ca2e68ec28dd5d0155c66cab2a645b"
+}

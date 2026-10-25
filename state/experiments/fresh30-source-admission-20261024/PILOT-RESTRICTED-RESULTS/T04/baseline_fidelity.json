@@ -1,0 +1,46 @@
+{
+  "case": "T04",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "d0a51d2c5bee3eb0c140c6853a8982e591da1d6834021a6ccf0e8fde47dd2410",
+  "elapsed_s": 5.41,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material content is preserved: the disclaimer about not bashing John Legend or the song; the praise of the song as one of the most beautiful, hopelessly romantic songs in history; the claim that part of it applies to the author's point; the claim that a partner must know you accept all of them to feel truly safe; and the warning that accepting everything makes you a yes man or doormat, nothing special, and invites shit-testing. Differences are stylistic: dropping 'Ok', 'nor' changed to 'or', 'hopeless' changed to 'hopelessly', 'really does apply' to 'applies directly', and 'what I'm talking about' to 'my point'. 'Really does apply' to 'applies directly' is a slight shift in emphasis but not a change in the assertion. 'Nothing actually special' to 'nothing special' loses a minor intensifier, which is not material. The 'toxic part' becomes 'toxic side', and the sentence split does not alter the causal or logical relation.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 991,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 380,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 991,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 380,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 991,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 991
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.007768000000000001,
+  "is_error": false,
+  "result_sha256": "25f8dcd79c3221ca00d09c4cfc29c44bc07d3e1c4a87486a63efd36efdb3fa9f"
+}
