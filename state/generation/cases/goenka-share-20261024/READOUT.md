@@ -93,3 +93,13 @@ After repeated same-pattern failures, launched one **genuinely fresh** GPT-6.1 S
 - C structural integration: **25% AI-context residual**, not owner approved.
 - A/D/E remain unresolved. No new cached or paid Pangram calls on them.
 - No changes to article master or Substack. Previous green source text remains protected.
+
+## 2026-10-25 owner-written Human D passage (superseding prior D status)
+
+Joel directly supplied a substantially rethought replacement for the retreat-alternatives passage at approximately 11:46 UTC and reports that it **passes Pangram as Human** and reads markedly better. **The direct owner replacement is frozen verbatim** in `OWNER-PASS-RETREAT-PARAGRAPH-20261025.md`, including the unconventional internal question punctuation. This positive observation supersedes the prior **“D unresolved”** status *editorially*, but **does not create an exact-bound verified Pangram certification or update the registered article master**. A bounded authenticated read-only search of recent local Pangram History found no exact/near relevant text; the owner's check may have used a different context or account. No additional paid submission was made. Hence no share URL was invented.
+
+The new paragraph does **more than humanize**: it states the further goal of insight/self-awareness, supplies a contingent benefit of a well-run retreat, narrows the alternatives to monastery retreats, and directly asks the center about pausing. The structure now develops the *reason for each choice* instead of repeating hypothetical first-person “If I still wanted ... I'd ...” advice. Classify the literal pair as **OWNER_REAUTHORING**, not a clean meaning-preserving AI→Human example. The surviving last question remains practical and decision-changing.
+
+The exact prior GPT line-editor, source-hidden semantic planner and fresh question-answering writer attempts all failed. Their failures must remain in this case as controls, not be erased by the passing owner example. Generator transfer remains **UNDEMONSTRATED**. Do not add another phrase blacklist; a future independent transfer test must use a different unseen target.
+
+The user’s prior Oliver deletion (remove the canned “not a recipe...” tail) is now durably recorded in `OWNER-OLIVER-CUT-20261025.md` as well. **No Substack publication or article master mutation was performed**.
