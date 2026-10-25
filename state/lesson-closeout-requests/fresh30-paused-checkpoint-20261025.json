@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request_id": "fresh30-paused-checkpoint-20261025",
+  "source_path": "state/experiments/fresh30-source-admission-20261024/CURRENT-STATE.md",
+  "source_ref": "65fbedaf444a764d2542aaa65a7bc0c731105e28",
+  "source_sha256": "7c92b8732d264c2b9e9a2c4789e4fd9cb56b0ef683f2f09cd804bc7983a9e462",
+  "finding": "Owner reports an already-Human version was rewritten and another worsened from Mixed. The five-revision recommendation is withdrawn, the workflow is paused, and exact owner prose and prior raw results remain unchanged. Historical AI labels apply only to their exact old sources, not later review-page versions.",
+  "disposition": "no-new-lesson",
+  "reason": "Direct owner feedback and bounded artifact-identity audit. No new detector outcome or general empirical rule; no more testing, rewriting or owner review assignment.",
+  "promoted_to": []
+}
