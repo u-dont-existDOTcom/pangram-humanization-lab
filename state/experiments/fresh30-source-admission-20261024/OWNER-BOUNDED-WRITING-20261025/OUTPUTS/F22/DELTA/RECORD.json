@@ -1,0 +1,51 @@
+{
+  "case": "F22",
+  "stage": "DELTA",
+  "prompt_sha256": "fe942ff001235568babd998be26c93e3d211b1bbaff78381db0d6d4d0ca87490",
+  "response_sha256": "44dc62991715f58eccb1eb8afd680438d7b90595790b256fa41d9c08e278373c",
+  "result": "```json\n{\"differences\":[],\"unresolved\":[],\"summary\":\"The only change is dropping the trailing \\\"too\\\" in \\\"is a warning sign too.\\\" The opening \\\"And\\\" and the earlier \\\"also\\\" already mark predisposition as an additional warning sign alongside the reactions, so the claim, scope, certainty and conditions are unchanged. The targeted sentence is absent from both versions, and \\\"These are just caution signs\\\" is intact in both. No restoration of the cut function.\"}\n```",
+  "parsed": {
+    "differences": [],
+    "unresolved": [],
+    "summary": "The only change is dropping the trailing \"too\" in \"is a warning sign too.\" The opening \"And\" and the earlier \"also\" already mark predisposition as an additional warning sign alongside the reactions, so the claim, scope, certainty and conditions are unchanged. The targeted sentence is absent from both versions, and \"These are just caution signs\" is intact in both. No restoration of the cut function."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2760,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 520,
+    "output_tokens_details": {
+      "thinking_tokens": 358
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2760,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 520,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2760,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2760
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.016243999999999998,
+  "elapsed_s": 6.76,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

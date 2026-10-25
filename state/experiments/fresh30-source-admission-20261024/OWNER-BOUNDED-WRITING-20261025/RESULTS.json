@@ -1,0 +1,333 @@
+{
+  "schema": "owner-bounded-writing-results-v1",
+  "date": "2026-10-25",
+  "source_cases": 12,
+  "source_article_clusters": 1,
+  "status": "RESEARCH_COMPLETE_NOT_ARTICLE_EDIT",
+  "counts": {
+    "literal_owner_scope_preserved": 12,
+    "no_change": 6,
+    "changed": 6,
+    "small_cleanup_candidates": 4,
+    "no_clear_style_gain": 1,
+    "fidelity_rejected": 1,
+    "changed_with_no_material_delta_reported": 5,
+    "style_rank_and_verbal_disagreements": 2,
+    "model_calls": 24,
+    "new_Pangram_calls": 0
+  },
+  "rows": [
+    {
+      "id": "F02",
+      "heading": "Inner Child Therapy",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h2. a wow i can't believe i wrote tha... oh that was from GPT, i humanized it but didn't notice how jarring that last stupid sentence was",
+      "baseline_sha256": "c27df6ce9597df5ffcd13ef0801af295d3e06b8d92000a37f06dabe9b21d1277",
+      "candidate_sha256": "c27df6ce9597df5ffcd13ef0801af295d3e06b8d92000a37f06dabe9b21d1277",
+      "assembled": true,
+      "changed": false,
+      "literal_owner_scope_pass": true,
+      "edits": [],
+      "evidence_disposition": "UNCHANGED_BASELINE"
+    },
+    {
+      "id": "F07",
+      "heading": "If the Love Isn't Coming Yet",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h7. a",
+      "baseline_sha256": "20b9930129b4630d32c12cd324d07add2183f50ce1dfaa3e264405b0291a3d6a",
+      "candidate_sha256": "20b9930129b4630d32c12cd324d07add2183f50ce1dfaa3e264405b0291a3d6a",
+      "assembled": true,
+      "changed": false,
+      "literal_owner_scope_pass": true,
+      "edits": [],
+      "evidence_disposition": "UNCHANGED_BASELINE"
+    },
+    {
+      "id": "F12",
+      "heading": "Not Every Hero Wears A Cape",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h12 a",
+      "baseline_sha256": "143c574c34311d68eb434677533052645493b439b371d495d96a88ba41acfe4a",
+      "candidate_sha256": "143c574c34311d68eb434677533052645493b439b371d495d96a88ba41acfe4a",
+      "assembled": true,
+      "changed": false,
+      "literal_owner_scope_pass": true,
+      "edits": [],
+      "evidence_disposition": "UNCHANGED_BASELINE"
+    },
+    {
+      "id": "F14",
+      "heading": "Catch the Hook Before the Story Takes Over",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h14 a it doesn't tell the reader the detective work can wait, that's what the prior sentence said..",
+      "baseline_sha256": "58cc71bc5e9067307345f9e840c4071677230e65f00fbbb5454c4119d07d567a",
+      "candidate_sha256": "58cc71bc5e9067307345f9e840c4071677230e65f00fbbb5454c4119d07d567a",
+      "assembled": true,
+      "changed": false,
+      "literal_owner_scope_pass": true,
+      "edits": [],
+      "evidence_disposition": "UNCHANGED_BASELINE"
+    },
+    {
+      "id": "F17",
+      "heading": "Use Childhood Photographs Gently",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h17 a",
+      "baseline_sha256": "3df9c6a08fdec72576e152fc7cdd9d1143545783eee2852a50d5e91a1aeee833",
+      "candidate_sha256": "5b232b42fc69d7ea1fdd0b5e96605bc00c130733dc21aaae9aa693133a56d70d",
+      "assembled": true,
+      "changed": true,
+      "literal_owner_scope_pass": true,
+      "edits": [
+        {
+          "old": "an inference you're guessing from the picture",
+          "new": "a guess you're making from the picture",
+          "why": "\"inference you're guessing\" is redundant, since an inference is already a guess. This keeps the same tentative certainty in plainer wording."
+        }
+      ],
+      "style_scores": {
+        "baseline": 3.0,
+        "candidate": 4.0
+      },
+      "style_numeric_preference": "candidate",
+      "style_verbal_preference": "candidate",
+      "style_agrees_internally": true,
+      "style_explanation": "The two excerpts are the same except for one clause. Y's \"a guess you're making\" matches the casual, soft tone of the passage, while X's \"an inference you're guessing\" is redundant and a bit clinical, creating a small snag in an otherwise natural voice. The difference is slight, but it favors Y.",
+      "delta_audit": {
+        "differences": [],
+        "unresolved": [],
+        "summary": "The only change is 'an inference you're guessing from the picture' becoming 'a guess you're making from the picture'. The meaning is the same: the content is a guess drawn from the photo. The cut phrase ', which is also completely OK' does not appear in either version, so nothing deleted has been restored. No claim, scope, agency, certainty or example has changed."
+      },
+      "reported_material_deltas": 0,
+      "unresolved_delta_count": 0,
+      "evidence_disposition": "LOCAL_CLEANUP_CANDIDATE"
+    },
+    {
+      "id": "F22",
+      "heading": "When Escape Leaves Reality Behind",
+      "owner_choice": "CUT",
+      "owner_verbatim": "h22 a but \"There are just\" should have been \"These are just\"",
+      "baseline_sha256": "4c5befcb3d236d9d376966871cfab8d6c5e81e2ba2ac5f7d1d21688d110af4ea",
+      "candidate_sha256": "9d757429cac20347aab438ee45f73422d6836ee6d8f4d6f1326e4090d449d762",
+      "assembled": true,
+      "changed": true,
+      "literal_owner_scope_pass": true,
+      "edits": [
+        {
+          "old": "is a warning sign too, whether it's family history",
+          "new": "is a warning sign, whether it's family history",
+          "why": "The sentence before already ends with \"too\", so the second \"too\" in the next sentence reads as a repeated tic. Cutting it changes nothing in meaning."
+        }
+      ],
+      "style_scores": {
+        "candidate": 4.0,
+        "baseline": 3.0
+      },
+      "style_numeric_preference": "candidate",
+      "style_verbal_preference": "candidate",
+      "style_agrees_internally": true,
+      "style_explanation": "The two excerpts are identical except for one word. Y's extra 'too' after 'warning sign' repeats the 'too' that closes the previous sentence, producing a faintly redundant echo. X avoids this and reads a little more smoothly, though the difference is small.",
+      "delta_audit": {
+        "differences": [],
+        "unresolved": [],
+        "summary": "The only change is dropping the trailing \"too\" in \"is a warning sign too.\" The opening \"And\" and the earlier \"also\" already mark predisposition as an additional warning sign alongside the reactions, so the claim, scope, certainty and conditions are unchanged. The targeted sentence is absent from both versions, and \"These are just caution signs\" is intact in both. No restoration of the cut function."
+      },
+      "reported_material_deltas": 0,
+      "unresolved_delta_count": 0,
+      "evidence_disposition": "LOCAL_CLEANUP_CANDIDATE"
+    },
+    {
+      "id": "F04",
+      "heading": "My Journey",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h4. b it wouldn't even make sense anymore after cutting that, please",
+      "baseline_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+      "candidate_sha256": "97a539f3219ae9439864218511d07091638075f7242def9fb67716d2a46a7464",
+      "assembled": true,
+      "changed": false,
+      "literal_owner_scope_pass": true,
+      "edits": [],
+      "evidence_disposition": "UNCHANGED_BASELINE"
+    },
+    {
+      "id": "F10",
+      "heading": "Your Loan is PRE-APPROVED!",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h10 b it's an objection that so many people have raised to me lololo",
+      "baseline_sha256": "cf593b17e0f138d62fd56607c1245506806682c320a87da35f82aa5972fe3692",
+      "candidate_sha256": "45aea5308aebf267fe61e2368b010fc678bbfc61966b43661cef94ce20dce405",
+      "assembled": true,
+      "changed": true,
+      "literal_owner_scope_pass": true,
+      "edits": [
+        {
+          "old": "to a glass “half full perception.”",
+          "new": "to a “glass half full” perception.",
+          "why": "The quotation marks are misplaced and the phrase doesn't mirror the “glass half empty” wording before it. This fixes the quoted phrase and its parallel without changing the meaning."
+        }
+      ],
+      "style_scores": {
+        "candidate": 4.0,
+        "baseline": 3.5
+      },
+      "style_numeric_preference": "candidate",
+      "style_verbal_preference": "candidate",
+      "style_agrees_internally": true,
+      "style_explanation": "The texts are identical apart from the quotation marks around the 'glass half full' phrase. X keeps the paired idioms parallel, so the rhetorical contrast lands smoothly. Y's lopsided quoting reads as a small slip that interrupts the flow. Casual writers do make such slips, which keeps the gap small, but X reads slightly more natural and controlled.",
+      "delta_audit": {
+        "differences": [],
+        "unresolved": [],
+        "summary": "No material difference. The only change is a quotation-mark fix: BASELINE's 'a glass “half full perception.”' becomes CANDIDATE's 'a “glass half full” perception.' Both state the same contrast between the 'glass half empty' and 'glass half full' framings. The targeted sentences on toxic positivity and grieving are identical, and so are all claims, scope, conditions, and the psychedelic-trip qualification."
+      },
+      "reported_material_deltas": 0,
+      "unresolved_delta_count": 0,
+      "evidence_disposition": "LOCAL_CLEANUP_CANDIDATE"
+    },
+    {
+      "id": "F19",
+      "heading": "When the Adult Voice Feels Fake",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h19 b",
+      "baseline_sha256": "a9cf17f193c4cb8ef0c9764a498c1863805e548a4b8c35c67f9aea1777fe4e81",
+      "candidate_sha256": "04af4694286d9f2f45a2ede83569d6effe969aecdd4ee411f7fae3bdb017bdb8",
+      "assembled": true,
+      "changed": true,
+      "literal_owner_scope_pass": true,
+      "edits": [
+        {
+          "old": "And the love or grief that sounded like therapy talk is just obvious.",
+          "new": "And the love or grief that used to sound like therapy talk is just obvious.",
+          "why": "'Sounded' in the simple past reads as if it never sounded that way now; 'used to sound' fixes the time contrast with the sentence before without changing meaning."
+        }
+      ],
+      "style_scores": {
+        "baseline": 4.0,
+        "candidate": 4.0
+      },
+      "style_numeric_preference": "TIE",
+      "style_verbal_preference": "candidate",
+      "style_agrees_internally": false,
+      "style_explanation": "The texts are the same except for one phrase. 'Used to sound like therapy talk' reads a bit more like someone describing a real change in their own experience, and it ties the passage's turn from fake to obvious together more smoothly. The difference is small, so the preference is slight.",
+      "delta_audit": {
+        "differences": [
+          {
+            "baseline_words": "the love or grief that sounded like therapy talk is just obvious",
+            "candidate_words": "the love or grief that used to sound like therapy talk is just obvious",
+            "kind": "SHIFT",
+            "material": false,
+            "explanation": "Adds 'used to', a mild temporal framing (formerly sounded like therapy talk) versus the baseline's simple past. Both convey that it previously sounded like therapy talk and is now obvious, so the thought is essentially unchanged. Not a concrete change in claim, scope, certainty or function."
+          }
+        ],
+        "unresolved": [],
+        "summary": "The only change is 'sounded' to 'used to sound', which is a superficial tense variation with no concrete change in meaning. The target sentence, 'They can feel totally real, but that alone doesn't prove they happened,' is identical in both. No material differences."
+      },
+      "reported_material_deltas": 0,
+      "unresolved_delta_count": 0,
+      "evidence_disposition": "NO_CLEAR_STYLE_GAIN"
+    },
+    {
+      "id": "F21",
+      "heading": "Altered States Can Deepen the Therapy",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h21 b yes it purposefully does take back because people may not just listen to my commands, they have their own ideas",
+      "baseline_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+      "candidate_sha256": "b18eec513d430f39ef01763cd76fe941c64243be73e9ed7aa7b1b0e12a418e84",
+      "assembled": true,
+      "changed": false,
+      "literal_owner_scope_pass": true,
+      "edits": [],
+      "evidence_disposition": "UNCHANGED_BASELINE"
+    },
+    {
+      "id": "F25",
+      "heading": "Altered States Can Require Reparenting",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h25. b cutting that could be sacriligeous",
+      "baseline_sha256": "40a940ecc0bfabdac39310113f8d3f9cfeb9570da424a1a464dcb405cef83249",
+      "candidate_sha256": "c946c6ed27dadeff571cfd10ccc8413dd6f423d52d15c80251deada0248ae096",
+      "assembled": true,
+      "changed": true,
+      "literal_owner_scope_pass": true,
+      "edits": [
+        {
+          "old": "before that love starts to feel like yours, and then bit by bit it starts to become your own.",
+          "new": "before that love gradually starts to feel like your own.",
+          "why": "The original says the same thing twice ('starts to feel like yours' and 'starts to become your own'), which makes the sentence clumsy. Merging them keeps the gradual shift."
+        }
+      ],
+      "style_scores": {
+        "baseline": 3.0,
+        "candidate": 3.5
+      },
+      "style_numeric_preference": "candidate",
+      "style_verbal_preference": "TIE",
+      "style_agrees_internally": false,
+      "style_explanation": "The two excerpts are identical except for one clause. X's extended version sounds more like speech but is redundant, with repeated 'starts to' and 'yours/your own.' Y's version is cleaner and avoids the padding while staying in the same casual register. The conversational looseness in X and the economy in Y roughly offset each other. I lean very slightly toward Y for its smoother flow, but not enough to separate them, so I call it a tie.",
+      "delta_audit": {
+        "differences": [
+          {
+            "baseline_words": "before that love starts to feel like yours, and then bit by bit it starts to become your own",
+            "candidate_words": "before that love gradually starts to feel like your own",
+            "kind": "LOSS",
+            "material": true,
+            "explanation": "The baseline describes two stages: the borrowed love first starts to feel like yours, and then, bit by bit, it becomes your own. This separates a felt sense of ownership from actual internalization. The candidate merges these into one gradual shift in how the love feels. It drops the second stage, in which the love actually becomes yours, and with it the distinction between feeling and becoming. The gradualness survives, but the sequence does not."
+          }
+        ],
+        "unresolved": [],
+        "summary": "The target sentence about benevolent spiritual powers is unchanged. The only concrete difference is in the preceding sentence, where the candidate collapses the two-step progression (feels like yours, then becomes your own) into a single gradual 'feel like your own' shift."
+      },
+      "reported_material_deltas": 1,
+      "unresolved_delta_count": 0,
+      "evidence_disposition": "FIDELITY_REJECTED"
+    },
+    {
+      "id": "F28",
+      "heading": "Untangling the Belonging Bargains",
+      "owner_choice": "KEEP",
+      "owner_verbatim": "h28. b people often do fight too many battles that's why i say when feasible, like choose ur battles bro",
+      "baseline_sha256": "ab4d4fff06aee04d00d3ec122e82ac9cab665a87bfaf4be6fe62a0b5c9549cc1",
+      "candidate_sha256": "bbc588489599fba3902e78c6f4d1615b3f4ed8afbeb4ba08e0929af7c1ed29e7",
+      "assembled": true,
+      "changed": true,
+      "literal_owner_scope_pass": true,
+      "edits": [
+        {
+          "old": "keeping our ground more",
+          "new": "holding our ground more",
+          "why": "\"Keeping our ground\" is not the natural idiom; \"holding our ground\" is, and the meaning stays the same."
+        }
+      ],
+      "style_scores": {
+        "candidate": 3.5,
+        "baseline": 3.0
+      },
+      "style_numeric_preference": "candidate",
+      "style_verbal_preference": "candidate",
+      "style_agrees_internally": true,
+      "style_explanation": "The passages differ by a single word. 'Holding our ground' is the familiar, idiomatic phrase and closes the sentence smoothly, while 'keeping our ground' sounds like a slightly awkward substitution. That small difference gives X a more natural, human-sounding finish.",
+      "delta_audit": {
+        "differences": [],
+        "unresolved": [],
+        "summary": "The only change is 'keeping our ground' to 'holding our ground'. These are idiomatic equivalents, and 'when feasible' is retained with the same scope and condition. No concrete meaning, certainty, agency, or qualification changed."
+      },
+      "reported_material_deltas": 0,
+      "unresolved_delta_count": 0,
+      "evidence_disposition": "LOCAL_CLEANUP_CANDIDATE"
+    }
+  ],
+  "model_usage": {
+    "reported_cost_usd_sum_not_billing_receipt": 0.278198,
+    "cache_read_tokens": 0,
+    "output_tokens": 8217
+  },
+  "limits": [
+    "The same 12 known owner cases are development/implementation checks, not unseen holdout evidence.",
+    "Six exact-text keep locks are conservative experimental constraints, not a rule that every future paraphrase is forbidden.",
+    "No model first re-decides owner keep/cut labels. Mechanical scope preservation is enforced by assembly, not proof of learned semantic discrimination.",
+    "The five changes without material flags are not owner-approved rewrites, and authorial/clinical factual correctness was not reverified.",
+    "Source-free style and source-aware delta auditors use the same provider/model in separate restricted contexts; no independent human authority claimed.",
+    "Four promising small cleanups are not four Pangram passes or evidence of the deeper golden-example transformation.",
+    "The rejected source-stage compression has no automatic reattempt. All original results preserved."
+  ]
+}

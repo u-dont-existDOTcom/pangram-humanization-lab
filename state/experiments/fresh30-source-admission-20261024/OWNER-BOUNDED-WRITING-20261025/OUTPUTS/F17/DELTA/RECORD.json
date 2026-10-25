@@ -1,0 +1,51 @@
+{
+  "case": "F17",
+  "stage": "DELTA",
+  "prompt_sha256": "fbd96cdb4fcae968b5a85bcfd14344b08311cae96b56970bd455e696bf586825",
+  "response_sha256": "f05cd5a0686331698f93546246e8e5d49b081d9fd450f1698310da233713a7cb",
+  "result": "{\"differences\":[],\"unresolved\":[],\"summary\":\"The only change is 'an inference you're guessing from the picture' becoming 'a guess you're making from the picture'. The meaning is the same: the content is a guess drawn from the photo. The cut phrase ', which is also completely OK' does not appear in either version, so nothing deleted has been restored. No claim, scope, agency, certainty or example has changed.\"}",
+  "parsed": {
+    "differences": [],
+    "unresolved": [],
+    "summary": "The only change is 'an inference you're guessing from the picture' becoming 'a guess you're making from the picture'. The meaning is the same: the content is a guess drawn from the photo. The cut phrase ', which is also completely OK' does not appear in either version, so nothing deleted has been restored. No claim, scope, agency, certainty or example has changed."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1987,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 282,
+    "output_tokens_details": {
+      "thinking_tokens": 146
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1987,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 282,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1987,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1987
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.010772,
+  "elapsed_s": 4.81,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}

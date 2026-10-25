@@ -1,0 +1,51 @@
+{
+  "case": "F28",
+  "stage": "DELTA",
+  "prompt_sha256": "a1b1996cc61f3829e9a7e1be7fd4eebf9acfda8bc8c34d5b7ade161b9d86279b",
+  "response_sha256": "8e5ef1265a4455855d1f2ce48f91053239e083a250d7cdcecf8f0a1d78adad84",
+  "result": "```json\n{\"differences\":[],\"unresolved\":[],\"summary\":\"The only change is 'keeping our ground' to 'holding our ground'. These are idiomatic equivalents, and 'when feasible' is retained with the same scope and condition. No concrete meaning, certainty, agency, or qualification changed.\"}\n```",
+  "parsed": {
+    "differences": [],
+    "unresolved": [],
+    "summary": "The only change is 'keeping our ground' to 'holding our ground'. These are idiomatic equivalents, and 'when feasible' is retained with the same scope and condition. No concrete meaning, certainty, agency, or qualification changed."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2070,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 105,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2070,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 105,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 2070,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2070
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009333999999999999,
+  "elapsed_s": 3.54,
+  "configuration": "sonnet/medium/restricted/fresh-process/no-tools"
+}
