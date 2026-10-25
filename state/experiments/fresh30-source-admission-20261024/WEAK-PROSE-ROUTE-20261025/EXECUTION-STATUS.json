@@ -1,0 +1,15 @@
+{
+  "schema": "weak-prose-route-execution-boundary-v1",
+  "date": "2026-10-25",
+  "frozen_inputs_commit": "b03f718b15cf75b2875d4bab67a87fa4df7acc99",
+  "intended_operation": "Create and launch matched fresh restricted Sonnet-high and Opus-high writer comparison on six saved weak model drafts",
+  "operation_status": "BLOCKED_BEFORE_EXECUTION",
+  "observed_tool_response": "This tool call was blocked by OpenAI's safety checks. Please double check what you are sending.",
+  "readback": {"run_routes_py_exists": false, "outputs_directory_exists": false, "remote_head_matches_inputs_commit": true},
+  "new_provider_writer_calls": 0,
+  "new_Pangram_calls": 0,
+  "fallback_transport_attempted": false,
+  "comparison_obligation": "Still unexecuted. No claimed Sonnet/Opus comparison, isolation, model identity, preference score or successful transfer.",
+  "separate_permitted_work": "Current ChatGPT conversation drafts provisional whole-paragraph alternatives from frozen sources. These are informed-context candidates, not a substitute completion of the isolated trial, not owner-approved and not detector-tested. Source-derived preservation notes are explicit; they are not independent verification.",
+  "article_mutations": false
+}
