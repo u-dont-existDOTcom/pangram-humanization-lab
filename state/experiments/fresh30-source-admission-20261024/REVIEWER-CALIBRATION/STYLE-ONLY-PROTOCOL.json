@@ -1,0 +1,15 @@
+{
+  "schema": "style-source-separation-calibration-v1",
+  "status": "FROZEN_BEFORE_OUTPUTS",
+  "cases": [
+    "envy",
+    "thanks",
+    "heading",
+    "golden-forgiveness"
+  ],
+  "rationale": "Joint fidelity/style rubric mismatched 4/4 known owner style preferences. Test whether separating the tasks and withholding the privileged source reference changes local agreement.",
+  "difference": "same candidate texts and anonymous ordering, same restricted Claude Sonnet medium; remove source block and preservation priority, ask human-sounding style only; no owner labels or golden training example in prompt.",
+  "not_validation": "Same four already inspected calibration cases; adaptive method comparison, not independent or population generalization.",
+  "fidelity": "Not measured by this style-only stage; keep original owner judgments and original model scores separately.",
+  "Pangram_calls": 0
+}
