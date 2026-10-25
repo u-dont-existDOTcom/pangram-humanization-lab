@@ -5,12 +5,45 @@
   "last_error": "",
   "measurement_key": "fresh30-v3-baseline-T26-20261025",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 1.0,
+    "fraction_ai_assisted": 5.863060800704321e-40,
+    "fraction_human": 1.0101907003599373e-28,
+    "headline": "AI Generated",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 1,
+    "num_human_segments": 0,
+    "prediction": "We believe that this entire text is AI.",
+    "prediction_short": "AI",
+    "stage": "STAGE_SUCCESS",
+    "text": "This is where the familiar talk of widening your \"window of tolerance\" becomes practical. Titration, pendulation, and orientation each ask the same question: can you touch something difficult in a small enough dose, notice what happens, and return? Some people may spend three to six months mainly building these capacities, and severe developmental trauma can take longer. I would treat that as a rough guide, not a countdown. If you are stable and have one clear target, you may be ready for focused trauma work much sooner.",
+    "version": "4.1",
+    "windows": [
+      {
+        "ai_assistance_score": 1.0,
+        "calibrated_confidence": 0.9976410969533145,
+        "class_probabilities": [
+          1.0101907003599373e-28,
+          5.863060800704321e-40,
+          1.0
+        ],
+        "confidence": "High",
+        "end_index": 526,
+        "humanizer_score": 0.009681091643869877,
+        "is_humanized": false,
+        "label": "AI-Generated",
+        "start_index": 0,
+        "text": "This is where the familiar talk of widening your \"window of tolerance\" becomes practical. Titration, pendulation, and orientation each ask the same question: can you touch something difficult in a small enough dose, notice what happens, and return? Some people may spend three to six months mainly building these capacities, and severe developmental trauma can take longer. I would treat that as a rough guide, not a countdown. If you are stable and have one clear target, you may be ready for focused trauma work much sooner.",
+        "token_length": 105,
+        "word_count": 87
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "08b4f152-fcd2-42b5-b522-889f66694d2a",
   "text": "This is where the familiar talk of widening your \"window of tolerance\" becomes practical. Titration, pendulation, and orientation each ask the same question: can you touch something difficult in a small enough dose, notice what happens, and return? Some people may spend three to six months mainly building these capacities, and severe developmental trauma can take longer. I would treat that as a rough guide, not a countdown. If you are stable and have one clear target, you may be ready for focused trauma work much sooner.",
   "text_sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
-  "updated_utc": "2026-10-25T01:09:46.839282+00:00"
+  "updated_utc": "2026-10-25T01:09:49.556619+00:00"
 }
