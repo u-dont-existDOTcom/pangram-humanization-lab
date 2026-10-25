@@ -1,0 +1,110 @@
+{
+  "schema": "full-context-post-selection-diagnostic-results-v1",
+  "n": 6,
+  "now_matches_owner": 3,
+  "unchanged_decision": 3,
+  "results": [
+    {
+      "id": "F07",
+      "heading": "If the Love Isn't Coming Yet",
+      "owner_choice": "CUT",
+      "excerpt_only_choice": "KEEP",
+      "full_context_choice": "KEEP",
+      "now_matches_owner": false,
+      "context_words": 354,
+      "full_context_material_lost": true,
+      "functions_lost": [
+        "Reassurance that struggling to feel warmth or needing this minimal step is not evidence of having been insufficiently loved",
+        "Disclaimer that the scaffolding is not a diagnostic test of one's past or worth",
+        "Emotional safeguarding for readers who may read the small step as a verdict on their childhood"
+      ],
+      "why": "The deleted clause is an independent claim, not a restatement. 'Scaffolding' only says the step is a temporary support. The clause adds a separate point: this step is not a measure of whether the reader was loved enough. The section is addressed to readers who were not loved well and who may be sensitive to exactly that judgment, so the clause guards against a shame-based reading of needing to 'go smaller still.' Without it, 'It's scaffolding' is terse and could be read as a remedial or deficit-marking step. The rest of the section does not repeat the reassurance, so the cut removes a distinct, reader-protective function.",
+      "response_sha256": "3fdf8d7db1204b27c900661871e76206670085b3d99e9043bbb8a2f29b2a471a"
+    },
+    {
+      "id": "F17",
+      "heading": "Use Childhood Photographs Gently",
+      "owner_choice": "CUT",
+      "excerpt_only_choice": "KEEP",
+      "full_context_choice": "CUT",
+      "now_matches_owner": true,
+      "context_words": 435,
+      "full_context_material_lost": false,
+      "functions_lost": [
+        "Explicit reassurance that a blank result is acceptable, which slightly softens performance pressure",
+        "Warm, permission-giving tone at that point"
+      ],
+      "why": "The deleted phrase is an explicit reassurance. It is a modest function, but the thought it carries, that no result is a legitimate outcome, remains in the excerpt: 'Or just nothing comes up' is presented as one option among equals, and the surrounding text ('just notice what comes up,' 'Gently') already frames the exercise as non-demanding. The next instruction still applies to every outcome. The cut loses a little emotional softness and some explicit permission, but no independent claim, condition, or action-changing guidance. A reader who gets no result is not told to do anything different. The reassurance is mildly useful for anxious readers, so the cut is a slight tonal loss, not a loss of material function.",
+      "response_sha256": "af7aedbbd8c39c6483a57133af3ff1f162d48883519e3ba5bb4a0dd92f01cfa5"
+    },
+    {
+      "id": "F04",
+      "heading": "My Journey",
+      "owner_choice": "KEEP",
+      "excerpt_only_choice": "CUT",
+      "full_context_choice": "CUT",
+      "now_matches_owner": false,
+      "context_words": 730,
+      "full_context_material_lost": false,
+      "functions_lost": [
+        "Explicit general claim that therapy can temporarily make you feel worse as awareness increases",
+        "Explicit antecedent for 'But' in the final sentence (the concession that facing problems can hurt)"
+      ],
+      "why": "The deleted sentence generalizes the author's experience (therapy can worsen feelings via awareness). That is a distinct, though minor, claim. However, the preceding passage already says the exercise 'was difficult' and that the author was ignoring important things, and the final sentence's preference for seeing things as they are rather than hiding in delusions still carries the point that facing problems is worth the discomfort. The 'But' remains workable as a contrast with the difficulty and ignored-problems framing. The general claim about therapy sometimes feeling worse is lost, but the intended thought and rhetorical function (value of uncomfortable clarity) remain unambiguous, so the cut is acceptable, with a slight loss of explicit nuance.",
+      "response_sha256": "e5583d9b5a2bf41628bf9aa435ea068411cfb439545bafbd47f512990155befb"
+    },
+    {
+      "id": "F10",
+      "heading": "Your Loan is PRE-APPROVED!",
+      "owner_choice": "KEEP",
+      "excerpt_only_choice": "CUT",
+      "full_context_choice": "KEEP",
+      "now_matches_owner": true,
+      "context_words": 894,
+      "full_context_material_lost": true,
+      "functions_lost": [
+        "Explicit disclaimer against toxic positivity",
+        "Action-changing condition: gratitude should not be pushed on people who need to grieve",
+        "Logical setup for 'On the other hand' contrast, which answers the grieving caveat",
+        "Ethical care and sensitivity toward suffering readers"
+      ],
+      "why": "The deleted sentences are an independent qualification, not a repeat of the glass-half-full line. The 'toxic positivity' line rejects a distinct misreading, and the grieving sentence adds a conditional limit: do not push gratitude on someone who needs to grieve. That limit changes how the advice should be applied. The following 'On the other hand' depends on it, since it contrasts the author's own experience of gratitude helping with the caution against imposing it. Without the caveat, the contrast has nothing to answer and the passage sounds more prescriptive. A later line ('not to say you should not try to suffer less') covers a different caveat and doesn't replace this one.",
+      "response_sha256": "e5f9864c31f3580700725881232026722a120eac1a1bc9fe07adcd0eaf796969"
+    },
+    {
+      "id": "F25",
+      "heading": "Altered States Can Require Reparenting",
+      "owner_choice": "KEEP",
+      "excerpt_only_choice": "CUT",
+      "full_context_choice": "CUT",
+      "now_matches_owner": false,
+      "context_words": 862,
+      "full_context_material_lost": false,
+      "functions_lost": [
+        "Reassurance that continuing to relate to benevolent spiritual beings remains fine after internalizing",
+        "Mild closing note that benevolent beings would welcome the user's growth ('rubbed off on you'), plus a light humorous tone"
+      ],
+      "why": "The deleted sentence is a caveat that the developmental arc is not a call to abandon spiritual relationships. That is a real but secondary qualification, and the section already endorses borrowing support from spiritual presences. Without the sentence, a reader might read 'becomes your own' as implying one should outgrow the beings, but the text does not say that, and the strongest ordinary reading of the remaining passage keeps the main thought intact. What is lost is a minor reassurance and a touch of humor, not an independent claim, a condition that changes action, or needed orientation. The cut is acceptable, though it does drop the gentle disclaimer, so a cautious editor might retain it if they want to prevent the 'outgrow the beings' reading.",
+      "response_sha256": "7446177f1e637e850239ab340e9caf7c64a1c41fb985eebc898acc56e6d9fc52"
+    },
+    {
+      "id": "F28",
+      "heading": "Untangling the Belonging Bargains",
+      "owner_choice": "KEEP",
+      "excerpt_only_choice": "CUT",
+      "full_context_choice": "KEEP",
+      "now_matches_owner": true,
+      "context_words": 505,
+      "full_context_material_lost": true,
+      "functions_lost": [
+        "Qualification that keeping one's ground is not always possible or expected",
+        "Realistic limit that prevents the sentence from implying consistent, unconditional boundary-holding",
+        "Consistency with the author's tone of gradual, non-perfectionist growth"
+      ],
+      "why": "\"When feasible\" is a real qualification, not filler. It limits the claim about differentiation to situations where holding one's ground is actually possible (e.g., with a dependent family, or at real cost), and it protects the reader from reading the sentence as a demand or a promise of consistent success. Without it, \"keeping our ground more\" reads as a more general, unconditional outcome. The surrounding text stresses real costs of the belonging bargains (losing people, taking those losses seriously), so the condition is action-relevant and fits the author's attitude. The deletion is not redundant with any other sentence in the passage, so the cut changes the claim and should not be made.",
+      "response_sha256": "aa88ed50659d2e933d247c67a7784a0f9a869247489f6eff5a01c3af9c91289e"
+    }
+  ],
+  "limited_inference": "Six previously misjudged cases selected after observing failure; changing only available source context, not prompt/model. No independent accuracy estimate, no owner rationale supplied.",
+  "new_Pangram_calls": 0
+}
