@@ -1,0 +1,37 @@
+{
+  "schema": "fresh30-candidate-pool-selector-plan-v1",
+  "date": "2026-10-25",
+  "frozen_before_new_candidate_outputs": true,
+  "cases": [
+    "T16",
+    "T26"
+  ],
+  "included_anonymous_comparators": [
+    "old_A",
+    "old_B",
+    "ATTENTION",
+    "CONNECTED",
+    "SPARSE"
+  ],
+  "selector_mapping_by_case": {
+    "T16": {
+      "X": "SPARSE",
+      "Y": "old_B",
+      "Z": "ATTENTION",
+      "W": "old_A",
+      "V": "CONNECTED"
+    },
+    "T26": {
+      "X": "old_A",
+      "Y": "CONNECTED",
+      "Z": "old_B",
+      "W": "SPARSE",
+      "V": "ATTENTION"
+    }
+  },
+  "analysis": "Compare three genuinely different composition strategies against the earlier one-shot A/B candidates; source text is displayed only to the selector and later fidelity analyst, never to the fresh candidate writer.",
+  "new_provider_Pangram_calls": 0,
+  "selection_scope": "source fidelity, clinical/safety permission, rhetoric, naturalness. Return NONE if every candidate is inadequate. No authorship labeling.",
+  "model_config": "Claude Sonnet medium restricted, no project/user loaded context, tools unavailable, one fresh process per candidate and fresh selector",
+  "old_controls": "existing first-attempt A/B from PILOT-RESTRICTED-RESULTS, not regenerated"
+}
