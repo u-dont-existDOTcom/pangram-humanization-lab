@@ -4,7 +4,7 @@
 
 Read `WEAK-PROSE-ROUTE-20261025/COMMENTABLE-r04/FIVE-REPAIRS.json` first. It supersedes the five unchanged proposals in r02/r03, not the historical experimental inputs or detector results. The owner objected that leaving known problems in the remaining passages wasted his review time.
 
-**All five W02–W06 are now actually revised.** No claim that a new review page alone repairs writing. The current commentable artifact is `Five_Rewritten_Passages_Commentable_r04.html`, SHA-256 `c1ddc805fd5e56c2b9d8d6c8280e2ac85451133cc54d707faeac66dd4c58a62a`, delivered as a conversation attachment. The exact five prose texts, hashes, changes, lint results and limitations are in FIVE-REPAIRS.json.
+**All five W02–W06 are now actually revised.** No claim that a new review page alone repairs writing. The current commentable artifact is `Five_Rewritten_Passages_Commentable_r04.html`, SHA-256 `c34dbcf80d55eaf6c6562b70ec46f8b7132393cc8662a360af726eeed2256ead`, delivered as a conversation attachment. The exact five prose texts, hashes, changes, lint results and limitations are in FIVE-REPAIRS.json.
 
 **W01 is Joel's literal replacement**, preserved verbatim including original spacing. Its exact text and SHA-256 are in the same record. It removes the physiology-evidence disclaimer and love-failed reassurance, replaces the prior generalized tear-count warning with despair deepening, and does not append the earlier safety sentence in a new position. This is direct owner reauthoring, not a style-only experimental pair or a fresh detector pass. The review seeds Keep on his paragraph; do not ask for repeat approval.
 
