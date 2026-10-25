@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "source_cases": 12,
+  "assembled_exactly": 12,
+  "prompt_response_pairs": 24,
+  "counts": {
+    "literal_owner_scope_preserved": 12,
+    "no_change": 6,
+    "changed": 6,
+    "small_cleanup_candidates": 4,
+    "no_clear_style_gain": 1,
+    "fidelity_rejected": 1,
+    "changed_with_no_material_delta_reported": 5,
+    "style_rank_and_verbal_disagreements": 2,
+    "model_calls": 24,
+    "new_Pangram_calls": 0
+  }
+}

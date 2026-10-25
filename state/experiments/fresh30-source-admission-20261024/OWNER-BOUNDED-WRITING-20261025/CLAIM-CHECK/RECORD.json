@@ -1,0 +1,40 @@
+{
+  "prompt_sha256": "fd4cdedc98d341d0eaa1dc321f2b552d328527cf240a421224f017a21c1bd610",
+  "response_sha256": "34e417c5fdfa35a4a7d6da9ca2149c6ec963db8ade1731607acad6ed326123ec",
+  "result": "```json\n{\n  \"supported\": true,\n  \"errors\": [],\n  \"caveats\": [\n    \"Counts reconcile with RESULTS and the source cases. There are 12 cases, 6 unchanged and 6 changed. The 6 changed split into 4 small cleanups (F17, F22, F10, F28), 1 no-clear-style-gain (F19) and 1 fidelity-rejected (F25). The 5 changed cases with no material delta are consistent with this. The 2 style disagreements are F19 and F25. The 24 model calls match 12 writer, 6 style and 6 delta calls, though only the total of 24 is stated in the evidence.\",\n    \"The 6 cuts and 6 keeps match the owner decisions in the cases. The 'There are just' to 'These are just' correction appears in the F22 baseline.\",\n    \"Several method details cannot be checked from the supplied evidence: the 'at most two local replacements' limit, the assembler's rejection rules, the 'six specifically retained spans', and the 'two separate fresh-context reads' as run. Neither can the file contents (INPUTS.json, CANDIDATES.json, OUTPUTS, verify_bounded.py) nor the claim that the delta reader was not asked whether the owner's retained points were important.\",\n    \"The claims that the earlier model 'frequently disagreed with Joel' and that this experiment is distinct from a 'golden forgiveness example' refer to prior work that is not supplied. They are unverified.\",\n    \"The report calls the delta reader 'independent' once. RESULTS limits say the style and delta auditors use the same provider and model in separate contexts, so 'independent' means separate context only.\",\n    \"The F25 style review is described as a 'verbal tie' with a numeric lean toward the candidate (3.5 vs 3.0). This matches the data.\"\n  ]\n}\n```",
+  "returncode": 0,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 23715,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1585,
+    "output_tokens_details": {
+      "thinking_tokens": 971
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 23715,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1585,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 23715,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 23715
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  }
+}
