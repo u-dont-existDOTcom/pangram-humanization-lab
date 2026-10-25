@@ -1,5 +1,7 @@
 # Six whole-paragraph candidates from saved weak model prose
 
+**Superseding owner correction:** use COMMENTABLE-r02/Six_Paragraphs_Commentable_r02.html for feedback. The unsolicited W01 physiology disclaimer is deleted in DRAFTS-r02.json; the earlier instruction to preserve it is superseded. Other candidate wording is unchanged. See COMMENTABLE-r02/OWNER-CORRECTION.json.
+
 **2026-10-25 — provisional current-context writing, not a completed isolated model comparison.**
 
 ## What was done

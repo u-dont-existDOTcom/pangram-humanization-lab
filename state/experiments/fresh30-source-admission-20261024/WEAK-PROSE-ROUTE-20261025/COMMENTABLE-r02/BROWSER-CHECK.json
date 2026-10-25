@@ -1,0 +1,144 @@
+{
+  "format": "joel-review-browser-test-v1",
+  "tested_utc": "2026-10-25T15:04:52+00:00",
+  "browser": "Chromium via Playwright",
+  "review_file": "Six_Paragraphs_Commentable_r02.html",
+  "review_sha256": "de1fef1ce755465601b92c5afbae8daa2d592c2e79405440ef12f564046ba9f2",
+  "article_file": "",
+  "article_sha256": "",
+  "navigation_mode": "file://",
+  "network_policy": "external HTTP(S) requests blocked; loopback allowed only when file:// was unavailable",
+  "clipboard_test": "deterministic injected writeText sink; browser permission path remains destination-specific",
+  "load_seconds": 0.199,
+  "result": "pass",
+  "tests": [
+    {
+      "test": "local-file navigation",
+      "status": "pass",
+      "detail": "file://"
+    },
+    {
+      "test": "open exact review file",
+      "status": "pass",
+      "detail": "file://; loaded in 0.199s"
+    },
+    {
+      "test": "offline review",
+      "status": "pass",
+      "detail": "external requests blocked: 0"
+    },
+    {
+      "test": "fixed interface controls",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "test": "review format",
+      "status": "pass",
+      "detail": "joel-commentable-diff-review-v4"
+    },
+    {
+      "test": "view mode",
+      "status": "pass",
+      "detail": "comparison"
+    },
+    {
+      "test": "sliders on second line with clear technical label",
+      "status": "pass",
+      "detail": "{\"headline_bottom\": 498.421875, \"tuners_top\": 505.421875, \"technical_label\": \"Technical detail\"}"
+    },
+    {
+      "test": "typed text and native control contrast: light",
+      "status": "pass",
+      "detail": "{\"count\": 2, \"minContrast\": 6.323708513479427, \"bad\": []}"
+    },
+    {
+      "test": "typed text and native control contrast: dark",
+      "status": "pass",
+      "detail": "{\"count\": 2, \"minContrast\": 6.323708513479427, \"bad\": []}"
+    },
+    {
+      "test": "whole-cell comment create/reopen/edit/delete and Enter/Shift+Enter/Escape",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "test": "selected-text comment survives toolbar focus",
+      "status": "pass",
+      "detail": "me people fi"
+    },
+    {
+      "test": "Keep/Remove/Brainstorm and supersession",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "test": "four sliders",
+      "status": "pass",
+      "detail": "{\".humor-slider\": 4, \".tech-slider\": 0, \".length-slider\": 3, \".blunt-slider\": 1}"
+    },
+    {
+      "test": "reasoning panel",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "test": "moved/consolidated destination jump",
+      "status": "not-applicable",
+      "detail": "no moved/consolidated row in this review"
+    },
+    {
+      "test": "changed-only filtering",
+      "status": "pass",
+      "detail": "equal rows: 0"
+    },
+    {
+      "test": "search",
+      "status": "pass",
+      "detail": "Some"
+    },
+    {
+      "test": "Copy JSON",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "test": "Copy Markdown",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "test": "JSON/Markdown export and parse",
+      "status": "pass",
+      "detail": "items: 2"
+    },
+    {
+      "test": "reload and local persistence",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "test": "no console errors",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "test": "no page errors",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "test": "review links: empty and internal fragments",
+      "status": "pass",
+      "detail": "{\"link_count\": 7, \"empty_targets\": [], \"unresolved_internal_fragments\": [], \"attachment_to_intended_text\": \"manual editorial audit required\"}"
+    }
+  ],
+  "blocked_requests": [],
+  "console_errors": [],
+  "page_errors": [],
+  "limitations": [
+    "Link attachment to the intended phrase requires editorial comparison with the authoritative source.",
+    "When navigation_mode is page.set_content-fallback, controls and persistence use an exact-HTML injection plus deterministic Storage shim; this does not prove local-file navigation. This run never proves Opera-specific behavior or publication-platform reconstruction.",
+    "A modest-laptop claim requires testing on that class of machine; this report records only the current environment."
+  ]
+}

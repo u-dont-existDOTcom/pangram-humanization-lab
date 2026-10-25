@@ -1,4 +1,13 @@
-# Fresh30 continuation checkpoint — 2026-10-25
+# Fresh30 continuation checkpoint
+
+## Controlling owner correction — commentable review and grief disclaimer (2026-10-25)
+
+Primary feedback artifact: WEAK-PROSE-ROUTE-20261025/COMMENTABLE-r02/Six_Paragraphs_Commentable_r02.html, generated from the current shared v4 commentable interface. It replaces the read-only primary review, not the historical evidence. Source, comments, selection offsets, Keep/Remove/Brainstorm, sliders, exports, local persistence and exact-source JSON import were exercised. Read OWNER-CORRECTION.json and DRAFTS-r02.json in that directory first.
+
+Joel expressly deleted the unsolicited physiology-evidence disclaimer in W01. The earlier candidate paraphrased it as “Experiences like that aren’t evidence for any particular physiological mechanism.” Remove it without a replacement disclaimer; old preservation instructions protecting that clause are superseded. No approval of other W01 wording or the other five candidates is inferred. Those five remain unchanged. Historical detector records stay unchanged. No new detector or model comparison was run for this correction.
+
+Multi-item requests for owner feedback, even research prototypes, require the shared commentable review—not a static report labelled research. The local build now calls a structural guard, and the old read-only page fails its regression test. Do not ask the owner to repeat the recorded correction.
+
 
 Status: six saved AI-labeled source drafts and six provisional current-context alternatives are recorded. The intended independent Sonnet/Opus writing-route comparison is BLOCKED_BEFORE_EXECUTION, not completed.
 

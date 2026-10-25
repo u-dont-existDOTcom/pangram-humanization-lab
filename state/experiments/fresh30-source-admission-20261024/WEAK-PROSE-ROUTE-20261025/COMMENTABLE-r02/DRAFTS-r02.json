@@ -1,0 +1,74 @@
+{
+  "schema": "weak-prose-current-context-candidates-v1",
+  "date": "2026-10-25",
+  "input_commit": "b03f718b15cf75b2875d4bab67a87fa4df7acc99",
+  "status": "PROVISIONAL_CURRENT_CONTEXT_DRAFTS_NOT_ISOLATED_TRIAL",
+  "provenance": "Drafted and revised in the informed current ChatGPT conversation. The context contains earlier examples, detector outcomes, and owner feedback.",
+  "comparison_status": "The matched Sonnet-high/Opus-high remote launch was blocked before execution. These candidates do not complete or substitute for that trial.",
+  "new_remote_writer_calls": 0,
+  "new_Pangram_calls": 0,
+  "owner_approval": false,
+  "independent_review": false,
+  "article_edits": false,
+  "source_inputs_path": "state/experiments/fresh30-source-admission-20261024/WEAK-PROSE-ROUTE-20261025/INPUTS.json",
+  "cases": [
+    {
+      "id": "W01",
+      "title": "Grief and receiving care",
+      "source_sha256": "f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373",
+      "candidate_text": "Being cared for can bring up grief for the care you didn’t get. That doesn’t mean the love has failed. And sometimes deep grieving opens into warmth and connection; some people even feel, in their bodies, as though the universe is holding them. Stay with it while you can remain present and still choose whether to continue, but don’t take more tears, on their own, to mean more healing.",
+      "candidate_sha256": "1febd574dacf5822e7d0f745e4df49615476940ea98dfe5a39b7230800d77f8d",
+      "operation": "Begin with grief arising from received care, then warmth arising from grief. Owner correction: delete the unsolicited physiology-evidence disclaimer without replacement. Other wording is unchanged.",
+      "remaining_question": "Only the disclaimer removal is owner-directed. The rest of the candidate still awaits review; no new detector or independent style result.",
+      "prior_candidate_sha256": "32520cf089bd17509ad84e86570b0236b531afb490af097c978acf9e08692a13",
+      "owner_directed_change": "OWNER_DELETED_NONCLAIM_DEFENSIVE_ASIDE"
+    },
+    {
+      "id": "W02",
+      "title": "Borrowing a caring adult",
+      "source_sha256": "856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126",
+      "candidate_text": "Even if you haven’t had many people you could trust, you can borrow care. You might remember someone whose response would help, or imagine an adult who intends to take good care of you. What would they say or do, given your actual history, limitations and options? When warmth feels too far away, look for the least cruel response you can believe. If there’s one sentence or action you can use, try it rather than go through the exercise again in different words.",
+      "candidate_sha256": "afbb20685411c08de0811db1ec84c22bf0c4fef46878eec7eb6b9dfe68bb8a17",
+      "operation": "Make the remembered or imagined caring adult lead into the reader-facing question about an actual situation. Preserve the fallback and the transition to trying an action.",
+      "remaining_question": "The source is genuinely instructional. This is still guidance in stages; smoother phrasing alone may not address the owner’s objection to manual-like progression."
+    },
+    {
+      "id": "W03",
+      "title": "Pacing trauma work",
+      "source_sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+      "candidate_text": "Some people may spend three to six months mainly building the ability to touch something difficult in a small enough dose, notice what happens, and return. Severe developmental trauma can take longer. When we talk about widening your “window of tolerance,” this is where it gets practical: titration, pendulation and orientation each ask whether you can do that. But I’d treat the timescale as a rough guide, not a countdown. If you’re stable and have one clear target, you may be ready for focused trauma work much sooner.",
+      "candidate_sha256": "a6b2d96c7462ee570830a634eaa6623b0ab0ccafefb3d547a1fa0d43c06b2259",
+      "operation": "Lead with the time spent developing a capacity, explain what the therapeutic vocabulary refers to, then put the timeframe in perspective.",
+      "remaining_question": "Changing the order is not itself proof of a more natural voice. Source treatment claims and time estimates have not been fact-checked or newly endorsed."
+    },
+    {
+      "id": "W04",
+      "title": "Retiring or keeping a hypnosis shortcut",
+      "source_sha256": "0b6aa86e8d573ecba5b1fe979e44d514c8842128ae8d2bb92392a898934ac435",
+      "candidate_text": "If you decide you don’t want the shortcut anymore, make that decision while you’re wide awake and say it to yourself. Stop practicing it, remove it from the recordings and apps where you’ve put it, and use your usual induction instead. It may still work for a while after you’ve done that; saying it’s gone isn’t going to erase it overnight. If it keeps kicking in when you don’t want it to, or using it leaves you spacey and disoriented, get help from someone qualified. You can keep the shortcut instead, provided you only use it to start a later session you’ve chosen. Either way, coming back ends today’s trance.",
+      "candidate_sha256": "4e49e1cc53cd1d5a68fe687664054f1828b1a6535f9694faae676034f1db0199",
+      "operation": "Put the awake decision before the actions that implement it, while retaining lingering activation, help triggers, voluntary future use and the present-session endpoint.",
+      "remaining_question": "This remains close to the original conditional-instruction structure. It is not being presented as a breakthrough or as new clinical advice."
+    },
+    {
+      "id": "W05",
+      "title": "A near-death comparison and its limit",
+      "source_sha256": "7a28c5435e930d57d8f199a7f3108aa22bf0835e55f1cb711040b854bf4f84cc",
+      "candidate_text": "Some near-death reports are the closest comparison worth mentioning: people describe out-of-body perceptions from impossible angles, and a controversial subset of those reports were verified by others in the room. There was something to check in those cases. I wasn’t floating around my room noticing specific details, so my experience didn’t have that kind of checkable target. Those reports can’t vouch for my event; they help show what I mean by no longer being stuck at the body’s vantage point. For more on the reports, there’s a systematic analysis of near-death reports, the AWARE-II cardiac-arrest study and a recent veridical-NDE evidence scale.",
+      "candidate_sha256": "d54349ad174b3bda356a06222013ed581c965eb121b649162d55a02e79cdae80",
+      "operation": "Make the contrast turn on what another person can check, before explaining what the comparison can and cannot do for the narrator’s account.",
+      "remaining_question": "The scholarly and autobiographical claims are being preserved as supplied, not independently verified. The report preserves source-lead names; restoring article hyperlinks is a separate publication task."
+    },
+    {
+      "id": "W06",
+      "title": "Correcting a remembered quotation",
+      "source_sha256": "62054d8c775a78cb3bcd210e2d79c87e67bfbf69196661507897362723c4ebcc",
+      "candidate_text": "I used to attribute “life is like a dream” directly to the historical Buddha, but the famous stanza I loved is from the later Mahāyāna Diamond Sutra, which puts some words in his mouth. The early Pāli texts have close images, though. SN 22.95 compares form to foam, feeling to a bubble, perception to a mirage and consciousness to a magic trick, while Dhammapada 170 asks us to see the world as a bubble and a mirage.",
+      "candidate_sha256": "c22eb2d90b54b0f68ca74c8ff4ee898b7c18f0c900a483ee5d01f01d6f368a94",
+      "operation": "Bind the mistaken attribution and its correction in the same sentence, then develop the comparison with early texts without dropping a single image-reference correspondence.",
+      "remaining_question": "This is a modest recomposition, not new research into the texts. The author’s source distinctions and potentially contestable wording remain unchanged in substance."
+    }
+  ],
+  "revision": "r02-owner-disclaimer-removal",
+  "owner_authorized_delta": "W01: remove the physiology-evidence aside. All other candidate text is unchanged."
+}
