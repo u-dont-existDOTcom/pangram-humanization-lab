@@ -1,0 +1,36 @@
+{
+  "matched": true,
+  "input_sha256": "e2b04aa271251f877def57fd8cb04c493d3c4128141ce0f22afb976057277350",
+  "word_count": 67,
+  "transport_match_mode": "exact_utf8",
+  "created_at_utc": "2026-10-25T13:18:28.991624Z",
+  "exact_match_count": 1,
+  "overall": {
+    "version": "4.1",
+    "stage": "STAGE_SUCCESS",
+    "headline": "Human Written",
+    "document_confidence": {
+      "level": "Low",
+      "boundary": "human"
+    },
+    "fraction_human": 0.9999999403953552,
+    "fraction_ai": 3.108732826717642e-08,
+    "fraction_mixed": 3.9658452312986976e-36,
+    "fraction_breakdown": {
+      "ai": {
+        "low-confidence": 3.108732826717642e-08,
+        "high-confidence": 0.0,
+        "medium-confidence": 0.0
+      },
+      "human": {
+        "low-confidence": 0.0,
+        "high-confidence": 0.9999999403953552,
+        "medium-confidence": 0.0
+      },
+      "ai-assisted": {
+        "lightly": 3.9658452312986976e-36,
+        "moderately": 0.0
+      }
+    }
+  }
+}

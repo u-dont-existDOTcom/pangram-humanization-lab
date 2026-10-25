@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-24",
+  "scope": "2 separate natural excerpts; never claim whole article pass",
+  "review": "fresh independent Claude reviewer marked B and F meaning PASS",
+  "tests": [
+    {
+      "id": "B-KINDNESS-TIMING",
+      "path": "/home/joel/ai-work/pangram-feed-20261024/B-KINDNESS-TIMING.pangram-scope-v4.txt",
+      "scope_sha": "2b9d98401f35e58e3bd82308284432b9a140a8811f6c81cbc6db6547d27a9bd0",
+      "words_whitespace": 77,
+      "candidate": "The Buddha taught that kindness was necessary preparation for real nibbana meditation. Goenka puts it after nine days of the intense stuff instead. I’d want that kindness there when trauma starts coming up, not nine days in.",
+      "scope_count_segment": 5,
+      "prediction": "Human but contextual instability possible; F stronger than B"
+    },
+    {
+      "id": "F-APPENDIX",
+      "path": "/home/joel/ai-work/pangram-feed-20261024/F-APPENDIX.pangram-scope-v4.txt",
+      "scope_sha": "77fbf929606805b230eeb54a9ab36c1e7f23f69457f76ab85b21cd853649e6f0",
+      "words_whitespace": 117,
+      "candidate": "You can skip these accounts if you don’t need them; some are rough to read. They’re anecdotes, not a measure of how often this happens.",
+      "scope_count_segment": 4,
+      "prediction": "Human but contextual instability possible; F stronger than B"
+    }
+  ]
+}

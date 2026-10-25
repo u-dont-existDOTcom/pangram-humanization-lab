@@ -1,0 +1,70 @@
+{
+  "schema": "GOENKA_V4_SOURCE_ANCHORED_COMPARATIVE_CANDIDATES",
+  "not_owner_final": true,
+  "method": "compare context-aware source-hidden generation with explicit durable source-anchor edits, no Emulate",
+  "unit_count": 6,
+  "items": [
+    {
+      "id": "A-METTA-EFFECT",
+      "original": "It also lets you want suffering to end without that wish turning into desperation or fear of failure.",
+      "candidate": "It also gives us room to keep wanting suffering to end without getting desperate about it or fearing we’ll fail.",
+      "source_sha": "e6d054862c8e235854c72c8a0f3a53423ca83b3ba052e7eb4c920f2fcfa7e849",
+      "neighbor_context": {
+        "19": "Metta calms the hindrances and builds goodwill.",
+        "21": "Theravada and most Mahayana Buddhist traditions treat metta as essential groundwork before the deeper work of unweaving the sense streams that make up the mind."
+      }
+    },
+    {
+      "id": "B-KINDNESS-TIMING",
+      "original": "It skips the Buddha’s kindness-first approach, which he taught was necessary to bring the mind to a state ready for real nibbana meditation. By the time the kindness I’d want available when trauma surfaces arrives, nine days of the intense part are already over.",
+      "candidate": "The Buddha taught that kindness was necessary preparation for real nibbana meditation. Goenka puts it after nine days of the intense stuff instead. I’d want that kindness there when trauma starts coming up, not after the fact.",
+      "source_sha": "81fb843f4eab4c241b835db82d72c4126b09ff626ae1d84e3fb3d29969880564",
+      "neighbor_context": {
+        "23": "Briefly. Mostly to share merit.",
+        "24": "I think that’s backwards.",
+        "26": "My buddy Oliver spent five weeks on a cave retreat following Ajahn Sona’s metta meditation teachings. It healed his cPTSD better than any shrink session. What ultimately helped him most was Cinnamon Ayahuasca, altho he has yet to try my new Ultimate Psychedelic Protocol."
+      }
+    },
+    {
+      "id": "C-OLIVER",
+      "original": "You don’t have to take Oliver’s experience as a recipe for yours. I’m including it because it is one reason I take the “metta first” possibility seriously.",
+      "candidate": "Oliver's experience is one reason I take the “metta first” possibility seriously, not a recipe I'd tell anybody else to follow.",
+      "source_sha": "777fc8734e7727795f23abe810178731a31cdbe5efa4218b2a6369a47a2ffa5c",
+      "neighbor_context": {
+        "26": "My buddy Oliver spent five weeks on a cave retreat following Ajahn Sona’s metta meditation teachings. It healed his cPTSD better than any shrink session. What ultimately helped him most was Cinnamon Ayahuasca, altho he has yet to try my new Ultimate Psychedelic Protocol.",
+        "29": "My second problem with Goenka has nothing to do with trauma."
+      }
+    },
+    {
+      "id": "D-RETREAT-ALTERNATIVES",
+      "original": "But if you know that sitting with intense internal material can destabilize you, there are gentler ways to explore what meditation can do.\nI’d start with metta. If that felt steady and I still wanted more, maybe trauma-informed mindfulness or Mindfulness-Based Stress Reduction with a therapist. If I still wanted a retreat after that, I’d ask Plum Village, or any other retreat I was considering one thing: what happens if I start destabilizing? Is pausing the practice treated as an ordinary option?",
+      "candidate": "Unless you know sitting with intense internal material can destabilize you. I'd start gentler then: metta, and perhaps trauma-informed mindfulness or Mindfulness-Based Stress Reduction with a therapist once metta felt steady and I still wanted more. A retreat might still appeal to me after that, but I'd want one answer from Plum Village—or wherever—before going: what happens if I start destabilizing? Would they treat pausing practice as something normal?",
+      "source_sha": "900f7b6a08fba9848f1bdc3ca734434d27fdfd24bb86470ab8b394f2bf60a499",
+      "neighbor_context": {
+        "37": "Retreat actually sounds like a nice time, almost like a vacation but more super spiritualish.",
+        "42": "I also question the for-profit retreat centers in general, considering you can go to an actual monastery and often get more benefits."
+      }
+    },
+    {
+      "id": "E-RETREAT-AUTONOMY",
+      "original": "A trauma-informed retreat shouldn’t turn continuing into a test of character. Your path is yours to shape.",
+      "candidate": "A trauma-informed retreat has no business treating continued practice as a test of character. You're the one who decides what your path looks like.",
+      "source_sha": "e1b3683e2e5e6788c3d754c27f0ae4985940872f59c4285f3ccfaada77b77380",
+      "neighbor_context": {
+        "42": "I also question the for-profit retreat centers in general, considering you can go to an actual monastery and often get more benefits.",
+        "45": "Thanks for reading.",
+        "46": "Drop your thoughts in the comments, or ask to join my therapycircle chat on Signal. I also have a lot of resources here on my Substack, so make sure to peruse those at your leisure. 😊😊😊💕🙏🏿\nStay grounded, stay kind—may all beings, including you, find ease."
+      }
+    },
+    {
+      "id": "F-APPENDIX",
+      "original": "They’re anecdotes, not incidence data. Some are rough. Skip them if you don’t need them.",
+      "candidate": "You can skip these accounts if you don’t need them; some are rough to read. They’re anecdotes, not a measure of how often this happens.",
+      "source_sha": "ff3dac372752945b5eea62fafb009967e72d0164a8f7d95da279363f2369e829",
+      "neighbor_context": {
+        "47": "🌌\nI’m putting the worst accounts down here instead of making the whole article one long horror story.",
+        "50": "Psychosis after a Goenka retreat, described as a possible “dark night,” with hallucinations, paranoia, and hospitalization: The user recounts extreme visual hallucinations, feelings of conspiracy, and being committed to a psychiatric hospital after day ten.\nPsychosis following a second ten-day retreat, leading to ongoing delusions and medical intervention: The original poster describes the rapid onset of psychosis, warnings about genetic predisposition, and advice to avoid intense practices because of the risk of brain damage."
+      }
+    }
+  ]
+}
