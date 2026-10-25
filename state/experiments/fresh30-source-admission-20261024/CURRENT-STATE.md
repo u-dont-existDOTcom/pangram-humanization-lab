@@ -1,31 +1,30 @@
 # Fresh30 continuation checkpoint
 
-## Controlling owner correction — commentable review and grief disclaimer (2026-10-25)
+## Controlling owner correction: fix the other five before review — 2026-10-25
 
-Primary feedback artifact: WEAK-PROSE-ROUTE-20261025/COMMENTABLE-r02/Six_Paragraphs_Commentable_r02.html, generated from the current shared v4 commentable interface. It replaces the read-only primary review, not the historical evidence. Source, comments, selection offsets, Keep/Remove/Brainstorm, sliders, exports, local persistence and exact-source JSON import were exercised. Read OWNER-CORRECTION.json and DRAFTS-r02.json in that directory first.
+Read `WEAK-PROSE-ROUTE-20261025/COMMENTABLE-r04/FIVE-REPAIRS.json` first. It supersedes the five unchanged proposals in r02/r03, not the historical experimental inputs or detector results. The owner objected that leaving known problems in the remaining passages wasted his review time.
 
-Joel expressly deleted the unsolicited physiology-evidence disclaimer in W01. The earlier candidate paraphrased it as “Experiences like that aren’t evidence for any particular physiological mechanism.” Remove it without a replacement disclaimer; old preservation instructions protecting that clause are superseded. No approval of other W01 wording or the other five candidates is inferred. Those five remain unchanged. Historical detector records stay unchanged. No new detector or model comparison was run for this correction.
+**All five W02–W06 are now actually revised.** No claim that a new review page alone repairs writing. The current commentable artifact is `Five_Rewritten_Passages_Commentable_r04.html`, SHA-256 `c1ddc805fd5e56c2b9d8d6c8280e2ac85451133cc54d707faeac66dd4c58a62a`, delivered as a conversation attachment. The exact five prose texts, hashes, changes, lint results and limitations are in FIVE-REPAIRS.json.
 
-Multi-item requests for owner feedback, even research prototypes, require the shared commentable review—not a static report labelled research. The local build now calls a structural guard, and the old read-only page fails its regression test. Do not ask the owner to repeat the recorded correction.
+**W01 is Joel's literal replacement**, preserved verbatim including original spacing. Its exact text and SHA-256 are in the same record. It removes the physiology-evidence disclaimer and love-failed reassurance, replaces the prior generalized tear-count warning with despair deepening, and does not append the earlier safety sentence in a new position. This is direct owner reauthoring, not a style-only experimental pair or a fresh detector pass. The review seeds Keep on his paragraph; do not ask for repeat approval.
 
+## Checks performed and their limits
 
-Status: six saved AI-labeled source drafts and six provisional current-context alternatives are recorded. The intended independent Sonnet/Opus writing-route comparison is BLOCKED_BEFORE_EXECUTION, not completed.
+The current canonical tells_lint.py was executed on all five final revisions: W03/W05/W06 CLEAR; W02/W04 REVIEW with concrete retained-function dispositions; zero final FAILs. The optional spelling library and dependency parser were unavailable, so those parts are not falsely certified. Direct editorial reading supplements the mechanical scan.
+
+A genuinely fresh restricted source reader found no material errors in exact final W03–W06. Another read caught option narrowing in an intermediate W02. The final W02 restores imagined and remembered adults as unrestricted alternatives and restores the optional invitation. That last correction was manually checked, not mislabeled as a final fresh-reader verdict. No new Pangram calls and no article master changes occurred.
+
+The repaired v4-compatible page retains selection/whole-paragraph comments, decisions, sliders, export/import and the owner's prior feedback. Light/dark desktop/mobile interaction tests passed, including exact selected offsets, typed-text contrast, r03 comment migration and not applying an old Keep decision to changed prose. Container file navigation was blocked, so those tests used page.set_content and a same-window storage shim, not actual owner-browser file navigation. Exact limitations are recorded in FIVE-REPAIRS.json.
 
 ## Current read order
-1. WEAK-PROSE-ROUTE-20261025/REPORT.md
-2. WEAK-PROSE-ROUTE-20261025/DRAFTS.json and INPUTS.json
-3. WEAK-PROSE-ROUTE-20261025/EXECUTION-STATUS.json and VERIFICATION.json
-4. OWNER-BOUNDED-WRITING-20261025/REPORT.md for the preceding bounded-edit result
-5. OWNER-HOLDOUT-20261025/REPORT.md for evaluator limits
 
-## Latest work and exact limitation
-Six prior experimental paragraphs were recovered with source hashes and historical exact Pangram 4.1 AI/High records. A paired Sonnet-high/Opus-high study was frozen. The tool-safety layer blocked its runner-creation/launch call before execution; readback found no runner or outputs. It was not retried through another wrapper.
+1. WEAK-PROSE-ROUTE-20261025/COMMENTABLE-r04/FIVE-REPAIRS.json
+2. WEAK-PROSE-ROUTE-20261025/INPUTS.json for original source identities
+3. WEAK-PROSE-ROUTE-20261025/EXECUTION-STATUS.json for the unexecuted matched-model trial
+4. OWNER-BOUNDED-WRITING-20261025/REPORT.md and OWNER-HOLDOUT-20261025/REPORT.md only when their earlier experiments are relevant
 
-Current ChatGPT instead drafted and revised six whole-paragraph alternatives in its already-informed context. DRAFTS.json labels that provenance explicitly. These are NOT results of the isolated model comparison, not owner-approved, not independently reviewed, and not Pangram-tested. Exact source/candidate hash checks pass, but those checks do not prove naturalness or semantic equivalence. The care/grief and checkable-evidence relations were kept explicit; the shortcut draft still resembles an instruction sequence.
+## Boundaries that remain
 
-The matched model experiment remains unexecuted. Parent research remains open; no general humanization skill is claimed. Existing twelve-case bounded-edit results, new-family evaluator checks and the earlier Fresh30 trial stay unchanged. Golden forgiveness stays golden.
+The Sonnet-high/Opus-high matched six-case generation trial remains BLOCKED_BEFORE_EXECUTION; the new edits and source-reader calls do not complete it. New W02–W06 wording is not owner-approved, not detector-certified, and not a demonstrated portable writing skill. Current article authority remains in Joel Articles; do not install this research page as an article master. The golden forgiveness example remains unchanged.
 
-## Delivery and next decision
-A read-only six-case comparison and ZIP were placed at the owner OS-designated download directory. Sandbox counterparts include source-function notes and comparison data. No current article, owner-final prose or production writing rule changed, and zero new external-model or Pangram calls occurred in this turn.
-
-The next editorial decision is whether any exact new alternative improves the thought's realization rather than merely rearranging model prose. Do not infer approval from this checkpoint or count the six drafts as independent trials. Any later permitted isolated run must retain its own configuration and outputs and must not relabel these drafts as its result.
+Prior checkpoints and page families remain preserved in Git history. In particular, the previous claim that the other five remain unchanged is historical and superseded. Do not resurface the old candidates as current work, repeat an owner's recorded judgment, or ask the owner to repair defects already identified and within the assistant's editing authority.
