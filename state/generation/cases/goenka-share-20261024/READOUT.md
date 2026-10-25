@@ -1,5 +1,21 @@
 # Owner-linked Goenka/metta Pangram report — local repairs and GPT-method results
 
+## CURRENT OWNER STATE — 2026-10-25 after explicit cut
+
+**Direct owner correction supersedes earlier E options:** remove the entire paragraph **“A trauma-informed retreat shouldn’t turn continuing into a test of character. Your path is yours to shape.”** and **do not replace it**. Joel calls it overcompletion. Exact authorized deletion, preserve source, placement and rationale: `OWNER-CUT-RETREAT-OVERCLOSURE-20261025.md`. A copyable **local ending** combining the owner-corrected D paragraph, original green for-profit criticism, the E deletion and original green sign-off (with sign-off spacing verified): `RETREAT-ENDING-OWNER-CUT-20261025.txt`. This is a research review excerpt, **not the canonical article master**.
+
+| Cluster | Present editorial status | Pangram provenance |
+|---|---|---|
+| A — wanting suffering to end | **UNRESOLVED**, distinct authorial claim must not be cut by analogy with E. One conversational A candidate stopped after fresh fidelity/AI-rhythm audit, `A-METTA-SURGICAL-RESULT-20261025.md`. | Original orange in shared full article; **no new A submission** |
+| B — Buddha/metta timing | Owner prefers “I’d say ...” and has reported a Human revision with “loving-kindness”; exact alternative not supplied here. Fact-corrected model candidate B3 did not pass; no verified current B owner text. | B earlier candidate Human 99.45% in one excerpt; B3 fact-corrected candidate 99.94% **AI-assisted**, different exact input |
+| C — Oliver | **OWNER CUT ACCEPTED**: the appended “not a recipe you have to follow” disclaimer removed. New sentence preserved in `OWNER-OLIVER-CUT-20261025.md`. | Old longer integrated candidate 75% Human / 25% AI with red ending; **short owner version not checked** |
+| D — retreat alternatives | **OWNER REAUTHORED** and Pangram Human as user reported. Corrected question mark, no other words altered, in `OWNER-RETREAT-PARAGRAPH-CURRENT-20261025.txt`. | Current owner result **owner-reported**, exact History URL not independently located |
+| E — retreat autonomy/conclusion | **OWNER CUT**, no replacement. Earlier `ACTUAL-POV-REVIEW-20261025.md` suggestions now superseded. | Original E red; deletion has **no independent current-section Pangram result** |
+| F — survivor-account introduction | **OWNER SHORTENED**, previous incidence caveat removed knowingly and meaning disposition recorded. | 107-word contextual Pangram 4.1 **100% Human, High**, exact History matched |
+
+No new Pangram scans were made in this cut/A-diagnostic continuation. Owner deletion is a substantive authorial decision, not merely mechanical detector optimization. Do not request an extra owner choice for E; the choice has been made. No live Substack or registered article master updated. Older detailed findings below are historical and must be read under this controlling status.
+
+
 Date: 2026-10-24
 Status: **research/owner review, not owner-final article authority**
 Source: user-supplied shared Pangram report `https://www.pangram.com/feed/009da24e-89ca-4f3c-a71a-91fee2d15c3e`.
