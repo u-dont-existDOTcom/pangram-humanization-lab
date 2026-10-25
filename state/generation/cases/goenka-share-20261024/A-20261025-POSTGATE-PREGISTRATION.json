@@ -1,0 +1,34 @@
+{
+  "task": "goenka-A-prose-20261025",
+  "date": "2026-10-25",
+  "status": "PRE-GENERATION-FROZEN",
+  "source_provenance": "Owner-linked original Pangram shared report, orange segment 20. Registered Nibbāna master not modified; separate article identity/authority unknown.",
+  "source_text": "It also lets you want suffering to end without that wish turning into desperation or fear of failure.",
+  "context": {
+    "preceding": "I realized it doesn’t help to spread negativity just because misery loves company. I’ve been preaching metta ever since 😊❣. Still trying to realize that deeper tho!\nIn the Metta Sutta, you wish ease and happiness to beings, yourself included. Metta calms the hindrances and builds goodwill.",
+    "following": "Theravada and most Mahayana Buddhist traditions treat metta as essential groundwork before the deeper work of unweaving the sense streams that make up the mind."
+  },
+  "direct_owner": {
+    "meaning": "Mettā is a wish of goodwill for suffering to end, as opposed to demanding or forcing that result. When the wish becomes an achievement project it can bring desperation and fear of failure.",
+    "voice_rejection": "Do not issue model-like X-can-Y-without-Z permission, predictable try-to-then-even-that sequence, or interruptive em-dash tail in this target."
+  },
+  "functions_to_preserve": [
+    "the wish is for suffering to end, including others and self",
+    "metta contributes goodwill, not mere achievement",
+    "trying to force/achieve result risks desperation",
+    "forcing outcome creates fear of failure",
+    "general conditional claim, not autobiographical event"
+  ],
+  "methods": [
+    {
+      "id": "spoken-continuation",
+      "design": "fresh context; continuation of owner's own metta context and direct concept, no failed candidate patterns in prompt"
+    },
+    {
+      "id": "real-person-explanation",
+      "design": "fresh context; treat as friend asking why a benevolent wish can become a task, one connected thought; no failed candidate patterns in prompt"
+    }
+  ],
+  "gates": "mechanical tells_lint + full T/C ledger + three exact-bound reviews via merged owner_delivery_gate.py. If blocked do not show. Pangram only if editorial/preservation gates pass and freeze prediction first.",
+  "owner_authority": "No new author meanings or changes to green source permitted; no article master edit."
+}
