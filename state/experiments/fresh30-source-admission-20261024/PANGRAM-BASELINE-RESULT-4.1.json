@@ -1,0 +1,30 @@
+{
+  "schema": "pangram-actual-backend-recovery-v1",
+  "source_candidate": "T13",
+  "actual_backend_version": "4.1",
+  "requested_model": "pangram-4",
+  "historical_cache_expected_version": "4.0",
+  "actual_stage": "STAGE_SUCCESS",
+  "exact_text_sha256": "f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373",
+  "prediction_frozen_before_result": {
+    "probability_all_human": 0.3,
+    "expected": "Non-Human window(s) / not all Human",
+    "reason": "The source-faithful model baseline is a sequence of compressed explanatory and cautionary functions ('an experience, not a mechanism' → 'grief comes back' → conditional permission → tears not healing). Despite natural word choices, it may retain Pangram-sensitive maximally efficient onward progression. This is a weak forecast."
+  },
+  "headline": "AI Generated",
+  "fraction_ai": 1.0,
+  "fraction_human": 5.198147402772996e-20,
+  "fraction_ai_assisted": 7.019498523767461e-36,
+  "window_count": 1,
+  "window_labels": [
+    {
+      "label": "AI-Generated",
+      "confidence": "High"
+    }
+  ],
+  "distinct_provider_task_count": 1,
+  "new_paid_calls_this_recovery": 0,
+  "imported_cache": "state/experiments/fresh30-source-admission-20261024/PANGRAM-BASELINE-CACHE/pangram-4/4.1/f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373/fresh30-v2-T13-baseline-20261024.json",
+  "source_mismatch_cache_preserved": true,
+  "interpretation": "Source-controlled AI-generated baseline was labeled AI/High; actual backend returned 4.1. This one test validates detector eligibility for only T13 in this exact context, not superiority of writing arm A or B."
+}
