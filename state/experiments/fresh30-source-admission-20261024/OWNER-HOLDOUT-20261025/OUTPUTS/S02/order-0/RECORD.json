@@ -1,0 +1,62 @@
+{
+  "id": "S02",
+  "stage": "order-0",
+  "prompt_sha256": "1262ea73a077ae047e4edbcfdba2c8a50f3dbd4a935bccb36bf491da0b8283d0",
+  "response_sha256": "93c5da6789b57093889f6a21e5ce5a97b0b6899623199d5c3d9b5091f4448713",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"\\\"The same principle extends to\\\" has an essayistic, slightly abstract feel, as if a general rule had been stated and is now being applied to a new case. That makes the link to the preceding material explicit, but it also sounds a bit like a formal transition. The rest of the sentence is conversational and specific, so the opening and the body sit at slightly different registers. It reads fine and is competent, but a little more constructed.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"\\\"This also happens in\\\" is plainer and more spoken. It treats the inner-child case as another instance of something already described, without announcing a principle. The shift into the colon and the vivid second-person clause flows more evenly, so the register stays consistent. It feels like a writer simply moving on to the next example, which comes across as more natural, though \\\"also\\\" is a mildly generic connector.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"The two sentences are identical after the opening, so the difference is the transition. Y's \\\"This also happens in\\\" matches the plain, direct tone of the rest of the sentence. X's \\\"The same principle extends to\\\" adds a formal, slightly lecturing layer that sits a bit awkwardly before the conversational second-person claim. The gap is small, but Y reads as more natural.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 3,
+      "prose_comment": "\"The same principle extends to\" has an essayistic, slightly abstract feel, as if a general rule had been stated and is now being applied to a new case. That makes the link to the preceding material explicit, but it also sounds a bit like a formal transition. The rest of the sentence is conversational and specific, so the opening and the body sit at slightly different registers. It reads fine and is competent, but a little more constructed."
+    },
+    "Y": {
+      "voice_score_1_to_5": 4,
+      "prose_comment": "\"This also happens in\" is plainer and more spoken. It treats the inner-child case as another instance of something already described, without announcing a principle. The shift into the colon and the vivid second-person clause flows more evenly, so the register stays consistent. It feels like a writer simply moving on to the next example, which comes across as more natural, though \"also\" is a mildly generic connector."
+    },
+    "preference": "Y",
+    "why": "The two sentences are identical after the opening, so the difference is the transition. Y's \"This also happens in\" matches the plain, direct tone of the rest of the sentence. X's \"The same principle extends to\" adds a formal, slightly lecturing layer that sits a bit awkwardly before the conversational second-person claim. The gap is small, but Y reads as more natural."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 875,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 469,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 875,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 469,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 875,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 875
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.008194,
+  "elapsed_s": 6.23,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "X": "A",
+    "Y": "B"
+  }
+}

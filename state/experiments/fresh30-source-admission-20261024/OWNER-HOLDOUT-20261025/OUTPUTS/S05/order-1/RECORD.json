@@ -1,0 +1,62 @@
+{
+  "id": "S05",
+  "stage": "order-1",
+  "prompt_sha256": "81b2b451bada19551ed7b230a90225b19535dd50aaaf0d788cfce1ad227cd283",
+  "response_sha256": "3992d8404ff8157f86079cf42fb02f6bb36899aaf012b40c1ad967bddfd9000c",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"A clean, conventional lead-in to a graphic. It is functional and plausible as a caption-style line under a 'My Journey' heading, but it has almost no personal voice. 'Maps out the details' is a slightly stock phrase, and the sentence does nothing beyond pointing at the image.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"The tacked-on 'as best as I can fit' adds a small, modest, first-person admission that the image is a compromise. That reads like a real person talking about their own constraints and fits the personal 'My Journey' heading. The phrasing is a bit loose ('as best as I can fit' is slightly off-grammar), but that looseness sounds spoken and human rather than a defect. The trailing qualifier gives the sentence a bit of rhythm and personality.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Y has a small hedge that gives it a personal, slightly imperfect voice suited to a journey narrative, while X is a tidy but generic signpost. The difference is slight given how short both excerpts are, but Y sounds more like a person.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 3,
+      "prose_comment": "A clean, conventional lead-in to a graphic. It is functional and plausible as a caption-style line under a 'My Journey' heading, but it has almost no personal voice. 'Maps out the details' is a slightly stock phrase, and the sentence does nothing beyond pointing at the image."
+    },
+    "Y": {
+      "voice_score_1_to_5": 4,
+      "prose_comment": "The tacked-on 'as best as I can fit' adds a small, modest, first-person admission that the image is a compromise. That reads like a real person talking about their own constraints and fits the personal 'My Journey' heading. The phrasing is a bit loose ('as best as I can fit' is slightly off-grammar), but that looseness sounds spoken and human rather than a defect. The trailing qualifier gives the sentence a bit of rhythm and personality."
+    },
+    "preference": "Y",
+    "why": "Y has a small hedge that gives it a personal, slightly imperfect voice suited to a journey narrative, while X is a tidy but generic signpost. The difference is slight given how short both excerpts are, but Y sounds more like a person."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 789,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 415,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 789,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 415,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 789,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 789
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.00731,
+  "elapsed_s": 5.85,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "X": "B",
+    "Y": "A"
+  }
+}

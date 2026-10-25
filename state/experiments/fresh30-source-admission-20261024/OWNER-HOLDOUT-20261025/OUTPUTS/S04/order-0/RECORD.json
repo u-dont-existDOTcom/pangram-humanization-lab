@@ -1,0 +1,62 @@
+{
+  "id": "S04",
+  "stage": "order-0",
+  "prompt_sha256": "0af14a326b751fc86e3eac905e811929f28bef224cfc5ef47981859846bdb507",
+  "response_sha256": "c59a4f0b9f679ed3fd45160095ea3ecda3733495d3016710752123095ca4d7d3",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Sounds like a person talking. The concessive opening ('Maybe... Great.') turns into a blunt personal pivot ('It didn't for me.'), and the short sentences feel like deliberate emphasis. 'Radically insufficient' is a slightly stiff, abstract phrase in an otherwise plain voice, but it reads as a personal word choice rather than filler. The last clause, 'so I kept looking for something deeper', follows naturally and is a little generic. The movement from concession to personal stake to consequence is coherent and has a believable, slightly wry tone.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Direct and conversational, with a real stance. The 'great—change your mind' concession, with its em dash, has a spoken edge. The second sentence is a tidy aphorism ('isn't the same thing yet') that feels a bit more constructed and slogan-like. The 'yet' adds a nice touch of nuance. Overall it's competent and natural, but it sounds more like advice delivered in a polished line than a lived moment, and there is less personal texture than in X.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X has a stronger sense of a specific speaker. Its concession is followed by a personal turn, and its rhythm of short statements gives a lived, slightly dry quality. Y is also natural and has a good conditional-then-caveat structure, but its closing line reads as a crafted maxim and carries less individual voice. The gap is modest.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 4,
+      "prose_comment": "Sounds like a person talking. The concessive opening ('Maybe... Great.') turns into a blunt personal pivot ('It didn't for me.'), and the short sentences feel like deliberate emphasis. 'Radically insufficient' is a slightly stiff, abstract phrase in an otherwise plain voice, but it reads as a personal word choice rather than filler. The last clause, 'so I kept looking for something deeper', follows naturally and is a little generic. The movement from concession to personal stake to consequence is coherent and has a believable, slightly wry tone."
+    },
+    "Y": {
+      "voice_score_1_to_5": 3,
+      "prose_comment": "Direct and conversational, with a real stance. The 'great—change your mind' concession, with its em dash, has a spoken edge. The second sentence is a tidy aphorism ('isn't the same thing yet') that feels a bit more constructed and slogan-like. The 'yet' adds a nice touch of nuance. Overall it's competent and natural, but it sounds more like advice delivered in a polished line than a lived moment, and there is less personal texture than in X."
+    },
+    "preference": "X",
+    "why": "X has a stronger sense of a specific speaker. Its concession is followed by a personal turn, and its rhythm of short statements gives a lived, slightly dry quality. Y is also natural and has a good conditional-then-caveat structure, but its closing line reads as a crafted maxim and carries less individual voice. The gap is modest."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 855,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 539,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 855,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 539,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 855,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 855
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.008813999999999999,
+  "elapsed_s": 6.55,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "X": "A",
+    "Y": "B"
+  }
+}

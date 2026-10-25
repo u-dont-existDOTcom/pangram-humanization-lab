@@ -1,0 +1,68 @@
+{
+  "id": "F22",
+  "stage": "function",
+  "prompt_sha256": "e870a13ff096c559245a222fc1586c65c795052d8d045aedfc503401596120a0",
+  "response_sha256": "1b685dd50f2e577edd0cd2b01acbe9d3bc9a04a3552415dfa078efb6dfd6b365",
+  "result": "{\"recommendation\":\"CUT\",\"material_function_lost\":false,\"functions_retained\":[\"Warning that reactions and predispositions signal vulnerability\",\"Guidance to take extra precautions when caution signs appear\",\"Instruction to figure out personal meaning and seek trusted advisors if unable\",\"Implicit individual-responsibility framing via 'You have to figure out what they mean for you'\"],\"functions_lost\":[\"Explicit author disclaimer of authority over what to do\",\"Minor softening of tone / acknowledgment of individual variation\"],\"exact_supporting_words\":[\"There are just caution signs, and when you see them, you take more precautions of every kind.\",\"You have to figure out what they mean for you, and if you can't, get help from trusted advisors.\"],\"why\":\"The deleted sentence is a disclaimer of the author's limits and that no one can know what's best for the reader. Its substantive point, that the reader must interpret the signs for themselves and seek advisors if unable, is retained and made action-guiding by the following sentences. The cut slightly weakens the humility framing, and 'There are just caution signs' loses its contrastive setup against 'what to do', but it still reads coherently as 'these are signs, not prescriptions'. No independent claim, condition, or causal link is lost.\"}",
+  "parsed": {
+    "recommendation": "CUT",
+    "material_function_lost": false,
+    "functions_retained": [
+      "Warning that reactions and predispositions signal vulnerability",
+      "Guidance to take extra precautions when caution signs appear",
+      "Instruction to figure out personal meaning and seek trusted advisors if unable",
+      "Implicit individual-responsibility framing via 'You have to figure out what they mean for you'"
+    ],
+    "functions_lost": [
+      "Explicit author disclaimer of authority over what to do",
+      "Minor softening of tone / acknowledgment of individual variation"
+    ],
+    "exact_supporting_words": [
+      "There are just caution signs, and when you see them, you take more precautions of every kind.",
+      "You have to figure out what they mean for you, and if you can't, get help from trusted advisors."
+    ],
+    "why": "The deleted sentence is a disclaimer of the author's limits and that no one can know what's best for the reader. Its substantive point, that the reader must interpret the signs for themselves and seek advisors if unable, is retained and made action-guiding by the following sentences. The cut slightly weakens the humility framing, and 'There are just caution signs' loses its contrastive setup against 'what to do', but it still reads coherently as 'these are signs, not prescriptions'. No independent claim, condition, or causal link is lost."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1288,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 413,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1288,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 413,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1288,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1288
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009285999999999999,
+  "elapsed_s": 7.39,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "delete nominated wording only"
+  }
+}

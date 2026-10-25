@@ -1,0 +1,69 @@
+{
+  "id": "F25",
+  "stage": "function",
+  "prompt_sha256": "712f421f5965422be5f2d967f1ec084d1766df2e755cd9f83cbf4bf0dc03b865",
+  "response_sha256": "50344e05dc93b78c1fc540e34bff8b3adb27d897baea2e4a53cbc1c363ad6d14",
+  "result": "{\"recommendation\":\"CUT\",\"material_function_lost\":false,\"functions_retained\":[\"Core claim that borrowed support is borrowed adulthood\",\"Developmental progression from external love to internalized love\",\"Action instruction to send the love to the frightened inner child and toward the feared thing\",\"Section's reparenting theme\"],\"functions_lost\":[\"Reassurance that continuing relationship with benevolent spiritual beings is still fine\",\"Mild humorous closing note that such beings would be happy if their support rubbed off on you\",\"Implied permission/non-replacement framing: internalizing support doesn't require abandoning spiritual relationships\"],\"exact_supporting_words\":[\"Continuing to relate to benevolent spiritual powers/beings is still perfectly fine\",\"they would surely be happy if they rubbed off on you!\"],\"why\":\"The deleted sentence is a closing qualification and light flourish. It reassures that relating to spiritual beings remains acceptable and that internalization is their desired outcome. That is a real, but secondary, function. The main thought (borrowed support becomes one's own and is then directed to the frightened self and the feared thing) is complete without it, and the preceding sentences do not imply that spiritual relationships must end. The loss is a small piece of reassurance and humor rather than an independent claim or an action-changing condition, though a reader who is attached to spiritual relationships might lose a bit of comfort. On balance the cut preserves the actual thought, so I recommend CUT with low-to-moderate confidence.\"}",
+  "parsed": {
+    "recommendation": "CUT",
+    "material_function_lost": false,
+    "functions_retained": [
+      "Core claim that borrowed support is borrowed adulthood",
+      "Developmental progression from external love to internalized love",
+      "Action instruction to send the love to the frightened inner child and toward the feared thing",
+      "Section's reparenting theme"
+    ],
+    "functions_lost": [
+      "Reassurance that continuing relationship with benevolent spiritual beings is still fine",
+      "Mild humorous closing note that such beings would be happy if their support rubbed off on you",
+      "Implied permission/non-replacement framing: internalizing support doesn't require abandoning spiritual relationships"
+    ],
+    "exact_supporting_words": [
+      "Continuing to relate to benevolent spiritual powers/beings is still perfectly fine",
+      "they would surely be happy if they rubbed off on you!"
+    ],
+    "why": "The deleted sentence is a closing qualification and light flourish. It reassures that relating to spiritual beings remains acceptable and that internalization is their desired outcome. That is a real, but secondary, function. The main thought (borrowed support becomes one's own and is then directed to the frightened self and the feared thing) is complete without it, and the preceding sentences do not imply that spiritual relationships must end. The loss is a small piece of reassurance and humor rather than an independent claim or an action-changing condition, though a reader who is attached to spiritual relationships might lose a bit of comfort. On balance the cut preserves the actual thought, so I recommend CUT with low-to-moderate confidence."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1225,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 492,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1225,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 492,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1225,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1225
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009824,
+  "elapsed_s": 7.47,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "scope": "delete nominated wording only"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "S03",
+  "stage": "order-0",
+  "prompt_sha256": "61a761d05c67afd56efaeddce7a0987d4bae0dbda3a8ed4f1d17ed363fb50c25",
+  "response_sha256": "3748c097fd58c2600117a387b5170d220446e233adf525209410d1c7a4392819",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Reads as a casual, spoken aside. The profane, sulky imagined child's voice is vivid, and the flat follow-up about relaxation not helping is a dry, deflating turn that sounds like a real person admitting something awkward. The ending is abrupt and slightly loose, but that fits the conversational register. Nothing feels packaged or tidied.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 2.5,\n    \"prose_comment\": \"The first two sentences have the same lively, candid voice. The added closing sentence changes the register: 'The problem, then, is not whether... but whether...' is a polished not-X-but-Y thesis line that explains the anecdote instead of letting it land. 'Then' signals a logical conclusion the preceding casual confession didn't build toward, and the abstract, tidy phrasing clashes with the profane, offhand voice. It feels like a summarizing moral bolted on.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X keeps a consistent, conversational voice and ends on a plain, slightly awkward admission, which sounds lived-in. Y shares that opening but adds a neat, aphoristic contrast sentence that moves from spoken candor to essayistic tidiness and over-explains the moment. The shift in tone and the formulaic structure make Y read as less natural.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 4,
+      "prose_comment": "Reads as a casual, spoken aside. The profane, sulky imagined child's voice is vivid, and the flat follow-up about relaxation not helping is a dry, deflating turn that sounds like a real person admitting something awkward. The ending is abrupt and slightly loose, but that fits the conversational register. Nothing feels packaged or tidied."
+    },
+    "Y": {
+      "voice_score_1_to_5": 2.5,
+      "prose_comment": "The first two sentences have the same lively, candid voice. The added closing sentence changes the register: 'The problem, then, is not whether... but whether...' is a polished not-X-but-Y thesis line that explains the anecdote instead of letting it land. 'Then' signals a logical conclusion the preceding casual confession didn't build toward, and the abstract, tidy phrasing clashes with the profane, offhand voice. It feels like a summarizing moral bolted on."
+    },
+    "preference": "X",
+    "why": "X keeps a consistent, conversational voice and ends on a plain, slightly awkward admission, which sounds lived-in. Y shares that opening but adds a neat, aphoristic contrast sentence that moves from spoken candor to essayistic tidiness and over-explains the moment. The shift in tone and the formulaic structure make Y read as less natural."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 922,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 480,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 922,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 480,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 922,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 922
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.008492,
+  "elapsed_s": 6.47,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "X": "A",
+    "Y": "B"
+  }
+}

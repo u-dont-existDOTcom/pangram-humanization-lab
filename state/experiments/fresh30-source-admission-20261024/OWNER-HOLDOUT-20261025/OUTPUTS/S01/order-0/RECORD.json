@@ -1,0 +1,62 @@
+{
+  "id": "S01",
+  "stage": "order-0",
+  "prompt_sha256": "7e2a4e6f2f9495b17010483f3049ff67bfa21585b83bec8fdfc465799eaf2a73",
+  "response_sha256": "1adf4c5d9723935344fac9feb7fa3b7cbb3b0bd259c23319c5af4f64f6898b20",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Has a distinct, slightly wry personal voice. 'The big advantage is that EFT travels' is a casual, confident opener, and 'a thought loop has recruited my whole body' is a vivid, idiosyncratic image that sounds like a person rather than a template. The closing 'I don't confuse that with finishing the deeper trauma work' is a self-aware hedge that gives the passage a grounded, honest stance. The short sentences are varied enough in function (claim, examples, qualification, caveat) that the rhythm feels purposeful. Slight risk: the 'big advantage' framing and the tidy caveat read a bit like a point-then-qualify essay move.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Smooth and conversational, with a natural em-dash list and a plausible 'my mind is looping and my body has joined in.' But it is blander: 'takes some pressure off' is stock phrasing, and the final line 'The deeper trauma can still be sitting there' is passive and vague, with less personal stake. The three short sentences feel evenly weighted, so the passage reads as competent but less individual. The em-dash opener is fine but slightly generic.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X has more personality and a clearer stance. Its fresh image ('recruited my whole body') and the first-person caveat give it a lived-in feel, and the ideas connect with purpose. Y is natural and clean but flatter, and its ending trails off in a generic way. X's slightly essayistic structure is a small cost compared to its stronger voice.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 4,
+      "prose_comment": "Has a distinct, slightly wry personal voice. 'The big advantage is that EFT travels' is a casual, confident opener, and 'a thought loop has recruited my whole body' is a vivid, idiosyncratic image that sounds like a person rather than a template. The closing 'I don't confuse that with finishing the deeper trauma work' is a self-aware hedge that gives the passage a grounded, honest stance. The short sentences are varied enough in function (claim, examples, qualification, caveat) that the rhythm feels purposeful. Slight risk: the 'big advantage' framing and the tidy caveat read a bit like a point-then-qualify essay move."
+    },
+    "Y": {
+      "voice_score_1_to_5": 3,
+      "prose_comment": "Smooth and conversational, with a natural em-dash list and a plausible 'my mind is looping and my body has joined in.' But it is blander: 'takes some pressure off' is stock phrasing, and the final line 'The deeper trauma can still be sitting there' is passive and vague, with less personal stake. The three short sentences feel evenly weighted, so the passage reads as competent but less individual. The em-dash opener is fine but slightly generic."
+    },
+    "preference": "X",
+    "why": "X has more personality and a clearer stance. Its fresh image ('recruited my whole body') and the first-person caveat give it a lived-in feel, and the ideas connect with purpose. Y is natural and clean but flatter, and its ending trails off in a generic way. X's slightly essayistic structure is a small cost compared to its stronger voice."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 915,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 571,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 915,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 571,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 915,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 915
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009374,
+  "elapsed_s": 7.22,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "X": "A",
+    "Y": "B"
+  }
+}

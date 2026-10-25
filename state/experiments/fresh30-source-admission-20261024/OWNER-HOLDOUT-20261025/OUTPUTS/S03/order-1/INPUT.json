@@ -1,0 +1,8 @@
+{
+  "prompt": "Assess only the human-sounding naturalness of these two essay excerpts. Neither is privileged as a source or original. Do not infer actual authorship or detector scores. Do not score semantic fidelity in this stage. Judge the writing as a reader, including the relationships between thoughts, pacing, voice, and rhetorical effects. Clear, short, polished prose is not automatically more natural; a long sentence is not automatically worse. Do not penalize a version merely because it changes syntax or point of view compared with the other. Return JSON with X and Y objects containing voice_score_1_to_5 and prose_comment, plus preference X/Y/TIE and why.\nHEADING: \nCANDIDATE X:\nAnd the child is sitting there thinking, “Big fuckity whoopty doo. What are you gonna do for me?” Relaxation hasn't really affected that awkward, difficult time with the inner child for me. The problem, then, is not whether the love is there, but whether the child believes the adult offering it.\nCANDIDATE Y:\nAnd the child is sitting there thinking, “Big fuckity whoopty doo. What are you gonna do for me?” Relaxation hasn't really affected that awkward, difficult time with the inner child for me.",
+  "sha256": "57c3ab42f88ca03adc5d82b3fb340be20405c102561ef0b75a9f3e3577104788",
+  "presentation": {
+    "X": "B",
+    "Y": "A"
+  }
+}

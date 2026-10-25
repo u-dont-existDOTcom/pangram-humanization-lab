@@ -1,0 +1,62 @@
+{
+  "id": "S04",
+  "stage": "order-1",
+  "prompt_sha256": "8f9c60bf69f55a88d61979de3f5d272c2dfa773ae579157c44397b9b976c7f44",
+  "response_sha256": "0db7d4e7b3a17fee77187bbb639af592438c2c89a07fc1676bf9d4418c527df5",
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Reads like advice from a speaker with a clear stance. The opening conditional ('If next time they actually show up differently, great') has a casual, slightly wry generosity. The second sentence restates the point in a balanced, aphoristic way ('isn't the same thing yet'), which feels a little tidy and explanatory, as if closing the thought with a neat moral. The 'yet' adds some human hedging. It's brief, so there's little room for voice to develop, and the two sentences make nearly the same point twice.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Has a more personal, lived-in voice. It concedes a point ('Maybe ordinary life already gives you enough'), uses a clipped 'Great.' as a dry beat, then pivots to a blunt first-person admission ('It didn't for me'). The closing sentence is longer and more specific, with a slightly unexpected word choice ('radically insufficient') and a plain continuation ('so I kept looking'). The rhythm of short, short, longer feels spoken and unforced. A small risk is the faintly stagey 'Great.' as a rhetorical device, but it reads as tone, not formula.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Y shows stronger relationships between thoughts: concession, wry beat, personal turn, consequence. The pacing varies and the voice commits to a specific experience. X is competent and has a nice conditional opening, but its second sentence feels like a polished restatement or takeaway line, so it comes across as slightly more generic.\"\n}\n```",
+  "parsed": {
+    "X": {
+      "voice_score_1_to_5": 3,
+      "prose_comment": "Reads like advice from a speaker with a clear stance. The opening conditional ('If next time they actually show up differently, great') has a casual, slightly wry generosity. The second sentence restates the point in a balanced, aphoristic way ('isn't the same thing yet'), which feels a little tidy and explanatory, as if closing the thought with a neat moral. The 'yet' adds some human hedging. It's brief, so there's little room for voice to develop, and the two sentences make nearly the same point twice."
+    },
+    "Y": {
+      "voice_score_1_to_5": 4,
+      "prose_comment": "Has a more personal, lived-in voice. It concedes a point ('Maybe ordinary life already gives you enough'), uses a clipped 'Great.' as a dry beat, then pivots to a blunt first-person admission ('It didn't for me'). The closing sentence is longer and more specific, with a slightly unexpected word choice ('radically insufficient') and a plain continuation ('so I kept looking'). The rhythm of short, short, longer feels spoken and unforced. A small risk is the faintly stagey 'Great.' as a rhetorical device, but it reads as tone, not formula."
+    },
+    "preference": "Y",
+    "why": "Y shows stronger relationships between thoughts: concession, wry beat, personal turn, consequence. The pacing varies and the voice commits to a specific experience. X is competent and has a nice conditional opening, but its second sentence feels like a polished restatement or takeaway line, so it comes across as slightly more generic."
+  },
+  "returncode": 0,
+  "error": null,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 855,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 558,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 855,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 558,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 855,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 855
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009004,
+  "elapsed_s": 6.74,
+  "model_config": "sonnet/medium/restricted/no-tools/fresh-process",
+  "presentation": {
+    "X": "B",
+    "Y": "A"
+  }
+}
