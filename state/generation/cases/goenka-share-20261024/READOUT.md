@@ -103,3 +103,7 @@ The new paragraph does **more than humanize**: it states the further goal of ins
 The exact prior GPT line-editor, source-hidden semantic planner and fresh question-answering writer attempts all failed. Their failures must remain in this case as controls, not be erased by the passing owner example. Generator transfer remains **UNDEMONSTRATED**. Do not add another phrase blacklist; a future independent transfer test must use a different unseen target.
 
 The user’s prior Oliver deletion (remove the canned “not a recipe...” tail) is now durably recorded in `OWNER-OLIVER-CUT-20261025.md` as well. **No Substack publication or article master mutation was performed**.
+
+## Owner POV workflow, 2026-10-25:
+
+The question-mark-corrected, owner-preferred retreat wording is stored in `OWNER-RETREAT-PARAGRAPH-CURRENT-20261025.txt`; Joel reports it still passes Pangram, without an exact bound History URL. `ACTUAL-POV-REVIEW-20261025.md` flags generic advice and distinguishes supported positions, article-hinted interpretations, and new author choices. The older literal source is retained. Do not promote a hypothesis or rewrite the article master.
