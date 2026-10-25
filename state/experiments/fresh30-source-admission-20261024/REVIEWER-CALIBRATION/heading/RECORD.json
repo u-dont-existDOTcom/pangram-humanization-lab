@@ -1,0 +1,41 @@
+{
+  "case": "heading",
+  "prompt_sha256": "b4c998d9a4a99610d222766e6fcadcdea01267596dd9a01c6e61621f35c68f8e",
+  "returncode": 0,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Identical to the SOURCE, word for word. The phrasing 'toward a belonging deeper than any group' echoes the heading and keeps the sentence's rhetorical setup. The voice is warm, plain and conversational, with natural short sentences ('Not all at once, though.') and gentle hedging.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"The explicit noun 'a belonging deeper than any group' in the first sentence, which echoes the heading and frames the concept as a state of belonging\",\n      \"The 'deeper than any group' comparison inside the body text, which is now carried only by the heading\"\n    ],\n    \"added\": [\n      \"'somewhere you belong' recasts the belonging as a place, which slightly narrows the abstract idea and anticipates the 'nature / existence / ultimate' list\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Almost identical to the SOURCE, with one rewording. 'Somewhere you belong that doesn't ask you to give up being yourself' reads smoothly and avoids repeating the heading, and it is arguably a little more natural. It loses the heading echo and the 'deeper than' framing, which was the contrast with groups. The core meaning is preserved, and the later 'you also belong there' still works.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X reproduces the SOURCE exactly, so the 'deeper than any group' contrast and the heading echo stay intact. Y is a faithful paraphrase with equal voice quality, but it drops that contrast from the body and adds a spatial framing the SOURCE doesn't have. The voice is equally natural in both, so fidelity decides it.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1436,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 638,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1436,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 638,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1436,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1436
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.012128
+}

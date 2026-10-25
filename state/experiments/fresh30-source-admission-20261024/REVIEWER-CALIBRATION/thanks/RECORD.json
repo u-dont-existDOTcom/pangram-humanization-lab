@@ -1,0 +1,41 @@
+{
+  "case": "thanks",
+  "prompt_sha256": "9df425adb731b4f0f9a392159aa379f398da89ee1cfd094b5993dfc708499432",
+  "returncode": 0,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"The opening sentence of the second paragraph, 'The thank-you you weren't waiting for might not come anyway,' is gone. It linked back to the thank-you in the first paragraph and set up the 'Oh, so NOW you care?' retort as a stand-in for the missing thanks.\"\n    ],\n    \"added\": [\n      \"'Your little one might not take it well at first.' This is a new claim. It shifts the point from thanks not arriving to the child reacting badly. It also adds 'at first,' which implies the reaction will soften, and the source says nothing like that.\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"It reads smoothly and sounds natural. The rewritten line is plain and conversational. But 'More like...' now follows 'might not take it well' less cleanly, because the contrast with the expected thank-you has been lost. The paragraph also repeats 'Your little one' and 'Your first instinct' in quick succession.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"It matches the source exactly, so the dry, wry voice and the emoji-led pivot are intact. 'More like...' lands as a contrast with the thank-you that won't come. The shift from the thank-you to the retort to the 'But I'm trying!' reflex keeps its comic timing.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Y preserves the source's meaning and rhetorical function. The 'thank-you you weren't waiting for' line bridges the two paragraphs and sets up the 'Oh, so NOW you care?' punchline. X replaces it with a different, more generic claim about the child's reaction, and that weakens the callback and the joke. The voice is similarly natural in both, so fidelity decides it.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1344,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 654,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1344,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 654,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1344,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1344
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.01192
+}
