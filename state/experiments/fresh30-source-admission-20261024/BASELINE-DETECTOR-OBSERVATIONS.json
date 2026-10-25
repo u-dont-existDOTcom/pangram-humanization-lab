@@ -5,7 +5,7 @@
   "forecast_source": "BASELINE-DETECTOR-FORECASTS.json",
   "selection_rule": "For each of six registered article clusters, take the first source-ordinal case with strict baseline fidelity admitted (T01,T06,T11,T16,T21,T26). Current A/B review outcomes played no role in choosing by ordinal; first T13 already measured AI/high is historical calibration, excluded from new prediction accuracy.",
   "source_count": 6,
-  "measured_count": 4,
+  "measured_count": 5,
   "measurements": [
     {
       "id": "T01",
@@ -101,6 +101,27 @@
       "windows": [
         {
           "label": "AI-Generated",
+          "confidence": "High"
+        }
+      ],
+      "cache_source": "live",
+      "task_recorded": true
+    },
+    {
+      "id": "T21",
+      "sha256": "52623767a2f2f3ffbcf1610282f68688e4b94b0c9e2996a65ce712d9f0cbf20b",
+      "actual_version": "4.1",
+      "forecast_probability_all_human": 0.69,
+      "forecast_verdict": "all_human",
+      "detector_stage": "STAGE_SUCCESS",
+      "headline": "Human Written",
+      "fraction_human": 1.0,
+      "fraction_ai": 2.5956153363796084e-38,
+      "fraction_ai_assisted": 4.901353658408955e-30,
+      "all_human": false,
+      "windows": [
+        {
+          "label": "Human Written",
           "confidence": "High"
         }
       ],
