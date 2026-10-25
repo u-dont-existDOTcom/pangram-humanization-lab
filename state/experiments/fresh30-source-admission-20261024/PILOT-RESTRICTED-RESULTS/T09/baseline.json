@@ -1,0 +1,46 @@
+{
+  "case": "T09",
+  "stage": "baseline",
+  "prompt_sha256": "0df87bd021ab05d4d3ea2f0cbc604bf7051620ec3338258c6dd9937b0b7dcb3a",
+  "elapsed_s": 3.56,
+  "return_code": 0,
+  "error": null,
+  "result": "Outside work complicates that boundary even before a common purse exists. It brings more than cash: it also brings another schedule, status system, social world, and set of loyalties, and often new consumption expectations. In the first stage, an outside earner should contribute an agreed share, but money cannot buy exemption from ordinary communal work or extra political authority. The group must also notice when outside jobs are draining the people and skills needed to build shared livelihoods. If it does not, the commune remains a dormitory for the cash economy rather than moving toward a common purse.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 853,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 174,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 853,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 174,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 853,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 853
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.005156,
+  "is_error": false,
+  "result_sha256": "5e2541e111d3f47842615566b3fe62d69fe11167846396a05775caddb4c32206"
+}

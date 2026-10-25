@@ -1,0 +1,46 @@
+{
+  "case": "T05",
+  "stage": "baseline",
+  "prompt_sha256": "735b412807fb15eda203a77eb21e19b1f072fa68a75bf85da46202d4cbe448fa",
+  "elapsed_s": 3.39,
+  "return_code": 0,
+  "error": null,
+  "result": "Some difference in maturity is to be expected, but it can become extreme. In all three of my reference relationships, I noticed the same thing: when one person is always the child and the other is always the therapist, guru, doctor, or dad, the relationship is too unequal, and eventually there is a pendulum swing or backlash. Once I became consistently the responsible one, I also became responsible for everything that went wrong, along with the unhealthy clinginess, jealousy, and everything else that came with that dynamic.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 852,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 159,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 852,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 159,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 852,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 852
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.0050019999999999995,
+  "is_error": false,
+  "result_sha256": "37b4f26df15b4d016c238d15e0a9726196d326720d52624ad3652503d4624063"
+}

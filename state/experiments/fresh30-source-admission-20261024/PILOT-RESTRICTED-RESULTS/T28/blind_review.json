@@ -1,0 +1,46 @@
+{
+  "case": "T28",
+  "stage": "blind_review",
+  "prompt_sha256": "9cfc07f501f3f50491f7a22d796568b4f999d405bbb02af0cdc455499d577c00",
+  "elapsed_s": 9.87,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Source's 'if somebody has' conditional framing is converted to 'for someone with', slightly flattening the hypothetical\",\n      \"Source's separate sentences are collapsed, so the pivot 'EMDR can be highly effective, but...' is subordinated into 'although', reducing its weight as a standalone concession\"\n    ],\n    \"added\": [\n      \"Nothing substantive; the 'and' + 'but' chaining adds a mildly continuous, run-on logic that the source lacks\"\n    ],\n    \"voice_score_1_to_5\": 2.5,\n    \"prose_comment\": \"Meaning is preserved, but the text is compressed into two long, clause-heavy sentences. The source's clinician voice relies on short declaratives ('I still care...', 'A stable person... is a different case') that read as measured, practiced judgment. X merges these, so the contrast between the general caution, the Brainspotting suggestion, and the stable-client exception blurs. The 'but' leading into the last clause ('...a better fit, but someone who is stable...') makes the exception read as an afterthought rather than a distinct case. It is readable but more written-up and less conversational.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"'If you cannot identify' (second-person, conversational) becomes the passive 'If no clear targets can be identified', which loses some of the direct, practitioner-to-peer address\",\n      \"'A stable person with one discrete event' becomes 'Someone who is stable and has a single discrete event', a minor softening of the compact phrasing\"\n    ],\n    \"added\": [\n      \"Nothing substantive\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Preserves the source's four-sentence structure and its rhetorical rhythm: statement of priority, concession with caution, conditional alternative, contrasting case. Each move keeps its own sentence, so the argument stays easy to follow and the final exception lands as a clear separate point. The passive in the Brainspotting sentence is slightly more impersonal than the source, but the overall tone remains natural and professional.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Both candidates keep the core claims: regulation and post-session care still matter, EMDR is effective but not automatically first-line for diffuse developmental trauma with an unstable nervous system, Brainspotting may suit bodily/pre-verbal/relational material without clear targets, and a stable person with a discrete event is a different case. The difference is rhetorical function. Y mirrors the source's sentence-by-sentence progression, so the concession, the conditional, and the exception each keep their weight. X fuses everything into two long sentences, which diminishes the contrast and makes the closing exception feel tacked on. X's 'If I can't identify' is a slightly closer match to the source's first-person-ish directness than Y's passive, but that gain is outweighed by the loss of structure. Y is the more natural and more faithful rendering of the original's function.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1127,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1025,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1127,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1025,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1127,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1127
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.014762,
+  "is_error": false,
+  "result_sha256": "1f5a0f47be6c45bf4ccc8534f6b25d6c040cdce78b1db12854896b1f47da0f33"
+}

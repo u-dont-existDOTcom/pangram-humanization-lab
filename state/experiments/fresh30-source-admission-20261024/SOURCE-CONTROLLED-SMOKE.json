@@ -1,0 +1,414 @@
+{
+  "schema": "fresh30-source-controlled-three-case-smoke-v1",
+  "date": "2026-10-24",
+  "model": "Claude Sonnet",
+  "effort": "medium",
+  "fresh_process_per_stage": true,
+  "tool_access_to_model": "none",
+  "cross_provider_independence": false,
+  "owner_style_review": false,
+  "Pangram_calls": 0,
+  "cases": [
+    {
+      "case": "T05",
+      "metrics": {
+        "baseline_fidelity": {
+          "preserve_all_critical_units": true,
+          "omissions": [],
+          "additions": [],
+          "certainty_changes": [],
+          "notes": "All material units are preserved: extremes getting out of hand, all three reference relationships, the always-child vs. always-therapist/guru/doctor/dad dynamic, inequality leading to a pendulum swing or backlash, the narrator becoming the consistently responsible one and therefore responsible for everything that went wrong, and the clinginess/jealousy that accompanied the dynamic. Differences are stylistic only: 'different maturity levels' vs 'difference in maturity', 'too unequal' vs 'the balance is too unequal', 'not to mention' vs 'to say nothing of', and 'there will be' vs 'there is' (a minor tense shift with no change in the claim's force). 'Eventually' is retained. The source's 'What I noticed... is' becomes 'I noticed the same thing', where 'the same thing' faintly emphasizes cross-relationship consistency already implied by 'all three'."
+        },
+        "arm_a_fidelity": false,
+        "arm_b_fidelity": false,
+        "arm_a_naturalness": 3,
+        "arm_b_naturalness": 3,
+        "reviewer_preference": "B"
+      },
+      "outputs": {
+        "baseline": {
+          "output": "Some difference in maturity is to be expected, but at the extremes it gets out of hand. In all three of my reference relationships, I noticed the same thing: when one person is always the child and the other is always the therapist, guru, doctor, or dad, the balance is too unequal, and eventually there is a pendulum swing or some kind of backlash. Once I became consistently the responsible one, I also became responsible for everything that went wrong, to say nothing of the unhealthy clinginess, jealousy, and everything else that came with that dynamic.",
+          "sha256": "d58fa8b9665c9baef090d9ff77b63678be638986e7c8511b6383260d48f7e698",
+          "reported_cost_usd": 0.0062922,
+          "tokens": {
+            "output": 172,
+            "input": 2,
+            "cache_creation": 1033,
+            "cache_read": 2181
+          },
+          "elapsed_s": 6.76
+        },
+        "baseline_fidelity": {
+          "output": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material units are preserved: extremes getting out of hand, all three reference relationships, the always-child vs. always-therapist/guru/doctor/dad dynamic, inequality leading to a pendulum swing or backlash, the narrator becoming the consistently responsible one and therefore responsible for everything that went wrong, and the clinginess/jealousy that accompanied the dynamic. Differences are stylistic only: 'different maturity levels' vs 'difference in maturity', 'too unequal' vs 'the balance is too unequal', 'not to mention' vs 'to say nothing of', and 'there will be' vs 'there is' (a minor tense shift with no change in the claim's force). 'Eventually' is retained. The source's 'What I noticed... is' becomes 'I noticed the same thing', where 'the same thing' faintly emphasizes cross-relationship consistency already implied by 'all three'.\"\n}\n```",
+          "sha256": "47f23cc1a4b65622b9eb1573ade71fe6e6cdc08fc887b4beb372ef932f5458a0",
+          "reported_cost_usd": 0.008902199999999999,
+          "tokens": {
+            "output": 359,
+            "input": 2,
+            "cache_creation": 1218,
+            "cache_read": 2181
+          },
+          "elapsed_s": 4.89,
+          "parsed": {
+            "preserve_all_critical_units": true,
+            "omissions": [],
+            "additions": [],
+            "certainty_changes": [],
+            "notes": "All material units are preserved: extremes getting out of hand, all three reference relationships, the always-child vs. always-therapist/guru/doctor/dad dynamic, inequality leading to a pendulum swing or backlash, the narrator becoming the consistently responsible one and therefore responsible for everything that went wrong, and the clinginess/jealousy that accompanied the dynamic. Differences are stylistic only: 'different maturity levels' vs 'difference in maturity', 'too unequal' vs 'the balance is too unequal', 'not to mention' vs 'to say nothing of', and 'there will be' vs 'there is' (a minor tense shift with no change in the claim's force). 'Eventually' is retained. The source's 'What I noticed... is' becomes 'I noticed the same thing', where 'the same thing' faintly emphasizes cross-relationship consistency already implied by 'all three'."
+          }
+        },
+        "arm_A": {
+          "output": "A little difference in maturity between partners seems normal to me, but at the extremes it becomes harmful. I'm describing only what I noticed across my own three reference relationships, not a rule I'd claim for everyone. In each of them, when one person was always the child and the other was always the therapist, guru, doctor, or dad, the imbalance grew too large, and sooner or later it provoked a backlash or a swing of the pendulum in the other direction. Once I became consistently the responsible one, I found myself held responsible for everything that went wrong, and from where I stood, the clinginess and jealousy that came with that dynamic made it all the harder.",
+          "sha256": "e00b523d9fc94bc5a77b193933267d5ef41dd9ee966a95a0fdbac182375534ec",
+          "reported_cost_usd": 0.040421000000000006,
+          "tokens": {
+            "output": 204,
+            "input": 2,
+            "cache_creation": 4903,
+            "cache_read": 93825
+          },
+          "elapsed_s": 7.5,
+          "paragraph_count": 1
+        },
+        "arm_B": {
+          "output": "A certain difference in maturity between partners is normal, but at the extremes it can do harm. I'm describing what I noticed across my own three reference relationships, not claiming a universal rule. In each of them, one person was always the child while the other was always the therapist, guru, doctor, or dad. That balance was too lopsided to hold, and it tended to end in a backlash or a swing of the pendulum the other way. From where I stood, clinginess and jealousy came with that dynamic too. And once I became the consistently responsible one, I found myself held responsible for everything that went wrong.",
+          "sha256": "23c23ef06626fa5d267713f1a8117b2bad2b94cfd12cd1d010c66ac48c2cc19c",
+          "reported_cost_usd": 0.251348,
+          "tokens": {
+            "output": 184,
+            "input": 2,
+            "cache_creation": 62376,
+            "cache_read": 0
+          },
+          "elapsed_s": 7.57,
+          "paragraph_count": 1
+        },
+        "blind_review": {
+          "output": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"The explicit 'always' framing is kept, but the 'unhealthy' quality of the clinginess and jealousy is dropped\",\n      \"'And all the rest' (the open-ended list of further problems) is dropped\",\n      \"'Not to mention' escalation: the source treats clinginess and jealousy as an extra burden on top of being blamed. X instead makes them something that made 'it all the harder'\",\n      \"'Eventually' is weakened to 'sooner or later', which is a mild shift in the tone of inevitability\",\n      \"'Can get out of hand' is flattened to 'becomes harmful'\"\n    ],\n    \"added\": [\n      \"Hedge sentence 'I'm describing only what I noticed... not a rule I'd claim for everyone' (not in source)\",\n      \"'From where I stood' softener\",\n      \"'Seems normal to me' hedges the opening claim\",\n      \"'I found myself held responsible' and 'made it all the harder' add a causal link that the source does not make: the clinginess is said to worsen the burden of responsibility, whereas the source lists it as a separate consequence of the dynamic\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Smooth, but over-hedged and slightly generic. The inserted disclaimer sentence and 'from where I stood' dilute the author's confident, observational voice. 'Provoked a backlash or a swing of the pendulum' is fine, and the sequence of the source's argument (imbalance, then backlash, then responsibility, then blame) is preserved in order. The final clause is the weakest part: it reframes clinginess as an aggravating factor rather than a by-product.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"'Unhealthy' qualifier on clinginess is dropped\",\n      \"'And all the rest' (open-ended list of further problems) is dropped\",\n      \"'Not to mention' escalation is lost: the clinginess and jealousy are moved to a separate, earlier sentence and no longer function as an add-on to the blame\",\n      \"'Eventually' becomes 'tended to', which loses the sense of an inevitable result\",\n      \"Source says 'it's too unequal'; Y says 'too lopsided to hold', a small shift toward stability from inequality\",\n      \"'Can get out of hand' is flattened to 'can do harm'\"\n    ],\n    \"added\": [\n      \"Hedge sentence 'not claiming a universal rule' (not in source)\",\n      \"'From where I stood' softener\",\n      \"'Too lopsided to hold' adds the idea of instability/unsustainability\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Cleaner and more readable, with short declaratives and an effective closing line. But the restructuring reorders the source's argument: it puts the clinginess and jealousy before the 'responsible one' point and splits them apart. The source's crescendo ('responsible for everything that went wrong, not to mention the clinginess...') is therefore lost. The added disclaimer is the same kind of hedge as in X. The 'always' logic is preserved, and the pendulum/backlash content is closer to the source than in X.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"Both candidates add a disclaimer, use the same 'from where I stood' hedge, and drop 'unhealthy' and 'all the rest', so neither is fully faithful. Y keeps the core claims distinct and accurate: unequal roles lead to a backlash, the author became responsible and was blamed, and clinginess and jealousy came with the dynamic. Y's main loss is the 'not to mention' escalation, which comes from its reordering. X distorts meaning more, because it makes the clinginess and jealousy a factor that made the author's responsibility 'all the harder', which turns a separate consequence into an aggravator. X also keeps the source's order but adds more hedging ('seems normal to me'). Y reads a bit more naturally and its ending is crisper. The preference is moderate, not strong.\"\n}\n```",
+          "sha256": "40902ba72dd37787063f9eeb2a633dcbeb143d39673a2aad9067a8ec4421f254",
+          "reported_cost_usd": 0.052917000000000006,
+          "tokens": {
+            "output": 1370,
+            "input": 2,
+            "cache_creation": 5112,
+            "cache_read": 93825
+          },
+          "elapsed_s": 16.09,
+          "parsed": {
+            "X": {
+              "fidelity_ok": false,
+              "missing": [
+                "The explicit 'always' framing is kept, but the 'unhealthy' quality of the clinginess and jealousy is dropped",
+                "'And all the rest' (the open-ended list of further problems) is dropped",
+                "'Not to mention' escalation: the source treats clinginess and jealousy as an extra burden on top of being blamed. X instead makes them something that made 'it all the harder'",
+                "'Eventually' is weakened to 'sooner or later', which is a mild shift in the tone of inevitability",
+                "'Can get out of hand' is flattened to 'becomes harmful'"
+              ],
+              "added": [
+                "Hedge sentence 'I'm describing only what I noticed... not a rule I'd claim for everyone' (not in source)",
+                "'From where I stood' softener",
+                "'Seems normal to me' hedges the opening claim",
+                "'I found myself held responsible' and 'made it all the harder' add a causal link that the source does not make: the clinginess is said to worsen the burden of responsibility, whereas the source lists it as a separate consequence of the dynamic"
+              ],
+              "voice_score_1_to_5": 3,
+              "prose_comment": "Smooth, but over-hedged and slightly generic. The inserted disclaimer sentence and 'from where I stood' dilute the author's confident, observational voice. 'Provoked a backlash or a swing of the pendulum' is fine, and the sequence of the source's argument (imbalance, then backlash, then responsibility, then blame) is preserved in order. The final clause is the weakest part: it reframes clinginess as an aggravating factor rather than a by-product."
+            },
+            "Y": {
+              "fidelity_ok": false,
+              "missing": [
+                "'Unhealthy' qualifier on clinginess is dropped",
+                "'And all the rest' (open-ended list of further problems) is dropped",
+                "'Not to mention' escalation is lost: the clinginess and jealousy are moved to a separate, earlier sentence and no longer function as an add-on to the blame",
+                "'Eventually' becomes 'tended to', which loses the sense of an inevitable result",
+                "Source says 'it's too unequal'; Y says 'too lopsided to hold', a small shift toward stability from inequality",
+                "'Can get out of hand' is flattened to 'can do harm'"
+              ],
+              "added": [
+                "Hedge sentence 'not claiming a universal rule' (not in source)",
+                "'From where I stood' softener",
+                "'Too lopsided to hold' adds the idea of instability/unsustainability"
+              ],
+              "voice_score_1_to_5": 3,
+              "prose_comment": "Cleaner and more readable, with short declaratives and an effective closing line. But the restructuring reorders the source's argument: it puts the clinginess and jealousy before the 'responsible one' point and splits them apart. The source's crescendo ('responsible for everything that went wrong, not to mention the clinginess...') is therefore lost. The added disclaimer is the same kind of hedge as in X. The 'always' logic is preserved, and the pendulum/backlash content is closer to the source than in X."
+            },
+            "preference": "Y",
+            "why": "Both candidates add a disclaimer, use the same 'from where I stood' hedge, and drop 'unhealthy' and 'all the rest', so neither is fully faithful. Y keeps the core claims distinct and accurate: unequal roles lead to a backlash, the author became responsible and was blamed, and clinginess and jealousy came with the dynamic. Y's main loss is the 'not to mention' escalation, which comes from its reordering. X distorts meaning more, because it makes the clinginess and jealousy a factor that made the author's responsibility 'all the harder', which turns a separate consequence into an aggravator. X also keeps the source's order but adds more hedging ('seems normal to me'). Y reads a bit more naturally and its ending is crisper. The preference is moderate, not strong."
+          }
+        },
+        "map": {
+          "X": "A",
+          "Y": "B"
+        }
+      }
+    },
+    {
+      "case": "T09",
+      "metrics": {
+        "baseline_fidelity": {
+          "preserve_all_critical_units": true,
+          "omissions": [],
+          "additions": [],
+          "certainty_changes": [],
+          "notes": "All material content is preserved: outside work complicates the boundary before a common purse; it brings more than cash (schedule, status system, social world, loyalties, consumption expectations); in the first stage an outside earner contributes an agreed share, with no exemption from communal work and no extra political authority; the group must notice when outside jobs drain people and skills needed for shared livelihoods; otherwise the commune stays a dormitory for the cash economy. Differences are stylistic: 'even before a common purse' became 'even before there is a common purse'; 'does not only bring cash' became 'brings more than cash' with a colon list; 'During the first stage' became 'In the first stage'. The final clause changed from 'instead of moving toward a common purse' to 'and does not move toward a common purse', which keeps the same meaning (the commune fails to progress toward a common purse)."
+        },
+        "arm_a_fidelity": false,
+        "arm_b_fidelity": true,
+        "arm_a_naturalness": 3,
+        "arm_b_naturalness": 4,
+        "reviewer_preference": "B"
+      },
+      "outputs": {
+        "baseline": {
+          "output": "Outside work complicates that boundary even before there is a common purse. It brings more than cash: another schedule, status system, social world, set of loyalties, and often new consumption expectations. In the first stage, an outside earner should contribute an agreed share, but money cannot buy exemption from ordinary communal work or extra political authority. The group also has to notice when outside jobs are draining the people and skills needed to build shared livelihoods. Otherwise the commune remains a dormitory for the cash economy and does not move toward a common purse.",
+          "sha256": "be6949face9cb2704b32187ff4328578b2f9d471b26057b3ba15593198754da9",
+          "reported_cost_usd": 0.031249,
+          "tokens": {
+            "output": 169,
+            "input": 2,
+            "cache_creation": 4515,
+            "cache_read": 57475
+          },
+          "elapsed_s": 5.52
+        },
+        "baseline_fidelity": {
+          "output": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material content is preserved: outside work complicates the boundary before a common purse; it brings more than cash (schedule, status system, social world, loyalties, consumption expectations); in the first stage an outside earner contributes an agreed share, with no exemption from communal work and no extra political authority; the group must notice when outside jobs drain people and skills needed for shared livelihoods; otherwise the commune stays a dormitory for the cash economy. Differences are stylistic: 'even before a common purse' became 'even before there is a common purse'; 'does not only bring cash' became 'brings more than cash' with a colon list; 'During the first stage' became 'In the first stage'. The final clause changed from 'instead of moving toward a common purse' to 'and does not move toward a common purse', which keeps the same meaning (the commune fails to progress toward a common purse).\"\n}\n```",
+          "sha256": "9ce9fad28f07206d10d84d474ed57a587456104d64b04dd0a90318ecfc38f834",
+          "reported_cost_usd": 0.0086742,
+          "tokens": {
+            "output": 337,
+            "input": 2,
+            "cache_creation": 1216,
+            "cache_read": 2181
+          },
+          "elapsed_s": 5.1,
+          "parsed": {
+            "preserve_all_critical_units": true,
+            "omissions": [],
+            "additions": [],
+            "certainty_changes": [],
+            "notes": "All material content is preserved: outside work complicates the boundary before a common purse; it brings more than cash (schedule, status system, social world, loyalties, consumption expectations); in the first stage an outside earner contributes an agreed share, with no exemption from communal work and no extra political authority; the group must notice when outside jobs drain people and skills needed for shared livelihoods; otherwise the commune stays a dormitory for the cash economy. Differences are stylistic: 'even before a common purse' became 'even before there is a common purse'; 'does not only bring cash' became 'brings more than cash' with a colon list; 'During the first stage' became 'In the first stage'. The final clause changed from 'instead of moving toward a common purse' to 'and does not move toward a common purse', which keeps the same meaning (the commune fails to progress toward a common purse)."
+          }
+        },
+        "arm_A": {
+          "output": "In an intentional community, a job outside the group changes more than its income. It brings another schedule, status system, social world, set of loyalties, and often new consumption expectations. At an early stage, before there is a full common purse, an outside earner ought to contribute an agreed share. But that money is only the cash interface with the outside economy, and it must not buy exemption from ordinary communal work or extra political power inside the group. The group also has to notice when outside jobs are draining the people and skills needed to build shared livelihoods. Otherwise a supposedly money-free commune can stay effectively dependent on the cash economy, closer to a dormitory than to a common purse.",
+          "sha256": "8a5f31f30f935de8eafbbc0f016442628469b6d8330b438e4caf48958d4b1c73",
+          "reported_cost_usd": 0.0106962,
+          "tokens": {
+            "output": 540,
+            "input": 2,
+            "cache_creation": 1214,
+            "cache_read": 2181
+          },
+          "elapsed_s": 5.84,
+          "paragraph_count": 1
+        },
+        "arm_B": {
+          "output": "Outside work complicates that boundary even before there is a common purse. It brings more than cash: another schedule, another status system, another social world, new loyalties, and often new consumption expectations.\n\nIn the early stage, an outside earner ought to contribute an agreed share. But outside money must not buy exemption from ordinary communal work, and it must not buy extra political power inside the group. The cash interface is one thing; internal communal power is another.\n\nThe group also has to notice when outside jobs are draining the people and skills needed to build shared livelihoods. If it doesn't, a supposedly money-free commune can stay dependent on the cash economy, closer to a dormitory than a common purse.",
+          "sha256": "450eddbe87a7ed8eac4e43f29f0ebe1f9194be983636f2739ebb0dc28c40bbf3",
+          "reported_cost_usd": 0.042605000000000004,
+          "tokens": {
+            "output": 214,
+            "input": 2,
+            "cache_creation": 5424,
+            "cache_read": 93825
+          },
+          "elapsed_s": 5.94,
+          "paragraph_count": 3
+        },
+        "blind_review": {
+          "output": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"The explicit statement that outside work complicates things 'does not only bring cash' is kept, but the sentence 'It does not only bring cash' is recast as 'more than cash' (minor, no real loss).\"\n    ],\n    \"added\": [\n      \"'The cash interface is one thing; internal communal power is another.' This is a new sentence. It elaborates the money/power separation, and the source only implies it.\",\n      \"'must not buy' is repeated for exemption and for power. This sharpens the source's parallel but stays within its meaning.\",\n      \"'closer to a dormitory than a common purse' is a softened rendering of 'remains a dormitory ... instead of moving toward a common purse'. The sense of movement toward a common purse is weakened.\",\n      \"'If it doesn't' replaces 'Otherwise'.\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Reads as natural, deliberate essay prose. The paragraph breaks, the colon list with repeated 'another', and the aphoristic line about the cash interface give it rhythm and a confident voice. The contraction 'doesn't' is slightly casual next to 'ought to', and the added aphorism is a little tidy and explanatory.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": false,\n    \"missing\": [\n      \"'even before a common purse' is changed to 'before there is a full common purse' and moved into the contribution sentence. The opening claim that outside work complicates the boundary is gone.\",\n      \"The 'boundary' framing is dropped, so the referent of 'that boundary' is lost. This is partly offset by the 'cash interface' idea.\",\n      \"'money cannot buy exemption' is made a conditional claim about what the money is.\"\n    ],\n    \"added\": [\n      \"The opening 'In an intentional community' is an invented context frame. The source only implied it.\",\n      \"'that money is only the cash interface with the outside economy' is a new characterization.\",\n      \"'effectively' is inserted before 'dependent'.\",\n      \"'full' is inserted before 'common purse'. It implies a stage distinction the source did not state.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Competent but flatter. It is a single dense block and the sentences are chained with little rhythm. The 'In an intentional community' opener reads like a gloss added for a reader who lacks context, which makes it sound more explanatory than the source. The hedges 'effectively' and 'full' add some wordiness. The 'cash interface' phrase is the one distinctive touch, and it is folded into a long sentence.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X keeps the source's opening claim, the 'boundary' language, and the structure of the argument: complication, then the contribution rule, then the warning about drain. Its main additions are one aphorism that restates the money/power distinction and the softened dormitory comparison. Both are small and consistent with the source's intent. Y gets the 'cash interface' idea in too, but it adds an invented 'intentional community' frame and a 'full common purse' stage distinction. It also loses the explicit 'complicates that boundary' claim, which changes the rhetorical function of the opening. X also reads more naturally and has more voice, so it wins on both fidelity and prose.\"\n}\n```",
+          "sha256": "b7ac658b1525e250fd593db921e813092b0c21d4213a425208d149f6df8c8d0f",
+          "reported_cost_usd": 0.050537,
+          "tokens": {
+            "output": 1118,
+            "input": 2,
+            "cache_creation": 5147,
+            "cache_read": 93825
+          },
+          "elapsed_s": 15.06,
+          "parsed": {
+            "X": {
+              "fidelity_ok": true,
+              "missing": [
+                "The explicit statement that outside work complicates things 'does not only bring cash' is kept, but the sentence 'It does not only bring cash' is recast as 'more than cash' (minor, no real loss)."
+              ],
+              "added": [
+                "'The cash interface is one thing; internal communal power is another.' This is a new sentence. It elaborates the money/power separation, and the source only implies it.",
+                "'must not buy' is repeated for exemption and for power. This sharpens the source's parallel but stays within its meaning.",
+                "'closer to a dormitory than a common purse' is a softened rendering of 'remains a dormitory ... instead of moving toward a common purse'. The sense of movement toward a common purse is weakened.",
+                "'If it doesn't' replaces 'Otherwise'."
+              ],
+              "voice_score_1_to_5": 4,
+              "prose_comment": "Reads as natural, deliberate essay prose. The paragraph breaks, the colon list with repeated 'another', and the aphoristic line about the cash interface give it rhythm and a confident voice. The contraction 'doesn't' is slightly casual next to 'ought to', and the added aphorism is a little tidy and explanatory."
+            },
+            "Y": {
+              "fidelity_ok": false,
+              "missing": [
+                "'even before a common purse' is changed to 'before there is a full common purse' and moved into the contribution sentence. The opening claim that outside work complicates the boundary is gone.",
+                "The 'boundary' framing is dropped, so the referent of 'that boundary' is lost. This is partly offset by the 'cash interface' idea.",
+                "'money cannot buy exemption' is made a conditional claim about what the money is."
+              ],
+              "added": [
+                "The opening 'In an intentional community' is an invented context frame. The source only implied it.",
+                "'that money is only the cash interface with the outside economy' is a new characterization.",
+                "'effectively' is inserted before 'dependent'.",
+                "'full' is inserted before 'common purse'. It implies a stage distinction the source did not state."
+              ],
+              "voice_score_1_to_5": 3,
+              "prose_comment": "Competent but flatter. It is a single dense block and the sentences are chained with little rhythm. The 'In an intentional community' opener reads like a gloss added for a reader who lacks context, which makes it sound more explanatory than the source. The hedges 'effectively' and 'full' add some wordiness. The 'cash interface' phrase is the one distinctive touch, and it is folded into a long sentence."
+            },
+            "preference": "X",
+            "why": "X keeps the source's opening claim, the 'boundary' language, and the structure of the argument: complication, then the contribution rule, then the warning about drain. Its main additions are one aphorism that restates the money/power distinction and the softened dormitory comparison. Both are small and consistent with the source's intent. Y gets the 'cash interface' idea in too, but it adds an invented 'intentional community' frame and a 'full common purse' stage distinction. It also loses the explicit 'complicates that boundary' claim, which changes the rhetorical function of the opening. X also reads more naturally and has more voice, so it wins on both fidelity and prose."
+          }
+        },
+        "map": {
+          "X": "B",
+          "Y": "A"
+        }
+      }
+    },
+    {
+      "case": "T13",
+      "metrics": {
+        "baseline_fidelity": {
+          "preserve_all_critical_units": true,
+          "omissions": [],
+          "additions": [],
+          "certainty_changes": [],
+          "notes": "All material units are preserved: grief giving way to warmth/connection/being held; experience-not-evidence for a particular physiological mechanism; love opening grief via received care evoking sadness for missing care; that this need not mean the love failed; advice to stay when present and retaining choice; more tears not proof of more healing. Differences are stylistic. 'need not mean' became 'does not mean', a negligible shift. 'for one particular mechanism' became 'for any particular mechanism', which is equivalent in context. 'Stay with the experience' and 'choice about it' are clarifying specifications of the same referent, not new content."
+        },
+        "arm_a_fidelity": true,
+        "arm_b_fidelity": true,
+        "arm_a_naturalness": 3,
+        "arm_b_naturalness": 4,
+        "reviewer_preference": "A"
+      },
+      "outputs": {
+        "baseline": {
+          "output": "Some people find that deep grieving gives way to warmth, connection, or a bodily sense of being held by the universe. That is a description of an experience, and it is not evidence for any particular physiological mechanism. Love can also open grief from the other direction: being cared for may bring sadness about the care that was missing, which does not mean the love failed. Stay with the experience when you can remain present and keep your choice about it. More tears, by themselves, do not prove more healing.",
+          "sha256": "f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373",
+          "reported_cost_usd": 0.038993,
+          "tokens": {
+            "output": 146,
+            "input": 2,
+            "cache_creation": 4691,
+            "cache_read": 93825
+          },
+          "elapsed_s": 5.92
+        },
+        "baseline_fidelity": {
+          "output": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material units are preserved: grief giving way to warmth/connection/being held; experience-not-evidence for a particular physiological mechanism; love opening grief via received care evoking sadness for missing care; that this need not mean the love failed; advice to stay when present and retaining choice; more tears not proof of more healing. Differences are stylistic. 'need not mean' became 'does not mean', a negligible shift. 'for one particular mechanism' became 'for any particular mechanism', which is equivalent in context. 'Stay with the experience' and 'choice about it' are clarifying specifications of the same referent, not new content.\"\n}\n```",
+          "sha256": "646a446b39a602b95bc46330876b21a90aa82975c0533ed02c6d675d103507b5",
+          "reported_cost_usd": 0.0076722,
+          "tokens": {
+            "output": 260,
+            "input": 2,
+            "cache_creation": 1158,
+            "cache_read": 2181
+          },
+          "elapsed_s": 4.73,
+          "parsed": {
+            "preserve_all_critical_units": true,
+            "omissions": [],
+            "additions": [],
+            "certainty_changes": [],
+            "notes": "All material units are preserved: grief giving way to warmth/connection/being held; experience-not-evidence for a particular physiological mechanism; love opening grief via received care evoking sadness for missing care; that this need not mean the love failed; advice to stay when present and retaining choice; more tears not proof of more healing. Differences are stylistic. 'need not mean' became 'does not mean', a negligible shift. 'for one particular mechanism' became 'for any particular mechanism', which is equivalent in context. 'Stay with the experience' and 'choice about it' are clarifying specifications of the same referent, not new content."
+          }
+        },
+        "arm_A": {
+          "output": "For some people, grieving may open into warmth, connection, or a bodily sense of being held by the universe. That is an experience; it does not establish any particular physiological mechanism. Love, or receiving care, may also uncover grief for the care that was missing earlier, rather than always easing sadness. That reaction does not in itself prove that love failed. Continue only while you can stay present and keep your choice about it; more tears alone are not evidence of more healing.",
+          "sha256": "b27462ed4de209970a2c034e4853976c63b6b5d0b1fde7999b1df83bfbed9be6",
+          "reported_cost_usd": 0.0112742,
+          "tokens": {
+            "output": 621,
+            "input": 2,
+            "cache_creation": 1156,
+            "cache_read": 2181
+          },
+          "elapsed_s": 5.94,
+          "paragraph_count": 1
+        },
+        "arm_B": {
+          "output": "For some people, grieving can open into warmth, connection, or a bodily feeling of being held by the universe. That's an experience, and it doesn't establish any particular physiological mechanism.\n\nLove can also open grief from the other side. Receiving care may uncover sadness for the care that was missing earlier, and that doesn't mean the love failed. Sometimes it simply shows what was absent before.\n\nKeep going only if you can stay present and choose to. More tears alone aren't evidence of more healing.",
+          "sha256": "993f2663dd8fc3b90c03e55f9a6e9c26d49f6639be014591b3e432620e757a02",
+          "reported_cost_usd": 0.0087162,
+          "tokens": {
+            "output": 158,
+            "input": 2,
+            "cache_creation": 1674,
+            "cache_read": 2181
+          },
+          "elapsed_s": 4.18,
+          "paragraph_count": 3
+        },
+        "blind_review": {
+          "output": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Source says 'deep grieving'; X drops 'deep'\",\n      \"Source's 'Stay with it when you can...' is rendered as 'Continue only while...', which slightly narrows the permission into a limit, though the condition is preserved\"\n    ],\n    \"added\": [\n      \"'rather than always easing sadness' is a small addition, implying a contrast with love as comforting\",\n      \"'earlier' attached to the missing care\",\n      \"'in itself' hedges the claim about love failing\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Accurate and tidy but stiff and abstract. 'May' appears repeatedly, 'does not establish' and 'in itself prove' read as formal and hedged, and the single block is dense. The merging of 'Love, or receiving care' is slightly awkward. The closing semicolon sentence mirrors the source well.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Source says 'deep grieving'; Y drops 'deep'\",\n      \"The 'retain choice' idea becomes 'choose to', which is a little weaker as agency but is acceptable\",\n      \"'Stay with it' becomes 'Keep going', which shifts slightly toward persistence\"\n    ],\n    \"added\": [\n      \"'from the other side' is a gloss on 'in the other direction'\",\n      \"'Sometimes it simply shows what was absent before' is a new sentence that adds an interpretation the source does not state: that the sadness reveals past absence\",\n      \"'earlier' attached to the missing care\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"More natural and warmer, with contractions and short paragraphs that suit the subject. The rhythm is good. The added sentence is mildly explanatory and does extra rhetorical work, but it is consistent with the source's point. 'Keep going' is slightly more pushy than 'stay with it'.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Y reads better, but it adds a sentence ('Sometimes it simply shows what was absent before') with new interpretive content, and 'Keep going' moves the advice from presence toward persistence. X is stiffer but stays closer to the source's meaning and rhetorical function: an experience is not a mechanism, sadness need not mean failed love, and tears are not proof of healing. If voice carries more weight than strict fidelity, Y is the better read, and the gap is small enough to call near-TIE. On the fidelity-first criterion, X is preferred.\"\n}\n```",
+          "sha256": "414049dd8d4fb91ad95cf685750b1eadab48138a1f4edf38c2a017d0d1b7a9df",
+          "reported_cost_usd": 0.0144162,
+          "tokens": {
+            "output": 878,
+            "input": 2,
+            "cache_creation": 1299,
+            "cache_read": 2181
+          },
+          "elapsed_s": 9.26,
+          "parsed": {
+            "X": {
+              "fidelity_ok": true,
+              "missing": [
+                "Source says 'deep grieving'; X drops 'deep'",
+                "Source's 'Stay with it when you can...' is rendered as 'Continue only while...', which slightly narrows the permission into a limit, though the condition is preserved"
+              ],
+              "added": [
+                "'rather than always easing sadness' is a small addition, implying a contrast with love as comforting",
+                "'earlier' attached to the missing care",
+                "'in itself' hedges the claim about love failing"
+              ],
+              "voice_score_1_to_5": 3,
+              "prose_comment": "Accurate and tidy but stiff and abstract. 'May' appears repeatedly, 'does not establish' and 'in itself prove' read as formal and hedged, and the single block is dense. The merging of 'Love, or receiving care' is slightly awkward. The closing semicolon sentence mirrors the source well."
+            },
+            "Y": {
+              "fidelity_ok": true,
+              "missing": [
+                "Source says 'deep grieving'; Y drops 'deep'",
+                "The 'retain choice' idea becomes 'choose to', which is a little weaker as agency but is acceptable",
+                "'Stay with it' becomes 'Keep going', which shifts slightly toward persistence"
+              ],
+              "added": [
+                "'from the other side' is a gloss on 'in the other direction'",
+                "'Sometimes it simply shows what was absent before' is a new sentence that adds an interpretation the source does not state: that the sadness reveals past absence",
+                "'earlier' attached to the missing care"
+              ],
+              "voice_score_1_to_5": 4,
+              "prose_comment": "More natural and warmer, with contractions and short paragraphs that suit the subject. The rhythm is good. The added sentence is mildly explanatory and does extra rhetorical work, but it is consistent with the source's point. 'Keep going' is slightly more pushy than 'stay with it'."
+            },
+            "preference": "X",
+            "why": "Y reads better, but it adds a sentence ('Sometimes it simply shows what was absent before') with new interpretive content, and 'Keep going' moves the advice from presence toward persistence. X is stiffer but stays closer to the source's meaning and rhetorical function: an experience is not a mechanism, sadness need not mean failed love, and tears are not proof of healing. If voice carries more weight than strict fidelity, Y is the better read, and the gap is small enough to call near-TIE. On the fidelity-first criterion, X is preferred."
+          }
+        },
+        "map": {
+          "X": "A",
+          "Y": "B"
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "baseline_admitted": 3,
+    "both_arms_written": 3,
+    "reviewer_pref_A": 1,
+    "reviewer_pref_B": 2,
+    "fidelity_ok_A": 1,
+    "fidelity_ok_B": 2,
+    "style_better_B": 2,
+    "candidate_format_violation_B": 2
+  },
+  "limits": [
+    "Separate contexts on same provider/model; no owner assessment",
+    "Only 3 selected cases, cannot generalize",
+    "Writer preserved model baseline fairly, but both A and B generated some false hedges, omission or interpretive additions",
+    "B generated multiple paragraphs in 2 cases contrary to one-paragraph output; counts are not valid primary joint-quality success",
+    "Some responses used unexpectedly large cached prompts; CLI reported cost is accounting estimate under Max subscription, not necessarily billed dollars",
+    "No claim that common model-created baselines are Pangram AI-labelled; baseline detector eligibility remains untested"
+  ]
+}

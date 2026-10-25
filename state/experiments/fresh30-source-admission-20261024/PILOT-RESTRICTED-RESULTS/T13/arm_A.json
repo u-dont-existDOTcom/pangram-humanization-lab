@@ -1,0 +1,46 @@
+{
+  "case": "T13",
+  "stage": "arm_A",
+  "prompt_sha256": "5bbe9a176537d45062776a74d9ac5dcdc0dea342453f9bb5831edd26878ef014",
+  "elapsed_s": 3.35,
+  "return_code": 0,
+  "error": null,
+  "result": "Some people find that deep grieving gives way to warmth, connection, or a bodily sense of being held by the universe. That is a description of an experience, not evidence for any particular physiological mechanism. Love can also open grief from the other direction: being cared for may bring sadness about the care that was missing, which does not mean the love failed. Stay with the experience when you can remain present and keep your choice about it. More tears, by themselves, do not prove more healing.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 836,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 143,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 836,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 143,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 836,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 836
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004778,
+  "is_error": false,
+  "result_sha256": "fcdbf55e756d324c3dc6364c7238d99cf4ec22bb0712eea4f21e8c628384acd9"
+}

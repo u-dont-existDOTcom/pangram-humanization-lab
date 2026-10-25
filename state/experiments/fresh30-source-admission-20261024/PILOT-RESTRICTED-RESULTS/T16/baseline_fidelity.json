@@ -1,0 +1,46 @@
+{
+  "case": "T16",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "e0663c5432430437bcaa60102069814755b3bb76f5d7eae6acfd8a73b8afe7b6",
+  "elapsed_s": 4.59,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material units are preserved: no need for a trustworthy history to borrow care; the option of a remembered person or an imagined adult whose intention is good care; the question about what that person would say or do given actual history, limitations, and options; starting with the least cruel believable response if warmth is unavailable; and trying one usable sentence or action rather than repeating the exercise in different words. Differences are stylistic only. 'Use a remembered person when that helps' becomes 'If it helps, use...', and 'whose intention is to take good care of you' becomes 'who intends to take good care of you'. The 'with my actual history' to 'given your actual history' shift is a person change in phrasing (first to second person inside an indirect question) and does not alter meaning. 'Begin with' versus 'start with' and 'rather than' versus 'instead of' are equivalent.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 957,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 331,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 957,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 331,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 957,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 957
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.007142000000000001,
+  "is_error": false,
+  "result_sha256": "4974610c3fb1a46be1eaedd70a39b89e8da06b48a9a9a99215b215f3b4c803d2"
+}

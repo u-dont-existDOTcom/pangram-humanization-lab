@@ -1,0 +1,62 @@
+{
+  "schema": "fresh30-restricted-pilot-v3",
+  "method": "distinct_fresh_restricted_no_autoload_cli_contexts",
+  "model": "sonnet",
+  "effort": "medium",
+  "cases": [
+    {
+      "case": "T05",
+      "status": "BASELINE_FIDELITY_NOT_ADMITTED",
+      "baseline_sha256": "37b4f26df15b4d016c238d15e0a9726196d326720d52624ad3652503d4624063"
+    },
+    {
+      "case": "T09",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "5e2541e111d3f47842615566b3fe62d69fe11167846396a05775caddb4c32206",
+      "arm_a_sha256": "6eaf66be0a3a9286110816fdea1117f5ee4d9f0b10e37b6067631624295bc1a0",
+      "arm_b_sha256": "466b28e7714a04c84c3984c2bc5001e797668e9ffea85145a227f9bab4615866",
+      "format_pass_A": true,
+      "format_pass_B": true
+    },
+    {
+      "case": "T13",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "f66dacdc7ed5adf06b7c3fbbad64ffa9671a9b0ef3ba478494fa80909c3a5373",
+      "arm_a_sha256": "fcdbf55e756d324c3dc6364c7238d99cf4ec22bb0712eea4f21e8c628384acd9",
+      "arm_b_sha256": "d2377d14a75645b897acabdf491977074a0117b8d14e9eae81d3603800526669",
+      "format_pass_A": true,
+      "format_pass_B": true
+    },
+    {
+      "case": "T16",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126",
+      "arm_a_sha256": "15ea48b9751c9ff5a62f3799d81a79e21a7b2964f9584c099061ab13e3ee6657",
+      "arm_b_sha256": "e4b1b31acafeb6686b93f1c3ef278fd172618b7d030d2fabc5c3a0df50971e2d",
+      "format_pass_A": true,
+      "format_pass_B": true
+    },
+    {
+      "case": "T22",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "1b01b8c6bab2873a1a4938553367552d2823f9d8dbcc44fbff9f3b47d8ea2453",
+      "arm_a_sha256": "1c89b19b9b0c68ca05bfbac5975f56cdb5eb168b18d0670c4c065fbbc6a3f35a",
+      "arm_b_sha256": "81918c917901be81722ad23661fc9cdb83c264955204767f4b8a1ca198cee10e",
+      "format_pass_A": true,
+      "format_pass_B": true
+    },
+    {
+      "case": "T28",
+      "status": "FIRST_ATTEMPTS_AND_REVIEW_CAPTURED",
+      "baseline_sha256": "67274dcbaeca5872430a19127106b2c3fbd0179144d64f084e9d43e2f6c00ee2",
+      "arm_a_sha256": "67274dcbaeca5872430a19127106b2c3fbd0179144d64f084e9d43e2f6c00ee2",
+      "arm_b_sha256": "7a00db491b597b0b29cd50659e2330c70e06c85892546ebf3792079b125659d8",
+      "format_pass_A": true,
+      "format_pass_B": true
+    }
+  ],
+  "calls_pangram": 0,
+  "owner_style_approval": false,
+  "independent_across_authors": false,
+  "pilot_only": true
+}

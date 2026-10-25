@@ -1,0 +1,46 @@
+{
+  "case": "T16",
+  "stage": "arm_B",
+  "prompt_sha256": "69f57e46bf69523eb3cc0abeba983d34b5019e104c7f126311b3f775e7512a2e",
+  "elapsed_s": 3.47,
+  "return_code": 0,
+  "error": null,
+  "result": "You don't need a history full of trustworthy people to borrow care. If it helps, draw on someone you remember, or imagine an adult who sincerely means to look after you, and ask what that person would say or do given your real history, your limits, and the options you actually have. If warmth feels out of reach, begin with the least cruel response you can honestly believe. And once you've found a single sentence or action you can use, try it out rather than going around the exercise again in new words.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1148,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 142,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1148,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 142,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1148,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1148
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.006016,
+  "is_error": false,
+  "result_sha256": "e4b1b31acafeb6686b93f1c3ef278fd172618b7d030d2fabc5c3a0df50971e2d"
+}

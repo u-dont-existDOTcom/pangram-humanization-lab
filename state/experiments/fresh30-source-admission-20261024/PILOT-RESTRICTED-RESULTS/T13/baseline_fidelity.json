@@ -1,0 +1,46 @@
+{
+  "case": "T13",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "32edaf93dbbf376bf188870f9cc4a810537d8535eb5b95efdd085636b837f2a9",
+  "elapsed_s": 7.43,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material units are preserved: the warmth/connection/being-held experience; the point that it is a description, not evidence for a physiological mechanism; care bringing sadness for missing care; the point that this does not mean the love failed; the advice to stay with it only when present and able to choose; and the point that more tears do not prove more healing. Two borderline wording shifts are not counted as material. First, 'need not mean the love failed' became 'does not mean the love failed', which is slightly more categorical. Second, 'stay with it' became 'stay with the experience', which slightly narrows an ambiguous referent. 'One particular' became 'any particular', which has the same practical meaning.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 982,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 762,
+    "output_tokens_details": {
+      "thinking_tokens": 488
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 982,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 762,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 982,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 982
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.011552,
+  "is_error": false,
+  "result_sha256": "16a011ef0a577ffcaa73c90f82d52ccdb4cdb4f1ae9ae320fbbeb184526294c5"
+}

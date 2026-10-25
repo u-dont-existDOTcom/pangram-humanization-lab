@@ -1,0 +1,46 @@
+{
+  "case": "T22",
+  "stage": "blind_review",
+  "prompt_sha256": "19dbb2c135aa456a6c7211bc51ae3c6b0e10bd99c3c72759e29e4ac122e4cb3b",
+  "elapsed_s": 11.41,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Source's 'And' opening connective is dropped; the claim is not framed as continuing a prior argument\",\n      \"Source's 'pleasure/pain' as a single compound channel is rendered 'pleasure and pain', a slight softening\",\n      \"Source's 'plane...able to land because there's somewhere solid to land' is kept, but the 'pain, like a plane' subject-simile structure is flattened into 'just as'\"\n    ],\n    \"added\": [\n      \"'just as' makes the analogy explicitly a comparison clause, slightly more formal than the source's appositive simile\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Accurate and clean, but reads as a tidy paraphrase. The source's conversational, slightly abrupt rhythm ('The pain, like a plane, is able to land...') is smoothed into formal, balanced syntax. The reordering of the bliss sentence ('What seems to be left... is supreme bliss, though one might have assumed...') is faithful but stiff, and 'one might have assumed' is more academic than the source's 'you might assume'. The colon-to-'As' attribution is preserved well.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Source's 'And' at the start is dropped, though a later 'And' is added elsewhere\",\n      \"'pleasure/pain' becomes 'pleasure and pain'\"\n    ],\n    \"added\": [\n      \"'a whole crowd of sense streams working together' amplifies 'multiple sense streams together' with a crowd metaphor\",\n      \"'though' and 'at all' add emphasis and a contrastive pivot not in the source\",\n      \"'plain neutrality' adds 'plain' as an intensifier\",\n      \"'have a place to show up' reframes the landing image: pain is personified as arriving, a shift from the source's plane-landing function\",\n      \"'And' opening the bliss sentence inserts a connective not in the source\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"More natural and spoken, with a conversational cadence closer to the source's register ('you might expect', 'the way a plane can land'). However, it embellishes: 'crowd' and 'plain' and 'at all' introduce flourishes the source lacks, and 'show up' adds a gloss that explains the analogy rather than just stating it. 'Expect' for 'assume' shifts nuance slightly (assumption vs. anticipation). The 'though' after 'In full unweaving' adds a contrast that matches the rhetorical turn but is editorially imposed.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both preserve the core argument: one stream suffices for suffering, a residual pleasure/pain channel still permits pain, full unweaving leaves no system to suffer, and bliss (not neutrality) is what seems to remain, as in the AN 9.34 quote. X is the closer match in meaning and rhetorical function: it adds nothing substantive and keeps the plane analogy as the source states it. Y reads more naturally and its voice is closer to the source's conversational tone, but it adds a 'crowd' image, emphasis words ('plain', 'at all'), the 'show up' gloss on the landing metaphor, and connective 'though'/'And', which shift the register toward embellishment. If voice were weighted equally with fidelity, Y would be competitive, but since fidelity is the primary criterion, X is preferred.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1288,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1184,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1288,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1184,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1288,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1288
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.016996,
+  "is_error": false,
+  "result_sha256": "b0937116652b111f4f6fdac35d01ed6261be3e47f4ae5d48a489d8116f196354"
+}

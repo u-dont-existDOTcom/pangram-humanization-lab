@@ -1,0 +1,46 @@
+{
+  "case": "T28",
+  "stage": "baseline",
+  "prompt_sha256": "06bc7ca22d69dfb167e4cdbb1f3aa99750cc95b5bd2b4a77812b12278d825c7a",
+  "elapsed_s": 3.47,
+  "return_code": 0,
+  "error": null,
+  "result": "I still care about regulation and about what happens after the session. EMDR can be highly effective, but when someone has diffuse developmental trauma and an unstable nervous system, I don't automatically assume it should be their first approach. If no clear targets can be identified and most of the material is bodily, pre-verbal, or relational, Brainspotting may be a better fit. Someone who is stable and has a single discrete event is a different case, and may be ready for EMDR much earlier.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 826,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 149,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 826,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 149,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 826,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 826
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004798,
+  "is_error": false,
+  "result_sha256": "67274dcbaeca5872430a19127106b2c3fbd0179144d64f084e9d43e2f6c00ee2"
+}
