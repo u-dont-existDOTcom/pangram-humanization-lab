@@ -19,9 +19,9 @@ Target previously AI-highlighted conclusion:
 **Live reader question:** If a retreat treats the decision to continue as a test of character, what does the writer actually believe participants should be allowed to do about that, and why does this end his argument?
 
 **Option 1 — SOURCE-SUPPORTED / recommended realization, requires ordinary editor review, NOT automatically owner final:**
-> A trauma-informed retreat shouldn't turn continuing into a test of character. Whether you continue should be up to you.
+> A trauma-informed retreat should let people pause without making it a test of their character.
 
-This preserves the source's normative judgment and the reader's agency with a more relevant concrete choice. It still may be unnecessary after the new owner retreat paragraph; verify natural-section flow before keeping any closing sentence.
+This answers the exact question about pausing with a position about the retreat's conduct; it does not invent an institution's actual behavior. It consolidates the original normative judgment and autonomy rather than appending a generic permission line. It still may be unnecessary after the new owner retreat paragraph; check section flow before retaining it.
 
 **Option 2 — ARTICLE-HINTED / owner to confirm if added substance is intended:**
 > If a retreat treats pausing as a sign you aren't serious enough, I'd question how trauma-informed its approach really is.
