@@ -1,0 +1,41 @@
+{
+  "case": "heading",
+  "prompt_sha256": "268a9b6f539f7a8f2d903076e7c11baef52875e7985ebece8adb0053c567e32a",
+  "returncode": 0,
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 3.5,\n    \"prose_comment\": \"Nearly identical to Y except for the opening clause: 'toward a belonging deeper than any group, one that doesn't ask you to give up being yourself.' This echoes the heading verbatim, which feels a little like a writer restating a title, and the appositive 'one that...' has a slightly composed, essayistic cadence. It also sits a bit stiffly against the casual register that follows ('a little different,' 'a lot less desperate,' 'your little one'). The abstract noun 'belonging' is then followed by 'you also belong there,' which makes a nice turn, though the repetition is slightly more engineered. Overall warm and conversational, with a small formal lift at the start.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"The opening, 'toward somewhere you belong that doesn't ask you to give up being yourself,' is plainer and more spoken, and it speaks directly to the reader, matching the 'you' address used throughout. It avoids repeating the heading's phrasing, so the paragraph doesn't feel like it is echoing its own title. The 'somewhere you belong' sets up the later 'you also belong there' more naturally, and the 'outside somewhere' memory lands cleanly. The rest (short fragments like 'Not all at once, though.', the quoted worry from the 'little one') is the same as X and reads as a warm, intimate guide voice.\"\n  },\n  \"preference\": \"Y\",\n  \"why\": \"The two differ only in the first sentence. Y's 'somewhere you belong' is more conversational, avoids echoing the heading, and flows into the later 'you also belong there' without extra scaffolding. X's 'a belonging deeper than any group, one that...' is fine, but its appositive and title-repeating phrasing feel slightly more constructed against the otherwise casual voice. The margin is small.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1260,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 654,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1260,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 654,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1260,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1260
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.011584
+}

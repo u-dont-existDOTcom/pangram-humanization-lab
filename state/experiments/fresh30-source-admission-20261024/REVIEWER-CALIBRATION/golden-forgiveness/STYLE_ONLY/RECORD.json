@@ -1,0 +1,41 @@
+{
+  "case": "golden-forgiveness",
+  "prompt_sha256": "b96478227639e4c745f739b531e07d32a219fde2b48b1a93c0133058797510a1",
+  "returncode": 0,
+  "result": "```json\n{\n  \"X\": {\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"One flowing sentence in a first-person plural voice. The stacked 'and' clauses feel like someone talking through a conflicted feeling, and the 'but' turn into 'one day we may find that we have forgiven them' has a gentle, discovered quality. 'They really did hurt us' is plainly spoken, and the 'really' sounds like real speech. The repeated 'still' is a bit loose, but it reads as natural emphasis rather than a pattern. The ending lands softly and personally.\"\n  },\n  \"Y\": {\n    \"voice_score_1_to_5\": 2.5,\n    \"prose_comment\": \"Two tidy, balanced sentences with abstract nouns ('the harm', 'the boundary', 'the person'). The parallel structure (X happened, Y still matters; Z is still accountable) reads like a checklist or a slogan. 'The person' is generic and detached, and 'on its own' is vague. The rhythm is clean but even and a little templated, with little sense of someone actually working through the feeling.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"X sounds like a person speaking from inside the experience, with a connected, slightly run-on thought that builds to a quiet realization. Y is polished but impersonal and schematic, with evenly weighted short clauses that read as formulaic. Brevity and tidiness alone don't make Y more natural, and X's longer sentence earns its length through the way the thoughts connect.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 842,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 508,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 842,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 508,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 842,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 842
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.008452
+}

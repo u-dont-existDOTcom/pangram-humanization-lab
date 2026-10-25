@@ -1,0 +1,92 @@
+{
+  "schema": "style-only-owner-calibration-results-v1",
+  "n": 4,
+  "cases": [
+    {
+      "case": "envy",
+      "owner_naturalness": "B",
+      "model_naturalness": "B",
+      "naturalness_matches_owner": true,
+      "owner_fidelity_B": true,
+      "model_fidelity_B": null,
+      "fidelity_matches_owner": null,
+      "joint_preference": "B",
+      "model_by_original_label": {
+        "A": {
+          "voice_score_1_to_5": 3,
+          "prose_comment": "The middle sentence of paragraph one is clumsy: 'I'd still take real suffering seriously, and do what you owe the people around you, but skip the part where you have to be miserable too.' It begins in first person, then shifts to an imperative, and 'take seriously' is stacked on 'do what you owe.' The conversational shrug at the end ('skip the part') is nice, but the sentence feels assembled. Also, 'take that loss seriously' in paragraph two repeats 'take ... seriously' from paragraph one, which reads as a verbal tic and not a deliberate echo. Overall the voice is plausible but a bit hedged and over-qualified."
+        },
+        "B": {
+          "voice_score_1_to_5": 4,
+          "prose_comment": "The imperative 'Do your part for people who are suffering, and skip the part where you have to be miserable too' is brisk and casual, and the 'part ... part' repetition reads as spoken, a natural rhetorical play. It avoids the doubled 'take seriously' phrasing, so the later 'I'd take that loss seriously' lands fresh. The shift from 'I found' to direct advice is a normal move in personal essays. The second paragraph is identical to X's and works fine here, with a more cohesive arc from the first."
+        }
+      },
+      "why": "The two excerpts differ only in one sentence. Y's version is tighter and sounds more like a person talking, and it keeps 'take ... seriously' for one use so it works better in the second paragraph. X's version is wordier, mixes registers within one sentence, and repeats a phrase across paragraphs in a way that feels mechanical."
+    },
+    {
+      "case": "thanks",
+      "owner_naturalness": "A",
+      "model_naturalness": "B",
+      "naturalness_matches_owner": false,
+      "owner_fidelity_B": false,
+      "model_fidelity_B": null,
+      "fidelity_matches_owner": null,
+      "joint_preference": "B",
+      "model_by_original_label": {
+        "B": {
+          "voice_score_1_to_5": 3.5,
+          "prose_comment": "The shared first paragraph has a casual, slightly wry voice with clipped imperatives and a nice 'borrow some' turn. The second paragraph opens with 'Your little one might not take it well at first,' which is a plain, slightly generic setup, but it connects logically to the quoted reactions: 'Oh, so NOW you care?' reads as the child's response and 'But I'm trying!' as the adult's reflex. The emoji after a flat sentence feels a bit tacked on, yet the flow from reaction to reaction to the closing 'borrow' callback is coherent and the ending lands with some rueful warmth."
+        },
+        "A": {
+          "voice_score_1_to_5": 3,
+          "prose_comment": "Same strong first paragraph. The second paragraph opens by echoing the 'thank-you' line, which is a clever callback, but 'the thank-you you weren't waiting for might not come anyway' is a little tangled, with 'you' repeated and a slightly contradictory 'weren't waiting for' versus 'might not come.' The following 'More like “Oh, so NOW you care?”' then fits less cleanly, since it is no longer clear what it is 'more like' than. The emoji and the quoted lines feel a touch disconnected, though the closing callback still works."
+        }
+      },
+      "why": "X's second paragraph moves more smoothly: a plain setup, a quoted child reaction, a quoted adult reflex, then the 'borrow' payoff. Y's callback to the thank-you is a nice idea but its opening sentence is awkwardly knotted, and the 'More like' pivot loses its referent, so the rhythm snags where X's reads as more natural."
+    },
+    {
+      "case": "heading",
+      "owner_naturalness": "B",
+      "model_naturalness": "B",
+      "naturalness_matches_owner": true,
+      "owner_fidelity_B": false,
+      "model_fidelity_B": null,
+      "fidelity_matches_owner": null,
+      "joint_preference": "B",
+      "model_by_original_label": {
+        "A": {
+          "voice_score_1_to_5": 3.5,
+          "prose_comment": "Nearly identical to Y except for the opening clause: 'toward a belonging deeper than any group, one that doesn't ask you to give up being yourself.' This echoes the heading verbatim, which feels a little like a writer restating a title, and the appositive 'one that...' has a slightly composed, essayistic cadence. It also sits a bit stiffly against the casual register that follows ('a little different,' 'a lot less desperate,' 'your little one'). The abstract noun 'belonging' is then followed by 'you also belong there,' which makes a nice turn, though the repetition is slightly more engineered. Overall warm and conversational, with a small formal lift at the start."
+        },
+        "B": {
+          "voice_score_1_to_5": 4,
+          "prose_comment": "The opening, 'toward somewhere you belong that doesn't ask you to give up being yourself,' is plainer and more spoken, and it speaks directly to the reader, matching the 'you' address used throughout. It avoids repeating the heading's phrasing, so the paragraph doesn't feel like it is echoing its own title. The 'somewhere you belong' sets up the later 'you also belong there' more naturally, and the 'outside somewhere' memory lands cleanly. The rest (short fragments like 'Not all at once, though.', the quoted worry from the 'little one') is the same as X and reads as a warm, intimate guide voice."
+        }
+      },
+      "why": "The two differ only in the first sentence. Y's 'somewhere you belong' is more conversational, avoids echoing the heading, and flows into the later 'you also belong there' without extra scaffolding. X's 'a belonging deeper than any group, one that...' is fine, but its appositive and title-repeating phrasing feel slightly more constructed against the otherwise casual voice. The margin is small."
+    },
+    {
+      "case": "golden-forgiveness",
+      "owner_naturalness": "B",
+      "model_naturalness": "B",
+      "naturalness_matches_owner": true,
+      "owner_fidelity_B": null,
+      "model_fidelity_B": null,
+      "fidelity_matches_owner": null,
+      "joint_preference": "B",
+      "model_by_original_label": {
+        "B": {
+          "voice_score_1_to_5": 4,
+          "prose_comment": "One flowing sentence in a first-person plural voice. The stacked 'and' clauses feel like someone talking through a conflicted feeling, and the 'but' turn into 'one day we may find that we have forgiven them' has a gentle, discovered quality. 'They really did hurt us' is plainly spoken, and the 'really' sounds like real speech. The repeated 'still' is a bit loose, but it reads as natural emphasis rather than a pattern. The ending lands softly and personally."
+        },
+        "A": {
+          "voice_score_1_to_5": 2.5,
+          "prose_comment": "Two tidy, balanced sentences with abstract nouns ('the harm', 'the boundary', 'the person'). The parallel structure (X happened, Y still matters; Z is still accountable) reads like a checklist or a slogan. 'The person' is generic and detached, and 'on its own' is vague. The rhythm is clean but even and a little templated, with little sense of someone actually working through the feeling."
+        }
+      },
+      "why": "X sounds like a person speaking from inside the experience, with a connected, slightly run-on thought that builds to a quiet realization. Y is polished but impersonal and schematic, with evenly weighted short clauses that read as formulaic. Brevity and tidiness alone don't make Y more natural, and X's longer sentence earns its length through the way the thoughts connect."
+    }
+  ],
+  "new_Pangram_calls": 0,
+  "limitations": "four familiar hand-selected calibration cases; fresh reviewer contexts but same provider, not held-out population accuracy; owners prior direct judgments remain authoritative"
+}
