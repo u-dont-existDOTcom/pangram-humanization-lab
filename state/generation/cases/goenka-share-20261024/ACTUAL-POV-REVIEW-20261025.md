@@ -1,3 +1,7 @@
+# Superseded POV proposal — direct owner deletion controls
+
+**2026-10-25 direct owner decision:** Joel cut the entire proposed retreat-autonomy conclusion as **overcompletion**, explicitly *without replacement*. The exact deleted text, location and revised transition are saved in [`OWNER-CUT-RETREAT-OVERCLOSURE-20261025.md`](OWNER-CUT-RETREAT-OVERCLOSURE-20261025.md). This file now preserves *superseded pre-owner diagnostic options only*; none is an open owner decision and none is authorized article prose.
+
 # ACTUAL POV REQUIRED — Goenka/metta article demonstration
 
 Date: 2026-10-25. Status: **editorial advisory / NOT publication prose / no new Pangram submission**. This is the first application of Joel's new owner rule: flag generic, interchangeable advice when an actual authorial reason/view is needed, then give source-ranked possible viewpoints without pretending Joel has endorsed the model's inventions.
