@@ -1,0 +1,31 @@
+{
+  "schema": "fresh30-fixed-candidate-pool-v1",
+  "date": "2026-10-25",
+  "state": "FROZEN_DESIGN_NOT_EXECUTED",
+  "cases": [
+    "T16",
+    "T26"
+  ],
+  "reason": "One-example one-shot failed Pangram on both AI-starting families; a different composition and selection architecture is needed.",
+  "model": "Claude Sonnet, medium, restricted fresh CLI contexts, no tools/no session persistence",
+  "candidates": [
+    {
+      "code": "ATTENTION",
+      "approach": "Follow a reader-facing question genuinely present in source, changing thought movement rather than listing steps."
+    },
+    {
+      "code": "CONNECTED",
+      "approach": "Compose by relationships of actors and qualifications, not one-function-per-sentence advancement."
+    },
+    {
+      "code": "SPARSE",
+      "approach": "Minimum-dose revision; change only demonstrable wording defects and preserve existing grounded prose."
+    }
+  ],
+  "candidate_count_per_case": 3,
+  "selector": "Fresh separate source-aware editor; sees owner source and anonymized candidates but no prompts, detector results or previous arms. Can choose NONE.",
+  "outcome": "Full semantic and rhetorical fidelity first; naturalness second. Save every first candidate, costs and failure. No Pangram calls.",
+  "n_not_powered": 2,
+  "same_provider_not_owner_independence": true,
+  "frozen_before_outputs": true
+}
