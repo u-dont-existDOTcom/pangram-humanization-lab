@@ -1,0 +1,193 @@
+{
+  "style": [
+    {
+      "id": "S01",
+      "owner_style_preference": "B",
+      "label_strength": "qualified/small preference",
+      "both_still_AI_like": true,
+      "owner_label_excerpt": "B looks a bit less AI, but both look AI.",
+      "label_source_repository": "pangram-humanization-lab",
+      "label_source_path": "state/generation/OWNER-CALIBRATION-MARCHING-EFFICIENCY-20260917.md",
+      "label_source_ref": "54944ff965831b299d222bee107d5b780498a16f",
+      "literal_question_source_path": "articles/inner-child-therapy/experiments/EPISODE-008-R17-OWNER-VISUAL-CALIBRATION-QUESTIONS-20260917.md",
+      "literal_question_source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "not_pangram_label": true
+    },
+    {
+      "id": "S02",
+      "owner_style_preference": "B",
+      "label_strength": "qualified/small preference",
+      "both_still_AI_like": true,
+      "owner_label_excerpt": "same answer as #1",
+      "label_source_repository": "pangram-humanization-lab",
+      "label_source_path": "state/generation/OWNER-CALIBRATION-MARCHING-EFFICIENCY-20260917.md",
+      "label_source_ref": "54944ff965831b299d222bee107d5b780498a16f",
+      "literal_question_source_path": "articles/inner-child-therapy/experiments/EPISODE-008-R17-OWNER-VISUAL-CALIBRATION-QUESTIONS-20260917.md",
+      "literal_question_source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "not_pangram_label": true
+    },
+    {
+      "id": "S03",
+      "owner_style_preference": "A",
+      "label_strength": "explicit preference",
+      "both_still_AI_like": false,
+      "owner_label_excerpt": "more AI, because it is compact polished and everything has its function.",
+      "label_source_repository": "pangram-humanization-lab",
+      "label_source_path": "state/generation/OWNER-CALIBRATION-MARCHING-EFFICIENCY-20260917.md",
+      "label_source_ref": "54944ff965831b299d222bee107d5b780498a16f",
+      "literal_question_source_path": "articles/inner-child-therapy/experiments/EPISODE-008-R17-OWNER-VISUAL-CALIBRATION-QUESTIONS-20260917.md",
+      "literal_question_source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "not_pangram_label": true
+    },
+    {
+      "id": "S04",
+      "owner_style_preference": "A",
+      "label_strength": "explicit preference",
+      "both_still_AI_like": false,
+      "owner_label_excerpt": "B looks much more AI",
+      "label_source_repository": "pangram-humanization-lab",
+      "label_source_path": "state/generation/OWNER-CALIBRATION-MARCHING-EFFICIENCY-20260917.md",
+      "label_source_ref": "54944ff965831b299d222bee107d5b780498a16f",
+      "literal_question_source_path": "articles/inner-child-therapy/experiments/EPISODE-008-R17-OWNER-VISUAL-CALIBRATION-QUESTIONS-20260917.md",
+      "literal_question_source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "not_pangram_label": true
+    },
+    {
+      "id": "S05",
+      "owner_style_preference": "A",
+      "label_strength": "explicit comparative style reason alongside owner function explanation",
+      "both_still_AI_like": null,
+      "owner_label_excerpt": "h5. b (i wouldn't want someone to think the image is enough lol, plus this sounds more human)",
+      "label_source_repository": "joel-articles",
+      "label_source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "label_source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "literal_question_source_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "literal_question_source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "not_pangram_label": true
+    }
+  ],
+  "function": [
+    {
+      "id": "F02",
+      "owner_choice": "CUT",
+      "owner_answer_verbatim": "h2. a wow i can't believe i wrote tha... oh that was from GPT, i humanized it but didn't notice how jarring that last stupid sentence was",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F07",
+      "owner_choice": "CUT",
+      "owner_answer_verbatim": "h7. a",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F12",
+      "owner_choice": "CUT",
+      "owner_answer_verbatim": "h12 a",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F14",
+      "owner_choice": "CUT",
+      "owner_answer_verbatim": "h14 a it doesn't tell the reader the detective work can wait, that's what the prior sentence said..",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F17",
+      "owner_choice": "CUT",
+      "owner_answer_verbatim": "h17 a",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F22",
+      "owner_choice": "CUT",
+      "owner_answer_verbatim": "h22 a but \"There are just\" should have been \"These are just\"",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F04",
+      "owner_choice": "KEEP",
+      "owner_answer_verbatim": "h4. b it wouldn't even make sense anymore after cutting that, please",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F10",
+      "owner_choice": "KEEP",
+      "owner_answer_verbatim": "h10 b it's an objection that so many people have raised to me lololo",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F19",
+      "owner_choice": "KEEP",
+      "owner_answer_verbatim": "h19 b",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F21",
+      "owner_choice": "KEEP",
+      "owner_answer_verbatim": "h21 b yes it purposefully does take back because people may not just listen to my commands, they have their own ideas",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F25",
+      "owner_choice": "KEEP",
+      "owner_answer_verbatim": "h25. b cutting that could be sacriligeous",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    },
+    {
+      "id": "F28",
+      "owner_choice": "KEEP",
+      "owner_answer_verbatim": "h28. b people often do fight too many battles that's why i say when feasible, like choose ur battles bro",
+      "label_type": "editorial keep/cut decision, NOT a separate binary fact of semantic equivalence",
+      "source_path": "articles/inner-child-therapy/experiments/t106-answers/JOEL-20261024-2255.md",
+      "source_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0",
+      "question_path": "articles/inner-child-therapy/experiments/t105-readers-edit/IDEAS.md",
+      "question_ref": "0412b53702c82b415a8a91d3e59a632998ec37c0"
+    }
+  ],
+  "access": "Scoring/curation only. Never include this file or owner answers in the evaluator prompt.",
+  "Pangram_calls": 0
+}
