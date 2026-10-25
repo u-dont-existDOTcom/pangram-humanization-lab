@@ -1,0 +1,44 @@
+{
+  "case": "T26",
+  "stage": "CANDIDATE_CONNECTED",
+  "result": "This is where the familiar talk of widening your \"window of tolerance\" becomes practical: titration, pendulation, and orientation each ask the same question, which is whether you can touch something difficult in a small enough dose, notice what happens, and return. Building these capacities may take some people three to six months of focused effort, and severe developmental trauma can take longer, but I would treat that range as a rough guide rather than a countdown. If you are stable and have one clear target, you may be ready for focused trauma work much sooner.",
+  "result_sha256": "673e78eca4991319306cccae1425b380cc7a82712eea26a14a020dc47c3a6594",
+  "prompt_sha256": "ea5330b233c96d1a4a8f567aed3a08bab73529cb00dccd027f8478cdbe8eee35",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 914,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 161,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 914,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 161,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 914,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 914
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.00527,
+  "returncode": 0,
+  "elapsed": 3.28
+}

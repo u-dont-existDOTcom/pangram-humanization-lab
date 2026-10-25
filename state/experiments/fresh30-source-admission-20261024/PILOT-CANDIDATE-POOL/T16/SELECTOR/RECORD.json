@@ -1,0 +1,44 @@
+{
+  "case": "T16",
+  "stage": "SELECTOR",
+  "result": "```json\n{\n  \"per_candidate\": {\n    \"X\": {\n      \"faithful_boolean\": true,\n      \"material_losses\": [],\n      \"added_claims\": [],\n      \"naturalness_1_to_5\": 4,\n      \"explanation\": \"Keeps every unit: no need for a trustworthy history, a remembered or imagined caring adult, the question applied to actual history, limitations and options, the least cruel believable response, and trying one usable thing instead of repeating the exercise. Wording is slightly clipped but accurate.\"\n    },\n    \"Y\": {\n      \"faithful_boolean\": false,\n      \"material_losses\": [],\n      \"added_claims\": [\n        \"\\\"sincerely means\\\" adds a sincerity qualifier to the imagined adult's intention\",\n        \"\\\"honestly believe\\\" adds an honesty qualifier to the least cruel response\",\n        \"\\\"real\\\" and \\\"actually\\\" slightly shift the emphasis on history and options\"\n      ],\n      \"naturalness_1_to_5\": 4,\n      \"explanation\": \"All the units are present and the prose reads well. The added qualifiers (sincerely, honestly) change the exact qualification of the source. The shifts are small but real.\"\n    },\n    \"Z\": {\n      \"faithful_boolean\": false,\n      \"material_losses\": [],\n      \"added_claims\": [\n        \"Opens with a hypothetical reader \\\"may wonder how to borrow care\\\" and answers it, which the source does not do\",\n        \"\\\"the answer is that you can still do it\\\" changes the framing from a statement that something is not needed to a Q&A\"\n      ],\n      \"naturalness_1_to_5\": 3,\n      \"explanation\": \"The core instructions are intact, but the invented opening framing adds content and changes the rhetorical stance. The opening is also wordy.\"\n    },\n    \"W\": {\n      \"faithful_boolean\": true,\n      \"material_losses\": [],\n      \"added_claims\": [],\n      \"naturalness_1_to_5\": 5,\n      \"explanation\": \"Fully faithful. \\\"Even if your history is not full of trustworthy people\\\" preserves the meaning of the source's opening. Every later unit and qualification is exact, and the prose flows naturally.\"\n    },\n    \"V\": {\n      \"faithful_boolean\": true,\n      \"material_losses\": [],\n      \"added_claims\": [],\n      \"naturalness_1_to_5\": 4,\n      \"explanation\": \"Closest to the source in structure and wording, with all units and qualifications intact. \\\"And then ask\\\" is a minor harmless addition.\"\n    }\n  },\n  \"best_joint_choice\": \"W\",\n  \"best_naturalness\": \"W\",\n  \"reason\": \"X, W and V are all faithful to every unit and qualification. Y adds sincerity and honesty qualifiers, and Z adds an invented framing. W is the most natural of the faithful candidates and keeps the source's decision boundaries exactly.\"\n}\n```",
+  "result_sha256": "356be520bf50db5db75c0fdb73009dc725c33b1db852cfe616ab0c0040080d4c",
+  "prompt_sha256": "de4ec71ac69e8bc6ed016321782b6db4e155c953c4ef70994c2adf437fec9463",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1644,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1490,
+    "output_tokens_details": {
+      "thinking_tokens": 551
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1644,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1490,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1644,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1644
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.02148,
+  "returncode": 0,
+  "elapsed": 12.39
+}

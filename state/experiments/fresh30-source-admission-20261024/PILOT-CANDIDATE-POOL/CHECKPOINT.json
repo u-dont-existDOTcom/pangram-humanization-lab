@@ -1,0 +1,90 @@
+{
+  "schema": "fixed-candidate-pool-v1",
+  "cases": [
+    {
+      "id": "T16",
+      "target_source_sha256": "e4cc24b26141051ff42c4b53f1790ccd3ca7338497903dcd6a195ecca030a86c",
+      "candidates": [
+        {
+          "id": "old_A",
+          "sha256": "15ea48b9751c9ff5a62f3799d81a79e21a7b2964f9584c099061ab13e3ee6657",
+          "valid": true
+        },
+        {
+          "id": "old_B",
+          "sha256": "e4b1b31acafeb6686b93f1c3ef278fd172618b7d030d2fabc5c3a0df50971e2d",
+          "valid": true
+        },
+        {
+          "id": "ATTENTION",
+          "sha256": "85be4daf80bceedf047fcf0f95e5e4a3178dbda8ef72110aa8d15e84254b95ed",
+          "valid": true
+        },
+        {
+          "id": "CONNECTED",
+          "sha256": "b66a1a92dc6f61de52c5fa4fb7f3871a1161e265359112c7bdb1e2bb99cb4bc1",
+          "valid": true
+        },
+        {
+          "id": "SPARSE",
+          "sha256": "856244197092d74bb0f68ef03498626a49d3904c3d0e02b0c927ed42ef80d126",
+          "valid": true
+        }
+      ],
+      "anonymous_mapping": {
+        "X": "SPARSE",
+        "Y": "old_B",
+        "Z": "ATTENTION",
+        "W": "old_A",
+        "V": "CONNECTED"
+      },
+      "selector_output_sha256": "356be520bf50db5db75c0fdb73009dc725c33b1db852cfe616ab0c0040080d4c",
+      "selector_available": true,
+      "no_Pangram_calls": true
+    },
+    {
+      "id": "T26",
+      "target_source_sha256": "27f7fc10e34c730aac2fa89605550433e13ea5a72566885ecc881bbc0bdb8f9f",
+      "candidates": [
+        {
+          "id": "old_A",
+          "sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+          "valid": true
+        },
+        {
+          "id": "old_B",
+          "sha256": "ef0dcb085804c7b182ad5d9fe469f48c1328419f6b005e21121f2009d082bc0b",
+          "valid": true
+        },
+        {
+          "id": "ATTENTION",
+          "sha256": "c4ffa1325a111c5bc264786629589be453201ba5325e44241d9e2204815502ab",
+          "valid": true
+        },
+        {
+          "id": "CONNECTED",
+          "sha256": "673e78eca4991319306cccae1425b380cc7a82712eea26a14a020dc47c3a6594",
+          "valid": true
+        },
+        {
+          "id": "SPARSE",
+          "sha256": "c7410faef0c4c8e4185ab0e46c709dd3d4892fae41397f009be196c9cea16eb8",
+          "valid": true
+        }
+      ],
+      "anonymous_mapping": {
+        "X": "old_A",
+        "Y": "CONNECTED",
+        "Z": "old_B",
+        "W": "SPARSE",
+        "V": "ATTENTION"
+      },
+      "selector_output_sha256": "9bb3878167a4ed7b76c5edf6363bcb0565b9b65bfc0815c6d1227fa276240c1e",
+      "selector_available": true,
+      "no_Pangram_calls": true
+    }
+  ],
+  "status": "FIRST_ATTEMPTS_COMPLETE",
+  "no_Pangram_calls": true,
+  "owner_approval": false
+}

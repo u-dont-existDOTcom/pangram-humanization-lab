@@ -1,0 +1,44 @@
+{
+  "case": "T26",
+  "stage": "SELECTOR",
+  "result": "```json\n{\n  \"per_candidate\": {\n    \"X\": {\n      \"faithful_boolean\": true,\n      \"material_losses\": [],\n      \"added_claims\": [],\n      \"naturalness_1_to_5\": 3,\n      \"explanation\": \"Carries every unit: the practical turn on the window of tolerance, the three methods asking one question (small dose, notice, return), the 3-6 month 'mainly building' range, severe developmental trauma taking longer, the guide-not-countdown qualification, and the stable/one-target/sooner condition. 'Rough guide' is a reasonable rendering of 'orientation'. The wording stays close to the source and reads slightly formal.\"\n    },\n    \"Y\": {\n      \"faithful_boolean\": false,\n      \"material_losses\": [\n        \"'mainly building' becomes 'focused effort', which loses the point that the time goes mostly to building capacities\",\n        \"The 'some people may spend' framing is turned into 'may take some people', a small shift\"\n      ],\n      \"added_claims\": [\n        \"'focused effort' implies an intensity of effort the source does not state\"\n      ],\n      \"naturalness_1_to_5\": 3,\n      \"explanation\": \"Mostly sound and the decision boundary is kept. The change to 'focused effort' alters the meaning of the time-range claim, and it also echoes 'focused trauma work' later in the passage. The long run-on sentences are somewhat stiff.\"\n    },\n    \"Z\": {\n      \"faithful_boolean\": true,\n      \"material_losses\": [],\n      \"added_claims\": [\n        \"'to handle' is a slight gloss on the dose size\",\n        \"'But' adds a contrast the source does not mark\"\n      ],\n      \"naturalness_1_to_5\": 4,\n      \"explanation\": \"All units and qualifications are kept: the range, the longer time for severe trauma, the guide-not-countdown framing, and the stable/one-target condition. The additions are minor and do not change the meaning. It reads the most naturally of the set.\"\n    },\n    \"W\": {\n      \"faithful_boolean\": true,\n      \"material_losses\": [],\n      \"added_claims\": [],\n      \"naturalness_1_to_5\": 3,\n      \"explanation\": \"Identical to X and equally faithful.\"\n    },\n    \"V\": {\n      \"faithful_boolean\": false,\n      \"material_losses\": [],\n      \"added_claims\": [\n        \"Opening question 'How do you know whether you're ready to do the harder work?' is not in the source\",\n        \"'How long it takes to build that capacity varies' is an added sentence that duplicates the later range\"\n      ],\n      \"naturalness_1_to_5\": 3,\n      \"explanation\": \"The core text matches X, but the added opening question and the extra sentence introduce material absent from the source. They also change the passage's framing, so it fails on fidelity.\"\n    }\n  },\n  \"best_joint_choice\": \"X\",\n  \"best_naturalness\": \"Z\",\n  \"reason\": \"X, W and Z are all faithful. X and W are identical and keep the source's structure and qualifications most exactly, so X is the best joint choice. Z is slightly more natural, with only small harmless glosses. Y changes 'mainly building' to 'focused effort', and V adds unsourced framing, so both fail on fidelity.\"\n}\n```",
+  "result_sha256": "9bb3878167a4ed7b76c5edf6363bcb0565b9b65bfc0815c6d1227fa276240c1e",
+  "prompt_sha256": "3c83ad4e4f1eae29edf09996a95bb02d038e80a32a48429e733c037010f4d7ea",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1807,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1398,
+    "output_tokens_details": {
+      "thinking_tokens": 332
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1807,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1398,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1807,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1807
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.021212,
+  "returncode": 0,
+  "elapsed": 11.42
+}
