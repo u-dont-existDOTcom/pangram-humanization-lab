@@ -1,0 +1,34 @@
+{
+  "report": "REPORT.md",
+  "source_input": "BLIND-INPUTS.json",
+  "owner_labels": "GOLD-KEY.json",
+  "model_results": "RESULTS.json",
+  "context_results": "CONTEXT-RESULTS.json",
+  "factual_counts": {
+    "style_cases": 5,
+    "style_trials": 10,
+    "numeric_rank_trial_agreement": 8,
+    "stable_both_order_owner_matches": 4,
+    "at_least_one_order_owner_matches": 4,
+    "stable_order_rankings": 4,
+    "function_cases": 12,
+    "function_owner_agreement": 3,
+    "owner_keep": 6,
+    "owner_cut": 6,
+    "model_keep": 3,
+    "model_cut": 6,
+    "keep_recall_numerator": 1,
+    "cut_recall_numerator": 2
+  },
+  "context_counts": {
+    "n": 6,
+    "now_matches_owner": 3,
+    "unchanged_decision": 3
+  },
+  "claim_limits": [
+    "four consistently matched comparisons, not independently established 80% accuracy",
+    "six context-selected failures, not a twelve-case full-context benchmark",
+    "owner preference controls these exact cases; no article changes"
+  ],
+  "no_Pangram_calls": true
+}
