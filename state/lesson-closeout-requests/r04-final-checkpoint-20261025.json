@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "Final r04 page correctly labels superseded candidates versus new wording; all five candidate and exact owner text identities remain unchanged. Browser tests repeated on final page bytes.",
+  "ledger_entry_ids": [
+    "L-d25358c5cd-01"
+  ],
+  "processed_at_utc": "2026-10-25T18:56:15.756264+00:00",
+  "promoted_to": [],
+  "reason": "Final delivery identity update only; existing owner correction and editorial limits remain unchanged.",
   "request_id": "r04-final-checkpoint-20261025",
+  "schema_version": 1,
   "source_path": "state/experiments/fresh30-source-admission-20261024/CURRENT-STATE.md",
   "source_ref": "4350c6466e7c844ba12ad8ccfc244164a19a0059",
   "source_sha256": "d25358c5cdacbfd3387122dab81fb80b8951b402e28a492681c9ae7067899cb8",
-  "finding": "Final r04 page correctly labels superseded candidates versus new wording; all five candidate and exact owner text identities remain unchanged. Browser tests repeated on final page bytes.",
-  "disposition": "no-new-lesson",
-  "reason": "Final delivery identity update only; existing owner correction and editorial limits remain unchanged.",
-  "promoted_to": []
+  "status": "processed"
 }

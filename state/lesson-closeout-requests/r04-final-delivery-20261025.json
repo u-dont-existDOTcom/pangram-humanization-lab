@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "Final r04 page correctly labels superseded candidates versus new wording; all five candidate and exact owner text identities remain unchanged. Browser tests repeated on final page bytes.",
+  "ledger_entry_ids": [
+    "L-58b9c43c23-01"
+  ],
+  "processed_at_utc": "2026-10-25T18:56:15.773573+00:00",
+  "promoted_to": [],
+  "reason": "Final delivery identity update only; existing owner correction and editorial limits remain unchanged.",
   "request_id": "r04-final-delivery-20261025",
+  "schema_version": 1,
   "source_path": "state/experiments/fresh30-source-admission-20261024/WEAK-PROSE-ROUTE-20261025/COMMENTABLE-r04/FIVE-REPAIRS.json",
   "source_ref": "02e99dfcfdbdea2bab0c661b5af8587efce57d2e",
   "source_sha256": "58b9c43c2333beece5423771af4e7dd33769e239f26bc9535b0a70cee6f79a66",
-  "finding": "Final r04 page correctly labels superseded candidates versus new wording; all five candidate and exact owner text identities remain unchanged. Browser tests repeated on final page bytes.",
-  "disposition": "no-new-lesson",
-  "reason": "Final delivery identity update only; existing owner correction and editorial limits remain unchanged.",
-  "promoted_to": []
+  "status": "processed"
 }
