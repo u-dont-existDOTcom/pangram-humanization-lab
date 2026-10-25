@@ -1,5 +1,10 @@
 # Fresh 30-family source admission and example allocation
 
+## Measured-results checkpoint — 2026-10-25
+
+The source-preparation text below is historical. Read FINAL-RESEARCH-REPORT.md and CURRENT-STATE.md for the completed 30-family execution, detector measurements, alternative candidate pool and failed evaluator calibration. Raw scores remain unchanged; do not treat the old model preference counts as owner-calibrated quality. No new Pangram call occurred in the final calibration/closeout continuation.
+
+
 2026-10-24 · Joel humanization research · **SOURCE PREPARATION COMPLETE / WRITER COMPARISON NOT RUN**.
 
 ## Owner objective
