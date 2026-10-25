@@ -8,7 +8,7 @@
 |---|---|---|
 | A — wanting suffering to end | **UNRESOLVED**, distinct authorial claim must not be cut by analogy with E. One conversational A candidate stopped after fresh fidelity/AI-rhythm audit, `A-METTA-SURGICAL-RESULT-20261025.md`. | Original orange in shared full article; **no new A submission** |
 | B — Buddha/metta timing | Owner prefers “I’d say ...” and has reported a Human revision with “loving-kindness”; exact alternative not supplied here. Fact-corrected model candidate B3 did not pass; no verified current B owner text. | B earlier candidate Human 99.45% in one excerpt; B3 fact-corrected candidate 99.94% **AI-assisted**, different exact input |
-| C — Oliver | **OWNER CUT ACCEPTED**: the appended “not a recipe you have to follow” disclaimer removed. New sentence preserved in `OWNER-OLIVER-CUT-20261025.md`. | Old longer integrated candidate 75% Human / 25% AI with red ending; **short owner version not checked** |
+| C — Oliver | **OWNER CUT ACCEPTED**: appended “not a recipe you have to follow” disclaimer removed. New sentence preserved in `OWNER-OLIVER-CUT-20261025.md`. | **Owner-shortened 67-word context: 100% Human, Low document confidence**, Pangram 4.1 exact History match SHA `e2b04aa271251f877def57fd8cb04c493d3c4128141ce0f22afb976057277350`; previous longer version had been 75% Human / 25% AI. |
 | D — retreat alternatives | **OWNER REAUTHORED** and Pangram Human as user reported. Corrected question mark, no other words altered, in `OWNER-RETREAT-PARAGRAPH-CURRENT-20261025.txt`. | Current owner result **owner-reported**, exact History URL not independently located |
 | E — retreat autonomy/conclusion | **OWNER CUT**, no replacement. Earlier `ACTUAL-POV-REVIEW-20261025.md` suggestions now superseded. | Original E red; deletion has **no independent current-section Pangram result** |
 | F — survivor-account introduction | **OWNER SHORTENED**, previous incidence caveat removed knowingly and meaning disposition recorded. | 107-word contextual Pangram 4.1 **100% Human, High**, exact History matched |
@@ -123,3 +123,8 @@ The user’s prior Oliver deletion (remove the canned “not a recipe...” tail
 ## Owner POV workflow, 2026-10-25:
 
 The question-mark-corrected, owner-preferred retreat wording is stored in `OWNER-RETREAT-PARAGRAPH-CURRENT-20261025.txt`; Joel reports it still passes Pangram, without an exact bound History URL. `ACTUAL-POV-REVIEW-20261025.md` flags generic advice and distinguishes supported positions, article-hinted interpretations, and new author choices. The older literal source is retained. Do not promote a hypothesis or rewrite the article master.
+
+### 2026-10-25 C owner-cut validation — updated exact evidence
+
+The only change in the original local Oliver context is Joel's removal of the unwanted overcompletion suffix. The adjacent green anecdote and following transition are unchanged, and the tested complete 67-whitespace-word excerpt is frozen in `C-OLIVER-OWNER-CUT-EXCERPT-20261025.txt` (SHA-256 `e2b04aa271251f877def57fd8cb04c493d3c4128141ce0f22afb976057277350`). Pangram 4.1 exact History readout `C-OWNER-CUT-EXACT-PANGRAM-HISTORY-20261025.json`: `fraction_human=0.9999999404` (~100% Human), document confidence **Low** because of short text; all sentences appeared green in the captured UI. This is a local boundary pass, **not** full article certification. The verified user-facing History link was supplied in the conversation, but no account-specific History identifier is written to this GitHub record. No other sentence was rewritten to chase this result.
+
