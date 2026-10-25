@@ -1,5 +1,11 @@
 # Owner-linked Goenka/metta Pangram report — local repairs and GPT-method results
 
+## 2026-10-25 continuation — A remains unresolved; delivery gate blocks both new approaches
+
+New exact continuation: [A-METTA-20261025-POST-GATE-CONTINUATION-NEGATIVE.md](A-METTA-20261025-POST-GATE-CONTINUATION-NEGATIVE.md).
+
+After the merged owner-delivery gate, a standalone Claude Opus writer generated another generic `helps us keep X because otherwise Y` construction; it was rejected before Pangram. A different, source-led two-sentence attempt got mechanical REVIEW (B7 and D9), and three genuinely separate readers returned Sonnet FAIL 2/5, Haiku PASS 4/5, and Opus preservation FAIL. The latter specifically found that mettā's causal role in preventing the wish becoming desperate/fearful was lost. The executable delivery check returned BLOCKED; no owner-facing text was exported or Pangram credit spent. The original A sentence and the author's confirmed goodwill-versus-forced-outcome intention remain authoritative. Do not restart generic rewrite attempts or ask Joel to repeat that meaning; next useful input is an author-led natural line or a truly different source-grounded realization.
+
 ## CURRENT OWNER STATE — 2026-10-25 after explicit cut
 
 **Direct owner correction supersedes earlier E options:** remove the entire paragraph **“A trauma-informed retreat shouldn’t turn continuing into a test of character. Your path is yours to shape.”** and **do not replace it**. Joel calls it overcompletion. Exact authorized deletion, preserve source, placement and rationale: `OWNER-CUT-RETREAT-OVERCLOSURE-20261025.md`. A copyable **local ending** combining the owner-corrected D paragraph, original green for-profit criticism, the E deletion and original green sign-off (with sign-off spacing verified): `RETREAT-ENDING-OWNER-CUT-20261025.txt`. This is a research review excerpt, **not the canonical article master**.
