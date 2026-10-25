@@ -6,6 +6,12 @@
 
 > But if you know that sitting with intense internal material can destabilize you, there are gentler ways to explore what meditation can do. I’d start with metta. If that felt steady and I still wanted more, maybe trauma-informed mindfulness or Mindfulness-Based Stress Reduction with a therapist. If I still wanted a retreat after that, I’d ask Plum Village, or any other retreat I was considering one thing: what happens if I start destabilizing? Is pausing the practice treated as an ordinary option?
 
+## 2026-10-25 owner punctuation approval — newest local text
+
+Joel directly instructed: **“yes fix the question mark in that psg. still tests human with it.”** The corrected, current **local owner-preferred passage** is stored verbatim in [`OWNER-RETREAT-PARAGRAPH-CURRENT-20261025.txt`](OWNER-RETREAT-PARAGRAPH-CURRENT-20261025.txt). The only copy edits relative to the literal owner text below are `destabilizing.` → `destabilizing?` inside the quoted question and removal of a redundant trailing quotation mark. The thought, wording and other punctuation remain unchanged.
+
+Joel reports that this revised version **still passes Pangram as Human**. This is **owner-reported detector evidence, not independently authenticated exact History certification**; no numeric confidence or direct History URL was supplied or invented. Do not reuse the score of any earlier model candidate. The historical uncorrected quotation below remains preserved as evidence but is *not* the current owner-preferred publication wording.
+
 ## Owner's exact new text — preserve verbatim including punctuation
 
 > But if you know that sitting with intense internal material can destabilize you, explore what meditation can do more gently first. Metta would be my starting point, then trauma-informed mindfulness or Mindfulness-Based Stress Reduction with a therapist if metta felt steady and you're moving on gaining more insight or self-awareness. A retreat can give a nice practice environment if it's set up well, but before choosing Plum Village, or another monastery retreat, ask "What would happen if I started destabilizing. Is pausing the practice an acceptable option there?""
