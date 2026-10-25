@@ -1,0 +1,46 @@
+{
+  "case": "T26",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "d1b130fb86a3bff79412dc07eeae44dc3124a7563029ee2421abdc8426457fb4",
+  "elapsed_s": 6.48,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material content is preserved: the window-of-tolerance framing, the three techniques, the question of touching something difficult in a small dose, noticing, and returning, the three-to-six-month range with 'some people may', the longer timeline for severe developmental trauma, the 'not a countdown' qualification, and the conditional about being stable with one clear target and possibly being ready much sooner. One minor shift: 'orientation' became 'a rough guide'. This loses the echo of the technique term 'orientation' and slightly stresses approximation. The advice that the timeframe is not a deadline is intact, so I did not count it as material. Other changes ('usual'→'familiar', 'expanding'→'widening', 'all ways of asking'→'each ask the same question', 'come back'→'return') are stylistic.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1006,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 584,
+    "output_tokens_details": {
+      "thinking_tokens": 265
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1006,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 584,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1006,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1006
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.009867999999999998,
+  "is_error": false,
+  "result_sha256": "f2e5cf83294099c19c6b60f8062c198988ce6c24640cfa04dd8f2f07878616fe"
+}

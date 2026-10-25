@@ -1,0 +1,46 @@
+{
+  "case": "T30",
+  "stage": "baseline",
+  "prompt_sha256": "aea3387a6e959a49f76d7073fbaba49533e7bf6952cee9a9d2054f742e318f3e",
+  "elapsed_s": 3.42,
+  "return_code": 0,
+  "error": null,
+  "result": "A small body of research does not show that a method is useless, and a large body of research does not show which therapy your own nervous system needs first. I would begin from first principles, look to people whose patterns resemble mine, change one thing at a time where possible, and keep asking the plain question of whether I am actually doing better. Go slowly enough to see what the practice really did, and do not mistake intensity for healing.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 809,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 123,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 809,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 123,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 809,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 809
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.00447,
+  "is_error": false,
+  "result_sha256": "66ee639e2f08f3ceb68c417bbaa7421f6c761bb8c2bc91190cf1ca4e5be0c11f"
+}

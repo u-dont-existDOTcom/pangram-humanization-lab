@@ -1,0 +1,46 @@
+{
+  "case": "T29",
+  "stage": "arm_A",
+  "prompt_sha256": "248d98d6e0cd0e9c21f7fed562f13bba1523f934d86f3c8b5bbde9b4ac758778",
+  "elapsed_s": 3.55,
+  "return_code": 0,
+  "error": null,
+  "result": "Brainspotting can fall on either side of this boundary. A resource-oriented or carefully titrated session can prepare you for deeper work, whereas entering highly charged developmental material is a different dose. With diffuse relational trauma, I sometimes think EMDR fits better after at least some inner-child reparenting, since access to a Nurturer and Protector gives you something to hold the material with. A stable person working on a single discrete event may not need a long preliminary sequence at all.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 843,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 153,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 843,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 153,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 843,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 843
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004906000000000001,
+  "is_error": false,
+  "result_sha256": "b3df9b33025cd2a1e64f33f9cdfa7e39120f41a29b451ffa16e81a00c25073d3"
+}

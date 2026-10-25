@@ -1,0 +1,46 @@
+{
+  "case": "T30",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "ba3e8ea37b3d01507e084802c3629cfcd98f169569c308d3f45c48f185f2c305",
+  "elapsed_s": 4.5,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"Draft preserves all material content. 'Thin research literature' -> 'small body of research' and 'large research literature' -> 'large body of research' are equivalent. 'Does not prove' -> 'does not show' is a negligible shift in wording with no meaningful change in certainty. 'Pay attention to people with patterns similar to mine' -> 'look to people whose patterns resemble mine' keeps the same advice. 'Unglamorous question' -> 'plain question' slightly alters tone but keeps the rhetorical function. 'Actually doing better' is preserved. 'Confuse' -> 'mistake' is a synonym. The advice to go slowly, change one thing at a time where possible, and not equate intensity with healing is intact.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 950,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 302,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 950,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 302,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 950,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 950
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.006824,
+  "is_error": false,
+  "result_sha256": "00cda496dbe952315f7481de8f4e6b9dc033026aab8068e2d47a17e9a8acac07"
+}

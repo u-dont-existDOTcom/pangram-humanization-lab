@@ -1,0 +1,46 @@
+{
+  "case": "T27",
+  "stage": "arm_A",
+  "prompt_sha256": "9490e841bbea5beab37d0d798fcfd10f638be170710fb603b93fb5fd2219272d",
+  "elapsed_s": 3.08,
+  "return_code": 0,
+  "error": null,
+  "result": "In this case, the purpose is daily autonomic discharge and energetic decompression. In Job 1, shaking stays mild and exploratory, but here it can become a regular discharge practice, provided you can still stop, orient, and settle afterward. A regular practice might last 10–45 minutes. I see the use cases as chronic freeze, non-verbal emotional processing, stress that builds up between therapy sessions, and leftover activation after a deeper session.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 837,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 147,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 837,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 147,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 837,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 837
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004822,
+  "is_error": false,
+  "result_sha256": "7258f5f127f3eb2d1100b22eaacbc5458fed49fe2d787f0f3eec10515fbf6c26"
+}

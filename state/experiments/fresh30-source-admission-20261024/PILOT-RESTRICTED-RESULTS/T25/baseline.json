@@ -1,0 +1,46 @@
+{
+  "case": "T25",
+  "stage": "baseline",
+  "prompt_sha256": "aa9bca863d19ec79b76987df2d352d1b0ec42576fb7e95cbf5bbb17dda250591",
+  "elapsed_s": 3.4,
+  "return_code": 0,
+  "error": null,
+  "result": "The earlier lucid-dream comparison also shapes my understanding of the seven-life limit said to apply to the stream-enterer. Once a dream is recognized as a dream, it naturally becomes hard to stay caught in it, much as it is hard to remain absorbed in a movie once the lights come on and you remember you are in a theater. Anyone who has had a lucid dream will know what I mean.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 817,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 129,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 817,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 129,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 817,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 817
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.004562,
+  "is_error": false,
+  "result_sha256": "24e8f9db656057e349404dba5ebe9f2adc1acb8b558f36345f2d76d537d75237"
+}

@@ -1,0 +1,46 @@
+{
+  "case": "T24",
+  "stage": "arm_B",
+  "prompt_sha256": "42018f19fcb98d4a3bc897a8d11bf73d3817bd6cc17f6c8ba42ee7c7e2e32692",
+  "elapsed_s": 3.47,
+  "return_code": 0,
+  "error": null,
+  "result": "Most of the time I still operate through a largely unified body, a single present scene, and some degree of witnessing, much as other people mostly do. Perfectly independent finger-flows and a cloud of separate colors wouldn't help much when I'm using a shovel. What differs from before is that I no longer take this unified sense of self to be anything more than a poor approximation of reality. Nature assembled it for survival, so that life could reproduce, and so on, and I understand that now.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1171,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 149,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1171,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 149,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1171,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1171
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.0061779999999999995,
+  "is_error": false,
+  "result_sha256": "2fb15a18fdf2a4e832a1e7fad73d99500c012715e490170f0d1db4248fcebcda"
+}
