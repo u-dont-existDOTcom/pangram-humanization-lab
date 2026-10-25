@@ -1,0 +1,25 @@
+{
+  "schema": "claim-check-reconciliation-v1",
+  "claim_checker_reported_supported": true,
+  "checker_had_sources_not_producer_reasoning": true,
+  "limitations_preserved": [
+    "5 cases, 10 dependent order trials; limited curated comparison",
+    "S05 explicit words this sounds more human are combined with a functional reason",
+    "Full-section six selected post-failure; not twelve-case full-context accuracy"
+  ],
+  "deterministic_followup": {
+    "result": "PASS",
+    "new_style_comparisons": 5,
+    "style_order_trials": 10,
+    "stable_owner_style_matches": 4,
+    "new_function_cases": 12,
+    "initial_owner_function_agreement": 3,
+    "context_diagnostic_cases": 6,
+    "context_corrected": 3,
+    "verified_prompt_response_pairs": 28,
+    "new_Pangram_calls": 0
+  },
+  "golden_and_prior_four_exact_text_overlap": 0,
+  "changed_scope": "this experiment folder, existing experiment recovery checkpoint and upcoming exact-hash lesson ledger only; no article master or production rules changed",
+  "source_transparency": "claim checker did not inspect output files; prompt/result hash assertions verified by separate read-only script"
+}
