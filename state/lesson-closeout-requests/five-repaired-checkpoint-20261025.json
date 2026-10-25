@@ -1,11 +1,16 @@
 {
-  "schema_version": 1,
+  "disposition": "no-new-lesson",
+  "finding": "Owner rejects re-delivery of unchanged passages with known problems. Five proposals are revised with exact source identity, lint and source-review limits; owner grief wording remains exact.",
+  "ledger_entry_ids": [
+    "L-69582dbe45-01"
+  ],
+  "processed_at_utc": "2026-10-25T18:54:55.933232+00:00",
+  "promoted_to": [],
+  "reason": "Owner-directed repair and exact recovery checkpoint, not a validated general humanization skill or new detector result. Existing editorial/delivery rules already require this.",
   "request_id": "five-repaired-checkpoint-20261025",
+  "schema_version": 1,
   "source_path": "state/experiments/fresh30-source-admission-20261024/CURRENT-STATE.md",
   "source_ref": "ea1170e104367c3dcd92f462cb7f4e2d7f5c342e",
   "source_sha256": "69582dbe45ae84daa742d1b6009e76f0ce44b059bcdabf69b9d32d4feac11dfa",
-  "finding": "Owner rejects re-delivery of unchanged passages with known problems. Five proposals are revised with exact source identity, lint and source-review limits; owner grief wording remains exact.",
-  "disposition": "no-new-lesson",
-  "reason": "Owner-directed repair and exact recovery checkpoint, not a validated general humanization skill or new detector result. Existing editorial/delivery rules already require this.",
-  "promoted_to": []
+  "status": "processed"
 }
