@@ -1,0 +1,39 @@
+{
+  "schema": "pangram4.1-targeted-arm-results-v1",
+  "source_prediction": "ARM-DETECTOR-PREDICTIONS.json",
+  "readings": [
+    {
+      "case": "T16",
+      "arm": "A",
+      "text_sha256": "15ea48b9751c9ff5a62f3799d81a79e21a7b2964f9584c099061ab13e3ee6657",
+      "frozen_forecast_p_all_human": 0.24,
+      "forecast": "AI/mixed",
+      "stage": "STAGE_SUCCESS",
+      "version": "4.1",
+      "headline": "AI Generated",
+      "categorical_all_Human": false,
+      "fraction_human": 1.3628393369564406e-34,
+      "fraction_ai": 1.0,
+      "fraction_ai_assisted": 0.0,
+      "windows": [
+        {
+          "label": "AI-Generated",
+          "confidence": "High"
+        }
+      ],
+      "paid_task_reuse": false,
+      "task_record_id_present": true
+    }
+  ],
+  "existing_baseline_controls": {
+    "T16": "AI Generated/High Pangram 4.1",
+    "T26": "AI Generated/High Pangram 4.1, A byte-identical with baseline — no repeat"
+  },
+  "actual_version": "4.1",
+  "one_paragraph_per_new_call": true,
+  "max_new_paid_tasks": 3,
+  "new_post_count": 1,
+  "source_gold_preserved": true,
+  "owner_style_approval": false,
+  "scope": "Two AI-starting families only; cannot infer general transfer from local scores."
+}
