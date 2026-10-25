@@ -1,0 +1,46 @@
+{
+  "case": "T17",
+  "stage": "baseline",
+  "prompt_sha256": "a59efea55856add404e349df477896dcf54ebb7d12b1f6406622d250c847cc9e",
+  "elapsed_s": 3.61,
+  "return_code": 0,
+  "error": null,
+  "result": "An anchor is a cue tied to a particular state, such as a hand on the heart, two fingers touching, a breath, a word, a posture, a scent, or a song. To set one, choose a real state you want easier access to and feel it. While it is clearly present, pair the cue with the phrase \"This is available.\" For re-entering hypnosis, pick a usable receptive state rather than one of peak emotional intensity, and follow \"A shortcut back into hypnosis\" in the main induction section. Keep the alert calming cue and the synchronicity wake-up cue separate.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 848,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 181,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 848,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 181,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 848,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 848
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.0052060000000000006,
+  "is_error": false,
+  "result_sha256": "38a67ba4934879bced1ca31b0efa7ea6d37271bf81e5ec753770a6445f0312d4"
+}

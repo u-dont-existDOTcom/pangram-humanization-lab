@@ -1,0 +1,46 @@
+{
+  "case": "T18",
+  "stage": "arm_B",
+  "prompt_sha256": "6079478ba236a0f36e5c8e86c40b3f58dda992029ba53163f6c58ed40599323f",
+  "elapsed_s": 6.87,
+  "return_code": 0,
+  "error": null,
+  "result": "Maggie Phillips and Claire Frederick's *Healing the Divided Self* (1995) covers interactive hypnosis, sensory learning, self-hypnosis, and a definite return, especially on pp. 24-27, 45-50, and 83-90. It is a professional clinical book, not a self-help manual, so its case procedures and historical claims shouldn't be carried over wholesale into solo practice. Adam Eason and Benjamin Parris's ISH article on self-hypnosis looks at self-directed learning, and at how that learning relates to working with another hypnotist and to using recordings.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1394,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 873,
+    "output_tokens_details": {
+      "thinking_tokens": 676
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1394,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 873,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1394,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1394
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.01431,
+  "is_error": false,
+  "result_sha256": "ba6adaeccdbb5c97abdbe21a404c6d996398edeb0fb7aa739dcdee604e58d077"
+}

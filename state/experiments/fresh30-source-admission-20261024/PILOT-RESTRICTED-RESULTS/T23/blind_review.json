@@ -1,0 +1,46 @@
+{
+  "case": "T23",
+  "stage": "blind_review",
+  "prompt_sha256": "ba79d54ff9d33d4b2c02ddce49455efce2a8a184853c6956d5a6b4e1a63dac85",
+  "elapsed_s": 8.15,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Clean and natural. 'Approaches... through' is a smooth rendering of 'comes at... from', though it loses a little of the source's colloquial edge. 'Its followers even claim' keeps the 'even' (the escalating, slightly surprising force of the source). 'Bodies dissolve into rainbow lights' preserves the source's plural 'lights'. The colon-based structure for the two accounts is tidy and compact, and fuses the two accounts into one sentence as the source does. 'Simply' for 'just' is a slightly more formal register but acceptable.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"'yet' introduces an explicit contrast not marked by 'but' in the same way (minor)\",\n      \"'go further' replaces 'even' and adds an explicit sense of escalation (minor)\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Reads fluently but slightly more polished and 'written'. 'Go further and claim' is a mild rhetorical embellishment that makes the escalation explicit instead of leaving it to 'even'. Changing 'rainbow lights' to 'rainbow light' shifts the image from discrete lights to a mass noun (small drift). Splitting the accounts into two short sentences with 'one of them' is clear but a little choppier and less faithful to the source's single-sentence rhythm. 'Yet' is a touch more formal than the source's plain 'but'.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both preserve the core meaning and rhetorical function: Dzogchen is similar to but more unified than the author's view, light is the essence of the elements, matter is condensed light, and the rainbow-body claims are backed by two modern accounts (one externally investigated, one from a family member). X stays closer to the source's structure and wording ('even', 'rainbow lights', single-sentence presentation of the two accounts), so the function of 'even' as an escalation marker is retained without embellishment. Y is fine but makes small shifts: 'go further' makes the escalation explicit, 'rainbow light' changes the plural, and the sentence split adds a slightly more constructed feel. The differences are small, so the preference is mild.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1222,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 817,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1222,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 817,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1222,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1222
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.013062,
+  "is_error": false,
+  "result_sha256": "11ea43c11b0ac61fddaac1c2b356ad99dd5f6c9d4e26157051b5bd0068b7cc0e"
+}

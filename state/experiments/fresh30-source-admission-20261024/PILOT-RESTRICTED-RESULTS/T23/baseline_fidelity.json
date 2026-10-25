@@ -1,0 +1,46 @@
+{
+  "case": "T23",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "63f8ddfa99917db14f96943d9a8ac6cec55ea4ef045b2c6cc2aff956f7832c7a",
+  "elapsed_s": 6.42,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material content is preserved: Dzogchen's more unified lens compared with the author's; the shared claim that the essence of the elements is light and matter is condensed light; the claim that masters' bodies dissolve into rainbow lights at death; the few 20th-century accounts; the Catholic priest's on-the-ground investigation; the account written by the dying master's nephew, Namkhai Norbu Rinpoche; and the pointer to the research report. Two small shifts are not material. 'They' became 'Its followers', which still attributes the claim to the tradition's adherents. 'Actually' was dropped from 'actually dissolve', which slightly softens the emphasis on literal dissolution but leaves the claim attributed and uncertain in the same way. 'Looked into' became 'investigated', and 'just' became 'simply'; both are harmless synonyms.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1056,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 617,
+    "output_tokens_details": {
+      "thinking_tokens": 278
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1056,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 617,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1056,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1056
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.010398000000000001,
+  "is_error": false,
+  "result_sha256": "6787249f1d723b46a9dd31b33f315af1b4e56292db049ba226afdbd7d9e56a52"
+}

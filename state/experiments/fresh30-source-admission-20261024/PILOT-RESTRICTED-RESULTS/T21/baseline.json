@@ -1,0 +1,46 @@
+{
+  "case": "T21",
+  "stage": "baseline",
+  "prompt_sha256": "048e3f646d5ef64be31d4384ca9adc1186af7760a9a09b5fbdf2bf8679a9f241",
+  "elapsed_s": 3.22,
+  "return_code": 0,
+  "error": null,
+  "result": "Ironically, he found his true master in that brutal Chinese prison camp. The master taught him to love the Chinese and to be glad he was growing rice for them, since the people were not their government. There his practice of loving-kindness flowered, and he became a light of love in the world. I thought that if he could find love there, perhaps I could stop using my own hell as an excuse.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 806,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 116,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 806,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 116,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 806,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 806
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.0043879999999999995,
+  "is_error": false,
+  "result_sha256": "52623767a2f2f3ffbcf1610282f68688e4b94b0c9e2996a65ce712d9f0cbf20b"
+}

@@ -1,0 +1,46 @@
+{
+  "case": "T19",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "a443f4294f3854cf7ac4006dab63dc740308e6cdc53f1e1493a537c383c917d1",
+  "elapsed_s": 4.28,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material units are preserved: base the next invitation on the actual response rather than the scripted one; utilization defined as working with what happens (thought, sound, movement, objection may change the practice's direction); notice what actually happens; absence of change is not hidden success; keep safety and exit instructions plain; Appendix B teaches richer language tools, and 'Let the next response guide you' shows their use after the induction. Differences are stylistic only: 'grow from' vs 'base on', 'may change where the practice goes' vs 'may shift the direction', 'Keep... plain' vs 'State... plainly' (a minor shift from keeping instructions plain to stating them plainly, not material). 'Actually received' is consistent with 'you got'. No changes in certainty, agency, causality, or attribution.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 970,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 316,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 970,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 316,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 970,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 970
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.007044,
+  "is_error": false,
+  "result_sha256": "477175f9469e33798c307a26419a46b97b53a5dbf6409aded051c7a622fed7a0"
+}

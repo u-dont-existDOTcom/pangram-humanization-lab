@@ -1,0 +1,46 @@
+{
+  "case": "T19",
+  "stage": "arm_B",
+  "prompt_sha256": "752eb379483489695d7f476098b938c5febe7680813b36f0e826c8143734ae72",
+  "elapsed_s": 5.58,
+  "return_code": 0,
+  "error": null,
+  "result": "Base the next invitation on the response you actually got, not the one the script expected. That's what utilization means: you work with what really happens, so a thought, a sound, a movement, or an objection might shift the direction of the practice. Pay attention to what occurs, and don't assume that nothing changing is a hidden success. Say the safety and exit instructions plainly, without dressing them up. Appendix B teaches the richer language tools, and \"Let the next response guide you\" shows how to use them once the induction is done.",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1647,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 159,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1647,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 159,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1647,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1647
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.008182,
+  "is_error": false,
+  "result_sha256": "674ed9355b6289f9e532a95aa24a964d09f27c5be3e711be292067588faaccf5"
+}

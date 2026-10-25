@@ -1,0 +1,46 @@
+{
+  "case": "T18",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "6994a790ed611a247f6c879cd725021654afd9ec742a770bf0cc847609b5c4a6",
+  "elapsed_s": 4.36,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": true,\n  \"omissions\": [],\n  \"additions\": [],\n  \"certainty_changes\": [],\n  \"notes\": \"All material units are preserved: authors, title, year, page ranges (24–27, 45–50, 83–90), topics (interactive hypnosis, sensory learning, self-hypnosis, definite return), the characterization as a professional clinical book and not a self-help manual, and the caution against wholesale import of case procedures and historical claims into solo practice. The Eason and Parris ISH article's coverage of self-directed learning and its relationship to another hypnotist and recordings is also intact. The draft turns 'shouldn't be imported' into 'should not be carried over' and adds the causal connector 'so', but this only makes explicit the reasoning already implied by the source and does not change the strength of the advice. 'Discusses' became 'covers' or 'addresses', which are harmless synonym changes.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1071,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 317,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1071,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 317,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1071,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1071
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.007457999999999999,
+  "is_error": false,
+  "result_sha256": "421d6779412b38307fecc366027474e5fca083a6e20b51f7351f6e7d8a3c2359"
+}

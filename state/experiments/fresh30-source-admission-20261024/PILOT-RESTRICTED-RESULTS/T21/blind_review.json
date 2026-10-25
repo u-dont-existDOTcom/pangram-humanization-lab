@@ -1,0 +1,46 @@
+{
+  "case": "T21",
+  "stage": "blind_review",
+  "prompt_sha256": "b99631c424bd1fde66db1c295fb18a8f8d1ba6a3c757373fa9c8f262260cc6f2",
+  "elapsed_s": 9.16,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"Nothing of consequence. 'blossomed' becomes 'flowered', a near-synonym. 'upon the world' becomes 'in the world', a slight loss of the benedictory register.\"\n    ],\n    \"added\": [],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Clean, compact and close to the source's cadence. The reordering of the first sentence ('he found his true master in that brutal Chinese prison camp') loses the cleft emphasis on the place, but 'Ironically' still carries the turn. 'Using my own hell as an excuse' is a natural rendering of 'treating... as an excuse'. The rhythm is brisk and plain, slightly flatter than the source's warm tone, but it is consistent and idiomatic.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": true,\n    \"missing\": [\n      \"'upon the world' becomes 'in the world', as in X.\"\n    ],\n    \"added\": [\n      \"'in a place like that' adds a gloss on the camp's harshness that the source leaves implicit (it says only 'there'). This is a mild but real expansion, though it echoes the 'brutal' framing.\",\n      \"'until he had become' adds a sequential or causal progression, where the source has a simple 'and he became'.\",\n      \"'not the same as their government' slightly rewords 'were not their government'. The meaning is nearly the same but the phrasing is looser and more explanatory.\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"The cleft construction ('it was in that brutal Chinese prison camp that he found...') keeps the source's emphasis on the place, which is a plus for rhetorical function. But the additions ('in a place like that', 'until he had become', 'not the same as') make the prose more explanatory and slightly padded. The result reads smooth but a little more elaborated and less terse than the source. 'Because' for 'since' is a fine choice.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both preserve the core meaning and rhetorical arc: the irony, the teaching about people versus government, the flowering of loving-kindness, and the narrator's self-challenge. X stays closer to the source's content and economy, adding nothing. Y keeps the cleft emphasis better, but it introduces small glosses ('in a place like that', 'until he had become', 'not the same as') that alter the source's plain, declarative rhythm and add interpretive material. The narrator's closing turn is also sharper in X, since 'there' is left to carry the weight, as in the source. X's loss of the cleft is minor by comparison, so X is the slightly better and more faithful candidate.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1050,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 910,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1050,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 910,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1050,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1050
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.013304,
+  "is_error": false,
+  "result_sha256": "555171f3bbff251e55e9058fa121a3980b2ca54b6b7b988af9cedd98f5abc26f"
+}

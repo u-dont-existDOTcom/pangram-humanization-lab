@@ -1,0 +1,46 @@
+{
+  "case": "T17",
+  "stage": "blind_review",
+  "prompt_sha256": "665dc410e921f9385c7fde79582c2fdeb88d0df20c61dcd6662bd959953f401d",
+  "elapsed_s": 9.04,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"X\": {\n    \"fidelity_ok\": true,\n    \"missing\": [],\n    \"added\": [\n      \"Opening framing 'To set one' makes the instruction sequence explicit (minor, consistent with source's imperative flow)\"\n    ],\n    \"voice_score_1_to_5\": 3,\n    \"prose_comment\": \"Clean, accurate, and orderly. It stays close to the source's compressed instruction style, expanding fragments into full sentences ('such as... a scent, or a song'). The result is clear but somewhat formal and procedural, with a manual-like evenness. Nothing jars, but little personality.\"\n  },\n  \"Y\": {\n    \"fidelity_ok\": false,\n    \"missing\": [],\n    \"added\": [\n      \"'let yourself feel it' softens the source's direct 'feel it' into a permissive stance\",\n      \"'you'd like' and 'actually use' add colloquial emphasis not in the source\",\n      \"'If you're using an anchor to get back into hypnosis' reframes a purpose condition as a conditional about the reader's activity\",\n      \"'so they don't blur into each other' adds a rationale for keeping cues separate that the source does not give\"\n    ],\n    \"voice_score_1_to_5\": 4,\n    \"prose_comment\": \"Warmer, more conversational, and more natural as spoken guidance, with contractions and a direct address that suit a hypnosis-practice text. The cost is editorializing: the added rationale clause and the intensifier 'actually' change the rhetorical function slightly, turning a terse directive into an explained one. The opening 'And' is a stylistic choice that reads naturally but departs from the source's clipped register.\"\n  },\n  \"preference\": \"X\",\n  \"why\": \"Both candidates preserve the core content: definition of anchor with the same list of cues, real state, pairing while clearly present, the phrase 'This is available,' the receptive-over-peak distinction, the cross-reference, and the separation of the two cues. The deciding factor is rhetorical function. X keeps the source's directive, economical register and adds nothing substantive. Y reads more naturally but inserts an explanatory claim ('so they don't blur into each other') and softens 'feel it' to 'let yourself feel it,' shifting the text from instruction toward coaching. If voice were weighted above fidelity, Y would win, but on a meaning-and-function comparison X is the safer match. The gap is modest, since Y's additions are mild and not contradictory.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1233,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 812,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1233,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 812,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1233,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1233
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.013056000000000002,
+  "is_error": false,
+  "result_sha256": "7b98bc10b4ed4d6916d0a649170d98f0e5f7a428dc01048343eb333090432c8c"
+}

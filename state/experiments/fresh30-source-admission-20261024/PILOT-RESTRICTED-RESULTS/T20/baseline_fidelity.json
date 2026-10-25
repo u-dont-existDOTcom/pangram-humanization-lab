@@ -1,0 +1,46 @@
+{
+  "case": "T20",
+  "stage": "baseline_fidelity",
+  "prompt_sha256": "727f70990087a083177d558164dbcd626ac43d6613e87f79a03f1e6b571769b3",
+  "elapsed_s": 10.56,
+  "return_code": 0,
+  "error": null,
+  "result": "```json\n{\n  \"preserve_all_critical_units\": false,\n  \"omissions\": [\n    \"SOURCE says the pattern of treating every objection as proof you need more of the same is what deserves scrutiny. The DRAFT's 'it deserves scrutiny when...' makes the antecedent 'it' read as discomfort, so the object of scrutiny shifts from the practitioner's or method's handling of objections to the discomfort itself. The warning about the objection-dismissing pattern as a red flag is blurred.\"\n  ],\n  \"additions\": [\n    \"The DRAFT implies that discomfort deserves scrutiny, and the 'but' creates a contrast the SOURCE does not make. In the SOURCE the two clauses are parallel cautions: discomfort isn't conclusive, and the objection-as-proof pattern warrants scrutiny.\"\n  ],\n  \"certainty_changes\": [\n    \"Advice strength: the SOURCE's imperative 'Ask the app or another informed person' becomes the permissive 'You can ask'. This is a minor softening.\"\n  ],\n  \"notes\": \"Most other content is preserved: evaluating what happened, the purpose and agreement questions, the practitioner's response, the limit on what a brief account can establish, and the alternatives of self-hypnosis, combined work or another practitioner remaining the user's choice. The DRAFT's 'you shouldn't expect them to certify a practitioner' slightly shifts the SOURCE's 'without expecting a practitioner to be certified from a brief account', which concerns the limits of verifying certification, but the meaning is largely equivalent. The main material issue is the changed object of scrutiny, and the missing agency of who is doing the 'treating' is also less clear in the passive construction.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1009,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1229,
+    "output_tokens_details": {
+      "thinking_tokens": 648
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1009,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1229,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1009,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1009
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "reported_cost_usd": 0.01633,
+  "is_error": false,
+  "result_sha256": "fc762217be2ccdb11cbf3b455aeffd63e86bad291c23235acc72bd605621a243"
+}
