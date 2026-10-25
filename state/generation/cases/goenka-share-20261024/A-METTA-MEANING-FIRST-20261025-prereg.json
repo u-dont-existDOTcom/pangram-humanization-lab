@@ -1,0 +1,32 @@
+{
+  "id": "goenka-metta-A-meaning-first-20261025",
+  "status": "PREGISTRATION",
+  "owner_input_status": "Original A is source supplied; no owner-supplied A correction",
+  "source": "It also lets you want suffering to end without that wish turning into desperation or fear of failure.",
+  "neighbors": {
+    "lead": "In the Metta Sutta, you wish ease and happiness to beings, yourself included. Metta calms the hindrances and builds goodwill.",
+    "end": "Theravada and most Mahayana Buddhist traditions treat metta as essential groundwork before the deeper work of unweaving the sense streams that make up the mind."
+  },
+  "protected_claims": [
+    "The claim is about the *wish* for suffering to end",
+    "Metta changes how the wish is held, not a blanket cure or generic permission",
+    "The wish does not become desperation",
+    "The wish does not become fear of failure",
+    "No claims of personal experience or of medical efficacy may be invented"
+  ],
+  "known_failed_repair": "An earlier attempt changed the actor from wish to person and kept formulaic lets-you-X-without-Y cadence; fresh critic marked meaning uncertain; no Pangram call was used on that.",
+  "prompts": [
+    {
+      "key": "A-PARADOX",
+      "title": "Begin with the lived paradox",
+      "prompt": "You are writing a sentence or two in an idiosyncratic, intelligent first-person Buddhist meditation essay, between two existing owner-written passages. Never change those surrounding lines. The author has a SPECIFIC distinct claim to convey: mettā makes it possible to wish for suffering to end without that *wish itself* turning into desperation or fear of failure. It is not a generic permission to feel hopeful, a promise to end suffering, a story about the author, or a reason to doubt sincere desire. Keep wish/aspiration the conceptual subject; keep both desperation and fear of failure. There is no permission to invent doctrine, examples, autobiography, risk advice or new claims. This is a substantive voice task, not a word synonym task. Do not imitate a template or turn it into a mini-essay with a moral. Write exactly the needed reader-facing passage, 20–50 words. No headings, analysis, source notes, citations or tool use.\n\nUNCHANGED PRECEDING PROSE:\nIn the Metta Sutta, you wish ease and happiness to beings, yourself included. Metta calms the hindrances and builds goodwill.\n\nUNCHANGED FOLLOWING PROSE:\nTheravada and most Mahayana Buddhist traditions treat metta as essential groundwork before the deeper work of unweaving the sense streams that make up the mind.\n\nAUTHORIAL CLAIM:\nMettā allows the desire for suffering to end to remain caring, rather than the wish itself escalating into desperation or fear of failing to end suffering.\n\nComposition premise: the reader recognizes how a well-meant wish can itself become a source of suffering when someone starts desperately needing a result. Follow that lived tension before naming how mettā affects the wish. No new abstract explanation. Output ONLY the insert."
+    },
+    {
+      "key": "A-METTA-PURPOSE",
+      "title": "Begin with goodwill's actual function",
+      "prompt": "You are writing a sentence or two in an idiosyncratic, intelligent first-person Buddhist meditation essay, between two existing owner-written passages. Never change those surrounding lines. The author has a SPECIFIC distinct claim to convey: mettā makes it possible to wish for suffering to end without that *wish itself* turning into desperation or fear of failure. It is not a generic permission to feel hopeful, a promise to end suffering, a story about the author, or a reason to doubt sincere desire. Keep wish/aspiration the conceptual subject; keep both desperation and fear of failure. There is no permission to invent doctrine, examples, autobiography, risk advice or new claims. This is a substantive voice task, not a word synonym task. Do not imitate a template or turn it into a mini-essay with a moral. Write exactly the needed reader-facing passage, 20–50 words. No headings, analysis, source notes, citations or tool use.\n\nUNCHANGED PRECEDING PROSE:\nIn the Metta Sutta, you wish ease and happiness to beings, yourself included. Metta calms the hindrances and builds goodwill.\n\nUNCHANGED FOLLOWING PROSE:\nTheravada and most Mahayana Buddhist traditions treat metta as essential groundwork before the deeper work of unweaving the sense streams that make up the mind.\n\nAUTHORIAL CLAIM:\nMettā allows the desire for suffering to end to remain caring, rather than the wish itself escalating into desperation or fear of failing to end suffering.\n\nComposition premise: the preceding sentence has already named metta's goodwill; let the concrete use of goodwill lead into the problem of desire becoming desperate or frightened. Don't set up an invented conflict; let the passage feel part of the sentence before it rather than a separate classroom lesson. Output ONLY the insert."
+    }
+  ],
+  "predictive_hypothesis": "The paradox route may sound human because it proceeds through a real tension; the goodwill route may be smoother but templated. A cold fidelity/naturalness audit is required before any new Pangram call. Distinct from local paraphrase and no Emulate.",
+  "outcome_limits": "At most one initial Pangram submission for the best meaning-clean candidate, only if cold human-voice review finds no material tell. No blind same-context self-approval. No change to canonical article authority or user-final past edits."
+}
