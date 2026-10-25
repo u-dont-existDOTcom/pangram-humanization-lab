@@ -5,12 +5,99 @@
   "last_error": "",
   "measurement_key": "fresh30-v3-baseline-T01-20261025",
   "model": "pangram-4",
-  "result": null,
+  "result": {
+    "fraction_ai": 5.631013775923843e-13,
+    "fraction_ai_assisted": 5.681914899517693e-13,
+    "fraction_human": 1.0,
+    "headline": "Human Written",
+    "num_ai_assisted_segments": 0,
+    "num_ai_segments": 0,
+    "num_human_segments": 4,
+    "prediction": "We believe that this entire text is human-written.",
+    "prediction_short": "Human",
+    "stage": "STAGE_SUCCESS",
+    "text": "It worked roughly 99% of the time. I lost interest in other women, with one exception: an extremely beautiful girl who caught my attention once. That surprised me. B., however, never fully believed the switch was real. She even began hallucinating that I was looking at or talking to other women when I wasn't. Her jealousy, then, was not simply tracking what I was doing in the present. It was more likely insecure attachment from her childhood trying to justify its continued existence.",
+    "version": "4.1",
+    "windows": [
+      {
+        "ai_assistance_score": 5.449708653009131e-18,
+        "calibrated_confidence": 0.9943681974881898,
+        "class_probabilities": [
+          1.0,
+          7.530759313174513e-19,
+          5.073170661501011e-18
+        ],
+        "confidence": "High",
+        "end_index": 144,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 0,
+        "text": "It worked roughly 99% of the time. I lost interest in other women, with one exception: an extremely beautiful girl who caught my attention once.",
+        "token_length": 32,
+        "word_count": 25
+      },
+      {
+        "ai_assistance_score": 1.003627411212682e-12,
+        "calibrated_confidence": 0.9823377764377159,
+        "class_probabilities": [
+          1.0,
+          1.529711687181523e-14,
+          9.959787985666657e-13
+        ],
+        "confidence": "Medium",
+        "end_index": 218,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 144,
+        "text": " That surprised me. B., however, never fully believed the switch was real.",
+        "token_length": 16,
+        "word_count": 12
+      },
+      {
+        "ai_assistance_score": 2.441924409961768e-21,
+        "calibrated_confidence": 0.9941101765106477,
+        "class_probabilities": [
+          1.0,
+          4.859371463154712e-21,
+          1.2238835367732037e-23
+        ],
+        "confidence": "High",
+        "end_index": 310,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 218,
+        "text": " She even began hallucinating that I was looking at or talking to other women when I wasn't.",
+        "token_length": 21,
+        "word_count": 18
+      },
+      {
+        "ai_assistance_score": 1.9054100745125035e-12,
+        "calibrated_confidence": 0.9713161933998464,
+        "class_probabilities": [
+          1.0,
+          1.5513783833964734e-12,
+          1.1297207743940496e-12
+        ],
+        "confidence": "Medium",
+        "end_index": 488,
+        "humanizer_score": 0.0,
+        "is_humanized": false,
+        "label": "Human Written",
+        "start_index": 310,
+        "text": " Her jealousy, then, was not simply tracking what I was doing in the present. It was more likely insecure attachment from her childhood trying to justify its continued existence.",
+        "token_length": 33,
+        "word_count": 29
+      }
+    ]
+  },
   "source": "live",
-  "status": "pending",
+  "status": "success",
   "submitted_model": "pangram-4",
   "task_id": "9aa2d121-e669-4bf7-96f1-85c26d69428f",
   "text": "It worked roughly 99% of the time. I lost interest in other women, with one exception: an extremely beautiful girl who caught my attention once. That surprised me. B., however, never fully believed the switch was real. She even began hallucinating that I was looking at or talking to other women when I wasn't. Her jealousy, then, was not simply tracking what I was doing in the present. It was more likely insecure attachment from her childhood trying to justify its continued existence.",
   "text_sha256": "38bebe6cef2d0bb228b0e58e5a539914a000dd283102b2ee4d25a0ba25e1653a",
-  "updated_utc": "2026-10-25T01:09:05.567339+00:00"
+  "updated_utc": "2026-10-25T01:09:08.850189+00:00"
 }
