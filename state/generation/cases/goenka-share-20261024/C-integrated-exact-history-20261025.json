@@ -1,0 +1,36 @@
+{
+  "matched": true,
+  "sha": "3eb77206d15e1ee24420ee93076a09cd1d277ec61cfae224f353f8c0887fea7b",
+  "word_count": 74,
+  "match_mode": "exact_utf8",
+  "created_at_utc": "2026-10-25T00:56:25.655127Z",
+  "overall": {
+    "stage": "STAGE_SUCCESS",
+    "version": "4.1",
+    "headline": "AI Detected",
+    "document_confidence": {
+      "level": "High",
+      "boundary": null
+    },
+    "fraction_human": 0.7511310577392578,
+    "fraction_ai": 0.24886897206306458,
+    "fraction_mixed": 0.0,
+    "fraction_breakdown": {
+      "ai": {
+        "low-confidence": 1.8936498236143962e-07,
+        "high-confidence": 0.24886877834796906,
+        "medium-confidence": 0.0
+      },
+      "human": {
+        "low-confidence": 1.2035638017504316e-29,
+        "high-confidence": 0.7511310577392578,
+        "medium-confidence": 0.0
+      },
+      "ai-assisted": {
+        "lightly": 0.0,
+        "moderately": 0.0
+      }
+    },
+    "confidence_policy_id": "pangram-4.1-calibrated-accuracy-v2"
+  }
+}
