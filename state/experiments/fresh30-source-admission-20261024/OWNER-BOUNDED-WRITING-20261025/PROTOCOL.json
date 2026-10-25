@@ -1,0 +1,24 @@
+{
+  "schema": "owner-bounded-local-writing-v1",
+  "prepared_date": "2026-10-25",
+  "status": "FROZEN_BEFORE_OUTPUTS",
+  "goal": "Test whether selective fresh writing adds naturalness after known owner decisions are implemented, without asking a model to decide what the owner should value.",
+  "same_twelve_are_development_not_holdout": true,
+  "source_families": 12,
+  "article_clusters": 1,
+  "design": "No-model minimal baseline versus optional local generation. Baseline implements only explicit owner cuts/keeps and the F22 correction. Writer sees source context and decisions as authority, not a quiz. At most two nonoverlapping exact-span replacement edits. Unchanged is valid and counted.",
+  "structurally_different": "Model cannot rewrite the full article or decide keep/cut. Deterministic assembler refuses patches touching locked owner-retained spans or restoring exact owner-deleted wording; human semantics still need review.",
+  "temporary_experiment_controls_not_new_universal_rule": [
+    "Exact wording lock for six retained spans is a conservative test constraint, not claim the owner forbids every future rewording.",
+    "Two-edit cap is a bounded experiment, not a generic writing rule."
+  ],
+  "meaning_evaluation": "Separate fresh delta auditor compares authoritative baseline and assembled candidate, listing concrete omissions/additions/shifts/prohibited-restatement only; no permission to disregard a function as secondary.",
+  "style_evaluation": "Unchanged previously frozen source-free style rubric, randomly counterbalanced X/Y mapping; no source label, owner decision or prior detector result.",
+  "model": "Claude Sonnet medium, restricted, no tools, no autoload settings, fresh working directory/process per call",
+  "candidate_attempts_per_case": 1,
+  "adaptive_retries": 0,
+  "valid_primary_units": 12,
+  "Pangram_calls": 0,
+  "medical_scope": "Historical editorial-source comparison, not health guidance or external truth verification. No new medical assertions are authorized.",
+  "stop": "Stop after one attempt per case, independent audits and exact serialization checks. No score-based loop and no extra candidate to force success."
+}
