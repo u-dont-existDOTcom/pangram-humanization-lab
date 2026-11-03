@@ -1476,6 +1476,105 @@
       "source_path": "state/experiments/blind-forecast-41-20261103/arm_B_catalogue/forecasts.json",
       "source_ref": "working-tree",
       "source_sha256": "2952dbb5e7d81706c38aed6c34a1d590c45398d812bf109432c3bf3140907b09"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Changing each em dash to a spaced en dash improved 6 of 17 borderline paragraphs and 3 of 30 AI paragraphs (two to 100% Human), hurt none, and left 10 Human-at-High paragraphs unchanged (p = 0.002).",
+      "id": "L-7c60c4a03b-01",
+      "promoted_to": [],
+      "reason": "One unreplicated sample (all 17 borderline paragraphs of 25 to 100 words); joins the quote-mark lever as a proposed meaning-free first step that waits for Joel's ruling.",
+      "recorded_at_utc": "2026-11-03T20:52:33.076189+00:00",
+      "source_path": "state/experiments/dash-style-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "7c60c4a03bebc0c6e1429923dedd2cd6cf8a941baf41ee28f5b0b04de712c799"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Dash-style experiment artifact (README.md); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-029198ec06-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lesson it supports is recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:52:33.122695+00:00",
+      "source_path": "state/experiments/dash-style-41-20261103/README.md",
+      "source_ref": "working-tree",
+      "source_sha256": "029198ec06a2f456a6156959b01f7cad0d4bb97ba9ccb8869ef8aa44df7aa449"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Dash-style experiment artifact (build_sample.py); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-4b98f60b1b-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lesson it supports is recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:52:33.167082+00:00",
+      "source_path": "state/experiments/dash-style-41-20261103/build_sample.py",
+      "source_ref": "working-tree",
+      "source_sha256": "4b98f60b1bb2b2e7f2f214693a6d95f20f7c4e859c3530433aa28406de85eec7"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Dash-style experiment artifact (FLIP-INPUTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-d691b7b2b9-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lesson it supports is recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:52:33.222131+00:00",
+      "source_path": "state/experiments/dash-style-41-20261103/FLIP-INPUTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "d691b7b2b955909d9629a88de14a8ce4f6e973a8c8812fc9f1fad59ec46dc18f"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Dash-style experiment artifact (TEXTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-b1dbcdc7f4-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lesson it supports is recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:52:33.265168+00:00",
+      "source_path": "state/experiments/dash-style-41-20261103/TEXTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "b1dbcdc7f4882d27b8d075904617039c8672233ae99eb33452d41c05720c485a"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Dash-style experiment artifact (RESULTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-add3e7c716-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lesson it supports is recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:52:33.307721+00:00",
+      "source_path": "state/experiments/dash-style-41-20261103/RESULTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "add3e7c7167592f08600f34715d484cfef8bc16658319f1314cfae834ce2ac86"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Dash-style experiment artifact (score.py); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-d2d8a78c4c-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lesson it supports is recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:52:33.348799+00:00",
+      "source_path": "state/experiments/dash-style-41-20261103/score.py",
+      "source_ref": "working-tree",
+      "source_sha256": "d2d8a78c4cc7f6aa703538854266f35463afaf81f3b7152170dad62f98219f85"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Dash-style experiment artifact (SCORE.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-5ca876fc42-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lesson it supports is recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:52:33.390075+00:00",
+      "source_path": "state/experiments/dash-style-41-20261103/SCORE.json",
+      "source_ref": "working-tree",
+      "source_sha256": "5ca876fc42a6ba260f2bf57d3cc974b5a223703e256146caab6ebe5ba158aaf6"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Dash-style experiment artifact (export_results.py); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-5ad577cd87-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lesson it supports is recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:52:33.431697+00:00",
+      "source_path": "state/experiments/dash-style-41-20261103/export_results.py",
+      "source_ref": "working-tree",
+      "source_sha256": "5ad577cd87f2dd2cf0c38449ed2dde170684b3544e73bf3fee75d2ba4e0abc80"
     }
   ],
   "schema_version": 1
