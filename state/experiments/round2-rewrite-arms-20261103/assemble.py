@@ -12,7 +12,8 @@ No API calls.
 import hashlib, json, pathlib, random, sys
 
 HERE = pathlib.Path(__file__).resolve().parent
-CURLY = {'‘': "'", '’': "'", '“': '"', '”': '"', '—': 'em dash', '–': 'en dash'}
+TYPES = {'‘': 'curly open single', '’': 'curly apostrophe', '“': 'curly open double', '”': 'curly close double',
+         '—': 'em dash', '–': 'en dash', "'": 'straight apostrophe', '"': 'straight double quote'}
 
 
 def main(wdir, odir):
@@ -34,7 +35,7 @@ def main(wdir, odir):
             if bool(g.get('unchanged')) != unchanged:
                 problems.append('%s %s: unchanged flag %s but text %s' % (arm, g['id'], g.get('unchanged'),
                                                                           'identical' if unchanged else 'differs'))
-            added = sorted({CURLY[ch] for ch in CURLY if text.count(ch) > orig.count(ch)})
+            added = sorted({TYPES[ch] for ch in TYPES if ch in text and ch not in orig})
             rows.append({'arm': arm, 'pid': g['id'], 'unchanged': unchanged, 'text': text,
                          'sha256': hashlib.sha256(text.encode('utf-8')).hexdigest(),
                          'words': len(text.split()), 'orig_words': len(orig.split()),

@@ -40,3 +40,9 @@ Pangram API, explicit `pangram-4` model, version recorded (expected 4.1), via jo
 - Forecast accuracy on the rewrites (replicates round 1 on new text).
 
 Expected cost: about 150 checks, roughly 260 API credits. Findings are recorded as provisional unless they replicate; no article or production rule changes in this round.
+
+## Amendment after assembly (before any check or Pangram call)
+
+The first character check counted occurrences, so it flagged rewrites that simply used more of the curly apostrophes their originals already used. The brief's rule is about character types the input doesn't have; `assemble.py` now checks that.
+
+A first assembly ran while two catalogue writers were still finishing, so it is void. In that draft, M2's P041 had straight apostrophes in a paragraph written with curly ones; the writer's final file returns P041 unchanged, so no mechanical fix applies. That writer noted that P041 is Joel's own published paragraph, and that the catalogue records it reading 100% Human with his straight apostrophes and 100% AI curled. The experiment keeps the input as saved.
