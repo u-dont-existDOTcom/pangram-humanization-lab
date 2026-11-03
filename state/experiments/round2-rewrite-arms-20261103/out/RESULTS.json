@@ -1,0 +1,41 @@
+{
+ "M1": {
+  "T_n": 48,
+  "T_unchanged": 19,
+  "T_all_human": 0,
+  "T_all_human_and_meaning_pass": 0,
+  "T_all_human_all_high_and_meaning_pass": 0,
+  "T_mean_fraction_human_change": -0.018,
+  "R_n": 26,
+  "R_unchanged": 11,
+  "R_regressed": 2,
+  "R_regressed_among_changed": "2/15",
+  "meaning_fail": "3/44",
+  "added_characters": 0
+ },
+ "M2": {
+  "T_n": 48,
+  "T_unchanged": 10,
+  "T_all_human": 5,
+  "T_all_human_and_meaning_pass": 5,
+  "T_all_human_all_high_and_meaning_pass": 1,
+  "T_mean_fraction_human_change": 0.068,
+  "R_n": 26,
+  "R_unchanged": 11,
+  "R_regressed": 2,
+  "R_regressed_among_changed": "2/15",
+  "meaning_fail": "5/53",
+  "added_characters": 0
+ },
+ "T_paired_success": {
+  "M1 no / M2 no": 43,
+  "M1 no / M2 ok": 5
+ },
+ "forecast_on_rewrites": {
+  "n": 97,
+  "all_human": 31,
+  "accuracy_at_0.5": 0.536,
+  "always_majority": 0.68,
+  "auc": 0.525
+ }
+}
