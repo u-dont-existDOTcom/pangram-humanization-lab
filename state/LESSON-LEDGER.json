@@ -1355,6 +1355,72 @@
       "source_path": "state/generation/OWNER-CALIBRATED-WRITER-REFERENCE-V2-20260917.md",
       "source_ref": "62abad9d2f32f3c97301a460c8aee0b73e3e50eb",
       "source_sha256": "28f57cdbdd9934dfe7fc81671442be1562648d06256ac8879514307d2380576b"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Paragraph census of the registered masters on Pangram 4.1: 664 of 1,536 pass at 100% Human, High; per-article lists of the rest.",
+      "id": "L-a28111719d-01",
+      "promoted_to": [],
+      "reason": "Each list is work for its own article lane; the census is a snapshot of the registered masters at 1cac9dd.",
+      "recorded_at_utc": "2026-11-03T19:30:12.028660+00:00",
+      "source_path": "state/experiments/paragraph-census-41-20261103/CENSUS-REPORT.md",
+      "source_ref": "working-tree",
+      "source_sha256": "a28111719d059ec64988e057cca638465a89be7fea0bb798935eab5feec1e29e"
+    },
+    {
+      "disposition": "article-specific",
+      "finding": "Paragraph census of the registered masters on Pangram 4.1: 664 of 1,536 pass at 100% Human, High; per-article lists of the rest.",
+      "id": "L-c4774ca0d0-01",
+      "promoted_to": [],
+      "reason": "Each list is work for its own article lane; the census is a snapshot of the registered masters at 1cac9dd.",
+      "recorded_at_utc": "2026-11-03T19:30:12.072869+00:00",
+      "source_path": "state/experiments/paragraph-census-41-20261103/README.md",
+      "source_ref": "working-tree",
+      "source_sha256": "c4774ca0d0ea4bfe80206adb543b808dd427667cfbc45503ad5606a433924355"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Census data artifact (CENSUS-RESULTS.json).",
+      "id": "L-2dd432af74-01",
+      "promoted_to": [],
+      "reason": "Evidence or tooling file; findings are dispositioned in README.md and CENSUS-REPORT.md.",
+      "recorded_at_utc": "2026-11-03T19:30:12.116205+00:00",
+      "source_path": "state/experiments/paragraph-census-41-20261103/CENSUS-RESULTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "2dd432af74c34693b779770993ba649f1c4172d7b47bbc5205d141f30d915253"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Census data artifact (census_inputs.json).",
+      "id": "L-b90743f081-01",
+      "promoted_to": [],
+      "reason": "Evidence or tooling file; findings are dispositioned in README.md and CENSUS-REPORT.md.",
+      "recorded_at_utc": "2026-11-03T19:30:12.159781+00:00",
+      "source_path": "state/experiments/paragraph-census-41-20261103/census_inputs.json",
+      "source_ref": "working-tree",
+      "source_sha256": "b90743f081ea5b6d1ce6064e8858dc1b83742090b00b53e1a3d978806611f55a"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Census data artifact (build_census.py).",
+      "id": "L-7948217154-01",
+      "promoted_to": [],
+      "reason": "Evidence or tooling file; findings are dispositioned in README.md and CENSUS-REPORT.md.",
+      "recorded_at_utc": "2026-11-03T19:30:12.202114+00:00",
+      "source_path": "state/experiments/paragraph-census-41-20261103/build_census.py",
+      "source_ref": "working-tree",
+      "source_sha256": "79482171541e21ac38e321e1423efd4ef7de834202f8734d5086df68d5830bf4"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Census data artifact (make_report.py).",
+      "id": "L-37b5c7dd89-01",
+      "promoted_to": [],
+      "reason": "Evidence or tooling file; findings are dispositioned in README.md and CENSUS-REPORT.md.",
+      "recorded_at_utc": "2026-11-03T19:30:12.243592+00:00",
+      "source_path": "state/experiments/paragraph-census-41-20261103/make_report.py",
+      "source_ref": "working-tree",
+      "source_sha256": "37b5c7dd89d7015013335276ef14e1cc5651b13ffa7f920ffbcda1ede6fe415e"
     }
   ],
   "schema_version": 1
