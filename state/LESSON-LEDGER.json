@@ -1597,6 +1597,72 @@
       "source_path": "state/experiments/quote-style-41-20261103/export_results.py",
       "source_ref": "working-tree",
       "source_sha256": "5ad577cd87f2dd2cf0c38449ed2dde170684b3544e73bf3fee75d2ba4e0abc80"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Replicated on the other 88 borderline paragraphs: straightening improved 29 and hurt 3; across both runs 40 of 113 improved and 4 got worse (p = 2.6e-9). Neuro de-armoring is the one article where it hurt (0 better, 3 worse of 5).",
+      "id": "L-ff20864618-01",
+      "promoted_to": [],
+      "reason": "Replicated and preregistered, but the production rule (straighten first on paragraphs below High) waits for Joel's ruling, since his gate keeps his characters as typed.",
+      "recorded_at_utc": "2026-11-03T20:44:59.261279+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "ff208646187b27a9af87f9f7773e4e015f1fa7c8ceda8f9471401b2651378fb6"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style replication artifact (build_replication.py); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-49234a5d9f-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:44:59.310836+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/build_replication.py",
+      "source_ref": "working-tree",
+      "source_sha256": "49234a5d9f31488c6645284f8e8babff45a0e6f38b969f7bcf21fa7356b4c0f9"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style replication artifact (REPL-INPUTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-07a1c52874-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:44:59.355746+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/REPL-INPUTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "07a1c52874a31f22eadab991cdc0fcf9dad73b7100fa4e1f2e10bc405889c8f6"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style replication artifact (REPL-TEXTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-cfdffa86b0-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:44:59.399651+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/REPL-TEXTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "cfdffa86b013661177b769f7eefc2ceafea22f2926ffe14ea6a5a63993a43b76"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style replication artifact (REPL-RESULTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-9a3bd47dfb-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:44:59.444745+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/REPL-RESULTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "9a3bd47dfbad2cf69887e2446b090d83b5fba9b1d5cb21c93bc4c7bf9a7ff06f"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style replication artifact (REPL-SCORE.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-3ef3840d1a-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:44:59.490022+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/REPL-SCORE.json",
+      "source_ref": "working-tree",
+      "source_sha256": "3ef3840d1a9b3f35c7a2986067d66c7323b2d91f74531ea69af1222ff825b756"
     }
   ],
   "schema_version": 1
