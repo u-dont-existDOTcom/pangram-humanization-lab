@@ -1476,6 +1476,61 @@
       "source_path": "state/experiments/blind-forecast-41-20261103/arm_B_catalogue/forecasts.json",
       "source_ref": "working-tree",
       "source_sha256": "2952dbb5e7d81706c38aed6c34a1d590c45398d812bf109432c3bf3140907b09"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Single first-pass rewrites rarely fix a paragraph: current method 0/48, with Joel fixes catalogue 5/48 (3 substantive), all successes in the catalogue arm.",
+      "id": "L-cd2c8e6f25-01",
+      "promoted_to": [],
+      "reason": "Three substantive successes; replicate on fresh passage families.",
+      "recorded_at_utc": "2026-11-03T18:06:47.512624+00:00",
+      "source_path": "state/experiments/round2-rewrite-arms-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "cd2c8e6f2531030985d99b5664e3af63f1216d2994de377b35ec489731e65c88"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "With the catalogue, changed rewrites raised the human share in 12 and lowered it in 4; without it, 3 up and 6 down.",
+      "id": "L-cd2c8e6f25-02",
+      "promoted_to": [],
+      "reason": "One writer per arm and chunk; replicate.",
+      "recorded_at_utc": "2026-11-03T18:06:47.557441+00:00",
+      "source_path": "state/experiments/round2-rewrite-arms-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "cd2c8e6f2531030985d99b5664e3af63f1216d2994de377b35ec489731e65c88"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Rewriting passing paragraphs flagged by a tell reader regressed 2 of 15 per method (one substantive, 100% to 47%).",
+      "id": "L-cd2c8e6f25-03",
+      "promoted_to": [],
+      "reason": "Small counts; supports not rewriting passing paragraphs on a flag alone.",
+      "recorded_at_utc": "2026-11-03T18:06:47.608630+00:00",
+      "source_path": "state/experiments/round2-rewrite-arms-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "cd2c8e6f2531030985d99b5664e3af63f1216d2994de377b35ec489731e65c88"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Blind forecasts of the rewrites scored 54% vs 68% for the majority guess, AUC 0.53.",
+      "id": "L-cd2c8e6f25-04",
+      "promoted_to": [],
+      "reason": "Replicates round 1 weak forecasting; one forecaster.",
+      "recorded_at_utc": "2026-11-03T18:06:47.668938+00:00",
+      "source_path": "state/experiments/round2-rewrite-arms-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "cd2c8e6f2531030985d99b5664e3af63f1216d2994de377b35ec489731e65c88"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Meaning held in about nine of ten changed rewrites; failures were stance shifts and dropped qualifiers.",
+      "id": "L-cd2c8e6f25-05",
+      "promoted_to": [],
+      "reason": "Matches earlier lanes meaning-check record.",
+      "recorded_at_utc": "2026-11-03T18:06:47.726693+00:00",
+      "source_path": "state/experiments/round2-rewrite-arms-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "cd2c8e6f2531030985d99b5664e3af63f1216d2994de377b35ec489731e65c88"
     }
   ],
   "schema_version": 1
