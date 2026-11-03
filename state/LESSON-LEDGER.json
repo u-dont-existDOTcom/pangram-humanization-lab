@@ -1476,6 +1476,127 @@
       "source_path": "state/experiments/blind-forecast-41-20261103/arm_B_catalogue/forecasts.json",
       "source_ref": "working-tree",
       "source_sha256": "2952dbb5e7d81706c38aed6c34a1d590c45398d812bf109432c3bf3140907b09"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Straightening curly apostrophes and quote marks improved Pangram 4.1's reading of 11 of 25 borderline paragraphs and hurt 1; two of 25 AI paragraphs went to 100% Human; near neutral on paragraphs already Human at High.",
+      "id": "L-bf57229869-01",
+      "promoted_to": [],
+      "reason": "One sample of 90 flips, one seed, 4.1 via API; the borderline gain is concentrated in one article (romance, 8 of 11). Replicate on the other 88 borderline paragraphs before promoting to a production default.",
+      "recorded_at_utc": "2026-11-03T20:34:42.042504+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "bf572298698e9c1c572ea5cc8bca8ef91274828b9a31d46369735f16b8c477eb"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Curling Joel's own straight-quoted paragraphs cost 2 of 20 their High window and improved none.",
+      "id": "L-bf57229869-02",
+      "promoted_to": [],
+      "reason": "Supports keeping his straight marks as typed (HUMANIZATION-GATE 2026-10-02); 20 paragraphs, all from one article.",
+      "recorded_at_utc": "2026-11-03T20:34:42.100519+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "bf572298698e9c1c572ea5cc8bca8ef91274828b9a31d46369735f16b8c477eb"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Unchanged repeats keep verdict and rank, but a Mixed paragraph's fraction human moved 0.15 between two identical checks.",
+      "id": "L-bf57229869-03",
+      "promoted_to": [],
+      "reason": "Ten repeats; rank, not fraction, is the stable comparison for a single check.",
+      "recorded_at_utc": "2026-11-03T20:34:42.159426+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "bf572298698e9c1c572ea5cc8bca8ef91274828b9a31d46369735f16b8c477eb"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style experiment artifact (README.md); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-c6434bfd9f-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:34:42.207530+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/README.md",
+      "source_ref": "working-tree",
+      "source_sha256": "c6434bfd9fe133cd43f0d9ac3f270c4a9d068c5d9c3c674197195befcf3593aa"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style experiment artifact (build_sample.py); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-a171daf270-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:34:42.251265+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/build_sample.py",
+      "source_ref": "working-tree",
+      "source_sha256": "a171daf27082375f86a4f36665339046aef9586ec38afcc6c5cb011b7ada5159"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style experiment artifact (FLIP-INPUTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-537067aaca-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:34:42.299336+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/FLIP-INPUTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "537067aaca337280f3810918bcdf82120774c54b9f290aeccca89e0d666a6951"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style experiment artifact (TEXTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-39c6aab1e3-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:34:42.351289+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/TEXTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "39c6aab1e33a97396b88e8d19cdf9426e791f921bc1fea28a4ca78107ab3fc82"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style experiment artifact (RESULTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-2830051f9b-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:34:42.409688+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/RESULTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "2830051f9b3987c1a929f1e64f96fb85920611f7c8f92cf8a24e08a6ee71223f"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style experiment artifact (score.py); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-99a5226da8-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:34:42.456440+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/score.py",
+      "source_ref": "working-tree",
+      "source_sha256": "99a5226da86153034fceb13b88be1a9894b9fe155a1504a14c81df5c26090039"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style experiment artifact (SCORE.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-191a2762fb-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:34:42.500466+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/SCORE.json",
+      "source_ref": "working-tree",
+      "source_sha256": "191a2762fba3cbc73e0974768926a6309a28179afb052c4263f04657feb34254"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Quote-style experiment artifact (export_results.py); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-5ad577cd87-01",
+      "promoted_to": [],
+      "reason": "Evidence or method file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T20:34:42.550457+00:00",
+      "source_path": "state/experiments/quote-style-41-20261103/export_results.py",
+      "source_ref": "working-tree",
+      "source_sha256": "5ad577cd87f2dd2cf0c38449ed2dde170684b3544e73bf3fee75d2ba4e0abc80"
     }
   ],
   "schema_version": 1
