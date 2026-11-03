@@ -1,0 +1,32 @@
+[
+ {
+  "arm": "B_catalogue",
+  "id": "B010",
+  "p": 0.23,
+  "truth": "Human",
+  "fraction_human": 1.0,
+  "words": 110,
+  "lane": "ai-work/claude-dangerous-lane/pangram-api/ic-b478/out",
+  "reason": "T02 checklist of questions, tidy parenthetical inventory"
+ },
+ {
+  "arm": "B_catalogue",
+  "id": "B059",
+  "p": 0.23,
+  "truth": "Human",
+  "fraction_human": 1.0,
+  "words": 86,
+  "lane": "ai-work/claude-dangerous-lane/pangram-api/t111",
+  "reason": "T10 permission formula, T20 landing"
+ },
+ {
+  "arm": "B_catalogue",
+  "id": "B078",
+  "p": 0.78,
+  "truth": "Mixed",
+  "fraction_human": 0.9999966621398926,
+  "words": 299,
+  "lane": "ai-work/claude-dangerous-lane/inbox/pangram-f1102/out",
+  "reason": "Citation run-ons, repeated 'etc', Cochrane joke"
+ }
+]

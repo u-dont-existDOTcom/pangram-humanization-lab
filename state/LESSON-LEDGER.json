@@ -1355,6 +1355,61 @@
       "source_path": "state/generation/OWNER-CALIBRATED-WRITER-REFERENCE-V2-20260917.md",
       "source_ref": "62abad9d2f32f3c97301a460c8aee0b73e3e50eb",
       "source_sha256": "28f57cdbdd9934dfe7fc81671442be1562648d06256ac8879514307d2380576b"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Pre-Pangram forecasts carry weak signal (AUC ~0.66 on 98 saved 4.1 texts); the tell inventory did not improve forecasting over a cold read; a forecast cannot yet replace a measurement.",
+      "id": "L-261f1cf62b-01",
+      "promoted_to": [],
+      "reason": "One balanced sample, one reviewer per arm; needs replication on fresh lanes.",
+      "recorded_at_utc": "2026-11-03T15:33:18.677270+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "261f1cf62bbc3c7a87bf123d573afd438e5a4cc722f803009819230925de0c38"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Readers over-call AI on paragraphs that pass: T02, T10 and T24 citations often landed on fully-Human advisory paragraphs, while T12, T20 and T17 citations pointed the right way more often.",
+      "id": "L-261f1cf62b-02",
+      "promoted_to": [],
+      "reason": "Single-reviewer citation counts are small; replicate before changing any tell definition.",
+      "recorded_at_utc": "2026-11-03T15:33:18.720722+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "261f1cf62bbc3c7a87bf123d573afd438e5a4cc722f803009819230925de0c38"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Jokes, emoji, casual asides or wordy phrasing added to AI-shaped reasoning did not make a paragraph read Human; several such paragraphs scored 0% Human.",
+      "id": "L-261f1cf62b-03",
+      "promoted_to": [],
+      "reason": "Consistent with existing humanizer-rewording lessons but from one cold reader; replicate.",
+      "recorded_at_utc": "2026-11-03T15:33:18.764544+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "261f1cf62bbc3c7a87bf123d573afd438e5a4cc722f803009819230925de0c38"
+    },
+    {
+      "disposition": "provisional",
+      "finding": "Among fully-Human paragraphs, readers could not tell which would get all-High confidence (AUC 0.44).",
+      "id": "L-261f1cf62b-04",
+      "promoted_to": [],
+      "reason": "Small subgroup (50); bears on the High-confidence preference but needs more data.",
+      "recorded_at_utc": "2026-11-03T15:33:18.809750+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "261f1cf62bbc3c7a87bf123d573afd438e5a4cc722f803009819230925de0c38"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Reviewers labelled 41-51 texts pure AI while the sample held one; the live failure mode in saved lane outputs is Mixed.",
+      "id": "L-261f1cf62b-05",
+      "promoted_to": [],
+      "reason": "Reflects how lanes pre-filter text before saving results, not a new detector lesson.",
+      "recorded_at_utc": "2026-11-03T15:33:18.852643+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/FINDINGS.md",
+      "source_ref": "working-tree",
+      "source_sha256": "261f1cf62bbc3c7a87bf123d573afd438e5a4cc722f803009819230925de0c38"
     }
   ],
   "schema_version": 1
