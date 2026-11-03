@@ -39,3 +39,15 @@ Each flipped text is compared with its own census result (same API route, same 4
 ## Files
 
 `build_sample.py`, `FLIP-INPUTS.json` (the items, their census results and hashes), `TEXTS.json` (what goes to the API). Results, scoring and findings follow in this folder.
+
+## Replication of the BORDER arm (preregistered 2026-11-03, after the first results and before these checks)
+
+The first run's BORDER gain (11 better, 1 worse of 25) was about twice my prediction and concentrated in the romance article (8 of its 11). `build_replication.py` takes every other paragraph in the same BORDER pool under the same rules: 88 paragraphs (romance 28, nibbana 30, intentional communities 15, inner signal 7, inner child therapy 4, neuro de-armoring 4), curly to straight, 88 credits. Scored by `score.py REPL-INPUTS.json REPL-RESULTS.json REPL-SCORE.json` against each paragraph's own census reading.
+
+Frozen predictions:
+
+1. 26 to 44 of 88 improve (30 to 50%), and at most 6 get worse.
+2. Outside romance (60 paragraphs), at least 12 improve (20%).
+3. More improve than worsen (one-sided sign test p < 0.01).
+
+If (1) and (3) hold, straightening becomes the first step for any paragraph reading below 100% Human at High, before any rewording (proposed to Joel, since his gate keeps his characters as typed).

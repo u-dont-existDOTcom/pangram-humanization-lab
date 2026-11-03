@@ -6,11 +6,13 @@ No API calls.
 A reading's rank, worst to best: AI (0), Mixed (1), Human with a window below High (2), Human at High throughout (3).
 A flip "improves" when its rank rises, "worsens" when it falls; within the same rank the fraction human breaks no ties
 (only the rank counts), and the fraction's change is reported separately."""
-import json, math, pathlib
+import json, math, pathlib, sys
 
 HERE = pathlib.Path(__file__).resolve().parent
-F = json.loads((HERE / 'FLIP-INPUTS.json').read_text(encoding='utf-8'))
-R = json.loads((HERE / 'RESULTS.json').read_text(encoding='utf-8'))
+# optional: INPUTS RESULTS OUT (the replication: REPL-INPUTS.json REPL-RESULTS.json REPL-SCORE.json)
+FI, RE, OUT = (sys.argv[1:4] if len(sys.argv) >= 4 else ('FLIP-INPUTS.json', 'RESULTS.json', 'SCORE.json'))
+F = json.loads((HERE / FI).read_text(encoding='utf-8'))
+R = json.loads((HERE / RE).read_text(encoding='utf-8'))
 
 
 def rank(r):
@@ -63,6 +65,6 @@ summary['AI+BORDER sign test'] = {'better': kb, 'worse': kw, 'p_one_sided': roun
 summary['repeats'] = {'n': len(reps), 'same_verdict': sum(r['same_verdict'] for r in reps),
                       'same_rank': sum(r['same_rank'] for r in reps),
                       'max_abs_fh_delta': round(max((abs(r['fh_delta']) for r in reps), default=0), 4)}
-(HERE / 'SCORE.json').write_text(json.dumps({'summary': summary, 'rows': rows, 'repeats': reps}, indent=1), encoding='utf-8')
+(HERE / OUT).write_text(json.dumps({'summary': summary, 'rows': rows, 'repeats': reps}, indent=1), encoding='utf-8')
 for k, v in summary.items():
     print(k, v)
