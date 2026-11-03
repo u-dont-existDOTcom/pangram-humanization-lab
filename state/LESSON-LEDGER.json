@@ -1410,6 +1410,72 @@
       "source_path": "state/experiments/blind-forecast-41-20261103/FINDINGS.md",
       "source_ref": "working-tree",
       "source_sha256": "261f1cf62bbc3c7a87bf123d573afd438e5a4cc722f803009819230925de0c38"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Round-1 data artifact (confident_misses.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-6e0fd73c32-01",
+      "promoted_to": [],
+      "reason": "Evidence file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T15:33:36.171823+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/confident_misses.json",
+      "source_ref": "working-tree",
+      "source_sha256": "6e0fd73c32f3aa4ecfc48c7eeea6c08c7e0c68eb1ef7248c7e8f667989107e5e"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Round-1 data artifact (RESULTS.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-8e6b8f0787-01",
+      "promoted_to": [],
+      "reason": "Evidence file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T15:33:36.220687+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/RESULTS.json",
+      "source_ref": "working-tree",
+      "source_sha256": "8e6b8f07872afb7c9673eebfd9e929b4509bf5a387a87b0efa3844177123c8f1"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Round-1 data artifact (answer_key.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-4c94fc1cc7-01",
+      "promoted_to": [],
+      "reason": "Evidence file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T15:33:36.277120+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/answer_key.json",
+      "source_ref": "working-tree",
+      "source_sha256": "4c94fc1cc794d30477b962fb9083362709148ac61746f4b2f772b70c831ec905"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Round-1 data artifact (arm_A_cold/forecasts.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-6e74d6fbd6-01",
+      "promoted_to": [],
+      "reason": "Evidence file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T15:33:36.320548+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/arm_A_cold/forecasts.json",
+      "source_ref": "working-tree",
+      "source_sha256": "6e74d6fbd68b7fdd2162663edad791b4f60383e11224c6533285a08b346b75b2"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Round-1 data artifact (blind_packet.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-1193651993-01",
+      "promoted_to": [],
+      "reason": "Evidence file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T15:33:36.362177+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/blind_packet.json",
+      "source_ref": "working-tree",
+      "source_sha256": "1193651993f967020ab77711353f99c3c85f7fe6263d57df4b0607eb74cd0a63"
+    },
+    {
+      "disposition": "no-new-lesson",
+      "finding": "Round-1 data artifact (arm_B_catalogue/forecasts.json); its findings are dispositioned against FINDINGS.md in the same experiment folder.",
+      "id": "L-2952dbb5e7-01",
+      "promoted_to": [],
+      "reason": "Evidence file only; the lessons it supports are recorded separately as provisional.",
+      "recorded_at_utc": "2026-11-03T15:33:36.405292+00:00",
+      "source_path": "state/experiments/blind-forecast-41-20261103/arm_B_catalogue/forecasts.json",
+      "source_ref": "working-tree",
+      "source_sha256": "2952dbb5e7d81706c38aed6c34a1d590c45398d812bf109432c3bf3140907b09"
     }
   ],
   "schema_version": 1
