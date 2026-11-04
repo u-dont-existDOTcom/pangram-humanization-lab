@@ -195,3 +195,20 @@ def test_record_can_disposition_artifact_from_another_ref(tmp_path):
     )
     assert entry['source_ref'] == 'experiment'
     assert entry['source_sha256'] == hashlib.sha256(b'branch evidence').hexdigest()
+
+
+def test_identical_files_in_two_folders_get_distinct_ids(tmp_path):
+    # 2026-11-03: a score.py copied byte for byte into a second experiment folder got the same L-<hash>-01 id as the
+    # first folder's, so merging the second branch after the first failed the duplicate-id check (PR #196 after #195)
+    from pangram_lab.lesson_closeout import record_finding
+    config = init_repo(tmp_path)
+    for folder in ('a', 'b'):
+        d = tmp_path / 'state/experiments' / folder
+        d.mkdir(parents=True)
+        (d / 'score.py').write_text('print(1)\n', encoding='utf-8')
+    one = record_finding(tmp_path, 'state/experiments/a/score.py', 'Artifact a.', 'no-new-lesson', 'Evidence only.', [])
+    two = record_finding(tmp_path, 'state/experiments/b/score.py', 'Artifact b.', 'no-new-lesson', 'Evidence only.', [])
+    assert one['source_sha256'] == two['source_sha256']
+    assert one['id'] != two['id']
+    ledger = json.loads((tmp_path / 'state/LESSON-LEDGER.json').read_text(encoding='utf-8'))
+    assert validate_ledger(ledger, config) == []

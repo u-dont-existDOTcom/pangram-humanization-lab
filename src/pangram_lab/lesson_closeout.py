@@ -243,9 +243,13 @@ def record_finding(repo: Path, source: str, finding: str, disposition: str, reas
     sha = hashlib.sha256(source_bytes).hexdigest()
     ledger_path = repo / 'state/LESSON-LEDGER.json'
     ledger = _load_json(ledger_path)
-    existing = [e for e in ledger.get('entries', []) if e.get('source_path') == source and e.get('source_sha256') == sha]
-    seq = len(existing) + 1
-    eid = f"L-{sha[:10]}-{seq:02d}"
+    # the id's number counts every entry whose id has this hash prefix, whatever its path: two byte-identical files in
+    # different experiment folders (a copied score.py) used to get the same id, and the second branch's merge then
+    # failed the duplicate-id check (2026-11-03, PR #196 after #195)
+    prefix = f"L-{sha[:10]}-"
+    taken = [str(e.get('id') or '') for e in ledger.get('entries', []) if str(e.get('id') or '').startswith(prefix)]
+    seq = max((int(t[len(prefix):]) for t in taken if t[len(prefix):].isdigit()), default=0) + 1
+    eid = f"{prefix}{seq:02d}"
     entry = {
         'id': eid,
         'source_path': source,
