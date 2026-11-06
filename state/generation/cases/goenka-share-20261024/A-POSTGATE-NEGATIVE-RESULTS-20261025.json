@@ -1,0 +1,103 @@
+{
+  "schema": "GOENKA_A_POST_DELIVERY_GATE_TEST_V1",
+  "date": "2026-10-25",
+  "status": "NO_CANDIDATE_ADMITTED",
+  "source": "It also lets you want suffering to end without that wish turning into desperation or fear of failure.",
+  "source_sha256": "e6d054862c8e235854c72c8a0f3a53423ca83b3ba052e7eb4c920f2fcfa7e849",
+  "owner_meaning": "Mettā is a goodwill wish for suffering to end, not trying to force/achieve the outcome; the forcing project is where desperation and fear of failure arise.",
+  "existing_owner_context_before": "I realized it doesn’t help to spread negativity just because misery loves company. I’ve been preaching metta ever since 😊❣. Still trying to realize that deeper tho!\nIn the Metta Sutta, you wish ease and happiness to beings, yourself included. Metta calms the hindrances and builds goodwill.",
+  "existing_owner_context_after": "Theravada and most Mahayana Buddhist traditions treat metta as essential groundwork before the deeper work of unweaving the sense streams that make up the mind.",
+  "gate": "joel-articles main ae9515d2ba14da3f70a32ad23907b82b8f58d783 owner_delivery_gate.py init; mechanical lint --source; separate full T/C sweep via stateless Claude Opus; fail closed; no Pangram calls.",
+  "candidates": [
+    {
+      "id": "spoken-continuation",
+      "writer": "isolated GPT-6.1 Sol High Codex CLI",
+      "candidate": "Wishing for suffering to end out of goodwill is different from trying to make it happen. When the wish becomes something we have to achieve, desperation and fear of failing can creep in.",
+      "sha256": "48660a1807ab95de6ba56ed0102ea26f0853a5f75e0ddfe6764bf867d08d8ee0",
+      "mechanical_verdict": "REVIEW",
+      "mechanical_findings": [
+        "D9 follows the source order"
+      ],
+      "global_tell_sweep": {
+        "model": "fresh Claude Opus CLI",
+        "reviewed_ids": 33,
+        "blocking_present": [
+          "T17"
+        ],
+        "uncertain": [
+          "T03",
+          "T06",
+          "T09",
+          "T13",
+          "T15",
+          "T26"
+        ],
+        "summary": "A polished thesis before a lived reason; gratuitous restatement of 'goodwill' and stock 'creep in' ending"
+      },
+      "admitted": false
+    },
+    {
+      "id": "real-person-explanation",
+      "writer": "isolated GPT-6.1 Sol High Codex CLI",
+      "candidate": "Wishing for suffering to end is an act of goodwill. But if you turn that same wish into something you have to achieve, you can get caught up in striving, desperate for results and afraid of failing.",
+      "sha256": "a676904054750a100819d7b33a2497641a0744ac3b021051af3b7d10927b4c46",
+      "mechanical_verdict": "FAIL",
+      "mechanical_findings": [
+        "E36/E41 heavy second person",
+        "E41 coach phrase",
+        "D9 follows source order"
+      ],
+      "global_tell_sweep": null,
+      "admitted": false
+    },
+    {
+      "id": "independent-claude",
+      "writer": "isolated Claude Opus via CLI, no tools/session persistence",
+      "candidate": "Here's the subtle part: mettā lets the wish for suffering to end stay a wish. Once it hardens into a personal project to *make* suffering stop, goodwill gives way to desperation, and fear of failing can take the wheel.",
+      "sha256": "efd43b0c32be41ad59944925775a4c7e5d7fa2d20847f88898d3d4992af6cde2",
+      "mechanical_verdict": "REVIEW",
+      "mechanical_findings": [
+        "B5 announces paragraph",
+        "D9 follows source order"
+      ],
+      "admitted": false,
+      "reason": "Editor would not resolve artificial framing 'Here's the subtle part' and stock 'take the wheel'; no further paid/full review"
+    },
+    {
+      "id": "thought-voices",
+      "writer": "same supervising context, different structural architecture (concrete inner-voice contrast), NOT isolated generation",
+      "candidate": "In mettā, “May suffering end” is a wish. The desperation and fear of failure come from turning it into “I have to make suffering end.”",
+      "sha256": "652f09e304c5748c64b429f5221ca9d695ddd087a4ea70ec03d1997e6eddf079",
+      "mechanical_verdict": "REVIEW",
+      "mechanical_findings": [
+        "D9 follows source order"
+      ],
+      "global_tell_sweep": {
+        "model": "fresh Claude Opus CLI",
+        "reviewed_ids": 33,
+        "blocking_present": [
+          "T03",
+          "T17"
+        ],
+        "uncertain": [
+          "T09",
+          "T13",
+          "T20",
+          "C02",
+          "C04"
+        ],
+        "summary": "Overtly finished quotable principle; abrupt definite 'the desperation' without setup and model-made imaginary quoted teaching; C04 raises unattributed metta vs karuna phrasing issue, unresolved."
+      },
+      "admitted": false
+    }
+  ],
+  "spending": {
+    "new_pangram_submissions": 0,
+    "credits_spent": 0,
+    "result_links": []
+  },
+  "lesson": "Mechanical lint admission correctly excluded one overt coach-like GPT sentence; full context/global tell sweep independently excluded two REVIEW candidates. Attempts spanning fresh GPT writers, fresh Claude model and imaginary inner-voice structure still revert to artificially complete aphorisms. Do not override the gate with same-context predicted Human; do not add pattern bans, and do not conceal failures.",
+  "next_gate": "To escape this attractor, recover new substantive owner cognition: a short human spoken example of the actual difference between wishing well and trying to force the result, or a structurally distinct owner-approved placement. User has already confirmed the conceptual distinction; do NOT ask the same yes/no again.",
+  "published_article_changed": false,
+  "owner_final_text_changed": false
+}
