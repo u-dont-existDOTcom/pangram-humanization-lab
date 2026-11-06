@@ -6,6 +6,7 @@ Design the next high-information controlled experiment from the complete passage
 
 Hard constraints:
 - Preserve claims, certainty, agency, chronology, attribution, claim object, examples, and substantive meaning in every synthetic probe.
+- Keep every quotation from the Human endpoint word for word in every probe, keep every number, date, and name exact, and add no factual claim the Human endpoint does not make.
 - Use complete passage boundaries for every Pangram submission.
 - Prefer exact recombinations or minimal same-meaning realizations.
 - Test interactions when prior evidence suggests interactions.
@@ -18,5 +19,12 @@ Hard constraints:
 - `repeat_threshold` should normally be 0.03. Exact repeats are scheduled deterministically by the harness only for preregistered contrasts crossing the threshold or headline class.
 - If existing evidence already discriminates the live hypotheses, return status `stop` with empty factors/probes/contrasts.
 - If a distinction cannot be tested without Joel's judgment, return `needs_owner_input` with exactly one narrow question and empty factors/probes/contrasts.
+
+Claim integrity in the plan's written fields:
+- Rest every statement about what an endpoint, probe, or prior round says or shows on the supplied text or record, and take figures from the supplied stats rather than from summaries or lessons. Mark an inference as your reading ("I read this as ..."), and label a predicted detector outcome as a prediction.
+- Put only exact words inside quotation marks, and mark a translation as a translation.
+- In each synthetic probe's `semantic_fidelity_note`, name exactly which words differ from `HUMAN_ENDPOINT`: replaced, moved, added, or removed. Describe the change itself rather than its hoped-for effect.
+- Before saying that no prior round tested something, check every supplied round.
+- Keep the plan consistent with the prior analyses. If it departs from a prior conclusion, say so and why.
 
 The purpose is to automate detector science after a human has produced a better Human endpoint, not to replace the human editorial act.
